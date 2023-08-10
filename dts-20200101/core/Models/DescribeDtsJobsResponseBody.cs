@@ -9,639 +9,3158 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDtsJobsResponseBody : TeaModel {
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("ErrMessage")]
-        [Validation(Required=false)]
-        public string ErrMessage { get; set; }
-
-        [NameInMap("DynamicMessage")]
-        [Validation(Required=false)]
-        public string DynamicMessage { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("DynamicCode")]
-        [Validation(Required=false)]
-        public string DynamicCode { get; set; }
-
+        /// <summary>
+        /// The list of DTS tasks and the details of each task.
+        /// </summary>
         [NameInMap("DtsJobList")]
         [Validation(Required=false)]
         public List<DescribeDtsJobsResponseBodyDtsJobList> DtsJobList { get; set; }
         public class DescribeDtsJobsResponseBodyDtsJobList : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("DtsJobName")]
-            [Validation(Required=false)]
-            public string DtsJobName { get; set; }
-
-            [NameInMap("Delay")]
-            [Validation(Required=false)]
-            public int? Delay { get; set; }
-
-            [NameInMap("ErrorMessage")]
-            [Validation(Required=false)]
-            public string ErrorMessage { get; set; }
-
-            [NameInMap("ExpireTime")]
-            [Validation(Required=false)]
-            public string ExpireTime { get; set; }
-
-            [NameInMap("DtsJobId")]
-            [Validation(Required=false)]
-            public string DtsJobId { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("PayType")]
-            [Validation(Required=false)]
-            public string PayType { get; set; }
-
-            [NameInMap("Reserved")]
-            [Validation(Required=false)]
-            public string Reserved { get; set; }
-
-            [NameInMap("ConsumptionClient")]
-            [Validation(Required=false)]
-            public string ConsumptionClient { get; set; }
-
-            [NameInMap("DbObject")]
-            [Validation(Required=false)]
-            public string DbObject { get; set; }
-
-            [NameInMap("DtsJobClass")]
-            [Validation(Required=false)]
-            public string DtsJobClass { get; set; }
-
-            [NameInMap("ConsumptionCheckpoint")]
-            [Validation(Required=false)]
-            public string ConsumptionCheckpoint { get; set; }
-
-            [NameInMap("EndTimestamp")]
-            [Validation(Required=false)]
-            public string EndTimestamp { get; set; }
-
+            /// <summary>
+            /// Indicates whether the **new** change tracking feature is used.
+            /// 
+            /// >  This parameter is returned only for change tracking instances of the new version.
+            /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            /// <summary>
+            /// The start of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// </summary>
             [NameInMap("BeginTimestamp")]
             [Validation(Required=false)]
             public string BeginTimestamp { get; set; }
 
-            [NameInMap("DtsInstanceID")]
-            [Validation(Required=false)]
-            public string DtsInstanceID { get; set; }
-
-            [NameInMap("DtsJobDirection")]
-            [Validation(Required=false)]
-            public string DtsJobDirection { get; set; }
-
+            /// <summary>
+            /// The start offset of incremental data synchronization. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+            /// </summary>
             [NameInMap("Checkpoint")]
             [Validation(Required=false)]
             public string Checkpoint { get; set; }
 
-            [NameInMap("TagList")]
+            /// <summary>
+            /// The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// </summary>
+            [NameInMap("ConsumptionCheckpoint")]
             [Validation(Required=false)]
-            public List<DescribeDtsJobsResponseBodyDtsJobListTagList> TagList { get; set; }
-            public class DescribeDtsJobsResponseBodyDtsJobListTagList : TeaModel {
-                [NameInMap("TagValue")]
-                [Validation(Required=false)]
-                public string TagValue { get; set; }
+            public string ConsumptionCheckpoint { get; set; }
 
-                [NameInMap("TagKey")]
-                [Validation(Required=false)]
-                public string TagKey { get; set; }
-
-            }
-
-            [NameInMap("DataInitializationStatus")]
+            /// <summary>
+            /// The downstream client information, in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.
+            /// </summary>
+            [NameInMap("ConsumptionClient")]
             [Validation(Required=false)]
-            public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus DataInitializationStatus { get; set; }
-            public class DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-                [NameInMap("Percent")]
-                [Validation(Required=false)]
-                public string Percent { get; set; }
+            public string ConsumptionClient { get; set; }
+
+            /// <summary>
+            /// The CPU utilization of the instance. Unit: percentage.
+            /// </summary>
+            [NameInMap("CpuUsage")]
+            [Validation(Required=false)]
+            public string CpuUsage { get; set; }
+
+            /// <summary>
+            /// The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
+            /// The state of the physical gateway-based migration task.
+            /// </summary>
+            [NameInMap("DataCloudStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus DataCloudStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus : TeaModel {
+                /// <summary>
+                /// The error message returned if the task failed.
+                /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
-                [NameInMap("Progress")]
-                [Validation(Required=false)]
-                public string Progress { get; set; }
-            };
 
-            [NameInMap("DataSynchronizationStatus")]
-            [Validation(Required=false)]
-            public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus DataSynchronizationStatus { get; set; }
-            public class DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
+                /// <summary>
+                /// Indicates whether the instance needs to be upgraded. Valid values:
+                /// 
+                /// - **true** 
+                /// - **false**
+                /// </summary>
                 [NameInMap("NeedUpgrade")]
                 [Validation(Required=false)]
                 public bool? NeedUpgrade { get; set; }
+
+                /// <summary>
+                /// The progress of the task. Unit: percentage.
+                /// </summary>
                 [NameInMap("Percent")]
                 [Validation(Required=false)]
                 public string Percent { get; set; }
+
+                /// <summary>
+                /// The number of tables that have been migrated.
+                /// </summary>
                 [NameInMap("Progress")]
                 [Validation(Required=false)]
                 public string Progress { get; set; }
-                [NameInMap("ErrorMessage")]
-                [Validation(Required=false)]
-                public string ErrorMessage { get; set; }
-            };
 
+                /// <summary>
+                /// The state of the task. For more information about the valid values, see the description of the request parameter **Status**.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The state of the extract, transform, and load (ETL) task. Valid values:
+            /// 
+            /// >  This parameter collection is returned only if an ETL task is configured.
+            /// </summary>
             [NameInMap("DataEtlStatus")]
             [Validation(Required=false)]
             public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus DataEtlStatus { get; set; }
             public class DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-                [NameInMap("Percent")]
-                [Validation(Required=false)]
-                public string Percent { get; set; }
+                /// <summary>
+                /// The error message returned if the task failed.
+                /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The progress of the ETL task.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The number of records that have been processed by the ETL task.
+                /// </summary>
                 [NameInMap("Progress")]
                 [Validation(Required=false)]
                 public string Progress { get; set; }
-            };
 
+                /// <summary>
+                /// The state of the ETL task. Valid values:
+                /// 
+                /// *   **NotStarted**: The task is not started.
+                /// *   **Migrating**: The task is in progress.
+                /// *   **Failed**: The task failed.
+                /// *   **Finished**: The task is complete.
+                /// *   **Catched**: The task is not delayed.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The state of full data synchronization.
+            /// </summary>
+            [NameInMap("DataInitializationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus DataInitializationStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus : TeaModel {
+                /// <summary>
+                /// The error message returned if full data synchronization failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The progress of full data synchronization. This is expressed as a percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The number of records that have been synchronized during full data synchronization.
+                /// </summary>
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                /// <summary>
+                /// The state of full data synchronization. Valid values:
+                /// 
+                /// *   **NotStarted**: The task is not started.
+                /// *   **Migrating**: The task is in progress.
+                /// *   **Failed**: The task failed.
+                /// *   **Finished**: The task is complete.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The state of incremental data migration or synchronization.
+            /// </summary>
+            [NameInMap("DataSynchronizationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus DataSynchronizationStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus : TeaModel {
+                /// <summary>
+                /// The error message returned if incremental data migration or synchronization failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// Indicates whether the instance needs to be upgraded. Valid values:
+                /// 
+                /// *   **true**: yes
+                /// *   **false**: no
+                /// 
+                /// >  To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.
+                /// </summary>
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                /// <summary>
+                /// The progress of incremental data migration or synchronization.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The number of records that have been migrated or synchronized during incremental data migration or synchronization.
+                /// </summary>
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                /// <summary>
+                /// The state of incremental data migration or synchronization. Valid values:
+                /// 
+                /// *   **NotStarted**: The task is not started.
+                /// *   **Migrating**: The task is in progress.
+                /// *   **Failed**: The task failed.
+                /// *   **Finished**: The task is complete.
+                /// *   **Catched**: The task is not delayed.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see "Objects of DTS tasks".
+            /// </summary>
+            [NameInMap("DbObject")]
+            [Validation(Required=false)]
+            public string DbObject { get; set; }
+
+            /// <summary>
+            /// The ID of the DTS dedicated cluster on which a DTS task runs.
+            /// </summary>
+            [NameInMap("DedicatedClusterId")]
+            [Validation(Required=false)]
+            public string DedicatedClusterId { get; set; }
+
+            /// <summary>
+            /// The latency of incremental data synchronization. Unit: seconds.
+            /// </summary>
+            [NameInMap("Delay")]
+            [Validation(Required=false)]
+            public long? Delay { get; set; }
+
+            /// <summary>
+            /// The connection settings of the destination instance.
+            /// </summary>
             [NameInMap("DestinationEndpoint")]
             [Validation(Required=false)]
             public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint DestinationEndpoint { get; set; }
             public class DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint : TeaModel {
-                [NameInMap("SslSolutionEnum")]
-                [Validation(Required=false)]
-                public string SslSolutionEnum { get; set; }
-                [NameInMap("OracleSID")]
-                [Validation(Required=false)]
-                public string OracleSID { get; set; }
-                [NameInMap("Region")]
-                [Validation(Required=false)]
-                public string Region { get; set; }
+                /// <summary>
+                /// The name of the database to which the migration object in the destination instance belongs.
+                /// </summary>
                 [NameInMap("DatabaseName")]
                 [Validation(Required=false)]
                 public string DatabaseName { get; set; }
-                [NameInMap("Ip")]
-                [Validation(Required=false)]
-                public string Ip { get; set; }
-                [NameInMap("InstanceID")]
-                [Validation(Required=false)]
-                public string InstanceID { get; set; }
-                [NameInMap("Port")]
-                [Validation(Required=false)]
-                public string Port { get; set; }
-                [NameInMap("InstanceType")]
-                [Validation(Required=false)]
-                public string InstanceType { get; set; }
-                [NameInMap("UserName")]
-                [Validation(Required=false)]
-                public string UserName { get; set; }
+
+                /// <summary>
+                /// The database type of the destination instance.
+                /// </summary>
                 [NameInMap("EngineName")]
                 [Validation(Required=false)]
                 public string EngineName { get; set; }
-            };
 
+                /// <summary>
+                /// The ID of the destination instance.
+                /// </summary>
+                [NameInMap("InstanceID")]
+                [Validation(Required=false)]
+                public string InstanceID { get; set; }
+
+                /// <summary>
+                /// The type of the destination instance.
+                /// </summary>
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                /// <summary>
+                /// The endpoint of the destination instance.
+                /// </summary>
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
+                public string Ip { get; set; }
+
+                /// <summary>
+                /// The SID of the Oracle database.
+                /// 
+                /// >  This parameter is returned only if the **EngineName** parameter of the destination instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+                /// </summary>
+                [NameInMap("OracleSID")]
+                [Validation(Required=false)]
+                public string OracleSID { get; set; }
+
+                /// <summary>
+                /// The database service port of the destination instance.
+                /// </summary>
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                /// <summary>
+                /// The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                /// <summary>
+                /// Indicates whether SSL encryption is enabled. Valid values:
+                /// 
+                /// *   **DISABLE**: SSL encryption is disabled.
+                /// *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+                /// *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+                /// *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
+                /// </summary>
+                [NameInMap("SslSolutionEnum")]
+                [Validation(Required=false)]
+                public string SslSolutionEnum { get; set; }
+
+                /// <summary>
+                /// The database account of the destination instance.
+                /// </summary>
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
+                public string UserName { get; set; }
+
+            }
+
+            [NameInMap("DtsBisLabel")]
+            [Validation(Required=false)]
+            public string DtsBisLabel { get; set; }
+
+            /// <summary>
+            /// The ID of the data synchronization instance.
+            /// </summary>
+            [NameInMap("DtsInstanceID")]
+            [Validation(Required=false)]
+            public string DtsInstanceID { get; set; }
+
+            /// <summary>
+            /// The instance class.
+            /// 
+            /// >  For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).
+            /// </summary>
+            [NameInMap("DtsJobClass")]
+            [Validation(Required=false)]
+            public string DtsJobClass { get; set; }
+
+            /// <summary>
+            /// The synchronization direction. The value is **Reverse**.
+            /// </summary>
+            [NameInMap("DtsJobDirection")]
+            [Validation(Required=false)]
+            public string DtsJobDirection { get; set; }
+
+            /// <summary>
+            /// The ID of the data synchronization task.
+            /// </summary>
+            [NameInMap("DtsJobId")]
+            [Validation(Required=false)]
+            public string DtsJobId { get; set; }
+
+            /// <summary>
+            /// The name of the data synchronization task.
+            /// </summary>
+            [NameInMap("DtsJobName")]
+            [Validation(Required=false)]
+            public string DtsJobName { get; set; }
+
+            /// <summary>
+            /// The number of DUs that have been used.
+            /// </summary>
+            [NameInMap("DuUsage")]
+            [Validation(Required=false)]
+            public long? DuUsage { get; set; }
+
+            /// <summary>
+            /// The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// </summary>
+            [NameInMap("EndTimestamp")]
+            [Validation(Required=false)]
+            public string EndTimestamp { get; set; }
+
+            /// <summary>
+            /// The error message returned.
+            /// </summary>
+            [NameInMap("ErrorDetails")]
+            [Validation(Required=false)]
+            public List<DescribeDtsJobsResponseBodyDtsJobListErrorDetails> ErrorDetails { get; set; }
+            public class DescribeDtsJobsResponseBodyDtsJobListErrorDetails : TeaModel {
+                /// <summary>
+                /// The error code returned.
+                /// </summary>
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                /// <summary>
+                /// The URL of the documentation.
+                /// </summary>
+                [NameInMap("HelpUrl")]
+                [Validation(Required=false)]
+                public string HelpUrl { get; set; }
+
+            }
+
+            /// <summary>
+            /// The error message returned if the task failed.
+            /// </summary>
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            /// <summary>
+            /// The checkpoint of the ETL task.
+            /// </summary>
+            [NameInMap("EtlSafeCheckpoint")]
+            [Validation(Required=false)]
+            public string EtlSafeCheckpoint { get; set; }
+
+            /// <summary>
+            /// The point in time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// 
+            /// >  This parameter is returned only if the value of the **PayType** parameter is **PrePaid**.
+            /// </summary>
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public string ExpireTime { get; set; }
+
+            /// <summary>
+            /// The state information about the full data verification task.
+            /// </summary>
+            [NameInMap("FullDataCheckStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus FullDataCheckStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus : TeaModel {
+                /// <summary>
+                /// The error message returned if the task failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The progress of the full data verification task. Unit: percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The progress of the full data verification task.
+                /// </summary>
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                /// <summary>
+                /// The state of the full data verification task. Valid values:
+                /// 
+                /// - **NotStarted**: The verification is not started. 
+                /// - **Checking**: The verification is in progress. 
+                /// - **Failed**: The verification failed. 
+                /// - **Finished**: The verification is complete.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The state information about the incremental data verification task.
+            /// </summary>
+            [NameInMap("IncDataCheckStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus IncDataCheckStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus : TeaModel {
+                /// <summary>
+                /// The error message returned if the task failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The progress of the incremental data verification task. Unit: percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The progress of the incremental data verification task.
+                /// </summary>
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                /// <summary>
+                /// The state of the incremental data verification task. Valid values:
+                /// 
+                /// - **Catched**: The verification is delayed. 
+                /// - **NotStarted**: The verification is not started. 
+                /// - **Checking**: The verification is in progress. 
+                /// - **Failed**: The verification failed.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The type of the DTS task. Valid values:
+            /// 
+            /// - **MIGRATION**: data migration task 
+            /// - **SYNC**: data synchronization task 
+            /// - **SUBSCRIBE**: change tracking task
+            /// </summary>
+            [NameInMap("JobType")]
+            [Validation(Required=false)]
+            public string JobType { get; set; }
+
+            /// <summary>
+            /// The memory that has been used. Unit: MB.
+            /// </summary>
+            [NameInMap("MemUsage")]
+            [Validation(Required=false)]
+            public string MemUsage { get; set; }
+
+            /// <summary>
+            /// The error code.
+            /// </summary>
+            [NameInMap("MigrationErrCode")]
+            [Validation(Required=false)]
+            public string MigrationErrCode { get; set; }
+
+            /// <summary>
+            /// The ID of the error code-related documentation.
+            /// </summary>
+            [NameInMap("MigrationErrHelpDocId")]
+            [Validation(Required=false)]
+            public string MigrationErrHelpDocId { get; set; }
+
+            /// <summary>
+            /// The key of the error code-related documentation.
+            /// </summary>
+            [NameInMap("MigrationErrHelpDocKey")]
+            [Validation(Required=false)]
+            public string MigrationErrHelpDocKey { get; set; }
+
+            /// <summary>
+            /// The error message.
+            /// </summary>
+            [NameInMap("MigrationErrMsg")]
+            [Validation(Required=false)]
+            public string MigrationErrMsg { get; set; }
+
+            /// <summary>
+            /// The type of the error code.
+            /// </summary>
+            [NameInMap("MigrationErrType")]
+            [Validation(Required=false)]
+            public string MigrationErrType { get; set; }
+
+            /// <summary>
+            /// The solution to the error.
+            /// </summary>
+            [NameInMap("MigrationErrWorkaround")]
+            [Validation(Required=false)]
+            public string MigrationErrWorkaround { get; set; }
+
+            /// <summary>
+            /// The migration or synchronization modes.
+            /// </summary>
             [NameInMap("MigrationMode")]
             [Validation(Required=false)]
             public DescribeDtsJobsResponseBodyDtsJobListMigrationMode MigrationMode { get; set; }
             public class DescribeDtsJobsResponseBodyDtsJobListMigrationMode : TeaModel {
+                /// <summary>
+                /// Indicates whether full data migration or synchronization is performed. Valid values:
+                /// 
+                /// *   **true**: yes
+                /// *   **false**: no
+                /// </summary>
                 [NameInMap("DataInitialization")]
                 [Validation(Required=false)]
                 public bool? DataInitialization { get; set; }
+
+                /// <summary>
+                /// Indicates whether incremental data migration or synchronization is performed. Valid values:
+                /// 
+                /// *   **true**: yes
+                /// *   **false**: no
+                /// </summary>
                 [NameInMap("DataSynchronization")]
                 [Validation(Required=false)]
                 public bool? DataSynchronization { get; set; }
+
+                /// <summary>
+                /// Indicates whether full data verification is performed. Valid values:
+                /// -  **true**: yes
+                /// -   **false**: no
+                /// </summary>
+                [NameInMap("FullDataCheck")]
+                [Validation(Required=false)]
+                public bool? FullDataCheck { get; set; }
+
+                /// <summary>
+                /// Indicates whether incremental data verification is performed. Valid values:
+                /// -  **true**: yes
+                /// -   **false**: no
+                /// </summary>
+                [NameInMap("IncDataCheck")]
+                [Validation(Required=false)]
+                public bool? IncDataCheck { get; set; }
+
+                /// <summary>
+                /// Indicates whether schema migration or schema synchronization is performed. Valid values:
+                /// 
+                /// *   **true**: yes
+                /// *   **false**: no
+                /// </summary>
                 [NameInMap("StructureInitialization")]
                 [Validation(Required=false)]
                 public bool? StructureInitialization { get; set; }
-            };
 
+            }
+
+            /// <summary>
+            /// The source of the task. Valid values:
+            /// 
+            /// *   **PTS**
+            /// *   **DMS**
+            /// *   **DTS**
+            /// </summary>
+            [NameInMap("OriginType")]
+            [Validation(Required=false)]
+            public string OriginType { get; set; }
+
+            /// <summary>
+            /// The billing method of the DTS instance. Valid values:
+            /// 
+            /// *   **PrePaid**: subscription
+            /// *   **PostPaid**: pay-as-you-go
+            /// </summary>
+            [NameInMap("PayType")]
+            [Validation(Required=false)]
+            public string PayType { get; set; }
+
+            /// <summary>
+            /// The performance of the data migration or synchronization instance.
+            /// </summary>
             [NameInMap("Performance")]
             [Validation(Required=false)]
             public DescribeDtsJobsResponseBodyDtsJobListPerformance Performance { get; set; }
             public class DescribeDtsJobsResponseBodyDtsJobListPerformance : TeaModel {
-                [NameInMap("Rps")]
-                [Validation(Required=false)]
-                public string Rps { get; set; }
+                /// <summary>
+                /// The size of data that is migrated or synchronized per second. Unit: MB/s.
+                /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
                 public string Flow { get; set; }
-            };
 
+                /// <summary>
+                /// The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
+                /// </summary>
+                [NameInMap("Rps")]
+                [Validation(Required=false)]
+                public string Rps { get; set; }
+
+            }
+
+            /// <summary>
+            /// The precheck state.
+            /// </summary>
             [NameInMap("PrecheckStatus")]
             [Validation(Required=false)]
             public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus PrecheckStatus { get; set; }
             public class DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-                [NameInMap("Percent")]
-                [Validation(Required=false)]
-                public string Percent { get; set; }
-                [NameInMap("ErrorMessage")]
-                [Validation(Required=false)]
-                public string ErrorMessage { get; set; }
+                /// <summary>
+                /// The result of each precheck item.
+                /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
                 public List<DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail> Detail { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail : TeaModel {
-                    public string CheckResult { get; set; }
-                    public string CheckItemDescription { get; set; }
+                    /// <summary>
+                    /// The name of the precheck item.
+                    /// </summary>
+                    [NameInMap("CheckItem")]
+                    [Validation(Required=false)]
                     public string CheckItem { get; set; }
-                    public string RepairMethod { get; set; }
-                    public string FailedReason { get; set; }
-                }
-            };
 
+                    /// <summary>
+                    /// The description of the precheck item.
+                    /// </summary>
+                    [NameInMap("CheckItemDescription")]
+                    [Validation(Required=false)]
+                    public string CheckItemDescription { get; set; }
+
+                    /// <summary>
+                    /// The precheck result. Valid values:
+                    /// 
+                    /// *   **Success**
+                    /// *   **Failed**
+                    /// </summary>
+                    [NameInMap("CheckResult")]
+                    [Validation(Required=false)]
+                    public string CheckResult { get; set; }
+
+                    /// <summary>
+                    /// The error message returned if the task failed to pass the precheck.
+                    /// 
+                    /// >  This parameter is returned only if the value of the **CheckResult** parameter is **Failed**.
+                    /// </summary>
+                    [NameInMap("FailedReason")]
+                    [Validation(Required=false)]
+                    public string FailedReason { get; set; }
+
+                    /// <summary>
+                    /// The method to fix the precheck failure.
+                    /// 
+                    /// >  This parameter is returned only if the value of the **CheckResult** parameter is **Failed**.
+                    /// </summary>
+                    [NameInMap("RepairMethod")]
+                    [Validation(Required=false)]
+                    public string RepairMethod { get; set; }
+
+                }
+
+                /// <summary>
+                /// The cause of the precheck failure.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The precheck progress. This is expressed as a percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The precheck status. Valid values:
+                /// 
+                /// *   **NotStarted**
+                /// *   **Suspending**:
+                /// *   **Checking**
+                /// *   **Failed**
+                /// *   **Finished**
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+            /// </summary>
+            [NameInMap("Reserved")]
+            [Validation(Required=false)]
+            public string Reserved { get; set; }
+
+            /// <summary>
+            /// The name of the resource group.
+            /// </summary>
+            [NameInMap("ResourceGroupDisplayName")]
+            [Validation(Required=false)]
+            public string ResourceGroupDisplayName { get; set; }
+
+            /// <summary>
+            /// The resource group ID.
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
+            /// The information about the retries performed by DTS due to an exception.
+            /// </summary>
+            [NameInMap("RetryState")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyDtsJobListRetryState RetryState { get; set; }
+            public class DescribeDtsJobsResponseBodyDtsJobListRetryState : TeaModel {
+                /// <summary>
+                /// The error message returned if these retries failed.
+                /// </summary>
+                [NameInMap("ErrMessage")]
+                [Validation(Required=false)]
+                public string ErrMessage { get; set; }
+
+                /// <summary>
+                /// The task ID.
+                /// </summary>
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
+                public string JobId { get; set; }
+
+                /// <summary>
+                /// The maximum duration of a retry. Unit: seconds.
+                /// </summary>
+                [NameInMap("MaxRetryTime")]
+                [Validation(Required=false)]
+                public int? MaxRetryTime { get; set; }
+
+                /// <summary>
+                /// The error code.
+                /// </summary>
+                [NameInMap("MigrationErrCode")]
+                [Validation(Required=false)]
+                public string MigrationErrCode { get; set; }
+
+                /// <summary>
+                /// The ID of the error code-related documentation.
+                /// </summary>
+                [NameInMap("MigrationErrHelpDocId")]
+                [Validation(Required=false)]
+                public string MigrationErrHelpDocId { get; set; }
+
+                /// <summary>
+                /// The key of the error code-related documentation.
+                /// </summary>
+                [NameInMap("MigrationErrHelpDocKey")]
+                [Validation(Required=false)]
+                public string MigrationErrHelpDocKey { get; set; }
+
+                /// <summary>
+                /// The error message.
+                /// </summary>
+                [NameInMap("MigrationErrMsg")]
+                [Validation(Required=false)]
+                public string MigrationErrMsg { get; set; }
+
+                /// <summary>
+                /// The type of the error code.
+                /// </summary>
+                [NameInMap("MigrationErrType")]
+                [Validation(Required=false)]
+                public string MigrationErrType { get; set; }
+
+                /// <summary>
+                /// The solution to the error.
+                /// </summary>
+                [NameInMap("MigrationErrWorkaround")]
+                [Validation(Required=false)]
+                public string MigrationErrWorkaround { get; set; }
+
+                /// <summary>
+                /// The progress of the instance when DTS retries.
+                /// </summary>
+                [NameInMap("Module")]
+                [Validation(Required=false)]
+                public string Module { get; set; }
+
+                /// <summary>
+                /// The number of retries that have been performed.
+                /// </summary>
+                [NameInMap("RetryCount")]
+                [Validation(Required=false)]
+                public int? RetryCount { get; set; }
+
+                /// <summary>
+                /// The object on which these retries are performed. Valid values:
+                /// 
+                /// - **srcDB**: the source database 
+                /// - **destDB**: the destination database 
+                /// - **inner_module**: an internal module of DTS
+                /// </summary>
+                [NameInMap("RetryTarget")]
+                [Validation(Required=false)]
+                public string RetryTarget { get; set; }
+
+                /// <summary>
+                /// The time that has elapsed from the time when the first retry starts. Unit: seconds.
+                /// </summary>
+                [NameInMap("RetryTime")]
+                [Validation(Required=false)]
+                public int? RetryTime { get; set; }
+
+                /// <summary>
+                /// Indicates whether the task is being retried. Valid values:
+                /// 
+                /// - **true**
+                /// - **false**
+                /// </summary>
+                [NameInMap("Retrying")]
+                [Validation(Required=false)]
+                public bool? Retrying { get; set; }
+
+            }
+
+            /// <summary>
+            /// The details of the data synchronization task in the reverse direction. 
+            /// 
+            /// > This parameter is returned only for two-way data synchronization tasks.
+            /// </summary>
             [NameInMap("ReverseJob")]
             [Validation(Required=false)]
             public DescribeDtsJobsResponseBodyDtsJobListReverseJob ReverseJob { get; set; }
             public class DescribeDtsJobsResponseBodyDtsJobListReverseJob : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-                [NameInMap("DtsJobName")]
-                [Validation(Required=false)]
-                public string DtsJobName { get; set; }
-                [NameInMap("Delay")]
-                [Validation(Required=false)]
-                public int? Delay { get; set; }
-                [NameInMap("ErrorMessage")]
-                [Validation(Required=false)]
-                public string ErrorMessage { get; set; }
-                [NameInMap("DtsJobId")]
-                [Validation(Required=false)]
-                public string DtsJobId { get; set; }
-                [NameInMap("ExpireTime")]
-                [Validation(Required=false)]
-                public string ExpireTime { get; set; }
-                [NameInMap("CreateTime")]
-                [Validation(Required=false)]
-                public string CreateTime { get; set; }
-                [NameInMap("PayType")]
-                [Validation(Required=false)]
-                public string PayType { get; set; }
-                [NameInMap("Reserved")]
-                [Validation(Required=false)]
-                public string Reserved { get; set; }
-                [NameInMap("DbObject")]
-                [Validation(Required=false)]
-                public string DbObject { get; set; }
-                [NameInMap("DtsJobClass")]
-                [Validation(Required=false)]
-                public string DtsJobClass { get; set; }
-                [NameInMap("DtsInstanceID")]
-                [Validation(Required=false)]
-                public string DtsInstanceID { get; set; }
-                [NameInMap("DtsJobDirection")]
-                [Validation(Required=false)]
-                public string DtsJobDirection { get; set; }
+                /// <summary>
+                /// The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// </summary>
                 [NameInMap("Checkpoint")]
                 [Validation(Required=false)]
                 public string Checkpoint { get; set; }
+
+                /// <summary>
+                /// The CPU utilization of the instance. Unit: percentage.
+                /// </summary>
+                [NameInMap("CpuUsage")]
+                [Validation(Required=false)]
+                public string CpuUsage { get; set; }
+
+                /// <summary>
+                /// The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// </summary>
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                /// <summary>
+                /// The state of initial full data synchronization.
+                /// </summary>
                 [NameInMap("DataInitializationStatus")]
                 [Validation(Required=false)]
                 public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus DataInitializationStatus { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus : TeaModel {
-                    [NameInMap("Status")]
-                    [Validation(Required=false)]
-                    public string Status { get; set; }
-
-                    [NameInMap("Percent")]
-                    [Validation(Required=false)]
-                    public string Percent { get; set; }
-
+                    /// <summary>
+                    /// The error message returned if initial full data synchronization failed.
+                    /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
+                    /// <summary>
+                    /// The progress of initial full data synchronization. Unit: percentage.
+                    /// </summary>
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    /// <summary>
+                    /// The number of entries that have been synchronized during initial full data synchronization.
+                    /// </summary>
                     [NameInMap("Progress")]
                     [Validation(Required=false)]
                     public string Progress { get; set; }
 
+                    /// <summary>
+                    /// The state of initial full data synchronization. Valid values:
+                    /// 
+                    /// - **NotStarted**: The task is not started. 
+                    /// - **Migrating**: The task is in progress. 
+                    /// - **Failed**: The task failed. 
+                    /// - **Finished**: The task is complete.
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
                 }
+
+                /// <summary>
+                /// The state of incremental data synchronization.
+                /// </summary>
                 [NameInMap("DataSynchronizationStatus")]
                 [Validation(Required=false)]
                 public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus DataSynchronizationStatus { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus : TeaModel {
-                    [NameInMap("Status")]
-                    [Validation(Required=false)]
-                    public string Status { get; set; }
-
-                    [NameInMap("NeedUpgrade")]
-                    [Validation(Required=false)]
-                    public bool? NeedUpgrade { get; set; }
-
-                    [NameInMap("Percent")]
-                    [Validation(Required=false)]
-                    public string Percent { get; set; }
-
-                    [NameInMap("Progress")]
-                    [Validation(Required=false)]
-                    public string Progress { get; set; }
-
+                    /// <summary>
+                    /// The error message returned if incremental data synchronization failed.
+                    /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
+                    /// <summary>
+                    /// Indicates whether the instance needs to be upgraded. Valid values:
+                    /// 
+                    /// - **true**
+                    /// - **false**
+                    /// 
+                    /// > To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.
+                    /// </summary>
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    /// <summary>
+                    /// The progress of incremental data synchronization. Unit: percentage.
+                    /// </summary>
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    /// <summary>
+                    /// The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+                    /// </summary>
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    /// <summary>
+                    /// The state of incremental data synchronization.
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
                 }
+
+                /// <summary>
+                /// The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.
+                /// </summary>
+                [NameInMap("DbObject")]
+                [Validation(Required=false)]
+                public string DbObject { get; set; }
+
+                /// <summary>
+                /// The ID of the DTS dedicated cluster on which a DTS task runs.
+                /// </summary>
+                [NameInMap("DedicatedClusterId")]
+                [Validation(Required=false)]
+                public string DedicatedClusterId { get; set; }
+
+                /// <summary>
+                /// The latency of incremental data synchronization. Unit: seconds.
+                /// </summary>
+                [NameInMap("Delay")]
+                [Validation(Required=false)]
+                public long? Delay { get; set; }
+
+                /// <summary>
+                /// The connection settings of the destination instance.
+                /// </summary>
                 [NameInMap("DestinationEndpoint")]
                 [Validation(Required=false)]
                 public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint DestinationEndpoint { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint : TeaModel {
-                    [NameInMap("SslSolutionEnum")]
-                    [Validation(Required=false)]
-                    public string SslSolutionEnum { get; set; }
-
-                    [NameInMap("OracleSID")]
-                    [Validation(Required=false)]
-                    public string OracleSID { get; set; }
-
-                    [NameInMap("Region")]
-                    [Validation(Required=false)]
-                    public string Region { get; set; }
-
+                    /// <summary>
+                    /// The name of the database that contains the synchronized objects in the destination instance.
+                    /// </summary>
                     [NameInMap("DatabaseName")]
                     [Validation(Required=false)]
                     public string DatabaseName { get; set; }
 
-                    [NameInMap("Ip")]
-                    [Validation(Required=false)]
-                    public string Ip { get; set; }
-
-                    [NameInMap("InstanceID")]
-                    [Validation(Required=false)]
-                    public string InstanceID { get; set; }
-
-                    [NameInMap("Port")]
-                    [Validation(Required=false)]
-                    public string Port { get; set; }
-
-                    [NameInMap("InstanceType")]
-                    [Validation(Required=false)]
-                    public string InstanceType { get; set; }
-
-                    [NameInMap("UserName")]
-                    [Validation(Required=false)]
-                    public string UserName { get; set; }
-
+                    /// <summary>
+                    /// The database engine of the destination instance.
+                    /// </summary>
                     [NameInMap("EngineName")]
                     [Validation(Required=false)]
                     public string EngineName { get; set; }
 
+                    /// <summary>
+                    /// The ID of the destination instance.
+                    /// </summary>
+                    [NameInMap("InstanceID")]
+                    [Validation(Required=false)]
+                    public string InstanceID { get; set; }
+
+                    /// <summary>
+                    /// The type of the destination instance.
+                    /// </summary>
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                    /// <summary>
+                    /// The endpoint of the destination instance.
+                    /// </summary>
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public string Ip { get; set; }
+
+                    /// <summary>
+                    /// The SID of the Oracle database. 
+                    /// 
+                    /// > This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+                    /// </summary>
+                    [NameInMap("OracleSID")]
+                    [Validation(Required=false)]
+                    public string OracleSID { get; set; }
+
+                    /// <summary>
+                    /// The port number of the destination instance.
+                    /// </summary>
+                    [NameInMap("Port")]
+                    [Validation(Required=false)]
+                    public string Port { get; set; }
+
+                    /// <summary>
+                    /// The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    /// <summary>
+                    /// Indicates whether SSL encryption is enabled. Valid values:
+                    /// 
+                    /// - **DISABLE**: SSL encryption is disabled. 
+                    /// - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
+                    /// - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
+                    /// - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+                    /// </summary>
+                    [NameInMap("SslSolutionEnum")]
+                    [Validation(Required=false)]
+                    public string SslSolutionEnum { get; set; }
+
+                    /// <summary>
+                    /// The database account of the destination instance.
+                    /// </summary>
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public string UserName { get; set; }
+
                 }
+
+                /// <summary>
+                /// The ID of the data synchronization instance.
+                /// </summary>
+                [NameInMap("DtsInstanceID")]
+                [Validation(Required=false)]
+                public string DtsInstanceID { get; set; }
+
+                /// <summary>
+                /// The instance class. 
+                /// 
+                /// > For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).
+                /// </summary>
+                [NameInMap("DtsJobClass")]
+                [Validation(Required=false)]
+                public string DtsJobClass { get; set; }
+
+                /// <summary>
+                /// The synchronization direction. **Reverse** is returned.
+                /// </summary>
+                [NameInMap("DtsJobDirection")]
+                [Validation(Required=false)]
+                public string DtsJobDirection { get; set; }
+
+                /// <summary>
+                /// The ID of the synchronization task.
+                /// </summary>
+                [NameInMap("DtsJobId")]
+                [Validation(Required=false)]
+                public string DtsJobId { get; set; }
+
+                /// <summary>
+                /// The name of the data synchronization task.
+                /// </summary>
+                [NameInMap("DtsJobName")]
+                [Validation(Required=false)]
+                public string DtsJobName { get; set; }
+
+                /// <summary>
+                /// The number of DUs that have been used.
+                /// </summary>
+                [NameInMap("DuUsage")]
+                [Validation(Required=false)]
+                public long? DuUsage { get; set; }
+
+                /// <summary>
+                /// The error message returned.
+                /// </summary>
+                [NameInMap("ErrorDetails")]
+                [Validation(Required=false)]
+                public List<DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails> ErrorDetails { get; set; }
+                public class DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails : TeaModel {
+                    /// <summary>
+                    /// The error code returned.
+                    /// </summary>
+                    [NameInMap("ErrorCode")]
+                    [Validation(Required=false)]
+                    public string ErrorCode { get; set; }
+
+                    /// <summary>
+                    /// The URL of the documentation.
+                    /// </summary>
+                    [NameInMap("HelpUrl")]
+                    [Validation(Required=false)]
+                    public string HelpUrl { get; set; }
+
+                }
+
+                /// <summary>
+                /// The error message returned if the task failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The checkpoint of the ETL task.
+                /// </summary>
+                [NameInMap("EtlSafeCheckpoint")]
+                [Validation(Required=false)]
+                public string EtlSafeCheckpoint { get; set; }
+
+                /// <summary>
+                /// The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. 
+                /// 
+                /// > This parameter is returned only if the returned value of **PayType** is **PrePaid**.
+                /// </summary>
+                [NameInMap("ExpireTime")]
+                [Validation(Required=false)]
+                public string ExpireTime { get; set; }
+
+                /// <summary>
+                /// The memory that has been used. Unit: MB.
+                /// </summary>
+                [NameInMap("MemUsage")]
+                [Validation(Required=false)]
+                public string MemUsage { get; set; }
+
+                /// <summary>
+                /// The initial synchronization types.
+                /// </summary>
                 [NameInMap("MigrationMode")]
                 [Validation(Required=false)]
                 public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode MigrationMode { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode : TeaModel {
+                    /// <summary>
+                    /// Indicates whether initial full data synchronization is performed. Valid values:
+                    /// 
+                    /// -  **true**
+                    /// -  **false**
+                    /// </summary>
                     [NameInMap("DataInitialization")]
                     [Validation(Required=false)]
                     public bool? DataInitialization { get; set; }
 
+                    /// <summary>
+                    /// Indicates whether incremental data synchronization is performed. Valid values:
+                    /// -  **true**
+                    /// -  **false**
+                    /// </summary>
                     [NameInMap("DataSynchronization")]
                     [Validation(Required=false)]
                     public bool? DataSynchronization { get; set; }
 
+                    /// <summary>
+                    /// Indicates whether initial schema synchronization is performed. Valid values:
+                    /// -  **true**
+                    /// -  **false**
+                    /// </summary>
                     [NameInMap("StructureInitialization")]
                     [Validation(Required=false)]
                     public bool? StructureInitialization { get; set; }
 
                 }
+
+                /// <summary>
+                /// The billing method of the DTS instance. Valid values:
+                /// 
+                /// - **PrePaid**: subscription
+                /// - **PostPaid**: pay-as-you-go
+                /// </summary>
+                [NameInMap("PayType")]
+                [Validation(Required=false)]
+                public string PayType { get; set; }
+
+                /// <summary>
+                /// The performance of the data synchronization instance.
+                /// </summary>
                 [NameInMap("Performance")]
                 [Validation(Required=false)]
                 public DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance Performance { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance : TeaModel {
-                    [NameInMap("Rps")]
-                    [Validation(Required=false)]
-                    public string Rps { get; set; }
-
+                    /// <summary>
+                    /// The size of data that is synchronized per second. Unit: MB/s.
+                    /// </summary>
                     [NameInMap("Flow")]
                     [Validation(Required=false)]
                     public string Flow { get; set; }
 
+                    /// <summary>
+                    /// The number of times that SQL statements are synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
+                    /// </summary>
+                    [NameInMap("Rps")]
+                    [Validation(Required=false)]
+                    public string Rps { get; set; }
+
                 }
+
+                /// <summary>
+                /// The precheck state.
+                /// </summary>
                 [NameInMap("PrecheckStatus")]
                 [Validation(Required=false)]
                 public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus PrecheckStatus { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus : TeaModel {
-                    [NameInMap("Status")]
-                    [Validation(Required=false)]
-                    public string Status { get; set; }
-
-                    [NameInMap("Percent")]
-                    [Validation(Required=false)]
-                    public string Percent { get; set; }
-
-                    [NameInMap("ErrorMessage")]
-                    [Validation(Required=false)]
-                    public string ErrorMessage { get; set; }
-
+                    /// <summary>
+                    /// The result of each precheck item.
+                    /// </summary>
                     [NameInMap("Detail")]
                     [Validation(Required=false)]
                     public List<DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail> Detail { get; set; }
                     public class DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail : TeaModel {
-                        [NameInMap("CheckResult")]
-                        [Validation(Required=false)]
-                        public string CheckResult { get; set; }
-
-                        [NameInMap("CheckItemDescription")]
-                        [Validation(Required=false)]
-                        public string CheckItemDescription { get; set; }
-
+                        /// <summary>
+                        /// The name of the precheck item.
+                        /// </summary>
                         [NameInMap("CheckItem")]
                         [Validation(Required=false)]
                         public string CheckItem { get; set; }
 
-                        [NameInMap("RepairMethod")]
+                        /// <summary>
+                        /// The description of the precheck item.
+                        /// </summary>
+                        [NameInMap("CheckItemDescription")]
                         [Validation(Required=false)]
-                        public string RepairMethod { get; set; }
+                        public string CheckItemDescription { get; set; }
 
+                        /// <summary>
+                        /// The precheck result. Valid values:
+                        /// 
+                        /// - **Success**
+                        /// - **Failed**
+                        /// </summary>
+                        [NameInMap("CheckResult")]
+                        [Validation(Required=false)]
+                        public string CheckResult { get; set; }
+
+                        /// <summary>
+                        /// The error message returned if the task failed to pass the precheck.
+                        /// </summary>
                         [NameInMap("FailedReason")]
                         [Validation(Required=false)]
                         public string FailedReason { get; set; }
 
+                        /// <summary>
+                        /// The method to fix a precheck failure.
+                        /// </summary>
+                        [NameInMap("RepairMethod")]
+                        [Validation(Required=false)]
+                        public string RepairMethod { get; set; }
+
                     }
 
-                }
-                [NameInMap("SourceEndpoint")]
-                [Validation(Required=false)]
-                public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint SourceEndpoint { get; set; }
-                public class DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint : TeaModel {
-                    [NameInMap("SslSolutionEnum")]
-                    [Validation(Required=false)]
-                    public string SslSolutionEnum { get; set; }
-
-                    [NameInMap("OracleSID")]
-                    [Validation(Required=false)]
-                    public string OracleSID { get; set; }
-
-                    [NameInMap("Region")]
-                    [Validation(Required=false)]
-                    public string Region { get; set; }
-
-                    [NameInMap("DatabaseName")]
-                    [Validation(Required=false)]
-                    public string DatabaseName { get; set; }
-
-                    [NameInMap("Ip")]
-                    [Validation(Required=false)]
-                    public string Ip { get; set; }
-
-                    [NameInMap("InstanceID")]
-                    [Validation(Required=false)]
-                    public string InstanceID { get; set; }
-
-                    [NameInMap("Port")]
-                    [Validation(Required=false)]
-                    public string Port { get; set; }
-
-                    [NameInMap("InstanceType")]
-                    [Validation(Required=false)]
-                    public string InstanceType { get; set; }
-
-                    [NameInMap("UserName")]
-                    [Validation(Required=false)]
-                    public string UserName { get; set; }
-
-                    [NameInMap("EngineName")]
-                    [Validation(Required=false)]
-                    public string EngineName { get; set; }
-
-                }
-                [NameInMap("StructureInitializationStatus")]
-                [Validation(Required=false)]
-                public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus StructureInitializationStatus { get; set; }
-                public class DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus : TeaModel {
-                    [NameInMap("Status")]
-                    [Validation(Required=false)]
-                    public string Status { get; set; }
-
-                    [NameInMap("Percent")]
-                    [Validation(Required=false)]
-                    public string Percent { get; set; }
-
+                    /// <summary>
+                    /// The error message returned if the precheck failed.
+                    /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
+                    /// <summary>
+                    /// The precheck progress. Unit: percentage.
+                    /// </summary>
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    /// <summary>
+                    /// The precheck state. Valid values:
+                    /// 
+                    /// - **NotStarted**: The precheck is not started. 
+                    /// - **Suspending**: The precheck is paused. 
+                    /// - **Checking**: The precheck is in progress. 
+                    /// - **Failed**: The precheck failed. 
+                    /// - **Finished**: The precheck is complete.
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                /// <summary>
+                /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+                /// </summary>
+                [NameInMap("Reserved")]
+                [Validation(Required=false)]
+                public string Reserved { get; set; }
+
+                /// <summary>
+                /// The connection settings of the source instance.
+                /// </summary>
+                [NameInMap("SourceEndpoint")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint SourceEndpoint { get; set; }
+                public class DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint : TeaModel {
+                    /// <summary>
+                    /// The name of the database that contains the objects to be migrated from the source instance.
+                    /// </summary>
+                    [NameInMap("DatabaseName")]
+                    [Validation(Required=false)]
+                    public string DatabaseName { get; set; }
+
+                    /// <summary>
+                    /// The database engine of the source instance.
+                    /// </summary>
+                    [NameInMap("EngineName")]
+                    [Validation(Required=false)]
+                    public string EngineName { get; set; }
+
+                    /// <summary>
+                    /// The ID of the source instance.
+                    /// </summary>
+                    [NameInMap("InstanceID")]
+                    [Validation(Required=false)]
+                    public string InstanceID { get; set; }
+
+                    /// <summary>
+                    /// The type of the source instance.
+                    /// </summary>
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                    /// <summary>
+                    /// The endpoint of the source instance.
+                    /// </summary>
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public string Ip { get; set; }
+
+                    /// <summary>
+                    /// The SID of the Oracle database. 
+                    /// 
+                    /// > This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+                    /// </summary>
+                    [NameInMap("OracleSID")]
+                    [Validation(Required=false)]
+                    public string OracleSID { get; set; }
+
+                    /// <summary>
+                    /// The port number of the source instance.
+                    /// </summary>
+                    [NameInMap("Port")]
+                    [Validation(Required=false)]
+                    public string Port { get; set; }
+
+                    /// <summary>
+                    /// The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    /// <summary>
+                    /// Indicates whether SSL encryption is enabled. Valid values:
+                    /// 
+                    /// - **DISABLE**: SSL encryption is disabled. 
+                    /// - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
+                    /// - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
+                    /// - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+                    /// </summary>
+                    [NameInMap("SslSolutionEnum")]
+                    [Validation(Required=false)]
+                    public string SslSolutionEnum { get; set; }
+
+                    /// <summary>
+                    /// The database account of the source instance.
+                    /// </summary>
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public string UserName { get; set; }
+
+                }
+
+                /// <summary>
+                /// The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                /// <summary>
+                /// The state of initial schema synchronization.
+                /// </summary>
+                [NameInMap("StructureInitializationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus StructureInitializationStatus { get; set; }
+                public class DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus : TeaModel {
+                    /// <summary>
+                    /// The error message returned if initial schema synchronization failed.
+                    /// </summary>
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    /// <summary>
+                    /// The progress of initial schema synchronization. Unit: percentage.
+                    /// </summary>
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    /// <summary>
+                    /// The number of tables that have been synchronized during initial schema synchronization.
+                    /// </summary>
                     [NameInMap("Progress")]
                     [Validation(Required=false)]
                     public string Progress { get; set; }
 
-                }
-            };
+                    /// <summary>
+                    /// The state of initial schema synchronization. Valid values:
+                    /// 
+                    /// - **NotStarted**: The task is not started. 
+                    /// - **Migrating**: The task is in progress. 
+                    /// - **Failed**: The task failed. 
+                    /// - **Finished**: The task is complete.
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
 
+                }
+
+            }
+
+            /// <summary>
+            /// The connection settings of the source instance.
+            /// </summary>
             [NameInMap("SourceEndpoint")]
             [Validation(Required=false)]
             public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint SourceEndpoint { get; set; }
             public class DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint : TeaModel {
-                [NameInMap("SslSolutionEnum")]
-                [Validation(Required=false)]
-                public string SslSolutionEnum { get; set; }
-                [NameInMap("OracleSID")]
-                [Validation(Required=false)]
-                public string OracleSID { get; set; }
-                [NameInMap("Region")]
-                [Validation(Required=false)]
-                public string Region { get; set; }
+                /// <summary>
+                /// The name of the database that contains the objects to be migrated from the source instance.
+                /// </summary>
                 [NameInMap("DatabaseName")]
                 [Validation(Required=false)]
                 public string DatabaseName { get; set; }
-                [NameInMap("Ip")]
-                [Validation(Required=false)]
-                public string Ip { get; set; }
-                [NameInMap("InstanceID")]
-                [Validation(Required=false)]
-                public string InstanceID { get; set; }
-                [NameInMap("Port")]
-                [Validation(Required=false)]
-                public string Port { get; set; }
-                [NameInMap("InstanceType")]
-                [Validation(Required=false)]
-                public string InstanceType { get; set; }
-                [NameInMap("UserName")]
-                [Validation(Required=false)]
-                public string UserName { get; set; }
+
+                /// <summary>
+                /// The database engine of the source instance.
+                /// </summary>
                 [NameInMap("EngineName")]
                 [Validation(Required=false)]
                 public string EngineName { get; set; }
-            };
 
+                /// <summary>
+                /// The ID of the source instance.
+                /// </summary>
+                [NameInMap("InstanceID")]
+                [Validation(Required=false)]
+                public string InstanceID { get; set; }
+
+                /// <summary>
+                /// The type of the source instance.
+                /// </summary>
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                /// <summary>
+                /// The endpoint of the source instance.
+                /// </summary>
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
+                public string Ip { get; set; }
+
+                /// <summary>
+                /// The SID of the Oracle database. 
+                /// 
+                /// > This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+                /// </summary>
+                [NameInMap("OracleSID")]
+                [Validation(Required=false)]
+                public string OracleSID { get; set; }
+
+                /// <summary>
+                /// The port number of the source instance.
+                /// </summary>
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                /// <summary>
+                /// The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                /// <summary>
+                /// Indicates whether SSL encryption is enabled. Valid values:
+                /// 
+                /// - **DISABLE**: SSL encryption is disabled. 
+                /// - **ENABLE_WITH_CERTIFICAT**E: SSL encryption is enabled and the CA certificate is uploaded. 
+                /// - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
+                /// - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+                /// </summary>
+                [NameInMap("SslSolutionEnum")]
+                [Validation(Required=false)]
+                public string SslSolutionEnum { get; set; }
+
+                /// <summary>
+                /// The database account of the source instance.
+                /// </summary>
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
+                public string UserName { get; set; }
+
+            }
+
+            /// <summary>
+            /// The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// The state of schema migration or initial schema synchronization.
+            /// </summary>
             [NameInMap("StructureInitializationStatus")]
             [Validation(Required=false)]
             public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus StructureInitializationStatus { get; set; }
             public class DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-                [NameInMap("Percent")]
-                [Validation(Required=false)]
-                public string Percent { get; set; }
+                /// <summary>
+                /// The error message returned if schema migration or initial schema synchronization failed.
+                /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The progress of schema migration or initial schema synchronization. Unit: percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.
+                /// </summary>
                 [NameInMap("Progress")]
                 [Validation(Required=false)]
                 public string Progress { get; set; }
-            };
 
+                /// <summary>
+                /// The state of schema migration or initial schema synchronization. Valid values:
+                /// 
+                /// - **NotStarted**: The task is not started. 
+                /// - **Migrating**: The task is in progress. 
+                /// - **Failed**: The task failed. 
+                /// - **Finished**: The task is complete.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The tags of the task.
+            /// </summary>
+            [NameInMap("TagList")]
+            [Validation(Required=false)]
+            public List<DescribeDtsJobsResponseBodyDtsJobListTagList> TagList { get; set; }
+            public class DescribeDtsJobsResponseBodyDtsJobListTagList : TeaModel {
+                /// <summary>
+                /// The key of the tag.
+                /// </summary>
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                /// <summary>
+                /// The value of the tag.
+                /// </summary>
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
+        }
+
+        /// <summary>
+        /// The dynamic error code. This parameter will be removed in the future.
+        /// </summary>
+        [NameInMap("DynamicCode")]
+        [Validation(Required=false)]
+        public string DynamicCode { get; set; }
+
+        /// <summary>
+        /// The dynamic part in the error message. The value of this parameter is used to replace the **%s** variable in the value of the **ErrMessage** parameter.
+        /// 
+        /// >  For example, if the value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the value of the **DynamicMessage** parameter is **Type**, the specified **Type** parameter is invalid.
+        /// </summary>
+        [NameInMap("DynamicMessage")]
+        [Validation(Required=false)]
+        public string DynamicMessage { get; set; }
+
+        /// <summary>
+        /// The error code returned if the call failed.
+        /// </summary>
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
+
+        /// <summary>
+        /// The error message returned if the call failed.
+        /// </summary>
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
+
+        /// <summary>
+        /// The DTS tasks and the details of each task.
+        /// </summary>
+        [NameInMap("EtlDemoList")]
+        [Validation(Required=false)]
+        public List<DescribeDtsJobsResponseBodyEtlDemoList> EtlDemoList { get; set; }
+        public class DescribeDtsJobsResponseBodyEtlDemoList : TeaModel {
+            /// <summary>
+            /// Indicates whether the **new** change tracking feature is used. 
+            /// 
+            /// > This parameter is returned only for change tracking instances of the new version.
+            /// </summary>
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+
+            /// <summary>
+            /// The start of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// </summary>
+            [NameInMap("BeginTimestamp")]
+            [Validation(Required=false)]
+            public string BeginTimestamp { get; set; }
+
+            /// <summary>
+            /// The start offset of incremental data migration or data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// </summary>
+            [NameInMap("Checkpoint")]
+            [Validation(Required=false)]
+            public string Checkpoint { get; set; }
+
+            /// <summary>
+            /// The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// </summary>
+            [NameInMap("ConsumptionCheckpoint")]
+            [Validation(Required=false)]
+            public string ConsumptionCheckpoint { get; set; }
+
+            /// <summary>
+            /// The downstream client information in the following format: <IP address of the downstream client>:<Random ID generated by DTS>.
+            /// </summary>
+            [NameInMap("ConsumptionClient")]
+            [Validation(Required=false)]
+            public string ConsumptionClient { get; set; }
+
+            /// <summary>
+            /// The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:s*sZ format. The time is displayed in UTC.
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
+            /// The state of the ETL task. 
+            /// 
+            /// > This parameter collection is returned only if an ETL task is configured.
+            /// </summary>
+            [NameInMap("DataEtlStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListDataEtlStatus DataEtlStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListDataEtlStatus : TeaModel {
+                /// <summary>
+                /// The error message returned if the ETL task failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The progress of the ETL task. Unit: percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The number of entries that have been processed by the ETL task.
+                /// </summary>
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                /// <summary>
+                /// The state of the ETL task. Valid values:
+                /// 
+                /// - **NotStarted**: The task is not started. 
+                /// - **Migrating**: The task is in progress. 
+                /// - **Failed**: The task failed. 
+                /// - **Finished**: The task is complete. 
+                /// - **Catched**: The task is not delayed.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The state of full data migration or initial full data synchronization.
+            /// </summary>
+            [NameInMap("DataInitializationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListDataInitializationStatus DataInitializationStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListDataInitializationStatus : TeaModel {
+                /// <summary>
+                /// The error message returned if full data migration or initial full data synchronization failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The progress of full data migration or initial full data synchronization. Unit: percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The number of entries that have been migrated or synchronized during full data migration or initial full data synchronization.
+                /// </summary>
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                /// <summary>
+                /// The state of full data migration or initial full data synchronization. Valid values:
+                /// 
+                /// - **NotStarted**: The task is not started. 
+                /// - **Migrating**: The task is in progress. 
+                /// - **Failed**: The task failed. 
+                /// - **Finished**: The task is complete.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The state of incremental data migration or synchronization.
+            /// </summary>
+            [NameInMap("DataSynchronizationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListDataSynchronizationStatus DataSynchronizationStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListDataSynchronizationStatus : TeaModel {
+                /// <summary>
+                /// The error message returned if incremental data migration or synchronization failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// Indicates whether the instance needs to be upgraded. Valid values:
+                /// 
+                /// - **true**
+                /// - **false**
+                /// 
+                /// > To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.
+                /// </summary>
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                /// <summary>
+                /// The progress of incremental data migration or synchronization. Unit: percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+                /// </summary>
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                /// <summary>
+                /// The state of incremental data migration or synchronization. Valid values:
+                /// 
+                /// - **NotStarted**: The task is not started. 
+                /// - **Migrating**: The task is in progress. 
+                /// - **Failed**: The task failed. 
+                /// - **Finished**: The task is complete. 
+                /// - **Catched**: The task is not delayed.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).
+            /// </summary>
+            [NameInMap("DbObject")]
+            [Validation(Required=false)]
+            public string DbObject { get; set; }
+
+            /// <summary>
+            /// The latency of incremental data migration or synchronization. 
+            /// 
+            /// > If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
+            /// </summary>
+            [NameInMap("Delay")]
+            [Validation(Required=false)]
+            public long? Delay { get; set; }
+
+            /// <summary>
+            /// The connection settings of the destination instance.
+            /// </summary>
+            [NameInMap("DestinationEndpoint")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListDestinationEndpoint DestinationEndpoint { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListDestinationEndpoint : TeaModel {
+                /// <summary>
+                /// The name of the database that contains the migrated objects in the destination instance.
+                /// </summary>
+                [NameInMap("DatabaseName")]
+                [Validation(Required=false)]
+                public string DatabaseName { get; set; }
+
+                /// <summary>
+                /// The database engine of the destination instance.
+                /// </summary>
+                [NameInMap("EngineName")]
+                [Validation(Required=false)]
+                public string EngineName { get; set; }
+
+                /// <summary>
+                /// The ID of the destination instance.
+                /// </summary>
+                [NameInMap("InstanceID")]
+                [Validation(Required=false)]
+                public string InstanceID { get; set; }
+
+                /// <summary>
+                /// The type of the destination instance.
+                /// </summary>
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                /// <summary>
+                /// The endpoint of the destination instance.
+                /// </summary>
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
+                public string Ip { get; set; }
+
+                /// <summary>
+                /// The SID of the Oracle database. 
+                /// 
+                /// > This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+                /// </summary>
+                [NameInMap("OracleSID")]
+                [Validation(Required=false)]
+                public string OracleSID { get; set; }
+
+                /// <summary>
+                /// The port number of the destination instance.
+                /// </summary>
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                /// <summary>
+                /// The ID of the region in which the destination instance resides. For more information, see [Supported regions](~~141033~~).
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                /// <summary>
+                /// Indicates whether SSL encryption is enabled. Valid values:
+                /// 
+                /// - **DISABLE**: SSL encryption is disabled. 
+                /// - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
+                /// - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
+                /// - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+                /// </summary>
+                [NameInMap("SslSolutionEnum")]
+                [Validation(Required=false)]
+                public string SslSolutionEnum { get; set; }
+
+                /// <summary>
+                /// The database account of the destination instance.
+                /// </summary>
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
+                public string UserName { get; set; }
+
+            }
+
+            /// <summary>
+            /// The ID of the data migration, data synchronization, or change tracking instance.
+            /// </summary>
+            [NameInMap("DtsInstanceID")]
+            [Validation(Required=false)]
+            public string DtsInstanceID { get; set; }
+
+            /// <summary>
+            /// The instance class. 
+            /// 
+            /// > For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
+            /// </summary>
+            [NameInMap("DtsJobClass")]
+            [Validation(Required=false)]
+            public string DtsJobClass { get; set; }
+
+            /// <summary>
+            /// The synchronization direction. Valid values:
+            /// 
+            /// - **Forward**
+            /// - **Reverse**
+            /// 
+            /// > This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
+            /// </summary>
+            [NameInMap("DtsJobDirection")]
+            [Validation(Required=false)]
+            public string DtsJobDirection { get; set; }
+
+            /// <summary>
+            /// The ID of the data migration, data synchronization, or change tracking task.
+            /// </summary>
+            [NameInMap("DtsJobId")]
+            [Validation(Required=false)]
+            public string DtsJobId { get; set; }
+
+            /// <summary>
+            /// The name of the data migration, data synchronization, or change tracking task.
+            /// </summary>
+            [NameInMap("DtsJobName")]
+            [Validation(Required=false)]
+            public string DtsJobName { get; set; }
+
+            /// <summary>
+            /// The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// </summary>
+            [NameInMap("EndTimestamp")]
+            [Validation(Required=false)]
+            public string EndTimestamp { get; set; }
+
+            /// <summary>
+            /// The error message returned if the task failed.
+            /// </summary>
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            /// <summary>
+            /// The checkpoint of the ETL task.
+            /// </summary>
+            [NameInMap("EtlSafeCheckpoint")]
+            [Validation(Required=false)]
+            public string EtlSafeCheckpoint { get; set; }
+
+            /// <summary>
+            /// The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// 
+            /// > This parameter is returned only if the returned value of **PayType** is **PrePaid**.
+            /// </summary>
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public string ExpireTime { get; set; }
+
+            /// <summary>
+            /// The type of the DTS task. Valid values:
+            /// 
+            /// - **MIGRATION**: data migration task 
+            /// - **SYNC**: data synchronization task 
+            /// - **SUBSCRIBE**: change tracking task
+            /// </summary>
+            [NameInMap("JobType")]
+            [Validation(Required=false)]
+            public string JobType { get; set; }
+
+            /// <summary>
+            /// The migration types or initial synchronization types.
+            /// </summary>
+            [NameInMap("MigrationMode")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListMigrationMode MigrationMode { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListMigrationMode : TeaModel {
+                /// <summary>
+                /// Indicates whether full data migration or initial full data synchronization is performed. Valid values:
+                /// 
+                /// - **true**
+                /// - **false**
+                /// </summary>
+                [NameInMap("DataInitialization")]
+                [Validation(Required=false)]
+                public bool? DataInitialization { get; set; }
+
+                /// <summary>
+                /// Indicates whether incremental data migration or synchronization is performed. Valid values:
+                /// 
+                /// - **true**
+                /// - **false**
+                /// </summary>
+                [NameInMap("DataSynchronization")]
+                [Validation(Required=false)]
+                public bool? DataSynchronization { get; set; }
+
+                /// <summary>
+                /// Indicates whether schema migration or initial schema synchronization is performed. Valid values:
+                /// 
+                /// - **true**
+                /// - **false**
+                /// </summary>
+                [NameInMap("StructureInitialization")]
+                [Validation(Required=false)]
+                public bool? StructureInitialization { get; set; }
+
+            }
+
+            /// <summary>
+            /// The source of the task.
+            /// - **PTS**
+            /// - **DMS**
+            /// - **DTS**
+            /// </summary>
+            [NameInMap("OriginType")]
+            [Validation(Required=false)]
+            public string OriginType { get; set; }
+
+            /// <summary>
+            /// The billing method of the DTS instance. Valid values:
+            /// 
+            /// - **PrePaid**: subscription 
+            /// - **PostPaid**: pay-as-you-go
+            /// </summary>
+            [NameInMap("PayType")]
+            [Validation(Required=false)]
+            public string PayType { get; set; }
+
+            /// <summary>
+            /// The performance of the data migration or synchronization instance.
+            /// </summary>
+            [NameInMap("Performance")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListPerformance Performance { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListPerformance : TeaModel {
+                /// <summary>
+                /// The size of data that is migrated or synchronized per second. Unit: MB/s.
+                /// </summary>
+                [NameInMap("Flow")]
+                [Validation(Required=false)]
+                public string Flow { get; set; }
+
+                /// <summary>
+                /// The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
+                /// </summary>
+                [NameInMap("Rps")]
+                [Validation(Required=false)]
+                public string Rps { get; set; }
+
+            }
+
+            /// <summary>
+            /// The precheck state.
+            /// </summary>
+            [NameInMap("PrecheckStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatus PrecheckStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatus : TeaModel {
+                /// <summary>
+                /// The result of each precheck item.
+                /// </summary>
+                [NameInMap("Detail")]
+                [Validation(Required=false)]
+                public List<DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatusDetail> Detail { get; set; }
+                public class DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatusDetail : TeaModel {
+                    /// <summary>
+                    /// The name of the precheck item.
+                    /// </summary>
+                    [NameInMap("CheckItem")]
+                    [Validation(Required=false)]
+                    public string CheckItem { get; set; }
+
+                    /// <summary>
+                    /// The description of the precheck item.
+                    /// </summary>
+                    [NameInMap("CheckItemDescription")]
+                    [Validation(Required=false)]
+                    public string CheckItemDescription { get; set; }
+
+                    /// <summary>
+                    /// The precheck result. Valid values:
+                    /// 
+                    /// - **Success**
+                    /// - **Failed**
+                    /// </summary>
+                    [NameInMap("CheckResult")]
+                    [Validation(Required=false)]
+                    public string CheckResult { get; set; }
+
+                    /// <summary>
+                    /// The error message returned if the task failed to pass the precheck. 
+                    /// 
+                    /// > This parameter is returned only if the returned value of **CheckResult** is **Failed**.
+                    /// </summary>
+                    [NameInMap("FailedReason")]
+                    [Validation(Required=false)]
+                    public string FailedReason { get; set; }
+
+                    /// <summary>
+                    /// The method to fix a precheck failure. 
+                    /// 
+                    /// > This parameter is returned only if the returned value of **CheckResult** is **Failed**.
+                    /// </summary>
+                    [NameInMap("RepairMethod")]
+                    [Validation(Required=false)]
+                    public string RepairMethod { get; set; }
+
+                }
+
+                /// <summary>
+                /// The error message returned if the precheck failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The precheck progress. Unit: percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The precheck state. Valid values:
+                /// 
+                /// - **NotStarted**: The precheck is not started. 
+                /// - **Suspending**: The precheck is paused. 
+                /// - **Checking**: The precheck is in progress. 
+                /// - **Failed**: The precheck failed. 
+                /// - **Finished**: The precheck is complete.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+            /// </summary>
+            [NameInMap("Reserved")]
+            [Validation(Required=false)]
+            public string Reserved { get; set; }
+
+            /// <summary>
+            /// The name of the resource group.
+            /// </summary>
+            [NameInMap("ResourceGroupDisplayName")]
+            [Validation(Required=false)]
+            public string ResourceGroupDisplayName { get; set; }
+
+            /// <summary>
+            /// The resource group ID.
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
+            /// The information about the retries performed by DTS due to an exception.
+            /// </summary>
             [NameInMap("RetryState")]
             [Validation(Required=false)]
-            public DescribeDtsJobsResponseBodyDtsJobListRetryState RetryState { get; set; }
-            public class DescribeDtsJobsResponseBodyDtsJobListRetryState : TeaModel {
-                [NameInMap("RetryCount")]
-                [Validation(Required=false)]
-                public int? RetryCount { get; set; }
-                [NameInMap("MaxRetryTime")]
-                [Validation(Required=false)]
-                public int? MaxRetryTime { get; set; }
+            public DescribeDtsJobsResponseBodyEtlDemoListRetryState RetryState { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListRetryState : TeaModel {
+                /// <summary>
+                /// The error message returned if these retries failed.
+                /// </summary>
                 [NameInMap("ErrMessage")]
                 [Validation(Required=false)]
                 public string ErrMessage { get; set; }
+
+                /// <summary>
+                /// The task ID.
+                /// </summary>
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
+                public string JobId { get; set; }
+
+                /// <summary>
+                /// The maximum duration of a retry. Unit: seconds.
+                /// </summary>
+                [NameInMap("MaxRetryTime")]
+                [Validation(Required=false)]
+                public int? MaxRetryTime { get; set; }
+
+                /// <summary>
+                /// The progress of the instance when DTS retries.
+                /// </summary>
+                [NameInMap("Module")]
+                [Validation(Required=false)]
+                public string Module { get; set; }
+
+                /// <summary>
+                /// The number of retries that have been performed.
+                /// </summary>
+                [NameInMap("RetryCount")]
+                [Validation(Required=false)]
+                public int? RetryCount { get; set; }
+
+                /// <summary>
+                /// The object on which these retries are performed. Valid values:
+                /// 
+                /// - **srcDB**: the source database 
+                /// - **destDB**: the destination database 
+                /// - **inner_module**: an internal module of DTS
+                /// </summary>
                 [NameInMap("RetryTarget")]
                 [Validation(Required=false)]
                 public string RetryTarget { get; set; }
+
+                /// <summary>
+                /// The time that has elapsed from the time when the first retry starts. Unit: seconds.
+                /// </summary>
                 [NameInMap("RetryTime")]
                 [Validation(Required=false)]
                 public int? RetryTime { get; set; }
-            };
+
+                /// <summary>
+                /// Indicates whether the task is being retried. Valid values:
+                /// 
+                /// - **true**
+                /// - **false**
+                /// </summary>
+                [NameInMap("Retrying")]
+                [Validation(Required=false)]
+                public bool? Retrying { get; set; }
+
+            }
+
+            /// <summary>
+            /// The details of the data synchronization task in the reverse direction. 
+            /// 
+            /// > This parameter is returned only for two-way data synchronization tasks.
+            /// </summary>
+            [NameInMap("ReverseJob")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListReverseJob ReverseJob { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListReverseJob : TeaModel {
+                /// <summary>
+                /// The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// </summary>
+                [NameInMap("Checkpoint")]
+                [Validation(Required=false)]
+                public string Checkpoint { get; set; }
+
+                /// <summary>
+                /// The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// </summary>
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                /// <summary>
+                /// The state of initial full data synchronization.
+                /// </summary>
+                [NameInMap("DataInitializationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataInitializationStatus DataInitializationStatus { get; set; }
+                public class DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataInitializationStatus : TeaModel {
+                    /// <summary>
+                    /// The error message returned if initial full data synchronization failed.
+                    /// </summary>
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    /// <summary>
+                    /// The progress of initial full data synchronization. Unit: percentage.
+                    /// </summary>
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    /// <summary>
+                    /// The number of entries that have been synchronized during initial full data synchronization.
+                    /// </summary>
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    /// <summary>
+                    /// The state of initial full data synchronization. Valid values:
+                    /// 
+                    /// - **NotStarted**: The task is not started. 
+                    /// - **Migrating**: The task is in progress. 
+                    /// - **Failed**: The task failed. 
+                    /// - **Finished**: The task is complete.
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                /// <summary>
+                /// The state of incremental data synchronization.
+                /// </summary>
+                [NameInMap("DataSynchronizationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataSynchronizationStatus DataSynchronizationStatus { get; set; }
+                public class DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataSynchronizationStatus : TeaModel {
+                    /// <summary>
+                    /// The error message returned if incremental data synchronization failed.
+                    /// </summary>
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    /// <summary>
+                    /// Indicates whether the instance needs to be upgraded. Valid values:
+                    /// 
+                    /// - **true**
+                    /// - **false**
+                    /// 
+                    /// > To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.
+                    /// </summary>
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    /// <summary>
+                    /// The progress of incremental data synchronization. Unit: percentage.
+                    /// </summary>
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    /// <summary>
+                    /// The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+                    /// </summary>
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    /// <summary>
+                    /// The state of incremental data synchronization.
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                /// <summary>
+                /// The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.
+                /// </summary>
+                [NameInMap("DbObject")]
+                [Validation(Required=false)]
+                public string DbObject { get; set; }
+
+                /// <summary>
+                /// The latency of incremental data synchronization. Unit: seconds.
+                /// </summary>
+                [NameInMap("Delay")]
+                [Validation(Required=false)]
+                public long? Delay { get; set; }
+
+                /// <summary>
+                /// The connection settings of the destination instance.
+                /// </summary>
+                [NameInMap("DestinationEndpoint")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyEtlDemoListReverseJobDestinationEndpoint DestinationEndpoint { get; set; }
+                public class DescribeDtsJobsResponseBodyEtlDemoListReverseJobDestinationEndpoint : TeaModel {
+                    /// <summary>
+                    /// The name of the database that contains the synchronized objects in the destination instance.
+                    /// </summary>
+                    [NameInMap("DatabaseName")]
+                    [Validation(Required=false)]
+                    public string DatabaseName { get; set; }
+
+                    /// <summary>
+                    /// The database engine of the destination instance.
+                    /// </summary>
+                    [NameInMap("EngineName")]
+                    [Validation(Required=false)]
+                    public string EngineName { get; set; }
+
+                    /// <summary>
+                    /// The ID of the destination instance.
+                    /// </summary>
+                    [NameInMap("InstanceID")]
+                    [Validation(Required=false)]
+                    public string InstanceID { get; set; }
+
+                    /// <summary>
+                    /// The type of the destination instance.
+                    /// </summary>
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                    /// <summary>
+                    /// The endpoint of the destination instance.
+                    /// </summary>
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public string Ip { get; set; }
+
+                    /// <summary>
+                    /// The SID of the Oracle database. 
+                    /// 
+                    /// > This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+                    /// </summary>
+                    [NameInMap("OracleSID")]
+                    [Validation(Required=false)]
+                    public string OracleSID { get; set; }
+
+                    /// <summary>
+                    /// The port number of the destination instance.
+                    /// </summary>
+                    [NameInMap("Port")]
+                    [Validation(Required=false)]
+                    public string Port { get; set; }
+
+                    /// <summary>
+                    /// The ID of the region in which the destination instance resides. For more information, see [Supported regions](~~141033~~).
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    /// <summary>
+                    /// Indicates whether SSL encryption is enabled. Valid values:
+                    /// 
+                    /// - **DISABLE**: SSL encryption is disabled. 
+                    /// - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
+                    /// - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
+                    /// - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+                    /// </summary>
+                    [NameInMap("SslSolutionEnum")]
+                    [Validation(Required=false)]
+                    public string SslSolutionEnum { get; set; }
+
+                    /// <summary>
+                    /// The database account of the destination instance.
+                    /// </summary>
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public string UserName { get; set; }
+
+                }
+
+                /// <summary>
+                /// The ID of the data synchronization instance.
+                /// </summary>
+                [NameInMap("DtsInstanceID")]
+                [Validation(Required=false)]
+                public string DtsInstanceID { get; set; }
+
+                /// <summary>
+                /// The instance class. 
+                /// 
+                /// > For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).
+                /// </summary>
+                [NameInMap("DtsJobClass")]
+                [Validation(Required=false)]
+                public string DtsJobClass { get; set; }
+
+                /// <summary>
+                /// The synchronization direction. **Reverse** is returned.
+                /// </summary>
+                [NameInMap("DtsJobDirection")]
+                [Validation(Required=false)]
+                public string DtsJobDirection { get; set; }
+
+                /// <summary>
+                /// The ID of the synchronization task.
+                /// </summary>
+                [NameInMap("DtsJobId")]
+                [Validation(Required=false)]
+                public string DtsJobId { get; set; }
+
+                /// <summary>
+                /// The name of the data synchronization task.
+                /// </summary>
+                [NameInMap("DtsJobName")]
+                [Validation(Required=false)]
+                public string DtsJobName { get; set; }
+
+                /// <summary>
+                /// The error message returned if the task failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The checkpoint of the ETL task.
+                /// </summary>
+                [NameInMap("EtlSafeCheckpoint")]
+                [Validation(Required=false)]
+                public string EtlSafeCheckpoint { get; set; }
+
+                /// <summary>
+                /// The time when the instance expires. The time follows the ISO 8601 standard in the* yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. 
+                /// 
+                /// > This parameter is returned only if the returned value of **PayType** is **PrePaid**.
+                /// </summary>
+                [NameInMap("ExpireTime")]
+                [Validation(Required=false)]
+                public string ExpireTime { get; set; }
+
+                /// <summary>
+                /// The migration types or initial synchronization types.
+                /// </summary>
+                [NameInMap("MigrationMode")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyEtlDemoListReverseJobMigrationMode MigrationMode { get; set; }
+                public class DescribeDtsJobsResponseBodyEtlDemoListReverseJobMigrationMode : TeaModel {
+                    /// <summary>
+                    /// Indicates whether full data migration or initial full data synchronization is performed. Valid values:
+                    /// 
+                    /// - **true**
+                    /// - **false**
+                    /// </summary>
+                    [NameInMap("DataInitialization")]
+                    [Validation(Required=false)]
+                    public bool? DataInitialization { get; set; }
+
+                    /// <summary>
+                    /// Indicates whether incremental data migration or synchronization is performed. Valid values:
+                    /// 
+                    /// - **true**
+                    /// - **false**
+                    /// </summary>
+                    [NameInMap("DataSynchronization")]
+                    [Validation(Required=false)]
+                    public bool? DataSynchronization { get; set; }
+
+                    /// <summary>
+                    /// Indicates whether schema migration or initial schema synchronization is performed. Valid values:
+                    /// 
+                    /// - **true**
+                    /// - **false**
+                    /// </summary>
+                    [NameInMap("StructureInitialization")]
+                    [Validation(Required=false)]
+                    public bool? StructureInitialization { get; set; }
+
+                }
+
+                /// <summary>
+                /// The billing method of the DTS instance. Valid values:
+                /// 
+                /// - **PrePaid**: subscription
+                /// - **PostPaid**: pay-as-you-go
+                /// </summary>
+                [NameInMap("PayType")]
+                [Validation(Required=false)]
+                public string PayType { get; set; }
+
+                /// <summary>
+                /// The performance of the data migration or synchronization instance.
+                /// </summary>
+                [NameInMap("Performance")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyEtlDemoListReverseJobPerformance Performance { get; set; }
+                public class DescribeDtsJobsResponseBodyEtlDemoListReverseJobPerformance : TeaModel {
+                    /// <summary>
+                    /// The size of data that is migrated or synchronized per second. Unit: MB/s.
+                    /// </summary>
+                    [NameInMap("Flow")]
+                    [Validation(Required=false)]
+                    public string Flow { get; set; }
+
+                    /// <summary>
+                    /// The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
+                    /// </summary>
+                    [NameInMap("Rps")]
+                    [Validation(Required=false)]
+                    public string Rps { get; set; }
+
+                }
+
+                /// <summary>
+                /// The precheck state.
+                /// </summary>
+                [NameInMap("PrecheckStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatus PrecheckStatus { get; set; }
+                public class DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatus : TeaModel {
+                    /// <summary>
+                    /// The result of each precheck item.
+                    /// </summary>
+                    [NameInMap("Detail")]
+                    [Validation(Required=false)]
+                    public List<DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatusDetail> Detail { get; set; }
+                    public class DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatusDetail : TeaModel {
+                        /// <summary>
+                        /// The name of the precheck item.
+                        /// </summary>
+                        [NameInMap("CheckItem")]
+                        [Validation(Required=false)]
+                        public string CheckItem { get; set; }
+
+                        /// <summary>
+                        /// The description of the precheck item.
+                        /// </summary>
+                        [NameInMap("CheckItemDescription")]
+                        [Validation(Required=false)]
+                        public string CheckItemDescription { get; set; }
+
+                        /// <summary>
+                        /// The precheck result. Valid values:
+                        /// 
+                        /// - **Success**
+                        /// - **Failed**
+                        /// </summary>
+                        [NameInMap("CheckResult")]
+                        [Validation(Required=false)]
+                        public string CheckResult { get; set; }
+
+                        /// <summary>
+                        /// The error message returned if the task failed to pass the precheck. 
+                        /// 
+                        /// > This parameter is returned only if the returned value of **CheckResult** is **Failed**.
+                        /// </summary>
+                        [NameInMap("FailedReason")]
+                        [Validation(Required=false)]
+                        public string FailedReason { get; set; }
+
+                        /// <summary>
+                        /// The method to fix a precheck failure. 
+                        /// 
+                        /// > This parameter is returned only if the returned value of **CheckResult** is **Failed**.
+                        /// </summary>
+                        [NameInMap("RepairMethod")]
+                        [Validation(Required=false)]
+                        public string RepairMethod { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// The error message returned if the precheck failed.
+                    /// </summary>
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    /// <summary>
+                    /// The precheck progress. Unit: percentage.
+                    /// </summary>
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    /// <summary>
+                    /// The precheck state. Valid values:
+                    /// 
+                    /// - **NotStarted**: The precheck is not started. 
+                    /// - **Suspending**: The precheck is paused. 
+                    /// - **Checking**: The precheck is in progress. 
+                    /// - **Failed**: The precheck failed. 
+                    /// - **Finished**: The precheck is complete.
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                /// <summary>
+                /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+                /// </summary>
+                [NameInMap("Reserved")]
+                [Validation(Required=false)]
+                public string Reserved { get; set; }
+
+                /// <summary>
+                /// The connection settings of the source instance.
+                /// </summary>
+                [NameInMap("SourceEndpoint")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyEtlDemoListReverseJobSourceEndpoint SourceEndpoint { get; set; }
+                public class DescribeDtsJobsResponseBodyEtlDemoListReverseJobSourceEndpoint : TeaModel {
+                    /// <summary>
+                    /// The name of the database that contains the objects to be migrated from the source instance.
+                    /// </summary>
+                    [NameInMap("DatabaseName")]
+                    [Validation(Required=false)]
+                    public string DatabaseName { get; set; }
+
+                    /// <summary>
+                    /// The database engine of the source instance.
+                    /// </summary>
+                    [NameInMap("EngineName")]
+                    [Validation(Required=false)]
+                    public string EngineName { get; set; }
+
+                    /// <summary>
+                    /// The ID of the source instance.
+                    /// </summary>
+                    [NameInMap("InstanceID")]
+                    [Validation(Required=false)]
+                    public string InstanceID { get; set; }
+
+                    /// <summary>
+                    /// The type of the source instance.
+                    /// </summary>
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                    /// <summary>
+                    /// The endpoint of the source instance.
+                    /// </summary>
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public string Ip { get; set; }
+
+                    /// <summary>
+                    /// The SID of the Oracle database. 
+                    /// 
+                    /// > This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+                    /// </summary>
+                    [NameInMap("OracleSID")]
+                    [Validation(Required=false)]
+                    public string OracleSID { get; set; }
+
+                    /// <summary>
+                    /// The port number of the source instance.
+                    /// </summary>
+                    [NameInMap("Port")]
+                    [Validation(Required=false)]
+                    public string Port { get; set; }
+
+                    /// <summary>
+                    /// The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    /// <summary>
+                    /// Indicates whether SSL encryption is enabled. Valid values:
+                    /// 
+                    /// - **DISABLE**: SSL encryption is disabled. 
+                    /// - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
+                    /// - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
+                    /// - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+                    /// </summary>
+                    [NameInMap("SslSolutionEnum")]
+                    [Validation(Required=false)]
+                    public string SslSolutionEnum { get; set; }
+
+                    /// <summary>
+                    /// The database account of the source instance.
+                    /// </summary>
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public string UserName { get; set; }
+
+                }
+
+                /// <summary>
+                /// The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                /// <summary>
+                /// The state of initial schema synchronization.
+                /// </summary>
+                [NameInMap("StructureInitializationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyEtlDemoListReverseJobStructureInitializationStatus StructureInitializationStatus { get; set; }
+                public class DescribeDtsJobsResponseBodyEtlDemoListReverseJobStructureInitializationStatus : TeaModel {
+                    /// <summary>
+                    /// The error message returned if initial schema synchronization failed.
+                    /// </summary>
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    /// <summary>
+                    /// The progress of initial schema synchronization. Unit: percentage.
+                    /// </summary>
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    /// <summary>
+                    /// The number of tables that have been synchronized during initial schema synchronization.
+                    /// </summary>
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    /// <summary>
+                    /// The state of initial schema synchronization. Valid values:
+                    /// 
+                    /// - **NotStarted**: The task is not started. 
+                    /// - **Migrating**: The task is in progress. 
+                    /// - **Failed**: The task failed. 
+                    /// - **Finished**: The task is complete.
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+            }
+
+            /// <summary>
+            /// The connection settings of the source instance.
+            /// </summary>
+            [NameInMap("SourceEndpoint")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListSourceEndpoint SourceEndpoint { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListSourceEndpoint : TeaModel {
+                /// <summary>
+                /// The name of the database that contains the objects to be migrated from the source instance.
+                /// </summary>
+                [NameInMap("DatabaseName")]
+                [Validation(Required=false)]
+                public string DatabaseName { get; set; }
+
+                /// <summary>
+                /// The database engine of the source instance.
+                /// </summary>
+                [NameInMap("EngineName")]
+                [Validation(Required=false)]
+                public string EngineName { get; set; }
+
+                /// <summary>
+                /// The ID of the source instance.
+                /// </summary>
+                [NameInMap("InstanceID")]
+                [Validation(Required=false)]
+                public string InstanceID { get; set; }
+
+                /// <summary>
+                /// The type of the source instance.
+                /// </summary>
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                /// <summary>
+                /// The endpoint of the source instance.
+                /// </summary>
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
+                public string Ip { get; set; }
+
+                /// <summary>
+                /// The SID of the Oracle database. 
+                /// 
+                /// > This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+                /// </summary>
+                [NameInMap("OracleSID")]
+                [Validation(Required=false)]
+                public string OracleSID { get; set; }
+
+                /// <summary>
+                /// The port number of the source instance.
+                /// </summary>
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                /// <summary>
+                /// The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                /// <summary>
+                /// Indicates whether SSL encryption is enabled. Valid values:
+                /// 
+                /// - **DISABLE**: SSL encryption is disabled. 
+                /// - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
+                /// - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
+                /// - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+                /// </summary>
+                [NameInMap("SslSolutionEnum")]
+                [Validation(Required=false)]
+                public string SslSolutionEnum { get; set; }
+
+                /// <summary>
+                /// The database account of the source instance.
+                /// </summary>
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
+                public string UserName { get; set; }
+
+            }
+
+            /// <summary>
+            /// The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// The state of schema migration or initial schema synchronization.
+            /// </summary>
+            [NameInMap("StructureInitializationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyEtlDemoListStructureInitializationStatus StructureInitializationStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListStructureInitializationStatus : TeaModel {
+                /// <summary>
+                /// The error message returned if schema migration or initial schema synchronization failed.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The progress of schema migration or initial schema synchronization. Unit: percentage.
+                /// </summary>
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                /// <summary>
+                /// The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.
+                /// </summary>
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                /// <summary>
+                /// The state of schema migration or initial schema synchronization. Valid values:
+                /// 
+                /// - **NotStarted**: The task is not started. 
+                /// - **Migrating**: The task is in progress. 
+                /// - **Failed**: The task failed. 
+                /// - **Finished**: The task is complete.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The tags of the task.
+            /// </summary>
+            [NameInMap("TagList")]
+            [Validation(Required=false)]
+            public List<DescribeDtsJobsResponseBodyEtlDemoListTagList> TagList { get; set; }
+            public class DescribeDtsJobsResponseBodyEtlDemoListTagList : TeaModel {
+                /// <summary>
+                /// The tag key.
+                /// </summary>
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                /// <summary>
+                /// The tag value.
+                /// </summary>
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
         }
+
+        /// <summary>
+        /// The HTTP status code.
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// The number of entries returned per page.
+        /// </summary>
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// Indicates whether the call was successful.
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        /// <summary>
+        /// The total number of DTS tasks that meet the query condition.
+        /// </summary>
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
     }
 

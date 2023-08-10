@@ -9,260 +9,2961 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDtsJobDetailResponseBody : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("DtsJobName")]
-        [Validation(Required=false)]
-        public string DtsJobName { get; set; }
-
-        [NameInMap("FinishTime")]
-        [Validation(Required=false)]
-        public string FinishTime { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("DtsJobId")]
-        [Validation(Required=false)]
-        public string DtsJobId { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        [NameInMap("PayType")]
-        [Validation(Required=false)]
-        public string PayType { get; set; }
-
-        [NameInMap("Reserved")]
-        [Validation(Required=false)]
-        public string Reserved { get; set; }
-
-        [NameInMap("DatabaseCount")]
-        [Validation(Required=false)]
-        public int? DatabaseCount { get; set; }
-
-        [NameInMap("DtsJobClass")]
-        [Validation(Required=false)]
-        public string DtsJobClass { get; set; }
-
-        [NameInMap("EndTimestamp")]
-        [Validation(Required=false)]
-        public string EndTimestamp { get; set; }
-
+        /// <summary>
+        /// The number of ApsaraDB RDS for MySQL instances that are attached to the source PolarDB-X 1.0 instance.
+        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
-        [NameInMap("DestNetType")]
-        [Validation(Required=false)]
-        public string DestNetType { get; set; }
-
-        [NameInMap("SubscribeTopic")]
-        [Validation(Required=false)]
-        public string SubscribeTopic { get; set; }
-
-        [NameInMap("DtsInstanceID")]
-        [Validation(Required=false)]
-        public string DtsInstanceID { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        [NameInMap("Checkpoint")]
-        [Validation(Required=false)]
-        public int? Checkpoint { get; set; }
-
-        [NameInMap("Delay")]
-        [Validation(Required=false)]
-        public int? Delay { get; set; }
-
-        [NameInMap("ExpireTime")]
-        [Validation(Required=false)]
-        public string ExpireTime { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrMessage")]
-        [Validation(Required=false)]
-        public string ErrMessage { get; set; }
-
-        [NameInMap("ConsumptionClient")]
-        [Validation(Required=false)]
-        public string ConsumptionClient { get; set; }
-
-        [NameInMap("DbObject")]
-        [Validation(Required=false)]
-        public string DbObject { get; set; }
-
-        [NameInMap("DynamicMessage")]
-        [Validation(Required=false)]
-        public string DynamicMessage { get; set; }
-
-        [NameInMap("ConsumptionCheckpoint")]
-        [Validation(Required=false)]
-        public string ConsumptionCheckpoint { get; set; }
-
-        [NameInMap("EtlCalculator")]
-        [Validation(Required=false)]
-        public string EtlCalculator { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
+        /// <summary>
+        /// The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// </summary>
         [NameInMap("BeginTimestamp")]
         [Validation(Required=false)]
         public string BeginTimestamp { get; set; }
 
-        [NameInMap("GroupId")]
+        [NameInMap("Binlog")]
         [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public string Binlog { get; set; }
 
-        [NameInMap("SynchronizationDirection")]
+        [NameInMap("BinlogSite")]
         [Validation(Required=false)]
-        public string SynchronizationDirection { get; set; }
+        public string BinlogSite { get; set; }
 
-        [NameInMap("DtsJobDirection")]
+        [NameInMap("BinlogTime")]
         [Validation(Required=false)]
-        public string DtsJobDirection { get; set; }
+        public string BinlogTime { get; set; }
 
-        [NameInMap("SourceEndpoint")]
+        [NameInMap("BootTime")]
         [Validation(Required=false)]
-        public DescribeDtsJobDetailResponseBodySourceEndpoint SourceEndpoint { get; set; }
-        public class DescribeDtsJobDetailResponseBodySourceEndpoint : TeaModel {
-            [NameInMap("OracleSID")]
+        public string BootTime { get; set; }
+
+        /// <summary>
+        /// The ID of the data migration, data synchronization, or change tracking instance.
+        /// </summary>
+        [NameInMap("Checkpoint")]
+        [Validation(Required=false)]
+        public long? Checkpoint { get; set; }
+
+        /// <summary>
+        /// The topic of the change tracking instance.
+        /// 
+        /// >  This parameter is returned only if your change tracking instances are of the new version and you have called the [CreateConsumerGroup](~~122863~~) operation to create a consumer group.
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        /// <summary>
+        /// The downstream client information in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.
+        /// </summary>
+        [NameInMap("ConsumptionCheckpoint")]
+        [Validation(Required=false)]
+        public string ConsumptionCheckpoint { get; set; }
+
+        /// <summary>
+        /// The error code returned if the request failed.
+        /// </summary>
+        [NameInMap("ConsumptionClient")]
+        [Validation(Required=false)]
+        public string ConsumptionClient { get; set; }
+
+        /// <summary>
+        /// The end time of the task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// </summary>
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public string CreateTime { get; set; }
+
+        [NameInMap("DataDeliveryChannelInfo")]
+        [Validation(Required=false)]
+        public DescribeDtsJobDetailResponseBodyDataDeliveryChannelInfo DataDeliveryChannelInfo { get; set; }
+        public class DescribeDtsJobDetailResponseBodyDataDeliveryChannelInfo : TeaModel {
+            [NameInMap("PartitionNum")]
             [Validation(Required=false)]
-            public string OracleSID { get; set; }
-            [NameInMap("SslSolutionEnum")]
+            public int? PartitionNum { get; set; }
+
+            [NameInMap("PublicDproxyUrl")]
             [Validation(Required=false)]
-            public string SslSolutionEnum { get; set; }
-            [NameInMap("Ip")]
-            [Validation(Required=false)]
-            public string Ip { get; set; }
-            [NameInMap("InstanceID")]
-            [Validation(Required=false)]
-            public string InstanceID { get; set; }
-            [NameInMap("RoleName")]
-            [Validation(Required=false)]
-            public string RoleName { get; set; }
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-            [NameInMap("Port")]
-            [Validation(Required=false)]
-            public string Port { get; set; }
-            [NameInMap("EngineName")]
-            [Validation(Required=false)]
-            public string EngineName { get; set; }
+            public string PublicDproxyUrl { get; set; }
+
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
-            [NameInMap("DatabaseName")]
-            [Validation(Required=false)]
-            public string DatabaseName { get; set; }
-            [NameInMap("AliyunUid")]
-            [Validation(Required=false)]
-            public string AliyunUid { get; set; }
-            [NameInMap("UserName")]
-            [Validation(Required=false)]
-            public string UserName { get; set; }
-        };
 
+            [NameInMap("Topic")]
+            [Validation(Required=false)]
+            public string Topic { get; set; }
+
+            [NameInMap("VpcDproxyUrl")]
+            [Validation(Required=false)]
+            public string VpcDproxyUrl { get; set; }
+
+        }
+
+        [NameInMap("DataSynchronizationStatus")]
+        [Validation(Required=false)]
+        public DescribeDtsJobDetailResponseBodyDataSynchronizationStatus DataSynchronizationStatus { get; set; }
+        public class DescribeDtsJobDetailResponseBodyDataSynchronizationStatus : TeaModel {
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            [NameInMap("NeedUpgrade")]
+            [Validation(Required=false)]
+            public bool? NeedUpgrade { get; set; }
+
+            [NameInMap("Percent")]
+            [Validation(Required=false)]
+            public string Percent { get; set; }
+
+            [NameInMap("Progress")]
+            [Validation(Required=false)]
+            public string Progress { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+        }
+
+        /// <summary>
+        /// The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// </summary>
+        [NameInMap("DatabaseCount")]
+        [Validation(Required=false)]
+        public int? DatabaseCount { get; set; }
+
+        /// <summary>
+        /// Indicates whether the request was successful.
+        /// </summary>
+        [NameInMap("DbObject")]
+        [Validation(Required=false)]
+        public string DbObject { get; set; }
+
+        [NameInMap("DedicatedClusterId")]
+        [Validation(Required=false)]
+        public string DedicatedClusterId { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("Delay")]
+        [Validation(Required=false)]
+        public long? Delay { get; set; }
+
+        [NameInMap("DemoJob")]
+        [Validation(Required=false)]
+        public bool? DemoJob { get; set; }
+
+        /// <summary>
+        /// The instance class.
+        /// 
+        /// >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
+        /// </summary>
+        [NameInMap("DestNetType")]
+        [Validation(Required=false)]
+        public string DestNetType { get; set; }
+
+        /// <summary>
+        /// The name of the database that contains the objects to be migrated from the source instance.
+        /// </summary>
         [NameInMap("DestinationEndpoint")]
         [Validation(Required=false)]
         public DescribeDtsJobDetailResponseBodyDestinationEndpoint DestinationEndpoint { get; set; }
         public class DescribeDtsJobDetailResponseBodyDestinationEndpoint : TeaModel {
-            [NameInMap("SslSolutionEnum")]
+            [NameInMap("CanModifyPassword")]
             [Validation(Required=false)]
-            public string SslSolutionEnum { get; set; }
-            [NameInMap("OracleSID")]
-            [Validation(Required=false)]
-            public string OracleSID { get; set; }
+            public bool? CanModifyPassword { get; set; }
+
+            /// <summary>
+            /// The connection settings of the destination instance.
+            /// </summary>
             [NameInMap("DatabaseName")]
             [Validation(Required=false)]
             public string DatabaseName { get; set; }
-            [NameInMap("Region")]
-            [Validation(Required=false)]
-            public string Region { get; set; }
-            [NameInMap("Ip")]
-            [Validation(Required=false)]
-            public string Ip { get; set; }
-            [NameInMap("InstanceID")]
-            [Validation(Required=false)]
-            public string InstanceID { get; set; }
-            [NameInMap("Port")]
-            [Validation(Required=false)]
-            public string Port { get; set; }
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-            [NameInMap("UserName")]
-            [Validation(Required=false)]
-            public string UserName { get; set; }
+
+            /// <summary>
+            /// The database service port of the destination instance.
+            /// </summary>
             [NameInMap("EngineName")]
             [Validation(Required=false)]
             public string EngineName { get; set; }
-        };
 
+            /// <summary>
+            /// The name of the database that contains the migrated objects in the destination instance.
+            /// </summary>
+            [NameInMap("InstanceID")]
+            [Validation(Required=false)]
+            public string InstanceID { get; set; }
+
+            /// <summary>
+            /// The IP address of the destination instance.
+            /// </summary>
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
+            /// <summary>
+            /// The SID of the Oracle database.
+            /// 
+            /// >  This parameter is returned only if the **EngineName** parameter of the destination instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+            /// </summary>
+            [NameInMap("Ip")]
+            [Validation(Required=false)]
+            public string Ip { get; set; }
+
+            /// <summary>
+            /// The username of the account that is used to connect to the source database.
+            /// </summary>
+            [NameInMap("OracleSID")]
+            [Validation(Required=false)]
+            public string OracleSID { get; set; }
+
+            /// <summary>
+            /// The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+            /// </summary>
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public string Port { get; set; }
+
+            /// <summary>
+            /// Indicates whether SSL encryption is enabled. Valid values:
+            /// 
+            /// *   **DISABLE**: SSL encryption is disabled.
+            /// *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+            /// *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+            /// *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
+            /// </summary>
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
+
+            /// <summary>
+            /// The ID of the Alibaba Cloud account to which the source ApsaraDB RDS instance belongs.
+            /// </summary>
+            [NameInMap("SslSolutionEnum")]
+            [Validation(Required=false)]
+            public string SslSolutionEnum { get; set; }
+
+            /// <summary>
+            /// The ID of the destination instance.
+            /// </summary>
+            [NameInMap("UserName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
+        }
+
+        [NameInMap("DtsBisLabel")]
+        [Validation(Required=false)]
+        public string DtsBisLabel { get; set; }
+
+        /// <summary>
+        /// Indicates whether the new change tracking feature is used.
+        /// 
+        /// >  This parameter is returned only for change tracking instances of the new version.
+        /// </summary>
+        [NameInMap("DtsInstanceID")]
+        [Validation(Required=false)]
+        public string DtsInstanceID { get; set; }
+
+        /// <summary>
+        /// The billing method of the instance. Valid values:
+        /// 
+        /// *   **PrePaid**: subscription
+        /// *   **PostPaid**: pay-as-you-go
+        /// </summary>
+        [NameInMap("DtsJobClass")]
+        [Validation(Required=false)]
+        public string DtsJobClass { get; set; }
+
+        /// <summary>
+        /// The beginning of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// </summary>
+        [NameInMap("DtsJobDirection")]
+        [Validation(Required=false)]
+        public string DtsJobDirection { get; set; }
+
+        /// <summary>
+        /// API test
+        /// </summary>
+        [NameInMap("DtsJobId")]
+        [Validation(Required=false)]
+        public string DtsJobId { get; set; }
+
+        /// <summary>
+        /// The synchronization direction. Valid values:
+        /// 
+        /// *   **Forward**: Data is synchronized from the source database to the destination database.
+        /// *   **Reverse**: Data is synchronized from the destination database to the source database.
+        /// 
+        /// > 
+        /// *   Default value: **Forward**.
+        /// *   The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
+        /// </summary>
+        [NameInMap("DtsJobName")]
+        [Validation(Required=false)]
+        public string DtsJobName { get; set; }
+
+        /// <summary>
+        /// The error message returned if the request failed.
+        /// </summary>
+        [NameInMap("DynamicMessage")]
+        [Validation(Required=false)]
+        public string DynamicMessage { get; set; }
+
+        /// <summary>
+        /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+        /// </summary>
+        [NameInMap("EndTimestamp")]
+        [Validation(Required=false)]
+        public string EndTimestamp { get; set; }
+
+        /// <summary>
+        /// The start offset of incremental data migration or synchronization. The value is a UNIX timestamp. Unit: seconds.
+        /// </summary>
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
+
+        /// <summary>
+        /// The point in time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// 
+        /// >  This parameter is returned only if the return value of the **PayType** parameter is **PrePaid**.
+        /// </summary>
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
+
+        /// <summary>
+        /// The name of the data migration, data synchronization, or change tracking task.
+        /// </summary>
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).
+        /// </summary>
+        [NameInMap("EtlCalculator")]
+        [Validation(Required=false)]
+        public string EtlCalculator { get; set; }
+
+        /// <summary>
+        /// The error code. This parameter will be removed in the future.
+        /// </summary>
+        [NameInMap("ExpireTime")]
+        [Validation(Required=false)]
+        public string ExpireTime { get; set; }
+
+        /// <summary>
+        /// The state of the data migration or data synchronization task.
+        /// 
+        /// Valid values for a data migration task:
+        /// 
+        /// *   **NotStarted**: The migration is not started.
+        /// *   **Migrating**: The migration is in progress.
+        /// *   **Failed**: The migration failed.
+        /// *   **Finished**: The migration is complete.
+        /// 
+        /// Valid values for a data synchronization task:
+        /// 
+        /// *   **NotStarted**: The task is not started.
+        /// *   **Prechecking**: The task is in precheck.
+        /// *   **PrecheckFailed**: The task failed to pass the precheck.
+        /// *   **Initializing**: The task is performing initial synchronization.
+        /// *   **InitializeFailed**: Initial synchronization failed.
+        /// *   **Synchronizing**: The task is in progress.
+        /// *   **Failed**: The task failed to synchronize data.
+        /// *   **Suspending**: The task is paused.
+        /// *   **Modifying**: The objects in the task are being modified.
+        /// *   **Finished**: The task is complete.
+        /// </summary>
+        [NameInMap("FinishTime")]
+        [Validation(Required=false)]
+        public string FinishTime { get; set; }
+
+        /// <summary>
+        /// The operator information of the extract, transform, and load (ETL) task.
+        /// 
+        /// >  This parameter is returned only if you query the details of an ETL task.
+        /// </summary>
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        /// <summary>
+        /// The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+        /// 
+        /// >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("JobType")]
+        [Validation(Required=false)]
+        public string JobType { get; set; }
+
+        [NameInMap("LastUpdateTime")]
+        [Validation(Required=false)]
+        public string LastUpdateTime { get; set; }
+
+        /// <summary>
+        /// The type of the destination instance.
+        /// </summary>
         [NameInMap("MigrationMode")]
         [Validation(Required=false)]
         public DescribeDtsJobDetailResponseBodyMigrationMode MigrationMode { get; set; }
         public class DescribeDtsJobDetailResponseBodyMigrationMode : TeaModel {
+            /// <summary>
+            /// The database account of the destination instance.
+            /// </summary>
             [NameInMap("DataExtractTransformLoad")]
             [Validation(Required=false)]
             public bool? DataExtractTransformLoad { get; set; }
+
+            /// <summary>
+            /// The database engine of the destination instance.
+            /// </summary>
             [NameInMap("DataInitialization")]
             [Validation(Required=false)]
             public bool? DataInitialization { get; set; }
+
+            /// <summary>
+            /// The migration types or synchronization types.
+            /// </summary>
             [NameInMap("DataSynchronization")]
             [Validation(Required=false)]
             public bool? DataSynchronization { get; set; }
+
+            /// <summary>
+            /// Indicates whether data transformation is performed. Valid values:
+            /// 
+            /// *   **true**: Data transformation is performed.
+            /// *   **false**: Data transformation is not performed.
+            /// </summary>
             [NameInMap("StructureInitialization")]
             [Validation(Required=false)]
             public bool? StructureInitialization { get; set; }
-        };
 
-        [NameInMap("SubscriptionHost")]
+        }
+
+        /// <summary>
+        /// The error message returned if the task failed.
+        /// </summary>
+        [NameInMap("PayType")]
         [Validation(Required=false)]
-        public DescribeDtsJobDetailResponseBodySubscriptionHost SubscriptionHost { get; set; }
-        public class DescribeDtsJobDetailResponseBodySubscriptionHost : TeaModel {
-            [NameInMap("VpcHost")]
-            [Validation(Required=false)]
-            public string VpcHost { get; set; }
-            [NameInMap("PublicHost")]
-            [Validation(Required=false)]
-            public string PublicHost { get; set; }
-            [NameInMap("PrivateHost")]
-            [Validation(Required=false)]
-            public string PrivateHost { get; set; }
-        };
+        public string PayType { get; set; }
 
+        /// <summary>
+        /// The network type of the consumer client. Valid values:
+        /// 
+        /// *   **CLASSIC**: classic network
+        /// *   **VPC**: Virtual Private Cloud (VPC)
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// The ID of the data migration, data synchronization, or change tracking task.
+        /// </summary>
+        [NameInMap("Reserved")]
+        [Validation(Required=false)]
+        public string Reserved { get; set; }
+
+        [NameInMap("ResourceGroupDisplayName")]
+        [Validation(Required=false)]
+        public string ResourceGroupDisplayName { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("RetryState")]
+        [Validation(Required=false)]
+        public DescribeDtsJobDetailResponseBodyRetryState RetryState { get; set; }
+        public class DescribeDtsJobDetailResponseBodyRetryState : TeaModel {
+            [NameInMap("ErrMessage")]
+            [Validation(Required=false)]
+            public string ErrMessage { get; set; }
+
+            [NameInMap("JobId")]
+            [Validation(Required=false)]
+            public string JobId { get; set; }
+
+            [NameInMap("MaxRetryTime")]
+            [Validation(Required=false)]
+            public int? MaxRetryTime { get; set; }
+
+            [NameInMap("Module")]
+            [Validation(Required=false)]
+            public string Module { get; set; }
+
+            [NameInMap("RetryCount")]
+            [Validation(Required=false)]
+            public int? RetryCount { get; set; }
+
+            [NameInMap("RetryTarget")]
+            [Validation(Required=false)]
+            public string RetryTarget { get; set; }
+
+            [NameInMap("RetryTime")]
+            [Validation(Required=false)]
+            public int? RetryTime { get; set; }
+
+            [NameInMap("Retrying")]
+            [Validation(Required=false)]
+            public bool? Retrying { get; set; }
+
+        }
+
+        /// <summary>
+        /// The ID of the DTS task.
+        /// </summary>
+        [NameInMap("SourceEndpoint")]
+        [Validation(Required=false)]
+        public DescribeDtsJobDetailResponseBodySourceEndpoint SourceEndpoint { get; set; }
+        public class DescribeDtsJobDetailResponseBodySourceEndpoint : TeaModel {
+            /// <summary>
+            /// The database engine of the source instance.
+            /// </summary>
+            [NameInMap("AliyunUid")]
+            [Validation(Required=false)]
+            public string AliyunUid { get; set; }
+
+            [NameInMap("CanModifyPassword")]
+            [Validation(Required=false)]
+            public bool? CanModifyPassword { get; set; }
+
+            /// <summary>
+            /// The database service port of the source instance.
+            /// </summary>
+            [NameInMap("DatabaseName")]
+            [Validation(Required=false)]
+            public string DatabaseName { get; set; }
+
+            /// <summary>
+            /// The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
+            /// </summary>
+            [NameInMap("EngineName")]
+            [Validation(Required=false)]
+            public string EngineName { get; set; }
+
+            /// <summary>
+            /// The system ID (SID) of the Oracle database.
+            /// 
+            /// >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+            /// </summary>
+            [NameInMap("InstanceID")]
+            [Validation(Required=false)]
+            public string InstanceID { get; set; }
+
+            /// <summary>
+            /// The IP address of the source instance.
+            /// </summary>
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
+            /// <summary>
+            /// The connection settings of the source instance.
+            /// </summary>
+            [NameInMap("Ip")]
+            [Validation(Required=false)]
+            public string Ip { get; set; }
+
+            /// <summary>
+            /// The synchronization direction. Valid values:
+            /// 
+            /// *   **Forward**: Data is synchronized from the source database to the destination database.
+            /// *   **Reverse**: Data is synchronized from the destination database to the source database.
+            /// </summary>
+            [NameInMap("OracleSID")]
+            [Validation(Required=false)]
+            public string OracleSID { get; set; }
+
+            /// <summary>
+            /// The ID of the source instance.
+            /// </summary>
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public string Port { get; set; }
+
+            /// <summary>
+            /// The type of the source instance.
+            /// </summary>
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
+
+            /// <summary>
+            /// Indicates whether SSL encryption is enabled. Valid values:
+            /// 
+            /// *   **DISABLE**: SSL encryption is disabled.
+            /// *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+            /// *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+            /// *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
+            /// </summary>
+            [NameInMap("RoleName")]
+            [Validation(Required=false)]
+            public string RoleName { get; set; }
+
+            /// <summary>
+            /// The synchronization direction. Valid values:
+            /// 
+            /// *   **Forward**: Data is synchronized from the source database to the destination database.
+            /// *   **Reverse**: Data is synchronized from the destination database to the source database.
+            /// 
+            /// >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
+            /// </summary>
+            [NameInMap("SslSolutionEnum")]
+            [Validation(Required=false)]
+            public string SslSolutionEnum { get; set; }
+
+            /// <summary>
+            /// The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
+            /// </summary>
+            [NameInMap("UserName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
+        }
+
+        /// <summary>
+        /// The ID of the data migration, data synchronization, or change tracking instance.
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("SubDistributedJob")]
+        [Validation(Required=false)]
+        public List<DescribeDtsJobDetailResponseBodySubDistributedJob> SubDistributedJob { get; set; }
+        public class DescribeDtsJobDetailResponseBodySubDistributedJob : TeaModel {
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+
+            [NameInMap("BeginTimestamp")]
+            [Validation(Required=false)]
+            public string BeginTimestamp { get; set; }
+
+            [NameInMap("Checkpoint")]
+            [Validation(Required=false)]
+            public string Checkpoint { get; set; }
+
+            [NameInMap("ConsumptionCheckpoint")]
+            [Validation(Required=false)]
+            public string ConsumptionCheckpoint { get; set; }
+
+            [NameInMap("ConsumptionClient")]
+            [Validation(Required=false)]
+            public string ConsumptionClient { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("DataEtlStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobDataEtlStatus DataEtlStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobDataEtlStatus : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("DataInitializationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobDataInitializationStatus DataInitializationStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobDataInitializationStatus : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("DataSynchronizationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobDataSynchronizationStatus DataSynchronizationStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobDataSynchronizationStatus : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("DatabaseCount")]
+            [Validation(Required=false)]
+            public int? DatabaseCount { get; set; }
+
+            [NameInMap("DbObject")]
+            [Validation(Required=false)]
+            public string DbObject { get; set; }
+
+            [NameInMap("Delay")]
+            [Validation(Required=false)]
+            public long? Delay { get; set; }
+
+            [NameInMap("DestNetType")]
+            [Validation(Required=false)]
+            public string DestNetType { get; set; }
+
+            [NameInMap("DestinationEndpoint")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobDestinationEndpoint DestinationEndpoint { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobDestinationEndpoint : TeaModel {
+                [NameInMap("AliyunUid")]
+                [Validation(Required=false)]
+                public string AliyunUid { get; set; }
+
+                [NameInMap("DatabaseName")]
+                [Validation(Required=false)]
+                public string DatabaseName { get; set; }
+
+                [NameInMap("EngineName")]
+                [Validation(Required=false)]
+                public string EngineName { get; set; }
+
+                [NameInMap("InstanceID")]
+                [Validation(Required=false)]
+                public string InstanceID { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
+                public string Ip { get; set; }
+
+                [NameInMap("OracleSID")]
+                [Validation(Required=false)]
+                public string OracleSID { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                [NameInMap("RoleName")]
+                [Validation(Required=false)]
+                public string RoleName { get; set; }
+
+                [NameInMap("SslSolutionEnum")]
+                [Validation(Required=false)]
+                public string SslSolutionEnum { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
+                public string UserName { get; set; }
+
+            }
+
+            [NameInMap("DtsInstanceID")]
+            [Validation(Required=false)]
+            public string DtsInstanceID { get; set; }
+
+            [NameInMap("DtsJobClass")]
+            [Validation(Required=false)]
+            public string DtsJobClass { get; set; }
+
+            [NameInMap("DtsJobDirection")]
+            [Validation(Required=false)]
+            public string DtsJobDirection { get; set; }
+
+            [NameInMap("DtsJobId")]
+            [Validation(Required=false)]
+            public string DtsJobId { get; set; }
+
+            [NameInMap("DtsJobName")]
+            [Validation(Required=false)]
+            public string DtsJobName { get; set; }
+
+            [NameInMap("EndTimestamp")]
+            [Validation(Required=false)]
+            public string EndTimestamp { get; set; }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            [NameInMap("EtlCalculator")]
+            [Validation(Required=false)]
+            public string EtlCalculator { get; set; }
+
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public string ExpireTime { get; set; }
+
+            [NameInMap("FinishTime")]
+            [Validation(Required=false)]
+            public string FinishTime { get; set; }
+
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+            [NameInMap("IsDemoJob")]
+            [Validation(Required=false)]
+            public bool? IsDemoJob { get; set; }
+
+            [NameInMap("JobType")]
+            [Validation(Required=false)]
+            public string JobType { get; set; }
+
+            [NameInMap("MigrationMode")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobMigrationMode MigrationMode { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobMigrationMode : TeaModel {
+                [NameInMap("DataExtractTransformLoad")]
+                [Validation(Required=false)]
+                public bool? DataExtractTransformLoad { get; set; }
+
+                [NameInMap("DataInitialization")]
+                [Validation(Required=false)]
+                public bool? DataInitialization { get; set; }
+
+                [NameInMap("DataSynchronization")]
+                [Validation(Required=false)]
+                public bool? DataSynchronization { get; set; }
+
+                [NameInMap("StructureInitialization")]
+                [Validation(Required=false)]
+                public bool? StructureInitialization { get; set; }
+
+            }
+
+            [NameInMap("OriginType")]
+            [Validation(Required=false)]
+            public string OriginType { get; set; }
+
+            [NameInMap("PayType")]
+            [Validation(Required=false)]
+            public string PayType { get; set; }
+
+            [NameInMap("Performance")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobPerformance Performance { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobPerformance : TeaModel {
+                [NameInMap("Flow")]
+                [Validation(Required=false)]
+                public string Flow { get; set; }
+
+                [NameInMap("Rps")]
+                [Validation(Required=false)]
+                public string Rps { get; set; }
+
+            }
+
+            [NameInMap("PrecheckStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobPrecheckStatus PrecheckStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobPrecheckStatus : TeaModel {
+                [NameInMap("Detail")]
+                [Validation(Required=false)]
+                public List<DescribeDtsJobDetailResponseBodySubDistributedJobPrecheckStatusDetail> Detail { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobPrecheckStatusDetail : TeaModel {
+                    [NameInMap("CheckItem")]
+                    [Validation(Required=false)]
+                    public string CheckItem { get; set; }
+
+                    [NameInMap("CheckItemDescription")]
+                    [Validation(Required=false)]
+                    public string CheckItemDescription { get; set; }
+
+                    [NameInMap("CheckResult")]
+                    [Validation(Required=false)]
+                    public string CheckResult { get; set; }
+
+                    [NameInMap("FailedReason")]
+                    [Validation(Required=false)]
+                    public string FailedReason { get; set; }
+
+                    [NameInMap("RepairMethod")]
+                    [Validation(Required=false)]
+                    public string RepairMethod { get; set; }
+
+                }
+
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("Reserved")]
+            [Validation(Required=false)]
+            public string Reserved { get; set; }
+
+            [NameInMap("RetryState")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobRetryState RetryState { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobRetryState : TeaModel {
+                [NameInMap("ErrMsg")]
+                [Validation(Required=false)]
+                public string ErrMsg { get; set; }
+
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
+                public string JobId { get; set; }
+
+                [NameInMap("MaxRetryTime")]
+                [Validation(Required=false)]
+                public int? MaxRetryTime { get; set; }
+
+                [NameInMap("Module")]
+                [Validation(Required=false)]
+                public string Module { get; set; }
+
+                [NameInMap("RetryCount")]
+                [Validation(Required=false)]
+                public int? RetryCount { get; set; }
+
+                /// <summary>
+                /// srcDB/destDB/metaDB/dstore
+                /// </summary>
+                [NameInMap("RetryTarget")]
+                [Validation(Required=false)]
+                public string RetryTarget { get; set; }
+
+                [NameInMap("RetryTime")]
+                [Validation(Required=false)]
+                public int? RetryTime { get; set; }
+
+                [NameInMap("Retrying")]
+                [Validation(Required=false)]
+                public bool? Retrying { get; set; }
+
+            }
+
+            [NameInMap("ReverseJob")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJob ReverseJob { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJob : TeaModel {
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
+
+                [NameInMap("BeginTimestamp")]
+                [Validation(Required=false)]
+                public string BeginTimestamp { get; set; }
+
+                [NameInMap("Checkpoint")]
+                [Validation(Required=false)]
+                public string Checkpoint { get; set; }
+
+                [NameInMap("ConsumptionCheckpoint")]
+                [Validation(Required=false)]
+                public string ConsumptionCheckpoint { get; set; }
+
+                [NameInMap("ConsumptionClient")]
+                [Validation(Required=false)]
+                public string ConsumptionClient { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                [NameInMap("DataEtlStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobDataEtlStatus DataEtlStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobDataEtlStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("DataInitializationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobDataInitializationStatus DataInitializationStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobDataInitializationStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("DataSynchronizationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobDataSynchronizationStatus DataSynchronizationStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobDataSynchronizationStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("DatabaseCount")]
+                [Validation(Required=false)]
+                public int? DatabaseCount { get; set; }
+
+                [NameInMap("DbObject")]
+                [Validation(Required=false)]
+                public string DbObject { get; set; }
+
+                [NameInMap("Delay")]
+                [Validation(Required=false)]
+                public long? Delay { get; set; }
+
+                [NameInMap("DestNetType")]
+                [Validation(Required=false)]
+                public string DestNetType { get; set; }
+
+                [NameInMap("DestinationEndpoint")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobDestinationEndpoint DestinationEndpoint { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobDestinationEndpoint : TeaModel {
+                    [NameInMap("AliyunUid")]
+                    [Validation(Required=false)]
+                    public string AliyunUid { get; set; }
+
+                    [NameInMap("DatabaseName")]
+                    [Validation(Required=false)]
+                    public string DatabaseName { get; set; }
+
+                    [NameInMap("EngineName")]
+                    [Validation(Required=false)]
+                    public string EngineName { get; set; }
+
+                    [NameInMap("InstanceID")]
+                    [Validation(Required=false)]
+                    public string InstanceID { get; set; }
+
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public string Ip { get; set; }
+
+                    [NameInMap("OracleSID")]
+                    [Validation(Required=false)]
+                    public string OracleSID { get; set; }
+
+                    [NameInMap("Port")]
+                    [Validation(Required=false)]
+                    public string Port { get; set; }
+
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    [NameInMap("RoleName")]
+                    [Validation(Required=false)]
+                    public string RoleName { get; set; }
+
+                    [NameInMap("SslSolutionEnum")]
+                    [Validation(Required=false)]
+                    public string SslSolutionEnum { get; set; }
+
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public string UserName { get; set; }
+
+                }
+
+                [NameInMap("DtsInstanceID")]
+                [Validation(Required=false)]
+                public string DtsInstanceID { get; set; }
+
+                [NameInMap("DtsJobClass")]
+                [Validation(Required=false)]
+                public string DtsJobClass { get; set; }
+
+                [NameInMap("DtsJobDirection")]
+                [Validation(Required=false)]
+                public string DtsJobDirection { get; set; }
+
+                [NameInMap("DtsJobId")]
+                [Validation(Required=false)]
+                public string DtsJobId { get; set; }
+
+                [NameInMap("DtsJobName")]
+                [Validation(Required=false)]
+                public string DtsJobName { get; set; }
+
+                [NameInMap("EndTimestamp")]
+                [Validation(Required=false)]
+                public string EndTimestamp { get; set; }
+
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("EtlCalculator")]
+                [Validation(Required=false)]
+                public string EtlCalculator { get; set; }
+
+                [NameInMap("ExpireTime")]
+                [Validation(Required=false)]
+                public string ExpireTime { get; set; }
+
+                [NameInMap("FinishTime")]
+                [Validation(Required=false)]
+                public string FinishTime { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
+                public string GroupId { get; set; }
+
+                [NameInMap("IsDemoJob")]
+                [Validation(Required=false)]
+                public bool? IsDemoJob { get; set; }
+
+                [NameInMap("JobType")]
+                [Validation(Required=false)]
+                public string JobType { get; set; }
+
+                [NameInMap("MigrationMode")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobMigrationMode MigrationMode { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobMigrationMode : TeaModel {
+                    [NameInMap("DataExtractTransformLoad")]
+                    [Validation(Required=false)]
+                    public bool? DataExtractTransformLoad { get; set; }
+
+                    [NameInMap("DataInitialization")]
+                    [Validation(Required=false)]
+                    public bool? DataInitialization { get; set; }
+
+                    [NameInMap("DataSynchronization")]
+                    [Validation(Required=false)]
+                    public bool? DataSynchronization { get; set; }
+
+                    [NameInMap("StructureInitialization")]
+                    [Validation(Required=false)]
+                    public bool? StructureInitialization { get; set; }
+
+                }
+
+                [NameInMap("OriginType")]
+                [Validation(Required=false)]
+                public string OriginType { get; set; }
+
+                [NameInMap("PayType")]
+                [Validation(Required=false)]
+                public string PayType { get; set; }
+
+                [NameInMap("Performance")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobPerformance Performance { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobPerformance : TeaModel {
+                    [NameInMap("Flow")]
+                    [Validation(Required=false)]
+                    public string Flow { get; set; }
+
+                    [NameInMap("Rps")]
+                    [Validation(Required=false)]
+                    public string Rps { get; set; }
+
+                }
+
+                [NameInMap("PrecheckStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobPrecheckStatus PrecheckStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobPrecheckStatus : TeaModel {
+                    [NameInMap("Detail")]
+                    [Validation(Required=false)]
+                    public List<DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobPrecheckStatusDetail> Detail { get; set; }
+                    public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobPrecheckStatusDetail : TeaModel {
+                        [NameInMap("CheckItem")]
+                        [Validation(Required=false)]
+                        public string CheckItem { get; set; }
+
+                        [NameInMap("CheckItemDescription")]
+                        [Validation(Required=false)]
+                        public string CheckItemDescription { get; set; }
+
+                        [NameInMap("CheckResult")]
+                        [Validation(Required=false)]
+                        public string CheckResult { get; set; }
+
+                        [NameInMap("FailedReason")]
+                        [Validation(Required=false)]
+                        public string FailedReason { get; set; }
+
+                        [NameInMap("RepairMethod")]
+                        [Validation(Required=false)]
+                        public string RepairMethod { get; set; }
+
+                    }
+
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("Reserved")]
+                [Validation(Required=false)]
+                public string Reserved { get; set; }
+
+                [NameInMap("RetryState")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobRetryState RetryState { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobRetryState : TeaModel {
+                    [NameInMap("ErrMsg")]
+                    [Validation(Required=false)]
+                    public string ErrMsg { get; set; }
+
+                    [NameInMap("JobId")]
+                    [Validation(Required=false)]
+                    public string JobId { get; set; }
+
+                    [NameInMap("MaxRetryTime")]
+                    [Validation(Required=false)]
+                    public int? MaxRetryTime { get; set; }
+
+                    [NameInMap("Module")]
+                    [Validation(Required=false)]
+                    public string Module { get; set; }
+
+                    [NameInMap("RetryCount")]
+                    [Validation(Required=false)]
+                    public int? RetryCount { get; set; }
+
+                    /// <summary>
+                    /// srcDB/destDB/metaDB/dstore
+                    /// </summary>
+                    [NameInMap("RetryTarget")]
+                    [Validation(Required=false)]
+                    public string RetryTarget { get; set; }
+
+                    [NameInMap("RetryTime")]
+                    [Validation(Required=false)]
+                    public int? RetryTime { get; set; }
+
+                    [NameInMap("Retrying")]
+                    [Validation(Required=false)]
+                    public bool? Retrying { get; set; }
+
+                }
+
+                [NameInMap("ReverseJob")]
+                [Validation(Required=false)]
+                public object ReverseJob { get; set; }
+
+                [NameInMap("SourceEndpoint")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobSourceEndpoint SourceEndpoint { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobSourceEndpoint : TeaModel {
+                    [NameInMap("AliyunUid")]
+                    [Validation(Required=false)]
+                    public string AliyunUid { get; set; }
+
+                    [NameInMap("DatabaseName")]
+                    [Validation(Required=false)]
+                    public string DatabaseName { get; set; }
+
+                    [NameInMap("EngineName")]
+                    [Validation(Required=false)]
+                    public string EngineName { get; set; }
+
+                    [NameInMap("InstanceID")]
+                    [Validation(Required=false)]
+                    public string InstanceID { get; set; }
+
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public string Ip { get; set; }
+
+                    [NameInMap("OracleSID")]
+                    [Validation(Required=false)]
+                    public string OracleSID { get; set; }
+
+                    [NameInMap("Port")]
+                    [Validation(Required=false)]
+                    public string Port { get; set; }
+
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    [NameInMap("RoleName")]
+                    [Validation(Required=false)]
+                    public string RoleName { get; set; }
+
+                    [NameInMap("SslSolutionEnum")]
+                    [Validation(Required=false)]
+                    public string SslSolutionEnum { get; set; }
+
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public string UserName { get; set; }
+
+                }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("StructureInitializationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobStructureInitializationStatus StructureInitializationStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobStructureInitializationStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("SubscribeTopic")]
+                [Validation(Required=false)]
+                public string SubscribeTopic { get; set; }
+
+                [NameInMap("SubscriptionDataType")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobSubscriptionDataType SubscriptionDataType { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobSubscriptionDataType : TeaModel {
+                    [NameInMap("Ddl")]
+                    [Validation(Required=false)]
+                    public bool? Ddl { get; set; }
+
+                    [NameInMap("Dml")]
+                    [Validation(Required=false)]
+                    public bool? Dml { get; set; }
+
+                }
+
+                [NameInMap("SubscriptionHost")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobSubscriptionHost SubscriptionHost { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobSubscriptionHost : TeaModel {
+                    [NameInMap("PrivateHost")]
+                    [Validation(Required=false)]
+                    public string PrivateHost { get; set; }
+
+                    [NameInMap("PublicHost")]
+                    [Validation(Required=false)]
+                    public string PublicHost { get; set; }
+
+                    [NameInMap("VpcHost")]
+                    [Validation(Required=false)]
+                    public string VpcHost { get; set; }
+
+                }
+
+                [NameInMap("SynchronizationDirection")]
+                [Validation(Required=false)]
+                public string SynchronizationDirection { get; set; }
+
+                [NameInMap("TagList")]
+                [Validation(Required=false)]
+                public List<DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobTagList> TagList { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobTagList : TeaModel {
+                    [NameInMap("AliUid")]
+                    [Validation(Required=false)]
+                    public long? AliUid { get; set; }
+
+                    [NameInMap("Creator")]
+                    [Validation(Required=false)]
+                    public long? Creator { get; set; }
+
+                    [NameInMap("GmtCreate")]
+                    [Validation(Required=false)]
+                    public string GmtCreate { get; set; }
+
+                    [NameInMap("GmtModified")]
+                    [Validation(Required=false)]
+                    public string GmtModified { get; set; }
+
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public long? Id { get; set; }
+
+                    /// <summary>
+                    /// region_id
+                    /// </summary>
+                    [NameInMap("RegionId")]
+                    [Validation(Required=false)]
+                    public string RegionId { get; set; }
+
+                    /// <summary>
+                    /// dts instance id
+                    /// </summary>
+                    [NameInMap("ResourceId")]
+                    [Validation(Required=false)]
+                    public string ResourceId { get; set; }
+
+                    [NameInMap("ResourceType")]
+                    [Validation(Required=false)]
+                    public string ResourceType { get; set; }
+
+                    [NameInMap("Scope")]
+                    [Validation(Required=false)]
+                    public string Scope { get; set; }
+
+                    [NameInMap("SrcRegion")]
+                    [Validation(Required=false)]
+                    public string SrcRegion { get; set; }
+
+                    [NameInMap("TagCategory")]
+                    [Validation(Required=false)]
+                    public string TagCategory { get; set; }
+
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                }
+
+                [NameInMap("TaskType")]
+                [Validation(Required=false)]
+                public string TaskType { get; set; }
+
+            }
+
+            [NameInMap("SourceEndpoint")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobSourceEndpoint SourceEndpoint { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobSourceEndpoint : TeaModel {
+                [NameInMap("AliyunUid")]
+                [Validation(Required=false)]
+                public string AliyunUid { get; set; }
+
+                [NameInMap("DatabaseName")]
+                [Validation(Required=false)]
+                public string DatabaseName { get; set; }
+
+                [NameInMap("EngineName")]
+                [Validation(Required=false)]
+                public string EngineName { get; set; }
+
+                [NameInMap("InstanceID")]
+                [Validation(Required=false)]
+                public string InstanceID { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
+                public string Ip { get; set; }
+
+                [NameInMap("OracleSID")]
+                [Validation(Required=false)]
+                public string OracleSID { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                [NameInMap("RoleName")]
+                [Validation(Required=false)]
+                public string RoleName { get; set; }
+
+                [NameInMap("SslSolutionEnum")]
+                [Validation(Required=false)]
+                public string SslSolutionEnum { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
+                public string UserName { get; set; }
+
+            }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("StructureInitializationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobStructureInitializationStatus StructureInitializationStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobStructureInitializationStatus : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("SubSyncJob")]
+            [Validation(Required=false)]
+            public List<object> SubSyncJob { get; set; }
+
+            [NameInMap("SubscribeTopic")]
+            [Validation(Required=false)]
+            public string SubscribeTopic { get; set; }
+
+            [NameInMap("SubscriptionDataType")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobSubscriptionDataType SubscriptionDataType { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobSubscriptionDataType : TeaModel {
+                [NameInMap("Ddl")]
+                [Validation(Required=false)]
+                public bool? Ddl { get; set; }
+
+                [NameInMap("Dml")]
+                [Validation(Required=false)]
+                public bool? Dml { get; set; }
+
+            }
+
+            [NameInMap("SubscriptionHost")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubDistributedJobSubscriptionHost SubscriptionHost { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobSubscriptionHost : TeaModel {
+                [NameInMap("PrivateHost")]
+                [Validation(Required=false)]
+                public string PrivateHost { get; set; }
+
+                [NameInMap("PublicHost")]
+                [Validation(Required=false)]
+                public string PublicHost { get; set; }
+
+                [NameInMap("VpcHost")]
+                [Validation(Required=false)]
+                public string VpcHost { get; set; }
+
+            }
+
+            [NameInMap("SynchronizationDirection")]
+            [Validation(Required=false)]
+            public string SynchronizationDirection { get; set; }
+
+            [NameInMap("TagList")]
+            [Validation(Required=false)]
+            public List<DescribeDtsJobDetailResponseBodySubDistributedJobTagList> TagList { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubDistributedJobTagList : TeaModel {
+                [NameInMap("AliUid")]
+                [Validation(Required=false)]
+                public long? AliUid { get; set; }
+
+                [NameInMap("Creator")]
+                [Validation(Required=false)]
+                public long? Creator { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
+                public string GmtCreate { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
+                public string GmtModified { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+                /// <summary>
+                /// region_id
+                /// </summary>
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                /// <summary>
+                /// dts instance id
+                /// </summary>
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+                [NameInMap("Scope")]
+                [Validation(Required=false)]
+                public string Scope { get; set; }
+
+                [NameInMap("SrcRegion")]
+                [Validation(Required=false)]
+                public string SrcRegion { get; set; }
+
+                [NameInMap("TagCategory")]
+                [Validation(Required=false)]
+                public string TagCategory { get; set; }
+
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
+            [NameInMap("TaskType")]
+            [Validation(Required=false)]
+            public string TaskType { get; set; }
+
+        }
+
+        [NameInMap("SubSyncJob")]
+        [Validation(Required=false)]
+        public List<DescribeDtsJobDetailResponseBodySubSyncJob> SubSyncJob { get; set; }
+        public class DescribeDtsJobDetailResponseBodySubSyncJob : TeaModel {
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+
+            [NameInMap("BeginTimestamp")]
+            [Validation(Required=false)]
+            public string BeginTimestamp { get; set; }
+
+            [NameInMap("Checkpoint")]
+            [Validation(Required=false)]
+            public string Checkpoint { get; set; }
+
+            [NameInMap("ConsumptionCheckpoint")]
+            [Validation(Required=false)]
+            public string ConsumptionCheckpoint { get; set; }
+
+            [NameInMap("ConsumptionClient")]
+            [Validation(Required=false)]
+            public string ConsumptionClient { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("DataEtlStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobDataEtlStatus DataEtlStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobDataEtlStatus : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("DataInitializationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobDataInitializationStatus DataInitializationStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobDataInitializationStatus : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("DataSynchronizationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobDataSynchronizationStatus DataSynchronizationStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobDataSynchronizationStatus : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("DatabaseCount")]
+            [Validation(Required=false)]
+            public int? DatabaseCount { get; set; }
+
+            [NameInMap("DbObject")]
+            [Validation(Required=false)]
+            public string DbObject { get; set; }
+
+            [NameInMap("Delay")]
+            [Validation(Required=false)]
+            public long? Delay { get; set; }
+
+            [NameInMap("DestNetType")]
+            [Validation(Required=false)]
+            public string DestNetType { get; set; }
+
+            [NameInMap("DestinationEndpoint")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobDestinationEndpoint DestinationEndpoint { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobDestinationEndpoint : TeaModel {
+                [NameInMap("AliyunUid")]
+                [Validation(Required=false)]
+                public string AliyunUid { get; set; }
+
+                [NameInMap("DatabaseName")]
+                [Validation(Required=false)]
+                public string DatabaseName { get; set; }
+
+                [NameInMap("EngineName")]
+                [Validation(Required=false)]
+                public string EngineName { get; set; }
+
+                [NameInMap("InstanceID")]
+                [Validation(Required=false)]
+                public string InstanceID { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
+                public string Ip { get; set; }
+
+                [NameInMap("OracleSID")]
+                [Validation(Required=false)]
+                public string OracleSID { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                [NameInMap("RoleName")]
+                [Validation(Required=false)]
+                public string RoleName { get; set; }
+
+                [NameInMap("SslSolutionEnum")]
+                [Validation(Required=false)]
+                public string SslSolutionEnum { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
+                public string UserName { get; set; }
+
+            }
+
+            [NameInMap("DtsInstanceID")]
+            [Validation(Required=false)]
+            public string DtsInstanceID { get; set; }
+
+            [NameInMap("DtsJobClass")]
+            [Validation(Required=false)]
+            public string DtsJobClass { get; set; }
+
+            [NameInMap("DtsJobDirection")]
+            [Validation(Required=false)]
+            public string DtsJobDirection { get; set; }
+
+            [NameInMap("DtsJobId")]
+            [Validation(Required=false)]
+            public string DtsJobId { get; set; }
+
+            [NameInMap("DtsJobName")]
+            [Validation(Required=false)]
+            public string DtsJobName { get; set; }
+
+            [NameInMap("EndTimestamp")]
+            [Validation(Required=false)]
+            public string EndTimestamp { get; set; }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            [NameInMap("EtlCalculator")]
+            [Validation(Required=false)]
+            public string EtlCalculator { get; set; }
+
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public string ExpireTime { get; set; }
+
+            [NameInMap("FinishTime")]
+            [Validation(Required=false)]
+            public string FinishTime { get; set; }
+
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+            [NameInMap("IsDemoJob")]
+            [Validation(Required=false)]
+            public bool? IsDemoJob { get; set; }
+
+            [NameInMap("JobType")]
+            [Validation(Required=false)]
+            public string JobType { get; set; }
+
+            [NameInMap("MigrationMode")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobMigrationMode MigrationMode { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobMigrationMode : TeaModel {
+                [NameInMap("DataExtractTransformLoad")]
+                [Validation(Required=false)]
+                public bool? DataExtractTransformLoad { get; set; }
+
+                [NameInMap("DataInitialization")]
+                [Validation(Required=false)]
+                public bool? DataInitialization { get; set; }
+
+                [NameInMap("DataSynchronization")]
+                [Validation(Required=false)]
+                public bool? DataSynchronization { get; set; }
+
+                [NameInMap("StructureInitialization")]
+                [Validation(Required=false)]
+                public bool? StructureInitialization { get; set; }
+
+            }
+
+            [NameInMap("OriginType")]
+            [Validation(Required=false)]
+            public string OriginType { get; set; }
+
+            [NameInMap("PayType")]
+            [Validation(Required=false)]
+            public string PayType { get; set; }
+
+            [NameInMap("Performance")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobPerformance Performance { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobPerformance : TeaModel {
+                [NameInMap("Flow")]
+                [Validation(Required=false)]
+                public string Flow { get; set; }
+
+                [NameInMap("Rps")]
+                [Validation(Required=false)]
+                public string Rps { get; set; }
+
+            }
+
+            [NameInMap("PrecheckStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobPrecheckStatus PrecheckStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobPrecheckStatus : TeaModel {
+                [NameInMap("Detail")]
+                [Validation(Required=false)]
+                public List<DescribeDtsJobDetailResponseBodySubSyncJobPrecheckStatusDetail> Detail { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobPrecheckStatusDetail : TeaModel {
+                    [NameInMap("CheckItem")]
+                    [Validation(Required=false)]
+                    public string CheckItem { get; set; }
+
+                    [NameInMap("CheckItemDescription")]
+                    [Validation(Required=false)]
+                    public string CheckItemDescription { get; set; }
+
+                    [NameInMap("CheckResult")]
+                    [Validation(Required=false)]
+                    public string CheckResult { get; set; }
+
+                    [NameInMap("FailedReason")]
+                    [Validation(Required=false)]
+                    public string FailedReason { get; set; }
+
+                    [NameInMap("RepairMethod")]
+                    [Validation(Required=false)]
+                    public string RepairMethod { get; set; }
+
+                }
+
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("Reserved")]
+            [Validation(Required=false)]
+            public string Reserved { get; set; }
+
+            [NameInMap("RetryState")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobRetryState RetryState { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobRetryState : TeaModel {
+                [NameInMap("ErrMsg")]
+                [Validation(Required=false)]
+                public string ErrMsg { get; set; }
+
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
+                public string JobId { get; set; }
+
+                [NameInMap("MaxRetryTime")]
+                [Validation(Required=false)]
+                public int? MaxRetryTime { get; set; }
+
+                [NameInMap("Module")]
+                [Validation(Required=false)]
+                public string Module { get; set; }
+
+                [NameInMap("RetryCount")]
+                [Validation(Required=false)]
+                public int? RetryCount { get; set; }
+
+                /// <summary>
+                /// srcDB/destDB/metaDB/dstore
+                /// </summary>
+                [NameInMap("RetryTarget")]
+                [Validation(Required=false)]
+                public string RetryTarget { get; set; }
+
+                [NameInMap("RetryTime")]
+                [Validation(Required=false)]
+                public int? RetryTime { get; set; }
+
+                [NameInMap("Retrying")]
+                [Validation(Required=false)]
+                public bool? Retrying { get; set; }
+
+            }
+
+            [NameInMap("ReverseJob")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobReverseJob ReverseJob { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJob : TeaModel {
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
+
+                [NameInMap("BeginTimestamp")]
+                [Validation(Required=false)]
+                public string BeginTimestamp { get; set; }
+
+                [NameInMap("Checkpoint")]
+                [Validation(Required=false)]
+                public string Checkpoint { get; set; }
+
+                [NameInMap("ConsumptionCheckpoint")]
+                [Validation(Required=false)]
+                public string ConsumptionCheckpoint { get; set; }
+
+                [NameInMap("ConsumptionClient")]
+                [Validation(Required=false)]
+                public string ConsumptionClient { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                [NameInMap("DataEtlStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobDataEtlStatus DataEtlStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobDataEtlStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("DataInitializationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobDataInitializationStatus DataInitializationStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobDataInitializationStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("DataSynchronizationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobDataSynchronizationStatus DataSynchronizationStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobDataSynchronizationStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("DatabaseCount")]
+                [Validation(Required=false)]
+                public int? DatabaseCount { get; set; }
+
+                [NameInMap("DbObject")]
+                [Validation(Required=false)]
+                public string DbObject { get; set; }
+
+                [NameInMap("Delay")]
+                [Validation(Required=false)]
+                public long? Delay { get; set; }
+
+                [NameInMap("DestNetType")]
+                [Validation(Required=false)]
+                public string DestNetType { get; set; }
+
+                [NameInMap("DestinationEndpoint")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobDestinationEndpoint DestinationEndpoint { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobDestinationEndpoint : TeaModel {
+                    [NameInMap("AliyunUid")]
+                    [Validation(Required=false)]
+                    public string AliyunUid { get; set; }
+
+                    [NameInMap("DatabaseName")]
+                    [Validation(Required=false)]
+                    public string DatabaseName { get; set; }
+
+                    [NameInMap("EngineName")]
+                    [Validation(Required=false)]
+                    public string EngineName { get; set; }
+
+                    [NameInMap("InstanceID")]
+                    [Validation(Required=false)]
+                    public string InstanceID { get; set; }
+
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public string Ip { get; set; }
+
+                    [NameInMap("OracleSID")]
+                    [Validation(Required=false)]
+                    public string OracleSID { get; set; }
+
+                    [NameInMap("Port")]
+                    [Validation(Required=false)]
+                    public string Port { get; set; }
+
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    [NameInMap("RoleName")]
+                    [Validation(Required=false)]
+                    public string RoleName { get; set; }
+
+                    [NameInMap("SslSolutionEnum")]
+                    [Validation(Required=false)]
+                    public string SslSolutionEnum { get; set; }
+
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public string UserName { get; set; }
+
+                }
+
+                [NameInMap("DtsInstanceID")]
+                [Validation(Required=false)]
+                public string DtsInstanceID { get; set; }
+
+                [NameInMap("DtsJobClass")]
+                [Validation(Required=false)]
+                public string DtsJobClass { get; set; }
+
+                [NameInMap("DtsJobDirection")]
+                [Validation(Required=false)]
+                public string DtsJobDirection { get; set; }
+
+                [NameInMap("DtsJobId")]
+                [Validation(Required=false)]
+                public string DtsJobId { get; set; }
+
+                [NameInMap("DtsJobName")]
+                [Validation(Required=false)]
+                public string DtsJobName { get; set; }
+
+                [NameInMap("EndTimestamp")]
+                [Validation(Required=false)]
+                public string EndTimestamp { get; set; }
+
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("EtlCalculator")]
+                [Validation(Required=false)]
+                public string EtlCalculator { get; set; }
+
+                [NameInMap("ExpireTime")]
+                [Validation(Required=false)]
+                public string ExpireTime { get; set; }
+
+                [NameInMap("FinishTime")]
+                [Validation(Required=false)]
+                public string FinishTime { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
+                public string GroupId { get; set; }
+
+                [NameInMap("IsDemoJob")]
+                [Validation(Required=false)]
+                public bool? IsDemoJob { get; set; }
+
+                [NameInMap("JobType")]
+                [Validation(Required=false)]
+                public string JobType { get; set; }
+
+                [NameInMap("MigrationMode")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobMigrationMode MigrationMode { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobMigrationMode : TeaModel {
+                    [NameInMap("DataExtractTransformLoad")]
+                    [Validation(Required=false)]
+                    public bool? DataExtractTransformLoad { get; set; }
+
+                    [NameInMap("DataInitialization")]
+                    [Validation(Required=false)]
+                    public bool? DataInitialization { get; set; }
+
+                    [NameInMap("DataSynchronization")]
+                    [Validation(Required=false)]
+                    public bool? DataSynchronization { get; set; }
+
+                    [NameInMap("StructureInitialization")]
+                    [Validation(Required=false)]
+                    public bool? StructureInitialization { get; set; }
+
+                }
+
+                [NameInMap("OriginType")]
+                [Validation(Required=false)]
+                public string OriginType { get; set; }
+
+                [NameInMap("PayType")]
+                [Validation(Required=false)]
+                public string PayType { get; set; }
+
+                [NameInMap("Performance")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobPerformance Performance { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobPerformance : TeaModel {
+                    [NameInMap("Flow")]
+                    [Validation(Required=false)]
+                    public string Flow { get; set; }
+
+                    [NameInMap("Rps")]
+                    [Validation(Required=false)]
+                    public string Rps { get; set; }
+
+                }
+
+                [NameInMap("PrecheckStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobPrecheckStatus PrecheckStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobPrecheckStatus : TeaModel {
+                    [NameInMap("Detail")]
+                    [Validation(Required=false)]
+                    public List<DescribeDtsJobDetailResponseBodySubSyncJobReverseJobPrecheckStatusDetail> Detail { get; set; }
+                    public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobPrecheckStatusDetail : TeaModel {
+                        [NameInMap("CheckItem")]
+                        [Validation(Required=false)]
+                        public string CheckItem { get; set; }
+
+                        [NameInMap("CheckItemDescription")]
+                        [Validation(Required=false)]
+                        public string CheckItemDescription { get; set; }
+
+                        [NameInMap("CheckResult")]
+                        [Validation(Required=false)]
+                        public string CheckResult { get; set; }
+
+                        [NameInMap("FailedReason")]
+                        [Validation(Required=false)]
+                        public string FailedReason { get; set; }
+
+                        [NameInMap("RepairMethod")]
+                        [Validation(Required=false)]
+                        public string RepairMethod { get; set; }
+
+                    }
+
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("Reserved")]
+                [Validation(Required=false)]
+                public string Reserved { get; set; }
+
+                [NameInMap("RetryState")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobRetryState RetryState { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobRetryState : TeaModel {
+                    [NameInMap("ErrMsg")]
+                    [Validation(Required=false)]
+                    public string ErrMsg { get; set; }
+
+                    [NameInMap("JobId")]
+                    [Validation(Required=false)]
+                    public string JobId { get; set; }
+
+                    [NameInMap("MaxRetryTime")]
+                    [Validation(Required=false)]
+                    public int? MaxRetryTime { get; set; }
+
+                    [NameInMap("Module")]
+                    [Validation(Required=false)]
+                    public string Module { get; set; }
+
+                    [NameInMap("RetryCount")]
+                    [Validation(Required=false)]
+                    public int? RetryCount { get; set; }
+
+                    /// <summary>
+                    /// srcDB/destDB/metaDB/dstore
+                    /// </summary>
+                    [NameInMap("RetryTarget")]
+                    [Validation(Required=false)]
+                    public string RetryTarget { get; set; }
+
+                    [NameInMap("RetryTime")]
+                    [Validation(Required=false)]
+                    public int? RetryTime { get; set; }
+
+                    [NameInMap("Retrying")]
+                    [Validation(Required=false)]
+                    public bool? Retrying { get; set; }
+
+                }
+
+                [NameInMap("ReverseJob")]
+                [Validation(Required=false)]
+                public object ReverseJob { get; set; }
+
+                [NameInMap("SourceEndpoint")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobSourceEndpoint SourceEndpoint { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobSourceEndpoint : TeaModel {
+                    [NameInMap("AliyunUid")]
+                    [Validation(Required=false)]
+                    public string AliyunUid { get; set; }
+
+                    [NameInMap("DatabaseName")]
+                    [Validation(Required=false)]
+                    public string DatabaseName { get; set; }
+
+                    [NameInMap("EngineName")]
+                    [Validation(Required=false)]
+                    public string EngineName { get; set; }
+
+                    [NameInMap("InstanceID")]
+                    [Validation(Required=false)]
+                    public string InstanceID { get; set; }
+
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public string Ip { get; set; }
+
+                    [NameInMap("OracleSID")]
+                    [Validation(Required=false)]
+                    public string OracleSID { get; set; }
+
+                    [NameInMap("Port")]
+                    [Validation(Required=false)]
+                    public string Port { get; set; }
+
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    [NameInMap("RoleName")]
+                    [Validation(Required=false)]
+                    public string RoleName { get; set; }
+
+                    [NameInMap("SslSolutionEnum")]
+                    [Validation(Required=false)]
+                    public string SslSolutionEnum { get; set; }
+
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public string UserName { get; set; }
+
+                }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("StructureInitializationStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobStructureInitializationStatus StructureInitializationStatus { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobStructureInitializationStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("NeedUpgrade")]
+                    [Validation(Required=false)]
+                    public bool? NeedUpgrade { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("SubscribeTopic")]
+                [Validation(Required=false)]
+                public string SubscribeTopic { get; set; }
+
+                [NameInMap("SubscriptionDataType")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobSubscriptionDataType SubscriptionDataType { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobSubscriptionDataType : TeaModel {
+                    [NameInMap("Ddl")]
+                    [Validation(Required=false)]
+                    public bool? Ddl { get; set; }
+
+                    [NameInMap("Dml")]
+                    [Validation(Required=false)]
+                    public bool? Dml { get; set; }
+
+                }
+
+                [NameInMap("SubscriptionHost")]
+                [Validation(Required=false)]
+                public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobSubscriptionHost SubscriptionHost { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobSubscriptionHost : TeaModel {
+                    [NameInMap("PrivateHost")]
+                    [Validation(Required=false)]
+                    public string PrivateHost { get; set; }
+
+                    [NameInMap("PublicHost")]
+                    [Validation(Required=false)]
+                    public string PublicHost { get; set; }
+
+                    [NameInMap("VpcHost")]
+                    [Validation(Required=false)]
+                    public string VpcHost { get; set; }
+
+                }
+
+                [NameInMap("SynchronizationDirection")]
+                [Validation(Required=false)]
+                public string SynchronizationDirection { get; set; }
+
+                [NameInMap("TagList")]
+                [Validation(Required=false)]
+                public List<DescribeDtsJobDetailResponseBodySubSyncJobReverseJobTagList> TagList { get; set; }
+                public class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobTagList : TeaModel {
+                    [NameInMap("AliUid")]
+                    [Validation(Required=false)]
+                    public long? AliUid { get; set; }
+
+                    [NameInMap("Creator")]
+                    [Validation(Required=false)]
+                    public long? Creator { get; set; }
+
+                    [NameInMap("GmtCreate")]
+                    [Validation(Required=false)]
+                    public string GmtCreate { get; set; }
+
+                    [NameInMap("GmtModified")]
+                    [Validation(Required=false)]
+                    public string GmtModified { get; set; }
+
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public long? Id { get; set; }
+
+                    /// <summary>
+                    /// region_id
+                    /// </summary>
+                    [NameInMap("RegionId")]
+                    [Validation(Required=false)]
+                    public string RegionId { get; set; }
+
+                    /// <summary>
+                    /// dts instance id
+                    /// </summary>
+                    [NameInMap("ResourceId")]
+                    [Validation(Required=false)]
+                    public string ResourceId { get; set; }
+
+                    [NameInMap("ResourceType")]
+                    [Validation(Required=false)]
+                    public string ResourceType { get; set; }
+
+                    [NameInMap("Scope")]
+                    [Validation(Required=false)]
+                    public string Scope { get; set; }
+
+                    [NameInMap("SrcRegion")]
+                    [Validation(Required=false)]
+                    public string SrcRegion { get; set; }
+
+                    [NameInMap("TagCategory")]
+                    [Validation(Required=false)]
+                    public string TagCategory { get; set; }
+
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                }
+
+                [NameInMap("TaskType")]
+                [Validation(Required=false)]
+                public string TaskType { get; set; }
+
+            }
+
+            [NameInMap("SourceEndpoint")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobSourceEndpoint SourceEndpoint { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobSourceEndpoint : TeaModel {
+                [NameInMap("AliyunUid")]
+                [Validation(Required=false)]
+                public string AliyunUid { get; set; }
+
+                [NameInMap("DatabaseName")]
+                [Validation(Required=false)]
+                public string DatabaseName { get; set; }
+
+                [NameInMap("EngineName")]
+                [Validation(Required=false)]
+                public string EngineName { get; set; }
+
+                [NameInMap("InstanceID")]
+                [Validation(Required=false)]
+                public string InstanceID { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
+                public string Ip { get; set; }
+
+                [NameInMap("OracleSID")]
+                [Validation(Required=false)]
+                public string OracleSID { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                [NameInMap("RoleName")]
+                [Validation(Required=false)]
+                public string RoleName { get; set; }
+
+                [NameInMap("SslSolutionEnum")]
+                [Validation(Required=false)]
+                public string SslSolutionEnum { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
+                public string UserName { get; set; }
+
+            }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("StructureInitializationStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobStructureInitializationStatus StructureInitializationStatus { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobStructureInitializationStatus : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("NeedUpgrade")]
+                [Validation(Required=false)]
+                public bool? NeedUpgrade { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            [NameInMap("SubSyncJob")]
+            [Validation(Required=false)]
+            public List<object> SubSyncJob { get; set; }
+
+            [NameInMap("SubscribeTopic")]
+            [Validation(Required=false)]
+            public string SubscribeTopic { get; set; }
+
+            [NameInMap("SubscriptionDataType")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobSubscriptionDataType SubscriptionDataType { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobSubscriptionDataType : TeaModel {
+                [NameInMap("Ddl")]
+                [Validation(Required=false)]
+                public bool? Ddl { get; set; }
+
+                [NameInMap("Dml")]
+                [Validation(Required=false)]
+                public bool? Dml { get; set; }
+
+            }
+
+            [NameInMap("SubscriptionHost")]
+            [Validation(Required=false)]
+            public DescribeDtsJobDetailResponseBodySubSyncJobSubscriptionHost SubscriptionHost { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobSubscriptionHost : TeaModel {
+                [NameInMap("PrivateHost")]
+                [Validation(Required=false)]
+                public string PrivateHost { get; set; }
+
+                [NameInMap("PublicHost")]
+                [Validation(Required=false)]
+                public string PublicHost { get; set; }
+
+                [NameInMap("VpcHost")]
+                [Validation(Required=false)]
+                public string VpcHost { get; set; }
+
+            }
+
+            [NameInMap("SynchronizationDirection")]
+            [Validation(Required=false)]
+            public string SynchronizationDirection { get; set; }
+
+            [NameInMap("TagList")]
+            [Validation(Required=false)]
+            public List<DescribeDtsJobDetailResponseBodySubSyncJobTagList> TagList { get; set; }
+            public class DescribeDtsJobDetailResponseBodySubSyncJobTagList : TeaModel {
+                [NameInMap("AliUid")]
+                [Validation(Required=false)]
+                public long? AliUid { get; set; }
+
+                [NameInMap("Creator")]
+                [Validation(Required=false)]
+                public long? Creator { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
+                public string GmtCreate { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
+                public string GmtModified { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+                /// <summary>
+                /// region_id
+                /// </summary>
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                /// <summary>
+                /// dts instance id
+                /// </summary>
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+                [NameInMap("Scope")]
+                [Validation(Required=false)]
+                public string Scope { get; set; }
+
+                [NameInMap("SrcRegion")]
+                [Validation(Required=false)]
+                public string SrcRegion { get; set; }
+
+                [NameInMap("TagCategory")]
+                [Validation(Required=false)]
+                public string TagCategory { get; set; }
+
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
+            [NameInMap("TaskType")]
+            [Validation(Required=false)]
+            public string TaskType { get; set; }
+
+        }
+
+        /// <summary>
+        /// The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// </summary>
+        [NameInMap("SubscribeTopic")]
+        [Validation(Required=false)]
+        public string SubscribeTopic { get; set; }
+
+        /// <summary>
+        /// The VPC endpoint of the change tracking instance in the `<Address>:<Port number>` format.
+        /// </summary>
         [NameInMap("SubscriptionDataType")]
         [Validation(Required=false)]
         public DescribeDtsJobDetailResponseBodySubscriptionDataType SubscriptionDataType { get; set; }
         public class DescribeDtsJobDetailResponseBodySubscriptionDataType : TeaModel {
-            [NameInMap("Dml")]
-            [Validation(Required=false)]
-            public bool? Dml { get; set; }
+            /// <summary>
+            /// The private endpoint of the change tracking instance in the `<Address>:<Port number>` format.
+            /// </summary>
             [NameInMap("Ddl")]
             [Validation(Required=false)]
             public bool? Ddl { get; set; }
-        };
+
+            /// <summary>
+            /// The public endpoint of the change tracking instance in the `<Address>:<Port number>` format.
+            /// </summary>
+            [NameInMap("Dml")]
+            [Validation(Required=false)]
+            public bool? Dml { get; set; }
+
+        }
+
+        /// <summary>
+        /// Indicates whether full data migration or synchronization is performed. Valid values:
+        /// 
+        /// *   **true**: Full data migration or synchronization is performed.
+        /// *   **false**: Full data migration or synchronization is not performed.
+        /// </summary>
+        [NameInMap("SubscriptionHost")]
+        [Validation(Required=false)]
+        public DescribeDtsJobDetailResponseBodySubscriptionHost SubscriptionHost { get; set; }
+        public class DescribeDtsJobDetailResponseBodySubscriptionHost : TeaModel {
+            /// <summary>
+            /// The endpoint of the change tracking instance.
+            /// </summary>
+            [NameInMap("PrivateHost")]
+            [Validation(Required=false)]
+            public string PrivateHost { get; set; }
+
+            /// <summary>
+            /// Indicates whether schema migration or schema synchronization is performed. Valid values:
+            /// 
+            /// *   **true**: Schema migration or schema synchronization is performed.
+            /// *   **false**: Schema migration or schema synchronization is not performed.
+            /// </summary>
+            [NameInMap("PublicHost")]
+            [Validation(Required=false)]
+            public string PublicHost { get; set; }
+
+            /// <summary>
+            /// Indicates whether incremental data migration or synchronization is performed. Valid values:
+            /// 
+            /// *   **true**: Incremental data migration or synchronization is performed.
+            /// *   **false**: Incremental data migration or synchronization is not performed.
+            /// </summary>
+            [NameInMap("VpcHost")]
+            [Validation(Required=false)]
+            public string VpcHost { get; set; }
+
+        }
+
+        /// <summary>
+        /// The latency of incremental data migration or synchronization.
+        /// 
+        /// >  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        /// <summary>
+        /// The status code returned.
+        /// </summary>
+        [NameInMap("SynchronizationDirection")]
+        [Validation(Required=false)]
+        public string SynchronizationDirection { get; set; }
+
+        [NameInMap("TaskType")]
+        [Validation(Required=false)]
+        public string TaskType { get; set; }
 
     }
 

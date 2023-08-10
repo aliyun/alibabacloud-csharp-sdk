@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
-    public class IgnoreJobDetailResponse : TeaModel {
+    public class SwitchPhysicalDtsJobToCloudResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public IgnoreJobDetailResponseBody Body { get; set; }
+        public SwitchPhysicalDtsJobToCloudResponseBody Body { get; set; }
 
     }
 

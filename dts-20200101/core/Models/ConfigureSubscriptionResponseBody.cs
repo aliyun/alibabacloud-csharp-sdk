@@ -9,33 +9,54 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ConfigureSubscriptionResponseBody : TeaModel {
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public string HttpStatusCode { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
-
-        [NameInMap("DtsJobId")]
-        [Validation(Required=false)]
-        public string DtsJobId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
-
+        /// <summary>
+        /// The ID of the change tracking instance.
+        /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the change tracking task.
+        /// </summary>
+        [NameInMap("DtsJobId")]
+        [Validation(Required=false)]
+        public string DtsJobId { get; set; }
+
+        /// <summary>
+        /// The error code returned if the request failed.
+        /// </summary>
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
+
+        /// <summary>
+        /// The error message returned if the request failed.
+        /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
+
+        /// <summary>
+        /// The HTTP status code.
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public string HttpStatusCode { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// Indicates whether the request was successful.
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public string Success { get; set; }
 
     }
 

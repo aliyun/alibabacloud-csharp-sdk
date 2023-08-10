@@ -8,10 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
-    public class IgnoreJobDetailResponseBody : TeaModel {
-        [NameInMap("Code")]
+    public class SwitchPhysicalDtsJobToCloudResponseBody : TeaModel {
+        [NameInMap("DynamicCode")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string DynamicCode { get; set; }
+
+        [NameInMap("DynamicMessage")]
+        [Validation(Required=false)]
+        public string DynamicMessage { get; set; }
+
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
+
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

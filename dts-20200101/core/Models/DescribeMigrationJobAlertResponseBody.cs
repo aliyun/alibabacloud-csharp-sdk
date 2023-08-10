@@ -9,49 +9,88 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeMigrationJobAlertResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("MigrationJobName")]
-        [Validation(Required=false)]
-        public string MigrationJobName { get; set; }
-
-        [NameInMap("ErrorAlertStatus")]
-        [Validation(Required=false)]
-        public string ErrorAlertStatus { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
-
-        [NameInMap("ErrorAlertPhone")]
-        [Validation(Required=false)]
-        public string ErrorAlertPhone { get; set; }
-
-        [NameInMap("ErrMessage")]
-        [Validation(Required=false)]
-        public string ErrMessage { get; set; }
-
-        [NameInMap("DelayAlertStatus")]
-        [Validation(Required=false)]
-        public string DelayAlertStatus { get; set; }
-
+        /// <summary>
+        /// The mobile phone numbers that receive latency-related alerts.
+        /// </summary>
         [NameInMap("DelayAlertPhone")]
         [Validation(Required=false)]
         public string DelayAlertPhone { get; set; }
 
+        /// <summary>
+        /// Indicates whether task latency is monitored. Valid values:
+        /// 
+        /// *   **enable**: yes
+        /// *   **disable**: no
+        /// </summary>
+        [NameInMap("DelayAlertStatus")]
+        [Validation(Required=false)]
+        public string DelayAlertStatus { get; set; }
+
+        /// <summary>
+        /// The threshold for triggering latency alerts. Unit: seconds.
+        /// </summary>
+        [NameInMap("DelayOverSeconds")]
+        [Validation(Required=false)]
+        public string DelayOverSeconds { get; set; }
+
+        /// <summary>
+        /// The error code returned if the call failed.
+        /// </summary>
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
+
+        /// <summary>
+        /// The error message returned if the call failed.
+        /// </summary>
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
+
+        /// <summary>
+        /// The mobile phone numbers that receive status-related alerts.
+        /// </summary>
+        [NameInMap("ErrorAlertPhone")]
+        [Validation(Required=false)]
+        public string ErrorAlertPhone { get; set; }
+
+        /// <summary>
+        /// Indicates whether task status is monitored. Valid values:
+        /// 
+        /// *   **enable**: yes
+        /// *   **disable**: no
+        /// </summary>
+        [NameInMap("ErrorAlertStatus")]
+        [Validation(Required=false)]
+        public string ErrorAlertStatus { get; set; }
+
+        /// <summary>
+        /// The ID of the data migration instance.
+        /// </summary>
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]
         public string MigrationJobId { get; set; }
 
-        [NameInMap("DelayOverSeconds")]
+        /// <summary>
+        /// The name of the data migration task.
+        /// </summary>
+        [NameInMap("MigrationJobName")]
         [Validation(Required=false)]
-        public string DelayOverSeconds { get; set; }
+        public string MigrationJobName { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// Indicates whether the call was successful.
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public string Success { get; set; }
 
     }
 

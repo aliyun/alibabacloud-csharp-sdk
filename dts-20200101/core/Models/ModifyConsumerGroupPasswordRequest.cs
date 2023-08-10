@@ -9,41 +9,67 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyConsumerGroupPasswordRequest : TeaModel {
-        [NameInMap("RegionId")]
+        /// <summary>
+        /// The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+        /// </summary>
+        [NameInMap("AccountId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AccountId { get; set; }
 
-        [NameInMap("SubscriptionInstanceId")]
-        [Validation(Required=false)]
-        public string SubscriptionInstanceId { get; set; }
-
+        /// <summary>
+        /// The ID of the consumer group.
+        /// 
+        /// You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group ID.
+        /// </summary>
         [NameInMap("ConsumerGroupID")]
         [Validation(Required=false)]
         public string ConsumerGroupID { get; set; }
 
+        /// <summary>
+        /// The name of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group name.
+        /// </summary>
         [NameInMap("ConsumerGroupName")]
         [Validation(Required=false)]
         public string ConsumerGroupName { get; set; }
 
-        [NameInMap("ConsumerGroupUserName")]
-        [Validation(Required=false)]
-        public string ConsumerGroupUserName { get; set; }
-
+        /// <summary>
+        /// The current password of the consumer group.
+        /// </summary>
         [NameInMap("ConsumerGroupPassword")]
         [Validation(Required=false)]
         public string ConsumerGroupPassword { get; set; }
 
-        [NameInMap("consumerGroupNewPassword")]
+        /// <summary>
+        /// The username of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the username.
+        /// </summary>
+        [NameInMap("ConsumerGroupUserName")]
         [Validation(Required=false)]
-        public string ConsumerGroupNewPassword { get; set; }
+        public string ConsumerGroupUserName { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
-        [NameInMap("AccountId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string AccountId { get; set; }
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.
+        /// </summary>
+        [NameInMap("SubscriptionInstanceId")]
+        [Validation(Required=false)]
+        public string SubscriptionInstanceId { get; set; }
+
+        /// <summary>
+        /// The new password of the consumer group.
+        /// 
+        /// *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
+        /// *   A password must be 8 to 32 characters in length.
+        /// </summary>
+        [NameInMap("consumerGroupNewPassword")]
+        [Validation(Required=false)]
+        public string ConsumerGroupNewPassword { get; set; }
 
     }
 

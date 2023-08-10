@@ -9,14 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyConsumptionTimestampRequest : TeaModel {
-        [NameInMap("RegionId")]
+        /// <summary>
+        /// The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+        /// </summary>
+        [NameInMap("AccountId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AccountId { get; set; }
 
-        [NameInMap("SubscriptionInstanceId")]
-        [Validation(Required=false)]
-        public string SubscriptionInstanceId { get; set; }
-
+        /// <summary>
+        /// The consumption checkpoint. The format is *yyyy-MM-dd*T*HH:mm:ss*Z. The time is displayed in UTC.
+        /// </summary>
         [NameInMap("ConsumptionTimestamp")]
         [Validation(Required=false)]
         public string ConsumptionTimestamp { get; set; }
@@ -25,9 +27,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
-        [NameInMap("AccountId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string AccountId { get; set; }
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.
+        /// </summary>
+        [NameInMap("SubscriptionInstanceId")]
+        [Validation(Required=false)]
+        public string SubscriptionInstanceId { get; set; }
 
     }
 
