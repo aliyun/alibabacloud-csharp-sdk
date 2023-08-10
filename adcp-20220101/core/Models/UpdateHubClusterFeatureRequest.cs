@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class UpdateHubClusterFeatureRequest : TeaModel {
+        [NameInMap("AccessControlList")]
+        [Validation(Required=false)]
+        public List<string> AccessControlList { get; set; }
+
         /// <summary>
         /// The ID of the EIP.
         /// </summary>
@@ -20,13 +24,13 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public bool? ArgoCDEnabled { get; set; }
 
+        [NameInMap("ArgoCDHAEnabled")]
+        [Validation(Required=false)]
+        public bool? ArgoCDHAEnabled { get; set; }
+
         [NameInMap("ArgoServerEnabled")]
         [Validation(Required=false)]
         public bool? ArgoServerEnabled { get; set; }
-
-        [NameInMap("ArmsEnabled")]
-        [Validation(Required=false)]
-        public bool? ArmsEnabled { get; set; }
 
         /// <summary>
         /// Specifies whether to enable the audit logging feature. Valid values:
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public bool? EnableMesh { get; set; }
 
+        [NameInMap("MonitorEnabled")]
+        [Validation(Required=false)]
+        public bool? MonitorEnabled { get; set; }
+
         /// <summary>
         /// The name of the cluster. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).
         /// </summary>
@@ -77,6 +85,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [NameInMap("PriceLimit")]
         [Validation(Required=false)]
         public string PriceLimit { get; set; }
+
+        [NameInMap("PublicAccessEnabled")]
+        [Validation(Required=false)]
+        public bool? PublicAccessEnabled { get; set; }
 
         /// <summary>
         /// Specifies whether to associate an elastic IP address (EIP) with the API server. Valid values:

@@ -1741,11 +1741,19 @@ namespace AlibabaCloud.SDK.Adcp20220101
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateHubClusterFeatureShrinkRequest request = new UpdateHubClusterFeatureShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AccessControlList))
+            {
+                request.AccessControlListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccessControlList, "AccessControlList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VSwitches))
             {
                 request.VSwitchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitches, "VSwitches", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessControlListShrink))
+            {
+                query["AccessControlList"] = request.AccessControlListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEipId))
             {
                 query["ApiServerEipId"] = request.ApiServerEipId;
@@ -1754,13 +1762,13 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["ArgoCDEnabled"] = request.ArgoCDEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgoCDHAEnabled))
+            {
+                query["ArgoCDHAEnabled"] = request.ArgoCDHAEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgoServerEnabled))
             {
                 query["ArgoServerEnabled"] = request.ArgoServerEnabled;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArmsEnabled))
-            {
-                query["ArmsEnabled"] = request.ArmsEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogEnabled))
             {
@@ -1778,6 +1786,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["EnableMesh"] = request.EnableMesh;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorEnabled))
+            {
+                query["MonitorEnabled"] = request.MonitorEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -1785,6 +1797,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PriceLimit))
             {
                 query["PriceLimit"] = request.PriceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicAccessEnabled))
+            {
+                query["PublicAccessEnabled"] = request.PublicAccessEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicApiServerEnabled))
             {
@@ -1822,11 +1838,19 @@ namespace AlibabaCloud.SDK.Adcp20220101
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateHubClusterFeatureShrinkRequest request = new UpdateHubClusterFeatureShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AccessControlList))
+            {
+                request.AccessControlListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccessControlList, "AccessControlList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VSwitches))
             {
                 request.VSwitchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitches, "VSwitches", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessControlListShrink))
+            {
+                query["AccessControlList"] = request.AccessControlListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEipId))
             {
                 query["ApiServerEipId"] = request.ApiServerEipId;
@@ -1835,13 +1859,13 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["ArgoCDEnabled"] = request.ArgoCDEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgoCDHAEnabled))
+            {
+                query["ArgoCDHAEnabled"] = request.ArgoCDHAEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgoServerEnabled))
             {
                 query["ArgoServerEnabled"] = request.ArgoServerEnabled;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArmsEnabled))
-            {
-                query["ArmsEnabled"] = request.ArmsEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogEnabled))
             {
@@ -1859,6 +1883,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["EnableMesh"] = request.EnableMesh;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorEnabled))
+            {
+                query["MonitorEnabled"] = request.MonitorEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -1866,6 +1894,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PriceLimit))
             {
                 query["PriceLimit"] = request.PriceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicAccessEnabled))
+            {
+                query["PublicAccessEnabled"] = request.PublicAccessEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicApiServerEnabled))
             {
