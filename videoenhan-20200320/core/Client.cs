@@ -3507,6 +3507,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddWatermark))
+            {
+                body["AddWatermark"] = request.AddWatermark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceURL))
             {
                 body["ReferenceURL"] = request.ReferenceURL;
@@ -3538,6 +3542,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddWatermark))
+            {
+                body["AddWatermark"] = request.AddWatermark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceURL))
             {
                 body["ReferenceURL"] = request.ReferenceURL;
@@ -3801,6 +3809,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddWatermark))
+            {
+                body["AddWatermark"] = request.AddWatermark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceImageURL))
             {
                 body["FaceImageURL"] = request.FaceImageURL;
@@ -3836,6 +3848,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddWatermark))
+            {
+                body["AddWatermark"] = request.AddWatermark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceImageURL))
             {
                 body["FaceImageURL"] = request.FaceImageURL;

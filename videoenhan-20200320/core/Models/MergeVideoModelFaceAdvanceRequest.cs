@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class MergeVideoModelFaceAdvanceRequest : TeaModel {
+        [NameInMap("AddWatermark")]
+        [Validation(Required=false)]
+        public bool? AddWatermark { get; set; }
+
         [NameInMap("FaceImageURL")]
         [Validation(Required=false)]
         public Stream FaceImageURLObject { get; set; }
