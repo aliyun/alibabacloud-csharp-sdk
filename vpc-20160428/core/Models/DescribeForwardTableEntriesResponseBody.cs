@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string IpProtocol { get; set; }
 
+                [NameInMap("NatGatewayId")]
+                [Validation(Required=false)]
+                public string NatGatewayId { get; set; }
+
                 /// <summary>
                 /// The status of the DNAT entry. Valid values:
                 /// 
