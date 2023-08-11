@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imarketing20220704.Models
 {
     public class QueryAuditResultResponseBody : TeaModel {
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<QueryAuditResultResponseBodyRecords> Records { get; set; }

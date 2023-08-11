@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imarketing20220704.Models
 {
-    public class GetMainPartListByUserIdResponse : TeaModel {
+    public class ConfirmSampleShippedResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Imarketing20220704.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetMainPartListByUserIdResponseBody Body { get; set; }
+        public ConfirmSampleShippedResponseBody Body { get; set; }
 
     }
 

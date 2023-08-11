@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imarketing20220704.Models
         [Validation(Required=false)]
         public List<UpdateAdxCreativeContentRequestAd> Ad { get; set; }
         public class UpdateAdxCreativeContentRequestAd : TeaModel {
+            [NameInMap("Bundle")]
+            [Validation(Required=false)]
+            public List<string> Bundle { get; set; }
+
             [NameInMap("Clicks")]
             [Validation(Required=false)]
             public List<string> Clicks { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Imarketing20220704.Models
             [NameInMap("Interacttype")]
             [Validation(Required=false)]
             public int? Interacttype { get; set; }
+
+            [NameInMap("MediaIdList")]
+            [Validation(Required=false)]
+            public List<string> MediaIdList { get; set; }
 
             [NameInMap("Nativead")]
             [Validation(Required=false)]
@@ -66,6 +74,14 @@ namespace AlibabaCloud.SDK.Imarketing20220704.Models
             [NameInMap("Ostype")]
             [Validation(Required=false)]
             public string Ostype { get; set; }
+
+            [NameInMap("Prereview")]
+            [Validation(Required=false)]
+            public bool? Prereview { get; set; }
+
+            [NameInMap("Seat")]
+            [Validation(Required=false)]
+            public string Seat { get; set; }
 
             [NameInMap("Startdate")]
             [Validation(Required=false)]

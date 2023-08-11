@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Imarketing20220704.Models
 
         [NameInMap("Id")]
         [Validation(Required=false)]
-        public int? Id { get; set; }
+        public long? Id { get; set; }
 
         [NameInMap("MainId")]
         [Validation(Required=false)]
