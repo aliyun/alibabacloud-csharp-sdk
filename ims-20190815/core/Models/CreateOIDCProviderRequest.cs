@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string Fingerprints { get; set; }
 
+        [NameInMap("IssuanceLimitTime")]
+        [Validation(Required=false)]
+        public long? IssuanceLimitTime { get; set; }
+
         /// <summary>
         /// The URL of the issuer, which is provided by the external IdP Okta. The URL of the issuer must be unique within an Alibaba Cloud account.
         /// 
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// The name of the OIDC IdP.
         /// 
-        /// The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are `periods, (.), hyphens (-), and underscores (_)`.
+        /// The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are `periods, (.), hyphens (-), and underscores (_)`.``
         /// 
         /// The name can be up to 128 characters in length.
         /// </summary>

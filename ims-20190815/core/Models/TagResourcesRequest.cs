@@ -9,10 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class TagResourcesRequest : TeaModel {
+        /// <summary>
+        /// The ID of resource N.
+        /// 
+        /// Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.
+        /// 
+        /// > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
+        /// <summary>
+        /// The name of resource N.
+        /// 
+        /// Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.
+        /// 
+        /// > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+        /// </summary>
         [NameInMap("ResourcePrincipalName")]
         [Validation(Required=false)]
         public List<string> ResourcePrincipalName { get; set; }
@@ -26,6 +40,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The tag value.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }

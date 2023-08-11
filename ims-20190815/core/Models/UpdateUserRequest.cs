@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// The new email address of the RAM user.
         /// 
-        /// >  This parameter applies only to the China site (aliyun.com).
+        /// > This parameter is valid only on the China site (aliyun.com).
         /// </summary>
         [NameInMap("NewEmail")]
         [Validation(Required=false)]
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// The new mobile phone number of the RAM user.
         /// 
-        /// Format: Country calling code-Mobile phone number.
+        /// Format: \<Country code>-\<Mobile phone number>.
         /// 
-        /// >  This parameter applies only to the China site (aliyun.com).
+        /// > This parameter is valid only on the China site (aliyun.com).
         /// </summary>
         [NameInMap("NewMobilePhone")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// The new logon name of the RAM user.
         /// 
-        /// The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` is the name of the RAM user. `<AccountAlias>.onaliyun.com` is the default domain name.
+        /// The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name.
         /// 
         /// The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be 1 to 64 characters in length.
         /// </summary>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// The ID of the RAM user.
         /// 
-        /// >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
+        /// > You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// The logon name of the RAM user.
         /// 
-        /// >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
+        /// > You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
         /// </summary>
         [NameInMap("UserPrincipalName")]
         [Validation(Required=false)]

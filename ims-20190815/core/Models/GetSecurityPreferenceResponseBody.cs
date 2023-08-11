@@ -144,10 +144,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
             }
 
+            /// <summary>
+            /// The MFA method preference.
+            /// </summary>
             [NameInMap("VerificationPreference")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference VerificationPreference { get; set; }
             public class GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference : TeaModel {
+                /// <summary>
+                /// The MFA method.
+                /// </summary>
                 [NameInMap("VerificationTypes")]
                 [Validation(Required=false)]
                 public List<string> VerificationTypes { get; set; }

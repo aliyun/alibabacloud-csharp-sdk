@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class SetSecurityPreferenceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -122,10 +122,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
             }
 
+            /// <summary>
+            /// The MFA method preference.
+            /// </summary>
             [NameInMap("VerificationPreference")]
             [Validation(Required=false)]
             public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference VerificationPreference { get; set; }
             public class SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference : TeaModel {
+                /// <summary>
+                /// The MFA methods.
+                /// </summary>
                 [NameInMap("VerificationTypes")]
                 [Validation(Required=false)]
                 public List<string> VerificationTypes { get; set; }

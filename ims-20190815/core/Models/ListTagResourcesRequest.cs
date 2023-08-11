@@ -17,24 +17,36 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The number of entries to return. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true.
-        /// 
-        /// Valid values: 1 to 100. Default value: 100.
+        /// The number of entries per page. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true. Valid values: 1 to 100. Default value: 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of resource N.
+        /// 
+        /// Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.
+        /// 
+        /// > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
+        /// <summary>
+        /// The name of resource N.
+        /// 
+        /// Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.
+        /// 
+        /// > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+        /// </summary>
         [NameInMap("ResourcePrincipalName")]
         [Validation(Required=false)]
         public List<string> ResourcePrincipalName { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// The type of the resource. Valid value:
         /// 
         /// *   user: a RAM user
         /// </summary>
@@ -42,6 +54,11 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The tag value.
+        /// 
+        /// Valid values of N: 1 to 20. N must be consecutive.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }

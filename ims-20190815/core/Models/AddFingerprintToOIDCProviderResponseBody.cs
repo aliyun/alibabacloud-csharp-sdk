@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            [NameInMap("IssuanceLimitTime")]
+            [Validation(Required=false)]
+            public long? IssuanceLimitTime { get; set; }
+
             /// <summary>
             /// The URL of the issuer.
             /// </summary>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -38,6 +38,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request AddClientIdToOIDCProviderRequest
@@ -76,6 +77,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request AddClientIdToOIDCProviderRequest
@@ -114,6 +116,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request AddClientIdToOIDCProviderRequest
@@ -126,6 +129,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request AddClientIdToOIDCProviderRequest
@@ -138,6 +142,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request AddFingerprintToOIDCProviderRequest
@@ -176,6 +181,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request AddFingerprintToOIDCProviderRequest
@@ -214,6 +220,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request AddFingerprintToOIDCProviderRequest
@@ -226,6 +233,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request AddFingerprintToOIDCProviderRequest
@@ -944,13 +952,14 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
-          * ## Prerequisites
+          * ### Prerequisites
           * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ## Limits
-          * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
-          * - You can add a maximum of 20 client IDs to an OIDC IdP.
-          * - You can add a maximum of five fingerprints to an OIDC IdP.
+          * ### Limits
+          * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+          * *   You can add a maximum of 20 client IDs to an OIDC IdP.
+          * *   You can add a maximum of five fingerprints to an OIDC IdP.
+          * ###
+          * ``
           *
           * @param request CreateOIDCProviderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -971,6 +980,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fingerprints))
             {
                 query["Fingerprints"] = request.Fingerprints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IssuanceLimitTime))
+            {
+                query["IssuanceLimitTime"] = request.IssuanceLimitTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IssuerUrl))
             {
@@ -1000,13 +1013,14 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
-          * ## Prerequisites
+          * ### Prerequisites
           * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ## Limits
-          * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
-          * - You can add a maximum of 20 client IDs to an OIDC IdP.
-          * - You can add a maximum of five fingerprints to an OIDC IdP.
+          * ### Limits
+          * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+          * *   You can add a maximum of 20 client IDs to an OIDC IdP.
+          * *   You can add a maximum of five fingerprints to an OIDC IdP.
+          * ###
+          * ``
           *
           * @param request CreateOIDCProviderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1027,6 +1041,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fingerprints))
             {
                 query["Fingerprints"] = request.Fingerprints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IssuanceLimitTime))
+            {
+                query["IssuanceLimitTime"] = request.IssuanceLimitTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IssuerUrl))
             {
@@ -1056,13 +1074,14 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
-          * ## Prerequisites
+          * ### Prerequisites
           * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ## Limits
-          * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
-          * - You can add a maximum of 20 client IDs to an OIDC IdP.
-          * - You can add a maximum of five fingerprints to an OIDC IdP.
+          * ### Limits
+          * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+          * *   You can add a maximum of 20 client IDs to an OIDC IdP.
+          * *   You can add a maximum of five fingerprints to an OIDC IdP.
+          * ###
+          * ``
           *
           * @param request CreateOIDCProviderRequest
           * @return CreateOIDCProviderResponse
@@ -1074,13 +1093,14 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
-          * ## Prerequisites
+          * ### Prerequisites
           * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ## Limits
-          * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
-          * - You can add a maximum of 20 client IDs to an OIDC IdP.
-          * - You can add a maximum of five fingerprints to an OIDC IdP.
+          * ### Limits
+          * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+          * *   You can add a maximum of 20 client IDs to an OIDC IdP.
+          * *   You can add a maximum of five fingerprints to an OIDC IdP.
+          * ###
+          * ``
           *
           * @param request CreateOIDCProviderRequest
           * @return CreateOIDCProviderResponse
@@ -1744,6 +1764,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request DeleteOIDCProviderRequest
@@ -1778,6 +1799,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request DeleteOIDCProviderRequest
@@ -1812,6 +1834,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request DeleteOIDCProviderRequest
@@ -1824,6 +1847,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request DeleteOIDCProviderRequest
@@ -2447,6 +2471,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await GetAppSecretWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the configurations of an application named `472457090344041****`.
+          *
+          * @param request GetApplicationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetApplicationResponse
+         */
         public GetApplicationResponse GetApplicationWithOptions(GetApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2474,6 +2505,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<GetApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the configurations of an application named `472457090344041****`.
+          *
+          * @param request GetApplicationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetApplicationResponse
+         */
         public async Task<GetApplicationResponse> GetApplicationWithOptionsAsync(GetApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2501,12 +2539,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<GetApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the configurations of an application named `472457090344041****`.
+          *
+          * @param request GetApplicationRequest
+          * @return GetApplicationResponse
+         */
         public GetApplicationResponse GetApplication(GetApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetApplicationWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the configurations of an application named `472457090344041****`.
+          *
+          * @param request GetApplicationRequest
+          * @return GetApplicationResponse
+         */
         public async Task<GetApplicationResponse> GetApplicationAsync(GetApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2742,7 +2792,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+          * ###
+          * This topic provides an example on how to query the information about an OpenID Connect (OIDC) identity provider (IdP) named `TestOIDCProvider`.
           *
           * @param request GetOIDCProviderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2776,7 +2827,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+          * ###
+          * This topic provides an example on how to query the information about an OpenID Connect (OIDC) identity provider (IdP) named `TestOIDCProvider`.
           *
           * @param request GetOIDCProviderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2810,7 +2862,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+          * ###
+          * This topic provides an example on how to query the information about an OpenID Connect (OIDC) identity provider (IdP) named `TestOIDCProvider`.
           *
           * @param request GetOIDCProviderRequest
           * @return GetOIDCProviderResponse
@@ -2822,7 +2875,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+          * ###
+          * This topic provides an example on how to query the information about an OpenID Connect (OIDC) identity provider (IdP) named `TestOIDCProvider`.
           *
           * @param request GetOIDCProviderRequest
           * @return GetOIDCProviderResponse
@@ -3349,6 +3403,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await ListAppSecretIdsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named `myapp` belongs to the current account.
+          *
+          * @param request ListApplicationsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListApplicationsResponse
+         */
         public ListApplicationsResponse ListApplicationsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3367,6 +3428,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListApplicationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named `myapp` belongs to the current account.
+          *
+          * @param request ListApplicationsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListApplicationsResponse
+         */
         public async Task<ListApplicationsResponse> ListApplicationsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3385,12 +3453,22 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListApplicationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named `myapp` belongs to the current account.
+          *
+          * @return ListApplicationsResponse
+         */
         public ListApplicationsResponse ListApplications()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListApplicationsWithOptions(runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named `myapp` belongs to the current account.
+          *
+          * @return ListApplicationsResponse
+         */
         public async Task<ListApplicationsResponse> ListApplicationsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3538,7 +3616,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+          * ###
+          * This topic provides an example on how to query all OpenID Connect (OIDC) identity providers (IdPs) within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
           *
           * @param request ListOIDCProvidersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3576,7 +3655,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+          * ###
+          * This topic provides an example on how to query all OpenID Connect (OIDC) identity providers (IdPs) within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
           *
           * @param request ListOIDCProvidersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3614,7 +3694,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+          * ###
+          * This topic provides an example on how to query all OpenID Connect (OIDC) identity providers (IdPs) within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
           *
           * @param request ListOIDCProvidersRequest
           * @return ListOIDCProvidersResponse
@@ -3626,7 +3707,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+          * ###
+          * This topic provides an example on how to query all OpenID Connect (OIDC) identity providers (IdPs) within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
           *
           * @param request ListOIDCProvidersRequest
           * @return ListOIDCProvidersResponse
@@ -3778,6 +3860,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
           * *   `ResourceId.N`
           * *   `Tag.N.Key`
@@ -3835,6 +3918,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
           * *   `ResourceId.N`
           * *   `Tag.N.Key`
@@ -3892,6 +3976,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
           * *   `ResourceId.N`
           * *   `Tag.N.Key`
@@ -3907,6 +3992,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
           * *   `ResourceId.N`
           * *   `Tag.N.Key`
@@ -4038,6 +4124,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ## Description
           * You can call the following API operations to query the information about all RAM users:
           * *   ListUsers: queries the details of all RAM users.
           * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
@@ -4082,6 +4169,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ## Description
           * You can call the following API operations to query the information about all RAM users:
           * *   ListUsers: queries the details of all RAM users.
           * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
@@ -4126,6 +4214,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ## Description
           * You can call the following API operations to query the information about all RAM users:
           * *   ListUsers: queries the details of all RAM users.
           * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
@@ -4140,6 +4229,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ## Description
           * You can call the following API operations to query the information about all RAM users:
           * *   ListUsers: queries the details of all RAM users.
           * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
@@ -4310,6 +4400,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request RemoveClientIdFromOIDCProviderRequest
@@ -4348,6 +4439,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request RemoveClientIdFromOIDCProviderRequest
@@ -4386,6 +4478,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request RemoveClientIdFromOIDCProviderRequest
@@ -4398,6 +4491,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request RemoveClientIdFromOIDCProviderRequest
@@ -4410,6 +4504,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request RemoveFingerprintFromOIDCProviderRequest
@@ -4448,6 +4543,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request RemoveFingerprintFromOIDCProviderRequest
@@ -4486,6 +4582,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request RemoveFingerprintFromOIDCProviderRequest
@@ -4498,6 +4595,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
           *
           * @param request RemoveFingerprintFromOIDCProviderRequest
@@ -4796,6 +4894,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
           *
           * @param tmpReq SetSecurityPreferenceRequest
@@ -4872,6 +4971,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
           *
           * @param tmpReq SetSecurityPreferenceRequest
@@ -4948,6 +5048,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
           *
           * @param request SetSecurityPreferenceRequest
@@ -4960,6 +5061,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
           *
           * @param request SetSecurityPreferenceRequest
@@ -5700,6 +5802,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
           *
           * @param request UpdateOIDCProviderRequest
@@ -5713,6 +5816,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
             {
                 query["ClientIds"] = request.ClientIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IssuanceLimitTime))
+            {
+                query["IssuanceLimitTime"] = request.IssuanceLimitTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewDescription))
             {
@@ -5742,6 +5849,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
           *
           * @param request UpdateOIDCProviderRequest
@@ -5755,6 +5863,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
             {
                 query["ClientIds"] = request.ClientIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IssuanceLimitTime))
+            {
+                query["IssuanceLimitTime"] = request.IssuanceLimitTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewDescription))
             {
@@ -5784,6 +5896,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
           *
           * @param request UpdateOIDCProviderRequest
@@ -5796,6 +5909,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
+          * ###
           * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
           *
           * @param request UpdateOIDCProviderRequest

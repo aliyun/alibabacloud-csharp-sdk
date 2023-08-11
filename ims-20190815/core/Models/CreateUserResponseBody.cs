@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateUserResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <summary>
             /// The email address of the RAM user.
             /// 
-            /// >  This parameter is valid only on the China site (aliyun.com).
+            /// > This parameter is valid only on the China site (aliyun.com).
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <summary>
             /// The mobile phone number of the RAM user.
             /// 
-            /// >  This parameter is valid only on the China site (aliyun.com).
+            /// > This parameter is valid only on the China site (aliyun.com).
             /// </summary>
             [NameInMap("MobilePhone")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ProvisionType { get; set; }
 
             /// <summary>
-            /// An array that consists of the details of the returned tags.
+            /// The tag value.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

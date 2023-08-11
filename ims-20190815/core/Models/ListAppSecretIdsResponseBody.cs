@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListAppSecretIdsResponseBody : TeaModel {
+        /// <summary>
+        /// The details of the application secret.
+        /// </summary>
         [NameInMap("AppSecrets")]
         [Validation(Required=false)]
         public ListAppSecretIdsResponseBodyAppSecrets AppSecrets { get; set; }
@@ -17,14 +20,23 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public List<ListAppSecretIdsResponseBodyAppSecretsAppSecret> AppSecret { get; set; }
             public class ListAppSecretIdsResponseBodyAppSecretsAppSecret : TeaModel {
+                /// <summary>
+                /// The ID of the application.
+                /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
+                /// <summary>
+                /// The ID of the application secret.
+                /// </summary>
                 [NameInMap("AppSecretId")]
                 [Validation(Required=false)]
                 public string AppSecretId { get; set; }
 
+                /// <summary>
+                /// The creation time.
+                /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
@@ -33,6 +45,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

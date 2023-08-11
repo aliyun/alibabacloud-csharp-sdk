@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array consisting of tags that are added to resources.
+        /// The tag key.
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]

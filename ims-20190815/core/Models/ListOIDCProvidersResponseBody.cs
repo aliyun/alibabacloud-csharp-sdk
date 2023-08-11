@@ -12,22 +12,22 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// Indicates whether the response is truncated. Valid values:
         /// 
-        /// - true
-        /// - false
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
+        /// The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``
         /// </summary>
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
 
         /// <summary>
-        /// The information about the OIDC IdP.
+        /// The timestamp when the OIDC IdP was modified.
         /// </summary>
         [NameInMap("OIDCProviders")]
         [Validation(Required=false)]
@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
+                [NameInMap("IssuanceLimitTime")]
+                [Validation(Required=false)]
+                public long? IssuanceLimitTime { get; set; }
+
                 /// <summary>
                 /// The URL of the issuer.
                 /// </summary>
@@ -112,7 +116,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

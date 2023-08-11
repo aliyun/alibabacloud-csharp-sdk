@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class DeleteAppSecretRequest : TeaModel {
+        /// <summary>
+        /// The ID of the application.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// The ID of the application secret.
+        /// </summary>
         [NameInMap("AppSecretId")]
         [Validation(Required=false)]
         public string AppSecretId { get; set; }

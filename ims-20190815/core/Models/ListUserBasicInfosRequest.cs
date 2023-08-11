@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public int? MaxItems { get; set; }
 
+        /// <summary>
+        /// The tag value.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListUserBasicInfosRequestTag> Tag { get; set; }
