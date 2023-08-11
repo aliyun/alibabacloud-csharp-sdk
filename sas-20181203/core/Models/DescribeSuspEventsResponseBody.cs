@@ -352,6 +352,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string K8sPodName { get; set; }
 
+            [NameInMap("LargeModel")]
+            [Validation(Required=false)]
+            public bool? LargeModel { get; set; }
+
             /// <summary>
             /// The time when the alert event was last generated.
             /// </summary>
