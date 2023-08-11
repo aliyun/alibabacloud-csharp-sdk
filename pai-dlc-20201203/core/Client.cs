@@ -1074,6 +1074,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["JodId"] = request.JodId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -1105,6 +1109,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JodId))
             {
                 query["JodId"] = request.JodId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -1142,6 +1150,76 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetTensorboardWithOptionsAsync(TensorboardId, request, headers, runtime);
+        }
+
+        public GetTensorboardSharedUrlResponse GetTensorboardSharedUrlWithOptions(string TensorboardId, GetTensorboardSharedUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTimeSeconds))
+            {
+                query["ExpireTimeSeconds"] = request.ExpireTimeSeconds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTensorboardSharedUrl",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId) + "/sharedurl",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTensorboardSharedUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetTensorboardSharedUrlResponse> GetTensorboardSharedUrlWithOptionsAsync(string TensorboardId, GetTensorboardSharedUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTimeSeconds))
+            {
+                query["ExpireTimeSeconds"] = request.ExpireTimeSeconds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTensorboardSharedUrl",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId) + "/sharedurl",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTensorboardSharedUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetTensorboardSharedUrlResponse GetTensorboardSharedUrl(string TensorboardId, GetTensorboardSharedUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetTensorboardSharedUrlWithOptions(TensorboardId, request, headers, runtime);
+        }
+
+        public async Task<GetTensorboardSharedUrlResponse> GetTensorboardSharedUrlAsync(string TensorboardId, GetTensorboardSharedUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetTensorboardSharedUrlWithOptionsAsync(TensorboardId, request, headers, runtime);
         }
 
         public GetTokenResponse GetTokenWithOptions(GetTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
