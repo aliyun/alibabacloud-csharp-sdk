@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 {
-    public class GetSymUploadParamRequest : TeaModel {
+    public class UploadSymbolFileRequest : TeaModel {
         [NameInMap("appVersion")]
         [Validation(Required=false)]
         public string AppVersion { get; set; }
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
         [NameInMap("flutterName")]
         [Validation(Required=false)]
         public string FlutterName { get; set; }
+
+        [NameInMap("ossUrl")]
+        [Validation(Required=false)]
+        public string OssUrl { get; set; }
 
     }
 
