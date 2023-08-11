@@ -760,6 +760,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["Edition"] = request.Edition;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAmbient))
+            {
+                body["EnableAmbient"] = request.EnableAmbient;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAudit))
             {
                 body["EnableAudit"] = request.EnableAudit;
@@ -1070,6 +1074,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
             {
                 body["Edition"] = request.Edition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAmbient))
+            {
+                body["EnableAmbient"] = request.EnableAmbient;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAudit))
             {
@@ -6442,6 +6450,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataPlaneMode))
+            {
+                body["DataPlaneMode"] = request.DataPlaneMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIstioInjection))
             {
                 body["EnableIstioInjection"] = request.EnableIstioInjection;
@@ -6485,6 +6497,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataPlaneMode))
+            {
+                body["DataPlaneMode"] = request.DataPlaneMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIstioInjection))
             {
                 body["EnableIstioInjection"] = request.EnableIstioInjection;

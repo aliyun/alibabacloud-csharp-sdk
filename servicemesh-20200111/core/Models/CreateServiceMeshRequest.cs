@@ -246,6 +246,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string Edition { get; set; }
 
+        [NameInMap("EnableAmbient")]
+        [Validation(Required=false)]
+        public bool? EnableAmbient { get; set; }
+
         /// <summary>
         /// Specifies whether to enable the mesh audit feature. To enable this feature, make sure that you have activated [Log Service](https://sls.console.aliyun.com/). Valid values:
         /// 
@@ -365,6 +369,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? GatewayAPIEnabled { get; set; }
 
+        /// <summary>
+        /// After this ASM instance is successfully created, automatically add an ACK cluster to it. 
+        /// Make sure this ASM instance and ACK cluster have same VPC, VSwitch, cluster domain.
+        /// </summary>
         [NameInMap("GuestCluster")]
         [Validation(Required=false)]
         public string GuestCluster { get; set; }

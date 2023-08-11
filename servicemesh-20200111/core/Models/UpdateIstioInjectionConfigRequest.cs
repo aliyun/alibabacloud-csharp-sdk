@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpdateIstioInjectionConfigRequest : TeaModel {
+        [NameInMap("DataPlaneMode")]
+        [Validation(Required=false)]
+        public string DataPlaneMode { get; set; }
+
         /// <summary>
         /// Specifies whether to enable Istio automatic sidecar injection.
         /// </summary>
