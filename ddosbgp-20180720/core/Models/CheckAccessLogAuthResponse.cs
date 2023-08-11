@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class CheckAccessLogAuthResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("AccessLogAuth")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public bool? AccessLogAuth { get; set; }
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public CheckAccessLogAuthResponseBody Body { get; set; }
 
     }
 

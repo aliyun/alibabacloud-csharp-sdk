@@ -9,35 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeRegionsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Regions")]
-        [Validation(Required=true)]
-        public List<DescribeRegionsResponseRegions> Regions { get; set; }
-        public class DescribeRegionsResponseRegions : TeaModel {
-            [NameInMap("RegionEnName")]
-            [Validation(Required=true)]
-            public string RegionEnName { get; set; }
-
-            [NameInMap("RegionName")]
-            [Validation(Required=true)]
-            public string RegionName { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=true)]
-            public string RegionId { get; set; }
-
-        }
+        public DescribeRegionsResponseBody Body { get; set; }
 
     }
 

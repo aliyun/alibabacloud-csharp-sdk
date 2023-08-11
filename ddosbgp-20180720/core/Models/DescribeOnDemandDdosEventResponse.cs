@@ -9,43 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeOnDemandDdosEventResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Total")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public long? Total { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("Events")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<DescribeOnDemandDdosEventResponseEvents> Events { get; set; }
-        public class DescribeOnDemandDdosEventResponseEvents : TeaModel {
-            [NameInMap("StartTime")]
-            [Validation(Required=true)]
-            public int? StartTime { get; set; }
-
-            [NameInMap("EndTime")]
-            [Validation(Required=true)]
-            public int? EndTime { get; set; }
-
-            [NameInMap("Pps")]
-            [Validation(Required=true)]
-            public int? Pps { get; set; }
-
-            [NameInMap("Ip")]
-            [Validation(Required=true)]
-            public string Ip { get; set; }
-
-            [NameInMap("Mbps")]
-            [Validation(Required=true)]
-            public int? Mbps { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-
-        }
+        public DescribeOnDemandDdosEventResponseBody Body { get; set; }
 
     }
 

@@ -9,27 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListOpenedAccessLogInstancesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("SlsConfigStatus")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<ListOpenedAccessLogInstancesResponseSlsConfigStatus> SlsConfigStatus { get; set; }
-        public class ListOpenedAccessLogInstancesResponseSlsConfigStatus : TeaModel {
-            [NameInMap("Enable")]
-            [Validation(Required=true)]
-            public bool? Enable { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=true)]
-            public string InstanceId { get; set; }
-
-        }
+        public ListOpenedAccessLogInstancesResponseBody Body { get; set; }
 
     }
 
