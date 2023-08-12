@@ -1,3 +1,6 @@
+2023-08-12 Version: 2.2.0
+- Generated csharp 2018-10-12 for alimt.
+
 2023-04-11 Version: 2.1.0
 - Add image batch translate API.
 

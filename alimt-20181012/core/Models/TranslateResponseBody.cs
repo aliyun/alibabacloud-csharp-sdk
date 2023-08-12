@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public TranslateResponseBodyData Data { get; set; }
         public class TranslateResponseBodyData : TeaModel {
+            [NameInMap("DetectedLanguage")]
+            [Validation(Required=false)]
+            public string DetectedLanguage { get; set; }
+
             [NameInMap("Translated")]
             [Validation(Required=false)]
             public string Translated { get; set; }

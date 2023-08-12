@@ -95,6 +95,112 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CreateAsyncTranslateResponse CreateAsyncTranslateWithOptions(CreateAsyncTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                body["ApiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                body["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["Scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAsyncTranslate",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAsyncTranslateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateAsyncTranslateResponse> CreateAsyncTranslateWithOptionsAsync(CreateAsyncTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                body["ApiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                body["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["Scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAsyncTranslate",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAsyncTranslateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateAsyncTranslateResponse CreateAsyncTranslate(CreateAsyncTranslateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAsyncTranslateWithOptions(request, runtime);
+        }
+
+        public async Task<CreateAsyncTranslateResponse> CreateAsyncTranslateAsync(CreateAsyncTranslateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAsyncTranslateWithOptionsAsync(request, runtime);
+        }
+
         public CreateDocTranslateTaskResponse CreateDocTranslateTaskWithOptions(CreateDocTranslateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -459,6 +565,72 @@ namespace AlibabaCloud.SDK.Alimt20181012
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateImageTranslateTaskWithOptionsAsync(request, runtime);
+        }
+
+        public GetAsyncTranslateResponse GetAsyncTranslateWithOptions(GetAsyncTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAsyncTranslate",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAsyncTranslateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetAsyncTranslateResponse> GetAsyncTranslateWithOptionsAsync(GetAsyncTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAsyncTranslate",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAsyncTranslateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetAsyncTranslateResponse GetAsyncTranslate(GetAsyncTranslateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAsyncTranslateWithOptions(request, runtime);
+        }
+
+        public async Task<GetAsyncTranslateResponse> GetAsyncTranslateAsync(GetAsyncTranslateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAsyncTranslateWithOptionsAsync(request, runtime);
         }
 
         public GetBatchTranslateResponse GetBatchTranslateWithOptions(GetBatchTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1831,6 +2003,14 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return translateCertificateResp;
         }
 
+        /**
+          * @deprecated : TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+          *
+          * @param request TranslateECommerceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TranslateECommerceResponse
+         */
+        // Deprecated
         public TranslateECommerceResponse TranslateECommerceWithOptions(TranslateECommerceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1880,6 +2060,14 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateECommerceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+          *
+          * @param request TranslateECommerceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TranslateECommerceResponse
+         */
+        // Deprecated
         public async Task<TranslateECommerceResponse> TranslateECommerceWithOptionsAsync(TranslateECommerceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1929,12 +2117,26 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateECommerceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+          *
+          * @param request TranslateECommerceRequest
+          * @return TranslateECommerceResponse
+         */
+        // Deprecated
         public TranslateECommerceResponse TranslateECommerce(TranslateECommerceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TranslateECommerceWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+          *
+          * @param request TranslateECommerceRequest
+          * @return TranslateECommerceResponse
+         */
+        // Deprecated
         public async Task<TranslateECommerceResponse> TranslateECommerceAsync(TranslateECommerceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
