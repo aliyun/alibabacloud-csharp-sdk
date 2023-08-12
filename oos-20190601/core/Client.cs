@@ -933,6 +933,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["RejectedPatchesAction"] = request.RejectedPatchesAction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
             {
                 query["Sources"] = request.SourcesShrink;
@@ -1021,6 +1025,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesAction))
             {
                 query["RejectedPatchesAction"] = request.RejectedPatchesAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
             {
@@ -8215,6 +8223,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["RejectedPatchesAction"] = request.RejectedPatchesAction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
             {
                 query["Sources"] = request.SourcesShrink;
@@ -8299,6 +8311,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesAction))
             {
                 query["RejectedPatchesAction"] = request.RejectedPatchesAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
             {

@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RejectedPatchesAction { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string SourcesShrink { get; set; }
