@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string LicenseMetadata { get; set; }
 
+        [NameInMap("LogMetadata")]
+        [Validation(Required=false)]
+        public string LogMetadata { get; set; }
+
         [NameInMap("OperationMetadata")]
         [Validation(Required=false)]
         public string OperationMetadata { get; set; }
@@ -73,6 +77,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string Locale { get; set; }
 
+            [NameInMap("LongDescriptionUrl")]
+            [Validation(Required=false)]
+            public string LongDescriptionUrl { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -90,6 +98,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("ShareType")]
         [Validation(Required=false)]
         public string ShareType { get; set; }
+
+        [NameInMap("SourceServiceId")]
+        [Validation(Required=false)]
+        public string SourceServiceId { get; set; }
+
+        [NameInMap("SourceServiceVersion")]
+        [Validation(Required=false)]
+        public string SourceServiceVersion { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

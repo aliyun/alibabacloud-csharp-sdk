@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string LicenseMetadata { get; set; }
 
+        [NameInMap("LogMetadata")]
+        [Validation(Required=false)]
+        public string LogMetadata { get; set; }
+
         [NameInMap("OperationMetadata")]
         [Validation(Required=false)]
         public string OperationMetadata { get; set; }
@@ -145,6 +149,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string Locale { get; set; }
 
+            [NameInMap("LongDescriptionUrl")]
+            [Validation(Required=false)]
+            public string LongDescriptionUrl { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -166,6 +174,60 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("ShareType")]
         [Validation(Required=false)]
         public string ShareType { get; set; }
+
+        [NameInMap("SourceServiceId")]
+        [Validation(Required=false)]
+        public string SourceServiceId { get; set; }
+
+        [NameInMap("SourceServiceVersion")]
+        [Validation(Required=false)]
+        public string SourceServiceVersion { get; set; }
+
+        [NameInMap("SourceSupplierName")]
+        [Validation(Required=false)]
+        public string SourceSupplierName { get; set; }
+
+        [NameInMap("Statistic")]
+        [Validation(Required=false)]
+        public GetServiceResponseBodyStatistic Statistic { get; set; }
+        public class GetServiceResponseBodyStatistic : TeaModel {
+            [NameInMap("AccumulativeInstanceCount")]
+            [Validation(Required=false)]
+            public int? AccumulativeInstanceCount { get; set; }
+
+            [NameInMap("AccumulativePocAmount")]
+            [Validation(Required=false)]
+            public double? AccumulativePocAmount { get; set; }
+
+            [NameInMap("AccumulativeUserCount")]
+            [Validation(Required=false)]
+            public int? AccumulativeUserCount { get; set; }
+
+            [NameInMap("AveragePocAmount")]
+            [Validation(Required=false)]
+            public double? AveragePocAmount { get; set; }
+
+            [NameInMap("AveragePocDuration")]
+            [Validation(Required=false)]
+            public double? AveragePocDuration { get; set; }
+
+            [NameInMap("AveragePocUnitAmount")]
+            [Validation(Required=false)]
+            public double? AveragePocUnitAmount { get; set; }
+
+            [NameInMap("DeployedServiceInstanceCount")]
+            [Validation(Required=false)]
+            public int? DeployedServiceInstanceCount { get; set; }
+
+            [NameInMap("DeployedUserCount")]
+            [Validation(Required=false)]
+            public int? DeployedUserCount { get; set; }
+
+            [NameInMap("SubmittedUsageCount")]
+            [Validation(Required=false)]
+            public int? SubmittedUsageCount { get; set; }
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

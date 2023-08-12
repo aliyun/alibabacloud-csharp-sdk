@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetServiceInstanceResponseBody : TeaModel {
+        [NameInMap("BizStatus")]
+        [Validation(Required=false)]
+        public string BizStatus { get; set; }
+
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
@@ -145,6 +149,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        [NameInMap("PredefinedParameterName")]
+        [Validation(Required=false)]
+        public string PredefinedParameterName { get; set; }
+
         [NameInMap("Progress")]
         [Validation(Required=false)]
         public long? Progress { get; set; }
@@ -156,6 +164,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("Resources")]
         [Validation(Required=false)]

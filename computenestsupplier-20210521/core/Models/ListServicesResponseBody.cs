@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string DeployType { get; set; }
 
+            [NameInMap("LatestResellSourceServiceVersion")]
+            [Validation(Required=false)]
+            public string LatestResellSourceServiceVersion { get; set; }
+
             [NameInMap("PublishTime")]
             [Validation(Required=false)]
             public string PublishTime { get; set; }
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("RelationType")]
             [Validation(Required=false)]
             public string RelationType { get; set; }
+
+            [NameInMap("ResellServiceId")]
+            [Validation(Required=false)]
+            public string ResellServiceId { get; set; }
 
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -102,6 +110,18 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("SourceImage")]
             [Validation(Required=false)]
             public string SourceImage { get; set; }
+
+            [NameInMap("SourceServiceId")]
+            [Validation(Required=false)]
+            public string SourceServiceId { get; set; }
+
+            [NameInMap("SourceServiceVersion")]
+            [Validation(Required=false)]
+            public string SourceServiceVersion { get; set; }
+
+            [NameInMap("SourceSupplierName")]
+            [Validation(Required=false)]
+            public string SourceSupplierName { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -153,7 +173,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string TotalCount { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

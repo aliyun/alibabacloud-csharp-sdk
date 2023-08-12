@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -40,9 +37,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("RepoId")]
+            [Validation(Required=false)]
+            public string RepoId { get; set; }
+
+            [NameInMap("RepoName")]
+            [Validation(Required=false)]
+            public string RepoName { get; set; }
+
             [NameInMap("ScriptMetadata")]
             [Validation(Required=false)]
             public string ScriptMetadata { get; set; }
+
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public string Tag { get; set; }
 
             [NameInMap("Url")]
             [Validation(Required=false)]

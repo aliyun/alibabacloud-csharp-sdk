@@ -1,3 +1,6 @@
+2023-08-12 Version: 1.2.0
+- Generated csharp 2021-05-21 for ComputeNestSupplier.
+
 2023-05-23 Version: 1.1.5
 - Add UpdateService GetService DeleteService.
 

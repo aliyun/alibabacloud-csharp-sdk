@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
     public class ListServiceInstancesResponseBody : TeaModel {
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string MaxResults { get; set; }
+        public int? MaxResults { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public long? Progress { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("Service")]
             [Validation(Required=false)]
             public ListServiceInstancesResponseBodyServiceInstancesService Service { get; set; }
@@ -118,6 +122,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 [NameInMap("ServiceType")]
                 [Validation(Required=false)]
                 public string ServiceType { get; set; }
+
+                [NameInMap("SourceSupplierName")]
+                [Validation(Required=false)]
+                public string SourceSupplierName { get; set; }
 
                 [NameInMap("Status")]
                 [Validation(Required=false)]
