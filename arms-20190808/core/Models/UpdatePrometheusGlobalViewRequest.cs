@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string MostRegionId { get; set; }
 
+        [NameInMap("ParamJson")]
+        [Validation(Required=false)]
+        public string ParamJson { get; set; }
+
         /// <summary>
         /// The region ID.
         /// </summary>

@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string GrafanaInstanceId { get; set; }
 
+        [NameInMap("ParamJson")]
+        [Validation(Required=false)]
+        public string ParamJson { get; set; }
+
         /// <summary>
         /// The region ID. If you create a Prometheus instance for cloud services in China, set the value to cn-shanghai.
         /// </summary>

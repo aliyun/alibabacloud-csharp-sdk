@@ -12,6 +12,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// The region ID.
         /// </summary>
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
