@@ -100,11 +100,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// 
         /// By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.
         /// 
-        /// > 
         /// 
-        /// *   If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
         /// 
-        /// *   If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.
+        /// > -  If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
+        /// > -  If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.
         /// </summary>
         [NameInMap("Parallelism")]
         [Validation(Required=false)]
@@ -211,11 +210,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// 
             /// Valid values of N: 1 to 20.
             /// 
-            /// > 
-            /// 
-            /// *   The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.
-            /// 
-            /// *   The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
+            /// > - The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.
+            /// > -  The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

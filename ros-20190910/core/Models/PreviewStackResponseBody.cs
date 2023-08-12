@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class PreviewStackResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -45,16 +45,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public PreviewStackResponseBodyStackLog Log { get; set; }
             public class PreviewStackResponseBodyStackLog : TeaModel {
                 /// <summary>
-                /// The log that is generated when a Terraform stack is run. This parameter is returned only if the stack is a Terraform stack.
+                /// The Terraform logs. This parameter is returned only if the stack is a Terraform stack.
                 /// 
-                /// >  You can use this parameter to preview the logs of a Terraform stack.
+                /// > This parameter contains the logs of previewing the stack.
                 /// </summary>
                 [NameInMap("TerraformLogs")]
                 [Validation(Required=false)]
                 public List<PreviewStackResponseBodyStackLogTerraformLogs> TerraformLogs { get; set; }
                 public class PreviewStackResponseBodyStackLogTerraformLogs : TeaModel {
                     /// <summary>
-                    /// The name of the Terraform command. Valid values:
+                    /// The name of the Terraform command that is run. Valid values:
                     /// 
                     /// *   apply
                     /// *   plan
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The region ID of the stack.
+            /// The region where the stack resides.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<PreviewStackResponseBodyStackResources> Resources { get; set; }
             public class PreviewStackResponseBodyStackResources : TeaModel {
                 /// <summary>
-                /// The type of the resource that belongs to an Alibaba Cloud service.
+                /// The resource type of an Alibaba Cloud service.
                 /// </summary>
                 [NameInMap("AcsResourceType")]
                 [Validation(Required=false)]
                 public string AcsResourceType { get; set; }
 
                 /// <summary>
-                /// The action that is performed on resources. Valid values:
+                /// The action that is performed on the resource. Valid values:
                 /// 
                 /// *   Add
                 /// *   Modify
@@ -161,14 +161,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// The physical ID of the resource.
                 /// 
-                /// This parameter is returned only if the Action parameter is set to Modify or Remove.
+                /// This parameter is returned only if Action is set to Modify or Remove.
                 /// </summary>
                 [NameInMap("PhysicalResourceId")]
                 [Validation(Required=false)]
                 public string PhysicalResourceId { get; set; }
 
                 /// <summary>
-                /// The properties of the resource.
+                /// The resource properties.
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// *   False: A change is made on the template.
                 /// *   Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.
                 /// 
-                /// >  This parameter is returned only if the Action parameter is set to Modify.
+                /// > This parameter is returned only if Action is set to Modify.
                 /// </summary>
                 [NameInMap("Replacement")]
                 [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public List<string> RequiredBy { get; set; }
 
                 /// <summary>
-                /// The type of the resource.
+                /// The resource type.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The name of the stack.
+            /// The stack name.
             /// </summary>
             [NameInMap("StackName")]
             [Validation(Required=false)]
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string TemplateDescription { get; set; }
 
             /// <summary>
-            /// The timeout period that is allowed to create the stack.
+            /// The timeout period for creating the stack.
             /// 
             /// Unit: minutes.
             /// </summary>

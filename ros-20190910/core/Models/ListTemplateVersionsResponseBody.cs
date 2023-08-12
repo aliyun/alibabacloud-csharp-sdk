@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplateVersionsResponseBody : TeaModel {
         /// <summary>
-        /// The query token that is returned in this call.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of versions.
+        /// The versions.
         /// </summary>
         [NameInMap("Versions")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the template. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.
+            /// The template ID. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The version number.
             /// 
-            /// For a shared template, this parameter is returned only if the VersionOption parameter is set to AllVersions.
+            /// For a shared template, this parameter is returned only if VersionOption is set to AllVersions.
             /// 
             /// Valid values: v1 to v100.
             /// </summary>

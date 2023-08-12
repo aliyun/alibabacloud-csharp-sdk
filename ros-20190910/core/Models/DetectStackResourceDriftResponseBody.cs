@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DetectStackResourceDriftResponseBody : TeaModel {
         /// <summary>
-        /// The actual resource properties in JSON format.
+        /// The actual JSON-formatted resource properties.
         /// </summary>
         [NameInMap("ActualProperties")]
         [Validation(Required=false)]
         public string ActualProperties { get; set; }
 
         /// <summary>
-        /// The time at which the resource drift detection operation was initiated.
+        /// The time when the resource drift detection was initiated.
         /// </summary>
         [NameInMap("DriftDetectionTime")]
         [Validation(Required=false)]
         public string DriftDetectionTime { get; set; }
 
         /// <summary>
-        /// The resource properties as defined in the template, in JSON format.
+        /// The JSON-formatted resource properties that are defined in the template.
         /// </summary>
         [NameInMap("ExpectedProperties")]
         [Validation(Required=false)]
         public string ExpectedProperties { get; set; }
 
         /// <summary>
-        /// The logical ID of the resource as defined in the template.
+        /// The logical ID of the resource that is defined in the template.
         /// </summary>
         [NameInMap("LogicalResourceId")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string PhysicalResourceId { get; set; }
 
         /// <summary>
-        /// The property differences of the resource.
+        /// The property drifts of the resource.
         /// </summary>
         [NameInMap("PropertyDifferences")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The drift type of the resource property. Valid values:
             /// 
-            /// *   ADD: The value has been added to a resource property whose data type is Array or List.
+            /// *   ADD: The property value has been added to a resource property whose data type was Array or List.
             /// *   REMOVE: The property has been deleted from the current resource configuration.
             /// *   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.
             /// </summary>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string DifferenceType { get; set; }
 
             /// <summary>
-            /// The expected value of the resource property as defined in the template.
+            /// The expected value of the resource property that is defined in the template.
             /// </summary>
             [NameInMap("ExpectedValue")]
             [Validation(Required=false)]
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resource drift status. Valid values:
+        /// The drift status of the resource. Valid values:
         /// 
-        /// *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource has been deleted.
+        /// *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.
         /// *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
         /// *   NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.
         /// *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceDriftStatus { get; set; }
 
         /// <summary>
-        /// The resource type.
+        /// The type of the resource.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

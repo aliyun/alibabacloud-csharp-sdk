@@ -56,16 +56,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The status code of the scenario that fails to be created.
             /// 
-            /// >  This parameter is returned only if the Status parameter is set to GENERATE_FAILED.
+            /// > This parameter is returned only if you set Status to GENERATE_FAILED.
             /// </summary>
             [NameInMap("FailedCode")]
             [Validation(Required=false)]
             public string FailedCode { get; set; }
 
             /// <summary>
-            /// The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:
+            /// The policy based on which the logical ID is generated. Valid values:
             /// 
-            /// *   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix
+            /// *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
             /// *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
             /// *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
             /// </summary>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string LogicalIdStrategy { get; set; }
 
             /// <summary>
-            /// The parameters that are configured for the scenario.
+            /// The preference parameters of the scenario.
             /// </summary>
             [NameInMap("PreferenceParameters")]
             [Validation(Required=false)]
             public List<ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters> PreferenceParameters { get; set; }
             public class ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters : TeaModel {
                 /// <summary>
-                /// The name of the parameter.
+                /// The key of the parameter.
                 /// </summary>
                 [NameInMap("ParameterKey")]
                 [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The filter for resource types.
+                /// The resource types.
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The resource type.
+                /// The type of the resource.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public Dictionary<string, object> ResourceTags { get; set; }
 
                 /// <summary>
-                /// The filter for resource types.
+                /// The resource types.
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The state of the scenario.
+            /// The status of the scenario.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The reason why the scenario fails to be created.
             /// 
-            /// >  This parameter is returned only if the Status parameter is set to GENERATE_FAILED.
+            /// > This parameter is returned only if you set Status to GENERATE_FAILED.
             /// </summary>
             [NameInMap("StatusReason")]
             [Validation(Required=false)]

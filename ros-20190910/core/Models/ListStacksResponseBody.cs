@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("DeletionProtection")]
+            [Validation(Required=false)]
+            public string DeletionProtection { get; set; }
+
             /// <summary>
             /// The state of the stack on which the last successful drift detection was performed. Valid values:
             /// 

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags from the resources. This parameter takes effect when the TagKey.N parameter is not specified in the request. Default value: false. Valid values:
+        /// Specifies whether to remove all tags from the resource. This parameter takes effect when TagKey is not specified in the request. Valid values:
         /// 
-        /// *   true: removes all tags from the resources.
-        /// *   false: removes the specified tags from the resources.
+        /// *   true
+        /// *   false (default)
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -27,7 +27,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// A list of resource IDs.
+        /// The IDs of the resource.
+        /// 
+        /// > If you set ResourceType to stackgroup, you must set ResourceId to the name of the stack group.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag keys of the resource.
+        /// The tag keys of the resource. You can specify up to 20 tag keys.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

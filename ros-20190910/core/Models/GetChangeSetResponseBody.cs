@@ -32,15 +32,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The changes of the change set.
-        /// 
-        /// For more information, see [Data structure](~~155988~~).
         /// </summary>
         [NameInMap("Changes")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Changes { get; set; }
 
         /// <summary>
-        /// The time when the resource was created. The time is displayed in UTC.
+        /// The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
@@ -54,7 +52,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Indicates whether rollback was performed.
+        /// Indicates whether rollback was performed when the stack failed to be created or updated.
         /// </summary>
         [NameInMap("DisableRollback")]
         [Validation(Required=false)]
@@ -68,37 +66,37 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ExecutionStatus { get; set; }
 
         /// <summary>
-        /// The logs of the change set.
+        /// The output logs of the change set.
         /// </summary>
         [NameInMap("Log")]
         [Validation(Required=false)]
         public GetChangeSetResponseBodyLog Log { get; set; }
         public class GetChangeSetResponseBodyLog : TeaModel {
             /// <summary>
-            /// The logs of the Terraform stack. This parameter is returned only for the change set of a Terraform stack.
+            /// The Terraform logs. This parameter is returned only for change sets of Terraform stacks.
             /// 
-            /// >  This parameter is not returned for change sets that are in the creating state. This parameter indicates the change set creation logs of the Terraform stack.
+            /// > This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.
             /// </summary>
             [NameInMap("TerraformLogs")]
             [Validation(Required=false)]
             public List<GetChangeSetResponseBodyLogTerraformLogs> TerraformLogs { get; set; }
             public class GetChangeSetResponseBodyLogTerraformLogs : TeaModel {
                 /// <summary>
-                /// The name of the Terraform command. Valid values:
+                /// The name of the Terraform command that is run. Valid values:
                 /// 
                 /// *   apply
                 /// *   plan
                 /// *   destroy
                 /// *   version
                 /// 
-                /// For more information about the Terraform commands, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/commands).
+                /// For more information about Terraform commands, see [Command](https://www.terraform.io/cli/commands).
                 /// </summary>
                 [NameInMap("Command")]
                 [Validation(Required=false)]
                 public string Command { get; set; }
 
                 /// <summary>
-                /// The content of the output stream.
+                /// The content of the output stream that is returned after the command is run.
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -107,8 +105,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// The output stream. Valid values:
                 /// 
-                /// *   stdout: the standard output stream.
-                /// *   stderr: the standard error stream.
+                /// *   stdout: standard output stream
+                /// *   stderr: standard error stream
                 /// </summary>
                 [NameInMap("Stream")]
                 [Validation(Required=false)]
@@ -126,7 +124,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<GetChangeSetResponseBodyParameters> Parameters { get; set; }
         public class GetChangeSetResponseBodyParameters : TeaModel {
             /// <summary>
-            /// The name of the parameter.
+            /// The key of the parameter.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
@@ -142,7 +140,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID of the change set.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -186,14 +184,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The template body of the change set.
         /// 
-        /// >  This parameter takes effect only when the ShowTemplate parameter is set to true.
+        /// > This parameter takes effect only if you set ShowTemplate to true.
         /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// The timeout period that is specified for the stack creation or update request.
+        /// The timeout period that is specified for the stack creation or update operation.
         /// </summary>
         [NameInMap("TimeoutInMinutes")]
         [Validation(Required=false)]

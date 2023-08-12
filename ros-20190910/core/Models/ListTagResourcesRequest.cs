@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The token that determines the start point of the next query.
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The list of resource IDs.
+        /// The IDs of the resources.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -43,24 +43,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags of the resources. You can specify up to 20 tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-            /// 
-            /// The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+            /// The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.\
+            /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-            /// 
+            /// The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.\
             /// The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Value")]

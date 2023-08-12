@@ -17,24 +17,23 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resources that you want to import to a stack in the scenario of the Resource Management type.
+        /// The resources that you want to import into a stack in the scenario.
         /// 
-        /// >  This parameter is returned only for scenarios of the Resource Management type.
+        /// > This parameter is returned only if the scenario is of the Resource Management type.
         /// </summary>
         [NameInMap("ResourcesToImport")]
         [Validation(Required=false)]
         public List<GenerateTemplateByScratchResponseBodyResourcesToImport> ResourcesToImport { get; set; }
         public class GenerateTemplateByScratchResponseBodyResourcesToImport : TeaModel {
             /// <summary>
-            /// The ID of the logical resource.
+            /// The logical ID of the resource.
             /// </summary>
             [NameInMap("LogicalResourceId")]
             [Validation(Required=false)]
             public string LogicalResourceId { get; set; }
 
             /// <summary>
-            /// The key-value mappings from string to string. The parameter value is a JSON string that identifies the resource that is imported.
-            /// 
+            /// The key-value mapping between strings. The value is a JSON string that identifies the resource that you want to import into a stack.\
             /// A key is an identifier for a resource, and a value is an assignment of data to the key. For example, VpcId is a key that indicates the ID of a virtual private cloud (VPC), and `vpc-bp1m6fww66xbntjyc****"` is a value that is assigned to VpcId.
             /// </summary>
             [NameInMap("ResourceIdentifier")]
@@ -51,7 +50,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The content of the template that is created for the scenario.
+        /// The template content of the scenario.
         /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]

@@ -10,88 +10,80 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateStackGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the template. This parameter applies to shared and private templates.
+        /// The name of the RAM role that you specify for the administrator account when you create a self-managed stack group. ROS assumes the administrator role to perform operations. If you do not specify this parameter, AliyunROSStackGroupAdministrationRole is used as the default value. ROS uses the administrator role to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks in the stack group.
         /// 
-        /// >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+        /// The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).
         /// </summary>
         [NameInMap("AdministrationRoleName")]
         [Validation(Required=false)]
         public string AdministrationRoleName { get; set; }
 
         /// <summary>
-        /// Specifies whether to retain stacks within a member when you remove the member from the folder.
+        /// The information about automatic deployment settings.
         /// 
-        /// Valid values:
-        /// 
-        /// *   true: retains the stacks.
-        /// *   false: deletes the stacks.
-        /// 
-        /// >  This parameter is required if the Enabled parameter is set to true.
+        /// > You must specify this parameter if PermissionModel is set to SERVICE_MANAGED.
         /// </summary>
         [NameInMap("AutoDeployment")]
         [Validation(Required=false)]
         public string AutoDeploymentShrink { get; set; }
 
+        /// <summary>
+        /// 资源栈组选项列表，最大长度为1。
+        /// </summary>
         [NameInMap("Capabilities")]
         [Validation(Required=false)]
         public List<string> Capabilities { get; set; }
 
         /// <summary>
-        /// The name of the RAM role that you specify for the execution account when you create a self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If you do not specify this parameter, the default value AliyunROSStackGroupExecutionRole is used. ROS assumes the execution role to perform operations on the stacks in the stack group.
-        /// 
-        /// The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
+        /// The token can contain letters, digits, underscores (\_), and hyphens (-) and cannot exceed 64 characters in length.\
+        /// For more information, see [How to ensure idempotence](~~134212~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-        /// 
-        /// >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+        /// The description of the stack group.\
+        /// The description must be 1 to 256 characters in length.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The version of the template. If you do not specify this parameter, the latest version is used.
+        /// The name of the RAM role that you specify for the execution account when you create a self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If you do not specify this parameter, AliyunROSStackGroupExecutionRole is used as the default value. ROS assumes the execution role to perform operations on the stacks in the stack group.
         /// 
-        /// >  This parameter takes effect only when the TemplateId parameter is specified.
+        /// The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).
         /// </summary>
         [NameInMap("ExecutionRoleName")]
         [Validation(Required=false)]
         public string ExecutionRoleName { get; set; }
 
         /// <summary>
-        /// The value of parameter N.
-        /// 
-        /// Maximum value of N: 200.
-        /// 
-        /// >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.
+        /// The parameters of the stack group.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<CreateStackGroupShrinkRequestParameters> Parameters { get; set; }
         public class CreateStackGroupShrinkRequestParameters : TeaModel {
             /// <summary>
-            /// The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.
+            /// The key of parameter N. If you do not specify the key and value of a parameter, ROS uses the default name and value that are defined in the template.
             /// 
-            /// For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
+            /// Maximum value of N: 200.
+            /// 
+            /// > Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// The permission model.
+            /// The value of parameter N.
             /// 
-            /// Default value: SELF_MANAGED. Valid values:
+            /// Maximum value of N: 200.
             /// 
-            /// *   SELF_MANAGED: the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.
-            /// *   SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.
-            /// 
-            /// >  When you use the service-managed permission model to deploy stacks, make sure that your account is the management account or a delegated administrator account in the resource directory and the trusted access feature is enabled for your account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).
+            /// > Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -100,62 +92,60 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The key of tag N that you want to add to the stack group.
+        /// The permission model of the stack group.
         /// 
-        /// >  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.
+        /// Valid values:
+        /// 
+        /// *   SELF_MANAGED (default): the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.
+        /// *   SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.
+        /// 
+        /// > If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Manage a delegated administrator account](~~308253~~) and [Enable trusted access](~~298229~~).
         /// </summary>
         [NameInMap("PermissionModel")]
         [Validation(Required=false)]
         public string PermissionModel { get; set; }
 
         /// <summary>
-        /// The description of the stack group.
-        /// 
-        /// The description must be 1 to 256 characters in length.
+        /// The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.\
+        /// For more information about resource groups, see [Resource groups](~~94475~~).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-        /// 
-        /// >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+        /// The name of the stack group. The name must be unique within a region.\
+        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
         /// </summary>
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]
         public string StackGroupName { get; set; }
 
         /// <summary>
-        /// The value of tag N that you want to add to the stack group.
+        /// The tags of the stack group.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateStackGroupShrinkRequestTags> Tags { get; set; }
         public class CreateStackGroupShrinkRequestTags : TeaModel {
             /// <summary>
-            /// The information about automatic deployment settings.
+            /// The tag key of the stack group.
             /// 
-            /// >  This parameter is required only if the PermissionModel parameter is set to SERVICE_MANAGED.
+            /// > Tags is optional. If you want to specify Tags, you must also specify Tags.N.Key.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable automatic deployment.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   true: enables automatic deployment. If you add a member to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the member. If you remove a member from the folder, ROS automatically deletes the stacks from the member.
-            /// *   false: disables automatic deployment. After you disable automatic deployment, the stacks remain unchanged when you change the members in the folder.
+            /// The tag value of the stack group.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -164,38 +154,36 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
+        /// The template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
         /// 
-        /// The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-        /// 
-        /// For more information, see [Ensure idempotence](~~134212~~).
+        /// > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
         /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// The parameters.
+        /// The ID of the template. This parameter applies to shared and private templates.
+        /// 
+        /// > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// The name of the RAM role that you specify for the administrator account when you create a self-managed stack group. ROS assumes the administrator role to perform operations. If you do not specify this parameter, the default value AliyunROSStackGroupAdministrationRole is used. ROS uses the administrator role to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks in the stack group.
+        /// The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
         /// 
-        /// The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).
+        /// > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
         /// </summary>
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]
         public string TemplateURL { get; set; }
 
         /// <summary>
-        /// The name of parameter N. If you do not specify the name and value of a parameter, ROS uses the default name and value that are defined in the template.
+        /// The version of the template. If you do not specify this parameter, the latest version is used.
         /// 
-        /// Maximum value of N: 200.
-        /// 
-        /// >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.
+        /// > TemplateVersion takes effect only if you specify TemplateId.
         /// </summary>
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]

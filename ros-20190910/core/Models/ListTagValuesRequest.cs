@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTagValuesRequest : TeaModel {
         /// <summary>
-        /// The tag key.
+        /// The key of the tag.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query.
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

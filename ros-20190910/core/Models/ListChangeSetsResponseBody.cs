@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListChangeSetsResponseBody : TeaModel {
         /// <summary>
-        /// The list of change sets.
+        /// The change sets.
         /// </summary>
         [NameInMap("ChangeSets")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ChangeSetType { get; set; }
 
             /// <summary>
-            /// The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+            /// The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ExecutionStatus { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// The region ID of the change set.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The reason why the change set is in its current status.
+            /// The reason why the change set is in its current state.
             /// </summary>
             [NameInMap("StatusReason")]
             [Validation(Required=false)]
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of queried entries.
+        /// The total number of change sets returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

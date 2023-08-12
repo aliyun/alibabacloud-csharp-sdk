@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// The list of tag keys. Separate multiple tag keys with commas (,).
+        /// The tag keys.
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public List<string> Keys { get; set; }
 
         /// <summary>
-        /// The token that is used to start the next query.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

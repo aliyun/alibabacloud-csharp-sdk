@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The language in which the returned results are displayed.
+        /// The language in which you want to display the results. Valid values:
         /// 
-        /// Default value: zh-CN. Valid values:
-        /// 
-        /// *   zh-CN: Chinese
+        /// *   zh-CN (default): Chinese
         /// *   en-US: English
         /// *   ja: Japanese
         /// </summary>

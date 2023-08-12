@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateStackResponseBody : TeaModel {
         /// <summary>
-        /// The validation result. This parameter is returned only if the DryRun parameter is set to true.
+        /// The dry run result. This parameter is returned only if DryRun is set to true.
         /// </summary>
         [NameInMap("DryRunResult")]
         [Validation(Required=false)]
@@ -24,16 +24,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<string> ParametersAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// The parameters whose changes cause service interruptions. If you change only values of the parameters in a stack template and use the template to update the stack, service interruptions are caused.
-            /// 
-            /// > 
-            /// *   This parameter is supported only for a small number of resource types.
-            /// *   This parameter is valid only for changes that are made on ROS stacks.
+            /// The parameters whose changes cause service interruptions.
+            /// > - This parameter is supported only for a small number of resource types.
+            /// > - This parameter is valid only for updates on ROS stacks.
             /// </summary>
             [NameInMap("ParametersCauseInterruptionIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersCauseInterruptionIfModified { get; set; }
 
+            /// <summary>
+            /// The parameters whose changes trigger replacement updates for resources.
+            /// 
+            /// > -  This parameter can be returned only if ReplacementOption is set to Enabled.
+            /// > -  This parameter is valid only for updates on ROS stacks.
+            /// </summary>
             [NameInMap("ParametersCauseReplacementIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersCauseReplacementIfModified { get; set; }
@@ -46,16 +50,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<string> ParametersConditionallyAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// The parameters whose changes cause service interruptions under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values and the update type determine whether service interruptions are caused.
+            /// The parameters whose changes cause service interruptions under specific conditions.
             /// 
-            /// > 
-            /// *   This parameter is supported only for a small number of resource types.
-            /// *   This parameter is valid only for changes that are made on ROS stacks.
+            /// > - This parameter is supported only for a small number of resource types.
+            /// > -  This parameter is valid only for updates on ROS stacks.
             /// </summary>
             [NameInMap("ParametersConditionallyCauseInterruptionIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersConditionallyCauseInterruptionIfModified { get; set; }
 
+            /// <summary>
+            /// The parameters whose changes trigger replacement updates for resources under specific conditions.
+            /// 
+            /// > - This parameter can be returned only if ReplacementOption is set to Enabled.
+            /// > - This parameter is valid only for updates on ROS stacks.
+            /// </summary>
             [NameInMap("ParametersConditionallyCauseReplacementIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersConditionallyCauseReplacementIfModified { get; set; }
@@ -75,16 +84,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<string> ParametersUncertainlyAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// The parameters whose changes cause service interruptions under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether service interruptions are caused.
+            /// The parameters whose changes cause service interruptions under uncertain conditions.
             /// 
-            /// > 
-            /// *   This parameter is supported only for a small number of resource types.
-            /// *   This parameter is valid only for changes that are made on ROS stacks.
+            /// > - This parameter is supported only for a small number of resource types.
+            /// > - This parameter is valid only for updates on ROS stacks.
             /// </summary>
             [NameInMap("ParametersUncertainlyCauseInterruptionIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersUncertainlyCauseInterruptionIfModified { get; set; }
 
+            /// <summary>
+            /// The parameters whose changes trigger replacement updates for resources under uncertain conditions.
+            /// 
+            /// > - This parameter can be returned only if ReplacementOption is set to Enabled.
+            /// > - This parameter is valid only for updates on ROS stacks.
+            /// </summary>
             [NameInMap("ParametersUncertainlyCauseReplacementIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersUncertainlyCauseReplacementIfModified { get; set; }

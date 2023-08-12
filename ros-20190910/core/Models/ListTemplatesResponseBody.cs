@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
-        /// 
+        /// The page number.\
         /// Pages start from page 1.
         /// </summary>
         [NameInMap("PageNumber")]
@@ -19,21 +18,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of templates.
+        /// The templates.
         /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
@@ -70,7 +69,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The sharing type of the template.
             /// 
-            /// Default value: Private. Valid values:
+            /// Valid values:
             /// 
             /// *   Private: The template belongs to the template owner.
             /// *   Shared: The template is shared with other users.
@@ -110,14 +109,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string TemplateARN { get; set; }
 
             /// <summary>
-            /// The ID of the template.
+            /// The template ID.
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// The name of the template.
+            /// The template name.
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]

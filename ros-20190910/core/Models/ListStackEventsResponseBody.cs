@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackEventsResponseBody : TeaModel {
         /// <summary>
-        /// The list of events.
+        /// The events.
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<ListStackEventsResponseBodyEvents> Events { get; set; }
         public class ListStackEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+            /// The time when the event was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the event.
+            /// The event ID.
             /// </summary>
             [NameInMap("EventId")]
             [Validation(Required=false)]
             public string EventId { get; set; }
 
             /// <summary>
-            /// The logical ID of the resource that is defined in the template.
+            /// The logical ID of the resource. The logical ID indicates the name of the resource that is defined in the template.
             /// </summary>
             [NameInMap("LogicalResourceId")]
             [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The ID of the stack.
+            /// The stack ID.
             /// </summary>
             [NameInMap("StackId")]
             [Validation(Required=false)]
             public string StackId { get; set; }
 
             /// <summary>
-            /// The name of the stack.
+            /// The stack name.
             /// </summary>
             [NameInMap("StackName")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The reason why the resource is in its current state.
+            /// The reason why the resource is in the current state.
             /// </summary>
             [NameInMap("StatusReason")]
             [Validation(Required=false)]
@@ -82,10 +82,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
-        /// 
-        /// Pages start from page 1.
-        /// 
+        /// The page number of the returned page.\
+        /// Pages start from page 1.\
         /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
@@ -93,10 +91,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
-        /// 
-        /// Maximum value: 50.
-        /// 
+        /// The number of entries returned per page.\
+        /// Maximum value: 50.\
         /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
@@ -104,7 +100,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// 
         /// Pages start from page 1.
         /// 
-        /// Default value: 1.
+        /// Default value: 1
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the scenario is created.
+        /// The region ID of the scenario.
         /// 
         /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The state of the scenario. Valid values:
+        /// The status of the scenario. Valid values:
         /// 
         /// *   GENERATE_IN_PROGRESS: The scenario is being created.
         /// *   GENERATE_COMPLETE: The scenario is created.
@@ -52,23 +52,23 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags of the scenario.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListTemplateScratchesRequestTags> Tags { get; set; }
         public class ListTemplateScratchesRequestTags : TeaModel {
             /// <summary>
-            /// The key of tag N that is added to the scenario.
+            /// The tag key of the scenario.
             /// 
-            /// >  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.
+            /// > Tags is optional. If you want to specify Tags, you must specify Key.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N that is added to the scenario.
+            /// The tag value of the scenario.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

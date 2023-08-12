@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteTemplateScratchRequest : TeaModel {
         /// <summary>
-        /// The ID of the region in which the scenario is created.
+        /// The region ID of the scenario.
         /// 
         /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>

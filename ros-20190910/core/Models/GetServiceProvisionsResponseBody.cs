@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetServiceProvisionsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the service.
+        /// The information about the services.
         /// </summary>
         [NameInMap("ServiceProvisions")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public bool? AutoEnableService { get; set; }
 
             /// <summary>
-            /// The names of Alibaba Cloud services on which the service depends.
+            /// The names of the services on which the service that is queried depends.
             /// </summary>
             [NameInMap("DependentServiceNames")]
             [Validation(Required=false)]
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The URL that points to the activation page of the service.
             /// 
-            /// >  This parameter is returned if the Status parameter is set to Disabled.
+            /// > This parameter is returned if Status is set to Disabled.
             /// </summary>
             [NameInMap("EnableURL")]
             [Validation(Required=false)]
             public string EnableURL { get; set; }
 
             /// <summary>
-            /// The information about the RAM role of the service. If this parameter is empty, no RAM role is associated with the service.
+            /// The information about the RAM roles of the service. If this parameter is empty, no RAM role is associated with the service.
             /// </summary>
             [NameInMap("RoleProvision")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// The authorization URL of the RAM role.
                 /// 
-                /// >  This parameter is returned if the Created parameter is set to false.
+                /// > This parameter is returned if Created is set to false.
                 /// </summary>
                 [NameInMap("AuthorizationURL")]
                 [Validation(Required=false)]
@@ -94,12 +94,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                         public string ApiProductId { get; set; }
 
                         /// <summary>
-                        /// The type of the API operation.
+                        /// The type of the API operation. Valid values:
                         /// 
-                        /// Valid values:
-                        /// 
-                        /// *   Open: public API operation
-                        /// *   Inner: private API operation
+                        /// *   Open: public
+                        /// *   Inner: private
                         /// </summary>
                         [NameInMap("ApiType")]
                         [Validation(Required=false)]
@@ -125,16 +123,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                     public bool? Created { get; set; }
 
                     /// <summary>
-                    /// The purpose for which the RAM role is used.
-                    /// 
-                    /// Default value: Default. This value indicates that the RAM role is the default role of the service.
+                    /// The purpose for which the RAM role is used. Default value: Default. A value of Default indicates that the RAM role is the default role of the service.
                     /// </summary>
                     [NameInMap("Function")]
                     [Validation(Required=false)]
                     public string Function { get; set; }
 
                     /// <summary>
-                    /// The name of the RAM role.
+                    /// The name of the role.
                     /// </summary>
                     [NameInMap("RoleName")]
                     [Validation(Required=false)]
@@ -145,7 +141,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The name of the service.
+            /// The service name.
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
@@ -165,7 +161,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The reason why the service is in the Disabled or Unknown state.
             /// 
-            /// >  This parameter is returned if the Status parameter is set to Disabled or Unknown.
+            /// > This parameter is returned if Status is set to Disabled or Unknown.
             /// </summary>
             [NameInMap("StatusReason")]
             [Validation(Required=false)]

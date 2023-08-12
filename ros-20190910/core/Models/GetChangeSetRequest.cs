@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to show the template. Default value: false. Valid values:
+        /// Specifies whether to obtain the template. Valid values:
         /// 
-        /// *   true: shows the template.
-        /// *   false: does not show the template.
+        /// *   true
+        /// *   false (default)
         /// </summary>
         [NameInMap("ShowTemplate")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateTemplateScratchShrinkRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among the different requests. The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// 
         /// For more information, see [How to ensure idempotence](~~134212~~).
         /// </summary>
@@ -26,21 +26,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The execution mode. Default value: Async. Valid values:
+        /// The execution mode. Valid values:
         /// 
-        /// *   Async: asynchronous mode
-        /// *   Sync: synchronous mode
+        /// *   Async (default)
+        /// *   Sync
         /// 
-        /// >  If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you set ClientToken to prevent the execution from timing out.
+        /// > If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.
         /// </summary>
         [NameInMap("ExecutionMode")]
         [Validation(Required=false)]
         public string ExecutionMode { get; set; }
 
         /// <summary>
-        /// The generation policy of the logical ID. Default value: LongTypePrefixAndIndexSuffix. Valid values:
+        /// The policy based on which the logical ID is generated. Valid values:
         /// 
-        /// *   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix
+        /// *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
         /// *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
         /// *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
         /// </summary>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string LogicalIdStrategy { get; set; }
 
         /// <summary>
-        /// The parameters that are configured in the scenario.
+        /// The preference parameters of the scenario.
         /// </summary>
         [NameInMap("PreferenceParameters")]
         [Validation(Required=false)]
         public string PreferenceParametersShrink { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the scenario is created.
+        /// The region ID of the scenario.
         /// 
         /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string SourceResourceGroupShrink { get; set; }
 
         /// <summary>
-        /// The source resource.
+        /// The source resources.
         /// </summary>
         [NameInMap("SourceResources")]
         [Validation(Required=false)]

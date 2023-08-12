@@ -10,20 +10,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplatesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to query the information about tags. Default value: Disabled. Valid values:
+        /// Specifies whether to query the tag information. Valid values:
         /// 
         /// *   Enabled
-        /// *   Disabled
+        /// *   Disabled (default)
         /// </summary>
         [NameInMap("IncludeTags")]
         [Validation(Required=false)]
         public string IncludeTags { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Pages start from page 1.
-        /// 
+        /// The page number.\
+        /// Pages start from page 1.\
         /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
@@ -31,10 +29,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
-        /// 
-        /// Valid values: 1 to 50.
-        /// 
+        /// The number of entries per page.\
+        /// Valid values: 1 to 50.\
         /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
@@ -42,9 +38,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
-        /// 
-        /// For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
+        /// The ID of the resource group.\
+        /// For more information about resource groups, see the "Resource Group" section of [What is Resource Management?](~~94475~~)
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -53,9 +48,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The sharing type of the template.
         /// 
-        /// Default value: Private. Valid values:
+        /// Valid values:
         /// 
-        /// *   Private: The template belongs to the template owner.
+        /// *   Private (default): The template belongs to the template owner.
         /// *   Shared: The template is shared with other users.
         /// *   Official: The template is the shared template of the official version.
         /// </summary>
@@ -64,14 +59,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ShareType { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags. You can specify up to 20 tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTemplatesRequestTag> Tag { get; set; }
         public class ListTemplatesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N. This parameter takes effect only when the ShareType parameter is set to Private.
+            /// The key of the tag. This parameter takes effect only when ShareType is set to Private.
             /// 
             /// You can specify up to 20 tag keys.
             /// </summary>
@@ -80,7 +75,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag N. This parameter takes effect only when the ShareType parameter is set to Private.
+            /// The value of the tag. This parameter takes effect only when ShareType is set to Private.
             /// 
             /// You can specify up to 20 tag values.
             /// </summary>
@@ -91,9 +86,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The name of the template. This parameter takes effect only when the ShareType parameter is set to Private.
-        /// 
-        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
+        /// The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

@@ -10,25 +10,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetServiceProvisionsRequest : TeaModel {
         /// <summary>
-        /// The list of parameters.
+        /// The parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<GetServiceProvisionsRequestParameters> Parameters { get; set; }
         public class GetServiceProvisionsRequestParameters : TeaModel {
             /// <summary>
-            /// The name of parameter N. If you do not specify the name and the value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.
+            /// The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.
             /// 
-            /// >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.
+            /// > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// The value of parameter N.
+            /// The value of the parameter.
             /// 
-            /// >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.
+            /// > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -37,9 +37,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The ID of the region.
-        /// 
-        /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<GetServiceProvisionsRequestServices> Services { get; set; }
         public class GetServiceProvisionsRequestServices : TeaModel {
             /// <summary>
-            /// The name of service N or feature N. Valid values:
+            /// The service or feature name. Valid values:
             /// 
             /// *   AHAS: Application High Availability Service
             /// *   ARMS: Application Real-Time Monitoring Service (ARMS)
@@ -64,11 +62,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   CMS: CloudMonitor
             /// *   CR: Container Registry
             /// *   CS: Container Service for Kubernetes (ACK)
-            /// *   DCDN: Dynamic Route for CDN (DCDN)
+            /// *   DCDN: Dynamic Content Delivery Network (DCDN)
             /// *   DataHub: DataHub
             /// *   DataWorks: DataWorks
             /// *   EDAS: Enterprise Distributed Application Service (EDAS)
-            /// *   E-HPC: Elastic High Performance Computing (E-HPC)
+            /// *   EHPC: Elastic High Performance Computing (E-HPC)
             /// *   EMAS: Enterprise Mobile Application Studio (EMAS)
             /// *   FC: Function Compute
             /// *   FNF: Serverless Workflow (SWF)
@@ -84,12 +82,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   OTS: Tablestore
             /// *   PrivateLink: PrivateLink
             /// *   PrivateZone: Alibaba Cloud DNS PrivateZone
-            /// *   RocketMQ: Message Queue for Apache RocketMQ
+            /// *   RocketMQ: ApsaraMQ for RocketMQ
             /// *   SAE: Serverless App Engine (SAE)
             /// *   SLS: Log Service
             /// *   TrafficMirror: the traffic mirroring feature
             /// *   VS: Video Surveillance System
-            /// *   Xtrace: Tracing Analysis
+            /// *   Xtrace: Managed Service for OpenTelemetry
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
@@ -100,25 +98,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
         /// 
-        /// You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.N.ServiceName.
+        /// You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
         /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// The ID of the template. This parameter applies to shared and private templates.
+        /// The template ID. This parameter applies to shared and private templates.
         /// 
-        /// You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.N.ServiceName.
+        /// You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
+        /// The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
         /// 
-        /// You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.N.ServiceName.
+        /// You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
         /// </summary>
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]
@@ -127,7 +125,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The version of the template. If you do not specify this parameter, the latest version is used.
         /// 
-        /// This parameter takes effect only when the TemplateId parameter is specified.
+        /// This parameter takes effect only when TemplateId is specified.
         /// </summary>
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]

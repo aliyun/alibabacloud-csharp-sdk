@@ -12,38 +12,38 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The ID of the change set.
         /// 
-        /// >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+        /// > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
         /// </summary>
         [NameInMap("ChangeSetId")]
         [Validation(Required=false)]
         public string ChangeSetId { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the template sharing information. Default value: Disabled. Valid values:
+        /// Specifies whether to query the shared information about the template. Valid values:
         /// 
         /// *   Enabled
-        /// *   Disabled
+        /// *   Disabled (default)
         /// 
-        /// >  Only the template owner can query the template sharing information.
+        /// > Only the template owner can query the shared information of a template.
         /// </summary>
         [NameInMap("IncludePermission")]
         [Validation(Required=false)]
         public string IncludePermission { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the information about tags. Default value: Disabled. Valid values:
+        /// Specifies whether to query the information about tags. Valid values:
         /// 
         /// *   Enabled
-        /// *   Disabled
+        /// *   Disabled (default)
         /// 
-        /// >  This parameter only takes effect when you specify the TemplateId parameter.
+        /// > This parameter takes effect only if you specify TemplateId.
         /// </summary>
         [NameInMap("IncludeTags")]
         [Validation(Required=false)]
         public string IncludeTags { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the stack or stack group defined in the template belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The name of the stack group.
         /// 
-        /// >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+        /// > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
         /// </summary>
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The ID of the stack.
         /// 
-        /// >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+        /// > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]
@@ -70,30 +70,29 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The ID of the template.
         /// 
-        /// This parameter applies to shared and private templates. If the template is a shared template, the value of the TemplateId parameter is the same as the value of the TemplateARN parameter. You can use the template ID to query a shared template.
+        /// This parameter applies to shared and private templates. If the template is a shared template, the value of TemplateId is the same as the value of TemplateARN. You can use the template ID to query a shared template.
         /// 
-        /// >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+        /// > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// The stage of the template. This parameter only takes effect when you specify the StackId, ChangeSetId, or StackGroupName parameter.
+        /// The stage of the template. This parameter takes effect only if you specify StackId, ChangeSetId, or StackGroupName.
         /// 
-        /// Default value: Processed. Valid values:
+        /// Valid values:
         /// 
-        /// *   Processed: returns the processed template that contains transforms.
-        /// *   Original: returns the original template that you specify.
+        /// *   Processed (default): returns the processed template.
+        /// *   Original: returns the original template.
         /// </summary>
         [NameInMap("TemplateStage")]
         [Validation(Required=false)]
         public string TemplateStage { get; set; }
 
         /// <summary>
-        /// The version of the template. This parameter only takes effect when you specify the TemplateId parameter.
-        /// 
-        /// If the template is a shared template, you can specify this parameter only if you set the VersionOption parameter to AllVersions.
+        /// The version of the template. This parameter takes effect only if you specify TemplateId.\
+        /// If the template is a shared template, you can specify this parameter only if VersionOption is set to AllVersions. For more information, see [SetTemplatePermission](~~194768~~).
         /// 
         /// Valid values: v1 to v100.
         /// </summary>

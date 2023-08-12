@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackGroupOperationRequest : TeaModel {
         /// <summary>
-        /// The ID of the operation that you want to query. You can call the [ListStackGroupOperations](~~151342~~) operation to query the operation.
+        /// The operation ID. You can call the [ListStackGroupOperations](~~151342~~) operation to query the operation ID.
         /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]

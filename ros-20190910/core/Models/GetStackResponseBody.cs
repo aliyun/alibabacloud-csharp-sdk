@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackResponseBody : TeaModel {
+        [NameInMap("CheckedStackResourceCount")]
+        [Validation(Required=false)]
+        public int? CheckedStackResourceCount { get; set; }
+
         /// <summary>
         /// The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
         /// </summary>
@@ -152,6 +156,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
         }
+
+        [NameInMap("NotCheckedStackResourceCount")]
+        [Validation(Required=false)]
+        public int? NotCheckedStackResourceCount { get; set; }
 
         /// <summary>
         /// The callback URLs that are used to receive stack events.
