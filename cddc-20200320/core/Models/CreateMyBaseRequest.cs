@@ -67,6 +67,22 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
 
         }
 
+        [NameInMap("EcsDeploymentSetId")]
+        [Validation(Required=false)]
+        public string EcsDeploymentSetId { get; set; }
+
+        [NameInMap("EcsHostName")]
+        [Validation(Required=false)]
+        public string EcsHostName { get; set; }
+
+        [NameInMap("EcsInstanceName")]
+        [Validation(Required=false)]
+        public string EcsInstanceName { get; set; }
+
+        [NameInMap("EcsUniqueSuffix")]
+        [Validation(Required=false)]
+        public string EcsUniqueSuffix { get; set; }
+
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }

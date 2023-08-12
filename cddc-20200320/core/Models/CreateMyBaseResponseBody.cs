@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
 
+                [NameInMap("DedicatedHostGroupName")]
+                [Validation(Required=false)]
+                public string DedicatedHostGroupName { get; set; }
+
                 [NameInMap("ECSInstanceIds")]
                 [Validation(Required=false)]
                 public string ECSInstanceIds { get; set; }

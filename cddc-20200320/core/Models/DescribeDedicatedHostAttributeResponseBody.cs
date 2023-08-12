@@ -145,6 +145,9 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
+        /// <summary>
+        /// VSwitch ID。
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }

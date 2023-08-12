@@ -569,6 +569,22 @@ namespace AlibabaCloud.SDK.Cddc20200320
             {
                 query["ECSClassList"] = request.ECSClassListShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsDeploymentSetId))
+            {
+                query["EcsDeploymentSetId"] = request.EcsDeploymentSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsHostName))
+            {
+                query["EcsHostName"] = request.EcsHostName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsInstanceName))
+            {
+                query["EcsInstanceName"] = request.EcsInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsUniqueSuffix))
+            {
+                query["EcsUniqueSuffix"] = request.EcsUniqueSuffix;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
@@ -681,6 +697,22 @@ namespace AlibabaCloud.SDK.Cddc20200320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ECSClassListShrink))
             {
                 query["ECSClassList"] = request.ECSClassListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsDeploymentSetId))
+            {
+                query["EcsDeploymentSetId"] = request.EcsDeploymentSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsHostName))
+            {
+                query["EcsHostName"] = request.EcsHostName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsInstanceName))
+            {
+                query["EcsInstanceName"] = request.EcsInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsUniqueSuffix))
+            {
+                query["EcsUniqueSuffix"] = request.EcsUniqueSuffix;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
