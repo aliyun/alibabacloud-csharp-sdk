@@ -49,6 +49,20 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("Labels")]
+            [Validation(Required=false)]
+            public List<ListInstanceSnapshotResponseBodySnapshotsLabels> Labels { get; set; }
+            public class ListInstanceSnapshotResponseBodySnapshotsLabels : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("ReasonCode")]
             [Validation(Required=false)]
             public string ReasonCode { get; set; }

@@ -45,6 +45,24 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            [NameInMap("IsAvailable")]
+            [Validation(Required=false)]
+            public bool? IsAvailable { get; set; }
+
+            [NameInMap("Labels")]
+            [Validation(Required=false)]
+            public List<ListEcsSpecsResponseBodyEcsSpecsLabels> Labels { get; set; }
+            public class ListEcsSpecsResponseBodyEcsSpecsLabels : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public float? Memory { get; set; }

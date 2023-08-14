@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
-    public class ListDemoCategoriesResponse : TeaModel {
+    public class DeleteIdleInstanceCullerResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListDemoCategoriesResponseBody Body { get; set; }
+        public DeleteIdleInstanceCullerResponseBody Body { get; set; }
 
     }
 
