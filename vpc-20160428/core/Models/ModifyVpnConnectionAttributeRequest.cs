@@ -77,6 +77,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EnableNatTraversal { get; set; }
 
+        /// <summary>
+        /// This parameter is supported by dual-tunnel IPsec-VPN connections. Specifies whether to enable BGP for the tunnel. Valid values: **true** and **false**.
+        /// </summary>
         [NameInMap("EnableTunnelsBgp")]
         [Validation(Required=false)]
         public bool? EnableTunnelsBgp { get; set; }
@@ -207,102 +210,225 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// **TunnelOptionsSpecification** parameters are supported by dual-tunnel IPsec-VPN gateways. You can modify both the active and standby tunnels of the IPsec-VPN connection.
+        /// </summary>
         [NameInMap("TunnelOptionsSpecification")]
         [Validation(Required=false)]
         public List<ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification> TunnelOptionsSpecification { get; set; }
         public class ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification : TeaModel {
+            /// <summary>
+            /// Specifies whether to enable DPD for the tunnel. Valid values:
+            /// 
+            /// - **true**: enables the DPD feature. The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SA and IPsec SA are deleted. The security tunnel is also deleted. 
+            /// - **false**: disables DPD. The IPsec initiator does not send DPD packets.
+            /// </summary>
             [NameInMap("EnableDpd")]
             [Validation(Required=false)]
             public bool? EnableDpd { get; set; }
 
+            /// <summary>
+            /// Specifies whether to enable NAT traversal for the tunnel. Valid values:
+            /// 
+            /// - **true**: yes After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel. 
+            /// - **false**: disables NAT traversal.
+            /// </summary>
             [NameInMap("EnableNatTraversal")]
             [Validation(Required=false)]
             public bool? EnableNatTraversal { get; set; }
 
+            /// <summary>
+            /// If the VPN gateway uses an SM certificate, you can modify the CA certificate used by the IPsec peer.
+            /// If the VPN gateway does not use an SM certificate, this parameter is not supported.
+            /// </summary>
             [NameInMap("RemoteCaCertificate")]
             [Validation(Required=false)]
             public string RemoteCaCertificate { get; set; }
 
+            /// <summary>
+            /// The BGP configurations.
+            /// </summary>
             [NameInMap("TunnelBgpConfig")]
             [Validation(Required=false)]
             public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig TunnelBgpConfig { get; set; }
             public class ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig : TeaModel {
+                /// <summary>
+                /// The local ASN (Alibaba Cloud side). Valid values: **1 ** to **4294967295**. Default value: **45104**. 
+                /// 
+                /// > - You can set or modify this parameter if BGP is enabled for the IPsecVPN connection (**EnableTunnelsBgp** is set to **true**). 
+                /// > - Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~). 
+                /// > - We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. Refer to the relevant documentation for the private ASN range.
+                /// </summary>
                 [NameInMap("LocalAsn")]
                 [Validation(Required=false)]
                 public long? LocalAsn { get; set; }
 
+                /// <summary>
+                /// The local BGP address (Alibaba Cloud side). The BGP address is an IP address that falls into the BGP CIDR block.
+                /// </summary>
                 [NameInMap("LocalBgpIp")]
                 [Validation(Required=false)]
                 public string LocalBgpIp { get; set; }
 
+                /// <summary>
+                /// The BGP CIDR block. The CIDR block must fall within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length. 
+                /// 
+                /// > The BGP CIDR block of each tunnel on a VPN gateway must be unique.
+                /// </summary>
                 [NameInMap("TunnelCidr")]
                 [Validation(Required=false)]
                 public string TunnelCidr { get; set; }
 
             }
 
+            /// <summary>
+            /// The tunnel ID.
+            /// </summary>
             [NameInMap("TunnelId")]
             [Validation(Required=false)]
             public string TunnelId { get; set; }
 
+            /// <summary>
+            /// The configuration of Phase 1 negotiations.
+            /// </summary>
             [NameInMap("TunnelIkeConfig")]
             [Validation(Required=false)]
             public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig TunnelIkeConfig { get; set; }
             public class ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig : TeaModel {
+                /// <summary>
+                /// The authentication algorithm that is used in Phase 1 negotiations. 
+                /// 
+                /// <props="intl"><ph>Valid values: **md5**,**sha1**,**sha256**,**sha384**,**sha512**.</ph></props>
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为普通型，则取值：**md5**、**sha1**、**sha256**、**sha384**、**sha512**。</ph></props>
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为国密型，则仅取值：**sm3**。</ph></props>
+                /// </summary>
                 [NameInMap("IkeAuthAlg")]
                 [Validation(Required=false)]
                 public string IkeAuthAlg { get; set; }
 
+                /// <summary>
+                /// The encryption algorithm that is used in Phase 1 negotiations. 
+                /// 
+                /// <props="intl"><ph>Valid values: **aes**,**aes192**,**aes256**,**des**或**3des**.</ph></props>
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为普通型，则取值为**aes**、**aes192**、**aes256**、**des**或**3des**。</ph></props>
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为国密型，则仅取值：**sm4**。</ph></props>
+                /// </summary>
                 [NameInMap("IkeEncAlg")]
                 [Validation(Required=false)]
                 public string IkeEncAlg { get; set; }
 
+                /// <summary>
+                /// The SA lifetime that is determined by Phase 1 negotiations. Unit: seconds. Valid values: **0** to **86400**.
+                /// </summary>
                 [NameInMap("IkeLifetime")]
                 [Validation(Required=false)]
                 public long? IkeLifetime { get; set; }
 
+                /// <summary>
+                /// The IKE negotiation mode. Valid values:
+                /// 
+                /// - **main**: This mode offers higher security during negotiations. 
+                /// - **aggressive**: This mode is faster and has a higher success rate. 
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为国密型，则协商模式仅支持**main**。</ph></props>
+                /// </summary>
                 [NameInMap("IkeMode")]
                 [Validation(Required=false)]
                 public string IkeMode { get; set; }
 
+                /// <summary>
+                /// The DH key exchange algorithm that is used in Phase 1 negotiations. Valid values: **group1**, **group2**, **group5**, and **group14**.
+                /// </summary>
                 [NameInMap("IkePfs")]
                 [Validation(Required=false)]
                 public string IkePfs { get; set; }
 
+                /// <summary>
+                /// The version of the IKE protocol. Valid values: **ikev1** and **ikev2**. Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为国密型，则IKE版本仅支持**ikev1**。</ph></props>
+                /// </summary>
                 [NameInMap("IkeVersion")]
                 [Validation(Required=false)]
                 public string IkeVersion { get; set; }
 
+                /// <summary>
+                /// The local identifier (Alibaba Cloud side) used for Phase 1 negotiation. The identifier cannot exceed 100 characters in length. The default identifier is the tunnel IP address.
+                ///  You can set **LocalId **to a fully qualified domain name (FQDN). In this case, we recommend that you set Negotiation Mode to **aggressive**.
+                /// </summary>
                 [NameInMap("LocalId")]
                 [Validation(Required=false)]
                 public string LocalId { get; set; }
 
+                /// <summary>
+                /// The pre-shared key that is used for authentication between the tunnel and peer. 
+                /// 
+                /// - It must be 1 to 100 characters in length, and can contain letters, digits, and the following characters: ```~!\`@#$%^&*()_-+={}[]|;:\",.<>/?```
+                /// - If you do not specify a pre-shared key, the system generates a random 16-bit string as the pre-shared key. You can call the [DescribeVpnConnection](~~120374~~) operation to query the pre-shared key that is generated by the system. 
+                /// 
+                /// > Make sure that the tunnels and peers use the same pre-shared key. Otherwise, tunnel communication cannot be established.
+                /// </summary>
                 [NameInMap("Psk")]
                 [Validation(Required=false)]
                 public string Psk { get; set; }
 
+                /// <summary>
+                /// The peer identifier used for Phase 1 negotiation. The identifier cannot exceed 100 characters in length. 
+                /// The default identifier is the IP address of the customer gateway. You can set **RemoteId** to an FQDN. In this case, we recommend that you set Negotiation Mode to **aggressive**.
+                /// </summary>
                 [NameInMap("RemoteId")]
                 [Validation(Required=false)]
                 public string RemoteId { get; set; }
 
             }
 
+            /// <summary>
+            /// The configuration of Phase 2 negotiations.
+            /// </summary>
             [NameInMap("TunnelIpsecConfig")]
             [Validation(Required=false)]
             public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig TunnelIpsecConfig { get; set; }
             public class ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig : TeaModel {
+                /// <summary>
+                /// The authentication algorithm that was used in Phase 2 negotiations.
+                /// 
+                /// <props="intl"><ph>Valid values: **md5**,**sha1**,**sha256**,**sha384**,**sha512**.</ph></props>
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为普通型，则取值：**md5**、**sha1**、**sha256**、**sha384**、**sha512**。</ph></props>
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为国密型，则仅取值：**sm3**。</ph></props>
+                /// </summary>
                 [NameInMap("IpsecAuthAlg")]
                 [Validation(Required=false)]
                 public string IpsecAuthAlg { get; set; }
 
+                /// <summary>
+                /// The encryption algorithm that is used in Phase 2 negotiations. 
+                /// 
+                /// <props="intl"><ph>Valid values: **aes**,**aes192**,**aes256**,**des**或**3des**.</ph></props>
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为普通型，则取值为**aes**、**aes192**、**aes256**、**des**或**3des**。</ph></props>
+                /// 
+                /// <props="china"><ph>如果VPN网关实例类型为国密型，则仅取值：**sm4**。</ph></props>
+                /// </summary>
                 [NameInMap("IpsecEncAlg")]
                 [Validation(Required=false)]
                 public string IpsecEncAlg { get; set; }
 
+                /// <summary>
+                /// The SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: **0** to **86400**.
+                /// </summary>
                 [NameInMap("IpsecLifetime")]
                 [Validation(Required=false)]
                 public int? IpsecLifetime { get; set; }
 
+                /// <summary>
+                /// The DH key exchange algorithm that is used in Phase 2 negotiations. Valid values: **disabled**, **group1**, **group2**, **group5**, and **group14**.
+                /// </summary>
                 [NameInMap("IpsecPfs")]
                 [Validation(Required=false)]
                 public string IpsecPfs { get; set; }

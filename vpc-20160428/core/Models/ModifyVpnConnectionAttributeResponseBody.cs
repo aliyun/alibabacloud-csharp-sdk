@@ -62,6 +62,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EnableNatTraversal { get; set; }
 
+        /// <summary>
+        /// Indicates whether BGP is enabled for the tunnel. Valid values: 
+        /// - **true** 
+        /// - **false** 
+        /// 
+        /// This parameter is returned only by dual-tunnel IPsec-VPN connections.
+        /// </summary>
         [NameInMap("EnableTunnelsBgp")]
         [Validation(Required=false)]
         public bool? EnableTunnelsBgp { get; set; }
@@ -211,6 +218,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The tunnel configurations of the IPsec-VPN connection. 
+        /// 
+        /// **TunnelOptionsSpecification** parameters are returned only for dual-tunnel IPsec-VPN connections.
+        /// </summary>
         [NameInMap("TunnelOptionsSpecification")]
         [Validation(Required=false)]
         public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecification TunnelOptionsSpecification { get; set; }
@@ -219,128 +231,236 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptions> TunnelOptions { get; set; }
             public class ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptions : TeaModel {
+                /// <summary>
+                /// The ID of the customer gateway that is associated with the tunnel.
+                /// </summary>
                 [NameInMap("CustomerGatewayId")]
                 [Validation(Required=false)]
                 public string CustomerGatewayId { get; set; }
 
+                /// <summary>
+                /// Indicates whether DPD is enabled for the tunnel. Valid values: 
+                /// 
+                /// - **false** 
+                /// - **true**
+                /// </summary>
                 [NameInMap("EnableDpd")]
                 [Validation(Required=false)]
                 public bool? EnableDpd { get; set; }
 
+                /// <summary>
+                /// Indicates whether NAT traversal is enabled for the tunnel. Valid values: 
+                /// 
+                /// - **false** 
+                /// - **true**
+                /// </summary>
                 [NameInMap("EnableNatTraversal")]
                 [Validation(Required=false)]
                 public bool? EnableNatTraversal { get; set; }
 
+                /// <summary>
+                /// The IP address on the Alibaba Cloud side.
+                /// </summary>
                 [NameInMap("InternetIp")]
                 [Validation(Required=false)]
                 public string InternetIp { get; set; }
 
+                /// <summary>
+                /// The CA certificate used by the IPsec peer. 
+                /// 
+                /// This parameter is returned only by VPN gateways that use SM certificates.
+                /// </summary>
                 [NameInMap("RemoteCaCertificate")]
                 [Validation(Required=false)]
                 public string RemoteCaCertificate { get; set; }
 
+                /// <summary>
+                /// The tunnel role. Valid values: 
+                /// 
+                /// - **master** 
+                /// - **slave**
+                /// </summary>
                 [NameInMap("Role")]
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
+                /// <summary>
+                /// The tunnel status. Valid values: 
+                /// 
+                /// - **active**
+                /// - **updating**
+                /// - **deleting**
+                /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }
 
+                /// <summary>
+                /// The BGP configurations.
+                /// </summary>
                 [NameInMap("TunnelBgpConfig")]
                 [Validation(Required=false)]
                 public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig TunnelBgpConfig { get; set; }
                 public class ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig : TeaModel {
+                    /// <summary>
+                    /// The local ASN (Alibaba Cloud side).
+                    /// </summary>
                     [NameInMap("LocalAsn")]
                     [Validation(Required=false)]
                     public long? LocalAsn { get; set; }
 
+                    /// <summary>
+                    /// The local BGP address (Alibaba Cloud side).
+                    /// </summary>
                     [NameInMap("LocalBgpIp")]
                     [Validation(Required=false)]
                     public string LocalBgpIp { get; set; }
 
+                    /// <summary>
+                    /// The peer ASN.
+                    /// </summary>
                     [NameInMap("PeerAsn")]
                     [Validation(Required=false)]
                     public long? PeerAsn { get; set; }
 
+                    /// <summary>
+                    /// The peer BGP address.
+                    /// </summary>
                     [NameInMap("PeerBgpIp")]
                     [Validation(Required=false)]
                     public string PeerBgpIp { get; set; }
 
+                    /// <summary>
+                    /// The BGP CIDR block of the tunnel.
+                    /// </summary>
                     [NameInMap("TunnelCidr")]
                     [Validation(Required=false)]
                     public string TunnelCidr { get; set; }
 
                 }
 
+                /// <summary>
+                /// The tunnel ID.
+                /// </summary>
                 [NameInMap("TunnelId")]
                 [Validation(Required=false)]
                 public string TunnelId { get; set; }
 
+                /// <summary>
+                /// The configuration of Phase 1 negotiations.
+                /// </summary>
                 [NameInMap("TunnelIkeConfig")]
                 [Validation(Required=false)]
                 public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig TunnelIkeConfig { get; set; }
                 public class ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig : TeaModel {
+                    /// <summary>
+                    /// The algorithm in the IKE phase.
+                    /// </summary>
                     [NameInMap("IkeAuthAlg")]
                     [Validation(Required=false)]
                     public string IkeAuthAlg { get; set; }
 
+                    /// <summary>
+                    /// The encryption algorithm in the IKE phase.
+                    /// </summary>
                     [NameInMap("IkeEncAlg")]
                     [Validation(Required=false)]
                     public string IkeEncAlg { get; set; }
 
+                    /// <summary>
+                    /// The lifetime in the IKE phase. Unit: seconds.
+                    /// </summary>
                     [NameInMap("IkeLifetime")]
                     [Validation(Required=false)]
                     public long? IkeLifetime { get; set; }
 
+                    /// <summary>
+                    /// The IKE negotiation mode. 
+                    /// 
+                    /// - **main**: This mode offers higher security during negotiations. 
+                    /// - **aggressive**: This mode is faster and has a higher success rate.
+                    /// </summary>
                     [NameInMap("IkeMode")]
                     [Validation(Required=false)]
                     public string IkeMode { get; set; }
 
+                    /// <summary>
+                    /// The DH group in the IKE phase.
+                    /// </summary>
                     [NameInMap("IkePfs")]
                     [Validation(Required=false)]
                     public string IkePfs { get; set; }
 
+                    /// <summary>
+                    /// The version of the IKE protocol.
+                    /// </summary>
                     [NameInMap("IkeVersion")]
                     [Validation(Required=false)]
                     public string IkeVersion { get; set; }
 
+                    /// <summary>
+                    /// The local identifier (Alibaba Cloud side).
+                    /// </summary>
                     [NameInMap("LocalId")]
                     [Validation(Required=false)]
                     public string LocalId { get; set; }
 
+                    /// <summary>
+                    /// The pre-shared key.
+                    /// </summary>
                     [NameInMap("Psk")]
                     [Validation(Required=false)]
                     public string Psk { get; set; }
 
+                    /// <summary>
+                    /// The peer identifier.
+                    /// </summary>
                     [NameInMap("RemoteId")]
                     [Validation(Required=false)]
                     public string RemoteId { get; set; }
 
                 }
 
+                /// <summary>
+                /// The configuration of Phase 2 negotiations.
+                /// </summary>
                 [NameInMap("TunnelIpsecConfig")]
                 [Validation(Required=false)]
                 public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig TunnelIpsecConfig { get; set; }
                 public class ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig : TeaModel {
+                    /// <summary>
+                    /// The authentication algorithm in the IPsec phase.
+                    /// </summary>
                     [NameInMap("IpsecAuthAlg")]
                     [Validation(Required=false)]
                     public string IpsecAuthAlg { get; set; }
 
+                    /// <summary>
+                    /// The encryption algorithm in the IPsec phase.
+                    /// </summary>
                     [NameInMap("IpsecEncAlg")]
                     [Validation(Required=false)]
                     public string IpsecEncAlg { get; set; }
 
+                    /// <summary>
+                    /// The lifetime in the IPsec phase. Unit: seconds.
+                    /// </summary>
                     [NameInMap("IpsecLifetime")]
                     [Validation(Required=false)]
                     public long? IpsecLifetime { get; set; }
 
+                    /// <summary>
+                    /// The DH group in the IPsec phase.
+                    /// </summary>
                     [NameInMap("IpsecPfs")]
                     [Validation(Required=false)]
                     public string IpsecPfs { get; set; }
 
                 }
 
+                /// <summary>
+                /// The zone of the tunnel.
+                /// </summary>
                 [NameInMap("ZoneNo")]
                 [Validation(Required=false)]
                 public string ZoneNo { get; set; }

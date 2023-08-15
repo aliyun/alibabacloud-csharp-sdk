@@ -45,10 +45,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The second IP address assigned by the system to create an IPsec-VPN connection. This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
+        /// </summary>
         [NameInMap("DisasterRecoveryInternetIp")]
         [Validation(Required=false)]
         public string DisasterRecoveryInternetIp { get; set; }
 
+        /// <summary>
+        /// The ID of the second vSwitch associated with the VPN gateway. This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
+        /// </summary>
         [NameInMap("DisasterRecoveryVSwitchId")]
         [Validation(Required=false)]
         public string DisasterRecoveryVSwitchId { get; set; }
@@ -73,7 +79,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The public IP address of the VPN gateway.
+        /// - If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection. 
+        /// - If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection. If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.
         /// </summary>
         [NameInMap("InternetIp")]
         [Validation(Required=false)]
@@ -107,6 +114,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Spec { get; set; }
 
+        /// <summary>
+        /// The IP address of the SSL-VPN connection. This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.
+        /// </summary>
         [NameInMap("SslVpnInternetIp")]
         [Validation(Required=false)]
         public string SslVpnInternetIp { get; set; }

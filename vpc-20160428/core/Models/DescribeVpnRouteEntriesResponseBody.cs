@@ -76,6 +76,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string NextHop { get; set; }
 
+                /// <summary>
+                /// The ID of the tunnel associated with the next hop. 
+                /// 
+                /// 
+                /// > This parameter is returned only if the VPN gateway supports the dual-tunnel mode.
+                /// </summary>
                 [NameInMap("NextHopTunnelId")]
                 [Validation(Required=false)]
                 public string NextHopTunnelId { get; set; }

@@ -75,6 +75,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? To { get; set; }
 
+        /// <summary>
+        /// The tunnel ID of the IPsec-VPN connection. You can specify this parameter only for IPsec-VPN connections in dual-tunnel mode.
+        /// </summary>
         [NameInMap("TunnelId")]
         [Validation(Required=false)]
         public string TunnelId { get; set; }
