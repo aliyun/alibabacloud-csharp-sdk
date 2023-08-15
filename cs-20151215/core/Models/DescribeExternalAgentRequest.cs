@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeExternalAgentRequest : TeaModel {
+        [NameInMap("AgentMode")]
+        [Validation(Required=false)]
+        public string AgentMode { get; set; }
+
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }

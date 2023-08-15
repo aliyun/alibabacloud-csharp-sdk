@@ -4869,6 +4869,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentMode))
+            {
+                query["AgentMode"] = request.AgentMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
@@ -4905,6 +4909,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentMode))
+            {
+                query["AgentMode"] = request.AgentMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
