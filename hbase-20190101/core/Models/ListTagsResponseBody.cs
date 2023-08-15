@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<ListTagsResponseBodyTagsTag> Tag { get; set; }
             public class ListTagsResponseBodyTagsTag : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
                 public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
                 public string TagValue { get; set; }
+
             }
-        };
+
+        }
 
     }
 

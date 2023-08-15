@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<ListInstanceServiceConfigHistoriesResponseBodyConfigureHistoryListConfig> Config { get; set; }
             public class ListInstanceServiceConfigHistoriesResponseBodyConfigureHistoryListConfig : TeaModel {
+                [NameInMap("ConfigureName")]
+                [Validation(Required=false)]
                 public string ConfigureName { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("Effective")]
+                [Validation(Required=false)]
                 public string Effective { get; set; }
+
+                [NameInMap("NewValue")]
+                [Validation(Required=false)]
                 public string NewValue { get; set; }
+
+                [NameInMap("OldValue")]
+                [Validation(Required=false)]
                 public string OldValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

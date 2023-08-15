@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
+        [NameInMap("EnableHbaseProxy")]
+        [Validation(Required=false)]
+        public bool? EnableHbaseProxy { get; set; }
+
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
@@ -116,6 +120,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [NameInMap("IsMultiModel")]
         [Validation(Required=false)]
         public bool? IsMultiModel { get; set; }
+
+        [NameInMap("LproxyMinorVersion")]
+        [Validation(Required=false)]
+        public string LproxyMinorVersion { get; set; }
 
         [NameInMap("MaintainEndTime")]
         [Validation(Required=false)]
@@ -168,7 +176,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("Comps")]
             [Validation(Required=false)]
             public List<string> Comps { get; set; }
-        };
+
+        }
 
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -206,10 +215,17 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeInstanceResponseBodyTagsTag> Tag { get; set; }
             public class DescribeInstanceResponseBodyTagsTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TaskProgress")]
         [Validation(Required=false)]

@@ -17,9 +17,23 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<QueryHBaseHaDBResponseBodyClusterListCluster> Cluster { get; set; }
             public class QueryHBaseHaDBResponseBodyClusterListCluster : TeaModel {
+                [NameInMap("ActiveName")]
+                [Validation(Required=false)]
                 public string ActiveName { get; set; }
+
+                /// <summary>
+                /// bdsId
+                /// </summary>
+                [NameInMap("BdsName")]
+                [Validation(Required=false)]
                 public string BdsName { get; set; }
+
+                [NameInMap("HaName")]
+                [Validation(Required=false)]
                 public string HaName { get; set; }
+
+                [NameInMap("HaSlbConnList")]
+                [Validation(Required=false)]
                 public QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnList HaSlbConnList { get; set; }
                 public class QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnList : TeaModel {
                     [NameInMap("HaSlbConn")]
@@ -41,9 +55,14 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                     }
 
                 }
+
+                [NameInMap("StandbyName")]
+                [Validation(Required=false)]
                 public string StandbyName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

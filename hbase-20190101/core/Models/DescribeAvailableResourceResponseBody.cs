@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone : TeaModel {
+                [NameInMap("MasterResources")]
+                [Validation(Required=false)]
                 public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResources MasterResources { get; set; }
                 public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResources : TeaModel {
                     [NameInMap("MasterResource")]
@@ -34,15 +36,23 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                             [NameInMap("Cpu")]
                             [Validation(Required=false)]
                             public int? Cpu { get; set; }
+
                             [NameInMap("Mem")]
                             [Validation(Required=false)]
                             public int? Mem { get; set; }
-                        };
+
+                        }
 
                     }
 
                 }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("SupportedEngines")]
+                [Validation(Required=false)]
                 public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines SupportedEngines { get; set; }
                 public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines : TeaModel {
                     [NameInMap("SupportedEngine")]
@@ -61,6 +71,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                             [Validation(Required=false)]
                             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion> SupportedEngineVersion { get; set; }
                             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion : TeaModel {
+                                [NameInMap("SupportedCategories")]
+                                [Validation(Required=false)]
                                 public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories SupportedCategories { get; set; }
                                 public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories : TeaModel {
                                     [NameInMap("SupportedCategories")]
@@ -79,6 +91,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                                             [Validation(Required=false)]
                                             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType> SupportedStorageType { get; set; }
                                             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType : TeaModel {
+                                                [NameInMap("CoreResources")]
+                                                [Validation(Required=false)]
                                                 public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources CoreResources { get; set; }
                                                 public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources : TeaModel {
                                                     [NameInMap("CoreResource")]
@@ -92,13 +106,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                                                             [NameInMap("MaxSize")]
                                                             [Validation(Required=false)]
                                                             public int? MaxSize { get; set; }
+
                                                             [NameInMap("MinSize")]
                                                             [Validation(Required=false)]
                                                             public int? MinSize { get; set; }
+
                                                             [NameInMap("StepSize")]
                                                             [Validation(Required=false)]
                                                             public int? StepSize { get; set; }
-                                                        };
+
+                                                        }
 
                                                         [NameInMap("InstanceType")]
                                                         [Validation(Required=false)]
@@ -111,10 +128,12 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                                                             [NameInMap("Cpu")]
                                                             [Validation(Required=false)]
                                                             public int? Cpu { get; set; }
+
                                                             [NameInMap("Mem")]
                                                             [Validation(Required=false)]
                                                             public int? Mem { get; set; }
-                                                        };
+
+                                                        }
 
                                                         [NameInMap("MaxCoreCount")]
                                                         [Validation(Required=false)]
@@ -123,23 +142,38 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                                                     }
 
                                                 }
+
+                                                [NameInMap("StorageType")]
+                                                [Validation(Required=false)]
                                                 public string StorageType { get; set; }
+
                                             }
-                                        };
+
+                                        }
 
                                     }
 
                                 }
+
+                                [NameInMap("Version")]
+                                [Validation(Required=false)]
                                 public string Version { get; set; }
+
                             }
-                        };
+
+                        }
 
                     }
 
                 }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

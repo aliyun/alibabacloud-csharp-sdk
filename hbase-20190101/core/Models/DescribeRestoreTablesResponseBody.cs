@@ -20,15 +20,19 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("DataSize")]
             [Validation(Required=false)]
             public string DataSize { get; set; }
+
             [NameInMap("Fail")]
             [Validation(Required=false)]
             public int? Fail { get; set; }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("RestoreFullDetails")]
             [Validation(Required=false)]
             public DescribeRestoreTablesResponseBodyRestoreFullRestoreFullDetails RestoreFullDetails { get; set; }
@@ -72,16 +76,20 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                 }
 
             }
+
             [NameInMap("Speed")]
             [Validation(Required=false)]
             public string Speed { get; set; }
+
             [NameInMap("Succeed")]
             [Validation(Required=false)]
             public int? Succeed { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("RestoreIncrDetail")]
         [Validation(Required=false)]
@@ -90,25 +98,32 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
+
             [NameInMap("Process")]
             [Validation(Required=false)]
             public string Process { get; set; }
+
             [NameInMap("RestoreDelay")]
             [Validation(Required=false)]
             public string RestoreDelay { get; set; }
+
             [NameInMap("RestoreStartTs")]
             [Validation(Required=false)]
             public string RestoreStartTs { get; set; }
+
             [NameInMap("RestoredTs")]
             [Validation(Required=false)]
             public string RestoredTs { get; set; }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
-        };
+
+        }
 
         [NameInMap("RestoreSchema")]
         [Validation(Required=false)]
@@ -117,12 +132,15 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("Fail")]
             [Validation(Required=false)]
             public int? Fail { get; set; }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("RestoreSchemaDetails")]
             [Validation(Required=false)]
             public DescribeRestoreTablesResponseBodyRestoreSchemaRestoreSchemaDetails RestoreSchemaDetails { get; set; }
@@ -154,13 +172,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                 }
 
             }
+
             [NameInMap("Succeed")]
             [Validation(Required=false)]
             public int? Succeed { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("RestoreSummary")]
         [Validation(Required=false)]
@@ -169,22 +190,28 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
+
             [NameInMap("RecordId")]
             [Validation(Required=false)]
             public string RecordId { get; set; }
+
             [NameInMap("RestoreToDate")]
             [Validation(Required=false)]
             public string RestoreToDate { get; set; }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
+
             [NameInMap("TargetCluster")]
             [Validation(Required=false)]
             public string TargetCluster { get; set; }
-        };
+
+        }
 
         [NameInMap("Tables")]
         [Validation(Required=false)]
@@ -193,7 +220,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("Table")]
             [Validation(Required=false)]
             public List<string> Table { get; set; }
-        };
+
+        }
 
     }
 

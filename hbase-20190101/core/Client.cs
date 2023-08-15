@@ -21,49 +21,18 @@ namespace AlibabaCloud.SDK.HBase20190101
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"ap-northeast-2-pop", "hbase.aliyuncs.com"},
                 {"ap-southeast-1", "hbase.aliyuncs.com"},
                 {"cn-beijing", "hbase.aliyuncs.com"},
-                {"cn-beijing-finance-1", "hbase.aliyuncs.com"},
-                {"cn-beijing-finance-pop", "hbase.aliyuncs.com"},
-                {"cn-beijing-gov-1", "hbase.aliyuncs.com"},
-                {"cn-beijing-nu16-b01", "hbase.aliyuncs.com"},
-                {"cn-edge-1", "hbase.aliyuncs.com"},
-                {"cn-fujian", "hbase.aliyuncs.com"},
-                {"cn-haidian-cm12-c01", "hbase.aliyuncs.com"},
                 {"cn-hangzhou", "hbase.aliyuncs.com"},
-                {"cn-hangzhou-bj-b01", "hbase.aliyuncs.com"},
                 {"cn-hangzhou-finance", "hbase.aliyuncs.com"},
-                {"cn-hangzhou-internal-prod-1", "hbase.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-1", "hbase.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-2", "hbase.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-3", "hbase.aliyuncs.com"},
-                {"cn-hangzhou-test-306", "hbase.aliyuncs.com"},
                 {"cn-hongkong", "hbase.aliyuncs.com"},
-                {"cn-hongkong-finance-pop", "hbase.aliyuncs.com"},
                 {"cn-north-2-gov-1", "hbase.aliyuncs.com"},
                 {"cn-qingdao", "hbase.aliyuncs.com"},
-                {"cn-qingdao-nebula", "hbase.aliyuncs.com"},
                 {"cn-shanghai", "hbase.aliyuncs.com"},
-                {"cn-shanghai-et15-b01", "hbase.aliyuncs.com"},
-                {"cn-shanghai-et2-b01", "hbase.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "hbase.aliyuncs.com"},
-                {"cn-shanghai-inner", "hbase.aliyuncs.com"},
-                {"cn-shanghai-internal-test-1", "hbase.aliyuncs.com"},
                 {"cn-shenzhen", "hbase.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "hbase.aliyuncs.com"},
-                {"cn-shenzhen-inner", "hbase.aliyuncs.com"},
-                {"cn-shenzhen-st4-d01", "hbase.aliyuncs.com"},
-                {"cn-shenzhen-su18-b01", "hbase.aliyuncs.com"},
-                {"cn-wuhan", "hbase.aliyuncs.com"},
-                {"cn-yushanfang", "hbase.aliyuncs.com"},
-                {"cn-zhangbei-na61-b01", "hbase.aliyuncs.com"},
-                {"cn-zhangjiakou-na62-a01", "hbase.aliyuncs.com"},
-                {"cn-zhengzhou-nebula-1", "hbase.aliyuncs.com"},
-                {"eu-west-1-oxs", "hbase.ap-northeast-1.aliyuncs.com"},
-                {"rus-west-1-pop", "hbase.ap-northeast-1.aliyuncs.com"},
-                {"us-east-1", "hbase.aliyuncs.com"},
-                {"us-west-1", "hbase.aliyuncs.com"},
+                {"cn-guangzhou", "hbase.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("hbase", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -879,6 +848,10 @@ namespace AlibabaCloud.SDK.HBase20190101
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
                 query["ResourceName"] = request.ResourceName;
@@ -917,6 +890,10 @@ namespace AlibabaCloud.SDK.HBase20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
@@ -1743,6 +1720,10 @@ namespace AlibabaCloud.SDK.HBase20190101
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
                 query["ResourceName"] = request.ResourceName;
@@ -1777,6 +1758,10 @@ namespace AlibabaCloud.SDK.HBase20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
@@ -8495,6 +8480,88 @@ namespace AlibabaCloud.SDK.HBase20190101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchHbaseHaSlbWithOptionsAsync(request, runtime);
+        }
+
+        public SwitchServiceResponse SwitchServiceWithOptions(SwitchServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operate))
+            {
+                query["Operate"] = request.Operate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchService",
+                Version = "2019-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SwitchServiceResponse> SwitchServiceWithOptionsAsync(SwitchServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operate))
+            {
+                query["Operate"] = request.Operate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchService",
+                Version = "2019-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SwitchServiceResponse SwitchService(SwitchServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SwitchServiceWithOptions(request, runtime);
+        }
+
+        public async Task<SwitchServiceResponse> SwitchServiceAsync(SwitchServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SwitchServiceWithOptionsAsync(request, runtime);
         }
 
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

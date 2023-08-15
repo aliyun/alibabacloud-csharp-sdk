@@ -17,15 +17,37 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<QueryXpackRelateDBResponseBodyClusterListCluster> Cluster { get; set; }
             public class QueryXpackRelateDBResponseBodyClusterListCluster : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
                 public string ClusterId { get; set; }
+
+                [NameInMap("ClusterName")]
+                [Validation(Required=false)]
                 public string ClusterName { get; set; }
+
+                [NameInMap("DBType")]
+                [Validation(Required=false)]
                 public string DBType { get; set; }
+
+                [NameInMap("DBVersion")]
+                [Validation(Required=false)]
                 public string DBVersion { get; set; }
+
+                [NameInMap("IsRelated")]
+                [Validation(Required=false)]
                 public bool? IsRelated { get; set; }
+
+                [NameInMap("LockMode")]
+                [Validation(Required=false)]
                 public string LockMode { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

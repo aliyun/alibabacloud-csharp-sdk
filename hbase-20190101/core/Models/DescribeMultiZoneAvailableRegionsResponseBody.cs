@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion : TeaModel {
+                [NameInMap("AvailableCombines")]
+                [Validation(Required=false)]
                 public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombines AvailableCombines { get; set; }
                 public class DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombines : TeaModel {
                     [NameInMap("AvailableCombine")]
@@ -34,16 +36,28 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                             [NameInMap("Zone")]
                             [Validation(Required=false)]
                             public List<string> Zone { get; set; }
-                        };
+
+                        }
 
                     }
 
                 }
+
+                [NameInMap("LocalName")]
+                [Validation(Required=false)]
                 public string LocalName { get; set; }
+
+                [NameInMap("RegionEndpoint")]
+                [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

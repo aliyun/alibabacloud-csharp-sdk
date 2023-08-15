@@ -32,7 +32,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("Table")]
             [Validation(Required=false)]
             public List<string> Table { get; set; }
-        };
+
+        }
 
     }
 

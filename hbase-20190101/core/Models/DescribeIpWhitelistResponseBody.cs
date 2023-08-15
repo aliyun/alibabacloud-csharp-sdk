@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeIpWhitelistResponseBodyGroupsGroup> Group { get; set; }
             public class DescribeIpWhitelistResponseBodyGroupsGroup : TeaModel {
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
                 public string GroupName { get; set; }
+
+                [NameInMap("IpList")]
+                [Validation(Required=false)]
                 public DescribeIpWhitelistResponseBodyGroupsGroupIpList IpList { get; set; }
                 public class DescribeIpWhitelistResponseBodyGroupsGroupIpList : TeaModel {
                     [NameInMap("Ip")]
@@ -25,9 +30,14 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                     public List<string> Ip { get; set; }
 
                 }
+
+                [NameInMap("IpVersion")]
+                [Validation(Required=false)]
                 public int? IpVersion { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

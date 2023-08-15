@@ -20,15 +20,19 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("DataSize")]
             [Validation(Required=false)]
             public string DataSize { get; set; }
+
             [NameInMap("Fail")]
             [Validation(Required=false)]
             public int? Fail { get; set; }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("RestoreFullDetails")]
             [Validation(Required=false)]
             public DescribeRestoreFullDetailsResponseBodyRestoreFullRestoreFullDetails RestoreFullDetails { get; set; }
@@ -72,16 +76,20 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                 }
 
             }
+
             [NameInMap("Speed")]
             [Validation(Required=false)]
             public string Speed { get; set; }
+
             [NameInMap("Succeed")]
             [Validation(Required=false)]
             public int? Succeed { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
+
+        }
 
     }
 

@@ -17,9 +17,20 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
+                [NameInMap("LocalName")]
+                [Validation(Required=false)]
                 public string LocalName { get; set; }
+
+                [NameInMap("RegionEndpoint")]
+                [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Zones")]
+                [Validation(Required=false)]
                 public DescribeRegionsResponseBodyRegionsRegionZones Zones { get; set; }
                 public class DescribeRegionsResponseBodyRegionsRegionZones : TeaModel {
                     [NameInMap("Zone")]
@@ -33,8 +44,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

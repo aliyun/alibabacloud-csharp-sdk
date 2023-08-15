@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
+        [NameInMap("ColdStorageSize")]
+        [Validation(Required=false)]
+        public int? ColdStorageSize { get; set; }
+
         [NameInMap("CoreDiskCount")]
         [Validation(Required=false)]
         public string CoreDiskCount { get; set; }
@@ -161,13 +165,45 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeMultiZoneClusterResponseBodyMultiZoneInstanceModelsMultiZoneInstanceModel> MultiZoneInstanceModel { get; set; }
             public class DescribeMultiZoneClusterResponseBodyMultiZoneInstanceModelsMultiZoneInstanceModel : TeaModel {
+                [NameInMap("HdfsMinorVersion")]
+                [Validation(Required=false)]
+                public string HdfsMinorVersion { get; set; }
+
+                [NameInMap("InsName")]
+                [Validation(Required=false)]
                 public string InsName { get; set; }
+
+                [NameInMap("IsHdfsLatestVersion")]
+                [Validation(Required=false)]
+                public string IsHdfsLatestVersion { get; set; }
+
+                [NameInMap("IsLatestVersion")]
+                [Validation(Required=false)]
                 public bool? IsLatestVersion { get; set; }
+
+                [NameInMap("LatestHdfsMinorVersion")]
+                [Validation(Required=false)]
+                public string LatestHdfsMinorVersion { get; set; }
+
+                [NameInMap("LatestMinorVersion")]
+                [Validation(Required=false)]
+                public string LatestMinorVersion { get; set; }
+
+                [NameInMap("MinorVersion")]
+                [Validation(Required=false)]
                 public string MinorVersion { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
                 public string Role { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -221,10 +257,17 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeMultiZoneClusterResponseBodyTagsTag> Tag { get; set; }
             public class DescribeMultiZoneClusterResponseBodyTagsTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]

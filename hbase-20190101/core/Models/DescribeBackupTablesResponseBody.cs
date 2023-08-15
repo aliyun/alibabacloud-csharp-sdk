@@ -17,16 +17,41 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeBackupTablesResponseBodyBackupRecordsBackupRecord> BackupRecord { get; set; }
             public class DescribeBackupTablesResponseBodyBackupRecordsBackupRecord : TeaModel {
+                [NameInMap("DataSize")]
+                [Validation(Required=false)]
                 public string DataSize { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
+                [NameInMap("Process")]
+                [Validation(Required=false)]
                 public string Process { get; set; }
+
+                [NameInMap("Speed")]
+                [Validation(Required=false)]
                 public string Speed { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("State")]
+                [Validation(Required=false)]
                 public string State { get; set; }
+
+                [NameInMap("Table")]
+                [Validation(Required=false)]
                 public string Table { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -47,7 +72,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("Table")]
             [Validation(Required=false)]
             public List<string> Table { get; set; }
-        };
+
+        }
 
         [NameInMap("Total")]
         [Validation(Required=false)]

@@ -17,15 +17,37 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<ListInstanceServiceConfigurationsResponseBodyConfigureListConfig> Config { get; set; }
             public class ListInstanceServiceConfigurationsResponseBodyConfigureListConfig : TeaModel {
+                [NameInMap("ConfigureName")]
+                [Validation(Required=false)]
                 public string ConfigureName { get; set; }
+
+                [NameInMap("ConfigureUnit")]
+                [Validation(Required=false)]
                 public string ConfigureUnit { get; set; }
+
+                [NameInMap("DefaultValue")]
+                [Validation(Required=false)]
                 public string DefaultValue { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("NeedRestart")]
+                [Validation(Required=false)]
                 public string NeedRestart { get; set; }
+
+                [NameInMap("RunningValue")]
+                [Validation(Required=false)]
                 public string RunningValue { get; set; }
+
+                [NameInMap("ValueRange")]
+                [Validation(Required=false)]
                 public string ValueRange { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

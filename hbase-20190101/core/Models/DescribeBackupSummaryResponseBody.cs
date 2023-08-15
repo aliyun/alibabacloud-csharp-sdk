@@ -16,15 +16,19 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("HasMore")]
             [Validation(Required=false)]
             public string HasMore { get; set; }
+
             [NameInMap("NextFullBackupDate")]
             [Validation(Required=false)]
             public string NextFullBackupDate { get; set; }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Records")]
             [Validation(Required=false)]
             public DescribeBackupSummaryResponseBodyFullRecords Records { get; set; }
@@ -64,10 +68,12 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                 }
 
             }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("Incr")]
         [Validation(Required=false)]
@@ -76,22 +82,28 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("BackupLogSize")]
             [Validation(Required=false)]
             public string BackupLogSize { get; set; }
+
             [NameInMap("Pos")]
             [Validation(Required=false)]
             public string Pos { get; set; }
+
             [NameInMap("QueueLogNum")]
             [Validation(Required=false)]
             public string QueueLogNum { get; set; }
+
             [NameInMap("RunningLogNum")]
             [Validation(Required=false)]
             public string RunningLogNum { get; set; }
+
             [NameInMap("Speed")]
             [Validation(Required=false)]
             public string Speed { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

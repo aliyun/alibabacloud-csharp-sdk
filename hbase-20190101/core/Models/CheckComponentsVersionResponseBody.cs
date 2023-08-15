@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<CheckComponentsVersionResponseBodyComponentsComponent> Component { get; set; }
             public class CheckComponentsVersionResponseBodyComponentsComponent : TeaModel {
+                [NameInMap("Component")]
+                [Validation(Required=false)]
                 public string Component { get; set; }
+
+                [NameInMap("IsLatestVersion")]
+                [Validation(Required=false)]
                 public string IsLatestVersion { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

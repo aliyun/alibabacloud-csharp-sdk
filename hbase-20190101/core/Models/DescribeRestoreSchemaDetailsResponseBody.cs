@@ -20,12 +20,15 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("Fail")]
             [Validation(Required=false)]
             public int? Fail { get; set; }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("RestoreSchemaDetails")]
             [Validation(Required=false)]
             public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetails RestoreSchemaDetails { get; set; }
@@ -57,13 +60,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                 }
 
             }
+
             [NameInMap("Succeed")]
             [Validation(Required=false)]
             public int? Succeed { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
+
+        }
 
     }
 

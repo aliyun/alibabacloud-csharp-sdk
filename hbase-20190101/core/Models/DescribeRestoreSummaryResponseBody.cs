@@ -33,16 +33,41 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeRestoreSummaryResponseBodyRescordsRescord> Rescord { get; set; }
             public class DescribeRestoreSummaryResponseBodyRescordsRescord : TeaModel {
+                [NameInMap("BulkLoadProcess")]
+                [Validation(Required=false)]
                 public string BulkLoadProcess { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("FinishTime")]
+                [Validation(Required=false)]
                 public string FinishTime { get; set; }
+
+                [NameInMap("HfileRestoreProcess")]
+                [Validation(Required=false)]
                 public string HfileRestoreProcess { get; set; }
+
+                [NameInMap("LogProcess")]
+                [Validation(Required=false)]
                 public string LogProcess { get; set; }
+
+                [NameInMap("RecordId")]
+                [Validation(Required=false)]
                 public string RecordId { get; set; }
+
+                [NameInMap("SchemaProcess")]
+                [Validation(Required=false)]
                 public string SchemaProcess { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Total")]
         [Validation(Required=false)]

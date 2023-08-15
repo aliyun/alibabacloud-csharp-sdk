@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
-    public class DescribeSecurityGroupsResponse : TeaModel {
+    public class SwitchServiceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeSecurityGroupsResponseBody Body { get; set; }
+        public SwitchServiceResponseBody Body { get; set; }
 
     }
 

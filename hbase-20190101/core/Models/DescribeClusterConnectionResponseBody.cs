@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddr> ServiceConnAddr { get; set; }
             public class DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddr : TeaModel {
+                [NameInMap("ConnAddrInfo")]
+                [Validation(Required=false)]
                 public DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo ConnAddrInfo { get; set; }
                 public class DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo : TeaModel {
                     [NameInMap("ConnAddr")]
@@ -48,9 +50,14 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                     public string NetType { get; set; }
 
                 }
+
+                [NameInMap("ConnType")]
+                [Validation(Required=false)]
                 public string ConnType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("SlbConnAddrs")]
         [Validation(Required=false)]
@@ -60,6 +67,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddr> SlbConnAddr { get; set; }
             public class DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddr : TeaModel {
+                [NameInMap("ConnAddrInfo")]
+                [Validation(Required=false)]
                 public DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo ConnAddrInfo { get; set; }
                 public class DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo : TeaModel {
                     [NameInMap("ConnAddr")]
@@ -75,9 +84,14 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                     public string NetType { get; set; }
 
                 }
+
+                [NameInMap("SlbType")]
+                [Validation(Required=false)]
                 public string SlbType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ThriftConn")]
         [Validation(Required=false)]
@@ -86,13 +100,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("ConnAddr")]
             [Validation(Required=false)]
             public string ConnAddr { get; set; }
+
             [NameInMap("ConnAddrPort")]
             [Validation(Required=false)]
             public string ConnAddrPort { get; set; }
+
             [NameInMap("NetType")]
             [Validation(Required=false)]
             public string NetType { get; set; }
-        };
+
+        }
 
         [NameInMap("UiProxyConnAddrInfo")]
         [Validation(Required=false)]
@@ -101,13 +118,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [NameInMap("ConnAddr")]
             [Validation(Required=false)]
             public string ConnAddr { get; set; }
+
             [NameInMap("ConnAddrPort")]
             [Validation(Required=false)]
             public string ConnAddrPort { get; set; }
+
             [NameInMap("NetType")]
             [Validation(Required=false)]
             public string NetType { get; set; }
-        };
+
+        }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -125,11 +145,21 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr> ZkConnAddr { get; set; }
             public class DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr : TeaModel {
+                [NameInMap("ConnAddr")]
+                [Validation(Required=false)]
                 public string ConnAddr { get; set; }
+
+                [NameInMap("ConnAddrPort")]
+                [Validation(Required=false)]
                 public string ConnAddrPort { get; set; }
+
+                [NameInMap("NetType")]
+                [Validation(Required=false)]
                 public string NetType { get; set; }
+
             }
-        };
+
+        }
 
     }
 
