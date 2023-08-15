@@ -8,16 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class GetLindormInstanceRequest : TeaModel {
-        /// <summary>
-        /// The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:
-        /// 
-        /// *   **cloud_efficiency**: The nodes use the Standard type of storage.
-        /// *   **cloud_ssd**: The nodes use the Performance type of storage.
-        /// </summary>
+    public class GetLdpsResourceCostRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -26,6 +28,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -38,6 +44,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

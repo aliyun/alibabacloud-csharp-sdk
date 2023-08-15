@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class DescribeRegionsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }

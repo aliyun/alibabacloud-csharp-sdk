@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// China (Hangzhou)
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
+            /// <summary>
+            /// Queries the regions where Lindorm is available.
+            /// </summary>
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]
             public string RegionEndpoint { get; set; }
@@ -27,6 +33,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

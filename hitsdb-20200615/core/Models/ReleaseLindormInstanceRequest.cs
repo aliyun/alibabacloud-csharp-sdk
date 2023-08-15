@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class ReleaseLindormInstanceRequest : TeaModel {
+        [NameInMap("Immediately")]
+        [Validation(Required=false)]
+        public bool? Immediately { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

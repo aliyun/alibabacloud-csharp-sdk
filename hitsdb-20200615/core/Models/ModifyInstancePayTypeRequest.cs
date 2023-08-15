@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class ModifyInstancePayTypeRequest : TeaModel {
+        /// <summary>
+        /// The subscription duration of the instance. The parameter is required if the instance is an subscription instance.
+        /// 
+        /// *   If PricingCycle is set to Month, set this parameter to an integer that ranges from 1 to 9.
+        /// *   If PricingCycle is set to Year, set this parameter to an integer that ranges from 1 to 3.
+        /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -25,10 +34,22 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The billing method of the instance. Valid values:
+        /// 
+        /// *   **PREPAY**: subscription.
+        /// *   **POSTPAY**: pay-as-you-go.
+        /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        /// <summary>
+        /// The unit of the subscription duration for the instance. Valid values:
+        /// 
+        /// *   Month
+        /// *   Year
+        /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public string PricingCycle { get; set; }

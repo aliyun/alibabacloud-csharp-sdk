@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string ArbiterZoneId { get; set; }
 
+        [NameInMap("ArchVersion")]
+        [Validation(Required=false)]
+        public string ArchVersion { get; set; }
+
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
@@ -49,6 +53,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? CreateMilliseconds { get; set; }
 
+        /// <summary>
+        /// The storage capacity of the disk of a single log node. This parameter is returned only for multi-zone instances.
+        /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
@@ -69,6 +76,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string DiskUsage { get; set; }
 
+        [NameInMap("EnableBlob")]
+        [Validation(Required=false)]
+        public bool? EnableBlob { get; set; }
+
         [NameInMap("EnableCdc")]
         [Validation(Required=false)]
         public bool? EnableCdc { get; set; }
@@ -80,6 +91,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("EnableKms")]
         [Validation(Required=false)]
         public bool? EnableKms { get; set; }
+
+        [NameInMap("EnableLTS")]
+        [Validation(Required=false)]
+        public bool? EnableLTS { get; set; }
+
+        [NameInMap("EnableMLCtrl")]
+        [Validation(Required=false)]
+        public bool? EnableMLCtrl { get; set; }
 
         [NameInMap("EnableSSL")]
         [Validation(Required=false)]
@@ -187,6 +206,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string NetworkType { get; set; }
 
+        /// <summary>
+        /// 400
+        /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
@@ -223,10 +245,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string StandbyZoneId { get; set; }
 
+        /// <summary>
+        /// The type of the log nodes. This parameter is returned only for multi-zone instances.
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        /// <summary>
+        /// The number of the log nodes. This parameter is returned only for multi-zone instances.
+        /// </summary>
         [NameInMap("VswitchId")]
         [Validation(Required=false)]
         public string VswitchId { get; set; }

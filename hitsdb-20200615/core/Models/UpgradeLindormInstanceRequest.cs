@@ -101,6 +101,24 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string SolrSpec { get; set; }
 
+        /// <summary>
+        /// 变配后实例的流引擎节点数量，取值：**0**~**90**。
+        /// </summary>
+        [NameInMap("StreamNum")]
+        [Validation(Required=false)]
+        public int? StreamNum { get; set; }
+
+        /// <summary>
+        /// 变配后实例的流引擎节点规格，取值：
+        /// 
+        /// - **lindorm.c.2xlarge**：表示8核16GB（独享规格）。
+        /// - **lindorm.c.4xlarge**：表示16核32GB（独享规格）。
+        /// - **lindorm.c.8xlarge**：表示32核64GB（独享规格）。
+        /// </summary>
+        [NameInMap("StreamSpec")]
+        [Validation(Required=false)]
+        public string StreamSpec { get; set; }
+
         [NameInMap("TsdbNum")]
         [Validation(Required=false)]
         public int? TsdbNum { get; set; }

@@ -148,6 +148,28 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string StandbyZoneId { get; set; }
 
+        /// <summary>
+        /// 实例的流引擎节点数量，取值：**0**~**60**。
+        /// </summary>
+        [NameInMap("StreamNum")]
+        [Validation(Required=false)]
+        public int? StreamNum { get; set; }
+
+        /// <summary>
+        /// 实例的流引擎节点规格，取值：
+        /// 
+        /// - **lindorm.g.xlarge**：表示4核16GB（独享规格）。
+        /// - **lindorm.c.2xlarge**：表示8核16GB（独享规格）。
+        /// - **lindorm.g.2xlarge**：表示8核32GB（独享规格）。
+        /// - **lindorm.c.4xlarge**：表示16核32GB（独享规格）。
+        /// - **lindorm.g.4xlarge**：表示16核64GB（独享规格）。
+        /// - **lindorm.c.8xlarge**：表示32核64GB（独享规格）。
+        /// - **lindorm.g.8xlarge**：表示32核128GB（独享规格）。
+        /// </summary>
+        [NameInMap("StreamSpec")]
+        [Validation(Required=false)]
+        public string StreamSpec { get; set; }
+
         [NameInMap("TsdbNum")]
         [Validation(Required=false)]
         public int? TsdbNum { get; set; }
