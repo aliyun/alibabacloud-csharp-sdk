@@ -13,6 +13,36 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<IsvUserSaveRequestUserList> UserList { get; set; }
         public class IsvUserSaveRequestUserList : TeaModel {
+            [NameInMap("birthday")]
+            [Validation(Required=false)]
+            public string Birthday { get; set; }
+
+            [NameInMap("cert_list")]
+            [Validation(Required=false)]
+            public List<IsvUserSaveRequestUserListCertList> CertList { get; set; }
+            public class IsvUserSaveRequestUserListCertList : TeaModel {
+                [NameInMap("cert_expired_time")]
+                [Validation(Required=false)]
+                public string CertExpiredTime { get; set; }
+
+                [NameInMap("cert_nation")]
+                [Validation(Required=false)]
+                public string CertNation { get; set; }
+
+                [NameInMap("cert_no")]
+                [Validation(Required=false)]
+                public string CertNo { get; set; }
+
+                [NameInMap("cert_type")]
+                [Validation(Required=false)]
+                public int? CertType { get; set; }
+
+                [NameInMap("nationality")]
+                [Validation(Required=false)]
+                public string Nationality { get; set; }
+
+            }
+
             [NameInMap("depart_id")]
             [Validation(Required=false)]
             public long? DepartId { get; set; }
@@ -20,6 +50,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("email")]
             [Validation(Required=false)]
             public string Email { get; set; }
+
+            [NameInMap("gender")]
+            [Validation(Required=false)]
+            public string Gender { get; set; }
 
             [NameInMap("job_no")]
             [Validation(Required=false)]
