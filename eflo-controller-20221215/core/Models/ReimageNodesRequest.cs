@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         }
 
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
     }
 
 }

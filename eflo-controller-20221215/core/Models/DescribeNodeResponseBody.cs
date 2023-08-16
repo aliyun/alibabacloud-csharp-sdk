@@ -33,6 +33,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// 镜像名称
+        /// </summary>
+        [NameInMap("ImageName")]
+        [Validation(Required=false)]
+        public string ImageName { get; set; }
+
         [NameInMap("MachineType")]
         [Validation(Required=false)]
         public string MachineType { get; set; }

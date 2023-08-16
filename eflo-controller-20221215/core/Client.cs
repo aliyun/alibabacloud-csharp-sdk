@@ -682,6 +682,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ExtendClusterShrinkRequest request = new ExtendClusterShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IpAllocationPolicy))
+            {
+                request.IpAllocationPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IpAllocationPolicy, "IpAllocationPolicy", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeGroups))
             {
                 request.NodeGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeGroups, "NodeGroups", "json");
@@ -698,6 +702,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFailedNodeTasks))
             {
                 body["IgnoreFailedNodeTasks"] = request.IgnoreFailedNodeTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAllocationPolicyShrink))
+            {
+                body["IpAllocationPolicy"] = request.IpAllocationPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupsShrink))
             {
@@ -731,6 +739,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ExtendClusterShrinkRequest request = new ExtendClusterShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IpAllocationPolicy))
+            {
+                request.IpAllocationPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IpAllocationPolicy, "IpAllocationPolicy", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeGroups))
             {
                 request.NodeGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeGroups, "NodeGroups", "json");
@@ -747,6 +759,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFailedNodeTasks))
             {
                 body["IgnoreFailedNodeTasks"] = request.IgnoreFailedNodeTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAllocationPolicyShrink))
+            {
+                body["IpAllocationPolicy"] = request.IpAllocationPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupsShrink))
             {
@@ -1255,6 +1271,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["Nodes"] = request.NodesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1295,6 +1315,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodesShrink))
             {
                 body["Nodes"] = request.NodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string NodesShrink { get; set; }
 
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
     }
 
 }

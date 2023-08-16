@@ -17,6 +17,84 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public bool? IgnoreFailedNodeTasks { get; set; }
 
+        [NameInMap("IpAllocationPolicy")]
+        [Validation(Required=false)]
+        public List<ExtendClusterRequestIpAllocationPolicy> IpAllocationPolicy { get; set; }
+        public class ExtendClusterRequestIpAllocationPolicy : TeaModel {
+            [NameInMap("BondPolicy")]
+            [Validation(Required=false)]
+            public ExtendClusterRequestIpAllocationPolicyBondPolicy BondPolicy { get; set; }
+            public class ExtendClusterRequestIpAllocationPolicyBondPolicy : TeaModel {
+                [NameInMap("BondDefaultSubnet")]
+                [Validation(Required=false)]
+                public string BondDefaultSubnet { get; set; }
+
+                [NameInMap("Bonds")]
+                [Validation(Required=false)]
+                public List<ExtendClusterRequestIpAllocationPolicyBondPolicyBonds> Bonds { get; set; }
+                public class ExtendClusterRequestIpAllocationPolicyBondPolicyBonds : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Subnet")]
+                    [Validation(Required=false)]
+                    public string Subnet { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("MachineTypePolicy")]
+            [Validation(Required=false)]
+            public List<ExtendClusterRequestIpAllocationPolicyMachineTypePolicy> MachineTypePolicy { get; set; }
+            public class ExtendClusterRequestIpAllocationPolicyMachineTypePolicy : TeaModel {
+                [NameInMap("Bonds")]
+                [Validation(Required=false)]
+                public List<ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds> Bonds { get; set; }
+                public class ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Subnet")]
+                    [Validation(Required=false)]
+                    public string Subnet { get; set; }
+
+                }
+
+                [NameInMap("MachineType")]
+                [Validation(Required=false)]
+                public string MachineType { get; set; }
+
+            }
+
+            [NameInMap("NodePolicy")]
+            [Validation(Required=false)]
+            public List<ExtendClusterRequestIpAllocationPolicyNodePolicy> NodePolicy { get; set; }
+            public class ExtendClusterRequestIpAllocationPolicyNodePolicy : TeaModel {
+                [NameInMap("Bonds")]
+                [Validation(Required=false)]
+                public List<ExtendClusterRequestIpAllocationPolicyNodePolicyBonds> Bonds { get; set; }
+                public class ExtendClusterRequestIpAllocationPolicyNodePolicyBonds : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Subnet")]
+                    [Validation(Required=false)]
+                    public string Subnet { get; set; }
+
+                }
+
+                [NameInMap("NodeId")]
+                [Validation(Required=false)]
+                public string NodeId { get; set; }
+
+            }
+
+        }
+
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public List<ExtendClusterRequestNodeGroups> NodeGroups { get; set; }
@@ -42,6 +120,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string NodeId { get; set; }
 
             }
+
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
 
         }
 

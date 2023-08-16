@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public bool? IgnoreFailedNodeTasks { get; set; }
 
+        [NameInMap("IpAllocationPolicy")]
+        [Validation(Required=false)]
+        public string IpAllocationPolicyShrink { get; set; }
+
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public string NodeGroupsShrink { get; set; }

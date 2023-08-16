@@ -53,6 +53,84 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public CreateClusterRequestNetworks Networks { get; set; }
         public class CreateClusterRequestNetworks : TeaModel {
+            [NameInMap("IpAllocationPolicy")]
+            [Validation(Required=false)]
+            public List<CreateClusterRequestNetworksIpAllocationPolicy> IpAllocationPolicy { get; set; }
+            public class CreateClusterRequestNetworksIpAllocationPolicy : TeaModel {
+                [NameInMap("BondPolicy")]
+                [Validation(Required=false)]
+                public CreateClusterRequestNetworksIpAllocationPolicyBondPolicy BondPolicy { get; set; }
+                public class CreateClusterRequestNetworksIpAllocationPolicyBondPolicy : TeaModel {
+                    [NameInMap("BondDefaultSubnet")]
+                    [Validation(Required=false)]
+                    public string BondDefaultSubnet { get; set; }
+
+                    [NameInMap("Bonds")]
+                    [Validation(Required=false)]
+                    public List<CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds> Bonds { get; set; }
+                    public class CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds : TeaModel {
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("Subnet")]
+                        [Validation(Required=false)]
+                        public string Subnet { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("MachineTypePolicy")]
+                [Validation(Required=false)]
+                public List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy> MachineTypePolicy { get; set; }
+                public class CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy : TeaModel {
+                    [NameInMap("Bonds")]
+                    [Validation(Required=false)]
+                    public List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds> Bonds { get; set; }
+                    public class CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds : TeaModel {
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("Subnet")]
+                        [Validation(Required=false)]
+                        public string Subnet { get; set; }
+
+                    }
+
+                    [NameInMap("MachineType")]
+                    [Validation(Required=false)]
+                    public string MachineType { get; set; }
+
+                }
+
+                [NameInMap("NodePolicy")]
+                [Validation(Required=false)]
+                public List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicy> NodePolicy { get; set; }
+                public class CreateClusterRequestNetworksIpAllocationPolicyNodePolicy : TeaModel {
+                    [NameInMap("Bonds")]
+                    [Validation(Required=false)]
+                    public List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds> Bonds { get; set; }
+                    public class CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds : TeaModel {
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("Subnet")]
+                        [Validation(Required=false)]
+                        public string Subnet { get; set; }
+
+                    }
+
+                    [NameInMap("NodeId")]
+                    [Validation(Required=false)]
+                    public string NodeId { get; set; }
+
+                }
+
+            }
+
             [NameInMap("NewVpdInfo")]
             [Validation(Required=false)]
             public CreateClusterRequestNetworksNewVpdInfo NewVpdInfo { get; set; }
@@ -101,14 +179,23 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             }
 
+            /// <summary>
+            /// 复用VPD信息
+            /// </summary>
             [NameInMap("VpdInfo")]
             [Validation(Required=false)]
             public CreateClusterRequestNetworksVpdInfo VpdInfo { get; set; }
             public class CreateClusterRequestNetworksVpdInfo : TeaModel {
+                /// <summary>
+                /// 专有网络 id
+                /// </summary>
                 [NameInMap("VpdId")]
                 [Validation(Required=false)]
                 public string VpdId { get; set; }
 
+                /// <summary>
+                /// 集群子网id列表
+                /// </summary>
                 [NameInMap("VpdSubnets")]
                 [Validation(Required=false)]
                 public List<string> VpdSubnets { get; set; }
@@ -154,6 +241,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string NodeId { get; set; }
 
             }
+
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
 
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
