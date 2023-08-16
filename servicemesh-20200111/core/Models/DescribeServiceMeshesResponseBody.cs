@@ -393,6 +393,20 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 
             }
 
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<DescribeServiceMeshesResponseBodyServiceMeshesTag> Tag { get; set; }
+            public class DescribeServiceMeshesResponseBodyServiceMeshesTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
     }
