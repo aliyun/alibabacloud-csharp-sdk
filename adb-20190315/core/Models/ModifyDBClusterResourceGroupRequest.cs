@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyDBClusterResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group. For more information, see [View basic information of a resource group](~~151181#task-2398293~~ "This topic describes how to view basic information of a resource group, including the resource group ID, resource group name, and resource group display name.").
+        /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }

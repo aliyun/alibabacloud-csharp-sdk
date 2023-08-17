@@ -9,30 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
+        /// <summary>
+        /// The resources available in elastic mode.
+        /// </summary>
         [NameInMap("AvailableZoneList")]
         [Validation(Required=false)]
         public List<DescribeAvailableResourceResponseBodyAvailableZoneList> AvailableZoneList { get; set; }
         public class DescribeAvailableResourceResponseBodyAvailableZoneList : TeaModel {
+            [NameInMap("SupportedComputeResource")]
+            [Validation(Required=false)]
+            public List<string> SupportedComputeResource { get; set; }
+
+            /// <summary>
+            /// The available computing resources.
+            /// </summary>
             [NameInMap("SupportedMode")]
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode> SupportedMode { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode : TeaModel {
+                /// <summary>
+                /// N/A
+                /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
                 public string Mode { get; set; }
 
+                /// <summary>
+                /// The available elastic I/O units (EIUs).
+                /// </summary>
                 [NameInMap("SupportedSerialList")]
                 [Validation(Required=false)]
                 public List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialList> SupportedSerialList { get; set; }
                 public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialList : TeaModel {
+                    /// <summary>
+                    /// The step size.
+                    /// </summary>
                     [NameInMap("Serial")]
                     [Validation(Required=false)]
                     public string Serial { get; set; }
 
+                    /// <summary>
+                    /// The minimum number of EIUs.
+                    /// </summary>
                     [NameInMap("SupportedFlexibleResource")]
                     [Validation(Required=false)]
                     public List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResource> SupportedFlexibleResource { get; set; }
                     public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResource : TeaModel {
+                        /// <summary>
+                        /// The maximum number of EIUs.
+                        /// </summary>
                         [NameInMap("StorageType")]
                         [Validation(Required=false)]
                         public string StorageType { get; set; }
@@ -48,13 +73,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                             [NameInMap("MaxCount")]
                             [Validation(Required=false)]
                             public string MaxCount { get; set; }
+
                             [NameInMap("MinCount")]
                             [Validation(Required=false)]
                             public string MinCount { get; set; }
+
                             [NameInMap("Step")]
                             [Validation(Required=false)]
                             public string Step { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("SupportedStorageResource")]
                         [Validation(Required=false)]
@@ -81,13 +109,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                                 [NameInMap("MaxCount")]
                                 [Validation(Required=false)]
                                 public string MaxCount { get; set; }
+
                                 [NameInMap("MinCount")]
                                 [Validation(Required=false)]
                                 public string MinCount { get; set; }
+
                                 [NameInMap("Step")]
                                 [Validation(Required=false)]
                                 public string Step { get; set; }
-                            };
+
+                            }
 
                         }
 
@@ -102,13 +133,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                                 [NameInMap("MaxCount")]
                                 [Validation(Required=false)]
                                 public string MaxCount { get; set; }
+
                                 [NameInMap("MinCount")]
                                 [Validation(Required=false)]
                                 public string MinCount { get; set; }
+
                                 [NameInMap("Step")]
                                 [Validation(Required=false)]
                                 public string Step { get; set; }
-                            };
+
+                            }
 
                             [NameInMap("StorageSize")]
                             [Validation(Required=false)]
@@ -126,16 +160,36 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
             }
 
+            [NameInMap("SupportedStorageResource")]
+            [Validation(Required=false)]
+            public List<string> SupportedStorageResource { get; set; }
+
+            /// <summary>
+            /// The storage type. Valid values:
+            /// 
+            /// *   **hdd**
+            /// *   **ssd**
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
         }
 
+        /// <summary>
+        /// The resources available in the supported editions.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The supported edition. Valid values:
+        /// 
+        /// *   **basic**: Basic Edition
+        /// *   **cluster**: Cluster Edition
+        /// *   **mixed_storage**: elastic mode for Cluster Edition
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

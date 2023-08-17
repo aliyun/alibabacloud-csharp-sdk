@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DeleteElasticPlanRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The name of the elastic plan.
+        /// </summary>
         [NameInMap("ElasticPlanName")]
         [Validation(Required=false)]
         public string ElasticPlanName { get; set; }

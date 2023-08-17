@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyAuditLogConfigRequest : TeaModel {
+        /// <summary>
+        /// The status of SQL audit. Valid values:
+        /// 
+        /// *   **on**: SQL audit is enabled.
+        /// *   **off**: SQL audit is disabled.
+        /// </summary>
         [NameInMap("AuditLogStatus")]
         [Validation(Required=false)]
         public string AuditLogStatus { get; set; }
 
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
@@ -25,6 +34,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

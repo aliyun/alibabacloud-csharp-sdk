@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeRegionsRequest : TeaModel {
+        /// <summary>
+        /// The language used for the region and zone names specified by the `LocalName` parameter. Valid values:
+        /// 
+        /// *   **zh-CN**: Chinese
+        /// *   **en-US**: English
+        /// *   **ja**: Japanese
+        /// 
+        /// >  If this parameter is left empty, Chinese is used.
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }

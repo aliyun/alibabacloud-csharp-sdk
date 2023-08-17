@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class RevokeOperatorPermissionRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

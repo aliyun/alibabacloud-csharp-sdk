@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyBackupPolicyResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

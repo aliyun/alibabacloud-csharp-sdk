@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
-    public class DescribeDBClusterHealthReportResponse : TeaModel {
+    public class DescribeEIURangeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeDBClusterHealthReportResponseBody Body { get; set; }
+        public DescribeEIURangeResponseBody Body { get; set; }
 
     }
 

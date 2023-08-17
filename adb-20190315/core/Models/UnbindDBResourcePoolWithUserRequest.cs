@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class UnbindDBResourcePoolWithUserRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The name of the resource pool. You cannot unbind users from the default resource pool named USER_DEFAULT.
+        /// </summary>
         [NameInMap("PoolName")]
         [Validation(Required=false)]
         public string PoolName { get; set; }
 
+        /// <summary>
+        /// The user bound to the resource pool.
+        /// </summary>
         [NameInMap("PoolUser")]
         [Validation(Required=false)]
         public string PoolUser { get; set; }

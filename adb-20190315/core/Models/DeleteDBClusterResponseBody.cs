@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DeleteDBClusterResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The task ID.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public int? TaskId { get; set; }

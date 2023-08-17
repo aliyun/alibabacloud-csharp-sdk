@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class BindDBResourceGroupWithUserRequest : TeaModel {
+        /// <summary>
+        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// 
+        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The name of the resource group.
+        /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// The database account with which to associate the resource group. It can be a standard account or a privileged account.
+        /// </summary>
         [NameInMap("GroupUser")]
         [Validation(Required=false)]
         public string GroupUser { get; set; }

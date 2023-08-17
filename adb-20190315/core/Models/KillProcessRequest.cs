@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class KillProcessRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The unique ID of the process. You can call the [DescribeProcessList](~~190092~~) operation to obtain the ID.
+        /// </summary>
         [NameInMap("ProcessId")]
         [Validation(Required=false)]
         public string ProcessId { get; set; }

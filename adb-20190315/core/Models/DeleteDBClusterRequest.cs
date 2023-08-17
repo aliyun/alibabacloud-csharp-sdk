@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DeleteDBClusterRequest : TeaModel {
+        /// <summary>
+        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
