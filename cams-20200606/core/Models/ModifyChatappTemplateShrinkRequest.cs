@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        [NameInMap("MessageSendTtlSeconds")]
+        [Validation(Required=false)]
+        public int? MessageSendTtlSeconds { get; set; }
+
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }

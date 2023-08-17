@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class GetMigrationVerifyCodeResponseBody : TeaModel {
-        [NameInMap("AccessDeniedDetail")]
-        [Validation(Required=false)]
-        public string AccessDeniedDetail { get; set; }
-
+    public class GetPreValidatePhoneIdResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetMigrationVerifyCodeResponseBodyData Data { get; set; }
-        public class GetMigrationVerifyCodeResponseBodyData : TeaModel {
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
+        public GetPreValidatePhoneIdResponseBodyData Data { get; set; }
+        public class GetPreValidatePhoneIdResponseBodyData : TeaModel {
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
+
+            [NameInMap("PhoneNumberId")]
+            [Validation(Required=false)]
+            public string PhoneNumberId { get; set; }
 
         }
 
@@ -35,6 +31,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

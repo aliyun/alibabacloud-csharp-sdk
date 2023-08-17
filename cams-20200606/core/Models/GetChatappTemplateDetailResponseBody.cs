@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateDetailResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -215,9 +219,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string Language { get; set; }
 
+            [NameInMap("MessageSendTtlSeconds")]
+            [Validation(Required=false)]
+            public int? MessageSendTtlSeconds { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("QualityScore")]
+            [Validation(Required=false)]
+            public string QualityScore { get; set; }
 
             [NameInMap("TemplateCode")]
             [Validation(Required=false)]

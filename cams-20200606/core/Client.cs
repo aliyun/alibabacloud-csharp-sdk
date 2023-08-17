@@ -1234,6 +1234,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["Language"] = request.Language;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageSendTtlSeconds))
+            {
+                body["MessageSendTtlSeconds"] = request.MessageSendTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -1313,6 +1317,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 body["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageSendTtlSeconds))
+            {
+                body["MessageSendTtlSeconds"] = request.MessageSendTtlSeconds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -2041,8 +2049,82 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await GetPhoneNumberVerificationStatusWithOptionsAsync(request, runtime);
         }
 
+        public GetPreValidatePhoneIdResponse GetPreValidatePhoneIdWithOptions(GetPreValidatePhoneIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
+            {
+                body["PhoneNumber"] = request.PhoneNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyCode))
+            {
+                body["VerifyCode"] = request.VerifyCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPreValidatePhoneId",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPreValidatePhoneIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetPreValidatePhoneIdResponse> GetPreValidatePhoneIdWithOptionsAsync(GetPreValidatePhoneIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
+            {
+                body["PhoneNumber"] = request.PhoneNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyCode))
+            {
+                body["VerifyCode"] = request.VerifyCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPreValidatePhoneId",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPreValidatePhoneIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetPreValidatePhoneIdResponse GetPreValidatePhoneId(GetPreValidatePhoneIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPreValidatePhoneIdWithOptions(request, runtime);
+        }
+
+        public async Task<GetPreValidatePhoneIdResponse> GetPreValidatePhoneIdAsync(GetPreValidatePhoneIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPreValidatePhoneIdWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * The message ID.
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request IsvGetAppIdRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2076,7 +2158,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * The message ID.
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request IsvGetAppIdRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2110,7 +2192,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * The message ID.
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request IsvGetAppIdRequest
           * @return IsvGetAppIdResponse
@@ -2122,7 +2204,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * The message ID.
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request IsvGetAppIdRequest
           * @return IsvGetAppIdResponse
@@ -2346,6 +2428,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["Language"] = request.Language;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageSendTtlSeconds))
+            {
+                body["MessageSendTtlSeconds"] = request.MessageSendTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 body["TemplateCode"] = request.TemplateCode;
@@ -2422,6 +2508,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["Language"] = request.Language;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageSendTtlSeconds))
+            {
+                body["MessageSendTtlSeconds"] = request.MessageSendTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 body["TemplateCode"] = request.TemplateCode;
@@ -2474,7 +2564,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * ModifyPhoneBusinessProfile
           *
           * @param tmpReq ModifyPhoneBusinessProfileRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2542,7 +2632,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * ModifyPhoneBusinessProfile
           *
           * @param tmpReq ModifyPhoneBusinessProfileRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2610,7 +2700,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * ModifyPhoneBusinessProfile
           *
           * @param request ModifyPhoneBusinessProfileRequest
           * @return ModifyPhoneBusinessProfileResponse
@@ -2622,7 +2712,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * ModifyPhoneBusinessProfile
           *
           * @param request ModifyPhoneBusinessProfileRequest
           * @return ModifyPhoneBusinessProfileResponse
@@ -3269,6 +3359,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 request.PayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Payload, "Payload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProductAction))
+            {
+                request.ProductActionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProductAction, "ProductAction", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TemplateParams))
             {
                 request.TemplateParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TemplateParams, "TemplateParams", "json");
@@ -3330,6 +3424,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
                 body["MessageType"] = request.MessageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductActionShrink))
+            {
+                body["ProductAction"] = request.ProductActionShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -3399,6 +3497,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 request.PayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Payload, "Payload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProductAction))
+            {
+                request.ProductActionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProductAction, "ProductAction", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TemplateParams))
             {
                 request.TemplateParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TemplateParams, "TemplateParams", "json");
@@ -3460,6 +3562,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
                 body["MessageType"] = request.MessageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductActionShrink))
+            {
+                body["ProductAction"] = request.ProductActionShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {

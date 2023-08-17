@@ -165,6 +165,36 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public List<string> Payload { get; set; }
 
+        [NameInMap("ProductAction")]
+        [Validation(Required=false)]
+        public SendChatappMessageRequestProductAction ProductAction { get; set; }
+        public class SendChatappMessageRequestProductAction : TeaModel {
+            [NameInMap("Sections")]
+            [Validation(Required=false)]
+            public List<SendChatappMessageRequestProductActionSections> Sections { get; set; }
+            public class SendChatappMessageRequestProductActionSections : TeaModel {
+                [NameInMap("ProductItems")]
+                [Validation(Required=false)]
+                public List<SendChatappMessageRequestProductActionSectionsProductItems> ProductItems { get; set; }
+                public class SendChatappMessageRequestProductActionSectionsProductItems : TeaModel {
+                    [NameInMap("ProductRetailerId")]
+                    [Validation(Required=false)]
+                    public string ProductRetailerId { get; set; }
+
+                }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
+                public string Title { get; set; }
+
+            }
+
+            [NameInMap("ThumbnailProductRetailerId")]
+            [Validation(Required=false)]
+            public string ThumbnailProductRetailerId { get; set; }
+
+        }
+
         /// <summary>
         /// The tag information of the Viber message.
         /// </summary>

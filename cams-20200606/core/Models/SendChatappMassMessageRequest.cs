@@ -94,6 +94,36 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public List<string> Payload { get; set; }
 
+            [NameInMap("ProductAction")]
+            [Validation(Required=false)]
+            public SendChatappMassMessageRequestSenderListProductAction ProductAction { get; set; }
+            public class SendChatappMassMessageRequestSenderListProductAction : TeaModel {
+                [NameInMap("Sections")]
+                [Validation(Required=false)]
+                public List<SendChatappMassMessageRequestSenderListProductActionSections> Sections { get; set; }
+                public class SendChatappMassMessageRequestSenderListProductActionSections : TeaModel {
+                    [NameInMap("ProductItems")]
+                    [Validation(Required=false)]
+                    public List<SendChatappMassMessageRequestSenderListProductActionSectionsProductItems> ProductItems { get; set; }
+                    public class SendChatappMassMessageRequestSenderListProductActionSectionsProductItems : TeaModel {
+                        [NameInMap("ProductRetailerId")]
+                        [Validation(Required=false)]
+                        public string ProductRetailerId { get; set; }
+
+                    }
+
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                }
+
+                [NameInMap("ThumbnailProductRetailerId")]
+                [Validation(Required=false)]
+                public string ThumbnailProductRetailerId { get; set; }
+
+            }
+
             /// <summary>
             /// The parameters of the message template.
             /// </summary>
