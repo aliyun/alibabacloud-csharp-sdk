@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220729.Models
         [Validation(Required=false)]
         public Stream FileUrlObject { get; set; }
 
+        [NameInMap("ParserConfigId")]
+        [Validation(Required=false)]
+        public int? ParserConfigId { get; set; }
+
     }
 
 }

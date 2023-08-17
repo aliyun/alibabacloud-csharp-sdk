@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Docmind_api20220729.Models
 {
-    public class GetSingleDocumentExtractResultRequest : TeaModel {
-        [NameInMap("Id")]
+    public class RetryTradeDocumentExtractRequest : TeaModel {
+        [NameInMap("BizId")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string BizId { get; set; }
 
     }
 

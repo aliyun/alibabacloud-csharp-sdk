@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Docmind_api20220729.Models
 {
-    public class SubmitCertificateOfOriginExtractJobAdvanceRequest : TeaModel {
+    public class SubmitTradeDocumentPackageExtractJobRequest : TeaModel {
+        [NameInMap("CustomExtractionRange")]
+        [Validation(Required=false)]
+        public List<string> CustomExtractionRange { get; set; }
+
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
@@ -19,11 +23,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220729.Models
 
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
-        public Stream FileUrlObject { get; set; }
-
-        [NameInMap("ParserConfigId")]
-        [Validation(Required=false)]
-        public int? ParserConfigId { get; set; }
+        public string FileUrl { get; set; }
 
     }
 
