@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public class ExtractFingerPrintResponseBodyData : TeaModel {
             [NameInMap("FingerPrint")]
             [Validation(Required=false)]
-            public byte[] FingerPrint { get; set; }
+            public string FingerPrint { get; set; }
 
         }
 

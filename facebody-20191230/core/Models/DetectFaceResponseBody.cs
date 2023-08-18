@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             /// </summary>
             [NameInMap("Pupils")]
             [Validation(Required=false)]
-            public List<float?> Pupils { get; set; }
+            public List<double?> Pupils { get; set; }
 
             [NameInMap("Qualities")]
             [Validation(Required=false)]

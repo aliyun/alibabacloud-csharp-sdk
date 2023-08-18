@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public string ImageURL { get; set; }
 
+            [NameInMap("MaskURL")]
+            [Validation(Required=false)]
+            public string MaskURL { get; set; }
+
         }
 
         [NameInMap("RequestId")]
