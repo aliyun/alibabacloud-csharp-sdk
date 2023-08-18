@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("IncludeValues")]
+        [Validation(Required=false)]
+        public bool? IncludeValues { get; set; }
+
+        [NameInMap("Metrics")]
+        [Validation(Required=false)]
+        public string Metrics { get; set; }
+
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }

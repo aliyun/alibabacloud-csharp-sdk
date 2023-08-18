@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstanceRequest : TeaModel {
+        [NameInMap("BackupId")]
+        [Validation(Required=false)]
+        public string BackupId { get; set; }
+
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](~~327176~~).
         /// </summary>
@@ -163,6 +167,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string InstanceSpec { get; set; }
 
+        [NameInMap("MasterCU")]
+        [Validation(Required=false)]
+        public int? MasterCU { get; set; }
+
         /// <summary>
         /// The number of coordinator nodes. Valid values: 1 and 2.
         /// 
@@ -286,6 +294,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("ServerlessResource")]
         [Validation(Required=false)]
         public int? ServerlessResource { get; set; }
+
+        [NameInMap("SrcDbInstanceName")]
+        [Validation(Required=false)]
+        public string SrcDbInstanceName { get; set; }
 
         /// <summary>
         /// The storage capacity of the instance. Unit: GB. Valid values: 50 to 4000.

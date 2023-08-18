@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string BackupEndTimeLocal { get; set; }
 
+            [NameInMap("BackupMethod")]
+            [Validation(Required=false)]
+            public string BackupMethod { get; set; }
+
             /// <summary>
             /// The backup mode.
             /// 
@@ -140,6 +144,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalBackupSize")]
+        [Validation(Required=false)]
+        public long? TotalBackupSize { get; set; }
 
         /// <summary>
         /// The total number of entries.

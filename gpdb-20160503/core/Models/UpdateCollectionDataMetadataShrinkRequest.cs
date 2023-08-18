@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class QueryCollectionDataShrinkRequest : TeaModel {
+    public class UpdateCollectionDataMetadataShrinkRequest : TeaModel {
         [NameInMap("Collection")]
         [Validation(Required=false)]
         public string Collection { get; set; }
-
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,13 +21,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
-        [NameInMap("IncludeValues")]
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public bool? IncludeValues { get; set; }
+        public string IdsShrink { get; set; }
 
-        [NameInMap("Metrics")]
+        [NameInMap("Metadata")]
         [Validation(Required=false)]
-        public string Metrics { get; set; }
+        public string MetadataShrink { get; set; }
 
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -48,14 +44,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("TopK")]
-        [Validation(Required=false)]
-        public long? TopK { get; set; }
-
-        [NameInMap("Vector")]
-        [Validation(Required=false)]
-        public string VectorShrink { get; set; }
 
     }
 

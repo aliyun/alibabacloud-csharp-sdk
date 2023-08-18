@@ -300,6 +300,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string MaintainStartTime { get; set; }
 
+                [NameInMap("MasterCU")]
+                [Validation(Required=false)]
+                public int? MasterCU { get; set; }
+
                 /// <summary>
                 /// The number of coordinator nodes.
                 /// </summary>
