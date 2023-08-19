@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListVodTemplateRequest : TeaModel {
         /// <summary>
-        /// The snapshot templates.
+        /// The ID of the application. Set the value to **app-1000000**. For more information, see [Overview](~~113600~~).
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// Indicates whether the template is the default one. Valid values:
-        /// 
-        /// *   **Default**: The template is the default one.
-        /// *   **NotDefault**: The template is not the default one.
+        /// The type of the template. Set the value to **Snapshot**.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The detailed information about Alibaba Cloud CDN logs.
+                /// The total number of entries returned on the current page.
                 /// </summary>
                 [NameInMap("LogCount")]
                 [Validation(Required=false)]
                 public long? LogCount { get; set; }
 
                 /// <summary>
-                /// The path of the log file.
+                /// The detailed information about Alibaba Cloud CDN logs.
                 /// </summary>
                 [NameInMap("LogInfos")]
                 [Validation(Required=false)]
@@ -46,32 +46,35 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> LogInfoDetail { get; set; }
                     public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail : TeaModel {
                         /// <summary>
-                        /// The total number of entries returned.
+                        /// The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("EndTime")]
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
 
                         /// <summary>
-                        /// Queries the information about the raw access logs for a specific domain name, including the log path.
+                        /// The name of the log file.
                         /// </summary>
                         [NameInMap("LogName")]
                         [Validation(Required=false)]
                         public string LogName { get; set; }
 
+                        /// <summary>
+                        /// The path of the log file.
+                        /// </summary>
                         [NameInMap("LogPath")]
                         [Validation(Required=false)]
                         public string LogPath { get; set; }
 
                         /// <summary>
-                        /// The ID of the request.
+                        /// The size of the log file.
                         /// </summary>
                         [NameInMap("LogSize")]
                         [Validation(Required=false)]
                         public long? LogSize { get; set; }
 
                         /// <summary>
-                        /// The pagination settings of Alibaba Cloud CDN logs.
+                        /// The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
@@ -81,18 +84,30 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
                 }
 
+                /// <summary>
+                /// The pagination settings of Alibaba Cloud CDN logs.
+                /// </summary>
                 [NameInMap("PageInfos")]
                 [Validation(Required=false)]
                 public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos PageInfos { get; set; }
                 public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos : TeaModel {
+                    /// <summary>
+                    /// The page number of the returned page.
+                    /// </summary>
                     [NameInMap("PageNumber")]
                     [Validation(Required=false)]
                     public long? PageNumber { get; set; }
 
+                    /// <summary>
+                    /// The number of entries returned per page.
+                    /// </summary>
                     [NameInMap("PageSize")]
                     [Validation(Required=false)]
                     public long? PageSize { get; set; }
 
+                    /// <summary>
+                    /// The total number of entries returned.
+                    /// </summary>
                     [NameInMap("Total")]
                     [Validation(Required=false)]
                     public long? Total { get; set; }
@@ -104,7 +119,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

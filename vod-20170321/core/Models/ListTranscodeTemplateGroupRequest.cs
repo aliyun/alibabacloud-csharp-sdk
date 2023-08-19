@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListTranscodeTemplateGroupRequest : TeaModel {
         /// <summary>
-        /// The name of the template group.
+        /// The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

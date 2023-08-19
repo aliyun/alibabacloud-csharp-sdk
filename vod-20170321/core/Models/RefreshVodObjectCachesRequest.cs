@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class RefreshVodObjectCachesRequest : TeaModel {
         /// <summary>
-        /// The granularity of the resources to be refreshed. Valid values:
-        /// 
-        /// *   **File**: refreshes one or more files. This is the default value.
-        /// *   **Directory**: refreshes the files under one or more directories.
+        /// The path of the resource to be refreshed. Separate multiple paths with line breaks (\n or \r\n).
         /// </summary>
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]
         public string ObjectPath { get; set; }
 
         /// <summary>
-        /// Refreshes files on Alibaba Cloud CDN nodes. You can refresh multiple files at a time based on URLs.
+        /// The granularity of the resources to be refreshed. Valid values:
+        /// 
+        /// *   **File**: refreshes one or more files. This is the default value.
+        /// *   **Directory**: refreshes the files under one or more directories.
         /// </summary>
         [NameInMap("ObjectType")]
         [Validation(Required=false)]

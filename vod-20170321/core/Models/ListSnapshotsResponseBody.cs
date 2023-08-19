@@ -10,33 +10,36 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// The URL of the snapshot.
+        /// The snapshot data of the media.
         /// </summary>
         [NameInMap("MediaSnapshot")]
         [Validation(Required=false)]
         public ListSnapshotsResponseBodyMediaSnapshot MediaSnapshot { get; set; }
         public class ListSnapshotsResponseBodyMediaSnapshot : TeaModel {
             /// <summary>
-            /// The ID of the snapshot job.
+            /// The time when the snapshot job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// Queries the snapshots that are captured from the specified media.
+            /// The ID of the snapshot job.
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The rule for generating snapshot URLs.
             /// </summary>
             [NameInMap("Regular")]
             [Validation(Required=false)]
             public string Regular { get; set; }
 
+            /// <summary>
+            /// The snapshot data.
+            /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
             public ListSnapshotsResponseBodyMediaSnapshotSnapshots Snapshots { get; set; }
@@ -45,10 +48,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public List<ListSnapshotsResponseBodyMediaSnapshotSnapshotsSnapshot> Snapshot { get; set; }
                 public class ListSnapshotsResponseBodyMediaSnapshotSnapshotsSnapshot : TeaModel {
+                    /// <summary>
+                    /// The index of the snapshot.
+                    /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
                     public long? Index { get; set; }
 
+                    /// <summary>
+                    /// The URL of the snapshot.
+                    /// </summary>
                     [NameInMap("Url")]
                     [Validation(Required=false)]
                     public string Url { get; set; }
@@ -67,7 +76,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The snapshot data of the media.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

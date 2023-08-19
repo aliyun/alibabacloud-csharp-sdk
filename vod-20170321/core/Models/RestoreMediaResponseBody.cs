@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class RestoreMediaResponseBody : TeaModel {
+        /// <summary>
+        /// The IDs of the media asset that failed to be processed.
+        /// </summary>
         [NameInMap("ForbiddenList")]
         [Validation(Required=false)]
         public RestoreMediaResponseBodyForbiddenList ForbiddenList { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<RestoreMediaResponseBodyForbiddenListMediaForbiddenReasonDTO> MediaForbiddenReasonDTO { get; set; }
             public class RestoreMediaResponseBodyForbiddenListMediaForbiddenReasonDTO : TeaModel {
+                /// <summary>
+                /// The ID of the media asset.
+                /// </summary>
                 [NameInMap("MediaId")]
                 [Validation(Required=false)]
                 public string MediaId { get; set; }
 
+                /// <summary>
+                /// The reason for the failure.
+                /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
@@ -29,6 +38,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         }
 
+        /// <summary>
+        /// The IDs of the media assets that failed to be obtained.
+        /// </summary>
         [NameInMap("IgnoredList")]
         [Validation(Required=false)]
         public RestoreMediaResponseBodyIgnoredList IgnoredList { get; set; }
@@ -39,10 +51,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

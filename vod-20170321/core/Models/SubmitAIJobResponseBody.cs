@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIJobResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the video.
+        /// The information about the AI jobs.
         /// </summary>
         [NameInMap("AIJobList")]
         [Validation(Required=false)]
@@ -20,16 +20,25 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<SubmitAIJobResponseBodyAIJobListAIJob> AIJob { get; set; }
             public class SubmitAIJobResponseBodyAIJobListAIJob : TeaModel {
+                /// <summary>
+                /// The ID of the AI job.
+                /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
 
+                /// <summary>
+                /// The ID of the video.
+                /// </summary>
                 [NameInMap("MediaId")]
                 [Validation(Required=false)]
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// SubmitAIJob
+                /// The type of the AI job. Valid values:
+                /// 
+                /// *   **AIMediaDNA**: The media fingerprinting job.
+                /// *   **AIVideoTag**: The smart tagging job.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitPreprocessJobsResponseBody : TeaModel {
+        /// <summary>
+        /// The job information.
+        /// </summary>
         [NameInMap("PreprocessJobs")]
         [Validation(Required=false)]
         public SubmitPreprocessJobsResponseBodyPreprocessJobs PreprocessJobs { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<SubmitPreprocessJobsResponseBodyPreprocessJobsPreprocessJob> PreprocessJob { get; set; }
             public class SubmitPreprocessJobsResponseBodyPreprocessJobsPreprocessJob : TeaModel {
+                /// <summary>
+                /// The ID of the job.
+                /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditAudioResultDetailRequest : TeaModel {
         /// <summary>
-        /// The end time of the audio that failed the review. Unit: seconds.
+        /// The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the [SearchMedia](~~86044~~) operation.
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// Details of review results.
+        /// The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]

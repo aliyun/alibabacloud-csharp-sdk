@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListDynamicImageRequest : TeaModel {
         /// <summary>
-        /// The size of the animated sticker file. Unit: byte.
+        /// The ID of the video.
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

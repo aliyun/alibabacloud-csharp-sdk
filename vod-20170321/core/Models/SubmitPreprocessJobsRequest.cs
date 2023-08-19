@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitPreprocessJobsRequest : TeaModel {
+        /// <summary>
+        /// The preprocessing type. Set the value to **LivePreprocess**, which indicates that the video is preprocessed in the production studio.
+        /// </summary>
         [NameInMap("PreprocessType")]
         [Validation(Required=false)]
         public string PreprocessType { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **SubmitPreprocessJobs**.
+        /// The ID of the video.
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

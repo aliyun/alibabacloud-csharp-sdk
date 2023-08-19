@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainConfigsRequest : TeaModel {
         /// <summary>
-        /// The name of the feature. Separate multiple names with commas (,). For more information, see the **Feature description** section.
+        /// The domain name for CDN.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The parameters of each feature.
+        /// The name of the feature. Separate multiple names with commas (,). For more information, see the **Feature description** section.
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]

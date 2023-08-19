@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateAITemplateRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The detailed configurations of the AI template. The value is a JSON string.
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public string TemplateConfig { get; set; }
 
         /// <summary>
-        /// The name of the AI template. The name can be up to 128 bytes in length.
+        /// The ID of the AI template. You can use one of the following methods to obtain the ID:
+        /// 
+        /// *   Call the [AddAITemplate](~~102930~~) operation to add an AI template if no AI template exists. The value of TemplateId in the response is the ID of the AI template.
+        /// *   Call the [ListAITemplate](~~102936~~) operation if the template already exists. The value of TemplateId in the response is the ID of the AI template.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).
+        /// The name of the AI template. The name can be up to 128 bytes in length.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

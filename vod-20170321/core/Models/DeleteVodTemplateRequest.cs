@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteVodTemplateRequest : TeaModel {
         /// <summary>
-        /// Deletes a snapshot template.
+        /// The ID of the snapshot template.
         /// </summary>
         [NameInMap("VodTemplateId")]
         [Validation(Required=false)]

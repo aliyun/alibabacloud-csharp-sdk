@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAIMediaAuditJobRequest : TeaModel {
         /// <summary>
-        /// http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg
+        /// The ID of the intelligent review job.
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

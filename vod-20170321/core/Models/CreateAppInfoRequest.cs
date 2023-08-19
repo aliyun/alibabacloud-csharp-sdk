@@ -10,23 +10,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateAppInfoRequest : TeaModel {
         /// <summary>
-        /// Creates an application.
+        /// The name of the application, which must be unique. 
+        /// 
+        /// - The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).
+        /// - The name can contain only UTF-8 characters.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// ## Common errors
-        /// 
-        /// The following table describes the common errors that this operation can return. 
-        /// 
-        /// | Error code | Error message | HTTP status code | Description |
-        /// | ---------- | ------------- | ---------------- | ----------- |
-        /// | OperationDenied.NotOpenAppService | The app service is not open. | 403 | The error message returned because the multi-application service has not been activated. |
-        /// | Forbidden.OperateApp | User not authorized to operate app. | 403 | The error message returned because you are not authorized to manage the application. |
-        /// | AlreadyExist.AppName | The specified AppName has already exist. | 409 | The error message returned because the name of the application already exists. |
-        /// | LimitExceeded.AppCount | App Count has exceeded 10. | 400 | The error message returned because the number of applications that can be created exceeds the upper limit. |
+        /// The description of the application. 
+        /// - The description can contain up to 512 characters in length.
+        /// - The description can contain only UTF-8 characters.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The timeline of the online editing project.
+        /// The ID of the online editing project.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

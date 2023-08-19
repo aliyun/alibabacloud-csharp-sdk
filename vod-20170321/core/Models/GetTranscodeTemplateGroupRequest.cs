@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetTranscodeTemplateGroupRequest : TeaModel {
         /// <summary>
-        /// The transcoding configurations of the video stream. The value is a JSON-formatted string.
+        /// The ID of the transcoding template group.
         /// </summary>
         [NameInMap("TranscodeTemplateGroupId")]
         [Validation(Required=false)]

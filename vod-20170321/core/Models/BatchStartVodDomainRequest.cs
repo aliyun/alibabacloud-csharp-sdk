@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class BatchStartVodDomainRequest : TeaModel {
+        /// <summary>
+        /// The domain name for CDN. Separate multiple domain names with commas (,).
+        /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }

@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMessageCallbackRequest : TeaModel {
         /// <summary>
-        /// The callback method. Valid values:
-        /// 
-        /// *   **HTTP**
-        /// *   **MNS**
+        /// The ID of the application. If you do not set this parameter, the default value **app-1000000** is used.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

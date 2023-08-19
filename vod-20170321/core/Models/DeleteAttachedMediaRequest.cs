@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteAttachedMediaRequest : TeaModel {
         /// <summary>
-        /// Deletes one or more auxiliary media assets at a time.
+        /// The list of auxiliary media asset IDs.
+        /// 
+        /// *   Separate multiple IDs with commas (,).
+        /// *   A maximum of 20 IDs can be specified.
         /// </summary>
         [NameInMap("MediaIds")]
         [Validation(Required=false)]

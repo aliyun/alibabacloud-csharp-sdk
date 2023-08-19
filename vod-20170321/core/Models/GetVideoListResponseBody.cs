@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? Total { get; set; }
 
         /// <summary>
-        /// The information about the media file. Information about a maximum of 5,000 media files can be returned.
+        /// The period of time in which the object remains in the restored state.
         /// </summary>
         [NameInMap("VideoList")]
         [Validation(Required=false)]
@@ -35,21 +35,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<GetVideoListResponseBodyVideoListVideo> Video { get; set; }
             public class GetVideoListResponseBodyVideoListVideo : TeaModel {
                 /// <summary>
-                /// The application ID. Default value: **app-1000000**.
+                /// The ID of the application. Default value: **app-1000000**.
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The category ID.
+                /// The category ID of the media file.
                 /// </summary>
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
                 public long? CateId { get; set; }
 
                 /// <summary>
-                /// The category name.
+                /// The name of the category.
                 /// </summary>
                 [NameInMap("CateName")]
                 [Validation(Required=false)]
@@ -90,10 +90,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string ModificationTime { get; set; }
 
+                /// <summary>
+                /// The period of time in which the object remains in the restored state.
+                /// </summary>
                 [NameInMap("RestoreExpiration")]
                 [Validation(Required=false)]
                 public string RestoreExpiration { get; set; }
 
+                /// <summary>
+                /// The restoration status of the media file. Valid values:
+                /// 
+                /// - **Processing**
+                /// - **Success**
+                /// - **Failed**
+                /// </summary>
                 [NameInMap("RestoreStatus")]
                 [Validation(Required=false)]
                 public string RestoreStatus { get; set; }
@@ -119,7 +129,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// The video status. Valid values:
+                /// The status of the video. Valid values:
                 /// 
                 /// *   **Uploading**: The video is being uploaded.
                 /// *   **UploadFail**: The video failed to be uploaded.
@@ -137,6 +147,18 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The storage class of the media file. Valid values:
+                /// 
+                /// - **Standard**: All media resources are stored as Standard objects.
+                /// - **IA**: All media resources are stored as IA objects.
+                /// - **Archive**: All media resources are stored as Archive objects.
+                /// - **ColdArchive**: All media resources are stored as Cold Archive objects.
+                /// - **SourceIA**: Only the source files are IA objects.
+                /// - **SourceArchive**: Only the source files are Archive objects.
+                /// - **SourceColdArchive**: Only the source files are Cold Archive objects.
+                /// - **Changing**: The storage class is being modified.
+                /// </summary>
                 [NameInMap("StorageClass")]
                 [Validation(Required=false)]
                 public string StorageClass { get; set; }
