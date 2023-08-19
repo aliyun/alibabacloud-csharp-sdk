@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? RiskStatus { get; set; }
 
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
         /// <summary>
         /// The source IP address of the request.
         /// </summary>

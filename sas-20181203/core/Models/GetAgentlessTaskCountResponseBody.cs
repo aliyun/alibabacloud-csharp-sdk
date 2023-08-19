@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? ScanMachine { get; set; }
 
+        [NameInMap("SysVulCount")]
+        [Validation(Required=false)]
+        public string SysVulCount { get; set; }
+
         [NameInMap("Vulnerability")]
         [Validation(Required=false)]
         public int? Vulnerability { get; set; }

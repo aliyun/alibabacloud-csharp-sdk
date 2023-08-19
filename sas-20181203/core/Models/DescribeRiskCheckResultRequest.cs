@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the check item. For more information about the check item, see the check item table in the "Response parameters" section of this topic.
+        /// An array that consists of the IDs of check items. For more information about the check item, see the check item table in the "Response parameters" section of this topic.
         /// </summary>
         [NameInMap("ItemIds")]
         [Validation(Required=false)]

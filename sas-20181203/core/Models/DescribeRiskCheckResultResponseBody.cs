@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// An array that consists of the check items.
+        /// The check items.
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]

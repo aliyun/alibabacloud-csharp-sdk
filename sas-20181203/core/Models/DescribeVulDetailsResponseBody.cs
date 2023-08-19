@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CnvdId { get; set; }
 
             /// <summary>
-            /// The difficulty level of exploiting the vulnerability. Valid values:
+            /// The difficulty level of exploiting the vulnerability. Valid value:
             /// 
             /// *   **LOW**
             /// *   **MEDIUM**
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The instance name of the server.
             /// 
-            /// > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
+            /// >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The public IP address of the server.
             /// 
-            /// > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
+            /// >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -120,12 +120,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The private IP address of the server.
             /// 
-            /// > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
+            /// >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            /// <summary>
+            /// The ID of the vulnerability.
+            /// </summary>
             [NameInMap("OtherId")]
             [Validation(Required=false)]
             public string OtherId { get; set; }
@@ -187,14 +190,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Summary { get; set; }
 
             /// <summary>
-            /// The ID of the asset on which the vulnerability is detected.
+            /// The ID of the asset on which the malicious image sample is detected.
             /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
             /// <summary>
-            /// The name of the asset on which the vulnerability is detected.
+            /// The name of the asset on which the malicious image sample is detected.
             /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
@@ -215,7 +218,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Vendor { get; set; }
 
             /// <summary>
-            /// The severity of the vulnerability. Valid values:
+            /// The severity of the vulnerability. Valid value:
             /// 
             /// *   **serious**
             /// *   **high**

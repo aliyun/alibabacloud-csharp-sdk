@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }

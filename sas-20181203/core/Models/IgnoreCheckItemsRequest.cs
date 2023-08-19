@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
         /// <summary>
         /// The operation that you want to perform on the risk item.Valid values:
         /// *  **1**: adds the risk item to the whitelist

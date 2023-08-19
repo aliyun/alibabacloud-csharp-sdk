@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public DescribeImageBaselineStrategyResponseBodyStrategy Strategy { get; set; }
         public class DescribeImageBaselineStrategyResponseBodyStrategy : TeaModel {
+            [NameInMap("BaselineItem")]
+            [Validation(Required=false)]
+            public string BaselineItem { get; set; }
+
             /// <summary>
             /// An array that contains the baselines.
             /// </summary>

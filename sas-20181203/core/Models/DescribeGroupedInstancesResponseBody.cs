@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? AsapVulInstanceCount { get; set; }
 
+            /// <summary>
+            /// The number of assets that are protected by the specified edition.
+            /// </summary>
             [NameInMap("AuthVersionCheckCount")]
             [Validation(Required=false)]
             public int? AuthVersionCheckCount { get; set; }
@@ -53,6 +56,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InstanceCount { get; set; }
 
+            /// <summary>
+            /// The operating system type of the asset. Valid values:
+            /// 
+            /// * **windows**
+            /// * **linux**
+            /// 
+            /// > This parameter is returned only when Lang is set to zh.
+            /// </summary>
             [NameInMap("Os")]
             [Validation(Required=false)]
             public string Os { get; set; }

@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ExpiredDate { get; set; }
 
         /// <summary>
-        /// The ID of the asset group to which the you want to add the asset.
+        /// The ID of the asset group to which you want to add the asset.
         /// 
-        /// >  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.
+        /// > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Os { get; set; }
 
+        /// <summary>
+        /// The name of the proxy cluster.
+        /// </summary>
         [NameInMap("ProxyCluster")]
         [Validation(Required=false)]
         public string ProxyCluster { get; set; }

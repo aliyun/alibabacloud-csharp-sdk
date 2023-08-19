@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the information about the alert event.
+        /// The information about the alert event.
         /// </summary>
         [NameInMap("SuspEvents")]
         [Validation(Required=false)]
@@ -278,6 +278,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// The UUID of the image.
+            /// </summary>
             [NameInMap("ImageUuid")]
             [Validation(Required=false)]
             public string ImageUuid { get; set; }
@@ -352,6 +355,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string K8sPodName { get; set; }
 
+            /// <summary>
+            /// Indicates whether the alert event can be detected by the cloud sandbox feature. Valid values:
+            /// 
+            /// * **true**
+            /// * **false**
+            /// </summary>
             [NameInMap("LargeModel")]
             [Validation(Required=false)]
             public bool? LargeModel { get; set; }

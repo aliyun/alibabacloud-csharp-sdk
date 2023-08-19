@@ -8,7 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeRiskTypeRequest : TeaModel {
+    public class QueryAttackCountRequest : TeaModel {
+        /// <summary>
+        /// The ID of the request source. Set the value to sas.
+        /// </summary>
+        [NameInMap("From")]
+        [Validation(Required=false)]
+        public string From { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Default value: **zh**. Valid values:
         /// 
@@ -18,10 +25,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
 
         /// <summary>
         /// The source IP address of the request.

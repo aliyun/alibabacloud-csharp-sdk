@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// DescribeBruteForceSummary
+        /// The source IP address of the request.
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

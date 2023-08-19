@@ -68,6 +68,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The edition of Security Center that protects the asset. Valid values:
+        /// 
+        /// * **sas_gte_advanced**: the Advanced edition or higher
+        /// * **sas_gte_enterprise**: the Enterprise edition or higher
+        /// * **sas_gt_basic:** a paid edition
+        /// * **sas_eq_advanced:** the Advanced edition
+        /// * **sas_gt_anti_virus:** an edition higher than the Anti-virus edition
+        /// </summary>
         [NameInMap("SaleVersionCheckCode")]
         [Validation(Required=false)]
         public string SaleVersionCheckCode { get; set; }

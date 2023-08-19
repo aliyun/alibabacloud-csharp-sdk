@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            [NameInMap("LastScanTime")]
+            [Validation(Required=false)]
+            public long? LastScanTime { get; set; }
+
             /// <summary>
             /// Indicates whether a port on the server is accessible over the Internet. Valid values:
             /// 
@@ -145,6 +149,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
+            [NameInMap("TargetId")]
+            [Validation(Required=false)]
+            public string TargetId { get; set; }
+
+            [NameInMap("TargetName")]
+            [Validation(Required=false)]
+            public string TargetName { get; set; }
+
+            [NameInMap("TargetType")]
+            [Validation(Required=false)]
+            public string TargetType { get; set; }
 
             /// <summary>
             /// The UUID of the server.

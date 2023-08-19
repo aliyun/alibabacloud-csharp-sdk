@@ -10,12 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBruteForceRecordsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the IP addresses.
+        /// The IP addresses.
         /// </summary>
         [NameInMap("MachineList")]
         [Validation(Required=false)]
         public List<DescribeBruteForceRecordsResponseBodyMachineList> MachineList { get; set; }
         public class DescribeBruteForceRecordsResponseBodyMachineList : TeaModel {
+            /// <summary>
+            /// The status of the host network extension. Valid values:
+            /// 
+            /// *   **true**: online
+            /// *   **false**: offline
+            /// </summary>
             [NameInMap("AliNetOnline")]
             [Validation(Required=false)]
             public bool? AliNetOnline { get; set; }
@@ -28,12 +34,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? BlockExpireDate { get; set; }
 
             /// <summary>
-            /// The blocked IP address.
+            /// The IP address that is blocked.
             /// </summary>
             [NameInMap("BlockIp")]
             [Validation(Required=false)]
             public string BlockIp { get; set; }
 
+            /// <summary>
+            /// The blocking type. Valid values:
+            /// 
+            /// *   **group**: security group
+            /// *   **alinet**: host network extension
+            /// </summary>
             [NameInMap("BlockType")]
             [Validation(Required=false)]
             public string BlockType { get; set; }
@@ -46,14 +58,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// The ID of the primary key in the table of records on the blocked IP address.
+            /// The ID of the primary key that is recorded in the defense rule.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// The instance name of the server.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -109,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// The UUID of the server on which access from the IP address is blocked.
+            /// The UUID of the server on which the defense rule takes effect.
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

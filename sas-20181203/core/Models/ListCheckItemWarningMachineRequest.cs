@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RiskType { get; set; }
 
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
         /// <summary>
         /// The status of the check item. Valid values:
         /// 

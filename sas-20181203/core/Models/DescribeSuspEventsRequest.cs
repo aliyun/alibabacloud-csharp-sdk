@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the alert event.
         /// 
-        /// >  To query the details about the exceptions of an alert event, you must specify the ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.
+        /// > To query the details of an alert event, you must specify the ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.
         /// </summary>
         [NameInMap("AlarmUniqueInfo")]
         [Validation(Required=false)]
         public string AlarmUniqueInfo { get; set; }
 
         /// <summary>
-        /// The types of assets.
+        /// The types of the assets.
         /// </summary>
         [NameInMap("AssetsTypeList")]
         [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperateTimeStart { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**.
+        /// The number of entries to return on each page. Default value: **20**. Maximum value: 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -200,6 +200,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Remark { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// 
+        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
