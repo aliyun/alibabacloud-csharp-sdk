@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
+
     }
 
 }
