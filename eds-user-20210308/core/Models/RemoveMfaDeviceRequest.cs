@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class RemoveMfaDeviceRequest : TeaModel {
+        [NameInMap("AdDomain")]
+        [Validation(Required=false)]
+        public string AdDomain { get; set; }
+
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
         public string SerialNumber { get; set; }

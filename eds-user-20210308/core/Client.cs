@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * The mobile number of the end user.
+          * Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
           *
           * @param request CreateUsersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * The mobile number of the end user.
+          * Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
           *
           * @param request CreateUsersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * The mobile number of the end user.
+          * Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
           *
           * @param request CreateUsersRequest
           * @return CreateUsersResponse
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * The mobile number of the end user.
+          * Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
           *
           * @param request CreateUsersRequest
           * @return CreateUsersResponse
@@ -489,6 +489,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                query["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
             {
                 query["EndUserIds"] = request.EndUserIds;
@@ -528,6 +532,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                query["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
             {
                 query["EndUserIds"] = request.EndUserIds;
@@ -968,6 +976,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                query["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
             {
                 query["SerialNumber"] = request.SerialNumber;
@@ -1002,6 +1014,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                query["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
             {
                 query["SerialNumber"] = request.SerialNumber;
@@ -1249,6 +1265,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                query["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
             {
                 query["SerialNumber"] = request.SerialNumber;
@@ -1276,6 +1296,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                query["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
             {
                 query["SerialNumber"] = request.SerialNumber;
@@ -1685,6 +1709,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                query["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
             {
                 query["SerialNumber"] = request.SerialNumber;
@@ -1712,6 +1740,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                query["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
             {
                 query["SerialNumber"] = request.SerialNumber;

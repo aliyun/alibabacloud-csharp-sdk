@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class FilterUsersRequest : TeaModel {
         /// <summary>
-        /// The IDs of excluded users.
+        /// The list of usernames to be precisely excluded.
         /// </summary>
         [NameInMap("ExcludeEndUserIds")]
         [Validation(Required=false)]
         public List<string> ExcludeEndUserIds { get; set; }
 
         /// <summary>
-        /// The string that you enter for a fuzzy search. You can enter a string to match the username or email address.
+        /// The string that is used for fuzzy search. You can use usernames and email addresses to perform fuzzy search. Wildcard characters (\*) are supported for this parameter. For example, if you set this parameter to a\*m, the usernames or an email addresses that start with a or end with m are returned.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -38,35 +38,79 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public bool? IncludeDesktopGroupCount { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. If you set this parameter to a value greater than 100, the system resets the value to 100.
+        /// The number of entries per page. If you set this parameter to a value greater than 100, the system resets the value to 100.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. You do not need to configure this parameter if you call this operation for the first time. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to perform the next query.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The parameter that is supported to sort query results.
+        /// The parameter that supports to sort query results.
         /// </summary>
         [NameInMap("OrderParam")]
         [Validation(Required=false)]
         public FilterUsersRequestOrderParam OrderParam { get; set; }
         public class FilterUsersRequestOrderParam : TeaModel {
             /// <summary>
-            /// The method that you want to use to sort query results.
+            /// The way to sort query results.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   EndUserId
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   id
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   gmt_created
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("OrderField")]
             [Validation(Required=false)]
             public string OrderField { get; set; }
 
             /// <summary>
-            /// Specifies whether to sort query results in ascending or descending order.
+            /// Specifies whether to sort query results in ascending or descending order. Valid values:
+            /// 
+            /// Valid values:
+            /// 
+            /// *   ASC: ascending
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   DESC (default): descending
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("OrderType")]
             [Validation(Required=false)]
@@ -89,7 +133,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string OwnerType { get; set; }
 
         /// <summary>
-        /// Details of the user property that you want to perform fuzzy search.
+        /// The list of properties for fuzzy search.
         /// </summary>
         [NameInMap("PropertyFilterParam")]
         [Validation(Required=false)]
@@ -112,21 +156,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// Details of the properties and property values.
+        /// The list of property names and property values.
         /// </summary>
         [NameInMap("PropertyKeyValueFilterParam")]
         [Validation(Required=false)]
         public List<FilterUsersRequestPropertyKeyValueFilterParam> PropertyKeyValueFilterParam { get; set; }
         public class FilterUsersRequestPropertyKeyValueFilterParam : TeaModel {
             /// <summary>
-            /// The name of the property.
+            /// The property name.
             /// </summary>
             [NameInMap("PropertyKey")]
             [Validation(Required=false)]
             public string PropertyKey { get; set; }
 
             /// <summary>
-            /// The values of the property.
+            /// The property values.
             /// </summary>
             [NameInMap("PropertyValues")]
             [Validation(Required=false)]

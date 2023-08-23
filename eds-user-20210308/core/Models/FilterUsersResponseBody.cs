@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class FilterUsersResponseBody : TeaModel {
         /// <summary>
-        /// The token that is used to query the next page. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to perform the next query.
+        /// The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -45,18 +45,39 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? DesktopGroupCount { get; set; }
 
             /// <summary>
-            /// The email address of the user.
+            /// The email address.
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// Indicates whether the user is a local administrator.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   true
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   false
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// </summary>
             [NameInMap("EnableAdminAccess")]
             [Validation(Required=false)]
             public bool? EnableAdminAccess { get; set; }
 
             /// <summary>
-            /// The name of the user.
+            /// The username.
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
@@ -70,14 +91,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public FilterUsersResponseBodyUsersExternalInfo ExternalInfo { get; set; }
             public class FilterUsersResponseBodyUsersExternalInfo : TeaModel {
                 /// <summary>
-                /// The name of the external system account to which the user is connected.
+                /// The account that is connected to the user.
                 /// </summary>
                 [NameInMap("ExternalName")]
                 [Validation(Required=false)]
                 public string ExternalName { get; set; }
 
                 /// <summary>
-                /// The student ID or employee ID of the external system account that is connected to the user.
+                /// The account, student ID, or employee ID that is connected to the user.
                 /// </summary>
                 [NameInMap("JobNumber")]
                 [Validation(Required=false)]
@@ -86,14 +107,32 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// The ID of the user.
+            /// The user ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// Specifies whether the user is a tenant administrator.
+            /// Indicates whether the user is a tenant administrator.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   true
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   false
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("IsTenantManager")]
             [Validation(Required=false)]
@@ -101,62 +140,106 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// The type of the account ownership.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   CreateFromManager
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     :
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     administrator-activated
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Normal
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     :
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     user-activated
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("OwnerType")]
             [Validation(Required=false)]
             public string OwnerType { get; set; }
 
             /// <summary>
-            /// The mobile number of the user.
+            /// The mobile number.
             /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
 
             /// <summary>
-            /// The remarks of the user.
+            /// The remarks.
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// The status of the user.
+            /// The user status.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   0: The user status is normal.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   9: The user is locked.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public long? Status { get; set; }
 
             /// <summary>
-            /// Details of the user properties.
+            /// Details of the properties.
             /// </summary>
             [NameInMap("UserSetPropertiesModels")]
             [Validation(Required=false)]
             public List<FilterUsersResponseBodyUsersUserSetPropertiesModels> UserSetPropertiesModels { get; set; }
             public class FilterUsersResponseBodyUsersUserSetPropertiesModels : TeaModel {
                 /// <summary>
-                /// The ID of the property.
+                /// The property ID.
                 /// </summary>
                 [NameInMap("PropertyId")]
                 [Validation(Required=false)]
                 public long? PropertyId { get; set; }
 
                 /// <summary>
-                /// The name of the property.
+                /// The property name.
                 /// </summary>
                 [NameInMap("PropertyKey")]
                 [Validation(Required=false)]
                 public string PropertyKey { get; set; }
 
                 /// <summary>
-                /// The ID of property.
+                /// The property ID.
                 /// </summary>
                 [NameInMap("PropertyType")]
                 [Validation(Required=false)]
                 public int? PropertyType { get; set; }
 
                 /// <summary>
-                /// Details of the property value.
+                /// The property value.
                 /// </summary>
                 [NameInMap("PropertyValues")]
                 [Validation(Required=false)]
@@ -170,7 +253,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                     public string PropertyValue { get; set; }
 
                     /// <summary>
-                    /// The ID of the property value.
+                    /// The property value ID.
                     /// </summary>
                     [NameInMap("PropertyValueId")]
                     [Validation(Required=false)]
