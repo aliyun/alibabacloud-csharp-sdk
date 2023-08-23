@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public UpdateHotelSceneItemRequestUpdateHotelSceneReq UpdateHotelSceneReq { get; set; }
         public class UpdateHotelSceneItemRequestUpdateHotelSceneReq : TeaModel {
+            [NameInMap("BeyondLimitReply")]
+            [Validation(Required=false)]
+            public string BeyondLimitReply { get; set; }
+
             [NameInMap("DeliveryMethod")]
             [Validation(Required=false)]
             public string DeliveryMethod { get; set; }
@@ -98,6 +102,14 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            [NameInMap("LimitNumber")]
+            [Validation(Required=false)]
+            public long? LimitNumber { get; set; }
+
+            [NameInMap("LimitSwitch")]
+            [Validation(Required=false)]
+            public int? LimitSwitch { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]

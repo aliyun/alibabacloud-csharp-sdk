@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string Result { get; set; }
 
+        [NameInMap("StatusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
     }
 
 }

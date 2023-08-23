@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public List<ImportRoomControlDevicesRequestLocationDevicesDevices> Devices { get; set; }
             public class ImportRoomControlDevicesRequestLocationDevicesDevices : TeaModel {
+                [NameInMap("AliasList")]
+                [Validation(Required=false)]
+                public List<string> AliasList { get; set; }
+
                 [NameInMap("Brand")]
                 [Validation(Required=false)]
                 public string Brand { get; set; }
@@ -65,6 +69,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                     [Validation(Required=false)]
                     public List<ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList> SwitchList { get; set; }
                     public class ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList : TeaModel {
+                        [NameInMap("AliasList")]
+                        [Validation(Required=false)]
+                        public List<string> AliasList { get; set; }
+
                         [NameInMap("Category")]
                         [Validation(Required=false)]
                         public string Category { get; set; }

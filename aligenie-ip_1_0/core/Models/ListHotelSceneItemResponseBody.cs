@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                     [Validation(Required=false)]
                     public long? Price { get; set; }
 
+                    [NameInMap("ResidueLimit")]
+                    [Validation(Required=false)]
+                    public long? ResidueLimit { get; set; }
+
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
