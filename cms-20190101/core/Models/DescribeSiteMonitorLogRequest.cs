@@ -9,12 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorLogRequest : TeaModel {
+        [NameInMap("Browser")]
+        [Validation(Required=false)]
+        public string Browser { get; set; }
+
+        [NameInMap("BrowserInfo")]
+        [Validation(Required=false)]
+        public string BrowserInfo { get; set; }
+
         /// <summary>
         /// The city identification code.
         /// </summary>
         [NameInMap("City")]
         [Validation(Required=false)]
         public string City { get; set; }
+
+        [NameInMap("Device")]
+        [Validation(Required=false)]
+        public string Device { get; set; }
 
         /// <summary>
         /// The end of the time range to query data. The following formats are supported:

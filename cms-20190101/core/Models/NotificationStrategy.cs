@@ -147,6 +147,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public NotificationStrategyPushingSetting PushingSetting { get; set; }
         public class NotificationStrategyPushingSetting : TeaModel {
+            [NameInMap("PushingDataFormat")]
+            [Validation(Required=false)]
+            public string PushingDataFormat { get; set; }
+
             [NameInMap("Range")]
             [Validation(Required=false)]
             public string Range { get; set; }

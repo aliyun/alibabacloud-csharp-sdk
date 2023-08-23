@@ -324,6 +324,64 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? Authentication { get; set; }
 
+                [NameInMap("blocked_url_list")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList BlockedUrlList { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList : TeaModel {
+                    [NameInMap("blocked_url_list")]
+                    [Validation(Required=false)]
+                    public List<string> BlockedUrlList { get; set; }
+
+                }
+
+                [NameInMap("browser_headers")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders BrowserHeaders { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders : TeaModel {
+                    [NameInMap("browser_headers")]
+                    [Validation(Required=false)]
+                    public List<Dictionary<string, object>> BrowserHeaders { get; set; }
+
+                }
+
+                [NameInMap("browser_hosts")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts BrowserHosts { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts : TeaModel {
+                    [NameInMap("browser_hosts")]
+                    [Validation(Required=false)]
+                    public List<string> BrowserHosts { get; set; }
+
+                }
+
+                [NameInMap("browser_info")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo BrowserInfo { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo : TeaModel {
+                    [NameInMap("browser_info")]
+                    [Validation(Required=false)]
+                    public List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo> BrowserInfo { get; set; }
+                    public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo : TeaModel {
+                        [NameInMap("browser")]
+                        [Validation(Required=false)]
+                        public string Browser { get; set; }
+
+                        [NameInMap("device")]
+                        [Validation(Required=false)]
+                        public string Device { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("browser_insecure")]
+                [Validation(Required=false)]
+                public bool? BrowserInsecure { get; set; }
+
+                [NameInMap("browser_task_version")]
+                [Validation(Required=false)]
+                public string BrowserTaskVersion { get; set; }
+
                 [NameInMap("cookie")]
                 [Validation(Required=false)]
                 public string Cookie { get; set; }
@@ -351,6 +409,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [NameInMap("dns_type")]
                 [Validation(Required=false)]
                 public string DnsType { get; set; }
+
+                [NameInMap("expect_exist_string")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString ExpectExistString { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString : TeaModel {
+                    [NameInMap("expect_exist_string")]
+                    [Validation(Required=false)]
+                    public List<string> ExpectExistString { get; set; }
+
+                }
+
+                [NameInMap("expect_non_exist_string")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString ExpectNonExistString { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString : TeaModel {
+                    [NameInMap("expect_non_exist_string")]
+                    [Validation(Required=false)]
+                    public List<string> ExpectNonExistString { get; set; }
+
+                }
 
                 [NameInMap("expect_value")]
                 [Validation(Required=false)]
@@ -388,6 +466,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? PingNum { get; set; }
 
+                [NameInMap("ping_port")]
+                [Validation(Required=false)]
+                public int? PingPort { get; set; }
+
+                [NameInMap("ping_type")]
+                [Validation(Required=false)]
+                public string PingType { get; set; }
+
                 [NameInMap("port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
@@ -416,9 +502,37 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? RetryDelay { get; set; }
 
+                [NameInMap("strict_mode")]
+                [Validation(Required=false)]
+                public bool? StrictMode { get; set; }
+
                 [NameInMap("time_out")]
                 [Validation(Required=false)]
                 public long? TimeOut { get; set; }
+
+                [NameInMap("traffic_hijack_element_blacklist")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist TrafficHijackElementBlacklist { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist : TeaModel {
+                    [NameInMap("traffic_hijack_element_blacklist")]
+                    [Validation(Required=false)]
+                    public List<string> TrafficHijackElementBlacklist { get; set; }
+
+                }
+
+                [NameInMap("traffic_hijack_element_count")]
+                [Validation(Required=false)]
+                public int? TrafficHijackElementCount { get; set; }
+
+                [NameInMap("traffic_hijack_element_whitelist")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist TrafficHijackElementWhitelist { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist : TeaModel {
+                    [NameInMap("traffic_hijack_element_whitelist")]
+                    [Validation(Required=false)]
+                    public List<string> TrafficHijackElementWhitelist { get; set; }
+
+                }
 
                 [NameInMap("username")]
                 [Validation(Required=false)]

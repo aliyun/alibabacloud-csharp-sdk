@@ -1920,7 +1920,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
           * This topic provides an example to show how to create an instant test task. The name of the task is `task1`. The tested address is `http://www.aliyun.com`. The test type is `HTTP`. The number of detection points is `1`.
           *
           * @param request CreateInstantSiteMonitorRequest
@@ -1975,7 +1975,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
           * This topic provides an example to show how to create an instant test task. The name of the task is `task1`. The tested address is `http://www.aliyun.com`. The test type is `HTTP`. The number of detection points is `1`.
           *
           * @param request CreateInstantSiteMonitorRequest
@@ -2030,7 +2030,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
           * This topic provides an example to show how to create an instant test task. The name of the task is `task1`. The tested address is `http://www.aliyun.com`. The test type is `HTTP`. The number of detection points is `1`.
           *
           * @param request CreateInstantSiteMonitorRequest
@@ -2043,7 +2043,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
           * This topic provides an example to show how to create an instant test task. The name of the task is `task1`. The tested address is `http://www.aliyun.com`. The test type is `HTTP`. The number of detection points is `1`.
           *
           * @param request CreateInstantSiteMonitorRequest
@@ -11822,7 +11822,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
           * This topic provides an example to show how to query the logs of an instant test task whose ID is `afa5c3ce-f944-4363-9edb-ce919a29****`.
           *
           * @param request DescribeSiteMonitorLogRequest
@@ -11833,9 +11833,21 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Browser))
+            {
+                query["Browser"] = request.Browser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserInfo))
+            {
+                query["BrowserInfo"] = request.BrowserInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
             {
                 query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Device))
+            {
+                query["Device"] = request.Device;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -11889,7 +11901,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
           * This topic provides an example to show how to query the logs of an instant test task whose ID is `afa5c3ce-f944-4363-9edb-ce919a29****`.
           *
           * @param request DescribeSiteMonitorLogRequest
@@ -11900,9 +11912,21 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Browser))
+            {
+                query["Browser"] = request.Browser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserInfo))
+            {
+                query["BrowserInfo"] = request.BrowserInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
             {
                 query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Device))
+            {
+                query["Device"] = request.Device;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -11956,7 +11980,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
           * This topic provides an example to show how to query the logs of an instant test task whose ID is `afa5c3ce-f944-4363-9edb-ce919a29****`.
           *
           * @param request DescribeSiteMonitorLogRequest
@@ -11969,7 +11993,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+          * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
           * This topic provides an example to show how to query the logs of an instant test task whose ID is `afa5c3ce-f944-4363-9edb-ce919a29****`.
           *
           * @param request DescribeSiteMonitorLogRequest
