@@ -3748,6 +3748,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exact))
+            {
+                query["Exact"] = request.Exact;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPub))
             {
                 query["SSLPub"] = request.SSLPub;
@@ -3786,6 +3790,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exact))
+            {
+                query["Exact"] = request.Exact;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPub))
             {
                 query["SSLPub"] = request.SSLPub;
@@ -12653,13 +12661,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeFCTriggerWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeIpInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeIpInfoResponse
-         */
         public DescribeIpInfoResponse DescribeIpInfoWithOptions(DescribeIpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12687,13 +12688,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeIpInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeIpInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeIpInfoResponse
-         */
         public async Task<DescribeIpInfoResponse> DescribeIpInfoWithOptionsAsync(DescribeIpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12721,24 +12715,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeIpInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeIpInfoRequest
-          * @return DescribeIpInfoResponse
-         */
         public DescribeIpInfoResponse DescribeIpInfo(DescribeIpInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeIpInfoWithOptions(request, runtime);
         }
 
-        /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeIpInfoRequest
-          * @return DescribeIpInfoResponse
-         */
         public async Task<DescribeIpInfoResponse> DescribeIpInfoAsync(DescribeIpInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

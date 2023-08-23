@@ -30,10 +30,16 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public int? DomainQuota { get; set; }
 
+        /// <summary>
+        /// The maximum number of ignore params that can be refreshed.
+        /// </summary>
         [NameInMap("IgnoreParamsQuota")]
         [Validation(Required=false)]
         public int? IgnoreParamsQuota { get; set; }
 
+        /// <summary>
+        /// The remaining number of ignore params that can be refreshed.
+        /// </summary>
         [NameInMap("IgnoreParamsRemain")]
         [Validation(Required=false)]
         public int? IgnoreParamsRemain { get; set; }

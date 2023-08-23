@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnDomainByCertificateRequest : TeaModel {
+        [NameInMap("Exact")]
+        [Validation(Required=false)]
+        public bool? Exact { get; set; }
+
         /// <summary>
         /// The public key of the SSL certificate. You must encode the public key in Base64 before you invoke the encodeURIComponent function to encode a URI component.
         /// 
