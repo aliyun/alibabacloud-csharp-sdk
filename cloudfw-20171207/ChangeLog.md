@@ -1,3 +1,6 @@
+2023-08-23 Version: 1.3.0
+- Generated csharp 2017-12-07 for Cloudfw.
+
 2023-07-19 Version: 1.2.8
 - Add new api DescribeSignatureLibVersion to support describe IPS lib version.
 - Support DescribePostpayTrafficTotal for postpay user flow detail.

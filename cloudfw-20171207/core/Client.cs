@@ -678,6 +678,208 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await BatchCopyVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        public CreateNatFirewallControlPolicyResponse CreateNatFirewallControlPolicyWithOptions(CreateNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclAction))
+            {
+                query["AclAction"] = request.AclAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationNameList))
+            {
+                query["ApplicationNameList"] = request.ApplicationNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPort))
+            {
+                query["DestPort"] = request.DestPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortGroup))
+            {
+                query["DestPortGroup"] = request.DestPortGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortType))
+            {
+                query["DestPortType"] = request.DestPortType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
+            {
+                query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewOrder))
+            {
+                query["NewOrder"] = request.NewOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proto))
+            {
+                query["Proto"] = request.Proto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Release))
+            {
+                query["Release"] = request.Release;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNatFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateNatFirewallControlPolicyResponse> CreateNatFirewallControlPolicyWithOptionsAsync(CreateNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclAction))
+            {
+                query["AclAction"] = request.AclAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationNameList))
+            {
+                query["ApplicationNameList"] = request.ApplicationNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPort))
+            {
+                query["DestPort"] = request.DestPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortGroup))
+            {
+                query["DestPortGroup"] = request.DestPortGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortType))
+            {
+                query["DestPortType"] = request.DestPortType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
+            {
+                query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewOrder))
+            {
+                query["NewOrder"] = request.NewOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proto))
+            {
+                query["Proto"] = request.Proto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Release))
+            {
+                query["Release"] = request.Release;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNatFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateNatFirewallControlPolicyResponse CreateNatFirewallControlPolicy(CreateNatFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateNatFirewallControlPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<CreateNatFirewallControlPolicyResponse> CreateNatFirewallControlPolicyAsync(CreateNatFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateNatFirewallControlPolicyWithOptionsAsync(request, runtime);
+        }
+
         public CreateTrFirewallV2Response CreateTrFirewallV2WithOptions(CreateTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1966,6 +2168,96 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteInstanceMembersWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteNatFirewallControlPolicyResponse DeleteNatFirewallControlPolicyWithOptions(DeleteNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuid))
+            {
+                query["AclUuid"] = request.AclUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNatFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteNatFirewallControlPolicyResponse> DeleteNatFirewallControlPolicyWithOptionsAsync(DeleteNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuid))
+            {
+                query["AclUuid"] = request.AclUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNatFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteNatFirewallControlPolicyResponse DeleteNatFirewallControlPolicy(DeleteNatFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNatFirewallControlPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteNatFirewallControlPolicyResponse> DeleteNatFirewallControlPolicyAsync(DeleteNatFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNatFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
         public DeleteTrFirewallV2Response DeleteTrFirewallV2WithOptions(DeleteTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3584,6 +3876,250 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DescribeInvadeEventListWithOptionsAsync(request, runtime);
         }
 
+        public DescribeNatFirewallControlPolicyResponse DescribeNatFirewallControlPolicyWithOptions(DescribeNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclAction))
+            {
+                query["AclAction"] = request.AclAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuid))
+            {
+                query["AclUuid"] = request.AclUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proto))
+            {
+                query["Proto"] = request.Proto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Release))
+            {
+                query["Release"] = request.Release;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNatFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeNatFirewallControlPolicyResponse> DescribeNatFirewallControlPolicyWithOptionsAsync(DescribeNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclAction))
+            {
+                query["AclAction"] = request.AclAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuid))
+            {
+                query["AclUuid"] = request.AclUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proto))
+            {
+                query["Proto"] = request.Proto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Release))
+            {
+                query["Release"] = request.Release;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNatFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeNatFirewallControlPolicyResponse DescribeNatFirewallControlPolicy(DescribeNatFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNatFirewallControlPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeNatFirewallControlPolicyResponse> DescribeNatFirewallControlPolicyAsync(DescribeNatFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNatFirewallControlPolicyWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeNatFirewallPolicyPriorUsedResponse DescribeNatFirewallPolicyPriorUsedWithOptions(DescribeNatFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNatFirewallPolicyPriorUsed",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNatFirewallPolicyPriorUsedResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeNatFirewallPolicyPriorUsedResponse> DescribeNatFirewallPolicyPriorUsedWithOptionsAsync(DescribeNatFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNatFirewallPolicyPriorUsed",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNatFirewallPolicyPriorUsedResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeNatFirewallPolicyPriorUsedResponse DescribeNatFirewallPolicyPriorUsed(DescribeNatFirewallPolicyPriorUsedRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNatFirewallPolicyPriorUsedWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeNatFirewallPolicyPriorUsedResponse> DescribeNatFirewallPolicyPriorUsedAsync(DescribeNatFirewallPolicyPriorUsedRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNatFirewallPolicyPriorUsedWithOptionsAsync(request, runtime);
+        }
+
         public DescribeOutgoingDestinationIPResponse DescribeOutgoingDestinationIPWithOptions(DescribeOutgoingDestinationIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4414,6 +4950,136 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRiskEventGroupWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeRiskEventPayloadResponse DescribeRiskEventPayloadWithOptions(DescribeRiskEventPayloadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIP))
+            {
+                query["DstIP"] = request.DstIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstVpcId))
+            {
+                query["DstVpcId"] = request.DstVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallType))
+            {
+                query["FirewallType"] = request.FirewallType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicIP))
+            {
+                query["PublicIP"] = request.PublicIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIP))
+            {
+                query["SrcIP"] = request.SrcIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcVpcId))
+            {
+                query["SrcVpcId"] = request.SrcVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UUID))
+            {
+                query["UUID"] = request.UUID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRiskEventPayload",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRiskEventPayloadResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeRiskEventPayloadResponse> DescribeRiskEventPayloadWithOptionsAsync(DescribeRiskEventPayloadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIP))
+            {
+                query["DstIP"] = request.DstIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstVpcId))
+            {
+                query["DstVpcId"] = request.DstVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallType))
+            {
+                query["FirewallType"] = request.FirewallType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicIP))
+            {
+                query["PublicIP"] = request.PublicIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIP))
+            {
+                query["SrcIP"] = request.SrcIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcVpcId))
+            {
+                query["SrcVpcId"] = request.SrcVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UUID))
+            {
+                query["UUID"] = request.UUID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRiskEventPayload",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRiskEventPayloadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeRiskEventPayloadResponse DescribeRiskEventPayload(DescribeRiskEventPayloadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRiskEventPayloadWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeRiskEventPayloadResponse> DescribeRiskEventPayloadAsync(DescribeRiskEventPayloadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRiskEventPayloadWithOptionsAsync(request, runtime);
         }
 
         public DescribeTrFirewallPolicyBackUpAssociationListResponse DescribeTrFirewallPolicyBackUpAssociationListWithOptions(DescribeTrFirewallPolicyBackUpAssociationListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7294,6 +7960,282 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceMemberAttributesWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyNatFirewallControlPolicyResponse ModifyNatFirewallControlPolicyWithOptions(ModifyNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclAction))
+            {
+                query["AclAction"] = request.AclAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuid))
+            {
+                query["AclUuid"] = request.AclUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationNameList))
+            {
+                query["ApplicationNameList"] = request.ApplicationNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPort))
+            {
+                query["DestPort"] = request.DestPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortGroup))
+            {
+                query["DestPortGroup"] = request.DestPortGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortType))
+            {
+                query["DestPortType"] = request.DestPortType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
+            {
+                query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proto))
+            {
+                query["Proto"] = request.Proto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Release))
+            {
+                query["Release"] = request.Release;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyNatFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyNatFirewallControlPolicyResponse> ModifyNatFirewallControlPolicyWithOptionsAsync(ModifyNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclAction))
+            {
+                query["AclAction"] = request.AclAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuid))
+            {
+                query["AclUuid"] = request.AclUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationNameList))
+            {
+                query["ApplicationNameList"] = request.ApplicationNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPort))
+            {
+                query["DestPort"] = request.DestPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortGroup))
+            {
+                query["DestPortGroup"] = request.DestPortGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortType))
+            {
+                query["DestPortType"] = request.DestPortType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
+            {
+                query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proto))
+            {
+                query["Proto"] = request.Proto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Release))
+            {
+                query["Release"] = request.Release;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyNatFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyNatFirewallControlPolicyResponse ModifyNatFirewallControlPolicy(ModifyNatFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyNatFirewallControlPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyNatFirewallControlPolicyResponse> ModifyNatFirewallControlPolicyAsync(ModifyNatFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyNatFirewallControlPolicyWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyNatFirewallControlPolicyPositionResponse ModifyNatFirewallControlPolicyPositionWithOptions(ModifyNatFirewallControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuid))
+            {
+                query["AclUuid"] = request.AclUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewOrder))
+            {
+                query["NewOrder"] = request.NewOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyNatFirewallControlPolicyPosition",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyNatFirewallControlPolicyPositionResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyNatFirewallControlPolicyPositionResponse> ModifyNatFirewallControlPolicyPositionWithOptionsAsync(ModifyNatFirewallControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuid))
+            {
+                query["AclUuid"] = request.AclUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewOrder))
+            {
+                query["NewOrder"] = request.NewOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyNatFirewallControlPolicyPosition",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyNatFirewallControlPolicyPositionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyNatFirewallControlPolicyPositionResponse ModifyNatFirewallControlPolicyPosition(ModifyNatFirewallControlPolicyPositionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyNatFirewallControlPolicyPositionWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyNatFirewallControlPolicyPositionResponse> ModifyNatFirewallControlPolicyPositionAsync(ModifyNatFirewallControlPolicyPositionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyNatFirewallControlPolicyPositionWithOptionsAsync(request, runtime);
         }
 
         /**
