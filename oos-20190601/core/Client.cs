@@ -5171,6 +5171,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupld))
+            {
+                query["ResourceGroupld"] = request.ResourceGroupld;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
             {
                 query["ShareType"] = request.ShareType;
@@ -5247,6 +5251,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupld))
+            {
+                query["ResourceGroupld"] = request.ResourceGroupld;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
             {

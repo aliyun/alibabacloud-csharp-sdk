@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string OperationSystem { get; set; }
 
+            [NameInMap("ResourceGroupld")]
+            [Validation(Required=false)]
+            public string ResourceGroupld { get; set; }
+
             /// <summary>
             /// Queries the details of patch baselines.
             /// </summary>

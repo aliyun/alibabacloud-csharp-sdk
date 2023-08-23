@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupld")]
+        [Validation(Required=false)]
+        public string ResourceGroupld { get; set; }
+
         /// <summary>
         /// The token that is used to retrieve the next page of results.
         /// </summary>
