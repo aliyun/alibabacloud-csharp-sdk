@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         /// <summary>
         /// The read/write mode that you want to configure for the topic. Valid values:
         /// 
-        /// *   **6:** Both read and write operations are allowed.
-        /// *   **4:** Write operations are forbidden.
-        /// *   **2:** Read operations are forbidden.
+        /// *   **6**: Both read and write operations are allowed.
+        /// *   **4**: Write operations are forbidden.
+        /// *   **2**: Read operations are forbidden.
         /// </summary>
         [NameInMap("Perm")]
         [Validation(Required=false)]

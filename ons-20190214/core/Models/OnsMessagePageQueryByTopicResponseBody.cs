@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public string BornHost { get; set; }
 
                     /// <summary>
-                    /// The timestamp when the message was generated. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                    /// The time when the message was generated. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
                     /// </summary>
                     [NameInMap("BornTimestamp")]
                     [Validation(Required=false)]
                     public long? BornTimestamp { get; set; }
 
                     /// <summary>
-                    /// The ID of the instance.
+                    /// The ID of the instance
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -92,10 +92,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                             /// 
                             /// *   **TRACE_ON**: indicates whether a trace of the message exists.
                             /// *   **KEYS**: indicates the key of the message.
-                            /// *   **TAGS**: indicates the tag that is attached to the message.
+                            /// *   **TAGS**: indicates the tag of the message.
                             /// *   **INSTANCE_ID**: indicates the ID of the instance that contains the message.
                             /// 
-                            /// For more information about the terms that are used in Message Queue for Apache RocketMQ, see [Terms](~~29533~~).
+                            /// For information about the terms that are used in ApsaraMQ for RocketMQ see [Terms](~~29533~~).
                             /// </summary>
                             [NameInMap("Name")]
                             [Validation(Required=false)]
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     }
 
                     /// <summary>
-                    /// The number of retries that Message Queue for Apache RocketMQ performed to send the message to consumers.
+                    /// The number of retries that were performed to send the message to consumers.
                     /// </summary>
                     [NameInMap("ReconsumeTimes")]
                     [Validation(Required=false)]
                     public int? ReconsumeTimes { get; set; }
 
                     /// <summary>
-                    /// The Message Queue for Apache RocketMQ broker that stores the message.
+                    /// The ApsaraMQ for RocketMQ broker that stores the message.
                     /// </summary>
                     [NameInMap("StoreHost")]
                     [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public int? StoreSize { get; set; }
 
                     /// <summary>
-                    /// The timestamp when the Message Queue for Apache RocketMQ broker stored the message. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                    /// The time when the ApsaraMQ for RocketMQ broker stored the message. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
                     /// </summary>
                     [NameInMap("StoreTimestamp")]
                     [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The ID of the query task. The first time you call this operation to query the dead-letter messages that are sent to a specified consumer group within a specified time range, this parameter is returned. You can use the task ID to query the details of dead-letter messages on other returned pages.
+            /// The ID of the query task. The first time you call this operation to query the messages that are sent to a specified consumer group within a specified time range, this parameter is returned. You can use the task ID to query the details of messages on other returned pages.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]

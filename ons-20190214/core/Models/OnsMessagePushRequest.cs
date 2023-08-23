@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsMessagePushRequest : TeaModel {
         /// <summary>
-        /// The ID of the consumer. You can call the [OnsConsumerGetConnection](~~29598~~) operation to query the ID of each consumer in a consumer group.
+        /// The ID of the consumer client. You can call the [OnsConsumerGetConnection](~~29598~~) operation to query client IDs.
         /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the Message Queue for Apache RocketMQ instance to which the specified consumer group belongs.
+        /// The ID of the ApsaraMQ for RocketMQ instance to which the specified consumer group belongs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

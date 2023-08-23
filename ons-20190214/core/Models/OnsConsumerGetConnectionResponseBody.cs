@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsConsumerGetConnectionResponseBody : TeaModel {
         /// <summary>
-        /// The data that is returned.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public OnsConsumerGetConnectionResponseBodyData Data { get; set; }
         public class OnsConsumerGetConnectionResponseBodyData : TeaModel {
             /// <summary>
-            /// The connection information about the consumers in the specified group.
+            /// The client connection information of the consumer group.
             /// </summary>
             [NameInMap("ConnectionList")]
             [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public List<OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo> ConnectionDo { get; set; }
                 public class OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo : TeaModel {
                     /// <summary>
-                    /// The IP address and port number of the consumer instance.
+                    /// The IP address and port number of the consumer client.
                     /// </summary>
                     [NameInMap("ClientAddr")]
                     [Validation(Required=false)]
                     public string ClientAddr { get; set; }
 
                     /// <summary>
-                    /// The ID of the consumer instance.
+                    /// The ID of the consumer client.
                     /// </summary>
                     [NameInMap("ClientId")]
                     [Validation(Required=false)]

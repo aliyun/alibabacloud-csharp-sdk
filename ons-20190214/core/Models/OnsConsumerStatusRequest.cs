@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         /// 
         /// *   **true**: The information about thread stack traces is queried. You can obtain the information from the **Jstack** response parameter.
         /// 
-        /// >  If you want to obtain the information about thread stack traces, make sure that the **Detail** parameter in the request is set to **true**.
+        /// > If you want to obtain the information about thread stack traces, make sure that the **Detail** parameter in the request is set to **true**.
         /// 
         /// *   **false**: The information about thread stack traces is not queried. The value of the **Jstack** response parameter is empty. This value is the default value of the NeedJstack parameter.
         /// </summary>

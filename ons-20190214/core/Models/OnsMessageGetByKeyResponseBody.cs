@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsMessageGetByKeyResponseBody : TeaModel {
         /// <summary>
-        /// The information about the message that is queried.
+        /// The list of returned results.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public string BornHost { get; set; }
 
                 /// <summary>
-                /// The timestamp when the message was produced.
+                /// The timestamp that indicates when the message was produced.
                 /// </summary>
                 [NameInMap("BornTimestamp")]
                 [Validation(Required=false)]
                 public long? BornTimestamp { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The ID of the instance
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                         /// <summary>
                         /// The name of the attribute. Valid values:
                         /// 
-                        /// *   **TRACE_ON**: indicates whether a trace of the message exists.
+                        /// *   **TRACE_ON**: indicates whether the message trace exists.
                         /// 
                         /// \-\*\* KEYS\*\*: indicates the key of the message.
                         /// 
                         /// *   **TAGS**: indicates the tag that is attached to the message.
                         /// *   **INSTANCE_ID**: indicates the ID of the instance that contains the message.
                         /// 
-                        /// For more information about the terms that are used in Message Queue for Apache RocketMQ, see [Terms](~~29533~~).
+                        /// For information about the terms that are used in ApsaraMQ for RocketMQ, see [Terms](~~29533~~).
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 }
 
                 /// <summary>
-                /// The number of retries that Message Queue for Apache RocketMQ performed to send the message to consumers.
+                /// The number of retries that were performed to send the message to consumers.
                 /// </summary>
                 [NameInMap("ReconsumeTimes")]
                 [Validation(Required=false)]
                 public int? ReconsumeTimes { get; set; }
 
                 /// <summary>
-                /// The Message Queue for Apache RocketMQ broker that stores the message.
+                /// The ApsaraMQ for RocketMQ broker that stores the message.
                 /// </summary>
                 [NameInMap("StoreHost")]
                 [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public int? StoreSize { get; set; }
 
                 /// <summary>
-                /// The timestamp when the Message Queue for Apache RocketMQ broker stored the message.
+                /// The timestamp that indicates when the ApsaraMQ for RocketMQ broker stored the message.
                 /// </summary>
                 [NameInMap("StoreTimestamp")]
                 [Validation(Required=false)]

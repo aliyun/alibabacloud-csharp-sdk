@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTraceGetResultResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+        /// The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the instance that contains the message.
+            /// The ID of the instance
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     /// *   **SEND_FAILED**: The message failed to be sent.
                     /// *   **SEND_ROLLBACK:** The message is a transactional message and is rolled back.
                     /// *   **SEND_UNKNOWN:** The message is a transactional message and is not committed.
-                    /// *   **SEND_DELAY:** The message is a scheduled or delayed message and is waiting to be sent at the specified point in time.
+                    /// *   **SEND_DELAY:** The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                                     public int? CostTime { get; set; }
 
                                     /// <summary>
-                                    /// The number of attempts that the Message Queue for Apache RocketMQ broker tried to send the message to the consumer.
+                                    /// The number of attempts that the ApsaraMQ for RocketMQ broker tried to send the message to the consumer.
                                     /// </summary>
                                     [NameInMap("ReconsumeTimes")]
                                     [Validation(Required=false)]
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public string Tag { get; set; }
 
                     /// <summary>
-                    /// The topic in which the message is stored.
+                    /// The topic to which the message belongs.
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]

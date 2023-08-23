@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsGroupConsumerUpdateRequest : TeaModel {
         /// <summary>
-        /// The ID of the consumer group for which you want to configure the read permissions.
+        /// The ID of the consumer group for which you want to configure read permissions.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Specifies whether to authorize the consumer group with the specified ID to read messages. Valid values:
+        /// Specifies whether to authorize the consumer group to read messages. Valid values:
         /// 
-        /// *   **true**: Authorize the consumer group with the specified ID to read messages.
-        /// *   **false**: Do not authorize the consumer group with the specified group ID to read messages.
+        /// *   **true**: The consumer group can read messages.
+        /// *   **false**: The consumer group cannot read messages.
         /// 
         /// Default value: **true**.
         /// </summary>

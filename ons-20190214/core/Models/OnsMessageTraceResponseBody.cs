@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public string ConsumerGroup { get; set; }
 
                 /// <summary>
-                /// The ID of the instance where the message that you want to query resides.
+                /// The ID of the instance to which the message you want to query belongs.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 /// The status of the message. Valid values:
                 /// 
                 /// *   **CONSUMED**: The message is consumed.
-                /// *   **CONSUMED_BUT_FILTERED:** No consumer groups subscribe to the message. The message is filtered out and not consumed.
-                /// *   **NOT_CONSUME_YET**: The message is pending to be consumed.
+                /// *   **CONSUMED_BUT_FILTERED**: No consumer group subscribes to the message. The message is filtered out and not consumed.
+                /// *   **NOT_CONSUME_YET**: The message is not consumed.
                 /// *   **NOT_ONLINE**: The consumer group is offline.
                 /// *   **UNKNOWN**: The message is not consumed due to unknown reasons.
                 /// </summary>

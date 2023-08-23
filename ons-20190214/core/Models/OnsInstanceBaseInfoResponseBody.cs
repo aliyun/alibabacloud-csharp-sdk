@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         [Validation(Required=false)]
         public OnsInstanceBaseInfoResponseBodyInstanceBaseInfo InstanceBaseInfo { get; set; }
         public class OnsInstanceBaseInfoResponseBodyInstanceBaseInfo : TeaModel {
+            /// <summary>
+            /// The time when the instance was created. The value of this parameter is a UNIX timestamp in milliseconds.
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The endpoints that correspond to different protocols.
+            /// The endpoints used to access ApsaraMQ for RocketMQ over different protocols.
             /// </summary>
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 ///     *   TCP client SDK for Java: V2.0.0.Final or later For more information, see [Release notes for the SDK for Java](~~325569~~).
                 ///     *   TCP client SDK for C++: V3.0.0 or later For more information, see [Release notes for the SDK for C++](~~325570~~).
                 /// 
-                /// *   You must pay the data transfer cost when you use a public TCP endpoint. For more information, see [Internet traffic fee](~~325571~~).
+                /// *   You are charged for Internet traffic when you use a public TCP endpoint. For more information, see [Internet traffic fee](~~325571~~).
                 /// </summary>
                 [NameInMap("TcpInternetEndpoint")]
                 [Validation(Required=false)]
@@ -77,14 +80,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             /// Indicates whether the instance uses a namespace. Valid values:
             /// 
             /// *   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.
-            /// *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.
+            /// *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within the instance and across all instances.
             /// </summary>
             [NameInMap("IndependentNaming")]
             [Validation(Required=false)]
             public bool? IndependentNaming { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The ID of the instance
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -114,28 +117,28 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             /// <summary>
             /// The instance type. Valid values:
             /// 
-            /// *   **1**: The instance is a Standard Edition instance that uses the pay-as-you-go billing method.
-            /// *   **2**: The instance is an Enterprise Platinum Edition instance that uses the subscription billing method.
+            /// *   **1**: Standard Edition instances that use the pay-as-you-go billing method.
+            /// *   **2**: Enterprise Platinum Edition instances that use the subscription billing method.
             /// 
-            /// For information about the editions and specifications of Message Queue for Apache RocketMQ instances, see [Instance editions](~~185261~~).
+            /// For information about the editions and specifications of ApsaraMQ for RocketMQ instances, see [Instance editions](~~185261~~).
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public int? InstanceType { get; set; }
 
             /// <summary>
-            /// The maximum transactions per second (TPS) for sending and receiving messages. Valid values: 5000, 10000, 20000, 50000, 100000, 200000, 300000, 500000, 800000, and 1000000.
+            /// The maximum messaging transactions per second (TPS). Valid values: 5000, 10000, 20000, 50000, 100000, 200000, 300000, 500000, 800000, and 1000000.
             /// 
-            /// For more information, see the description on the buy page.
+            /// You can view the details about messaging TPS on the buy page of ApsaraMQ for RocketMQ.
             /// 
-            /// >  This parameter is available only for Message Queue for Apache RocketMQ instances of the Enterprise Platinum Edition.
+            /// > This parameter is available only to the ApsaraMQ for RocketMQ Enterprise Platinum Edition instances.
             /// </summary>
             [NameInMap("MaxTps")]
             [Validation(Required=false)]
             public long? MaxTps { get; set; }
 
             /// <summary>
-            /// The point in time when the Enterprise Platinum Edition instance expires.
+            /// The time when the Enterprise Platinum Edition instance expires.
             /// </summary>
             [NameInMap("ReleaseTime")]
             [Validation(Required=false)]
@@ -151,16 +154,22 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             /// <summary>
             /// The maximum number of topics that can be created on the instance. Valid values: 25, 50, 100, 300, and 500.
             /// 
-            /// >  This parameter is available only for Message Queue for Apache RocketMQ instances of the Enterprise Platinum Edition.
+            /// > This parameter is available only to the ApsaraMQ for RocketMQ Enterprise Platinum Edition instances.
             /// </summary>
             [NameInMap("TopicCapacity")]
             [Validation(Required=false)]
             public int? TopicCapacity { get; set; }
 
+            /// <summary>
+            /// The commodity ID of the instance.
+            /// </summary>
             [NameInMap("spInstanceId")]
             [Validation(Required=false)]
             public string SpInstanceId { get; set; }
 
+            /// <summary>
+            /// The commodity type of the instance.
+            /// </summary>
             [NameInMap("spInstanceType")]
             [Validation(Required=false)]
             public int? SpInstanceType { get; set; }

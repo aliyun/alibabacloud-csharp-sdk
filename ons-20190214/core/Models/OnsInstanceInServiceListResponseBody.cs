@@ -20,22 +20,29 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             [Validation(Required=false)]
             public List<OnsInstanceInServiceListResponseBodyDataInstanceVO> InstanceVO { get; set; }
             public class OnsInstanceInServiceListResponseBodyDataInstanceVO : TeaModel {
+                /// <summary>
+                /// The time when the instance was created. The value of this parameter is a UNIX timestamp in milliseconds.
+                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("GroupCount")]
+                [Validation(Required=false)]
+                public int? GroupCount { get; set; }
 
                 /// <summary>
                 /// Indicates whether the instance uses a namespace. Valid values:
                 /// 
                 /// *   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.
-                /// *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.
+                /// *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within the instance and across all instances.
                 /// </summary>
                 [NameInMap("IndependentNaming")]
                 [Validation(Required=false)]
                 public bool? IndependentNaming { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The ID of the instance
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -65,8 +72,8 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 /// <summary>
                 /// The instance type. Valid values:
                 /// 
-                /// *   **1**: Standard Edition
-                /// *   **2**: Enterprise Platinum Edition
+                /// *   **1**: Standard Edition instances
+                /// *   **2**: Enterprise Platinum Edition instances
                 /// 
                 /// For more information about the instance editions and differences between the editions, see [Instance editions](~~185261~~).
                 /// </summary>
@@ -75,14 +82,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public int? InstanceType { get; set; }
 
                 /// <summary>
-                /// The point in time when the instance expires. If the instance is an Enterprise Platinum Edition instance, this parameter is returned.
+                /// The time when the instance expires. If the instance is an Enterprise Platinum Edition instance, this parameter is returned.
                 /// </summary>
                 [NameInMap("ReleaseTime")]
                 [Validation(Required=false)]
                 public long? ReleaseTime { get; set; }
 
                 /// <summary>
-                /// The tags that are attached to the instance.
+                /// The tags that are attached to the instance you want to query.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -93,14 +100,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public List<OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag> Tag { get; set; }
                     public class OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The key of the tag that is attached to the instance.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The value of the tag that is attached to the instance.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -109,6 +116,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     }
 
                 }
+
+                [NameInMap("TopicCount")]
+                [Validation(Required=false)]
+                public int? TopicCount { get; set; }
 
             }
 

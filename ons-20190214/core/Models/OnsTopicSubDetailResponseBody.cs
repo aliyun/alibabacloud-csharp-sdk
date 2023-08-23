@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTopicSubDetailResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public List<OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> SubscriptionDataList { get; set; }
                 public class OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList : TeaModel {
                     /// <summary>
-                    /// The ID of the consumer group.
+                    /// The ID of the consumer group that subscribes to the topic.
                     /// </summary>
                     [NameInMap("GroupId")]
                     [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The name of the topic.
+            /// The topic name.
             /// </summary>
             [NameInMap("Topic")]
             [Validation(Required=false)]

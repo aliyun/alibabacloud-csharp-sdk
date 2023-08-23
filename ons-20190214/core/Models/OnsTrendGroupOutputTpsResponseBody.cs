@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTrendGroupOutputTpsResponseBody : TeaModel {
         /// <summary>
-        /// The data that is returned.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public OnsTrendGroupOutputTpsResponseBodyData Data { get; set; }
         public class OnsTrendGroupOutputTpsResponseBodyData : TeaModel {
             /// <summary>
-            /// The data set that is returned based on sampling period.
+            /// The data set returned based on sampling period.
             /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public List<OnsTrendGroupOutputTpsResponseBodyDataRecordsStatsDataDo> StatsDataDo { get; set; }
                 public class OnsTrendGroupOutputTpsResponseBodyDataRecordsStatsDataDo : TeaModel {
                     /// <summary>
-                    /// Indicates the timestamp. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                    /// The X axis. The value of this parameter is a UNIX timestamp in milliseconds.
                     /// </summary>
                     [NameInMap("X")]
                     [Validation(Required=false)]
                     public long? X { get; set; }
 
                     /// <summary>
-                    /// Indicates the TPS for message consumption or the number of messages that are consumed.
+                    /// The Y axis. This parameter indicates the TPS for message consumption or the number of messages that are consumed.
                     /// </summary>
                     [NameInMap("Y")]
                     [Validation(Required=false)]
@@ -46,21 +46,21 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The name of the table that stores the data.
+            /// The name of the table.
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// The unit of the timestamp. Unit: milliseconds.
+            /// The unit of the timestamp.
             /// </summary>
             [NameInMap("XUnit")]
             [Validation(Required=false)]
             public string XUnit { get; set; }
 
             /// <summary>
-            /// The unit of the value of the Y parameter.
+            /// The total number of messages.
             /// </summary>
             [NameInMap("YUnit")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         }
 
         /// <summary>
-        /// The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+        /// The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

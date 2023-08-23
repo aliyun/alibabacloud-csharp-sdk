@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public bool? Detail { get; set; }
 
         /// <summary>
-        /// The ID of the consumer group whose message accumulation you want to query.
+        /// The ID of the consumer group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

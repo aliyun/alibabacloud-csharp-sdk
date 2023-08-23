@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsConsumerAccumulateResponseBody : TeaModel {
         /// <summary>
-        /// The information about message accumulation of topics to which the consumer group subscribes.
+        /// The message accumulation information about topics to which the specified consumer subscribes.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public long? LastTimestamp { get; set; }
 
                     /// <summary>
-                    /// The name of the topic.
+                    /// The topic name.
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The point in time when the latest message that was consumed by a consumer in the consumer group was produced.
+            /// The point in time when the latest message consumed by a consumer in the consumer group was produced.
             /// </summary>
             [NameInMap("LastTimestamp")]
             [Validation(Required=false)]
             public long? LastTimestamp { get; set; }
 
             /// <summary>
-            /// Indicates whether the consumer group is online. The group is online if one of the consumers in the group is online. Valid values:
+            /// Indicates whether the consumer group is online. The consumer group is online if one of the consumers in the group is online. Valid values:
             /// 
             /// *   **true**: The consumer group is online.
             /// *   **false**: The consumer group is offline.

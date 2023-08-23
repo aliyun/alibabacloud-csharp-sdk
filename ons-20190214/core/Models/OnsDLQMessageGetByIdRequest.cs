@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsDLQMessageGetByIdRequest : TeaModel {
         /// <summary>
-        /// The ID of the consumer group whose dead-letter messages you want to query.
+        /// The ID of the consumer group whose dead-letter message you want to query.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

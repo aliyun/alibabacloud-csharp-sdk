@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTraceQueryByMsgIdRequest : TeaModel {
         /// <summary>
-        /// The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the Message Queue for Apache RocketMQ instance which contains the specified topic.
+        /// The ID of the ApsaraMQ for RocketMQ instance that contains the specified topic.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public string MsgId { get; set; }
 
         /// <summary>
-        /// The topic in which the message you want to query is stored.
+        /// The topic that contains the message you want to query.
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsMessageDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the Message Queue for Apache RocketMQ Instance.
+        /// The ID of the ApsaraMQ for RocketMQ Instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

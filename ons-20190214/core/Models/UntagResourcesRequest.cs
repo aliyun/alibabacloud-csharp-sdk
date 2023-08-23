@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags that are attached to the specified resource. This parameter takes effect only when the **TagKey.N** parameter is not configured. Default value: **false**.
+        /// Specifies whether to remove all tags that are attached to the specified resource. This parameter takes effect only if the **TagKey** parameter is empty. Default value: **false**.
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The list of resource IDs.
+        /// The resource IDs.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resources from which you want to detach tags. Valid values:
+        /// The type of the resource from which you want to detach tags. Valid values:
         /// 
         /// *   **INSTANCE**
         /// *   **TOPIC**

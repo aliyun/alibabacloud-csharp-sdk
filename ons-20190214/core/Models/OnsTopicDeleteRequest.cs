@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTopicDeleteRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance that contains the topic you want to delete.
+        /// The ID of the instance to which the topic you want to delete belongs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

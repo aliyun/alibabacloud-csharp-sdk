@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public List<OnsTopicListResponseBodyDataPublishInfoDo> PublishInfoDo { get; set; }
             public class OnsTopicListResponseBodyDataPublishInfoDo : TeaModel {
                 /// <summary>
-                /// The point in time when the topic was created.
+                /// The time when the topic was created.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 /// Indicates whether the instance that contains the topic uses a namespace. Valid values:
                 /// 
                 /// *   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.
-                /// *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.
+                /// *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within an instance and across all instances.
                 /// </summary>
                 [NameInMap("IndependentNaming")]
                 [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The type of the messages. Valid values:
+                /// The message type. Valid values:
                 /// 
                 /// *   **0**: normal messages
                 /// *   **1**: partitionally ordered messages
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public int? MessageType { get; set; }
 
                 /// <summary>
-                /// The user ID of the topic owner.
+                /// The user ID of the topic owner. The value of this parameter is an Alibaba account ID.
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The code of the relationship between the current account and the topic. Valid values:
+                /// Indicates the relationship between the current account and the topic. Valid values:
                 /// 
                 /// *   **1**: The current account is the owner of the topic.
                 /// *   **2**: The current account can publish messages to the topic.
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public int? Relation { get; set; }
 
                 /// <summary>
-                /// The name of the relationship between the current account and the topic. The value of this parameter indicates that the current account is the owner of the topic, the current account can publish messages to the topic, the current account can subscribe to the topic, or the current account can publish messages to and subscribe to the topic.
+                /// The relationship between the current account and the topic. The value of this parameter indicates whether the current account is the owner of the topic, and whether the current account can subscribe or publish messages to the topic. the topic.
                 /// </summary>
                 [NameInMap("RelationName")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// The status of the topic. Valid values:
+                /// The status of the topic that is asynchronously created. Valid values:
                 /// 
                 /// *   **0**: The topic is being created.
                 /// *   **1**: The topic is being used.
@@ -112,14 +112,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public List<OnsTopicListResponseBodyDataPublishInfoDoTagsTag> Tag { get; set; }
                     public class OnsTopicListResponseBodyDataPublishInfoDoTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 }
 
                 /// <summary>
-                /// The name of the topic.
+                /// The topic name.
                 /// </summary>
                 [NameInMap("Topic")]
                 [Validation(Required=false)]

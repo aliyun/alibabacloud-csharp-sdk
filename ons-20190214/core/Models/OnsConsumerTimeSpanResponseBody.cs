@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsConsumerTimeSpanResponseBody : TeaModel {
         /// <summary>
-        /// The query results.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The earliest point in time when a message was published to the topic.
+            /// The point in time when the earliest stored message was published to the topic.
             /// </summary>
             [NameInMap("MaxTimeStamp")]
             [Validation(Required=false)]
             public long? MaxTimeStamp { get; set; }
 
             /// <summary>
-            /// The most recent point in time when a message was published to the topic.
+            /// The point in time when the most recently stored message was published to the topic.
             /// </summary>
             [NameInMap("MinTimeStamp")]
             [Validation(Required=false)]

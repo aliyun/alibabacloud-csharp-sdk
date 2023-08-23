@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsConsumerResetOffsetRequest : TeaModel {
         /// <summary>
-        /// The ID of the consumer group for which you want to reset the consumer offset.
+        /// The ID of the consumer group whose dead-letter message you want to query.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -40,13 +40,13 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         /// <summary>
         /// The method that you want to use to clear accumulated messages. Valid values:
         /// 
-        /// *   **0:** All accumulated messages are cleared. Messages that are not consumed are ignored. Consumers in the specified consumer group consume only messages that are published to the topic after the current point in time.
+        /// *   **0:** All accumulated messages are cleared. Messages that are not consumed are ignored. Consumers in the specified consumer group consume only messages that are published to the topic after the specified point in time.
         /// 
-        /// If "reconsumeLater" is returned, the accumulated messages are not cleared because the system is retrying to send the messages to consumers.
+        /// If "reconsumeLater" is returned, the accumulated messages are not cleared because the system is retrying to resend the messages to consumers.
         /// 
-        /// *   **1:** The messages that were published to the topic before a specified point in time are cleared. You must specify a point in time. Consumers in the specified consumer group consume only the messages that are published to the topic after the specified point in time.
+        /// *   **1:** The messages that were published to the topic before the specified point in time are cleared. You must specify a point in time. Consumers in the specified consumer group consume only the messages that are published to the topic after the specified point in time.
         /// 
-        /// You can specify a point in time within the time range that is from the earliest point in time when a message was published to the topic to the most recent point in time when a message was published to the topic. Points in time that are not within the allowed time range are invalid.
+        /// You can specify a point in time from the earliest point in time when a message was published to the topic to the most recent point in time when a message was published to the topic. Points in time that are not within the allowed time range are invalid.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

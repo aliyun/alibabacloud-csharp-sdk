@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the Message Queue for Apache RocketMQ instance that contains the specified group.
+        /// The ID of the ApsaraMQ for RocketMQ instance to which the specified consumer group belongs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

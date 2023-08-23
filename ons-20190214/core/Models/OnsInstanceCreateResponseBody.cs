@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsInstanceCreateResponseBody : TeaModel {
         /// <summary>
-        /// The results that are returned.
+        /// The result returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The edition of the instance. Valid value:
+            /// The edition of the instance that you created. Valid value:
             /// 
-            /// *   **1**: Standard Edition
+            /// *   **1**: Standard Edition instances
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]

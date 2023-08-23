@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTrendGroupOutputTpsRequest : TeaModel {
         /// <summary>
-        /// The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// The timestamp that indicates the beginning of the time range to query. Unit: milliseconds.
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// The timestamp that indicates the end of the time range to query. Unit: milliseconds.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the Message Queue for Apache RocketMQ instance which contains the specified consumer group.
+        /// The ID of the instance to which the consumer group you want to query belongs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

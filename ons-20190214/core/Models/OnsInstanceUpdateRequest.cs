@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         /// The new name of the instance. The name must meet the following rules:
         /// 
         /// *   The name of the instance must be unique in the region where the instance is deployed.
-        /// *   The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+        /// *   The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), underscores (\_), and Chinese characters.
         /// *   If you do not configure this parameter, the instance name remains unchanged.
         /// </summary>
         [NameInMap("InstanceName")]

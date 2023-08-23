@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsRegionListResponseBody : TeaModel {
         /// <summary>
-        /// The information about the message that is queried.
+        /// The result returned
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public string OnsRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The name of the region.
                 /// </summary>
                 [NameInMap("RegionName")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsConsumerStatusResponseBody : TeaModel {
         /// <summary>
-        /// The query results.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public string ClientId { get; set; }
 
                     /// <summary>
-                    /// The programming language that the consumer client supports.
+                    /// The programming language in which the consumer is developed.
                     /// </summary>
                     [NameInMap("Language")]
                     [Validation(Required=false)]
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             /// <summary>
             /// The consumption mode. Valid values:
             /// 
-            /// *   **CLUSTERING:** the clustering consumption mode
-            /// *   **BROADCASTING:** the broadcasting consumption mode
+            /// *   **CLUSTERING**: the clustering consumption mode
+            /// *   **BROADCASTING**: the broadcasting consumption mode
             /// 
             /// For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).
             /// </summary>
@@ -113,8 +113,8 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     /// <summary>
                     /// The consumption mode. Valid values:
                     /// 
-                    /// *   **CLUSTERING:** the clustering consumption mode
-                    /// *   **BROADCASTING:** the broadcasting consumption mode
+                    /// *   **CLUSTERING**: the clustering consumption mode
+                    /// *   **BROADCASTING**: the broadcasting consumption mode
                     /// 
                     /// For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).
                     /// </summary>
@@ -125,8 +125,8 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     /// <summary>
                     /// The mode in which the consumer consumes messages. Valid values:
                     /// 
-                    /// *   **PUSH:** The Message Queue for Apache RocketMQ broker pushes messages to the consumer.
-                    /// *   **PULL:** The consumer pulls messages from the Message Queue for Apache RocketMQ broker.
+                    /// *   **PUSH**: The ApsaraMQ for RocketMQ broker pushes messages to the consumer.
+                    /// *   **PULL**: The consumer pulls messages from the ApsaraMQ for RocketMQ broker.
                     /// </summary>
                     [NameInMap("ConsumeType")]
                     [Validation(Required=false)]
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The maximum latency of message consumption in all topics to which the consumer group subscribe. Unit: milliseconds.
+            /// The maximum latency of message consumption in all topics to which the consumer group subscribes. Unit: milliseconds.
             /// </summary>
             [NameInMap("DelayTime")]
             [Validation(Required=false)]
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public long? LastTimestamp { get; set; }
 
                     /// <summary>
-                    /// The name of the topic.
+                    /// The topic name.
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The ID of the instance
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -394,8 +394,8 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             /// <summary>
             /// Indicates whether load balancing is performed as expected. Valid values:
             /// 
-            /// *   **true:** Load balancing is performed as expected.
-            /// *   **false:** Load balancing is not performed as expected.
+            /// *   **true**: Load balancing is performed as expected.
+            /// *   **false**: Load balancing is not performed as expected.
             /// </summary>
             [NameInMap("RebalanceOK")]
             [Validation(Required=false)]

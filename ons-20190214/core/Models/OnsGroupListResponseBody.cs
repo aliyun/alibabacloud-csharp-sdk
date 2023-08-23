@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public List<OnsGroupListResponseBodyDataSubscribeInfoDo> SubscribeInfoDo { get; set; }
             public class OnsGroupListResponseBodyDataSubscribeInfoDo : TeaModel {
                 /// <summary>
-                /// The time when the group was created.
+                /// The point in time when the consumer group was created.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The protocol over which the queried consumer groups consume messages. All clients in a consumer group communicate with the Message Queue for Apache RocketMQ broker over the same protocol. A consumer group cannot contain TCP clients and HTTP clients at the same time. You must create different consumer groups for TCP clients and HTTP clients. Valid values:
+                /// The protocol over which the queried consumer group publishes and subscribes to messages. All clients in a consumer group communicate with the ApsaraMQ for RocketMQ broker over the same protocol. You must create different consumer groups for TCP clients and HTTP clients. Valid values:
                 /// 
-                /// *   **tcp**: indicates that the consumer group consumes messages over TCP.
-                /// *   **http**: indicates that the consumer group consumes messages over HTTP.
+                /// *   **tcp**: indicates that the consumer group publishes and subscribes to messages over TCP.
+                /// *   **http**: indicates that the consumer group publishes and subscribes to messages over HTTP.
                 /// </summary>
                 [NameInMap("GroupType")]
                 [Validation(Required=false)]
@@ -48,21 +48,21 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 /// Indicates whether the instance uses a namespace. Valid values:
                 /// 
                 /// *   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.
-                /// *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.
+                /// *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within the instance and across all instances.
                 /// </summary>
                 [NameInMap("IndependentNaming")]
                 [Validation(Required=false)]
                 public bool? IndependentNaming { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The ID of the instance
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the user who created the consumer group.
+                /// The Alibaba Cloud account ID of the user who created the consumer group.
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public List<OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag> Tag { get; set; }
                     public class OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The key of the tag that is attached to the consumer group.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The value of the tag that is attached to the consumer group.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 }
 
                 /// <summary>
-                /// The time when the group ID was updated.
+                /// The most recent point in time when the consumer group was updated.
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
