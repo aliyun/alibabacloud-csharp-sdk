@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillRecordTime { get; set; }
 
+                [NameInMap("book_model")]
+                [Validation(Required=false)]
+                public string BookModel { get; set; }
+
                 [NameInMap("book_time")]
                 [Validation(Required=false)]
                 public string BookTime { get; set; }
@@ -282,6 +286,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("third_itinerary_id")]
                 [Validation(Required=false)]
                 public string ThirdItineraryId { get; set; }
+
+                [NameInMap("time_type")]
+                [Validation(Required=false)]
+                public string TimeType { get; set; }
 
                 [NameInMap("traveler_id")]
                 [Validation(Required=false)]

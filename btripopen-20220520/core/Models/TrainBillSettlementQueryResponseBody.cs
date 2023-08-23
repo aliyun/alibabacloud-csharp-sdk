@@ -112,6 +112,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? ChangeFee { get; set; }
 
+                [NameInMap("coach_no")]
+                [Validation(Required=false)]
+                public string CoachNo { get; set; }
+
                 [NameInMap("cost_center")]
                 [Validation(Required=false)]
                 public string CostCenter { get; set; }
@@ -223,6 +227,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("settlement_type")]
                 [Validation(Required=false)]
                 public string SettlementType { get; set; }
+
+                [NameInMap("short_ticket_no")]
+                [Validation(Required=false)]
+                public string ShortTicketNo { get; set; }
 
                 [NameInMap("status")]
                 [Validation(Required=false)]

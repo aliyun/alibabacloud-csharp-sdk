@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }
 
+                [NameInMap("average_nights")]
+                [Validation(Required=false)]
+                public string AverageNights { get; set; }
+
                 [NameInMap("bill_record_time")]
                 [Validation(Required=false)]
                 public string BillRecordTime { get; set; }
@@ -211,6 +215,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
+
+                [NameInMap("reserve_rule")]
+                [Validation(Required=false)]
+                public string ReserveRule { get; set; }
+
+                [NameInMap("room_no")]
+                [Validation(Required=false)]
+                public string RoomNo { get; set; }
 
                 [NameInMap("room_number")]
                 [Validation(Required=false)]

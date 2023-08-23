@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            [NameInMap("is_deleted")]
+            [Validation(Required=false)]
+            public string IsDeleted { get; set; }
+
             [NameInMap("itineraries")]
             [Validation(Required=false)]
             public List<QueryReimbursementOrderResponseBodyModuleItineraries> Itineraries { get; set; }
