@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class CreateSheetHeaders : TeaModel {
+    public class AddWorkspaceMembersHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         [NameInMap("AccountContext")]
         [Validation(Required=false)]
-        public CreateSheetHeadersAccountContext AccountContext { get; set; }
-        public class CreateSheetHeadersAccountContext : TeaModel {
+        public AddWorkspaceMembersHeadersAccountContext AccountContext { get; set; }
+        public class AddWorkspaceMembersHeadersAccountContext : TeaModel {
             [NameInMap("accountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
