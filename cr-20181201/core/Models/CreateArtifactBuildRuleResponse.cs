@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class ListChartResponse : TeaModel {
+    public class CreateArtifactBuildRuleResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListChartResponseBody Body { get; set; }
+        public CreateArtifactBuildRuleResponseBody Body { get; set; }
 
     }
 

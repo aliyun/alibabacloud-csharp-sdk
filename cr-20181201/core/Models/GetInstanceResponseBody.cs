@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("InstanceIssue")]
+        [Validation(Required=false)]
+        public string InstanceIssue { get; set; }
+
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }

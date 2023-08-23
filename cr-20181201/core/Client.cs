@@ -275,6 +275,122 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the rule.
+          *
+          * @param request CreateArtifactBuildRuleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateArtifactBuildRuleResponse
+         */
+        public CreateArtifactBuildRuleResponse CreateArtifactBuildRuleWithOptions(CreateArtifactBuildRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactType))
+            {
+                query["ArtifactType"] = request.ArtifactType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeId))
+            {
+                query["ScopeId"] = request.ScopeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                query["ScopeType"] = request.ScopeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateArtifactBuildRule",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateArtifactBuildRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * The ID of the rule.
+          *
+          * @param request CreateArtifactBuildRuleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateArtifactBuildRuleResponse
+         */
+        public async Task<CreateArtifactBuildRuleResponse> CreateArtifactBuildRuleWithOptionsAsync(CreateArtifactBuildRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactType))
+            {
+                query["ArtifactType"] = request.ArtifactType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeId))
+            {
+                query["ScopeId"] = request.ScopeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                query["ScopeType"] = request.ScopeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateArtifactBuildRule",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateArtifactBuildRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * The ID of the rule.
+          *
+          * @param request CreateArtifactBuildRuleRequest
+          * @return CreateArtifactBuildRuleResponse
+         */
+        public CreateArtifactBuildRuleResponse CreateArtifactBuildRule(CreateArtifactBuildRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateArtifactBuildRuleWithOptions(request, runtime);
+        }
+
+        /**
+          * The ID of the rule.
+          *
+          * @param request CreateArtifactBuildRuleRequest
+          * @return CreateArtifactBuildRuleResponse
+         */
+        public async Task<CreateArtifactBuildRuleResponse> CreateArtifactBuildRuleAsync(CreateArtifactBuildRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateArtifactBuildRuleWithOptionsAsync(request, runtime);
+        }
+
         public CreateBuildRecordByRuleResponse CreateBuildRecordByRuleWithOptions(CreateBuildRecordByRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -757,6 +873,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await CreateInstanceEndpointAclPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request CreateInstanceVpcEndpointLinkedVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateInstanceVpcEndpointLinkedVpcResponse
+         */
         public CreateInstanceVpcEndpointLinkedVpcResponse CreateInstanceVpcEndpointLinkedVpcWithOptions(CreateInstanceVpcEndpointLinkedVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -800,6 +923,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<CreateInstanceVpcEndpointLinkedVpcResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request CreateInstanceVpcEndpointLinkedVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateInstanceVpcEndpointLinkedVpcResponse
+         */
         public async Task<CreateInstanceVpcEndpointLinkedVpcResponse> CreateInstanceVpcEndpointLinkedVpcWithOptionsAsync(CreateInstanceVpcEndpointLinkedVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -843,12 +973,24 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<CreateInstanceVpcEndpointLinkedVpcResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request CreateInstanceVpcEndpointLinkedVpcRequest
+          * @return CreateInstanceVpcEndpointLinkedVpcResponse
+         */
         public CreateInstanceVpcEndpointLinkedVpcResponse CreateInstanceVpcEndpointLinkedVpc(CreateInstanceVpcEndpointLinkedVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateInstanceVpcEndpointLinkedVpcWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request CreateInstanceVpcEndpointLinkedVpcRequest
+          * @return CreateInstanceVpcEndpointLinkedVpcResponse
+         */
         public async Task<CreateInstanceVpcEndpointLinkedVpcResponse> CreateInstanceVpcEndpointLinkedVpcAsync(CreateInstanceVpcEndpointLinkedVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2069,6 +2211,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await DeleteChainWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.
+          *
+          * @param request DeleteChartNamespaceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteChartNamespaceResponse
+         */
         public DeleteChartNamespaceResponse DeleteChartNamespaceWithOptions(DeleteChartNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2100,6 +2249,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<DeleteChartNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.
+          *
+          * @param request DeleteChartNamespaceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteChartNamespaceResponse
+         */
         public async Task<DeleteChartNamespaceResponse> DeleteChartNamespaceWithOptionsAsync(DeleteChartNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2131,12 +2287,24 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<DeleteChartNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.
+          *
+          * @param request DeleteChartNamespaceRequest
+          * @return DeleteChartNamespaceResponse
+         */
         public DeleteChartNamespaceResponse DeleteChartNamespace(DeleteChartNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteChartNamespaceWithOptions(request, runtime);
         }
 
+        /**
+          * >  If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.
+          *
+          * @param request DeleteChartNamespaceRequest
+          * @return DeleteChartNamespaceResponse
+         */
         public async Task<DeleteChartNamespaceResponse> DeleteChartNamespaceAsync(DeleteChartNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2577,6 +2745,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await DeleteInstanceVpcEndpointLinkedVpcWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.
+          *
+          * @param request DeleteNamespaceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNamespaceResponse
+         */
         public DeleteNamespaceResponse DeleteNamespaceWithOptions(DeleteNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2608,6 +2783,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<DeleteNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.
+          *
+          * @param request DeleteNamespaceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNamespaceResponse
+         */
         public async Task<DeleteNamespaceResponse> DeleteNamespaceWithOptionsAsync(DeleteNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2639,12 +2821,24 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<DeleteNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.
+          *
+          * @param request DeleteNamespaceRequest
+          * @return DeleteNamespaceResponse
+         */
         public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNamespaceWithOptions(request, runtime);
         }
 
+        /**
+          * > After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.
+          *
+          * @param request DeleteNamespaceRequest
+          * @return DeleteNamespaceResponse
+         */
         public async Task<DeleteNamespaceResponse> DeleteNamespaceAsync(DeleteNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2971,6 +3165,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await DeleteRepoTriggerWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you delete a repository, all images in the repository are also deleted.
+          *
+          * @param request DeleteRepositoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteRepositoryResponse
+         */
         public DeleteRepositoryResponse DeleteRepositoryWithOptions(DeleteRepositoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3010,6 +3211,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<DeleteRepositoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you delete a repository, all images in the repository are also deleted.
+          *
+          * @param request DeleteRepositoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteRepositoryResponse
+         */
         public async Task<DeleteRepositoryResponse> DeleteRepositoryWithOptionsAsync(DeleteRepositoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3049,12 +3257,24 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<DeleteRepositoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you delete a repository, all images in the repository are also deleted.
+          *
+          * @param request DeleteRepositoryRequest
+          * @return DeleteRepositoryResponse
+         */
         public DeleteRepositoryResponse DeleteRepository(DeleteRepositoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteRepositoryWithOptions(request, runtime);
         }
 
+        /**
+          * If you delete a repository, all images in the repository are also deleted.
+          *
+          * @param request DeleteRepositoryRequest
+          * @return DeleteRepositoryResponse
+         */
         public async Task<DeleteRepositoryResponse> DeleteRepositoryAsync(DeleteRepositoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3119,6 +3339,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await GetArtifactBuildTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the Container Registry instance.
+          *
+          * @param request GetAuthorizationTokenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAuthorizationTokenResponse
+         */
         public GetAuthorizationTokenResponse GetAuthorizationTokenWithOptions(GetAuthorizationTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3146,6 +3373,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetAuthorizationTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the Container Registry instance.
+          *
+          * @param request GetAuthorizationTokenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAuthorizationTokenResponse
+         */
         public async Task<GetAuthorizationTokenResponse> GetAuthorizationTokenWithOptionsAsync(GetAuthorizationTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3173,12 +3407,24 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetAuthorizationTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the Container Registry instance.
+          *
+          * @param request GetAuthorizationTokenRequest
+          * @return GetAuthorizationTokenResponse
+         */
         public GetAuthorizationTokenResponse GetAuthorizationToken(GetAuthorizationTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAuthorizationTokenWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the Container Registry instance.
+          *
+          * @param request GetAuthorizationTokenRequest
+          * @return GetAuthorizationTokenResponse
+         */
         public async Task<GetAuthorizationTokenResponse> GetAuthorizationTokenAsync(GetAuthorizationTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3833,6 +4079,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await GetNamespaceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request GetRepoBuildRecordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetRepoBuildRecordResponse
+         */
         public GetRepoBuildRecordResponse GetRepoBuildRecordWithOptions(GetRepoBuildRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3864,6 +4117,13 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetRepoBuildRecordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request GetRepoBuildRecordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetRepoBuildRecordResponse
+         */
         public async Task<GetRepoBuildRecordResponse> GetRepoBuildRecordWithOptionsAsync(GetRepoBuildRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3895,12 +4155,24 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetRepoBuildRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request GetRepoBuildRecordRequest
+          * @return GetRepoBuildRecordResponse
+         */
         public GetRepoBuildRecordResponse GetRepoBuildRecord(GetRepoBuildRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetRepoBuildRecordWithOptions(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request GetRepoBuildRecordRequest
+          * @return GetRepoBuildRecordResponse
+         */
         public async Task<GetRepoBuildRecordResponse> GetRepoBuildRecordAsync(GetRepoBuildRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -9,22 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateInstanceEndpointAclPolicyRequest : TeaModel {
+        /// <summary>
+        /// The description.
+        /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        /// <summary>
+        /// The type of the endpoint. Set the value to Internet.
+        /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
         public string EndpointType { get; set; }
 
+        /// <summary>
+        /// The CIDR block that is accessible.
+        /// </summary>
         [NameInMap("Entry")]
         [Validation(Required=false)]
         public string Entry { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The name of the module that you want to access. Valid values:
+        /// 
+        /// *   `Registry`: the image repository.
+        /// *   `Chart`: a Helm chart.
+        /// </summary>
         [NameInMap("ModuleName")]
         [Validation(Required=false)]
         public string ModuleName { get; set; }
