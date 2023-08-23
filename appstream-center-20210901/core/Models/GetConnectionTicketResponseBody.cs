@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string TaskStatus { get; set; }
 
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public long? TenantId { get; set; }
+
         [NameInMap("Ticket")]
         [Validation(Required=false)]
         public string Ticket { get; set; }

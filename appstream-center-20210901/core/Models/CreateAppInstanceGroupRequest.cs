@@ -41,6 +41,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public CreateAppInstanceGroupRequestNetwork Network { get; set; }
         public class CreateAppInstanceGroupRequestNetwork : TeaModel {
+            [NameInMap("DomainRules")]
+            [Validation(Required=false)]
+            public List<CreateAppInstanceGroupRequestNetworkDomainRules> DomainRules { get; set; }
+            public class CreateAppInstanceGroupRequestNetworkDomainRules : TeaModel {
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
+                public string Domain { get; set; }
+
+                [NameInMap("Policy")]
+                [Validation(Required=false)]
+                public string Policy { get; set; }
+
+            }
+
             [NameInMap("IpExpireMinutes")]
             [Validation(Required=false)]
             public int? IpExpireMinutes { get; set; }

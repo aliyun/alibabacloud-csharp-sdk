@@ -17,6 +17,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
+        [NameInMap("Network")]
+        [Validation(Required=false)]
+        public ModifyAppInstanceGroupAttributeRequestNetwork Network { get; set; }
+        public class ModifyAppInstanceGroupAttributeRequestNetwork : TeaModel {
+            [NameInMap("DomainRules")]
+            [Validation(Required=false)]
+            public List<ModifyAppInstanceGroupAttributeRequestNetworkDomainRules> DomainRules { get; set; }
+            public class ModifyAppInstanceGroupAttributeRequestNetworkDomainRules : TeaModel {
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
+                public string Domain { get; set; }
+
+                [NameInMap("Policy")]
+                [Validation(Required=false)]
+                public string Policy { get; set; }
+
+            }
+
+        }
+
         [NameInMap("NodePool")]
         [Validation(Required=false)]
         public ModifyAppInstanceGroupAttributeRequestNodePool NodePool { get; set; }
@@ -30,6 +50,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NodePoolId { get; set; }
 
         }
+
+        [NameInMap("PreOpenAppId")]
+        [Validation(Required=false)]
+        public string PreOpenAppId { get; set; }
+
+        [NameInMap("PreOpenMode")]
+        [Validation(Required=false)]
+        public string PreOpenMode { get; set; }
 
         [NameInMap("ProductType")]
         [Validation(Required=false)]

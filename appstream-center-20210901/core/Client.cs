@@ -1159,6 +1159,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["Amount"] = request.Amount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceType))
+            {
+                query["AppInstanceType"] = request.AppInstanceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
@@ -1209,6 +1213,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
                 query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceType))
+            {
+                query["AppInstanceType"] = request.AppInstanceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
@@ -1986,6 +1994,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyAppInstanceGroupAttributeShrinkRequest request = new ModifyAppInstanceGroupAttributeShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Network))
+            {
+                request.NetworkShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Network, "Network", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodePool))
             {
                 request.NodePoolShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodePool, "NodePool", "json");
@@ -2020,6 +2032,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
                 query["SessionTimeout"] = request.SessionTimeout;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkShrink))
+            {
+                body["Network"] = request.NetworkShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreOpenAppId))
+            {
+                body["PreOpenAppId"] = request.PreOpenAppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreOpenMode))
+            {
+                body["PreOpenMode"] = request.PreOpenMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyShrink))
             {
                 body["SecurityPolicy"] = request.SecurityPolicyShrink;
@@ -2053,6 +2077,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyAppInstanceGroupAttributeShrinkRequest request = new ModifyAppInstanceGroupAttributeShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Network))
+            {
+                request.NetworkShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Network, "Network", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodePool))
             {
                 request.NodePoolShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodePool, "NodePool", "json");
@@ -2087,6 +2115,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
                 query["SessionTimeout"] = request.SessionTimeout;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkShrink))
+            {
+                body["Network"] = request.NetworkShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreOpenAppId))
+            {
+                body["PreOpenAppId"] = request.PreOpenAppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreOpenMode))
+            {
+                body["PreOpenMode"] = request.PreOpenMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyShrink))
             {
                 body["SecurityPolicy"] = request.SecurityPolicyShrink;

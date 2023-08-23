@@ -94,6 +94,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
+            [NameInMap("MaxAmount")]
+            [Validation(Required=false)]
+            public int? MaxAmount { get; set; }
+
+            [NameInMap("MinAmount")]
+            [Validation(Required=false)]
+            public int? MinAmount { get; set; }
+
             [NameInMap("NodePool")]
             [Validation(Required=false)]
             public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> NodePool { get; set; }
@@ -230,9 +238,33 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("ReserveAmountRatio")]
+            [Validation(Required=false)]
+            public string ReserveAmountRatio { get; set; }
+
+            [NameInMap("ReserveMaxAmount")]
+            [Validation(Required=false)]
+            public int? ReserveMaxAmount { get; set; }
+
+            [NameInMap("ReserveMinAmount")]
+            [Validation(Required=false)]
+            public int? ReserveMinAmount { get; set; }
+
             [NameInMap("ResourceStatus")]
             [Validation(Required=false)]
             public string ResourceStatus { get; set; }
+
+            [NameInMap("ScalingDownAfterIdleMinutes")]
+            [Validation(Required=false)]
+            public int? ScalingDownAfterIdleMinutes { get; set; }
+
+            [NameInMap("ScalingStep")]
+            [Validation(Required=false)]
+            public int? ScalingStep { get; set; }
+
+            [NameInMap("ScalingUsageThreshold")]
+            [Validation(Required=false)]
+            public string ScalingUsageThreshold { get; set; }
 
             [NameInMap("SessionTimeout")]
             [Validation(Required=false)]

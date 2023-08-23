@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public long? Amount { get; set; }
 
+        [NameInMap("AppInstanceType")]
+        [Validation(Required=false)]
+        public string AppInstanceType { get; set; }
+
         [NameInMap("BizRegionId")]
         [Validation(Required=false)]
         public string BizRegionId { get; set; }

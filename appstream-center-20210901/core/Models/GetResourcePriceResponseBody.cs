@@ -17,6 +17,78 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("PriceList")]
+        [Validation(Required=false)]
+        public List<GetResourcePriceResponseBodyPriceList> PriceList { get; set; }
+        public class GetResourcePriceResponseBodyPriceList : TeaModel {
+            [NameInMap("Price")]
+            [Validation(Required=false)]
+            public GetResourcePriceResponseBodyPriceListPrice Price { get; set; }
+            public class GetResourcePriceResponseBodyPriceListPrice : TeaModel {
+                [NameInMap("Currency")]
+                [Validation(Required=false)]
+                public string Currency { get; set; }
+
+                [NameInMap("DiscountPrice")]
+                [Validation(Required=false)]
+                public string DiscountPrice { get; set; }
+
+                [NameInMap("OriginalPrice")]
+                [Validation(Required=false)]
+                public string OriginalPrice { get; set; }
+
+                [NameInMap("Promotions")]
+                [Validation(Required=false)]
+                public List<GetResourcePriceResponseBodyPriceListPricePromotions> Promotions { get; set; }
+                public class GetResourcePriceResponseBodyPriceListPricePromotions : TeaModel {
+                    [NameInMap("OptionCode")]
+                    [Validation(Required=false)]
+                    public string OptionCode { get; set; }
+
+                    [NameInMap("PromotionDesc")]
+                    [Validation(Required=false)]
+                    public string PromotionDesc { get; set; }
+
+                    [NameInMap("PromotionId")]
+                    [Validation(Required=false)]
+                    public string PromotionId { get; set; }
+
+                    [NameInMap("PromotionName")]
+                    [Validation(Required=false)]
+                    public string PromotionName { get; set; }
+
+                    [NameInMap("Selected")]
+                    [Validation(Required=false)]
+                    public bool? Selected { get; set; }
+
+                }
+
+                [NameInMap("TradePrice")]
+                [Validation(Required=false)]
+                public string TradePrice { get; set; }
+
+            }
+
+            [NameInMap("PriceType")]
+            [Validation(Required=false)]
+            public string PriceType { get; set; }
+
+            [NameInMap("Rules")]
+            [Validation(Required=false)]
+            public List<GetResourcePriceResponseBodyPriceListRules> Rules { get; set; }
+            public class GetResourcePriceResponseBodyPriceListRules : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("RuleId")]
+                [Validation(Required=false)]
+                public long? RuleId { get; set; }
+
+            }
+
+        }
+
         [NameInMap("PriceModel")]
         [Validation(Required=false)]
         public GetResourcePriceResponseBodyPriceModel PriceModel { get; set; }
