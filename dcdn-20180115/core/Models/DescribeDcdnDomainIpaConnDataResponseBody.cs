@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// The timestamp of the returned data.
+                /// The timestamp of the data returned.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

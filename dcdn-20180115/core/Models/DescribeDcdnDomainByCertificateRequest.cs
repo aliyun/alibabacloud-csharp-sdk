@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainByCertificateRequest : TeaModel {
+        [NameInMap("Exact")]
+        [Validation(Required=false)]
+        public bool? Exact { get; set; }
+
         /// <summary>
         /// The public key of the certificate.
         /// 

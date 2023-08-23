@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRegionAndIspResponseBody : TeaModel {
+        /// <summary>
+        /// The list of ISPs.
+        /// </summary>
         [NameInMap("Isps")]
         [Validation(Required=false)]
         public DescribeDcdnRegionAndIspResponseBodyIsps Isps { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnRegionAndIspResponseBodyIspsIsp> Isp { get; set; }
             public class DescribeDcdnRegionAndIspResponseBodyIspsIsp : TeaModel {
+                /// <summary>
+                /// The English name of the region.
+                /// </summary>
                 [NameInMap("NameEn")]
                 [Validation(Required=false)]
                 public string NameEn { get; set; }
 
+                /// <summary>
+                /// The Chinese name of the ISP.
+                /// </summary>
                 [NameInMap("NameZh")]
                 [Validation(Required=false)]
                 public string NameZh { get; set; }

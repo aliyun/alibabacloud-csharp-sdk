@@ -100,6 +100,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [Validation(Required=false)]
                 public string Sandbox { get; set; }
 
+                /// <summary>
+                /// The moderation scenario. Valid values:
+                /// 
+                /// *   **apiscene**: Api scene acceleration. 
+                /// *   **webservicescene**: Web scene acceleration.
+                /// *   **staticscene**: Video and graphic scene acceleration.
+                /// </summary>
                 [NameInMap("Scene")]
                 [Validation(Required=false)]
                 public string Scene { get; set; }

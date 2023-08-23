@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnKvAccountResponseBody : TeaModel {
+        /// <summary>
+        /// The available capacity of all namespaces.
+        /// </summary>
         [NameInMap("CapacityString")]
         [Validation(Required=false)]
         public string CapacityString { get; set; }
 
+        /// <summary>
+        /// All namespaces have used capacity.
+        /// </summary>
         [NameInMap("CapacityUsedString")]
         [Validation(Required=false)]
         public string CapacityUsedString { get; set; }
@@ -24,10 +30,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public List<DescribeDcdnKvAccountResponseBodyNamespaceList> NamespaceList { get; set; }
         public class DescribeDcdnKvAccountResponseBodyNamespaceList : TeaModel {
+            /// <summary>
+            /// The available capacity of the namespace.
+            /// </summary>
             [NameInMap("CapacityString")]
             [Validation(Required=false)]
             public string CapacityString { get; set; }
 
+            /// <summary>
+            /// The namespace has used capacity.
+            /// </summary>
             [NameInMap("CapacityUsedString")]
             [Validation(Required=false)]
             public string CapacityUsedString { get; set; }

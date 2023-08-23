@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainCertificateInfoRequest : TeaModel {
         /// <summary>
-        /// The certificate information of the domain name.
+        /// The accelerated domain name. You can specify only one domain name in each request.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

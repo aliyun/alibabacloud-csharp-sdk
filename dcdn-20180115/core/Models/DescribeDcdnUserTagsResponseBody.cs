@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag that you want to query.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }

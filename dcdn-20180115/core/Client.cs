@@ -3895,8 +3895,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second.
+          * *   You can call this operation up to 20 times per second per account.
           * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           *
           * @param request DeleteDcdnWafPolicyRequest
@@ -3931,8 +3930,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second.
+          * *   You can call this operation up to 20 times per second per account.
           * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           *
           * @param request DeleteDcdnWafPolicyRequest
@@ -3967,8 +3965,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second.
+          * *   You can call this operation up to 20 times per second per account.
           * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           *
           * @param request DeleteDcdnWafPolicyRequest
@@ -3981,8 +3978,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second.
+          * *   You can call this operation up to 20 times per second per account.
           * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           *
           * @param request DeleteDcdnWafPolicyRequest
@@ -5593,6 +5589,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exact))
+            {
+                query["Exact"] = request.Exact;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPub))
             {
                 query["SSLPub"] = request.SSLPub;
@@ -5631,6 +5631,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exact))
+            {
+                query["Exact"] = request.Exact;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPub))
             {
                 query["SSLPub"] = request.SSLPub;
@@ -5843,7 +5847,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The ID of the request.
+          * > You can call this operation up to 100 times per second per account.
           *
           * @param request DescribeDcdnDomainCertificateInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5877,7 +5881,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The ID of the request.
+          * > You can call this operation up to 100 times per second per account.
           *
           * @param request DescribeDcdnDomainCertificateInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5911,7 +5915,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The ID of the request.
+          * > You can call this operation up to 100 times per second per account.
           *
           * @param request DescribeDcdnDomainCertificateInfoRequest
           * @return DescribeDcdnDomainCertificateInfoResponse
@@ -5923,7 +5927,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The ID of the request.
+          * > You can call this operation up to 100 times per second per account.
           *
           * @param request DescribeDcdnDomainCertificateInfoRequest
           * @return DescribeDcdnDomainCertificateInfoResponse
@@ -6551,11 +6555,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second per account.
-          * *   You cannot query the distribution of HTTP status codes by IP protocol.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * * You can call this operation up to 20 times per second per account.
+          * * You cannot query the distribution of HTTP status codes by IP protocol.
+          * * If you do not specify the **StartTime** or **EndTime** parameter, the data that is collected within the last 24 hours is collected. If you specify both the **StartTime** and **EndTime** parameters, the data that is collected within the time range that you specify is collected.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainHttpCodeDataByLayerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6613,11 +6622,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second per account.
-          * *   You cannot query the distribution of HTTP status codes by IP protocol.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * * You can call this operation up to 20 times per second per account.
+          * * You cannot query the distribution of HTTP status codes by IP protocol.
+          * * If you do not specify the **StartTime** or **EndTime** parameter, the data that is collected within the last 24 hours is collected. If you specify both the **StartTime** and **EndTime** parameters, the data that is collected within the time range that you specify is collected.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainHttpCodeDataByLayerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6675,11 +6689,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second per account.
-          * *   You cannot query the distribution of HTTP status codes by IP protocol.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * * You can call this operation up to 20 times per second per account.
+          * * You cannot query the distribution of HTTP status codes by IP protocol.
+          * * If you do not specify the **StartTime** or **EndTime** parameter, the data that is collected within the last 24 hours is collected. If you specify both the **StartTime** and **EndTime** parameters, the data that is collected within the time range that you specify is collected.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainHttpCodeDataByLayerRequest
           * @return DescribeDcdnDomainHttpCodeDataByLayerResponse
@@ -6691,11 +6710,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second per account.
-          * *   You cannot query the distribution of HTTP status codes by IP protocol.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * * You can call this operation up to 20 times per second per account.
+          * * You cannot query the distribution of HTTP status codes by IP protocol.
+          * * If you do not specify the **StartTime** or **EndTime** parameter, the data that is collected within the last 24 hours is collected. If you specify both the **StartTime** and **EndTime** parameters, the data that is collected within the time range that you specify is collected.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainHttpCodeDataByLayerRequest
           * @return DescribeDcdnDomainHttpCodeDataByLayerResponse
@@ -6867,8 +6891,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 10 times per second per account.
+          * *   You can call this operation up to 10 times per second per user.
           * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
           * *   The minimum time granularity at which the data is queried is 5 minutes. The maximum time range for a single query is 31 days. The period within which historical data is available is 366 days. The data latency is no more than 10 minutes.
           *
@@ -6916,8 +6939,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 10 times per second per account.
+          * *   You can call this operation up to 10 times per second per user.
           * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
           * *   The minimum time granularity at which the data is queried is 5 minutes. The maximum time range for a single query is 31 days. The period within which historical data is available is 366 days. The data latency is no more than 10 minutes.
           *
@@ -6965,8 +6987,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 10 times per second per account.
+          * *   You can call this operation up to 10 times per second per user.
           * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
           * *   The minimum time granularity at which the data is queried is 5 minutes. The maximum time range for a single query is 31 days. The period within which historical data is available is 366 days. The data latency is no more than 10 minutes.
           *
@@ -6980,8 +7001,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 10 times per second per account.
+          * *   You can call this operation up to 10 times per second per user.
           * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
           * *   The minimum time granularity at which the data is queried is 5 minutes. The maximum time range for a single query is 31 days. The period within which historical data is available is 366 days. The data latency is no more than 10 minutes.
           *
@@ -8181,14 +8201,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * - You can call this operation up to 20 times per second per account.
-          * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
-          * | Time granularity | Maximum time range per query | Historical data available | Data delay |
-          * | ---------------- | ---------------------------- | ------------------------- | ---------- |
-          * | 5 minutes | 3 days | 93 days | 15 minutes |
-          * | 1 hour | 31 days | 186 days | 4 hours |
-          * | 1 day | 366 days | 366 days | 04:00 on the next day |
+          * * You can call this operation up to 20 times per second per account.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainQpsDataByLayerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8246,14 +8267,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * - You can call this operation up to 20 times per second per account.
-          * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
-          * | Time granularity | Maximum time range per query | Historical data available | Data delay |
-          * | ---------------- | ---------------------------- | ------------------------- | ---------- |
-          * | 5 minutes | 3 days | 93 days | 15 minutes |
-          * | 1 hour | 31 days | 186 days | 4 hours |
-          * | 1 day | 366 days | 366 days | 04:00 on the next day |
+          * * You can call this operation up to 20 times per second per account.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainQpsDataByLayerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8311,14 +8333,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * - You can call this operation up to 20 times per second per account.
-          * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
-          * | Time granularity | Maximum time range per query | Historical data available | Data delay |
-          * | ---------------- | ---------------------------- | ------------------------- | ---------- |
-          * | 5 minutes | 3 days | 93 days | 15 minutes |
-          * | 1 hour | 31 days | 186 days | 4 hours |
-          * | 1 day | 366 days | 366 days | 04:00 on the next day |
+          * * You can call this operation up to 20 times per second per account.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainQpsDataByLayerRequest
           * @return DescribeDcdnDomainQpsDataByLayerResponse
@@ -8330,14 +8353,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * - You can call this operation up to 20 times per second per account.
-          * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
-          * | Time granularity | Maximum time range per query | Historical data available | Data delay |
-          * | ---------------- | ---------------------------- | ------------------------- | ---------- |
-          * | 5 minutes | 3 days | 93 days | 15 minutes |
-          * | 1 hour | 31 days | 186 days | 4 hours |
-          * | 1 day | 366 days | 366 days | 04:00 on the next day |
+          * * You can call this operation up to 20 times per second per account.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainQpsDataByLayerRequest
           * @return DescribeDcdnDomainQpsDataByLayerResponse
@@ -9411,9 +9435,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 50 times per second per user.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. |Time granularity |Maximum time range per query |Historical data available|Data delay| |---------------|--------| |1 minute|1 hour|7 days|5 minutes| |5 minutes|3 days|93 days|15 minutes| |1 hour|31 days|186 days|4 hours|
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |1 minute|1 hour|7 days|5 minutes|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
           *
           * @param request DescribeDcdnDomainRealTimeTrafficDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9455,9 +9484,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 50 times per second per user.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. |Time granularity |Maximum time range per query |Historical data available|Data delay| |---------------|--------| |1 minute|1 hour|7 days|5 minutes| |5 minutes|3 days|93 days|15 minutes| |1 hour|31 days|186 days|4 hours|
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |1 minute|1 hour|7 days|5 minutes|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
           *
           * @param request DescribeDcdnDomainRealTimeTrafficDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9499,9 +9533,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 50 times per second per user.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. |Time granularity |Maximum time range per query |Historical data available|Data delay| |---------------|--------| |1 minute|1 hour|7 days|5 minutes| |5 minutes|3 days|93 days|15 minutes| |1 hour|31 days|186 days|4 hours|
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |1 minute|1 hour|7 days|5 minutes|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
           *
           * @param request DescribeDcdnDomainRealTimeTrafficDataRequest
           * @return DescribeDcdnDomainRealTimeTrafficDataResponse
@@ -9513,9 +9552,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 50 times per second per user.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. |Time granularity |Maximum time range per query |Historical data available|Data delay| |---------------|--------| |1 minute|1 hour|7 days|5 minutes| |5 minutes|3 days|93 days|15 minutes| |1 hour|31 days|186 days|4 hours|
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |1 minute|1 hour|7 days|5 minutes|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
           *
           * @param request DescribeDcdnDomainRealTimeTrafficDataRequest
           * @return DescribeDcdnDomainRealTimeTrafficDataResponse
@@ -10427,10 +10471,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 100 times per second per account.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * * You can call this operation up to 100 times per second per account.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainWebsocketBpsDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10484,10 +10533,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 100 times per second per account.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * * You can call this operation up to 100 times per second per account.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainWebsocketBpsDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10541,10 +10595,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 100 times per second per account.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * * You can call this operation up to 100 times per second per account.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainWebsocketBpsDataRequest
           * @return DescribeDcdnDomainWebsocketBpsDataResponse
@@ -10556,10 +10615,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 100 times per second per account.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * * You can call this operation up to 100 times per second per account.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainWebsocketBpsDataRequest
           * @return DescribeDcdnDomainWebsocketBpsDataResponse
@@ -10571,9 +10635,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 100 times per second per account.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainWebsocketHttpCodeDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10627,9 +10696,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 100 times per second per account.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainWebsocketHttpCodeDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10683,9 +10757,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 100 times per second per account.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainWebsocketHttpCodeDataRequest
           * @return DescribeDcdnDomainWebsocketHttpCodeDataResponse
@@ -10697,9 +10776,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 100 times per second per account.
-          * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+          * **Time granularity**
+          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |5 minutes|3 days|93 days|15 minutes|
+          * |1 hour|31 days|186 days|4 hours|
+          * |1 day|366 days|366 days|04:00 on the next day|
           *
           * @param request DescribeDcdnDomainWebsocketHttpCodeDataRequest
           * @return DescribeDcdnDomainWebsocketHttpCodeDataResponse
@@ -10875,7 +10959,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * *   You can call this operation up to 10 times per second per account.
           * *   The minimum time granularity for a query is 1 hour. The maximum time span for a query is 24 hours. The time period within which historical data is available for a query is 366 days.
           *
@@ -10927,7 +11010,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * *   You can call this operation up to 10 times per second per account.
           * *   The minimum time granularity for a query is 1 hour. The maximum time span for a query is 24 hours. The time period within which historical data is available for a query is 366 days.
           *
@@ -10979,7 +11061,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * *   You can call this operation up to 10 times per second per account.
           * *   The minimum time granularity for a query is 1 hour. The maximum time span for a query is 24 hours. The time period within which historical data is available for a query is 366 days.
           *
@@ -10993,7 +11074,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * *   You can call this operation up to 10 times per second per account.
           * *   The minimum time granularity for a query is 1 hour. The maximum time span for a query is 24 hours. The time period within which historical data is available for a query is 366 days.
           *
@@ -14177,7 +14257,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * > You can call this operation up to 100 times per second per account.
           *
           * @param request DescribeDcdnUserCertificateExpireCountRequest
@@ -14203,7 +14282,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * > You can call this operation up to 100 times per second per account.
           *
           * @param request DescribeDcdnUserCertificateExpireCountRequest
@@ -14229,7 +14307,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * > You can call this operation up to 100 times per second per account.
           *
           * @return DescribeDcdnUserCertificateExpireCountResponse
@@ -14241,7 +14318,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * > You can call this operation up to 100 times per second per account.
           *
           * @return DescribeDcdnUserCertificateExpireCountResponse
@@ -15611,7 +15687,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafDomainDetailRequest
@@ -15646,7 +15721,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafDomainDetailRequest
@@ -15681,7 +15755,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafDomainDetailRequest
@@ -15694,7 +15767,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafDomainDetailRequest
@@ -15707,7 +15779,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafDomainsRequest
@@ -15750,7 +15821,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafDomainsRequest
@@ -15793,7 +15863,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafDomainsRequest
@@ -15806,7 +15875,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafDomainsRequest
@@ -16651,7 +16719,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafPolicyValidDomainsRequest
@@ -16698,7 +16765,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafPolicyValidDomainsRequest
@@ -16745,7 +16811,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafPolicyValidDomainsRequest
@@ -16758,7 +16823,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * You can call this operation up to 20 times per second per account.
           *
           * @param request DescribeDcdnWafPolicyValidDomainsRequest
@@ -17243,7 +17307,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * >*   You can call this operation up to 10 times per second per account.
+          * *   You can call this operation up to 10 times per second per account.
           * *   The minimum time granularity for a query is 5 minutes. The maximum time span for a query is 31 days. The time period within which historical data is available for a query is 90 days.
           *
           * @param request DescribeDcdnWafUsageDataRequest
@@ -17294,7 +17358,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * >*   You can call this operation up to 10 times per second per account.
+          * *   You can call this operation up to 10 times per second per account.
           * *   The minimum time granularity for a query is 5 minutes. The maximum time span for a query is 31 days. The time period within which historical data is available for a query is 90 days.
           *
           * @param request DescribeDcdnWafUsageDataRequest
@@ -17345,7 +17409,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * >*   You can call this operation up to 10 times per second per account.
+          * *   You can call this operation up to 10 times per second per account.
           * *   The minimum time granularity for a query is 5 minutes. The maximum time span for a query is 31 days. The time period within which historical data is available for a query is 90 days.
           *
           * @param request DescribeDcdnWafUsageDataRequest
@@ -17358,7 +17422,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * >*   You can call this operation up to 10 times per second per account.
+          * *   You can call this operation up to 10 times per second per account.
           * *   The minimum time granularity for a query is 5 minutes. The maximum time span for a query is 31 days. The time period within which historical data is available for a query is 90 days.
           *
           * @param request DescribeDcdnWafUsageDataRequest
@@ -18166,6 +18230,72 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRoutineCodeRevisionWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeRoutineRelatedDomainsResponse DescribeRoutineRelatedDomainsWithOptions(DescribeRoutineRelatedDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRoutineRelatedDomains",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRoutineRelatedDomainsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeRoutineRelatedDomainsResponse> DescribeRoutineRelatedDomainsWithOptionsAsync(DescribeRoutineRelatedDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRoutineRelatedDomains",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRoutineRelatedDomainsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeRoutineRelatedDomainsResponse DescribeRoutineRelatedDomains(DescribeRoutineRelatedDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRoutineRelatedDomainsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeRoutineRelatedDomainsResponse> DescribeRoutineRelatedDomainsAsync(DescribeRoutineRelatedDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRoutineRelatedDomainsWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -19263,7 +19393,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * *   You can call this operation up to 20 times per second per account.
           * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           *
@@ -19307,7 +19436,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * *   You can call this operation up to 20 times per second per account.
           * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           *
@@ -19351,7 +19479,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * *   You can call this operation up to 20 times per second per account.
           * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           *
@@ -19365,7 +19492,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * *   You can call this operation up to 20 times per second per account.
           * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           *
@@ -19503,9 +19629,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second.
-          * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+          * *   You can call this operation up to 20 times per second per account.
+          * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           * *   You must configure at least one of the **RuleStatus**, **RuleName** and **RuleConfig** parameters.
           *
           * @param request ModifyDcdnWafRuleRequest
@@ -19552,9 +19677,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second.
-          * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+          * *   You can call this operation up to 20 times per second per account.
+          * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           * *   You must configure at least one of the **RuleStatus**, **RuleName** and **RuleConfig** parameters.
           *
           * @param request ModifyDcdnWafRuleRequest
@@ -19601,9 +19725,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second.
-          * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+          * *   You can call this operation up to 20 times per second per account.
+          * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           * *   You must configure at least one of the **RuleStatus**, **RuleName** and **RuleConfig** parameters.
           *
           * @param request ModifyDcdnWafRuleRequest
@@ -19616,9 +19739,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
-          * *   You can call this operation up to 20 times per second.
-          * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+          * *   You can call this operation up to 20 times per second per account.
+          * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
           * *   You must configure at least one of the **RuleStatus**, **RuleName** and **RuleConfig** parameters.
           *
           * @param request ModifyDcdnWafRuleRequest

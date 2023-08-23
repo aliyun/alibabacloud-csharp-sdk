@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class PutDcdnKvRequest : TeaModel {
+        /// <summary>
+        /// The time when the key expires.Example: "1690081381".
+        /// </summary>
         [NameInMap("Expiration")]
         [Validation(Required=false)]
         public long? Expiration { get; set; }
 
+        /// <summary>
+        /// The time when the key expires.Example: "3600".
+        /// </summary>
         [NameInMap("ExpirationTtl")]
         [Validation(Required=false)]
         public long? ExpirationTtl { get; set; }

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public List<ListDcdnKvResponseBodyKeys> Keys { get; set; }
         public class ListDcdnKvResponseBodyKeys : TeaModel {
             /// <summary>
-            /// The name of the key.
+            /// The value of the key obtained in this traversal.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
