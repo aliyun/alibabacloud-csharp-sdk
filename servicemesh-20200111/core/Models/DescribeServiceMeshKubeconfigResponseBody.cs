@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshKubeconfigResponseBody : TeaModel {
+        [NameInMap("ExpireTime")]
+        [Validation(Required=false)]
+        public string ExpireTime { get; set; }
+
         /// <summary>
         /// The content of the kubeconfig file of the cluster.
         /// </summary>
