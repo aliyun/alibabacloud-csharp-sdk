@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CheckCloudResourceAuthorizedResponseBody : TeaModel {
+        /// <summary>
+        /// CheckCloudResourceAuthorized
+        /// </summary>
         [NameInMap("AuthorizationState")]
         [Validation(Required=false)]
         public int? AuthorizationState { get; set; }

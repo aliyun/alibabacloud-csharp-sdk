@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifySecurityIpsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -37,10 +40,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityIpGroupAttribute { get; set; }
 
+        /// <summary>
+        /// The method of modification. Valid values:
+        /// 
+        /// *   **Cover**: overwrites the whitelist.
+        /// *   **Append**: appends data to the whitelist.
+        /// *   **Delete**: deletes the whitelist.
+        /// </summary>
         [NameInMap("SecurityIpGroupName")]
         [Validation(Required=false)]
         public string SecurityIpGroupName { get; set; }
 
+        /// <summary>
+        /// The operation that you want to perform. Set the value to **ModifySecurityIps**.
+        /// </summary>
         [NameInMap("SecurityIps")]
         [Validation(Required=false)]
         public string SecurityIps { get; set; }

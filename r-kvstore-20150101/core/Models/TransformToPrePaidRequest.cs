@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class TransformToPrePaidRequest : TeaModel {
+        /// <summary>
+        /// true
+        /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// r-bp1zxszhcgatnx****
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The subscription duration of the instance. Unit: months. Valid values: **1** to **9**, **12**, **24**, and **36**.
+        /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public long? Period { get; set; }

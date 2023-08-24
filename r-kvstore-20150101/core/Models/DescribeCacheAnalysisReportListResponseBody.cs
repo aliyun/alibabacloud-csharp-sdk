@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportListResponseBody : TeaModel {
+        /// <summary>
+        /// 30
+        /// </summary>
         [NameInMap("DailyTasks")]
         [Validation(Required=false)]
         public DescribeCacheAnalysisReportListResponseBodyDailyTasks DailyTasks { get; set; }
@@ -17,7 +20,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask> DailyTask { get; set; }
             public class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask : TeaModel {
+                /// <summary>
+                /// The number of the page to return.
+                /// </summary>
+                [NameInMap("Date")]
+                [Validation(Required=false)]
                 public string Date { get; set; }
+
+                /// <summary>
+                /// Details about the offline key analysis tasks.
+                /// </summary>
+                [NameInMap("Tasks")]
+                [Validation(Required=false)]
                 public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks Tasks { get; set; }
                 public class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks : TeaModel {
                     [NameInMap("Task")]
@@ -32,6 +46,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         [Validation(Required=false)]
                         public string StartTime { get; set; }
 
+                        /// <summary>
+                        /// The ID of the child node in the cluster instance.
+                        /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
                         public string Status { get; set; }
@@ -43,13 +60,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     }
 
                 }
-            }
-        };
 
+            }
+
+        }
+
+        /// <summary>
+        /// The date when the offline key analysis task was performed.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the task.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

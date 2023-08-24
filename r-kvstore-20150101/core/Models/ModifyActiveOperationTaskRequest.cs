@@ -8,14 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyActiveOperationTasksRequest : TeaModel {
+    public class ModifyActiveOperationTaskRequest : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }
-
-        [NameInMap("ImmediateStart")]
-        [Validation(Required=false)]
-        public int? ImmediateStart { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -37,6 +36,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// The operation that you want to perform. Set the value to: **ModifyActiveOperationTask**.
+        /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]
         public string SwitchTime { get; set; }

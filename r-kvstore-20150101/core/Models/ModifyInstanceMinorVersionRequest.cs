@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceMinorVersionRequest : TeaModel {
+        /// <summary>
+        /// The minor version to which you want to update. Default value: **latest_version**.
+        /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The operation that you want to perform. Set the value to **ModifyInstanceMinorVersion**.
+        /// </summary>
         [NameInMap("Minorversion")]
         [Validation(Required=false)]
         public string Minorversion { get; set; }

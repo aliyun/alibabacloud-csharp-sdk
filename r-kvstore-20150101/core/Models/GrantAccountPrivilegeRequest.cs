@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class GrantAccountPrivilegeRequest : TeaModel {
+        /// <summary>
+        /// GrantAccountPrivilege
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string AccountPrivilege { get; set; }
 
+        /// <summary>
+        /// Modifies the permissions of an account for an ApsaraDB for Redis instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

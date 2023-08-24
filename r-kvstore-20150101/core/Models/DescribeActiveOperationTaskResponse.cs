@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyActiveOperationTasksResponse : TeaModel {
+    public class DescribeActiveOperationTaskResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ModifyActiveOperationTasksResponseBody Body { get; set; }
+        public DescribeActiveOperationTaskResponseBody Body { get; set; }
 
     }
 

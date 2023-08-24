@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
+        /// <summary>
+        /// The progress of the backup task in percentage.
+        /// </summary>
         [NameInMap("BackupJobId")]
         [Validation(Required=false)]
         public string BackupJobId { get; set; }
 
+        /// <summary>
+        /// The details of the backup tasks.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The operation that you want to perform. The operation that you want to perform. Set the value to **DescribeBackupTasks**.
+        /// </summary>
         [NameInMap("JobMode")]
         [Validation(Required=false)]
         public string JobMode { get; set; }

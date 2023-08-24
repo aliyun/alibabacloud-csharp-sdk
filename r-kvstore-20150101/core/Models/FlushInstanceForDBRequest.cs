@@ -8,34 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyNodeSpecRequest : TeaModel {
-        [NameInMap("AutoPay")]
+    public class FlushInstanceForDBRequest : TeaModel {
+        [NameInMap("DbIndex")]
         [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
-
-        [NameInMap("BusinessInfo")]
-        [Validation(Required=false)]
-        public string BusinessInfo { get; set; }
-
-        [NameInMap("CouponNo")]
-        [Validation(Required=false)]
-        public string CouponNo { get; set; }
-
-        [NameInMap("InstanceClass")]
-        [Validation(Required=false)]
-        public string InstanceClass { get; set; }
+        public int? DbIndex { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("NodeId")]
-        [Validation(Required=false)]
-        public string NodeId { get; set; }
-
-        [NameInMap("OrderType")]
-        [Validation(Required=false)]
-        public string OrderType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -56,10 +36,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
-
-        [NameInMap("SwitchTimeMode")]
-        [Validation(Required=false)]
-        public string SwitchTimeMode { get; set; }
 
     }
 

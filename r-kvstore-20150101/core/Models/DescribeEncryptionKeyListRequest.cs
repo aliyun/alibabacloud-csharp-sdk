@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEncryptionKeyListRequest : TeaModel {
+        /// <summary>
+        /// The operation that you want to perform. Set the value to **DescribeEncryptionKeyList**.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

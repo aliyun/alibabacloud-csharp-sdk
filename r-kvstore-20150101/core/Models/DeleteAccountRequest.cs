@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteAccountRequest : TeaModel {
+        /// <summary>
+        /// The username of the account. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// The instance ID.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

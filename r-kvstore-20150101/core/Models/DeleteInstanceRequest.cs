@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string GlobalInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the distributed instance to which the instance belongs. This parameter is applicable to only China site (aliyun.com).
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

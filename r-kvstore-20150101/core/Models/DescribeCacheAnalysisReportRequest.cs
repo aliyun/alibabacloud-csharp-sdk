@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportRequest : TeaModel {
+        /// <summary>
+        /// The maximum number of entries returned per page.
+        /// </summary>
         [NameInMap("AnalysisType")]
         [Validation(Required=false)]
         public string AnalysisType { get; set; }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("Date")]
         [Validation(Required=false)]
         public string Date { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+        /// 
+        /// >  Default value: **30**.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -37,6 +48,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? PageNumbers { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

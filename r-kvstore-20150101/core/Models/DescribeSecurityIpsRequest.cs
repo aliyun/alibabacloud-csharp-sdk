@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeSecurityIpsRequest : TeaModel {
+        /// <summary>
+        /// The IP addresses in the whitelist. A maximum of 1,000 IP addresses can be specified in a whitelist.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

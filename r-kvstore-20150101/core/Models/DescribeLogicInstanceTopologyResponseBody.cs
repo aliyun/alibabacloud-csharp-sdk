@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeLogicInstanceTopologyResponseBody : TeaModel {
+        /// <summary>
+        /// The operation that you want to perform. Set the value to **DescribeLogicInstanceTopology**.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The bandwidth throttling of the node. Unit: MB/s.
+        /// </summary>
         [NameInMap("RedisProxyList")]
         [Validation(Required=false)]
         public DescribeLogicInstanceTopologyResponseBodyRedisProxyList RedisProxyList { get; set; }
@@ -21,13 +27,44 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo : TeaModel {
+                /// <summary>
+                /// The ID of the request.
+                /// </summary>
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
                 public string Bandwidth { get; set; }
+
+                /// <summary>
+                /// The detailed proxy information, including information about proxy nodes.
+                /// </summary>
+                [NameInMap("Capacity")]
+                [Validation(Required=false)]
                 public string Capacity { get; set; }
+
+                /// <summary>
+                /// The ID of the instance whose topology information you want to query.
+                /// </summary>
+                [NameInMap("Connection")]
+                [Validation(Required=false)]
                 public string Connection { get; set; }
+
+                /// <summary>
+                /// Queries the logical topology of an ApsaraDB for Redis instance.
+                /// </summary>
+                [NameInMap("NodeId")]
+                [Validation(Required=false)]
                 public string NodeId { get; set; }
+
+                /// <summary>
+                /// The ID of the node.
+                /// </summary>
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
                 public string NodeType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RedisShardList")]
         [Validation(Required=false)]
@@ -37,14 +74,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo : TeaModel {
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
                 public string Bandwidth { get; set; }
-                public string Capacity { get; set; }
-                public string Connection { get; set; }
-                public string NodeId { get; set; }
-                public string NodeType { get; set; }
-            }
-        };
 
+                [NameInMap("Capacity")]
+                [Validation(Required=false)]
+                public string Capacity { get; set; }
+
+                [NameInMap("Connection")]
+                [Validation(Required=false)]
+                public string Connection { get; set; }
+
+                [NameInMap("NodeId")]
+                [Validation(Required=false)]
+                public string NodeId { get; set; }
+
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
+                public string NodeType { get; set; }
+
+                [NameInMap("SubInstanceType")]
+                [Validation(Required=false)]
+                public string SubInstanceType { get; set; }
+
+            }
+
+        }
+
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

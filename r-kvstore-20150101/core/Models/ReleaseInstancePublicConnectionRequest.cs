@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ReleaseInstancePublicConnectionRequest : TeaModel {
+        /// <summary>
+        /// The public endpoint to be released.
+        /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
         public string CurrentConnectionString { get; set; }
 
+        /// <summary>
+        /// The operation that you want to perform. Set the value to **ReleaseInstancePublicConnection**.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

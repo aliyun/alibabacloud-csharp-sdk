@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AllocateDirectConnectionRequest : TeaModel {
+        /// <summary>
+        /// The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
+        /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

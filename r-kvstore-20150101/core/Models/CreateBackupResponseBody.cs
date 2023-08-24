@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateBackupResponseBody : TeaModel {
+        /// <summary>
+        /// The operation that you want to perform. Set the value to **CreateBackup**.
+        /// </summary>
         [NameInMap("BackupJobID")]
         [Validation(Required=false)]
         public string BackupJobID { get; set; }

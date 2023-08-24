@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        [NameInMap("ForceTrans")]
+        [Validation(Required=false)]
+        public bool? ForceTrans { get; set; }
+
         [NameInMap("ForceUpgrade")]
         [Validation(Required=false)]
         public bool? ForceUpgrade { get; set; }
@@ -37,6 +41,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
+        /// <summary>
+        /// ModifyInstanceSpec
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -61,6 +68,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? ReadOnlyCount { get; set; }
 
+        /// <summary>
+        /// Changes the configurations of an ApsaraDB for Redis instance.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -76,6 +86,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("ShardCount")]
+        [Validation(Required=false)]
+        public int? ShardCount { get; set; }
 
         [NameInMap("SourceBiz")]
         [Validation(Required=false)]

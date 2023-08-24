@@ -9,12 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteShardingNodeRequest : TeaModel {
+        [NameInMap("ForceTrans")]
+        [Validation(Required=false)]
+        public bool? ForceTrans { get; set; }
+
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the data shard that you want to remove. You can specify multiple IDs at a time. Separate multiple IDs with commas (,).
+        /// 
+        /// > If you specify both the NodeId and ShardCount parameters, the system prioritizes the NodeId parameter.
+        /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NodeId { get; set; }
 
         [NameInMap("OwnerAccount")]
@@ -24,10 +37,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("ReadOnlyCount")]
-        [Validation(Required=false)]
-        public int? ReadOnlyCount { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -41,6 +50,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// The number of data shards that you want to remove. Shard removal starts from the end of the shard list.
+        /// 
+        /// > For example, the instance has the following data shards: db-0, db-1, db-2, db-3, and db-4. In this case, if you set this parameter to 2, db-3 and db-4 are removed.
+        /// </summary>
         [NameInMap("ShardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }

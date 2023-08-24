@@ -9,18 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
+        /// <summary>
+        /// The current endpoint of the instance.
+        /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
         public string CurrentConnectionString { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The network type of the endpoint. Valid values:
+        /// 
+        /// *   **Private**: internal network
+        /// *   **Public**: Internet
+        /// </summary>
         [NameInMap("IPType")]
         [Validation(Required=false)]
         public string IPType { get; set; }
 
+        /// <summary>
+        /// The prefix of the new endpoint. Specify the endpoint in the `<prefix>.redis.rds.aliyuncs.com` format. The prefix can contain lowercase letters and digits, and must start with a lowercase letter. The prefix can be 8 to 40 characters in length.
+        /// 
+        /// > You must specify one of the **NewConnectionString** and **Port** parameters.
+        /// </summary>
         [NameInMap("NewConnectionString")]
         [Validation(Required=false)]
         public string NewConnectionString { get; set; }
@@ -33,6 +50,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The port number that is used to connect to the instance. Valid values: **1024** to **65535**.
+        /// 
+        /// > You must specify one of the **NewConnectionString** and **Port** parameters.
+        /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }

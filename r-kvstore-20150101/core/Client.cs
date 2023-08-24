@@ -85,6 +85,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * This operation is available only for cluster instances that use cloud disks.
+          *
+          * @param request AddShardingNodeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddShardingNodeResponse
+         */
         public AddShardingNodeResponse AddShardingNodeWithOptions(AddShardingNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -101,6 +108,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["CouponNo"] = request.CouponNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceTrans))
+            {
+                query["ForceTrans"] = request.ForceTrans;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -113,10 +124,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
-            {
-                query["ReadOnlyCount"] = request.ReadOnlyCount;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -128,10 +135,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardClass))
-            {
-                query["ShardClass"] = request.ShardClass;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
@@ -160,6 +163,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<AddShardingNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for cluster instances that use cloud disks.
+          *
+          * @param request AddShardingNodeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddShardingNodeResponse
+         */
         public async Task<AddShardingNodeResponse> AddShardingNodeWithOptionsAsync(AddShardingNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -176,6 +186,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["CouponNo"] = request.CouponNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceTrans))
+            {
+                query["ForceTrans"] = request.ForceTrans;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -188,10 +202,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
-            {
-                query["ReadOnlyCount"] = request.ReadOnlyCount;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -203,10 +213,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardClass))
-            {
-                query["ShardClass"] = request.ShardClass;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
@@ -235,18 +241,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<AddShardingNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for cluster instances that use cloud disks.
+          *
+          * @param request AddShardingNodeRequest
+          * @return AddShardingNodeResponse
+         */
         public AddShardingNodeResponse AddShardingNode(AddShardingNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddShardingNodeWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available only for cluster instances that use cloud disks.
+          *
+          * @param request AddShardingNodeRequest
+          * @return AddShardingNodeResponse
+         */
         public async Task<AddShardingNodeResponse> AddShardingNodeAsync(AddShardingNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddShardingNodeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request AllocateDirectConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AllocateDirectConnectionResponse
+         */
         public AllocateDirectConnectionResponse AllocateDirectConnectionWithOptions(AllocateDirectConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -302,6 +327,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<AllocateDirectConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request AllocateDirectConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AllocateDirectConnectionResponse
+         */
         public async Task<AllocateDirectConnectionResponse> AllocateDirectConnectionWithOptionsAsync(AllocateDirectConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -357,18 +389,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<AllocateDirectConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request AllocateDirectConnectionRequest
+          * @return AllocateDirectConnectionResponse
+         */
         public AllocateDirectConnectionResponse AllocateDirectConnection(AllocateDirectConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllocateDirectConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request AllocateDirectConnectionRequest
+          * @return AllocateDirectConnectionResponse
+         */
         public async Task<AllocateDirectConnectionResponse> AllocateDirectConnectionAsync(AllocateDirectConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllocateDirectConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request AllocateInstancePublicConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AllocateInstancePublicConnectionResponse
+         */
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnectionWithOptions(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -424,6 +475,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request AllocateInstancePublicConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AllocateInstancePublicConnectionResponse
+         */
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionWithOptionsAsync(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -479,18 +537,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request AllocateInstancePublicConnectionRequest
+          * @return AllocateInstancePublicConnectionResponse
+         */
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllocateInstancePublicConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request AllocateInstancePublicConnectionRequest
+          * @return AllocateInstancePublicConnectionResponse
+         */
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionAsync(AllocateInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllocateInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **CheckCloudResourceAuthorized**.
+          *
+          * @param request CheckCloudResourceAuthorizedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckCloudResourceAuthorizedResponse
+         */
         public CheckCloudResourceAuthorizedResponse CheckCloudResourceAuthorizedWithOptions(CheckCloudResourceAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -542,6 +619,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **CheckCloudResourceAuthorized**.
+          *
+          * @param request CheckCloudResourceAuthorizedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckCloudResourceAuthorizedResponse
+         */
         public async Task<CheckCloudResourceAuthorizedResponse> CheckCloudResourceAuthorizedWithOptionsAsync(CheckCloudResourceAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -593,18 +677,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **CheckCloudResourceAuthorized**.
+          *
+          * @param request CheckCloudResourceAuthorizedRequest
+          * @return CheckCloudResourceAuthorizedResponse
+         */
         public CheckCloudResourceAuthorizedResponse CheckCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckCloudResourceAuthorizedWithOptions(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **CheckCloudResourceAuthorized**.
+          *
+          * @param request CheckCloudResourceAuthorizedRequest
+          * @return CheckCloudResourceAuthorizedResponse
+         */
         public async Task<CheckCloudResourceAuthorizedResponse> CheckCloudResourceAuthorizedAsync(CheckCloudResourceAuthorizedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckCloudResourceAuthorizedWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The name of the account.
+          *
+          * @param request CreateAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAccountResponse
+         */
         public CreateAccountResponse CreateAccountWithOptions(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -672,6 +775,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The name of the account.
+          *
+          * @param request CreateAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAccountResponse
+         */
         public async Task<CreateAccountResponse> CreateAccountWithOptionsAsync(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -739,18 +849,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The name of the account.
+          *
+          * @param request CreateAccountRequest
+          * @return CreateAccountResponse
+         */
         public CreateAccountResponse CreateAccount(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAccountWithOptions(request, runtime);
         }
 
+        /**
+          * The name of the account.
+          *
+          * @param request CreateAccountRequest
+          * @return CreateAccountResponse
+         */
         public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the backup job.
+          *
+          * @param request CreateBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateBackupResponse
+         */
         public CreateBackupResponse CreateBackupWithOptions(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -798,6 +927,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateBackupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the backup job.
+          *
+          * @param request CreateBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateBackupResponse
+         */
         public async Task<CreateBackupResponse> CreateBackupWithOptionsAsync(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -845,18 +981,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the backup job.
+          *
+          * @param request CreateBackupRequest
+          * @return CreateBackupResponse
+         */
         public CreateBackupResponse CreateBackup(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateBackupWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the backup job.
+          *
+          * @param request CreateBackupRequest
+          * @return CreateBackupResponse
+         */
         public async Task<CreateBackupResponse> CreateBackupAsync(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateBackupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **CreateCacheAnalysisTask**.
+          *
+          * @param request CreateCacheAnalysisTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCacheAnalysisTaskResponse
+         */
         public CreateCacheAnalysisTaskResponse CreateCacheAnalysisTaskWithOptions(CreateCacheAnalysisTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -904,6 +1059,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateCacheAnalysisTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **CreateCacheAnalysisTask**.
+          *
+          * @param request CreateCacheAnalysisTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCacheAnalysisTaskResponse
+         */
         public async Task<CreateCacheAnalysisTaskResponse> CreateCacheAnalysisTaskWithOptionsAsync(CreateCacheAnalysisTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -951,18 +1113,40 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateCacheAnalysisTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **CreateCacheAnalysisTask**.
+          *
+          * @param request CreateCacheAnalysisTaskRequest
+          * @return CreateCacheAnalysisTaskResponse
+         */
         public CreateCacheAnalysisTaskResponse CreateCacheAnalysisTask(CreateCacheAnalysisTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCacheAnalysisTaskWithOptions(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **CreateCacheAnalysisTask**.
+          *
+          * @param request CreateCacheAnalysisTaskRequest
+          * @return CreateCacheAnalysisTaskResponse
+         */
         public async Task<CreateCacheAnalysisTaskResponse> CreateCacheAnalysisTaskAsync(CreateCacheAnalysisTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCacheAnalysisTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+          * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
+          * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
+          * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+          *
+          * @param request CreateGlobalDistributeCacheRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateGlobalDistributeCacheResponse
+         */
         public CreateGlobalDistributeCacheResponse CreateGlobalDistributeCacheWithOptions(CreateGlobalDistributeCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -974,6 +1158,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -1010,6 +1198,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateGlobalDistributeCacheResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+          * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
+          * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
+          * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+          *
+          * @param request CreateGlobalDistributeCacheRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateGlobalDistributeCacheResponse
+         */
         public async Task<CreateGlobalDistributeCacheResponse> CreateGlobalDistributeCacheWithOptionsAsync(CreateGlobalDistributeCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1021,6 +1219,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -1057,22 +1259,183 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateGlobalDistributeCacheResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+          * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
+          * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
+          * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+          *
+          * @param request CreateGlobalDistributeCacheRequest
+          * @return CreateGlobalDistributeCacheResponse
+         */
         public CreateGlobalDistributeCacheResponse CreateGlobalDistributeCache(CreateGlobalDistributeCacheRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateGlobalDistributeCacheWithOptions(request, runtime);
         }
 
+        /**
+          * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+          * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
+          * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
+          * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+          *
+          * @param request CreateGlobalDistributeCacheRequest
+          * @return CreateGlobalDistributeCacheResponse
+         */
         public async Task<CreateGlobalDistributeCacheResponse> CreateGlobalDistributeCacheAsync(CreateGlobalDistributeCacheRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateGlobalDistributeCacheWithOptionsAsync(request, runtime);
         }
 
+        public CreateGlobalSecurityIPGroupResponse CreateGlobalSecurityIPGroupWithOptions(CreateGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GIpList))
+            {
+                query["GIpList"] = request.GIpList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalIgName))
+            {
+                query["GlobalIgName"] = request.GlobalIgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGlobalSecurityIPGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateGlobalSecurityIPGroupResponse> CreateGlobalSecurityIPGroupWithOptionsAsync(CreateGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GIpList))
+            {
+                query["GIpList"] = request.GIpList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalIgName))
+            {
+                query["GlobalIgName"] = request.GlobalIgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGlobalSecurityIPGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateGlobalSecurityIPGroupResponse CreateGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateGlobalSecurityIPGroupWithOptions(request, runtime);
+        }
+
+        public async Task<CreateGlobalSecurityIPGroupResponse> CreateGlobalSecurityIPGroupAsync(CreateGlobalSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * You can call this operation to create an ApsaraDB for Redis instance that uses local or cloud disks or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks. To create a Tair instance that uses cloud disks, call the [CreateTairInstance](~~208271~~) operation.
+          * > You can also create an instance in the ApsaraDB for Redis console. For more information, see [Create an instance](~~26351~~).
+          *
+          * @param request CreateInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateInstanceResponse
+         */
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Appendonly))
+            {
+                query["Appendonly"] = request.Appendonly;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
@@ -1101,6 +1464,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStringPrefix))
+            {
+                query["ConnectionStringPrefix"] = request.ConnectionStringPrefix;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
             {
                 query["CouponNo"] = request.CouponNo;
@@ -1125,6 +1492,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["GlobalInstanceId"] = request.GlobalInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupIds))
+            {
+                query["GlobalSecurityGroupIds"] = request.GlobalSecurityGroupIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
                 query["InstanceClass"] = request.InstanceClass;
@@ -1140,6 +1511,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
                 query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -1164,6 +1539,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
+            {
+                query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1240,10 +1619,23 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * You can call this operation to create an ApsaraDB for Redis instance that uses local or cloud disks or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks. To create a Tair instance that uses cloud disks, call the [CreateTairInstance](~~208271~~) operation.
+          * > You can also create an instance in the ApsaraDB for Redis console. For more information, see [Create an instance](~~26351~~).
+          *
+          * @param request CreateInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateInstanceResponse
+         */
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Appendonly))
+            {
+                query["Appendonly"] = request.Appendonly;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
@@ -1272,6 +1664,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStringPrefix))
+            {
+                query["ConnectionStringPrefix"] = request.ConnectionStringPrefix;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
             {
                 query["CouponNo"] = request.CouponNo;
@@ -1296,6 +1692,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["GlobalInstanceId"] = request.GlobalInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupIds))
+            {
+                query["GlobalSecurityGroupIds"] = request.GlobalSecurityGroupIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
                 query["InstanceClass"] = request.InstanceClass;
@@ -1311,6 +1711,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
                 query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -1335,6 +1739,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
+            {
+                query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1411,18 +1819,43 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * You can call this operation to create an ApsaraDB for Redis instance that uses local or cloud disks or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks. To create a Tair instance that uses cloud disks, call the [CreateTairInstance](~~208271~~) operation.
+          * > You can also create an instance in the ApsaraDB for Redis console. For more information, see [Create an instance](~~26351~~).
+          *
+          * @param request CreateInstanceRequest
+          * @return CreateInstanceResponse
+         */
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * You can call this operation to create an ApsaraDB for Redis instance that uses local or cloud disks or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks. To create a Tair instance that uses cloud disks, call the [CreateTairInstance](~~208271~~) operation.
+          * > You can also create an instance in the ApsaraDB for Redis console. For more information, see [Create an instance](~~26351~~).
+          *
+          * @param request CreateInstanceRequest
+          * @return CreateInstanceResponse
+         */
         public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
+          * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+          *
+          * @param request CreateInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateInstancesResponse
+         */
         public CreateInstancesResponse CreateInstancesWithOptions(CreateInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1502,6 +1935,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
+          * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+          *
+          * @param request CreateInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateInstancesResponse
+         */
         public async Task<CreateInstancesResponse> CreateInstancesWithOptionsAsync(CreateInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1581,18 +2023,45 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
+          * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+          *
+          * @param request CreateInstancesRequest
+          * @return CreateInstancesResponse
+         */
         public CreateInstancesResponse CreateInstances(CreateInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
+          * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+          *
+          * @param request CreateInstancesRequest
+          * @return CreateInstancesResponse
+         */
         public async Task<CreateInstancesResponse> CreateInstancesAsync(CreateInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
+          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * > 
+          * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+          * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+          *
+          * @param request CreateTairInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTairInstanceResponse
+         */
         public CreateTairInstanceResponse CreateTairInstanceWithOptions(CreateTairInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1633,6 +2102,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["CouponNo"] = request.CouponNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
@@ -1640,6 +2113,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalInstanceId))
             {
                 query["GlobalInstanceId"] = request.GlobalInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupIds))
+            {
+                query["GlobalSecurityGroupIds"] = request.GlobalSecurityGroupIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
@@ -1661,6 +2138,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamGroupId))
+            {
+                query["ParamGroupId"] = request.ParamGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["Password"] = request.Password;
@@ -1669,9 +2150,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["Period"] = request.Period;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
+            {
+                query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1717,6 +2206,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["StorageType"] = request.StorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -1748,6 +2241,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateTairInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
+          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * > 
+          * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+          * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+          *
+          * @param request CreateTairInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTairInstanceResponse
+         */
         public async Task<CreateTairInstanceResponse> CreateTairInstanceWithOptionsAsync(CreateTairInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1788,6 +2292,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["CouponNo"] = request.CouponNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
@@ -1795,6 +2303,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalInstanceId))
             {
                 query["GlobalInstanceId"] = request.GlobalInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupIds))
+            {
+                query["GlobalSecurityGroupIds"] = request.GlobalSecurityGroupIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
@@ -1816,6 +2328,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamGroupId))
+            {
+                query["ParamGroupId"] = request.ParamGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["Password"] = request.Password;
@@ -1824,9 +2340,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["Period"] = request.Period;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
+            {
+                query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1872,6 +2396,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["StorageType"] = request.StorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -1903,18 +2431,46 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateTairInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
+          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * > 
+          * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+          * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+          *
+          * @param request CreateTairInstanceRequest
+          * @return CreateTairInstanceResponse
+         */
         public CreateTairInstanceResponse CreateTairInstance(CreateTairInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTairInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
+          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * > 
+          * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+          * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+          *
+          * @param request CreateTairInstanceRequest
+          * @return CreateTairInstanceResponse
+         */
         public async Task<CreateTairInstanceResponse> CreateTairInstanceAsync(CreateTairInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTairInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
+          * *   The ApsaraDB for Redis instance must be in the Running state.
+          *
+          * @param request DeleteAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1966,6 +2522,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
+          * *   The ApsaraDB for Redis instance must be in the Running state.
+          *
+          * @param request DeleteAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2017,18 +2581,43 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
+          * *   The ApsaraDB for Redis instance must be in the Running state.
+          *
+          * @param request DeleteAccountRequest
+          * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccountWithOptions(request, runtime);
         }
 
+        /**
+          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
+          * *   The ApsaraDB for Redis instance must be in the Running state.
+          *
+          * @param request DeleteAccountRequest
+          * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the running state.
+          * *   The instance is charged on a pay-as-you-go basis.
+          * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
+          *
+          * @param request DeleteInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteInstanceResponse
+         */
         public DeleteInstanceResponse DeleteInstanceWithOptions(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2080,6 +2669,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the running state.
+          * *   The instance is charged on a pay-as-you-go basis.
+          * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
+          *
+          * @param request DeleteInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteInstanceResponse
+         */
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2131,22 +2731,56 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the running state.
+          * *   The instance is charged on a pay-as-you-go basis.
+          * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
+          *
+          * @param request DeleteInstanceRequest
+          * @return DeleteInstanceResponse
+         */
         public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the running state.
+          * *   The instance is charged on a pay-as-you-go basis.
+          * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
+          *
+          * @param request DeleteInstanceRequest
+          * @return DeleteInstanceResponse
+         */
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](~~198082~~).\\
+          * Before you call this operation, make sure that the instance meets the following requirements:
+          * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](~~183956~~).
+          * *   The instance has more than one data shard.
+          *
+          * @param request DeleteShardingNodeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteShardingNodeResponse
+         */
         public DeleteShardingNodeResponse DeleteShardingNodeWithOptions(DeleteShardingNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceTrans))
+            {
+                query["ForceTrans"] = request.ForceTrans;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -2162,10 +2796,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
-            {
-                query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -2202,10 +2832,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DeleteShardingNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](~~198082~~).\\
+          * Before you call this operation, make sure that the instance meets the following requirements:
+          * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](~~183956~~).
+          * *   The instance has more than one data shard.
+          *
+          * @param request DeleteShardingNodeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteShardingNodeResponse
+         */
         public async Task<DeleteShardingNodeResponse> DeleteShardingNodeWithOptionsAsync(DeleteShardingNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceTrans))
+            {
+                query["ForceTrans"] = request.ForceTrans;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -2221,10 +2865,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
-            {
-                query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -2261,18 +2901,43 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DeleteShardingNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](~~198082~~).\\
+          * Before you call this operation, make sure that the instance meets the following requirements:
+          * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](~~183956~~).
+          * *   The instance has more than one data shard.
+          *
+          * @param request DeleteShardingNodeRequest
+          * @return DeleteShardingNodeResponse
+         */
         public DeleteShardingNodeResponse DeleteShardingNode(DeleteShardingNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteShardingNodeWithOptions(request, runtime);
         }
 
+        /**
+          * You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](~~198082~~).\\
+          * Before you call this operation, make sure that the instance meets the following requirements:
+          * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](~~183956~~).
+          * *   The instance has more than one data shard.
+          *
+          * @param request DeleteShardingNodeRequest
+          * @return DeleteShardingNodeResponse
+         */
         public async Task<DeleteShardingNodeResponse> DeleteShardingNodeAsync(DeleteShardingNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteShardingNodeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Details about returned accounts of the instance.
+          *
+          * @param request DescribeAccountsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAccountsResponse
+         */
         public DescribeAccountsResponse DescribeAccountsWithOptions(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2324,6 +2989,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeAccountsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Details about returned accounts of the instance.
+          *
+          * @param request DescribeAccountsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAccountsResponse
+         */
         public async Task<DescribeAccountsResponse> DescribeAccountsWithOptionsAsync(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2375,41 +3047,46 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Details about returned accounts of the instance.
+          *
+          * @param request DescribeAccountsRequest
+          * @return DescribeAccountsResponse
+         */
         public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccountsWithOptions(request, runtime);
         }
 
+        /**
+          * Details about returned accounts of the instance.
+          *
+          * @param request DescribeAccountsRequest
+          * @return DescribeAccountsResponse
+         */
         public async Task<DescribeAccountsResponse> DescribeAccountsAsync(DescribeAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccountsWithOptionsAsync(request, runtime);
         }
 
-        public DescribeActiveOperationTasksResponse DescribeActiveOperationTasksWithOptions(DescribeActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * Specifies whether to return the historical tasks. Valid values:
+          * *   **0**: returns the current task. This is the default value.
+          * *   **1**: returns the historical tasks.
+          *
+          * @param request DescribeActiveOperationTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeActiveOperationTaskResponse
+         */
+        public DescribeActiveOperationTaskResponse DescribeActiveOperationTaskWithOptions(DescribeActiveOperationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowCancel))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsHistory))
             {
-                query["AllowCancel"] = request.AllowCancel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowChange))
-            {
-                query["AllowChange"] = request.AllowChange;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeLevel))
-            {
-                query["ChangeLevel"] = request.ChangeLevel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
-            {
-                query["DbType"] = request.DbType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsName))
-            {
-                query["InsName"] = request.InsName;
+                query["IsHistory"] = request.IsHistory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -2427,9 +3104,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["PageSize"] = request.PageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
-                query["ProductId"] = request.ProductId;
+                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -2443,10 +3120,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
             {
                 query["TaskType"] = request.TaskType;
@@ -2457,7 +3130,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeActiveOperationTasks",
+                Action = "DescribeActiveOperationTask",
                 Version = "2015-01-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -2467,32 +3140,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeActiveOperationTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeActiveOperationTasksResponse> DescribeActiveOperationTasksWithOptionsAsync(DescribeActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * Specifies whether to return the historical tasks. Valid values:
+          * *   **0**: returns the current task. This is the default value.
+          * *   **1**: returns the historical tasks.
+          *
+          * @param request DescribeActiveOperationTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeActiveOperationTaskResponse
+         */
+        public async Task<DescribeActiveOperationTaskResponse> DescribeActiveOperationTaskWithOptionsAsync(DescribeActiveOperationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowCancel))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsHistory))
             {
-                query["AllowCancel"] = request.AllowCancel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowChange))
-            {
-                query["AllowChange"] = request.AllowChange;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeLevel))
-            {
-                query["ChangeLevel"] = request.ChangeLevel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
-            {
-                query["DbType"] = request.DbType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsName))
-            {
-                query["InsName"] = request.InsName;
+                query["IsHistory"] = request.IsHistory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -2510,9 +3176,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["PageSize"] = request.PageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
-                query["ProductId"] = request.ProductId;
+                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -2526,10 +3192,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
             {
                 query["TaskType"] = request.TaskType;
@@ -2540,7 +3202,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeActiveOperationTasks",
+                Action = "DescribeActiveOperationTask",
                 Version = "2015-01-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -2550,21 +3212,48 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeActiveOperationTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeActiveOperationTasksResponse DescribeActiveOperationTasks(DescribeActiveOperationTasksRequest request)
+        /**
+          * Specifies whether to return the historical tasks. Valid values:
+          * *   **0**: returns the current task. This is the default value.
+          * *   **1**: returns the historical tasks.
+          *
+          * @param request DescribeActiveOperationTaskRequest
+          * @return DescribeActiveOperationTaskResponse
+         */
+        public DescribeActiveOperationTaskResponse DescribeActiveOperationTask(DescribeActiveOperationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeActiveOperationTasksWithOptions(request, runtime);
+            return DescribeActiveOperationTaskWithOptions(request, runtime);
         }
 
-        public async Task<DescribeActiveOperationTasksResponse> DescribeActiveOperationTasksAsync(DescribeActiveOperationTasksRequest request)
+        /**
+          * Specifies whether to return the historical tasks. Valid values:
+          * *   **0**: returns the current task. This is the default value.
+          * *   **1**: returns the historical tasks.
+          *
+          * @param request DescribeActiveOperationTaskRequest
+          * @return DescribeActiveOperationTaskResponse
+         */
+        public async Task<DescribeActiveOperationTaskResponse> DescribeActiveOperationTaskAsync(DescribeActiveOperationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeActiveOperationTasksWithOptionsAsync(request, runtime);
+            return await DescribeActiveOperationTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](~~102015~~).
+          * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+          * *   The instance is an instance of the ApsaraDB for Redis Community Edition or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair). For more information, see [Performance-enhanced instances](~~126164~~).
+          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
+          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+          *
+          * @param request DescribeAuditLogConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAuditLogConfigResponse
+         */
         public DescribeAuditLogConfigResponse DescribeAuditLogConfigWithOptions(DescribeAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2616,6 +3305,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeAuditLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](~~102015~~).
+          * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+          * *   The instance is an instance of the ApsaraDB for Redis Community Edition or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair). For more information, see [Performance-enhanced instances](~~126164~~).
+          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
+          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+          *
+          * @param request DescribeAuditLogConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAuditLogConfigResponse
+         */
         public async Task<DescribeAuditLogConfigResponse> DescribeAuditLogConfigWithOptionsAsync(DescribeAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2667,18 +3367,49 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeAuditLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](~~102015~~).
+          * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+          * *   The instance is an instance of the ApsaraDB for Redis Community Edition or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair). For more information, see [Performance-enhanced instances](~~126164~~).
+          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
+          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+          *
+          * @param request DescribeAuditLogConfigRequest
+          * @return DescribeAuditLogConfigResponse
+         */
         public DescribeAuditLogConfigResponse DescribeAuditLogConfig(DescribeAuditLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAuditLogConfigWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](~~102015~~).
+          * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+          * *   The instance is an instance of the ApsaraDB for Redis Community Edition or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair). For more information, see [Performance-enhanced instances](~~126164~~).
+          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
+          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+          *
+          * @param request DescribeAuditLogConfigRequest
+          * @return DescribeAuditLogConfigResponse
+         */
         public async Task<DescribeAuditLogConfigResponse> DescribeAuditLogConfigAsync(DescribeAuditLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAuditLogConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
+          * Before you call this operation, make sure that the instance meets the following requirements:
+          * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
+          * *   The engine version of the instance is Redis 4.0 or later.
+          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+          *
+          * @param request DescribeAuditRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAuditRecordsResponse
+         */
         public DescribeAuditRecordsResponse DescribeAuditRecordsWithOptions(DescribeAuditRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2762,6 +3493,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeAuditRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
+          * Before you call this operation, make sure that the instance meets the following requirements:
+          * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
+          * *   The engine version of the instance is Redis 4.0 or later.
+          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+          *
+          * @param request DescribeAuditRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAuditRecordsResponse
+         */
         public async Task<DescribeAuditRecordsResponse> DescribeAuditRecordsWithOptionsAsync(DescribeAuditRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2845,12 +3587,32 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeAuditRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
+          * Before you call this operation, make sure that the instance meets the following requirements:
+          * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
+          * *   The engine version of the instance is Redis 4.0 or later.
+          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+          *
+          * @param request DescribeAuditRecordsRequest
+          * @return DescribeAuditRecordsResponse
+         */
         public DescribeAuditRecordsResponse DescribeAuditRecords(DescribeAuditRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAuditRecordsWithOptions(request, runtime);
         }
 
+        /**
+          * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
+          * Before you call this operation, make sure that the instance meets the following requirements:
+          * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
+          * *   The engine version of the instance is Redis 4.0 or later.
+          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+          *
+          * @param request DescribeAuditRecordsRequest
+          * @return DescribeAuditRecordsResponse
+         */
         public async Task<DescribeAuditRecordsResponse> DescribeAuditRecordsAsync(DescribeAuditRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2876,6 +3638,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceScene))
+            {
+                query["InstanceScene"] = request.InstanceScene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
             {
@@ -2959,6 +3725,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceScene))
+            {
+                query["InstanceScene"] = request.InstanceScene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
             {
@@ -3417,6 +4187,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeBackupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The number of entries returned on the current page.
+          *
+          * @param request DescribeCacheAnalysisReportRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCacheAnalysisReportResponse
+         */
         public DescribeCacheAnalysisReportResponse DescribeCacheAnalysisReportWithOptions(DescribeCacheAnalysisReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3484,6 +4261,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeCacheAnalysisReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The number of entries returned on the current page.
+          *
+          * @param request DescribeCacheAnalysisReportRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCacheAnalysisReportResponse
+         */
         public async Task<DescribeCacheAnalysisReportResponse> DescribeCacheAnalysisReportWithOptionsAsync(DescribeCacheAnalysisReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3551,18 +4335,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeCacheAnalysisReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The number of entries returned on the current page.
+          *
+          * @param request DescribeCacheAnalysisReportRequest
+          * @return DescribeCacheAnalysisReportResponse
+         */
         public DescribeCacheAnalysisReportResponse DescribeCacheAnalysisReport(DescribeCacheAnalysisReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCacheAnalysisReportWithOptions(request, runtime);
         }
 
+        /**
+          * The number of entries returned on the current page.
+          *
+          * @param request DescribeCacheAnalysisReportRequest
+          * @return DescribeCacheAnalysisReportResponse
+         */
         public async Task<DescribeCacheAnalysisReportResponse> DescribeCacheAnalysisReportAsync(DescribeCacheAnalysisReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCacheAnalysisReportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **DescribeCacheAnalysisReportList**.
+          *
+          * @param request DescribeCacheAnalysisReportListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCacheAnalysisReportListResponse
+         */
         public DescribeCacheAnalysisReportListResponse DescribeCacheAnalysisReportListWithOptions(DescribeCacheAnalysisReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3626,6 +4429,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeCacheAnalysisReportListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **DescribeCacheAnalysisReportList**.
+          *
+          * @param request DescribeCacheAnalysisReportListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCacheAnalysisReportListResponse
+         */
         public async Task<DescribeCacheAnalysisReportListResponse> DescribeCacheAnalysisReportListWithOptionsAsync(DescribeCacheAnalysisReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3689,18 +4499,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeCacheAnalysisReportListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **DescribeCacheAnalysisReportList**.
+          *
+          * @param request DescribeCacheAnalysisReportListRequest
+          * @return DescribeCacheAnalysisReportListResponse
+         */
         public DescribeCacheAnalysisReportListResponse DescribeCacheAnalysisReportList(DescribeCacheAnalysisReportListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCacheAnalysisReportListWithOptions(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **DescribeCacheAnalysisReportList**.
+          *
+          * @param request DescribeCacheAnalysisReportListRequest
+          * @return DescribeCacheAnalysisReportListResponse
+         */
         public async Task<DescribeCacheAnalysisReportListResponse> DescribeCacheAnalysisReportListAsync(DescribeCacheAnalysisReportListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCacheAnalysisReportListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
+          *
+          * @param request DescribeClusterMemberInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterMemberInfoResponse
+         */
         public DescribeClusterMemberInfoResponse DescribeClusterMemberInfoWithOptions(DescribeClusterMemberInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3756,6 +4585,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeClusterMemberInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
+          *
+          * @param request DescribeClusterMemberInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterMemberInfoResponse
+         */
         public async Task<DescribeClusterMemberInfoResponse> DescribeClusterMemberInfoWithOptionsAsync(DescribeClusterMemberInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3811,12 +4647,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeClusterMemberInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
+          *
+          * @param request DescribeClusterMemberInfoRequest
+          * @return DescribeClusterMemberInfoResponse
+         */
         public DescribeClusterMemberInfoResponse DescribeClusterMemberInfo(DescribeClusterMemberInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterMemberInfoWithOptions(request, runtime);
         }
 
+        /**
+          * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
+          *
+          * @param request DescribeClusterMemberInfoRequest
+          * @return DescribeClusterMemberInfoResponse
+         */
         public async Task<DescribeClusterMemberInfoResponse> DescribeClusterMemberInfoAsync(DescribeClusterMemberInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3929,6 +4777,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeDBInstanceNetInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
+          *
+          * @param request DescribeDedicatedClusterInstanceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedClusterInstanceListResponse
+         */
         public DescribeDedicatedClusterInstanceListResponse DescribeDedicatedClusterInstanceListWithOptions(DescribeDedicatedClusterInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4016,6 +4871,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
+          *
+          * @param request DescribeDedicatedClusterInstanceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedClusterInstanceListResponse
+         */
         public async Task<DescribeDedicatedClusterInstanceListResponse> DescribeDedicatedClusterInstanceListWithOptionsAsync(DescribeDedicatedClusterInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4103,18 +4965,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
+          *
+          * @param request DescribeDedicatedClusterInstanceListRequest
+          * @return DescribeDedicatedClusterInstanceListResponse
+         */
         public DescribeDedicatedClusterInstanceListResponse DescribeDedicatedClusterInstanceList(DescribeDedicatedClusterInstanceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDedicatedClusterInstanceListWithOptions(request, runtime);
         }
 
+        /**
+          * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
+          *
+          * @param request DescribeDedicatedClusterInstanceListRequest
+          * @return DescribeDedicatedClusterInstanceListResponse
+         */
         public async Task<DescribeDedicatedClusterInstanceListResponse> DescribeDedicatedClusterInstanceListAsync(DescribeDedicatedClusterInstanceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDedicatedClusterInstanceListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
+          * > For more information about TDE, see [Enable TDE](~~265913~~).
+          *
+          * @param request DescribeEncryptionKeyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeEncryptionKeyResponse
+         */
         public DescribeEncryptionKeyResponse DescribeEncryptionKeyWithOptions(DescribeEncryptionKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4166,6 +5048,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeEncryptionKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
+          * > For more information about TDE, see [Enable TDE](~~265913~~).
+          *
+          * @param request DescribeEncryptionKeyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeEncryptionKeyResponse
+         */
         public async Task<DescribeEncryptionKeyResponse> DescribeEncryptionKeyWithOptionsAsync(DescribeEncryptionKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4217,18 +5107,39 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeEncryptionKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
+          * > For more information about TDE, see [Enable TDE](~~265913~~).
+          *
+          * @param request DescribeEncryptionKeyRequest
+          * @return DescribeEncryptionKeyResponse
+         */
         public DescribeEncryptionKeyResponse DescribeEncryptionKey(DescribeEncryptionKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEncryptionKeyWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
+          * > For more information about TDE, see [Enable TDE](~~265913~~).
+          *
+          * @param request DescribeEncryptionKeyRequest
+          * @return DescribeEncryptionKeyResponse
+         */
         public async Task<DescribeEncryptionKeyResponse> DescribeEncryptionKeyAsync(DescribeEncryptionKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEncryptionKeyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request DescribeEncryptionKeyListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeEncryptionKeyListResponse
+         */
         public DescribeEncryptionKeyListResponse DescribeEncryptionKeyListWithOptions(DescribeEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4276,6 +5187,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeEncryptionKeyListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request DescribeEncryptionKeyListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeEncryptionKeyListResponse
+         */
         public async Task<DescribeEncryptionKeyListResponse> DescribeEncryptionKeyListWithOptionsAsync(DescribeEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4323,12 +5241,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeEncryptionKeyListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request DescribeEncryptionKeyListRequest
+          * @return DescribeEncryptionKeyListResponse
+         */
         public DescribeEncryptionKeyListResponse DescribeEncryptionKeyList(DescribeEncryptionKeyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEncryptionKeyListWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request DescribeEncryptionKeyListRequest
+          * @return DescribeEncryptionKeyListResponse
+         */
         public async Task<DescribeEncryptionKeyListResponse> DescribeEncryptionKeyListAsync(DescribeEncryptionKeyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4571,6 +5501,71 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeGlobalDistributeCacheWithOptionsAsync(request, runtime);
         }
 
+        public DescribeGlobalSecurityIPGroupResponse DescribeGlobalSecurityIPGroupWithOptions(DescribeGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGlobalSecurityIPGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeGlobalSecurityIPGroupResponse> DescribeGlobalSecurityIPGroupWithOptionsAsync(DescribeGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGlobalSecurityIPGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeGlobalSecurityIPGroupResponse DescribeGlobalSecurityIPGroup(DescribeGlobalSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGlobalSecurityIPGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeGlobalSecurityIPGroupResponse> DescribeGlobalSecurityIPGroupAsync(DescribeGlobalSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
+          *
+          * @param request DescribeHistoryMonitorValuesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHistoryMonitorValuesResponse
+         */
         public DescribeHistoryMonitorValuesResponse DescribeHistoryMonitorValuesWithOptions(DescribeHistoryMonitorValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4638,6 +5633,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeHistoryMonitorValuesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
+          *
+          * @param request DescribeHistoryMonitorValuesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHistoryMonitorValuesResponse
+         */
         public async Task<DescribeHistoryMonitorValuesResponse> DescribeHistoryMonitorValuesWithOptionsAsync(DescribeHistoryMonitorValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4705,16 +5707,206 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeHistoryMonitorValuesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
+          *
+          * @param request DescribeHistoryMonitorValuesRequest
+          * @return DescribeHistoryMonitorValuesResponse
+         */
         public DescribeHistoryMonitorValuesResponse DescribeHistoryMonitorValues(DescribeHistoryMonitorValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHistoryMonitorValuesWithOptions(request, runtime);
         }
 
+        /**
+          * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
+          *
+          * @param request DescribeHistoryMonitorValuesRequest
+          * @return DescribeHistoryMonitorValuesResponse
+         */
         public async Task<DescribeHistoryMonitorValuesResponse> DescribeHistoryMonitorValuesAsync(DescribeHistoryMonitorValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHistoryMonitorValuesWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeHistoryTasksResponse DescribeHistoryTasksWithOptions(DescribeHistoryTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromExecTime))
+            {
+                query["FromExecTime"] = request.FromExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToExecTime))
+            {
+                query["ToExecTime"] = request.ToExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryTasks",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeHistoryTasksResponse> DescribeHistoryTasksWithOptionsAsync(DescribeHistoryTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromExecTime))
+            {
+                query["FromExecTime"] = request.FromExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToExecTime))
+            {
+                query["ToExecTime"] = request.ToExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryTasks",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeHistoryTasksResponse DescribeHistoryTasks(DescribeHistoryTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHistoryTasksWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeHistoryTasksResponse> DescribeHistoryTasksAsync(DescribeHistoryTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHistoryTasksWithOptionsAsync(request, runtime);
         }
 
         public DescribeInstanceAttributeResponse DescribeInstanceAttributeWithOptions(DescribeInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4953,6 +6145,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeInstanceAutoRenewalAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available only for instances that use cloud disks.
+          * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
+          *
+          * @param request DescribeInstanceConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceConfigResponse
+         */
         public DescribeInstanceConfigResponse DescribeInstanceConfigWithOptions(DescribeInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5000,6 +6200,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for instances that use cloud disks.
+          * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
+          *
+          * @param request DescribeInstanceConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceConfigResponse
+         */
         public async Task<DescribeInstanceConfigResponse> DescribeInstanceConfigWithOptionsAsync(DescribeInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5047,18 +6255,43 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for instances that use cloud disks.
+          * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
+          *
+          * @param request DescribeInstanceConfigRequest
+          * @return DescribeInstanceConfigResponse
+         */
         public DescribeInstanceConfigResponse DescribeInstanceConfig(DescribeInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceConfigWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available only for instances that use cloud disks.
+          * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
+          *
+          * @param request DescribeInstanceConfigRequest
+          * @return DescribeInstanceConfigResponse
+         */
         public async Task<DescribeInstanceConfigResponse> DescribeInstanceConfigAsync(DescribeInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+          * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
+          * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
+          * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
+          * > After SSL encryption is enabled, the instance may respond slower.
+          *
+          * @param request DescribeInstanceSSLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceSSLResponse
+         */
         public DescribeInstanceSSLResponse DescribeInstanceSSLWithOptions(DescribeInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5106,6 +6339,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+          * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
+          * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
+          * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
+          * > After SSL encryption is enabled, the instance may respond slower.
+          *
+          * @param request DescribeInstanceSSLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceSSLResponse
+         */
         public async Task<DescribeInstanceSSLResponse> DescribeInstanceSSLWithOptionsAsync(DescribeInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5153,18 +6397,45 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+          * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
+          * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
+          * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
+          * > After SSL encryption is enabled, the instance may respond slower.
+          *
+          * @param request DescribeInstanceSSLRequest
+          * @return DescribeInstanceSSLResponse
+         */
         public DescribeInstanceSSLResponse DescribeInstanceSSL(DescribeInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceSSLWithOptions(request, runtime);
         }
 
+        /**
+          * SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+          * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
+          * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
+          * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
+          * > After SSL encryption is enabled, the instance may respond slower.
+          *
+          * @param request DescribeInstanceSSLRequest
+          * @return DescribeInstanceSSLResponse
+         */
         public async Task<DescribeInstanceSSLResponse> DescribeInstanceSSLAsync(DescribeInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request DescribeInstanceTDEStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceTDEStatusResponse
+         */
         public DescribeInstanceTDEStatusResponse DescribeInstanceTDEStatusWithOptions(DescribeInstanceTDEStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5212,6 +6483,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceTDEStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request DescribeInstanceTDEStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceTDEStatusResponse
+         */
         public async Task<DescribeInstanceTDEStatusResponse> DescribeInstanceTDEStatusWithOptionsAsync(DescribeInstanceTDEStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5259,12 +6537,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceTDEStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request DescribeInstanceTDEStatusRequest
+          * @return DescribeInstanceTDEStatusResponse
+         */
         public DescribeInstanceTDEStatusResponse DescribeInstanceTDEStatus(DescribeInstanceTDEStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceTDEStatusWithOptions(request, runtime);
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request DescribeInstanceTDEStatusRequest
+          * @return DescribeInstanceTDEStatusResponse
+         */
         public async Task<DescribeInstanceTDEStatusResponse> DescribeInstanceTDEStatusAsync(DescribeInstanceTDEStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5537,6 +6827,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
+          * > This operation returns non-paged results.
+          *
+          * @param request DescribeInstancesOverviewRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstancesOverviewResponse
+         */
         public DescribeInstancesOverviewResponse DescribeInstancesOverviewWithOptions(DescribeInstancesOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5644,6 +6942,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstancesOverviewResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
+          * > This operation returns non-paged results.
+          *
+          * @param request DescribeInstancesOverviewRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstancesOverviewResponse
+         */
         public async Task<DescribeInstancesOverviewResponse> DescribeInstancesOverviewWithOptionsAsync(DescribeInstancesOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5751,18 +7057,39 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstancesOverviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
+          * > This operation returns non-paged results.
+          *
+          * @param request DescribeInstancesOverviewRequest
+          * @return DescribeInstancesOverviewResponse
+         */
         public DescribeInstancesOverviewResponse DescribeInstancesOverview(DescribeInstancesOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstancesOverviewWithOptions(request, runtime);
         }
 
+        /**
+          * If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
+          * > This operation returns non-paged results.
+          *
+          * @param request DescribeInstancesOverviewRequest
+          * @return DescribeInstancesOverviewResponse
+         */
         public async Task<DescribeInstancesOverviewResponse> DescribeInstancesOverviewAsync(DescribeInstancesOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstancesOverviewWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
+          *
+          * @param request DescribeIntranetAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeIntranetAttributeResponse
+         */
         public DescribeIntranetAttributeResponse DescribeIntranetAttributeWithOptions(DescribeIntranetAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5814,6 +7141,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeIntranetAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
+          *
+          * @param request DescribeIntranetAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeIntranetAttributeResponse
+         */
         public async Task<DescribeIntranetAttributeResponse> DescribeIntranetAttributeWithOptionsAsync(DescribeIntranetAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5865,18 +7199,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeIntranetAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
+          *
+          * @param request DescribeIntranetAttributeRequest
+          * @return DescribeIntranetAttributeResponse
+         */
         public DescribeIntranetAttributeResponse DescribeIntranetAttribute(DescribeIntranetAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeIntranetAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
+          *
+          * @param request DescribeIntranetAttributeRequest
+          * @return DescribeIntranetAttributeResponse
+         */
         public async Task<DescribeIntranetAttributeResponse> DescribeIntranetAttributeAsync(DescribeIntranetAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeIntranetAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The maximum number of connections.
+          *
+          * @param request DescribeLogicInstanceTopologyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeLogicInstanceTopologyResponse
+         */
         public DescribeLogicInstanceTopologyResponse DescribeLogicInstanceTopologyWithOptions(DescribeLogicInstanceTopologyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5924,6 +7277,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeLogicInstanceTopologyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The maximum number of connections.
+          *
+          * @param request DescribeLogicInstanceTopologyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeLogicInstanceTopologyResponse
+         */
         public async Task<DescribeLogicInstanceTopologyResponse> DescribeLogicInstanceTopologyWithOptionsAsync(DescribeLogicInstanceTopologyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5971,18 +7331,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeLogicInstanceTopologyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The maximum number of connections.
+          *
+          * @param request DescribeLogicInstanceTopologyRequest
+          * @return DescribeLogicInstanceTopologyResponse
+         */
         public DescribeLogicInstanceTopologyResponse DescribeLogicInstanceTopology(DescribeLogicInstanceTopologyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeLogicInstanceTopologyWithOptions(request, runtime);
         }
 
+        /**
+          * The maximum number of connections.
+          *
+          * @param request DescribeLogicInstanceTopologyRequest
+          * @return DescribeLogicInstanceTopologyResponse
+         */
         public async Task<DescribeLogicInstanceTopologyResponse> DescribeLogicInstanceTopologyAsync(DescribeLogicInstanceTopologyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeLogicInstanceTopologyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
+          * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~61107~~) operation to query monitoring history of the instance.
+          *
+          * @param request DescribeMonitorItemsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeMonitorItemsResponse
+         */
         public DescribeMonitorItemsResponse DescribeMonitorItemsWithOptions(DescribeMonitorItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6026,6 +7406,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeMonitorItemsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
+          * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~61107~~) operation to query monitoring history of the instance.
+          *
+          * @param request DescribeMonitorItemsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeMonitorItemsResponse
+         */
         public async Task<DescribeMonitorItemsResponse> DescribeMonitorItemsWithOptionsAsync(DescribeMonitorItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6069,18 +7457,177 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeMonitorItemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
+          * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~61107~~) operation to query monitoring history of the instance.
+          *
+          * @param request DescribeMonitorItemsRequest
+          * @return DescribeMonitorItemsResponse
+         */
         public DescribeMonitorItemsResponse DescribeMonitorItems(DescribeMonitorItemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMonitorItemsWithOptions(request, runtime);
         }
 
+        /**
+          * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
+          * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~61107~~) operation to query monitoring history of the instance.
+          *
+          * @param request DescribeMonitorItemsRequest
+          * @return DescribeMonitorItemsResponse
+         */
         public async Task<DescribeMonitorItemsResponse> DescribeMonitorItemsAsync(DescribeMonitorItemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMonitorItemsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeParameterModificationHistoryResponse DescribeParameterModificationHistoryWithOptions(DescribeParameterModificationHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterName))
+            {
+                query["ParameterName"] = request.ParameterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterModificationHistory",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeParameterModificationHistoryResponse> DescribeParameterModificationHistoryWithOptionsAsync(DescribeParameterModificationHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterName))
+            {
+                query["ParameterName"] = request.ParameterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterModificationHistory",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeParameterModificationHistoryResponse DescribeParameterModificationHistory(DescribeParameterModificationHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeParameterModificationHistoryWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeParameterModificationHistoryResponse> DescribeParameterModificationHistoryAsync(DescribeParameterModificationHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeParameterModificationHistoryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * An array that consists of the details about the parameters returned.
+          *
+          * @param request DescribeParameterTemplatesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterTemplatesResponse
+         */
         public DescribeParameterTemplatesResponse DescribeParameterTemplatesWithOptions(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6144,6 +7691,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeParameterTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * An array that consists of the details about the parameters returned.
+          *
+          * @param request DescribeParameterTemplatesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterTemplatesResponse
+         */
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesWithOptionsAsync(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6207,18 +7761,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeParameterTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * An array that consists of the details about the parameters returned.
+          *
+          * @param request DescribeParameterTemplatesRequest
+          * @return DescribeParameterTemplatesResponse
+         */
         public DescribeParameterTemplatesResponse DescribeParameterTemplates(DescribeParameterTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterTemplatesWithOptions(request, runtime);
         }
 
+        /**
+          * An array that consists of the details about the parameters returned.
+          *
+          * @param request DescribeParameterTemplatesRequest
+          * @return DescribeParameterTemplatesResponse
+         */
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesAsync(DescribeParameterTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParameterTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available only for instances that use local disks.
+          * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
+          *
+          * @param request DescribeParametersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParametersResponse
+         */
         public DescribeParametersResponse DescribeParametersWithOptions(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6274,6 +7848,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeParametersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for instances that use local disks.
+          * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
+          *
+          * @param request DescribeParametersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParametersResponse
+         */
         public async Task<DescribeParametersResponse> DescribeParametersWithOptionsAsync(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6329,12 +7911,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for instances that use local disks.
+          * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
+          *
+          * @param request DescribeParametersRequest
+          * @return DescribeParametersResponse
+         */
         public DescribeParametersResponse DescribeParameters(DescribeParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParametersWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available only for instances that use local disks.
+          * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
+          *
+          * @param request DescribeParametersRequest
+          * @return DescribeParametersResponse
+         */
         public async Task<DescribeParametersResponse> DescribeParametersAsync(DescribeParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6795,6 +8391,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeRoleZoneInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](~~101713~~).
+          * This operation can be called up to 100 times per minute.
+          *
+          * @param request DescribeRunningLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRunningLogRecordsResponse
+         */
         public DescribeRunningLogRecordsResponse DescribeRunningLogRecordsWithOptions(DescribeRunningLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6886,6 +8490,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](~~101713~~).
+          * This operation can be called up to 100 times per minute.
+          *
+          * @param request DescribeRunningLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRunningLogRecordsResponse
+         */
         public async Task<DescribeRunningLogRecordsResponse> DescribeRunningLogRecordsWithOptionsAsync(DescribeRunningLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6977,12 +8589,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](~~101713~~).
+          * This operation can be called up to 100 times per minute.
+          *
+          * @param request DescribeRunningLogRecordsRequest
+          * @return DescribeRunningLogRecordsResponse
+         */
         public DescribeRunningLogRecordsResponse DescribeRunningLogRecords(DescribeRunningLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRunningLogRecordsWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](~~101713~~).
+          * This operation can be called up to 100 times per minute.
+          *
+          * @param request DescribeRunningLogRecordsRequest
+          * @return DescribeRunningLogRecordsResponse
+         */
         public async Task<DescribeRunningLogRecordsResponse> DescribeRunningLogRecordsAsync(DescribeRunningLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7201,6 +8827,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeSecurityIpsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogRecordsResponse
+         */
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecordsWithOptions(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7288,6 +8921,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogRecordsResponse
+         */
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsWithOptionsAsync(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7375,18 +9015,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @return DescribeSlowLogRecordsResponse
+         */
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecords(DescribeSlowLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlowLogRecordsWithOptions(request, runtime);
         }
 
+        /**
+          * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @return DescribeSlowLogRecordsResponse
+         */
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsAsync(DescribeSlowLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlowLogRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The progress of the task. Unit: %.
+          *
+          * @param request DescribeTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTasksResponse
+         */
         public DescribeTasksResponse DescribeTasksWithOptions(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7454,6 +9113,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The progress of the task. Unit: %.
+          *
+          * @param request DescribeTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTasksResponse
+         */
         public async Task<DescribeTasksResponse> DescribeTasksWithOptionsAsync(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7521,12 +9187,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The progress of the task. Unit: %.
+          *
+          * @param request DescribeTasksRequest
+          * @return DescribeTasksResponse
+         */
         public DescribeTasksResponse DescribeTasks(DescribeTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTasksWithOptions(request, runtime);
         }
 
+        /**
+          * The progress of the task. Unit: %.
+          *
+          * @param request DescribeTasksRequest
+          * @return DescribeTasksResponse
+         */
         public async Task<DescribeTasksResponse> DescribeTasksAsync(DescribeTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7647,6 +9325,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeZonesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the fees, limits, and answers to some frequently asked questions about bandwidth adjustments, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~).
+          * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the bandwidth of each data shard in the instance.
+          *
+          * @param request EnableAdditionalBandwidthRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableAdditionalBandwidthResponse
+         */
         public EnableAdditionalBandwidthResponse EnableAdditionalBandwidthWithOptions(EnableAdditionalBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7666,6 +9352,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
             {
                 query["Bandwidth"] = request.Bandwidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
             {
@@ -7726,6 +9416,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<EnableAdditionalBandwidthResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the fees, limits, and answers to some frequently asked questions about bandwidth adjustments, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~).
+          * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the bandwidth of each data shard in the instance.
+          *
+          * @param request EnableAdditionalBandwidthRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableAdditionalBandwidthResponse
+         */
         public async Task<EnableAdditionalBandwidthResponse> EnableAdditionalBandwidthWithOptionsAsync(EnableAdditionalBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7745,6 +9443,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
             {
                 query["Bandwidth"] = request.Bandwidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
             {
@@ -7805,18 +9507,42 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<EnableAdditionalBandwidthResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the fees, limits, and answers to some frequently asked questions about bandwidth adjustments, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~).
+          * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the bandwidth of each data shard in the instance.
+          *
+          * @param request EnableAdditionalBandwidthRequest
+          * @return EnableAdditionalBandwidthResponse
+         */
         public EnableAdditionalBandwidthResponse EnableAdditionalBandwidth(EnableAdditionalBandwidthRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableAdditionalBandwidthWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the fees, limits, and answers to some frequently asked questions about bandwidth adjustments, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~).
+          * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the bandwidth of each data shard in the instance.
+          *
+          * @param request EnableAdditionalBandwidthRequest
+          * @return EnableAdditionalBandwidthResponse
+         */
         public async Task<EnableAdditionalBandwidthResponse> EnableAdditionalBandwidthAsync(EnableAdditionalBandwidthRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableAdditionalBandwidthWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The time when the minor version is upgraded. Valid values:
+          * *   **Immediately**: immediately deletes expired keys.
+          * *   **MaintainTime:**deletes expired key in the maintenance window.
+          * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+          *
+          * @param request FlushExpireKeysRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FlushExpireKeysResponse
+         */
         public FlushExpireKeysResponse FlushExpireKeysWithOptions(FlushExpireKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7868,6 +9594,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<FlushExpireKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The time when the minor version is upgraded. Valid values:
+          * *   **Immediately**: immediately deletes expired keys.
+          * *   **MaintainTime:**deletes expired key in the maintenance window.
+          * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+          *
+          * @param request FlushExpireKeysRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FlushExpireKeysResponse
+         */
         public async Task<FlushExpireKeysResponse> FlushExpireKeysWithOptionsAsync(FlushExpireKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7919,18 +9655,43 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<FlushExpireKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The time when the minor version is upgraded. Valid values:
+          * *   **Immediately**: immediately deletes expired keys.
+          * *   **MaintainTime:**deletes expired key in the maintenance window.
+          * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+          *
+          * @param request FlushExpireKeysRequest
+          * @return FlushExpireKeysResponse
+         */
         public FlushExpireKeysResponse FlushExpireKeys(FlushExpireKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FlushExpireKeysWithOptions(request, runtime);
         }
 
+        /**
+          * The time when the minor version is upgraded. Valid values:
+          * *   **Immediately**: immediately deletes expired keys.
+          * *   **MaintainTime:**deletes expired key in the maintenance window.
+          * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+          *
+          * @param request FlushExpireKeysRequest
+          * @return FlushExpireKeysResponse
+         */
         public async Task<FlushExpireKeysResponse> FlushExpireKeysAsync(FlushExpireKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FlushExpireKeysWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request FlushInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FlushInstanceResponse
+         */
         public FlushInstanceResponse FlushInstanceWithOptions(FlushInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7978,6 +9739,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<FlushInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request FlushInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FlushInstanceResponse
+         */
         public async Task<FlushInstanceResponse> FlushInstanceWithOptionsAsync(FlushInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8025,18 +9793,151 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<FlushInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request FlushInstanceRequest
+          * @return FlushInstanceResponse
+         */
         public FlushInstanceResponse FlushInstance(FlushInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FlushInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request FlushInstanceRequest
+          * @return FlushInstanceResponse
+         */
         public async Task<FlushInstanceResponse> FlushInstanceAsync(FlushInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FlushInstanceWithOptionsAsync(request, runtime);
         }
 
+        public FlushInstanceForDBResponse FlushInstanceForDBWithOptions(FlushInstanceForDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbIndex))
+            {
+                query["DbIndex"] = request.DbIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlushInstanceForDB",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlushInstanceForDBResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<FlushInstanceForDBResponse> FlushInstanceForDBWithOptionsAsync(FlushInstanceForDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbIndex))
+            {
+                query["DbIndex"] = request.DbIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlushInstanceForDB",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlushInstanceForDBResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public FlushInstanceForDBResponse FlushInstanceForDB(FlushInstanceForDBRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FlushInstanceForDBWithOptions(request, runtime);
+        }
+
+        public async Task<FlushInstanceForDBResponse> FlushInstanceForDBAsync(FlushInstanceForDBRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FlushInstanceForDBWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantAccountPrivilegeResponse
+         */
         public GrantAccountPrivilegeResponse GrantAccountPrivilegeWithOptions(GrantAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8092,6 +9993,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<GrantAccountPrivilegeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantAccountPrivilegeResponse
+         */
         public async Task<GrantAccountPrivilegeResponse> GrantAccountPrivilegeWithOptionsAsync(GrantAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8147,18 +10055,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<GrantAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @return GrantAccountPrivilegeResponse
+         */
         public GrantAccountPrivilegeResponse GrantAccountPrivilege(GrantAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantAccountPrivilegeWithOptions(request, runtime);
         }
 
+        /**
+          * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @return GrantAccountPrivilegeResponse
+         */
         public async Task<GrantAccountPrivilegeResponse> GrantAccountPrivilegeAsync(GrantAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantAccountPrivilegeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request InitializeKvstorePermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InitializeKvstorePermissionResponse
+         */
         public InitializeKvstorePermissionResponse InitializeKvstorePermissionWithOptions(InitializeKvstorePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8206,6 +10133,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<InitializeKvstorePermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request InitializeKvstorePermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InitializeKvstorePermissionResponse
+         */
         public async Task<InitializeKvstorePermissionResponse> InitializeKvstorePermissionWithOptionsAsync(InitializeKvstorePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8253,18 +10187,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<InitializeKvstorePermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request InitializeKvstorePermissionRequest
+          * @return InitializeKvstorePermissionResponse
+         */
         public InitializeKvstorePermissionResponse InitializeKvstorePermission(InitializeKvstorePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InitializeKvstorePermissionWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request InitializeKvstorePermissionRequest
+          * @return InitializeKvstorePermissionResponse
+         */
         public async Task<InitializeKvstorePermissionResponse> InitializeKvstorePermissionAsync(InitializeKvstorePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InitializeKvstorePermissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](~~119160~~) and [View tags bound to an instance](~~134038~~).
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8324,6 +10277,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](~~119160~~) and [View tags bound to an instance](~~134038~~).
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8383,18 +10343,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](~~119160~~) and [View tags bound to an instance](~~134038~~).
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](~~119160~~) and [View tags bound to an instance](~~134038~~).
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request MigrateToOtherZoneRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MigrateToOtherZoneResponse
+         */
         public MigrateToOtherZoneResponse MigrateToOtherZoneWithOptions(MigrateToOtherZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8458,6 +10437,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<MigrateToOtherZoneResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request MigrateToOtherZoneRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MigrateToOtherZoneResponse
+         */
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneWithOptionsAsync(MigrateToOtherZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8521,18 +10507,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<MigrateToOtherZoneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request MigrateToOtherZoneRequest
+          * @return MigrateToOtherZoneResponse
+         */
         public MigrateToOtherZoneResponse MigrateToOtherZone(MigrateToOtherZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MigrateToOtherZoneWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request MigrateToOtherZoneRequest
+          * @return MigrateToOtherZoneResponse
+         */
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneAsync(MigrateToOtherZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MigrateToOtherZoneWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is supported only for instances that run Redis 4.0 or later.
+          *
+          * @param request ModifyAccountDescriptionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAccountDescriptionResponse
+         */
         public ModifyAccountDescriptionResponse ModifyAccountDescriptionWithOptions(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8588,6 +10593,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is supported only for instances that run Redis 4.0 or later.
+          *
+          * @param request ModifyAccountDescriptionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAccountDescriptionResponse
+         */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionWithOptionsAsync(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8643,12 +10655,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is supported only for instances that run Redis 4.0 or later.
+          *
+          * @param request ModifyAccountDescriptionRequest
+          * @return ModifyAccountDescriptionResponse
+         */
         public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccountDescriptionWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is supported only for instances that run Redis 4.0 or later.
+          *
+          * @param request ModifyAccountDescriptionRequest
+          * @return ModifyAccountDescriptionResponse
+         */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionAsync(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8785,17 +10809,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ModifyAccountPasswordWithOptionsAsync(request, runtime);
         }
 
-        public ModifyActiveOperationTasksResponse ModifyActiveOperationTasksWithOptions(ModifyActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * 11111,22222
+          *
+          * @param request ModifyActiveOperationTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyActiveOperationTaskResponse
+         */
+        public ModifyActiveOperationTaskResponse ModifyActiveOperationTaskWithOptions(ModifyActiveOperationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
             {
                 query["Ids"] = request.Ids;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImmediateStart))
-            {
-                query["ImmediateStart"] = request.ImmediateStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -8827,7 +10854,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "ModifyActiveOperationTasks",
+                Action = "ModifyActiveOperationTask",
                 Version = "2015-01-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -8837,20 +10864,23 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ModifyActiveOperationTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ModifyActiveOperationTasksResponse> ModifyActiveOperationTasksWithOptionsAsync(ModifyActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * 11111,22222
+          *
+          * @param request ModifyActiveOperationTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyActiveOperationTaskResponse
+         */
+        public async Task<ModifyActiveOperationTaskResponse> ModifyActiveOperationTaskWithOptionsAsync(ModifyActiveOperationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
             {
                 query["Ids"] = request.Ids;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImmediateStart))
-            {
-                query["ImmediateStart"] = request.ImmediateStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -8882,7 +10912,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "ModifyActiveOperationTasks",
+                Action = "ModifyActiveOperationTask",
                 Version = "2015-01-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -8892,21 +10922,43 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ModifyActiveOperationTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ModifyActiveOperationTasksResponse ModifyActiveOperationTasks(ModifyActiveOperationTasksRequest request)
+        /**
+          * 11111,22222
+          *
+          * @param request ModifyActiveOperationTaskRequest
+          * @return ModifyActiveOperationTaskResponse
+         */
+        public ModifyActiveOperationTaskResponse ModifyActiveOperationTask(ModifyActiveOperationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ModifyActiveOperationTasksWithOptions(request, runtime);
+            return ModifyActiveOperationTaskWithOptions(request, runtime);
         }
 
-        public async Task<ModifyActiveOperationTasksResponse> ModifyActiveOperationTasksAsync(ModifyActiveOperationTasksRequest request)
+        /**
+          * 11111,22222
+          *
+          * @param request ModifyActiveOperationTaskRequest
+          * @return ModifyActiveOperationTaskResponse
+         */
+        public async Task<ModifyActiveOperationTaskResponse> ModifyActiveOperationTaskAsync(ModifyActiveOperationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ModifyActiveOperationTasksWithOptionsAsync(request, runtime);
+            return await ModifyActiveOperationTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Specifies whether to enable the audit log feature. Default value: true. Valid values:
+          * *   **true**: enables the audit log feature.
+          * *   **false**: disables the audit log feature.
+          * > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
+          *
+          * @param request ModifyAuditLogConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAuditLogConfigResponse
+         */
         public ModifyAuditLogConfigResponse ModifyAuditLogConfigWithOptions(ModifyAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8962,6 +11014,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyAuditLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Specifies whether to enable the audit log feature. Default value: true. Valid values:
+          * *   **true**: enables the audit log feature.
+          * *   **false**: disables the audit log feature.
+          * > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
+          *
+          * @param request ModifyAuditLogConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAuditLogConfigResponse
+         */
         public async Task<ModifyAuditLogConfigResponse> ModifyAuditLogConfigWithOptionsAsync(ModifyAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9017,12 +11079,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyAuditLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Specifies whether to enable the audit log feature. Default value: true. Valid values:
+          * *   **true**: enables the audit log feature.
+          * *   **false**: disables the audit log feature.
+          * > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
+          *
+          * @param request ModifyAuditLogConfigRequest
+          * @return ModifyAuditLogConfigResponse
+         */
         public ModifyAuditLogConfigResponse ModifyAuditLogConfig(ModifyAuditLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAuditLogConfigWithOptions(request, runtime);
         }
 
+        /**
+          * Specifies whether to enable the audit log feature. Default value: true. Valid values:
+          * *   **true**: enables the audit log feature.
+          * *   **false**: disables the audit log feature.
+          * > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
+          *
+          * @param request ModifyAuditLogConfigRequest
+          * @return ModifyAuditLogConfigResponse
+         */
         public async Task<ModifyAuditLogConfigResponse> ModifyAuditLogConfigAsync(ModifyAuditLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9159,6 +11239,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ModifyBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](~~85683~~).
+          *
+          * @param request ModifyDBInstanceConnectionStringRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceConnectionStringResponse
+         */
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionStringWithOptions(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9222,6 +11309,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](~~85683~~).
+          *
+          * @param request ModifyDBInstanceConnectionStringRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceConnectionStringResponse
+         */
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringWithOptionsAsync(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9285,18 +11379,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](~~85683~~).
+          *
+          * @param request ModifyDBInstanceConnectionStringRequest
+          * @return ModifyDBInstanceConnectionStringResponse
+         */
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceConnectionStringWithOptions(request, runtime);
         }
 
+        /**
+          * You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](~~85683~~).
+          *
+          * @param request ModifyDBInstanceConnectionStringRequest
+          * @return ModifyDBInstanceConnectionStringResponse
+         */
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringAsync(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceConnectionStringWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * uW8+nsrp
+          *
+          * @param request ModifyInstanceAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceAttributeResponse
+         */
         public ModifyInstanceAttributeResponse ModifyInstanceAttributeWithOptions(ModifyInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9356,6 +11469,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * uW8+nsrp
+          *
+          * @param request ModifyInstanceAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceAttributeResponse
+         */
         public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeWithOptionsAsync(ModifyInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9415,18 +11535,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * uW8+nsrp
+          *
+          * @param request ModifyInstanceAttributeRequest
+          * @return ModifyInstanceAttributeResponse
+         */
         public ModifyInstanceAttributeResponse ModifyInstanceAttribute(ModifyInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * uW8+nsrp
+          *
+          * @param request ModifyInstanceAttributeRequest
+          * @return ModifyInstanceAttributeResponse
+         */
         public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeAsync(ModifyInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > Auto-renewal is triggered seven days before the expiration date of the instance.
+          *
+          * @param request ModifyInstanceAutoRenewalAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceAutoRenewalAttributeResponse
+         */
         public ModifyInstanceAutoRenewalAttributeResponse ModifyInstanceAutoRenewalAttributeWithOptions(ModifyInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9482,6 +11621,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > Auto-renewal is triggered seven days before the expiration date of the instance.
+          *
+          * @param request ModifyInstanceAutoRenewalAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceAutoRenewalAttributeResponse
+         */
         public async Task<ModifyInstanceAutoRenewalAttributeResponse> ModifyInstanceAutoRenewalAttributeWithOptionsAsync(ModifyInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9537,12 +11683,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > Auto-renewal is triggered seven days before the expiration date of the instance.
+          *
+          * @param request ModifyInstanceAutoRenewalAttributeRequest
+          * @return ModifyInstanceAutoRenewalAttributeResponse
+         */
         public ModifyInstanceAutoRenewalAttributeResponse ModifyInstanceAutoRenewalAttribute(ModifyInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceAutoRenewalAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * > Auto-renewal is triggered seven days before the expiration date of the instance.
+          *
+          * @param request ModifyInstanceAutoRenewalAttributeRequest
+          * @return ModifyInstanceAutoRenewalAttributeResponse
+         */
         public async Task<ModifyInstanceAutoRenewalAttributeResponse> ModifyInstanceAutoRenewalAttributeAsync(ModifyInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9785,6 +11943,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ModifyInstanceMaintainTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request ModifyInstanceMajorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceMajorVersionResponse
+         */
         public ModifyInstanceMajorVersionResponse ModifyInstanceMajorVersionWithOptions(ModifyInstanceMajorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9840,6 +12005,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceMajorVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request ModifyInstanceMajorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceMajorVersionResponse
+         */
         public async Task<ModifyInstanceMajorVersionResponse> ModifyInstanceMajorVersionWithOptionsAsync(ModifyInstanceMajorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9895,18 +12067,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceMajorVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request ModifyInstanceMajorVersionRequest
+          * @return ModifyInstanceMajorVersionResponse
+         */
         public ModifyInstanceMajorVersionResponse ModifyInstanceMajorVersion(ModifyInstanceMajorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceMajorVersionWithOptions(request, runtime);
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request ModifyInstanceMajorVersionRequest
+          * @return ModifyInstanceMajorVersionResponse
+         */
         public async Task<ModifyInstanceMajorVersionResponse> ModifyInstanceMajorVersionAsync(ModifyInstanceMajorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceMajorVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request ModifyInstanceMinorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceMinorVersionResponse
+         */
         public ModifyInstanceMinorVersionResponse ModifyInstanceMinorVersionWithOptions(ModifyInstanceMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9962,6 +12153,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceMinorVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request ModifyInstanceMinorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceMinorVersionResponse
+         */
         public async Task<ModifyInstanceMinorVersionResponse> ModifyInstanceMinorVersionWithOptionsAsync(ModifyInstanceMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10017,18 +12215,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceMinorVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request ModifyInstanceMinorVersionRequest
+          * @return ModifyInstanceMinorVersionResponse
+         */
         public ModifyInstanceMinorVersionResponse ModifyInstanceMinorVersion(ModifyInstanceMinorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceMinorVersionWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the instance.
+          *
+          * @param request ModifyInstanceMinorVersionRequest
+          * @return ModifyInstanceMinorVersionResponse
+         */
         public async Task<ModifyInstanceMinorVersionResponse> ModifyInstanceMinorVersionAsync(ModifyInstanceMinorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceMinorVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
+          * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
+          *
+          * @param request ModifyInstanceNetExpireTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceNetExpireTimeResponse
+         */
         public ModifyInstanceNetExpireTimeResponse ModifyInstanceNetExpireTimeWithOptions(ModifyInstanceNetExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10084,6 +12302,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceNetExpireTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
+          * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
+          *
+          * @param request ModifyInstanceNetExpireTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceNetExpireTimeResponse
+         */
         public async Task<ModifyInstanceNetExpireTimeResponse> ModifyInstanceNetExpireTimeWithOptionsAsync(ModifyInstanceNetExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10139,18 +12365,164 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceNetExpireTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
+          * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
+          *
+          * @param request ModifyInstanceNetExpireTimeRequest
+          * @return ModifyInstanceNetExpireTimeResponse
+         */
         public ModifyInstanceNetExpireTimeResponse ModifyInstanceNetExpireTime(ModifyInstanceNetExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceNetExpireTimeWithOptions(request, runtime);
         }
 
+        /**
+          * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
+          * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
+          *
+          * @param request ModifyInstanceNetExpireTimeRequest
+          * @return ModifyInstanceNetExpireTimeResponse
+         */
         public async Task<ModifyInstanceNetExpireTimeResponse> ModifyInstanceNetExpireTimeAsync(ModifyInstanceNetExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceNetExpireTimeWithOptionsAsync(request, runtime);
         }
 
+        public ModifyInstanceParameterResponse ModifyInstanceParameterWithOptions(ModifyInstanceParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceParameter",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceParameterResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyInstanceParameterResponse> ModifyInstanceParameterWithOptionsAsync(ModifyInstanceParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceParameter",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceParameterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyInstanceParameterResponse ModifyInstanceParameter(ModifyInstanceParameterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstanceParameterWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyInstanceParameterResponse> ModifyInstanceParameterAsync(ModifyInstanceParameterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstanceParameterWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * Modifies SSL encryption configurations. Valid values:
+          * *   **Disable**: The SSL encryption is disabled.
+          * *   **Enable**: The SSL encryption is enabled.
+          * *   **Update**: The SSL certificate is updated.
+          *
+          * @param request ModifyInstanceSSLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceSSLResponse
+         */
         public ModifyInstanceSSLResponse ModifyInstanceSSLWithOptions(ModifyInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10202,6 +12574,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Modifies SSL encryption configurations. Valid values:
+          * *   **Disable**: The SSL encryption is disabled.
+          * *   **Enable**: The SSL encryption is enabled.
+          * *   **Update**: The SSL certificate is updated.
+          *
+          * @param request ModifyInstanceSSLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceSSLResponse
+         */
         public async Task<ModifyInstanceSSLResponse> ModifyInstanceSSLWithOptionsAsync(ModifyInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10253,18 +12635,43 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Modifies SSL encryption configurations. Valid values:
+          * *   **Disable**: The SSL encryption is disabled.
+          * *   **Enable**: The SSL encryption is enabled.
+          * *   **Update**: The SSL certificate is updated.
+          *
+          * @param request ModifyInstanceSSLRequest
+          * @return ModifyInstanceSSLResponse
+         */
         public ModifyInstanceSSLResponse ModifyInstanceSSL(ModifyInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceSSLWithOptions(request, runtime);
         }
 
+        /**
+          * Modifies SSL encryption configurations. Valid values:
+          * *   **Disable**: The SSL encryption is disabled.
+          * *   **Enable**: The SSL encryption is enabled.
+          * *   **Update**: The SSL certificate is updated.
+          *
+          * @param request ModifyInstanceSSLRequest
+          * @return ModifyInstanceSSLResponse
+         */
         public async Task<ModifyInstanceSSLResponse> ModifyInstanceSSLAsync(ModifyInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the promotional event or business information.
+          *
+          * @param request ModifyInstanceSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceSpecResponse
+         */
         public ModifyInstanceSpecResponse ModifyInstanceSpecWithOptions(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10289,6 +12696,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["EffectiveTime"] = request.EffectiveTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceTrans))
+            {
+                query["ForceTrans"] = request.ForceTrans;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceUpgrade))
             {
                 query["ForceUpgrade"] = request.ForceUpgrade;
@@ -10336,6 +12747,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
+            {
+                query["ShardCount"] = request.ShardCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBiz))
             {
@@ -10360,6 +12775,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the promotional event or business information.
+          *
+          * @param request ModifyInstanceSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceSpecResponse
+         */
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecWithOptionsAsync(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10383,6 +12805,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 query["EffectiveTime"] = request.EffectiveTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceTrans))
+            {
+                query["ForceTrans"] = request.ForceTrans;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceUpgrade))
             {
@@ -10432,6 +12858,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
+            {
+                query["ShardCount"] = request.ShardCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBiz))
             {
                 query["SourceBiz"] = request.SourceBiz;
@@ -10455,18 +12885,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the promotional event or business information.
+          *
+          * @param request ModifyInstanceSpecRequest
+          * @return ModifyInstanceSpecResponse
+         */
         public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceSpecWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the promotional event or business information.
+          *
+          * @param request ModifyInstanceSpecRequest
+          * @return ModifyInstanceSpecResponse
+         */
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecAsync(ModifyInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceSpecWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
+          *
+          * @param request ModifyInstanceTDERequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceTDEResponse
+         */
         public ModifyInstanceTDEResponse ModifyInstanceTDEWithOptions(ModifyInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10530,6 +12979,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceTDEResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
+          *
+          * @param request ModifyInstanceTDERequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceTDEResponse
+         */
         public async Task<ModifyInstanceTDEResponse> ModifyInstanceTDEWithOptionsAsync(ModifyInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10593,18 +13049,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
+          *
+          * @param request ModifyInstanceTDERequest
+          * @return ModifyInstanceTDEResponse
+         */
         public ModifyInstanceTDEResponse ModifyInstanceTDE(ModifyInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceTDEWithOptions(request, runtime);
         }
 
+        /**
+          * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
+          *
+          * @param request ModifyInstanceTDERequest
+          * @return ModifyInstanceTDEResponse
+         */
         public async Task<ModifyInstanceTDEResponse> ModifyInstanceTDEAsync(ModifyInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceTDEWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ModifyInstanceVpcAuthModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceVpcAuthModeResponse
+         */
         public ModifyInstanceVpcAuthModeResponse ModifyInstanceVpcAuthModeWithOptions(ModifyInstanceVpcAuthModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10656,6 +13131,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ModifyInstanceVpcAuthModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceVpcAuthModeResponse
+         */
         public async Task<ModifyInstanceVpcAuthModeResponse> ModifyInstanceVpcAuthModeWithOptionsAsync(ModifyInstanceVpcAuthModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10707,18 +13189,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ModifyInstanceVpcAuthModeRequest
+          * @return ModifyInstanceVpcAuthModeResponse
+         */
         public ModifyInstanceVpcAuthModeResponse ModifyInstanceVpcAuthMode(ModifyInstanceVpcAuthModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceVpcAuthModeWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ModifyInstanceVpcAuthModeRequest
+          * @return ModifyInstanceVpcAuthModeResponse
+         */
         public async Task<ModifyInstanceVpcAuthModeResponse> ModifyInstanceVpcAuthModeAsync(ModifyInstanceVpcAuthModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceVpcAuthModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > 
+          * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
+          *
+          * @param request ModifyIntranetAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyIntranetAttributeResponse
+         */
         public ModifyIntranetAttributeResponse ModifyIntranetAttributeWithOptions(ModifyIntranetAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10774,6 +13276,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyIntranetAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
+          *
+          * @param request ModifyIntranetAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyIntranetAttributeResponse
+         */
         public async Task<ModifyIntranetAttributeResponse> ModifyIntranetAttributeWithOptionsAsync(ModifyIntranetAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10829,180 +13339,40 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyIntranetAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
+          *
+          * @param request ModifyIntranetAttributeRequest
+          * @return ModifyIntranetAttributeResponse
+         */
         public ModifyIntranetAttributeResponse ModifyIntranetAttribute(ModifyIntranetAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyIntranetAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * > 
+          * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
+          *
+          * @param request ModifyIntranetAttributeRequest
+          * @return ModifyIntranetAttributeResponse
+         */
         public async Task<ModifyIntranetAttributeResponse> ModifyIntranetAttributeAsync(ModifyIntranetAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyIntranetAttributeWithOptionsAsync(request, runtime);
         }
 
-        public ModifyNodeSpecResponse ModifyNodeSpecWithOptions(ModifyNodeSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
-            {
-                query["AutoPay"] = request.AutoPay;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
-            {
-                query["BusinessInfo"] = request.BusinessInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
-            {
-                query["CouponNo"] = request.CouponNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
-            {
-                query["InstanceClass"] = request.InstanceClass;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
-            {
-                query["NodeId"] = request.NodeId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
-            {
-                query["OrderType"] = request.OrderType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                query["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTimeMode))
-            {
-                query["SwitchTimeMode"] = request.SwitchTimeMode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModifyNodeSpec",
-                Version = "2015-01-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModifyNodeSpecResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ModifyNodeSpecResponse> ModifyNodeSpecWithOptionsAsync(ModifyNodeSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
-            {
-                query["AutoPay"] = request.AutoPay;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
-            {
-                query["BusinessInfo"] = request.BusinessInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
-            {
-                query["CouponNo"] = request.CouponNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
-            {
-                query["InstanceClass"] = request.InstanceClass;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
-            {
-                query["NodeId"] = request.NodeId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
-            {
-                query["OrderType"] = request.OrderType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                query["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTimeMode))
-            {
-                query["SwitchTimeMode"] = request.SwitchTimeMode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModifyNodeSpec",
-                Version = "2015-01-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModifyNodeSpecResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ModifyNodeSpecResponse ModifyNodeSpec(ModifyNodeSpecRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ModifyNodeSpecWithOptions(request, runtime);
-        }
-
-        public async Task<ModifyNodeSpecResponse> ModifyNodeSpecAsync(ModifyNodeSpecRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ModifyNodeSpecWithOptionsAsync(request, runtime);
-        }
-
+        /**
+          * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
+          * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
+          *
+          * @param request ModifyResourceGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyResourceGroupResponse
+         */
         public ModifyResourceGroupResponse ModifyResourceGroupWithOptions(ModifyResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11058,6 +13428,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
+          * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
+          *
+          * @param request ModifyResourceGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyResourceGroupResponse
+         */
         public async Task<ModifyResourceGroupResponse> ModifyResourceGroupWithOptionsAsync(ModifyResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11113,18 +13491,39 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
+          * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
+          *
+          * @param request ModifyResourceGroupRequest
+          * @return ModifyResourceGroupResponse
+         */
         public ModifyResourceGroupResponse ModifyResourceGroup(ModifyResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyResourceGroupWithOptions(request, runtime);
         }
 
+        /**
+          * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
+          * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
+          *
+          * @param request ModifyResourceGroupRequest
+          * @return ModifyResourceGroupResponse
+         */
         public async Task<ModifyResourceGroupResponse> ModifyResourceGroupAsync(ModifyResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ModifySecurityGroupConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySecurityGroupConfigurationResponse
+         */
         public ModifySecurityGroupConfigurationResponse ModifySecurityGroupConfigurationWithOptions(ModifySecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11176,6 +13575,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ModifySecurityGroupConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySecurityGroupConfigurationResponse
+         */
         public async Task<ModifySecurityGroupConfigurationResponse> ModifySecurityGroupConfigurationWithOptionsAsync(ModifySecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11227,18 +13633,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ModifySecurityGroupConfigurationRequest
+          * @return ModifySecurityGroupConfigurationResponse
+         */
         public ModifySecurityGroupConfigurationResponse ModifySecurityGroupConfiguration(ModifySecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySecurityGroupConfigurationWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ModifySecurityGroupConfigurationRequest
+          * @return ModifySecurityGroupConfigurationResponse
+         */
         public async Task<ModifySecurityGroupConfigurationResponse> ModifySecurityGroupConfigurationAsync(ModifySecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityGroupConfigurationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The IP addresses in the whitelist group. Up to 1,000 IP addresses can be specified in each whitelist. Separate multiple IP addresses with a comma (,). You can add 0.0.0.0/0, IP addresses such as 10.23.12.24, and Classless Inter-Domain Routing (CIDR) blocks such as 10.23.12.24/24 to the whitelist group. In CIDR block 10.23.12.24/24, /24 specifies the length of the prefix in the IP addresses. The prefix length ranges from 1 to 32.
+          *
+          * @param request ModifySecurityIpsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySecurityIpsResponse
+         */
         public ModifySecurityIpsResponse ModifySecurityIpsWithOptions(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11302,6 +13727,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifySecurityIpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The IP addresses in the whitelist group. Up to 1,000 IP addresses can be specified in each whitelist. Separate multiple IP addresses with a comma (,). You can add 0.0.0.0/0, IP addresses such as 10.23.12.24, and Classless Inter-Domain Routing (CIDR) blocks such as 10.23.12.24/24 to the whitelist group. In CIDR block 10.23.12.24/24, /24 specifies the length of the prefix in the IP addresses. The prefix length ranges from 1 to 32.
+          *
+          * @param request ModifySecurityIpsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySecurityIpsResponse
+         */
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsWithOptionsAsync(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11365,18 +13797,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifySecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The IP addresses in the whitelist group. Up to 1,000 IP addresses can be specified in each whitelist. Separate multiple IP addresses with a comma (,). You can add 0.0.0.0/0, IP addresses such as 10.23.12.24, and Classless Inter-Domain Routing (CIDR) blocks such as 10.23.12.24/24 to the whitelist group. In CIDR block 10.23.12.24/24, /24 specifies the length of the prefix in the IP addresses. The prefix length ranges from 1 to 32.
+          *
+          * @param request ModifySecurityIpsRequest
+          * @return ModifySecurityIpsResponse
+         */
         public ModifySecurityIpsResponse ModifySecurityIps(ModifySecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySecurityIpsWithOptions(request, runtime);
         }
 
+        /**
+          * The IP addresses in the whitelist group. Up to 1,000 IP addresses can be specified in each whitelist. Separate multiple IP addresses with a comma (,). You can add 0.0.0.0/0, IP addresses such as 10.23.12.24, and Classless Inter-Domain Routing (CIDR) blocks such as 10.23.12.24/24 to the whitelist group. In CIDR block 10.23.12.24/24, /24 specifies the length of the prefix in the IP addresses. The prefix length ranges from 1 to 32.
+          *
+          * @param request ModifySecurityIpsRequest
+          * @return ModifySecurityIpsResponse
+         */
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsAsync(ModifySecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityIpsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
+          *
+          * @param request ReleaseDirectConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseDirectConnectionResponse
+         */
         public ReleaseDirectConnectionResponse ReleaseDirectConnectionWithOptions(ReleaseDirectConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11424,6 +13875,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ReleaseDirectConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
+          *
+          * @param request ReleaseDirectConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseDirectConnectionResponse
+         */
         public async Task<ReleaseDirectConnectionResponse> ReleaseDirectConnectionWithOptionsAsync(ReleaseDirectConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11471,18 +13929,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ReleaseDirectConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
+          *
+          * @param request ReleaseDirectConnectionRequest
+          * @return ReleaseDirectConnectionResponse
+         */
         public ReleaseDirectConnectionResponse ReleaseDirectConnection(ReleaseDirectConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseDirectConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
+          *
+          * @param request ReleaseDirectConnectionRequest
+          * @return ReleaseDirectConnectionResponse
+         */
         public async Task<ReleaseDirectConnectionResponse> ReleaseDirectConnectionAsync(ReleaseDirectConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseDirectConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ReleaseInstancePublicConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseInstancePublicConnectionResponse
+         */
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnectionWithOptions(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11534,6 +14011,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ReleaseInstancePublicConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseInstancePublicConnectionResponse
+         */
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionWithOptionsAsync(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11585,18 +14069,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ReleaseInstancePublicConnectionRequest
+          * @return ReleaseInstancePublicConnectionResponse
+         */
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseInstancePublicConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request.
+          *
+          * @param request ReleaseInstancePublicConnectionRequest
+          * @return ReleaseInstancePublicConnectionResponse
+         */
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionAsync(ReleaseInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **RemoveSubInstance**.
+          *
+          * @param request RemoveSubInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveSubInstanceResponse
+         */
         public RemoveSubInstanceResponse RemoveSubInstanceWithOptions(RemoveSubInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11644,6 +14147,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RemoveSubInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **RemoveSubInstance**.
+          *
+          * @param request RemoveSubInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveSubInstanceResponse
+         */
         public async Task<RemoveSubInstanceResponse> RemoveSubInstanceWithOptionsAsync(RemoveSubInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11691,18 +14201,39 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RemoveSubInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **RemoveSubInstance**.
+          *
+          * @param request RemoveSubInstanceRequest
+          * @return RemoveSubInstanceResponse
+         */
         public RemoveSubInstanceResponse RemoveSubInstance(RemoveSubInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveSubInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **RemoveSubInstance**.
+          *
+          * @param request RemoveSubInstanceRequest
+          * @return RemoveSubInstanceResponse
+         */
         public async Task<RemoveSubInstanceResponse> RemoveSubInstanceAsync(RemoveSubInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveSubInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+          * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+          *
+          * @param request RenewAdditionalBandwidthRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewAdditionalBandwidthResponse
+         */
         public RenewAdditionalBandwidthResponse RenewAdditionalBandwidthWithOptions(RenewAdditionalBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11766,6 +14297,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RenewAdditionalBandwidthResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+          * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+          *
+          * @param request RenewAdditionalBandwidthRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewAdditionalBandwidthResponse
+         */
         public async Task<RenewAdditionalBandwidthResponse> RenewAdditionalBandwidthWithOptionsAsync(RenewAdditionalBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11829,18 +14369,41 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RenewAdditionalBandwidthResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+          * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+          *
+          * @param request RenewAdditionalBandwidthRequest
+          * @return RenewAdditionalBandwidthResponse
+         */
         public RenewAdditionalBandwidthResponse RenewAdditionalBandwidth(RenewAdditionalBandwidthRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewAdditionalBandwidthWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+          * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+          * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+          *
+          * @param request RenewAdditionalBandwidthRequest
+          * @return RenewAdditionalBandwidthResponse
+         */
         public async Task<RenewAdditionalBandwidthResponse> RenewAdditionalBandwidthAsync(RenewAdditionalBandwidthRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenewAdditionalBandwidthWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is applicable only to subscription instances.
+          *
+          * @param request RenewInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewInstanceResponse
+         */
         public RenewInstanceResponse RenewInstanceWithOptions(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11920,6 +14483,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is applicable only to subscription instances.
+          *
+          * @param request RenewInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewInstanceResponse
+         */
         public async Task<RenewInstanceResponse> RenewInstanceWithOptionsAsync(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11999,18 +14569,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is applicable only to subscription instances.
+          *
+          * @param request RenewInstanceRequest
+          * @return RenewInstanceResponse
+         */
         public RenewInstanceResponse RenewInstance(RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is applicable only to subscription instances.
+          *
+          * @param request RenewInstanceRequest
+          * @return RenewInstanceResponse
+         */
         public async Task<RenewInstanceResponse> RenewInstanceAsync(RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenewInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request ResetAccountPasswordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetAccountPasswordResponse
+         */
         public ResetAccountPasswordResponse ResetAccountPasswordWithOptions(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12066,6 +14655,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ResetAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request ResetAccountPasswordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetAccountPasswordResponse
+         */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordWithOptionsAsync(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12121,12 +14717,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ResetAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request ResetAccountPasswordRequest
+          * @return ResetAccountPasswordResponse
+         */
         public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetAccountPasswordWithOptions(request, runtime);
         }
 
+        /**
+          * r-bp1zxszhcgatnx****
+          *
+          * @param request ResetAccountPasswordRequest
+          * @return ResetAccountPasswordResponse
+         */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordAsync(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12255,6 +14863,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await RestartInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   If your instance is a [persistent memory-optimized instance](~~443828~~) or [DRAM-based instance](~~443827~~) that is compatible with Redis 5.0 and the [data flashback](~~443784~~) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+          * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](~~60873~~) operation to create an instance. Then, you can restore data to the new instance.
+          *
+          * @param request RestoreInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RestoreInstanceResponse
+         */
         public RestoreInstanceResponse RestoreInstanceWithOptions(RestoreInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12299,6 +14915,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeShift))
+            {
+                query["TimeShift"] = request.TimeShift;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -12318,6 +14938,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RestoreInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   If your instance is a [persistent memory-optimized instance](~~443828~~) or [DRAM-based instance](~~443827~~) that is compatible with Redis 5.0 and the [data flashback](~~443784~~) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+          * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](~~60873~~) operation to create an instance. Then, you can restore data to the new instance.
+          *
+          * @param request RestoreInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RestoreInstanceResponse
+         */
         public async Task<RestoreInstanceResponse> RestoreInstanceWithOptionsAsync(RestoreInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12362,6 +14990,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeShift))
+            {
+                query["TimeShift"] = request.TimeShift;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -12381,18 +15013,43 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RestoreInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   If your instance is a [persistent memory-optimized instance](~~443828~~) or [DRAM-based instance](~~443827~~) that is compatible with Redis 5.0 and the [data flashback](~~443784~~) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+          * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](~~60873~~) operation to create an instance. Then, you can restore data to the new instance.
+          *
+          * @param request RestoreInstanceRequest
+          * @return RestoreInstanceResponse
+         */
         public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RestoreInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * *   If your instance is a [persistent memory-optimized instance](~~443828~~) or [DRAM-based instance](~~443827~~) that is compatible with Redis 5.0 and the [data flashback](~~443784~~) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+          * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](~~60873~~) operation to create an instance. Then, you can restore data to the new instance.
+          *
+          * @param request RestoreInstanceRequest
+          * @return RestoreInstanceResponse
+         */
         public async Task<RestoreInstanceResponse> RestoreInstanceAsync(RestoreInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RestoreInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](~~164222~~).
+          * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](~~126164~~) instance that uses local disks.
+          * A call to this operation has the following impacts on your instance:
+          * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
+          * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
+          *
+          * @param request SwitchInstanceHARequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchInstanceHAResponse
+         */
         public SwitchInstanceHAResponse SwitchInstanceHAWithOptions(SwitchInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12452,6 +15109,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<SwitchInstanceHAResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](~~164222~~).
+          * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](~~126164~~) instance that uses local disks.
+          * A call to this operation has the following impacts on your instance:
+          * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
+          * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
+          *
+          * @param request SwitchInstanceHARequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchInstanceHAResponse
+         */
         public async Task<SwitchInstanceHAResponse> SwitchInstanceHAWithOptionsAsync(SwitchInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12511,18 +15179,48 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<SwitchInstanceHAResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](~~164222~~).
+          * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](~~126164~~) instance that uses local disks.
+          * A call to this operation has the following impacts on your instance:
+          * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
+          * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
+          *
+          * @param request SwitchInstanceHARequest
+          * @return SwitchInstanceHAResponse
+         */
         public SwitchInstanceHAResponse SwitchInstanceHA(SwitchInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchInstanceHAWithOptions(request, runtime);
         }
 
+        /**
+          * > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](~~164222~~).
+          * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](~~126164~~) instance that uses local disks.
+          * A call to this operation has the following impacts on your instance:
+          * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
+          * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
+          *
+          * @param request SwitchInstanceHARequest
+          * @return SwitchInstanceHAResponse
+         */
         public async Task<SwitchInstanceHAResponse> SwitchInstanceHAAsync(SwitchInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchInstanceHAWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
+          * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
+          * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+          *
+          * @param request SwitchInstanceProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchInstanceProxyResponse
+         */
         public SwitchInstanceProxyResponse SwitchInstanceProxyWithOptions(SwitchInstanceProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12570,6 +15268,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<SwitchInstanceProxyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
+          * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
+          * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+          *
+          * @param request SwitchInstanceProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchInstanceProxyResponse
+         */
         public async Task<SwitchInstanceProxyResponse> SwitchInstanceProxyWithOptionsAsync(SwitchInstanceProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12617,12 +15325,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<SwitchInstanceProxyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
+          * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
+          * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+          *
+          * @param request SwitchInstanceProxyRequest
+          * @return SwitchInstanceProxyResponse
+         */
         public SwitchInstanceProxyResponse SwitchInstanceProxy(SwitchInstanceProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchInstanceProxyWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
+          * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
+          * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+          *
+          * @param request SwitchInstanceProxyRequest
+          * @return SwitchInstanceProxyResponse
+         */
         public async Task<SwitchInstanceProxyResponse> SwitchInstanceProxyAsync(SwitchInstanceProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12905,6 +15631,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await SyncDtsStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
+          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+          * *   You can add up to 20 tags to each instance.
+          * *   You can add tags to up to 50 instances in each request.
+          * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](~~118779~~).
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12960,6 +15699,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
+          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+          * *   You can add up to 20 tags to each instance.
+          * *   You can add tags to up to 50 instances in each request.
+          * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](~~118779~~).
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13015,18 +15767,49 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
+          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+          * *   You can add up to 20 tags to each instance.
+          * *   You can add tags to up to 50 instances in each request.
+          * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](~~118779~~).
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
+          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+          * *   You can add up to 20 tags to each instance.
+          * *   You can add tags to up to 50 instances in each request.
+          * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](~~118779~~).
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * 1
+          *
+          * @param request TransformInstanceChargeTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransformInstanceChargeTypeResponse
+         */
         public TransformInstanceChargeTypeResponse TransformInstanceChargeTypeWithOptions(TransformInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13035,17 +15818,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["AutoPay"] = request.AutoPay;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
-            {
-                query["BusinessInfo"] = request.BusinessInfo;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 query["ChargeType"] = request.ChargeType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
-            {
-                query["CouponNo"] = request.CouponNo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -13094,6 +15869,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * 1
+          *
+          * @param request TransformInstanceChargeTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransformInstanceChargeTypeResponse
+         */
         public async Task<TransformInstanceChargeTypeResponse> TransformInstanceChargeTypeWithOptionsAsync(TransformInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13102,17 +15884,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["AutoPay"] = request.AutoPay;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
-            {
-                query["BusinessInfo"] = request.BusinessInfo;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 query["ChargeType"] = request.ChargeType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
-            {
-                query["CouponNo"] = request.CouponNo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -13161,18 +15935,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * 1
+          *
+          * @param request TransformInstanceChargeTypeRequest
+          * @return TransformInstanceChargeTypeResponse
+         */
         public TransformInstanceChargeTypeResponse TransformInstanceChargeType(TransformInstanceChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransformInstanceChargeTypeWithOptions(request, runtime);
         }
 
+        /**
+          * 1
+          *
+          * @param request TransformInstanceChargeTypeRequest
+          * @return TransformInstanceChargeTypeResponse
+         */
         public async Task<TransformInstanceChargeTypeResponse> TransformInstanceChargeTypeAsync(TransformInstanceChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransformInstanceChargeTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+          *
+          * @param request TransformToPrePaidRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransformToPrePaidResponse
+         */
         public TransformToPrePaidResponse TransformToPrePaidWithOptions(TransformToPrePaidRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13228,6 +16021,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<TransformToPrePaidResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+          *
+          * @param request TransformToPrePaidRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransformToPrePaidResponse
+         */
         public async Task<TransformToPrePaidResponse> TransformToPrePaidWithOptionsAsync(TransformToPrePaidRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13283,18 +16083,39 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<TransformToPrePaidResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+          *
+          * @param request TransformToPrePaidRequest
+          * @return TransformToPrePaidResponse
+         */
         public TransformToPrePaidResponse TransformToPrePaid(TransformToPrePaidRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransformToPrePaidWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+          *
+          * @param request TransformToPrePaidRequest
+          * @return TransformToPrePaidResponse
+         */
         public async Task<TransformToPrePaidResponse> TransformToPrePaidAsync(TransformToPrePaidRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransformToPrePaidWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can remove up to 20 tags at a time.
+          * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
+          * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](~~119157~~).
+          *
+          * @param request UntagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13354,6 +16175,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can remove up to 20 tags at a time.
+          * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
+          * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](~~119157~~).
+          *
+          * @param request UntagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13413,12 +16243,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can remove up to 20 tags at a time.
+          * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
+          * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](~~119157~~).
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can remove up to 20 tags at a time.
+          * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
+          * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](~~119157~~).
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

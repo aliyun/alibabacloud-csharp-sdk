@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyNodeSpecResponse : TeaModel {
+    public class DescribeParameterModificationHistoryResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ModifyNodeSpecResponseBody Body { get; set; }
+        public DescribeParameterModificationHistoryResponseBody Body { get; set; }
 
     }
 

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeGlobalDistributeCacheRequest : TeaModel {
+        /// <summary>
+        /// Details of the child instances.
+        /// </summary>
         [NameInMap("GlobalInstanceId")]
         [Validation(Required=false)]
         public string GlobalInstanceId { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
@@ -41,6 +50,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// The ID of the distributed instance.
+        /// </summary>
         [NameInMap("SubInstanceId")]
         [Validation(Required=false)]
         public string SubInstanceId { get; set; }

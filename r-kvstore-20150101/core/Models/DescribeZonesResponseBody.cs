@@ -21,14 +21,33 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesKVStoreZone> KVStoreZone { get; set; }
             public class DescribeZonesResponseBodyZonesKVStoreZone : TeaModel {
+                [NameInMap("Disabled")]
+                [Validation(Required=false)]
                 public bool? Disabled { get; set; }
+
+                [NameInMap("IsRds")]
+                [Validation(Required=false)]
                 public bool? IsRds { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("SwitchNetwork")]
+                [Validation(Required=false)]
                 public bool? SwitchNetwork { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
+                [NameInMap("ZoneName")]
+                [Validation(Required=false)]
                 public string ZoneName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

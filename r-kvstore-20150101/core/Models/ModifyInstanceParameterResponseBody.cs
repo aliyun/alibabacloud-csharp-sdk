@@ -8,14 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyNodeSpecResponseBody : TeaModel {
-        [NameInMap("OrderId")]
+    public class ModifyInstanceParameterResponseBody : TeaModel {
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public long? OrderId { get; set; }
+        public string InstanceId { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public long? TaskId { get; set; }
 
     }
 
