@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? DbId { get; set; }
 
+        [NameInMap("IsDefault")]
+        [Validation(Required=false)]
+        public bool? IsDefault { get; set; }
+
         /// <summary>
         /// Specifies whether the database is a logical database. Valid values:
         /// 

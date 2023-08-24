@@ -15967,6 +15967,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DbId"] = request.DbId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDefault))
+            {
+                query["IsDefault"] = request.IsDefault;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsLogic))
             {
                 query["IsLogic"] = request.IsLogic;
@@ -16021,6 +16025,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
             {
                 query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDefault))
+            {
+                query["IsDefault"] = request.IsDefault;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsLogic))
             {
