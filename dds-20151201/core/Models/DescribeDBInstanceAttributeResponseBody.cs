@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance> DBInstance { get; set; }
             public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance : TeaModel {
+                [NameInMap("BurstingEnabled")]
+                [Validation(Required=false)]
+                public bool? BurstingEnabled { get; set; }
+
                 /// <summary>
                 /// The storage type of the instance. Valid values:
                 /// 
@@ -461,6 +465,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [NameInMap("ProtocolType")]
                 [Validation(Required=false)]
                 public string ProtocolType { get; set; }
+
+                [NameInMap("ProvisionedIops")]
+                [Validation(Required=false)]
+                public long? ProvisionedIops { get; set; }
 
                 /// <summary>
                 /// The kind code of the instance. Valid values:

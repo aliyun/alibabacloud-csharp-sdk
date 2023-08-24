@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the accounts.
+        /// The username of the account.
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
                 /// <summary>
                 /// The description of the account.
+                /// 
+                /// > This parameter is returned only after you configure the description of the account by calling the [ModifyAccountDescription](~~468391~~) operation.
                 /// </summary>
                 [NameInMap("AccountDescription")]
                 [Validation(Required=false)]
@@ -37,8 +39,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The status of the account.
                 /// 
-                /// *   Unavailable
-                /// *   Available
+                /// *   **Unavailable**
+                /// *   **Available**
                 /// </summary>
                 [NameInMap("AccountStatus")]
                 [Validation(Required=false)]
@@ -47,11 +49,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The role of the account. Valid values:
                 /// 
-                /// *   db: shard
-                /// *   cs: Configserver
-                /// *   mongos: mongos
-                /// *   logic: sharded cluster instance
-                /// *   normal: replica set instance
+                /// *   **db**: shard
+                /// *   **cs**: Configserver
+                /// *   **mongos**: mongos
+                /// *   **logic:** sharded cluster instance
+                /// *   **normal:** replica set instance
                 /// </summary>
                 [NameInMap("CharacterType")]
                 [Validation(Required=false)]
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

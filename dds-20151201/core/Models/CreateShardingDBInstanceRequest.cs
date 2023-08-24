@@ -237,6 +237,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
+        [NameInMap("ProvisionedIops")]
+        [Validation(Required=false)]
+        public long? ProvisionedIops { get; set; }
+
         /// <summary>
         /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
         /// </summary>

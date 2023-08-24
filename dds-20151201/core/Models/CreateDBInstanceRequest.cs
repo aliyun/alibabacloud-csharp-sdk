@@ -199,6 +199,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public int? Period { get; set; }
 
+        [NameInMap("ProvisionedIops")]
+        [Validation(Required=false)]
+        public long? ProvisionedIops { get; set; }
+
         /// <summary>
         /// The storage type of the instance. Valid values:
         /// 
