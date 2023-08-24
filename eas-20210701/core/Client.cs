@@ -191,6 +191,26 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 body["EcsInstanceType"] = request.EcsInstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalClusterId))
+            {
+                body["ExternalClusterId"] = request.ExternalClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeMatchLabels))
+            {
+                body["NodeMatchLabels"] = request.NodeMatchLabels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTolerations))
+            {
+                body["NodeTolerations"] = request.NodeTolerations;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                body["RoleName"] = request.RoleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
             {
                 body["SystemDiskSize"] = request.SystemDiskSize;
@@ -238,6 +258,26 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsInstanceType))
             {
                 body["EcsInstanceType"] = request.EcsInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalClusterId))
+            {
+                body["ExternalClusterId"] = request.ExternalClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeMatchLabels))
+            {
+                body["NodeMatchLabels"] = request.NodeMatchLabels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTolerations))
+            {
+                body["NodeTolerations"] = request.NodeTolerations;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                body["RoleName"] = request.RoleName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
             {
@@ -3011,6 +3051,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["ResourceName"] = request.ResourceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3050,6 +3094,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
                 query["ResourceName"] = request.ResourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3985,6 +4033,14 @@ namespace AlibabaCloud.SDK.Eas20210701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeMatchLabels))
+            {
+                body["NodeMatchLabels"] = request.NodeMatchLabels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTolerations))
+            {
+                body["NodeTolerations"] = request.NodeTolerations;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
                 body["ResourceName"] = request.ResourceName;
@@ -4013,6 +4069,14 @@ namespace AlibabaCloud.SDK.Eas20210701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeMatchLabels))
+            {
+                body["NodeMatchLabels"] = request.NodeMatchLabels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTolerations))
+            {
+                body["NodeTolerations"] = request.NodeTolerations;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
                 body["ResourceName"] = request.ResourceName;
