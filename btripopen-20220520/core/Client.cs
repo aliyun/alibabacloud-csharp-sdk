@@ -4942,18 +4942,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public FlightCancelOrderV2Response FlightCancelOrderV2WithOptions(FlightCancelOrderV2Request request, FlightCancelOrderV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
             {
-                body["isv_name"] = request.IsvName;
+                query["isv_name"] = request.IsvName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
-                body["order_id"] = request.OrderId;
+                query["order_id"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
             {
-                body["out_order_id"] = request.OutOrderId;
+                query["out_order_id"] = request.OutOrderId;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -4967,7 +4967,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4978,7 +4978,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<FlightCancelOrderV2Response>(CallApi(params_, req, runtime));
@@ -4987,18 +4987,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public async Task<FlightCancelOrderV2Response> FlightCancelOrderV2WithOptionsAsync(FlightCancelOrderV2Request request, FlightCancelOrderV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
             {
-                body["isv_name"] = request.IsvName;
+                query["isv_name"] = request.IsvName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
-                body["order_id"] = request.OrderId;
+                query["order_id"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
             {
-                body["out_order_id"] = request.OutOrderId;
+                query["out_order_id"] = request.OutOrderId;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -5012,7 +5012,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5023,7 +5023,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<FlightCancelOrderV2Response>(await CallApiAsync(params_, req, runtime));
@@ -6182,26 +6182,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public FlightModifyCancelV2Response FlightModifyCancelV2WithOptions(FlightModifyCancelV2Request request, FlightModifyCancelV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
             {
-                body["isv_name"] = request.IsvName;
+                query["isv_name"] = request.IsvName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
-                body["order_id"] = request.OrderId;
+                query["order_id"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
             {
-                body["out_order_id"] = request.OutOrderId;
+                query["out_order_id"] = request.OutOrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutSubOrderId))
             {
-                body["out_sub_order_id"] = request.OutSubOrderId;
+                query["out_sub_order_id"] = request.OutSubOrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubOrderId))
             {
-                body["sub_order_id"] = request.SubOrderId;
+                query["sub_order_id"] = request.SubOrderId;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -6215,7 +6215,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6226,7 +6226,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<FlightModifyCancelV2Response>(CallApi(params_, req, runtime));
@@ -6235,26 +6235,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public async Task<FlightModifyCancelV2Response> FlightModifyCancelV2WithOptionsAsync(FlightModifyCancelV2Request request, FlightModifyCancelV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
             {
-                body["isv_name"] = request.IsvName;
+                query["isv_name"] = request.IsvName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
-                body["order_id"] = request.OrderId;
+                query["order_id"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
             {
-                body["out_order_id"] = request.OutOrderId;
+                query["out_order_id"] = request.OutOrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutSubOrderId))
             {
-                body["out_sub_order_id"] = request.OutSubOrderId;
+                query["out_sub_order_id"] = request.OutSubOrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubOrderId))
             {
-                body["sub_order_id"] = request.SubOrderId;
+                query["sub_order_id"] = request.SubOrderId;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -6268,7 +6268,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6279,7 +6279,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<FlightModifyCancelV2Response>(await CallApiAsync(params_, req, runtime));
