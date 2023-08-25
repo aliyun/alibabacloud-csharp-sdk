@@ -14379,6 +14379,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["Period"] = request.Period;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
+            {
+                query["PricingCycle"] = request.PricingCycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -14461,6 +14465,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
+            {
+                query["PricingCycle"] = request.PricingCycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
