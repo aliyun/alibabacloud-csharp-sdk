@@ -8,22 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
-    public class ModifyAnycastEipAddressSpecRequest : TeaModel {
+    public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the Anycast EIP.
+        /// The request ID.
         /// </summary>
-        [NameInMap("AnycastId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AnycastId { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.
+        /// Indicates whether the operation is successful. Valid values:
         /// 
-        /// Valid values: **200** to **1000**.
+        /// **true**
+        /// 
+        /// **false**
         /// </summary>
-        [NameInMap("Bandwidth")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Bandwidth { get; set; }
+        public bool? Success { get; set; }
 
     }
 
