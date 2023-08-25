@@ -55,18 +55,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// 系统为VPN网关实例分配的用于创建IPsec-VPN连接的第二个IP地址。
-        /// 
-        /// 仅支持创建双隧道模式IPsec-VPN连接的VPN网关实例会返回当前参数。
+        /// The second IP address assigned by the system to create an IPsec-VPN connection. 
+        /// This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
         /// </summary>
         [NameInMap("DisasterRecoveryInternetIp")]
         [Validation(Required=false)]
         public string DisasterRecoveryInternetIp { get; set; }
 
         /// <summary>
-        /// VPN网关实例关联的第二个交换机ID。
+        /// The ID of the second vSwitch associated with the VPN gateway. 
         /// 
-        /// 仅支持创建双隧道模式IPsec-VPN连接的VPN网关实例会返回当前参数。
+        /// This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
         /// </summary>
         [NameInMap("DisasterRecoveryVSwitchId")]
         [Validation(Required=false)]
@@ -92,7 +91,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The public IP address of the VPN gateway.
+        /// - If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection. 
+        /// - If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection. 
+        /// 
+        /// If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.
         /// </summary>
         [NameInMap("InternetIp")]
         [Validation(Required=false)]
@@ -232,9 +234,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SslVpn { get; set; }
 
         /// <summary>
-        /// SSL-VPN连接的IP地址。
+        /// The IP address of the SSL-VPN connection. 
         /// 
-        /// 仅支持创建双隧道模式IPsec-VPN连接的公网网络类型的VPN网关实例开启SSL-VPN功能后，才会返回当前参数。
+        /// This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.
         /// </summary>
         [NameInMap("SslVpnInternetIp")]
         [Validation(Required=false)]

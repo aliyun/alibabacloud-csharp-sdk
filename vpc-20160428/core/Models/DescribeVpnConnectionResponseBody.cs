@@ -405,8 +405,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The tunnel role. Valid values:
                 /// 
-                /// - **false** 
-                /// - **true**
+                /// - **master** 
+                /// - **slave**
                 /// </summary>
                 [NameInMap("Role")]
                 [Validation(Required=false)]
