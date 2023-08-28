@@ -1,3 +1,6 @@
+2023-08-28 Version: 1.3.0
+- Generated csharp 2023-04-26 for aliding.
+
 2023-08-23 Version: 1.2.0
 - Generated csharp 2023-04-26 for aliding.
 
