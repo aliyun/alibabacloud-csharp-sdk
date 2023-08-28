@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
         [Validation(Required=false)]
         public QueryAvatarResponseBodyData Data { get; set; }
         public class QueryAvatarResponseBodyData : TeaModel {
+            [NameInMap("AllLocateImages")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> AllLocateImages { get; set; }
+
             [NameInMap("AvatarType")]
             [Validation(Required=false)]
             public string AvatarType { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [NameInMap("MakeFailReason")]
             [Validation(Required=false)]
             public string MakeFailReason { get; set; }
+
+            [NameInMap("MakeStage")]
+            [Validation(Required=false)]
+            public string MakeStage { get; set; }
 
             [NameInMap("MakeStatus")]
             [Validation(Required=false)]
