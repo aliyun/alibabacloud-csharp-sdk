@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBClusterRequest : TeaModel {
+        [NameInMap("BackupSetId")]
+        [Validation(Required=false)]
+        public string BackupSetId { get; set; }
+
         /// <summary>
         /// The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
         /// 
@@ -86,6 +90,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("RestoreToTime")]
+        [Validation(Required=false)]
+        public string RestoreToTime { get; set; }
+
+        [NameInMap("RestoreType")]
+        [Validation(Required=false)]
+        public string RestoreType { get; set; }
+
+        [NameInMap("SourceDbClusterId")]
+        [Validation(Required=false)]
+        public string SourceDbClusterId { get; set; }
 
         /// <summary>
         /// The reserved storage resources. Unit: AnalyticDB Compute Units (ACUs). Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.

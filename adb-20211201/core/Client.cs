@@ -416,6 +416,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetId))
+            {
+                query["BackupSetId"] = request.BackupSetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeResource))
             {
                 query["ComputeResource"] = request.ComputeResource;
@@ -451,6 +455,18 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreToTime))
+            {
+                query["RestoreToTime"] = request.RestoreToTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreType))
+            {
+                query["RestoreType"] = request.RestoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDbClusterId))
+            {
+                query["SourceDbClusterId"] = request.SourceDbClusterId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageResource))
             {
@@ -499,6 +515,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetId))
+            {
+                query["BackupSetId"] = request.BackupSetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeResource))
             {
                 query["ComputeResource"] = request.ComputeResource;
@@ -534,6 +554,18 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreToTime))
+            {
+                query["RestoreToTime"] = request.RestoreToTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreType))
+            {
+                query["RestoreType"] = request.RestoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDbClusterId))
+            {
+                query["SourceDbClusterId"] = request.SourceDbClusterId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageResource))
             {
