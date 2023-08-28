@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class ListFacegroupsResponseBody : TeaModel {
-        [NameInMap("items")]
+    public class GetOfficeEditUrlOption : TeaModel {
+        [NameInMap("copy")]
         [Validation(Required=false)]
-        public List<FaceGroup> Items { get; set; }
+        public bool? Copy { get; set; }
 
-        [NameInMap("next_marker")]
+        [NameInMap("print")]
         [Validation(Required=false)]
-        public string NextMarker { get; set; }
+        public bool? Print { get; set; }
 
-        [NameInMap("total_count")]
+        [NameInMap("readonly")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public bool? Readonly { get; set; }
 
     }
 

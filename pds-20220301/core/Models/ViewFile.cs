@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class File : TeaModel {
+    public class ViewFile : TeaModel {
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
+        [NameInMap("fields")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Fields { get; set; }
+
         [NameInMap("file_extension")]
         [Validation(Required=false)]
         public string FileExtension { get; set; }
@@ -57,14 +61,18 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string FileId { get; set; }
 
+        [NameInMap("file_revision_id")]
+        [Validation(Required=false)]
+        public string FileRevisionId { get; set; }
+
         [NameInMap("hidden")]
         [Validation(Required=false)]
         public bool? Hidden { get; set; }
 
         [NameInMap("investigation_info")]
         [Validation(Required=false)]
-        public FileInvestigationInfo InvestigationInfo { get; set; }
-        public class FileInvestigationInfo : TeaModel {
+        public ViewFileInvestigationInfo InvestigationInfo { get; set; }
+        public class ViewFileInvestigationInfo : TeaModel {
             [NameInMap("status")]
             [Validation(Required=false)]
             public long? Status { get; set; }
@@ -74,6 +82,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             public string Suggestion { get; set; }
 
         }
+
+        [NameInMap("joined_at")]
+        [Validation(Required=false)]
+        public long? JoinedAt { get; set; }
 
         [NameInMap("labels")]
         [Validation(Required=false)]
@@ -135,9 +147,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string UploadId { get; set; }
 
-        [NameInMap("user_tags")]
+        [NameInMap("view_id")]
         [Validation(Required=false)]
-        public Dictionary<string, string> UserTags { get; set; }
+        public string ViewId { get; set; }
 
     }
 

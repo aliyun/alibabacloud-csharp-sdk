@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public long? InitDriveSize { get; set; }
 
+        [NameInMap("published_app_access_strategy")]
+        [Validation(Required=false)]
+        public AppAccessStrategy PublishedAppAccessStrategy { get; set; }
+
         [NameInMap("size_quota")]
         [Validation(Required=false)]
         public long? SizeQuota { get; set; }

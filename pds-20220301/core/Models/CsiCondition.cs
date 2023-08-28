@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class ParseKeywordsRequest : TeaModel {
-        [NameInMap("keywords")]
+    public class CsiCondition : TeaModel {
+        [NameInMap("file_data_punish")]
         [Validation(Required=false)]
-        public string Keywords { get; set; }
+        public Condition FileDataPunish { get; set; }
 
     }
 

@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public List<CreateFileRequestPartInfoList> PartInfoList { get; set; }
         public class CreateFileRequestPartInfoList : TeaModel {
+            [NameInMap("content_md5")]
+            [Validation(Required=false)]
+            public string ContentMd5 { get; set; }
+
             [NameInMap("part_number")]
             [Validation(Required=false)]
             public int? PartNumber { get; set; }

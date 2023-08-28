@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string ParentName { get; set; }
 
-        [NameInMap("source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
-
         [NameInMap("tag_level")]
         [Validation(Required=false)]
         public int? TagLevel { get; set; }

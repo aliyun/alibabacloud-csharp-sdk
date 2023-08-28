@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class GetVideoPreviewPlayInfoResponseBody : TeaModel {
-        [NameInMap("code")]
+    public class CdnFileDownloadCallbackInfo : TeaModel {
+        [NameInMap("bucket")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Bucket { get; set; }
 
         [NameInMap("domain_id")]
         [Validation(Required=false)]
@@ -21,21 +21,25 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
+        [NameInMap("expire")]
+        [Validation(Required=false)]
+        public long? Expire { get; set; }
+
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
-        [NameInMap("message")]
+        [NameInMap("object")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string Object { get; set; }
 
-        [NameInMap("share_id")]
+        [NameInMap("token")]
         [Validation(Required=false)]
-        public string ShareId { get; set; }
+        public string Token { get; set; }
 
-        [NameInMap("video_preview_play_info")]
+        [NameInMap("user_id")]
         [Validation(Required=false)]
-        public VideoPreviewPlayInfo VideoPreviewPlayInfo { get; set; }
+        public string UserId { get; set; }
 
     }
 

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Remarks { get; set; }
 
+        [NameInMap("return_total_count")]
+        [Validation(Required=false)]
+        public bool? ReturnTotalCount { get; set; }
+
     }
 
 }

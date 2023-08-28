@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public List<GetUploadUrlRequestPartInfoList> PartInfoList { get; set; }
         public class GetUploadUrlRequestPartInfoList : TeaModel {
+            [NameInMap("content_md5")]
+            [Validation(Required=false)]
+            public string ContentMd5 { get; set; }
+
+            [NameInMap("content_type")]
+            [Validation(Required=false)]
+            public string ContentType { get; set; }
+
             [NameInMap("parallel_sha1_ctx")]
             [Validation(Required=false)]
             public GetUploadUrlRequestPartInfoListParallelSha1Ctx ParallelSha1Ctx { get; set; }
