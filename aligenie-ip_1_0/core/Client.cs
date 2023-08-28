@@ -8181,6 +8181,126 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0
             return await PushHotelMessageWithOptionsAsync(request, headers, runtime);
         }
 
+        public PushWelcomeResponse PushWelcomeWithOptions(PushWelcomeRequest request, PushWelcomeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelId))
+            {
+                body["HotelId"] = request.HotelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomNo))
+            {
+                body["RoomNo"] = request.RoomNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WelcomeMusicUrl))
+            {
+                body["WelcomeMusicUrl"] = request.WelcomeMusicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WelcomeText))
+            {
+                body["WelcomeText"] = request.WelcomeText;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushWelcome",
+                Version = "ip_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/ip/pushWelcome",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushWelcomeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PushWelcomeResponse> PushWelcomeWithOptionsAsync(PushWelcomeRequest request, PushWelcomeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelId))
+            {
+                body["HotelId"] = request.HotelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomNo))
+            {
+                body["RoomNo"] = request.RoomNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WelcomeMusicUrl))
+            {
+                body["WelcomeMusicUrl"] = request.WelcomeMusicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WelcomeText))
+            {
+                body["WelcomeText"] = request.WelcomeText;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushWelcome",
+                Version = "ip_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/ip/pushWelcome",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushWelcomeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PushWelcomeResponse PushWelcome(PushWelcomeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            PushWelcomeHeaders headers = new PushWelcomeHeaders();
+            return PushWelcomeWithOptions(request, headers, runtime);
+        }
+
+        public async Task<PushWelcomeResponse> PushWelcomeAsync(PushWelcomeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            PushWelcomeHeaders headers = new PushWelcomeHeaders();
+            return await PushWelcomeWithOptionsAsync(request, headers, runtime);
+        }
+
         public PushWelcomeTextAndMusicResponse PushWelcomeTextAndMusicWithOptions(PushWelcomeTextAndMusicRequest tmpReq, PushWelcomeTextAndMusicHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
