@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string DomainType { get; set; }
 
+        [NameInMap("HostRecord")]
+        [Validation(Required=false)]
+        public string HostRecord { get; set; }
+
         [NameInMap("IcpStatus")]
         [Validation(Required=false)]
         public string IcpStatus { get; set; }
