@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class ListExecutionsRequest : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("ExecutionNamePrefix")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ExecutionNamePrefix { get; set; }
 
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("StartedTimeBegin")]
         [Validation(Required=false)]
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         [Validation(Required=false)]
         public string StartedTimeEnd { get; set; }
 
-        [NameInMap("ExecutionNamePrefix")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string ExecutionNamePrefix { get; set; }
+        public string Status { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class ReportTaskSucceededRequest : TeaModel {
+        [NameInMap("Output")]
+        [Validation(Required=false)]
+        public string Output { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         [NameInMap("TaskToken")]
         [Validation(Required=false)]
         public string TaskToken { get; set; }
-
-        [NameInMap("Output")]
-        [Validation(Required=false)]
-        public string Output { get; set; }
 
     }
 

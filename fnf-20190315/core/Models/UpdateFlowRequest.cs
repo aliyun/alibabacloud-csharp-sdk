@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class UpdateFlowRequest : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
         [NameInMap("Definition")]
         [Validation(Required=false)]
         public string Definition { get; set; }
@@ -25,17 +17,21 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
-        [NameInMap("ExternalStorageLocation")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string ExternalStorageLocation { get; set; }
+        public string Type { get; set; }
 
     }
 

@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class GetExecutionHistoryRequest : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("ExecutionName")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ExecutionName { get; set; }
 
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
-        [NameInMap("ExecutionName")]
+        [NameInMap("Limit")]
         [Validation(Required=false)]
-        public string ExecutionName { get; set; }
+        public int? Limit { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("Limit")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? Limit { get; set; }
+        public string RequestId { get; set; }
 
     }
 

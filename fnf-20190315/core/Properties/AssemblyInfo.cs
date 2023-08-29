@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-fnf")]
 [assembly: AssemblyDescription("Alibaba Cloud Serverless Workflow (20190315) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6c9427a0-4a50-11eb-ba00-7fce0557369a")]
+[assembly: Guid("b6876150-468e-11ee-b19e-8df773e84fdf")]
 
 // Version information for an assembly consists of the following four values:
 //
