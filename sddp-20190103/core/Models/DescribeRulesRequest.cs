@@ -146,6 +146,19 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// The type of the data asset. Valid values:
+        /// 
+        /// *   **0**: all data assets
+        /// *   **1**: structured data asset
+        /// *   **2**: unstructured data asset
+        /// 
+        /// > If you set the parameter to 1 or 2, rules that support all data assets and rules that support the queried data asset type are returned.
+        /// </summary>
+        [NameInMap("SupportForm")]
+        [Validation(Required=false)]
+        public int? SupportForm { get; set; }
+
+        /// <summary>
         /// The severity level of the alert. Valid values:
         /// 
         /// *   **1**: low

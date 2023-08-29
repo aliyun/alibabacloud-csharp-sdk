@@ -17,9 +17,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public long? DomainId { get; set; }
 
+        [NameInMap("FileType")]
+        [Validation(Required=false)]
+        public long? FileType { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        [NameInMap("ModelIds")]
+        [Validation(Required=false)]
+        public string ModelIds { get; set; }
 
         [NameInMap("ModelTagIds")]
         [Validation(Required=false)]
