@@ -266,6 +266,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? CertType { get; set; }
 
+                [NameInMap("change_fee")]
+                [Validation(Required=false)]
+                public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee ChangeFee { get; set; }
+                public class FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee : TeaModel {
+                    [NameInMap("change_fee")]
+                    [Validation(Required=false)]
+                    public long? ChangeFee { get; set; }
+
+                    [NameInMap("service_fee")]
+                    [Validation(Required=false)]
+                    public long? ServiceFee { get; set; }
+
+                    [NameInMap("upgrade_price")]
+                    [Validation(Required=false)]
+                    public long? UpgradePrice { get; set; }
+
+                }
+
                 [NameInMap("gender")]
                 [Validation(Required=false)]
                 public int? Gender { get; set; }
