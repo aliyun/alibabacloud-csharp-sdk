@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainTopReferVisitResponseBodyTopReferListReferList> ReferList { get; set; }
             public class DescribeDcdnDomainTopReferVisitResponseBodyTopReferListReferList : TeaModel {
                 /// <summary>
-                /// The amount of network traffic. Unit: bytes.
+                /// The amount of network traffic. (Unit: bytes)
                 /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string ReferDetail { get; set; }
 
                 /// <summary>
-                /// The number of visits to the URL.
+                /// The number of visits.
                 /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]

@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         }
 
+        [NameInMap("WebSiteType")]
+        [Validation(Required=false)]
+        public string WebSiteType { get; set; }
+
     }
 
 }

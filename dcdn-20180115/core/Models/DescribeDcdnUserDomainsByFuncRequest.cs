@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserDomainsByFuncRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name.
+        /// The accelerated domain name whose ICP filing status you want to update.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// Specifies whether the feature that is specified by the FuncId parameter is enabled. Valid values:
+        /// Specifies whether the feature that is specified by the FuncId parameter is enabled.
         /// 
         /// *   **config**: enabled
         /// *   **unconfig**: not enabled

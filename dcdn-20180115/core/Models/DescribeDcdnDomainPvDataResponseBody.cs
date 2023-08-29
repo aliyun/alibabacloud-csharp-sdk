@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range during which data was queried.
+        /// The end of the time range that was queried.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The start of the time range during which data was queried.
+        /// The beginning of the time range that was queried.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

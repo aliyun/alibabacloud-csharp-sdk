@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Sandbox { get; set; }
 
                 /// <summary>
-                /// The information about the origin server.
+                /// The information about the origin servers.
                 /// </summary>
                 [NameInMap("Sources")]
                 [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     public List<DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageDataSourcesSource> Source { get; set; }
                     public class DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageDataSourcesSource : TeaModel {
                         /// <summary>
-                        /// The address of the origin server.
+                        /// The origin server address.
                         /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
@@ -136,8 +136,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 /// <summary>
                 /// Indicates whether HTTPS is enabled. Valid values:
                 /// 
-                /// *   **on**
-                /// *   **off**
+                /// *   **on**: HTTPS is enabled.
+                /// *   **off**: HTTPS is disabled.
                 /// </summary>
                 [NameInMap("SslProtocol")]
                 [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number of the page returned.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The sorting method. Valid values:
+        /// The sorting order. Valid values:
         /// 
         /// *   **traf**: by network traffic
         /// *   **pv**: by the number of visits

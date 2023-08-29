@@ -17,15 +17,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string ChangingAffectTime { get; set; }
 
         /// <summary>
-        /// The new metering method for DCDN. Valid values:
+        /// The new metering method for the renewed secure DCDN. Valid values:
         /// 
-        /// *   **PayByTraffic**: pay-by-data-transfer
-        /// *   **PayByBandwidth**: pay-by-bandwidth
-        /// *   **PayByBandwidth95**: pay-by-95th percentile bandwidth
-        /// *   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth
-        /// *   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month
-        /// *   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth
-        /// *   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)
+        /// *   **PayByTraffic**: pay by data transfer
+        /// *   **PayByBandwidth**: pay by bandwidth
+        /// *   **PayByBandwidth95**: pay by 95th percentile bandwidth
+        /// *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
+        /// *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
+        /// *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
+        /// *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
         /// </summary>
         [NameInMap("ChangingChargeType")]
         [Validation(Required=false)]
@@ -41,13 +41,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// The current metering method. Valid values:
         /// 
-        /// *   **PayByTraffic**: pay-by-data-transfer
-        /// *   **PayByBandwidth**: pay-by-bandwidth
-        /// *   **PayByBandwidth95**: pay-by-95th percentile bandwidth
-        /// *   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth
-        /// *   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month
-        /// *   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth
-        /// *   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)
+        /// *   **PayByTraffic**: pay by data transfer
+        /// *   **PayByBandwidth**: pay by bandwidth
+        /// *   **PayByBandwidth95**: pay by 95th percentile bandwidth
+        /// *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
+        /// *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
+        /// *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
+        /// *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string OpeningTime { get; set; }
 
         /// <summary>
-        /// The lock status of secure DCDN.
+        /// The lock status of DCDN.
         /// </summary>
         [NameInMap("OperationLocks")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnServiceResponseBodyOperationLocksLockReason> LockReason { get; set; }
             public class DescribeDcdnServiceResponseBodyOperationLocksLockReason : TeaModel {
                 /// <summary>
-                /// The reason why the instance is locked. For example, a value of financial indicates that an overdue payment exists.
+                /// The reason why secure DCDN was locked. For example, a value of financial indicates that an overdue payment exists.
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

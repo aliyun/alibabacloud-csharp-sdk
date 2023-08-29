@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnAclFieldsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the rules.
+        /// The details about the rules.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,13 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class DeleteDcdnDomainResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
+    public class BatchPutDcdnKvResponseBody : TeaModel {
+        [NameInMap("FailKeys")]
+        [Validation(Required=false)]
+        public List<string> FailKeys { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SuccessKeys")]
+        [Validation(Required=false)]
+        public List<string> SuccessKeys { get; set; }
 
     }
 

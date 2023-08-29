@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRefreshTaskByIdResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public string Process { get; set; }
 
             /// <summary>
-            /// The status of the task. Valid values:
+            /// The task status. Valid values:
             /// 
             /// *   **Complete**: The task is complete.
             /// *   **Pending**: The task is pending.

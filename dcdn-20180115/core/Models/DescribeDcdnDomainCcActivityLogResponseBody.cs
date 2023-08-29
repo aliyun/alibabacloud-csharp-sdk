@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// The accelerated domain name.
+            /// The accelerated domain name whose ICP filing status you want to update.
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The timestamp of the returned data.
+            /// The timestamp of the data returned.
             /// </summary>
             [NameInMap("TimeStamp")]
             [Validation(Required=false)]
             public string TimeStamp { get; set; }
 
             /// <summary>
-            /// The object that triggered rate limiting.
+            /// The object that triggered the blocking event.
             /// </summary>
             [NameInMap("TriggerObject")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public long? Ttl { get; set; }
 
             /// <summary>
-            /// The value of the object that triggered rate limiting.
+            /// The value of the trigger for rate limiting.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList> UrlList { get; set; }
             public class DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList : TeaModel {
                 /// <summary>
-                /// The amount of network traffic. Unit: bytes.
+                /// The amount of network traffic. (Unit: bytes)
                 /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string UrlDetail { get; set; }
 
                 /// <summary>
-                /// The number of visits to the URL.
+                /// The number of visits.
                 /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
                 /// <summary>
-                /// The proportion of visits to the URL.
+                /// The proportion of visits.
                 /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList> UrlList { get; set; }
             public class DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList : TeaModel {
                 /// <summary>
-                /// The amount of network traffic. Unit: bytes.
+                /// The amount of network traffic. (Unit: bytes)
                 /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string UrlDetail { get; set; }
 
                 /// <summary>
-                /// The number of visits to the URL.
+                /// The number of visits.
                 /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
                 /// <summary>
-                /// The proportion of visits to the URL.
+                /// The proportion of visits.
                 /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList> UrlList { get; set; }
             public class DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList : TeaModel {
                 /// <summary>
-                /// The amount of network traffic. Unit: bytes.
+                /// The amount of network traffic. (Unit: bytes)
                 /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
@@ -163,14 +163,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string UrlDetail { get; set; }
 
                 /// <summary>
-                /// The number of visits to the URL.
+                /// The number of visits.
                 /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
                 /// <summary>
-                /// The proportion of visits to the URL.
+                /// The proportion of visits.
                 /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList> UrlList { get; set; }
             public class DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList : TeaModel {
                 /// <summary>
-                /// The amount of network traffic. Unit: bytes.
+                /// The amount of network traffic. (Unit: bytes)
                 /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
@@ -213,14 +213,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string UrlDetail { get; set; }
 
                 /// <summary>
-                /// The number of visits to the URL.
+                /// The number of visits.
                 /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
                 /// <summary>
-                /// The proportion of visits to the URL.
+                /// The proportion of visits.
                 /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList> UrlList { get; set; }
             public class DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList : TeaModel {
                 /// <summary>
-                /// The amount of network traffic. Unit: bytes.
+                /// The amount of network traffic. (Unit: bytes)
                 /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
@@ -263,14 +263,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string UrlDetail { get; set; }
 
                 /// <summary>
-                /// The number of visits to the URL.
+                /// The number of visits.
                 /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
                 /// <summary>
-                /// The proportion of visits to the URL.
+                /// The proportion of visits.
                 /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]

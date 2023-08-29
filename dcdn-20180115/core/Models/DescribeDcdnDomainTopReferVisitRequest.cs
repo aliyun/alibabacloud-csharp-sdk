@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The method that is used to arrange the returned application information. Valid values:
+        /// The sorting order. Valid values:
         /// 
         /// *   **traf**: by network traffic
         /// *   **pv**: by the number of visits
@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
         /// To query the data on a specified day, use the yyyy-MM-ddT16:00:00Z format.
         /// 
-        /// If you leave this parameter empty, data collected in the last 24 hours is queried.
+        /// If you do not set this parameter, data collected within the last 24 hours is queried.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("FunctionType")]
+        [Validation(Required=false)]
+        public string FunctionType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnKvNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// The available capacity of namespace.
+        /// The available capacity of all namespaces in your account.
         /// </summary>
         [NameInMap("CapacityString")]
         [Validation(Required=false)]
         public string CapacityString { get; set; }
 
         /// <summary>
-        /// Used capacity of namespace.
+        /// The used capacity of all namespaces in your account.
         /// </summary>
         [NameInMap("CapacityUsedString")]
         [Validation(Required=false)]

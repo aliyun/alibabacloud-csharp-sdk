@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

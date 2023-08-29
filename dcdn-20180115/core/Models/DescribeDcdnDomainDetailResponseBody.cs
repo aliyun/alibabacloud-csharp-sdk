@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public string DomainStatus { get; set; }
 
+            [NameInMap("FunctionType")]
+            [Validation(Required=false)]
+            public string FunctionType { get; set; }
+
             /// <summary>
             /// The time when the domain name was added.
             /// </summary>

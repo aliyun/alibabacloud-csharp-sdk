@@ -19,15 +19,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string BindDomains { get; set; }
 
         /// <summary>
-        /// The change method. Valid values:
+        /// The association method. Valid values:
         /// 
-        /// *   0: replace
-        /// *   1: add
+        /// *   0: replace.
+        /// *   1: add.
         /// *   Default value: 0.
         /// 
         /// > 
         /// 
-        /// *   This parameter takes effect only when you specify **BindDomains**. If you have bound a domain name indicated by **BindDomains** to the default protection policy, the `Policy.DefaultAndCustom.BindToSameDomain` error is returned.
+        /// *   This parameter takes effect only when you specify **BindDomains**. If you have associated a domain name indicated by **BindDomains** with the default protection policy, the `Policy.DefaultAndCustom.BindToSameDomain` error is returned.
         /// 
         /// *   You can only replace accelerated domain names that are bound to the default protection policy.
         /// </summary>

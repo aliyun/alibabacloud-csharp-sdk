@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   production: the name of the environment, including the environment name (SpecName) and the domain name whitelist (AllowedHosts).
         /// 
-        /// *   Preset_Canary_xx: You can add canary release environments based on your business requirements. This parameter is optional.
+        /// *   presetCanary: You can add canary release environments based on your business requirements. This parameter is optional.
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]

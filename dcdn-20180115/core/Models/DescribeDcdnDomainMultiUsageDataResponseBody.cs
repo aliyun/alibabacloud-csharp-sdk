@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainMultiUsageDataResponseBody : TeaModel {
         /// <summary>
-        /// The end of the time range during which data was queried.
+        /// The end of the time range that was queried.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public long? Request { get; set; }
 
                 /// <summary>
-                /// The timestamp of the returned data.
+                /// The timestamp of the data returned.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The start of the time range during which data was queried.
+        /// The beginning of the time range that was queried.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// The timestamp of the returned data.
+                /// The timestamp of the data returned.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about tasks.
+        /// The tasks.
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -71,6 +71,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 /// 
                 /// *   **file**: URL-based refresh
                 /// *   **path**: directory-based refresh
+                /// *   **regex**: regular expression-based refresh
                 /// *   **preload**: URL-based prefetch
                 /// </summary>
                 [NameInMap("ObjectType")]
@@ -85,7 +86,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Process { get; set; }
 
                 /// <summary>
-                /// The status of the task. Valid values:
+                /// The status of the auxiliary media asset.
                 /// 
                 /// *   **Complete**: The task is complete.
                 /// *   **Refreshing**: The task is in progress.
@@ -96,7 +97,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The ID of the task.
+                /// The task ID.
                 /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]

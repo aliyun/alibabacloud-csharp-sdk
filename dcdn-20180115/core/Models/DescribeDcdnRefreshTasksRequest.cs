@@ -37,6 +37,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   **file**: URL-based refresh
         /// *   **directory**: directory-based refresh
+        /// *   **regex**: regular expression-based refresh
         /// *   **preload**: URL-based prefetch
         /// 
         /// If you set **DomainName** or **Status**, you must also set this parameter.

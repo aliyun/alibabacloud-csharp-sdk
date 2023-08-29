@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public int? DomainQuota { get; set; }
 
         /// <summary>
-        /// The maximum number of URLs or directories with parameters ignored that can be refreshed on the current day.
+        /// The maximum number of URLs or directories with parameters ignored that can be refreshed.
         /// </summary>
         [NameInMap("IgnoreParamsQuota")]
         [Validation(Required=false)]
         public int? IgnoreParamsQuota { get; set; }
 
         /// <summary>
-        /// The number of remaining URLs or directories that can be refreshed with parameters ignored on the current day.
+        /// The number of remaining URLs or directories with parameters ignored that can be refreshed.
         /// </summary>
         [NameInMap("IgnoreParamsRemain")]
         [Validation(Required=false)]

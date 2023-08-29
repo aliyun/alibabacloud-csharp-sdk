@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? DomainOnlineCount { get; set; }
 
         /// <summary>
-        /// The end of the time range during which data was queried.
+        /// The end of the reporting period.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range during which data was queried.
+        /// The beginning of the reporting period.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public long? Rank { get; set; }
 
                 /// <summary>
-                /// The number of visits to the URL.
+                /// The number of visits.
                 /// </summary>
                 [NameInMap("TotalAccess")]
                 [Validation(Required=false)]
                 public long? TotalAccess { get; set; }
 
                 /// <summary>
-                /// The total volume of traffic.
+                /// The total amount of network traffic.
                 /// </summary>
                 [NameInMap("TotalTraffic")]
                 [Validation(Required=false)]

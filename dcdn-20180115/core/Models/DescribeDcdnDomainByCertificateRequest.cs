@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainByCertificateRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether the domain name list to return match the SSL certificate.
+        /// 
+        /// - **true**: The domain name list match the SSL certificate.
+        /// - **false**: The domain name list do not match the SSL certificate.
+        /// </summary>
         [NameInMap("Exact")]
         [Validation(Required=false)]
         public bool? Exact { get; set; }
