@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetMseSourceRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
-        /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// The data structure.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// The MSE engine type. Valid values:
+        /// 
+        /// *   NACOS
+        /// *   ZOOKEEPER
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The MSE engine type. Valid values:
+        /// The language of the response. Valid values:
         /// 
-        /// *   NACOS
-        /// *   ZOOKEEPER
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

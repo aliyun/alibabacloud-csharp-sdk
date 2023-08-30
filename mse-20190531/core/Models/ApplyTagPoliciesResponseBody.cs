@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ApplyTagPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
         /// The details of the data.
         /// </summary>
         [NameInMap("Data")]
@@ -97,13 +90,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Tag { get; set; }
 
         }
-
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// The message returned.

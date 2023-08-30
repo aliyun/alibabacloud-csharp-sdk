@@ -22,13 +22,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The destination service type.
         /// 
-        /// Valid values
-        /// 
-        /// <!-- -->
-        /// 
-        /// :
+        /// Enumeration values:
         /// 
         /// *   VersionOriented
+        /// 
+        ///     <!-- -->
         /// 
         ///     <!-- -->
         /// 
@@ -40,7 +38,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         ///     <!-- -->
         /// 
+        ///     <!-- -->
+        /// 
         /// *   Single
+        /// 
+        ///     <!-- -->
         /// 
         ///     <!-- -->
         /// 
@@ -52,7 +54,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         ///     <!-- -->
         /// 
+        ///     <!-- -->
+        /// 
         /// *   Redirect
+        /// 
+        ///     <!-- -->
         /// 
         ///     <!-- -->
         /// 
@@ -125,6 +131,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The routing policy in a JSON string.
+        /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public string Policies { get; set; }
@@ -150,6 +159,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? RouteOrder { get; set; }
 
+        /// <summary>
+        /// The route type. Valid values:
+        /// 
+        /// Op: Manage routes.
+        /// </summary>
         [NameInMap("RouteType")]
         [Validation(Required=false)]
         public string RouteType { get; set; }

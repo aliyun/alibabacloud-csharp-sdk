@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs. For more information about resource groups, see the topic "View basic information of a resource group."
+        /// The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ListClustersRequestTag> Tag { get; set; }
         public class ListClustersRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// The key of the tag.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The value of the tag.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

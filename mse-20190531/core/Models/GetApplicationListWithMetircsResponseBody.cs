@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetApplicationListWithMetircsResponseBody : TeaModel {
         /// <summary>
-        /// The response code returned.
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
         /// The details of the data.
         /// </summary>
         [NameInMap("Data")]
@@ -57,6 +50,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
+
+                [NameInMap("AppType")]
+                [Validation(Required=false)]
+                public int? AppType { get; set; }
 
                 /// <summary>
                 /// The current metrics.
@@ -195,13 +192,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Language { get; set; }
 
-                /// <summary>
-                /// The license key in use.
-                /// </summary>
-                [NameInMap("LicenseKey")]
-                [Validation(Required=false)]
-                public string LicenseKey { get; set; }
-
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
@@ -227,19 +217,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public long? Status { get; set; }
 
+                [NameInMap("TagCount")]
+                [Validation(Required=false)]
+                public long? TagCount { get; set; }
+
                 /// <summary>
                 /// The tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<string> Tags { get; set; }
-
-                /// <summary>
-                /// The ID of the user.
-                /// </summary>
-                [NameInMap("UserId")]
-                [Validation(Required=false)]
-                public string UserId { get; set; }
 
             }
 
@@ -251,13 +238,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? TotalSize { get; set; }
 
         }
-
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// The message returned.

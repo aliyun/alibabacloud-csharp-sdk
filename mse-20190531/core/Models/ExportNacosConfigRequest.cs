@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string DataId { get; set; }
 
+        [NameInMap("DataIds")]
+        [Validation(Required=false)]
+        public string DataIds { get; set; }
+
         /// <summary>
         /// The name of the configuration group.
         /// </summary>

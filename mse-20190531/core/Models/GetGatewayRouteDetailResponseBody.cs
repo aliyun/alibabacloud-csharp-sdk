@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<GetGatewayRouteDetailResponseBodyDataFallbackServices> FallbackServices { get; set; }
             public class GetGatewayRouteDetailResponseBodyDataFallbackServices : TeaModel {
                 /// <summary>
-                /// The type of the protocol.
+                /// The type of the protocol. Valid values:
                 /// </summary>
                 [NameInMap("AgreementType")]
                 [Validation(Required=false)]
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? ServiceId { get; set; }
 
                 /// <summary>
-                /// The name of the service.
+                /// The name of a service.
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
@@ -245,18 +245,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? ServicePort { get; set; }
 
                 /// <summary>
-                /// The source type.
+                /// The type of the service source.
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// The version of the service.
+                /// The version of a service.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }
+
+            }
+
+            [NameInMap("FlowMirror")]
+            [Validation(Required=false)]
+            public GetGatewayRouteDetailResponseBodyDataFlowMirror FlowMirror { get; set; }
+            public class GetGatewayRouteDetailResponseBodyDataFlowMirror : TeaModel {
+                [NameInMap("Percentage")]
+                [Validation(Required=false)]
+                public int? Percentage { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public int? Port { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("TargetServiceId")]
+                [Validation(Required=false)]
+                public long? TargetServiceId { get; set; }
+
+                [NameInMap("TargetServiceName")]
+                [Validation(Required=false)]
+                public string TargetServiceName { get; set; }
 
             }
 
@@ -324,7 +350,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Pattern { get; set; }
 
                 /// <summary>
-                /// The status.
+                /// The status of the policy.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -598,28 +624,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The information about services.
+            /// The services.
             /// </summary>
             [NameInMap("RouteServices")]
             [Validation(Required=false)]
             public List<GetGatewayRouteDetailResponseBodyDataRouteServices> RouteServices { get; set; }
             public class GetGatewayRouteDetailResponseBodyDataRouteServices : TeaModel {
                 /// <summary>
-                /// The type of the protocol.
+                /// The type of the protocol. Valid values:
                 /// </summary>
                 [NameInMap("AgreementType")]
                 [Validation(Required=false)]
                 public string AgreementType { get; set; }
 
                 /// <summary>
-                /// The name of the group to which the service belongs.
+                /// The name of the group to which a service belongs.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The name of the service.
+                /// The name of a service.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -640,14 +666,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Percent { get; set; }
 
                 /// <summary>
-                /// The ID of the service.
+                /// The ID of a service.
                 /// </summary>
                 [NameInMap("ServiceId")]
                 [Validation(Required=false)]
                 public long? ServiceId { get; set; }
 
                 /// <summary>
-                /// The name of the service.
+                /// The name of a service.
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
@@ -661,14 +687,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? ServicePort { get; set; }
 
                 /// <summary>
-                /// The source type.
+                /// The source type of a service.
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// The version of the service.
+                /// The version of a service.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]

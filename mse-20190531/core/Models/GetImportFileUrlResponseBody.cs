@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetImportFileUrlResponseBody : TeaModel {
         /// <summary>
-        /// The response code returned.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -33,9 +33,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-        /// 
-        /// >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+        /// The dynamic part in the error message. This parameter is used to replace the \\*\\*%s\\*\\* variable in the **ErrMessage** parameter.\n\n>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
@@ -71,9 +69,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// *   `true`: The request was successful. 
+        /// *  `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

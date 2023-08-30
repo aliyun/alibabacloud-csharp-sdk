@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DataId { get; set; }
 
         /// <summary>
-        /// The group.
+        /// The name of the group.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]

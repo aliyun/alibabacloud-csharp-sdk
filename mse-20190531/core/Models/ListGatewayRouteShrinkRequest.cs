@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable sorting. This parameter is taken offline and is unavailable.
+        /// Specifies whether to enable sorting. This parameter is unavailable.
         /// </summary>
         [NameInMap("DescSort")]
         [Validation(Required=false)]

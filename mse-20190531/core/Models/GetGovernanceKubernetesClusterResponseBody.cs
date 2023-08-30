@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGovernanceKubernetesClusterResponseBody : TeaModel {
         /// <summary>
-        /// The response code returned.
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
         /// The details of the data.
         /// </summary>
         [NameInMap("Data")]
@@ -58,19 +51,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> Namespaces { get; set; }
             public class GetGovernanceKubernetesClusterResponseBodyDataNamespaces : TeaModel {
+                [NameInMap("Labels")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> Labels { get; set; }
+
+                [NameInMap("MseNamespace")]
+                [Validation(Required=false)]
+                public string MseNamespace { get; set; }
+
                 /// <summary>
                 /// The name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
-
-                /// <summary>
-                /// The tags.
-                /// </summary>
-                [NameInMap("Tags")]
-                [Validation(Required=false)]
-                public string Tags { get; set; }
 
             }
 
@@ -96,13 +90,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string UpdateTime { get; set; }
 
         }
-
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// The message returned.

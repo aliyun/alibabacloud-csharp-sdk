@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// The format of the configuration. Supported formats include TEXT, JSON, and XML.
+        /// The configuration format such as text, JSON, or XML.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

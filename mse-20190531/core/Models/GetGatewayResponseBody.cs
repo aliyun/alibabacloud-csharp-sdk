@@ -30,6 +30,50 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            [NameInMap("Elastic")]
+            [Validation(Required=false)]
+            public bool? Elastic { get; set; }
+
+            [NameInMap("ElasticPolicy")]
+            [Validation(Required=false)]
+            public GetGatewayResponseBodyDataElasticPolicy ElasticPolicy { get; set; }
+            public class GetGatewayResponseBodyDataElasticPolicy : TeaModel {
+                [NameInMap("ElasticType")]
+                [Validation(Required=false)]
+                public string ElasticType { get; set; }
+
+                [NameInMap("MaxReplica")]
+                [Validation(Required=false)]
+                public int? MaxReplica { get; set; }
+
+                [NameInMap("TimePolicyList")]
+                [Validation(Required=false)]
+                public List<GetGatewayResponseBodyDataElasticPolicyTimePolicyList> TimePolicyList { get; set; }
+                public class GetGatewayResponseBodyDataElasticPolicyTimePolicyList : TeaModel {
+                    [NameInMap("DesiredReplica")]
+                    [Validation(Required=false)]
+                    public int? DesiredReplica { get; set; }
+
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public string EndTime { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("ElasticReplica")]
+            [Validation(Required=false)]
+            public int? ElasticReplica { get; set; }
+
+            [NameInMap("ElasticType")]
+            [Validation(Required=false)]
+            public string ElasticType { get; set; }
+
             /// <summary>
             /// The time when the gateway expires.
             /// </summary>
@@ -171,6 +215,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("StatusDesc")]
             [Validation(Required=false)]
             public string StatusDesc { get; set; }
+
+            [NameInMap("TotalReplica")]
+            [Validation(Required=false)]
+            public int? TotalReplica { get; set; }
 
             /// <summary>
             /// The ID of the VPC.

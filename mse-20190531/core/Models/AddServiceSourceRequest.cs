@@ -10,67 +10,67 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddServiceSourceRequest : TeaModel {
         /// <summary>
-        /// The language in which the returned information is displayed. Valid values:
-        /// 
-        /// *   zh-CN: Chinese. This is the default value.
-        /// *   en-US: English.
-        /// *   ja: Japanese.
+        /// The return value.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The address.
+        /// Specifies whether to monitor Ingress classes.
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// Specifies whether to update the Ingress status.
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The list of service groups.
+        /// The data structure.
         /// </summary>
         [NameInMap("GroupList")]
         [Validation(Required=false)]
         public List<string> GroupList { get; set; }
 
         /// <summary>
-        /// The configurations of Ingress resources.
+        /// The list of service groups.
         /// </summary>
         [NameInMap("IngressOptionsRequest")]
         [Validation(Required=false)]
         public AddServiceSourceRequestIngressOptionsRequest IngressOptionsRequest { get; set; }
         public class AddServiceSourceRequestIngressOptionsRequest : TeaModel {
             /// <summary>
-            /// Specifies whether to enable Ingress.
+            /// The group to which the service belongs.
             /// </summary>
             [NameInMap("EnableIngress")]
             [Validation(Required=false)]
             public bool? EnableIngress { get; set; }
 
             /// <summary>
-            /// Specifies whether to update the Ingress status.
+            /// The language of the response. Valid values:
+            /// 
+            /// *   zh-CN: Chinese. This is the default value.
+            /// *   en-US: English.
+            /// *   ja: Japanese.
             /// </summary>
             [NameInMap("EnableStatus")]
             [Validation(Required=false)]
             public bool? EnableStatus { get; set; }
 
             /// <summary>
-            /// Specifies whether to monitor Ingress classes.
+            /// An array of service root paths.
             /// </summary>
             [NameInMap("IngressClass")]
             [Validation(Required=false)]
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// The namespace whose resources you want to monitor.
+            /// The root path of the service.
             /// </summary>
             [NameInMap("WatchNamespace")]
             [Validation(Required=false)]
@@ -79,39 +79,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The name.
-        /// 
-        /// > The parameter definition varies based on the source type.
-        /// 
-        /// *   If Type is set to K8S, this parameter specifies the name of the Kubernetes cluster.
-        /// *   If Type is set to NACOS, this parameter specifies the ID of the instance.
+        /// The namespace whose resources you want to monitor.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// An array of service root paths.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("PathList")]
         [Validation(Required=false)]
         public List<string> PathList { get; set; }
 
         /// <summary>
-        /// The service source. Valid values:
-        /// 
-        /// *   K8S: Kubernetes cluster
-        /// *   MSE: Nacos instance
+        /// Specifies whether to enable Ingress.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The type of the service source. Valid values:
-        /// 
-        /// *   K8S: Kubernetes cluster
-        /// *   NACOS: Nacos instance
+        /// The unique ID of the gateway.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

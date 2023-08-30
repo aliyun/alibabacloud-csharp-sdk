@@ -189,6 +189,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string SyncLimit { get; set; }
 
+        [NameInMap("TLSEnabled")]
+        [Validation(Required=false)]
+        public bool? TLSEnabled { get; set; }
+
         /// <summary>
         /// The time unit. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.
         /// </summary>

@@ -16,6 +16,48 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public ListAnsServiceClustersResponseBodyData Data { get; set; }
         public class ListAnsServiceClustersResponseBodyData : TeaModel {
+            [NameInMap("AppDetail")]
+            [Validation(Required=false)]
+            public ListAnsServiceClustersResponseBodyDataAppDetail AppDetail { get; set; }
+            public class ListAnsServiceClustersResponseBodyDataAppDetail : TeaModel {
+                [NameInMap("AppId")]
+                [Validation(Required=false)]
+                public string AppId { get; set; }
+
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
+
+                [NameInMap("CheckInternal")]
+                [Validation(Required=false)]
+                public int? CheckInternal { get; set; }
+
+                [NameInMap("CheckPath")]
+                [Validation(Required=false)]
+                public string CheckPath { get; set; }
+
+                [NameInMap("CheckTimeout")]
+                [Validation(Required=false)]
+                public int? CheckTimeout { get; set; }
+
+                [NameInMap("CheckType")]
+                [Validation(Required=false)]
+                public string CheckType { get; set; }
+
+                [NameInMap("HealthyCheckTimes")]
+                [Validation(Required=false)]
+                public int? HealthyCheckTimes { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public int? Port { get; set; }
+
+                [NameInMap("UnhealthyCheckTimes")]
+                [Validation(Required=false)]
+                public int? UnhealthyCheckTimes { get; set; }
+
+            }
+
             /// <summary>
             /// The information about the clusters.
             /// </summary>
@@ -119,6 +161,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string SelectorType { get; set; }
 
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
         }
 
         /// <summary>
@@ -127,6 +173,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
+
+        [NameInMap("HttpCode")]
+        [Validation(Required=false)]
+        public string HttpCode { get; set; }
 
         /// <summary>
         /// The message returned.

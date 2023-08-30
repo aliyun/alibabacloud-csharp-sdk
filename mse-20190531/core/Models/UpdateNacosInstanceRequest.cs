@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// Specifies whether to disable this service. Valid values:
         /// 
-        /// *   `true`: yes
-        /// *   `false`: no
+        /// *   `true`: yes.
+        /// *   `false`: no.
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// Specifies whether the node is a non-persistent node. Valid values:
         /// 
-        /// *   `true`: yes
-        /// *   `false`: no
+        /// *   `true`: yes.
+        /// *   `false`: no.
         /// </summary>
         [NameInMap("Ephemeral")]
         [Validation(Required=false)]

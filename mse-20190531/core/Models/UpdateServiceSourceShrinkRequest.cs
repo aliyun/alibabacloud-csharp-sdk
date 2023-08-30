@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// *   zh: Chinese.
+        /// *   en: English.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The service source. Valid values:
         /// 
-        /// *   K8S: ACK cluster
-        /// *   MSE: Nacos instance
+        /// *   K8s: ACK cluster.
+        /// *   MSE: Nacos instance.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The type of the service source. Valid values:
         /// 
-        /// *   K8S: ACK cluster
-        /// *   NACOS: Nacos instance
+        /// *   K8s: ACK cluster.
+        /// *   NACOS: Nacos instance.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

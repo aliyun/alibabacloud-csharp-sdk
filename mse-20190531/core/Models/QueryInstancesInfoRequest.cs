@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the instance is deployed.
+        /// The ID of the region where the instance resides.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the cluster.
         /// 
         /// > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
         /// </summary>

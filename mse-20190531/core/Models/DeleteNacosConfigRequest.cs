@@ -10,48 +10,42 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteNacosConfigRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
-        /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// The status code returned.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a beta release. Valid values:
-        /// 
-        /// *   `true`: yes
-        /// *   `false`: no
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("Beta")]
         [Validation(Required=false)]
         public bool? Beta { get; set; }
 
         /// <summary>
-        /// The ID of the configuration.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
         public string DataId { get; set; }
 
         /// <summary>
-        /// The type of the group.
+        /// The message returned.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public string Group { get; set; }
 
         /// <summary>
-        /// The ID of the instance
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the namespace.
+        /// The request is successfully processed.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// MSE命名空间名字。
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the Sentinel-compatible mode.
+        /// Specifies whether to start the switch.
         /// </summary>
         [NameInMap("SentinelEnable")]
         [Validation(Required=false)]
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable switching.
+        /// The name of the Microservices Engine (MSE) namespace.
         /// </summary>
         [NameInMap("SwitchEnable")]
         [Validation(Required=false)]

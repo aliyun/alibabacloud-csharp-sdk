@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string HttpsVServerGroupId { get; set; }
 
             /// <summary>
-            /// ID
+            /// The ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? ServiceWeight { get; set; }
 
             /// <summary>
-            /// SLB ID
+            /// The ID of the SLB instance.
             /// </summary>
             [NameInMap("SlbId")]
             [Validation(Required=false)]
             public string SlbId { get; set; }
 
             /// <summary>
-            /// SLB IP
+            /// The IP address of the SLB instance.
             /// </summary>
             [NameInMap("SlbIp")]
             [Validation(Required=false)]
@@ -134,6 +134,32 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("VServerGroupId")]
             [Validation(Required=false)]
             public string VServerGroupId { get; set; }
+
+            [NameInMap("VServiceList")]
+            [Validation(Required=false)]
+            public List<ListGatewaySlbResponseBodyDataVServiceList> VServiceList { get; set; }
+            public class ListGatewaySlbResponseBodyDataVServiceList : TeaModel {
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                [NameInMap("Protocol")]
+                [Validation(Required=false)]
+                public string Protocol { get; set; }
+
+                [NameInMap("VServerGroupId")]
+                [Validation(Required=false)]
+                public string VServerGroupId { get; set; }
+
+                [NameInMap("VServerGroupName")]
+                [Validation(Required=false)]
+                public string VServerGroupName { get; set; }
+
+            }
+
+            [NameInMap("VsMetaInfo")]
+            [Validation(Required=false)]
+            public string VsMetaInfo { get; set; }
 
         }
 

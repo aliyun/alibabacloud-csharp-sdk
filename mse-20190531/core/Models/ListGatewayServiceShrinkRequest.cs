@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? DescSort { get; set; }
 
         /// <summary>
-        /// The parameters that specify filter conditions, which are in the format of {"key1":"value1"}.
+        /// The parameters that are used to specify filter conditions. The values of the parameters are in the format of {"key1":"value1"}.
         /// </summary>
         [NameInMap("FilterParams")]
         [Validation(Required=false)]

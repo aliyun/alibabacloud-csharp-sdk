@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The time range for the query. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.
+        /// The query time. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

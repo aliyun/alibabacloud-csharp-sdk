@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteGatewayResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.
+        /// The HTTP status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string PrimaryUser { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// The ID of the region.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// The returned message.
         /// 
         /// *   If the request is successful, a success message is returned.
         /// *   If the request fails, an error message is returned, such as the "TaskId not found" message.

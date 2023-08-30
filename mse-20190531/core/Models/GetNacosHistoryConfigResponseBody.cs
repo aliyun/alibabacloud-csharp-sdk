@@ -10,56 +10,56 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetNacosHistoryConfigResponseBody : TeaModel {
         /// <summary>
-        /// The configuration information.
+        /// The name of the application.
         /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public GetNacosHistoryConfigResponseBodyConfiguration Configuration { get; set; }
         public class GetNacosHistoryConfigResponseBodyConfiguration : TeaModel {
             /// <summary>
-            /// The name of the application.
+            /// The MD5 value of the configuration.
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// The content of the configuration.
+            /// The name of the configuration group.
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// The ID of the configuration.
+            /// The content of the configuration.
             /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
 
             /// <summary>
-            /// The encryption key.
+            /// The error code returned if the request failed.
             /// </summary>
             [NameInMap("EncryptedDataKey")]
             [Validation(Required=false)]
             public string EncryptedDataKey { get; set; }
 
             /// <summary>
-            /// The name of the configuration group.
+            /// The configuration type.
             /// </summary>
             [NameInMap("Group")]
             [Validation(Required=false)]
             public string Group { get; set; }
 
             /// <summary>
-            /// The MD5 value of the configuration.
+            /// The ID of the configuration.
             /// </summary>
             [NameInMap("Md5")]
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
             /// <summary>
-            /// The configuration type.
+            /// The encryption key.
             /// </summary>
             [NameInMap("OpType")]
             [Validation(Required=false)]
@@ -68,31 +68,31 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// The request was successfully processed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The configuration information.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// mse-200-105
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

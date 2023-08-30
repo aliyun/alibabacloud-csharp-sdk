@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
+        /// <summary>
+        /// MSE命名空间名字
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }

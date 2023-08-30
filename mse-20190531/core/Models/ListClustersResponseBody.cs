@@ -73,28 +73,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string EndDate { get; set; }
 
             /// <summary>
-            /// The initial status of the instance.
+            /// The initialization status of the instance.
             /// </summary>
             [NameInMap("InitStatus")]
             [Validation(Required=false)]
             public string InitStatus { get; set; }
 
             /// <summary>
-            /// The number of instances.
+            /// The number of instance nodes.
             /// </summary>
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public long? InstanceCount { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The ID of the instance
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The public IP address of the instance.
+            /// The public IP address.
             /// </summary>
             [NameInMap("InternetAddress")]
             [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InternetDomain { get; set; }
 
             /// <summary>
-            /// The internal IP address of the instance.
+            /// The internal IP address.
             /// </summary>
             [NameInMap("IntranetAddress")]
             [Validation(Required=false)]
@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("VersionCode")]
             [Validation(Required=false)]
             public string VersionCode { get; set; }
+
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
 
         }
 

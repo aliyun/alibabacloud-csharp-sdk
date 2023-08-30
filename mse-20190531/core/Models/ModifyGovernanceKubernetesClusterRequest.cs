@@ -26,12 +26,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        /// <summary>
-        /// The information about the namespaces of the cluster.
-        /// </summary>
         [NameInMap("NamespaceInfos")]
         [Validation(Required=false)]
-        public string NamespaceInfos { get; set; }
+        public List<ModifyGovernanceKubernetesClusterRequestNamespaceInfos> NamespaceInfos { get; set; }
+        public class ModifyGovernanceKubernetesClusterRequestNamespaceInfos : TeaModel {
+            [NameInMap("labels")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Labels { get; set; }
+
+            [NameInMap("mseNamespace")]
+            [Validation(Required=false)]
+            public string MseNamespace { get; set; }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
 
         /// <summary>
         /// The region in which the cluster resides.

@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
         }
 
         /// <summary>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of returned instances.
+        /// The total number of instances returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

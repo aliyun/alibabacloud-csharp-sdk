@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// The returned message.
         /// 
         /// *   If the request is successful, a success message is returned.
         /// *   If the request fails, an error message is returned.

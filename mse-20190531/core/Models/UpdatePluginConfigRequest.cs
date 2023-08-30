@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The plug-in configuration.
+        /// The plug-in configuration. Configurations of WebAssembly plug-ins are in the YAML format, and configurations of Lua plug-ins are in the Lua code.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]

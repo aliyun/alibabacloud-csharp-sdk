@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Body { get; set; }
 
                 /// <summary>
-                /// The status code returned.
+                /// The return value.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? DomainId { get; set; }
 
             /// <summary>
-            /// The IDs of domains.
+            /// The list of domain IDs.
             /// </summary>
             [NameInMap("DomainIdList")]
             [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The names of domains.
+            /// The domain names.
             /// </summary>
             [NameInMap("DomainNameList")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The update time.
+            /// The modification time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Attempts { get; set; }
 
                 /// <summary>
-                /// The HTTP status codes.
+                /// The HTTP status code.
                 /// </summary>
                 [NameInMap("HttpCodes")]
                 [Validation(Required=false)]
@@ -469,7 +469,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// The information about parameter matching.
+                /// The parameter matching rules.
                 /// </summary>
                 [NameInMap("QueryPredicates")]
                 [Validation(Required=false)]

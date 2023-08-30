@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public ExportZookeeperDataResponseBodyData Data { get; set; }
         public class ExportZookeeperDataResponseBodyData : TeaModel {
             /// <summary>
-            /// The content of the task.
+            /// The content of a task.
             /// </summary>
             [NameInMap("ContentMap")]
             [Validation(Required=false)]
             public Dictionary<string, object> ContentMap { get; set; }
 
             /// <summary>
-            /// The time when the task was created.
+            /// The creation time.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The ID of the instance
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -69,12 +69,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string KubeoneTaskIds { get; set; }
 
             /// <summary>
-            /// The task status. Valid values:
+            /// The status of the task. Valid values:
             /// 
-            /// *   CREATE: The task is being created.
-            /// *   RUNNING: The task is being executed.
+            /// *   CREATE: The object is being created.
+            /// *   RUNNING: The task is running.
             /// *   FINISH: The task is completed.
-            /// *   FAILED: The task failed.
+            /// *   FAILED: The task fails.
             /// *   EXPIRE: The task has expired.
             /// </summary>
             [NameInMap("Status")]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The last modification time.
+            /// The last update time.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
         /// 
-        /// >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+        /// > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]

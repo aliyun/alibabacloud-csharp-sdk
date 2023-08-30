@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public AddMigrationTaskResponseBodyData Data { get; set; }
         public class AddMigrationTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// The type of the instance.
+            /// The type of the instance. Valid values:
             /// 
             /// *   Nacos-Ans
             /// *   ZooKeeper
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// The source instance node address.
+            /// The endpoint of the source instance node.
             /// </summary>
             [NameInMap("OriginInstanceAddress")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string OriginInstanceName { get; set; }
 
             /// <summary>
-            /// The list of namespaces. This parameter is optional if the source instance is a Nacos instance.
+            /// The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.
             /// </summary>
             [NameInMap("OriginInstanceNamespace")]
             [Validation(Required=false)]

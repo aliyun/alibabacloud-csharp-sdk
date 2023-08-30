@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The token that is required for the next query.
+        /// The token used to start the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resources. Valid values:
+        /// The type of the resource. Valid values:
         /// 
         /// *   CLUSTER: MSE instance
         /// *   GATEWAY: cloud-native gateway
@@ -51,21 +51,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The list of tags. You can specify a maximum of 20 tags.
+        /// The list of tags. A maximum number of 20 tags are supported.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of a tag.
+            /// The key of the tag.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of a tag.
+            /// The value of the tag.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

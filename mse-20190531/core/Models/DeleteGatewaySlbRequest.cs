@@ -34,11 +34,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The ID of the associated record.
+        /// The ID of the association record.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        /// <summary>
+        /// The ID of the SLB instance that needs to be deleted.
+        /// </summary>
+        [NameInMap("SlbId")]
+        [Validation(Required=false)]
+        public string SlbId { get; set; }
 
     }
 

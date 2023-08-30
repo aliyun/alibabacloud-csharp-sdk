@@ -10,19 +10,66 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetPluginsResponseBody : TeaModel {
         /// <summary>
-        /// Code.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data entries returned.
+        /// The information about the plug-in.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetPluginsResponseBodyData> Data { get; set; }
         public class GetPluginsResponseBodyData : TeaModel {
+            /// <summary>
+            /// The name of the plug-in.
+            /// </summary>
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public int? Category { get; set; }
+
+            /// <summary>
+            /// \# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne
+            /// </summary>
+            [NameInMap("ConfigCheck")]
+            [Validation(Required=false)]
+            public string ConfigCheck { get; set; }
+
+            /// <summary>
+            /// The ID of the creator.
+            /// </summary>
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            [NameInMap("MaxVersion")]
+            [Validation(Required=false)]
+            public string MaxVersion { get; set; }
+
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public int? Mode { get; set; }
+
+            /// <summary>
+            /// The version of the plug-in.
+            /// </summary>
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("NewVersionPublishingFlag")]
+            [Validation(Required=false)]
+            public bool? NewVersionPublishingFlag { get; set; }
+
+            /// <summary>
+            /// The execution priority of the plug-in. A larger value indicates a higher priority.
+            /// </summary>
+            [NameInMap("Phase")]
+            [Validation(Required=false)]
+            public int? Phase { get; set; }
+
             /// <summary>
             /// The type of the plug-in. Valid values:
             /// 
@@ -38,75 +85,41 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// 
             /// 5: traffic observation
             /// </summary>
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public int? Category { get; set; }
-
-            /// <summary>
-            /// The information about the plug-in configuration used for checking.
-            /// </summary>
-            [NameInMap("ConfigCheck")]
-            [Validation(Required=false)]
-            public string ConfigCheck { get; set; }
-
-            /// <summary>
-            /// The ID of the plug-in.
-            /// </summary>
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public long? Id { get; set; }
-
-            [NameInMap("MaxVersion")]
-            [Validation(Required=false)]
-            public string MaxVersion { get; set; }
-
-            [NameInMap("Mode")]
-            [Validation(Required=false)]
-            public int? Mode { get; set; }
-
-            /// <summary>
-            /// The name of the plug-in.
-            /// </summary>
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("NewVersionPublishingFlag")]
-            [Validation(Required=false)]
-            public bool? NewVersionPublishingFlag { get; set; }
-
-            /// <summary>
-            /// The execution stage of the plug-in.
-            /// 
-            /// *   0: default stage
-            /// *   1: authorization stage
-            /// *   2: authentication stage
-            /// *   3: statistics stage
-            /// </summary>
-            [NameInMap("Phase")]
-            [Validation(Required=false)]
-            public int? Phase { get; set; }
-
-            /// <summary>
-            /// The ID of the creator.
-            /// </summary>
             [NameInMap("PrimaryUser")]
             [Validation(Required=false)]
             public string PrimaryUser { get; set; }
 
             /// <summary>
-            /// The execution priority of the plug-in. A larger value indicates a higher priority.
+            /// The information about the plug-in configuration used for checking.
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The publish status.
+            /// The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
             /// </summary>
             [NameInMap("PublishState")]
             [Validation(Required=false)]
             public int? PublishState { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// This is a plug-in.
+            /// </summary>
+            [NameInMap("Summary")]
+            [Validation(Required=false)]
+            public string Summary { get; set; }
+
+            /// <summary>
+            /// The summary of the plug-in.
+            /// </summary>
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
 
             /// <summary>
             /// Indicates whether the plug-in is enabled.
@@ -114,39 +127,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// *   0: disabled
             /// *   1: enabled
             /// </summary>
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            /// <summary>
-            /// The summary of the plug-in.
-            /// </summary>
-            [NameInMap("Summary")]
-            [Validation(Required=false)]
-            public string Summary { get; set; }
-
-            /// <summary>
-            /// The version of the plug-in.
-            /// </summary>
-            [NameInMap("Version")]
-            [Validation(Required=false)]
-            public string Version { get; set; }
-
-            /// <summary>
-            /// The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
-            /// </summary>
             [NameInMap("WasmFile")]
             [Validation(Required=false)]
             public string WasmFile { get; set; }
 
             /// <summary>
-            /// The WebAssembly language. Valid values:
-            /// 
-            /// *   0: C++
-            /// *   1: TinyGo
-            /// *   2: Rust
-            /// *   3: AssemblyScript
-            /// *   4: Zig
+            /// The publish status.
             /// </summary>
             [NameInMap("WasmLang")]
             [Validation(Required=false)]
@@ -155,49 +141,49 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The dynamic part in the error message.
+        /// The dynamic error message.
         /// </summary>
         [NameInMap("DynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The dynamic error message.
+        /// The data entries returned.
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The message returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// The dynamic part in the error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// The returned code.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

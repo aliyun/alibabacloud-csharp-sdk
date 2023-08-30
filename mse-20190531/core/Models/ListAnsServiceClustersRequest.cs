@@ -71,13 +71,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The extended request parameters in the JSON format.
-        /// </summary>
-        [NameInMap("RequestPars")]
-        [Validation(Required=false)]
-        public string RequestPars { get; set; }
-
-        /// <summary>
         /// The name of the service.
         /// </summary>
         [NameInMap("ServiceName")]

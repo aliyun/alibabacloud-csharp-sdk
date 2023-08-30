@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListZkTrackResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// The type of the event. For tracks of the Notify type:
+            /// The type of the event. Valid values: For tracks of the Notify type:
             /// 
             /// *   NodeCreated
             /// *   NodeDeleted

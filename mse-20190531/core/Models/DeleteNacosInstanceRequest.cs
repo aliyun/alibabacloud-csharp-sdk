@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The alias of the instance.
+        /// The alias of the cluster.
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// Specifies whether the instance is marked as a temporary node. Valid values:
+        /// Specifies whether the node is an ephemeral node. Valid values:
         /// 
-        /// *   `true`: monitors the task status.
+        /// *   `true`: yes
         /// *   `false`: no
         /// </summary>
         [NameInMap("Ephemeral")]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the Nacos instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

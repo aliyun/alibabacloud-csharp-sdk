@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClientPort { get; set; }
 
             /// <summary>
-            /// The creation time of the TIMESTAMP type.
+            /// The creation time. The value of this parameter is a timestamp.
             /// </summary>
             [NameInMap("CreationTimestamp")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// The name of the pod.
+            /// The pod name.
             /// </summary>
             [NameInMap("PodName")]
             [Validation(Required=false)]
@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Zone { get; set; }
 
+            [NameInMap("ZoneDistributed")]
+            [Validation(Required=false)]
+            public bool? ZoneDistributed { get; set; }
+
         }
 
         /// <summary>
@@ -89,14 +93,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// The message that is returned.
         /// 
         /// *   If the request is successful, a success message is returned.
         /// *   If the request fails, an error message is returned.

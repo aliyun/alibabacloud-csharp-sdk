@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the destination cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

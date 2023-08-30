@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListServiceSourceResponseBody : TeaModel {
         /// <summary>
-        /// The response code returned.
+        /// The status code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ListServiceSourceResponseBodyData> Data { get; set; }
         public class ListServiceSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) registry.
+            /// The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) instance.
             /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// Indicates whether Ingress is supported for applications.
+            /// The information about the support for Ingresses by applications.
             /// </summary>
             [NameInMap("IngressOptions")]
             [Validation(Required=false)]
             public ListServiceSourceResponseBodyDataIngressOptions IngressOptions { get; set; }
             public class ListServiceSourceResponseBodyDataIngressOptions : TeaModel {
                 /// <summary>
-                /// Indicates whether Ingress is enabled.
+                /// Indicates whether Ingresses are enabled.
                 /// </summary>
                 [NameInMap("EnableIngress")]
                 [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

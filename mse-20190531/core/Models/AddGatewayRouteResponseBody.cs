@@ -17,12 +17,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The response data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public long? Data { get; set; }
 
+        /// <summary>
+        /// The error code that is returned.
+        /// 
+        /// *   InvalidParameter: The parameter is invalid. For example, the parameter is incomplete or the parameter format is invalid.
+        /// *   IllegalRequest: The request is invalid. Unauthorized access to data initiated by parameters is identified.
+        /// *   NoPermission: You are not authorized to perform this operation.
+        /// *   NotFound: The resource does not exist and error 404 is returned.
+        /// *   InternalError: An internal error occurred.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }

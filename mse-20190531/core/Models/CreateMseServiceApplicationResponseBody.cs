@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateMseServiceApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The return value.
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
         /// The data structure.
         /// </summary>
         [NameInMap("Data")]
@@ -80,7 +73,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// The status. Valid values: 1: available; 2: deleted
+            /// The status. Valid values: 1: available; 2: deleted.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -108,13 +101,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Version { get; set; }
 
         }
-
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// The message returned.

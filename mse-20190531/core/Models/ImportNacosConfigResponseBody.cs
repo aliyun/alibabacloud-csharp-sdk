@@ -10,35 +10,62 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ImportNacosConfigResponseBody : TeaModel {
         /// <summary>
-        /// The code returned.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the data.
+        /// The number of configurations that are imported.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImportNacosConfigResponseBodyData Data { get; set; }
         public class ImportNacosConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The information about configurations that are failed to be imported.
+            /// The data structure.
             /// </summary>
             [NameInMap("FailData")]
             [Validation(Required=false)]
             public List<ImportNacosConfigResponseBodyDataFailData> FailData { get; set; }
             public class ImportNacosConfigResponseBodyDataFailData : TeaModel {
                 /// <summary>
-                /// The ID of the data.
+                /// The ID of the group.
+                /// </summary>
+                [NameInMap("DataId")]
+                [Validation(Required=false)]
+                public string DataId { get; set; }
+
+                [NameInMap("Group")]
+                [Validation(Required=false)]
+                public string Group { get; set; }
+
+            }
+
+            /// <summary>
+            /// The information about skipped configurations.
+            /// </summary>
+            [NameInMap("SkipCount")]
+            [Validation(Required=false)]
+            public int? SkipCount { get; set; }
+
+            /// <summary>
+            /// The data structure.
+            /// </summary>
+            [NameInMap("SkipData")]
+            [Validation(Required=false)]
+            public List<ImportNacosConfigResponseBodyDataSkipData> SkipData { get; set; }
+            public class ImportNacosConfigResponseBodyDataSkipData : TeaModel {
+                /// <summary>
+                /// The ID of the group.
                 /// </summary>
                 [NameInMap("DataId")]
                 [Validation(Required=false)]
                 public string DataId { get; set; }
 
                 /// <summary>
-                /// The ID of the group.
+                /// The information about configurations that are failed to be imported.
                 /// </summary>
                 [NameInMap("Group")]
                 [Validation(Required=false)]
@@ -49,36 +76,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// The number of configurations that are skipped.
             /// </summary>
-            [NameInMap("SkipCount")]
-            [Validation(Required=false)]
-            public int? SkipCount { get; set; }
-
-            /// <summary>
-            /// The information about skipped configurations.
-            /// </summary>
-            [NameInMap("SkipData")]
-            [Validation(Required=false)]
-            public List<ImportNacosConfigResponseBodyDataSkipData> SkipData { get; set; }
-            public class ImportNacosConfigResponseBodyDataSkipData : TeaModel {
-                /// <summary>
-                /// The ID of the data.
-                /// </summary>
-                [NameInMap("DataId")]
-                [Validation(Required=false)]
-                public string DataId { get; set; }
-
-                /// <summary>
-                /// The ID of the group.
-                /// </summary>
-                [NameInMap("Group")]
-                [Validation(Required=false)]
-                public string Group { get; set; }
-
-            }
-
-            /// <summary>
-            /// The number of configurations that are imported.
-            /// </summary>
             [NameInMap("SuccCount")]
             [Validation(Required=false)]
             public int? SuccCount { get; set; }
@@ -86,47 +83,45 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.
-        /// 
-        /// > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+        /// The details of the data.
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The code returned.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// The request is successfully processed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// The error code that is returned.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

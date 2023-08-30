@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
         /// <summary>
         /// The engine specifications. Valid values:
         /// 
@@ -81,7 +85,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("DiskType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string DiskType { get; set; }
+
+        [NameInMap("EipEnabled")]
+        [Validation(Required=false)]
+        public bool? EipEnabled { get; set; }
 
         /// <summary>
         /// The number of nodes in the instance. Valid values: 1 to 9.
@@ -133,6 +142,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("PrivateSlbSpecification")]
         [Validation(Required=false)]
+        [Obsolete]
         public string PrivateSlbSpecification { get; set; }
 
         /// <summary>
@@ -151,6 +161,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("PubSlbSpecification")]
         [Validation(Required=false)]
+        [Obsolete]
         public string PubSlbSpecification { get; set; }
 
         /// <summary>
@@ -179,6 +190,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SecurityGroupType")]
+        [Validation(Required=false)]
+        public string SecurityGroupType { get; set; }
 
         /// <summary>
         /// The list of the tags that you want to add.

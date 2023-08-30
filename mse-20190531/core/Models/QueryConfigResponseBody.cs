@@ -45,27 +45,27 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// Indicates whether RAM authorization of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
+            /// Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
             /// 
-            /// *   `true`: enabled
-            /// *   `false`: disabled
+            /// *   `true`: enabled.
+            /// *   `false`: disabled.
             /// </summary>
             [NameInMap("ConfigAuthEnabled")]
             [Validation(Required=false)]
             public bool? ConfigAuthEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether RAM authorization is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
+            /// Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
             /// 
-            /// *   `true`: supported
-            /// *   `false`: not supported
+            /// *   `true`: supported.
+            /// *   `false`: not supported.
             /// </summary>
             [NameInMap("ConfigAuthSupported")]
             [Validation(Required=false)]
             public bool? ConfigAuthSupported { get; set; }
 
             /// <summary>
-            /// The maximum size of a configuration. Unit: KB.
+            /// The maximum size of contents in a configuration. Unit: KB.
             /// </summary>
             [NameInMap("ConfigContentLimit")]
             [Validation(Required=false)]
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:
             /// 
-            /// *   `true`: enabled
-            /// *   `false`: disabled
+            /// *   `true`: enabled.
+            /// *   `false`: disabled.
             /// </summary>
             [NameInMap("ConfigSecretEnabled")]
             [Validation(Required=false)]
@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:
             /// 
-            /// *   `true`: supported
-            /// *   `false`: not supported
+            /// *   `true`: supported.
+            /// *   `false`: not supported.
             /// </summary>
             [NameInMap("ConfigSecretSupported")]
             [Validation(Required=false)]
@@ -126,8 +126,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:
             /// 
-            /// *   `true`: enabled
-            /// *   `false`: disabled
+            /// *   `true`: enabled.
+            /// *   `false`: disabled.
             /// </summary>
             [NameInMap("MCPEnabled")]
             [Validation(Required=false)]
@@ -136,8 +136,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:
             /// 
-            /// *   `true`: supported
-            /// *   `false`: not supported
+            /// *   `true`: supported.
+            /// *   `false`: not supported.
             /// </summary>
             [NameInMap("MCPSupported")]
             [Validation(Required=false)]
@@ -182,20 +182,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// Indicates whether RAM authorization of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
+            /// Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
             /// 
-            /// *   `true`: enabled
-            /// *   `false`: disabled
+            /// *   `true`: enabled.
+            /// *   `false`: disabled.
             /// </summary>
             [NameInMap("NamingAuthEnabled")]
             [Validation(Required=false)]
             public bool? NamingAuthEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether RAM authorization of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
+            /// Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
             /// 
-            /// *   `true`: supported
-            /// *   `false`: not supported
+            /// *   `true`: supported.
+            /// *   `false`: not supported.
             /// </summary>
             [NameInMap("NamingAuthSupported")]
             [Validation(Required=false)]
@@ -204,8 +204,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:
             /// 
-            /// *   `true`: supported
-            /// *   `false`: not supported
+            /// *   `true`: supported.
+            /// *   `false`: not supported.
             /// </summary>
             [NameInMap("NamingCreateServiceSupported")]
             [Validation(Required=false)]
@@ -214,15 +214,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:
             /// 
-            /// *   `true`: enabled
-            /// *   `false`: disabled
+            /// *   `true`: enabled.
+            /// *   `false`: disabled.
             /// </summary>
             [NameInMap("OpenSuperAcl")]
             [Validation(Required=false)]
             public bool? OpenSuperAcl { get; set; }
 
             /// <summary>
-            /// The user password. This parameter is valid only if OpenSuperAcl is set to true.
+            /// The password that corresponds to the username. This parameter is valid only if OpenSuperAcl is set to true.
             /// </summary>
             [NameInMap("PassWord")]
             [Validation(Required=false)]
@@ -252,6 +252,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string SyncLimit { get; set; }
 
+            [NameInMap("TLSEnabled")]
+            [Validation(Required=false)]
+            public bool? TLSEnabled { get; set; }
+
             /// <summary>
             /// The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.
             /// </summary>
@@ -260,7 +264,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string TickTime { get; set; }
 
             /// <summary>
-            /// The username. This parameter is valid only if OpenSuperAcl is set to true.
+            /// The username of the user. This parameter is valid only if OpenSuperAcl is set to true.
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]

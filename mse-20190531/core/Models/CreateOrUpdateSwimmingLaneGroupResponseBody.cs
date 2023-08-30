@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateOrUpdateSwimmingLaneGroupResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The value 200 is returned if the request is successful.
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
         /// The details of the data.
         /// </summary>
         [NameInMap("Data")]
@@ -30,10 +23,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("DbGrayEnable")]
             [Validation(Required=false)]
             public string DbGrayEnable { get; set; }
-
-            [NameInMap("Enable")]
-            [Validation(Required=false)]
-            public string Enable { get; set; }
 
             [NameInMap("EntryApp")]
             [Validation(Required=false)]
@@ -67,14 +56,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Region { get; set; }
 
-            [NameInMap("Source")]
-            [Validation(Required=false)]
-            public string Source { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
@@ -82,25 +63,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The dynamic part in the error message.
-        /// </summary>
-        [NameInMap("DynamicMessage")]
-        [Validation(Required=false)]
-        public string DynamicMessage { get; set; }
-
-        /// <summary>
-        /// The error code returned if the request failed.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
-
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// The message returned.

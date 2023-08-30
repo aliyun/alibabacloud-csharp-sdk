@@ -10,45 +10,42 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddServiceSourceResponseBody : TeaModel {
         /// <summary>
-        /// The return value.
+        /// duplicatedClusterAliasName
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// mse-100-007
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public long? Data { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// code
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// mse-200-105
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The response data.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// duplicated cluster alias name
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

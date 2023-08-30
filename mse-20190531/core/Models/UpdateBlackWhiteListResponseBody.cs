@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateBlackWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The return value.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

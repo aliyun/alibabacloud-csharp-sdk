@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// 应用所属的MSE命名空间。
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }

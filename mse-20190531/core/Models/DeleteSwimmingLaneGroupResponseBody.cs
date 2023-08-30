@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteSwimmingLaneGroupResponseBody : TeaModel {
         /// <summary>
-        /// The status code. A value of 200 is returned if the request is successful.
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
         /// The details of the data.
         /// </summary>
         [NameInMap("Data")]
@@ -24,25 +17,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public object Data { get; set; }
 
         /// <summary>
-        /// The dynamic part in the error message.
-        /// </summary>
-        [NameInMap("DynamicMessage")]
-        [Validation(Required=false)]
-        public string DynamicMessage { get; set; }
-
-        /// <summary>
         /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
-
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// The message returned.

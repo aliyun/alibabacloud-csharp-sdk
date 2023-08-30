@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ModifyLosslessRuleResponseBody : TeaModel {
+        /// <summary>
+        /// 响应码。
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// 返回数据。
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public object Data { get; set; }
@@ -24,6 +30,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// HTTP状态码。
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }

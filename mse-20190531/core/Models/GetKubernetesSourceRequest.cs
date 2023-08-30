@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        [NameInMap("IsAll")]
+        [Validation(Required=false)]
+        public bool? IsAll { get; set; }
+
         /// <summary>
         /// The ID of the virtual private cloud (VPC).
         /// </summary>

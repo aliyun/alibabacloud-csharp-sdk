@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryGovernanceKubernetesClusterResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
         /// The response data.
         /// </summary>
         [NameInMap("Data")]
@@ -45,21 +38,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<QueryGovernanceKubernetesClusterResponseBodyDataResult> Result { get; set; }
             public class QueryGovernanceKubernetesClusterResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The ID of the instance.
+                /// The ID of cluster.
                 /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// The name of the cluster.
                 /// </summary>
                 [NameInMap("ClusterName")]
                 [Validation(Required=false)]
                 public string ClusterName { get; set; }
 
                 /// <summary>
-                /// The Kubernetes version of the instance.
+                /// The version of the cluster.
                 /// </summary>
                 [NameInMap("K8sVersion")]
                 [Validation(Required=false)]
@@ -98,14 +91,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        /// <summary>
-        /// The message returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

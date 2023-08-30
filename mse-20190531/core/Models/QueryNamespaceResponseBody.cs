@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// HttpStatusCode
+        /// 错误码。
         /// </summary>
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public string ErrorCode { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

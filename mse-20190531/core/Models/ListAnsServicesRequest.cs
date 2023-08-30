@@ -20,13 +20,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the cluster.
         /// 
         /// > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        /// <summary>
+        /// 查询服务下某个集群的实例列表是所需要的参数
+        /// </summary>
+        [NameInMap("ClusterName")]
+        [Validation(Required=false)]
+        public string ClusterName { get; set; }
 
         /// <summary>
         /// The name of the contact group.
@@ -66,11 +73,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         /// <summary>
         /// The extended request parameters in the JSON format.

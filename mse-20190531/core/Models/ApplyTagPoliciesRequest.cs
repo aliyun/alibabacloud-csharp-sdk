@@ -63,13 +63,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Rules { get; set; }
 
-        /// <summary>
-        /// The service source.
-        /// </summary>
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
-
     }
 
 }

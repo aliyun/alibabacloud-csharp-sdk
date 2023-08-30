@@ -65,6 +65,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string LicenseKey { get; set; }
 
+            /// <summary>
+            /// MSE命名空间名字。
+            /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
@@ -107,6 +110,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string UserId { get; set; }
 
+            /// <summary>
+            /// 版本号。
+            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }

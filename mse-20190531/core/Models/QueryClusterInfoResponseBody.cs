@@ -114,6 +114,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string DiskType { get; set; }
 
+            [NameInMap("EipInstanceId")]
+            [Validation(Required=false)]
+            public string EipInstanceId { get; set; }
+
+            [NameInMap("EndDate")]
+            [Validation(Required=false)]
+            public string EndDate { get; set; }
+
+            [NameInMap("ExpectZones")]
+            [Validation(Required=false)]
+            public List<string> ExpectZones { get; set; }
+
             /// <summary>
             /// The status of the instance.
             /// </summary>
@@ -143,7 +155,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The ID of the instance
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -229,7 +241,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InternetDomain { get; set; }
 
             /// <summary>
-            /// The instance port that is accessible over the Internet.
+            /// The instance ports that are accessible over the Internet.
             /// </summary>
             [NameInMap("InternetPort")]
             [Validation(Required=false)]
@@ -250,7 +262,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string IntranetDomain { get; set; }
 
             /// <summary>
-            /// The instance port that is accessible over an internal network.
+            /// The instance ports that are accessible over an internal network.
             /// </summary>
             [NameInMap("IntranetPort")]
             [Validation(Required=false)]
@@ -278,7 +290,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string NetType { get; set; }
 
             /// <summary>
-            /// The billing method. Valid values:
+            /// The billing method.
             /// </summary>
             [NameInMap("PayInfo")]
             [Validation(Required=false)]
@@ -293,11 +305,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string PubNetworkFlow { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// The ID of the region.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+            [NameInMap("SecurityGroupType")]
+            [Validation(Required=false)]
+            public string SecurityGroupType { get; set; }
 
             /// <summary>
             /// The tag.

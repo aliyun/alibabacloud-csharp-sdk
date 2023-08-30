@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class FetchLosslessRuleListRequest : TeaModel {
         /// <summary>
-        /// The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.
+        /// The language of the response. Valid values:
         /// 
-        /// *   By default, this parameter is left empty.
-        /// *   zh-CN: Chinese
-        /// *   en-US: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -42,14 +41,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

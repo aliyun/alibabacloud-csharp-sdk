@@ -79,6 +79,58 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string CurrentVersion { get; set; }
 
+                [NameInMap("Elastic")]
+                [Validation(Required=false)]
+                public bool? Elastic { get; set; }
+
+                [NameInMap("ElasticInstanceId")]
+                [Validation(Required=false)]
+                public string ElasticInstanceId { get; set; }
+
+                [NameInMap("ElasticPolicy")]
+                [Validation(Required=false)]
+                public ListGatewayResponseBodyDataResultElasticPolicy ElasticPolicy { get; set; }
+                public class ListGatewayResponseBodyDataResultElasticPolicy : TeaModel {
+                    [NameInMap("Elastic")]
+                    [Validation(Required=false)]
+                    public bool? Elastic { get; set; }
+
+                    [NameInMap("ElasticType")]
+                    [Validation(Required=false)]
+                    public string ElasticType { get; set; }
+
+                    [NameInMap("MaxReplica")]
+                    [Validation(Required=false)]
+                    public int? MaxReplica { get; set; }
+
+                    [NameInMap("TimePolicyList")]
+                    [Validation(Required=false)]
+                    public List<ListGatewayResponseBodyDataResultElasticPolicyTimePolicyList> TimePolicyList { get; set; }
+                    public class ListGatewayResponseBodyDataResultElasticPolicyTimePolicyList : TeaModel {
+                        [NameInMap("DesiredReplica")]
+                        [Validation(Required=false)]
+                        public int? DesiredReplica { get; set; }
+
+                        [NameInMap("EndTime")]
+                        [Validation(Required=false)]
+                        public string EndTime { get; set; }
+
+                        [NameInMap("StartTime")]
+                        [Validation(Required=false)]
+                        public string StartTime { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("ElasticReplica")]
+                [Validation(Required=false)]
+                public int? ElasticReplica { get; set; }
+
+                [NameInMap("ElasticType")]
+                [Validation(Required=false)]
+                public string ElasticType { get; set; }
+
                 /// <summary>
                 /// The time when the subscription gateway expires.
                 /// </summary>
@@ -406,12 +458,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
+                [NameInMap("TotalReplica")]
+                [Validation(Required=false)]
+                public int? TotalReplica { get; set; }
+
                 /// <summary>
                 /// Indicates whether the gateway can be updated.
                 /// </summary>
                 [NameInMap("Upgrade")]
                 [Validation(Required=false)]
                 public bool? Upgrade { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
 
                 /// <summary>
                 /// The ID of the secondary vSwitch.

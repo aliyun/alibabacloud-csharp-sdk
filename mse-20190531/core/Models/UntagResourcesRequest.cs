@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resources. Valid values:
+        /// The type of the resource. Valid values:
         /// 
         /// *   CLUSTER: MSE instance
         /// *   GATEWAY: cloud-native gateway

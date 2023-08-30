@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// Valid values:
+        /// The instance edition. Valid values:
         /// 
         /// *   `mse_dev`: Developer Edition.
         /// *   `mse_pro`: Professional Edition. This is the default value.

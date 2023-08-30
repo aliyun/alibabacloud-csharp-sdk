@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// The type of the instance.
+                /// The type of the cluster.
                 /// </summary>
                 [NameInMap("ClusterType")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public bool? NoticeFeature { get; set; }
 
                     /// <summary>
-                    /// The ID of the user to which the instance belongs.
+                    /// The ID of the user to which the cluster belongs.
                     /// </summary>
                     [NameInMap("PrimaryUser")]
                     [Validation(Required=false)]
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The time of the last modification.
+                /// The last update time.
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The error code returned if the request failed. Take note of the following rules:
         /// 
-        /// *   The **ErrorCode** parameter is not returned if the request succeeds.
+        /// *   The **ErrorCode** parameter is not returned if the request is successful.
         /// *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.
         /// </summary>
         [NameInMap("ErrorCode")]

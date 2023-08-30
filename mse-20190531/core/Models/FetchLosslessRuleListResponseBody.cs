@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The response.
+        /// The returned result.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public FetchLosslessRuleListResponseBodyData Data { get; set; }
         public class FetchLosslessRuleListResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of the returned page.
+            /// The page number of the returned page.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The data returned.
+            /// The returned data.
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
             public List<FetchLosslessRuleListResponseBodyDataResults> Results { get; set; }
             public class FetchLosslessRuleListResponseBodyDataResults : TeaModel {
                 /// <summary>
-                /// Indicates whether delayed registration is enabled.
+                /// Indicates whether service registration is complete before readiness probe.
                 /// </summary>
                 [NameInMap("Aligned")]
                 [Validation(Required=false)]
@@ -73,17 +73,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The registration latency.
+                /// The registration latency. Unit: seconds.
                 /// </summary>
                 [NameInMap("DelayTime")]
                 [Validation(Required=false)]
                 public int? DelayTime { get; set; }
 
                 /// <summary>
-                /// The status. Valid values:
+                /// Indicates whether graceful start is enabled. Valid values:
                 /// 
-                /// *   `true`: enabled.
-                /// *   `false`: disabled.
+                /// *   `true`: enabled
+                /// *   `false`: disabled
                 /// </summary>
                 [NameInMap("Enable")]
                 [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? FuncType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the graceful start and shutdown feature is enabled.
+                /// Indicates whether online and offline processing details are displayed.
                 /// </summary>
                 [NameInMap("LossLessDetail")]
                 [Validation(Required=false)]
@@ -111,14 +111,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Notice { get; set; }
 
                 /// <summary>
-                /// Indicates whether service prefetching is associated.
+                /// Indicates whether service prefetching is complete before readiness probe.
                 /// </summary>
                 [NameInMap("Related")]
                 [Validation(Required=false)]
                 public bool? Related { get; set; }
 
                 /// <summary>
-                /// The prefetching duration.
+                /// The prefetching duration. Unit: seconds.
                 /// </summary>
                 [NameInMap("WarmupTime")]
                 [Validation(Required=false)]

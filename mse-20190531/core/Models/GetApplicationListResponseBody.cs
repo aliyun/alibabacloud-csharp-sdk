@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetApplicationListResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
         /// The data structure.
         /// </summary>
         [NameInMap("Data")]
@@ -79,13 +72,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Language { get; set; }
 
-                /// <summary>
-                /// The license key in use.
-                /// </summary>
-                [NameInMap("LicenseKey")]
-                [Validation(Required=false)]
-                public string LicenseKey { get; set; }
-
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
@@ -111,6 +97,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public long? Status { get; set; }
 
+                [NameInMap("TagCount")]
+                [Validation(Required=false)]
+                public long? TagCount { get; set; }
+
                 /// <summary>
                 /// The ID of the user.
                 /// </summary>
@@ -129,12 +119,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         }
 
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public string ErrorCode { get; set; }
 
         /// <summary>
         /// The message returned.

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// *   **zh-CN**: Chinese. This is the default value.
-        /// *   **en-US**: English
+        /// *   **zh-CN**: Chinese
+        /// *   **en-US**: English.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? GatewayId { get; set; }
 
         /// <summary>
-        /// The traffic policy of the service.
+        /// The traffic policy of the gateway.
         /// </summary>
         [NameInMap("GatewayTrafficPolicy")]
         [Validation(Required=false)]

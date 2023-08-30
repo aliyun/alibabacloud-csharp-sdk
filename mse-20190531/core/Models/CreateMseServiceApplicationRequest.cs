@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// *   zh: Chinese.
+        /// *   en: English.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The edition of the MSE instance that you want to purchase.
         /// 
-        /// *   mse_pro: Professional Edition
-        /// *   mse_dev: Developer Edition
+        /// *   mse_pro: Professional Edition.
+        /// *   mse_dev: Developer Edition.
         /// </summary>
         [NameInMap("MseVersion")]
         [Validation(Required=false)]

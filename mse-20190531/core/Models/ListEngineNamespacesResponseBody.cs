@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string NamespaceShowName { get; set; }
 
             /// <summary>
-            /// The quotas.
+            /// The quota.
             /// </summary>
             [NameInMap("Quota")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

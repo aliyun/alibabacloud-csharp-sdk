@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetPluginConfigResponseBody : TeaModel {
         /// <summary>
-        /// Code.
+        /// The status code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public GetPluginConfigResponseBodyData Data { get; set; }
         public class GetPluginConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The category of the plug-in.
+            /// The category of the plug-in. Valid values:
             /// 
-            /// 0: custom
+            /// 0: user-defined
             /// 
-            /// 1: permission authorization
+            /// 1: permission authentication
             /// 
             /// 2: security protection
             /// 
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Config { get; set; }
 
                 /// <summary>
-                /// The application scope of the plug-in.
+                /// The application scope of the plug-in. Valid values:
                 /// 
                 /// 0: global
                 /// 
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The execution stage of the plug-in.
+            /// The execution stage of the plug-in. Valid values:
             /// 
             /// 0: default stage
             /// 
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ReadmeEn { get; set; }
 
             /// <summary>
-            /// Indicates whether the plug-in is enabled.
+            /// Indicates whether the plug-in is enabled. Valid values:
             /// 
             /// 0: disabled
             /// 
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string VersionJson { get; set; }
 
             /// <summary>
-            /// The WebAssembly language.
+            /// The WebAssembly language. Valid values:
             /// 
             /// 0: C++
             /// 
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// Indicates whether the request is successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

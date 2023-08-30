@@ -10,45 +10,45 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetNacosHistoryConfigRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:
-        /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// The data structure.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the data.
+        /// The name of the group.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
         public string DataId { get; set; }
 
         /// <summary>
-        /// The group.
+        /// The ID of the namespace.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public string Group { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the data.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the namespace.
+        /// The version ID of the configuration.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// The version ID of the configuration.
+        /// The language of the response. Valid values:
+        /// 
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("Nid")]
         [Validation(Required=false)]

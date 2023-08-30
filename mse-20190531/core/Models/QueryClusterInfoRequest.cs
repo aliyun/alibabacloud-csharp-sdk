@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? AclSwitch { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
