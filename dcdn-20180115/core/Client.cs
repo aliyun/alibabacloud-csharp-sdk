@@ -11654,6 +11654,72 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await DescribeDcdnIpInfoWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDcdnIpaDomainCidrResponse DescribeDcdnIpaDomainCidrWithOptions(DescribeDcdnIpaDomainCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnIpaDomainCidr",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnIpaDomainCidrResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnIpaDomainCidrResponse> DescribeDcdnIpaDomainCidrWithOptionsAsync(DescribeDcdnIpaDomainCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnIpaDomainCidr",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnIpaDomainCidrResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnIpaDomainCidrResponse DescribeDcdnIpaDomainCidr(DescribeDcdnIpaDomainCidrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnIpaDomainCidrWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDcdnIpaDomainCidrResponse> DescribeDcdnIpaDomainCidrAsync(DescribeDcdnIpaDomainCidrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnIpaDomainCidrWithOptionsAsync(request, runtime);
+        }
+
         /**
           * > You can call this operation up to 20 times per second per account.
           *
