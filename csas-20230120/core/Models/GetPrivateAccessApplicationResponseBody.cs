@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string ApplicationId { get; set; }
 
+            [NameInMap("ConnectorIds")]
+            [Validation(Required=false)]
+            public List<string> ConnectorIds { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }

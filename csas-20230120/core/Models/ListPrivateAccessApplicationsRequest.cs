@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
+        [NameInMap("ConnectorId")]
+        [Validation(Required=false)]
+        public string ConnectorId { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }

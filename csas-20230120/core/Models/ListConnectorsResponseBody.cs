@@ -27,6 +27,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            [NameInMap("ConnectorClients")]
+            [Validation(Required=false)]
+            public List<ListConnectorsResponseBodyConnectorsConnectorClients> ConnectorClients { get; set; }
+            public class ListConnectorsResponseBodyConnectorsConnectorClients : TeaModel {
+                [NameInMap("ConnectionStatus")]
+                [Validation(Required=false)]
+                public string ConnectionStatus { get; set; }
+
+                [NameInMap("DevTag")]
+                [Validation(Required=false)]
+                public string DevTag { get; set; }
+
+                [NameInMap("Hostname")]
+                [Validation(Required=false)]
+                public string Hostname { get; set; }
+
+                [NameInMap("PublicIp")]
+                [Validation(Required=false)]
+                public string PublicIp { get; set; }
+
+            }
+
             /// <summary>
             /// ConnectorID。
             /// </summary>
