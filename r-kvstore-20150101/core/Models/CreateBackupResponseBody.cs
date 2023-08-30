@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateBackupResponseBody : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **CreateBackup**.
+        /// The ID of the backup task.
         /// </summary>
         [NameInMap("BackupJobID")]
         [Validation(Required=false)]
         public string BackupJobID { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

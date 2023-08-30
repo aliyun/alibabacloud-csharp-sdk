@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyActiveOperationTaskResponseBody : TeaModel {
         /// <summary>
-        /// The scheduled switchover time to be specified. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-        /// 
-        /// >  The time cannot be later than the latest operation time. You can call the [DescribeActiveOperationTask](~~197387~~) operation. The **Deadline** parameter in the response indicates the latest operation time.
+        /// The ID of the O\&M task. IDs are separated by commas (,).
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }
 
         /// <summary>
-        /// Modifies the scheduled switchover time of an operations and maintenance (O&M) task.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

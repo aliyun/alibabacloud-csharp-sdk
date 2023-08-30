@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        /// <summary>
+        /// Details of the backup files.
+        /// </summary>
         [NameInMap("Backups")]
         [Validation(Required=false)]
         public DescribeBackupsResponseBodyBackups Backups { get; set; }
@@ -51,58 +54,116 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeBackupsResponseBodyBackupsBackup> Backup { get; set; }
             public class DescribeBackupsResponseBodyBackupsBackup : TeaModel {
+                /// <summary>
+                /// The databases that are backed up. Default value: **all**, which indicates that all databases are backed up.
+                /// </summary>
                 [NameInMap("BackupDBNames")]
                 [Validation(Required=false)]
                 public string BackupDBNames { get; set; }
 
+                /// <summary>
+                /// The public download URL of the backup file.
+                /// </summary>
                 [NameInMap("BackupDownloadURL")]
                 [Validation(Required=false)]
                 public string BackupDownloadURL { get; set; }
 
+                /// <summary>
+                /// The end time of the backup.
+                /// </summary>
                 [NameInMap("BackupEndTime")]
                 [Validation(Required=false)]
                 public string BackupEndTime { get; set; }
 
+                /// <summary>
+                /// The ID of the backup file.
+                /// </summary>
                 [NameInMap("BackupId")]
                 [Validation(Required=false)]
                 public int? BackupId { get; set; }
 
+                /// <summary>
+                /// The internal download URL of the backup file.
+                /// 
+                /// >  You can download the backup file by using this URL from the Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance and ApsaraDB for Redis instance must reside in the classic network or the same virtual private cloud (VPC) within the same region.
+                /// </summary>
                 [NameInMap("BackupIntranetDownloadURL")]
                 [Validation(Required=false)]
                 public string BackupIntranetDownloadURL { get; set; }
 
+                /// <summary>
+                /// The ID of the backup task.
+                /// </summary>
                 [NameInMap("BackupJobID")]
                 [Validation(Required=false)]
                 public int? BackupJobID { get; set; }
 
+                /// <summary>
+                /// The backup method. Valid values:
+                /// 
+                /// *   **Logical**
+                /// *   **Physical**
+                /// </summary>
                 [NameInMap("BackupMethod")]
                 [Validation(Required=false)]
                 public string BackupMethod { get; set; }
 
+                /// <summary>
+                /// The backup mode. Valid values:
+                /// 
+                /// *   **Automated**
+                /// *   **Manual**
+                /// </summary>
                 [NameInMap("BackupMode")]
                 [Validation(Required=false)]
                 public string BackupMode { get; set; }
 
+                /// <summary>
+                /// The size of the backup file.
+                /// </summary>
                 [NameInMap("BackupSize")]
                 [Validation(Required=false)]
                 public long? BackupSize { get; set; }
 
+                /// <summary>
+                /// The start time of the backup.
+                /// </summary>
                 [NameInMap("BackupStartTime")]
                 [Validation(Required=false)]
                 public string BackupStartTime { get; set; }
 
+                /// <summary>
+                /// The state of the backup task. Valid values:
+                /// 
+                /// *   **Success**: The task is successful.
+                /// *   **Failed**: The task failed.
+                /// </summary>
                 [NameInMap("BackupStatus")]
                 [Validation(Required=false)]
                 public string BackupStatus { get; set; }
 
+                /// <summary>
+                /// The backup type of the backup file. Valid values:
+                /// 
+                /// *   **FullBackup**
+                /// *   **IncrementalBackup**
+                /// </summary>
                 [NameInMap("BackupType")]
                 [Validation(Required=false)]
                 public string BackupType { get; set; }
 
+                /// <summary>
+                /// The major engine version of the instance.
+                /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
                 public string EngineVersion { get; set; }
 
+                /// <summary>
+                /// The node ID.
+                /// 
+                /// >  If a standard instance is used, the instance ID is returned.
+                /// </summary>
                 [NameInMap("NodeInstanceId")]
                 [Validation(Required=false)]
                 public string NodeInstanceId { get; set; }
@@ -111,18 +172,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries returned on each page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of backup files that were returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

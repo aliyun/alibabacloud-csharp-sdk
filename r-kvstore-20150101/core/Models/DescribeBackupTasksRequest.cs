@@ -24,7 +24,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. The operation that you want to perform. Set the value to **DescribeBackupTasks**.
+        /// The backup mode. Valid values:
+        /// 
+        /// *   **Automated**: automatic backup. You can call the [DescribeBackupPolicy](~~61078~~) operation to query the automatic backup policy.
+        /// *   **Manual**: manual backup.
+        /// 
+        /// > By default, the information about backup tasks in both modes is returned.
         /// </summary>
         [NameInMap("JobMode")]
         [Validation(Required=false)]

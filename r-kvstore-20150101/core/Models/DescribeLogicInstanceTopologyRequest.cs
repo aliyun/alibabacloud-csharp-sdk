@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeLogicInstanceTopologyRequest : TeaModel {
         /// <summary>
-        /// The storage capacity of the node. Unit: MB.
+        /// The ID of the instance whose topology information you want to query.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

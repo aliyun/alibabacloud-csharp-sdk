@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
+        /// The details of the backup tasks.
         /// </summary>
         [NameInMap("BackupJobs")]
         [Validation(Required=false)]
@@ -58,25 +58,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? BackupJobID { get; set; }
 
             /// <summary>
-            /// The beginning time when the backup task started. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
+            /// The state of the backup task. Valid values:
+            /// 
+            /// *   **NoStart**: The backup task is not started.
+            /// *   **Preparing**: The backup task is being prepared.
+            /// *   **Waiting**: The backup task is pending.
+            /// *   **Uploading**: The system is uploading the backup file.
+            /// *   **Checking**: The system is checking the uploaded backup file.
+            /// *   **Finished**: The backup task is completed.
             /// </summary>
             [NameInMap("BackupProgressStatus")]
             [Validation(Required=false)]
             public string BackupProgressStatus { get; set; }
-
-            /// <summary>
-            /// Manual
-            /// </summary>
-            [NameInMap("JobMode")]
-            [Validation(Required=false)]
-            public string JobMode { get; set; }
-
-            /// <summary>
-            /// The ID of the request.
-            /// </summary>
-            [NameInMap("NodeId")]
-            [Validation(Required=false)]
-            public string NodeId { get; set; }
 
             /// <summary>
             /// The backup mode. Valid values:
@@ -84,17 +77,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// *   **Automated**: automatic backup
             /// *   **Manual**: manual backup
             /// </summary>
+            [NameInMap("JobMode")]
+            [Validation(Required=false)]
+            public string JobMode { get; set; }
+
+            /// <summary>
+            /// The ID of the data node.
+            /// </summary>
+            [NameInMap("NodeId")]
+            [Validation(Required=false)]
+            public string NodeId { get; set; }
+
+            /// <summary>
+            /// The progress of the backup task in percentage.
+            /// </summary>
             [NameInMap("Process")]
             [Validation(Required=false)]
             public string Process { get; set; }
 
             /// <summary>
-            /// 1162****
+            /// The start time of the backup task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
+            /// <summary>
+            /// The type of the backup task. Valid values:
+            /// 
+            /// *   **TempBackupTask**: The backup task was manually performed.
+            /// *   **NormalBackupTask**: The backup task was automatically performed.
+            /// </summary>
             [NameInMap("TaskAction")]
             [Validation(Required=false)]
             public string TaskAction { get; set; }

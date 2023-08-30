@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifySecurityGroupConfigurationRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ModifySecurityGroupConfiguration**.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

@@ -10,88 +10,102 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribePriceRequest : TeaModel {
         /// <summary>
-        /// The coupon code. Default value: youhuiquan_promotion_option_id_for_blank. This value indicates that no coupon code is available.
+        /// The extended information such as the promotional event ID and business information.
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+        /// The storage capacity of the instance. Unit: MB. You must specify one of the **InstanceClass** and **Capacity** parameters to specify the instance type. We recommend that you use **InstanceClass** to specify the instance type.
         /// </summary>
         [NameInMap("Capacity")]
         [Validation(Required=false)]
         public long? Capacity { get; set; }
 
         /// <summary>
-        /// The actual price of the order.
+        /// The billing method of the instance. Valid values:
+        /// 
+        /// *   **PostPaid**: pay-as-you-go
+        /// *   **PrePaid**: subscription.
+        /// 
+        /// > The default value is **PostPaid**.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// Specify the instance type. You must set InstanceClass or Capacity to specify the instance type. We recommend that you use InstanceClass to specify the instance type.
-        /// 
-        /// To view the instance type, perform the following steps:
-        /// 
-        /// 1\. In the [Overview](~~26350~~) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.
-        /// 
-        /// 2\. In the instance type table of the page that appears, find the code corresponding to the instance type in the **InstanceClass** column.
+        /// The coupon code. Default value: youhuiquan_promotion_option_id_for_blank. This value indicates that no coupon code is available.
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// The node type. Set the value to MASTER_SLAVE. This value indicates that the node type is master-replica.
+        /// Specifies whether to forcefully change the configurations of the instance. Valid values:
+        /// 
+        /// *   **false**: forcefully changes the configurations.
+        /// *   **true**: does not forcefully change the configurations.
+        /// 
+        /// > The default value is **true**.
         /// </summary>
         [NameInMap("ForceUpgrade")]
         [Validation(Required=false)]
         public bool? ForceUpgrade { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcefully change the configurations of the instance. Default value: true. Valid values:
+        /// The instance type of the instance. You must specify one of the InstanceClass and Capacity parameters to specify the instance type. We recommend that you use InstanceClass to specify the instance type.
         /// 
-        /// *   **false**: The system forcefully changes the configurations.
-        /// *   **true**: The system does not forcefully change the configurations.
+        /// To query the instance type, perform the following steps:
         /// 
-        /// >  Default value: **true**.
+        /// 1.  In the [Overview](~~26350~~) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.
+        /// 2.  In the instance type table of the page that appears, find the instance type in the **InstanceClass** column.
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// The subscription period. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The storage capacity of the instance. Unit: MB. You must set **InstanceClass** or **Capacity** to specify the instance type. We recommend that you use **InstanceClass** to specify the instance type.
+        /// A JSON string that contains multiple instances. For more information, see [Description of the Instances parameter in the DescribePrice API operation](~~161811~~).
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public string Instances { get; set; }
 
         /// <summary>
-        /// The discount amount of the order.
+        /// The node type. Set the value to MASTER_SLAVE. This value indicates that the node type is master-replica.
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }
 
         /// <summary>
-        /// Indicates whether the coupon was selected.
+        /// Specifies whether to return parameters related to the order. Valid values:
+        /// 
+        /// *   **false**: does not return parameters related to the order.
+        /// *   **true**: returns parameters related to the order.
+        /// 
+        /// > The default value is **false**.
         /// </summary>
         [NameInMap("OrderParamOut")]
         [Validation(Required=false)]
         public string OrderParamOut { get; set; }
 
         /// <summary>
-        /// The service fees of the order.
+        /// The order type. Valid values:
+        /// 
+        /// *   **BUY**: The order is used to purchase instances.
+        /// *   **UPGRADE**: The order is used to change the configurations of instances.
+        /// *   **RENEW**: The order is used to renew instances.
+        /// *   **CONVERT**: The order is used to change the billing methods of instances.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -106,26 +120,23 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The extended information such as the promotional event ID and business information.
+        /// The subscription duration. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public long? Period { get; set; }
 
         /// <summary>
-        /// The currency used for payment. A value of CNY is used when the order was generated on the China site (aliyun.com), and a value of USD is used when the order was generated on the international site (alibabacloud.com).
+        /// The number of instances that you want to purchase. Valid values: **1** to **30**.
+        /// 
+        /// > The default value is **1**.
         /// </summary>
         [NameInMap("Quantity")]
         [Validation(Required=false)]
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
-        /// 
-        /// *   **PostPaid**: pay-as-you-go
-        /// *   **PrePaid**: subscription
-        /// 
-        /// >  Default value: **PostPaid**.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -144,7 +155,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The description of the coupon.
+        /// The zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

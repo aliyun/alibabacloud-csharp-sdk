@@ -25,25 +25,29 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The minor version of the node.
+        /// The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeRoleZoneInfo**.
+        /// The number of entries to return on each page. Valid values: **10**, **20**, and **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.
+        /// The type of the node to query. Default value: 1. Valid values:
         /// 
-        /// > 
-        /// *   You can call the [EnableAdditionalBandwidth](~~206173~~) operation to specify the increased bandwidth.
-        /// *   You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.
+        /// *   **0**: proxy node
+        /// 
+        ///     **
+        /// 
+        ///     **Note**This parameter is supported only for cluster and read/write splitting instances.
+        /// 
+        /// *   **1**: data node
         /// </summary>
         [NameInMap("QueryType")]
         [Validation(Required=false)]

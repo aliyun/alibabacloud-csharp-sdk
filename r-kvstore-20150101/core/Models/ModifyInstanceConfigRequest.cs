@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceConfigRequest : TeaModel {
+        /// <summary>
+        /// The configuration parameters of the instance in the JSON format.
+        /// 
+        /// > For more information, see [Supported parameters](~~259681~~).
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

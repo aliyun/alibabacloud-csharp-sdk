@@ -9,12 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyAuditLogConfigRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable the audit log feature. Default value: true. Valid values:
+        /// 
+        /// *   **true**: enables the audit log feature.
+        /// *   **false**: disables the audit log feature.
+        /// 
+        /// > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
+        /// </summary>
         [NameInMap("DbAudit")]
         [Validation(Required=false)]
         public bool? DbAudit { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -36,6 +44,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The retention period of audit logs. Valid values: **1** to **365**. Unit: days.
+        /// 
+        /// > *   This parameter is required only if the **DbAudit** parameter is set to **true**.
+        /// > *   The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.
+        /// </summary>
         [NameInMap("Retention")]
         [Validation(Required=false)]
         public int? Retention { get; set; }

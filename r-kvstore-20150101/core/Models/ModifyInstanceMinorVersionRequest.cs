@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceMinorVersionRequest : TeaModel {
         /// <summary>
-        /// The minor version to which you want to update. Default value: **latest_version**.
+        /// The time when the minor version is updated. Valid values:
+        /// 
+        /// *   **Immediately**: The minor version is immediately updated.
+        /// *   **MaintainTime**: The minor version is updated within the maintenance window.
+        /// 
+        /// >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ModifyInstanceMinorVersion**.
+        /// The minor version to which you want to update. Default value: **latest_version**.
         /// </summary>
         [NameInMap("Minorversion")]
         [Validation(Required=false)]

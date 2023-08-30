@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoRenewal { get; set; }
 
         /// <summary>
-        /// The time when the extra internal bandwidth that you purchased expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The expiration time of the purchased bandwidth. The time follows the ISO 8601 standard in the *yyyy-MM-dd* T *HH:mm:ss* Z format.
         /// 
         /// > If no extra internal bandwidth is purchased, this parameter is not returned.
         /// </summary>
@@ -44,9 +44,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// Does the instance have unexpired prepaid bandwidth package, value:
-        /// - true
-        /// - false
+        /// Specifies whether the instance has unexpired bandwidth plans. Valid values:
+        /// 
+        /// *   **true**: The instance has unexpired bandwidth plans.
+        /// *   **false**: The instance does not have unexpired bandwidth plans.
+        /// 
+        /// > If no extra internal bandwidth is purchased, this parameter is not returned.
         /// </summary>
         [NameInMap("HasPrePaidBandWidthOrderRunning")]
         [Validation(Required=false)]

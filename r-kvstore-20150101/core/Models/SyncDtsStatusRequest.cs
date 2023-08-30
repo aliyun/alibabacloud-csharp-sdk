@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class SyncDtsStatusRequest : TeaModel {
         /// <summary>
-        /// Disables configuration change for the instance. Valid values:
-        /// 
-        /// *   **0**: no
-        /// *   **1**: yes. If you attempt to modify the configurations of the instance, the system sends a prompt about the restriction.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -47,14 +44,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// cn-hangzhou
+        /// Disables configuration changes for the instance. Valid values:
+        /// 
+        /// *   **0**: does not disable configuration changes.
+        /// *   **1**: disables configuration changes. In this case, if you attempt to modify the configurations of the instance, the system informs you that the operation cannot be performed.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Disables the configuration change of an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.
+        /// The ID of the DTS instance. You can view the ID in the [DTS console](https://dts.console.aliyun.com/).
+        /// 
+        /// > An ApsaraDB for Redis instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

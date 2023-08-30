@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Details of slow log entries.
+        /// The slow log entries.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? ElapsedTime { get; set; }
 
                 /// <summary>
-                /// The start time when the slow query statement was executed. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format.
+                /// The start time when the slow query statement was executed. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format.
                 /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string IPAddress { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The node ID.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]

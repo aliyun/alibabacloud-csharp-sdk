@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeHistoryTasksResponseBody : TeaModel {
+        /// <summary>
+        /// The request source. Valid values: System and User.
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryTasksResponseBodyItems> Items { get; set; }
@@ -95,18 +98,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        /// <summary>
+        /// The page number. Pages start from page 1. Default value: 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page. Valid values: 10 to 100. Default value: 10.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of tasks that meet these constraints without taking pagination into account.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

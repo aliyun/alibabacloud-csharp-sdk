@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAuditLogConfigRequest : TeaModel {
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeInstanceAttribute](~~60996~~) operation to query the region ID of the instance.
+        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The retention period of audit logs. Unit: day.
+        /// The region ID of the instance. You can call the [DescribeInstanceAttribute](~~60996~~) operation to query the region ID of the instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

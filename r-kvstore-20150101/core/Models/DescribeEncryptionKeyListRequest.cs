@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEncryptionKeyListRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeEncryptionKeyList**.
+        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

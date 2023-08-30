@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyActiveOperationTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the O\&M task. Separate multiple IDs with commas (,).
+        /// 
+        /// > You can call the [DescribeActiveOperationTask](~~197387~~) operation to query the ID of an O\&M task.
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -37,7 +39,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to: **ModifyActiveOperationTask**.
+        /// The scheduled switchover time to be specified. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// 
+        /// > The time cannot be later than the latest operation time. You can call the [DescribeActiveOperationTask](~~197387~~) operation to obtain the latest operation time, which is the value of the **Deadline** parameter in the response.
         /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]

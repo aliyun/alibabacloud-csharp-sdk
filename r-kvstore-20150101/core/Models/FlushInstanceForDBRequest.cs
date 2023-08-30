@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class FlushInstanceForDBRequest : TeaModel {
+        /// <summary>
+        /// The index number of the database. Valid values: 0 to 255.
+        /// </summary>
         [NameInMap("DbIndex")]
         [Validation(Required=false)]
         public int? DbIndex { get; set; }
 
+        /// <summary>
+        /// The instance ID. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeLogicInstanceTopologyResponseBody : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeLogicInstanceTopology**.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The bandwidth throttling of the node. Unit: MB/s.
+        /// The detailed proxy information, including information about proxy nodes.
         /// </summary>
         [NameInMap("RedisProxyList")]
         [Validation(Required=false)]
@@ -28,35 +28,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo : TeaModel {
                 /// <summary>
-                /// The ID of the request.
+                /// The bandwidth throttling of the node. Unit: MB/s.
                 /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public string Bandwidth { get; set; }
 
                 /// <summary>
-                /// The detailed proxy information, including information about proxy nodes.
+                /// The storage capacity of the node. Unit: MB.
                 /// </summary>
                 [NameInMap("Capacity")]
                 [Validation(Required=false)]
                 public string Capacity { get; set; }
 
                 /// <summary>
-                /// The ID of the instance whose topology information you want to query.
+                /// The maximum number of connections.
                 /// </summary>
                 [NameInMap("Connection")]
                 [Validation(Required=false)]
                 public string Connection { get; set; }
 
                 /// <summary>
-                /// Queries the logical topology of an ApsaraDB for Redis instance.
+                /// The ID of the node.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The node type. Valid values:
+                /// 
+                /// *   **proxy**: proxy node
+                /// *   **db**: data node
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
@@ -103,7 +106,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

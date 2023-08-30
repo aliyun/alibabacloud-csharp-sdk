@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateCacheAnalysisTaskRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

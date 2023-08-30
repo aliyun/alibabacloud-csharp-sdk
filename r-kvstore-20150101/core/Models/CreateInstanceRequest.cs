@@ -197,6 +197,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("ParamGroupId")]
+        [Validation(Required=false)]
+        public string ParamGroupId { get; set; }
+
         /// <summary>
         /// The password that is used to connect to the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
         /// </summary>

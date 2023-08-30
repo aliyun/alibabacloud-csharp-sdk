@@ -9,26 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateAccountRequest : TeaModel {
+        /// <summary>
+        /// The description of the account.
+        /// 
+        /// *   The description must start with a letter, and cannot start with `http://` or `https://`.
+        /// *   The description can contain letters, digits, underscores (\_), and hyphens (-).
+        /// *   The description must be 2 to 256 characters in length.
+        /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
+        /// <summary>
+        /// The name of the account. The name must meet the following requirements:
+        /// 
+        /// *   The name can contain lowercase letters, digits, and hyphens (-), and must start with a lowercase letter.
+        /// *   The name can be up to 100 characters in length.
+        /// *   The name cannot be one of the reserved words in the [Reserved words for Redis account names](~~92665~~#title-84o-mok-b6h) section.
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// The password of the account. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
+        /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
+        /// <summary>
+        /// The permissions of the account. Valid values:
+        /// 
+        /// *   **RoleReadOnly**: The account has read-only permissions.
+        /// *   **RoleReadWrite**: The account has read and write permissions.
+        /// </summary>
         [NameInMap("AccountPrivilege")]
         [Validation(Required=false)]
         public string AccountPrivilege { get; set; }
 
+        /// <summary>
+        /// The type of the account. Set the value to **Normal**, which indicates that the account is a standard account.
+        /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

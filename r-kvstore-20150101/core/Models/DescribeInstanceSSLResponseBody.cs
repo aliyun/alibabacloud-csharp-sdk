@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstanceSSLResponseBody : TeaModel {
         /// <summary>
-        /// The common name of the SSL certificate, which is the domain name for which you want to apply for the SSL certificate. The default value is the internal endpoint of the instance.
+        /// The common name of the CA certificate. The default value is the internal endpoint of the instance.
         /// </summary>
         [NameInMap("CertCommonName")]
         [Validation(Required=false)]
         public string CertCommonName { get; set; }
 
         /// <summary>
-        /// Download URL for CA certificate.
+        /// The download URL of the CA certificate.
         /// </summary>
         [NameInMap("CertDownloadURL")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether SSL encryption is enabled. Valid values:
+        /// The status of the TLS (SSL) encryption feature. Valid values:
         /// 
         /// *   **Enable**: SSL encryption is enabled.
         /// *   **Disable**: SSL encryption is disabled.
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SSLEnabled { get; set; }
 
         /// <summary>
-        /// The expiration time of the SSL certificate.
+        /// The time when the CA certificate expires.
         /// </summary>
         [NameInMap("SSLExpiredTime")]
         [Validation(Required=false)]

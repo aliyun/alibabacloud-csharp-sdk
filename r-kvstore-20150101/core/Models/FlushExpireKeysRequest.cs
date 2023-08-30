@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class FlushExpireKeysRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The time when to delete the expired keys. Default value: Immediately. Valid values:
+        /// 
+        /// *   **Immediately**: deletes the keys immediately.
+        /// *   **MaintainTime**: deletes the keys during the maintenance window.
+        /// 
+        /// > You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]

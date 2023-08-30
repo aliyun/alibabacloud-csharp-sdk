@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEncryptionKeyListResponseBody : TeaModel {
         /// <summary>
-        /// DescribeEncryptionKeyList
+        /// The custom keys that are available in the region.
         /// </summary>
         [NameInMap("KeyIds")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// Queries the custom keys that are available for an ApsaraDB for Redis instance to use transparent data encryption (TDE).
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

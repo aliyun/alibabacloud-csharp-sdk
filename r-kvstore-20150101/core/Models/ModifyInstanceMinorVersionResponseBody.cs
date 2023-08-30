@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceMinorVersionResponseBody : TeaModel {
         /// <summary>
-        /// Upgrades the minor version of an ApsaraDB for Redis instance.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// Modifies the attributes of an ApsaraDB for Redis instance, such as the name, password, and state of release protection.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

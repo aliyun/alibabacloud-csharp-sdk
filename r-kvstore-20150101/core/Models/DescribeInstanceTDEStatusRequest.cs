@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstanceTDEStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

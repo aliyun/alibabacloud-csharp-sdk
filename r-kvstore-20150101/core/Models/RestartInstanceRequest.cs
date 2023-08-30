@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RestartInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The time when you want to restart the instance. Default value: Immediately. Valid values:
+        /// 
+        /// *   **Immediately**: immediately restarts the instance.
+        /// *   **MaintainTime**: restarts the instance during the maintenance window.
+        /// 
+        /// Enumeration values:
+        /// 
+        /// *   0
+        /// *   1
+        /// *   Immediately
+        /// *   MaintainTime
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
@@ -43,6 +53,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// Specifies whether to update the instance to the latest minor version when the instance is restarted. Valid values:
+        /// 
+        /// *   **true**: updates the minor version.
+        /// *   **false**: does not update the minor version.
+        /// 
+        /// > The default value is **true**.
+        /// </summary>
         [NameInMap("UpgradeMinorVersion")]
         [Validation(Required=false)]
         public bool? UpgradeMinorVersion { get; set; }

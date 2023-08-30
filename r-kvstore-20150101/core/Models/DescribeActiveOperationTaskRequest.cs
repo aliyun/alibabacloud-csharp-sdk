@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The deadline before which the time to execute the O\&M task can be modified. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
+        /// The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeActiveOperationTask**.
+        /// The number of entries to return on each page. Specify a value greater than **10**. Default value: **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
