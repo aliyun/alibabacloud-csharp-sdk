@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class Tag : TeaModel {
-        [NameInMap("key")]
+    public class CreateVpcBindingRequest : TeaModel {
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public string Key { get; set; }
-
-        [NameInMap("value")]
-        [Validation(Required=false)]
-        public string Value { get; set; }
+        public CreateVpcBindingInput Body { get; set; }
 
     }
 

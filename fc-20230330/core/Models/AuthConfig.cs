@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class RewriteRegexRule : TeaModel {
-        [NameInMap("regexStr")]
+    public class AuthConfig : TeaModel {
+        [NameInMap("authInfo")]
         [Validation(Required=false)]
-        public string RegexStr { get; set; }
+        public string AuthInfo { get; set; }
 
-        [NameInMap("replacement")]
+        [NameInMap("authType")]
         [Validation(Required=false)]
-        public string Replacement { get; set; }
+        public string AuthType { get; set; }
 
     }
 

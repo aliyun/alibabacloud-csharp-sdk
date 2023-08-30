@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class TagResourceResponse : TeaModel {
+    public class CreateVpcBindingResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }

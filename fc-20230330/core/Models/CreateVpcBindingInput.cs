@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class InnerRewriteConfig : TeaModel {
-        [NameInMap("regexRules")]
+    public class CreateVpcBindingInput : TeaModel {
+        [NameInMap("vpcId")]
         [Validation(Required=false)]
-        public List<RewriteRegexRule> RegexRules { get; set; }
+        public string VpcId { get; set; }
 
     }
 

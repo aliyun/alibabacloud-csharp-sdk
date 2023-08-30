@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string ApiVersion { get; set; }
 
+        [NameInMap("authConfig")]
+        [Validation(Required=false)]
+        public AuthConfig AuthConfig { get; set; }
+
         [NameInMap("certConfig")]
         [Validation(Required=false)]
         public CertConfig CertConfig { get; set; }

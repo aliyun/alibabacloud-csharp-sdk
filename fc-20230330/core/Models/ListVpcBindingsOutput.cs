@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class VPCBinding : TeaModel {
+    public class ListVpcBindingsOutput : TeaModel {
         [NameInMap("vpcIds")]
         [Validation(Required=false)]
         public List<string> VpcIds { get; set; }

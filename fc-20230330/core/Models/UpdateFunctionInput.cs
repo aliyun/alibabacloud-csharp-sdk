@@ -97,10 +97,6 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public TracingConfig TracingConfig { get; set; }
 
-        [NameInMap("vpcBinding")]
-        [Validation(Required=false)]
-        public VPCBinding VpcBinding { get; set; }
-
         [NameInMap("vpcConfig")]
         [Validation(Required=false)]
         public VPCConfig VpcConfig { get; set; }

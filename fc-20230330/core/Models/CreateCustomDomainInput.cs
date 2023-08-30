@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateCustomDomainInput : TeaModel {
+        [NameInMap("authConfig")]
+        [Validation(Required=false)]
+        public AuthConfig AuthConfig { get; set; }
+
         [NameInMap("certConfig")]
         [Validation(Required=false)]
         public CertConfig CertConfig { get; set; }

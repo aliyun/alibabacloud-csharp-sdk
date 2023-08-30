@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string ResourceArn { get; set; }
 
-        [NameInMap("resourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
         [NameInMap("tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }

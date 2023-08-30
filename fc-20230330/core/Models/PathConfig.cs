@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PathConfig : TeaModel {
-        [NameInMap("accountId")]
-        [Validation(Required=false)]
-        public string AccountId { get; set; }
-
         [NameInMap("functionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
-
-        [NameInMap("innerRewriteConfig")]
-        [Validation(Required=false)]
-        public InnerRewriteConfig InnerRewriteConfig { get; set; }
 
         [NameInMap("methods")]
         [Validation(Required=false)]
@@ -36,10 +28,6 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("rewriteConfig")]
         [Validation(Required=false)]
         public RewriteConfig RewriteConfig { get; set; }
-
-        [NameInMap("serviceName")]
-        [Validation(Required=false)]
-        public string ServiceName { get; set; }
 
     }
 

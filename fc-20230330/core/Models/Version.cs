@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("functionVersionArn")]
-        [Validation(Required=false)]
-        public string FunctionVersionArn { get; set; }
-
         [NameInMap("lastModifiedTime")]
         [Validation(Required=false)]
         public string LastModifiedTime { get; set; }

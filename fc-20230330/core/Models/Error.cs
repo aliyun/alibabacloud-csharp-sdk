@@ -9,15 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class Error : TeaModel {
-        [NameInMap("code")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("message")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("requestId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 

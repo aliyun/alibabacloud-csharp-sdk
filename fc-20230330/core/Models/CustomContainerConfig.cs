@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string AccelerationType { get; set; }
 
-        [NameInMap("acrInstanceID")]
+        [NameInMap("acrInstanceId")]
         [Validation(Required=false)]
-        public string AcrInstanceID { get; set; }
+        public string AcrInstanceId { get; set; }
 
         [NameInMap("command")]
         [Validation(Required=false)]

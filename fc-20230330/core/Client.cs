@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * create function version
+          * 创建函数别名
           *
           * @param request CreateAliasRequest
           * @param headers map
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * create function version
+          * 创建函数别名
           *
           * @param request CreateAliasRequest
           * @param headers map
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * create function version
+          * 创建函数别名
           *
           * @param request CreateAliasRequest
           * @return CreateAliasResponse
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * create function version
+          * 创建函数别名
           *
           * @param request CreateAliasRequest
           * @return CreateAliasResponse
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create custom domain.
+          * 创建自定义域名
           *
           * @param request CreateCustomDomainRequest
           * @param headers map
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create custom domain.
+          * 创建自定义域名
           *
           * @param request CreateCustomDomainRequest
           * @param headers map
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create custom domain.
+          * 创建自定义域名
           *
           * @param request CreateCustomDomainRequest
           * @return CreateCustomDomainResponse
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create custom domain.
+          * 创建自定义域名
           *
           * @param request CreateCustomDomainRequest
           * @return CreateCustomDomainResponse
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create function
+          * 创建函数
           *
           * @param request CreateFunctionRequest
           * @param headers map
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create function
+          * 创建函数
           *
           * @param request CreateFunctionRequest
           * @param headers map
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create function
+          * 创建函数
           *
           * @param request CreateFunctionRequest
           * @return CreateFunctionResponse
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create function
+          * 创建函数
           *
           * @param request CreateFunctionRequest
           * @return CreateFunctionResponse
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create layer version
+          * 创建层版本
           *
           * @param request CreateLayerVersionRequest
           * @param headers map
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create layer version
+          * 创建层版本
           *
           * @param request CreateLayerVersionRequest
           * @param headers map
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create layer version
+          * 创建层版本
           *
           * @param request CreateLayerVersionRequest
           * @return CreateLayerVersionResponse
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create layer version
+          * 创建层版本
           *
           * @param request CreateLayerVersionRequest
           * @return CreateLayerVersionResponse
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create trigger.
+          * 创建函数触发器
           *
           * @param request CreateTriggerRequest
           * @param headers map
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create trigger.
+          * 创建函数触发器
           *
           * @param request CreateTriggerRequest
           * @param headers map
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create trigger.
+          * 创建函数触发器
           *
           * @param request CreateTriggerRequest
           * @return CreateTriggerResponse
@@ -465,7 +465,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Create trigger.
+          * 创建函数触发器
           *
           * @param request CreateTriggerRequest
           * @return CreateTriggerResponse
@@ -478,7 +478,95 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function alias
+          * 创建VPC绑定
+          *
+          * @param request CreateVpcBindingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcBindingResponse
+         */
+        public CreateVpcBindingResponse CreateVpcBindingWithOptions(string functionName, CreateVpcBindingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVpcBinding",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/vpc-bindings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateVpcBindingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * 创建VPC绑定
+          *
+          * @param request CreateVpcBindingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcBindingResponse
+         */
+        public async Task<CreateVpcBindingResponse> CreateVpcBindingWithOptionsAsync(string functionName, CreateVpcBindingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVpcBinding",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/vpc-bindings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateVpcBindingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * 创建VPC绑定
+          *
+          * @param request CreateVpcBindingRequest
+          * @return CreateVpcBindingResponse
+         */
+        public CreateVpcBindingResponse CreateVpcBinding(string functionName, CreateVpcBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateVpcBindingWithOptions(functionName, request, headers, runtime);
+        }
+
+        /**
+          * 创建VPC绑定
+          *
+          * @param request CreateVpcBindingRequest
+          * @return CreateVpcBindingResponse
+         */
+        public async Task<CreateVpcBindingResponse> CreateVpcBindingAsync(string functionName, CreateVpcBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateVpcBindingWithOptionsAsync(functionName, request, headers, runtime);
+        }
+
+        /**
+          * 删除函数别名
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -506,7 +594,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function alias
+          * 删除函数别名
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -534,7 +622,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function alias
+          * 删除函数别名
           *
           * @return DeleteAliasResponse
          */
@@ -546,7 +634,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function alias
+          * 删除函数别名
           *
           * @return DeleteAliasResponse
          */
@@ -558,7 +646,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function async invoke config
+          * 删除函数异步调用配置
           *
           * @param request DeleteAsyncInvokeConfigRequest
           * @param headers map
@@ -594,7 +682,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function async invoke config
+          * 删除函数异步调用配置
           *
           * @param request DeleteAsyncInvokeConfigRequest
           * @param headers map
@@ -630,7 +718,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function async invoke config
+          * 删除函数异步调用配置
           *
           * @param request DeleteAsyncInvokeConfigRequest
           * @return DeleteAsyncInvokeConfigResponse
@@ -643,7 +731,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function async invoke config
+          * 删除函数异步调用配置
           *
           * @param request DeleteAsyncInvokeConfigRequest
           * @return DeleteAsyncInvokeConfigResponse
@@ -656,7 +744,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * deletes the concurrency config for a function
+          * 删除函数并发度配置
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -684,7 +772,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * deletes the concurrency config for a function
+          * 删除函数并发度配置
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -712,7 +800,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * deletes the concurrency config for a function
+          * 删除函数并发度配置
           *
           * @return DeleteConcurrencyConfigResponse
          */
@@ -724,7 +812,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * deletes the concurrency config for a function
+          * 删除函数并发度配置
           *
           * @return DeleteConcurrencyConfigResponse
          */
@@ -736,7 +824,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete custom domain.
+          * 删除自定义域名
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -764,7 +852,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete custom domain.
+          * 删除自定义域名
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -792,7 +880,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete custom domain.
+          * 删除自定义域名
           *
           * @return DeleteCustomDomainResponse
          */
@@ -804,7 +892,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete custom domain.
+          * 删除自定义域名
           *
           * @return DeleteCustomDomainResponse
          */
@@ -816,7 +904,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function
+          * 删除函数
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -844,7 +932,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function
+          * 删除函数
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -872,7 +960,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function
+          * 删除函数
           *
           * @return DeleteFunctionResponse
          */
@@ -884,7 +972,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function
+          * 删除函数
           *
           * @return DeleteFunctionResponse
          */
@@ -896,13 +984,13 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function version
+          * 删除函数版本
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
           * @return DeleteFunctionVersionResponse
          */
-        public DeleteFunctionVersionResponse DeleteFunctionVersionWithOptions(string functionName, string versionID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteFunctionVersionResponse DeleteFunctionVersionWithOptions(string functionName, string versionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -913,7 +1001,7 @@ namespace AlibabaCloud.SDK.FC20230330
                 Action = "DeleteFunctionVersion",
                 Version = "2023-03-30",
                 Protocol = "HTTPS",
-                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(versionID),
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(versionId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -924,13 +1012,13 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function version
+          * 删除函数版本
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
           * @return DeleteFunctionVersionResponse
          */
-        public async Task<DeleteFunctionVersionResponse> DeleteFunctionVersionWithOptionsAsync(string functionName, string versionID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteFunctionVersionResponse> DeleteFunctionVersionWithOptionsAsync(string functionName, string versionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -941,7 +1029,7 @@ namespace AlibabaCloud.SDK.FC20230330
                 Action = "DeleteFunctionVersion",
                 Version = "2023-03-30",
                 Protocol = "HTTPS",
-                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(versionID),
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(versionId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -952,31 +1040,31 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete function version
+          * 删除函数版本
           *
           * @return DeleteFunctionVersionResponse
          */
-        public DeleteFunctionVersionResponse DeleteFunctionVersion(string functionName, string versionID)
+        public DeleteFunctionVersionResponse DeleteFunctionVersion(string functionName, string versionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteFunctionVersionWithOptions(functionName, versionID, headers, runtime);
+            return DeleteFunctionVersionWithOptions(functionName, versionId, headers, runtime);
         }
 
         /**
-          * Delete function version
+          * 删除函数版本
           *
           * @return DeleteFunctionVersionResponse
          */
-        public async Task<DeleteFunctionVersionResponse> DeleteFunctionVersionAsync(string functionName, string versionID)
+        public async Task<DeleteFunctionVersionResponse> DeleteFunctionVersionAsync(string functionName, string versionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteFunctionVersionWithOptionsAsync(functionName, versionID, headers, runtime);
+            return await DeleteFunctionVersionWithOptionsAsync(functionName, versionId, headers, runtime);
         }
 
         /**
-          * Delete layer version
+          * 删除层版本
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1004,7 +1092,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete layer version
+          * 删除层版本
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1032,7 +1120,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete layer version
+          * 删除层版本
           *
           * @return DeleteLayerVersionResponse
          */
@@ -1044,7 +1132,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete layer version
+          * 删除层版本
           *
           * @return DeleteLayerVersionResponse
          */
@@ -1056,7 +1144,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete provision config.
+          * 删除函数预留配置
           *
           * @param request DeleteProvisionConfigRequest
           * @param headers map
@@ -1092,7 +1180,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete provision config.
+          * 删除函数预留配置
           *
           * @param request DeleteProvisionConfigRequest
           * @param headers map
@@ -1128,7 +1216,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete provision config.
+          * 删除函数预留配置
           *
           * @param request DeleteProvisionConfigRequest
           * @return DeleteProvisionConfigResponse
@@ -1141,7 +1229,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete provision config.
+          * 删除函数预留配置
           *
           * @param request DeleteProvisionConfigRequest
           * @return DeleteProvisionConfigResponse
@@ -1154,7 +1242,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete trigger.
+          * 删除函数触发器
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1182,7 +1270,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete trigger.
+          * 删除函数触发器
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1210,7 +1298,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete trigger.
+          * 删除函数触发器
           *
           * @return DeleteTriggerResponse
          */
@@ -1222,7 +1310,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Delete trigger.
+          * 删除函数触发器
           *
           * @return DeleteTriggerResponse
          */
@@ -1234,7 +1322,87 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function alias
+          * 删除VPC绑定
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVpcBindingResponse
+         */
+        public DeleteVpcBindingResponse DeleteVpcBindingWithOptions(string functionName, string vpcId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVpcBinding",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/vpc-bindings/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(vpcId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteVpcBindingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * 删除VPC绑定
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVpcBindingResponse
+         */
+        public async Task<DeleteVpcBindingResponse> DeleteVpcBindingWithOptionsAsync(string functionName, string vpcId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVpcBinding",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/vpc-bindings/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(vpcId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteVpcBindingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * 删除VPC绑定
+          *
+          * @return DeleteVpcBindingResponse
+         */
+        public DeleteVpcBindingResponse DeleteVpcBinding(string functionName, string vpcId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteVpcBindingWithOptions(functionName, vpcId, headers, runtime);
+        }
+
+        /**
+          * 删除VPC绑定
+          *
+          * @return DeleteVpcBindingResponse
+         */
+        public async Task<DeleteVpcBindingResponse> DeleteVpcBindingAsync(string functionName, string vpcId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteVpcBindingWithOptionsAsync(functionName, vpcId, headers, runtime);
+        }
+
+        /**
+          * 获取函数别名信息
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1262,7 +1430,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function alias
+          * 获取函数别名信息
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1290,7 +1458,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function alias
+          * 获取函数别名信息
           *
           * @return GetAliasResponse
          */
@@ -1302,7 +1470,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function alias
+          * 获取函数别名信息
           *
           * @return GetAliasResponse
          */
@@ -1314,7 +1482,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function async invoke config
+          * 获取函数异步调用配置
           *
           * @param request GetAsyncInvokeConfigRequest
           * @param headers map
@@ -1350,7 +1518,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function async invoke config
+          * 获取函数异步调用配置
           *
           * @param request GetAsyncInvokeConfigRequest
           * @param headers map
@@ -1386,7 +1554,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function async invoke config
+          * 获取函数异步调用配置
           *
           * @param request GetAsyncInvokeConfigRequest
           * @return GetAsyncInvokeConfigResponse
@@ -1399,7 +1567,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function async invoke config
+          * 获取函数异步调用配置
           *
           * @param request GetAsyncInvokeConfigRequest
           * @return GetAsyncInvokeConfigResponse
@@ -1412,7 +1580,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * gets the concurrency config for a function
+          * 获取函数并发度配置
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1440,7 +1608,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * gets the concurrency config for a function
+          * 获取函数并发度配置
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1468,7 +1636,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * gets the concurrency config for a function
+          * 获取函数并发度配置
           *
           * @return GetConcurrencyConfigResponse
          */
@@ -1480,7 +1648,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * gets the concurrency config for a function
+          * 获取函数并发度配置
           *
           * @return GetConcurrencyConfigResponse
          */
@@ -1492,7 +1660,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get custom domain.
+          * 获取自定义域名
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1520,7 +1688,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get custom domain.
+          * 获取自定义域名
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1548,7 +1716,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get custom domain.
+          * 获取自定义域名
           *
           * @return GetCustomDomainResponse
          */
@@ -1560,7 +1728,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get custom domain.
+          * 获取自定义域名
           *
           * @return GetCustomDomainResponse
          */
@@ -1572,7 +1740,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function info by function name
+          * 获取函数信息
           *
           * @param request GetFunctionRequest
           * @param headers map
@@ -1608,7 +1776,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function info by function name
+          * 获取函数信息
           *
           * @param request GetFunctionRequest
           * @param headers map
@@ -1644,7 +1812,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function info by function name
+          * 获取函数信息
           *
           * @param request GetFunctionRequest
           * @return GetFunctionResponse
@@ -1657,7 +1825,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function info by function name
+          * 获取函数信息
           *
           * @param request GetFunctionRequest
           * @return GetFunctionResponse
@@ -1670,7 +1838,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function code by function name
+          * 获取函数代码
           *
           * @param request GetFunctionCodeRequest
           * @param headers map
@@ -1706,7 +1874,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function code by function name
+          * 获取函数代码
           *
           * @param request GetFunctionCodeRequest
           * @param headers map
@@ -1742,7 +1910,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function code by function name
+          * 获取函数代码
           *
           * @param request GetFunctionCodeRequest
           * @return GetFunctionCodeResponse
@@ -1755,7 +1923,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get function code by function name
+          * 获取函数代码
           *
           * @param request GetFunctionCodeRequest
           * @return GetFunctionCodeResponse
@@ -1768,7 +1936,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get layer version.
+          * 获取层版本
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1796,7 +1964,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get layer version.
+          * 获取层版本
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1824,7 +1992,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get layer version.
+          * 获取层版本
           *
           * @return GetLayerVersionResponse
          */
@@ -1836,7 +2004,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get layer version.
+          * 获取层版本
           *
           * @return GetLayerVersionResponse
          */
@@ -1848,7 +2016,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get layer version by arn.
+          * 根据资源标识获取层版本
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1876,7 +2044,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get layer version by arn.
+          * 根据资源标识获取层版本
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -1904,7 +2072,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get layer version by arn.
+          * 根据资源标识获取层版本
           *
           * @return GetLayerVersionByArnResponse
          */
@@ -1916,7 +2084,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get layer version by arn.
+          * 根据资源标识获取层版本
           *
           * @return GetLayerVersionByArnResponse
          */
@@ -1928,7 +2096,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get provision config.
+          * 获取函数预留配置
           *
           * @param request GetProvisionConfigRequest
           * @param headers map
@@ -1964,7 +2132,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get provision config.
+          * 获取函数预留配置
           *
           * @param request GetProvisionConfigRequest
           * @param headers map
@@ -2000,7 +2168,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get provision config.
+          * 获取函数预留配置
           *
           * @param request GetProvisionConfigRequest
           * @return GetProvisionConfigResponse
@@ -2013,7 +2181,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get provision config.
+          * 获取函数预留配置
           *
           * @param request GetProvisionConfigRequest
           * @return GetProvisionConfigResponse
@@ -2026,7 +2194,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get resource tag
+          * 获取资源标签
           *
           * @param request GetResourceTagsRequest
           * @param headers map
@@ -2062,7 +2230,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get resource tag
+          * 获取资源标签
           *
           * @param request GetResourceTagsRequest
           * @param headers map
@@ -2098,7 +2266,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get resource tag
+          * 获取资源标签
           *
           * @param request GetResourceTagsRequest
           * @return GetResourceTagsResponse
@@ -2111,7 +2279,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get resource tag
+          * 获取资源标签
           *
           * @param request GetResourceTagsRequest
           * @return GetResourceTagsResponse
@@ -2124,7 +2292,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get trigger.
+          * 获取函数触发器
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -2152,7 +2320,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get trigger.
+          * 获取函数触发器
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -2180,7 +2348,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get trigger.
+          * 获取函数触发器
           *
           * @return GetTriggerResponse
          */
@@ -2192,7 +2360,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Get trigger.
+          * 获取函数触发器
           *
           * @return GetTriggerResponse
          */
@@ -2204,7 +2372,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Invoke function
+          * 调用函数
           *
           * @param request InvokeFunctionRequest
           * @param headers InvokeFunctionHeaders
@@ -2272,7 +2440,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Invoke function
+          * 调用函数
           *
           * @param request InvokeFunctionRequest
           * @param headers InvokeFunctionHeaders
@@ -2340,7 +2508,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Invoke function
+          * 调用函数
           *
           * @param request InvokeFunctionRequest
           * @return InvokeFunctionResponse
@@ -2353,7 +2521,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Invoke function
+          * 调用函数
           *
           * @param request InvokeFunctionRequest
           * @return InvokeFunctionResponse
@@ -2366,7 +2534,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List function aliases
+          * 列出函数别名
           *
           * @param request ListAliasesRequest
           * @param headers map
@@ -2410,7 +2578,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List function aliases
+          * 列出函数别名
           *
           * @param request ListAliasesRequest
           * @param headers map
@@ -2454,7 +2622,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List function aliases
+          * 列出函数别名
           *
           * @param request ListAliasesRequest
           * @return ListAliasesResponse
@@ -2467,7 +2635,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List function aliases
+          * 列出函数别名
           *
           * @param request ListAliasesRequest
           * @return ListAliasesResponse
@@ -2480,7 +2648,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List all functions async invoke config
+          * 列出函数异步调用配置
           *
           * @param request ListAsyncInvokeConfigsRequest
           * @param headers map
@@ -2524,7 +2692,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List all functions async invoke config
+          * 列出函数异步调用配置
           *
           * @param request ListAsyncInvokeConfigsRequest
           * @param headers map
@@ -2568,7 +2736,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List all functions async invoke config
+          * 列出函数异步调用配置
           *
           * @param request ListAsyncInvokeConfigsRequest
           * @return ListAsyncInvokeConfigsResponse
@@ -2581,7 +2749,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List all functions async invoke config
+          * 列出函数异步调用配置
           *
           * @param request ListAsyncInvokeConfigsRequest
           * @return ListAsyncInvokeConfigsResponse
@@ -2594,7 +2762,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List all functions concurrency configs
+          * 列出函数并发度配置
           *
           * @param request ListConcurrencyConfigsRequest
           * @param headers map
@@ -2638,7 +2806,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List all functions concurrency configs
+          * 列出函数并发度配置
           *
           * @param request ListConcurrencyConfigsRequest
           * @param headers map
@@ -2682,7 +2850,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List all functions concurrency configs
+          * 列出函数并发度配置
           *
           * @param request ListConcurrencyConfigsRequest
           * @return ListConcurrencyConfigsResponse
@@ -2695,7 +2863,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List all functions concurrency configs
+          * 列出函数并发度配置
           *
           * @param request ListConcurrencyConfigsRequest
           * @return ListConcurrencyConfigsResponse
@@ -2708,7 +2876,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List custom domains.
+          * 列出自定义域名
           *
           * @param request ListCustomDomainsRequest
           * @param headers map
@@ -2752,7 +2920,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List custom domains.
+          * 列出自定义域名
           *
           * @param request ListCustomDomainsRequest
           * @param headers map
@@ -2796,7 +2964,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List custom domains.
+          * 列出自定义域名
           *
           * @param request ListCustomDomainsRequest
           * @return ListCustomDomainsResponse
@@ -2809,7 +2977,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List custom domains.
+          * 列出自定义域名
           *
           * @param request ListCustomDomainsRequest
           * @return ListCustomDomainsResponse
@@ -2822,7 +2990,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List function versions
+          * 列出函数版本
           *
           * @param request ListFunctionVersionsRequest
           * @param headers map
@@ -2866,7 +3034,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List function versions
+          * 列出函数版本
           *
           * @param request ListFunctionVersionsRequest
           * @param headers map
@@ -2910,7 +3078,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List function versions
+          * 列出函数版本
           *
           * @param request ListFunctionVersionsRequest
           * @return ListFunctionVersionsResponse
@@ -2923,7 +3091,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List function versions
+          * 列出函数版本
           *
           * @param request ListFunctionVersionsRequest
           * @return ListFunctionVersionsResponse
@@ -2936,7 +3104,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Lists existing functions.
+          * 列出函数
           *
           * @param request ListFunctionsRequest
           * @param headers map
@@ -2980,7 +3148,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Lists existing functions.
+          * 列出函数
           *
           * @param request ListFunctionsRequest
           * @param headers map
@@ -3024,7 +3192,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Lists existing functions.
+          * 列出函数
           *
           * @param request ListFunctionsRequest
           * @return ListFunctionsResponse
@@ -3037,7 +3205,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Lists existing functions.
+          * 列出函数
           *
           * @param request ListFunctionsRequest
           * @return ListFunctionsResponse
@@ -3050,7 +3218,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List instances for function.
+          * 列出函数实例
           *
           * @param request ListInstancesRequest
           * @param headers map
@@ -3090,7 +3258,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List instances for function.
+          * 列出函数实例
           *
           * @param request ListInstancesRequest
           * @param headers map
@@ -3130,7 +3298,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List instances for function.
+          * 列出函数实例
           *
           * @param request ListInstancesRequest
           * @return ListInstancesResponse
@@ -3143,7 +3311,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List instances for function.
+          * 列出函数实例
           *
           * @param request ListInstancesRequest
           * @return ListInstancesResponse
@@ -3156,7 +3324,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List layer versions.
+          * 列出层版本
           *
           * @param request ListLayerVersionsRequest
           * @param headers map
@@ -3196,7 +3364,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List layer versions.
+          * 列出层版本
           *
           * @param request ListLayerVersionsRequest
           * @param headers map
@@ -3236,7 +3404,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List layer versions.
+          * 列出层版本
           *
           * @param request ListLayerVersionsRequest
           * @return ListLayerVersionsResponse
@@ -3249,7 +3417,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List layer versions.
+          * 列出层版本
           *
           * @param request ListLayerVersionsRequest
           * @return ListLayerVersionsResponse
@@ -3262,7 +3430,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List layers .
+          * 列出层
           *
           * @param request ListLayersRequest
           * @param headers map
@@ -3314,7 +3482,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List layers .
+          * 列出层
           *
           * @param request ListLayersRequest
           * @param headers map
@@ -3366,7 +3534,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List layers .
+          * 列出层
           *
           * @param request ListLayersRequest
           * @return ListLayersResponse
@@ -3379,7 +3547,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List layers .
+          * 列出层
           *
           * @param request ListLayersRequest
           * @return ListLayersResponse
@@ -3392,7 +3560,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List provision configs.
+          * 列出函数预留配置
           *
           * @param request ListProvisionConfigsRequest
           * @param headers map
@@ -3436,7 +3604,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List provision configs.
+          * 列出函数预留配置
           *
           * @param request ListProvisionConfigsRequest
           * @param headers map
@@ -3480,7 +3648,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List provision configs.
+          * 列出函数预留配置
           *
           * @param request ListProvisionConfigsRequest
           * @return ListProvisionConfigsResponse
@@ -3493,7 +3661,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List provision configs.
+          * 列出函数预留配置
           *
           * @param request ListProvisionConfigsRequest
           * @return ListProvisionConfigsResponse
@@ -3506,7 +3674,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List tagged resources
+          * 列出具有标签的资源
           *
           * @param request ListTaggedResourcesRequest
           * @param headers map
@@ -3546,7 +3714,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List tagged resources
+          * 列出具有标签的资源
           *
           * @param request ListTaggedResourcesRequest
           * @param headers map
@@ -3586,7 +3754,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List tagged resources
+          * 列出具有标签的资源
           *
           * @param request ListTaggedResourcesRequest
           * @return ListTaggedResourcesResponse
@@ -3599,7 +3767,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List tagged resources
+          * 列出具有标签的资源
           *
           * @param request ListTaggedResourcesRequest
           * @return ListTaggedResourcesResponse
@@ -3612,7 +3780,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List triggers.
+          * 列出函数触发器
           *
           * @param request ListTriggersRequest
           * @param headers map
@@ -3656,7 +3824,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List triggers.
+          * 列出函数触发器
           *
           * @param request ListTriggersRequest
           * @param headers map
@@ -3700,7 +3868,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List triggers.
+          * 列出函数触发器
           *
           * @param request ListTriggersRequest
           * @return ListTriggersResponse
@@ -3713,7 +3881,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * List triggers.
+          * 列出函数触发器
           *
           * @param request ListTriggersRequest
           * @return ListTriggersResponse
@@ -3726,7 +3894,87 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * publish new function version
+          * 列出VPC绑定配置
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListVpcBindingsResponse
+         */
+        public ListVpcBindingsResponse ListVpcBindingsWithOptions(string functionName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcBindings",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/vpc-bindings",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcBindingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * 列出VPC绑定配置
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListVpcBindingsResponse
+         */
+        public async Task<ListVpcBindingsResponse> ListVpcBindingsWithOptionsAsync(string functionName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcBindings",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/vpc-bindings",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcBindingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * 列出VPC绑定配置
+          *
+          * @return ListVpcBindingsResponse
+         */
+        public ListVpcBindingsResponse ListVpcBindings(string functionName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListVpcBindingsWithOptions(functionName, headers, runtime);
+        }
+
+        /**
+          * 列出VPC绑定配置
+          *
+          * @return ListVpcBindingsResponse
+         */
+        public async Task<ListVpcBindingsResponse> ListVpcBindingsAsync(string functionName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListVpcBindingsWithOptionsAsync(functionName, headers, runtime);
+        }
+
+        /**
+          * 发布函数版本
           *
           * @param request PublishFunctionVersionRequest
           * @param headers map
@@ -3757,7 +4005,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * publish new function version
+          * 发布函数版本
           *
           * @param request PublishFunctionVersionRequest
           * @param headers map
@@ -3788,7 +4036,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * publish new function version
+          * 发布函数版本
           *
           * @param request PublishFunctionVersionRequest
           * @return PublishFunctionVersionResponse
@@ -3801,7 +4049,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * publish new function version
+          * 发布函数版本
           *
           * @param request PublishFunctionVersionRequest
           * @return PublishFunctionVersionResponse
@@ -3814,7 +4062,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Put function async invoke config.
+          * 设置函数异步调用配置
           *
           * @param request PutAsyncInvokeConfigRequest
           * @param headers map
@@ -3851,7 +4099,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Put function async invoke config.
+          * 设置函数异步调用配置
           *
           * @param request PutAsyncInvokeConfigRequest
           * @param headers map
@@ -3888,7 +4136,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Put function async invoke config.
+          * 设置函数异步调用配置
           *
           * @param request PutAsyncInvokeConfigRequest
           * @return PutAsyncInvokeConfigResponse
@@ -3901,7 +4149,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Put function async invoke config.
+          * 设置函数异步调用配置
           *
           * @param request PutAsyncInvokeConfigRequest
           * @return PutAsyncInvokeConfigResponse
@@ -3914,7 +4162,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * sets the concurrency config for a function
+          * 设置函数并发度配置
           *
           * @param request PutConcurrencyConfigRequest
           * @param headers map
@@ -3945,7 +4193,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * sets the concurrency config for a function
+          * 设置函数并发度配置
           *
           * @param request PutConcurrencyConfigRequest
           * @param headers map
@@ -3976,7 +4224,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * sets the concurrency config for a function
+          * 设置函数并发度配置
           *
           * @param request PutConcurrencyConfigRequest
           * @return PutConcurrencyConfigResponse
@@ -3989,7 +4237,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * sets the concurrency config for a function
+          * 设置函数并发度配置
           *
           * @param request PutConcurrencyConfigRequest
           * @return PutConcurrencyConfigResponse
@@ -4002,7 +4250,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update layer ACL.
+          * 设置层的访问权限
           *
           * @param request PutLayerACLRequest
           * @param headers map
@@ -4038,7 +4286,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update layer ACL.
+          * 设置层的访问权限
           *
           * @param request PutLayerACLRequest
           * @param headers map
@@ -4074,7 +4322,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update layer ACL.
+          * 设置层的访问权限
           *
           * @param request PutLayerACLRequest
           * @return PutLayerACLResponse
@@ -4087,7 +4335,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update layer ACL.
+          * 设置层的访问权限
           *
           * @param request PutLayerACLRequest
           * @return PutLayerACLResponse
@@ -4100,7 +4348,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Put provision config.
+          * 设置函数预留配置
           *
           * @param request PutProvisionConfigRequest
           * @param headers map
@@ -4137,7 +4385,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Put provision config.
+          * 设置函数预留配置
           *
           * @param request PutProvisionConfigRequest
           * @param headers map
@@ -4174,7 +4422,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Put provision config.
+          * 设置函数预留配置
           *
           * @param request PutProvisionConfigRequest
           * @return PutProvisionConfigResponse
@@ -4187,7 +4435,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Put provision config.
+          * 设置函数预留配置
           *
           * @param request PutProvisionConfigRequest
           * @return PutProvisionConfigResponse
@@ -4200,7 +4448,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Tag resource
+          * 设置资源标签
           *
           * @param request TagResourceRequest
           * @param headers map
@@ -4225,13 +4473,13 @@ namespace AlibabaCloud.SDK.FC20230330
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<TagResourceResponse>(CallApi(params_, req, runtime));
         }
 
         /**
-          * Tag resource
+          * 设置资源标签
           *
           * @param request TagResourceRequest
           * @param headers map
@@ -4256,13 +4504,13 @@ namespace AlibabaCloud.SDK.FC20230330
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<TagResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /**
-          * Tag resource
+          * 设置资源标签
           *
           * @param request TagResourceRequest
           * @return TagResourceResponse
@@ -4275,7 +4523,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Tag resource
+          * 设置资源标签
           *
           * @param request TagResourceRequest
           * @return TagResourceResponse
@@ -4288,7 +4536,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Untag resource tag, support resource type: function, service
+          * 删除资源标签
           *
           * @param request UntagResourceRequest
           * @param headers map
@@ -4332,7 +4580,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Untag resource tag, support resource type: function, service
+          * 删除资源标签
           *
           * @param request UntagResourceRequest
           * @param headers map
@@ -4376,7 +4624,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Untag resource tag, support resource type: function, service
+          * 删除资源标签
           *
           * @param request UntagResourceRequest
           * @return UntagResourceResponse
@@ -4389,7 +4637,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Untag resource tag, support resource type: function, service
+          * 删除资源标签
           *
           * @param request UntagResourceRequest
           * @return UntagResourceResponse
@@ -4402,7 +4650,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update function alias
+          * 更新函数别名
           *
           * @param request UpdateAliasRequest
           * @param headers map
@@ -4433,7 +4681,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update function alias
+          * 更新函数别名
           *
           * @param request UpdateAliasRequest
           * @param headers map
@@ -4464,7 +4712,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update function alias
+          * 更新函数别名
           *
           * @param request UpdateAliasRequest
           * @return UpdateAliasResponse
@@ -4477,7 +4725,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update function alias
+          * 更新函数别名
           *
           * @param request UpdateAliasRequest
           * @return UpdateAliasResponse
@@ -4490,7 +4738,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update custom domain.
+          * 更新自定义域名
           *
           * @param request UpdateCustomDomainRequest
           * @param headers map
@@ -4521,7 +4769,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update custom domain.
+          * 更新自定义域名
           *
           * @param request UpdateCustomDomainRequest
           * @param headers map
@@ -4552,7 +4800,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update custom domain.
+          * 更新自定义域名
           *
           * @param request UpdateCustomDomainRequest
           * @return UpdateCustomDomainResponse
@@ -4565,7 +4813,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update custom domain.
+          * 更新自定义域名
           *
           * @param request UpdateCustomDomainRequest
           * @return UpdateCustomDomainResponse
@@ -4578,7 +4826,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update function
+          * 更新函数
           *
           * @param request UpdateFunctionRequest
           * @param headers map
@@ -4609,7 +4857,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update function
+          * 更新函数
           *
           * @param request UpdateFunctionRequest
           * @param headers map
@@ -4640,7 +4888,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update function
+          * 更新函数
           *
           * @param request UpdateFunctionRequest
           * @return UpdateFunctionResponse
@@ -4653,7 +4901,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update function
+          * 更新函数
           *
           * @param request UpdateFunctionRequest
           * @return UpdateFunctionResponse
@@ -4666,7 +4914,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update trigger.
+          * 更新函数触发器
           *
           * @param request UpdateTriggerRequest
           * @param headers map
@@ -4697,7 +4945,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update trigger.
+          * 更新函数触发器
           *
           * @param request UpdateTriggerRequest
           * @param headers map
@@ -4728,7 +4976,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update trigger.
+          * 更新函数触发器
           *
           * @param request UpdateTriggerRequest
           * @return UpdateTriggerResponse
@@ -4741,7 +4989,7 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-          * Update trigger.
+          * 更新函数触发器
           *
           * @param request UpdateTriggerRequest
           * @return UpdateTriggerResponse
