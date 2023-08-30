@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The status of the command. Valid values:
+        /// The status of the command execution. Valid values:
         /// 
-        /// *   Running: The command is running.
-        /// *   Finished: The command finishes running.
-        /// *   Failed: The command failed to be run.
+        /// *   Running: The command is being executed.
+        /// *   Finished: The execution is complete.
+        /// *   Failed: The execution fails.
         /// </summary>
         [NameInMap("InvokeStatus")]
         [Validation(Required=false)]
         public string InvokeStatus { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Pages start from page 1.
         /// 
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
         /// Maximum value: 50.
         /// 
-        /// Default value: 10
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

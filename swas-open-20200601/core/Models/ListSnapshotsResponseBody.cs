@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -44,6 +44,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// The ID of the simple application server.
+            /// 
+            /// Note: This parameter has a value for system disk snapshots. This parameter is left empty for data disk snapshots.
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
@@ -56,7 +61,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The region ID of the snapshots.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -69,12 +74,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string Remark { get; set; }
 
+            /// <summary>
+            /// The time when the last disk rollback was performed.
+            /// </summary>
             [NameInMap("RollbackTime")]
             [Validation(Required=false)]
             public string RollbackTime { get; set; }
 
             /// <summary>
-            /// The ID of the snapshot.
+            /// The snapshot ID.
             /// </summary>
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
@@ -88,7 +96,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string SnapshotName { get; set; }
 
             /// <summary>
-            /// The ID of the source disk. This parameter has a value even after the source disk is released.
+            /// The ID of the source disk based on which the snapshot is created. This parameter has a value even if the source disk is released.
             /// </summary>
             [NameInMap("SourceDiskId")]
             [Validation(Required=false)]
@@ -97,8 +105,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// The type of the source disk. Valid values:
             /// 
-            /// *   System: system disk
-            /// *   data: data disk
+            /// *   system: system disk.
+            /// *   data: data disk.
             /// </summary>
             [NameInMap("SourceDiskType")]
             [Validation(Required=false)]
@@ -118,7 +126,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The total number of snapshots.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

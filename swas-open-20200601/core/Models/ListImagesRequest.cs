@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListImagesRequest : TeaModel {
         /// <summary>
-        /// The IDs of the images. The value can be a JSON array that consists of up to 50 image IDs, in the format of `["xxx", "yyy", … "zzz"]`. Separate the image IDs with commas (,).
+        /// The image IDs. The value can be a JSON array that consists of up to 50 image IDs. Format: `["xxx", "yyy", … "zzz"]`. Separate multiple image IDs with commas (,).
         /// </summary>
         [NameInMap("ImageIds")]
         [Validation(Required=false)]
         public string ImageIds { get; set; }
 
         /// <summary>
-        /// The type of the image. Valid values:
+        /// The type of the images. Valid values:
         /// 
-        /// *   system
-        /// *   app
-        /// *   custom
+        /// *   system: OS images
+        /// *   app: application images
+        /// *   custom: custom images
         /// </summary>
         [NameInMap("ImageType")]
         [Validation(Required=false)]

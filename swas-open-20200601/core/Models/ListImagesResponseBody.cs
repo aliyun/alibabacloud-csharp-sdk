@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListImagesResponseBody : TeaModel {
         /// <summary>
-        /// Details of the images.
+        /// The OS type of the image. Valid values:
+        /// 
+        /// *   Linux
+        /// *   Windows
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class RunCommandResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the command task.
+        /// The execution ID.
         /// </summary>
         [NameInMap("InvokeId")]
         [Validation(Required=false)]
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

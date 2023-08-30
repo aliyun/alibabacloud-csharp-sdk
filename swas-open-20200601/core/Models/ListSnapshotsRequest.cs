@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListSnapshotsRequest : TeaModel {
         /// <summary>
-        /// The ID of the source disk.
+        /// The disk ID.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100.
+        /// The number of entries per page. Maximum value: 100.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -42,19 +42,25 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the simple application server.
+        /// The region ID of the simple application server that corresponds to the snapshots.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the snapshots. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).
+        /// The snapshot IDs. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple snapshot IDs with commas (,).
         /// </summary>
         [NameInMap("SnapshotIds")]
         [Validation(Required=false)]
         public string SnapshotIds { get; set; }
 
+        /// <summary>
+        /// The type of the source disk. Valid values:
+        /// 
+        /// *   system: system disk.
+        /// *   data: data disk.
+        /// </summary>
         [NameInMap("SourceDiskType")]
         [Validation(Required=false)]
         public string SourceDiskType { get; set; }

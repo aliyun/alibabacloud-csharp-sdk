@@ -10,12 +10,20 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListDisksRequest : TeaModel {
         /// <summary>
-        /// The IDs of the disks. The value can be a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).
+        /// The IDs of the disks. The value can be a JSON array that consists of up to 100 disk IDs. Separate multiple disk IDs with commas (,).
         /// </summary>
         [NameInMap("DiskIds")]
         [Validation(Required=false)]
         public string DiskIds { get; set; }
 
+        /// <summary>
+        /// The type of the disk. Valid values:
+        /// 
+        /// *   System: system disk.
+        /// *   Data: data disk.
+        /// 
+        /// By default, system disks and data disks are both queried.
+        /// </summary>
         [NameInMap("DiskType")]
         [Validation(Required=false)]
         public string DiskType { get; set; }
@@ -28,7 +36,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -37,7 +45,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
         /// Maximum value: 100.
         /// 
@@ -48,7 +56,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the simple application server.
+        /// The region ID of the disks.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// The billing method of the simple application server. Set the value to PrePaid, which indicates the subscription billing method. Only the subscription billing method is supported.
+        /// The billing method of the simple application servers. Set the value to PrePaid, which indicates the subscription billing method.
         /// 
         /// Default value: PrePaid.
         /// </summary>
@@ -19,16 +19,16 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate the server IDs with commas (,).
+        /// The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).
         /// 
-        /// >  If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that each specified ID and its corresponding public IP address belong to the same simple application server. Otherwise, an empty result is returned.
+        /// > If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100.
+        /// The number of entries per page. Maximum value: 100.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
+        /// The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).
         /// 
-        /// >  If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that each specified ID and its corresponding public IP address belong to the same simple application server. Otherwise, an empty result is returned.
+        /// > If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.
         /// </summary>
         [NameInMap("PublicIpAddresses")]
         [Validation(Required=false)]
@@ -60,6 +60,22 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// 实例状态，可能值：
+        /// 
+        /// - Pending：准备中
+        /// - Starting：启动中
+        /// - Running：运行中
+        /// - Stopping：停止中
+        /// - Stopped：停止
+        /// - Resetting：重置中
+        /// - Upgrading：升级中
+        /// - Disabled：不可用
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

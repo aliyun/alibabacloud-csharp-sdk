@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeCloudMonitorAgentStatusesResponseBody : TeaModel {
+        /// <summary>
+        /// Indicates whether the Cloud Monitor agent was automatically installed on the simple application server. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("InstanceStatusList")]
         [Validation(Required=false)]
         public List<DescribeCloudMonitorAgentStatusesResponseBodyInstanceStatusList> InstanceStatusList { get; set; }
@@ -27,6 +33,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

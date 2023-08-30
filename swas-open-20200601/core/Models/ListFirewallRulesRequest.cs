@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Pages start from page 1.
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
         /// Maximum value: 100.
         /// 

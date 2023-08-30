@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListPlansRequest : TeaModel {
         /// <summary>
-        /// The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+        /// The region ID of the plans. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

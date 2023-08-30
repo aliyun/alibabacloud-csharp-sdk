@@ -9,18 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseInstancesRequest : TeaModel {
+        /// <summary>
+        /// The IDs of the Simple Database Service instances. The value can be a JSON array that consists of up to 100 Simple Database Service instance IDs. Separate multiple instance IDs with commas (,).
+        /// </summary>
         [NameInMap("DatabaseInstanceIds")]
         [Validation(Required=false)]
         public string DatabaseInstanceIds { get; set; }
 
+        /// <summary>
+        /// The page number.
+        /// 
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page.
+        /// 
+        /// Maximum value: 100.
+        /// 
+        /// Default value: 10.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The region ID of the Simple Database Service instances.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

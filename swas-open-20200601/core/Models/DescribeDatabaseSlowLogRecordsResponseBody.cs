@@ -9,26 +9,50 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseSlowLogRecordsResponseBody : TeaModel {
+        /// <summary>
+        /// The database engine that the instance runs.
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// The page number.
+        /// 
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page. Valid values: 30 to 100.
+        /// 
+        /// Default value: 30.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The number of logical reads.
+        /// </summary>
         [NameInMap("PhysicalIORead")]
         [Validation(Required=false)]
         public long? PhysicalIORead { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The database name.
+        /// </summary>
         [NameInMap("SlowLogs")]
         [Validation(Required=false)]
         public List<DescribeDatabaseSlowLogRecordsResponseBodySlowLogs> SlowLogs { get; set; }
@@ -71,6 +95,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

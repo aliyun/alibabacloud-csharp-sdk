@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseInstanceParametersResponseBody : TeaModel {
+        /// <summary>
+        /// The range of ParameterValue.
+        /// 
+        /// > The value of CheckingCode varies based on the value of ParameterName.
+        /// </summary>
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
         public List<DescribeDatabaseInstanceParametersResponseBodyConfigParameters> ConfigParameters { get; set; }
@@ -39,18 +44,35 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         }
 
+        /// <summary>
+        /// The database engine that the instance runs. The value must be MySQL.
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// The version of the database engine. Valid values:
+        /// 
+        /// *   5.7: MySQL 5.7.
+        /// *   8.0: MySQL 8.0.
+        /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The range of ParameterValue.
+        /// 
+        /// > The value of CheckingCode varies based on the value of ParameterName.
+        /// </summary>
         [NameInMap("RunningParameters")]
         [Validation(Required=false)]
         public List<DescribeDatabaseInstanceParametersResponseBodyRunningParameters> RunningParameters { get; set; }

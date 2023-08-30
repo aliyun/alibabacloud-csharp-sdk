@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListInstancePlansModificationResponseBody : TeaModel {
         /// <summary>
-        /// Details about the plans.
+        /// The operating system types supported by the plan.
         /// </summary>
         [NameInMap("Plans")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

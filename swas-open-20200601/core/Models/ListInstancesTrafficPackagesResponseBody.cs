@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListInstancesTrafficPackagesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the data transfer plans of the simple application servers.
+        /// The data transfers that exceed the quota of the data transfer plan in the current month. Unit: bytes.
         /// </summary>
         [NameInMap("InstanceTrafficPackageUsages")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

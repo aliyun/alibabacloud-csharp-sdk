@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeCloudAssistantStatusResponseBody : TeaModel {
         /// <summary>
-        /// The status of the Cloud Assistant client.
+        /// Indicates whether the Cloud Assistant client is installed on the server.
         /// </summary>
         [NameInMap("CloudAssistantStatus")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// 
         /// Pages start from page 1.
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// 
         /// Maximum value: 50.
         /// 
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of commands.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

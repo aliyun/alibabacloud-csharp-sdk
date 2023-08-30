@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public List<ListDisksResponseBodyDisks> Disks { get; set; }
         public class ListDisksResponseBodyDisks : TeaModel {
             /// <summary>
-            /// The category of the disk. Valid values: Valid values:
+            /// The category of the disk. Valid values:
             /// 
-            /// *   ESSD: enhanced SSD (ESSD) at performance level 0 (PL0)
-            /// *   SSD: standard SSD
+            /// *   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).
+            /// *   SSD: a standard SSD.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// The type of the disk. Valid values:
             /// 
-            /// *   System: system disk
-            /// *   Data: data disk
+            /// *   System: system disk.
+            /// *   Data: data disk.
             /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
@@ -78,17 +78,23 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// Name of the simple application server.
+            /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The region ID of the server.
+            /// The region ID of the disks.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// Description about the disk.
+            /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
@@ -117,14 +123,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of disks.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

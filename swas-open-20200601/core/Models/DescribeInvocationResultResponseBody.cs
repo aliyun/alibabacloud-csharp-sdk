@@ -10,74 +10,74 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeInvocationResultResponseBody : TeaModel {
         /// <summary>
-        /// The information about the command running result.
+        /// The execution results.
         /// </summary>
         [NameInMap("InvocationResult")]
         [Validation(Required=false)]
         public DescribeInvocationResultResponseBodyInvocationResult InvocationResult { get; set; }
         public class DescribeInvocationResultResponseBodyInvocationResult : TeaModel {
             /// <summary>
-            /// The error code returned when the command cannot be sent or run. Valid values:
+            /// The error code that is returned if the command failed to be sent or executed.
             /// 
-            /// *   If this parameter is empty, the command is run normally.
-            /// *   InstanceNotExists: The instance does not exist or is released.
-            /// *   InstanceReleased: The instance was released while the command was being run on the instance.
-            /// *   InstanceNotRunning: The instance is not in the Running state while the command is being run.
-            /// *   CommandNotApplicable: The command is not applicable to the specified instance.
+            /// *   If this parameter is empty, the command is executed normally.
+            /// *   InstanceNotExists: The specified server does not exist or is released.
+            /// *   InstanceReleased: The server was released while the command was being executed on the server.
+            /// *   InstanceNotRunning: The server is not in the Running state while the command is being executed.
+            /// *   CommandNotApplicable: The command is not applicable to the specified server.
             /// *   AccountNotExists: The specified account does not exist.
             /// *   DirectoryNotExists: The specified directory does not exist.
-            /// *   BadCronExpression: The specified cron expression for the running schedule is invalid.
+            /// *   BadCronExpression: The specified cron expression for the execution schedule is invalid.
             /// *   ClientNotRunning: The Cloud Assistant client is not running.
             /// *   ClientNotResponse: The Cloud Assistant client does not respond.
             /// *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
             /// *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
-            /// *   DeliveryTimeout: The request for sending the command times out.
-            /// *   ExecutionTimeout: The running of the command times out.
-            /// *   ExecutionException: An exception has occurred while the command is being run.
-            /// *   ExecutionInterrupted: The running of the command is interrupted.
-            /// *   ExitCodeNonzero: The command finishes running, but the exit code is not 0.
+            /// *   DeliveryTimeout: Command sending times out.
+            /// *   ExecutionTimeout: The execution times out.
+            /// *   ExecutionException: An exception occurs while the command is being executed.
+            /// *   ExecutionInterrupted: The execution is interrupted.
+            /// *   ExitCodeNonzero: The execution is complete, but the exit code is not 0.
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// The error message returned when the command cannot be sent or run. Valid values:
+            /// The error message returned when the command is not successfully sent or executed. Valid values:
             /// 
-            /// *   If this parameter is empty, the command is run normally.
-            /// *   the specified instance does not exists: The specified instance does not exist or is released.
-            /// *   the instance has released when create task: The instance was released while the command was being run on the instance.
-            /// *   the instance is not running when create task: The instance is not in the Running state while the command is being run.
-            /// *   the command is not applicable: The command is not applicable to the specified instance.
+            /// *   If this parameter is empty, the command is executed normally.
+            /// *   the specified instance does not exists: The specified server does not exist or is released.
+            /// *   the instance has released when create task: The server was released while the command was being executed on the server.
+            /// *   the instance is not running when create task: The server is not in the Running state while the command is being executed.
+            /// *   the command is not applicable: The command is not applicable to the specified server.
             /// *   the specified account does not exists: The specified account does not exist.
             /// *   the specified directory does not exists: The specified directory does not exist.
-            /// *   the cron job expression is invalid: The specified cron expression for the runing schedule is invalid.
+            /// *   the cron job expression is invalid: The specified cron expression is invalid.
             /// *   the aliyun service is not running on the instance: The Cloud Assistance client is not running.
-            /// *   the aliyun service in the instance does not response: The Cloud Assistant client does not respond.
+            /// *   the aliyun service in the instance does not response: The Cloud Assistant client does not respond to your request.
             /// *   the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.
             /// *   the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.
-            /// *   the command delivery has been timeout: The request for sending the command times out.
-            /// *   the command execution has been timeout: The running of the command times out.
-            /// *   the command execution got an exception: An exception has occurred while the command is being run.
-            /// *   the command execution has been interrupted: The running of the command is interrupted.
-            /// *   the command execution exit code is not zero: The command finishes running, but the exit code is not 0.
+            /// *   the command delivery has been timeout: Command sending times out.
+            /// *   the command execution has been timeout: The execution times out.
+            /// *   the command execution got an exception: An exception occurs while the command is being executed.
+            /// *   the command execution has been interrupted: The execution is interrupted.
+            /// *   the command execution exit code is not zero: The execution is complete, and the exit code is not 0.
             /// </summary>
             [NameInMap("ErrorInfo")]
             [Validation(Required=false)]
             public string ErrorInfo { get; set; }
 
             /// <summary>
-            /// The exit code of the command task.
+            /// The exit code of the command.
             /// 
-            /// *   For Linux instances, the value is the exit code of the shell command.
-            /// *   For Windows instances, the value is the exit code of the batch or PowerShell command.
+            /// *   For Linux instances, the exit code is the exit code of the shell command.
+            /// *   For Windows instances, the exit code is the exit code of the batch or PowerShell command.
             /// </summary>
             [NameInMap("ExitCode")]
             [Validation(Required=false)]
             public long? ExitCode { get; set; }
 
             /// <summary>
-            /// The time when the command finished running on the instance.
+            /// The time when the execution ended.
             /// </summary>
             [NameInMap("FinishedTime")]
             [Validation(Required=false)]
@@ -91,33 +91,33 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The status of the command. Valid values:
+            /// The status of the execution progress. Valid values:
             /// 
             /// *   Pending: The command is being verified or sent.
             /// *   Invalid: The specified command type or parameter is invalid.
-            /// *   Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.
-            /// *   Running: The command is being run on the instance.
-            /// *   Success: The command finishes running, and the exit code is 0.
-            /// *   Failed: The command finishes running, but the exit code is not 0.
-            /// *   Error: The running of the command cannot proceed due to an exception.
-            /// *   Timeout: The running of the command times out.
-            /// *   Cancelled: The running is canceled, and the command is not run.
-            /// *   Stopping: The command that is running is being stopped.
-            /// *   Terminated: The command is terminated while it is being run.
+            /// *   Aborted: The command fails to be sent to the server. To send a command to a server, make sure that the server is in the Running state and the command can be sent within 1 minute.
+            /// *   Running: The command is being executed on the server.
+            /// *   Success: The execution is completed, and the exit code is 0.
+            /// *   Failed: The execution is completed, and the exit code is not 0.
+            /// *   Error: The execution cannot proceed due to an exception.
+            /// *   Timeout: The execution times out.
+            /// *   Cancelled: The execution is canceled, and the command is not executed.
+            /// *   Stopping: The command in the Running state is being stopped.
+            /// *   Terminated: The command is terminated while it is being executed.
             /// </summary>
             [NameInMap("InvocationStatus")]
             [Validation(Required=false)]
             public string InvocationStatus { get; set; }
 
             /// <summary>
-            /// The ID of the command task.
+            /// The execution ID.
             /// </summary>
             [NameInMap("InvokeId")]
             [Validation(Required=false)]
             public string InvokeId { get; set; }
 
             /// <summary>
-            /// The status of the command task. Valid values:
+            /// The status of the execution. Valid values:
             /// 
             /// *   Running
             /// *   Finished
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string InvokeRecordStatus { get; set; }
 
             /// <summary>
-            /// The username who runs the command on the simple application server.
+            /// The username who executes the command on the simple application server.
             /// </summary>
             [NameInMap("InvokeUser")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Output { get; set; }
 
             /// <summary>
-            /// The time when the command started to be run on the instance.
+            /// The time when the execution started.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

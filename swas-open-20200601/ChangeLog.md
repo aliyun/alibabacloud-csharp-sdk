@@ -1,3 +1,6 @@
+2023-08-30 Version: 1.1.0
+- Generated csharp 2020-06-01 for SWAS-OPEN.
+
 2023-06-13 Version: 1.0.4
 - Add new apis.
 

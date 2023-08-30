@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the command task. You can call the [DescribeInvocations](~~439368~~) operation to query the task IDs.
+        /// The execution ID. You can call the [DescribeInvocations](~~439368~~) operation to query execution IDs.
         /// </summary>
         [NameInMap("InvokeId")]
         [Validation(Required=false)]

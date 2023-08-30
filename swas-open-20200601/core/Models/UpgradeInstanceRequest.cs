@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class UpgradeInstanceRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the new plan. You can call the [ListPlans](~~189314~~) operation to query plans provided by Simple Application Server.
+        /// The ID of the new plan. You can call the [ListPlans](~~189314~~) operation to query the plans provided by Simple Application Server.
         /// </summary>
         [NameInMap("PlanId")]
         [Validation(Required=false)]

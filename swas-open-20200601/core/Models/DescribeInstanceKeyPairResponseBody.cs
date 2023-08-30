@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeInstanceKeyPairResponseBody : TeaModel {
+        /// <summary>
+        /// The fingerprint of the key pair.
+        /// </summary>
         [NameInMap("Fingerprint")]
         [Validation(Required=false)]
         public string Fingerprint { get; set; }
 
+        /// <summary>
+        /// The name of the key pair.
+        /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
