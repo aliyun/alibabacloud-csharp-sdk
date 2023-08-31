@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public int? Concurrency { get; set; }
 
+        [NameInMap("EnableCoreDump")]
+        [Validation(Required=false)]
+        public bool? EnableCoreDump { get; set; }
+
         /// <summary>
         /// The range of IP addresses that are allowed to access external services. (`global.proxy.excludelPRanges`)
         /// </summary>
@@ -123,6 +127,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string PreStop { get; set; }
 
+        [NameInMap("Privileged")]
+        [Validation(Required=false)]
+        public bool? Privileged { get; set; }
+
         [NameInMap("ProxyInitAckSloCPUResourceLimit")]
         [Validation(Required=false)]
         public string ProxyInitAckSloCPUResourceLimit { get; set; }
@@ -167,6 +175,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ProxyInitMemoryResourceRequest { get; set; }
 
+        /// <summary>
+        /// The environment variables that are added to a sidecar proxy. The environment variables are represented as JSON objects. The keys and values in the JSON objects represent the keys and values added to the environment variables of the sidecar proxy.
+        /// </summary>
         [NameInMap("ProxyMetadata")]
         [Validation(Required=false)]
         public string ProxyMetadata { get; set; }
@@ -177,6 +188,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ProxyStatsMatcher")]
         [Validation(Required=false)]
         public string ProxyStatsMatcher { get; set; }
+
+        [NameInMap("ReadinessFailureThreshold")]
+        [Validation(Required=false)]
+        public int? ReadinessFailureThreshold { get; set; }
+
+        [NameInMap("ReadinessInitialDelaySeconds")]
+        [Validation(Required=false)]
+        public int? ReadinessInitialDelaySeconds { get; set; }
+
+        [NameInMap("ReadinessPeriodSeconds")]
+        [Validation(Required=false)]
+        public int? ReadinessPeriodSeconds { get; set; }
 
         /// <summary>
         /// The ID of the ASM instance.

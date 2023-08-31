@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public CreateIstioGatewayRoutesRequestGatewayRoute GatewayRoute { get; set; }
         public class CreateIstioGatewayRoutesRequestGatewayRoute : TeaModel {
+            /// <summary>
+            /// The requested domain names.
+            /// </summary>
             [NameInMap("Domains")]
             [Validation(Required=false)]
             public List<string> Domains { get; set; }
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 }
 
                 /// <summary>
-                /// The HTTP redirect rule.
+                /// The HTTP redirection rule.
                 /// </summary>
                 [NameInMap("HTTPRedirect")]
                 [Validation(Required=false)]
@@ -207,7 +210,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public CreateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetries Retries { get; set; }
                 public class CreateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetries : TeaModel {
                     /// <summary>
-                    /// The number of retries allowed for a request.
+                    /// The number of retries that are allowed for a request.
                     /// </summary>
                     [NameInMap("Attempts")]
                     [Validation(Required=false)]
@@ -383,12 +386,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             }
 
             /// <summary>
-            /// The name of the namespace.
+            /// The namespace.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            /// <summary>
+            /// A JSON string. This parameter corresponds to the three routing types in virtual services and provides configuration entries for advanced features. The value of this parameter overwrites the configurations in RouteName, RouteType, MatchRequest, and HTTPAdvancedOptions.
+            /// </summary>
             [NameInMap("RawVSRoute")]
             [Validation(Required=false)]
             public object RawVSRoute { get; set; }
@@ -414,10 +420,16 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [Validation(Required=false)]
                     public string Host { get; set; }
 
+                    /// <summary>
+                    /// The port.
+                    /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public CreateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort Port { get; set; }
                     public class CreateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort : TeaModel {
+                        /// <summary>
+                        /// The port number.
+                        /// </summary>
                         [NameInMap("Number")]
                         [Validation(Required=false)]
                         public int? Number { get; set; }

@@ -306,6 +306,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [Validation(Required=false)]
                         public bool? Enabled { get; set; }
 
+                        [NameInMap("LogTTL")]
+                        [Validation(Required=false)]
+                        public int? LogTTL { get; set; }
+
                         /// <summary>
                         /// The name of the Log Service project that stores control-plane logs.
                         /// </summary>
@@ -400,12 +404,20 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [Validation(Required=false)]
                         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf AccessLogExtraConf { get; set; }
                         public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf : TeaModel {
+                            [NameInMap("GatewayEnabled")]
+                            [Validation(Required=false)]
+                            public bool? GatewayEnabled { get; set; }
+
                             /// <summary>
                             /// The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.
                             /// </summary>
                             [NameInMap("GatewayLifecycle")]
                             [Validation(Required=false)]
                             public int? GatewayLifecycle { get; set; }
+
+                            [NameInMap("SidecarEnabled")]
+                            [Validation(Required=false)]
+                            public bool? SidecarEnabled { get; set; }
 
                             /// <summary>
                             /// The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.

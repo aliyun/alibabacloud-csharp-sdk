@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? EnableSidecarSetInjection { get; set; }
 
+        /// <summary>
+        /// Specifies the version to be injected into the namespace. This parameter is valid only when the ASM instance performs a canary release. When IstioRev is not empty, you must not specify EnableIstioInjection and EnableSidecarSetInjection.
+        /// </summary>
         [NameInMap("IstioRev")]
         [Validation(Required=false)]
         public string IstioRev { get; set; }

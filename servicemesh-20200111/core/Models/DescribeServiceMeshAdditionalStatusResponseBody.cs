@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public bool? Reused { get; set; }
 
                 /// <summary>
-                /// The check result of the number of the backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
+                /// The check result of the number of backend servers of the SLB instance created for exposing the API server. Valid values:
                 /// 
                 /// *   `too_much`: An excessive number of backend servers are created.
                 /// *   `num_exact`: A proper number of backend servers are created.
@@ -115,10 +115,16 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public string AuditProjectStatus { get; set; }
 
+            /// <summary>
+            /// The check results of the SLB instance that is created for exposing Istio Pilot and used during canary release.
+            /// </summary>
             [NameInMap("CanaryPilotLoadBalancerStatus")]
             [Validation(Required=false)]
             public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus CanaryPilotLoadBalancerStatus { get; set; }
             public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus : TeaModel {
+                /// <summary>
+                /// Indicates whether the SLB instance is locked due to overdue payments. Valid values: `true` `false`
+                /// </summary>
                 [NameInMap("Locked")]
                 [Validation(Required=false)]
                 public bool? Locked { get; set; }
@@ -127,14 +133,35 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
+                /// <summary>
+                /// Indicates whether the SLB instance is reused. Valid values:
+                /// 
+                /// *   `true`: The SLB instance is reused. Non-ASM listener configuration is detected in the listener configurations of the SLB instance.
+                /// *   `false`: The SLB instance is not reused.
+                /// </summary>
                 [NameInMap("Reused")]
                 [Validation(Required=false)]
                 public bool? Reused { get; set; }
 
+                /// <summary>
+                /// The check result of the number of backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
+                /// 
+                /// *   `num_exact`: A proper number of backend servers are created.
+                /// *   `too_much`: An excessive number of backend servers are created.
+                /// *   `too_little`: The number of backend servers falls short.
+                /// </summary>
                 [NameInMap("SLBBackEndServerNumStatus")]
                 [Validation(Required=false)]
                 public string SLBBackEndServerNumStatus { get; set; }
 
+                /// <summary>
+                /// The check result of the SLB instance. Valid values:
+                /// 
+                /// *   `exist`: The SLB instance exists.
+                /// *   `not_exist`: The SLB instance does not exist.
+                /// *   `time_out`: The check times out.
+                /// *   `failed`: The SLB instance has expired.
+                /// </summary>
                 [NameInMap("SLBExistStatus")]
                 [Validation(Required=false)]
                 public string SLBExistStatus { get; set; }
@@ -198,7 +225,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public bool? Reused { get; set; }
 
                 /// <summary>
-                /// The check result of the number of the backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
+                /// The check result of the number of backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
                 /// 
                 /// *   `too_much`: An excessive number of backend servers are created.
                 /// *   `num_exact`: A proper number of backend servers are created.
@@ -223,6 +250,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 
             }
 
+            /// <summary>
+            /// The status of the RAM OAuth application that is integrated with Mesh Topology. Valid values:
+            /// 
+            /// *   `exist`: The RAM OAuth application exists.
+            /// *   `reused`: The RAM OAuth application is reused.
+            /// *   `not_exist`: The RAM OAuth application does not exist.
+            /// *   `failed`: The check fails.
+            /// *   `time_out`: The check times out.
+            /// </summary>
             [NameInMap("RAMApplicationStatus")]
             [Validation(Required=false)]
             public string RAMApplicationStatus { get; set; }

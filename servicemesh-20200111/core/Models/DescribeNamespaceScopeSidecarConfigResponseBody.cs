@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public int? Concurrency { get; set; }
 
+            [NameInMap("EnableCoreDump")]
+            [Validation(Required=false)]
+            public bool? EnableCoreDump { get; set; }
+
             /// <summary>
             /// The inbound ports to be excluded from redirection to the sidecar proxy in the ASM instance.
             /// </summary>
@@ -109,6 +113,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public string LogLevel { get; set; }
 
+            [NameInMap("Privileged")]
+            [Validation(Required=false)]
+            public bool? Privileged { get; set; }
+
             [NameInMap("ProxyMetadata")]
             [Validation(Required=false)]
             public Dictionary<string, string> ProxyMetadata { get; set; }
@@ -142,6 +150,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public List<string> InclusionSuffixes { get; set; }
 
             }
+
+            [NameInMap("ReadinessFailureThreshold")]
+            [Validation(Required=false)]
+            public int? ReadinessFailureThreshold { get; set; }
+
+            [NameInMap("ReadinessInitialDelaySeconds")]
+            [Validation(Required=false)]
+            public int? ReadinessInitialDelaySeconds { get; set; }
+
+            [NameInMap("ReadinessPeriodSeconds")]
+            [Validation(Required=false)]
+            public int? ReadinessPeriodSeconds { get; set; }
 
             [NameInMap("SidecarProxyAckSloResource")]
             [Validation(Required=false)]

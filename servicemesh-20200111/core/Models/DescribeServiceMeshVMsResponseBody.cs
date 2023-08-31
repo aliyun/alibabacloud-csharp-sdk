@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshVMsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public bool? HasTag { get; set; }
 
             /// <summary>
-            /// The hostname of the ECS instance.
+            /// The host name.
             /// </summary>
             [NameInMap("HostName")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string IpAddress { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The region ID.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// The ID of the ASM instance.
+            /// The ASM instance ID.
             /// </summary>
             [NameInMap("ServiceMeshId")]
             [Validation(Required=false)]

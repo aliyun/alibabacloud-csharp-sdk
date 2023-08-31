@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeVMsInServiceMeshResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -24,28 +24,28 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public List<DescribeVMsInServiceMeshResponseBodyVMs> VMs { get; set; }
         public class DescribeVMsInServiceMeshResponseBodyVMs : TeaModel {
             /// <summary>
-            /// Indicates whether the VM has labels.
+            /// Indicates whether the ECS instance has labels.
             /// </summary>
             [NameInMap("HasTag")]
             [Validation(Required=false)]
             public bool? HasTag { get; set; }
 
             /// <summary>
-            /// The host name of the VM.
+            /// The host name.
             /// </summary>
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
 
             /// <summary>
-            /// The ID of the VM.
+            /// The ID of the ECS instance.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The IP address of the VM.
+            /// The IP address of the ECS instance.
             /// </summary>
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// The security group to which the VM belongs.
+            /// The security group to which the ECS instance belongs.
             /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public string SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// The status of the VM.
+            /// The state of the ECS instance.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

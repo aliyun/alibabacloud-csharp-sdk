@@ -133,6 +133,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 
         /// <summary>
         /// The billing method of the SLB instance. Valid values:
+        /// 
         /// *   `PayOnDemand`: pay-as-you-go.
         /// *   `PrePay`: subscription.
         /// </summary>
@@ -534,7 +535,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public bool? OpenAgentPolicy { get; set; }
 
         /// <summary>
-        /// The subscription period of the SLB instance. Unit: month. This parameter is valid only if the ChargeType parameter is set to PrePay. For example, if the subscription period is one year, set this parameter to 12.
+        /// The auto-renewal period of the SLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the SLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
