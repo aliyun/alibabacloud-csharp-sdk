@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class CreateNetworkReachableAnalysisRequest : TeaModel {
+        [NameInMap("AuditParam")]
+        [Validation(Required=false)]
+        public string AuditParam { get; set; }
+
         /// <summary>
         /// The ID of the network path. You can call the **CreateNetworkPath** operation to obtain the ID of the network path.
         /// </summary>
