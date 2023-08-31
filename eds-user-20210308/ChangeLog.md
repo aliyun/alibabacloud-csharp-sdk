@@ -1,3 +1,6 @@
+2023-08-31 Version: 1.0.2
+- Generated csharp 2021-03-08 for eds-user.
+
 2023-08-23 Version: 1.0.1
 - Generated csharp 2021-03-08 for eds-user.
 

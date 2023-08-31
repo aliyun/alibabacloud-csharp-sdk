@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateUsersRequest : TeaModel {
+        [NameInMap("AutoLockTime")]
+        [Validation(Required=false)]
+        public string AutoLockTime { get; set; }
+
         /// <summary>
         /// The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.
         /// </summary>

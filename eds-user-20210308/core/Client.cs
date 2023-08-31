@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * The operation that you want to perform. Set the value to **CheckUsedPropertyValue**.
+          * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
           *
           * @param request CheckUsedPropertyValueRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * The operation that you want to perform. Set the value to **CheckUsedPropertyValue**.
+          * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
           *
           * @param request CheckUsedPropertyValueRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * The operation that you want to perform. Set the value to **CheckUsedPropertyValue**.
+          * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
           *
           * @param request CheckUsedPropertyValueRequest
           * @return CheckUsedPropertyValueResponse
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * The operation that you want to perform. Set the value to **CheckUsedPropertyValue**.
+          * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
           *
           * @param request CheckUsedPropertyValueRequest
           * @return CheckUsedPropertyValueResponse
@@ -287,6 +287,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         public CreateUsersResponse CreateUsersWithOptions(CreateUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoLockTime))
+            {
+                query["AutoLockTime"] = request.AutoLockTime;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
@@ -298,6 +303,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -325,6 +331,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         public async Task<CreateUsersResponse> CreateUsersWithOptionsAsync(CreateUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoLockTime))
+            {
+                query["AutoLockTime"] = request.AutoLockTime;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
@@ -336,6 +347,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -966,7 +978,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * Locks a virtual MFA device that is bound to a convenience user.
+          * ## Description
+          * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
           *
           * @param request LockMfaDeviceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1004,7 +1017,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * Locks a virtual MFA device that is bound to a convenience user.
+          * ## Description
+          * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
           *
           * @param request LockMfaDeviceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1042,7 +1056,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * Locks a virtual MFA device that is bound to a convenience user.
+          * ## Description
+          * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
           *
           * @param request LockMfaDeviceRequest
           * @return LockMfaDeviceResponse
@@ -1054,7 +1069,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         }
 
         /**
-          * Locks a virtual MFA device that is bound to a convenience user.
+          * ## Description
+          * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
           *
           * @param request LockMfaDeviceRequest
           * @return LockMfaDeviceResponse
@@ -1782,6 +1798,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         public UnlockUsersResponse UnlockUsersWithOptions(UnlockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoLockTime))
+            {
+                query["AutoLockTime"] = request.AutoLockTime;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
             {
@@ -1789,6 +1810,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1809,6 +1831,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         public async Task<UnlockUsersResponse> UnlockUsersWithOptionsAsync(UnlockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoLockTime))
+            {
+                query["AutoLockTime"] = request.AutoLockTime;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
             {
@@ -1816,6 +1843,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params

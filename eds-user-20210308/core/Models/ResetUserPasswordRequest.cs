@@ -11,44 +11,6 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
     public class ResetUserPasswordRequest : TeaModel {
         /// <summary>
         /// The method to notify the user after the password is reset.
-        /// 
-        /// Valid values:
-        /// 
-        /// *   1
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     email
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   2
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     text message
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   3
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     both
-        /// 
-        ///     <!-- -->
         /// </summary>
         [NameInMap("NotifyType")]
         [Validation(Required=false)]
