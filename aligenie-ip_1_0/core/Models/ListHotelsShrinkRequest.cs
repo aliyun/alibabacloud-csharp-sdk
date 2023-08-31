@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ListHotelsShrinkRequest : TeaModel {
+        [NameInMap("HotelRequest")]
+        [Validation(Required=false)]
+        public string HotelRequestShrink { get; set; }
+
         [NameInMap("Page")]
         [Validation(Required=false)]
         public string PageShrink { get; set; }

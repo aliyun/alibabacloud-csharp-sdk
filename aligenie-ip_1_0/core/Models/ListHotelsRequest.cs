@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ListHotelsRequest : TeaModel {
+        [NameInMap("HotelRequest")]
+        [Validation(Required=false)]
+        public ListHotelsRequestHotelRequest HotelRequest { get; set; }
+        public class ListHotelsRequestHotelRequest : TeaModel {
+            [NameInMap("HotelId")]
+            [Validation(Required=false)]
+            public string HotelId { get; set; }
+
+        }
+
         [NameInMap("Page")]
         [Validation(Required=false)]
         public ListHotelsRequestPage Page { get; set; }

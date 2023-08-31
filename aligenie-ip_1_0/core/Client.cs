@@ -305,6 +305,162 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0
             return await AddCustomQAWithOptionsAsync(request, headers, runtime);
         }
 
+        public AddCustomQAV2Response AddCustomQAV2WithOptions(AddCustomQAV2Request tmpReq, AddCustomQAV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddCustomQAV2ShrinkRequest request = new AddCustomQAV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Answers))
+            {
+                request.AnswersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Answers, "Answers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KeyWords))
+            {
+                request.KeyWordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KeyWords, "KeyWords", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SupplementaryQuestions))
+            {
+                request.SupplementaryQuestionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SupplementaryQuestions, "SupplementaryQuestions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnswersShrink))
+            {
+                body["Answers"] = request.AnswersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelId))
+            {
+                body["HotelId"] = request.HotelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWordsShrink))
+            {
+                body["KeyWords"] = request.KeyWordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MajorQuestion))
+            {
+                body["MajorQuestion"] = request.MajorQuestion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplementaryQuestionsShrink))
+            {
+                body["SupplementaryQuestions"] = request.SupplementaryQuestionsShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCustomQAV2",
+                Version = "ip_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/ip/addQAV2",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCustomQAV2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddCustomQAV2Response> AddCustomQAV2WithOptionsAsync(AddCustomQAV2Request tmpReq, AddCustomQAV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddCustomQAV2ShrinkRequest request = new AddCustomQAV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Answers))
+            {
+                request.AnswersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Answers, "Answers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KeyWords))
+            {
+                request.KeyWordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KeyWords, "KeyWords", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SupplementaryQuestions))
+            {
+                request.SupplementaryQuestionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SupplementaryQuestions, "SupplementaryQuestions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnswersShrink))
+            {
+                body["Answers"] = request.AnswersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelId))
+            {
+                body["HotelId"] = request.HotelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWordsShrink))
+            {
+                body["KeyWords"] = request.KeyWordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MajorQuestion))
+            {
+                body["MajorQuestion"] = request.MajorQuestion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplementaryQuestionsShrink))
+            {
+                body["SupplementaryQuestions"] = request.SupplementaryQuestionsShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCustomQAV2",
+                Version = "ip_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/ip/addQAV2",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCustomQAV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddCustomQAV2Response AddCustomQAV2(AddCustomQAV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddCustomQAV2Headers headers = new AddCustomQAV2Headers();
+            return AddCustomQAV2WithOptions(request, headers, runtime);
+        }
+
+        public async Task<AddCustomQAV2Response> AddCustomQAV2Async(AddCustomQAV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddCustomQAV2Headers headers = new AddCustomQAV2Headers();
+            return await AddCustomQAV2WithOptionsAsync(request, headers, runtime);
+        }
+
         public AddMessageTemplateResponse AddMessageTemplateWithOptions(AddMessageTemplateRequest request, AddMessageTemplateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6497,10 +6653,20 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0
             return await ListHotelOrderWithOptionsAsync(request, headers, runtime);
         }
 
-        public ListHotelRoomsResponse ListHotelRoomsWithOptions(ListHotelRoomsRequest request, ListHotelRoomsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListHotelRoomsResponse ListHotelRoomsWithOptions(ListHotelRoomsRequest tmpReq, ListHotelRoomsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListHotelRoomsShrinkRequest request = new ListHotelRoomsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HotelAdminRoom))
+            {
+                request.HotelAdminRoomShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HotelAdminRoom, "HotelAdminRoom", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelAdminRoomShrink))
+            {
+                body["HotelAdminRoom"] = request.HotelAdminRoomShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelId))
             {
                 body["HotelId"] = request.HotelId;
@@ -6538,10 +6704,20 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0
             return TeaModel.ToObject<ListHotelRoomsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListHotelRoomsResponse> ListHotelRoomsWithOptionsAsync(ListHotelRoomsRequest request, ListHotelRoomsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListHotelRoomsResponse> ListHotelRoomsWithOptionsAsync(ListHotelRoomsRequest tmpReq, ListHotelRoomsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListHotelRoomsShrinkRequest request = new ListHotelRoomsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HotelAdminRoom))
+            {
+                request.HotelAdminRoomShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HotelAdminRoom, "HotelAdminRoom", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelAdminRoomShrink))
+            {
+                body["HotelAdminRoom"] = request.HotelAdminRoomShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelId))
             {
                 body["HotelId"] = request.HotelId;
@@ -7078,11 +7254,19 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListHotelsShrinkRequest request = new ListHotelsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HotelRequest))
+            {
+                request.HotelRequestShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HotelRequest, "HotelRequest", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Page))
             {
                 request.PageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Page, "Page", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelRequestShrink))
+            {
+                query["HotelRequest"] = request.HotelRequestShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageShrink))
             {
                 query["Page"] = request.PageShrink;
@@ -7131,11 +7315,19 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListHotelsShrinkRequest request = new ListHotelsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HotelRequest))
+            {
+                request.HotelRequestShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HotelRequest, "HotelRequest", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Page))
             {
                 request.PageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Page, "Page", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelRequestShrink))
+            {
+                query["HotelRequest"] = request.HotelRequestShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageShrink))
             {
                 query["Page"] = request.PageShrink;
