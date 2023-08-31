@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string BackupRetentionPeriod { get; set; }
 
+        [NameInMap("DbsInstance")]
+        [Validation(Required=false)]
+        public string DbsInstance { get; set; }
+
         /// <summary>
         /// Indicates whether incremental data backup is enabled. Valid values:
         /// 
