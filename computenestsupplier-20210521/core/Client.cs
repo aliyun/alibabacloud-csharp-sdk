@@ -1301,6 +1301,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             {
                 query["ServiceVersion"] = request.ServiceVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecificationName))
+            {
+                query["SpecificationName"] = request.SpecificationName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
             {
                 query["TemplateName"] = request.TemplateName;
@@ -1357,6 +1361,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
             {
                 query["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecificationName))
+            {
+                query["SpecificationName"] = request.SpecificationName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
             {

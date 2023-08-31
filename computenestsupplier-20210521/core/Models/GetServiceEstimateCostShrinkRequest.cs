@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ServiceVersion { get; set; }
 
+        [NameInMap("SpecificationName")]
+        [Validation(Required=false)]
+        public string SpecificationName { get; set; }
+
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
