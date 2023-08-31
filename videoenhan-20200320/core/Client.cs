@@ -3511,6 +3511,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             {
                 body["AddWatermark"] = request.AddWatermark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enhance))
+            {
+                body["Enhance"] = request.Enhance;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceURL))
             {
                 body["ReferenceURL"] = request.ReferenceURL;
@@ -3545,6 +3549,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddWatermark))
             {
                 body["AddWatermark"] = request.AddWatermark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enhance))
+            {
+                body["Enhance"] = request.Enhance;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceURL))
             {
