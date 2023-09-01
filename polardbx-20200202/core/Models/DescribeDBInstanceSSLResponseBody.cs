@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("CertCommonName")]
             [Validation(Required=false)]
             public string CertCommonName { get; set; }
+
             [NameInMap("SSLEnabled")]
             [Validation(Required=false)]
             public bool? SSLEnabled { get; set; }
+
             [NameInMap("SSLExpiredTime")]
             [Validation(Required=false)]
             public string SSLExpiredTime { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

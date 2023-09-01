@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("ConnectionString")]
             [Validation(Required=false)]
             public string ConnectionString { get; set; }
+
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
+
             [NameInMap("DBInstanceNetType")]
             [Validation(Required=false)]
             public string DBInstanceNetType { get; set; }
+
             [NameInMap("Port")]
             [Validation(Required=false)]
             public string Port { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

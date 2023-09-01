@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class DescribeSlinkTaskInfoResponse : TeaModel {
+    public class DescribeBackupSetResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeSlinkTaskInfoResponseBody Body { get; set; }
+        public DescribeBackupSetResponseBody Body { get; set; }
 
     }
 

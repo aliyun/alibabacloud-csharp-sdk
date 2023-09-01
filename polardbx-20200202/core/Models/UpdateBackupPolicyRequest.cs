@@ -29,13 +29,41 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string BackupWay { get; set; }
 
+        [NameInMap("ColdDataBackupInterval")]
+        [Validation(Required=false)]
+        public int? ColdDataBackupInterval { get; set; }
+
+        [NameInMap("ColdDataBackupRetention")]
+        [Validation(Required=false)]
+        public int? ColdDataBackupRetention { get; set; }
+
+        [NameInMap("CrossRegionDataBackupRetention")]
+        [Validation(Required=false)]
+        public int? CrossRegionDataBackupRetention { get; set; }
+
+        [NameInMap("CrossRegionLogBackupRetention")]
+        [Validation(Required=false)]
+        public int? CrossRegionLogBackupRetention { get; set; }
+
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        [NameInMap("DestCrossRegion")]
+        [Validation(Required=false)]
+        public string DestCrossRegion { get; set; }
+
         [NameInMap("ForceCleanOnHighSpaceUsage")]
         [Validation(Required=false)]
         public int? ForceCleanOnHighSpaceUsage { get; set; }
+
+        [NameInMap("IsCrossRegionDataBackupEnabled")]
+        [Validation(Required=false)]
+        public bool? IsCrossRegionDataBackupEnabled { get; set; }
+
+        [NameInMap("IsCrossRegionLogBackupEnabled")]
+        [Validation(Required=false)]
+        public bool? IsCrossRegionLogBackupEnabled { get; set; }
 
         [NameInMap("IsEnabled")]
         [Validation(Required=false)]
@@ -44,6 +72,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("LocalLogRetention")]
         [Validation(Required=false)]
         public int? LocalLogRetention { get; set; }
+
+        [NameInMap("LocalLogRetentionNumber")]
+        [Validation(Required=false)]
+        public int? LocalLogRetentionNumber { get; set; }
 
         [NameInMap("LogLocalRetentionSpace")]
         [Validation(Required=false)]

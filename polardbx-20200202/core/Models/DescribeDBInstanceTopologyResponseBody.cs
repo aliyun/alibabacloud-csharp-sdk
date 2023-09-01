@@ -57,6 +57,44 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [Validation(Required=false)]
                 public string EngineVersion { get; set; }
 
+                [NameInMap("HistoryItems")]
+                [Validation(Required=false)]
+                public List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems> HistoryItems { get; set; }
+                public class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems : TeaModel {
+                    [NameInMap("Activated")]
+                    [Validation(Required=false)]
+                    public bool? Activated { get; set; }
+
+                    [NameInMap("Azone")]
+                    [Validation(Required=false)]
+                    public string Azone { get; set; }
+
+                    [NameInMap("CharacterType")]
+                    [Validation(Required=false)]
+                    public string CharacterType { get; set; }
+
+                    [NameInMap("DBInstanceId")]
+                    [Validation(Required=false)]
+                    public string DBInstanceId { get; set; }
+
+                    [NameInMap("DBInstanceName")]
+                    [Validation(Required=false)]
+                    public string DBInstanceName { get; set; }
+
+                    [NameInMap("PhyInstanceName")]
+                    [Validation(Required=false)]
+                    public string PhyInstanceName { get; set; }
+
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    [NameInMap("Role")]
+                    [Validation(Required=false)]
+                    public string Role { get; set; }
+
+                }
+
                 [NameInMap("Items")]
                 [Validation(Required=false)]
                 public List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems> Items { get; set; }
@@ -169,6 +207,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public int? MaxIops { get; set; }
 
+                    [NameInMap("NodeClass")]
+                    [Validation(Required=false)]
+                    public string NodeClass { get; set; }
+
+                    [NameInMap("PhyInstanceName")]
+                    [Validation(Required=false)]
+                    public string PhyInstanceName { get; set; }
+
                     [NameInMap("Region")]
                     [Validation(Required=false)]
                     public string Region { get; set; }
@@ -176,6 +222,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [NameInMap("Role")]
                     [Validation(Required=false)]
                     public string Role { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("Version")]
+                    [Validation(Required=false)]
+                    public string Version { get; set; }
 
                 }
 
@@ -196,7 +250,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string MaintainStartTime { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

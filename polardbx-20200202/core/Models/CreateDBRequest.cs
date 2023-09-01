@@ -33,9 +33,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DbName { get; set; }
 
-        /// <summary>
-        /// drds/auto 用来区分所建库为自动拆分模式，还是手动拆分模式
-        /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }

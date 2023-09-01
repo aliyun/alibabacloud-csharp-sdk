@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class InitDBInstanceResourceGroupIdRequest : TeaModel {
-        /// <summary>
-        /// 资源类型
-        /// </summary>
-        [NameInMap("DBInstanceName")]
+    public class DescribeDBInstanceViaEndpointRequest : TeaModel {
+        [NameInMap("Endpoint")]
         [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
+        public string Endpoint { get; set; }
 
-        /// <summary>
-        /// 地域
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

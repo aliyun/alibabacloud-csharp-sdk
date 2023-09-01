@@ -16,14 +16,22 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
+
             [NameInMap("GroupItems")]
             [Validation(Required=false)]
             public List<DescribeSecurityIpsResponseBodyDataGroupItems> GroupItems { get; set; }
             public class DescribeSecurityIpsResponseBodyDataGroupItems : TeaModel {
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
                 public string GroupName { get; set; }
+
+                [NameInMap("SecurityIPList")]
+                [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

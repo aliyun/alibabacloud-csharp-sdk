@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("ConfigName")]
             [Validation(Required=false)]
             public string ConfigName { get; set; }
+
             [NameInMap("ConfigValue")]
             [Validation(Required=false)]
             public string ConfigValue { get; set; }
+
             [NameInMap("DbInstanceName")]
             [Validation(Required=false)]
             public string DbInstanceName { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -13,17 +13,30 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public List<DescribeDBInstancesResponseBodyDBInstances> DBInstances { get; set; }
         public class DescribeDBInstancesResponseBodyDBInstances : TeaModel {
+            [NameInMap("CdcInstanceName")]
+            [Validation(Required=false)]
+            public string CdcInstanceName { get; set; }
+
+            [NameInMap("CnNodeClassCode")]
+            [Validation(Required=false)]
+            public string CnNodeClassCode { get; set; }
+
+            [NameInMap("CnNodeCount")]
+            [Validation(Required=false)]
+            public int? CnNodeCount { get; set; }
+
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
+
+            [NameInMap("ContainBinlogX")]
+            [Validation(Required=false)]
+            public bool? ContainBinlogX { get; set; }
 
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            /// <summary>
-            /// 数据库实例名称
-            /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
@@ -39,6 +52,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("DnNodeClassCode")]
+            [Validation(Required=false)]
+            public string DnNodeClassCode { get; set; }
+
+            [NameInMap("DnNodeCount")]
+            [Validation(Required=false)]
+            public int? DnNodeCount { get; set; }
 
             [NameInMap("Engine")]
             [Validation(Required=false)]
@@ -114,12 +135,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
-            /// <summary>
-            /// 资源组ID
-            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
+            [NameInMap("Series")]
+            [Validation(Required=false)]
+            public string Series { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -129,23 +151,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public long? StorageUsed { get; set; }
 
-            /// <summary>
-            /// 标签集合
-            /// </summary>
+            [NameInMap("SupportBinlogX")]
+            [Validation(Required=false)]
+            public bool? SupportBinlogX { get; set; }
+
             [NameInMap("TagSet")]
             [Validation(Required=false)]
             public List<DescribeDBInstancesResponseBodyDBInstancesTagSet> TagSet { get; set; }
             public class DescribeDBInstancesResponseBodyDBInstancesTagSet : TeaModel {
-                /// <summary>
-                /// 标签名称
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// 标签值
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -156,6 +173,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// VPC ID。
+            /// </summary>
             [NameInMap("VPCId")]
             [Validation(Required=false)]
             public string VPCId { get; set; }

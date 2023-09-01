@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("CharacterSet")]
             [Validation(Required=false)]
             public List<string> CharacterSet { get; set; }
+
             [NameInMap("Engine")]
             [Validation(Required=false)]
             public string Engine { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

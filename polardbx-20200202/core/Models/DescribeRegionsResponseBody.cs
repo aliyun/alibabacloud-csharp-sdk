@@ -29,9 +29,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("SupportPolarx10")]
+                [Validation(Required=false)]
                 public bool? SupportPolarx10 { get; set; }
+
+                [NameInMap("SupportPolarx20")]
+                [Validation(Required=false)]
                 public bool? SupportPolarx20 { get; set; }
+
+                [NameInMap("Zones")]
+                [Validation(Required=false)]
                 public DescribeRegionsResponseBodyRegionsRegionZones Zones { get; set; }
                 public class DescribeRegionsResponseBodyRegionsRegionZones : TeaModel {
                     [NameInMap("Zone")]
@@ -49,8 +60,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

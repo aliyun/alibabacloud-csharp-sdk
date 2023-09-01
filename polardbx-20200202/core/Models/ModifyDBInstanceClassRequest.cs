@@ -13,9 +13,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CnClass")]
+        [Validation(Required=false)]
+        public string CnClass { get; set; }
+
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
+
+        [NameInMap("DnClass")]
+        [Validation(Required=false)]
+        public string DnClass { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

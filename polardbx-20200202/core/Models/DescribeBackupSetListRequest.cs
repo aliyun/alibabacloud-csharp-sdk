@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        [NameInMap("DestCrossRegion")]
+        [Validation(Required=false)]
+        public string DestCrossRegion { get; set; }
+
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }

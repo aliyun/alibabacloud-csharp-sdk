@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("TDEStatus")]
             [Validation(Required=false)]
             public string TDEStatus { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

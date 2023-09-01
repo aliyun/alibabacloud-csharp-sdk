@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("KeyIds")]
             [Validation(Required=false)]
             public List<string> KeyIds { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

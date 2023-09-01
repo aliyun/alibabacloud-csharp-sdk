@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public long? TaskId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("AuthorizationState")]
             [Validation(Required=false)]
             public string AuthorizationState { get; set; }
+
             [NameInMap("RoleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
