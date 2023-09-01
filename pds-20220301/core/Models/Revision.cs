@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
+        [NameInMap("creator_id")]
+        [Validation(Required=false)]
+        public string CreatorId { get; set; }
+
+        [NameInMap("creator_name")]
+        [Validation(Required=false)]
+        public string CreatorName { get; set; }
+
         [NameInMap("domain_id")]
         [Validation(Required=false)]
         public string DomainId { get; set; }
