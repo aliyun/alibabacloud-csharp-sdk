@@ -1,0 +1,32 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
+{
+    public class CreateWorkspaceResourceResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public List<CreateWorkspaceResourceResponseBodyResources> Resources { get; set; }
+        public class CreateWorkspaceResourceResponseBodyResources : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+        }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
+
+    }
+
+}
