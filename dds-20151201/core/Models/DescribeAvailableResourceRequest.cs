@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
+
         /// <summary>
         /// The ID of the zone. You can call the [DescribeRegions](~~61933~~) operation to query the available zones.
         /// </summary>

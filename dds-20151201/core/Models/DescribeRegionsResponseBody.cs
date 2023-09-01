@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsDdsRegion> DdsRegion { get; set; }
             public class DescribeRegionsResponseBodyRegionsDdsRegion : TeaModel {
+                [NameInMap("EndPoint")]
+                [Validation(Required=false)]
+                public string EndPoint { get; set; }
+
                 /// <summary>
                 /// The ID of the region.
                 /// </summary>
