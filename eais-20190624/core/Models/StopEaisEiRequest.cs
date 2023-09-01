@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class GetPrivateIpRequest : TeaModel {
+    public class StopEaisEiRequest : TeaModel {
+        [NameInMap("EiInstanceId")]
+        [Validation(Required=false)]
+        public string EiInstanceId { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("ClientInstanceId")]
-        [Validation(Required=false)]
-        public string ClientInstanceId { get; set; }
 
     }
 

@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class CreateEaiJupyterShrinkRequest : TeaModel {
+    public class CreateEaisEiRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("EaisName")]
+        [NameInMap("InstanceName")]
         [Validation(Required=false)]
-        public string EaisName { get; set; }
+        public string InstanceName { get; set; }
 
-        [NameInMap("EaisType")]
+        [NameInMap("InstanceType")]
         [Validation(Required=false)]
-        public string EaisType { get; set; }
-
-        [NameInMap("EnvironmentVar")]
-        [Validation(Required=false)]
-        public string EnvironmentVarShrink { get; set; }
+        public string InstanceType { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

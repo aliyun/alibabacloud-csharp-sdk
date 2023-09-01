@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Image")]
+        [Validation(Required=false)]
+        public string Image { get; set; }
+
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }

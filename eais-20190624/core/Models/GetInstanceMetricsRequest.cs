@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
         [Validation(Required=false)]
         public string MetricType { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class GetPrivateIpResponse : TeaModel {
+    public class AttachEaisEiResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetPrivateIpResponseBody Body { get; set; }
+        public AttachEaisEiResponseBody Body { get; set; }
 
     }
 

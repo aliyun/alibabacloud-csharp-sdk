@@ -1,3 +1,6 @@
+2023-09-01 Version: 2.2.0
+- Generated csharp 2019-06-24 for eais.
+
 2023-01-10 Version: 2.1.1
 - Support ResourceGroup.
 
