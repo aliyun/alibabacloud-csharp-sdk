@@ -13,9 +13,17 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("escalationPlanId")]
+        [Validation(Required=false)]
+        public long? EscalationPlanId { get; set; }
+
         [NameInMap("serviceDescription")]
         [Validation(Required=false)]
         public string ServiceDescription { get; set; }
+
+        [NameInMap("serviceGroupIdList")]
+        [Validation(Required=false)]
+        public List<long?> ServiceGroupIdList { get; set; }
 
         [NameInMap("serviceId")]
         [Validation(Required=false)]

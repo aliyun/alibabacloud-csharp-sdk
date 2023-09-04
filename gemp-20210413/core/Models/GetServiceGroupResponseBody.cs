@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [Validation(Required=false)]
                 public string Phone { get; set; }
 
+                [NameInMap("roleNameList")]
+                [Validation(Required=false)]
+                public List<string> RoleNameList { get; set; }
+
                 [NameInMap("serviceGroupId")]
                 [Validation(Required=false)]
                 public long? ServiceGroupId { get; set; }

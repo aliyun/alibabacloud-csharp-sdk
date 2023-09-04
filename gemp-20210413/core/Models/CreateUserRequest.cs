@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public long? RamId { get; set; }
 
+        [NameInMap("roleIdList")]
+        [Validation(Required=false)]
+        public List<long?> RoleIdList { get; set; }
+
         [NameInMap("username")]
         [Validation(Required=false)]
         public string Username { get; set; }

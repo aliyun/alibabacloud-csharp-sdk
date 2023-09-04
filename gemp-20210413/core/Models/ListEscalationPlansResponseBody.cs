@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 
             }
 
+            [NameInMap("isGlobal")]
+            [Validation(Required=false)]
+            public bool? IsGlobal { get; set; }
+
             [NameInMap("modifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }

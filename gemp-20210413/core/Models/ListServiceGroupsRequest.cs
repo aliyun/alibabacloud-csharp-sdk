@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string QueryType { get; set; }
 
+        [NameInMap("serviceId")]
+        [Validation(Required=false)]
+        public long? ServiceId { get; set; }
+
         [NameInMap("userId")]
         [Validation(Required=false)]
         public long? UserId { get; set; }

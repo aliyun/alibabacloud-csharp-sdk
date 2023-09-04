@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [Validation(Required=false)]
                 public List<long?> NoticeObjects { get; set; }
 
+                [NameInMap("noticeRoleList")]
+                [Validation(Required=false)]
+                public List<long?> NoticeRoleList { get; set; }
+
                 [NameInMap("noticeTime")]
                 [Validation(Required=false)]
                 public string NoticeTime { get; set; }
@@ -91,6 +95,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public long? ScopeObjectId { get; set; }
 
         }
+
+        [NameInMap("isGlobal")]
+        [Validation(Required=false)]
+        public bool? IsGlobal { get; set; }
 
     }
 

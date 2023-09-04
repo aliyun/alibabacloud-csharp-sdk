@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public string RamId { get; set; }
 
+            [NameInMap("roleIdList")]
+            [Validation(Required=false)]
+            public List<long?> RoleIdList { get; set; }
+
+            [NameInMap("roleNameList")]
+            [Validation(Required=false)]
+            public List<string> RoleNameList { get; set; }
+
             [NameInMap("serviceGroups")]
             [Validation(Required=false)]
             public List<GetUserResponseBodyDataServiceGroups> ServiceGroups { get; set; }

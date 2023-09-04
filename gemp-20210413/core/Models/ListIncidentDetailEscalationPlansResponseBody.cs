@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                     [Validation(Required=false)]
                     public string NoticeObjectPhone { get; set; }
 
+                    [NameInMap("roleNameList")]
+                    [Validation(Required=false)]
+                    public List<string> RoleNameList { get; set; }
+
                 }
 
                 [NameInMap("noticeTime")]
@@ -110,6 +114,28 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                     [Validation(Required=false)]
                     public string NoticeObjectPhone { get; set; }
 
+                    [NameInMap("roleNameList")]
+                    [Validation(Required=false)]
+                    public List<string> RoleNameList { get; set; }
+
+                }
+
+                [NameInMap("noticeRoleList")]
+                [Validation(Required=false)]
+                public List<long?> NoticeRoleList { get; set; }
+
+                [NameInMap("noticeRoleObjectList")]
+                [Validation(Required=false)]
+                public List<ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanNoticeRoleObjectList> NoticeRoleObjectList { get; set; }
+                public class ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanNoticeRoleObjectList : TeaModel {
+                    [NameInMap("id")]
+                    [Validation(Required=false)]
+                    public long? Id { get; set; }
+
+                    [NameInMap("name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
                 }
 
                 [NameInMap("noticeTime")]
@@ -167,6 +193,28 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                     [NameInMap("noticeObjectPhone")]
                     [Validation(Required=false)]
                     public string NoticeObjectPhone { get; set; }
+
+                    [NameInMap("roleNameList")]
+                    [Validation(Required=false)]
+                    public List<string> RoleNameList { get; set; }
+
+                }
+
+                [NameInMap("noticeRoleList")]
+                [Validation(Required=false)]
+                public List<long?> NoticeRoleList { get; set; }
+
+                [NameInMap("noticeRoleObjectList")]
+                [Validation(Required=false)]
+                public List<ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanNoticeRoleObjectList> NoticeRoleObjectList { get; set; }
+                public class ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanNoticeRoleObjectList : TeaModel {
+                    [NameInMap("id")]
+                    [Validation(Required=false)]
+                    public long? Id { get; set; }
+
+                    [NameInMap("name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
 
                 }
 

@@ -84,6 +84,28 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 
                     }
 
+                    [NameInMap("noticeObjects")]
+                    [Validation(Required=false)]
+                    public List<long?> NoticeObjects { get; set; }
+
+                    [NameInMap("noticeRoleList")]
+                    [Validation(Required=false)]
+                    public List<long?> NoticeRoleList { get; set; }
+
+                    [NameInMap("noticeRoleObjectList")]
+                    [Validation(Required=false)]
+                    public List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList> NoticeRoleObjectList { get; set; }
+                    public class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList : TeaModel {
+                        [NameInMap("id")]
+                        [Validation(Required=false)]
+                        public long? Id { get; set; }
+
+                        [NameInMap("name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
                     [NameInMap("noticeTime")]
                     [Validation(Required=false)]
                     public long? NoticeTime { get; set; }
@@ -131,6 +153,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 public string ScopeObjectName { get; set; }
 
             }
+
+            [NameInMap("isGlobal")]
+            [Validation(Required=false)]
+            public bool? IsGlobal { get; set; }
 
         }
 

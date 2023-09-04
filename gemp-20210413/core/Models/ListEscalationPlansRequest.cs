@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string EscalationPlanName { get; set; }
 
+        [NameInMap("isGlobal")]
+        [Validation(Required=false)]
+        public bool? IsGlobal { get; set; }
+
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("serviceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
+
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

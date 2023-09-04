@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public string MonitorSourceShortName { get; set; }
 
+            [NameInMap("monitorSourceType")]
+            [Validation(Required=false)]
+            public int? MonitorSourceType { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
