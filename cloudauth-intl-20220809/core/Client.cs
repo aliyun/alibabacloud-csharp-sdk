@@ -1031,6 +1031,160 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return await DocOcrWithOptionsAsync(request, runtime);
         }
 
+        public EkycVerifyResponse EkycVerifyWithOptions(EkycVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorize))
+            {
+                query["Authorize"] = request.Authorize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                query["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocName))
+            {
+                query["DocName"] = request.DocName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocNo))
+            {
+                query["DocNo"] = request.DocNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
+            {
+                query["FacePictureBase64"] = request.FacePictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
+            {
+                query["FacePictureUrl"] = request.FacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureBase64))
+            {
+                query["IdOcrPictureBase64"] = request.IdOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
+            {
+                query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EkycVerify",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EkycVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<EkycVerifyResponse> EkycVerifyWithOptionsAsync(EkycVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorize))
+            {
+                query["Authorize"] = request.Authorize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                query["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocName))
+            {
+                query["DocName"] = request.DocName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocNo))
+            {
+                query["DocNo"] = request.DocNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
+            {
+                query["FacePictureBase64"] = request.FacePictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
+            {
+                query["FacePictureUrl"] = request.FacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureBase64))
+            {
+                query["IdOcrPictureBase64"] = request.IdOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
+            {
+                query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EkycVerify",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EkycVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public EkycVerifyResponse EkycVerify(EkycVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EkycVerifyWithOptions(request, runtime);
+        }
+
+        public async Task<EkycVerifyResponse> EkycVerifyAsync(EkycVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EkycVerifyWithOptionsAsync(request, runtime);
+        }
+
         public FaceCompareResponse FaceCompareWithOptions(FaceCompareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1413,6 +1567,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["ProductConfig"] = request.ProductConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductFlow))
+            {
+                query["ProductFlow"] = request.ProductFlow;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnUrl))
             {
                 query["ReturnUrl"] = request.ReturnUrl;
@@ -1515,6 +1673,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductConfig))
             {
                 query["ProductConfig"] = request.ProductConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductFlow))
+            {
+                query["ProductFlow"] = request.ProductFlow;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnUrl))
             {

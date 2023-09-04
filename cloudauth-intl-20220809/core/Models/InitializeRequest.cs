@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string ProductConfig { get; set; }
 
+        [NameInMap("ProductFlow")]
+        [Validation(Required=false)]
+        public string ProductFlow { get; set; }
+
         [NameInMap("ReturnUrl")]
         [Validation(Required=false)]
         public string ReturnUrl { get; set; }
