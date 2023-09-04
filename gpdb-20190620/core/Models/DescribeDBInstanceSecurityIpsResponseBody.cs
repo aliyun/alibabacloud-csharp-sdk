@@ -9,29 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20190620.Models
 {
     public class DescribeDBInstanceSecurityIpsResponseBody : TeaModel {
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public long? Count { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("Count")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? Count { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -46,6 +42,10 @@ namespace AlibabaCloud.SDK.Gpdb20190620.Models
             public List<string> WhiteList { get; set; }
 
         }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -13,13 +13,17 @@ namespace AlibabaCloud.SDK.Gpdb20190620.Models
         [Validation(Required=false)]
         public long? AliUid { get; set; }
 
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("GroupName")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string GroupName { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("WhileList")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Gpdb20190620.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
     }
 
 }

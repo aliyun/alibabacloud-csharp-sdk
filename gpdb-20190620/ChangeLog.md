@@ -1,3 +1,6 @@
+2023-09-04 Version: 1.0.2
+- Generated csharp 2019-06-20 for gpdb.
+
 2021-10-11 Version: 1.0.1
 - ADB for PG sdk.
 
