@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                [NameInMap("RegionCode")]
+                [Validation(Required=false)]
+                public string RegionCode { get; set; }
+
                 /// <summary>
                 /// The type of the resource.
                 /// </summary>

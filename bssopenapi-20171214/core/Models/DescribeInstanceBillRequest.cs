@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The billing cycle. Specify the parameter in the YYYY-MM format.
+        /// Only the latest 18 month billing cycle is supported.
         /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]

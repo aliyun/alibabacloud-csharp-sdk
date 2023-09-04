@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string AllocationStatus { get; set; }
 
+                [NameInMap("CommodityCode")]
+                [Validation(Required=false)]
+                public string CommodityCode { get; set; }
+
                 /// <summary>
                 /// The status of the instance. Valid values:
                 /// 
@@ -51,6 +55,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
+
+                [NameInMap("CurrentPoolValue")]
+                [Validation(Required=false)]
+                public string CurrentPoolValue { get; set; }
 
                 [NameInMap("Cycle")]
                 [Validation(Required=false)]

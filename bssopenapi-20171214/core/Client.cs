@@ -4217,7 +4217,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The ID of the customer.
+          * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
           *
           * @param request GetCustomerListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4242,7 +4242,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The ID of the customer.
+          * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
           *
           * @param request GetCustomerListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4267,7 +4267,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The ID of the customer.
+          * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
           *
           * @return GetCustomerListResponse
          */
@@ -4278,7 +4278,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The ID of the customer.
+          * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
           *
           * @return GetCustomerListResponse
          */
@@ -6609,7 +6609,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The UID of the deducted instance.
+          * Limits:
+          * *   Only the usage records within the past year can be queried.
           *
           * @param request QueryDPUtilizationDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6679,7 +6680,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The UID of the deducted instance.
+          * Limits:
+          * *   Only the usage records within the past year can be queried.
           *
           * @param request QueryDPUtilizationDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6749,7 +6751,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The UID of the deducted instance.
+          * Limits:
+          * *   Only the usage records within the past year can be queried.
           *
           * @param request QueryDPUtilizationDetailRequest
           * @return QueryDPUtilizationDetailResponse
@@ -6761,7 +6764,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The UID of the deducted instance.
+          * Limits:
+          * *   Only the usage records within the past year can be queried.
           *
           * @param request QueryDPUtilizationDetailRequest
           * @return QueryDPUtilizationDetailResponse
@@ -9648,6 +9652,112 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RelieveAccountRelationWithOptionsAsync(request, runtime);
+        }
+
+        public RenewChangeInstanceResponse RenewChangeInstanceWithOptions(RenewChangeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter))
+            {
+                query["Parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewPeriod))
+            {
+                query["RenewPeriod"] = request.RenewPeriod;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewChangeInstance",
+                Version = "2017-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewChangeInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RenewChangeInstanceResponse> RenewChangeInstanceWithOptionsAsync(RenewChangeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter))
+            {
+                query["Parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewPeriod))
+            {
+                query["RenewPeriod"] = request.RenewPeriod;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewChangeInstance",
+                Version = "2017-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewChangeInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RenewChangeInstanceResponse RenewChangeInstance(RenewChangeInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RenewChangeInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<RenewChangeInstanceResponse> RenewChangeInstanceAsync(RenewChangeInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RenewChangeInstanceWithOptionsAsync(request, runtime);
         }
 
         public RenewInstanceResponse RenewInstanceWithOptions(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

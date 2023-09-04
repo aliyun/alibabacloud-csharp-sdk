@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page. A maximum of 300 entries can be returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
