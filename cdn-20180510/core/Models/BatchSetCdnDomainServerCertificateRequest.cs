@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string CertName { get; set; }
 
         /// <summary>
-        /// The type of the certificate. Valid values:
+        /// The type of the SSL certificate. Valid values:
         /// 
         /// *   **upload**: a user-uploaded SSL certificate.
-        /// *   **cas**: a certificate that is acquired through Certificate Management Service.
+        /// *   **cas**: a certificate that is issued by SSL Certificates Service.
         /// </summary>
         [NameInMap("CertType")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).
         /// 
-        /// >You can configure up to 10 domain names at a time.
+        /// >  You can manage the SSL certificates of up to 50 accelerated domain names in each call.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -47,31 +47,31 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The private key. Specify the private key only if you want to enable the SSL certificate.
+        /// The private key. Specify the private key only if you enable the SSL certificate.
         /// </summary>
         [NameInMap("SSLPri")]
         [Validation(Required=false)]
         public string SSLPri { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the SSL certificate. Default value: off. Valid values:
+        /// Specifies whether to enable the SSL certificate. Valid values:
         /// 
-        /// *   **on** ：enables the SSL certificate.
-        /// *   **off**：disables the SSL certificate
+        /// *   **on**: enables the SSL certificate.
+        /// *   **off**: disables the SSL certificate. This is the default value.
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]
         public string SSLProtocol { get; set; }
 
         /// <summary>
-        /// The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.
+        /// The content of the SSL certificate. Specify the content of the certificate only if you want to enable the SSL certificate.
         /// </summary>
         [NameInMap("SSLPub")]
         [Validation(Required=false)]

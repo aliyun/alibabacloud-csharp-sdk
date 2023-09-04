@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnConditionIPBInfoRequest : TeaModel {
+        /// <summary>
+        /// The configuration ID. Valid values:
+        /// 
+        /// *   condition_region_config_cn
+        /// *   condition_region_config_en
+        /// *   condition_isp_config_cn
+        /// *   condition_isp_config_en
+        /// *   condition_country_config_cn
+        /// *   condition_country_config_en
+        /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
         public string DataId { get; set; }

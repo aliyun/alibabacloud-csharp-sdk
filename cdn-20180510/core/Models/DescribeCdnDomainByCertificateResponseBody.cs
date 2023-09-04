@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnDomainByCertificateResponseBody : TeaModel {
         /// <summary>
-        /// The certificate information.
+        /// The information about the certificate.
         /// </summary>
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 /// <summary>
                 /// Indicates whether the SSL certificate is obsolete. Valid values:
                 /// 
-                /// *   **yes**
-                /// *   **no**
+                /// *   **yes**: The SSL certificate is obsolete.
+                /// *   **no**: The SSL certificate is working as expected.
                 /// </summary>
                 [NameInMap("CertCaIsLegacy")]
                 [Validation(Required=false)]
@@ -40,15 +40,15 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 /// <summary>
                 /// Indicates whether the SSL certificate is expired. Valid values:
                 /// 
-                /// *   **yes**
-                /// *   **no**
+                /// *   **yes**: The SSL certificate is expired.
+                /// *   **no**: The SSL certificate is not expired.
                 /// </summary>
                 [NameInMap("CertExpired")]
                 [Validation(Required=false)]
                 public string CertExpired { get; set; }
 
                 /// <summary>
-                /// The effective time of the certificate.
+                /// The time when the certificate became effective.
                 /// </summary>
                 [NameInMap("CertStartTime")]
                 [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string CertType { get; set; }
 
                 /// <summary>
-                /// The list of domain names. If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).
+                /// If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).
                 /// </summary>
                 [NameInMap("DomainList")]
                 [Validation(Required=false)]

@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// Specifies whether to enable the SSL certificate. Default value: off. Valid values:
         /// 
-        /// *   **on** ：enables the SSL certificate.
-        /// *   **off**：disables the SSL certificate.
+        /// *   **on** : enables the SSL certificate.
+        /// *   **off**: disables the SSL certificate.
         /// </summary>
         [NameInMap("ServerCertificateStatus")]
         [Validation(Required=false)]

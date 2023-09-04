@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string Cycle { get; set; }
 
         /// <summary>
-        /// The accelerated domain name. If you do not specify this parameter, data of all accelerated domain names under your account is queried.
+        /// The accelerated domain name. If you do not specify a domain name, data of all domain names is queried.
         /// 
-        /// > You cannot specify multiple domain names at a time.
+        /// > You cannot specify multiple domain names in a DescribeDomainMax95BpsData request.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

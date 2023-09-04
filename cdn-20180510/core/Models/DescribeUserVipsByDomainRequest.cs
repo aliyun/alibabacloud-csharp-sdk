@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:
         /// 
-        /// *   **on**：healthy CDN edge nodes.
-        /// *   **off**：all CDN edge nodes.
+        /// *   **on**: healthy CDN edge nodes.
+        /// *   **off**: all CDN edge nodes.
         /// </summary>
         [NameInMap("Available")]
         [Validation(Required=false)]

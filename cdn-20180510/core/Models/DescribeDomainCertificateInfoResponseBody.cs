@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string CertUpdateTime { get; set; }
 
                 /// <summary>
-                /// The CANME status of the domain name.
+                /// The CNAME status of the domain name.
                 /// 
                 /// *   **ok**: The domain name points to the CNAME assigned by Alibaba Cloud CDN.
                 /// *   **cname_error**: An error occurred and the domain name cannot point to the CNAME.

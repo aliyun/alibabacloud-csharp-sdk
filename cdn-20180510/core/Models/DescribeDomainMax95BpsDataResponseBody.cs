@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainMax95BpsDataResponseBody : TeaModel {
+        /// <summary>
+        /// Details of the 95th percentile bandwidth.
+        /// </summary>
         [NameInMap("DetailData")]
         [Validation(Required=false)]
         public DescribeDomainMax95BpsDataResponseBodyDetailData DetailData { get; set; }
@@ -17,18 +20,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainMax95BpsDataResponseBodyDetailDataMax95Detail> Max95Detail { get; set; }
             public class DescribeDomainMax95BpsDataResponseBodyDetailDataMax95Detail : TeaModel {
+                /// <summary>
+                /// Region of the 95th percentile bandwidth.
+                /// </summary>
                 [NameInMap("Area")]
                 [Validation(Required=false)]
                 public string Area { get; set; }
 
+                /// <summary>
+                /// The 95th percentile bandwidth.
+                /// </summary>
                 [NameInMap("Max95Bps")]
                 [Validation(Required=false)]
                 public float? Max95Bps { get; set; }
 
+                /// <summary>
+                /// Time of the 95th percentile bandwidth.
+                /// </summary>
                 [NameInMap("Max95BpsPeakTime")]
                 [Validation(Required=false)]
                 public string Max95BpsPeakTime { get; set; }
 
+                /// <summary>
+                /// The timestamp of the returned data.
+                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
