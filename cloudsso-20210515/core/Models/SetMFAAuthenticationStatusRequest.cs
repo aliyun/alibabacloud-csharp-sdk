@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class SetMFAAuthenticationStatusRequest : TeaModel {
+        /// <summary>
+        /// The ID of the directory.
+        /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
+        /// <summary>
+        /// The status of MFA. Valid values:
+        /// 
+        /// *   Enabled
+        /// *   Disabled
+        /// </summary>
         [NameInMap("MFAAuthenticationStatus")]
         [Validation(Required=false)]
         public string MFAAuthenticationStatus { get; set; }

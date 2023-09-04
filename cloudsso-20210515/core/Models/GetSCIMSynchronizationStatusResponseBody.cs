@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetSCIMSynchronizationStatusResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The status of SCIM synchronization. Valid values:
+        /// 
+        /// *   Enabled
+        /// *   Disabled
+        /// </summary>
         [NameInMap("SCIMSynchronizationStatus")]
         [Validation(Required=false)]
         public string SCIMSynchronizationStatus { get; set; }

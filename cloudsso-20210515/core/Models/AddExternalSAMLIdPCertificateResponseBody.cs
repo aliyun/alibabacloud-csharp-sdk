@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class AddExternalSAMLIdPCertificateResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the SAML signing certificate.
+        /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
         public string CertificateId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
