@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class ApplyLensServiceResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

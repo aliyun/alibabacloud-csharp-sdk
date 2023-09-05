@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * The region ID of the replication pair-consistent group.
+          *
+          * @param request AddDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDiskReplicaPairResponse
+         */
         public AddDiskReplicaPairResponse AddDiskReplicaPairWithOptions(AddDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -76,6 +83,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<AddDiskReplicaPairResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The region ID of the replication pair-consistent group.
+          *
+          * @param request AddDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDiskReplicaPairResponse
+         */
         public async Task<AddDiskReplicaPairResponse> AddDiskReplicaPairWithOptionsAsync(AddDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -115,18 +129,38 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<AddDiskReplicaPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The region ID of the replication pair-consistent group.
+          *
+          * @param request AddDiskReplicaPairRequest
+          * @return AddDiskReplicaPairResponse
+         */
         public AddDiskReplicaPairResponse AddDiskReplicaPair(AddDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDiskReplicaPairWithOptions(request, runtime);
         }
 
+        /**
+          * The region ID of the replication pair-consistent group.
+          *
+          * @param request AddDiskReplicaPairRequest
+          * @return AddDiskReplicaPairResponse
+         */
         public async Task<AddDiskReplicaPairResponse> AddDiskReplicaPairAsync(AddDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddDiskReplicaPairWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request ApplyLensServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ApplyLensServiceResponse
+         */
         public ApplyLensServiceResponse ApplyLensServiceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -145,6 +179,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ApplyLensServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request ApplyLensServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ApplyLensServiceResponse
+         */
         public async Task<ApplyLensServiceResponse> ApplyLensServiceWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -163,18 +205,38 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ApplyLensServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @return ApplyLensServiceResponse
+         */
         public ApplyLensServiceResponse ApplyLensService()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ApplyLensServiceWithOptions(runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @return ApplyLensServiceResponse
+         */
         public async Task<ApplyLensServiceResponse> ApplyLensServiceAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ApplyLensServiceWithOptionsAsync(runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request CancelLensServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelLensServiceResponse
+         */
         public CancelLensServiceResponse CancelLensServiceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -193,6 +255,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<CancelLensServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request CancelLensServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelLensServiceResponse
+         */
         public async Task<CancelLensServiceResponse> CancelLensServiceWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -211,18 +281,138 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<CancelLensServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @return CancelLensServiceResponse
+         */
         public CancelLensServiceResponse CancelLensService()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelLensServiceWithOptions(runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @return CancelLensServiceResponse
+         */
         public async Task<CancelLensServiceResponse> CancelLensServiceAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelLensServiceWithOptionsAsync(runtime);
         }
 
+        public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewResourceGroupId))
+            {
+                query["NewResourceGroupId"] = request.NewResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeResourceGroup",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewResourceGroupId))
+            {
+                query["NewResourceGroupId"] = request.NewResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeResourceGroup",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeResourceGroupWithOptions(request, runtime);
+        }
+
+        public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+          * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
+          * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
+          * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+          *
+          * @param request CreateDedicatedBlockStorageClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDedicatedBlockStorageClusterResponse
+         */
         public CreateDedicatedBlockStorageClusterResponse CreateDedicatedBlockStorageClusterWithOptions(CreateDedicatedBlockStorageClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -243,6 +433,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["DbscName"] = request.DbscName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -250,6 +448,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -274,6 +476,16 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<CreateDedicatedBlockStorageClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+          * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
+          * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
+          * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+          *
+          * @param request CreateDedicatedBlockStorageClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDedicatedBlockStorageClusterResponse
+         */
         public async Task<CreateDedicatedBlockStorageClusterResponse> CreateDedicatedBlockStorageClusterWithOptionsAsync(CreateDedicatedBlockStorageClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -294,6 +506,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["DbscName"] = request.DbscName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -301,6 +521,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -325,18 +549,48 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<CreateDedicatedBlockStorageClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+          * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
+          * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
+          * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+          *
+          * @param request CreateDedicatedBlockStorageClusterRequest
+          * @return CreateDedicatedBlockStorageClusterResponse
+         */
         public CreateDedicatedBlockStorageClusterResponse CreateDedicatedBlockStorageCluster(CreateDedicatedBlockStorageClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDedicatedBlockStorageClusterWithOptions(request, runtime);
         }
 
+        /**
+          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+          * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
+          * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
+          * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+          *
+          * @param request CreateDedicatedBlockStorageClusterRequest
+          * @return CreateDedicatedBlockStorageClusterResponse
+         */
         public async Task<CreateDedicatedBlockStorageClusterResponse> CreateDedicatedBlockStorageClusterAsync(CreateDedicatedBlockStorageClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDedicatedBlockStorageClusterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of one or more instances.
+          * When you create a replication pair-consistent group, take note of the following items:
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   Replication pair-consistent groups support disaster recovery across zones within the same region and disaster recovery across regions.
+          * *   A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). Replication pairs can be added only to a replication pair-consistent group that replicates in the same direction as them.
+          * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.
+          *
+          * @param request CreateDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDiskReplicaGroupResponse
+         */
         public CreateDiskReplicaGroupResponse CreateDiskReplicaGroupWithOptions(CreateDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -373,9 +627,17 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceZoneId))
             {
                 query["SourceZoneId"] = request.SourceZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -396,6 +658,18 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<CreateDiskReplicaGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of one or more instances.
+          * When you create a replication pair-consistent group, take note of the following items:
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   Replication pair-consistent groups support disaster recovery across zones within the same region and disaster recovery across regions.
+          * *   A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). Replication pairs can be added only to a replication pair-consistent group that replicates in the same direction as them.
+          * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.
+          *
+          * @param request CreateDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDiskReplicaGroupResponse
+         */
         public async Task<CreateDiskReplicaGroupResponse> CreateDiskReplicaGroupWithOptionsAsync(CreateDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -432,9 +706,17 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceZoneId))
             {
                 query["SourceZoneId"] = request.SourceZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -455,18 +737,52 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<CreateDiskReplicaGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of one or more instances.
+          * When you create a replication pair-consistent group, take note of the following items:
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   Replication pair-consistent groups support disaster recovery across zones within the same region and disaster recovery across regions.
+          * *   A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). Replication pairs can be added only to a replication pair-consistent group that replicates in the same direction as them.
+          * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.
+          *
+          * @param request CreateDiskReplicaGroupRequest
+          * @return CreateDiskReplicaGroupResponse
+         */
         public CreateDiskReplicaGroupResponse CreateDiskReplicaGroup(CreateDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDiskReplicaGroupWithOptions(request, runtime);
         }
 
+        /**
+          * The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of one or more instances.
+          * When you create a replication pair-consistent group, take note of the following items:
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   Replication pair-consistent groups support disaster recovery across zones within the same region and disaster recovery across regions.
+          * *   A replication pair and a replication pair-consistent group replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). Replication pairs can be added only to a replication pair-consistent group that replicates in the same direction as them.
+          * *   After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs in place of their original RPOs.
+          *
+          * @param request CreateDiskReplicaGroupRequest
+          * @return CreateDiskReplicaGroupResponse
+         */
         public async Task<CreateDiskReplicaGroupResponse> CreateDiskReplicaGroupAsync(CreateDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDiskReplicaGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity.
+          * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
+          * Before you call this operation, take note of the following items:
+          * *   Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the [CreateDisk](~~25513~~) operation to create disks.
+          * *   The secondary disk cannot reside the same region as the primary disk. The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   After you call this operation to create a replication pair, you must call the [StartDiskReplicaPair](~~354205~~) operation to enable async replication to periodically replicate data from the primary disk to the secondary disk across regions.
+          *
+          * @param request CreateDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDiskReplicaPairResponse
+         */
         public CreateDiskReplicaPairResponse CreateDiskReplicaPairWithOptions(CreateDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -523,9 +839,17 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceZoneId))
             {
                 query["SourceZoneId"] = request.SourceZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -546,6 +870,18 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<CreateDiskReplicaPairResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity.
+          * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
+          * Before you call this operation, take note of the following items:
+          * *   Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the [CreateDisk](~~25513~~) operation to create disks.
+          * *   The secondary disk cannot reside the same region as the primary disk. The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   After you call this operation to create a replication pair, you must call the [StartDiskReplicaPair](~~354205~~) operation to enable async replication to periodically replicate data from the primary disk to the secondary disk across regions.
+          *
+          * @param request CreateDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDiskReplicaPairResponse
+         */
         public async Task<CreateDiskReplicaPairResponse> CreateDiskReplicaPairWithOptionsAsync(CreateDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -602,9 +938,17 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceZoneId))
             {
                 query["SourceZoneId"] = request.SourceZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -625,18 +969,49 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<CreateDiskReplicaPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity.
+          * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
+          * Before you call this operation, take note of the following items:
+          * *   Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the [CreateDisk](~~25513~~) operation to create disks.
+          * *   The secondary disk cannot reside the same region as the primary disk. The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   After you call this operation to create a replication pair, you must call the [StartDiskReplicaPair](~~354205~~) operation to enable async replication to periodically replicate data from the primary disk to the secondary disk across regions.
+          *
+          * @param request CreateDiskReplicaPairRequest
+          * @return CreateDiskReplicaPairResponse
+         */
         public CreateDiskReplicaPairResponse CreateDiskReplicaPair(CreateDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDiskReplicaPairWithOptions(request, runtime);
         }
 
+        /**
+          * Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity.
+          * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
+          * Before you call this operation, take note of the following items:
+          * *   Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the [CreateDisk](~~25513~~) operation to create disks.
+          * *   The secondary disk cannot reside the same region as the primary disk. The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   After you call this operation to create a replication pair, you must call the [StartDiskReplicaPair](~~354205~~) operation to enable async replication to periodically replicate data from the primary disk to the secondary disk across regions.
+          *
+          * @param request CreateDiskReplicaPairRequest
+          * @return CreateDiskReplicaPairResponse
+         */
         public async Task<CreateDiskReplicaPairResponse> CreateDiskReplicaPairAsync(CreateDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDiskReplicaPairWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs are present in the group.
+          * *   The replication pair-consistent group that you want to delete must be in the **Created** (`created`), **Creation Failed** (`create_failed`), **Stopped** (`stopped`), **Failover Failed** (`failovered`), **Deleting** (`deleting`), **Deletion Failed** (`delete_failed`), or **Invalid** (`invalid`) state.
+          *
+          * @param request DeleteDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDiskReplicaGroupResponse
+         */
         public DeleteDiskReplicaGroupResponse DeleteDiskReplicaGroupWithOptions(DeleteDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -672,6 +1047,15 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DeleteDiskReplicaGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs are present in the group.
+          * *   The replication pair-consistent group that you want to delete must be in the **Created** (`created`), **Creation Failed** (`create_failed`), **Stopped** (`stopped`), **Failover Failed** (`failovered`), **Deleting** (`deleting`), **Deletion Failed** (`delete_failed`), or **Invalid** (`invalid`) state.
+          *
+          * @param request DeleteDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDiskReplicaGroupResponse
+         */
         public async Task<DeleteDiskReplicaGroupResponse> DeleteDiskReplicaGroupWithOptionsAsync(DeleteDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -707,18 +1091,43 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DeleteDiskReplicaGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs are present in the group.
+          * *   The replication pair-consistent group that you want to delete must be in the **Created** (`created`), **Creation Failed** (`create_failed`), **Stopped** (`stopped`), **Failover Failed** (`failovered`), **Deleting** (`deleting`), **Deletion Failed** (`delete_failed`), or **Invalid** (`invalid`) state.
+          *
+          * @param request DeleteDiskReplicaGroupRequest
+          * @return DeleteDiskReplicaGroupResponse
+         */
         public DeleteDiskReplicaGroupResponse DeleteDiskReplicaGroup(DeleteDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDiskReplicaGroupWithOptions(request, runtime);
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs are present in the group.
+          * *   The replication pair-consistent group that you want to delete must be in the **Created** (`created`), **Creation Failed** (`create_failed`), **Stopped** (`stopped`), **Failover Failed** (`failovered`), **Deleting** (`deleting`), **Deletion Failed** (`delete_failed`), or **Invalid** (`invalid`) state.
+          *
+          * @param request DeleteDiskReplicaGroupRequest
+          * @return DeleteDiskReplicaGroupResponse
+         */
         public async Task<DeleteDiskReplicaGroupResponse> DeleteDiskReplicaGroupAsync(DeleteDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDiskReplicaGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Only replication pairs that are in the **Stopped** (`stopped`), **Invalid** (`invalid`), or **Failed Over** (`failovered`) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.
+          * *   To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.
+          *
+          * @param request DeleteDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDiskReplicaPairResponse
+         */
         public DeleteDiskReplicaPairResponse DeleteDiskReplicaPairWithOptions(DeleteDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -754,6 +1163,15 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DeleteDiskReplicaPairResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Only replication pairs that are in the **Stopped** (`stopped`), **Invalid** (`invalid`), or **Failed Over** (`failovered`) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.
+          * *   To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.
+          *
+          * @param request DeleteDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDiskReplicaPairResponse
+         */
         public async Task<DeleteDiskReplicaPairResponse> DeleteDiskReplicaPairWithOptionsAsync(DeleteDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -789,18 +1207,46 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DeleteDiskReplicaPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Only replication pairs that are in the **Stopped** (`stopped`), **Invalid** (`invalid`), or **Failed Over** (`failovered`) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.
+          * *   To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.
+          *
+          * @param request DeleteDiskReplicaPairRequest
+          * @return DeleteDiskReplicaPairResponse
+         */
         public DeleteDiskReplicaPairResponse DeleteDiskReplicaPair(DeleteDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDiskReplicaPairWithOptions(request, runtime);
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Only replication pairs that are in the **Stopped** (`stopped`), **Invalid** (`invalid`), or **Failed Over** (`failovered`) state can be deleted. This operation deletes only replication pairs. The primary and secondary disks in the deleted replication pairs are retained.
+          * *   To delete a replication pair, you must call this operation in the region where the primary disk is located. After the replication pair is deleted, the functionality limits are lifted from the primary and secondary disks. For example, you can attach the secondary disk, resize the disk, or read data from or write data to the disk.
+          *
+          * @param request DeleteDiskReplicaPairRequest
+          * @return DeleteDiskReplicaPairResponse
+         */
         public async Task<DeleteDiskReplicaPairResponse> DeleteDiskReplicaPairAsync(DeleteDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDiskReplicaPairWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can use one of the following methods to check the responses:
+          *     *   Method 1: Use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeDisks operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+          *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return.
+          *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When `NextToken` is specified, `PageSize` and `PageNumber` do not take effect and `TotalCount` in the response is invalid.
+          * *   A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the `Attachment` values in the response.
+          * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
+          *
+          * @param request DescribeDedicatedBlockStorageClusterDisksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedBlockStorageClusterDisksResponse
+         */
         public DescribeDedicatedBlockStorageClusterDisksResponse DescribeDedicatedBlockStorageClusterDisksWithOptions(DescribeDedicatedBlockStorageClusterDisksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -840,6 +1286,18 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDedicatedBlockStorageClusterDisksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can use one of the following methods to check the responses:
+          *     *   Method 1: Use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeDisks operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+          *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return.
+          *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When `NextToken` is specified, `PageSize` and `PageNumber` do not take effect and `TotalCount` in the response is invalid.
+          * *   A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the `Attachment` values in the response.
+          * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
+          *
+          * @param request DescribeDedicatedBlockStorageClusterDisksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedBlockStorageClusterDisksResponse
+         */
         public async Task<DescribeDedicatedBlockStorageClusterDisksResponse> DescribeDedicatedBlockStorageClusterDisksWithOptionsAsync(DescribeDedicatedBlockStorageClusterDisksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -879,22 +1337,69 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDedicatedBlockStorageClusterDisksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can use one of the following methods to check the responses:
+          *     *   Method 1: Use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeDisks operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+          *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return.
+          *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When `NextToken` is specified, `PageSize` and `PageNumber` do not take effect and `TotalCount` in the response is invalid.
+          * *   A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the `Attachment` values in the response.
+          * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
+          *
+          * @param request DescribeDedicatedBlockStorageClusterDisksRequest
+          * @return DescribeDedicatedBlockStorageClusterDisksResponse
+         */
         public DescribeDedicatedBlockStorageClusterDisksResponse DescribeDedicatedBlockStorageClusterDisks(DescribeDedicatedBlockStorageClusterDisksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDedicatedBlockStorageClusterDisksWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can use one of the following methods to check the responses:
+          *     *   Method 1: Use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeDisks operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+          *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return.
+          *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When `NextToken` is specified, `PageSize` and `PageNumber` do not take effect and `TotalCount` in the response is invalid.
+          * *   A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the `Attachment` values in the response.
+          * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
+          *
+          * @param request DescribeDedicatedBlockStorageClusterDisksRequest
+          * @return DescribeDedicatedBlockStorageClusterDisksResponse
+         */
         public async Task<DescribeDedicatedBlockStorageClusterDisksResponse> DescribeDedicatedBlockStorageClusterDisksAsync(DescribeDedicatedBlockStorageClusterDisksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDedicatedBlockStorageClusterDisksWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  Dedicated Block Storage Cluster is supported in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.
+          * *   You can specify multiple request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+          * *   We recommend that you use the NextToken and MaxResults parameters to perform a paged query. During a paged query, when you call the DescribeDedicatedBlockStorageClusters operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDedicatedBlockStorageClustersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedBlockStorageClustersResponse
+         */
         public DescribeDedicatedBlockStorageClustersResponse DescribeDedicatedBlockStorageClustersWithOptions(DescribeDedicatedBlockStorageClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedBlockStorageClusterId))
+            {
+                query["DedicatedBlockStorageClusterId"] = request.DedicatedBlockStorageClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -919,22 +1424,6 @@ namespace AlibabaCloud.SDK.Ebs20210730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 body["Category"] = request.Category;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                body["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedBlockStorageClusterId))
-            {
-                body["DedicatedBlockStorageClusterId"] = request.DedicatedBlockStorageClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                body["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                body["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -964,10 +1453,35 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDedicatedBlockStorageClustersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  Dedicated Block Storage Cluster is supported in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.
+          * *   You can specify multiple request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+          * *   We recommend that you use the NextToken and MaxResults parameters to perform a paged query. During a paged query, when you call the DescribeDedicatedBlockStorageClusters operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDedicatedBlockStorageClustersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedBlockStorageClustersResponse
+         */
         public async Task<DescribeDedicatedBlockStorageClustersResponse> DescribeDedicatedBlockStorageClustersWithOptionsAsync(DescribeDedicatedBlockStorageClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedBlockStorageClusterId))
+            {
+                query["DedicatedBlockStorageClusterId"] = request.DedicatedBlockStorageClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -992,22 +1506,6 @@ namespace AlibabaCloud.SDK.Ebs20210730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 body["Category"] = request.Category;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                body["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedBlockStorageClusterId))
-            {
-                body["DedicatedBlockStorageClusterId"] = request.DedicatedBlockStorageClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                body["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                body["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1037,18 +1535,42 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDedicatedBlockStorageClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  Dedicated Block Storage Cluster is supported in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.
+          * *   You can specify multiple request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+          * *   We recommend that you use the NextToken and MaxResults parameters to perform a paged query. During a paged query, when you call the DescribeDedicatedBlockStorageClusters operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDedicatedBlockStorageClustersRequest
+          * @return DescribeDedicatedBlockStorageClustersResponse
+         */
         public DescribeDedicatedBlockStorageClustersResponse DescribeDedicatedBlockStorageClusters(DescribeDedicatedBlockStorageClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDedicatedBlockStorageClustersWithOptions(request, runtime);
         }
 
+        /**
+          * >  Dedicated Block Storage Cluster is supported in the China (Heyuan), Indonesia (Jakarta), and China (Shenzhen) regions.
+          * *   You can specify multiple request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+          * *   We recommend that you use the NextToken and MaxResults parameters to perform a paged query. During a paged query, when you call the DescribeDedicatedBlockStorageClusters operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDedicatedBlockStorageClustersRequest
+          * @return DescribeDedicatedBlockStorageClustersResponse
+         */
         public async Task<DescribeDedicatedBlockStorageClustersResponse> DescribeDedicatedBlockStorageClustersAsync(DescribeDedicatedBlockStorageClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDedicatedBlockStorageClustersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeDiskEventsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskEventsResponse
+         */
         public DescribeDiskEventsResponse DescribeDiskEventsWithOptions(DescribeDiskEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1104,6 +1626,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeDiskEventsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskEventsResponse
+         */
         public async Task<DescribeDiskEventsResponse> DescribeDiskEventsWithOptionsAsync(DescribeDiskEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1159,18 +1689,42 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeDiskEventsRequest
+          * @return DescribeDiskEventsResponse
+         */
         public DescribeDiskEventsResponse DescribeDiskEvents(DescribeDiskEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDiskEventsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeDiskEventsRequest
+          * @return DescribeDiskEventsResponse
+         */
         public async Task<DescribeDiskEventsResponse> DescribeDiskEventsAsync(DescribeDiskEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDiskEventsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   Up to 400 monitoring data entries can be returned at a time. An error is returned if the value calculated based on the following formula is greater than 400: `(EndTime - StartTime)/Period`.
+          * *   You can query the monitoring data collected in the last three days. An error is returned if the time specified by `StartTime` is more than three days prior to the current time.
+          *
+          * @param request DescribeDiskMonitorDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskMonitorDataResponse
+         */
         public DescribeDiskMonitorDataResponse DescribeDiskMonitorDataWithOptions(DescribeDiskMonitorDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1218,6 +1772,16 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskMonitorDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   Up to 400 monitoring data entries can be returned at a time. An error is returned if the value calculated based on the following formula is greater than 400: `(EndTime - StartTime)/Period`.
+          * *   You can query the monitoring data collected in the last three days. An error is returned if the time specified by `StartTime` is more than three days prior to the current time.
+          *
+          * @param request DescribeDiskMonitorDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskMonitorDataResponse
+         */
         public async Task<DescribeDiskMonitorDataResponse> DescribeDiskMonitorDataWithOptionsAsync(DescribeDiskMonitorDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1265,18 +1829,44 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskMonitorDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   Up to 400 monitoring data entries can be returned at a time. An error is returned if the value calculated based on the following formula is greater than 400: `(EndTime - StartTime)/Period`.
+          * *   You can query the monitoring data collected in the last three days. An error is returned if the time specified by `StartTime` is more than three days prior to the current time.
+          *
+          * @param request DescribeDiskMonitorDataRequest
+          * @return DescribeDiskMonitorDataResponse
+         */
         public DescribeDiskMonitorDataResponse DescribeDiskMonitorData(DescribeDiskMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDiskMonitorDataWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   Up to 400 monitoring data entries can be returned at a time. An error is returned if the value calculated based on the following formula is greater than 400: `(EndTime - StartTime)/Period`.
+          * *   You can query the monitoring data collected in the last three days. An error is returned if the time specified by `StartTime` is more than three days prior to the current time.
+          *
+          * @param request DescribeDiskMonitorDataRequest
+          * @return DescribeDiskMonitorDataResponse
+         */
         public async Task<DescribeDiskMonitorDataResponse> DescribeDiskMonitorDataAsync(DescribeDiskMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDiskMonitorDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeDiskMonitorDataListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskMonitorDataListResponse
+         */
         public DescribeDiskMonitorDataListResponse DescribeDiskMonitorDataListWithOptions(DescribeDiskMonitorDataListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1328,6 +1918,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskMonitorDataListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeDiskMonitorDataListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskMonitorDataListResponse
+         */
         public async Task<DescribeDiskMonitorDataListResponse> DescribeDiskMonitorDataListWithOptionsAsync(DescribeDiskMonitorDataListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1379,18 +1977,40 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskMonitorDataListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeDiskMonitorDataListRequest
+          * @return DescribeDiskMonitorDataListResponse
+         */
         public DescribeDiskMonitorDataListResponse DescribeDiskMonitorDataList(DescribeDiskMonitorDataListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDiskMonitorDataListWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeDiskMonitorDataListRequest
+          * @return DescribeDiskMonitorDataListResponse
+         */
         public async Task<DescribeDiskMonitorDataListResponse> DescribeDiskMonitorDataListAsync(DescribeDiskMonitorDataListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDiskMonitorDataListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To perform a paged query, set the MaxResults and NextToken parameters.
+          * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDiskReplicaGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskReplicaGroupsResponse
+         */
         public DescribeDiskReplicaGroupsResponse DescribeDiskReplicaGroupsWithOptions(DescribeDiskReplicaGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1419,9 +2039,17 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
             {
                 query["Site"] = request.Site;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1442,6 +2070,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskReplicaGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To perform a paged query, set the MaxResults and NextToken parameters.
+          * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDiskReplicaGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskReplicaGroupsResponse
+         */
         public async Task<DescribeDiskReplicaGroupsResponse> DescribeDiskReplicaGroupsWithOptionsAsync(DescribeDiskReplicaGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1470,9 +2106,17 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
             {
                 query["Site"] = request.Site;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1493,12 +2137,26 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskReplicaGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To perform a paged query, set the MaxResults and NextToken parameters.
+          * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDiskReplicaGroupsRequest
+          * @return DescribeDiskReplicaGroupsResponse
+         */
         public DescribeDiskReplicaGroupsResponse DescribeDiskReplicaGroups(DescribeDiskReplicaGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDiskReplicaGroupsWithOptions(request, runtime);
         }
 
+        /**
+          * To perform a paged query, set the MaxResults and NextToken parameters.
+          * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDiskReplicaGroupsRequest
+          * @return DescribeDiskReplicaGroupsResponse
+         */
         public async Task<DescribeDiskReplicaGroupsResponse> DescribeDiskReplicaGroupsAsync(DescribeDiskReplicaGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1579,6 +2237,15 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return await DescribeDiskReplicaPairProgressWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides within the region, the information of the replication pair is displayed in the response.
+          * *   If you want to perform a paged query, configure the `NextToken` and `MaxResults` parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set `MaxResults` to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDiskReplicaPairsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskReplicaPairsResponse
+         */
         public DescribeDiskReplicaPairsResponse DescribeDiskReplicaPairsWithOptions(DescribeDiskReplicaPairsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1611,9 +2278,17 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["ReplicaGroupId"] = request.ReplicaGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
             {
                 query["Site"] = request.Site;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1634,6 +2309,15 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskReplicaPairsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides within the region, the information of the replication pair is displayed in the response.
+          * *   If you want to perform a paged query, configure the `NextToken` and `MaxResults` parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set `MaxResults` to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDiskReplicaPairsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiskReplicaPairsResponse
+         */
         public async Task<DescribeDiskReplicaPairsResponse> DescribeDiskReplicaPairsWithOptionsAsync(DescribeDiskReplicaPairsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1666,9 +2350,17 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["ReplicaGroupId"] = request.ReplicaGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
             {
                 query["Site"] = request.Site;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1689,18 +2381,42 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeDiskReplicaPairsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides within the region, the information of the replication pair is displayed in the response.
+          * *   If you want to perform a paged query, configure the `NextToken` and `MaxResults` parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set `MaxResults` to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDiskReplicaPairsRequest
+          * @return DescribeDiskReplicaPairsResponse
+         */
         public DescribeDiskReplicaPairsResponse DescribeDiskReplicaPairs(DescribeDiskReplicaPairsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDiskReplicaPairsWithOptions(request, runtime);
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore, US (Silicon Valley), and US (Virginia) regions.
+          * *   When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides within the region, the information of the replication pair is displayed in the response.
+          * *   If you want to perform a paged query, configure the `NextToken` and `MaxResults` parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set `MaxResults` to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
+          *
+          * @param request DescribeDiskReplicaPairsRequest
+          * @return DescribeDiskReplicaPairsResponse
+         */
         public async Task<DescribeDiskReplicaPairsResponse> DescribeDiskReplicaPairsAsync(DescribeDiskReplicaPairsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDiskReplicaPairsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeLensServiceStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeLensServiceStatusResponse
+         */
         public DescribeLensServiceStatusResponse DescribeLensServiceStatusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -1719,6 +2435,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeLensServiceStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request DescribeLensServiceStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeLensServiceStatusResponse
+         */
         public async Task<DescribeLensServiceStatusResponse> DescribeLensServiceStatusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -1737,12 +2461,24 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<DescribeLensServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @return DescribeLensServiceStatusResponse
+         */
         public DescribeLensServiceStatusResponse DescribeLensServiceStatus()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeLensServiceStatusWithOptions(runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @return DescribeLensServiceStatusResponse
+         */
         public async Task<DescribeLensServiceStatusResponse> DescribeLensServiceStatusAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1831,6 +2567,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **FailoverDiskReplicaGroup**.
+          *
+          * @param request FailoverDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FailoverDiskReplicaGroupResponse
+         */
         public FailoverDiskReplicaGroupResponse FailoverDiskReplicaGroupWithOptions(FailoverDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1866,6 +2609,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<FailoverDiskReplicaGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **FailoverDiskReplicaGroup**.
+          *
+          * @param request FailoverDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FailoverDiskReplicaGroupResponse
+         */
         public async Task<FailoverDiskReplicaGroupResponse> FailoverDiskReplicaGroupWithOptionsAsync(FailoverDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1901,18 +2651,37 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<FailoverDiskReplicaGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **FailoverDiskReplicaGroup**.
+          *
+          * @param request FailoverDiskReplicaGroupRequest
+          * @return FailoverDiskReplicaGroupResponse
+         */
         public FailoverDiskReplicaGroupResponse FailoverDiskReplicaGroup(FailoverDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FailoverDiskReplicaGroupWithOptions(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **FailoverDiskReplicaGroup**.
+          *
+          * @param request FailoverDiskReplicaGroupRequest
+          * @return FailoverDiskReplicaGroupResponse
+         */
         public async Task<FailoverDiskReplicaGroupResponse> FailoverDiskReplicaGroupAsync(FailoverDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FailoverDiskReplicaGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request FailoverDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FailoverDiskReplicaPairResponse
+         */
         public FailoverDiskReplicaPairResponse FailoverDiskReplicaPairWithOptions(FailoverDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1948,6 +2717,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<FailoverDiskReplicaPairResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request FailoverDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FailoverDiskReplicaPairResponse
+         */
         public async Task<FailoverDiskReplicaPairResponse> FailoverDiskReplicaPairWithOptionsAsync(FailoverDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1983,18 +2759,40 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<FailoverDiskReplicaPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request FailoverDiskReplicaPairRequest
+          * @return FailoverDiskReplicaPairResponse
+         */
         public FailoverDiskReplicaPairResponse FailoverDiskReplicaPair(FailoverDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FailoverDiskReplicaPairWithOptions(request, runtime);
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request FailoverDiskReplicaPairRequest
+          * @return FailoverDiskReplicaPairResponse
+         */
         public async Task<FailoverDiskReplicaPairResponse> FailoverDiskReplicaPairAsync(FailoverDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FailoverDiskReplicaPairWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+          * *   `ResourceId.N`
+          * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
+          * If you set `Tag.N` and `ResourceId.N` at the same time, the EBS resources that match both the parameters are returned.
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2042,6 +2840,16 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+          * *   `ResourceId.N`
+          * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
+          * If you set `Tag.N` and `ResourceId.N` at the same time, the EBS resources that match both the parameters are returned.
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2089,18 +2897,43 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+          * *   `ResourceId.N`
+          * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
+          * If you set `Tag.N` and `ResourceId.N` at the same time, the EBS resources that match both the parameters are returned.
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+          * *   `ResourceId.N`
+          * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
+          * If you set `Tag.N` and `ResourceId.N` at the same time, the EBS resources that match both the parameters are returned.
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.
+          *
+          * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDedicatedBlockStorageClusterAttributeResponse
+         */
         public ModifyDedicatedBlockStorageClusterAttributeResponse ModifyDedicatedBlockStorageClusterAttributeWithOptions(ModifyDedicatedBlockStorageClusterAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2144,6 +2977,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ModifyDedicatedBlockStorageClusterAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.
+          *
+          * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDedicatedBlockStorageClusterAttributeResponse
+         */
         public async Task<ModifyDedicatedBlockStorageClusterAttributeResponse> ModifyDedicatedBlockStorageClusterAttributeWithOptionsAsync(ModifyDedicatedBlockStorageClusterAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2187,18 +3027,38 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ModifyDedicatedBlockStorageClusterAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.
+          *
+          * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
+          * @return ModifyDedicatedBlockStorageClusterAttributeResponse
+         */
         public ModifyDedicatedBlockStorageClusterAttributeResponse ModifyDedicatedBlockStorageClusterAttribute(ModifyDedicatedBlockStorageClusterAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDedicatedBlockStorageClusterAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.
+          *
+          * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
+          * @return ModifyDedicatedBlockStorageClusterAttributeResponse
+         */
         public async Task<ModifyDedicatedBlockStorageClusterAttributeResponse> ModifyDedicatedBlockStorageClusterAttributeAsync(ModifyDedicatedBlockStorageClusterAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDedicatedBlockStorageClusterAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group must be in the **Created** (`created`) or **Stopped** (`stopped`) state.
+          *
+          * @param request ModifyDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDiskReplicaGroupResponse
+         */
         public ModifyDiskReplicaGroupResponse ModifyDiskReplicaGroupWithOptions(ModifyDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2250,6 +3110,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ModifyDiskReplicaGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group must be in the **Created** (`created`) or **Stopped** (`stopped`) state.
+          *
+          * @param request ModifyDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDiskReplicaGroupResponse
+         */
         public async Task<ModifyDiskReplicaGroupResponse> ModifyDiskReplicaGroupWithOptionsAsync(ModifyDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2301,18 +3169,39 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ModifyDiskReplicaGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group must be in the **Created** (`created`) or **Stopped** (`stopped`) state.
+          *
+          * @param request ModifyDiskReplicaGroupRequest
+          * @return ModifyDiskReplicaGroupResponse
+         */
         public ModifyDiskReplicaGroupResponse ModifyDiskReplicaGroup(ModifyDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDiskReplicaGroupWithOptions(request, runtime);
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group must be in the **Created** (`created`) or **Stopped** (`stopped`) state.
+          *
+          * @param request ModifyDiskReplicaGroupRequest
+          * @return ModifyDiskReplicaGroupResponse
+         */
         public async Task<ModifyDiskReplicaGroupResponse> ModifyDiskReplicaGroupAsync(ModifyDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDiskReplicaGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The name of the replication pair.
+          *
+          * @param request ModifyDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDiskReplicaPairResponse
+         */
         public ModifyDiskReplicaPairResponse ModifyDiskReplicaPairWithOptions(ModifyDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2364,6 +3253,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ModifyDiskReplicaPairResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The name of the replication pair.
+          *
+          * @param request ModifyDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDiskReplicaPairResponse
+         */
         public async Task<ModifyDiskReplicaPairResponse> ModifyDiskReplicaPairWithOptionsAsync(ModifyDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2415,18 +3311,38 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ModifyDiskReplicaPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The name of the replication pair.
+          *
+          * @param request ModifyDiskReplicaPairRequest
+          * @return ModifyDiskReplicaPairResponse
+         */
         public ModifyDiskReplicaPairResponse ModifyDiskReplicaPair(ModifyDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDiskReplicaPairWithOptions(request, runtime);
         }
 
+        /**
+          * The name of the replication pair.
+          *
+          * @param request ModifyDiskReplicaPairRequest
+          * @return ModifyDiskReplicaPairResponse
+         */
         public async Task<ModifyDiskReplicaPairResponse> ModifyDiskReplicaPairAsync(ModifyDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDiskReplicaPairWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group from which you want to remove a replication pair must be in the **Created** (`created`), **Stopped** (`stopped`), or **Invalid** (`invalid`) state.
+          *
+          * @param request RemoveDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveDiskReplicaPairResponse
+         */
         public RemoveDiskReplicaPairResponse RemoveDiskReplicaPairWithOptions(RemoveDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2466,6 +3382,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<RemoveDiskReplicaPairResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group from which you want to remove a replication pair must be in the **Created** (`created`), **Stopped** (`stopped`), or **Invalid** (`invalid`) state.
+          *
+          * @param request RemoveDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveDiskReplicaPairResponse
+         */
         public async Task<RemoveDiskReplicaPairResponse> RemoveDiskReplicaPairWithOptionsAsync(RemoveDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2505,18 +3429,39 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<RemoveDiskReplicaPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group from which you want to remove a replication pair must be in the **Created** (`created`), **Stopped** (`stopped`), or **Invalid** (`invalid`) state.
+          *
+          * @param request RemoveDiskReplicaPairRequest
+          * @return RemoveDiskReplicaPairResponse
+         */
         public RemoveDiskReplicaPairResponse RemoveDiskReplicaPair(RemoveDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveDiskReplicaPairWithOptions(request, runtime);
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group from which you want to remove a replication pair must be in the **Created** (`created`), **Stopped** (`stopped`), or **Invalid** (`invalid`) state.
+          *
+          * @param request RemoveDiskReplicaPairRequest
+          * @return RemoveDiskReplicaPairResponse
+         */
         public async Task<RemoveDiskReplicaPairResponse> RemoveDiskReplicaPairAsync(RemoveDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveDiskReplicaPairWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **ReprotectDiskReplicaGroup**.
+          *
+          * @param request ReprotectDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReprotectDiskReplicaGroupResponse
+         */
         public ReprotectDiskReplicaGroupResponse ReprotectDiskReplicaGroupWithOptions(ReprotectDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2552,6 +3497,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ReprotectDiskReplicaGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **ReprotectDiskReplicaGroup**.
+          *
+          * @param request ReprotectDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReprotectDiskReplicaGroupResponse
+         */
         public async Task<ReprotectDiskReplicaGroupResponse> ReprotectDiskReplicaGroupWithOptionsAsync(ReprotectDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2587,18 +3539,37 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ReprotectDiskReplicaGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **ReprotectDiskReplicaGroup**.
+          *
+          * @param request ReprotectDiskReplicaGroupRequest
+          * @return ReprotectDiskReplicaGroupResponse
+         */
         public ReprotectDiskReplicaGroupResponse ReprotectDiskReplicaGroup(ReprotectDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReprotectDiskReplicaGroupWithOptions(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **ReprotectDiskReplicaGroup**.
+          *
+          * @param request ReprotectDiskReplicaGroupRequest
+          * @return ReprotectDiskReplicaGroupResponse
+         */
         public async Task<ReprotectDiskReplicaGroupResponse> ReprotectDiskReplicaGroupAsync(ReprotectDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReprotectDiskReplicaGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request ReprotectDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReprotectDiskReplicaPairResponse
+         */
         public ReprotectDiskReplicaPairResponse ReprotectDiskReplicaPairWithOptions(ReprotectDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2634,6 +3605,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ReprotectDiskReplicaPairResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request ReprotectDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReprotectDiskReplicaPairResponse
+         */
         public async Task<ReprotectDiskReplicaPairResponse> ReprotectDiskReplicaPairWithOptionsAsync(ReprotectDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2669,18 +3647,39 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<ReprotectDiskReplicaPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request ReprotectDiskReplicaPairRequest
+          * @return ReprotectDiskReplicaPairResponse
+         */
         public ReprotectDiskReplicaPairResponse ReprotectDiskReplicaPair(ReprotectDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReprotectDiskReplicaPairWithOptions(request, runtime);
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request ReprotectDiskReplicaPairRequest
+          * @return ReprotectDiskReplicaPairResponse
+         */
         public async Task<ReprotectDiskReplicaPairResponse> ReprotectDiskReplicaPairAsync(ReprotectDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReprotectDiskReplicaPairWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   CloudLens for EBS can be used to monitor the performance of enhanced SSDs (ESSDs), standard SSDs, and ultra disks. After you enable CloudLens for EBS, you can enable the data collection feature to obtain the near real-time monitoring data. For more information, see [Enable near real-time monitoring for disks](~~354196~~).
+          *
+          * @param tmpReq StartDiskMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartDiskMonitorResponse
+         */
         public StartDiskMonitorResponse StartDiskMonitorWithOptions(StartDiskMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2718,6 +3717,15 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StartDiskMonitorResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   CloudLens for EBS can be used to monitor the performance of enhanced SSDs (ESSDs), standard SSDs, and ultra disks. After you enable CloudLens for EBS, you can enable the data collection feature to obtain the near real-time monitoring data. For more information, see [Enable near real-time monitoring for disks](~~354196~~).
+          *
+          * @param tmpReq StartDiskMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartDiskMonitorResponse
+         */
         public async Task<StartDiskMonitorResponse> StartDiskMonitorWithOptionsAsync(StartDiskMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2755,18 +3763,41 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StartDiskMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   CloudLens for EBS can be used to monitor the performance of enhanced SSDs (ESSDs), standard SSDs, and ultra disks. After you enable CloudLens for EBS, you can enable the data collection feature to obtain the near real-time monitoring data. For more information, see [Enable near real-time monitoring for disks](~~354196~~).
+          *
+          * @param request StartDiskMonitorRequest
+          * @return StartDiskMonitorResponse
+         */
         public StartDiskMonitorResponse StartDiskMonitor(StartDiskMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartDiskMonitorWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   CloudLens for EBS can be used to monitor the performance of enhanced SSDs (ESSDs), standard SSDs, and ultra disks. After you enable CloudLens for EBS, you can enable the data collection feature to obtain the near real-time monitoring data. For more information, see [Enable near real-time monitoring for disks](~~354196~~).
+          *
+          * @param request StartDiskMonitorRequest
+          * @return StartDiskMonitorResponse
+         */
         public async Task<StartDiskMonitorResponse> StartDiskMonitorAsync(StartDiskMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartDiskMonitorWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **StartDiskReplicaGroup**.
+          *
+          * @param request StartDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartDiskReplicaGroupResponse
+         */
         public StartDiskReplicaGroupResponse StartDiskReplicaGroupWithOptions(StartDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2806,6 +3837,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StartDiskReplicaGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **StartDiskReplicaGroup**.
+          *
+          * @param request StartDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartDiskReplicaGroupResponse
+         */
         public async Task<StartDiskReplicaGroupResponse> StartDiskReplicaGroupWithOptionsAsync(StartDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2845,18 +3883,37 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StartDiskReplicaGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **StartDiskReplicaGroup**.
+          *
+          * @param request StartDiskReplicaGroupRequest
+          * @return StartDiskReplicaGroupResponse
+         */
         public StartDiskReplicaGroupResponse StartDiskReplicaGroup(StartDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartDiskReplicaGroupWithOptions(request, runtime);
         }
 
+        /**
+          * The operation that you want to perform. Set the value to **StartDiskReplicaGroup**.
+          *
+          * @param request StartDiskReplicaGroupRequest
+          * @return StartDiskReplicaGroupResponse
+         */
         public async Task<StartDiskReplicaGroupResponse> StartDiskReplicaGroupAsync(StartDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartDiskReplicaGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request StartDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartDiskReplicaPairResponse
+         */
         public StartDiskReplicaPairResponse StartDiskReplicaPairWithOptions(StartDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2896,6 +3953,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StartDiskReplicaPairResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request StartDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartDiskReplicaPairResponse
+         */
         public async Task<StartDiskReplicaPairResponse> StartDiskReplicaPairWithOptionsAsync(StartDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2935,18 +3999,38 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StartDiskReplicaPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request StartDiskReplicaPairRequest
+          * @return StartDiskReplicaPairResponse
+         */
         public StartDiskReplicaPairResponse StartDiskReplicaPair(StartDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartDiskReplicaPairWithOptions(request, runtime);
         }
 
+        /**
+          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+          *
+          * @param request StartDiskReplicaPairRequest
+          * @return StartDiskReplicaPairResponse
+         */
         public async Task<StartDiskReplicaPairResponse> StartDiskReplicaPairAsync(StartDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartDiskReplicaPairWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param tmpReq StopDiskMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopDiskMonitorResponse
+         */
         public StopDiskMonitorResponse StopDiskMonitorWithOptions(StopDiskMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2984,6 +4068,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StopDiskMonitorResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param tmpReq StopDiskMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopDiskMonitorResponse
+         */
         public async Task<StopDiskMonitorResponse> StopDiskMonitorWithOptionsAsync(StopDiskMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3021,18 +4113,41 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StopDiskMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request StopDiskMonitorRequest
+          * @return StopDiskMonitorResponse
+         */
         public StopDiskMonitorResponse StopDiskMonitor(StopDiskMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopDiskMonitorWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request StopDiskMonitorRequest
+          * @return StopDiskMonitorResponse
+         */
         public async Task<StopDiskMonitorResponse> StopDiskMonitorAsync(StopDiskMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDiskMonitorWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group that you want to stop must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), or **Stopped** (`stopped`) state.
+          * *   When a replication pair-consistent group is stopped, it enters the **Stopped** (`stopped`) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to **Stop Failed** (`stop_failed`). In this case, try again later.
+          *
+          * @param request StopDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopDiskReplicaGroupResponse
+         */
         public StopDiskReplicaGroupResponse StopDiskReplicaGroupWithOptions(StopDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3068,6 +4183,15 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StopDiskReplicaGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group that you want to stop must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), or **Stopped** (`stopped`) state.
+          * *   When a replication pair-consistent group is stopped, it enters the **Stopped** (`stopped`) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to **Stop Failed** (`stop_failed`). In this case, try again later.
+          *
+          * @param request StopDiskReplicaGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopDiskReplicaGroupResponse
+         */
         public async Task<StopDiskReplicaGroupResponse> StopDiskReplicaGroupWithOptionsAsync(StopDiskReplicaGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3103,18 +4227,42 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StopDiskReplicaGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group that you want to stop must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), or **Stopped** (`stopped`) state.
+          * *   When a replication pair-consistent group is stopped, it enters the **Stopped** (`stopped`) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to **Stop Failed** (`stop_failed`). In this case, try again later.
+          *
+          * @param request StopDiskReplicaGroupRequest
+          * @return StopDiskReplicaGroupResponse
+         */
         public StopDiskReplicaGroupResponse StopDiskReplicaGroup(StopDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopDiskReplicaGroupWithOptions(request, runtime);
         }
 
+        /**
+          * *   The replication pair-consistent group feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   The replication pair-consistent group that you want to stop must be in the **One-time Syncing** (`manual_syncing`), **Syncing** (`syncing`), **Normal** (`normal`), **Stopping** (`stopping`), **Stop Failed** (`stop_failed`), or **Stopped** (`stopped`) state.
+          * *   When a replication pair-consistent group is stopped, it enters the **Stopped** (`stopped`) state. If a replication pair-consistent group cannot be stopped, the state of the group remains unchanged or changes to **Stop Failed** (`stop_failed`). In this case, try again later.
+          *
+          * @param request StopDiskReplicaGroupRequest
+          * @return StopDiskReplicaGroupResponse
+         */
         public async Task<StopDiskReplicaGroupResponse> StopDiskReplicaGroupAsync(StopDiskReplicaGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDiskReplicaGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Only replication pairs that are in the **Initial Syncing** (`initial_syncing`), **Syncing** (`syncing`), **One-time Syncing** (`manual_syncing`), or **Normal** (`normal`) state can be stopped. When a replication pair is stopped, it enters the Stopped (`stopped`) state. The secondary disk rolls back to the point in time when the last asynchronous replication was complete and drops all the data that is being replicated from the primary disk.
+          *
+          * @param request StopDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopDiskReplicaPairResponse
+         */
         public StopDiskReplicaPairResponse StopDiskReplicaPairWithOptions(StopDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3150,6 +4298,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StopDiskReplicaPairResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Only replication pairs that are in the **Initial Syncing** (`initial_syncing`), **Syncing** (`syncing`), **One-time Syncing** (`manual_syncing`), or **Normal** (`normal`) state can be stopped. When a replication pair is stopped, it enters the Stopped (`stopped`) state. The secondary disk rolls back to the point in time when the last asynchronous replication was complete and drops all the data that is being replicated from the primary disk.
+          *
+          * @param request StopDiskReplicaPairRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopDiskReplicaPairResponse
+         */
         public async Task<StopDiskReplicaPairResponse> StopDiskReplicaPairWithOptionsAsync(StopDiskReplicaPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3185,18 +4341,39 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<StopDiskReplicaPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Only replication pairs that are in the **Initial Syncing** (`initial_syncing`), **Syncing** (`syncing`), **One-time Syncing** (`manual_syncing`), or **Normal** (`normal`) state can be stopped. When a replication pair is stopped, it enters the Stopped (`stopped`) state. The secondary disk rolls back to the point in time when the last asynchronous replication was complete and drops all the data that is being replicated from the primary disk.
+          *
+          * @param request StopDiskReplicaPairRequest
+          * @return StopDiskReplicaPairResponse
+         */
         public StopDiskReplicaPairResponse StopDiskReplicaPair(StopDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopDiskReplicaPairWithOptions(request, runtime);
         }
 
+        /**
+          * *   The async replication feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Heyuan), China (Chengdu), China (Hong Kong), Singapore (Singapore), US (Silicon Valley), and US (Virginia) regions.
+          * *   Only replication pairs that are in the **Initial Syncing** (`initial_syncing`), **Syncing** (`syncing`), **One-time Syncing** (`manual_syncing`), or **Normal** (`normal`) state can be stopped. When a replication pair is stopped, it enters the Stopped (`stopped`) state. The secondary disk rolls back to the point in time when the last asynchronous replication was complete and drops all the data that is being replicated from the primary disk.
+          *
+          * @param request StopDiskReplicaPairRequest
+          * @return StopDiskReplicaPairResponse
+         */
         public async Task<StopDiskReplicaPairResponse> StopDiskReplicaPairAsync(StopDiskReplicaPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDiskReplicaPairWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the "Tag limits" section in [Limits](~~25412~~).
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3240,6 +4417,13 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the "Tag limits" section in [Limits](~~25412~~).
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3283,18 +4467,38 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the "Tag limits" section in [Limits](~~25412~~).
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the "Tag limits" section in [Limits](~~25412~~).
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can remove up to 20 tags at a time.
+          * *   After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.
+          *
+          * @param request UntagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3342,6 +4546,14 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can remove up to 20 tags at a time.
+          * *   After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.
+          *
+          * @param request UntagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3389,12 +4601,26 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can remove up to 20 tags at a time.
+          * *   After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can remove up to 20 tags at a time.
+          * *   After a tag is removed from an EBS resource, the tag is automatically deleted if the tag is not added to any instance.
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

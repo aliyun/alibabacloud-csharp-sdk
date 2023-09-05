@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateDedicatedBlockStorageClusterResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the dedicated block storage cluster.
+        /// </summary>
         [NameInMap("DbscId")]
         [Validation(Required=false)]
         public string DbscId { get; set; }
 
+        /// <summary>
+        /// The ID of the order.
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

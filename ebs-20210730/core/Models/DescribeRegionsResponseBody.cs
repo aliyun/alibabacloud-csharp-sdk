@@ -9,34 +9,58 @@ using Tea;
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// Details about the regions.
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
+            /// <summary>
+            /// The name of the region.
+            /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
+            /// <summary>
+            /// The endpoint of the region.
+            /// </summary>
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]
             public string RegionEndpoint { get; set; }
 
+            /// <summary>
+            /// The ID of the region.
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// Details about the zones.
+            /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsZones> Zones { get; set; }
             public class DescribeRegionsResponseBodyRegionsZones : TeaModel {
+                /// <summary>
+                /// The name of the zone.
+                /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
+                /// <summary>
+                /// The type of resource list.
+                /// </summary>
                 [NameInMap("ResourceTypes")]
                 [Validation(Required=false)]
                 public List<string> ResourceTypes { get; set; }
 
+                /// <summary>
+                /// The ID of the zone.
+                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -45,6 +69,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeDedicatedBlockStorageClustersRequest : TeaModel {
+        /// <summary>
+        /// The zone ID of the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+        /// </summary>
         [NameInMap("AzoneId")]
         [Validation(Required=false)]
         public string AzoneId { get; set; }
 
+        /// <summary>
+        /// The category of disks that can be created in the dedicated block storage cluster.
+        /// 
+        /// Set the value to cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -41,6 +49,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

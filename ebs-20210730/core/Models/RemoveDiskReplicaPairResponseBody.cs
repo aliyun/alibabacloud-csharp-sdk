@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class RemoveDiskReplicaPairResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
