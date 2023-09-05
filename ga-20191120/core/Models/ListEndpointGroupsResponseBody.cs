@@ -10,92 +10,48 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListEndpointGroupsResponseBody : TeaModel {
         /// <summary>
-        /// Configurations of endpoint groups.
+        /// The ID of the endpoint group.
         /// </summary>
         [NameInMap("EndpointGroups")]
         [Validation(Required=false)]
         public List<ListEndpointGroupsResponseBodyEndpointGroups> EndpointGroups { get; set; }
         public class ListEndpointGroupsResponseBodyEndpointGroups : TeaModel {
-            /// <summary>
-            /// The ID of the GA instance.
-            /// </summary>
             [NameInMap("AcceleratorId")]
             [Validation(Required=false)]
             public string AcceleratorId { get; set; }
 
-            /// <summary>
-            /// The description of the endpoint group.
-            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// Configurations of Endpoints.
-            /// </summary>
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
             public List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations> EndpointConfigurations { get; set; }
             public class ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations : TeaModel {
-                /// <summary>
-                /// Indicates whether the client IP address preservation feature is enabled. Valid values:
-                /// 
-                /// *   **true:** The client IP address preservation feature is enabled.
-                /// *   **false:** The client IP address preservation feature is disabled.
-                /// </summary>
                 [NameInMap("EnableClientIPPreservation")]
                 [Validation(Required=false)]
                 public bool? EnableClientIPPreservation { get; set; }
 
-                /// <summary>
-                /// The IP address or domain name of the endpoint.
-                /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
-                /// <summary>
-                /// The ID of the endpoint.
-                /// </summary>
                 [NameInMap("EndpointId")]
                 [Validation(Required=false)]
                 public string EndpointId { get; set; }
 
-                /// <summary>
-                /// The port that is used to monitor latency.
-                /// </summary>
                 [NameInMap("ProbePort")]
                 [Validation(Required=false)]
                 public int? ProbePort { get; set; }
 
-                /// <summary>
-                /// The protocol that is used to monitor latency. Valid values:
-                /// 
-                /// *   **icmp:** ICMP.
-                /// *   **tcp:** TCP.
-                /// </summary>
                 [NameInMap("ProbeProtocol")]
                 [Validation(Required=false)]
                 public string ProbeProtocol { get; set; }
 
-                /// <summary>
-                /// The type of the endpoint. Valid values:
-                /// 
-                /// *   **Domain:** a custom domain name.
-                /// *   **Ip:** a custom IP address.
-                /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-                /// *   **ECS:** an Elastic Compute Service (ECS) instance.
-                /// *   **SLB:** a Server Load Balancer (SLB) instance.
-                /// *   **ALB:** an Application Load Balancer (ALB) instance.
-                /// *   **OSS:** an Object Storage Service (OSS) bucket.
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
-                /// <summary>
-                /// The weight of the endpoint.
-                /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
                 public int? Weight { get; set; }
@@ -103,133 +59,87 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The ID of the endpoint group.
+            /// The ID of an endpoint group.
             /// </summary>
             [NameInMap("EndpointGroupId")]
             [Validation(Required=false)]
             public string EndpointGroupId { get; set; }
 
             /// <summary>
-            /// The list of endpoint group IP addresses.
+            /// The mappings between ports.
             /// </summary>
             [NameInMap("EndpointGroupIpList")]
             [Validation(Required=false)]
             public List<string> EndpointGroupIpList { get; set; }
 
             /// <summary>
-            /// The ID of the region where the endpoint group is deployed.
+            /// Indicates whether the health check feature is enabled. Valid values:
+            /// 
+            /// *   **true**: The health check feature is enabled.
+            /// *   **false**: The health check feature is disabled.
             /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
             public string EndpointGroupRegion { get; set; }
 
-            /// <summary>
-            /// The type of the endpoint group. Valid values:
-            /// 
-            /// *   **default:** a default endpoint group.
-            /// *   **virtual:** a virtual endpoint group.
-            /// </summary>
             [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
 
             /// <summary>
-            /// The list of endpoint group IP addresses to be confirmed after the GA instance is upgraded.
+            /// The interval at which health checks are performed. Unit: seconds.
             /// </summary>
             [NameInMap("EndpointGroupUnconfirmedIpList")]
             [Validation(Required=false)]
             public List<string> EndpointGroupUnconfirmedIpList { get; set; }
 
-            /// <summary>
-            /// The protocol that is used by the backend service. Valid values:
-            /// 
-            /// *   **HTTP:** HTTP.
-            /// *   **HTTPS:** HTTPS.
-            /// </summary>
             [NameInMap("EndpointRequestProtocol")]
             [Validation(Required=false)]
             public string EndpointRequestProtocol { get; set; }
 
-            /// <summary>
-            /// IDs of forwarding rules that are associated with endpoint groups.
-            /// </summary>
             [NameInMap("ForwardingRuleIds")]
             [Validation(Required=false)]
             public List<string> ForwardingRuleIds { get; set; }
 
-            /// <summary>
-            /// Indicates whether the health check feature is enabled. Valid values:
-            /// 
-            /// *   **true:** The health check feature is enabled.
-            /// *   **false:** The health check feature is disabled.
-            /// </summary>
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
 
-            /// <summary>
-            /// The interval at which health checks are performed. Unit: seconds.
-            /// </summary>
             [NameInMap("HealthCheckIntervalSeconds")]
             [Validation(Required=false)]
             public int? HealthCheckIntervalSeconds { get; set; }
 
             /// <summary>
-            /// The path to which health check probes are sent.
+            /// The ID of the request.
             /// </summary>
             [NameInMap("HealthCheckPath")]
             [Validation(Required=false)]
             public string HealthCheckPath { get; set; }
 
-            /// <summary>
-            /// The port that is used for health checks.
-            /// </summary>
             [NameInMap("HealthCheckPort")]
             [Validation(Required=false)]
             public int? HealthCheckPort { get; set; }
 
-            /// <summary>
-            /// The protocol over which health check probes are sent. Valid values:
-            /// 
-            /// *   **tcp:** TCP.
-            /// *   **http:** HTTP.
-            /// *   **https:** HTTPS.
-            /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
-            /// <summary>
-            /// The ID of the listener.
-            /// </summary>
             [NameInMap("ListenerId")]
             [Validation(Required=false)]
             public string ListenerId { get; set; }
 
-            /// <summary>
-            /// The name of the endpoint group.
-            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// Mappings between ports.
-            /// </summary>
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
             public List<ListEndpointGroupsResponseBodyEndpointGroupsPortOverrides> PortOverrides { get; set; }
             public class ListEndpointGroupsResponseBodyEndpointGroupsPortOverrides : TeaModel {
-                /// <summary>
-                /// The endpoint port.
-                /// </summary>
                 [NameInMap("EndpointPort")]
                 [Validation(Required=false)]
                 public int? EndpointPort { get; set; }
 
-                /// <summary>
-                /// The listening port.
-                /// </summary>
                 [NameInMap("ListenerPort")]
                 [Validation(Required=false)]
                 public int? ListenerPort { get; set; }
@@ -237,50 +147,103 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The state of the endpoint group. Valid values:
+            /// 托管实例所属的服务方ID。
             /// 
-            /// *   **init:** The endpoint group is being initialized.
-            /// *   **active:** The endpoint group is running as expected.
-            /// *   **updating:**The endpoint group is being updated.
-            /// *   **deleteing:** The endpoint group is being deleted.
+            /// > 仅在**ServiceManaged**参数为**True**时有效。
+            /// </summary>
+            [NameInMap("ServiceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
+
+            /// <summary>
+            /// 是否为托管实例。取值：
+            /// 
+            /// - **true**：是托管资实例。
+            /// 
+            /// - **false**：不是托管实例。
+            /// </summary>
+            [NameInMap("ServiceManaged")]
+            [Validation(Required=false)]
+            public bool? ServiceManaged { get; set; }
+
+            /// <summary>
+            /// 用户在此托管实例下可执行的动作策略列表。
+            /// 
+            /// > 仅在**ServiceManaged**参数为**True**时有效。
+            /// > - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。
+            /// </summary>
+            [NameInMap("ServiceManagedInfos")]
+            [Validation(Required=false)]
+            public List<ListEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> ServiceManagedInfos { get; set; }
+            public class ListEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos : TeaModel {
+                /// <summary>
+                /// 托管策略动作名称，取值：
+                /// - **Create**：创建实例。
+                /// - **Update**：更新当前实例。
+                /// - **Delete**：删除当前实例。
+                /// - **Associate**：引用/被引用当前实例。
+                /// - **UserUnmanaged**：用户解托管实例。
+                /// - **CreateChild**：在当前实例下创建子资源。
+                /// </summary>
+                [NameInMap("Action")]
+                [Validation(Required=false)]
+                public string Action { get; set; }
+
+                /// <summary>
+                /// 子资源类型，取值：
+                /// - **Listener**：监听资源。
+                /// - **IpSet**：加速地域资源。
+                /// - **EndpointGroup**：终端节点组资源。
+                /// - **ForwardingRule**：转发策略资源。
+                /// - **Endpoint**：终端节点资源。
+                /// - **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。
+                /// - **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。
+                /// > 仅在**Action**参数为**CreateChild**时有效
+                /// </summary>
+                [NameInMap("ChildType")]
+                [Validation(Required=false)]
+                public string ChildType { get; set; }
+
+                /// <summary>
+                /// 托管策略动作是否被托管，取值：
+                /// - **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。
+                /// - **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。
+                /// </summary>
+                [NameInMap("IsManaged")]
+                [Validation(Required=false)]
+                public bool? IsManaged { get; set; }
+
+            }
+
+            /// <summary>
+            /// The protocol over which health check requests are sent. Valid values:
+            /// 
+            /// *   **tcp**: TCP
+            /// *   **http**: HTTP
+            /// *   **https**: HTTPS
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
-            /// <summary>
-            /// Tags of GA instances.
-            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListEndpointGroupsResponseBodyEndpointGroupsTags> Tags { get; set; }
             public class ListEndpointGroupsResponseBodyEndpointGroupsTags : TeaModel {
-                /// <summary>
-                /// The tag key of the GA instance.
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// The tag value of the GA instance.
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
-            /// <summary>
-            /// The number of consecutive failed health checks that must occur before an endpoint is considered unhealthy.
-            /// </summary>
             [NameInMap("ThresholdCount")]
             [Validation(Required=false)]
             public int? ThresholdCount { get; set; }
 
-            /// <summary>
-            /// The weight of the endpoint group when the listener is associated with multiple endpoint groups.
-            /// </summary>
             [NameInMap("TrafficPercentage")]
             [Validation(Required=false)]
             public int? TrafficPercentage { get; set; }
@@ -288,28 +251,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// Indicates whether the client IP address preservation feature is enabled. Valid values:
+        /// 
+        /// *   **true**: The client IP address preservation feature is enabled.
+        /// *   **false**: The client IP address preservation feature is disabled.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of consecutive failed health checks that must occur before an endpoint is considered unhealthy.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The weight of the endpoint.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of returned entries.
+        /// The ID of the endpoint.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

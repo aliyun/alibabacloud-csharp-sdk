@@ -9,16 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class RemoveEntriesFromAclRequest : TeaModel {
+        /// <summary>
+        /// The IP addresses or CIDR blocks that you want to delete from the ACL. You can delete up to 20 entries in each request.
+        /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<RemoveEntriesFromAclRequestAclEntries> AclEntries { get; set; }
         public class RemoveEntriesFromAclRequestAclEntries : TeaModel {
             /// <summary>
-            /// The client token that is used to ensure the idempotence of the request.
+            /// The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to delete from the ACL. You can delete up to 20 entries in each request.
             /// 
-            /// You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.
-            /// 
-            /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+            /// > This parameter is required.
             /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
@@ -27,35 +28,35 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The IP address or CIDR block that you want to delete from the ACL.
-        /// 
-        /// You can delete at most 20 entries in each request.
-        /// 
-        /// >  This parameter is required.
+        /// The ACL ID.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// Specifies whether to check the request without performing the operation. Valid values:
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+        /// 
+        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Specifies whether to perform a dry run, without performing the actual request. Valid values:
+        /// 
+        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the ACL.
+        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

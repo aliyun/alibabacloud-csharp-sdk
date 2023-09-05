@@ -1,3 +1,6 @@
+2023-09-05 Version: 2.0.0
+- Generated csharp 2019-11-20 for Ga.
+
 2023-06-28 Version: 1.0.22
 - Update EndPointGroup api.
 

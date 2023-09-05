@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string AcceleratorId { get; set; }
 
             /// <summary>
-            /// The URL or IP address that is probed.
+            /// The URL or IP address that was probed.
             /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// Indicates whether the automatic diagnostics feature is enabled. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("DetectEnable")]
             [Validation(Required=false)]
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string OptionsJson { get; set; }
 
             /// <summary>
-            /// The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic, GA must wait until the silence period ends before GA can trigger another automatic diagnostic.
+            /// The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic task, GA must wait until the silence period ends before GA can trigger another automatic diagnostic task.
             /// 
-            /// If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of the **DetectTimes** parameter, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.
+            /// If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of **DetectTimes** , the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.
             /// 
             /// Unit: seconds.
             /// </summary>
@@ -80,26 +80,26 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? SilenceTime { get; set; }
 
             /// <summary>
-            /// The state of the origin probing task. Valid values:
+            /// The status of the origin probing task. Valid values:
             /// 
-            /// *   **active**: The origin probing task is running.
-            /// *   **inactive**: The origin probing task is stopped.
-            /// *   **init**: The origin probing task is being initialized.
-            /// *   **deleting**: The origin probing task is being deleted.
+            /// *   **active:** The origin probing task is running.
+            /// *   **inactive:** The origin probing task is stopped.
+            /// *   **init:** The origin probing task is being initialized.
+            /// *   **deleting:** The origin probing task is being deleted.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The ID of the origin probing task.
+            /// The origin probing task ID.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
             /// <summary>
-            /// The name of the origin probing task.
+            /// The origin probing task name.
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
@@ -108,21 +108,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

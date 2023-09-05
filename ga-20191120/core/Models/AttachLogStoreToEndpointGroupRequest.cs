@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The IDs of the endpoint groups.
+        /// </summary>
         [NameInMap("EndpointGroupIds")]
         [Validation(Required=false)]
         public List<string> EndpointGroupIds { get; set; }

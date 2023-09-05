@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListCustomRoutingEndpointGroupDestinationsRequest : TeaModel {
         /// <summary>
-        /// The ID of the GA instance.
+        /// The GA instance ID.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint group.
+        /// The endpoint group ID.
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
@@ -26,39 +26,50 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The start port of the backend service port range of the endpoint group.
         /// 
-        /// Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
+        /// Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
         /// </summary>
         [NameInMap("FromPort")]
         [Validation(Required=false)]
         public int? FromPort { get; set; }
 
         /// <summary>
-        /// The ID of the listener.
+        /// The listener ID.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The backend service protocols of the endpoint group. Valid values:
+        /// 
+        /// *   **TCP:** TCP.
+        /// *   **UDP:** UDP.
+        /// *   **TCP,UDP:** TCP and UDP.
+        /// 
+        /// If this parameter is empty, all types of protocols are queried.
+        /// 
+        /// You can specify up to 10 protocols.
+        /// </summary>
         [NameInMap("Protocols")]
         [Validation(Required=false)]
         public List<string> Protocols { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -67,7 +78,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The end port of the backend service port range of the endpoint group.
         /// 
-        /// Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
+        /// Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
         /// </summary>
         [NameInMap("ToPort")]
         [Validation(Required=false)]

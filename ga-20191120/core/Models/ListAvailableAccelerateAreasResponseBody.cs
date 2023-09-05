@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public List<ListAvailableAccelerateAreasResponseBodyAreasRegionList> RegionList { get; set; }
             public class ListAvailableAccelerateAreasResponseBodyAreasRegionList : TeaModel {
+                [NameInMap("ChinaMainland")]
+                [Validation(Required=false)]
+                public bool? ChinaMainland { get; set; }
+
+                [NameInMap("IspTypeList")]
+                [Validation(Required=false)]
+                public List<string> IspTypeList { get; set; }
+
                 /// <summary>
                 /// The name of the acceleration region.
                 /// </summary>
@@ -50,6 +58,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("SupportIpv6")]
+                [Validation(Required=false)]
+                public bool? SupportIpv6 { get; set; }
 
             }
 

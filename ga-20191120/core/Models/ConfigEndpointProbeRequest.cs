@@ -12,19 +12,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable latency monitoring. Default value: false. Valid values:
+        /// Specifies whether to enable latency monitoring. Valid values:
         /// 
-        /// *   **true**: enables latency monitoring.
-        /// *   **false**: disables latency monitoring.
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
@@ -38,19 +38,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint group.
+        /// The endpoint group ID.
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The type of endpoint. Valid values:
+        /// The type of the endpoint. Valid values:
         /// 
-        /// *   **Ip**: a custom IP address
-        /// *   **Domain**: a custom domain name
-        /// *   **EIP**: an Alibaba Cloud elastic IP address (EIP)
-        /// *   **PublicIp**: an Alibaba Cloud public IP address
+        /// *   **Ip:** a custom IP address.
+        /// *   **Domain:** a custom domain name.
+        /// *   **EIP:** an Alibaba Cloud elastic IP address (EIP).
+        /// *   **PublicIp:** an Alibaba Cloud public IP address.
         /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
@@ -66,15 +66,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The protocol that is used to monitor latency. Valid values:
         /// 
-        /// *   **tcp**
-        /// *   **icmp**
+        /// *   **tcp:** TCP.
+        /// *   **icmp:** ICMP.
         /// </summary>
         [NameInMap("ProbeProtocol")]
         [Validation(Required=false)]
         public string ProbeProtocol { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

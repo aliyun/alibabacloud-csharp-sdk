@@ -72,6 +72,32 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("ServiceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
+
+            [NameInMap("ServiceManaged")]
+            [Validation(Required=false)]
+            public bool? ServiceManaged { get; set; }
+
+            [NameInMap("ServiceManagedInfos")]
+            [Validation(Required=false)]
+            public List<ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> ServiceManagedInfos { get; set; }
+            public class ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos : TeaModel {
+                [NameInMap("Action")]
+                [Validation(Required=false)]
+                public string Action { get; set; }
+
+                [NameInMap("ChildType")]
+                [Validation(Required=false)]
+                public string ChildType { get; set; }
+
+                [NameInMap("IsManaged")]
+                [Validation(Required=false)]
+                public bool? IsManaged { get; set; }
+
+            }
+
             /// <summary>
             /// The status of the endpoint group. Valid values:
             /// 

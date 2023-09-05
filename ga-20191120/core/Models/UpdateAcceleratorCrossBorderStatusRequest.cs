@@ -8,24 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
-    public class BandwidthPackageAddAcceleratorRequest : TeaModel {
-        /// <summary>
-        /// The GA instance ID.
-        /// </summary>
+    public class UpdateAcceleratorCrossBorderStatusRequest : TeaModel {
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
-        /// <summary>
-        /// The bandwidth plan ID.
-        /// </summary>
-        [NameInMap("BandwidthPackageId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string BandwidthPackageId { get; set; }
+        public string ClientToken { get; set; }
 
-        /// <summary>
-        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
-        /// </summary>
+        [NameInMap("CrossBorderStatus")]
+        [Validation(Required=false)]
+        public bool? CrossBorderStatus { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

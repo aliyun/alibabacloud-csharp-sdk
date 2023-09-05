@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
             public class UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
                 /// <summary>
-                /// The IP address or domain name of the endpoint.
+                /// The IP address, domain name or instance id according to the type of the endpoint.
                 /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]

@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateAclRequest : TeaModel {
         /// <summary>
-        /// The ACL entries.
+        /// The entries of IP addresses or CIDR blocks to add to the ACL.
+        /// 
+        /// You can add up to 20 entries in each request.
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<CreateAclRequestAclEntries> AclEntries { get; set; }
         public class CreateAclRequestAclEntries : TeaModel {
             /// <summary>
-            /// The IP address(192.168.XX.XX) or CIDR(10.0.XX.XX/24) block that you want to add to the ACL.
+            /// The IP addresses (192.168.XX.XX) or CIDR blocks (10.0.XX.XX/24) that you want to add to the ACL.
             /// 
             /// You can add up to 20 entries in each request.
             /// </summary>
@@ -90,14 +92,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags of the ACL.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateAclRequestTag> Tag { get; set; }
         public class CreateAclRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the ACL. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag keys.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the ACL. The tag value cannot be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag values.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

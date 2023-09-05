@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class BandwidthPackageAddAcceleratorResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the GA instance.
+        /// The GA instance IDs.
         /// </summary>
         [NameInMap("Accelerators")]
         [Validation(Required=false)]
         public List<string> Accelerators { get; set; }
 
         /// <summary>
-        /// The ID of the bandwidth plan.
+        /// The bandwidth plan ID.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

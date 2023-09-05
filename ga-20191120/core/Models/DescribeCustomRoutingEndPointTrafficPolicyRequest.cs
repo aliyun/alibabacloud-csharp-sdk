@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// The ID of the traffic destination to be queried.
+        /// The ID of the traffic policy to be queried.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

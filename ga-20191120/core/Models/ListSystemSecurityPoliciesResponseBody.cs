@@ -10,84 +10,62 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListSystemSecurityPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The security policies.
+        /// The list of TLS security policies.
         /// </summary>
         [NameInMap("SecurityPolicies")]
         [Validation(Required=false)]
         public List<ListSystemSecurityPoliciesResponseBodySecurityPolicies> SecurityPolicies { get; set; }
         public class ListSystemSecurityPoliciesResponseBodySecurityPolicies : TeaModel {
             /// <summary>
-            /// The supported cipher suites, which depend on the **TLSVersions** value.
+            /// The supported cipher suites. The value of this parameter is determined by the value of **TLSVersions**.
             /// 
-            /// The specified cipher suites must be supported by at least one **TLS protocol version** that you select. For example, if you set the TLSVersions.N parameter to **TLSv1.3**, you can specify only cipher suites that are supported by **TLSv1.3**.
+            /// The specified cipher suites must be supported by at least one value of **TLSVersions**. For example, if you set TLSVersions to **TLSv1.3**, you must specify cipher suites that are supported by **TLSv1.3**.
             /// 
-            /// *   **TLSv1.0** and **TLSv1.1** support the following cipher suites:
+            /// *   Valid values when TLSVersions is set to **TLSv1.0** or **TLSv1.1**:
             /// 
-            ///     *   **ECDHE-ECDSA-AES128-SHA**
-            ///     *   **ECDHE-ECDSA-AES256-SHA**
-            ///     *   **ECDHE-RSA-AES128-SHA**
-            ///     *   **ECDHE-RSA-AES256-SHA**
-            ///     *   **AES128-SHA**
-            ///     *   **AES256-SHA**
-            ///     *   **DES-CBC3-SHA**
+            ///     *   ECDHE-ECDSA-AES128-SHA
+            ///     *   ECDHE-ECDSA-AES256-SHA
+            ///     *   ECDHE-RSA-AES128-SHA
+            ///     *   ECDHE-RSA-AES256-SHA
+            ///     *   AES128-SHA
+            ///     *   AES256-SHA
+            ///     *   DES-CBC3-SHA
             /// 
-            /// *   **TLS 1.2** supports the following cipher suites:
+            /// *   Valid values when TLSVersions is set to **TLSv1.2**:
             /// 
-            ///     *   **ECDHE-ECDSA-AES128-SHA**
-            ///     *   **ECDHE-ECDSA-AES256-SHA**
-            ///     *   **ECDHE-RSA-AES128-SHA**
-            ///     *   **ECDHE-RSA-AES256-SHA**
-            ///     *   **AES128-SHA**
-            ///     *   **AES256-SHA**
-            ///     *   **DES-CBC3-SHA**
-            ///     *   **ECDHE-ECDSA-AES128-GCM-SHA256**
-            ///     *   **ECDHE-ECDSA-AES256-GCM-SHA384**
-            ///     *   **ECDHE-ECDSA-AES128-SHA256**
-            ///     *   **ECDHE-ECDSA-AES256-SHA384**
-            ///     *   **ECDHE-RSA-AES128-GCM-SHA256**
-            ///     *   **ECDHE-RSA-AES256-GCM-SHA384**
-            ///     *   **ECDHE-RSA-AES128-SHA256**
-            ///     *   **ECDHE-RSA-AES256-SHA384**
-            ///     *   **AES128-GCM-SHA256**
-            ///     *   **AES256-GCM-SHA384**
-            ///     *   **AES128-SHA256**
-            ///     *   **AES256-SHA256**
+            /// ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA256 AES256-SHA256
             /// 
-            /// *   **TLSv1.3** supports the following cipher suites:
+            /// *   Valid values when TLSVersions is set to **TLSv1.3**:
             /// 
-            ///     *   **TLS_AES\_128\_GCM_SHA256**
-            ///     *   **TLS_AES\_256\_GCM_SHA384**
-            ///     *   **TLS_CHACHA20\_POLY1305\_SHA256**
-            ///     *   **TLS_AES\_128\_CCM_SHA256**
-            ///     *   **TLS_AES\_128\_CCM\_8\_SHA256**
+            /// TLS_AES\_128\_GCM_SHA256 TLS_AES\_256\_GCM_SHA384 TLS_CHACHA20\_POLY1305\_SHA256 TLS_AES\_128\_CCM_SHA256 TLS_AES\_128\_CCM\_8\_SHA256
             /// </summary>
             [NameInMap("Ciphers")]
             [Validation(Required=false)]
             public List<string> Ciphers { get; set; }
 
             /// <summary>
-            /// The ID of the security policy.
+            /// The TLS security policy ID.
             /// </summary>
             [NameInMap("SecurityPolicyId")]
             [Validation(Required=false)]

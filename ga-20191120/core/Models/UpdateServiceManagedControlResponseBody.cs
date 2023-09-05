@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
-    public class CreateSpareIpsResponseBody : TeaModel {
+    public class UpdateServiceManagedControlResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

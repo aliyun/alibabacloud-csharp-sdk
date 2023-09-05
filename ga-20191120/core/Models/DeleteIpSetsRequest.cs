@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteIpSetsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the acceleration region that you want to delete.
+        /// </summary>
         [NameInMap("IpSetIds")]
         [Validation(Required=false)]
         public List<string> IpSetIds { get; set; }

@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// Terminal node group configuration information.
+        /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
         public List<CreateEndpointGroupsRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
@@ -65,12 +68,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public bool? EnableClientIPPreservationToa { get; set; }
 
+            /// <summary>
+            /// Terminal node configuration information.
+            /// </summary>
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
             public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
             public class CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
                 /// <summary>
-                /// The IP address or domain name of the endpoint.
+                /// The IP address, domain name or instance id according to the type of the endpoint.
                 /// 
                 /// You can specify up to 100 endpoint IP addresses or domain names in an endpoint group.
                 /// 
@@ -236,6 +242,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
+            /// <summary>
+            /// The mappings between ports.
+            /// </summary>
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
             public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> PortOverrides { get; set; }

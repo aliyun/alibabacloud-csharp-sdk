@@ -52,7 +52,77 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 终端节点当前状态。
+        /// The service ID to which the managed instance belongs.
+        /// 
+        /// >  Valid only when the ServiceManaged parameter is True.。
+        /// </summary>
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
+
+        /// <summary>
+        /// Is it a managed instance. Value：
+        /// 
+        /// - true
+        /// - false
+        /// </summary>
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public bool? ServiceManaged { get; set; }
+
+        /// <summary>
+        /// A list of action policies that users can execute on this managed instance.
+        /// </summary>
+        [NameInMap("ServiceManagedInfos")]
+        [Validation(Required=false)]
+        public List<DescribeCustomRoutingEndpointResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
+        public class DescribeCustomRoutingEndpointResponseBodyServiceManagedInfos : TeaModel {
+            /// <summary>
+            /// Managed policy action name，Value：
+            /// 
+            /// - Create
+            /// - Update
+            /// - Delete
+            /// - Associate
+            /// - UserUnmanaged
+            /// - CreateChild
+            /// </summary>
+            [NameInMap("Action")]
+            [Validation(Required=false)]
+            public string Action { get; set; }
+
+            /// <summary>
+            /// Sub resource type，Value：
+            /// 
+            /// - Listener
+            /// - IpSet
+            /// - EndpointGroup
+            /// - ForwardingRule
+            /// - Endpoint
+            /// - EndpointGroupDestination
+            /// - EndpointPolicy
+            /// 
+            /// >Only valid when the Action parameter is CreateChild.
+            /// </summary>
+            [NameInMap("ChildType")]
+            [Validation(Required=false)]
+            public string ChildType { get; set; }
+
+            /// <summary>
+            /// Is the managed policy action managed，Value：
+            /// 
+            /// - true：The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance。
+            /// 
+            /// - false：The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+            /// </summary>
+            [NameInMap("IsManaged")]
+            [Validation(Required=false)]
+            public bool? IsManaged { get; set; }
+
+        }
+
+        /// <summary>
+        /// The status of the endpoint .
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
@@ -61,9 +131,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The access policy of traffic for the specified endpoint. Valid values:
         /// 
-        /// *   **AllowAll:** allows all traffic to the endpoint.
-        /// *   **DenyAll:** denies all traffic to the endpoint.
-        /// *   **AllowCustom:** allows traffic only to specified destinations in the endpoint
+        /// *   **AllowAll**: allows all traffic to the endpoint.
+        /// *   **DenyAll**: denies all traffic to the endpoint.
+        /// *   **AllowCustom**: allows traffic only to specified destinations.
         /// </summary>
         [NameInMap("TrafficToEndpointPolicy")]
         [Validation(Required=false)]

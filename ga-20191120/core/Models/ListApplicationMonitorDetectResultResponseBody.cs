@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListApplicationMonitorDetectResultResponseBody : TeaModel {
         /// <summary>
-        /// The diagnostic results of the origin probing tasks.
+        /// Details about the diagnostic result of the origin probing task.
         /// </summary>
         [NameInMap("ApplicationMonitorDetectResultList")]
         [Validation(Required=false)]
@@ -31,15 +31,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// The description of the diagnostic result of the origin probing task. Valid values:
+            /// The description of the diagnostic result. Valid values:
             /// 
-            /// *   **All forward nodes work well**: The origin is normal.
-            /// *   **Endpoint network error.**: The origin is abnormal. You must check whether the origin is running as expected.
+            /// *   **All forward nodes work well.**: The origin server is normal.
+            /// *   **Endpoint network error.**: The origin server is abnormal. You must check whether the origin server is running as expected.
             /// *   **Public network error.**: An Internet error occurred. This refers to a network error that occurred when the client connects to the acceleration region.
             /// *   **Ga internal error.**: An internal error occurred. For example, an exception occurred when a request is processed by GA.
             /// *   **Ga has been deleted.**: The current GA instance is deleted.
             /// *   **Ga state is not stable**: The current GA instance is in an unstable state, such as the Configuring state.
-            /// *   **Ga has no listener configuration.**: The current GA instance does not have a listener.
+            /// *   **Ga has no listener configuration.**: No listener is configured for the current GA instance.
             /// *   **Missing endpoint configuration.**: No endpoint is configured.
             /// *   **Missing acceleration region configuration.**: No acceleration region is configured.
             /// *   **Missing endpointgroup configuration.**: No endpoint group is configured.
@@ -49,17 +49,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// The time when the diagnosis of the origin detection task ends.
+            /// The time when the diagnosis of the origin probing task ends.
             /// </summary>
             [NameInMap("DetectTime")]
             [Validation(Required=false)]
             public string DetectTime { get; set; }
 
             /// <summary>
-            /// The diagnostic result of the origin probing task.
+            /// The diagnostic result of the origin probing task. Valid values:
             /// 
-            /// *   **success**: The origin probing task succeeded.
-            /// *   **failed**: The origin probing task failed.
+            /// *   **success:** The origin probing task succeeded.
+            /// *   **failed:** The origin probing task failed.
             /// </summary>
             [NameInMap("DiagStatus")]
             [Validation(Required=false)]
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The network transmission protocol that is used by the listener. Valid values:
             /// 
-            /// *   **tcp**: TCP
-            /// *   **udp**: UDP
-            /// *   **http**: HTTP
-            /// *   **https**: HTTPS
+            /// *   **tcp:** TCP.
+            /// *   **udp:** UDP.
+            /// *   **http:** HTTP.
+            /// *   **https:** HTTPS.
             /// 
             /// >  UDP listeners do not support probing.
             /// </summary>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string StatusCode { get; set; }
 
             /// <summary>
-            /// The ID of the origin probing task.
+            /// The origin probing task ID.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -110,28 +110,28 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<ListAvailableBusiRegionsResponseBodyRegions> Regions { get; set; }
         public class ListAvailableBusiRegionsResponseBodyRegions : TeaModel {
+            [NameInMap("ChinaMainland")]
+            [Validation(Required=false)]
+            public bool? ChinaMainland { get; set; }
+
             /// <summary>
             /// The name of the region.
             /// </summary>

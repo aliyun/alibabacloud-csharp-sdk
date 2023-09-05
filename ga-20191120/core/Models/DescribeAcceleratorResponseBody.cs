@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public long? ExpiredTime { get; set; }
 
         /// <summary>
-        /// The billing method of the GA instance. Only **PREPAY** is returned. This value indicates the subscription billing method.
+        /// The billing method of the GA instance.
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -217,6 +217,83 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string SecondDnsName { get; set; }
 
         /// <summary>
+        /// 托管实例所属的服务方ID。
+        /// > 仅在**ServiceManaged**参数为**True**时有效。
+        /// </summary>
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
+
+        /// <summary>
+        /// 是否为托管实例。取值：
+        /// 
+        /// - **true**：是托管实例。
+        /// 
+        /// - **false**：不是托管实例。
+        /// </summary>
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public bool? ServiceManaged { get; set; }
+
+        /// <summary>
+        /// 用户在此托管实例下可执行的动作策略列表。
+        /// > 仅在**ServiceManaged**参数为**True**时有效。
+        /// > - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。
+        /// </summary>
+        [NameInMap("ServiceManagedInfos")]
+        [Validation(Required=false)]
+        public List<DescribeAcceleratorResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
+        public class DescribeAcceleratorResponseBodyServiceManagedInfos : TeaModel {
+            /// <summary>
+            /// 托管策略动作名称，取值：
+            /// - **Create**：创建实例。
+            /// - **Update**：更新当前实例。
+            /// - **Delete**：删除当前实例。
+            /// - **Associate**：引用/被引用当前实例。
+            /// - **UserUnmanaged**：用户解托管实例。
+            /// - **CreateChild**：在当前实例下创建子资源。
+            /// </summary>
+            [NameInMap("Action")]
+            [Validation(Required=false)]
+            public string Action { get; set; }
+
+            /// <summary>
+            /// 子资源类型，取值：
+            /// 
+            /// - **Listener**：监听资源。
+            /// 
+            /// - **IpSet**：加速地域资源。
+            /// 
+            /// - **EndpointGroup**：终端节点组资源。
+            /// 
+            /// - **ForwardingRule**：转发策略资源。
+            /// 
+            /// - **Endpoint**：终端节点资源。
+            /// 
+            /// - **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。
+            /// 
+            /// - **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。
+            /// 
+            /// > 仅在**Action**参数为**CreateChild**时有效。
+            /// </summary>
+            [NameInMap("ChildType")]
+            [Validation(Required=false)]
+            public string ChildType { get; set; }
+
+            /// <summary>
+            /// 托管策略动作是否被托管，取值：
+            /// 
+            /// - **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。
+            /// 
+            /// - **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。
+            /// </summary>
+            [NameInMap("IsManaged")]
+            [Validation(Required=false)]
+            public bool? IsManaged { get; set; }
+
+        }
+
+        /// <summary>
         /// The specification of the GA instance. Valid values:
         /// 
         /// *   **1**: Small Ⅰ
@@ -267,14 +344,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<DescribeAcceleratorResponseBodyTags> Tags { get; set; }
         public class DescribeAcceleratorResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// The key of tag N that is added to the GA instance.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The value of tag N that is added to the GA instance.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -283,10 +360,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// Indicates the upgradable state of the GA instance.
-        /// - **notUpgradable**: The GA instance can not be upgraded
-        /// - **upgradable**: The GA instance can be upgraded
-        /// - **upgradeFailed**: The GA instance has been upgraded and failed
+        /// Indicates whether the GA instance can be upgraded. Valid values:
+        /// 
+        /// *   **notUpgradable:** The GA instance does not need to be upgraded.
+        /// *   **upgradable:** The GA instance can be upgraded to the latest version.
+        /// *   **upgradeFailed:** The GA instance failed to be upgraded.
         /// </summary>
         [NameInMap("UpgradableStatus")]
         [Validation(Required=false)]

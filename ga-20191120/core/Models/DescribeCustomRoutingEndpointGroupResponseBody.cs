@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// Indicates whether access logging is enabled.
         /// 
-        /// *   **on**: enabled
-        /// *   **off**: disabled
+        /// *   **true**: enabled
+        /// *   **false**: disabled
         /// </summary>
         [NameInMap("EnableAccessLog")]
         [Validation(Required=false)]
@@ -93,6 +93,32 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
+
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public bool? ServiceManaged { get; set; }
+
+        [NameInMap("ServiceManagedInfos")]
+        [Validation(Required=false)]
+        public List<DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
+        public class DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos : TeaModel {
+            [NameInMap("Action")]
+            [Validation(Required=false)]
+            public string Action { get; set; }
+
+            [NameInMap("ChildType")]
+            [Validation(Required=false)]
+            public string ChildType { get; set; }
+
+            [NameInMap("IsManaged")]
+            [Validation(Required=false)]
+            public bool? IsManaged { get; set; }
+
+        }
 
         /// <summary>
         /// The name of the Logstore.
