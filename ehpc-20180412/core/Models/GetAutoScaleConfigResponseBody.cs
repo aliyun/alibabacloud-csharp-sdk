@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public bool? ComputeEnableHt { get; set; }
 
+        [NameInMap("DnsConfig")]
+        [Validation(Required=false)]
+        public string DnsConfig { get; set; }
+
         /// <summary>
         /// Indicates whether the cluster enabled auto scale-out. Valid values:
         /// 
@@ -122,6 +126,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<GetAutoScaleConfigResponseBodyQueuesQueueInfo> QueueInfo { get; set; }
             public class GetAutoScaleConfigResponseBodyQueuesQueueInfo : TeaModel {
+                [NameInMap("AutoMinNodesPerCycle")]
+                [Validation(Required=false)]
+                public bool? AutoMinNodesPerCycle { get; set; }
+
                 /// <summary>
                 /// The list of data disks.
                 /// </summary>
@@ -173,7 +181,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public string DataDiskKMSKeyId { get; set; }
 
                         /// <summary>
-                        /// The performance level of the ESSD used as the data disk. The parameter takes effect only when the DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values: 
+                        /// The performance level of the ESSD used as the data disk. The parameter takes effect only when the DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values:
                         /// 
                         /// - PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
                         /// - PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
@@ -187,7 +195,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         /// <summary>
                         /// The capacity of the data disk. Unit: GB.
                         /// 
-                        /// Valid values: 40 to 500
+                        /// Valid values: 40 to 500.
                         /// </summary>
                         [NameInMap("DataDiskSize")]
                         [Validation(Required=false)]
@@ -263,10 +271,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
+                        /// <summary>
+                        /// The protection period of the preemptible instance. Unit: hours. Valid values: 0 to 1. Default value: 1. A value of 0 means no protection period is specified.
+                        /// </summary>
                         [NameInMap("SpotDuration")]
                         [Validation(Required=false)]
                         public int? SpotDuration { get; set; }
 
+                        /// <summary>
+                        /// The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which indicates that the instance is released.
+                        /// </summary>
                         [NameInMap("SpotInterruptionBehavior")]
                         [Validation(Required=false)]
                         public string SpotInterruptionBehavior { get; set; }
@@ -315,7 +329,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public int? MaxNodesInQueue { get; set; }
 
                 /// <summary>
-                /// The maximum number of compute nodes that can be added in each round of scale-out. Valid values: 0 to 99.  
+                /// The maximum number of compute nodes that can be added in each round of an auto scale-out task. Valid values: 0 to 99.
                 /// 
                 /// Default value: 0.
                 /// </summary>
@@ -331,13 +345,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public int? MinNodesInQueue { get; set; }
 
                 /// <summary>
-                /// The minimum number of compute nodes that can be added in each round of scale-out. Valid values: 1 to 99.  
+                /// The minimum number of compute nodes that can be added in each round of an auto scale-out task. Valid values: 1 to 99.
                 /// 
-                /// Default value: 1. 
+                /// Default value: 1.
                 /// 
-                /// If the compute nodes that you want to add in a round is less than the minimum compute nodes that can be added, the value of this parameter is automatically changed to the number of compute nodes that you want to add. This ensures that compute nodes can be added as expected.  
+                /// If the number of compute nodes that you want to add in a round is less than the value of this property, the system automatically changes the value of this property to the number of compute nodes that you want to add in a round. This helps ensure that compute nodes can be added as expected.
                 /// 
-                /// >  The configuration takes effect only for the minimum compute nodes that can be added in the current round.
+                /// > The configuration takes effect only for the minimum compute nodes that can be added in the current round.
                 /// </summary>
                 [NameInMap("MinNodesPerCycle")]
                 [Validation(Required=false)]
@@ -363,6 +377,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SortedByInventory")]
+                [Validation(Required=false)]
+                public bool? SortedByInventory { get; set; }
 
                 /// <summary>
                 /// The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.

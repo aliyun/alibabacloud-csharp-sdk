@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListSecurityGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

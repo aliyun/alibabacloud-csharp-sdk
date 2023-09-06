@@ -9,12 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class CreateJobFileRequest : TeaModel {
+        /// <summary>
+        /// Indicates whether to use an asynchronous link to submit job files.
+        /// 
+        /// Default value: false.
+        /// </summary>
         [NameInMap("Async")]
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the E-HPC cluster.
         /// 
         /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
         /// </summary>
@@ -30,7 +35,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// The user to which the job belongs.
+        /// The user to which the job file belongs.
         /// 
         /// You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
         /// </summary>
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string RunasUser { get; set; }
 
         /// <summary>
-        /// The password of the user.
+        /// The user password.
         /// </summary>
         [NameInMap("RunasUserPassword")]
         [Validation(Required=false)]

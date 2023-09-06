@@ -9,47 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class UpdateClusterVolumesRequest : TeaModel {
+        /// <summary>
+        /// The list of file system information.
+        /// </summary>
         [NameInMap("AdditionalVolumes")]
         [Validation(Required=false)]
         public List<UpdateClusterVolumesRequestAdditionalVolumes> AdditionalVolumes { get; set; }
         public class UpdateClusterVolumesRequestAdditionalVolumes : TeaModel {
             /// <summary>
-            /// The queue name of the nth attached mounted filesystem.
+            /// The queue name of the additional mounted file system N.
             /// </summary>
             [NameInMap("JobQueue")]
             [Validation(Required=false)]
             public string JobQueue { get; set; }
 
             /// <summary>
-            /// The on-premises mount directory for the nth additional mounted file system.
+            /// The on-premises mount directory for the additional mounted file system N.
             /// </summary>
             [NameInMap("LocalDirectory")]
             [Validation(Required=false)]
             public string LocalDirectory { get; set; }
 
             /// <summary>
-            /// The storage location of the nth attached mounted file system. Valid values:
+            /// The storage location of the additional mounted file system N. Valid values:
             /// 
-            /// *   OnPremise: hybrid cloud cluster
-            /// *   PublicCloud: public cloud cluster
+            /// *   OnPremise: The cluster is deployed on a hybrid cloud.
+            /// *   PublicCloud: The cluster is deployed on a public cloud.
             /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
             public string Location { get; set; }
 
             /// <summary>
-            /// The remote directory to be mounted by the nth additional mounted file system.
+            /// The remote directory to be mounted by the additional mounted file system N.
             /// </summary>
             [NameInMap("RemoteDirectory")]
             [Validation(Required=false)]
             public string RemoteDirectory { get; set; }
 
+            /// <summary>
+            /// The array of the node on which the file system is mounted.
+            /// </summary>
             [NameInMap("Roles")]
             [Validation(Required=false)]
             public List<UpdateClusterVolumesRequestAdditionalVolumesRoles> Roles { get; set; }
             public class UpdateClusterVolumesRequestAdditionalVolumesRoles : TeaModel {
                 /// <summary>
-                /// The node type on which the nth additional mounted file system is mounted. Valid values:
+                /// The node type on which the additional mounted file system N is mounted. Valid values:
                 /// 
                 /// *   Manager: management node
                 /// *   Login: logon node
@@ -62,7 +68,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             }
 
             /// <summary>
-            /// The ID of the nth additional mounted file system.
+            /// The ID of the additional mounted file system N.
             /// </summary>
             [NameInMap("VolumeId")]
             [Validation(Required=false)]
@@ -73,14 +79,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public string VolumeMountOption { get; set; }
 
             /// <summary>
-            /// The domain name of the mount target for the nth additional mounted file system.
+            /// The domain name of the mount target for the additional mounted file system N.
             /// </summary>
             [NameInMap("VolumeMountpoint")]
             [Validation(Required=false)]
             public string VolumeMountpoint { get; set; }
 
             /// <summary>
-            /// The protocol type of the nth additional mounted file system. Valid values:
+            /// The protocol type of the additional mounted file system N. Valid values:
             /// 
             /// *   NFS
             /// *   SMB
@@ -90,7 +96,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public string VolumeProtocol { get; set; }
 
             /// <summary>
-            /// The type of the nth additional mounted file system. Currently, only NAS is supported.
+            /// The type of the additional mounted file system N. Currently, only NAS is supported.
             /// 
             /// Valid values of N: 1 to 10.
             /// </summary>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListUpgradeClientsRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

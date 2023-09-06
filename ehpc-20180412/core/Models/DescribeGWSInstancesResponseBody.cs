@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<DescribeGWSInstancesResponseBodyInstancesInstanceInfo> InstanceInfo { get; set; }
             public class DescribeGWSInstancesResponseBodyInstancesInstanceInfo : TeaModel {
                 /// <summary>
-                /// The list of application information.
+                /// The application information.
                 /// 
-                /// >  If the WorkMode parameter is set to Desktop, an empty value is returned in this parameter.
+                /// >  This parameter is emtryp if the working mode is Desktop.
                 /// </summary>
                 [NameInMap("AppList")]
                 [Validation(Required=false)]
@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     [Validation(Required=false)]
                     public List<DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo> AppInfo { get; set; }
                     public class DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo : TeaModel {
+                        /// <summary>
+                        /// The runtime parameters of the application.
+                        /// </summary>
                         [NameInMap("AppArgs")]
                         [Validation(Required=false)]
                         public string AppArgs { get; set; }
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public string AppName { get; set; }
 
                         /// <summary>
-                        /// The execution directory of the application.
+                        /// The running path of the application.
                         /// </summary>
                         [NameInMap("AppPath")]
                         [Validation(Required=false)]
@@ -56,21 +59,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The ID of the visualizatio service.
+                /// The ID of the visualization cluster.
                 /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// The time when the visualization instance was created.
+                /// The time at which the visualization instance was created.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The time when the visualization instance expires.
+                /// The time at which the visualization instance expires.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -100,25 +103,25 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The status of the visualization instance. Valid values:
                 /// 
-                /// *   Creating: The instance is being created.
-                /// *   Starting: The instance is being started.
-                /// *   Stopping: The instance is being stopped.
-                /// *   Stopped: The instance is stopped.
-                /// *   Initializing: The instance is being initialized.
-                /// *   Unregistered: The instance is not registered.
-                /// *   Registered: The instance is registered.
-                /// *   InUse: The instance is in use.
-                /// *   Missing: The instance cannot be found.
-                /// *   Cloning: An image is being generated based on the instance.
+                /// *   Creating
+                /// *   Starting
+                /// *   Stopping
+                /// *   Stopped
+                /// *   Initializing
+                /// *   Unregistered
+                /// *   Registered
+                /// *   InUse
+                /// *   Missing
+                /// *   Cloning: The image is being created.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The username of the entity to which the visualization instance is assigned.
+                /// The username assigned to the visualization instance.
                 /// 
-                /// >  If the instance is not assigned to a specified user, this parameter is empty.
+                /// >  This parameter is empty if the instance is not assigned to specified users.
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -127,8 +130,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The working mode of the visualization instance. Valid values:
                 /// 
-                /// *   Desktop
-                /// *   Application
+                /// *   Desktop: the desktop mode
+                /// *   Application: the application mode
                 /// </summary>
                 [NameInMap("WorkMode")]
                 [Validation(Required=false)]
@@ -139,7 +142,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The page number of the current page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -153,14 +156,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of the information.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

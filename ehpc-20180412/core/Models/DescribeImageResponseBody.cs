@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public DescribeImageResponseBodyImageInfo ImageInfo { get; set; }
         public class DescribeImageResponseBodyImageInfo : TeaModel {
             /// <summary>
-            /// The ID of the image.
+            /// The ID of the custom image.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public string Repository { get; set; }
 
             /// <summary>
-            /// The status of the image.
+            /// The state of the image.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public string System { get; set; }
 
             /// <summary>
-            /// The tag of the image.
+            /// The tags of the image.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

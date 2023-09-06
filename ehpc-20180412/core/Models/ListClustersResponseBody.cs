@@ -307,6 +307,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
                 /// <summary>
                 /// The type of the scheduler. Valid values:
                 /// 

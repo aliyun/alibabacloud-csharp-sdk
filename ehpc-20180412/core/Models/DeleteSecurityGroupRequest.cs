@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DeleteSecurityGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the security group.
+        /// The security group ID of the instance.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DescribeGWSInstancesRequest : TeaModel {
         /// <summary>
-        /// The ID of the visualization service.
+        /// The ID of the visualization cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

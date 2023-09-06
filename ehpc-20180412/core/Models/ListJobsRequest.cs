@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListJobsRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the E-HPC cluster.
         /// 
         /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
         /// </summary>
@@ -28,20 +28,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number of the page to return.
         /// 
-        /// Pages start from page 1.
+        /// Pages start from 1.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 50.
+        /// The number of entries to return per page. Maximum value: 50.
         /// 
-        /// Default value: 10
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   true
         /// *   false
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("Rerunable")]
         [Validation(Required=false)]

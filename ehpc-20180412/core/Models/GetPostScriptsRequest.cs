@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetPostScriptsRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
-        /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+        /// You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The ID of the region where the cluster resides.
         /// 
         /// You can call the [ListRegions](~~188593~~) operation to query the latest region list.
         /// </summary>

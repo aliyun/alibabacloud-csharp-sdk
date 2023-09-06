@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListVolumesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// The page number of the page to return.
         /// 
         /// Pages start from page 1.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The number of entries to return on each page. Valid values: 1 to 50.
         /// 
-        /// Default value: 10
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

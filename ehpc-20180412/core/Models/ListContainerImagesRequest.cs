@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListContainerImagesRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the E-HPC cluster.
         /// 
         /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
         /// </summary>
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ContainerType { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number to return.
         /// 
         /// Pages start from page 1.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The number of entries to return on each page. Valid values: 1 to 50.
         /// 
-        /// Default value: 10
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

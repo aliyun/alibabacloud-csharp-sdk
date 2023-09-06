@@ -1103,6 +1103,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await DeleteClusterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you delete container applications, you can call the [ListContainerApps](~~87333~~) operation to query the container applications.
+          *
+          * @param request DeleteContainerAppsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteContainerAppsResponse
+         */
         public DeleteContainerAppsResponse DeleteContainerAppsWithOptions(DeleteContainerAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1126,6 +1133,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DeleteContainerAppsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you delete container applications, you can call the [ListContainerApps](~~87333~~) operation to query the container applications.
+          *
+          * @param request DeleteContainerAppsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteContainerAppsResponse
+         */
         public async Task<DeleteContainerAppsResponse> DeleteContainerAppsWithOptionsAsync(DeleteContainerAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1149,12 +1163,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DeleteContainerAppsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you delete container applications, you can call the [ListContainerApps](~~87333~~) operation to query the container applications.
+          *
+          * @param request DeleteContainerAppsRequest
+          * @return DeleteContainerAppsResponse
+         */
         public DeleteContainerAppsResponse DeleteContainerApps(DeleteContainerAppsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteContainerAppsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you delete container applications, you can call the [ListContainerApps](~~87333~~) operation to query the container applications.
+          *
+          * @param request DeleteContainerAppsRequest
+          * @return DeleteContainerAppsResponse
+         */
         public async Task<DeleteContainerAppsResponse> DeleteContainerAppsAsync(DeleteContainerAppsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1710,7 +1736,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
           *
           * @param request DeleteUsersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1740,7 +1766,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
           *
           * @param request DeleteUsersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1770,7 +1796,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
           *
           * @param request DeleteUsersRequest
           * @return DeleteUsersResponse
@@ -1782,7 +1808,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
           *
           * @param request DeleteUsersRequest
           * @return DeleteUsersResponse
@@ -2571,13 +2597,6 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await DescribeNFSClientStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ****
-          *
-          * @param request DescribePriceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePriceResponse
-         */
         public DescribePriceResponse DescribePriceWithOptions(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2601,13 +2620,6 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ****
-          *
-          * @param request DescribePriceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePriceResponse
-         */
         public async Task<DescribePriceResponse> DescribePriceWithOptionsAsync(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2631,28 +2643,90 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ****
-          *
-          * @param request DescribePriceRequest
-          * @return DescribePriceResponse
-         */
         public DescribePriceResponse DescribePrice(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePriceWithOptions(request, runtime);
         }
 
-        /**
-          * ****
-          *
-          * @param request DescribePriceRequest
-          * @return DescribePriceResponse
-         */
         public async Task<DescribePriceResponse> DescribePriceAsync(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePriceWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeServerlessJobsResponse DescribeServerlessJobsWithOptions(DescribeServerlessJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeServerlessJobs",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeServerlessJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeServerlessJobsResponse> DescribeServerlessJobsWithOptionsAsync(DescribeServerlessJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeServerlessJobs",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeServerlessJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeServerlessJobsResponse DescribeServerlessJobs(DescribeServerlessJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeServerlessJobsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeServerlessJobsResponse> DescribeServerlessJobsAsync(DescribeServerlessJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeServerlessJobsWithOptionsAsync(request, runtime);
         }
 
         public EditJobTemplateResponse EditJobTemplateWithOptions(EditJobTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2771,6 +2845,14 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await GetAccountingReportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
+          *
+          * @param request GetAutoScaleConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAutoScaleConfigResponse
+         */
         public GetAutoScaleConfigResponse GetAutoScaleConfigWithOptions(GetAutoScaleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2794,6 +2876,14 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<GetAutoScaleConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
+          *
+          * @param request GetAutoScaleConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAutoScaleConfigResponse
+         */
         public async Task<GetAutoScaleConfigResponse> GetAutoScaleConfigWithOptionsAsync(GetAutoScaleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2817,12 +2907,26 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<GetAutoScaleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
+          *
+          * @param request GetAutoScaleConfigRequest
+          * @return GetAutoScaleConfigResponse
+         */
         public GetAutoScaleConfigResponse GetAutoScaleConfig(GetAutoScaleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAutoScaleConfigWithOptions(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
+          *
+          * @param request GetAutoScaleConfigRequest
+          * @return GetAutoScaleConfigResponse
+         */
         public async Task<GetAutoScaleConfigResponse> GetAutoScaleConfigAsync(GetAutoScaleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5303,6 +5407,152 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await ListSecurityGroupsWithOptionsAsync(request, runtime);
         }
 
+        public ListServerlessJobsResponse ListServerlessJobsWithOptions(ListServerlessJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNames))
+            {
+                query["JobNames"] = request.JobNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartOrder))
+            {
+                query["StartOrder"] = request.StartOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitOrder))
+            {
+                query["SubmitOrder"] = request.SubmitOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitTimeEnd))
+            {
+                query["SubmitTimeEnd"] = request.SubmitTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitTimeStart))
+            {
+                query["SubmitTimeStart"] = request.SubmitTimeStart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServerlessJobs",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServerlessJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListServerlessJobsResponse> ListServerlessJobsWithOptionsAsync(ListServerlessJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNames))
+            {
+                query["JobNames"] = request.JobNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartOrder))
+            {
+                query["StartOrder"] = request.StartOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitOrder))
+            {
+                query["SubmitOrder"] = request.SubmitOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitTimeEnd))
+            {
+                query["SubmitTimeEnd"] = request.SubmitTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitTimeStart))
+            {
+                query["SubmitTimeStart"] = request.SubmitTimeStart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServerlessJobs",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServerlessJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListServerlessJobsResponse ListServerlessJobs(ListServerlessJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListServerlessJobsWithOptions(request, runtime);
+        }
+
+        public async Task<ListServerlessJobsResponse> ListServerlessJobsAsync(ListServerlessJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListServerlessJobsWithOptionsAsync(request, runtime);
+        }
+
         public ListSoftwaresResponse ListSoftwaresWithOptions(ListSoftwaresRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5776,7 +6026,8 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+          * ## Usage notes
+          * Before you call this operation, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
           *
           * @param request ModifyClusterAttributesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5806,7 +6057,8 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+          * ## Usage notes
+          * Before you call this operation, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
           *
           * @param request ModifyClusterAttributesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5836,7 +6088,8 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+          * ## Usage notes
+          * Before you call this operation, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
           *
           * @param request ModifyClusterAttributesRequest
           * @return ModifyClusterAttributesResponse
@@ -5848,7 +6101,8 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+          * ## Usage notes
+          * Before you call this operation, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
           *
           * @param request ModifyClusterAttributesRequest
           * @return ModifyClusterAttributesResponse
@@ -6614,7 +6868,8 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+          * ## Usage notes
+          * If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.
           *
           * @param request SetAutoScaleConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6644,7 +6899,8 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+          * ## Usage notes
+          * If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.
           *
           * @param request SetAutoScaleConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6674,7 +6930,8 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+          * ## Usage notes
+          * If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.
           *
           * @param request SetAutoScaleConfigRequest
           * @return SetAutoScaleConfigResponse
@@ -6686,7 +6943,8 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+          * ## Usage notes
+          * If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.
           *
           * @param request SetAutoScaleConfigRequest
           * @return SetAutoScaleConfigResponse
@@ -7591,6 +7849,80 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await StopNodesWithOptionsAsync(request, runtime);
         }
 
+        public StopServerlessJobsResponse StopServerlessJobsWithOptions(StopServerlessJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopServerlessJobs",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopServerlessJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StopServerlessJobsResponse> StopServerlessJobsWithOptionsAsync(StopServerlessJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopServerlessJobs",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopServerlessJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StopServerlessJobsResponse StopServerlessJobs(StopServerlessJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopServerlessJobsWithOptions(request, runtime);
+        }
+
+        public async Task<StopServerlessJobsResponse> StopServerlessJobsAsync(StopServerlessJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopServerlessJobsWithOptionsAsync(request, runtime);
+        }
+
         public StopVisualServiceResponse StopVisualServiceWithOptions(StopVisualServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7735,6 +8067,244 @@ namespace AlibabaCloud.SDK.EHPC20180412
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitJobWithOptionsAsync(request, runtime);
+        }
+
+        public SubmitServerlessJobResponse SubmitServerlessJobWithOptions(SubmitServerlessJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitServerlessJobShrinkRequest request = new SubmitServerlessJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArrayProperties))
+            {
+                request.ArrayPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArrayProperties, "ArrayProperties", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Container))
+            {
+                request.ContainerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Container, "Container", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DependsOn))
+            {
+                request.DependsOnShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DependsOn, "DependsOn", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceType))
+            {
+                request.InstanceTypeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceType, "InstanceType", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RetryStrategy))
+            {
+                request.RetryStrategyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RetryStrategy, "RetryStrategy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VSwitchId))
+            {
+                request.VSwitchIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchId, "VSwitchId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArrayPropertiesShrink))
+            {
+                query["ArrayProperties"] = request.ArrayPropertiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerShrink))
+            {
+                query["Container"] = request.ContainerShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                query["Cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DependsOnShrink))
+            {
+                query["DependsOn"] = request.DependsOnShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EphemeralStorage))
+            {
+                query["EphemeralStorage"] = request.EphemeralStorage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeShrink))
+            {
+                query["InstanceType"] = request.InstanceTypeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobPriority))
+            {
+                query["JobPriority"] = request.JobPriority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
+            {
+                query["Memory"] = request.Memory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
+            {
+                query["RamRoleName"] = request.RamRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyShrink))
+            {
+                query["RetryStrategy"] = request.RetryStrategyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotPriceLimit))
+            {
+                query["SpotPriceLimit"] = request.SpotPriceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotStrategy))
+            {
+                query["SpotStrategy"] = request.SpotStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                query["Timeout"] = request.Timeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdShrink))
+            {
+                query["VSwitchId"] = request.VSwitchIdShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitServerlessJob",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitServerlessJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SubmitServerlessJobResponse> SubmitServerlessJobWithOptionsAsync(SubmitServerlessJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitServerlessJobShrinkRequest request = new SubmitServerlessJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArrayProperties))
+            {
+                request.ArrayPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArrayProperties, "ArrayProperties", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Container))
+            {
+                request.ContainerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Container, "Container", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DependsOn))
+            {
+                request.DependsOnShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DependsOn, "DependsOn", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceType))
+            {
+                request.InstanceTypeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceType, "InstanceType", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RetryStrategy))
+            {
+                request.RetryStrategyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RetryStrategy, "RetryStrategy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VSwitchId))
+            {
+                request.VSwitchIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchId, "VSwitchId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArrayPropertiesShrink))
+            {
+                query["ArrayProperties"] = request.ArrayPropertiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerShrink))
+            {
+                query["Container"] = request.ContainerShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                query["Cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DependsOnShrink))
+            {
+                query["DependsOn"] = request.DependsOnShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EphemeralStorage))
+            {
+                query["EphemeralStorage"] = request.EphemeralStorage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeShrink))
+            {
+                query["InstanceType"] = request.InstanceTypeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobPriority))
+            {
+                query["JobPriority"] = request.JobPriority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
+            {
+                query["Memory"] = request.Memory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
+            {
+                query["RamRoleName"] = request.RamRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyShrink))
+            {
+                query["RetryStrategy"] = request.RetryStrategyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotPriceLimit))
+            {
+                query["SpotPriceLimit"] = request.SpotPriceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotStrategy))
+            {
+                query["SpotStrategy"] = request.SpotStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                query["Timeout"] = request.Timeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdShrink))
+            {
+                query["VSwitchId"] = request.VSwitchIdShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitServerlessJob",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitServerlessJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SubmitServerlessJobResponse SubmitServerlessJob(SubmitServerlessJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitServerlessJobWithOptions(request, runtime);
+        }
+
+        public async Task<SubmitServerlessJobResponse> SubmitServerlessJobAsync(SubmitServerlessJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitServerlessJobWithOptionsAsync(request, runtime);
         }
 
         public SummaryImagesResponse SummaryImagesWithOptions(SummaryImagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8216,7 +8786,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+          * After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
           *
           * @param request UpdateQueueConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8246,7 +8816,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+          * After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
           *
           * @param request UpdateQueueConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8276,7 +8846,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+          * After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
           *
           * @param request UpdateQueueConfigRequest
           * @return UpdateQueueConfigResponse
@@ -8288,7 +8858,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
-          * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+          * After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
           *
           * @param request UpdateQueueConfigRequest
           * @return UpdateQueueConfigResponse

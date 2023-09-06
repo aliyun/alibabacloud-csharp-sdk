@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListPreferredEcsTypesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes of the E-HPC cluster.
+        /// The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes in the E-HPC cluster.
         /// </summary>
         [NameInMap("Series")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListPreferredEcsTypesResponseBodySeriesSeriesInfo> SeriesInfo { get; set; }
             public class ListPreferredEcsTypesResponseBodySeriesSeriesInfo : TeaModel {
                 /// <summary>
-                /// The recommended ECS instance types for various nodes of the E-HPC cluster.
+                /// Recommended instance types for nodes in an E-HPC cluser.
                 /// </summary>
                 [NameInMap("Roles")]
                 [Validation(Required=false)]
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The ID of the ECS instance series. Valid values:
                 /// 
-                /// *   HighCompute: high computing
-                /// *   HighMem: high storage
-                /// *   GPU
-                /// *   All: all options.
+                /// *   HighCompute: compute-optimized instance families
+                /// *   HighMem: memory-optimized instance families
+                /// *   GPU: GPU-accelerated instance families
+                /// *   All: all instance families
                 /// </summary>
                 [NameInMap("SeriesId")]
                 [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// Indicates whether spot instances are supported.
+        /// Indicates whether preemptible instances are supported.
         /// </summary>
         [NameInMap("SupportSpotInstance")]
         [Validation(Required=false)]

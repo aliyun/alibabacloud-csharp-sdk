@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// Specifies whether to use an asynchronous link to delete the jobs.
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("Async")]
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the E-HPC cluster.
         /// 
         /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
         /// </summary>

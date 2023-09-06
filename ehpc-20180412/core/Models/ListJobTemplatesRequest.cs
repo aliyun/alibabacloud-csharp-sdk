@@ -19,18 +19,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Page numbers start from 1.
+        /// The page number to return. Pages start from page 1.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 50.
+        /// The number of entries to return per page. Maximum value: 50.
         /// 
-        /// Default value: 10
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

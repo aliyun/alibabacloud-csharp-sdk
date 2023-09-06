@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<DescribeEstackImageResponseBodyImageListImageListInfo> ImageListInfo { get; set; }
             public class DescribeEstackImageResponseBodyImageListImageListInfo : TeaModel {
                 /// <summary>
-                /// The name of the image.
+                /// The image name.
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number returned.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

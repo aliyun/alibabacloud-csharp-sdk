@@ -15,12 +15,15 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   PostPaid: pay-as-you-go
         /// *   PrePaid: subscription
         /// 
-        /// Default value: PostPaid
+        /// Default value: PostPaid.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// The information about the service.
+        /// </summary>
         [NameInMap("Commodities")]
         [Validation(Required=false)]
         public List<DescribePriceRequestCommodities> Commodities { get; set; }
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The node quantity of the type. Valid values: 1 to 1000.
             /// 
-            /// Default value: 1
+            /// Default value: 1.
             /// 
             /// Valid values of N: 1 to 10
             /// </summary>
@@ -36,6 +39,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public int? Amount { get; set; }
 
+            /// <summary>
+            /// The list of data disks.
+            /// </summary>
             [NameInMap("DataDisks")]
             [Validation(Required=false)]
             public List<DescribePriceRequestCommoditiesDataDisks> DataDisks { get; set; }
@@ -44,13 +50,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// The type of the data disk. Valid values:
                 /// 
                 /// *   cloud_efficiency: ultra disk
-                /// *   cloud_ssd: SSD
+                /// *   cloud_ssd: standard SSD
                 /// *   cloud_essd: ESSD
                 /// *   cloud: basic disk
                 /// 
-                /// Default value: cloud_efficiency
+                /// Default value: cloud_efficiency.
                 /// 
-                /// Valid values of N: 0 to 4
+                /// Valid values of N: 0 to 4.
                 /// </summary>
                 [NameInMap("category")]
                 [Validation(Required=false)]
@@ -62,9 +68,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// *   true
                 /// *   false
                 /// 
-                /// Default value: true
+                /// Default value: true.
                 /// 
-                /// Valid values of N: 0 to 4
+                /// Valid values of N: 0 to 4.
                 /// </summary>
                 [NameInMap("deleteWithInstance")]
                 [Validation(Required=false)]
@@ -73,28 +79,28 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// Specifies whether to encrypt the data disk. Valid values:
                 /// 
-                /// *   true
-                /// *   false
+                /// *   true: encrypts the data disk.
+                /// *   false: does not encrypt the data disk.
                 /// 
-                /// Default value: false
+                /// Default value: false.
                 /// 
-                /// Valid values of N: 0 to 4
+                /// Valid values of N: 0 to 4.
                 /// </summary>
                 [NameInMap("encrypted")]
                 [Validation(Required=false)]
                 public bool? Encrypted { get; set; }
 
                 /// <summary>
-                /// The performance level of the ESSD used as the data disk. This parameter takes effect only when the Commodities.N.DataDisks.N.category parameter is set to cloud_essd. Default value: PL1. Valid values:
+                /// The performance level of the ESSD used as the data disk. This parameter takes effect only when the Commodities.N.DataDisks.N.category parameter is set to cloud_essd. Valid values:
                 /// 
                 /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-                /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+                /// *   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.
                 /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
                 /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
                 /// 
-                /// Default value: PL1
+                /// Default value: PL1.
                 /// 
-                /// Valid values of N: 0 to 4
+                /// Valid values of N: 0 to 4.
                 /// </summary>
                 [NameInMap("performanceLevel")]
                 [Validation(Required=false)]
@@ -103,11 +109,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The size of the data disk. Unit: GB.
                 /// 
-                /// Valid values: 40 to 500
+                /// Valid values: 40 to 500.
                 /// 
-                /// Default value: 40
+                /// Default value: 40.
                 /// 
-                /// Valid values of N: 0 to 4
+                /// Valid values of N: 0 to 4.
                 /// </summary>
                 [NameInMap("size")]
                 [Validation(Required=false)]
@@ -118,7 +124,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The instance type of the node.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -130,7 +136,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// *   PayByBandwidth: pay-by-bandwidth
             /// *   PayByTraffic: pay-by-traffic
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("InternetChargeType")]
             [Validation(Required=false)]
@@ -139,11 +145,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The maximum outbound public bandwidth of the node. Unit: Mbit/s.
             /// 
-            /// Valid values: 0 to 100
+            /// Valid values: 0 to 100.
             /// 
-            /// Default value: 0
+            /// Default value: 0.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("InternetMaxBandWidthOut")]
             [Validation(Required=false)]
@@ -152,7 +158,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The network type of the node. Valid value: VPC.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("NetworkType")]
             [Validation(Required=false)]
@@ -165,7 +171,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// *   Manager: management node
             /// *   Login: logon node
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("NodeType")]
             [Validation(Required=false)]
@@ -178,9 +184,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// *   If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
             /// *   If PriceUnit is set to Hour, the valid value of the Period parameter is 1.
             /// 
-            /// Default value: 1
+            /// Default value: 1.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
@@ -190,27 +196,27 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// The system disk type of the node. Valid values:
             /// 
             /// *   cloud_efficiency: ultra disk
-            /// *   cloud_ssd: SSD
+            /// *   cloud_ssd: standard SSD
             /// *   cloud_essd: ESSD
             /// *   cloud: basic disk
             /// 
             /// Default value: cloud_efficiency
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// The performance level of the ESSD used as the system disk. This parameter takes effect only when the Commodities.N.SystemDiskCategory parameter is set to cloud_essd. Default value: PL1. Valid values:
+            /// The performance level of the ESSD used as the system disk. This parameter takes effect only when the Commodities.N.SystemDiskCategory parameter is set to cloud_essd. Valid values:
             /// 
             /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-            /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+            /// *   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.
             /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
             /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
             /// 
-            /// Default value: PL1
+            /// Default value: PL1.
             /// 
             /// Valid values of N: 1 to 10
             /// </summary>
@@ -221,11 +227,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The system disk size of the node. Unit: GB.
             /// 
-            /// Valid values: 40 to 500
+            /// Valid values: 40 to 500.
             /// 
-            /// Default value: 40
+            /// Default value: 40.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
@@ -247,7 +253,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   Year: pay-by-year
         /// *   Hour: pay-by-hour
         /// 
-        /// Default value: Hour
+        /// Default value: Hour.
         /// </summary>
         [NameInMap("PriceUnit")]
         [Validation(Required=false)]

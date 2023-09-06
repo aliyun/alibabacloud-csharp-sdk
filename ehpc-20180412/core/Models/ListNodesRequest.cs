@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// Format: {"status":"node_status"}. Replace node_status with the node status. Valid values of node_status:
         /// 
         /// *   uninit: The node is being installed.
-        /// *   exception: An exception has occurred on the node.
+        /// *   exception: An exception occurred on the node.
         /// *   running: The node is running.
         /// *   initing: The node is being initialized.
         /// *   releasing: The node is being released.
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The number of entries to return on each page. Valid values: 1 to 100.
         /// 
-        /// Default value: 10
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -96,9 +96,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   Forward: sorts the nodes in chronological order.
         /// *   Backward: sorts the nodes in reverse chronological order.
         /// 
-        /// Default value: Forward
+        /// Default value: Forward.
         /// 
-        /// >  Sequence is used in combination with SortBy. If SortBy is set to AddedTime and Sequence is set to Forward, nodes are sorted by the time that they were added in chronological order.
+        /// >  This parameter is used together with the SortBy parameter. If you set SortBy to AddedTime and set Sequence to Forward, nodes are queried in ascending order of time that they are added.
         /// </summary>
         [NameInMap("Sequence")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The sorting method of the node list. Valid values:
         /// 
-        /// *   AddedTime: sorts the nodes by the time that they were added.
+        /// *   AddedTime: sorts the nodes by the time that they are added.
         /// *   HostName: sorts the nodes by their host names.
         /// </summary>
         [NameInMap("SortBy")]

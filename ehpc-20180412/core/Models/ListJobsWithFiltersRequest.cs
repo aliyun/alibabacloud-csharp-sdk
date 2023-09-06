@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public bool? Async { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the E-HPC cluster.
         /// 
         /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
         /// </summary>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ExecuteOrder { get; set; }
 
         /// <summary>
-        /// The name of the job. Fuzzy match is supported.
+        /// The name of the job. Fuzzy search is supported.
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
@@ -63,31 +63,34 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   finished
         /// *   notfinish
         /// 
-        /// Default value: all
+        /// Default value: all.
         /// </summary>
         [NameInMap("JobStatus")]
         [Validation(Required=false)]
         public string JobStatus { get; set; }
 
+        /// <summary>
+        /// The information about the computing nodes that are used to run the job.
+        /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
         public List<string> Nodes { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number to return.
         /// 
-        /// Pages start from page 1.
+        /// Pages start from 1.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 50.
+        /// The number of entries per page. Maximum value: 50.
         /// 
-        /// Default value: 10
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -103,14 +106,15 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string PendOrder { get; set; }
 
+        /// <summary>
+        /// The information about the queues in which the job is run.
+        /// </summary>
         [NameInMap("Queues")]
         [Validation(Required=false)]
         public List<string> Queues { get; set; }
 
         /// <summary>
-        /// The ID of the region.
-        /// 
-        /// You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.
+        /// The ID of the region. You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -126,6 +130,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string SubmitOrder { get; set; }
 
+        /// <summary>
+        /// The users that run the job.
+        /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<string> Users { get; set; }

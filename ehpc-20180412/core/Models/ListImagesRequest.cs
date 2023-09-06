@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string BaseOsTag { get; set; }
 
         /// <summary>
-        /// The instance type of the node.
+        /// The instance type.
         /// 
         /// *   If a value is passed to the parameter, the list of images that are supported by the specified instance type is queried.
         /// *   If no value is passed to the parameter, the list of images that are supported by all instance types is queried.

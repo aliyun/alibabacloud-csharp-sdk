@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListPreferredEcsTypesRequest : TeaModel {
         /// <summary>
-        /// The billing method of the ECS instance. Valid values:
+        /// The billing method of the ECS instances. Valid values:
         /// 
-        /// *   PostPaid: pay-as-you-go
-        /// *   PrePaid: subscription
+        /// *   PostPaid
+        /// *   PrePaid
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -22,16 +22,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The bidding policy of the ECS instance. Valid values:
         /// 
-        /// *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-        /// *   SpotWithPriceLimit: The instance to be created is a preemptible instance with a user-defined maximum hourly price.
-        /// *   SpotAsPriceGo: The instance is a preemptible instance whose price is based on the current market price.
+        /// *   NoSpot: The instance is created as a pay-as-you-go instance.
+        /// *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+        /// *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
         /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// The ID of the zone.
+        /// The zone ID.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

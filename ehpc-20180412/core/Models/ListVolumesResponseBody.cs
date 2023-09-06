@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListVolumesResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public string LocalDirectory { get; set; }
 
                         /// <summary>
-                        /// The location where the cluster was deployed. Valid values:
+                        /// The location where the cluster is deployed. Valid values:
                         /// 
-                        /// *   OnPremise: The cluster is deployed on a hybrid cloud.
+                        /// *   OnPremise: The node is deployed on a hybrid cloud.
                         /// *   PublicCloud: The cluster is deployed on a public cloud.
                         /// </summary>
                         [NameInMap("Location")]
@@ -137,21 +137,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The ID of the cluster.
+                /// The cluster ID.
                 /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// The name of the cluster.
+                /// The instance name.
                 /// </summary>
                 [NameInMap("ClusterName")]
                 [Validation(Required=false)]
                 public string ClusterName { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]

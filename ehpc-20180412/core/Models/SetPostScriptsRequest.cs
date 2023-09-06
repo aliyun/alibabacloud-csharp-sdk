@@ -10,27 +10,30 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class SetPostScriptsRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
-        /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+        /// You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The post-processing scripts.
+        /// </summary>
         [NameInMap("PostInstallScripts")]
         [Validation(Required=false)]
         public List<SetPostScriptsRequestPostInstallScripts> PostInstallScripts { get; set; }
         public class SetPostScriptsRequestPostInstallScripts : TeaModel {
             /// <summary>
-            /// The parameter that is used to run the Nth post-installation script. Valid values of N: 1 to 16.
+            /// The parameter that is used to run the post-processing script.
             /// </summary>
             [NameInMap("Args")]
             [Validation(Required=false)]
             public string Args { get; set; }
 
             /// <summary>
-            /// The URL that is used to download the Nth post-installation script. Valid values of N: 1 to 16.
+            /// The URL that is used to download the post-processing script.
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]

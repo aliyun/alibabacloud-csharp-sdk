@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ImagesName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

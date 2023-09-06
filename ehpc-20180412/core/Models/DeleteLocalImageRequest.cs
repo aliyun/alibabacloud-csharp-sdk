@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DeleteLocalImageRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster from which that you want to delete the image.
+        /// The ID of the cluster from which you want to delete the image.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The type of the image. Set the value to singularity.
+        /// The image type. Set the value to singularity.
         /// </summary>
         [NameInMap("ContainerType")]
         [Validation(Required=false)]

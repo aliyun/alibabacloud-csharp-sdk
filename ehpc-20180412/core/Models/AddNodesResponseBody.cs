@@ -9,11 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class AddNodesResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the instance.
-        /// 
-        /// >  AddNodes is an asynchronous API operation. If a request succeeds, a response is immediately generated before ECS instances are created. Therefore, the value of the parameter is null. You can call the [ListNodes](~~87161~~) operation to obtain the IDs of the ECS instances.
-        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public AddNodesResponseBodyInstanceIds InstanceIds { get; set; }

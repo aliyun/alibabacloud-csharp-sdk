@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class UpdateQueueConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the E-HPC cluster.
         /// 
         /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
         /// </summary>
@@ -28,6 +28,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ComputeInstanceType { get; set; }
 
         /// <summary>
+        /// The ID of the deployment set. You can obtain the deployment set ID by calling the [DescribeDeploymentSets](~~91313~~) operation. Only the deployment sets that use low latency policy are supported.
+        /// </summary>
+        [NameInMap("DeploymentSetId")]
+        [Validation(Required=false)]
+        public string DeploymentSetId { get; set; }
+
+        [NameInMap("NetworkInterfaceTrafficMode")]
+        [Validation(Required=false)]
+        public string NetworkInterfaceTrafficMode { get; set; }
+
+        /// <summary>
         /// The name of the queue.
         /// </summary>
         [NameInMap("QueueName")]
@@ -35,7 +46,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string QueueName { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// 
         /// You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.
         /// </summary>

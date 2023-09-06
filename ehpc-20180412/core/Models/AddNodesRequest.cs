@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// Specifies whether to allocate a public IP address to the compute nodes. Valid values:
         /// 
-        /// *   true: A public IP address is allocated to the compute nodes.
-        /// *   false: A public IP address is not allocated to the compute nodes.
+        /// *   true
+        /// *   false
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("AllocatePublicAddress")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   true: enables auto-renewal
         /// *   false: disables auto-renewal
         /// 
-        /// Default value: true
+        /// Default value: true.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
@@ -36,17 +36,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.
         /// 
-        /// *   If PeriodUnit is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.
-        /// *   If PeriodUnit is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, and 12.
+        /// *   Valid values when PeriodUnit is set to Week: 1, 2, and 3.
+        /// *   Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
         public int? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -62,12 +62,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether the compute nodes support hyper-threading. Valid values:
+        /// Specifies whether to enable hyper-threading for the compute node. Valid values:
         /// 
-        /// *   true: Hyper-threading is supported.
-        /// *   false: Hyper-threading is not supported.
+        /// *   true
+        /// *   false
         /// 
-        /// Default value: true
+        /// Default value: true.
         /// </summary>
         [NameInMap("ComputeEnableHt")]
         [Validation(Required=false)]
@@ -97,11 +97,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The preemption policy of the compute nodes. The parameter only takes effect when EcsChargeType is set to PostPaid. Valid values:
         /// 
-        /// *   NoSpot: The compute nodes are pay-as-you-go instances.
-        /// *   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.
+        /// *   NoSpot: The instance is a regular pay-as-you-go instance.
+        /// *   SpotWithPriceLimit: The policy applies to preemptible instances for which a maximum hourly price is specified.
         /// *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
         /// 
-        /// Default value: NoSpot
+        /// Default value: NoSpot.
         /// </summary>
         [NameInMap("ComputeSpotStrategy")]
         [Validation(Required=false)]
@@ -124,12 +124,15 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   manual: The compute nodes are manually added.
         /// *   autoscale: The compute nodes are automatically added.
         /// 
-        /// Default value: manual
+        /// Default value: manual.
         /// </summary>
         [NameInMap("CreateMode")]
         [Validation(Required=false)]
         public string CreateMode { get; set; }
 
+        /// <summary>
+        /// The list of data disks.
+        /// </summary>
         [NameInMap("DataDisks")]
         [Validation(Required=false)]
         public List<AddNodesRequestDataDisks> DataDisks { get; set; }
@@ -142,9 +145,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// *   cloud_essd: ESSD
             /// *   cloud: basic disk
             /// 
-            /// Default value: cloud_efficiency
+            /// Default value: cloud_efficiency.
             /// 
-            /// Valid values of N: 0 to 16
+            /// Valid values of N: 0 to 16.
             /// </summary>
             [NameInMap("DataDiskCategory")]
             [Validation(Required=false)]
@@ -156,9 +159,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// *   true
             /// *   false
             /// 
-            /// Default value: true
+            /// Default value: true.
             /// 
-            /// Valid values of N: 0 to 16
+            /// Valid values of N: 0 to 16.
             /// </summary>
             [NameInMap("DataDiskDeleteWithInstance")]
             [Validation(Required=false)]
@@ -170,9 +173,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// *   true
             /// *   false
             /// 
-            /// Default value: false
+            /// Default value: false.
             /// 
-            /// Valid values of N: 0 to 16
+            /// Valid values of N: 0 to 16.
             /// </summary>
             [NameInMap("DataDiskEncrypted")]
             [Validation(Required=false)]
@@ -181,7 +184,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The KMS key ID of the data disk.
             /// 
-            /// Valid values of N: 0 to 16
+            /// Valid values of N: 0 to 16.
             /// </summary>
             [NameInMap("DataDiskKMSKeyId")]
             [Validation(Required=false)]
@@ -195,22 +198,22 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
             /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
             /// 
-            /// Default value: PL1
+            /// Default value: PL1.
             /// 
-            /// Valid values of N: 0 to 16
+            /// Valid values of N: 0 to 16.
             /// </summary>
             [NameInMap("DataDiskPerformanceLevel")]
             [Validation(Required=false)]
             public string DataDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// The size of the data disk. Unit: GB
+            /// The size of the data disk. Unit: GB.
             /// 
-            /// Valid values: 40 to 500
+            /// Valid values: 40 to 500.
             /// 
-            /// Default value: 40
+            /// Default value: 40.
             /// 
-            /// Valid values of N: 0 to 16
+            /// Valid values of N: 0 to 16.
             /// </summary>
             [NameInMap("DataDiskSize")]
             [Validation(Required=false)]
@@ -218,13 +221,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         }
 
+        [NameInMap("DnsConfig")]
+        [Validation(Required=false)]
+        public string DnsConfig { get; set; }
+
         /// <summary>
         /// The billing method of the compute nodes. Valid values:
         /// 
         /// *   PostPaid: pay-as-you-go
         /// *   PrePaid: subscription
         /// 
-        /// Default value: PostPaid
+        /// Default value: PostPaid.
         /// 
         /// If the parameter is set to PrePaid, auto-renewal is enabled by default. After the E-HPC cluster is released, auto-renewal is disabled.
         /// </summary>
@@ -251,7 +258,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// 
         /// *   The operating system that is specified by the image must be the same as that of the existing cluster nodes. For example, if the operating system of the cluster nodes is CentOS, you can select only a CentOS image.
         /// 
-        /// > If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of the cluster nodes is Windows.
+        /// > If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of nodes is Windows.
         /// 
         /// *   The major version of the image specified for the compute nodes that you want to add is the same as that of the image of the cluster. For example, if the version of the cluster image is CentOS 7.x, the version of the image specified for the compute nodes must be CentOS 7.x.
         /// 
@@ -269,7 +276,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   others: shared image
         /// *   marketplace: Alibaba Cloud Marketplace image
         /// 
-        /// Default value: system
+        /// Default value: system.
         /// </summary>
         [NameInMap("ImageOwnerAlias")]
         [Validation(Required=false)]
@@ -305,7 +312,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
         /// 
-        /// Default value: 0
+        /// Default value: 0.
         /// </summary>
         [NameInMap("InternetMaxBandWidthOut")]
         [Validation(Required=false)]
@@ -325,12 +332,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   If the number of available ECS instances is greater than the value of the MinCount parameter and less than that of the Count parameter, the compute nodes are added based on the value of the MinCount parameter.
         /// *   If the number of available ECS instances is greater than the value of the Count parameter, the compute nodes are added based on the value of the Count parameter.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("MinCount")]
         [Validation(Required=false)]
         public int? MinCount { get; set; }
 
+        /// <summary>
+        /// The communication mode of the ENI. Valid values:
+        /// 
+        /// *   Standard: uses the TCP communication mode.
+        /// *   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.
+        /// </summary>
         [NameInMap("NetworkInterfaceTrafficMode")]
         [Validation(Required=false)]
         public string NetworkInterfaceTrafficMode { get; set; }
@@ -338,48 +351,48 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The duration of the subscription. The unit of the duration is specified by the PeriodUnit parameter. The parameter only takes effect when InstanceChargeType is set to PrePaid. Valid values:
         /// 
-        /// *   If PeriodUnit is set to Week, the valid values of the Period parameter are 1, 2, 3, and 4.
+        /// *   Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.
         /// *   Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the subscription period. Valid values:
+        /// The unit of the subscription period of the resource. Valid values:
         /// 
         /// *   Week
         /// *   Month
         /// 
-        /// Default value: Month
+        /// Default value: Month.
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// Specifies whether to set the API operation as a synchronous operation. Valid values:
+        /// Specifies whether to set this operation as a synchronous operation. Valid values:
         /// 
         /// *   true
         /// *   false
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("Sync")]
         [Validation(Required=false)]
         public bool? Sync { get; set; }
 
         /// <summary>
-        /// The performance level of the ESSD that is used as the system disk. Valid values:
+        /// The performance level of the ESSD to be used as the system disk. Default value: PL1. Valid values:
         /// 
         /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
         /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
         /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
         /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
         /// 
-        /// Default value: PL1
+        /// Default value: PL1.
         /// 
         /// For more information about ESSD performance parameters, see [ESSD](~~122389~~).
         /// </summary>
@@ -388,11 +401,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string SystemDiskLevel { get; set; }
 
         /// <summary>
-        /// The size of the system disk. Unit: GiB
+        /// The size of the system disk. Unit: GiB.
         /// 
-        /// Valid values: 40 to 500
+        /// Valid values: 40 to 500.
         /// 
-        /// Default value: 40
+        /// Default value: 40.
         /// </summary>
         [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]
@@ -401,12 +414,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The type of the system disk. Valid values:
         /// 
-        /// *   cloud_efficiency: ultra disk.
-        /// *   cloud_ssd: SSD.
-        /// *   cloud_essd: ESSD.
+        /// *   cloud_efficiency: ultra disk
+        /// *   cloud_ssd: SSD
+        /// *   cloud_essd: enhanced SSD (ESSD)
         /// *   cloud: basic disk. Disks of this type are retired.
         /// 
-        /// Default value: cloud_efficiency
+        /// Default value: cloud_efficiency.
         /// </summary>
         [NameInMap("SystemDiskType")]
         [Validation(Required=false)]

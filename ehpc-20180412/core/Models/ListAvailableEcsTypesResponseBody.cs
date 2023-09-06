@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public int? InstanceBandwidthTx { get; set; }
 
                         /// <summary>
-                        /// The inbound packet forwarding rate over the internal network. Unit: pps
+                        /// The inbound packet forwarding rate over the internal network. Unit: pps.
                         /// </summary>
                         [NameInMap("InstancePpsRx")]
                         [Validation(Required=false)]
                         public int? InstancePpsRx { get; set; }
 
                         /// <summary>
-                        /// The outbound packet forwarding rate over the internal network. Unit: pps
+                        /// The outbound packet forwarding rate over the internal network. Unit: pps.
                         /// </summary>
                         [NameInMap("InstancePpsTx")]
                         [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public string InstanceTypeId { get; set; }
 
                         /// <summary>
-                        /// The memory size of the ECS instance. Unit: GiB
+                        /// The memory size of the ECS instance. Unit: GiB.
                         /// </summary>
                         [NameInMap("MemorySize")]
                         [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

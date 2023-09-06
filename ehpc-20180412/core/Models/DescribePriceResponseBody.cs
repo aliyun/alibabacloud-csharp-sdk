@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The original price of the image.
                 /// 
-                /// Unit: USD
+                /// Unit: USD.
                 /// </summary>
                 [NameInMap("OriginalPrice")]
                 [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The final price.
                 /// 
-                /// Unit: USD
+                /// Unit: USD.
                 /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The total price.
         /// 
-        /// Unit: USD
+        /// Unit: USD.
         /// </summary>
         [NameInMap("TotalTradePrice")]
         [Validation(Required=false)]

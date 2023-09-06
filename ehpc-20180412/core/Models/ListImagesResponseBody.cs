@@ -44,16 +44,22 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
+                /// <summary>
+                /// The name of the image.
+                /// </summary>
                 [NameInMap("OSName")]
                 [Validation(Required=false)]
                 public string OSName { get; set; }
 
+                /// <summary>
+                /// The name of the image in English.
+                /// </summary>
                 [NameInMap("OSNameEn")]
                 [Validation(Required=false)]
                 public string OSNameEn { get; set; }
 
                 /// <summary>
-                /// The image tag of the cluster.
+                /// The tag that is added to the image.
                 /// </summary>
                 [NameInMap("OsTag")]
                 [Validation(Required=false)]

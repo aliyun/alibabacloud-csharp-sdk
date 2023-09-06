@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string DBInfo { get; set; }
 
         /// <summary>
-        /// The array of local images.
+        /// The array of images.
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -28,21 +28,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListContainerImagesResponseBodyImagesImages> Images { get; set; }
             public class ListContainerImagesResponseBodyImagesImages : TeaModel {
                 /// <summary>
-                /// The ID of the image.
+                /// The image ID.
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The name of the repository.
+                /// The name of the certificate application repository.
                 /// </summary>
                 [NameInMap("Repository")]
                 [Validation(Required=false)]
                 public string Repository { get; set; }
 
                 /// <summary>
-                /// The status of the image.
+                /// The state of the image.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

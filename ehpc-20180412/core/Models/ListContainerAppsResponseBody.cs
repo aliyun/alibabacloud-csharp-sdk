@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListContainerAppsResponseBodyContainerAppsContainerApps> ContainerApps { get; set; }
             public class ListContainerAppsResponseBodyContainerAppsContainerApps : TeaModel {
                 /// <summary>
-                /// The time when the containerized application was created.
+                /// The time at which the containerized application was created.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the containerized application.
+                /// The ID of the container application.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number returned.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

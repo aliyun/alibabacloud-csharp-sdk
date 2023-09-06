@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DescribeImageRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster that you want to manage.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ContainerType { get; set; }
 
         /// <summary>
-        /// The tag of the image. Default value: latest.
+        /// The tags of the image. Default value: latest.
         /// </summary>
         [NameInMap("ImageTag")]
         [Validation(Required=false)]

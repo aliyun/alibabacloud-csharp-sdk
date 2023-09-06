@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListContainerAppsRequest : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number to return.
         /// 
         /// Pages start from page 1.
         /// 

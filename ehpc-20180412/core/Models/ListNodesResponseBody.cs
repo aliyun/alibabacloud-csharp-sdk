@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListNodesResponseBody : TeaModel {
         /// <summary>
-        /// The information about nodes.
+        /// The list of nodes.
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListNodesResponseBodyNodesNodeInfo> NodeInfo { get; set; }
             public class ListNodesResponseBodyNodesNodeInfo : TeaModel {
                 /// <summary>
-                /// The time when the node was added to the cluster.
+                /// The time when the node is added to the cluster.
                 /// </summary>
                 [NameInMap("AddTime")]
                 [Validation(Required=false)]
@@ -30,15 +30,15 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The mode in which the compute nodes are added. Valid values:
                 /// 
-                /// *   manual: The compute nodes are manually added.
-                /// *   autoscale: The compute nodes are automatically added.
+                /// *   manual: The node is manually added.
+                /// *   autoscale: The node is automatically added.
                 /// </summary>
                 [NameInMap("CreateMode")]
                 [Validation(Required=false)]
                 public string CreateMode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the node was created by using E-HPC.
+                /// Indicates whether the node is created by using E-HPC.
                 /// 
                 /// *   true: The node is created by using E-HPC.
                 /// *   false: The node is not created by using E-HPC.
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The name of the node.
+                /// The name of the task node.
                 /// </summary>
                 [NameInMap("HostName")]
                 [Validation(Required=false)]
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public bool? HtEnabled { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The node ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The ID of the image.
+                /// The ID of the custom image.
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string IpAddress { get; set; }
 
                 /// <summary>
-                /// The location where the node was deployed. Valid values:
+                /// The location where the node is deployed. Valid values:
                 /// 
                 /// *   OnPremise: The node is deployed on your data center.
                 /// *   PublicCloud: The node is deployed on the public cloud.
@@ -126,12 +126,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The reason why the node was locked. Valid values:
+                /// The reason why the node is locked. Valid values:
                 /// 
-                /// *   financial: The node is locked due to overdue payments.
+                /// *   financial: The instance is locked due to overdue payments.
                 /// *   security: The node is locked for security reasons.
-                /// *   recycling: The preemptible node is locked and pending release.
-                /// *   dedicatedhostfinancial: The node is locked due to the overdue payments of the dedicated host.
+                /// *   recycling: The preemptible instance is locked and pending release.
+                /// *   dedicatedhostfinancial: The ECS instance is locked due to overdue payments of the dedicated host.
                 /// 
                 /// By default, an empty string is returned.
                 /// </summary>
@@ -140,14 +140,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// The public IP address of the node.
+                /// The public IP address of the server.
                 /// </summary>
                 [NameInMap("PublicIpAddress")]
                 [Validation(Required=false)]
                 public string PublicIpAddress { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// The status of the node. Valid values:
                 /// 
                 /// *   uninit: The node is being installed.
-                /// *   exception: An exception has occurred on the node.
+                /// *   exception: An exception occurred on the node.
                 /// *   running: The node is running.
                 /// *   initing: The node is being initialized.
                 /// *   releasing: The node is being released.
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public int? Gpu { get; set; }
 
                     /// <summary>
-                    /// The memory capacity. Unit: GB
+                    /// The memory capacity. Unit: GB.
                     /// </summary>
                     [NameInMap("Memory")]
                     [Validation(Required=false)]
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public int? Gpu { get; set; }
 
                     /// <summary>
-                    /// The memory capacity. Unit: GB
+                    /// The memory capacity. Unit: GB.
                     /// </summary>
                     [NameInMap("Memory")]
                     [Validation(Required=false)]
@@ -265,28 +265,28 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The version of the client.
+                /// The version of the client that is used for the cluster.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }
 
                 /// <summary>
-                /// The ID of the virtual private cloud (VPC).
+                /// The VPC ID of the node.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The ID of the zone.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number returned.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

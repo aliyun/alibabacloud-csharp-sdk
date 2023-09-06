@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   false: available
         /// *   true: sold out
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("ShowSoldOut")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// 
         /// *   NoSpot: The ECS instances are pay-as-you-go instances.
         /// *   SpotWithPriceLimit: The ECS instances are preemptible instances that have a user-defined maximum hourly price.
-        /// *   SpotAsPriceGo: The ECS instances are preemptible instances for which the market price at the time of purchase is used as the bid price.
+        /// *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
         /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListUsersResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The page number returned.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Group { get; set; }
 
                 /// <summary>
-                /// The username.
+                /// The username of the account.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

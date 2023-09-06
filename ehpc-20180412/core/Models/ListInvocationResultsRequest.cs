@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string CommandId { get; set; }
 
+        /// <summary>
+        /// The information of nodes on which the command is run.
+        /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public List<ListInvocationResultsRequestInstance> Instance { get; set; }

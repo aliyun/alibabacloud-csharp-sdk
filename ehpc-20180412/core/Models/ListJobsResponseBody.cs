@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// The ID of the job.
+                /// The job ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string NodeList { get; set; }
 
                 /// <summary>
-                /// The name of the user that runs the job.
+                /// The name of the user that ran the job.
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
+                /// The priority of the job. Valid values: 0 to 9. A large value indicates a higher priority.
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
@@ -109,17 +109,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string ShellPath { get; set; }
 
                 /// <summary>
-                /// The time when the job started to run.
+                /// The time when the job was created.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The status of the job. Valid values: Valid values:
+                /// The status of the job. Valid values:
                 /// 
                 /// *   FINISHED: The job is completed
-                /// *   RUNNING: The job is running.
+                /// *   RUNNING: The job connector is running.
                 /// *   QUEUED: The job is pending in a queue.
                 /// </summary>
                 [NameInMap("State")]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number returned.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

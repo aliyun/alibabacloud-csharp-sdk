@@ -13,14 +13,29 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public SubmitJobRequestJobRetry JobRetry { get; set; }
         public class SubmitJobRequestJobRetry : TeaModel {
+            /// <summary>
+            /// The number of retries for the job. Valid values: 1 to 10. You can only retry jobs that are run on the PBS clusters.
+            /// 
+            /// >  If this parameter is left empty, the JobRetry.Priority and JobRetry.OnExitCode parameters do not take effect.
+            /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
+            /// <summary>
+            /// The retry condition of the job. If the exit code is the value of the parameter, the job retry is triggered.
+            /// 
+            /// >  If this parameter is left empty, the job retry is triggered when the exit code is not 0.
+            /// </summary>
             [NameInMap("OnExitCode")]
             [Validation(Required=false)]
             public int? OnExitCode { get; set; }
 
+            /// <summary>
+            /// The priority of the job retry. Valid values: 0 to 9. A larger value indicates a higher priority.
+            /// 
+            /// >  If this parameter is left empty, the priority of the job retry is min {Priority of the original job +1, 9}.
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }

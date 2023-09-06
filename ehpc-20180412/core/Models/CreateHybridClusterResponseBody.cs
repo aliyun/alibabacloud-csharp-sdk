@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class CreateHybridClusterResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

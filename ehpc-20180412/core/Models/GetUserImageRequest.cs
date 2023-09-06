@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetUserImageRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ContainerType { get; set; }
 
         /// <summary>
-        /// The name of the image.
+        /// The image name.
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string OSSBucket { get; set; }
 
         /// <summary>
-        /// The endpoint of OSS.
+        /// The OSS endpoint.
         /// </summary>
         [NameInMap("OSSEndPoint")]
         [Validation(Required=false)]

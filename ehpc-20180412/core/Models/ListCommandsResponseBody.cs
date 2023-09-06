@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on the current page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

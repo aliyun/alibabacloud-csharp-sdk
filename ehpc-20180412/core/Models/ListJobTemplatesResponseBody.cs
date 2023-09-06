@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListJobTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The page number returned.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListJobTemplatesResponseBodyTemplatesJobTemplates> JobTemplates { get; set; }
             public class ListJobTemplatesResponseBodyTemplatesJobTemplates : TeaModel {
                 /// <summary>
-                /// The job array.
+                /// The queue of the job.
                 /// 
                 /// Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.
                 /// </summary>
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string ClockTime { get; set; }
 
                 /// <summary>
-                /// The command that was used to run the job.
+                /// The command that is used to run the job.
                 /// </summary>
                 [NameInMap("CommandLine")]
                 [Validation(Required=false)]
                 public string CommandLine { get; set; }
 
                 /// <summary>
-                /// The maximum GPU usage required by a single compute node. Valid values: 1 to 8.
+                /// The maximum GPU usage for individual compute nodes. Valid values: 1 to 8.
                 /// 
                 /// The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.
                 /// </summary>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The URL of the job files that were uploaded to an Object Storage Service (OSS) bucket.
+                /// The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.
                 /// </summary>
                 [NameInMap("InputFileUrl")]
                 [Validation(Required=false)]
@@ -106,21 +106,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The number of the compute nodes. Valid values: 1 to 500.
+                /// The number of compute nodes. Valid values: 1 to 500.
                 /// </summary>
                 [NameInMap("Node")]
                 [Validation(Required=false)]
                 public int? Node { get; set; }
 
                 /// <summary>
-                /// The path that was used to run the job.
+                /// The path that is used to run the job.
                 /// </summary>
                 [NameInMap("PackagePath")]
                 [Validation(Required=false)]
                 public string PackagePath { get; set; }
 
                 /// <summary>
-                /// The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
+                /// The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Queue { get; set; }
 
                 /// <summary>
-                /// Indicates whether the job can be rerun. Valid values:
+                /// Specifies whether the job can be rerun. Valid values:
                 /// 
                 /// *   true: The job can be rerun.
                 /// *   false: The job cannot be rerun.
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public bool? ReRunable { get; set; }
 
                 /// <summary>
-                /// The name of the user that ran the job.
+                /// The name of the user that runs the job.
                 /// </summary>
                 [NameInMap("RunasUser")]
                 [Validation(Required=false)]
@@ -172,14 +172,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public int? Task { get; set; }
 
                 /// <summary>
-                /// The number of threads required by a single compute node. Valid values: 1 to 1000.
+                /// The number of threads required by a single task. Valid values: 1 to 1000.
                 /// </summary>
                 [NameInMap("Thread")]
                 [Validation(Required=false)]
                 public int? Thread { get; set; }
 
                 /// <summary>
-                /// The command that was used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:
+                /// The command that is used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:
                 /// 
                 /// *   tar xzf: decompresses GZIP files.
                 /// *   tar xf: decompresses TAR files.
@@ -197,10 +197,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Variables { get; set; }
 
                 /// <summary>
-                /// Indicates whether to decompress the job files downloaded from an OSS bucket. Valid values:
+                /// Specifies whether to decompress the job files downloaded from an OSS bucket. Valid value:
                 /// 
-                /// *   true: The job files are decompressed.
-                /// *   false: The job files are not decompressed.
+                /// *   true: decompresses the job file.
+                /// *   false: does not decompress the job file.
                 /// </summary>
                 [NameInMap("WithUnzipCmd")]
                 [Validation(Required=false)]

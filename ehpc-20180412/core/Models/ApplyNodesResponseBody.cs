@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the task.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? SatisfiedAmount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public CreateClusterRequestEcsOrderCompute Compute { get; set; }
             public class CreateClusterRequestEcsOrderCompute : TeaModel {
                 /// <summary>
-                /// The number of the compute nodes. Valid values: 1 to 99.
+                /// The number of compute nodes in the cluster. Valid values: 0 to 99.
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
@@ -87,29 +87,90 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   nis
         /// *   ldap
         /// 
-        /// Default value: nis
+        /// Default value: nis.
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
+        /// <summary>
+        /// The custom component service.
+        /// </summary>
+        [NameInMap("AddOns")]
+        [Validation(Required=false)]
+        public List<CreateClusterRequestAddOns> AddOns { get; set; }
+        public class CreateClusterRequestAddOns : TeaModel {
+            /// <summary>
+            /// The path to the configuration file.
+            /// </summary>
+            [NameInMap("ConfigFile")]
+            [Validation(Required=false)]
+            public string ConfigFile { get; set; }
+
+            /// <summary>
+            /// The type of the database engine. Valid values: Mysql, and null.
+            /// </summary>
+            [NameInMap("DBType")]
+            [Validation(Required=false)]
+            public string DBType { get; set; }
+
+            /// <summary>
+            /// Indicates whether to auto-start the custom component. Valid values: true and false.
+            /// </summary>
+            [NameInMap("DefaultStart")]
+            [Validation(Required=false)]
+            public bool? DefaultStart { get; set; }
+
+            /// <summary>
+            /// The deployment mode. Valid values: local and ecs.
+            /// </summary>
+            [NameInMap("DeployMode")]
+            [Validation(Required=false)]
+            public string DeployMode { get; set; }
+
+            /// <summary>
+            /// The component name.
+            /// </summary>
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            /// <summary>
+            /// The access port of the custom component.
+            /// </summary>
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public float? Port { get; set; }
+
+            /// <summary>
+            /// The version number of the component.
+            /// </summary>
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
+
+        }
+
+        /// <summary>
+        /// The information of the NAS file system.
+        /// </summary>
         [NameInMap("AdditionalVolumes")]
         [Validation(Required=false)]
         public List<CreateClusterRequestAdditionalVolumes> AdditionalVolumes { get; set; }
         public class CreateClusterRequestAdditionalVolumes : TeaModel {
             /// <summary>
-            /// The queue of the nodes to which the additional file system is attached.
+            /// The queue of the nodes to which the NAS file system is attached.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("JobQueue")]
             [Validation(Required=false)]
             public string JobQueue { get; set; }
 
             /// <summary>
-            /// The local directory on which the additional file system is mounted.
+            /// The local directory on which the NAS file system is mounted.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("LocalDirectory")]
             [Validation(Required=false)]
@@ -118,31 +179,34 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The type of the E-HPC cluster. Set the value to PublicCloud.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
             public string Location { get; set; }
 
             /// <summary>
-            /// The remote directory on which the additional file system is mounted.
+            /// The remote directory to which the NAS file system is mounted.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("RemoteDirectory")]
             [Validation(Required=false)]
             public string RemoteDirectory { get; set; }
 
+            /// <summary>
+            /// The node information to which the NAS file system is attached.
+            /// </summary>
             [NameInMap("Roles")]
             [Validation(Required=false)]
             public List<CreateClusterRequestAdditionalVolumesRoles> Roles { get; set; }
             public class CreateClusterRequestAdditionalVolumesRoles : TeaModel {
                 /// <summary>
-                /// The type of the nodes to which the additional file system is attached.
+                /// The type of the nodes to which the NAS file system is attached.
                 /// 
                 /// Valid values of N in AdditionalVolumes.N.Roles: 1 to 10
                 /// 
-                /// Valid values of N in Roles.N.Name: 0 to 8
+                /// Valid values of N in Roles.N.Name: 0 to 8.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -151,41 +215,41 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             }
 
             /// <summary>
-            /// The ID of the additional file system.
+            /// The ID of the NAS file system.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("VolumeId")]
             [Validation(Required=false)]
             public string VolumeId { get; set; }
 
             /// <summary>
-            /// The mount options of the additional file system.
+            /// The mount options of the NAS file system.
             /// 
-            /// Valid values of N: 1 to 10
+            /// You can specify 1 to 10 vCPUs.
             /// </summary>
             [NameInMap("VolumeMountOption")]
             [Validation(Required=false)]
             public string VolumeMountOption { get; set; }
 
             /// <summary>
-            /// The mount target of the additional file system.
+            /// The mount target of the NAS file system.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("VolumeMountpoint")]
             [Validation(Required=false)]
             public string VolumeMountpoint { get; set; }
 
             /// <summary>
-            /// The type of the protocol that is used by the additional file system. Valid values:
+            /// The type of the protocol that is used by the NAS file system. Valid value:
             /// 
             /// *   NFS
             /// *   SMB
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// 
-            /// Default value: NFS
+            /// Default value: NFS.
             /// </summary>
             [NameInMap("VolumeProtocol")]
             [Validation(Required=false)]
@@ -194,7 +258,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The type of the additional shared storage. Only NAS file systems are supported.
             /// 
-            /// Valid values of N: 1 to 10
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("VolumeType")]
             [Validation(Required=false)]
@@ -202,6 +266,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         }
 
+        /// <summary>
+        /// The application information.
+        /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
         public List<CreateClusterRequestApplication> Application { get; set; }
@@ -209,7 +276,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The tag of the software.
             /// 
-            /// Valid values of N: 0 to 100
+            /// Valid values of N: 0 to 100.
             /// 
             /// You can call the [ListSoftwares](~~87216~~) operation to query the tag of the software.
             /// </summary>
@@ -220,12 +287,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for the subscription. Valid values:
+        /// Specifies whether to enable auto-renewal. Valid values:
         /// 
         /// *   true
         /// *   false
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
@@ -239,7 +306,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -257,19 +324,19 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The version of the E-HPC cluster.
         /// 
-        /// Default value: 1.0
+        /// Default value: 1.0.
         /// </summary>
         [NameInMap("ClusterVersion")]
         [Validation(Required=false)]
         public string ClusterVersion { get; set; }
 
         /// <summary>
-        /// Specifies whether the compute nodes support hyper-threading. Valid values:
+        /// Specifies whether to enable hyper-threading for the compute node. Valid values:
         /// 
         /// *   true
         /// *   false
         /// 
-        /// Default value: true
+        /// Default value: true.
         /// </summary>
         [NameInMap("ComputeEnableHt")]
         [Validation(Required=false)]
@@ -289,7 +356,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
         /// *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
         /// 
-        /// Default value: NoSpot
+        /// Default value: NoSpot.
         /// </summary>
         [NameInMap("ComputeSpotStrategy")]
         [Validation(Required=false)]
@@ -299,17 +366,24 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// The mode in which the E-HPC cluster is deployed. Valid values:
         /// 
         /// *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
-        /// *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
+        /// *   Simple: A management node, which consists of an account node and a scheduling node, is deployed, while a logon node and multiple compute nodes are separately deployed.
         /// *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
         /// 
-        /// Default value: Standard
+        /// Default value: Standard.
         /// </summary>
         [NameInMap("DeployMode")]
         [Validation(Required=false)]
         public string DeployMode { get; set; }
 
         /// <summary>
-        /// The description of the E-HPC cluster. The description must be 2 to 256 characters in length. It cannot start with http:// or https://.
+        /// The ID of the deployment set in which to deploy the instance. You can obtain the deployment set ID by calling the [DescribeDeploymentSets](~~91313~~) operation. Only the deployment sets that use low latency policy are supported.
+        /// </summary>
+        [NameInMap("DeploymentSetId")]
+        [Validation(Required=false)]
+        public string DeploymentSetId { get; set; }
+
+        /// <summary>
+        /// The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -318,7 +392,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The domain name of the on-premises E-HPC cluster.
         /// 
-        /// This parameter takes effect only when the AccoutType parameter is set to Idap.
+        /// This parameter takes effect only when the AccountType parameter is set to Idap.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -327,8 +401,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The billing method of the nodes. Valid values:
         /// 
-        /// *   PostPaid: pay-as-you-go
-        /// *   PrePaid: subscription
+        /// *   PostPaid: pay-as-you-go.
+        /// *   PrePaid: subscription.
         /// 
         /// If you set the parameter to PrePaid, auto-renewal is enabled by default.
         /// </summary>
@@ -349,16 +423,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   true
         /// *   false
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// 
-        /// >  If high availability is enabled, a primary management node and a secondary management node are used.
+        /// > If high availability is enabled, a primary management node and a secondary management node are used.
         /// </summary>
         [NameInMap("HaEnable")]
         [Validation(Required=false)]
         public bool? HaEnable { get; set; }
 
         /// <summary>
-        /// The ID of the image.
+        /// The image IDs.
         /// 
         /// You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the images that are supported by E-HPC.
         /// </summary>
@@ -373,14 +447,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   self: custom image
         /// *   others: shared image
         /// 
-        /// Default value: system
+        /// Default value: system.
         /// </summary>
         [NameInMap("ImageOwnerAlias")]
         [Validation(Required=false)]
         public string ImageOwnerAlias { get; set; }
 
         /// <summary>
-        /// The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.
+        /// The URL of the job file that is uploaded to an Object Storage Service (OSS) bucket.
         /// </summary>
         [NameInMap("InputFileUrl")]
         [Validation(Required=false)]
@@ -392,7 +466,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   true
         /// *   false
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("IsComputeEss")]
         [Validation(Required=false)]
@@ -406,9 +480,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string JobQueue { get; set; }
 
         /// <summary>
-        /// The name of the AccessKey pair.
+        /// The name of the key pair.
         /// 
-        /// >  For more information, see [Create an SSH key pair](~~51793~~).
+        /// > For more information, see [Create an SSH key pair](~~51793~~).
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
@@ -421,6 +495,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The communication model of the ENI. Valid values:
+        /// 
+        /// *   Standard: The TCP communication mode is used.
+        /// *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.
+        /// </summary>
         [NameInMap("NetworkInterfaceTrafficMode")]
         [Validation(Required=false)]
         public string NetworkInterfaceTrafficMode { get; set; }
@@ -433,13 +513,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string OsTag { get; set; }
 
         /// <summary>
-        /// The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:
+        /// The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
         /// 
         /// `( ) ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ‘ < > , . ? /`
         /// 
         /// You must specify either Password or KeyPairName. If both are specified, the Password parameter prevails.
         /// 
-        /// >  We recommend that you use HTTPS to call the API operation to prevent password leakages.
+        /// > We recommend that you use HTTPS to call the API operation to prevent password leakage.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -448,11 +528,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The duration of the subscription. The unit of the duration is specified by the `PeriodUnit` parameter.
         /// 
-        /// *   If you set PriceUnit to Year, the valid values of the Period parameter are 1, 2, and 3.
-        /// *   If you set PriceUnit to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-        /// *   If you set PriceUnit to Hour, the valid value of the Period parameter is 1.
+        /// *   Valid values if PriceUnit is set to Year: 1, 2, and 3.
+        /// *   Valid values if PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+        /// *   Valid value if PriceUnit is set to Hour: 1.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -465,7 +545,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   Month
         /// *   Hour
         /// 
-        /// Default value: Month
+        /// Default value: Month.
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
@@ -476,10 +556,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// 
         /// The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.
         /// 
-        /// *   pluginMod: the mode of the plug-in. The following modes are supported:
+        /// *   pluginMod: the plug-in mode. The following modes are supported:
         /// 
-        ///     *   oss: The plug-in is downloaded and decompressed from OSS to a local path. The local path is specified by the pluginLocalPath parameter.
-        ///     *   image: By default, the plug-in is stored in a pre-defined local path. The local path is specified by the pluginLocalPath parameter.
+        ///     *   oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.
+        ///     *   image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.
         /// 
         /// *   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.
         /// 
@@ -489,14 +569,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string Plugin { get; set; }
 
+        /// <summary>
+        /// The information of the post-installation script.
+        /// </summary>
         [NameInMap("PostInstallScript")]
         [Validation(Required=false)]
         public List<CreateClusterRequestPostInstallScript> PostInstallScript { get; set; }
         public class CreateClusterRequestPostInstallScript : TeaModel {
             /// <summary>
-            /// The parameter that is used to run the script after the E-HPC cluster is created.
+            /// The parameter that is used to run the script after the cluster is created.
             /// 
-            /// Valid values of N: 0 to 16
+            /// Valid values of N: 0 to 16.
             /// </summary>
             [NameInMap("Args")]
             [Validation(Required=false)]
@@ -513,6 +596,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         }
 
+        /// <summary>
+        /// The node of the RAM role.
+        /// </summary>
         [NameInMap("RamNodeTypes")]
         [Validation(Required=false)]
         public List<string> RamNodeTypes { get; set; }
@@ -520,14 +606,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The name of the Resource Access Management (RAM) role.
         /// 
-        /// You can call the [ListRoles](~~28713~~) operation provided by RAM to query the created RAM roles.
+        /// You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.
         /// </summary>
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
         public string RamRoleName { get; set; }
 
         /// <summary>
-        /// The remote directory on which the file system is mounted.
+        /// The remote directory to which the NAS file system is mounted.
         /// </summary>
         [NameInMap("RemoteDirectory")]
         [Validation(Required=false)]
@@ -539,14 +625,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   true
         /// *   false
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("RemoteVisEnable")]
         [Validation(Required=false)]
         public string RemoteVisEnable { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// 
         /// You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID of the resource group.
         /// </summary>
@@ -555,7 +641,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the Super Computing Cluster (SCC) instance.
+        /// The Super Computing Cluster (SCC) instance ID.
         /// 
         /// If you specify the parameter, the SCC instance is moved to a new SCC cluster.
         /// </summary>
@@ -571,7 +657,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   opengridscheduler
         /// *   deadline
         /// 
-        /// Default value: pbs
+        /// Default value: pbs.
         /// </summary>
         [NameInMap("SchedulerType")]
         [Validation(Required=false)]
@@ -594,14 +680,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string SecurityGroupName { get; set; }
 
         /// <summary>
-        /// The performance level of the ESSD that is used as the system disk. Valid values:
+        /// The performance level of the ESSD to be used as the system disk. Default value: PL1. Valid values:
         /// 
         /// *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
-        /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-        /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+        /// *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
+        /// *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
         /// *   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.
         /// 
-        /// Default value: PL1
+        /// Default value: PL1.
         /// 
         /// For more information, see [ESSDs](~~122389~~).
         /// </summary>
@@ -610,11 +696,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string SystemDiskLevel { get; set; }
 
         /// <summary>
-        /// The size of the system disk. Unit: GB.
+        /// The system disk size. Unit: GB.
         /// 
-        /// Valid values: 40 to 500
+        /// Valid values: 40 to 500.
         /// 
-        /// Default value: 40
+        /// Default value: 40.
         /// </summary>
         [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]
@@ -623,30 +709,33 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The type of the system disk. Valid values:
         /// 
-        /// *   cloud_efficiency: ultra disk.
-        /// *   cloud_ssd: standard SSD.
-        /// *   cloud_essd: enhanced SSD (ESSD).
+        /// *   cloud_efficiency: ultra disk
+        /// *   cloud_ssd: standard SSD
+        /// *   cloud_essd: enhanced SSD (ESSD)
         /// *   cloud: basic disk. Disks of this type are retired.
         /// 
-        /// Default value: cloud_ssd
+        /// Default value: cloud_ssd.
         /// </summary>
         [NameInMap("SystemDiskType")]
         [Validation(Required=false)]
         public string SystemDiskType { get; set; }
 
+        /// <summary>
+        /// The array of the tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateClusterRequestTag> Tag { get; set; }
         public class CreateClusterRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// The tag key.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The tag value.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -655,7 +744,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the vSwitch. E-HPC supports only VPC networks.
+        /// The vSwitch ID. E-HPC supports only VPC networks.
         /// 
         /// You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.
         /// </summary>
@@ -664,7 +753,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the file system. If you leave the parameter empty, a Performance NAS file system is created by default.
+        /// The ID of the NAS file system. If you leave the parameter empty, a Performance NAS file system is created by default.
         /// 
         /// You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.
         /// </summary>
@@ -682,29 +771,29 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string VolumeMountOption { get; set; }
 
         /// <summary>
-        /// The mount target of the file system. Take note of the following information:
+        /// The mount target of the NAS file system. The mount target is of the VPC type. Take note of the following information:
         /// 
-        /// *   If you do not specify the VolumeId parameter, you can leave the VolumeMountpoint parameter empty. A mount target is created by default.
-        /// *   If you specify the VolumeId parameter, the VolumeMountpoint parameter is required. You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.
+        /// *   If the VolumeId parameter is not specified, you can leave the VolumeMountpoint parameter empty. In this case, a mount target is created by default.
+        /// *   When the VolumeId parameter is specified, the VolumeMountpoint parameter is required. You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.
         /// </summary>
         [NameInMap("VolumeMountpoint")]
         [Validation(Required=false)]
         public string VolumeMountpoint { get; set; }
 
         /// <summary>
-        /// The type of the protocol that is used by the file system. Valid values:
+        /// The type of the protocol that is used by the NAS file system. Valid values:
         /// 
         /// *   NFS
         /// *   SMB
         /// 
-        /// Default value: NFS
+        /// Default value: NFS.
         /// </summary>
         [NameInMap("VolumeProtocol")]
         [Validation(Required=false)]
         public string VolumeProtocol { get; set; }
 
         /// <summary>
-        /// The type of the shared storage. Set the value to `nas`, which indicates a NAS file system.
+        /// The type of the shared storage. Set the value to `nas`, which indicates NAS file system.
         /// </summary>
         [NameInMap("VolumeType")]
         [Validation(Required=false)]
@@ -722,26 +811,43 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// Specifies whether not to install the agent.
         /// 
-        /// *   true: The agent is not installed.
-        /// *   false: The agent is installed.
+        /// *   true: does not install the agent.
+        /// *   false: installs the agent.
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("WithoutAgent")]
         [Validation(Required=false)]
         public bool? WithoutAgent { get; set; }
 
         /// <summary>
-        /// Specifies whether the logon node uses an elastic IP address (EIP). Default value: false
+        /// Specifies whether the logon node uses an elastic IP address (EIP). Default value: false.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("WithoutElasticIp")]
         [Validation(Required=false)]
         public bool? WithoutElasticIp { get; set; }
 
         /// <summary>
-        /// The ID of the zone.
+        /// Indicates whether to use NAS as a shared storage. Valid values:
         /// 
-        /// You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query IDs of the zones where E-HPC is supported.
+        /// *   true: does not use NAS.
+        /// *   false: use NAS.
+        /// 
+        /// Default value: false.
+        /// </summary>
+        [NameInMap("WithoutNas")]
+        [Validation(Required=false)]
+        public bool? WithoutNas { get; set; }
+
+        /// <summary>
+        /// The ID of the zone in which the resource resides.
+        /// 
+        /// You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query the IDs of the zones where E-HPC is supported.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

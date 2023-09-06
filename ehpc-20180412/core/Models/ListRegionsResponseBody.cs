@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The array of regions.
+        /// The list of regions.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListRegionsResponseBodyRegionsRegionInfo> RegionInfo { get; set; }
             public class ListRegionsResponseBodyRegionsRegionInfo : TeaModel {
                 /// <summary>
-                /// The region name.
+                /// The name of the region.
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

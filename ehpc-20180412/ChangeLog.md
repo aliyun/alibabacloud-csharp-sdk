@@ -1,3 +1,6 @@
+2023-09-06 Version: 2.0.0
+- Generated csharp 2018-04-12 for EHPC.
+
 2023-03-16 Version: 1.14.21
 - Support JobRetry parameters in SubmitJob API.
 
