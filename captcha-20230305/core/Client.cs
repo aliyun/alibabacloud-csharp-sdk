@@ -103,5 +103,71 @@ namespace AlibabaCloud.SDK.Captcha20230305
             return await VerifyCaptchaWithOptionsAsync(request, runtime);
         }
 
+        public VerifyIntelligentCaptchaResponse VerifyIntelligentCaptchaWithOptions(VerifyIntelligentCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaptchaVerifyParam))
+            {
+                body["CaptchaVerifyParam"] = request.CaptchaVerifyParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyIntelligentCaptcha",
+                Version = "2023-03-05",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyIntelligentCaptchaResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<VerifyIntelligentCaptchaResponse> VerifyIntelligentCaptchaWithOptionsAsync(VerifyIntelligentCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaptchaVerifyParam))
+            {
+                body["CaptchaVerifyParam"] = request.CaptchaVerifyParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyIntelligentCaptcha",
+                Version = "2023-03-05",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyIntelligentCaptchaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public VerifyIntelligentCaptchaResponse VerifyIntelligentCaptcha(VerifyIntelligentCaptchaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VerifyIntelligentCaptchaWithOptions(request, runtime);
+        }
+
+        public async Task<VerifyIntelligentCaptchaResponse> VerifyIntelligentCaptchaAsync(VerifyIntelligentCaptchaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VerifyIntelligentCaptchaWithOptionsAsync(request, runtime);
+        }
+
     }
 }
