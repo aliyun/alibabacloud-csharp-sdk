@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
-        /// <summary>
-        /// The string that is obtained by performing Base64 encoding on the message. Example: `dGhpcyBpcyBhbiBleGFtcGxl`.
-        /// </summary>
         [NameInMap("RequestBase64Byte")]
         [Validation(Required=false)]
         public string RequestBase64Byte { get; set; }

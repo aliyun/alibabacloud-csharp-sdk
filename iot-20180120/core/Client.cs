@@ -21987,6 +21987,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["ProductKey"] = request.ProductKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qos))
+            {
+                query["Qos"] = request.Qos;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -22063,6 +22067,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
             {
                 query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qos))
+            {
+                query["Qos"] = request.Qos;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -26097,6 +26105,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["Retained"] = request.Retained;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicAlias))
+            {
+                query["TopicAlias"] = request.TopicAlias;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicFullName))
             {
                 query["TopicFullName"] = request.TopicFullName;
@@ -26185,6 +26197,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Retained))
             {
                 query["Retained"] = request.Retained;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicAlias))
+            {
+                query["TopicAlias"] = request.TopicAlias;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicFullName))
             {
@@ -38689,10 +38705,6 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["ProductKey"] = request.ProductKey;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestBase64Byte))
-            {
-                query["RequestBase64Byte"] = request.RequestBase64Byte;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
             {
                 query["Timeout"] = request.Timeout;
@@ -38701,9 +38713,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["Topic"] = request.Topic;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestBase64Byte))
+            {
+                body["RequestBase64Byte"] = request.RequestBase64Byte;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -38750,10 +38768,6 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["ProductKey"] = request.ProductKey;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestBase64Byte))
-            {
-                query["RequestBase64Byte"] = request.RequestBase64Byte;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
             {
                 query["Timeout"] = request.Timeout;
@@ -38762,9 +38776,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["Topic"] = request.Topic;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestBase64Byte))
+            {
+                body["RequestBase64Byte"] = request.RequestBase64Byte;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -40876,6 +40896,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["ProductKey"] = request.ProductKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qos))
+            {
+                query["Qos"] = request.Qos;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -40929,6 +40953,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
             {
                 query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qos))
+            {
+                query["Qos"] = request.Qos;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

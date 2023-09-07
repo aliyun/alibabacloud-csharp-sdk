@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public bool? Retained { get; set; }
 
+        [NameInMap("TopicAlias")]
+        [Validation(Required=false)]
+        public int? TopicAlias { get; set; }
+
         /// <summary>
         /// The custom topic for the device that receives the message.
         /// 
