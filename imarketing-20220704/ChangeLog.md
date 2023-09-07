@@ -1,3 +1,6 @@
+2023-09-07 Version: 5.2.0
+- Generated csharp 2022-07-04 for imarketing.
+
 2023-08-11 Version: 5.1.0
 - Generated csharp 2022-07-04 for imarketing.
 

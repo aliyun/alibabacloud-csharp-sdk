@@ -563,6 +563,54 @@ namespace AlibabaCloud.SDK.Imarketing20220704
             return await DeleteCreativeInfoWithOptionsAsync(request, runtime);
         }
 
+        public GetAdvertisingForE2Response GetAdvertisingForE2WithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAdvertisingForE2",
+                Version = "2022-07-04",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAdvertisingForE2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetAdvertisingForE2Response> GetAdvertisingForE2WithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAdvertisingForE2",
+                Version = "2022-07-04",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAdvertisingForE2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetAdvertisingForE2Response GetAdvertisingForE2()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAdvertisingForE2WithOptions(runtime);
+        }
+
+        public async Task<GetAdvertisingForE2Response> GetAdvertisingForE2Async()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAdvertisingForE2WithOptionsAsync(runtime);
+        }
+
         public GetBrandPageResponse GetBrandPageWithOptions(GetBrandPageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
