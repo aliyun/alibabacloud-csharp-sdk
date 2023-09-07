@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class DescribeStoragePlanResponse : TeaModel {
+    public class ManuallyStartDBClusterResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeStoragePlanResponseBody Body { get; set; }
+        public ManuallyStartDBClusterResponseBody Body { get; set; }
 
     }
 

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteBackupRequest : TeaModel {
+        /// <summary>
+        /// The backup ID. If you need to specify multiple backup IDs, separate the backup IDs with commas (,).
+        /// 
+        /// >  You can call the [DescribeBackups](~~98102~~) operation to query the backup IDs.
+        /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

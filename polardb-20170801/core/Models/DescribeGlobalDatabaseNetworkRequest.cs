@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGlobalDatabaseNetworkRequest : TeaModel {
+        /// <summary>
+        /// The ID of the GDN.
+        /// </summary>
         [NameInMap("GDNId")]
         [Validation(Required=false)]
         public string GDNId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

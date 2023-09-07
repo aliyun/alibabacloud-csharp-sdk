@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeParameterTemplatesRequest : TeaModel {
+        /// <summary>
+        /// The type of the database engine. Only **MySQL** is supported.
+        /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
         public string DBType { get; set; }
 
+        /// <summary>
+        /// The version of the database. Valid values:
+        /// 
+        /// *   **5.6**
+        /// *   **5.7**
+        /// *   **8.0**
+        /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
         public string DBVersion { get; set; }
@@ -25,10 +35,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// 
+        /// >  You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available within your account, such as the region IDs.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

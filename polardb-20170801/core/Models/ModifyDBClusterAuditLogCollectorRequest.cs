@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterAuditLogCollectorRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable or disable SQL collector. Valid values:
+        /// 
+        /// *   Enable
+        /// *   Disable
+        /// </summary>
         [NameInMap("CollectorStatus")]
         [Validation(Required=false)]
         public string CollectorStatus { get; set; }
 
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RevokeAccountPrivilegeRequest : TeaModel {
+        /// <summary>
+        /// The name of the account.
+        /// 
+        /// >  You can specify only a standard account.
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// The ID of the PolarDB cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The names of the databases. If you need to specify multiple database names, separate the names with commas (,).
+        /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }

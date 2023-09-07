@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDBClusterEndpointRequest : TeaModel {
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The ID of the custom cluster endpoint.
+        /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]
         public string DBEndpointId { get; set; }

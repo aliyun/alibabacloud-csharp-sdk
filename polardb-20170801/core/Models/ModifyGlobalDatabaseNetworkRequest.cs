@@ -9,10 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyGlobalDatabaseNetworkRequest : TeaModel {
+        /// <summary>
+        /// The description of the GDN. The description must meet the following requirements:
+        /// 
+        /// *   It cannot start with `http://` or `https://`.
+        /// *   It must start with a letter.
+        /// *   It can contain letters, digits, underscores (\_), and hyphens (-).
+        /// *   It must be 2 to 126 characters in length.
+        /// </summary>
         [NameInMap("GDNDescription")]
         [Validation(Required=false)]
         public string GDNDescription { get; set; }
 
+        /// <summary>
+        /// The ID of the GDN.
+        /// </summary>
         [NameInMap("GDNId")]
         [Validation(Required=false)]
         public string GDNId { get; set; }
@@ -25,6 +36,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

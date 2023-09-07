@@ -8,7 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class DescribeStoragePlanRequest : TeaModel {
+    public class ManuallyStartDBClusterRequest : TeaModel {
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -17,17 +24,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("PageNumber")]
+        /// <summary>
+        /// The region ID of the cluster.
+        /// 
+        /// > You can call the [DescribeRegions](~~98041~~) operation to query available regions.
+        /// </summary>
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
+        /// <summary>
+        /// The ID of the backup task.
+        /// </summary>
         [NameInMap("BackupJobId")]
         [Validation(Required=false)]
         public string BackupJobId { get; set; }
 
+        /// <summary>
+        /// The backup mode. Valid values:
+        /// 
+        /// *   **Automated**
+        /// *   **Manual**
+        /// </summary>
         [NameInMap("BackupMode")]
         [Validation(Required=false)]
         public string BackupMode { get; set; }
 
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

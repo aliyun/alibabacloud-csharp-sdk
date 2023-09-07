@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBLinksRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster for which you want to query the database links.
+        /// 
+        /// > You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The name of the database link. If you leave this parameter empty, the system returns all the database links.
+        /// </summary>
         [NameInMap("DBLinkName")]
         [Validation(Required=false)]
         public string DBLinkName { get; set; }

@@ -9,9 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterParametersRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        /// <summary>
+        /// The kernel parameter. Valid values:
+        /// 
+        /// *   **Normal**: the kernel parameters.
+        /// *   **MigrationFromRDS**: compares the current parameters with the parameters of the source RDS instance.
+        /// </summary>
+        [NameInMap("DescribeType")]
+        [Validation(Required=false)]
+        public string DescribeType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

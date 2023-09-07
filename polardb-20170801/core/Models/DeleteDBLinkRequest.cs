@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDBLinkRequest : TeaModel {
+        /// <summary>
+        /// The ID of the source cluster where a database link is to be deleted.
+        /// 
+        /// >  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The name of the database link to be deleted.
+        /// </summary>
         [NameInMap("DBLinkName")]
         [Validation(Required=false)]
         public string DBLinkName { get; set; }

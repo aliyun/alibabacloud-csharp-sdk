@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBDescriptionRequest : TeaModel {
+        /// <summary>
+        /// The ID of cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The description of the database. The description must meet the following requirements:
+        /// 
+        /// *   It cannot start with `http://` or `https://`.
+        /// *   It must be 2 to 256 characters in length.
+        /// </summary>
         [NameInMap("DBDescription")]
         [Validation(Required=false)]
         public string DBDescription { get; set; }
 
+        /// <summary>
+        /// The name of the database.
+        /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }

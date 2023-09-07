@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBNodesParametersRequest : TeaModel {
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
+        /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]
         public string DBNodeIds { get; set; }

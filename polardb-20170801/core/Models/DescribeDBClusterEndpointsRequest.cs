@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterEndpointsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// 
+        /// > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The ID of the endpoint.
+        /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]
         public string DBEndpointId { get; set; }
+
+        [NameInMap("DescribeType")]
+        [Validation(Required=false)]
+        public string DescribeType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

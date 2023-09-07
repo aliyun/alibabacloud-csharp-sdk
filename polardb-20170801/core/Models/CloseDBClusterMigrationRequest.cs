@@ -9,10 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CloseDBClusterMigrationRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to continue to enable binary logging. Valid values:
+        /// 
+        /// *   **true**: continues to enable binary logging.
+        /// *   **false**: disables binary logging.
+        /// 
+        /// Default value: **true**.
+        /// 
+        /// > If binary logging is disabled, your PolarDB cluster is restarted.
+        /// </summary>
         [NameInMap("ContinueEnableBinlog")]
         [Validation(Required=false)]
         public bool? ContinueEnableBinlog { get; set; }
 
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

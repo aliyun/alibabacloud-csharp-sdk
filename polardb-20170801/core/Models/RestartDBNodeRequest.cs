@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RestartDBNodeRequest : TeaModel {
+        /// <summary>
+        /// The ID of the node.
+        /// 
+        /// >  You can call the [DescribeDBClusters](~~185342~~) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as cluster IDs.
+        /// </summary>
         [NameInMap("DBNodeId")]
         [Validation(Required=false)]
         public string DBNodeId { get; set; }

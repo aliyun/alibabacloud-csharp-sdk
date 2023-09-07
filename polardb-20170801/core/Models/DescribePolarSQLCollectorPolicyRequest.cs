@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarSQLCollectorPolicyRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// 
+        /// > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all the clusters for your account, such as the cluster ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterDescriptionRequest : TeaModel {
+        /// <summary>
+        /// The name of the cluster. The name must meet the following requirements:
+        /// 
+        /// *   The name cannot start with `http://` or `https://`.
+        /// *   The name must be 2 to 256 characters in length.
+        /// </summary>
         [NameInMap("DBClusterDescription")]
         [Validation(Required=false)]
         public string DBClusterDescription { get; set; }
 
+        /// <summary>
+        /// The ID of the PolarDB cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

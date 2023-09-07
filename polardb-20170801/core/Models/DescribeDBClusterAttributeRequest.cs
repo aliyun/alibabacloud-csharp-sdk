@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAttributeRequest : TeaModel {
+        /// <summary>
+        /// The ID of cluster.
+        /// 
+        /// > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        /// <summary>
+        /// Specifies whether to query information about AI-related nodes.
+        /// </summary>
+        [NameInMap("DescribeType")]
+        [Validation(Required=false)]
+        public string DescribeType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

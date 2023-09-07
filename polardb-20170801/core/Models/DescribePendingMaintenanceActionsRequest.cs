@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePendingMaintenanceActionsRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to return the historical tasks. Valid values:
+        /// 
+        /// *   **0**: returns the current task.
+        /// *   **1**: returns the historical tasks.
+        /// 
+        /// Default value: **0**.
+        /// </summary>
         [NameInMap("IsHistory")]
         [Validation(Required=false)]
         public int? IsHistory { get; set; }
@@ -21,10 +29,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

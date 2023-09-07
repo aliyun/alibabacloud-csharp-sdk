@@ -412,6 +412,210 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await CheckDBNameWithOptionsAsync(request, runtime);
         }
 
+        public CheckKMSAuthorizedResponse CheckKMSAuthorizedWithOptions(CheckKMSAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TDERegion))
+            {
+                query["TDERegion"] = request.TDERegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckKMSAuthorized",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckKMSAuthorizedResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CheckKMSAuthorizedResponse> CheckKMSAuthorizedWithOptionsAsync(CheckKMSAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TDERegion))
+            {
+                query["TDERegion"] = request.TDERegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckKMSAuthorized",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckKMSAuthorizedResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CheckKMSAuthorizedResponse CheckKMSAuthorized(CheckKMSAuthorizedRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckKMSAuthorizedWithOptions(request, runtime);
+        }
+
+        public async Task<CheckKMSAuthorizedResponse> CheckKMSAuthorizedAsync(CheckKMSAuthorizedRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckKMSAuthorizedWithOptionsAsync(request, runtime);
+        }
+
+        public CheckServiceLinkedRoleResponse CheckServiceLinkedRoleWithOptions(CheckServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckServiceLinkedRole",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckServiceLinkedRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CheckServiceLinkedRoleResponse> CheckServiceLinkedRoleWithOptionsAsync(CheckServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckServiceLinkedRole",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckServiceLinkedRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CheckServiceLinkedRoleResponse CheckServiceLinkedRole(CheckServiceLinkedRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckServiceLinkedRoleWithOptions(request, runtime);
+        }
+
+        public async Task<CheckServiceLinkedRoleResponse> CheckServiceLinkedRoleAsync(CheckServiceLinkedRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckServiceLinkedRoleWithOptionsAsync(request, runtime);
+        }
+
         public CloseAITaskResponse CloseAITaskWithOptions(CloseAITaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -518,6 +722,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await CloseAITaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to cancel the migration task before data migration.
+          * *   You can call this operation to perform the migration task after data migration.
+          * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+          *
+          * @param request CloseDBClusterMigrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CloseDBClusterMigrationResponse
+         */
         public CloseDBClusterMigrationResponse CloseDBClusterMigrationWithOptions(CloseDBClusterMigrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -565,6 +778,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CloseDBClusterMigrationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to cancel the migration task before data migration.
+          * *   You can call this operation to perform the migration task after data migration.
+          * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+          *
+          * @param request CloseDBClusterMigrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CloseDBClusterMigrationResponse
+         */
         public async Task<CloseDBClusterMigrationResponse> CloseDBClusterMigrationWithOptionsAsync(CloseDBClusterMigrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -612,12 +834,28 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CloseDBClusterMigrationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to cancel the migration task before data migration.
+          * *   You can call this operation to perform the migration task after data migration.
+          * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+          *
+          * @param request CloseDBClusterMigrationRequest
+          * @return CloseDBClusterMigrationResponse
+         */
         public CloseDBClusterMigrationResponse CloseDBClusterMigration(CloseDBClusterMigrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CloseDBClusterMigrationWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to cancel the migration task before data migration.
+          * *   You can call this operation to perform the migration task after data migration.
+          * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+          *
+          * @param request CloseDBClusterMigrationRequest
+          * @return CloseDBClusterMigrationResponse
+         */
         public async Task<CloseDBClusterMigrationResponse> CloseDBClusterMigrationAsync(CloseDBClusterMigrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -667,6 +905,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivForAllDB))
+            {
+                query["PrivForAllDB"] = request.PrivForAllDB;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -739,6 +981,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivForAllDB))
+            {
+                query["PrivForAllDB"] = request.PrivForAllDB;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -778,6 +1024,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await CreateAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > 
+          * *   You can manually create up to three backups for each cluster.
+          * *   The `Exceeding the daily backup times of this DB cluster` error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see [Delete backups](~~98101~~).
+          * *   After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.
+          *
+          * @param request CreateBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateBackupResponse
+         */
         public CreateBackupResponse CreateBackupWithOptions(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -825,6 +1081,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateBackupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   You can manually create up to three backups for each cluster.
+          * *   The `Exceeding the daily backup times of this DB cluster` error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see [Delete backups](~~98101~~).
+          * *   After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.
+          *
+          * @param request CreateBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateBackupResponse
+         */
         public async Task<CreateBackupResponse> CreateBackupWithOptionsAsync(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -872,12 +1138,30 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   You can manually create up to three backups for each cluster.
+          * *   The `Exceeding the daily backup times of this DB cluster` error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see [Delete backups](~~98101~~).
+          * *   After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.
+          *
+          * @param request CreateBackupRequest
+          * @return CreateBackupResponse
+         */
         public CreateBackupResponse CreateBackup(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateBackupWithOptions(request, runtime);
         }
 
+        /**
+          * > 
+          * *   You can manually create up to three backups for each cluster.
+          * *   The `Exceeding the daily backup times of this DB cluster` error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see [Delete backups](~~98101~~).
+          * *   After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.
+          *
+          * @param request CreateBackupRequest
+          * @return CreateBackupResponse
+         */
         public async Task<CreateBackupResponse> CreateBackupAsync(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -891,6 +1175,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowShutDown))
             {
                 query["AllowShutDown"] = request.AllowShutDown;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Architecture))
+            {
+                query["Architecture"] = request.Architecture;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -932,6 +1220,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBNodeClass"] = request.DBNodeClass;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeNum))
+            {
+                query["DBNodeNum"] = request.DBNodeNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
             {
                 query["DBType"] = request.DBType;
@@ -947,6 +1239,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNId))
             {
                 query["GDNId"] = request.GDNId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotStandbyCluster))
+            {
+                query["HotStandbyCluster"] = request.HotStandbyCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoosePolarLogBin))
+            {
+                query["LoosePolarLogBin"] = request.LoosePolarLogBin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LooseXEngine))
+            {
+                query["LooseXEngine"] = request.LooseXEngine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LooseXEngineUseMemoryPct))
+            {
+                query["LooseXEngineUseMemoryPct"] = request.LooseXEngineUseMemoryPct;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowerCaseTableNames))
             {
@@ -971,6 +1279,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyClass))
+            {
+                query["ProxyClass"] = request.ProxyClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyType))
+            {
+                query["ProxyType"] = request.ProxyType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1016,9 +1332,33 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["SourceResourceId"] = request.SourceResourceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyAZ))
+            {
+                query["StandbyAZ"] = request.StandbyAZ;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageAutoScale))
+            {
+                query["StorageAutoScale"] = request.StorageAutoScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePayType))
+            {
+                query["StoragePayType"] = request.StoragePayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSpace))
+            {
+                query["StorageSpace"] = request.StorageSpace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
             {
                 query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageUpperBound))
+            {
+                query["StorageUpperBound"] = request.StorageUpperBound;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrictConsistency))
+            {
+                query["StrictConsistency"] = request.StrictConsistency;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TDEStatus))
             {
@@ -1071,6 +1411,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["AllowShutDown"] = request.AllowShutDown;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Architecture))
+            {
+                query["Architecture"] = request.Architecture;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
@@ -1111,6 +1455,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBNodeClass"] = request.DBNodeClass;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeNum))
+            {
+                query["DBNodeNum"] = request.DBNodeNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
             {
                 query["DBType"] = request.DBType;
@@ -1126,6 +1474,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNId))
             {
                 query["GDNId"] = request.GDNId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotStandbyCluster))
+            {
+                query["HotStandbyCluster"] = request.HotStandbyCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoosePolarLogBin))
+            {
+                query["LoosePolarLogBin"] = request.LoosePolarLogBin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LooseXEngine))
+            {
+                query["LooseXEngine"] = request.LooseXEngine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LooseXEngineUseMemoryPct))
+            {
+                query["LooseXEngineUseMemoryPct"] = request.LooseXEngineUseMemoryPct;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowerCaseTableNames))
             {
@@ -1150,6 +1514,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyClass))
+            {
+                query["ProxyClass"] = request.ProxyClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyType))
+            {
+                query["ProxyType"] = request.ProxyType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1195,9 +1567,33 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["SourceResourceId"] = request.SourceResourceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyAZ))
+            {
+                query["StandbyAZ"] = request.StandbyAZ;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageAutoScale))
+            {
+                query["StorageAutoScale"] = request.StorageAutoScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePayType))
+            {
+                query["StoragePayType"] = request.StoragePayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSpace))
+            {
+                query["StorageSpace"] = request.StorageSpace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
             {
                 query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageUpperBound))
+            {
+                query["StorageUpperBound"] = request.StorageUpperBound;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrictConsistency))
+            {
+                query["StrictConsistency"] = request.StrictConsistency;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TDEStatus))
             {
@@ -1408,6 +1804,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await CreateDBClusterEndpointWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+          *
+          * @param request CreateDBEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBEndpointAddressResponse
+         */
         public CreateDBEndpointAddressResponse CreateDBEndpointAddressWithOptions(CreateDBEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1444,6 +1847,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneInfo))
+            {
+                query["ZoneInfo"] = request.ZoneInfo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1463,6 +1878,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateDBEndpointAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+          *
+          * @param request CreateDBEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBEndpointAddressResponse
+         */
         public async Task<CreateDBEndpointAddressResponse> CreateDBEndpointAddressWithOptionsAsync(CreateDBEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1499,6 +1921,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneInfo))
+            {
+                query["ZoneInfo"] = request.ZoneInfo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1518,18 +1952,40 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateDBEndpointAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+          *
+          * @param request CreateDBEndpointAddressRequest
+          * @return CreateDBEndpointAddressResponse
+         */
         public CreateDBEndpointAddressResponse CreateDBEndpointAddress(CreateDBEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDBEndpointAddressWithOptions(request, runtime);
         }
 
+        /**
+          * > You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+          *
+          * @param request CreateDBEndpointAddressRequest
+          * @return CreateDBEndpointAddressResponse
+         */
         public async Task<CreateDBEndpointAddressResponse> CreateDBEndpointAddressAsync(CreateDBEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBEndpointAddressWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.
+          * > *   You can create up to 10 database links for a cluster.
+          * > *   Each database link connects a source cluster and a destination cluster.
+          * > *   The source cluster and the destination cluster or the destination ECS instance must be located in the same region.
+          *
+          * @param request CreateDBLinkRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBLinkResponse
+         */
         public CreateDBLinkResponse CreateDBLinkWithOptions(CreateDBLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1621,6 +2077,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateDBLinkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.
+          * > *   You can create up to 10 database links for a cluster.
+          * > *   Each database link connects a source cluster and a destination cluster.
+          * > *   The source cluster and the destination cluster or the destination ECS instance must be located in the same region.
+          *
+          * @param request CreateDBLinkRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBLinkResponse
+         */
         public async Task<CreateDBLinkResponse> CreateDBLinkWithOptionsAsync(CreateDBLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1712,12 +2178,30 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateDBLinkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.
+          * > *   You can create up to 10 database links for a cluster.
+          * > *   Each database link connects a source cluster and a destination cluster.
+          * > *   The source cluster and the destination cluster or the destination ECS instance must be located in the same region.
+          *
+          * @param request CreateDBLinkRequest
+          * @return CreateDBLinkResponse
+         */
         public CreateDBLinkResponse CreateDBLink(CreateDBLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDBLinkWithOptions(request, runtime);
         }
 
+        /**
+          * A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.
+          * > *   You can create up to 10 database links for a cluster.
+          * > *   Each database link connects a source cluster and a destination cluster.
+          * > *   The source cluster and the destination cluster or the destination ECS instance must be located in the same region.
+          *
+          * @param request CreateDBLinkRequest
+          * @return CreateDBLinkResponse
+         */
         public async Task<CreateDBLinkResponse> CreateDBLinkAsync(CreateDBLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1739,6 +2223,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNode))
             {
                 query["DBNode"] = request.DBNode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeType))
+            {
+                query["DBNodeType"] = request.DBNodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointBindList))
             {
@@ -1811,6 +2299,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBNode"] = request.DBNode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeType))
+            {
+                query["DBNodeType"] = request.DBNodeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointBindList))
             {
                 query["EndpointBindList"] = request.EndpointBindList;
@@ -1878,6 +2370,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await CreateDBNodesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The cluster is in the Running state.
+          * *   The cluster is unlocked.
+          *
+          * @param request CreateDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDatabaseResponse
+         */
         public CreateDatabaseResponse CreateDatabaseWithOptions(CreateDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1949,6 +2450,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The cluster is in the Running state.
+          * *   The cluster is unlocked.
+          *
+          * @param request CreateDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDatabaseResponse
+         */
         public async Task<CreateDatabaseResponse> CreateDatabaseWithOptionsAsync(CreateDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2020,18 +2530,41 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The cluster is in the Running state.
+          * *   The cluster is unlocked.
+          *
+          * @param request CreateDatabaseRequest
+          * @return CreateDatabaseResponse
+         */
         public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDatabaseWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The cluster is in the Running state.
+          * *   The cluster is unlocked.
+          *
+          * @param request CreateDatabaseRequest
+          * @return CreateDatabaseResponse
+         */
         public async Task<CreateDatabaseResponse> CreateDatabaseAsync(CreateDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  A cluster belongs to only one GDN.
+          *
+          * @param request CreateGlobalDatabaseNetworkRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateGlobalDatabaseNetworkResponse
+         */
         public CreateGlobalDatabaseNetworkResponse CreateGlobalDatabaseNetworkWithOptions(CreateGlobalDatabaseNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2087,6 +2620,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateGlobalDatabaseNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  A cluster belongs to only one GDN.
+          *
+          * @param request CreateGlobalDatabaseNetworkRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateGlobalDatabaseNetworkResponse
+         */
         public async Task<CreateGlobalDatabaseNetworkResponse> CreateGlobalDatabaseNetworkWithOptionsAsync(CreateGlobalDatabaseNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2142,12 +2682,24 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateGlobalDatabaseNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  A cluster belongs to only one GDN.
+          *
+          * @param request CreateGlobalDatabaseNetworkRequest
+          * @return CreateGlobalDatabaseNetworkResponse
+         */
         public CreateGlobalDatabaseNetworkResponse CreateGlobalDatabaseNetwork(CreateGlobalDatabaseNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateGlobalDatabaseNetworkWithOptions(request, runtime);
         }
 
+        /**
+          * >  A cluster belongs to only one GDN.
+          *
+          * @param request CreateGlobalDatabaseNetworkRequest
+          * @return CreateGlobalDatabaseNetworkResponse
+         */
         public async Task<CreateGlobalDatabaseNetworkResponse> CreateGlobalDatabaseNetworkAsync(CreateGlobalDatabaseNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2284,6 +2836,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await CreateGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > You can call this operation only on a PolarDB for MySQL cluster.
+          *
+          * @param request CreateParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateParameterGroupResponse
+         */
         public CreateParameterGroupResponse CreateParameterGroupWithOptions(CreateParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2351,6 +2911,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateParameterGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > You can call this operation only on a PolarDB for MySQL cluster.
+          *
+          * @param request CreateParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateParameterGroupResponse
+         */
         public async Task<CreateParameterGroupResponse> CreateParameterGroupWithOptionsAsync(CreateParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2418,16 +2986,120 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<CreateParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > You can call this operation only on a PolarDB for MySQL cluster.
+          *
+          * @param request CreateParameterGroupRequest
+          * @return CreateParameterGroupResponse
+         */
         public CreateParameterGroupResponse CreateParameterGroup(CreateParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateParameterGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > You can call this operation only on a PolarDB for MySQL cluster.
+          *
+          * @param request CreateParameterGroupRequest
+          * @return CreateParameterGroupResponse
+         */
         public async Task<CreateParameterGroupResponse> CreateParameterGroupAsync(CreateParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateParameterGroupWithOptionsAsync(request, runtime);
+        }
+
+        public CreateServiceLinkedRoleResponse CreateServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceLinkedRole",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceLinkedRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleWithOptionsAsync(CreateServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceLinkedRole",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceLinkedRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateServiceLinkedRoleResponse CreateServiceLinkedRole(CreateServiceLinkedRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateServiceLinkedRoleWithOptions(request, runtime);
+        }
+
+        public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleAsync(CreateServiceLinkedRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateServiceLinkedRoleWithOptionsAsync(request, runtime);
         }
 
         public CreateStoragePlanResponse CreateStoragePlanWithOptions(CreateStoragePlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2560,6 +3232,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await CreateStoragePlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+          *
+          * @param request DeleteAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2607,6 +3286,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+          *
+          * @param request DeleteAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2654,18 +3340,41 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+          *
+          * @param request DeleteAccountRequest
+          * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccountWithOptions(request, runtime);
         }
 
+        /**
+          * > Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+          *
+          * @param request DeleteAccountRequest
+          * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the cluster meets the following requirements:
+          * *   The cluster is in the Running state.
+          * *   The backup sets are in the Success state.
+          * > *   You can call the [DescribeBackups](~~98102~~) operation to query the status of backup sets.
+          * >*   After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks
+          *
+          * @param request DeleteBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupResponse
+         */
         public DeleteBackupResponse DeleteBackupWithOptions(DeleteBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2713,6 +3422,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteBackupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the cluster meets the following requirements:
+          * *   The cluster is in the Running state.
+          * *   The backup sets are in the Success state.
+          * > *   You can call the [DescribeBackups](~~98102~~) operation to query the status of backup sets.
+          * >*   After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks
+          *
+          * @param request DeleteBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupResponse
+         */
         public async Task<DeleteBackupResponse> DeleteBackupWithOptionsAsync(DeleteBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2760,12 +3480,32 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the cluster meets the following requirements:
+          * *   The cluster is in the Running state.
+          * *   The backup sets are in the Success state.
+          * > *   You can call the [DescribeBackups](~~98102~~) operation to query the status of backup sets.
+          * >*   After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks
+          *
+          * @param request DeleteBackupRequest
+          * @return DeleteBackupResponse
+         */
         public DeleteBackupResponse DeleteBackup(DeleteBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteBackupWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the cluster meets the following requirements:
+          * *   The cluster is in the Running state.
+          * *   The backup sets are in the Success state.
+          * > *   You can call the [DescribeBackups](~~98102~~) operation to query the status of backup sets.
+          * >*   After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks
+          *
+          * @param request DeleteBackupRequest
+          * @return DeleteBackupResponse
+         */
         public async Task<DeleteBackupResponse> DeleteBackupAsync(DeleteBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2984,6 +3724,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DeleteDBClusterEndpointWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > *   You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+          * > *   Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).
+          *
+          * @param request DeleteDBEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBEndpointAddressResponse
+         */
         public DeleteDBEndpointAddressResponse DeleteDBEndpointAddressWithOptions(DeleteDBEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3035,6 +3783,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteDBEndpointAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > *   You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+          * > *   Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).
+          *
+          * @param request DeleteDBEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBEndpointAddressResponse
+         */
         public async Task<DeleteDBEndpointAddressResponse> DeleteDBEndpointAddressWithOptionsAsync(DeleteDBEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3086,12 +3842,26 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteDBEndpointAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > *   You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+          * > *   Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).
+          *
+          * @param request DeleteDBEndpointAddressRequest
+          * @return DeleteDBEndpointAddressResponse
+         */
         public DeleteDBEndpointAddressResponse DeleteDBEndpointAddress(DeleteDBEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDBEndpointAddressWithOptions(request, runtime);
         }
 
+        /**
+          * > *   You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+          * > *   Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).
+          *
+          * @param request DeleteDBEndpointAddressRequest
+          * @return DeleteDBEndpointAddressResponse
+         */
         public async Task<DeleteDBEndpointAddressResponse> DeleteDBEndpointAddressAsync(DeleteDBEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3220,6 +3990,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBNodeId"] = request.DBNodeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeType))
+            {
+                query["DBNodeType"] = request.DBNodeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -3271,6 +4045,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBNodeId"] = request.DBNodeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeType))
+            {
+                query["DBNodeType"] = request.DBNodeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -3318,6 +4096,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DeleteDBNodesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >- The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.
+          * >- The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.
+          *
+          * @param request DeleteDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDatabaseResponse
+         */
         public DeleteDatabaseResponse DeleteDatabaseWithOptions(DeleteDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3365,6 +4151,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >- The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.
+          * >- The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.
+          *
+          * @param request DeleteDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDatabaseResponse
+         */
         public async Task<DeleteDatabaseResponse> DeleteDatabaseWithOptionsAsync(DeleteDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3412,18 +4206,39 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >- The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.
+          * >- The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.
+          *
+          * @param request DeleteDatabaseRequest
+          * @return DeleteDatabaseResponse
+         */
         public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDatabaseWithOptions(request, runtime);
         }
 
+        /**
+          * >- The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.
+          * >- The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.
+          *
+          * @param request DeleteDatabaseRequest
+          * @return DeleteDatabaseResponse
+         */
         public async Task<DeleteDatabaseResponse> DeleteDatabaseAsync(DeleteDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can delete a GDN only when the GDN includes only a primary cluster.
+          *
+          * @param request DeleteGlobalDatabaseNetworkRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteGlobalDatabaseNetworkResponse
+         */
         public DeleteGlobalDatabaseNetworkResponse DeleteGlobalDatabaseNetworkWithOptions(DeleteGlobalDatabaseNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3475,6 +4290,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteGlobalDatabaseNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can delete a GDN only when the GDN includes only a primary cluster.
+          *
+          * @param request DeleteGlobalDatabaseNetworkRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteGlobalDatabaseNetworkResponse
+         */
         public async Task<DeleteGlobalDatabaseNetworkResponse> DeleteGlobalDatabaseNetworkWithOptionsAsync(DeleteGlobalDatabaseNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3526,12 +4348,24 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteGlobalDatabaseNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can delete a GDN only when the GDN includes only a primary cluster.
+          *
+          * @param request DeleteGlobalDatabaseNetworkRequest
+          * @return DeleteGlobalDatabaseNetworkResponse
+         */
         public DeleteGlobalDatabaseNetworkResponse DeleteGlobalDatabaseNetwork(DeleteGlobalDatabaseNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteGlobalDatabaseNetworkWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can delete a GDN only when the GDN includes only a primary cluster.
+          *
+          * @param request DeleteGlobalDatabaseNetworkRequest
+          * @return DeleteGlobalDatabaseNetworkResponse
+         */
         public async Task<DeleteGlobalDatabaseNetworkResponse> DeleteGlobalDatabaseNetworkAsync(DeleteGlobalDatabaseNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3742,6 +4576,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DeleteMaskingRulesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * >  When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.
+          *
+          * @param request DeleteParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteParameterGroupResponse
+         */
         public DeleteParameterGroupResponse DeleteParameterGroupWithOptions(DeleteParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3793,6 +4635,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteParameterGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * >  When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.
+          *
+          * @param request DeleteParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteParameterGroupResponse
+         */
         public async Task<DeleteParameterGroupResponse> DeleteParameterGroupWithOptionsAsync(DeleteParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3844,12 +4694,26 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DeleteParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * >  When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.
+          *
+          * @param request DeleteParameterGroupRequest
+          * @return DeleteParameterGroupResponse
+         */
         public DeleteParameterGroupResponse DeleteParameterGroup(DeleteParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteParameterGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * >  When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.
+          *
+          * @param request DeleteParameterGroupRequest
+          * @return DeleteParameterGroupResponse
+         */
         public async Task<DeleteParameterGroupResponse> DeleteParameterGroupAsync(DeleteParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4792,6 +5656,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["CommodityCode"] = request.CommodityCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterHa))
+            {
+                query["MasterHa"] = request.MasterHa;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
                 query["OrderType"] = request.OrderType;
@@ -4846,6 +5714,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
             {
                 query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterHa))
+            {
+                query["MasterHa"] = request.MasterHa;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
@@ -5012,6 +5884,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -5054,6 +5930,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -5338,6 +6218,128 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeDBClusterAvailableResourcesWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDBClusterConnectivityResponse DescribeDBClusterConnectivityWithOptions(DescribeDBClusterConnectivityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIpAddress))
+            {
+                query["SourceIpAddress"] = request.SourceIpAddress;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBClusterConnectivity",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDBClusterConnectivityResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDBClusterConnectivityResponse> DescribeDBClusterConnectivityWithOptionsAsync(DescribeDBClusterConnectivityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIpAddress))
+            {
+                query["SourceIpAddress"] = request.SourceIpAddress;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBClusterConnectivity",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDBClusterConnectivityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDBClusterConnectivityResponse DescribeDBClusterConnectivity(DescribeDBClusterConnectivityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDBClusterConnectivityWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDBClusterConnectivityResponse> DescribeDBClusterConnectivityAsync(DescribeDBClusterConnectivityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDBClusterConnectivityWithOptionsAsync(request, runtime);
+        }
+
         public DescribeDBClusterEndpointsResponse DescribeDBClusterEndpointsWithOptions(DescribeDBClusterEndpointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5349,6 +6351,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBEndpointId))
             {
                 query["DBEndpointId"] = request.DBEndpointId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -5397,6 +6403,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBEndpointId"] = request.DBEndpointId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -5444,6 +6454,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeDBClusterEndpointsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see [Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click](~~121582~~).
+          * *   Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**.
+          *
+          * @param request DescribeDBClusterMigrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterMigrationResponse
+         */
         public DescribeDBClusterMigrationResponse DescribeDBClusterMigrationWithOptions(DescribeDBClusterMigrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5487,6 +6505,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBClusterMigrationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see [Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click](~~121582~~).
+          * *   Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**.
+          *
+          * @param request DescribeDBClusterMigrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterMigrationResponse
+         */
         public async Task<DescribeDBClusterMigrationResponse> DescribeDBClusterMigrationWithOptionsAsync(DescribeDBClusterMigrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5530,12 +6556,26 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBClusterMigrationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see [Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click](~~121582~~).
+          * *   Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**.
+          *
+          * @param request DescribeDBClusterMigrationRequest
+          * @return DescribeDBClusterMigrationResponse
+         */
         public DescribeDBClusterMigrationResponse DescribeDBClusterMigration(DescribeDBClusterMigrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBClusterMigrationWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see [Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click](~~121582~~).
+          * *   Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**.
+          *
+          * @param request DescribeDBClusterMigrationRequest
+          * @return DescribeDBClusterMigrationResponse
+         */
         public async Task<DescribeDBClusterMigrationResponse> DescribeDBClusterMigrationAsync(DescribeDBClusterMigrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5648,6 +6688,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -5690,6 +6734,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -5738,6 +6786,24 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeDBClusterParametersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+          *
+          * @param request DescribeDBClusterPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterPerformanceResponse
+         */
         public DescribeDBClusterPerformanceResponse DescribeDBClusterPerformanceWithOptions(DescribeDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5777,6 +6843,24 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBClusterPerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+          *
+          * @param request DescribeDBClusterPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterPerformanceResponse
+         */
         public async Task<DescribeDBClusterPerformanceResponse> DescribeDBClusterPerformanceWithOptionsAsync(DescribeDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5816,12 +6900,46 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBClusterPerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+          *
+          * @param request DescribeDBClusterPerformanceRequest
+          * @return DescribeDBClusterPerformanceResponse
+         */
         public DescribeDBClusterPerformanceResponse DescribeDBClusterPerformance(DescribeDBClusterPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBClusterPerformanceWithOptions(request, runtime);
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+          *
+          * @param request DescribeDBClusterPerformanceRequest
+          * @return DescribeDBClusterPerformanceResponse
+         */
         public async Task<DescribeDBClusterPerformanceResponse> DescribeDBClusterPerformanceAsync(DescribeDBClusterPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6122,6 +7240,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeDBClusterTDEWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+          *
+          * @param request DescribeDBClusterVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterVersionResponse
+         */
         public DescribeDBClusterVersionResponse DescribeDBClusterVersionWithOptions(DescribeDBClusterVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6165,6 +7290,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBClusterVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+          *
+          * @param request DescribeDBClusterVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterVersionResponse
+         */
         public async Task<DescribeDBClusterVersionResponse> DescribeDBClusterVersionWithOptionsAsync(DescribeDBClusterVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6208,12 +7340,24 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBClusterVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+          *
+          * @param request DescribeDBClusterVersionRequest
+          * @return DescribeDBClusterVersionResponse
+         */
         public DescribeDBClusterVersionResponse DescribeDBClusterVersion(DescribeDBClusterVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBClusterVersionWithOptions(request, runtime);
         }
 
+        /**
+          * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+          *
+          * @param request DescribeDBClusterVersionRequest
+          * @return DescribeDBClusterVersionResponse
+         */
         public async Task<DescribeDBClusterVersionResponse> DescribeDBClusterVersionAsync(DescribeDBClusterVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6698,6 +7842,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeDBInitializeVariableWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > You can query only the database links that use a PolarDB for Oracle cluster as the source.
+          *
+          * @param request DescribeDBLinksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBLinksResponse
+         */
         public DescribeDBLinksResponse DescribeDBLinksWithOptions(DescribeDBLinksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6745,6 +7896,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBLinksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > You can query only the database links that use a PolarDB for Oracle cluster as the source.
+          *
+          * @param request DescribeDBLinksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBLinksResponse
+         */
         public async Task<DescribeDBLinksResponse> DescribeDBLinksWithOptionsAsync(DescribeDBLinksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6792,18 +7950,48 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBLinksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > You can query only the database links that use a PolarDB for Oracle cluster as the source.
+          *
+          * @param request DescribeDBLinksRequest
+          * @return DescribeDBLinksResponse
+         */
         public DescribeDBLinksResponse DescribeDBLinks(DescribeDBLinksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBLinksWithOptions(request, runtime);
         }
 
+        /**
+          * > You can query only the database links that use a PolarDB for Oracle cluster as the source.
+          *
+          * @param request DescribeDBLinksRequest
+          * @return DescribeDBLinksResponse
+         */
         public async Task<DescribeDBLinksResponse> DescribeDBLinksAsync(DescribeDBLinksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBLinksWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+          *
+          * @param request DescribeDBNodePerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBNodePerformanceResponse
+         */
         public DescribeDBNodePerformanceResponse DescribeDBNodePerformanceWithOptions(DescribeDBNodePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6847,6 +8035,24 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBNodePerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+          *
+          * @param request DescribeDBNodePerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBNodePerformanceResponse
+         */
         public async Task<DescribeDBNodePerformanceResponse> DescribeDBNodePerformanceWithOptionsAsync(DescribeDBNodePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6890,12 +8096,46 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBNodePerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+          *
+          * @param request DescribeDBNodePerformanceRequest
+          * @return DescribeDBNodePerformanceResponse
+         */
         public DescribeDBNodePerformanceResponse DescribeDBNodePerformance(DescribeDBNodePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBNodePerformanceWithOptions(request, runtime);
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+          *
+          * @param request DescribeDBNodePerformanceRequest
+          * @return DescribeDBNodePerformanceResponse
+         */
         public async Task<DescribeDBNodePerformanceResponse> DescribeDBNodePerformanceAsync(DescribeDBNodePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7008,6 +8248,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeDBNodesParametersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeDBProxyPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBProxyPerformanceResponse
+         */
         public DescribeDBProxyPerformanceResponse DescribeDBProxyPerformanceWithOptions(DescribeDBProxyPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7047,6 +8294,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBProxyPerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeDBProxyPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBProxyPerformanceResponse
+         */
         public async Task<DescribeDBProxyPerformanceResponse> DescribeDBProxyPerformanceWithOptionsAsync(DescribeDBProxyPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7086,12 +8340,24 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBProxyPerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeDBProxyPerformanceRequest
+          * @return DescribeDBProxyPerformanceResponse
+         */
         public DescribeDBProxyPerformanceResponse DescribeDBProxyPerformance(DescribeDBProxyPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBProxyPerformanceWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeDBProxyPerformanceRequest
+          * @return DescribeDBProxyPerformanceResponse
+         */
         public async Task<DescribeDBProxyPerformanceResponse> DescribeDBProxyPerformanceAsync(DescribeDBProxyPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7220,6 +8486,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeDatabasesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the PolarDB cluster is in the **Released** state. You must also confirm that the **Retain All Backups Permanently** or **Retain Last Automatic Backup Permanently** backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.
+          * > You can call the [DescribeDBClusterAttribute](~~98181~~) operation to query the cluster status.
+          *
+          * @param request DescribeDetachedBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDetachedBackupsResponse
+         */
         public DescribeDetachedBackupsResponse DescribeDetachedBackupsWithOptions(DescribeDetachedBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7295,6 +8569,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDetachedBackupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the PolarDB cluster is in the **Released** state. You must also confirm that the **Retain All Backups Permanently** or **Retain Last Automatic Backup Permanently** backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.
+          * > You can call the [DescribeDBClusterAttribute](~~98181~~) operation to query the cluster status.
+          *
+          * @param request DescribeDetachedBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDetachedBackupsResponse
+         */
         public async Task<DescribeDetachedBackupsResponse> DescribeDetachedBackupsWithOptionsAsync(DescribeDetachedBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7370,12 +8652,26 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDetachedBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the PolarDB cluster is in the **Released** state. You must also confirm that the **Retain All Backups Permanently** or **Retain Last Automatic Backup Permanently** backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.
+          * > You can call the [DescribeDBClusterAttribute](~~98181~~) operation to query the cluster status.
+          *
+          * @param request DescribeDetachedBackupsRequest
+          * @return DescribeDetachedBackupsResponse
+         */
         public DescribeDetachedBackupsResponse DescribeDetachedBackups(DescribeDetachedBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDetachedBackupsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the PolarDB cluster is in the **Released** state. You must also confirm that the **Retain All Backups Permanently** or **Retain Last Automatic Backup Permanently** backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.
+          * > You can call the [DescribeDBClusterAttribute](~~98181~~) operation to query the cluster status.
+          *
+          * @param request DescribeDetachedBackupsRequest
+          * @return DescribeDetachedBackupsResponse
+         */
         public async Task<DescribeDetachedBackupsResponse> DescribeDetachedBackupsAsync(DescribeDetachedBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7504,6 +8800,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterRegion))
+            {
+                query["FilterRegion"] = request.FilterRegion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNDescription))
             {
                 query["GDNDescription"] = request.GDNDescription;
@@ -7570,6 +8870,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterRegion))
+            {
+                query["FilterRegion"] = request.FilterRegion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNDescription))
             {
@@ -8204,6 +9508,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeMetaListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > This parameter is valid only for a PolarDB for MySQL cluster.
+          *
+          * @param request DescribeParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterGroupResponse
+         */
         public DescribeParameterGroupResponse DescribeParameterGroupWithOptions(DescribeParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8255,6 +9567,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeParameterGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > This parameter is valid only for a PolarDB for MySQL cluster.
+          *
+          * @param request DescribeParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterGroupResponse
+         */
         public async Task<DescribeParameterGroupResponse> DescribeParameterGroupWithOptionsAsync(DescribeParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8306,18 +9626,40 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > This parameter is valid only for a PolarDB for MySQL cluster.
+          *
+          * @param request DescribeParameterGroupRequest
+          * @return DescribeParameterGroupResponse
+         */
         public DescribeParameterGroupResponse DescribeParameterGroup(DescribeParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > This parameter is valid only for a PolarDB for MySQL cluster.
+          *
+          * @param request DescribeParameterGroupRequest
+          * @return DescribeParameterGroupResponse
+         */
         public async Task<DescribeParameterGroupResponse> DescribeParameterGroupAsync(DescribeParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParameterGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeParameterGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterGroupsResponse
+         */
         public DescribeParameterGroupsResponse DescribeParameterGroupsWithOptions(DescribeParameterGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8373,6 +9715,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeParameterGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeParameterGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterGroupsResponse
+         */
         public async Task<DescribeParameterGroupsResponse> DescribeParameterGroupsWithOptionsAsync(DescribeParameterGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8428,12 +9778,26 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeParameterGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeParameterGroupsRequest
+          * @return DescribeParameterGroupsResponse
+         */
         public DescribeParameterGroupsResponse DescribeParameterGroups(DescribeParameterGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterGroupsWithOptions(request, runtime);
         }
 
+        /**
+          * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeParameterGroupsRequest
+          * @return DescribeParameterGroupsResponse
+         */
         public async Task<DescribeParameterGroupsResponse> DescribeParameterGroupsAsync(DescribeParameterGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9156,6 +10520,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeScheduleTasksWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogRecordsResponse
+         */
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecordsWithOptions(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9227,6 +10598,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogRecordsResponse
+         */
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsWithOptionsAsync(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9298,18 +10676,37 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @return DescribeSlowLogRecordsResponse
+         */
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecords(DescribeSlowLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlowLogRecordsWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @return DescribeSlowLogRecordsResponse
+         */
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsAsync(DescribeSlowLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlowLogRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeSlowLogsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogsResponse
+         */
         public DescribeSlowLogsResponse DescribeSlowLogsWithOptions(DescribeSlowLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9377,6 +10774,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeSlowLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeSlowLogsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogsResponse
+         */
         public async Task<DescribeSlowLogsResponse> DescribeSlowLogsWithOptionsAsync(DescribeSlowLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9444,132 +10848,38 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeSlowLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeSlowLogsRequest
+          * @return DescribeSlowLogsResponse
+         */
         public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlowLogsWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is applicable only to PolarDB for MySQL clusters.
+          *
+          * @param request DescribeSlowLogsRequest
+          * @return DescribeSlowLogsResponse
+         */
         public async Task<DescribeSlowLogsResponse> DescribeSlowLogsAsync(DescribeSlowLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlowLogsWithOptionsAsync(request, runtime);
         }
 
-        public DescribeStoragePlanResponse DescribeStoragePlanWithOptions(DescribeStoragePlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["ResourceGroupId"] = request.ResourceGroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeStoragePlan",
-                Version = "2017-08-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeStoragePlanResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeStoragePlanResponse> DescribeStoragePlanWithOptionsAsync(DescribeStoragePlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["ResourceGroupId"] = request.ResourceGroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeStoragePlan",
-                Version = "2017-08-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeStoragePlanResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeStoragePlanResponse DescribeStoragePlan(DescribeStoragePlanRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeStoragePlanWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeStoragePlanResponse> DescribeStoragePlanAsync(DescribeStoragePlanRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeStoragePlanWithOptionsAsync(request, runtime);
-        }
-
+        /**
+          * *   You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the [CreateDBCluster](~~98169~~) operation or [create a cluster](~~58769~~) in the console.
+          * *   You can view the details of tasks that are generated only when you call the [CreateDBCluster](~~98169~~) operation to create a cluster and `CreationOption` is not set to `CreateGdnStandby`.
+          *
+          * @param request DescribeTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTasksResponse
+         */
         public DescribeTasksResponse DescribeTasksWithOptions(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9637,6 +10947,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the [CreateDBCluster](~~98169~~) operation or [create a cluster](~~58769~~) in the console.
+          * *   You can view the details of tasks that are generated only when you call the [CreateDBCluster](~~98169~~) operation to create a cluster and `CreationOption` is not set to `CreateGdnStandby`.
+          *
+          * @param request DescribeTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTasksResponse
+         */
         public async Task<DescribeTasksResponse> DescribeTasksWithOptionsAsync(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9704,16 +11022,298 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the [CreateDBCluster](~~98169~~) operation or [create a cluster](~~58769~~) in the console.
+          * *   You can view the details of tasks that are generated only when you call the [CreateDBCluster](~~98169~~) operation to create a cluster and `CreationOption` is not set to `CreateGdnStandby`.
+          *
+          * @param request DescribeTasksRequest
+          * @return DescribeTasksResponse
+         */
         public DescribeTasksResponse DescribeTasks(DescribeTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTasksWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the [CreateDBCluster](~~98169~~) operation or [create a cluster](~~58769~~) in the console.
+          * *   You can view the details of tasks that are generated only when you call the [CreateDBCluster](~~98169~~) operation to create a cluster and `CreationOption` is not set to `CreateGdnStandby`.
+          *
+          * @param request DescribeTasksRequest
+          * @return DescribeTasksResponse
+         */
         public async Task<DescribeTasksResponse> DescribeTasksAsync(DescribeTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTasksWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeUserEncryptionKeyListResponse DescribeUserEncryptionKeyListWithOptions(DescribeUserEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TDERegion))
+            {
+                query["TDERegion"] = request.TDERegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserEncryptionKeyList",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeUserEncryptionKeyListResponse> DescribeUserEncryptionKeyListWithOptionsAsync(DescribeUserEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TDERegion))
+            {
+                query["TDERegion"] = request.TDERegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserEncryptionKeyList",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeUserEncryptionKeyListResponse DescribeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserEncryptionKeyListWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeUserEncryptionKeyListResponse> DescribeUserEncryptionKeyListAsync(DescribeUserEncryptionKeyListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserEncryptionKeyListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeVSwitchesResponse DescribeVSwitchesWithOptions(DescribeVSwitchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostGroupId))
+            {
+                query["DedicatedHostGroupId"] = request.DedicatedHostGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVSwitches",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVSwitchesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVSwitchesResponse> DescribeVSwitchesWithOptionsAsync(DescribeVSwitchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostGroupId))
+            {
+                query["DedicatedHostGroupId"] = request.DedicatedHostGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVSwitches",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVSwitchesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVSwitchesResponse DescribeVSwitches(DescribeVSwitchesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVSwitchesWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVSwitchesResponse> DescribeVSwitchesAsync(DescribeVSwitchesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVSwitchesWithOptionsAsync(request, runtime);
         }
 
         public EnableFirewallRulesResponse EnableFirewallRulesWithOptions(EnableFirewallRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -10114,6 +11714,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await FailoverDBClusterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > *   An account can be authorized to access one or more databases.
+          * > *   If the specified account already has the access permissions on the specified databases, the operation returns a successful response.
+          * > *   Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+          * > *   You can call this operation only on a PolarDB for MySQL cluster.
+          * > *   By default, a privileged account for a cluster has all the permissions on the databases in the cluster.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantAccountPrivilegeResponse
+         */
         public GrantAccountPrivilegeResponse GrantAccountPrivilegeWithOptions(GrantAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10169,6 +11780,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<GrantAccountPrivilegeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > *   An account can be authorized to access one or more databases.
+          * > *   If the specified account already has the access permissions on the specified databases, the operation returns a successful response.
+          * > *   Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+          * > *   You can call this operation only on a PolarDB for MySQL cluster.
+          * > *   By default, a privileged account for a cluster has all the permissions on the databases in the cluster.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantAccountPrivilegeResponse
+         */
         public async Task<GrantAccountPrivilegeResponse> GrantAccountPrivilegeWithOptionsAsync(GrantAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10224,12 +11846,32 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<GrantAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > *   An account can be authorized to access one or more databases.
+          * > *   If the specified account already has the access permissions on the specified databases, the operation returns a successful response.
+          * > *   Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+          * > *   You can call this operation only on a PolarDB for MySQL cluster.
+          * > *   By default, a privileged account for a cluster has all the permissions on the databases in the cluster.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @return GrantAccountPrivilegeResponse
+         */
         public GrantAccountPrivilegeResponse GrantAccountPrivilege(GrantAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantAccountPrivilegeWithOptions(request, runtime);
         }
 
+        /**
+          * > *   An account can be authorized to access one or more databases.
+          * > *   If the specified account already has the access permissions on the specified databases, the operation returns a successful response.
+          * > *   Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+          * > *   You can call this operation only on a PolarDB for MySQL cluster.
+          * > *   By default, a privileged account for a cluster has all the permissions on the databases in the cluster.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @return GrantAccountPrivilegeResponse
+         */
         public async Task<GrantAccountPrivilegeResponse> GrantAccountPrivilegeAsync(GrantAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10364,6 +12006,112 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        public ManuallyStartDBClusterResponse ManuallyStartDBClusterWithOptions(ManuallyStartDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManuallyStartDBCluster",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManuallyStartDBClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ManuallyStartDBClusterResponse> ManuallyStartDBClusterWithOptionsAsync(ManuallyStartDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManuallyStartDBCluster",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManuallyStartDBClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ManuallyStartDBClusterResponse ManuallyStartDBCluster(ManuallyStartDBClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ManuallyStartDBClusterWithOptions(request, runtime);
+        }
+
+        public async Task<ManuallyStartDBClusterResponse> ManuallyStartDBClusterAsync(ManuallyStartDBClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ManuallyStartDBClusterWithOptionsAsync(request, runtime);
         }
 
         public ModifyAccountDescriptionResponse ModifyAccountDescriptionWithOptions(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -10732,6 +12480,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await ModifyAutoRenewAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see [Backup settings](~~280422~~).
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10823,6 +12578,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see [Backup settings](~~280422~~).
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10914,16 +12676,166 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see [Backup settings](~~280422~~).
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyBackupPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * > You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see [Backup settings](~~280422~~).
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyAsync(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyBackupPolicyWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyDBClusterResponse ModifyDBClusterWithOptions(ModifyDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSyncMode))
+            {
+                query["DataSyncMode"] = request.DataSyncMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultSimulateMode))
+            {
+                query["FaultSimulateMode"] = request.FaultSimulateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyHAMode))
+            {
+                query["StandbyHAMode"] = request.StandbyHAMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageAutoScale))
+            {
+                query["StorageAutoScale"] = request.StorageAutoScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageUpperBound))
+            {
+                query["StorageUpperBound"] = request.StorageUpperBound;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBCluster",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDBClusterResponse> ModifyDBClusterWithOptionsAsync(ModifyDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSyncMode))
+            {
+                query["DataSyncMode"] = request.DataSyncMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultSimulateMode))
+            {
+                query["FaultSimulateMode"] = request.FaultSimulateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyHAMode))
+            {
+                query["StandbyHAMode"] = request.StandbyHAMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageAutoScale))
+            {
+                query["StorageAutoScale"] = request.StorageAutoScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageUpperBound))
+            {
+                query["StorageUpperBound"] = request.StorageUpperBound;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBCluster",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDBClusterResponse ModifyDBCluster(ModifyDBClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDBClusterWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDBClusterResponse> ModifyDBClusterAsync(ModifyDBClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDBClusterWithOptionsAsync(request, runtime);
         }
 
         public ModifyDBClusterAccessWhitelistResponse ModifyDBClusterAccessWhitelistWithOptions(ModifyDBClusterAccessWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -11682,6 +13594,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await ModifyDBClusterEndpointWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.
+          *
+          * @param request ModifyDBClusterMaintainTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterMaintainTimeResponse
+         */
         public ModifyDBClusterMaintainTimeResponse ModifyDBClusterMaintainTimeWithOptions(ModifyDBClusterMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11729,6 +13648,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterMaintainTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.
+          *
+          * @param request ModifyDBClusterMaintainTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterMaintainTimeResponse
+         */
         public async Task<ModifyDBClusterMaintainTimeResponse> ModifyDBClusterMaintainTimeWithOptionsAsync(ModifyDBClusterMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11776,18 +13702,39 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterMaintainTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.
+          *
+          * @param request ModifyDBClusterMaintainTimeRequest
+          * @return ModifyDBClusterMaintainTimeResponse
+         */
         public ModifyDBClusterMaintainTimeResponse ModifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBClusterMaintainTimeWithOptions(request, runtime);
         }
 
+        /**
+          * >  We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.
+          *
+          * @param request ModifyDBClusterMaintainTimeRequest
+          * @return ModifyDBClusterMaintainTimeResponse
+         */
         public async Task<ModifyDBClusterMaintainTimeResponse> ModifyDBClusterMaintainTimeAsync(ModifyDBClusterMaintainTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBClusterMaintainTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.
+          * *   You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.
+          * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+          *
+          * @param request ModifyDBClusterMigrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterMigrationResponse
+         */
         public ModifyDBClusterMigrationResponse ModifyDBClusterMigrationWithOptions(ModifyDBClusterMigrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11851,6 +13798,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterMigrationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.
+          * *   You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.
+          * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+          *
+          * @param request ModifyDBClusterMigrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterMigrationResponse
+         */
         public async Task<ModifyDBClusterMigrationResponse> ModifyDBClusterMigrationWithOptionsAsync(ModifyDBClusterMigrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11914,18 +13870,51 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterMigrationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.
+          * *   You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.
+          * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+          *
+          * @param request ModifyDBClusterMigrationRequest
+          * @return ModifyDBClusterMigrationResponse
+         */
         public ModifyDBClusterMigrationResponse ModifyDBClusterMigration(ModifyDBClusterMigrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBClusterMigrationWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.
+          * *   You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.
+          * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+          *
+          * @param request ModifyDBClusterMigrationRequest
+          * @return ModifyDBClusterMigrationResponse
+         */
         public async Task<ModifyDBClusterMigrationResponse> ModifyDBClusterMigrationAsync(ModifyDBClusterMigrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBClusterMigrationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          *
+          * @param request ModifyDBClusterMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterMonitorResponse
+         */
         public ModifyDBClusterMonitorResponse ModifyDBClusterMonitorWithOptions(ModifyDBClusterMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11973,6 +13962,23 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterMonitorResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          *
+          * @param request ModifyDBClusterMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterMonitorResponse
+         */
         public async Task<ModifyDBClusterMonitorResponse> ModifyDBClusterMonitorWithOptionsAsync(ModifyDBClusterMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12020,18 +14026,59 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          *
+          * @param request ModifyDBClusterMonitorRequest
+          * @return ModifyDBClusterMonitorResponse
+         */
         public ModifyDBClusterMonitorResponse ModifyDBClusterMonitor(ModifyDBClusterMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBClusterMonitorWithOptions(request, runtime);
         }
 
+        /**
+          * *   When the monitoring data is collected every 5 seconds:
+          *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          * *   When the monitoring data is collected every 60 seconds:
+          *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+          *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+          *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+          *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+          *
+          * @param request ModifyDBClusterMonitorRequest
+          * @return ModifyDBClusterMonitorResponse
+         */
         public async Task<ModifyDBClusterMonitorResponse> ModifyDBClusterMonitorAsync(ModifyDBClusterMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBClusterMonitorWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * **
+          * **Only PolarDB for MySQL clusters support parameter templates.
+          *
+          * @param request ModifyDBClusterParametersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterParametersResponse
+         */
         public ModifyDBClusterParametersResponse ModifyDBClusterParametersWithOptions(ModifyDBClusterParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12095,6 +14142,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterParametersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * **
+          * **Only PolarDB for MySQL clusters support parameter templates.
+          *
+          * @param request ModifyDBClusterParametersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterParametersResponse
+         */
         public async Task<ModifyDBClusterParametersResponse> ModifyDBClusterParametersWithOptionsAsync(ModifyDBClusterParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12158,12 +14214,28 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * **
+          * **Only PolarDB for MySQL clusters support parameter templates.
+          *
+          * @param request ModifyDBClusterParametersRequest
+          * @return ModifyDBClusterParametersResponse
+         */
         public ModifyDBClusterParametersResponse ModifyDBClusterParameters(ModifyDBClusterParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBClusterParametersWithOptions(request, runtime);
         }
 
+        /**
+          * PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+          * **
+          * **Only PolarDB for MySQL clusters support parameter templates.
+          *
+          * @param request ModifyDBClusterParametersRequest
+          * @return ModifyDBClusterParametersResponse
+         */
         public async Task<ModifyDBClusterParametersResponse> ModifyDBClusterParametersAsync(ModifyDBClusterParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12181,6 +14253,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromTimeService))
             {
                 query["FromTimeService"] = request.FromTimeService;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSwitchOverForDisaster))
+            {
+                query["IsSwitchOverForDisaster"] = request.IsSwitchOverForDisaster;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -12205,6 +14281,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -12245,6 +14325,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["FromTimeService"] = request.FromTimeService;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSwitchOverForDisaster))
+            {
+                query["IsSwitchOverForDisaster"] = request.IsSwitchOverForDisaster;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -12268,6 +14352,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -12698,6 +14786,152 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await ModifyDBClusterServerlessConfWithOptionsAsync(request, runtime);
         }
 
+        public ModifyDBClusterStorageSpaceResponse ModifyDBClusterStorageSpaceWithOptions(ModifyDBClusterStorageSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedEndTime))
+            {
+                query["PlannedEndTime"] = request.PlannedEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedStartTime))
+            {
+                query["PlannedStartTime"] = request.PlannedStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSpace))
+            {
+                query["StorageSpace"] = request.StorageSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCategory))
+            {
+                query["SubCategory"] = request.SubCategory;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBClusterStorageSpace",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBClusterStorageSpaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDBClusterStorageSpaceResponse> ModifyDBClusterStorageSpaceWithOptionsAsync(ModifyDBClusterStorageSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedEndTime))
+            {
+                query["PlannedEndTime"] = request.PlannedEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedStartTime))
+            {
+                query["PlannedStartTime"] = request.PlannedStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSpace))
+            {
+                query["StorageSpace"] = request.StorageSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCategory))
+            {
+                query["SubCategory"] = request.SubCategory;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBClusterStorageSpace",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBClusterStorageSpaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDBClusterStorageSpaceResponse ModifyDBClusterStorageSpace(ModifyDBClusterStorageSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDBClusterStorageSpaceWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDBClusterStorageSpaceResponse> ModifyDBClusterStorageSpaceAsync(ModifyDBClusterStorageSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDBClusterStorageSpaceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * > *   To perform this operation, you must activate KMS first. For more information, see [Purchase a dedicated KMS instance](~~153781~~).
+          * > *   After TDE is enabled, you cannot disable TDE.
+          *
+          * @param request ModifyDBClusterTDERequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterTDEResponse
+         */
         public ModifyDBClusterTDEResponse ModifyDBClusterTDEWithOptions(ModifyDBClusterTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12757,6 +14991,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterTDEResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > *   To perform this operation, you must activate KMS first. For more information, see [Purchase a dedicated KMS instance](~~153781~~).
+          * > *   After TDE is enabled, you cannot disable TDE.
+          *
+          * @param request ModifyDBClusterTDERequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterTDEResponse
+         */
         public async Task<ModifyDBClusterTDEResponse> ModifyDBClusterTDEWithOptionsAsync(ModifyDBClusterTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12816,12 +15058,26 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ModifyDBClusterTDEResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > *   To perform this operation, you must activate KMS first. For more information, see [Purchase a dedicated KMS instance](~~153781~~).
+          * > *   After TDE is enabled, you cannot disable TDE.
+          *
+          * @param request ModifyDBClusterTDERequest
+          * @return ModifyDBClusterTDEResponse
+         */
         public ModifyDBClusterTDEResponse ModifyDBClusterTDE(ModifyDBClusterTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBClusterTDEWithOptions(request, runtime);
         }
 
+        /**
+          * > *   To perform this operation, you must activate KMS first. For more information, see [Purchase a dedicated KMS instance](~~153781~~).
+          * > *   After TDE is enabled, you cannot disable TDE.
+          *
+          * @param request ModifyDBClusterTDERequest
+          * @return ModifyDBClusterTDEResponse
+         */
         public async Task<ModifyDBClusterTDEResponse> ModifyDBClusterTDEAsync(ModifyDBClusterTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13232,6 +15488,120 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBNodeClassWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyDBNodeHotReplicaModeResponse ModifyDBNodeHotReplicaModeWithOptions(ModifyDBNodeHotReplicaModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeId))
+            {
+                query["DBNodeId"] = request.DBNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotReplicaMode))
+            {
+                query["HotReplicaMode"] = request.HotReplicaMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBNodeHotReplicaMode",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBNodeHotReplicaModeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDBNodeHotReplicaModeResponse> ModifyDBNodeHotReplicaModeWithOptionsAsync(ModifyDBNodeHotReplicaModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeId))
+            {
+                query["DBNodeId"] = request.DBNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotReplicaMode))
+            {
+                query["HotReplicaMode"] = request.HotReplicaMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBNodeHotReplicaMode",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBNodeHotReplicaModeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDBNodeHotReplicaModeResponse ModifyDBNodeHotReplicaMode(ModifyDBNodeHotReplicaModeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDBNodeHotReplicaModeWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDBNodeHotReplicaModeResponse> ModifyDBNodeHotReplicaModeAsync(ModifyDBNodeHotReplicaModeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDBNodeHotReplicaModeWithOptionsAsync(request, runtime);
         }
 
         public ModifyDBNodesClassResponse ModifyDBNodesClassWithOptions(ModifyDBNodesClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -14404,6 +16774,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -14462,6 +16840,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -14624,6 +17010,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await RefreshDBClusterStorageUsageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You cannot remove the primary cluster from a GDN.
+          *
+          * @param request RemoveDBClusterFromGDNRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveDBClusterFromGDNResponse
+         */
         public RemoveDBClusterFromGDNResponse RemoveDBClusterFromGDNWithOptions(RemoveDBClusterFromGDNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14675,6 +17068,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<RemoveDBClusterFromGDNResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You cannot remove the primary cluster from a GDN.
+          *
+          * @param request RemoveDBClusterFromGDNRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveDBClusterFromGDNResponse
+         */
         public async Task<RemoveDBClusterFromGDNResponse> RemoveDBClusterFromGDNWithOptionsAsync(RemoveDBClusterFromGDNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14726,18 +17126,38 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<RemoveDBClusterFromGDNResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You cannot remove the primary cluster from a GDN.
+          *
+          * @param request RemoveDBClusterFromGDNRequest
+          * @return RemoveDBClusterFromGDNResponse
+         */
         public RemoveDBClusterFromGDNResponse RemoveDBClusterFromGDN(RemoveDBClusterFromGDNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveDBClusterFromGDNWithOptions(request, runtime);
         }
 
+        /**
+          * >  You cannot remove the primary cluster from a GDN.
+          *
+          * @param request RemoveDBClusterFromGDNRequest
+          * @return RemoveDBClusterFromGDNResponse
+         */
         public async Task<RemoveDBClusterFromGDNResponse> RemoveDBClusterFromGDNAsync(RemoveDBClusterFromGDNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveDBClusterFromGDNWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >- Only PolarDB for MySQL clusters support this operation.
+          * >- If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.
+          *
+          * @param request ResetAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetAccountResponse
+         */
         public ResetAccountResponse ResetAccountWithOptions(ResetAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14789,6 +17209,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ResetAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >- Only PolarDB for MySQL clusters support this operation.
+          * >- If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.
+          *
+          * @param request ResetAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetAccountResponse
+         */
         public async Task<ResetAccountResponse> ResetAccountWithOptionsAsync(ResetAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14840,16 +17268,152 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<ResetAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >- Only PolarDB for MySQL clusters support this operation.
+          * >- If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.
+          *
+          * @param request ResetAccountRequest
+          * @return ResetAccountResponse
+         */
         public ResetAccountResponse ResetAccount(ResetAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetAccountWithOptions(request, runtime);
         }
 
+        /**
+          * >- Only PolarDB for MySQL clusters support this operation.
+          * >- If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.
+          *
+          * @param request ResetAccountRequest
+          * @return ResetAccountResponse
+         */
         public async Task<ResetAccountResponse> ResetAccountAsync(ResetAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetAccountWithOptionsAsync(request, runtime);
+        }
+
+        public ResetGlobalDatabaseNetworkResponse ResetGlobalDatabaseNetworkWithOptions(ResetGlobalDatabaseNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNId))
+            {
+                query["GDNId"] = request.GDNId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetGlobalDatabaseNetwork",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetGlobalDatabaseNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ResetGlobalDatabaseNetworkResponse> ResetGlobalDatabaseNetworkWithOptionsAsync(ResetGlobalDatabaseNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNId))
+            {
+                query["GDNId"] = request.GDNId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetGlobalDatabaseNetwork",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetGlobalDatabaseNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ResetGlobalDatabaseNetworkResponse ResetGlobalDatabaseNetwork(ResetGlobalDatabaseNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResetGlobalDatabaseNetworkWithOptions(request, runtime);
+        }
+
+        public async Task<ResetGlobalDatabaseNetworkResponse> ResetGlobalDatabaseNetworkAsync(ResetGlobalDatabaseNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResetGlobalDatabaseNetworkWithOptionsAsync(request, runtime);
         }
 
         public RestartDBNodeResponse RestartDBNodeWithOptions(RestartDBNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -15592,6 +18156,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await TempModifyDBNodeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > *   PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see [Change the billing method from subscription to pay-as-you-go](~~172886~~) and [Change the billing method from pay-as-you-go to subscription](~~84076~~).
+          * >*   You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.
+          * >*   If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.
+          *
+          * @param request TransformDBClusterPayTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransformDBClusterPayTypeResponse
+         */
         public TransformDBClusterPayTypeResponse TransformDBClusterPayTypeWithOptions(TransformDBClusterPayTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15659,6 +18232,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<TransformDBClusterPayTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > *   PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see [Change the billing method from subscription to pay-as-you-go](~~172886~~) and [Change the billing method from pay-as-you-go to subscription](~~84076~~).
+          * >*   You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.
+          * >*   If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.
+          *
+          * @param request TransformDBClusterPayTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransformDBClusterPayTypeResponse
+         */
         public async Task<TransformDBClusterPayTypeResponse> TransformDBClusterPayTypeWithOptionsAsync(TransformDBClusterPayTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15726,12 +18308,28 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<TransformDBClusterPayTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > *   PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see [Change the billing method from subscription to pay-as-you-go](~~172886~~) and [Change the billing method from pay-as-you-go to subscription](~~84076~~).
+          * >*   You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.
+          * >*   If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.
+          *
+          * @param request TransformDBClusterPayTypeRequest
+          * @return TransformDBClusterPayTypeResponse
+         */
         public TransformDBClusterPayTypeResponse TransformDBClusterPayType(TransformDBClusterPayTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransformDBClusterPayTypeWithOptions(request, runtime);
         }
 
+        /**
+          * > *   PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see [Change the billing method from subscription to pay-as-you-go](~~172886~~) and [Change the billing method from pay-as-you-go to subscription](~~84076~~).
+          * >*   You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.
+          * >*   If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.
+          *
+          * @param request TransformDBClusterPayTypeRequest
+          * @return TransformDBClusterPayTypeResponse
+         */
         public async Task<TransformDBClusterPayTypeResponse> TransformDBClusterPayTypeAsync(TransformDBClusterPayTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15868,6 +18466,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
+          *
+          * @param request UpgradeDBClusterMinorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBClusterMinorVersionResponse
+         */
         public UpgradeDBClusterMinorVersionResponse UpgradeDBClusterMinorVersionWithOptions(UpgradeDBClusterMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15923,6 +18528,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<UpgradeDBClusterMinorVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
+          *
+          * @param request UpgradeDBClusterMinorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBClusterMinorVersionResponse
+         */
         public async Task<UpgradeDBClusterMinorVersionResponse> UpgradeDBClusterMinorVersionWithOptionsAsync(UpgradeDBClusterMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15978,18 +18590,39 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<UpgradeDBClusterMinorVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
+          *
+          * @param request UpgradeDBClusterMinorVersionRequest
+          * @return UpgradeDBClusterMinorVersionResponse
+         */
         public UpgradeDBClusterMinorVersionResponse UpgradeDBClusterMinorVersion(UpgradeDBClusterMinorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBClusterMinorVersionWithOptions(request, runtime);
         }
 
+        /**
+          * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
+          *
+          * @param request UpgradeDBClusterMinorVersionRequest
+          * @return UpgradeDBClusterMinorVersionResponse
+         */
         public async Task<UpgradeDBClusterMinorVersionResponse> UpgradeDBClusterMinorVersionAsync(UpgradeDBClusterMinorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeDBClusterMinorVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > 
+          * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+          * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+          *
+          * @param request UpgradeDBClusterVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBClusterVersionResponse
+         */
         public UpgradeDBClusterVersionResponse UpgradeDBClusterVersionWithOptions(UpgradeDBClusterVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16026,6 +18659,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBRevisionVersionCode))
+            {
+                query["TargetDBRevisionVersionCode"] = request.TargetDBRevisionVersionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeLabel))
             {
                 query["UpgradeLabel"] = request.UpgradeLabel;
@@ -16057,6 +18694,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<UpgradeDBClusterVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+          * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+          *
+          * @param request UpgradeDBClusterVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBClusterVersionResponse
+         */
         public async Task<UpgradeDBClusterVersionResponse> UpgradeDBClusterVersionWithOptionsAsync(UpgradeDBClusterVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16093,6 +18739,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBRevisionVersionCode))
+            {
+                query["TargetDBRevisionVersionCode"] = request.TargetDBRevisionVersionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeLabel))
             {
                 query["UpgradeLabel"] = request.UpgradeLabel;
@@ -16124,12 +18774,28 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<UpgradeDBClusterVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+          * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+          *
+          * @param request UpgradeDBClusterVersionRequest
+          * @return UpgradeDBClusterVersionResponse
+         */
         public UpgradeDBClusterVersionResponse UpgradeDBClusterVersion(UpgradeDBClusterVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBClusterVersionWithOptions(request, runtime);
         }
 
+        /**
+          * > 
+          * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+          * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+          *
+          * @param request UpgradeDBClusterVersionRequest
+          * @return UpgradeDBClusterVersionResponse
+         */
         public async Task<UpgradeDBClusterVersionResponse> UpgradeDBClusterVersionAsync(UpgradeDBClusterVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
