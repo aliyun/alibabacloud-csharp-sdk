@@ -97,10 +97,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public long? Status { get; set; }
 
-                [NameInMap("TagCount")]
-                [Validation(Required=false)]
-                public long? TagCount { get; set; }
-
                 /// <summary>
                 /// The ID of the user.
                 /// </summary>
@@ -118,10 +114,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? TotalSize { get; set; }
 
         }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
 
         /// <summary>
         /// The message returned.

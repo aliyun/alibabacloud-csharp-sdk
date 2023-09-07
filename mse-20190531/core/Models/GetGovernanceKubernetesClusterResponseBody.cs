@@ -51,10 +51,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> Namespaces { get; set; }
             public class GetGovernanceKubernetesClusterResponseBodyDataNamespaces : TeaModel {
-                [NameInMap("Labels")]
-                [Validation(Required=false)]
-                public Dictionary<string, string> Labels { get; set; }
-
                 [NameInMap("MseNamespace")]
                 [Validation(Required=false)]
                 public string MseNamespace { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ApplyTagPoliciesRequest : TeaModel {
+    public class ApplyTagPoliciesShrinkRequest : TeaModel {
         /// <summary>
         /// The language of the response. Valid values:
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
-        public Dictionary<string, RulesValue> Rules { get; set; }
+        public string RulesShrink { get; set; }
 
     }
 

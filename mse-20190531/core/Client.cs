@@ -2176,9 +2176,15 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await ApplyGatewayRouteWithOptionsAsync(request, runtime);
         }
 
-        public ApplyTagPoliciesResponse ApplyTagPoliciesWithOptions(ApplyTagPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ApplyTagPoliciesResponse ApplyTagPoliciesWithOptions(ApplyTagPoliciesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyTagPoliciesShrinkRequest request = new ApplyTagPoliciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -2208,9 +2214,9 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Region"] = request.Region;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
             {
-                query["Rules"] = request.Rules;
+                query["Rules"] = request.RulesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2231,9 +2237,15 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ApplyTagPoliciesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ApplyTagPoliciesResponse> ApplyTagPoliciesWithOptionsAsync(ApplyTagPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ApplyTagPoliciesResponse> ApplyTagPoliciesWithOptionsAsync(ApplyTagPoliciesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyTagPoliciesShrinkRequest request = new ApplyTagPoliciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -2263,9 +2275,9 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Region"] = request.Region;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
             {
-                query["Rules"] = request.Rules;
+                query["Rules"] = request.RulesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
