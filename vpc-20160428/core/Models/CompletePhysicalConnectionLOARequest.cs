@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("FinishWork")]
+        [Validation(Required=false)]
+        public bool? FinishWork { get; set; }
+
         /// <summary>
         /// The ID of the Express Connect circuit.
         /// </summary>
@@ -40,6 +44,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("LineLabel")]
         [Validation(Required=false)]
         public string LineLabel { get; set; }
+
+        [NameInMap("LineSPContactInfo")]
+        [Validation(Required=false)]
+        public string LineSPContactInfo { get; set; }
+
+        [NameInMap("LineServiceProvider")]
+        [Validation(Required=false)]
+        public string LineServiceProvider { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

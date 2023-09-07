@@ -58,6 +58,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string LineLabel { get; set; }
 
+            [NameInMap("LineSPContactInfo")]
+            [Validation(Required=false)]
+            public string LineSPContactInfo { get; set; }
+
+            [NameInMap("LineServiceProvider")]
+            [Validation(Required=false)]
+            public string LineServiceProvider { get; set; }
+
             /// <summary>
             /// The type of the Express Connect circuit. Valid values:
             /// 
