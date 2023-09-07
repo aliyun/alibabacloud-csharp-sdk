@@ -241,6 +241,216 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return await RecognizeAirItineraryWithOptionsAsync(request, runtime);
         }
 
+        public RecognizeAllTextResponse RecognizeAllTextWithOptions(RecognizeAllTextRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RecognizeAllTextShrinkRequest request = new RecognizeAllTextShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedConfig))
+            {
+                request.AdvancedConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedConfig, "AdvancedConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IdCardConfig))
+            {
+                request.IdCardConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IdCardConfig, "IdCardConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InternationalIdCardConfig))
+            {
+                request.InternationalIdCardConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InternationalIdCardConfig, "InternationalIdCardConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultiLanConfig))
+            {
+                request.MultiLanConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiLanConfig, "MultiLanConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedConfigShrink))
+            {
+                query["AdvancedConfig"] = request.AdvancedConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdCardConfigShrink))
+            {
+                query["IdCardConfig"] = request.IdCardConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternationalIdCardConfigShrink))
+            {
+                query["InternationalIdCardConfig"] = request.InternationalIdCardConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiLanConfigShrink))
+            {
+                query["MultiLanConfig"] = request.MultiLanConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputBarCode))
+            {
+                query["OutputBarCode"] = request.OutputBarCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputCoordinate))
+            {
+                query["OutputCoordinate"] = request.OutputCoordinate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFigure))
+            {
+                query["OutputFigure"] = request.OutputFigure;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputKVExcel))
+            {
+                query["OutputKVExcel"] = request.OutputKVExcel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputOricoord))
+            {
+                query["OutputOricoord"] = request.OutputOricoord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputQrcode))
+            {
+                query["OutputQrcode"] = request.OutputQrcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputStamp))
+            {
+                query["OutputStamp"] = request.OutputStamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
+                Stream = tmpReq.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecognizeAllText",
+                Version = "2021-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecognizeAllTextResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RecognizeAllTextResponse> RecognizeAllTextWithOptionsAsync(RecognizeAllTextRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RecognizeAllTextShrinkRequest request = new RecognizeAllTextShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedConfig))
+            {
+                request.AdvancedConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedConfig, "AdvancedConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IdCardConfig))
+            {
+                request.IdCardConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IdCardConfig, "IdCardConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InternationalIdCardConfig))
+            {
+                request.InternationalIdCardConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InternationalIdCardConfig, "InternationalIdCardConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultiLanConfig))
+            {
+                request.MultiLanConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiLanConfig, "MultiLanConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedConfigShrink))
+            {
+                query["AdvancedConfig"] = request.AdvancedConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdCardConfigShrink))
+            {
+                query["IdCardConfig"] = request.IdCardConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternationalIdCardConfigShrink))
+            {
+                query["InternationalIdCardConfig"] = request.InternationalIdCardConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiLanConfigShrink))
+            {
+                query["MultiLanConfig"] = request.MultiLanConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputBarCode))
+            {
+                query["OutputBarCode"] = request.OutputBarCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputCoordinate))
+            {
+                query["OutputCoordinate"] = request.OutputCoordinate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFigure))
+            {
+                query["OutputFigure"] = request.OutputFigure;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputKVExcel))
+            {
+                query["OutputKVExcel"] = request.OutputKVExcel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputOricoord))
+            {
+                query["OutputOricoord"] = request.OutputOricoord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputQrcode))
+            {
+                query["OutputQrcode"] = request.OutputQrcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputStamp))
+            {
+                query["OutputStamp"] = request.OutputStamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
+                Stream = tmpReq.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecognizeAllText",
+                Version = "2021-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecognizeAllTextResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RecognizeAllTextResponse RecognizeAllText(RecognizeAllTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RecognizeAllTextWithOptions(request, runtime);
+        }
+
+        public async Task<RecognizeAllTextResponse> RecognizeAllTextAsync(RecognizeAllTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RecognizeAllTextWithOptionsAsync(request, runtime);
+        }
+
         public RecognizeBankAcceptanceResponse RecognizeBankAcceptanceWithOptions(RecognizeBankAcceptanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
