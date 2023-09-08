@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
@@ -56,6 +60,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("SupportRegionIds")]
         [Validation(Required=false)]
         public string SupportRegionIds { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<GetArtifactResponseBodyTags> Tags { get; set; }
+        public class GetArtifactResponseBodyTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("VersionName")]
         [Validation(Required=false)]

@@ -1,3 +1,6 @@
+2023-09-08 Version: 1.4.2
+- Generated csharp 2021-05-21 for ComputeNestSupplier.
+
 2023-08-31 Version: 1.4.1
 - Generated csharp 2021-05-21 for ComputeNestSupplier.
 
