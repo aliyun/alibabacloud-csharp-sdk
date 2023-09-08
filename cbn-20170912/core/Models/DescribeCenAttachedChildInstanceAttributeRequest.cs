@@ -9,18 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenAttachedChildInstanceAttributeRequest : TeaModel {
+        /// <summary>
+        /// The ID of the CEN instance.
+        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        /// <summary>
+        /// The ID of the network instance that is attached to the CEN instance.
+        /// </summary>
         [NameInMap("ChildInstanceId")]
         [Validation(Required=false)]
         public string ChildInstanceId { get; set; }
 
+        /// <summary>
+        /// The region ID of the network instance.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("ChildInstanceRegionId")]
         [Validation(Required=false)]
         public string ChildInstanceRegionId { get; set; }
 
+        /// <summary>
+        /// The type of the network instance. Valid values:
+        /// 
+        /// *   **VPC**: virtual private cloud (VPC)
+        /// *   **VBR**: virtual border router (VBR)
+        /// *   **CCN**: Cloud Connect Network (CCN) instance
+        /// </summary>
         [NameInMap("ChildInstanceType")]
         [Validation(Required=false)]
         public string ChildInstanceType { get; set; }

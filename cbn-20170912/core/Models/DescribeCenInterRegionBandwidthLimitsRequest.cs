@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenInterRegionBandwidthLimitsRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeCenInterRegionBandwidthLimits**.
+        /// The ID of the Cloud Enterprise Network (CEN) instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -25,16 +25,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The connected areas.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the local region.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -48,6 +46,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the transit router.
+        /// 
+        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("TrRegionId")]
         [Validation(Required=false)]
         public string TrRegionId { get; set; }

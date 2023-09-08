@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? AutoPublishRouteEnabled { get; set; }
 
+            /// <summary>
+            /// The ID of the CEN instance.
+            /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
             public string CenId { get; set; }

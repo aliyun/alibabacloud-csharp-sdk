@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeChildInstanceRegionsRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
+        [Validation(Required=false)]
+        public string AcceptLanguage { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

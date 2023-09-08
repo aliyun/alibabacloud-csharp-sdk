@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterVpcAttachmentRequest : TeaModel {
         /// <summary>
-        /// 是否使企业版转发路由器自动发布路由到VPC实例。
+        /// Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to VPCs. Valid values:
         /// 
-        /// - **false**（默认值）：否。
-        /// - **true**：是。
+        /// *   **false:** (default)
+        /// *   **true**
         /// </summary>
         [NameInMap("AutoPublishRouteEnabled")]
         [Validation(Required=false)]
