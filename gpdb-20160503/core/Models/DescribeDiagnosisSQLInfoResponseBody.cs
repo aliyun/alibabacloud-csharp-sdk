@@ -31,21 +31,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MaxOutputRows { get; set; }
 
         /// <summary>
-        /// The ID of the query.
+        /// The query ID.
         /// </summary>
         [NameInMap("QueryID")]
         [Validation(Required=false)]
         public string QueryID { get; set; }
 
         /// <summary>
-        /// The information of the operator.
+        /// The information about the operator.
         /// </summary>
         [NameInMap("QueryPlan")]
         [Validation(Required=false)]
         public string QueryPlan { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SortedMetrics { get; set; }
 
         /// <summary>
-        /// The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -82,22 +82,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The execution state of the query. Valid values:
         /// 
-        /// *   **running**: The query is being executed.
-        /// *   **finished**: The query execution is complete.
+        /// *   **running**
+        /// *   **finished**
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The information of the execution plan.
+        /// The information about the execution plan.
         /// </summary>
         [NameInMap("TextPlan")]
         [Validation(Required=false)]
         public string TextPlan { get; set; }
 
         /// <summary>
-        /// The name of the database account.
+        /// The username.
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]

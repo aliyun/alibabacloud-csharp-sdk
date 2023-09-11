@@ -9,14 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceNetInfoRequest : TeaModel {
+        /// <summary>
+        /// The endpoint that is used to connect to the instance.
+        /// 
+        /// >  If you do not specify this parameter, the information about all endpoints of the instance is returned.
+        /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
-        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

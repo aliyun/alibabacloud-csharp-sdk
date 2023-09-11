@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModifyParameterLogResponseBody : TeaModel {
         /// <summary>
-        /// Details about the parameter reconfiguration logs.
+        /// Indicates whether the modification takes effect.
         /// </summary>
         [NameInMap("Changelogs")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

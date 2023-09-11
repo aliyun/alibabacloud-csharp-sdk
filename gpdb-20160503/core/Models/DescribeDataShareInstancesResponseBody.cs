@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataShareInstancesResponseBody : TeaModel {
         /// <summary>
-        /// Details of the instances.
+        /// The state of data sharing. Valid values:
+        /// 
+        /// *   **opening**
+        /// *   **opened**
+        /// *   **closing**
+        /// *   **closed**
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -76,21 +81,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

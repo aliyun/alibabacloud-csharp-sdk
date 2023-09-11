@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstancePlansResponseBody : TeaModel {
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// 
-        /// This parameter is returned only when the operation fails.
+        /// This parameter is returned only if the request fails.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Details of the plans.
+        /// The instance ID.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -119,37 +119,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on the current page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The state of the operation.
+        /// Indicates whether the request was successful.
         /// 
-        /// If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.
+        /// If the request was successful, **success** is returned. If the request failed, this parameter is not returned.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

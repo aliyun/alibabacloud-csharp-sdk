@@ -10,24 +10,26 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class SwitchDBInstanceNetTypeRequest : TeaModel {
         /// <summary>
-        /// The prefix of the custom endpoint. The prefix must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter. A valid endpoint is in the following format: Prefix.Database engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.
+        /// The prefix of the custom endpoint.
+        /// 
+        /// *   The prefix can contain lowercase letters, digits, and hyphens (-) and must start with a lowercase letter.
+        /// *   The prefix can be up to 30 characters in length.
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
+        /// 
+        /// > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The port number. Valid values: 3000 to 5999.
-        /// 
-        /// > 
-        /// *   Only ApsaraDB PolarDB MySQL-compatible edition clusters support this parameter. If you leave this parameter empty, the default port 3306 is used.
+        /// The port number.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

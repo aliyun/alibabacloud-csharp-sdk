@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataBackupsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the backup sets.
+        /// The instance ID.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -30,6 +30,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string BackupEndTimeLocal { get; set; }
 
+            /// <summary>
+            /// The method that is used to generate the backup set. Valid values:
+            /// 
+            /// *   **Logical**: logical backup
+            /// *   **Physical**: physical backup
+            /// *   **Snapshot**: snapshot backup
+            /// </summary>
             [NameInMap("BackupMethod")]
             [Validation(Required=false)]
             public string BackupMethod { get; set; }
@@ -125,32 +132,35 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of backup sets on the page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total backup set size. Unit: Byte.
+        /// </summary>
         [NameInMap("TotalBackupSize")]
         [Validation(Required=false)]
         public long? TotalBackupSize { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

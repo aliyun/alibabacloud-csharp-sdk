@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceDiagnosisSummaryResponseBody : TeaModel {
         /// <summary>
-        /// Details of instance nodes.
+        /// The group ID.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// State statistics of the coordinator node.
+        /// The state information about the coordinator node.
         /// </summary>
         [NameInMap("MasterStatusInfo")]
         [Validation(Required=false)]
@@ -166,21 +166,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// State statistics of compute nodes.
+        /// The state information about compute nodes.
         /// </summary>
         [NameInMap("SegmentStatusInfo")]
         [Validation(Required=false)]

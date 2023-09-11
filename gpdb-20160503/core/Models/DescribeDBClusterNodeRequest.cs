@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBClusterNodeRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
-        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+        /// > You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The node type. Valid values:
         /// 
-        /// *   **master**: coordinator node
-        /// *   **segment**: compute node
+        /// *   **master**: coordinator node.
+        /// *   **segment**: compute node.
         /// 
-        /// >  If you do not specify this parameter, the information of all nodes is returned.
+        /// > If you do not specify this parameter, the information about all nodes is returned.
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]

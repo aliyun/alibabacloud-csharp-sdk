@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
         /// <summary>
-        /// The edition of the instance. Separate multiple values with commas (,). Valid values:
-        /// 
-        /// *   **basic**: Basic Edition
-        /// *   **highavailability**: High-availability Edition
-        /// *   **finance**: Enterprise Edition
+        /// The edition of the instance. Separate multiple values with commas (,).
         /// </summary>
         [NameInMap("DBInstanceCategories")]
         [Validation(Required=false)]
@@ -28,27 +24,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The ID of the instance. Separate multiple IDs with commas (,).
+        /// The instance ID. Separate multiple values with commas (,).
         /// </summary>
         [NameInMap("DBInstanceIds")]
         [Validation(Required=false)]
         public string DBInstanceIds { get; set; }
 
         /// <summary>
-        /// The resource type of the instance. Separate multiple values with commas (,). Valid values:
-        /// 
-        /// *   **serverless**: Serverless mode
-        /// *   **storageelastic**: elastic storage mode
-        /// *   **classic**: reserved storage mode
+        /// The resource type of the instance. Separate multiple values with commas (,).
         /// </summary>
         [NameInMap("DBInstanceModes")]
         [Validation(Required=false)]
         public List<string> DBInstanceModes { get; set; }
 
         /// <summary>
-        /// The state of the instance. Separate multiple values with commas (,). For more information, see [Instance statuses](~~86944~~).
-        /// 
-        /// >  The value of this parameter must be in lowercase.
+        /// The state of the instance.
         /// </summary>
         [NameInMap("DBInstanceStatuses")]
         [Validation(Required=false)]
@@ -64,10 +54,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The network type of the instance. Valid values:
         /// 
-        /// *   **VPC**
-        /// *   **Classic**
+        /// *   **VPC**: virtual private cloud (VPC).
+        /// *   **Classic**: classic network.
         /// 
-        /// >  If you do not specify this parameter, instances of both network types are returned.
+        /// > If you do not specify this parameter, instances of all network types are returned.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -78,14 +68,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+        /// The page number. Pages start from page 1. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values:
+        /// The number of entries per page. Valid values:
         /// 
         /// *   **30**
         /// *   **50**
@@ -98,9 +88,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// The region ID.
         /// 
-        /// >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+        /// > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -114,7 +104,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// The tag value.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

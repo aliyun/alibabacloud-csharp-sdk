@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDiagnosisSQLInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
-        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+        /// > You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// The ID of the query. It is a unique identifier of the query.
+        /// The query ID. It is a unique identifier of the query.
         /// 
-        /// >  You can call the [DescribeDiagnosisRecords](~~450511~~) operation to query the query ID.
+        /// > You can call the [DescribeDiagnosisRecords](~~450511~~) operation to obtain query IDs.
         /// </summary>
         [NameInMap("QueryID")]
         [Validation(Required=false)]

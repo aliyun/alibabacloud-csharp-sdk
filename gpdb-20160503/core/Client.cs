@@ -990,10 +990,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to create a plan for an AnalyticDB for PostgreSQL instance. For example, you can create a plan to pause and resume an instance, change the number of compute nodes, or change compute node specifications.
-          * >  This operation is applicable only to pay-as-you-go instances.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * *   The plan management feature is supported only for pay-as-you-go instances.
+          * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
           *
           * @param request CreateDBInstancePlanRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1059,10 +1058,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to create a plan for an AnalyticDB for PostgreSQL instance. For example, you can create a plan to pause and resume an instance, change the number of compute nodes, or change compute node specifications.
-          * >  This operation is applicable only to pay-as-you-go instances.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * *   The plan management feature is supported only for pay-as-you-go instances.
+          * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
           *
           * @param request CreateDBInstancePlanRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1128,10 +1126,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to create a plan for an AnalyticDB for PostgreSQL instance. For example, you can create a plan to pause and resume an instance, change the number of compute nodes, or change compute node specifications.
-          * >  This operation is applicable only to pay-as-you-go instances.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * *   The plan management feature is supported only for pay-as-you-go instances.
+          * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
           *
           * @param request CreateDBInstancePlanRequest
           * @return CreateDBInstancePlanResponse
@@ -1143,10 +1140,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to create a plan for an AnalyticDB for PostgreSQL instance. For example, you can create a plan to pause and resume an instance, change the number of compute nodes, or change compute node specifications.
-          * >  This operation is applicable only to pay-as-you-go instances.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * *   The plan management feature is supported only for pay-as-you-go instances.
+          * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
           *
           * @param request CreateDBInstancePlanRequest
           * @return CreateDBInstancePlanResponse
@@ -2420,9 +2416,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a specific zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
           *
           * @param request DescribeAvailableResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2464,9 +2458,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a specific zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
           *
           * @param request DescribeAvailableResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2508,9 +2500,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a specific zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
           *
           * @param request DescribeAvailableResourcesRequest
           * @return DescribeAvailableResourcesResponse
@@ -2522,9 +2512,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a specific zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
           *
           * @param request DescribeAvailableResourcesRequest
           * @return DescribeAvailableResourcesResponse
@@ -2742,9 +2730,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the information of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+          * ##
+          * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
           * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBClusterNodeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2782,9 +2771,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the information of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+          * ##
+          * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
           * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBClusterNodeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2822,9 +2812,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the information of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+          * ##
+          * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
           * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBClusterNodeRequest
           * @return DescribeDBClusterNodeResponse
@@ -2836,9 +2827,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the information of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+          * ##
+          * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
           * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBClusterNodeRequest
           * @return DescribeDBClusterNodeResponse
@@ -2850,10 +2842,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the performance metrics of an AnalyticDB for PostgreSQL instance, such as the number of connections, memory usage, CPU utilization, I/O throughput, read IOPS, write IOPS, and disk space usage.
           * You can query monitoring information only within the last 30 days.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBClusterPerformanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2907,10 +2896,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the performance metrics of an AnalyticDB for PostgreSQL instance, such as the number of connections, memory usage, CPU utilization, I/O throughput, read IOPS, write IOPS, and disk space usage.
           * You can query monitoring information only within the last 30 days.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBClusterPerformanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2964,10 +2950,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the performance metrics of an AnalyticDB for PostgreSQL instance, such as the number of connections, memory usage, CPU utilization, I/O throughput, read IOPS, write IOPS, and disk space usage.
           * You can query monitoring information only within the last 30 days.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBClusterPerformanceRequest
           * @return DescribeDBClusterPerformanceResponse
@@ -2979,10 +2962,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the performance metrics of an AnalyticDB for PostgreSQL instance, such as the number of connections, memory usage, CPU utilization, I/O throughput, read IOPS, write IOPS, and disk space usage.
           * You can query monitoring information only within the last 30 days.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBClusterPerformanceRequest
           * @return DescribeDBClusterPerformanceResponse
@@ -2994,9 +2974,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
+          * ##
           * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
           * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBInstanceAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3038,9 +3019,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
+          * ##
           * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
           * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBInstanceAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3082,9 +3064,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
+          * ##
           * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
           * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBInstanceAttributeRequest
           * @return DescribeDBInstanceAttributeResponse
@@ -3096,9 +3079,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
+          * ##
           * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
           * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDBInstanceAttributeRequest
           * @return DescribeDBInstanceAttributeResponse
@@ -3342,9 +3326,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the distribution and states of coordinator and compute nodes on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
           *
           * @param request DescribeDBInstanceDiagnosisSummaryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3398,9 +3380,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the distribution and states of coordinator and compute nodes on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
           *
           * @param request DescribeDBInstanceDiagnosisSummaryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3454,9 +3434,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the distribution and states of coordinator and compute nodes on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
           *
           * @param request DescribeDBInstanceDiagnosisSummaryRequest
           * @return DescribeDBInstanceDiagnosisSummaryResponse
@@ -3468,9 +3446,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the distribution and states of coordinator and compute nodes on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
           *
           * @param request DescribeDBInstanceDiagnosisSummaryRequest
           * @return DescribeDBInstanceDiagnosisSummaryResponse
@@ -3762,10 +3738,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Appropriate indexes can improve the database query speed. You can call this operation to query the details of index usage on an AnalyticDB for PostgreSQL instance.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDBInstanceIndexUsageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3807,10 +3781,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Appropriate indexes can improve the database query speed. You can call this operation to query the details of index usage on an AnalyticDB for PostgreSQL instance.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDBInstanceIndexUsageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3852,10 +3824,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Appropriate indexes can improve the database query speed. You can call this operation to query the details of index usage on an AnalyticDB for PostgreSQL instance.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDBInstanceIndexUsageRequest
           * @return DescribeDBInstanceIndexUsageResponse
@@ -3867,10 +3837,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Appropriate indexes can improve the database query speed. You can call this operation to query the details of index usage on an AnalyticDB for PostgreSQL instance.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDBInstanceIndexUsageRequest
           * @return DescribeDBInstanceIndexUsageResponse
@@ -4268,7 +4236,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a specific region.
+          * ##
+          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
           * ## Limits
           * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -4370,7 +4339,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a specific region.
+          * ##
+          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
           * ## Limits
           * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -4472,7 +4442,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a specific region.
+          * ##
+          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
           * ## Limits
           * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -4486,7 +4457,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a specific region.
+          * ##
+          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
           * ## Limits
           * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -4499,6 +4471,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeDBInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+          *
+          * @param request DescribeDataBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDataBackupsResponse
+         */
         public DescribeDataBackupsResponse DescribeDataBackupsWithOptions(DescribeDataBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4558,6 +4537,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDataBackupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+          *
+          * @param request DescribeDataBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDataBackupsResponse
+         */
         public async Task<DescribeDataBackupsResponse> DescribeDataBackupsWithOptionsAsync(DescribeDataBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4617,12 +4603,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDataBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+          *
+          * @param request DescribeDataBackupsRequest
+          * @return DescribeDataBackupsResponse
+         */
         public DescribeDataBackupsResponse DescribeDataBackups(DescribeDataBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataBackupsWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+          *
+          * @param request DescribeDataBackupsRequest
+          * @return DescribeDataBackupsResponse
+         */
         public async Task<DescribeDataBackupsResponse> DescribeDataBackupsAsync(DescribeDataBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4704,9 +4702,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the state of data sharing for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Data sharing is supported only for instances in Serverless mode.
           *
           * @param request DescribeDataShareInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4760,9 +4756,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the state of data sharing for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Data sharing is supported only for instances in Serverless mode.
           *
           * @param request DescribeDataShareInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4816,9 +4810,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the state of data sharing for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Data sharing is supported only for instances in Serverless mode.
           *
           * @param request DescribeDataShareInstancesRequest
           * @return DescribeDataShareInstancesResponse
@@ -4830,9 +4822,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the state of data sharing for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Data sharing is supported only for instances in Serverless mode.
           *
           * @param request DescribeDataShareInstancesRequest
           * @return DescribeDataShareInstancesResponse
@@ -5388,10 +5378,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of a specified query on an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDiagnosisSQLInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5433,10 +5421,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of a specified query on an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDiagnosisSQLInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5478,10 +5464,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of a specified query on an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDiagnosisSQLInfoRequest
           * @return DescribeDiagnosisSQLInfoResponse
@@ -5493,10 +5477,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of a specified query on an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDiagnosisSQLInfoRequest
           * @return DescribeDiagnosisSQLInfoResponse
@@ -5508,10 +5490,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to obtain a download record before you can call this operation to query and download the query diagnostic information.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDownloadRecordsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5545,10 +5525,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to obtain a download record before you can call this operation to query and download the query diagnostic information.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDownloadRecordsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5582,10 +5560,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to obtain a download record before you can call this operation to query and download the query diagnostic information.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDownloadRecordsRequest
           * @return DescribeDownloadRecordsResponse
@@ -5597,10 +5573,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to obtain a download record before you can call this operation to query and download the query diagnostic information.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
           *
           * @param request DescribeDownloadRecordsRequest
           * @return DescribeDownloadRecordsResponse
@@ -6591,6 +6565,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is not available for instances in reserved storage mode.
+          *
+          * @param request DescribeSQLLogCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLLogCountResponse
+         */
         public DescribeSQLLogCountResponse DescribeSQLLogCountWithOptions(DescribeSQLLogCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6666,6 +6647,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeSQLLogCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is not available for instances in reserved storage mode.
+          *
+          * @param request DescribeSQLLogCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLLogCountResponse
+         */
         public async Task<DescribeSQLLogCountResponse> DescribeSQLLogCountWithOptionsAsync(DescribeSQLLogCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6741,12 +6729,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeSQLLogCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is not available for instances in reserved storage mode.
+          *
+          * @param request DescribeSQLLogCountRequest
+          * @return DescribeSQLLogCountResponse
+         */
         public DescribeSQLLogCountResponse DescribeSQLLogCount(DescribeSQLLogCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSQLLogCountWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is not available for instances in reserved storage mode.
+          *
+          * @param request DescribeSQLLogCountRequest
+          * @return DescribeSQLLogCountResponse
+         */
         public async Task<DescribeSQLLogCountResponse> DescribeSQLLogCountAsync(DescribeSQLLogCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9377,6 +9377,96 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await ModifyDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        public ModifyMasterSpecResponse ModifyMasterSpecWithOptions(ModifyMasterSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceDescription))
+            {
+                query["DBInstanceDescription"] = request.DBInstanceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterCU))
+            {
+                query["MasterCU"] = request.MasterCU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyMasterSpec",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyMasterSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyMasterSpecResponse> ModifyMasterSpecWithOptionsAsync(ModifyMasterSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceDescription))
+            {
+                query["DBInstanceDescription"] = request.DBInstanceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterCU))
+            {
+                query["MasterCU"] = request.MasterCU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyMasterSpec",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyMasterSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyMasterSpecResponse ModifyMasterSpec(ModifyMasterSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyMasterSpecWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyMasterSpecResponse> ModifyMasterSpecAsync(ModifyMasterSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyMasterSpecWithOptionsAsync(request, runtime);
+        }
+
         /**
           * This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
           * ## Limits
@@ -11542,11 +11632,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to change the configurations of an AnalyticDB for PostgreSQL instance.
-          * >  This operation is not supported for instances in reserved storage mode.
+          * This operation is not available for instances in reserved storage mode.
           * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request UpgradeDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11632,11 +11719,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to change the configurations of an AnalyticDB for PostgreSQL instance.
-          * >  This operation is not supported for instances in reserved storage mode.
+          * This operation is not available for instances in reserved storage mode.
           * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request UpgradeDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11722,11 +11806,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to change the configurations of an AnalyticDB for PostgreSQL instance.
-          * >  This operation is not supported for instances in reserved storage mode.
+          * This operation is not available for instances in reserved storage mode.
           * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request UpgradeDBInstanceRequest
           * @return UpgradeDBInstanceResponse
@@ -11738,11 +11819,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to change the configurations of an AnalyticDB for PostgreSQL instance.
-          * >  This operation is not supported for instances in reserved storage mode.
+          * This operation is not available for instances in reserved storage mode.
           * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request UpgradeDBInstanceRequest
           * @return UpgradeDBInstanceResponse

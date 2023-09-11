@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDiagnosisRecordsResponseBody : TeaModel {
         /// <summary>
-        /// Details of SQL queries.
+        /// The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

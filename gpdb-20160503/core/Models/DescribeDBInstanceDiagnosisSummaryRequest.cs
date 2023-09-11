@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceDiagnosisSummaryRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
-        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+        /// > You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+        /// The page number. Pages start from page 1. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values:
+        /// The number of entries per page. Valid values:
         /// 
         /// *   **20**
         /// *   **50**
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The role state of the node. It indicates whether a primary/secondary switchover occurs. Valid values:
+        /// The role state of the node. It specifies whether a primary/secondary switchover occurs. Valid values:
         /// 
         /// *   **normal**: The node role is normal. No primary/secondary switchover occurs.
         /// *   **reverse**: The node role is reversed. A primary/secondary switchover occurs.
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// *   **UP**: The node is running.
         /// *   **DOWN**: The node is faulty.
         /// 
-        /// If this parameter is not specified, information of nodes in all running states is returned.
+        /// If you do not specify this parameter, the information about nodes in all running states is returned.
         /// </summary>
         [NameInMap("StartStatus")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// *   **synced**: The node data is synchronized.
         /// *   **notSyncing**: The node data is not synchronized.
         /// 
-        /// If this parameter is not specified, information of nodes in all synchronization states is returned.
+        /// If you do not specify this parameter, the information about nodes in all synchronization states is returned.
         /// </summary>
         [NameInMap("SyncMode")]
         [Validation(Required=false)]

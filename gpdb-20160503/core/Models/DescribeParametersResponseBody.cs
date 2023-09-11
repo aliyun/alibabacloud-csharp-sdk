@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
         /// <summary>
-        /// Details of the parameters.
+        /// The queried configuration parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<DescribeParametersResponseBodyParameters> Parameters { get; set; }
         public class DescribeParametersResponseBodyParameters : TeaModel {
             /// <summary>
-            /// The current value of the parameter.
+            /// The current value of the configuration parameter.
             /// </summary>
             [NameInMap("CurrentValue")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ForceRestartInstance { get; set; }
 
             /// <summary>
-            /// Indicates whether the parameter can be modified. Valid values:
+            /// Indicates whether the configuration parameter can be modified. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -44,28 +44,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string IsChangeableConfig { get; set; }
 
             /// <summary>
-            /// The valid values of the parameter.
+            /// The valid values of the configuration parameter.
             /// </summary>
             [NameInMap("OptionalRange")]
             [Validation(Required=false)]
             public string OptionalRange { get; set; }
 
             /// <summary>
-            /// The description of the parameter.
+            /// The description of the configuration parameter.
             /// </summary>
             [NameInMap("ParameterDescription")]
             [Validation(Required=false)]
             public string ParameterDescription { get; set; }
 
             /// <summary>
-            /// The name of the parameter.
+            /// The name of the configuration parameter.
             /// </summary>
             [NameInMap("ParameterName")]
             [Validation(Required=false)]
             public string ParameterName { get; set; }
 
             /// <summary>
-            /// The default value of the parameter.
+            /// The default value of the configuration parameter.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]

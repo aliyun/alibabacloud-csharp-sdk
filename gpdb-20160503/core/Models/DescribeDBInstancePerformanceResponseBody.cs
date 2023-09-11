@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstancePerformanceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// Details of the performance metrics. Format: {perf1, perf2, perf3, …}.
+        /// The queried performance metrics.
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public List<string> PerformanceKeys { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

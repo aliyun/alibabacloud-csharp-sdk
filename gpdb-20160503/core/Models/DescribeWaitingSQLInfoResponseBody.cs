@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// Details of the lock-waiting query.
+        /// The queried lock-waiting query.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]

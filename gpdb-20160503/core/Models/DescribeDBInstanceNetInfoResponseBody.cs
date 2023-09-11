@@ -21,59 +21,59 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo> DBInstanceNetInfo { get; set; }
             public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo : TeaModel {
                 /// <summary>
-                /// The IP address type of the instance.
+                /// The type of the endpoint.
                 /// </summary>
                 [NameInMap("AddressType")]
                 [Validation(Required=false)]
                 public string AddressType { get; set; }
 
                 /// <summary>
-                /// The endpoint used to connect to the instance.
+                /// The endpoint that is used to connect to the instance.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The IP address of the instance.
+                /// The IP address.
                 /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
                 /// <summary>
-                /// The type of IP address.
+                /// The type of the IP address.
                 /// 
-                /// *   Valid values for instances in the classic network: Inner and Public
-                /// *   Valid values for instances in a virtual private cloud (VPC): Private and Public
+                /// *   Valid values for instances in the classic network: Inner and Public.
+                /// *   Valid values for instances in a virtual private cloud (VPC): Private and Public.
                 /// </summary>
                 [NameInMap("IPType")]
                 [Validation(Required=false)]
                 public string IPType { get; set; }
 
                 /// <summary>
-                /// The port number used to connect to the instance.
+                /// The port number.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The VPC ID of the instance.
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch. Multiple IDs are separated by commas (,).
+                /// The vSwitch ID. Multiple IDs are separated by commas (,).
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The ID of the instance that is deployed in a VPC.
                 /// </summary>
                 [NameInMap("VpcInstanceId")]
                 [Validation(Required=false)]
@@ -84,17 +84,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The network type of the instance. 
+        /// The network type of the instance. Valid values:
         /// 
-        /// *   **VPC**: a virtual private cloud (VPC)
-        /// *   **Classic**: classic network
+        /// *   Classic: classic network.
+        /// *   VPC: VPC.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

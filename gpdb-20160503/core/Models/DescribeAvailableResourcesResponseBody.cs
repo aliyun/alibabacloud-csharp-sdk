@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeAvailableResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the available resources.
+        /// The zone ID.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

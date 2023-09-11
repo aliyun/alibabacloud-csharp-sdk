@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDownloadSQLLogsResponseBody : TeaModel {
+        /// <summary>
+        /// The URL that is used to download the file.
+        /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<DescribeDownloadSQLLogsResponseBodyRecords> Records { get; set; }
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

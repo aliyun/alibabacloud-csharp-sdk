@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstancePlanResponseBody : TeaModel {
         /// <summary>
-        /// The ID of instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -19,30 +19,30 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The error message.
         /// 
-        /// This parameter is returned only if the operation fails.
+        /// This parameter is returned only if the request fails.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the plan.
+        /// The plan ID.
         /// </summary>
         [NameInMap("PlanId")]
         [Validation(Required=false)]
         public string PlanId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The state of the operation.
+        /// Indicates whether the request was successful.
         /// 
-        /// If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.
+        /// If the request was successful, **success** is returned. If the request failed, this parameter is not returned.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

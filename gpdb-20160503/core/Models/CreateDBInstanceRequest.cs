@@ -187,11 +187,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The billing method of the instance. Valid values:
         /// 
-        /// - **Postpaid**: pay-as-you-go.
-        /// - **Prepaid**: subscription.
+        /// *   **Postpaid**: pay-as-you-go.
+        /// *   **Prepaid**: subscription.
+        /// 
         /// > 
-        /// - If you do not specify this parameter, Postpaid is used.
-        /// - You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.
+        /// 
+        /// *   If you do not specify this parameter, Postpaid is used.
+        /// 
+        /// *   You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -241,12 +244,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The performance level of ESSDs. Valid values:
         /// 
-        /// - **pl0**
-        /// - **pl1**
-        /// - **pl2**
+        /// *   **pl0**
+        /// *   **pl1**
+        /// *   **pl2**
+        /// 
         /// > 
-        /// - This parameter takes effect only when SegStorageType is set to cloud_essd.
-        /// - If you do not specify this parameter, pl1 is used.
+        /// 
+        /// *   This parameter takes effect only when SegStorageType is set to cloud_essd.
+        /// 
+        /// *   If you do not specify this parameter, pl1 is used.
         /// </summary>
         [NameInMap("SegDiskPerformanceLevel")]
         [Validation(Required=false)]

@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataBackupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set. If you specify the BackupId parameter, the details of the backup set are returned.
+        /// The ID of the backup set. If you specify BackupId, the details of the backup set are returned.
+        /// 
+        /// > You can call the [DescribeDataBackups](~~210093~~) operation to query the information about all backup sets of an instance, including backup set IDs.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -19,41 +21,43 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The backup mode. Valid values:
         /// 
-        /// *   Automated: automatic backup
-        /// *   Manual: manual backup
+        /// *   Automated
+        /// *   Manual
         /// 
-        /// If you do not specify this parameter, the records of the backup sets in all modes are returned.
+        /// If you do not specify this parameter, all backup sets are returned.
         /// </summary>
         [NameInMap("BackupMode")]
         [Validation(Required=false)]
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// The status of the backup set. Valid values:
+        /// The state of the backup set. Valid values:
         /// 
-        /// *   Success: The backup is complete.
-        /// *   Failed: The backup task fails.
+        /// *   Success
+        /// *   Failed
         /// 
-        /// If you do not specify this parameter, the records of the backup sets in all states are returned.
+        /// If you do not specify this parameter, all backup sets are returned.
         /// </summary>
         [NameInMap("BackupStatus")]
         [Validation(Required=false)]
         public string BackupStatus { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
+        /// 
+        /// > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The type of the backup. Valid values:
+        /// The backup type. Valid values:
         /// 
-        /// *   DATA: full backup
-        /// *   RESTOREPOI: point-in-time backup
+        /// *   **DATA**: full backup.
+        /// *   **RESTOREPOI**: point-in-time recovery backup.
         /// 
-        /// If you do not specify this parameter, the records of the full backup set are returned.
+        /// If you do not specify this parameter, the backup sets of full backup are returned.
         /// </summary>
         [NameInMap("DataType")]
         [Validation(Required=false)]
@@ -67,14 +71,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is larger than 0. Default value: 1.
+        /// The page number. Pages start from page 1. Default value: 1
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values:
+        /// The number of entries per page. Valid values:
         /// 
         /// *   30
         /// *   50
