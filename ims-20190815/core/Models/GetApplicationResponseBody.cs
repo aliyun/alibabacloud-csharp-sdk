@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The information about the application.
+        /// The configuration information about the application.
         /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public GetApplicationResponseBodyApplicationDelegatedScope DelegatedScope { get; set; }
             public class GetApplicationResponseBodyApplicationDelegatedScope : TeaModel {
                 /// <summary>
-                /// An array consisting of the information about the permissions that are granted on the application.
+                /// The information about the permissions that are granted on the application.
                 /// </summary>
                 [NameInMap("PredefinedScopes")]
                 [Validation(Required=false)]

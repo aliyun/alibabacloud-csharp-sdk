@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// The timestamp when the OIDC IdP was modified.
+        /// The information about the OIDC IdP.
         /// </summary>
         [NameInMap("OIDCProviders")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).
+                /// The ID of the client, If you want to specify multiple client IDs, separate the client IDs with commas (,).
                 /// </summary>
                 [NameInMap("ClientIds")]
                 [Validation(Required=false)]
@@ -86,6 +86,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
+                /// <summary>
+                /// The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.
+                /// </summary>
                 [NameInMap("IssuanceLimitTime")]
                 [Validation(Required=false)]
                 public long? IssuanceLimitTime { get; set; }

@@ -65,12 +65,15 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            /// <summary>
+            /// The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.
+            /// </summary>
             [NameInMap("IssuanceLimitTime")]
             [Validation(Required=false)]
             public long? IssuanceLimitTime { get; set; }
 
             /// <summary>
-            /// The URL of the issuer.
+            /// The URL of the issuer,
             /// </summary>
             [NameInMap("IssuerUrl")]
             [Validation(Required=false)]

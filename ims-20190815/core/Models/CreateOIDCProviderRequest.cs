@@ -40,12 +40,15 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string Fingerprints { get; set; }
 
+        /// <summary>
+        /// The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.
+        /// </summary>
         [NameInMap("IssuanceLimitTime")]
         [Validation(Required=false)]
         public long? IssuanceLimitTime { get; set; }
 
         /// <summary>
-        /// The URL of the issuer, which is provided by the external IdP Okta. The URL of the issuer must be unique within an Alibaba Cloud account.
+        /// The URL of the issuer, which is provided by the external IdP. The URL of the issuer must be unique within an Alibaba Cloud account.
         /// 
         /// The URL of the issuer must start with `https` and be in the valid URL format. The URL cannot contain query parameters that follow a question mark (`?`) or logon information that is identified by at signs (`@`). The URL cannot be a fragment URL that contains number signs (`#`).
         /// 

@@ -952,14 +952,14 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ### Prerequisites
+          * ### [](#)Prerequisite
           * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ### Limits
+          * ### [](#)Limits
           * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
           * *   You can add a maximum of 20 client IDs to an OIDC IdP.
           * *   You can add a maximum of five fingerprints to an OIDC IdP.
-          * ###
-          * ``
+          * ### [](#)
+          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
           *
           * @param request CreateOIDCProviderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1013,14 +1013,14 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ### Prerequisites
+          * ### [](#)Prerequisite
           * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ### Limits
+          * ### [](#)Limits
           * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
           * *   You can add a maximum of 20 client IDs to an OIDC IdP.
           * *   You can add a maximum of five fingerprints to an OIDC IdP.
-          * ###
-          * ``
+          * ### [](#)
+          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
           *
           * @param request CreateOIDCProviderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1074,14 +1074,14 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ### Prerequisites
+          * ### [](#)Prerequisite
           * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ### Limits
+          * ### [](#)Limits
           * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
           * *   You can add a maximum of 20 client IDs to an OIDC IdP.
           * *   You can add a maximum of five fingerprints to an OIDC IdP.
-          * ###
-          * ``
+          * ### [](#)
+          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
           *
           * @param request CreateOIDCProviderRequest
           * @return CreateOIDCProviderResponse
@@ -1093,14 +1093,14 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ### Prerequisites
+          * ### [](#)Prerequisite
           * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ### Limits
+          * ### [](#)Limits
           * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
           * *   You can add a maximum of 20 client IDs to an OIDC IdP.
           * *   You can add a maximum of five fingerprints to an OIDC IdP.
-          * ###
-          * ``
+          * ### [](#)
+          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
           *
           * @param request CreateOIDCProviderRequest
           * @return CreateOIDCProviderResponse
@@ -2563,9 +2563,22 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await GetApplicationWithOptionsAsync(request, runtime);
         }
 
-        public GetCredentialReportResponse GetCredentialReportWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetCredentialReportResponse GetCredentialReportWithOptions(GetCredentialReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxItems))
+            {
+                query["MaxItems"] = request.MaxItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetCredentialReport",
@@ -2581,9 +2594,22 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<GetCredentialReportResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetCredentialReportResponse> GetCredentialReportWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetCredentialReportResponse> GetCredentialReportWithOptionsAsync(GetCredentialReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxItems))
+            {
+                query["MaxItems"] = request.MaxItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetCredentialReport",
@@ -2599,16 +2625,16 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<GetCredentialReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetCredentialReportResponse GetCredentialReport()
+        public GetCredentialReportResponse GetCredentialReport(GetCredentialReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetCredentialReportWithOptions(runtime);
+            return GetCredentialReportWithOptions(request, runtime);
         }
 
-        public async Task<GetCredentialReportResponse> GetCredentialReportAsync()
+        public async Task<GetCredentialReportResponse> GetCredentialReportAsync(GetCredentialReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetCredentialReportWithOptionsAsync(runtime);
+            return await GetCredentialReportWithOptionsAsync(request, runtime);
         }
 
         public GetDefaultDomainResponse GetDefaultDomainWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

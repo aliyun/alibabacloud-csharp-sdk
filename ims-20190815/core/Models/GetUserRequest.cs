@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// The AccessKey ID of the RAM user.
         /// 
-        /// >  You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.
+        /// > You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.
         /// </summary>
         [NameInMap("UserAccessKeyId")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// The ID of the RAM user.
         /// 
-        /// >  You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.
+        /// > You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// 
         /// The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name.
         /// 
-        /// The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<AccountAlias>.onaliyun.com` must be 1 to 64 characters in length.
+        /// The value of `UserPrincipalName` must be `1 to 128` characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be `1 to 64` characters in length.
         /// 
-        /// >  You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.
+        /// > You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.
         /// </summary>
         [NameInMap("UserPrincipalName")]
         [Validation(Required=false)]

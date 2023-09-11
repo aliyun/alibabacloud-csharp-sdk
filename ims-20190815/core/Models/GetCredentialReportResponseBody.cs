@@ -25,8 +25,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string GeneratedTime { get; set; }
 
+        [NameInMap("IsTruncated")]
+        [Validation(Required=false)]
+        public string IsTruncated { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

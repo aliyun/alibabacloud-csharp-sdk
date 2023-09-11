@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetUserResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <summary>
             /// The email address of the RAM user.
             /// 
-            /// >  This parameter is valid only on the China site (aliyun.com).
+            /// > This parameter is valid only on the China site (aliyun.com).
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <summary>
             /// The mobile phone number of the RAM user.
             /// 
-            /// >  This parameter is valid only on the China site (aliyun.com).
+            /// > This parameter is valid only on the China site (aliyun.com).
             /// </summary>
             [NameInMap("MobilePhone")]
             [Validation(Required=false)]
             public string MobilePhone { get; set; }
 
             /// <summary>
-            /// The source of the RAM user. Valid values:
+            /// The source of the RAM user. Valid value:
             /// 
             /// *   Manual: The RAM user is manually created in the RAM console.
             /// *   SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ProvisionType { get; set; }
 
             /// <summary>
-            /// An array that consists of tags.
+            /// The tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

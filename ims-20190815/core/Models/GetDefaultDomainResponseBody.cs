@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string DefaultDomainName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

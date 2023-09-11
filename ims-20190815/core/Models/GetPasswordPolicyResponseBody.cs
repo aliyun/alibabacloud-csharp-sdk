@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? MinimumPasswordDifferentCharacter { get; set; }
 
             /// <summary>
-            /// The minimum number of characters in the password.
+            /// The minimum required number of characters in a password.
             /// </summary>
             [NameInMap("MinimumPasswordLength")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

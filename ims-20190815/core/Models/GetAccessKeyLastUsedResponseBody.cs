@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string LastUsedDate { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud service that was last accessed.
+            /// The Alibaba Cloud service that was last accessed by using the AccessKey pair.
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
