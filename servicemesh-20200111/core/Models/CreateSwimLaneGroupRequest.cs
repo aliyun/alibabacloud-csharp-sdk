@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string IngressType { get; set; }
 
+        [NameInMap("IsPermissive")]
+        [Validation(Required=false)]
+        public bool? IsPermissive { get; set; }
+
+        [NameInMap("RouteHeader")]
+        [Validation(Required=false)]
+        public string RouteHeader { get; set; }
+
         /// <summary>
         /// The ID of the Alibaba Cloud Service Mesh (ASM) instance.
         /// </summary>
@@ -43,6 +51,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ServicesList")]
         [Validation(Required=false)]
         public string ServicesList { get; set; }
+
+        [NameInMap("TraceHeader")]
+        [Validation(Required=false)]
+        public string TraceHeader { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpdateSwimLaneGroupRequest : TeaModel {
+        [NameInMap("FallbackTarget")]
+        [Validation(Required=false)]
+        public string FallbackTarget { get; set; }
+
         /// <summary>
         /// The name of the lane group.
         /// </summary>

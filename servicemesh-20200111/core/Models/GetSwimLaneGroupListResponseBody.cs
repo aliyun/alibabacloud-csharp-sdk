@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public List<GetSwimLaneGroupListResponseBodySwimLaneGroupList> SwimLaneGroupList { get; set; }
         public class GetSwimLaneGroupListResponseBodySwimLaneGroupList : TeaModel {
+            [NameInMap("FallbackTarget")]
+            [Validation(Required=false)]
+            public string FallbackTarget { get; set; }
+
             /// <summary>
             /// The name of the lane group.
             /// </summary>
@@ -44,12 +48,28 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public string IngressType { get; set; }
 
+            [NameInMap("IsPermissive")]
+            [Validation(Required=false)]
+            public bool? IsPermissive { get; set; }
+
+            [NameInMap("RouteHeader")]
+            [Validation(Required=false)]
+            public string RouteHeader { get; set; }
+
             /// <summary>
             /// A list of services associated with the lane group.
             /// </summary>
             [NameInMap("ServiceList")]
             [Validation(Required=false)]
             public string ServiceList { get; set; }
+
+            [NameInMap("SwimLaneLabels")]
+            [Validation(Required=false)]
+            public string SwimLaneLabels { get; set; }
+
+            [NameInMap("TraceHeader")]
+            [Validation(Required=false)]
+            public string TraceHeader { get; set; }
 
         }
 

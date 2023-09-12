@@ -1436,6 +1436,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["IngressType"] = request.IngressType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPermissive))
+            {
+                body["IsPermissive"] = request.IsPermissive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteHeader))
+            {
+                body["RouteHeader"] = request.RouteHeader;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 body["ServiceMeshId"] = request.ServiceMeshId;
@@ -1443,6 +1451,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServicesList))
             {
                 body["ServicesList"] = request.ServicesList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceHeader))
+            {
+                body["TraceHeader"] = request.TraceHeader;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1479,6 +1491,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["IngressType"] = request.IngressType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPermissive))
+            {
+                body["IsPermissive"] = request.IsPermissive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteHeader))
+            {
+                body["RouteHeader"] = request.RouteHeader;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 body["ServiceMeshId"] = request.ServiceMeshId;
@@ -1486,6 +1506,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServicesList))
             {
                 body["ServicesList"] = request.ServicesList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceHeader))
+            {
+                body["TraceHeader"] = request.TraceHeader;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8524,6 +8548,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackTarget))
+            {
+                body["FallbackTarget"] = request.FallbackTarget;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 body["GroupName"] = request.GroupName;
@@ -8559,6 +8587,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackTarget))
+            {
+                body["FallbackTarget"] = request.FallbackTarget;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 body["GroupName"] = request.GroupName;
