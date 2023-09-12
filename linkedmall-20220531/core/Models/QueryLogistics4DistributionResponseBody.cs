@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
                 [Validation(Required=false)]
                 public int? Quantity { get; set; }
 
+                [NameInMap("SkuId")]
+                [Validation(Required=false)]
+                public string SkuId { get; set; }
+
             }
 
             [NameInMap("LogisticsCompanyCode")]

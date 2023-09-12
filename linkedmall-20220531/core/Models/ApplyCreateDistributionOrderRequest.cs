@@ -48,10 +48,17 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [Validation(Required=false)]
             public string LmItemId { get; set; }
 
+            [NameInMap("Price")]
+            [Validation(Required=false)]
+            public long? Price { get; set; }
+
             [NameInMap("Quantity")]
             [Validation(Required=false)]
             public int? Quantity { get; set; }
 
+            /// <summary>
+            /// SKU
+            /// </summary>
             [NameInMap("SkuId")]
             [Validation(Required=false)]
             public string SkuId { get; set; }

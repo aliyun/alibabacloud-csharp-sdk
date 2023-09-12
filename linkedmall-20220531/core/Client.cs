@@ -2030,6 +2030,10 @@ namespace AlibabaCloud.SDK.Linkedmall20220531
             {
                 body["MainDistributionOrderId"] = request.MainDistributionOrderId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["RequestId"] = request.RequestId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 body["TenantId"] = request.TenantId;
@@ -2064,6 +2068,10 @@ namespace AlibabaCloud.SDK.Linkedmall20220531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainDistributionOrderId))
             {
                 body["MainDistributionOrderId"] = request.MainDistributionOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["RequestId"] = request.RequestId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {

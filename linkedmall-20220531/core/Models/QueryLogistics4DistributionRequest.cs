@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
         [Validation(Required=false)]
         public string MainDistributionOrderId { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
