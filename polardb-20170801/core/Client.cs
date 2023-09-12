@@ -15360,6 +15360,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBNodeTargetClass"] = request.DBNodeTargetClass;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeType))
+            {
+                query["DBNodeType"] = request.DBNodeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {
                 query["ModifyType"] = request.ModifyType;
@@ -15426,6 +15430,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeTargetClass))
             {
                 query["DBNodeTargetClass"] = request.DBNodeTargetClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeType))
+            {
+                query["DBNodeType"] = request.DBNodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {

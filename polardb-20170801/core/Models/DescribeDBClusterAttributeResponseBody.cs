@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string AiType { get; set; }
 
+        [NameInMap("Architecture")]
+        [Validation(Required=false)]
+        public string Architecture { get; set; }
+
         /// <summary>
         /// Maximum blktags in file system.
         /// </summary>
@@ -327,6 +331,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("HasCompleteStandbyRes")]
         [Validation(Required=false)]
         public bool? HasCompleteStandbyRes { get; set; }
+
+        [NameInMap("HotStandbyCluster")]
+        [Validation(Required=false)]
+        public string HotStandbyCluster { get; set; }
 
         /// <summary>
         /// Maximum inodes in file system.

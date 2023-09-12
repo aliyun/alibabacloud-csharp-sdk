@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBNodeTargetClass { get; set; }
 
+        [NameInMap("DBNodeType")]
+        [Validation(Required=false)]
+        public string DBNodeType { get; set; }
+
         /// <summary>
         /// The type of the configuration change. Valid values:
         /// 
