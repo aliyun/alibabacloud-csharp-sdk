@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetPrometheusRemoteWriteResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. The status code 200 indicates that the request was successful.
+        /// The status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The queried remote write configuration.
+        /// The details of the remote write configuration item.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the remote write configuration.
+            /// The name of the remote write configuration item.
             /// </summary>
             [NameInMap("RemoteWriteName")]
             [Validation(Required=false)]
             public string RemoteWriteName { get; set; }
 
             /// <summary>
-            /// The remote write configuration. The configuration is displayed in the YAML format.
+            /// The details of the remote write configuration item. The value is in the YAML format.
             /// </summary>
             [NameInMap("RemoteWriteYaml")]
             [Validation(Required=false)]

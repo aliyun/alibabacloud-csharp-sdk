@@ -8,23 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class UninstallManagedPrometheusResponseBody : TeaModel {
+    public class DeleteAppListResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+        /// The HTTP status code. 2XX indicates that the request was successful. 3XX indicates that the request was redirected. 4XX indicates that a request error occurred. 5XX indicates that a server error occurred.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public long? Code { get; set; }
 
         /// <summary>
-        /// The response content. The status of the Prometheus instance is returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The error message that is returned if the request fails.
+        /// The error message returned when the request parameters are invalid.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -38,7 +38,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the Prometheus instance was removed.
+        /// Indicates whether the specified applications are deleted. Valid values:
+        /// 
+        /// *   `true`: The applications are deleted.
+        /// *   `false`: The applications failed to be deleted.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

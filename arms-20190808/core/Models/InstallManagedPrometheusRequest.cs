@@ -10,70 +10,70 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class InstallManagedPrometheusRequest : TeaModel {
         /// <summary>
-        /// The response object.
+        /// The ID of the ACK cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The name of the ECS instance. If you set the ClusterType parameter to ecs, you must configure this parameter.
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The response content. In most cases, the installation status of the Prometheus agent is returned.
+        /// The type of the monitoring object. Valid values: ask and ecs.
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// success=false
+        /// The ID of the Grafana workspace used by the ASK cluster or ECS instance. If you set the value to free or leave the parameter empty, a shared Grafana workspace is used.
         /// </summary>
         [NameInMap("GrafanaInstanceId")]
         [Validation(Required=false)]
         public string GrafanaInstanceId { get; set; }
 
         /// <summary>
-        /// __null__
+        /// This parameter is not supported.
         /// </summary>
         [NameInMap("KubeConfig")]
         [Validation(Required=false)]
         public string KubeConfig { get; set; }
 
         /// <summary>
-        /// The parameter is not supported.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Prometheus实例的资源组ID。
+        /// The ID of the resource group to which the Prometheus instance belongs.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+        /// The security group of the ASK cluster or ECS instance.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// The error message returned if the Prometheus agent failed to be installed.
+        /// The vSwitch used by the ASK cluster or ECS instance.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// Indicates whether the Prometheus agent was installed.
+        /// The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

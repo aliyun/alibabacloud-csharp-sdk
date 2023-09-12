@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The queried remote write configurations.
+        /// The remote write configuration items returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the remote write configuration.
+            /// The name of the remote write configuration item.
             /// </summary>
             [NameInMap("RemoteWriteName")]
             [Validation(Required=false)]
             public string RemoteWriteName { get; set; }
 
             /// <summary>
-            /// The remote write configuration. The configuration is displayed in the YAML format.
+            /// The information about the queried remote write configuration item of the Prometheus instance. The information is displayed in the YAML format.
             /// </summary>
             [NameInMap("RemoteWriteYaml")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListNotificationPoliciesRequest : TeaModel {
+        [NameInMap("DirectedMode")]
+        [Validation(Required=false)]
+        public bool? DirectedMode { get; set; }
+
         /// <summary>
         /// The ID of the notification policy.
         /// </summary>

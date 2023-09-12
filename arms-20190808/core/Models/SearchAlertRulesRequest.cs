@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class SearchAlertRulesRequest : TeaModel {
+        /// <summary>
+        /// The id of AlertRule.
+        /// </summary>
         [NameInMap("AlertRuleId")]
         [Validation(Required=false)]
         public string AlertRuleId { get; set; }
@@ -51,6 +54,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

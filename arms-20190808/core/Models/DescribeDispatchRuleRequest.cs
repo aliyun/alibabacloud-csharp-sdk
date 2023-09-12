@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeDispatchRuleRequest : TeaModel {
         /// <summary>
-        /// The value of the tag.
+        /// The ID of the dispatch policy.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to DescribeDispatchRule.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

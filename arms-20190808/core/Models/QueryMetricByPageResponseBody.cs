@@ -28,6 +28,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public QueryMetricByPageResponseBodyData Data { get; set; }
         public class QueryMetricByPageResponseBodyData : TeaModel {
+            /// <summary>
+            /// Whether the paging query ends.
+            /// 
+            /// true: end.
+            /// false: Need to continue pagination (continue to query after CurrentPage+1).
+            /// </summary>
             [NameInMap("Completed")]
             [Validation(Required=false)]
             public bool? Completed { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdatePrometheusGlobalViewResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful.
+        /// The response code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public UpdatePrometheusGlobalViewResponseBodyData Data { get; set; }
         public class UpdatePrometheusGlobalViewResponseBodyData : TeaModel {
             /// <summary>
-            /// The Prometheus instances or data sources that failed to be updated.
+            /// The data sources that failed to be updated.
             /// </summary>
             [NameInMap("FailedInstances")]
             [Validation(Required=false)]
@@ -45,11 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string SourceName { get; set; }
 
                 /// <summary>
-                /// The type of the data source. Valid values:
-                /// 
-                /// *   AlibabaPrometheus
-                /// *   MetricStore
-                /// *   CustomPrometheus
+                /// The type of the data source. AlibabaPrometheus MetricStore CustomPrometheus
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
@@ -77,14 +73,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The error message returned if the Prometheus agent failed to be installed.
+        /// The error message that is returned if the request failed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the ID to query logs and troubleshoot issues.
+        /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

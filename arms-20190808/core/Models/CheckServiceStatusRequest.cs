@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The service code of an Alibaba Cloud service. The service code of Prometheus Service is prometheus.
+        /// The service code of an Alibaba Cloud service. The service code of Managed Service for Prometheus is prometheus.
         /// </summary>
         [NameInMap("SvcCode")]
         [Validation(Required=false)]

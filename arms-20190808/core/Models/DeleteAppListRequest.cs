@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class ApplyScenarioResponseBody : TeaModel {
+    public class DeleteAppListRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The PIDs of the applications monitored by ARMS Application Monitoring.
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Pids")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<string> Pids { get; set; }
 
         /// <summary>
-        /// The code of the business monitoring job, which is the coloring sign.
+        /// The region ID.
         /// </summary>
-        [NameInMap("Result")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Result { get; set; }
+        public string RegionId { get; set; }
 
     }
 

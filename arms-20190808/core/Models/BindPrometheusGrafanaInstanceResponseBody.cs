@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// Indicates whether the request was successful.
         /// 
         /// *   true
         /// *   false
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

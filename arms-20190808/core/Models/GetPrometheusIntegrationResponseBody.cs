@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned struct.
+        /// The struct returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public bool? CanDelete { get; set; }
 
             /// <summary>
-            /// Indicates whether the exporter can be edited.
+            /// Indicates whether the exporter can be modified.
             /// </summary>
             [NameInMap("CanEditor")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the container.
+            /// The container name.
             /// </summary>
             [NameInMap("ContainerName")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The integration type.
+            /// The type of the integration.
             /// </summary>
             [NameInMap("IntegrationType")]
             [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// The version number.
+            /// The version information.
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

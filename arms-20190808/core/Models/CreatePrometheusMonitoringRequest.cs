@@ -31,9 +31,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The status of the monitoring configuration. Valid values: run and stop. 
-        /// When not transmitted, the default value: run.
-        /// Probe does not support status, this field set empty.
+        /// The status of the monitoring configuration. Valid values: run and stop. Default value: run. This parameter is not available if the Type parameter is set to Probe.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -41,8 +39,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The type of the monitoring configuration. 
-        /// Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. 
-        /// Valid values for a Prometheus instance for ECS: CustomJob and Probe.
+        /// Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe. 
+        /// Valid values for a Prometheus instance for ECS: customJob and probe.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

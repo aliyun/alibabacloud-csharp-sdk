@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddPrometheusRemoteWriteResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+        /// The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The name of the remote write configuration that was added, or the exception information.
+        /// The name of the remote write configuration item. If the request fails, an error message is returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

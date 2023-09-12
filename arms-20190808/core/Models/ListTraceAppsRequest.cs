@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListTraceAppsRequest : TeaModel {
+        [NameInMap("AppType")]
+        [Validation(Required=false)]
+        public string AppType { get; set; }
+
         /// <summary>
         /// The region ID.
         /// </summary>

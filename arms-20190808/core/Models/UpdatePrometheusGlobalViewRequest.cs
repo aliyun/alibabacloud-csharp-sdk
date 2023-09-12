@@ -31,12 +31,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string MostRegionId { get; set; }
 
-        [NameInMap("ParamJson")]
-        [Validation(Required=false)]
-        public string ParamJson { get; set; }
-
         /// <summary>
-        /// The region ID.
+        /// The ID of the region in which the Prometheus instance resides.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,7 +46,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The data sources of the global aggregation instance.
+        /// The data sources of the Prometheus instance for GlobalView.
         /// </summary>
         [NameInMap("SubClustersJson")]
         [Validation(Required=false)]

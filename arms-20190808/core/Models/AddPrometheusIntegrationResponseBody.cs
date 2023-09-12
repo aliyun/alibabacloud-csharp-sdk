@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned struct.
+        /// The struct returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddPrometheusIntegrationResponseBodyData Data { get; set; }
         public class AddPrometheusIntegrationResponseBodyData : TeaModel {
             /// <summary>
-            /// The exporter ID.
+            /// The ID of the exporter.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
 
             /// <summary>
-            /// The exporter name.
+            /// The name of the exporter.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

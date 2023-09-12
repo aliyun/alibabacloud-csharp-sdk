@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListPrometheusRemoteWritesRequest : TeaModel {
         /// <summary>
-        /// The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.
+        /// The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

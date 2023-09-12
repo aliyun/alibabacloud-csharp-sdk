@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class TagResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// The returned message.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }

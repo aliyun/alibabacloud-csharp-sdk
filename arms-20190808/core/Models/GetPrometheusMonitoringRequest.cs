@@ -31,7 +31,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. Valid values for a Prometheus instance for ECS: CustomJob and Probe.
+        /// The type of the monitoring configuration. 
+        /// Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe. 
+        /// Valid values for a Prometheus instance for ECS: customJob and probe.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

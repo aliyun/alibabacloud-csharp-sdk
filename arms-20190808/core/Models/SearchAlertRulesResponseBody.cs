@@ -178,6 +178,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public int? AlertVersion { get; set; }
 
+                /// <summary>
+                /// Sending method of alarm notification.
+                /// </summary>
                 [NameInMap("AlertWays")]
                 [Validation(Required=false)]
                 public List<string> AlertWays { get; set; }
@@ -365,6 +368,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }

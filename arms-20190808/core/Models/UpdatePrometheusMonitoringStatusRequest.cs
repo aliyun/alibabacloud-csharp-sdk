@@ -38,7 +38,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, and CustomJob. Valid value for a Prometheus instance for ECS: CustomJob. The status of Probe cannot be modified.
+        /// The type of the monitoring configuration. 
+        /// Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, and customJob. 
+        /// Valid value for a Prometheus instance for ECS: customJob. 
+        /// The status of probe cannot be modified.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

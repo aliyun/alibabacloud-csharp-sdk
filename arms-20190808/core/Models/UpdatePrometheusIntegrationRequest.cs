@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdatePrometheusIntegrationRequest : TeaModel {
         /// <summary>
-        /// arms-hz-central
+        /// The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The exporter ID.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
+        /// <summary>
+        /// The type of the integration.
+        /// </summary>
         [NameInMap("IntegrationType")]
         [Validation(Required=false)]
         public string IntegrationType { get; set; }
 
+        /// <summary>
+        /// The configurations of the exporter. The value is a JSON string.
+        /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]
         public string Param { get; set; }
 
         /// <summary>
-        /// success=false
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

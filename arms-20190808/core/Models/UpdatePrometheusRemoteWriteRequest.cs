@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the remote write configuration.
+        /// The name of the remote write configuration item.
         /// </summary>
         [NameInMap("RemoteWriteName")]
         [Validation(Required=false)]

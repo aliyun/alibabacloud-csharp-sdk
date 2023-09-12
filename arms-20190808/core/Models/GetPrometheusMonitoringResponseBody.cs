@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public GetPrometheusMonitoringResponseBodyData Data { get; set; }
         public class GetPrometheusMonitoringResponseBodyData : TeaModel {
             /// <summary>
-            /// Prometheus实例ID。
+            /// Prometheus Instance ID.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The type of the monitoring configuration. Valid values: ServiceMonitor, PodMonitor, CustomJob, and Probe.
+            /// The type of the monitoring configuration. Valid values: serviceMonitor, podMonitor, customJob, and probe.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

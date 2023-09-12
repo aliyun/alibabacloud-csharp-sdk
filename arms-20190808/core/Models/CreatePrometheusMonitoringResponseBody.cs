@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The name of the remote write configuration that was added, or the exception information.
+        /// The name of the monitoring configuration that was added, or the exception information.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

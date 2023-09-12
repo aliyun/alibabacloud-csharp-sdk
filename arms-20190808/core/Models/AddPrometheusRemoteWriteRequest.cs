@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddPrometheusRemoteWriteRequest : TeaModel {
         /// <summary>
-        /// The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.
+        /// The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The remote write configuration. Specify the value in the YAML format.
+        /// The details of the remote write configuration item. Specify the value in the YAML format.
         /// </summary>
         [NameInMap("RemoteWriteYaml")]
         [Validation(Required=false)]

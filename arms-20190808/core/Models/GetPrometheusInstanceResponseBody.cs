@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetPrometheusInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+        /// The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,14 +31,19 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// The name of the monitoring object.
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// The instance type. Valid values: remote-write (Prometheus instance for Remote Write), ecs (Prometheus instance for ECS), cloud-monitor (Prometheus instance for Alibaba Cloud services in China), cloud-product (Prometheus instance for Alibaba Cloud services outside China), global-view (Prometheus instance for GlobalView), aliyun-cs (Prometheus instance for Container Service).
+            /// *   remote-write: Prometheus instance for Remote Write
+            /// *   ecs: Prometheus instances for ECS
+            /// *   cloud-monitor: Prometheus instance for cloud services (Chinese mainland)
+            /// *   cloud-monitor: Prometheus instance for cloud services (regions outside the Chinese mainland)
+            /// *   global-view: Prometheus instance for GlobalView
+            /// *   aliyun-cs: Prometheus instance for Container Service
             /// </summary>
             [NameInMap("ClusterType")]
             [Validation(Required=false)]
@@ -52,7 +57,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string GrafanaInstanceId { get; set; }
 
             /// <summary>
-            /// The billing method. Valid values: PREPAY (subscription) and POSTPAY (pay-as-you-go).
+            /// The billing method. Valid values:
+            /// 
+            /// *   PREPAY: subscription
+            /// *   POSTPAY: pay-as-you-go
             /// </summary>
             [NameInMap("PaymentType")]
             [Validation(Required=false)]
@@ -73,7 +81,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The type of the resource. Valid value: PROMETHEUS.
+            /// The type of the resource. Set the value to PROMETHEUS.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -87,28 +95,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// The child instances of the global aggregation instance. The value is a JSON string.
+            /// The child instances of the Prometheus instance for GlobalView. The value is a JSON string.
             /// </summary>
             [NameInMap("SubClustersJson")]
             [Validation(Required=false)]
             public string SubClustersJson { get; set; }
 
             /// <summary>
-            /// The tags that are bound to the instance.
+            /// The tags of the instance.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetPrometheusInstanceResponseBodyDataTags> Tags { get; set; }
             public class GetPrometheusInstanceResponseBodyDataTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The tag key of the instance.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The tag value of the instance.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -124,14 +132,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// The ID of the VSwitch.
+            /// The ID of the vSwitch.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The ID of the virtual private cloud (VPC) in which the instance resides.
+            /// The virtual private cloud (VPC) where the monitoring object resides.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]

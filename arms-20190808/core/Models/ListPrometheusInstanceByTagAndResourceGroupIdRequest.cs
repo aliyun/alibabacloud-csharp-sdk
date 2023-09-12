@@ -10,27 +10,36 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListPrometheusInstanceByTagAndResourceGroupIdRequest : TeaModel {
         /// <summary>
-        /// code!=200
+        /// The region ID of the Prometheus instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// http://arms.${regionId}.aliyun-inc.com:8099/prometheus/ListPrometheusInstanceByTagAndResourceGroupId.json
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListPrometheusInstanceByTagAndResourceGroupIdRequestTag> Tag { get; set; }
         public class ListPrometheusInstanceByTagAndResourceGroupIdRequestTag : TeaModel {
+            /// <summary>
+            /// The key of the tag.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

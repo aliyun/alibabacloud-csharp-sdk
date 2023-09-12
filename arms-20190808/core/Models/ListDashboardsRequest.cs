@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string DashboardName { get; set; }
 
         /// <summary>
-        /// The language of the returned Grafana dashboard. Valid values: en and zh. Default value: en.
+        /// The language of the Grafana dashboards. Valid values: en and zh. Default value: en.
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// The cloud service code. This parameter is required if you set the ClusterType parameter to `cloud-product-prometheus`. The following cloud services are available: Serverless App Engine, Microservices Engine, Message Queue for Apache RocketMQ, Lindorm, Message Queue for Apache Kafka, ApsaraDB for ClickHouse, Data Lake Analytics, Message Queue for RabbitMQ, ApsaraDB for MongoDB, Time Series Database (TSDB) for InfluxDB, MSE Cloud-native Gateway, Grafana Service, SchedulerX, Global Transaction Service, Enterprise Distributed Application Service, Machine Learning Platform for AI - Elastic Algorithm Service (EAS), Application High Availability Service, and Performance Testing.
+        /// The code of the cloud service. This parameter is required if you set the ClusterType parameter to `cloud-product-prometheus`. The following cloud services are available: Serverless App Engine, Microservices Engine, Message Queue for Apache RocketMQ, Lindorm, Message Queue for Apache Kafka, ApsaraDB for ClickHouse, Data Lake Analytics, Message Queue for RabbitMQ, ApsaraDB for MongoDB, Time Series Database (TSDB) for InfluxDB, MSE Cloud-native Gateway, Grafana Service, SchedulerX, Global Transaction Service, Enterprise Distributed Application Service, Machine Learning Platform for AI - Elastic Algorithm Service (EAS), Application High Availability Service, and Performance Testing.
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]

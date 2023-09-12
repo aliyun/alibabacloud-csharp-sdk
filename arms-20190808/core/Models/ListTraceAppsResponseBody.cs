@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
             /// <summary>
             /// The time when the monitoring task was created. The value is a timestamp. Unit: milliseconds.
             /// </summary>
@@ -79,6 +83,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<string> Labels { get; set; }
+
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
 
             /// <summary>
             /// The process identifier (PID) of the application.
@@ -164,6 +172,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
+
+            [NameInMap("WorkloadKind")]
+            [Validation(Required=false)]
+            public string WorkloadKind { get; set; }
+
+            [NameInMap("WorkloadName")]
+            [Validation(Required=false)]
+            public string WorkloadName { get; set; }
 
         }
 

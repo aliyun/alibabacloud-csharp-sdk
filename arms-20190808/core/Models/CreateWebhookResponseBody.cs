@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateWebhookResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the contact for webhook alerts.
+        /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

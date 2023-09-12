@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetPrometheusIntegrationRequest : TeaModel {
         /// <summary>
-        /// The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.
+        /// The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the exporter that is integrated into the Prometheus instance.
+        /// The exporter ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// The integration type.
+        /// The type of the integration.
         /// </summary>
         [NameInMap("IntegrationType")]
         [Validation(Required=false)]

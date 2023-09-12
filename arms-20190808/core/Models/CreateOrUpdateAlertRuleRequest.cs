@@ -81,11 +81,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AlertStatus { get; set; }
 
         /// <summary>
-        /// The type of the alert rule.
+        /// The type of the alert rule. Valid values:
         /// 
-        /// *   APPLICATION_MONITORING_ALERT_RULE: an alert rule of Application Monitoring
-        /// *   BROWSER_MONITORING_ALERT_RULE: an alert rule of Browser Monitoring
-        /// *   PROMETHEUS_MONITORING_ALERT_RULE: an alert rule of Prometheus Service
+        /// *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
+        /// *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
+        /// *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service
         /// 
         /// Valid values:
         /// 
@@ -110,15 +110,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:
         /// 
-        /// *   `true`: yes
-        /// *   `false`: no
+        /// *   `true`: enables the health check feature.
+        /// *   `false`: disables the automatic backup feature.
         /// </summary>
         [NameInMap("AutoAddNewApplication")]
         [Validation(Required=false)]
         public bool? AutoAddNewApplication { get; set; }
 
         /// <summary>
-        /// The cluster ID of the Prometheus alert rule.
+        /// The ID of the monitored cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? Duration { get; set; }
 
         /// <summary>
-        /// The filter conditions of the Application Monitoring or Browser Monitoring alert rule. The name must meet the following format requirements:
+        /// The filter conditions of the Application Monitoring or Browser Monitoring alert rule. The following code shows the format of matching rules:
         /// 
         ///     "DimFilters": [ 
         ///     { 
@@ -172,6 +172,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Level { get; set; }
 
+        [NameInMap("MarkTags")]
+        [Validation(Required=false)]
+        public List<CreateOrUpdateAlertRuleRequestMarkTags> MarkTags { get; set; }
+        public class CreateOrUpdateAlertRuleRequestMarkTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// The alert message of the Prometheus alert rule.
         /// </summary>
@@ -198,7 +212,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// The notification policy.
         /// 
-        /// *   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. If the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.
+        /// *   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.
         /// *   To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.
         /// </summary>
         [NameInMap("NotifyStrategy")]

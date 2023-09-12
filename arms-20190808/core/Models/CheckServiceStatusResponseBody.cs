@@ -12,15 +12,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   true.
+        /// *   false.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the ID to query logs and troubleshoot issues.
+        /// The request ID. You can use the ID to find logs and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

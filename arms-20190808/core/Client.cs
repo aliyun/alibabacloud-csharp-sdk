@@ -1475,7 +1475,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of the Alert Management module.
           *
           * @param request CreateAlertContactRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1533,7 +1533,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of the Alert Management module.
           *
           * @param request CreateAlertContactRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1591,7 +1591,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of the Alert Management module.
           *
           * @param request CreateAlertContactRequest
           * @return CreateAlertContactResponse
@@ -1603,7 +1603,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of the Alert Management module.
           *
           * @param request CreateAlertContactRequest
           * @return CreateAlertContactResponse
@@ -1928,6 +1928,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 body["Level"] = request.Level;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MarkTags))
+            {
+                body["MarkTags"] = request.MarkTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
                 body["Message"] = request.Message;
@@ -2038,6 +2042,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
             {
                 body["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MarkTags))
+            {
+                body["MarkTags"] = request.MarkTags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
@@ -2582,6 +2590,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectedMode))
+            {
+                body["DirectedMode"] = request.DirectedMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EscalationPolicyId))
             {
                 body["EscalationPolicyId"] = request.EscalationPolicyId;
@@ -2653,6 +2665,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectedMode))
+            {
+                body["DirectedMode"] = request.DirectedMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EscalationPolicyId))
             {
                 body["EscalationPolicyId"] = request.EscalationPolicyId;
@@ -3122,10 +3138,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["GrafanaInstanceId"] = request.GrafanaInstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamJson))
-            {
-                query["ParamJson"] = request.ParamJson;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3196,10 +3208,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaInstanceId))
             {
                 query["GrafanaInstanceId"] = request.GrafanaInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamJson))
-            {
-                query["ParamJson"] = request.ParamJson;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4100,6 +4108,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await DelAuthTokenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ********
+          *
+          * @param request DeleteAlertContactRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAlertContactResponse
+         */
         public DeleteAlertContactResponse DeleteAlertContactWithOptions(DeleteAlertContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4131,6 +4146,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<DeleteAlertContactResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ********
+          *
+          * @param request DeleteAlertContactRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAlertContactResponse
+         */
         public async Task<DeleteAlertContactResponse> DeleteAlertContactWithOptionsAsync(DeleteAlertContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4162,12 +4184,24 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<DeleteAlertContactResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ********
+          *
+          * @param request DeleteAlertContactRequest
+          * @return DeleteAlertContactResponse
+         */
         public DeleteAlertContactResponse DeleteAlertContact(DeleteAlertContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAlertContactWithOptions(request, runtime);
         }
 
+        /**
+          * ********
+          *
+          * @param request DeleteAlertContactRequest
+          * @return DeleteAlertContactResponse
+         */
         public async Task<DeleteAlertContactResponse> DeleteAlertContactAsync(DeleteAlertContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4386,6 +4420,80 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAlertRulesWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteAppListResponse DeleteAppListWithOptions(DeleteAppListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pids))
+            {
+                query["Pids"] = request.Pids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAppList",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteAppListResponse> DeleteAppListWithOptionsAsync(DeleteAppListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pids))
+            {
+                query["Pids"] = request.Pids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAppList",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteAppListResponse DeleteAppList(DeleteAppListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAppListWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteAppListResponse> DeleteAppListAsync(DeleteAppListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAppListWithOptionsAsync(request, runtime);
         }
 
         public DeleteCmsExporterResponse DeleteCmsExporterWithOptions(DeleteCmsExporterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5908,6 +6016,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
@@ -5938,6 +6050,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
@@ -7773,7 +7889,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * None.
           *
           * @param request GetPrometheusApiTokenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7807,7 +7923,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * None.
           *
           * @param request GetPrometheusApiTokenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7841,7 +7957,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * None.
           *
           * @param request GetPrometheusApiTokenRequest
           * @return GetPrometheusApiTokenResponse
@@ -7853,7 +7969,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * None.
           *
           * @param request GetPrometheusApiTokenRequest
           * @return GetPrometheusApiTokenResponse
@@ -9453,7 +9569,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the region where the associated applications reside.
+          * >  You can call the **ImportAppAlertRules** operation to import only the alert rules that are generated by Application Real-Time Monitoring Service (ARMS) for application monitoring and browser monitoring. This operation cannot be used to import custom alert rules, alert rules for Prometheus monitoring, or default emergency alert rules.
           *
           * @param request ImportAppAlertRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9511,7 +9627,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the region where the associated applications reside.
+          * >  You can call the **ImportAppAlertRules** operation to import only the alert rules that are generated by Application Real-Time Monitoring Service (ARMS) for application monitoring and browser monitoring. This operation cannot be used to import custom alert rules, alert rules for Prometheus monitoring, or default emergency alert rules.
           *
           * @param request ImportAppAlertRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9569,7 +9685,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the region where the associated applications reside.
+          * >  You can call the **ImportAppAlertRules** operation to import only the alert rules that are generated by Application Real-Time Monitoring Service (ARMS) for application monitoring and browser monitoring. This operation cannot be used to import custom alert rules, alert rules for Prometheus monitoring, or default emergency alert rules.
           *
           * @param request ImportAppAlertRulesRequest
           * @return ImportAppAlertRulesResponse
@@ -9581,7 +9697,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the region where the associated applications reside.
+          * >  You can call the **ImportAppAlertRules** operation to import only the alert rules that are generated by Application Real-Time Monitoring Service (ARMS) for application monitoring and browser monitoring. This operation cannot be used to import custom alert rules, alert rules for Prometheus monitoring, or default emergency alert rules.
           *
           * @param request ImportAppAlertRulesRequest
           * @return ImportAppAlertRulesResponse
@@ -9691,7 +9807,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * $.parameters[5].schema.example
+          * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
           *
           * @param request InstallManagedPrometheusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9761,7 +9877,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * $.parameters[5].schema.example
+          * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
           *
           * @param request InstallManagedPrometheusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9831,7 +9947,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * $.parameters[5].schema.example
+          * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
           *
           * @param request InstallManagedPrometheusRequest
           * @return InstallManagedPrometheusResponse
@@ -9843,7 +9959,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * $.parameters[5].schema.example
+          * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
           *
           * @param request InstallManagedPrometheusRequest
           * @return InstallManagedPrometheusResponse
@@ -10082,6 +10198,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["Page"] = request.Page;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
             {
                 query["Severity"] = request.Severity;
@@ -10148,6 +10268,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
             {
@@ -10988,6 +11112,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectedMode))
+            {
+                query["DirectedMode"] = request.DirectedMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
             {
                 query["Ids"] = request.Ids;
@@ -11035,6 +11163,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectedMode))
+            {
+                query["DirectedMode"] = request.DirectedMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
             {
                 query["Ids"] = request.Ids;
@@ -12190,6 +12322,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                query["AppType"] = request.AppType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
@@ -12229,6 +12365,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                query["AppType"] = request.AppType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
@@ -12514,6 +12654,17 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await OpenArmsDefaultSLRWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
+          * *   Application Monitoring: Basic Edition
+          * *   Browser Monitoring: Basic Edition
+          * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
+          * *   Prometheus Service: Pro Edition
+          *
+          * @param request OpenArmsServiceSecondVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return OpenArmsServiceSecondVersionResponse
+         */
         public OpenArmsServiceSecondVersionResponse OpenArmsServiceSecondVersionWithOptions(OpenArmsServiceSecondVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12545,6 +12696,17 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<OpenArmsServiceSecondVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
+          * *   Application Monitoring: Basic Edition
+          * *   Browser Monitoring: Basic Edition
+          * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
+          * *   Prometheus Service: Pro Edition
+          *
+          * @param request OpenArmsServiceSecondVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return OpenArmsServiceSecondVersionResponse
+         */
         public async Task<OpenArmsServiceSecondVersionResponse> OpenArmsServiceSecondVersionWithOptionsAsync(OpenArmsServiceSecondVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12576,12 +12738,32 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<OpenArmsServiceSecondVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
+          * *   Application Monitoring: Basic Edition
+          * *   Browser Monitoring: Basic Edition
+          * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
+          * *   Prometheus Service: Pro Edition
+          *
+          * @param request OpenArmsServiceSecondVersionRequest
+          * @return OpenArmsServiceSecondVersionResponse
+         */
         public OpenArmsServiceSecondVersionResponse OpenArmsServiceSecondVersion(OpenArmsServiceSecondVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return OpenArmsServiceSecondVersionWithOptions(request, runtime);
         }
 
+        /**
+          * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
+          * *   Application Monitoring: Basic Edition
+          * *   Browser Monitoring: Basic Edition
+          * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
+          * *   Prometheus Service: Pro Edition
+          *
+          * @param request OpenArmsServiceSecondVersionRequest
+          * @return OpenArmsServiceSecondVersionResponse
+         */
         public async Task<OpenArmsServiceSecondVersionResponse> OpenArmsServiceSecondVersionAsync(OpenArmsServiceSecondVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12750,6 +12932,64 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OpenXtraceDefaultSLRWithOptionsAsync(request, runtime);
+        }
+
+        public QueryAppMetadataResponse QueryAppMetadataWithOptions(QueryAppMetadataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAppMetadata",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAppMetadataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryAppMetadataResponse> QueryAppMetadataWithOptionsAsync(QueryAppMetadataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAppMetadata",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAppMetadataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryAppMetadataResponse QueryAppMetadata(QueryAppMetadataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryAppMetadataWithOptions(request, runtime);
+        }
+
+        public async Task<QueryAppMetadataResponse> QueryAppMetadataAsync(QueryAppMetadataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryAppMetadataWithOptionsAsync(request, runtime);
         }
 
         public QueryMetricByPageResponse QueryMetricByPageWithOptions(QueryMetricByPageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -13357,7 +13597,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the resource group.
+          * This operation is no longer maintained. To query alert contacts, call the DescribeContacts operation provided by the new version of Alert Management.
           *
           * @param request SearchAlertContactRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13415,7 +13655,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the resource group.
+          * This operation is no longer maintained. To query alert contacts, call the DescribeContacts operation provided by the new version of Alert Management.
           *
           * @param request SearchAlertContactRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13473,7 +13713,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the resource group.
+          * This operation is no longer maintained. To query alert contacts, call the DescribeContacts operation provided by the new version of Alert Management.
           *
           * @param request SearchAlertContactRequest
           * @return SearchAlertContactResponse
@@ -13485,7 +13725,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the resource group.
+          * This operation is no longer maintained. To query alert contacts, call the DescribeContacts operation provided by the new version of Alert Management.
           *
           * @param request SearchAlertContactRequest
           * @return SearchAlertContactResponse
@@ -13497,7 +13737,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The mobile number of the alert contact.
+          * The operation is no longer maintained. Call the DescribeContactGroups operation in the alert management module to query alert contact groups.
           *
           * @param request SearchAlertContactGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13551,7 +13791,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The mobile number of the alert contact.
+          * The operation is no longer maintained. Call the DescribeContactGroups operation in the alert management module to query alert contact groups.
           *
           * @param request SearchAlertContactGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13605,7 +13845,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The mobile number of the alert contact.
+          * The operation is no longer maintained. Call the DescribeContactGroups operation in the alert management module to query alert contact groups.
           *
           * @param request SearchAlertContactGroupRequest
           * @return SearchAlertContactGroupResponse
@@ -13617,7 +13857,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The mobile number of the alert contact.
+          * The operation is no longer maintained. Call the DescribeContactGroups operation in the alert management module to query alert contact groups.
           *
           * @param request SearchAlertContactGroupRequest
           * @return SearchAlertContactGroupResponse
@@ -13941,7 +14181,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The operation that you want to perform. Set the value to `SearchEvents`.
+          * Alert event records are different from alert notification records. Alert events are recorded every minute after an alert rule filters data. Alert events can be classified based on whether they are triggered or not. If a triggered event is not in the silence period, an alert notification is sent.
           *
           * @param request SearchEventsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14011,7 +14251,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The operation that you want to perform. Set the value to `SearchEvents`.
+          * Alert event records are different from alert notification records. Alert events are recorded every minute after an alert rule filters data. Alert events can be classified based on whether they are triggered or not. If a triggered event is not in the silence period, an alert notification is sent.
           *
           * @param request SearchEventsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14081,7 +14321,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The operation that you want to perform. Set the value to `SearchEvents`.
+          * Alert event records are different from alert notification records. Alert events are recorded every minute after an alert rule filters data. Alert events can be classified based on whether they are triggered or not. If a triggered event is not in the silence period, an alert notification is sent.
           *
           * @param request SearchEventsRequest
           * @return SearchEventsResponse
@@ -14093,7 +14333,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The operation that you want to perform. Set the value to `SearchEvents`.
+          * Alert event records are different from alert notification records. Alert events are recorded every minute after an alert rule filters data. Alert events can be classified based on whether they are triggered or not. If a triggered event is not in the silence period, an alert notification is sent.
           *
           * @param request SearchEventsRequest
           * @return SearchEventsResponse
@@ -14218,13 +14458,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await SearchRetcodeAppByPageWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ***
-          *
-          * @param request SearchTraceAppByNameRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SearchTraceAppByNameResponse
-         */
         public SearchTraceAppByNameResponse SearchTraceAppByNameWithOptions(SearchTraceAppByNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14260,13 +14493,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<SearchTraceAppByNameResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ***
-          *
-          * @param request SearchTraceAppByNameRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SearchTraceAppByNameResponse
-         */
         public async Task<SearchTraceAppByNameResponse> SearchTraceAppByNameWithOptionsAsync(SearchTraceAppByNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14302,24 +14528,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<SearchTraceAppByNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ***
-          *
-          * @param request SearchTraceAppByNameRequest
-          * @return SearchTraceAppByNameResponse
-         */
         public SearchTraceAppByNameResponse SearchTraceAppByName(SearchTraceAppByNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchTraceAppByNameWithOptions(request, runtime);
         }
 
-        /**
-          * ***
-          *
-          * @param request SearchTraceAppByNameRequest
-          * @return SearchTraceAppByNameResponse
-         */
         public async Task<SearchTraceAppByNameResponse> SearchTraceAppByNameAsync(SearchTraceAppByNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15515,7 +15729,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+          * Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
           *
           * @param request UninstallManagedPrometheusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15565,7 +15779,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+          * Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
           *
           * @param request UninstallManagedPrometheusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15615,7 +15829,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+          * Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
           *
           * @param request UninstallManagedPrometheusRequest
           * @return UninstallManagedPrometheusResponse
@@ -15627,7 +15841,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+          * Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
           *
           * @param request UninstallManagedPrometheusRequest
           * @return UninstallManagedPrometheusResponse
@@ -15811,7 +16025,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of Alert Management.
           *
           * @param request UpdateAlertContactRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15869,7 +16083,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of Alert Management.
           *
           * @param request UpdateAlertContactRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15927,7 +16141,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of Alert Management.
           *
           * @param request UpdateAlertContactRequest
           * @return UpdateAlertContactResponse
@@ -15939,7 +16153,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of Alert Management.
           *
           * @param request UpdateAlertContactRequest
           * @return UpdateAlertContactResponse
@@ -16564,10 +16778,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["MostRegionId"] = request.MostRegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamJson))
-            {
-                query["ParamJson"] = request.ParamJson;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -16618,10 +16828,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MostRegionId))
             {
                 query["MostRegionId"] = request.MostRegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamJson))
-            {
-                query["ParamJson"] = request.ParamJson;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -17273,7 +17479,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. Call the CreateOrUpdateWebhookContact operation in the new alter management module to create or modify a webhook alert contact.
           *
           * @param request UpdateWebhookRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17339,7 +17545,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. Call the CreateOrUpdateWebhookContact operation in the new alter management module to create or modify a webhook alert contact.
           *
           * @param request UpdateWebhookRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17405,7 +17611,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. Call the CreateOrUpdateWebhookContact operation in the new alter management module to create or modify a webhook alert contact.
           *
           * @param request UpdateWebhookRequest
           * @return UpdateWebhookResponse
@@ -17417,7 +17623,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * The ID of the request.
+          * This operation is no longer maintained. Call the CreateOrUpdateWebhookContact operation in the new alter management module to create or modify a webhook alert contact.
           *
           * @param request UpdateWebhookRequest
           * @return UpdateWebhookResponse

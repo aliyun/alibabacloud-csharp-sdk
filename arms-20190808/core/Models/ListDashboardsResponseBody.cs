@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string HttpsUrl { get; set; }
 
             /// <summary>
-            /// The information about the Grafana dashboards.
+            /// The information about the Grafana dashboard.
             /// </summary>
             [NameInMap("I18nChild")]
             [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<string> Tags { get; set; }
 
             /// <summary>
-            /// The timestamp generated when the Grafana dashboard was created. Unit: seconds
+            /// The timestamp when the Grafana dashboard was created. Unit: seconds.
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
@@ -310,6 +310,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Version { get; set; }
 
         }
+
+        [NameInMap("PrometheusServiceOpened")]
+        [Validation(Required=false)]
+        public string PrometheusServiceOpened { get; set; }
 
         /// <summary>
         /// The request ID.
