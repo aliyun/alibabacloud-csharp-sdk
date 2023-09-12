@@ -33,19 +33,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string SourceURI { get; set; }
 
-        [NameInMap("Target")]
+        [NameInMap("TargetURI")]
         [Validation(Required=false)]
-        public CreateFileUncompressionTaskRequestTarget Target { get; set; }
-        public class CreateFileUncompressionTaskRequestTarget : TeaModel {
-            [NameInMap("ManifestURI")]
-            [Validation(Required=false)]
-            public string ManifestURI { get; set; }
-
-            [NameInMap("URI")]
-            [Validation(Required=false)]
-            public string URI { get; set; }
-
-        }
+        public string TargetURI { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]

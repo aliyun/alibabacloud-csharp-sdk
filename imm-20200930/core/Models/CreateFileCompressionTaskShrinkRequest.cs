@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
-        [NameInMap("Password")]
-        [Validation(Required=false)]
-        public string Password { get; set; }
-
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }

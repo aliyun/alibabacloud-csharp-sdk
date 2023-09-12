@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("MaxResult")]
         [Validation(Required=false)]
-        public string MaxResult { get; set; }
+        public long? MaxResult { get; set; }
 
         [NameInMap("Notification")]
         [Validation(Required=false)]
@@ -34,10 +34,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string URI { get; set; }
 
         }
-
-        [NameInMap("TopK")]
-        [Validation(Required=false)]
-        public long? TopK { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]

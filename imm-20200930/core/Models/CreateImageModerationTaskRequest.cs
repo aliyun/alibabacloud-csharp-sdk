@@ -32,10 +32,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
-        [NameInMap("Reviewer")]
-        [Validation(Required=false)]
-        public string Reviewer { get; set; }
-
         [NameInMap("Scenes")]
         [Validation(Required=false)]
         public List<string> Scenes { get; set; }

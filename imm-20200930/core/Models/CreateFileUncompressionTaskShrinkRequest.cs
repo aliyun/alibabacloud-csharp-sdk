@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string SourceURI { get; set; }
 
-        [NameInMap("Target")]
+        [NameInMap("TargetURI")]
         [Validation(Required=false)]
-        public string TargetShrink { get; set; }
+        public string TargetURI { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]

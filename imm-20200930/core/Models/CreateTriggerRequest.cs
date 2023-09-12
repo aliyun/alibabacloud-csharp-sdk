@@ -31,13 +31,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public CreateTriggerRequestNotification Notification { get; set; }
         public class CreateTriggerRequestNotification : TeaModel {
-            [NameInMap("Endpoint")]
+            [NameInMap("MNS")]
             [Validation(Required=false)]
-            public string Endpoint { get; set; }
-
-            [NameInMap("Topic")]
-            [Validation(Required=false)]
-            public string Topic { get; set; }
+            public MNS MNS { get; set; }
 
         }
 

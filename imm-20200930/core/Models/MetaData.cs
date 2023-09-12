@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ResumeBindingRequest : TeaModel {
-        [NameInMap("DatasetName")]
+    public class MetaData : TeaModel {
+        [NameInMap("Identifier")]
         [Validation(Required=false)]
-        public string DatasetName { get; set; }
+        public string Identifier { get; set; }
 
-        [NameInMap("ProjectName")]
+        [NameInMap("Provider")]
         [Validation(Required=false)]
-        public string ProjectName { get; set; }
+        public string Provider { get; set; }
 
-        [NameInMap("URI")]
+        [NameInMap("Version")]
         [Validation(Required=false)]
-        public string URI { get; set; }
+        public string Version { get; set; }
 
     }
 

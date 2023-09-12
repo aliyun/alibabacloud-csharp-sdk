@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class DeleteBindingRequest : TeaModel {
-        [NameInMap("DatasetName")]
+    public class Schedule : TeaModel {
+        [NameInMap("Gamma")]
         [Validation(Required=false)]
-        public string DatasetName { get; set; }
+        public float? Gamma { get; set; }
 
-        [NameInMap("ProjectName")]
+        [NameInMap("LRScheduler")]
         [Validation(Required=false)]
-        public string ProjectName { get; set; }
+        public string LRScheduler { get; set; }
 
-        [NameInMap("URI")]
+        [NameInMap("StepSize")]
         [Validation(Required=false)]
-        public string URI { get; set; }
+        public long? StepSize { get; set; }
 
     }
 

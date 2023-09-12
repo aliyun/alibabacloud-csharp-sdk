@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Notification : TeaModel {
+        [NameInMap("ExtendedMessageURI")]
+        [Validation(Required=false)]
+        public string ExtendedMessageURI { get; set; }
+
         [NameInMap("MNS")]
         [Validation(Required=false)]
         public MNS MNS { get; set; }

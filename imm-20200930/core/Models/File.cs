@@ -93,14 +93,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
-        [NameInMap("DocumentContent")]
-        [Validation(Required=false)]
-        public string DocumentContent { get; set; }
-
-        [NameInMap("DocumentLanguage")]
-        [Validation(Required=false)]
-        public string DocumentLanguage { get; set; }
-
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public double? Duration { get; set; }

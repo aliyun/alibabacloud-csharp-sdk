@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class LiveTranscodingResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+    public class ModelSpecification : TeaModel {
+        [NameInMap("MetaData")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public MetaData MetaData { get; set; }
 
-        [NameInMap("URI")]
+        [NameInMap("Spec")]
         [Validation(Required=false)]
-        public string URI { get; set; }
+        public Spec Spec { get; set; }
 
     }
 
