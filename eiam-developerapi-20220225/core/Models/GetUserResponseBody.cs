@@ -47,18 +47,30 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public bool? EmailVerified { get; set; }
 
+        /// <summary>
+        /// 账户所属组列表。
+        /// </summary>
         [NameInMap("groups")]
         [Validation(Required=false)]
         public List<GetUserResponseBodyGroups> Groups { get; set; }
         public class GetUserResponseBodyGroups : TeaModel {
+            /// <summary>
+            /// 组描述。
+            /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// 组ID。
+            /// </summary>
             [NameInMap("groupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
+            /// <summary>
+            /// 组名称。
+            /// </summary>
             [NameInMap("groupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
