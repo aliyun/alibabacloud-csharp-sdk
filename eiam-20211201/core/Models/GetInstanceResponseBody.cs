@@ -57,6 +57,39 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// The default domain of the instance.
+            /// </summary>
+            [NameInMap("DomainConfig")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyInstanceDomainConfig DomainConfig { get; set; }
+            public class GetInstanceResponseBodyInstanceDomainConfig : TeaModel {
+                /// <summary>
+                /// The default domain of the instance.
+                /// </summary>
+                [NameInMap("DefaultDomain")]
+                [Validation(Required=false)]
+                public string DefaultDomain { get; set; }
+
+                /// <summary>
+                /// The init domain of the instance.
+                /// </summary>
+                [NameInMap("InitDomain")]
+                [Validation(Required=false)]
+                public string InitDomain { get; set; }
+
+                /// <summary>
+                /// Valid values:
+                /// 
+                /// *   true
+                /// *   false
+                /// </summary>
+                [NameInMap("InitDomainAutoRedirectStatus")]
+                [Validation(Required=false)]
+                public string InitDomainAutoRedirectStatus { get; set; }
+
+            }
+
+            /// <summary>
             /// The outbound public CIDR blocks of the instance. For example, when you synchronize Active Directory (AD) accounts, the IDaaS EIAM instance accesses your AD service by using the outbound public CIDR blocks.
             /// </summary>
             [NameInMap("EgressAddresses")]
