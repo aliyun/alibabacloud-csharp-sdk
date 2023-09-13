@@ -9,14 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSQLPatternsResponseBody : TeaModel {
+        /// <summary>
+        /// The page number.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// Indicates whether the execution of the SQL pattern can be blocked. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// 
+        /// > Only SELECT and INSERT statements can be blocked.
+        /// </summary>
         [NameInMap("PatternDetails")]
         [Validation(Required=false)]
         public List<DescribeSQLPatternsResponseBodyPatternDetails> PatternDetails { get; set; }
@@ -91,10 +105,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

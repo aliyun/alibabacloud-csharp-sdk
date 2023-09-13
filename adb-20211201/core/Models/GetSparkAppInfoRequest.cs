@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The ID of the application. 
         /// 
-        /// >  You can call the [ListSparkApps](/help/en/analyticdb-for-mysql/latest/listsparkapps) operation to query the Spark application ID.
+        /// >  You can call the [ListSparkApps](~~612475~~) operation to query the Spark application ID.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
