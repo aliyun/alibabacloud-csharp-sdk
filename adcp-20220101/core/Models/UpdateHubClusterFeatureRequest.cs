@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public bool? ArgoCDHAEnabled { get; set; }
 
+        [NameInMap("ArgoEventsEnabled")]
+        [Validation(Required=false)]
+        public bool? ArgoEventsEnabled { get; set; }
+
         [NameInMap("ArgoServerEnabled")]
         [Validation(Required=false)]
         public bool? ArgoServerEnabled { get; set; }

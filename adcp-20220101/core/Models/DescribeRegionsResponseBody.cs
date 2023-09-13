@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// Example 1
+        /// A list of available regions that are returned.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
+            /// <summary>
+            /// The name of the region.
+            /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// You can call the DescribeRegions operation to query available regions.
+            /// The ID of the region.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         }
 
         /// <summary>
-        /// The name of the region.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

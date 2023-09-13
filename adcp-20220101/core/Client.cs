@@ -1766,6 +1766,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["ArgoCDHAEnabled"] = request.ArgoCDHAEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgoEventsEnabled))
+            {
+                query["ArgoEventsEnabled"] = request.ArgoEventsEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgoServerEnabled))
             {
                 query["ArgoServerEnabled"] = request.ArgoServerEnabled;
@@ -1862,6 +1866,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgoCDHAEnabled))
             {
                 query["ArgoCDHAEnabled"] = request.ArgoCDHAEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgoEventsEnabled))
+            {
+                query["ArgoEventsEnabled"] = request.ArgoEventsEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgoServerEnabled))
             {
