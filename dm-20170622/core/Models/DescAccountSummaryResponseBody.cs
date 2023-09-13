@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public int? Receivers { get; set; }
 
+        [NameInMap("RemainFreeQuota")]
+        [Validation(Required=false)]
+        public int? RemainFreeQuota { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

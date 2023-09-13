@@ -1865,6 +1865,14 @@ namespace AlibabaCloud.SDK.Dm20170622
             return await GetAccountListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetMailAddressMsgCallBackUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMailAddressMsgCallBackUrlResponse
+         */
+        // Deprecated
         public GetMailAddressMsgCallBackUrlResponse GetMailAddressMsgCallBackUrlWithOptions(GetMailAddressMsgCallBackUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1904,6 +1912,14 @@ namespace AlibabaCloud.SDK.Dm20170622
             return TeaModel.ToObject<GetMailAddressMsgCallBackUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetMailAddressMsgCallBackUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMailAddressMsgCallBackUrlResponse
+         */
+        // Deprecated
         public async Task<GetMailAddressMsgCallBackUrlResponse> GetMailAddressMsgCallBackUrlWithOptionsAsync(GetMailAddressMsgCallBackUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1943,12 +1959,26 @@ namespace AlibabaCloud.SDK.Dm20170622
             return TeaModel.ToObject<GetMailAddressMsgCallBackUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetMailAddressMsgCallBackUrlRequest
+          * @return GetMailAddressMsgCallBackUrlResponse
+         */
+        // Deprecated
         public GetMailAddressMsgCallBackUrlResponse GetMailAddressMsgCallBackUrl(GetMailAddressMsgCallBackUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetMailAddressMsgCallBackUrlWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetMailAddressMsgCallBackUrlRequest
+          * @return GetMailAddressMsgCallBackUrlResponse
+         */
+        // Deprecated
         public async Task<GetMailAddressMsgCallBackUrlResponse> GetMailAddressMsgCallBackUrlAsync(GetMailAddressMsgCallBackUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

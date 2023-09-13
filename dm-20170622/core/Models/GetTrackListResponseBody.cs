@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
             public class GetTrackListResponseBodyDataStat : TeaModel {
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
-                public string CreateTime { get; set; }
+                public long? CreateTime { get; set; }
 
                 [NameInMap("RcptClickCount")]
                 [Validation(Required=false)]
-                public string RcptClickCount { get; set; }
+                public long? RcptClickCount { get; set; }
 
                 [NameInMap("RcptClickRate")]
                 [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
 
                 [NameInMap("RcptOpenCount")]
                 [Validation(Required=false)]
-                public string RcptOpenCount { get; set; }
+                public long? RcptOpenCount { get; set; }
 
                 [NameInMap("RcptOpenRate")]
                 [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
 
                 [NameInMap("RcptUniqueClickCount")]
                 [Validation(Required=false)]
-                public string RcptUniqueClickCount { get; set; }
+                public long? RcptUniqueClickCount { get; set; }
 
                 [NameInMap("RcptUniqueClickRate")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
 
                 [NameInMap("RcptUniqueOpenCount")]
                 [Validation(Required=false)]
-                public string RcptUniqueOpenCount { get; set; }
+                public long? RcptUniqueOpenCount { get; set; }
 
                 [NameInMap("RcptUniqueOpenRate")]
                 [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
 
                 [NameInMap("TotalNumber")]
                 [Validation(Required=false)]
-                public string TotalNumber { get; set; }
+                public long? TotalNumber { get; set; }
 
             }
 
