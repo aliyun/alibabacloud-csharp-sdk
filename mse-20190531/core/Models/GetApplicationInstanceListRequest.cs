@@ -8,22 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class GetServiceListPageRequest : TeaModel {
+    public class GetApplicationInstanceListRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         [NameInMap("AppId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string AppId { get; set; }
 
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
-
-        [NameInMap("Ip")]
-        [Validation(Required=false)]
-        public string Ip { get; set; }
 
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -31,23 +28,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string PageSize { get; set; }
 
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        [NameInMap("ServiceName")]
+        [NameInMap("Tag")]
         [Validation(Required=false)]
-        public string ServiceName { get; set; }
-
-        [NameInMap("ServiceType")]
-        [Validation(Required=false)]
-        public string ServiceType { get; set; }
+        public string Tag { get; set; }
 
     }
 

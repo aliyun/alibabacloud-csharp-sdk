@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string DataId { get; set; }
 
+        /// <summary>
+        /// The configuration group name and the ID of the data that you want to export. Separate multiple configurations with comma (,).
+        /// </summary>
         [NameInMap("DataIds")]
         [Validation(Required=false)]
         public string DataIds { get; set; }
