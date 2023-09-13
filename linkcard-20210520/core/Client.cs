@@ -2442,6 +2442,124 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             return await ResumeSingleCardWithOptionsAsync(request, runtime);
         }
 
+        public SendMessageResponse SendMessageWithOptions(SendMessageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SendMessageShrinkRequest request = new SendMessageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Msisdns))
+            {
+                request.MsisdnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Msisdns, "Msisdns", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiProduct))
+            {
+                body["ApiProduct"] = request.ApiProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageSendTime))
+            {
+                body["MessageSendTime"] = request.MessageSendTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTemplateId))
+            {
+                body["MessageTemplateId"] = request.MessageTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageVariableParam))
+            {
+                body["MessageVariableParam"] = request.MessageVariableParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsisdnsShrink))
+            {
+                body["Msisdns"] = request.MsisdnsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendMessage",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendMessageResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SendMessageResponse> SendMessageWithOptionsAsync(SendMessageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SendMessageShrinkRequest request = new SendMessageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Msisdns))
+            {
+                request.MsisdnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Msisdns, "Msisdns", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiProduct))
+            {
+                body["ApiProduct"] = request.ApiProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageSendTime))
+            {
+                body["MessageSendTime"] = request.MessageSendTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTemplateId))
+            {
+                body["MessageTemplateId"] = request.MessageTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageVariableParam))
+            {
+                body["MessageVariableParam"] = request.MessageVariableParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsisdnsShrink))
+            {
+                body["Msisdns"] = request.MsisdnsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendMessage",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendMessageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SendMessageResponse SendMessage(SendMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendMessageWithOptions(request, runtime);
+        }
+
+        public async Task<SendMessageResponse> SendMessageAsync(SendMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendMessageWithOptionsAsync(request, runtime);
+        }
+
         public SetCardStopRuleResponse SetCardStopRuleWithOptions(SetCardStopRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
