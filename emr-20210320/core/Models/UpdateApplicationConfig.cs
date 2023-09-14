@@ -9,45 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateApplicationConfig : TeaModel {
-        [NameInMap("ConfigAction")]
-        [Validation(Required=false)]
-        public string ConfigAction { get; set; }
-
+        /// <summary>
+        /// 修改描述。
+        /// </summary>
         [NameInMap("ConfigDescription")]
         [Validation(Required=false)]
         public string ConfigDescription { get; set; }
 
+        /// <summary>
+        /// 应用配置文件名。
+        /// </summary>
         [NameInMap("ConfigFileName")]
         [Validation(Required=false)]
         public string ConfigFileName { get; set; }
 
+        /// <summary>
+        /// 配置项键。
+        /// </summary>
         [NameInMap("ConfigItemKey")]
         [Validation(Required=false)]
         public string ConfigItemKey { get; set; }
 
+        /// <summary>
+        /// 配置项值。
+        /// </summary>
         [NameInMap("ConfigItemValue")]
         [Validation(Required=false)]
         public string ConfigItemValue { get; set; }
-
-        [NameInMap("ConfigScope")]
-        [Validation(Required=false)]
-        public string ConfigScope { get; set; }
-
-        [NameInMap("EffectiveActions")]
-        [Validation(Required=false)]
-        public string EffectiveActions { get; set; }
-
-        [NameInMap("EffectiveType")]
-        [Validation(Required=false)]
-        public string EffectiveType { get; set; }
-
-        [NameInMap("NodeGroupId")]
-        [Validation(Required=false)]
-        public string NodeGroupId { get; set; }
-
-        [NameInMap("NodeId")]
-        [Validation(Required=false)]
-        public string NodeId { get; set; }
 
     }
 

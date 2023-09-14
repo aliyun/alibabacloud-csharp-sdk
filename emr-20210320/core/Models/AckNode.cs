@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class AckNode : TeaModel {
+        /// <summary>
+        /// 节点ID。
+        /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
+        /// <summary>
+        /// ACK节点选择器。
+        /// </summary>
         [NameInMap("NodeSelector")]
         [Validation(Required=false)]
         public AckNodeSelector NodeSelector { get; set; }

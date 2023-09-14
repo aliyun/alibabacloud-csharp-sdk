@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class JoinResourceGroupResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

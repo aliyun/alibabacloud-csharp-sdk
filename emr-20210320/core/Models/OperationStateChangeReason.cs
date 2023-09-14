@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class OperationStateChangeReason : TeaModel {
+        /// <summary>
+        /// 状态码。
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// 状态变化信息。
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

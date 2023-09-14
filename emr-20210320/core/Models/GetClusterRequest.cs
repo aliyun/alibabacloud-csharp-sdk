@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetClusterRequest : TeaModel {
+        /// <summary>
+        /// 集群ID。
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// 区域ID。
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

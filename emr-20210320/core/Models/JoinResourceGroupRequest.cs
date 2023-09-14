@@ -9,18 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class JoinResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// The ID of the region in which you want to create the instance.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        /// <summary>
+        /// The type of the resource. Valid values:
+        /// 
+        /// *   cluster: cluster
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

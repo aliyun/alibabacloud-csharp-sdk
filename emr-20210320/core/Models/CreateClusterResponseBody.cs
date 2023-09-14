@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateClusterResponseBody : TeaModel {
+        /// <summary>
+        /// 集群ID。
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// 操作ID。
+        /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]
         public string OperationId { get; set; }
 
+        /// <summary>
+        /// 请求ID。
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
