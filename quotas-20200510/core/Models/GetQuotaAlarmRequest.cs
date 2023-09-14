@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class GetQuotaAlarmRequest : TeaModel {
         /// <summary>
-        /// The ID of the quota alert.
-        /// 
-        /// For more information about how to query the ID of a quota alert, see [ListQuotaAlarms](~~184348~~).
+        /// The ID of the request.
         /// </summary>
         [NameInMap("AlarmId")]
         [Validation(Required=false)]

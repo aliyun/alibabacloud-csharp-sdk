@@ -8,15 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ModifyTemplateQuotaItemRequest : TeaModel {
+    public class CreateQuotaApplicationsForTemplateRequest : TeaModel {
+        [NameInMap("AliyunUids")]
+        [Validation(Required=false)]
+        public List<string> AliyunUids { get; set; }
+
         [NameInMap("DesireValue")]
         [Validation(Required=false)]
-        public float? DesireValue { get; set; }
+        public double? DesireValue { get; set; }
 
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
-        public List<ModifyTemplateQuotaItemRequestDimensions> Dimensions { get; set; }
-        public class ModifyTemplateQuotaItemRequestDimensions : TeaModel {
+        public List<CreateQuotaApplicationsForTemplateRequestDimensions> Dimensions { get; set; }
+        public class CreateQuotaApplicationsForTemplateRequestDimensions : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
@@ -39,13 +43,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
         [NameInMap("NoticeType")]
         [Validation(Required=false)]
-        public long? NoticeType { get; set; }
+        public int? NoticeType { get; set; }
 
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaCategory")]
         [Validation(Required=false)]
         public string QuotaCategory { get; set; }
+
+        [NameInMap("Reason")]
+        [Validation(Required=false)]
+        public string Reason { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListProductsRequest : TeaModel {
         /// <summary>
-        /// The maximum number of records to be returned for the query.
+        /// The maximum number of records that can be returned for the query.
         /// 
         /// Valid values: 1 to 200. Default value: 30.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to mark the location where the query is started. An empty value indicates that the query is executed from the start.
+        /// The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

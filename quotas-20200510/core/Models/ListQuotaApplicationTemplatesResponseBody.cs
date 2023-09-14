@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListQuotaApplicationTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The maximum number of records that are returned for the query.
+        /// The maximum number of records returned for the query.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The quota templates that are returned.
+        /// The returned quota templates.
         /// </summary>
         [NameInMap("QuotaApplicationTemplates")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates> QuotaApplicationTemplates { get; set; }
         public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates : TeaModel {
             /// <summary>
-            /// None
+            /// N/A
             /// </summary>
             [NameInMap("ApplicableRange")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public Dictionary<string, object> Dimensions { get; set; }
 
             /// <summary>
-            /// 配额生效的UTC时间。
+            /// The start time of the validity period of the quota. The value is displayed in UTC.
             /// </summary>
             [NameInMap("EffectiveTime")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string EnvLanguage { get; set; }
 
             /// <summary>
-            /// 配额失效的UTC时间。
+            /// The end time of the validity period of the quota. The value is displayed in UTC.
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
@@ -107,6 +107,35 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public int? NoticeType { get; set; }
 
             /// <summary>
+            /// The calculation cycle of the quota.
+            /// </summary>
+            [NameInMap("Period")]
+            [Validation(Required=false)]
+            public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod Period { get; set; }
+            public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod : TeaModel {
+                /// <summary>
+                /// The unit of the calculation cycle. Valid values:
+                /// 
+                /// *   second
+                /// *   minute
+                /// *   hour
+                /// *   day
+                /// *   week
+                /// </summary>
+                [NameInMap("PeriodUnit")]
+                [Validation(Required=false)]
+                public string PeriodUnit { get; set; }
+
+                /// <summary>
+                /// The value of the calculation cycle.
+                /// </summary>
+                [NameInMap("PeriodValue")]
+                [Validation(Required=false)]
+                public int? PeriodValue { get; set; }
+
+            }
+
+            /// <summary>
             /// The abbreviation of the Alibaba Cloud service name.
             /// </summary>
             [NameInMap("ProductCode")]
@@ -121,9 +150,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaActionCode { get; set; }
 
             /// <summary>
-            /// 配额类型。
-            /// - CommonQuota：通用配额。
-            /// - WhiteListLabel：权益配额。
+            /// The type of the quota.
+            /// 
+            /// *   CommonQuota: general quota
+            /// *   WhiteListLabel: privilege
             /// </summary>
             [NameInMap("QuotaCategory")]
             [Validation(Required=false)]
@@ -146,14 +176,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of records that are returned for the query.
+        /// The total number of records returned for the query.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

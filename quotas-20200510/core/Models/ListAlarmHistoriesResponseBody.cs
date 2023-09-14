@@ -30,12 +30,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            /// <summary>
-            /// The notification methods of the quota alert. Valid values:
-            /// 
-            /// *   sms: short messages
-            /// *   email: emails
-            /// </summary>
             [NameInMap("NotifyChannels")]
             [Validation(Required=false)]
             public List<string> NotifyChannels { get; set; }
@@ -48,7 +42,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string NotifyTarget { get; set; }
 
             /// <summary>
-            /// The abbreviation of the cloud service name.
+            /// The abbreviation of the Alibaba Cloud service name.
             /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
@@ -85,14 +79,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// The maximum number of records returned for the query.
+        /// The maximum number of records that are returned for the query.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to mark the location where the query is ended. An empty value indicates that all the data is queried.
+        /// The token that marks the position at which the query ends. An empty value indicates that all data is returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -106,7 +100,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of records returned for the query.
+        /// The total number of records that are returned for the query.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

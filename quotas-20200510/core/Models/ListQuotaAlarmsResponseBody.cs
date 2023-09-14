@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The token that marks the position at which the query ends.
         /// 
-        /// >  If an empty value is returned, all data is queried.
+        /// > An empty value indicates that all data is returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public List<ListQuotaAlarmsResponseBodyQuotaAlarms> QuotaAlarms { get; set; }
         public class ListQuotaAlarmsResponseBodyQuotaAlarms : TeaModel {
             /// <summary>
-            /// The ID of the quota alert.
+            /// The ID of the alert.
             /// </summary>
             [NameInMap("AlarmId")]
             [Validation(Required=false)]
             public string AlarmId { get; set; }
 
             /// <summary>
-            /// The name of the quota alert.
+            /// The name of the alert event.
             /// </summary>
             [NameInMap("AlarmName")]
             [Validation(Required=false)]
@@ -63,25 +63,19 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public bool? ExceedThreshold { get; set; }
 
-            /// <summary>
-            /// The notification method. Valid values:
-            /// 
-            /// *   sms: SMS messages
-            /// *   email: emails
-            /// </summary>
             [NameInMap("NotifyChannels")]
             [Validation(Required=false)]
             public List<string> NotifyChannels { get; set; }
 
             /// <summary>
-            /// The alert contact. Valid value: accountContact.
+            /// The alert contact. The value is accountContact.
             /// </summary>
             [NameInMap("NotifyTarget")]
             [Validation(Required=false)]
             public string NotifyTarget { get; set; }
 
             /// <summary>
-            /// The abbreviation of the cloud service name.
+            /// The abbreviation of the Alibaba Cloud service name.
             /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]

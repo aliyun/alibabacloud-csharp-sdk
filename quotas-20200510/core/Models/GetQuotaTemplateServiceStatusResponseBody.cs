@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
-            /// The status of the quota template. Valid values:
+            /// The state of the quota template. Valid values:
             /// 
-            /// *   \-1: disabled
-            /// *   1: enabled
+            /// *   \-1: The quota template is disabled.
+            /// *   1: The quota template is enabled.
             /// </summary>
             [NameInMap("ServiceStatus")]
             [Validation(Required=false)]

@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListProductDimensionGroupsRequest : TeaModel {
         /// <summary>
-        /// The maximum number of records that can be returned for the query.
-        /// 
-        /// Valid values: 1 to 200. Default value: 30.
+        /// The maximum number of records that can be returned for the query. Valid values: 1 to 200. Default value: 30.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -28,7 +26,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The service code.
         /// 
-        /// >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]

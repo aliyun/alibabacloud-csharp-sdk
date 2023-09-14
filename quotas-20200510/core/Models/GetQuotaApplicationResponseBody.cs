@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string AuditReason { get; set; }
 
             /// <summary>
-            /// The quota for which you apply.
+            /// The expected value of the quota.
             /// </summary>
             [NameInMap("DesireValue")]
             [Validation(Required=false)]
             public int? DesireValue { get; set; }
 
             /// <summary>
-            /// The quota dimensions.
+            /// The dimension.
             /// 
             /// Format: `{"regionId":"Region"}`.
             /// </summary>
@@ -61,21 +61,21 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public Dictionary<string, object> Dimension { get; set; }
 
             /// <summary>
-            /// The time when the quota took effect.
+            /// The time when the new quota value takes effect.
             /// </summary>
             [NameInMap("EffectiveTime")]
             [Validation(Required=false)]
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// The time when the quota expired.
+            /// The time when the new quota expires.
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// The notification method. Valid values:
+            /// The method of that is used to send alert notifications. Valid values:
             /// 
             /// *   0: Quota Center does not send a notification.
             /// *   1: Quota Center sends an email notification.
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public long? NoticeType { get; set; }
 
             /// <summary>
-            /// The abbreviation of the cloud service name.
+            /// The abbreviation of the Alibaba Cloud service name.
             /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaName { get; set; }
 
             /// <summary>
-            /// The unit of the quota.
+            /// The unit of the new quota value.
             /// </summary>
             [NameInMap("QuotaUnit")]
             [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// 
             /// *   Disagree: The application is rejected.
             /// *   Agree: The application is approved.
-            /// *   Process: The application is pending approval.
+            /// *   Process: The application is being reviewed.
             /// *   Cancel: The application is closed.
             /// </summary>
             [NameInMap("Status")]

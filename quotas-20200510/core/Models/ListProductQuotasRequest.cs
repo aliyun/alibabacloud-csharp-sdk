@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The type of the quota. Valid values:
         /// 
-        /// *   CommonQuota: general quota
+        /// *   CommonQuota (default value): general quota
         /// *   FlowControl: API rate limit
         /// *   WhiteListLabel: whitelist quota
         /// </summary>

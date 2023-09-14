@@ -9,23 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListQuotaApplicationsRequest : TeaModel {
+        /// <summary>
+        /// The quota dimensions.
+        /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationsRequestDimensions> Dimensions { get; set; }
         public class ListQuotaApplicationsRequestDimensions : TeaModel {
             /// <summary>
-            /// The dimension keys.
+            /// The key of the dimension.
             /// 
-            /// >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The dimension values.
+            /// The value of the dimension.
             /// 
-            /// >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// The maximum number of records that you want to return for the query.
+        /// The maximum number of records that can be returned for the query.
         /// 
         /// Valid values: 1 to 200. Default value: 30.
         /// </summary>
@@ -50,16 +53,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that marks the position from which you want to start the query. An empty value indicates that the query starts from the beginning.
+        /// The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The abbreviation of the cloud service name.
+        /// The abbreviation of the Alibaba Cloud service name.
         /// 
-        /// >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -75,8 +78,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The type of the quota. Valid values:
         /// 
-        /// *   FlowControl: API rate limit
         /// *   CommonQuota: general quota
+        /// *   FlowControl: API rate limit
+        /// *   WhiteListLabel: whitelist quota
         /// </summary>
         [NameInMap("QuotaCategory")]
         [Validation(Required=false)]
@@ -85,10 +89,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The status of the application. Valid values:
         /// 
-        /// *   Disagree: The application is rejected.
-        /// *   Agree: The application is approved.
-        /// *   Process: The application is pending approval.
-        /// *   Cancel: The application is closed.
+        /// *   Disagree: rejects the application.
+        /// *   Agree: approves the application.
+        /// *   Process: reviews the application.
+        /// *   Cancel: cancels the application.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

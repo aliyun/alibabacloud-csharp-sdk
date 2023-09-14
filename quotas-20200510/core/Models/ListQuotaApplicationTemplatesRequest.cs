@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The token that marks the position from which you want to start the query.
         /// 
-        /// > An empty value indicates that the query starts from the beginning.
+        /// > If you leave this parameter empty, the query starts from the beginning.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -76,9 +76,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaActionCode { get; set; }
 
         /// <summary>
-        /// 配额种类。取值：
-        /// - CommonQuota：通用配额。
-        /// - WhiteListLabel：权益配额。
+        /// The type of the quota. Valid values:
+        /// 
+        /// *   CommonQuota: general quota
+        /// *   WhiteListLabel: privilege
+        /// *   FlowControl: API rate limit
         /// </summary>
         [NameInMap("QuotaCategory")]
         [Validation(Required=false)]

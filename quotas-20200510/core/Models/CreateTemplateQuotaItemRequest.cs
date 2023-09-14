@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public List<CreateTemplateQuotaItemRequestDimensions> Dimensions { get; set; }
         public class CreateTemplateQuotaItemRequestDimensions : TeaModel {
             /// <summary>
-            /// The dimension keys.
+            /// The key of the dimension.
             /// 
             /// The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The dimension values.
+            /// The value of the dimension.
             /// 
             /// The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
         /// 
-        /// > If you do not specify this parameter, the quota takes effect immediately.
+        /// > If you leave this parameter empty, the quota takes effect immediately.
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
         /// 
-        /// > If the value of this parameter is empty, no end time is specified.
+        /// > If you leave this parameter empty, no end time is specified.
         /// </summary>
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
@@ -102,10 +102,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaActionCode { get; set; }
 
         /// <summary>
-        /// The type of the quota. Valid values:
+        /// The quota type. Valid values:
         /// 
         /// *   CommonQuota: general quota
-        /// *   WhiteListLabel: whitelist quota
+        /// *   WhiteListLabel: privilege
+        /// *   FlowControl: API rate limit
         /// </summary>
         [NameInMap("QuotaCategory")]
         [Validation(Required=false)]

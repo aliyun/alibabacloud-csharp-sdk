@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public List<ListProductDimensionGroupsResponseBodyDimensionGroups> DimensionGroups { get; set; }
         public class ListProductDimensionGroupsResponseBodyDimensionGroups : TeaModel {
             /// <summary>
-            /// The keys of the dimension group.
+            /// The key of the dimension group.
             /// </summary>
             [NameInMap("DimensionKeys")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The maximum number of records that are returned for the query.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

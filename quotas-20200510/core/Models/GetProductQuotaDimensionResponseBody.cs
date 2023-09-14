@@ -10,47 +10,47 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class GetProductQuotaDimensionResponseBody : TeaModel {
         /// <summary>
-        /// The details about the quota dimension.
+        /// The details of the quota dimension.
         /// </summary>
         [NameInMap("QuotaDimension")]
         [Validation(Required=false)]
         public GetProductQuotaDimensionResponseBodyQuotaDimension QuotaDimension { get; set; }
         public class GetProductQuotaDimensionResponseBodyQuotaDimension : TeaModel {
             /// <summary>
-            /// The quota dimensions that are supported by the cloud service.
+            /// The quota dimensions on which the quota dimension that you want to query is dependent.
             /// </summary>
             [NameInMap("DependentDimensions")]
             [Validation(Required=false)]
             public List<string> DependentDimensions { get; set; }
 
             /// <summary>
-            /// The dimension key. Valid values:
+            /// The key of the quota dimension. Valid values:
             /// 
-            /// *   regionId: region ID
-            /// *   zoneId: zone ID
-            /// *   chargeType: billing method
-            /// *   networkType: network type
+            /// *   regionId: the region ID.
+            /// *   zoneId: the zone ID.
+            /// *   chargeType: the billing method.
+            /// *   networkType: the network type.
             /// </summary>
             [NameInMap("DimensionKey")]
             [Validation(Required=false)]
             public string DimensionKey { get; set; }
 
             /// <summary>
-            /// The details about the dimension value.
+            /// The details of the quota dimension value.
             /// </summary>
             [NameInMap("DimensionValueDetail")]
             [Validation(Required=false)]
             public List<GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail> DimensionValueDetail { get; set; }
             public class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail : TeaModel {
                 /// <summary>
-                /// The name of the dimension value.
+                /// The name of the quota dimension value.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The dimension value.
+                /// The quota dimension value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             }
 
             /// <summary>
-            /// The dimension values.
+            /// The values of the quota dimension.
             /// </summary>
             [NameInMap("DimensionValues")]
             [Validation(Required=false)]
             public List<string> DimensionValues { get; set; }
 
             /// <summary>
-            /// The name of the dimension.
+            /// The name of the quota dimension.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

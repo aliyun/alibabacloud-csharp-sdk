@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The keyword that is used to execute the query.
+        /// The keyword that is used for the query.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The maximum number of records to be returned for the query.
+        /// The maximum number of records that can be returned for the query.
         /// 
         /// Valid values: 1 to 200. Default value: 30.
         /// </summary>
@@ -33,23 +33,23 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to mark the location where the query is started. An empty value indicates that the query is executed from the start.
+        /// The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The abbreviation of the cloud service name.
+        /// The abbreviation of the Alibaba Cloud service name.
         /// 
-        /// >  For more information about the Alibaba Cloud services that support Quota Center, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The start of the time range to query.
+        /// The beginning of the time range to query.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class CreateQuotaAlarmResponseBody : TeaModel {
-        [NameInMap("AlarmId")]
+    public class CreateQuotaApplicationsForTemplateResponseBody : TeaModel {
+        [NameInMap("AliyunUids")]
         [Validation(Required=false)]
-        public string AlarmId { get; set; }
+        public List<string> AliyunUids { get; set; }
+
+        [NameInMap("BatchQuotaApplicationId")]
+        [Validation(Required=false)]
+        public string BatchQuotaApplicationId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

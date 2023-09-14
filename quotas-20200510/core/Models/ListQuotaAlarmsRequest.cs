@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListQuotaAlarmsRequest : TeaModel {
         /// <summary>
-        /// The name of the quota alert.
+        /// The name of the alert.
         /// </summary>
         [NameInMap("AlarmName")]
         [Validation(Required=false)]
         public string AlarmName { get; set; }
 
         /// <summary>
-        /// The maximum number of records that you want to return for the query.
+        /// The maximum number of records that can be returned for the query.
         /// 
         /// Valid values: 1 to 200. Default value: 30.
         /// </summary>
@@ -28,16 +28,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The token that marks the position from which you want to start the query.
         /// 
-        /// >  An empty value indicates that the query starts from the beginning.
+        /// > An empty value indicates that the query starts from the beginning.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The abbreviation of the cloud service name.
+        /// The abbreviation of the Alibaba Cloud service name.
         /// 
-        /// >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -45,28 +45,33 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
         /// <summary>
         /// The ID of the quota.
+        /// 
+        /// > The `ProductCode` parameter is required if you specify this parameter.
         /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
         public string QuotaActionCode { get; set; }
 
+        /// <summary>
+        /// The quota dimensions.
+        /// </summary>
         [NameInMap("QuotaDimensions")]
         [Validation(Required=false)]
         public List<ListQuotaAlarmsRequestQuotaDimensions> QuotaDimensions { get; set; }
         public class ListQuotaAlarmsRequestQuotaDimensions : TeaModel {
             /// <summary>
-            /// The dimension keys.
+            /// The key of the dimension.
             /// 
-            /// >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The dimension values.
+            /// The value of the dimension.
             /// 
-            /// >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class GetProductQuotaResponseBody : TeaModel {
         /// <summary>
-        /// The details about the quota.
+        /// The details of the quotas.
         /// </summary>
         [NameInMap("Quota")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? Adjustable { get; set; }
 
             /// <summary>
-            /// The range of the quota value, for example, `[802,10000]`.
+            /// The range of the quota value.
             /// </summary>
             [NameInMap("ApplicableRange")]
             [Validation(Required=false)]
@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string ApplicableType { get; set; }
 
+            [NameInMap("ApplyReasonTips")]
+            [Validation(Required=false)]
+            public string ApplyReasonTips { get; set; }
+
             /// <summary>
             /// Indicates whether the system shows the used value of the quota. Valid values:
             /// 
@@ -54,16 +58,22 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? Consumable { get; set; }
 
             /// <summary>
-            /// The quota dimensions. Format: `{"regionId":"Region"}`.
+            /// The quota dimension. Format: `{"regionId":"Region"}`.
             /// </summary>
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
             public Dictionary<string, object> Dimensions { get; set; }
 
+            /// <summary>
+            /// The start time of the validity period of the quota. Specify the value in UTC.
+            /// </summary>
             [NameInMap("EffectiveTime")]
             [Validation(Required=false)]
             public string EffectiveTime { get; set; }
 
+            /// <summary>
+            /// The end time of the validity period of the quota. Specify the value in UTC.
+            /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
@@ -118,6 +128,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string QuotaArn { get; set; }
 
+            /// <summary>
+            /// The type of the quota. Valid values:
+            /// 
+            /// *   CommonQuota: general quota
+            /// *   FlowControl: API rate limit
+            /// *   WhiteListLabel: whitelist quota
+            /// </summary>
             [NameInMap("QuotaCategory")]
             [Validation(Required=false)]
             public string QuotaCategory { get; set; }
@@ -130,7 +147,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaDescription { get; set; }
 
             /// <summary>
-            /// The details about the quota.
+            /// The details of the quotas.
             /// </summary>
             [NameInMap("QuotaItems")]
             [Validation(Required=false)]
@@ -144,9 +161,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 public string Quota { get; set; }
 
                 /// <summary>
-                /// The unit of the quota. 
+                /// The unit of the new quota value.
                 /// 
-                /// >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is Number of security groups.
+                /// **
+                /// 
+                /// **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
                 /// </summary>
                 [NameInMap("QuotaUnit")]
                 [Validation(Required=false)]
@@ -181,27 +200,26 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The type of the quota. Valid values:
             /// 
-            /// - privilege
-            /// - normal (default value)
+            /// *   privilege
+            /// *   normal (default value)
             /// </summary>
             [NameInMap("QuotaType")]
             [Validation(Required=false)]
             public string QuotaType { get; set; }
 
             /// <summary>
-            /// The unit of the quota.
+            /// The unit of the new quota value.
             /// 
-            /// >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+            /// **
+            /// 
+            /// **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
             /// </summary>
             [NameInMap("QuotaUnit")]
             [Validation(Required=false)]
             public string QuotaUnit { get; set; }
 
             /// <summary>
-            /// The range of the quota value that can be requested for the current quota item. When you configure a quota template, you can use the range as a reference.  
-            /// 
-            /// - If the value of the ApplicableType parameter is continuous and the value of the ApplicableRange parameter is [802,1000], the quota value ranges from 802 to 1,000.
-            /// - If the value of the ApplicableType parameter is discontinuous and the value of the ApplicableRange parameter is [10,20,50,100], the quota value is 10, 20, 50, or 100.
+            /// The range of the quota value.
             /// </summary>
             [NameInMap("SupportedRange")]
             [Validation(Required=false)]

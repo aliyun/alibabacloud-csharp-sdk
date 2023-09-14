@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public List<CreateQuotaApplicationRequestDimensions> Dimensions { get; set; }
         public class CreateQuotaApplicationRequestDimensions : TeaModel {
             /// <summary>
-            /// The dimension keys.
+            /// The key of the dimension.
             /// 
             /// The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The dimension values.
+            /// The value of the dimension.
             /// 
             /// The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// 
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// Specifies whether to send a notification about the application result. Valid values:
         /// 
-        /// *   0 (default value): no
-        /// *   3: yes
+        /// *   0 (default value): sends a notification about the application result.
+        /// *   3: A notification about the application result is sent.
         /// </summary>
         [NameInMap("NoticeType")]
         [Validation(Required=false)]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The type of the quota.
         /// 
-        /// *   CommonQuota: general quota
+        /// *   CommonQuota (default value): general quota
         /// *   FlowControl: API rate limit
         /// *   WhiteListLabel: whitelist quota
         /// </summary>

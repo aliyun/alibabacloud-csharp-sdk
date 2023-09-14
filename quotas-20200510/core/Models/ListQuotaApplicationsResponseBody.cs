@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListQuotaApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// The number of records that are returned for the query.
+        /// The maximum number of records that are returned for the query.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The details about the applications.
+        /// The details of the applications.
         /// </summary>
         [NameInMap("QuotaApplications")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public float? DesireValue { get; set; }
 
             /// <summary>
-            /// The quota dimension of the application.
+            /// The dimension of the application.
             /// </summary>
             [NameInMap("Dimension")]
             [Validation(Required=false)]
@@ -96,8 +96,8 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// Indicates whether Quota Center sends a notification about the application result. Valid values:
             /// 
-            /// *   0: Quota Center sends a notification.
-            /// *   3: Quota Center does not send a notification.
+            /// *   0: A notification about the application result is not sent.
+            /// *   3: A notification about the application result is sent.
             /// </summary>
             [NameInMap("NoticeType")]
             [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod Period { get; set; }
             public class ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod : TeaModel {
                 /// <summary>
-                /// The unit of the calculation cycle of the quota. Valid values:
+                /// The unit of the calculation cycle. Valid values:
                 /// 
                 /// *   second
                 /// *   minute
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 public string PeriodUnit { get; set; }
 
                 /// <summary>
-                /// The value of the calculation cycle of the quota.
+                /// The value of the calculation cycle.
                 /// </summary>
                 [NameInMap("PeriodValue")]
                 [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             }
 
             /// <summary>
-            /// The abbreviation of the cloud service name.
+            /// The abbreviation of the Alibaba Cloud service name.
             /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaName { get; set; }
 
             /// <summary>
-            /// The unit of the quota.
+            /// The unit of the new quota value.
             /// </summary>
             [NameInMap("QuotaUnit")]
             [Validation(Required=false)]
@@ -186,8 +186,8 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// 
             /// *   Disagree: The application is rejected.
             /// *   Agree: The application is approved.
-            /// *   Process: The application is pending approval.
-            /// *   Cancel: The application is closed.
+            /// *   Process: The application is being reviewed.
+            /// *   Cancel: The application is canceled.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? DesireValue { get; set; }
 
         /// <summary>
-        /// The quota dimensions.
+        /// The quota dimension.
         /// </summary>
         [NameInMap("Dimension")]
         [Validation(Required=false)]
