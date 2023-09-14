@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? AppId { get; set; }
 
             /// <summary>
-            /// PID。
+            /// PID.
             /// </summary>
             [NameInMap("Pid")]
             [Validation(Required=false)]

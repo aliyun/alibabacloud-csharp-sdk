@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AlertName { get; set; }
 
+        [NameInMap("AlertPiplines")]
+        [Validation(Required=false)]
+        public string AlertPiplines { get; set; }
+
         /// <summary>
         /// The content of the Application Monitoring or Browser Monitoring alert rule. The following code provides an example of the **AlertRuleContent** parameter. For more information about the meaning of each field, see the supplementary description.
         /// 
@@ -123,6 +127,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        [NameInMap("DataConfig")]
+        [Validation(Required=false)]
+        public string DataConfig { get; set; }
 
         /// <summary>
         /// The duration of the Prometheus alert rule. Unit: minutes.
@@ -208,6 +216,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("MetricsType")]
         [Validation(Required=false)]
         public string MetricsType { get; set; }
+
+        [NameInMap("Notice")]
+        [Validation(Required=false)]
+        public string Notice { get; set; }
 
         /// <summary>
         /// The notification policy.
