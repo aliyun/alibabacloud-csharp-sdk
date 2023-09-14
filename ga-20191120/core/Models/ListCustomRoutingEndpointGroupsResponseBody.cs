@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupId { get; set; }
 
             /// <summary>
-            /// A list of endpoint group IP addresses.
+            /// The list of endpoint group IP addresses.
             /// </summary>
             [NameInMap("EndpointGroupIpList")]
             [Validation(Required=false)]
             public List<string> EndpointGroupIpList { get; set; }
 
             /// <summary>
-            /// The ID of the region where the endpoint group is deployed.
+            /// The ID of the region where the endpoint group is created.
             /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
@@ -72,26 +72,69 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The service ID to which the managed instance belongs.
+            /// 
+            /// >  Valid only when the ServiceManaged parameter is True.
+            /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
+            /// <summary>
+            /// Is it a managed instance. Valid values:
+            /// 
+            /// - true
+            /// - false
+            /// </summary>
             [NameInMap("ServiceManaged")]
             [Validation(Required=false)]
             public bool? ServiceManaged { get; set; }
 
+            /// <summary>
+            /// A list of action policies that users can execute on this managed instance.
+            /// </summary>
             [NameInMap("ServiceManagedInfos")]
             [Validation(Required=false)]
             public List<ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> ServiceManagedInfos { get; set; }
             public class ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos : TeaModel {
+                /// <summary>
+                /// Managed policy action name, Valid values:
+                /// - Create
+                /// - Update
+                /// - Delete
+                /// - Associate
+                /// - UserUnmanaged
+                /// - CreateChild
+                /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
+                /// <summary>
+                /// Sub resource type, Valid values:
+                /// 
+                /// - Listener
+                /// - IpSet
+                /// - EndpointGroup
+                /// - ForwardingRule
+                /// - Endpoint
+                /// - EndpointGroupDestination
+                /// - EndpointPolicy
+                /// 
+                /// >Only valid when the Action parameter is CreateChild.
+                /// </summary>
                 [NameInMap("ChildType")]
                 [Validation(Required=false)]
                 public string ChildType { get; set; }
 
+                /// <summary>
+                /// Is the managed policy action managed, Valid values:
+                /// 
+                /// - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
+                /// 
+                /// - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+                /// </summary>
                 [NameInMap("IsManaged")]
                 [Validation(Required=false)]
                 public bool? IsManaged { get; set; }
@@ -99,12 +142,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The status of the endpoint group. Valid values:
+            /// The status of the endpoint group.
             /// 
-            /// *   **init**: The endpoint group is being initialized.
-            /// *   **active**: The endpoint group is running as expected.
-            /// *   **updating**: The endpoint group is being updated.
-            /// *   **deleting**: The endpoint group is being deleted.
+            /// *   **init**: being initialized
+            /// *   **active**: running as expected
+            /// *   **updating**: being updated
+            /// *   **deleting**: being deleted
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -120,7 +163,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries returned on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -134,7 +177,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

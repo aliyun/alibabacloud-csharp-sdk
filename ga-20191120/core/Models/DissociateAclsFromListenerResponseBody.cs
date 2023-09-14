@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DissociateAclsFromListenerResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the ACL.
+        /// The IDs of the ACL.
         /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]

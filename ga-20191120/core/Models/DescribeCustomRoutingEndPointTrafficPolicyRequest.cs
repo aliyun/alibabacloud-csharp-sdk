@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeCustomRoutingEndPointTrafficPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the endpoint to which the traffic destination belongs.
+        /// The ID of the traffic policy to be queried.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// The ID of the traffic policy to be queried.
+        /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// The operation that you want to perform. Set the value to **DescribeCustomRoutingEndPointTrafficPolicy**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

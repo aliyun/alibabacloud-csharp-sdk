@@ -27,6 +27,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The domain name associated with the additional certificate.
+        /// 
+        /// You can specify up to 10 domain names in each request.
+        /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<string> Domains { get; set; }

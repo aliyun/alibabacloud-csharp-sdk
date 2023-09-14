@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
-    public class DescribeCustomRoutingEndpointGroupDestinationsRequest : TeaModel {
+    public class DescribeLogStoreOfEndpointGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the endpoint group mapping configuration.
+        /// The ID of the GA instance.
         /// </summary>
-        [NameInMap("DestinationId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string DestinationId { get; set; }
+        public string AcceleratorId { get; set; }
 
         /// <summary>
         /// The ID of the endpoint group.
@@ -24,7 +24,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The ID of the listener.
+        /// </summary>
+        [NameInMap("ListenerId")]
+        [Validation(Required=false)]
+        public string ListenerId { get; set; }
+
+        /// <summary>
+        /// The region where the GA instance is deployed. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

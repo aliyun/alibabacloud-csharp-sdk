@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The service ID to which the managed instance belongs.
         /// 
-        /// >  Valid only when the ServiceManaged parameter is True.。
+        /// >  Valid only when the ServiceManaged parameter is True.
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// Is it a managed instance. Value：
+        /// Is it a managed instance. Valid values:
         /// 
         /// - true
         /// - false
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<DescribeCustomRoutingEndpointResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
         public class DescribeCustomRoutingEndpointResponseBodyServiceManagedInfos : TeaModel {
             /// <summary>
-            /// Managed policy action name，Value：
+            /// Managed policy action name, Valid values:
             /// 
             /// - Create
             /// - Update
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// Sub resource type，Value：
+            /// Sub resource type, Valid values:
             /// 
             /// - Listener
             /// - IpSet
@@ -109,11 +109,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ChildType { get; set; }
 
             /// <summary>
-            /// Is the managed policy action managed，Value：
+            /// Is the managed policy action managed, Valid values:
             /// 
-            /// - true：The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance。
+            /// - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
             /// 
-            /// - false：The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+            /// - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
             /// </summary>
             [NameInMap("IsManaged")]
             [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The status of the endpoint .
+        /// The status of the endpoint.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

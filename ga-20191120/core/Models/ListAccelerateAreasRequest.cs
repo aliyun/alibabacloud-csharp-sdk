@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAccelerateAreasRequest : TeaModel {
         /// <summary>
-        /// The region ID of the Global Accelerator instance. Set the value to **cn-hangzhou**.
+        /// The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

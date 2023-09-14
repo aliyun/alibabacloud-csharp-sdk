@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -99,14 +102,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// The tags of the bandwidth plans.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListBandwidthackagesResponseBodyBandwidthPackagesTags> Tags { get; set; }
             public class ListBandwidthackagesResponseBodyBandwidthPackagesTags : TeaModel {
+                /// <summary>
+                /// The tag key of the bandwidth plan.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value of the bandwidth plan.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

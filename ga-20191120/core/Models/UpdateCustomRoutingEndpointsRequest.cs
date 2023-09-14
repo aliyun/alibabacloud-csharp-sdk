@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The configurations of the endpoint.
+        /// </summary>
         [NameInMap("EndpointConfigurations")]
         [Validation(Required=false)]
         public List<UpdateCustomRoutingEndpointsRequestEndpointConfigurations> EndpointConfigurations { get; set; }
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string EndpointId { get; set; }
 
+            /// <summary>
+            /// The configurations of the policy.
+            /// </summary>
             [NameInMap("PolicyConfigurations")]
             [Validation(Required=false)]
             public List<UpdateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurations> PolicyConfigurations { get; set; }
@@ -48,6 +54,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public string Address { get; set; }
 
+                /// <summary>
+                /// The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.
+                /// 
+                /// If you leave this parameter empty, traffic is forwarded to all destination ports.
+                /// 
+                /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
+                /// 
+                /// You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 port ranges for each destination.
+                /// </summary>
                 [NameInMap("PortRanges")]
                 [Validation(Required=false)]
                 public List<UpdateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurationsPortRanges> PortRanges { get; set; }

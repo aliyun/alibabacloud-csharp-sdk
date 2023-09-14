@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBasicAcceleratorsResponseBody : TeaModel {
         /// <summary>
-        /// The basic GA instances.
+        /// The information about basic GA instances.
         /// </summary>
         [NameInMap("Accelerators")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string BandwidthBillingType { get; set; }
 
             /// <summary>
-            /// The details about the basic bandwidth plan that is associated with the basic GA instance.
+            /// Details about the basic bandwidth plan that is associated with the basic GA instance.
             /// </summary>
             [NameInMap("BasicBandwidthPackage")]
             [Validation(Required=false)]
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The ID of the endpoint group.
+            /// The ID of the endpoint group that is associated with the basic GA instance.
             /// </summary>
             [NameInMap("BasicEndpointGroupId")]
             [Validation(Required=false)]
             public string BasicEndpointGroupId { get; set; }
 
             /// <summary>
-            /// The ID of the acceleration region.
+            /// The ID of the acceleration region where the basic GA instance is deployed.
             /// </summary>
             [NameInMap("BasicIpSetId")]
             [Validation(Required=false)]
@@ -91,14 +91,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// Indicates whether cross-border acceleration is enabled for the GA instance. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
+            /// </summary>
             [NameInMap("CrossBorderStatus")]
             [Validation(Required=false)]
             public bool? CrossBorderStatus { get; set; }
 
             /// <summary>
-            /// The details about the cross-region acceleration bandwidth plan that is associated with the GA instance.
+            /// Details about the cross-region acceleration bandwidth plan that is associated with the GA instance.
             /// 
-            /// This array is returned only for GA instances that are created on the international site (alibabacloud.com).
+            /// This parameter is returned only when you call this operation on the International site (alibabacloud.com).
             /// </summary>
             [NameInMap("CrossDomainBandwidthPackage")]
             [Validation(Required=false)]
@@ -165,15 +171,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The status of the basic GA instance.
+            /// The state of the basic GA instance.
             /// 
-            /// *   **init**: The GA instance is being initialized.
-            /// *   **active**: The GA instance is available.
-            /// *   **configuring**: The GA instance is being configured.
-            /// *   **binding**: The GA instance is being associated.
+            /// *   **init**: The basic GA instance is being initialized.
+            /// *   **active**: The basic GA instance is available.
+            /// *   **configuring**: The basic GA instance is being configured.
+            /// *   **binding**: The basic GA instance is being associated.
             /// *   **unbinding**: The GA instance is being disassociated.
-            /// *   **deleting**: The GA instance is being deleted.
-            /// *   **finacialLocked**: The GA instance is locked due to overdue payments.
+            /// *   **deleting**: The basic GA instance is being deleted.
+            /// *   **finacialLocked**: The basic GA instance is locked due to overdue payments.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -203,7 +209,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// An invalid parameter.
+            /// This parameter is invalid.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

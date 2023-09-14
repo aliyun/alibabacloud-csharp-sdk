@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -45,31 +45,29 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The status of the basic GA instance. Valid values:
+        /// The state of the basic GA instance. Valid values:
         /// 
-        /// *   **init**: The GA instance is being initialized.
-        /// *   **active**: The GA instance is available.
-        /// *   **configuring**: The GA instance is being configured.
-        /// *   **binding**: The GA instance is being associated.
-        /// *   **unbinding**: The GA instance is being disassociated.
-        /// *   **deleting**: The GA instance is being deleted.
-        /// *   **finacialLocked**: The GA instance is locked due to overdue payments.
+        /// *   **init**: The basic GA instance is being initialized.
+        /// *   **active**: The basic GA instance is available.
+        /// *   **configuring**: The basic GA instance is being configured.
+        /// *   **binding**: The basic GA instance is being associated.
+        /// *   **unbinding**: The basic GA instance is being disassociated.
+        /// *   **deleting**: The basic GA instance is being deleted.
+        /// *   **finacialLocked**: The basic GA instance is locked due to overdue payments.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
 
         /// <summary>
-        /// The tags of the basic GA instance.
-        /// 
-        /// You can specify up to 20 tags.
+        /// The tags of the GA instance.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListBasicAcceleratorsRequestTag> Tag { get; set; }
         public class ListBasicAcceleratorsRequestTag : TeaModel {
             /// <summary>
-            /// The tag key of the basic GA instance. The tag key cannot be an empty string.
+            /// The key of tag N of the basic GA instance. The tag key cannot be an empty string.
             /// 
             /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
             /// 
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the basic GA instance. The tag value cannot be an empty string.
+            /// The value of tag N of the basic GA instance. The tag value can be an empty string.
             /// 
             /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
             /// 

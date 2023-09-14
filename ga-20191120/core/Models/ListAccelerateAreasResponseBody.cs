@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAccelerateAreasResponseBody : TeaModel {
         /// <summary>
-        /// The acceleration areas.
+        /// The information about the areas.
         /// </summary>
         [NameInMap("Areas")]
         [Validation(Required=false)]
         public List<ListAccelerateAreasResponseBodyAreas> Areas { get; set; }
         public class ListAccelerateAreasResponseBodyAreas : TeaModel {
             /// <summary>
-            /// The ID of the acceleration area.
+            /// The area ID.
             /// </summary>
             [NameInMap("AreaId")]
             [Validation(Required=false)]
             public string AreaId { get; set; }
 
             /// <summary>
-            /// The name of the acceleration area.
+            /// The area name.
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The list of regions.
+            /// The regions in the acceleration area.
             /// </summary>
             [NameInMap("RegionList")]
             [Validation(Required=false)]
             public List<ListAccelerateAreasResponseBodyAreasRegionList> RegionList { get; set; }
             public class ListAccelerateAreasResponseBodyAreasRegionList : TeaModel {
                 /// <summary>
-                /// The name of the region.
+                /// The region name.
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

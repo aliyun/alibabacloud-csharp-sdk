@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DissociateAclsFromListenerRequest : TeaModel {
+        /// <summary>
+        /// The ID of the ACL. You can disassociate up to two ACLs from a listener.
+        /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
         public List<string> AclIds { get; set; }

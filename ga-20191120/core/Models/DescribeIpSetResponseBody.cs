@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// The line type of the elastic IP address (EIP) in the acceleration region.
+        /// The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
         /// 
         /// *   **BGP**: BGP (Multi-ISP) lines.
-        /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
+        /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines.
         /// 
         /// If you are allowed to use single-ISP bandwidth, one of the following values is returned:
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **ChinaUnicom_L2**: China Unicom (single ISP)\_L2.
         /// *   **ChinaMobile_L2**: China Mobile (single ISP)\_L2.
         /// 
-        /// >  The supported single-ISP line types vary based on the acceleration region.
+        /// >  The supported single-ISP type varies with the acceleration region.
         /// </summary>
         [NameInMap("IspType")]
         [Validation(Required=false)]
@@ -82,26 +82,70 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The service ID to which the managed instance belongs.
+        /// 
+        /// >  Valid only when the ServiceManaged parameter is True.
+        /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
+        /// <summary>
+        /// Is it a managed instance. Valid values:
+        /// 
+        /// - true
+        /// - false
+        /// </summary>
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }
 
+        /// <summary>
+        /// A list of action policies that users can execute on this managed instance.
+        /// </summary>
         [NameInMap("ServiceManagedInfos")]
         [Validation(Required=false)]
         public List<DescribeIpSetResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
         public class DescribeIpSetResponseBodyServiceManagedInfos : TeaModel {
+            /// <summary>
+            /// Managed policy action name, Valid values:
+            /// 
+            /// - Create
+            /// - Update
+            /// - Delete
+            /// - Associate
+            /// - UserUnmanaged
+            /// - CreateChild
+            /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
+            /// <summary>
+            /// Sub resource type, Valid values:
+            /// 
+            /// - Listener
+            /// - IpSet
+            /// - EndpointGroup
+            /// - ForwardingRule
+            /// - Endpoint
+            /// - EndpointGroupDestination
+            /// - EndpointPolicy
+            /// 
+            /// >Only valid when the Action parameter is CreateChild.
+            /// </summary>
             [NameInMap("ChildType")]
             [Validation(Required=false)]
             public string ChildType { get; set; }
 
+            /// <summary>
+            /// Is the managed policy action managed, Valid values:
+            /// 
+            /// - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
+            /// 
+            /// - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+            /// </summary>
             [NameInMap("IsManaged")]
             [Validation(Required=false)]
             public bool? IsManaged { get; set; }
@@ -114,7 +158,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **init**: The acceleration region is being initialized.
         /// *   **active**: The acceleration region is in the running state.
         /// *   **updating**: The acceleration region is being configured.
-        /// *   **deleting:** The VPN gateway is being deleted.
+        /// *   **deleting**: The GA instance is being deleted.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

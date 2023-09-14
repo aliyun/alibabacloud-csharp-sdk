@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string CbnGeographicRegionIdB { get; set; }
 
         /// <summary>
-        /// The billing method. Valid values:
+        /// The billing method of the bandwidth plan. Valid values:
         /// 
-        /// *   **PREPAY** (default): subscription
-        /// *   **POSTPAY**: pay-as-you-go By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.
+        /// *   **PREPAY** (default): subscription.
+        /// *   **POSTPAY**: pay-as-you-go. By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -179,14 +179,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags to add to the bandwidth plan.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateBandwidthPackageRequestTag> Tag { get; set; }
         public class CreateBandwidthPackageRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key.
+            /// 
+            /// The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// 
+            /// You can specify at most 20 tag keys.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value.
+            /// 
+            /// Each tag key corresponds to a tag value. Valid values of **N**: **1** to **20**.
+            /// 
+            /// The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

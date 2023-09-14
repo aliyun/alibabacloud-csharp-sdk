@@ -8827,6 +8827,14 @@ namespace AlibabaCloud.SDK.Ga20191120
             return await DescribeEndpointGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=DescribeIpSet\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request DescribeIpSetRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeIpSetResponse
+         */
         public DescribeIpSetResponse DescribeIpSetWithOptions(DescribeIpSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8858,6 +8866,14 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<DescribeIpSetResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=DescribeIpSet\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request DescribeIpSetRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeIpSetResponse
+         */
         public async Task<DescribeIpSetResponse> DescribeIpSetWithOptionsAsync(DescribeIpSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8889,12 +8905,26 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<DescribeIpSetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=DescribeIpSet\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request DescribeIpSetRequest
+          * @return DescribeIpSetResponse
+         */
         public DescribeIpSetResponse DescribeIpSet(DescribeIpSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeIpSetWithOptions(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=DescribeIpSet\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request DescribeIpSetRequest
+          * @return DescribeIpSetResponse
+         */
         public async Task<DescribeIpSetResponse> DescribeIpSetAsync(DescribeIpSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8999,6 +9029,96 @@ namespace AlibabaCloud.SDK.Ga20191120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeListenerWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeLogStoreOfEndpointGroupResponse DescribeLogStoreOfEndpointGroupWithOptions(DescribeLogStoreOfEndpointGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceleratorId))
+            {
+                query["AcceleratorId"] = request.AcceleratorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointGroupId))
+            {
+                query["EndpointGroupId"] = request.EndpointGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerId))
+            {
+                query["ListenerId"] = request.ListenerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLogStoreOfEndpointGroup",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLogStoreOfEndpointGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeLogStoreOfEndpointGroupResponse> DescribeLogStoreOfEndpointGroupWithOptionsAsync(DescribeLogStoreOfEndpointGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceleratorId))
+            {
+                query["AcceleratorId"] = request.AcceleratorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointGroupId))
+            {
+                query["EndpointGroupId"] = request.EndpointGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerId))
+            {
+                query["ListenerId"] = request.ListenerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLogStoreOfEndpointGroup",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLogStoreOfEndpointGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeLogStoreOfEndpointGroupResponse DescribeLogStoreOfEndpointGroup(DescribeLogStoreOfEndpointGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLogStoreOfEndpointGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeLogStoreOfEndpointGroupResponse> DescribeLogStoreOfEndpointGroupAsync(DescribeLogStoreOfEndpointGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLogStoreOfEndpointGroupWithOptionsAsync(request, runtime);
         }
 
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9180,6 +9300,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DetachLogStoreFromEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
           *     *   If the endpoint group is in the **updating** state, the Log Service Logstore is being disassociated from the endpoint group. In this case, you can perform only query operations.
           *     <!---->
@@ -9234,6 +9355,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DetachLogStoreFromEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
           *     *   If the endpoint group is in the **updating** state, the Log Service Logstore is being disassociated from the endpoint group. In this case, you can perform only query operations.
           *     <!---->
@@ -9288,6 +9410,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DetachLogStoreFromEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
           *     *   If the endpoint group is in the **updating** state, the Log Service Logstore is being disassociated from the endpoint group. In this case, you can perform only query operations.
           *     <!---->
@@ -9304,6 +9427,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DetachLogStoreFromEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
           *     *   If the endpoint group is in the **updating** state, the Log Service Logstore is being disassociated from the endpoint group. In this case, you can perform only query operations.
           *     <!---->
@@ -9484,6 +9608,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DissociateAclsFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener:
           *     *   If the listener is in the **updating** state, ACLs are being disassociated from the listener. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, ACLs are disassociated from the listener.
@@ -9537,6 +9662,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DissociateAclsFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener:
           *     *   If the listener is in the **updating** state, ACLs are being disassociated from the listener. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, ACLs are disassociated from the listener.
@@ -9590,6 +9716,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DissociateAclsFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener:
           *     *   If the listener is in the **updating** state, ACLs are being disassociated from the listener. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, ACLs are disassociated from the listener.
@@ -9605,6 +9732,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DissociateAclsFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener:
           *     *   If the listener is in the **updating** state, ACLs are being disassociated from the listener. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, ACLs are disassociated from the listener.
@@ -9620,6 +9748,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DissociateAdditionalCertificatesFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of an HTTPS listener.
           *     *   If the listener is in the **updating** state, it indicates that the additional certificate is being dissociated from the listener. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, it indicates that the additional certificate is dissociated from the listener.
@@ -9673,6 +9802,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DissociateAdditionalCertificatesFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of an HTTPS listener.
           *     *   If the listener is in the **updating** state, it indicates that the additional certificate is being dissociated from the listener. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, it indicates that the additional certificate is dissociated from the listener.
@@ -9726,6 +9856,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DissociateAdditionalCertificatesFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of an HTTPS listener.
           *     *   If the listener is in the **updating** state, it indicates that the additional certificate is being dissociated from the listener. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, it indicates that the additional certificate is dissociated from the listener.
@@ -9741,6 +9872,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **DissociateAdditionalCertificatesFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of an HTTPS listener.
           *     *   If the listener is in the **updating** state, it indicates that the additional certificate is being dissociated from the listener. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, it indicates that the additional certificate is dissociated from the listener.
@@ -12447,6 +12579,14 @@ namespace AlibabaCloud.SDK.Ga20191120
             return await ListCustomRoutingEndpointGroupDestinationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListCustomRoutingEndpointGroups\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request ListCustomRoutingEndpointGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCustomRoutingEndpointGroupsResponse
+         */
         public ListCustomRoutingEndpointGroupsResponse ListCustomRoutingEndpointGroupsWithOptions(ListCustomRoutingEndpointGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12494,6 +12634,14 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<ListCustomRoutingEndpointGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListCustomRoutingEndpointGroups\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request ListCustomRoutingEndpointGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCustomRoutingEndpointGroupsResponse
+         */
         public async Task<ListCustomRoutingEndpointGroupsResponse> ListCustomRoutingEndpointGroupsWithOptionsAsync(ListCustomRoutingEndpointGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12541,12 +12689,26 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<ListCustomRoutingEndpointGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListCustomRoutingEndpointGroups\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request ListCustomRoutingEndpointGroupsRequest
+          * @return ListCustomRoutingEndpointGroupsResponse
+         */
         public ListCustomRoutingEndpointGroupsResponse ListCustomRoutingEndpointGroups(ListCustomRoutingEndpointGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCustomRoutingEndpointGroupsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListCustomRoutingEndpointGroups\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request ListCustomRoutingEndpointGroupsRequest
+          * @return ListCustomRoutingEndpointGroupsResponse
+         */
         public async Task<ListCustomRoutingEndpointGroupsResponse> ListCustomRoutingEndpointGroupsAsync(ListCustomRoutingEndpointGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13191,6 +13353,14 @@ namespace AlibabaCloud.SDK.Ga20191120
             return await ListEndpointGroupIpAddressCidrBlocksWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListEndpointGroups\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request ListEndpointGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListEndpointGroupsResponse
+         */
         public ListEndpointGroupsResponse ListEndpointGroupsWithOptions(ListEndpointGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13250,6 +13420,14 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<ListEndpointGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListEndpointGroups\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request ListEndpointGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListEndpointGroupsResponse
+         */
         public async Task<ListEndpointGroupsResponse> ListEndpointGroupsWithOptionsAsync(ListEndpointGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13309,12 +13487,26 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<ListEndpointGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListEndpointGroups\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request ListEndpointGroupsRequest
+          * @return ListEndpointGroupsResponse
+         */
         public ListEndpointGroupsResponse ListEndpointGroups(ListEndpointGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListEndpointGroupsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListEndpointGroups\\&type=RPC\\&version=2019-11-20)
+          *
+          * @param request ListEndpointGroupsRequest
+          * @return ListEndpointGroupsResponse
+         */
         public async Task<ListEndpointGroupsResponse> ListEndpointGroupsAsync(ListEndpointGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13322,7 +13514,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * >  You can call this operation to query only custom forwarding rules. You cannot call this operation to query the default forwarding rule.
+          * >  This operation is used to query only custom forwarding rules, not the default forwarding rule.
           *
           * @param request ListForwardingRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13380,7 +13572,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * >  You can call this operation to query only custom forwarding rules. You cannot call this operation to query the default forwarding rule.
+          * >  This operation is used to query only custom forwarding rules, not the default forwarding rule.
           *
           * @param request ListForwardingRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13438,7 +13630,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * >  You can call this operation to query only custom forwarding rules. You cannot call this operation to query the default forwarding rule.
+          * >  This operation is used to query only custom forwarding rules, not the default forwarding rule.
           *
           * @param request ListForwardingRulesRequest
           * @return ListForwardingRulesResponse
@@ -13450,7 +13642,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * >  You can call this operation to query only custom forwarding rules. You cannot call this operation to query the default forwarding rule.
+          * >  This operation is used to query only custom forwarding rules, not the default forwarding rule.
           *
           * @param request ListForwardingRulesRequest
           * @return ListForwardingRulesResponse
@@ -15387,6 +15579,18 @@ namespace AlibabaCloud.SDK.Ga20191120
             return await UpdateAcceleratorCrossBorderModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use this operation to enable or disable the cross-border data transmission feature for a GA instance. Before you enable the cross-border data transmission feature, make sure that the following requirements are met:
+          * - **Basic GA instances**:
+          * Cloud Data Transfer (CDT) is activated. When you call the CreateBasicAccelerator operation to create a basic GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+          * If you want to enable the cross-border data transmission feature, make sure that the current account has completed enterprise real-name registration. For more information, see Real-name registration FAQs.
+          * - **Standard GA instances**:
+          * CDT is activated. When you call the CreateAccelerator operation to create a standard GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+          *
+          * @param request UpdateAcceleratorCrossBorderStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAcceleratorCrossBorderStatusResponse
+         */
         public UpdateAcceleratorCrossBorderStatusResponse UpdateAcceleratorCrossBorderStatusWithOptions(UpdateAcceleratorCrossBorderStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15426,6 +15630,18 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<UpdateAcceleratorCrossBorderStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to enable or disable the cross-border data transmission feature for a GA instance. Before you enable the cross-border data transmission feature, make sure that the following requirements are met:
+          * - **Basic GA instances**:
+          * Cloud Data Transfer (CDT) is activated. When you call the CreateBasicAccelerator operation to create a basic GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+          * If you want to enable the cross-border data transmission feature, make sure that the current account has completed enterprise real-name registration. For more information, see Real-name registration FAQs.
+          * - **Standard GA instances**:
+          * CDT is activated. When you call the CreateAccelerator operation to create a standard GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+          *
+          * @param request UpdateAcceleratorCrossBorderStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAcceleratorCrossBorderStatusResponse
+         */
         public async Task<UpdateAcceleratorCrossBorderStatusResponse> UpdateAcceleratorCrossBorderStatusWithOptionsAsync(UpdateAcceleratorCrossBorderStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15465,12 +15681,34 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<UpdateAcceleratorCrossBorderStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to enable or disable the cross-border data transmission feature for a GA instance. Before you enable the cross-border data transmission feature, make sure that the following requirements are met:
+          * - **Basic GA instances**:
+          * Cloud Data Transfer (CDT) is activated. When you call the CreateBasicAccelerator operation to create a basic GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+          * If you want to enable the cross-border data transmission feature, make sure that the current account has completed enterprise real-name registration. For more information, see Real-name registration FAQs.
+          * - **Standard GA instances**:
+          * CDT is activated. When you call the CreateAccelerator operation to create a standard GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+          *
+          * @param request UpdateAcceleratorCrossBorderStatusRequest
+          * @return UpdateAcceleratorCrossBorderStatusResponse
+         */
         public UpdateAcceleratorCrossBorderStatusResponse UpdateAcceleratorCrossBorderStatus(UpdateAcceleratorCrossBorderStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateAcceleratorCrossBorderStatusWithOptions(request, runtime);
         }
 
+        /**
+          * You can use this operation to enable or disable the cross-border data transmission feature for a GA instance. Before you enable the cross-border data transmission feature, make sure that the following requirements are met:
+          * - **Basic GA instances**:
+          * Cloud Data Transfer (CDT) is activated. When you call the CreateBasicAccelerator operation to create a basic GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+          * If you want to enable the cross-border data transmission feature, make sure that the current account has completed enterprise real-name registration. For more information, see Real-name registration FAQs.
+          * - **Standard GA instances**:
+          * CDT is activated. When you call the CreateAccelerator operation to create a standard GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+          *
+          * @param request UpdateAcceleratorCrossBorderStatusRequest
+          * @return UpdateAcceleratorCrossBorderStatusResponse
+         */
         public async Task<UpdateAcceleratorCrossBorderStatusResponse> UpdateAcceleratorCrossBorderStatusAsync(UpdateAcceleratorCrossBorderStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17086,6 +17324,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **UpdateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of the endpoint groups associated with a custom routing listener to check whether the endpoints in the endpoint groups are modified.
           *     *   If an endpoint group is in the **updating** state, the endpoints in the endpoint group are being modified. In this case, you can perform only query operations.
           *     *   If an endpoint group is in the **active** state, the endpoints in the endpoint group are modified.
@@ -17135,6 +17374,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **UpdateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of the endpoint groups associated with a custom routing listener to check whether the endpoints in the endpoint groups are modified.
           *     *   If an endpoint group is in the **updating** state, the endpoints in the endpoint group are being modified. In this case, you can perform only query operations.
           *     *   If an endpoint group is in the **active** state, the endpoints in the endpoint group are modified.
@@ -17184,6 +17424,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **UpdateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of the endpoint groups associated with a custom routing listener to check whether the endpoints in the endpoint groups are modified.
           *     *   If an endpoint group is in the **updating** state, the endpoints in the endpoint group are being modified. In this case, you can perform only query operations.
           *     *   If an endpoint group is in the **active** state, the endpoints in the endpoint group are modified.
@@ -17199,6 +17440,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
+          * ## Description
           * *   **UpdateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of the endpoint groups associated with a custom routing listener to check whether the endpoints in the endpoint groups are modified.
           *     *   If an endpoint group is in the **updating** state, the endpoints in the endpoint group are being modified. In this case, you can perform only query operations.
           *     *   If an endpoint group is in the **active** state, the endpoints in the endpoint group are modified.
@@ -17431,9 +17673,9 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **updating** state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, the configurations of the endpoint group are modified.
-          * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
+          * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request UpdateEndpointGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17528,9 +17770,9 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **updating** state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, the configurations of the endpoint group are modified.
-          * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
+          * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request UpdateEndpointGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17625,9 +17867,9 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **updating** state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, the configurations of the endpoint group are modified.
-          * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
+          * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request UpdateEndpointGroupRequest
           * @return UpdateEndpointGroupResponse
@@ -17640,9 +17882,9 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **updating** state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, the configurations of the endpoint group are modified.
-          * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
+          * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request UpdateEndpointGroupRequest
           * @return UpdateEndpointGroupResponse
@@ -17752,10 +17994,11 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **updating** state, the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active**, the configuration of the endpoint group is modified.
-          * *   The **UpdateEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+          * ### Description
+          * *   **UpdateEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the status of an endpoint group.
+          *     *   If the endpoint group is in the **updating** state, it indicates that the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, it indicates that the configuration of the endpoint group is modified.
+          * *   The **UpdateEndpointGroups** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
           *
           * @param request UpdateEndpointGroupsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17805,10 +18048,11 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **updating** state, the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active**, the configuration of the endpoint group is modified.
-          * *   The **UpdateEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+          * ### Description
+          * *   **UpdateEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the status of an endpoint group.
+          *     *   If the endpoint group is in the **updating** state, it indicates that the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, it indicates that the configuration of the endpoint group is modified.
+          * *   The **UpdateEndpointGroups** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
           *
           * @param request UpdateEndpointGroupsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17858,10 +18102,11 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **updating** state, the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active**, the configuration of the endpoint group is modified.
-          * *   The **UpdateEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+          * ### Description
+          * *   **UpdateEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the status of an endpoint group.
+          *     *   If the endpoint group is in the **updating** state, it indicates that the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, it indicates that the configuration of the endpoint group is modified.
+          * *   The **UpdateEndpointGroups** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
           *
           * @param request UpdateEndpointGroupsRequest
           * @return UpdateEndpointGroupsResponse
@@ -17873,10 +18118,11 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **updating** state, the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active**, the configuration of the endpoint group is modified.
-          * *   The **UpdateEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+          * ### Description
+          * *   **UpdateEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the status of an endpoint group.
+          *     *   If the endpoint group is in the **updating** state, it indicates that the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, it indicates that the configuration of the endpoint group is modified.
+          * *   The **UpdateEndpointGroups** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
           *
           * @param request UpdateEndpointGroupsRequest
           * @return UpdateEndpointGroupsResponse
@@ -18471,6 +18717,17 @@ namespace AlibabaCloud.SDK.Ga20191120
             return await UpdateListenerWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   This operation is applicable only to **managed** Global Accelerator (GA) instances.
+          * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you cannot change the mode of the instance to managed mode.
+          * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you can obtain all operation permissions on the instance.
+          *     **
+          *     **Warning** If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.
+          *
+          * @param request UpdateServiceManagedControlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateServiceManagedControlResponse
+         */
         public UpdateServiceManagedControlResponse UpdateServiceManagedControlWithOptions(UpdateServiceManagedControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18514,6 +18771,17 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<UpdateServiceManagedControlResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   This operation is applicable only to **managed** Global Accelerator (GA) instances.
+          * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you cannot change the mode of the instance to managed mode.
+          * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you can obtain all operation permissions on the instance.
+          *     **
+          *     **Warning** If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.
+          *
+          * @param request UpdateServiceManagedControlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateServiceManagedControlResponse
+         */
         public async Task<UpdateServiceManagedControlResponse> UpdateServiceManagedControlWithOptionsAsync(UpdateServiceManagedControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18557,12 +18825,32 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<UpdateServiceManagedControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   This operation is applicable only to **managed** Global Accelerator (GA) instances.
+          * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you cannot change the mode of the instance to managed mode.
+          * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you can obtain all operation permissions on the instance.
+          *     **
+          *     **Warning** If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.
+          *
+          * @param request UpdateServiceManagedControlRequest
+          * @return UpdateServiceManagedControlResponse
+         */
         public UpdateServiceManagedControlResponse UpdateServiceManagedControl(UpdateServiceManagedControlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateServiceManagedControlWithOptions(request, runtime);
         }
 
+        /**
+          * *   This operation is applicable only to **managed** Global Accelerator (GA) instances.
+          * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you cannot change the mode of the instance to managed mode.
+          * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you can obtain all operation permissions on the instance.
+          *     **
+          *     **Warning** If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.
+          *
+          * @param request UpdateServiceManagedControlRequest
+          * @return UpdateServiceManagedControlResponse
+         */
         public async Task<UpdateServiceManagedControlResponse> UpdateServiceManagedControlAsync(UpdateServiceManagedControlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

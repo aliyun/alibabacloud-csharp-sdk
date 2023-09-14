@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -23,14 +23,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The description of the endpoint group.
         /// 
-        /// The description can be up to 256 characters in length and cannot contain `http://` or `https://`.
+        /// The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The configurations of the endpoint.
+        /// The information about the endpoints.
+        /// 
+        /// You can specify information for up to 20 endpoints.
         /// </summary>
         [NameInMap("EndpointConfigurations")]
         [Validation(Required=false)]
@@ -39,48 +41,48 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// Specifies whether to reserve client IP addresses. Default value: false. Valid values:
             /// 
-            /// *   **true:** reserves client IP addresses.
-            /// *   **false:** does not preserve client IP addresses.
+            /// *   **true**: reserves client IP addresses.
+            /// *   **false**: does not reserve client IP addresses.
             /// </summary>
             [NameInMap("EnableClientIPPreservation")]
             [Validation(Required=false)]
             public bool? EnableClientIPPreservation { get; set; }
 
             /// <summary>
-            /// Specifies whether to preserve the IP addresses of clients that access the endpoint by using the ProxyProtocol module. Valid values:
+            /// Specifies whether to preserve client IP addresses by using the ProxyProtocol module. Default value: false. Valid values:
             /// 
-            /// *   **true**
-            /// *   **false** (default)
+            /// *   **true**: preserves client IP addresses by using the ProxyProtocol module.
+            /// *   **false**: does not preserve client IP addresses by using the ProxyProtocol module.
             /// </summary>
             [NameInMap("EnableProxyProtocol")]
             [Validation(Required=false)]
             public bool? EnableProxyProtocol { get; set; }
 
             /// <summary>
-            /// The IP address, domain name or instance id according to the type of the endpoint.
+            /// The IP address or domain name of the endpoint.
             /// </summary>
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
+            [NameInMap("SubAddress")]
+            [Validation(Required=false)]
+            public string SubAddress { get; set; }
+
             /// <summary>
             /// The type of the endpoint. Valid values:
             /// 
-            /// *   **Domain:** a custom domain name
-            /// *   **Ip:** a custom IP address
-            /// *   **PublicIp:** a public IP address provided by Alibaba Cloud
-            /// *   **ECS:** an ECS instance
-            /// *   **SLB:** a Server Load Balancer (SLB) instance
-            /// *   **ALB:** an Application Load Balancer (ALB) instance
-            /// *   **OSS:** an Object Storage Service (OSS) bucket
+            /// *   **Domain**: a custom domain name
+            /// *   **Ip**: a custom IP address
+            /// *   **PublicIp**: a public IP address provided by Alibaba Cloud
+            /// *   **ECS**: an Elastic Compute Service (ECS) instance
+            /// *   **SLB**: a Server Load Balancer (SLB) instance
+            /// *   **ALB**: an Application Load Balancer (ALB) instance
+            /// *   **OSS**: an Object Storage Service (OSS) bucket
             /// 
-            /// > 
-            /// 
-            /// *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system creates the service-linked role.
-            /// 
-            /// *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-            /// 
-            /// *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+            /// > *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+            /// > *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+            /// > *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
             /// 
             /// For more information, see [Service-linked roles](~~178360~~).
             /// </summary>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// Valid values: **0** to **255**.
             /// 
-            /// > If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.
+            /// >  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the endpoint group is deployed.
+        /// The ID of the region where the endpoint group is created.
         /// </summary>
         [NameInMap("EndpointGroupRegion")]
         [Validation(Required=false)]
@@ -121,28 +123,25 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **HTTP**
         /// *   **HTTPS**
         /// 
-        /// > 
-        /// 
-        /// *   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.
-        /// 
-        /// *   For an HTTP listener, the backend service protocol must be HTTP.
+        /// > *   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.
+        /// > *   For an HTTP listener, the backend service protocol must be HTTP.
         /// </summary>
         [NameInMap("EndpointRequestProtocol")]
         [Validation(Required=false)]
         public string EndpointRequestProtocol { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the health check feature. Valid values:
+        /// Specifies whether to enable the health check feature. Default value: true. Valid values:
         /// 
-        /// *   **true:** enables the health check feature. This is the default value.
-        /// *   **false:** disables the health check feature.
+        /// *   **true**: enables the health check feature.
+        /// *   **false**: disables the health check feature.
         /// </summary>
         [NameInMap("HealthCheckEnabled")]
         [Validation(Required=false)]
         public bool? HealthCheckEnabled { get; set; }
 
         /// <summary>
-        /// The interval between consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
+        /// The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
         /// </summary>
         [NameInMap("HealthCheckIntervalSeconds")]
         [Validation(Required=false)]
@@ -199,11 +198,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The listener port that is mapped to the endpoint port.
             /// 
-            /// > 
-            /// 
-            /// *   Only HTTP and HTTPS listeners support port mappings.
-            /// 
-            /// *   The listener port in a port mapping must be the one used by the current listener.
+            /// > *   Only HTTP and HTTPS listeners support port mappings.
+            /// > *   The listener port in a port mapping must be the one used by the current listener.
             /// </summary>
             [NameInMap("ListenerPort")]
             [Validation(Required=false)]
