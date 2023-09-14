@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateServerGroupResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the asynchronous job.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the server group.
+        /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]
         public string ServerGroupId { get; set; }

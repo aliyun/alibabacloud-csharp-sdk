@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateAclResponseBody : TeaModel {
+        /// <summary>
+        /// The ACL ID.
+        /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        /// <summary>
+        /// The asynchronous task ID.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,14 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// The ID of the resource group to which you want to move the resource.
+        /// 
+        /// > You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify resource and permission management in your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~)
+        /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The resource ID.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        /// <summary>
+        /// The type of the resource. Valid values:
+        /// 
+        /// *   **loadbalancer**: Application Load Balancer (ALB) instance
+        /// *   **acl**: access control list (ACL)
+        /// *   **securitypolicy**: security policy
+        /// *   **servergroup**: server group
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

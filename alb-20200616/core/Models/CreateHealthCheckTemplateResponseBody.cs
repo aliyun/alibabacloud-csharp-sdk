@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateHealthCheckTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the health check template.
+        /// </summary>
         [NameInMap("HealthCheckTemplateId")]
         [Validation(Required=false)]
         public string HealthCheckTemplateId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

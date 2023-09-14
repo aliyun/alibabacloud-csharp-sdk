@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetListenerAttributeRequest : TeaModel {
+        /// <summary>
+        /// The listener ID.
+        /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
