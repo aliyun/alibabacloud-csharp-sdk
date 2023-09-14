@@ -245,6 +245,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
             }
 
+            [NameInMap("RichTextDescription")]
+            [Validation(Required=false)]
+            public ListEventsResponseBodyEventsRichTextDescription RichTextDescription { get; set; }
+            public class ListEventsResponseBodyEventsRichTextDescription : TeaModel {
+                [NameInMap("Text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+            }
+
             [NameInMap("SeriesMasterId")]
             [Validation(Required=false)]
             public string SeriesMasterId { get; set; }
