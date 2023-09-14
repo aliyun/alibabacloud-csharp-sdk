@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public bool? AddWatermark { get; set; }
 
+        [NameInMap("Enhance")]
+        [Validation(Required=false)]
+        public bool? Enhance { get; set; }
+
         [NameInMap("FaceImageURL")]
         [Validation(Required=false)]
         public string FaceImageURL { get; set; }
