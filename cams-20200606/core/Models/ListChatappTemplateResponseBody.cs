@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string Language { get; set; }
 
+            [NameInMap("Reason")]
+            [Validation(Required=false)]
+            public string Reason { get; set; }
+
             /// <summary>
             /// The code of the message template.
             /// </summary>

@@ -9,22 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateDetailRequest : TeaModel {
+        /// <summary>
+        /// The space ID of the user under the ISV account.
+        /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
+        /// <summary>
+        /// The ID of the WhatsApp account that you registered.
+        /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
         [Obsolete]
         public string CustWabaId { get; set; }
 
+        /// <summary>
+        /// The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.
+        /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
+        /// <summary>
+        /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+        /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
+
+        /// <summary>
+        /// The code of the message template.
+        /// </summary>
+        [NameInMap("TemplateCode")]
+        [Validation(Required=false)]
+        public string TemplateCode { get; set; }
 
         /// <summary>
         /// The type of the message template. Valid values:
@@ -33,10 +52,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// *   **VIBER**
         /// *   LINE (developing)
         /// </summary>
-        [NameInMap("TemplateCode")]
-        [Validation(Required=false)]
-        public string TemplateCode { get; set; }
-
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }

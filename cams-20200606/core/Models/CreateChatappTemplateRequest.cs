@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappTemplateRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to allow Facebook to automatically change the directory of the template. If you set this parameter to true, the review success rate of the template is improved. This parameter is valid only if TemplateType is set to WHATSAPP.
+        /// Specifies whether to allow Facebook to automatically change the directory of the template. If you set this parameter to true, the review success rate of the template is improved. This parameter is valid only when TemplateType is set to WHATSAPP.
         /// </summary>
         [NameInMap("AllowCategoryChange")]
         [Validation(Required=false)]
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// The components of the message template.
         /// 
-        /// > If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the value of Type is BODY or FOOTER, the Text sub-parameter of the Components parameter is empty.
+        /// > If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter is empty.
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<CreateChatappTemplateRequestComponents> Components { get; set; }
         public class CreateChatappTemplateRequestComponents : TeaModel {
             /// <summary>
-            /// The prompt message indicating that the verification code must be kept secret. This parameter is valid if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Components parameter is set to BODY. The prompt message is displayed in the BODY component.
+            /// The note indicating that customers cannot share verification codes with others. The note is displayed in the message body. This parameter is valid if Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to BODY in a WhatsApp message template.
             /// </summary>
             [NameInMap("AddSecretRecommendation")]
             [Validation(Required=false)]
@@ -63,35 +63,35 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<CreateChatappTemplateRequestComponentsButtons> Buttons { get; set; }
             public class CreateChatappTemplateRequestComponentsButtons : TeaModel {
                 /// <summary>
-                /// The text of the one-tap autofill button. AutofillText is required if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to ONE_TAP.
+                /// The text of the one-tap autofill button. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
                 /// </summary>
                 [NameInMap("AutofillText")]
                 [Validation(Required=false)]
                 public string AutofillText { get; set; }
 
                 /// <summary>
-                /// The unsubscribe button in a WhatsApp marketing template. This parameter is valid if Category is set to MARKETING in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY. After you tap this button and customers configure the feature for unsubscribing from a WhatsApp marketing template in the ChatAPP console, subsequent marketing messages are not sent to you.
+                /// The unsubscribe button. This parameter is valid if Category is set to MARKETING and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY in a WhatsApp message template. After you configure message sending in the ChatApp Message Service console, marketing messages will not be sent to customers if they click this button.
                 /// </summary>
                 [NameInMap("IsOptOut")]
                 [Validation(Required=false)]
                 public bool? IsOptOut { get; set; }
 
                 /// <summary>
-                /// The package name of the app. PackageName is required if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to ONE_TAP.
+                /// The app package name that WhatsApp uses to load your app. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
                 /// </summary>
                 [NameInMap("PackageName")]
                 [Validation(Required=false)]
                 public string PackageName { get; set; }
 
                 /// <summary>
-                /// The phone number. This parameter is valid only if the Type sub-parameter of the Buttons parameter is set to **PHONE_NUMBER**.
+                /// The phone number. This parameter is valid only when the Type sub-parameter of the Buttons parameter is set to **PHONE_NUMBER**.
                 /// </summary>
                 [NameInMap("PhoneNumber")]
                 [Validation(Required=false)]
                 public string PhoneNumber { get; set; }
 
                 /// <summary>
-                /// The hash value of the app signing key. SignatureHash is required if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to ONE_TAP.
+                /// The app signing key hash that WhatsApp uses to load your app. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
                 /// </summary>
                 [NameInMap("SignatureHash")]
                 [Validation(Required=false)]
@@ -113,17 +113,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// *   **COPY_CODE**: the copy code button if Category is set to AUTHENTICATION
                 /// *   **ONE_TAP**: the one-tap autofill button if Category is set to AUTHENTICATION
                 /// 
-                /// > - In a WhatsApp message template, the quick reply button cannot be used together with the phone call button or the URL button.
-                /// > - You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a WhatsApp message template.
-                /// > -  If Category is set to AUTHENTICATION in a WhatsApp message template, you can add only one button to the WhatsApp message template and you must set the Type sub-parameter of the Buttons parameter to COPY_CODE or ONE_TAP. If the Type sub-parameter of the Buttons parameter is set to COPY_CODE, the Text sub-parameter of the Buttons parameter is required. If the Type sub-parameter of the Buttons parameter is set to ONE_TAP, the Text, SignatureHash, PackageName, and AutofillText sub-parameters of the Buttons parameter are required. The value of Text is displayed if the desired app is not installed on the terminal. It indicates that you must manually copy the verification code.
-                /// > - You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.
+                /// > 
+                /// 
+                /// *   In a WhatsApp message template, the quick reply button cannot be used together with the phone call button or the URL button.
+                /// 
+                /// *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a WhatsApp message template.
+                /// 
+                /// *   If Category is set to AUTHENTICATION in a WhatsApp message template, you can add only one button to the WhatsApp message template and you must set the Type sub-parameter of the Buttons parameter to COPY_CODE or ONE_TAP. If the Type sub-parameter of the Buttons parameter is set to COPY_CODE, the Text sub-parameter of the Buttons parameter is required. If the Type sub-parameter of the Buttons parameter is set to ONE_TAP, the Text, SignatureHash, PackageName, and AutofillText sub-parameters of the Buttons parameter are required. The value of Text is displayed if the desired app is not installed on the device. The value indicates that you must manually copy the verification code.
+                /// 
+                /// *   You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The URL to be accessed when you click the URL button.
+                /// The URL to which you are redirected when you click the URL button.
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
@@ -149,14 +154,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Caption { get; set; }
 
             /// <summary>
-            /// The validity period of the verification code in a WhatsApp message template. Unit: minutes. This parameter is valid if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Components parameter is set to FOOTER. The value of CodeExpirationMinutes is displayed in the FOOTER component.
+            /// The validity period of the verification code in the WhatsApp authentication template. Unit: minutes. This parameter is valid only when Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to FOOTER in a WhatsApp message template. The validity period of the verification code is displayed in the footer.
             /// </summary>
             [NameInMap("CodeExpirationMinutes")]
             [Validation(Required=false)]
             public int? CodeExpirationMinutes { get; set; }
 
             /// <summary>
-            /// The length of the video in the Viber message template. Valid values: 0 to 600. Unit: seconds.
+            /// The length of the video in the Viber message template. Unit: seconds. Valid values: 0 to 600.
             /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
@@ -211,9 +216,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// *   **HEADER**
             /// *   **FOOTER**
             /// *   **BUTTONS**
-            /// > - The following limits apply to components in WhatsApp message templates: A **BODY** component cannot exceed 1,024 characters in length. A **HEADER** or **FOOTER** component cannot exceed 60 characters in length.
-            /// > - **FOOTER** components are not supported in Viber message templates.
-            /// > - In a Viber message template, a media resource, such as an image, a video, or a document, is placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a terminal.
+            /// 
+            /// > 
+            /// 
+            /// *   In WhatsApp message templates, a **BODY** component cannot exceed 1,024 characters in length, and a **HEADER** or **FOOTER** component cannot exceed 60 characters in length.
+            /// 
+            /// *   **FOOTER** components are not supported in Viber message templates.
+            /// 
+            /// *   In a Viber message template, media resources, such as images, videos, or documents, are placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a device.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -222,7 +232,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <summary>
             /// The URL of the media resource.
             /// 
-            /// > We recommend that the resolution of the image in the Viber message template is 800 × 800.
+            /// > We recommend that the resolution of the image is 800 × 800 in a Viber message template.
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -231,12 +241,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// The space ID of the user within the independent software vendor (ISV) account.
+        /// The space ID of the user within the ISV account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
+        /// <summary>
+        /// The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.
+        /// 
+        /// > CustWabaId is an obsolete parameter. Use CustSpaceId instead.
+        /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
         [Obsolete]
@@ -249,22 +264,43 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Example { get; set; }
 
+        /// <summary>
+        /// The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
+        /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
+        /// <summary>
+        /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+        /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// Validity period of authentication template message sending in WhatsApp
+        /// 
+        /// > This attribute requires providing waba in advance to Alibaba operators to open the whitelist, otherwise it will result in template submission failure
+        /// </summary>
         [NameInMap("MessageSendTtlSeconds")]
         [Validation(Required=false)]
         public int? MessageSendTtlSeconds { get; set; }
 
+        /// <summary>
+        /// The name of the message template.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The type of the message template.
+        /// 
+        /// *   **WHATSAPP**
+        /// *   **VIBER**
+        /// *   LINE: the Line message template. This type of message template will be released later.
+        /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }
