@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string Enable { get; set; }
 
+        [NameInMap("IsSpecialPort")]
+        [Validation(Required=false)]
+        public string IsSpecialPort { get; set; }
+
         [NameInMap("ProtectedArea")]
         [Validation(Required=false)]
         public string ProtectedArea { get; set; }

@@ -3918,6 +3918,72 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await DeleteDcdnSubTaskWithOptionsAsync(runtime);
         }
 
+        public DeleteDcdnUserConfigResponse DeleteDcdnUserConfigWithOptions(DeleteDcdnUserConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
+            {
+                query["FunctionName"] = request.FunctionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDcdnUserConfig",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDcdnUserConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDcdnUserConfigResponse> DeleteDcdnUserConfigWithOptionsAsync(DeleteDcdnUserConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
+            {
+                query["FunctionName"] = request.FunctionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDcdnUserConfig",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDcdnUserConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDcdnUserConfigResponse DeleteDcdnUserConfig(DeleteDcdnUserConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDcdnUserConfigWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDcdnUserConfigResponse> DeleteDcdnUserConfigAsync(DeleteDcdnUserConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDcdnUserConfigWithOptionsAsync(request, runtime);
+        }
+
         public DeleteDcdnWafGroupResponse DeleteDcdnWafGroupWithOptions(DeleteDcdnWafGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
