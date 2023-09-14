@@ -117,6 +117,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupPolicyMode { get; set; }
 
+        /// <summary>
+        /// Specifies whether the backup settings of a secondary instance are configured. Valid values:
+        /// 
+        /// *   **1**: secondary instance preferred
+        /// *   **2**: primary instance preferred
+        /// 
+        /// > 
+        /// 
+        /// *   This parameter is suitable only for instances that run SQL Server on RDS Cluster Edition.
+        /// 
+        /// *   This parameter takes effect only when **BackupMethod** is set to **Physical**. If **BackupMethod** is set to **Snapshot**, backups are forcefully performed on the primary instance that runs SQL Server on RDS Cluster Edition.
+        /// </summary>
         [NameInMap("BackupPriority")]
         [Validation(Required=false)]
         public int? BackupPriority { get; set; }
@@ -162,7 +174,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CompressType { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -185,7 +197,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EnableBackupLog { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the incremental backup feature. Valid values:
+        /// Specifies whether to enable incremental backup. Valid values:
         /// 
         /// *   **false** (default): disables the feature.
         /// *   **true**: enables the feature.

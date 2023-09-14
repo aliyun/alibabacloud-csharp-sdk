@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesByExpireTimeResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details about the instances.
+        /// The details of the instances.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceStatus { get; set; }
 
                 /// <summary>
-                /// The expiration date and time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// 
-                /// > Pay-as-you-go instances never expire.
+                /// > : Pay-as-you-go instances never expire.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The billing method of the instance. Valid values:
                 /// 
-                /// *   **Postpaid**: pay-as-you-go
-                /// *   **Prepaid**: subscription
+                /// *   **Postpaid**: pay-as-you-go.
+                /// *   **Prepaid**: subscription.
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]

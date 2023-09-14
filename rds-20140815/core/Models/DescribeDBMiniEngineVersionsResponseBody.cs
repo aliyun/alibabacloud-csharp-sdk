@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBMiniEngineVersionsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MaxRecordsPerPage { get; set; }
 
         /// <summary>
-        /// An array that consists of details of the minor engine versions.
+        /// An array that consists of details of the minor engine version.
         /// </summary>
         [NameInMap("MinorVersionItems")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](~~126002~~).
             /// 
-            /// >  This parameter is valid only when the Engine parameter is set to **PostgreSQL**.
+            /// > This parameter is valid only when the instance runs **PostgreSQL**.
             /// </summary>
             [NameInMap("CommunityMinorVersion")]
             [Validation(Required=false)]
@@ -54,14 +54,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// An internal parameter. You can ignore this parameter.
+            /// 内核版本过期状态：vaild-有效；expired-过期
+            /// </summary>
+            [NameInMap("ExpireStatus")]
+            [Validation(Required=false)]
+            public string ExpireStatus { get; set; }
+
+            /// <summary>
+            /// An internal parameter. You do not need to specify this parameter.
             /// </summary>
             [NameInMap("IsHotfixVersion")]
             [Validation(Required=false)]
             public bool? IsHotfixVersion { get; set; }
 
             /// <summary>
-            /// The version of the minor engine.
+            /// The minor engine version.
             /// </summary>
             [NameInMap("MinorVersion")]
             [Validation(Required=false)]
@@ -105,10 +112,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The tag that corresponds to the minor engine version. Valid values:
             /// 
-            /// *   **pgsql_docker_image**: tag of common instances
+            /// *   **pgsql_docker_image**: tag of the common instance
             /// *   **pgsql_babelfish_image**: tag of the instance for which Babelfish is enabled
             /// 
-            /// >  This parameter is valid only when the Engine parameter is set to **PostgreSQL**.
+            /// > This parameter is valid only when the instance runs **PostgreSQL**.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
@@ -117,21 +124,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number returned.
         /// </summary>
         [NameInMap("PageNumbers")]
         [Validation(Required=false)]
         public int? PageNumbers { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

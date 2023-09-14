@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDedicatedHostGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the dedicated cluster.
+        /// The dedicated cluster ID.
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The image based on which the hosts in the dedicated clusters are created. Valid values:
         /// 
-        /// *   **WindowsWithMssqlStdLicense**: a Windows image, which contains the licenses of the SQL Server Standard Edition
-        /// *   **WindowsWithMssqlEntLisence**: a Windows image, which contains the licenses of the SQL Server Enterprise Edition
-        /// *   **WindowsWithMssqlWebLisence**: a Windows image, which contains the licenses of the SQL Server Web Edition
+        /// *   **WindowsWithMssqlStdLicense**: a Windows image that contains the licenses of SQL Server Standard Edition
+        /// *   **WindowsWithMssqlEntLisence**: a Windows image that contains the licenses of SQL Server Enterprise Edition
+        /// *   **WindowsWithMssqlWebLisence**: a Windows image that contains the licenses of SQL Server Web Edition
         /// *   **AliLinux**: a Linux image
         /// </summary>
         [NameInMap("ImageCategory")]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the dedicated clusters. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

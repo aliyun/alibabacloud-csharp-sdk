@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The ID of the resource group. You can leave this parameter empty.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSlowLogsRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the database that you want to query.
+        /// The name of the database.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the *yyyy-MM-dd*Z format. The time must be in UTC.
+        /// The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: any non-zero positive integer.
+        /// The page number. Valid values: any non-zero positive integer.
         /// 
         /// Default value: **1**.
         /// </summary>
@@ -63,21 +63,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The dimension based on which ApsaraDB RDS sorts the returned entries. Valid values:
+        /// The dimension based on which the system sorts the entries to return. Valid values:
         /// 
-        /// *   **TotalExecutionCounts**: ApsaraDB RDS sorts the returned entries based on the total number of SQL statements that are executed.
-        /// *   **TotalQueryTimes**: ApsaraDB RDS sorts the returned entries based on the total execution duration.
-        /// *   **TotalLogicalReads**: ApsaraDB RDS sorts the returned entries based on the total number of logical reads.
-        /// *   **TotalPhysicalReads**: ApsaraDB RDS sorts the returned entries based on the total number of physical reads.
+        /// *   **TotalExecutionCounts**: The system sorts the entries to return based on the number of times that SQL statements are executed.
+        /// *   **TotalQueryTimes**: The system sorts the entries to return based on the total execution duration.
+        /// *   **TotalLogicalReads**: The system sorts the entries to return based on the total number of logical reads.
+        /// *   **TotalPhysicalReads**: The system sorts the entries to return based on the total number of physical reads.
         /// 
-        /// >  This parameter is supported only for instances that run SQL Server 2008 R2.
+        /// > This parameter is supported only for instances that run SQL Server 2008 R2.
         /// </summary>
         [NameInMap("SortKey")]
         [Validation(Required=false)]
         public string SortKey { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*Z format. The time must be in UTC.
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The database engine.
+                /// The database engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine version.
+                /// The version of the database engine.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? ParamCounts { get; set; }
 
                 /// <summary>
-                /// The array of parameters.
+                /// The details of the parameters.
                 /// </summary>
                 [NameInMap("ParamDetail")]
                 [Validation(Required=false)]
@@ -131,9 +131,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The instance to which the parameter template was applied. 
+        /// The instance to which the parameter template was applied.
         /// 
-        /// >  The RelatedCustinsInfo parameter is available only for ApsaraDB RDS for PostgreSQL instances.
+        /// > This parameter is available only for ApsaraDB RDS for PostgreSQL instances.
         /// </summary>
         [NameInMap("RelatedCustinsInfo")]
         [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string AppliedTime { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceName")]
                 [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

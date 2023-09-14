@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancePerformanceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The end of the time range that is queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+        /// The end time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -42,21 +42,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
                 /// <summary>
-                /// The name of the performance metric.
+                /// Specify the name of the performance metric.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The unit of the performance metric.
+                /// The unit of the performance metrics.
                 /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// The format in which the value of the performance metric is returned. Multiple values of the performance metric are separated by the \&amp; string. Example: com_delete\&amp;com_insert\&amp;com_insert_select\&amp;com_replace.
+                /// The format in which the value of the performance metric is returned.
+                /// 
+                /// >  Multiple performance metric values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.
                 /// </summary>
                 [NameInMap("ValueFormat")]
                 [Validation(Required=false)]
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string Date { get; set; }
 
                         /// <summary>
-                        /// The value of the performance metric.
+                        /// The queried values of the performance metric.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -96,14 +98,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range that is queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+        /// The start time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UnlockAccountRequest : TeaModel {
         /// <summary>
-        /// The account that you want to unlock. You can unlock only one account at a time.
+        /// The account that you want to unlock. You can unlock a single account at a time.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The ID of the ApsaraDB RDS for PostgreSQL instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

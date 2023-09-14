@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRenewalPriceResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of price information.
+        /// Details of price information.
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public DescribeRenewalPriceResponseBodyPriceInfoActivityInfo ActivityInfo { get; set; }
             public class DescribeRenewalPriceResponseBodyPriceInfoActivityInfo : TeaModel {
                 /// <summary>
-                /// The description of the error.
+                /// The returned message.
                 /// </summary>
                 [NameInMap("CheckErrMsg")]
                 [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public List<DescribeRenewalPriceResponseBodyPriceInfoCouponsCoupon> Coupon { get; set; }
                 public class DescribeRenewalPriceResponseBodyPriceInfoCouponsCoupon : TeaModel {
                     /// <summary>
-                    /// The ID of the coupon.
+                    /// The coupon ID.
                     /// </summary>
                     [NameInMap("CouponNo")]
                     [Validation(Required=false)]
@@ -151,14 +151,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeRenewalPriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribeRenewalPriceResponseBodyRulesRule : TeaModel {
                 /// <summary>
-                /// The description of the promotion rule.
+                /// The description of the activity.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the promotion rule.
+                /// The name of the rule.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

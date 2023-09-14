@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckCreateDdrDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the data of the source instance can be restored across regions. Valid values:** true and false**
+        /// Indicates whether the data of the source instance can be restored across regions. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("IsValid")]
         [Validation(Required=false)]
         public string IsValid { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

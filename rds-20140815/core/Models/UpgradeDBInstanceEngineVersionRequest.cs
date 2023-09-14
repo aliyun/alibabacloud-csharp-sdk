@@ -17,19 +17,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The time at which you want the specification change to take effect. Valid values:
+        /// The effective time. Valid values:
         /// 
-        /// *   **Immediate**: The specification change takes effect immediately.
-        /// *   **MaintainTime**: The change is applied during the specified maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).
-        /// 
-        /// Default value: **Immediate**.
+        /// *   **Immediate**: This is the default value.
+        /// *   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]

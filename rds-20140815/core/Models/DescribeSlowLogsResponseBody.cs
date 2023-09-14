@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The end date of the time range that was queried.
+        /// The end date of the query.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// An array that consists of the information about each slow query.
+        /// An array that consists of the information about each slow query log.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -44,7 +44,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The average execution duration per SQL statement in the query. Unit: seconds.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// **
+                /// 
+                /// ****
                 /// </summary>
                 [NameInMap("AvgExecutionTime")]
                 [Validation(Required=false)]
@@ -53,16 +55,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The average number of I/O writes per SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("AvgIOWriteCounts")]
                 [Validation(Required=false)]
                 public long? AvgIOWriteCounts { get; set; }
 
                 /// <summary>
-                /// The average number of rows that are affected by the last SQL statement in the query.
+                /// The average number of rows that were affected by the last SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("AvgLastRowsAffectedCounts")]
                 [Validation(Required=false)]
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The average number of logical reads per SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("AvgLogicalReadCounts")]
                 [Validation(Required=false)]
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The average number of physical reads per SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("AvgPhysicalReadCounts")]
                 [Validation(Required=false)]
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The average number of rows that were affected per SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("AvgRowsAffectedCounts")]
                 [Validation(Required=false)]
@@ -103,7 +105,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The name of the database that was queried.
+                /// The name of the database.
                 /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
@@ -116,6 +118,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public long? MaxExecutionTime { get; set; }
 
+                /// <summary>
+                /// The longest execution duration of a specific SQL statement in the query. Unit: milliseconds.
+                /// </summary>
                 [NameInMap("MaxExecutionTimeMS")]
                 [Validation(Required=false)]
                 public long? MaxExecutionTimeMS { get; set; }
@@ -123,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The largest number of I/O writes that were performed by a specific SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MaxIOWriteCounts")]
                 [Validation(Required=false)]
@@ -132,7 +137,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The largest number of rows that were affected by the last SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MaxLastRowsAffectedCounts")]
                 [Validation(Required=false)]
@@ -145,6 +150,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public long? MaxLockTime { get; set; }
 
+                /// <summary>
+                /// The longest lock duration that was caused by a specific SQL statement in the query. Unit: milliseconds.
+                /// </summary>
                 [NameInMap("MaxLockTimeMS")]
                 [Validation(Required=false)]
                 public long? MaxLockTimeMS { get; set; }
@@ -152,7 +160,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The largest number of logical reads that were performed by a specific SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MaxLogicalReadCounts")]
                 [Validation(Required=false)]
@@ -161,7 +169,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The largest number of physical reads that were performed by a specific SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MaxPhysicalReadCounts")]
                 [Validation(Required=false)]
@@ -170,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The largest number of rows that were affected by a specific SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MaxRowsAffectedCounts")]
                 [Validation(Required=false)]
@@ -179,7 +187,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The smallest number of I/O writes that were performed by a specific SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MinIOWriteCounts")]
                 [Validation(Required=false)]
@@ -188,7 +196,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The smallest number of rows that were affected by the last SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MinLastRowsAffectedCounts")]
                 [Validation(Required=false)]
@@ -197,7 +205,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The smallest number of logical reads that were performed by a specific SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MinLogicalReadCounts")]
                 [Validation(Required=false)]
@@ -206,7 +214,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The smallest number of physical reads that were performed by a specific SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MinPhysicalReadCounts")]
                 [Validation(Required=false)]
@@ -215,7 +223,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The smallest number of rows that were affected by a specific SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("MinRowsAffectedCounts")]
                 [Validation(Required=false)]
@@ -229,7 +237,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? MySQLTotalExecutionCounts { get; set; }
 
                 /// <summary>
-                /// The total execution duration of all SQL statements in the query. This parameter is returned only for instances that run MySQL. Unit: seconds.
+                /// The total execution duration of all SQL statements in the query. Unit: seconds. This parameter is returned only for instances that run MySQL.
                 /// </summary>
                 [NameInMap("MySQLTotalExecutionTimes")]
                 [Validation(Required=false)]
@@ -287,7 +295,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The average amount of CPU time per SQL statement in the query. Unit: seconds.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("SQLServerAvgCpuTime")]
                 [Validation(Required=false)]
@@ -296,7 +304,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The average execution duration per SQL statement in the query. Unit: seconds.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("SQLServerAvgExecutionTime")]
                 [Validation(Required=false)]
@@ -305,7 +313,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The largest amount of CPU time that was used by a specific SQL statement in the query. Unit: seconds.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("SQLServerMaxCpuTime")]
                 [Validation(Required=false)]
@@ -314,7 +322,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The smallest amount of CPU time that was used by a specific SQL statement. Unit: seconds.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("SQLServerMinCpuTime")]
                 [Validation(Required=false)]
@@ -323,7 +331,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The smallest execution duration of a specific SQL statement in the query. Unit: seconds.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("SQLServerMinExecutionTime")]
                 [Validation(Required=false)]
@@ -332,7 +340,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The total amount of CPU time that was used by all SQL statements in the query. Unit: seconds.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("SQLServerTotalCpuTime")]
                 [Validation(Required=false)]
@@ -369,7 +377,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The total number of I/O writes that were performed by all SQL statements in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("TotalIOWriteCounts")]
                 [Validation(Required=false)]
@@ -378,7 +386,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The total number of rows that were affected by the last SQL statement in the query.
                 /// 
-                /// >  This parameter is returned only for instances that run SQL Server.
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("TotalLastRowsAffectedCounts")]
                 [Validation(Required=false)]
@@ -399,7 +407,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? TotalLogicalReadCounts { get; set; }
 
                 /// <summary>
-                /// The total number of physical reads that were performed by all SQL statements in the query.
+                /// The total number of physical reads that were performed by all SQL statements in the query .
                 /// </summary>
                 [NameInMap("TotalPhysicalReadCounts")]
                 [Validation(Required=false)]
@@ -417,7 +425,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of the page returned.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -431,14 +439,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The start date of the time range that was queried.
+        /// The start date of the query.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

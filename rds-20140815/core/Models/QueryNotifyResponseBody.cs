@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class QueryNotifyResponseBody : TeaModel {
         /// <summary>
-        /// The details of the returned parameters.
+        /// The response parameters.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryNotifyResponseBodyData Data { get; set; }
         public class QueryNotifyResponseBodyData : TeaModel {
             /// <summary>
-            /// The details of the notification.
+            /// The details of notifications.
             /// </summary>
             [NameInMap("NotifyItemList")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? AliUid { get; set; }
 
                 /// <summary>
-                /// Indicates whether the notification has been confirmed. You can call the ConfirmNotify operation to mark the notification as confirmed. Valid values:
+                /// Indicates whether the notification has been confirmed. You can call the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. Valid values:
                 /// 
                 /// *   **true**
                 /// *   **false**
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public bool? ConfirmFlag { get; set; }
 
                 /// <summary>
-                /// The UID of the contact who called the ConfirmNotify operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.
+                /// The UID of the contact who called the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.
                 /// 
                 /// The value **0** indicates that the notification is automatically confirmed by the system.
                 /// </summary>
@@ -139,21 +139,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number of the page returned.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The number of entries returned on each page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries.
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalRecordCount")]
             [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

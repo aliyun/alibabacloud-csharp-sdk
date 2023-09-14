@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceNetInfoResponseBody : TeaModel {
         /// <summary>
-        /// Details of the endpoints of the instance.
+        /// The information about the endpoints of the instance.
         /// </summary>
         [NameInMap("DBInstanceNetInfos")]
         [Validation(Required=false)]
@@ -30,24 +30,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BabelfishPort { get; set; }
 
                 /// <summary>
-                /// The endpoint of the instance.
+                /// The endpoints of the instance.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The type of the endpoint. Valid values:
+                /// The types of the endpoints. Valid values:
                 /// 
-                /// *   **Normal**: regular endpoint
-                /// *   **ReadWriteSplitting**: read/write splitting endpoint
+                /// *   **Normal**: regular endpoints
+                /// *   **ReadWriteSplitting**: read/write splitting endpoints
                 /// </summary>
                 [NameInMap("ConnectionStringType")]
                 [Validation(Required=false)]
                 public string ConnectionStringType { get; set; }
 
                 /// <summary>
-                /// Details of the weight. This parameter is returned only when the read/write splitting feature is enabled for the instance.
+                /// The information about the instance weight.
+                /// 
+                /// > This parameter is returned only for instances that have read/write splitting endpoints.
                 /// </summary>
                 [NameInMap("DBInstanceWeights")]
                 [Validation(Required=false)]
@@ -68,14 +70,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string Availability { get; set; }
 
                         /// <summary>
-                        /// The ID of the instance.
+                        /// The instance ID.
                         /// </summary>
                         [NameInMap("DBInstanceId")]
                         [Validation(Required=false)]
                         public string DBInstanceId { get; set; }
 
                         /// <summary>
-                        /// The database engine of the instance. Valid values:
+                        /// The role of the instance. Valid values:
                         /// 
                         /// *   **Master**: primary instance
                         /// *   **Readonly**: read-only instance
@@ -106,35 +108,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint. Valid values:
                 /// 
                 /// *   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.
-                /// *   **Custom**: You must manually allocate read weights to the instance and its read-only instances.
+                /// *   **Custom**: You must manually assign read weights to the instance and its read-only instances.
                 /// </summary>
                 [NameInMap("DistributionType")]
                 [Validation(Required=false)]
                 public string DistributionType { get; set; }
 
                 /// <summary>
-                /// The remaining validity period of the instance of the classic network in hybrid access mode. Unit: seconds.
+                /// The remaining validity period of the instance in the classic network in hybrid access mode. Unit: seconds.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The IP address of the endpoint.
+                /// The IP address.
                 /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
                 /// <summary>
-                /// The type of the network.
+                /// The network type.
                 /// 
                 /// *   Valid values when the instance resides in the classic network:
-                /// *   **Inner:**: internal network
-                /// *   **Public**: Internet
-                /// *   Valid values when the instance resides in a VPC:
-                /// *   **Private**: internal network
-                /// *   **Public**: Internet
+                /// 
+                ///     *   **Inner:**: internal network
+                ///     *   **Public**: Internet
+                /// 
+                /// *   Valid values when the instance resides in a virtual private cloud (VPC):
+                /// 
+                ///     *   **Private**: internal network
+                ///     *   **Public**: Internet
                 /// </summary>
                 [NameInMap("IPType")]
                 [Validation(Required=false)]
@@ -149,6 +154,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string MaxDelayTime { get; set; }
 
+                /// <summary>
+                /// The PgBouncer port.
+                /// 
+                /// > This parameter is returned only when PgBouncer is enabled for the instance that runs PostgreSQL.
+                /// </summary>
                 [NameInMap("PGBouncerPort")]
                 [Validation(Required=false)]
                 public string PGBouncerPort { get; set; }
@@ -161,7 +171,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Port { get; set; }
 
                 /// <summary>
-                /// An array that consists of the details about the IP address whitelists.
+                /// The details of the IP address whitelist.
                 /// </summary>
                 [NameInMap("SecurityIPGroups")]
                 [Validation(Required=false)]
@@ -179,7 +189,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string SecurityIPGroupName { get; set; }
 
                         /// <summary>
-                        /// The IP addresses contained in the IP address whitelist.
+                        /// The IP addresses that is contained in the IP address whitelist.
                         /// </summary>
                         [NameInMap("SecurityIPs")]
                         [Validation(Required=false)]
@@ -202,14 +212,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Upgradeable { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]

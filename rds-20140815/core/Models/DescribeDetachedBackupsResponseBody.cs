@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDetachedBackupsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the returned data backup files.
+        /// The queried backup sets.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDetachedBackupsResponseBodyItemsBackup> Backup { get; set; }
             public class DescribeDetachedBackupsResponseBodyItemsBackup : TeaModel {
                 /// <summary>
-                /// The URL that is used to download the data backup file over the Internet. If the data backup file cannot be downloaded, an empty string is returned.
+                /// The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.
                 /// </summary>
                 [NameInMap("BackupDownloadURL")]
                 [Validation(Required=false)]
                 public string BackupDownloadURL { get; set; }
 
                 /// <summary>
-                /// The end time of the backup.
+                /// The end time of the backup task.
                 /// 
                 /// The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
                 /// </summary>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BackupEndTime { get; set; }
 
                 /// <summary>
-                /// The ID of the data backup file.
+                /// The ID of the backup set.
                 /// </summary>
                 [NameInMap("BackupId")]
                 [Validation(Required=false)]
                 public string BackupId { get; set; }
 
                 /// <summary>
-                /// The URL that is used to download the data backup file over an internal network. If the data backup file cannot be downloaded, an empty string is returned.
+                /// The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned.
                 /// </summary>
                 [NameInMap("BackupIntranetDownloadURL")]
                 [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BackupMethod { get; set; }
 
                 /// <summary>
-                /// The backup mode of the data backup file. Valid values:
+                /// The backup method. Valid values:
                 /// 
                 /// *   **Automated**
                 /// *   **Manual**
@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BackupMode { get; set; }
 
                 /// <summary>
-                /// The size of the data backup file. Unit: bytes.
+                /// The backup size. Unit: bytes.
                 /// </summary>
                 [NameInMap("BackupSize")]
                 [Validation(Required=false)]
                 public long? BackupSize { get; set; }
 
                 /// <summary>
-                /// The start time of the backup.
+                /// The start time of the backup task.
                 /// 
                 /// The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
                 /// </summary>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BackupStartTime { get; set; }
 
                 /// <summary>
-                /// The status of the data backup file. Valid values:
+                /// The status of the backup set. Valid values:
                 /// 
                 /// *   **Success**
                 /// *   **Failed**
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BackupStatus { get; set; }
 
                 /// <summary>
-                /// The backup type. Valid values:
+                /// The backup type of the backup file. Valid values:
                 /// 
                 /// *   **FullBackup**
                 /// *   **IncrementalBackup**
@@ -107,9 +107,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BackupType { get; set; }
 
                 /// <summary>
-                /// The point in time at which the data in the data backup file is consistent. The return value of this parameter is a timestamp.
+                /// The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.
                 /// 
-                /// >  If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.
+                /// > If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.
                 /// </summary>
                 [NameInMap("ConsistentTime")]
                 [Validation(Required=false)]
@@ -130,28 +130,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The No. of the instance that generates the data backup file. This parameter is used to indicate whether the instance that generates the data backup file is a primary instance or a secondary instance.
+                /// The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.
                 /// </summary>
                 [NameInMap("HostInstanceID")]
                 [Validation(Required=false)]
                 public string HostInstanceID { get; set; }
 
                 /// <summary>
-                /// Indicates whether the data backup file is available. Valid values:
+                /// Indicates whether the backup set is available. Valid values:
                 /// 
-                /// *   **0**: The data backup file is unavailable.
-                /// *   **1**: The data backup file is available.
+                /// *   **0**: The backup set is unavailable.
+                /// *   **1**: The backup set is available.
                 /// </summary>
                 [NameInMap("IsAvail")]
                 [Validation(Required=false)]
                 public int? IsAvail { get; set; }
 
                 /// <summary>
-                /// The status of the data backup file that is used to restore individual databases or tables. Valid values:
+                /// The status of the backup set that is used to restore individual databases or tables. Valid values:
                 /// 
-                /// *   **OK**: The data backup file is normal.
-                /// *   **LARGE**: The data backup file contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.
-                /// *   **EMPTY**: The data backup file is generated from a failed backup task.
+                /// *   **OK**: The backup set is normal.
+                /// *   **LARGE**: The backup set contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.
+                /// *   **EMPTY**: The backup set is generated from a failed backup task.
                 /// </summary>
                 [NameInMap("MetaStatus")]
                 [Validation(Required=false)]
@@ -160,8 +160,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the data backup file can be deleted. Valid values:
                 /// 
-                /// *   **Enabled**: The data backup file can be deleted.
-                /// *   **Disabled**: The data backup file cannot be deleted.
+                /// *   **Enabled**
+                /// *   **Disabled**
                 /// </summary>
                 [NameInMap("StoreStatus")]
                 [Validation(Required=false)]
@@ -172,21 +172,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of data backup files on the page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

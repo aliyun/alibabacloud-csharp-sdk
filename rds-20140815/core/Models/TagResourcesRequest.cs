@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the instances. You can specify up to 50 instance IDs.
+        /// The instance ID.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -43,21 +43,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags to be added to the resources. You can specify up to 20 tags.
+        /// The list of tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag that you want to add to the instance. The value of this parameter cannot be an empty string.
+            /// The key of the tag. You can create N tag keys at a time. Valid values of N: **1** to **20**. The value of this parameter cannot be an empty string.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value that is associated with the specified tag key. This parameter can be an empty string.
+            /// The value of the tag. You can create N tag values at a time. Valid values of N: **1** to **20**. The value of this parameter can be an empty string.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

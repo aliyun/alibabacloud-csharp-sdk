@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// 目标实例ID。可调用[DescribeDBInstances](~~26232~~)接口查询。
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// 资源组ID，可以为空。
+        /// The ID of the resource group. You can leave this parameter empty.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The name of the replication slot.
+        /// The name of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the name of the replication slot.
         /// </summary>
         [NameInMap("SlotName")]
         [Validation(Required=false)]
         public string SlotName { get; set; }
 
         /// <summary>
-        /// The status of the replication slot.
+        /// The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot.
         /// 
         /// Valid values:
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDedicatedHostGroupsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of dedicated clusters returned.
+        /// The information about dedicated clusters returned.
         /// </summary>
         [NameInMap("DedicatedHostGroups")]
         [Validation(Required=false)]
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The type of storage media that is used for the hosts in the dedicated cluster. Valid values:
                 /// 
-                /// *   **dhg_cloud_ssd**: standard or enhanced solid-state drive (SSD)
-                /// *   **dhg_local_ssd**: local SSD
+                /// *   **dhg_cloud_ssd**: cloud disks
+                /// *   **dhg_local_ssd**: local disks
                 /// </summary>
                 [NameInMap("DedicatedHostCountGroupByHostType")]
                 [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public float? DiskAllocatedAmount { get; set; }
 
                 /// <summary>
-                /// The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the disk overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+                /// The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
                 /// </summary>
                 [NameInMap("DiskAllocationRatio")]
                 [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public float? DiskUtility { get; set; }
 
                 /// <summary>
-                /// The database engine that is run on the instances in the dedicated cluster.
+                /// The database engine of the instances in the dedicated cluster.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? HostNumber { get; set; }
 
                 /// <summary>
-                /// The policy based on which the system handles host failures. Valid values:
+                /// The policy that is used to handle host failures. Valid values:
                 /// 
                 /// *   **Auto**: The system automatically replaces faulty hosts.
                 /// *   **Manual**: You must manually replace faulty hosts.
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public float? MemAllocatedAmount { get; set; }
 
                 /// <summary>
-                /// The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the memory overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+                /// The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
                 /// </summary>
                 [NameInMap("MemAllocationRatio")]
                 [Validation(Required=false)]
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public float? MemUtility { get; set; }
 
                 /// <summary>
-                /// Indicates whether the operating system permissions of the hosts in the dedicated cluster can be granted. Valid values:
+                /// Indicates whether the feature that allows you to have the OS permissions on the host is enabled. Valid values:
                 /// 
                 /// *   **0** or **null**: The permissions cannot be granted.
                 /// *   **1**: The permissions can be granted.
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string OpenPermission { get; set; }
 
                 /// <summary>
-                /// The name and ID of the dedicated cluster. The value of this parameter consists of two parts: the value of the **DedicatedHostGroupDesc** parameter and the value of the **DedicatedHostGroupId** parameter. Format: DedicatedHostGroupDesc/DedicatedHostGroupId.
+                /// The name and ID of the dedicated cluster. The value consists of **DedicatedHostGroupDesc** and **DedicatedHostGroupId**. Format: DedicatedHostGroupDesc/DedicatedHostGroupId.
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// A list of zones to which the hosts of the dedicated cluster belong.
+                /// The zones to which the hosts of the dedicated cluster belong.
                 /// </summary>
                 [NameInMap("ZoneIDList")]
                 [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

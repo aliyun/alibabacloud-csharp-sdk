@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details about the instance.
+        /// The information of instances.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -20,10 +20,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancesResponseBodyItemsDBInstance> DBInstance { get; set; }
             public class DescribeDBInstancesResponseBodyItemsDBInstance : TeaModel {
+                /// <summary>
+                /// Indicates whether the buffer pool extension (BPE) feature is enabled. Valid values:
+                /// 
+                /// *   **1**: The feature is enabled.
+                /// *   **0**: The feature is disabled.
+                /// </summary>
                 [NameInMap("BpeEnabled")]
                 [Validation(Required=false)]
                 public string BpeEnabled { get; set; }
 
+                /// <summary>
+                /// Indicates whether the I/O burst feature is enabled. Valid values:
+                /// 
+                /// *   **true**: The feature is enabled.
+                /// *   **false**: The feature is disabled.
+                /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
@@ -32,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The RDS edition of the instance. Valid values:
                 /// 
                 /// *   **Basic**: RDS Basic Edition
-                /// *   **HighAvailability**: RDS High-availability Edition
+                /// *   **HighAvailability**: High-availability Edition
                 /// *   **Finance**: RDS Enterprise Edition
                 /// 
                 /// > This parameter is returned only when **InstanceLevel** is set to **1**.
@@ -73,14 +85,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceClass { get; set; }
 
                 /// <summary>
-                /// The description of the instance.
+                /// The instance description.
                 /// </summary>
                 [NameInMap("DBInstanceDescription")]
                 [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
@@ -123,7 +135,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated cluster.
+                /// The dedicated cluster ID.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
@@ -217,14 +229,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DestroyTime { get; set; }
 
                 /// <summary>
-                /// The database engine of the instance.
+                /// The database engine of the serverless instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine version of the instance.
+                /// The database engine version.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -267,8 +279,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The lock mode of the instance. Valid values:
                 /// 
                 /// *   **Unlock**: The instance is not locked.
-                /// *   \*\* ManualLock\*\*: The instance is manually locked.
-                /// *   **LockByExpiration**: The instance is automatically locked after it expires.
+                /// *   **ManualLock**: The instance is manually locked.
+                /// *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
                 /// *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
                 /// *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
                 /// *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
@@ -292,7 +304,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string MasterInstanceId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the multi-zone deployment method is used for the instance. Valid values: **true and false**.
+                /// Indicates whether the multi-zone deployment method is used for the instance. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
                 /// 
                 /// > If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: `cn-hangzhou-MAZ10(h,i)`.
                 /// </summary>
@@ -333,7 +348,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -381,28 +396,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? TipsLevel { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID of the instance.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The VPC ID of the instance. This parameter is returned only when the instance resides in a VPC.
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcCloudInstanceId")]
                 [Validation(Required=false)]
                 public string VpcCloudInstanceId { get; set; }
 
                 /// <summary>
-                /// The VPC ID of the instance.
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The name of the VPC.
+                /// The VPC name.
                 /// </summary>
                 [NameInMap("VpcName")]
                 [Validation(Required=false)]

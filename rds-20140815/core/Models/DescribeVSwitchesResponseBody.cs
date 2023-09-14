@@ -38,28 +38,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The details about the vSwitches.
+        /// The information about the vSwitches.
         /// </summary>
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]
         public List<DescribeVSwitchesResponseBodyVSwitchs> VSwitchs { get; set; }
         public class DescribeVSwitchesResponseBodyVSwitchs : TeaModel {
             /// <summary>
-            /// 交换机中可用的IP地址数量。
+            /// The number of available IP addresses in the vSwitch.
             /// </summary>
             [NameInMap("AvailableIpAddressCount")]
             [Validation(Required=false)]
             public string AvailableIpAddressCount { get; set; }
 
             /// <summary>
-            /// The CIDR blocks of the vSwitches.
+            /// The CIDR block of the vSwitch.
             /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// The descriptions of the vSwitches.
+            /// The description of the vSwitch.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -68,22 +68,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// Indicates whether the vSwitch is the default vSwitch. Valid values:
             /// 
-            /// *   **true**: The vSwitch is the default vSwitch.
-            /// *   **false**: The vSwitch is not the default vSwitch.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// The ID of the zone to which the vSwitches belong.
+            /// The ID of the zone to which the vSwitch belongs.
             /// </summary>
             [NameInMap("IzNo")]
             [Validation(Required=false)]
             public string IzNo { get; set; }
 
             /// <summary>
-            /// The status of a vSwitch. Valid values:
+            /// The status of the vSwitch. Valid values:
             /// 
             /// *   **Pending**: The vSwitch is being configured.
             /// *   **Available**: The vSwitch is available.
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch.
+            /// The vSwitch ID.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The name of the vSwitch.
+            /// The vSwitch name.
             /// </summary>
             [NameInMap("VSwitchName")]
             [Validation(Required=false)]

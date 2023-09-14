@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReadOnlyDBInstanceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether payment is automatically made during renewal. Valid values:
+        /// Specifies whether to enable the automatic payment feature. Valid values:
         /// 
-        /// *   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.
-        /// *   **False** (default): disables automatic payment. You have to manually pay the order in the console. Log on to the ApsaraDB RDS console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.
+        /// 1.  **true**: enables the feature. You must make sure that your account balance is sufficient.
+        /// 2.  **false**: disables the feature. An unpaid order is generated.
+        /// 
+        /// >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -33,25 +35,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// This parameter is not publicly available.
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// This parameter is not publicly available.
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// The RDS edition of the read-only instance. Valid values:
+        /// The RDS edition of the instance. Valid values:
         /// 
-        /// *   **Basic**: RDS Basic Edition.
-        /// *   **HighAvailability**: RDS High-availability Edition. This is the default value.
-        /// *   **AlwaysOn**: RDS Cluster Edition.
+        /// *   **Basic**: RDS Basic Edition
+        /// *   **HighAvailability** (default): RDS High-availability Edition
+        /// *   **AlwaysOn**: RDS Cluster Edition
         /// 
         /// > If the primary instance runs PostgreSQL with cloud disks, you must set this parameter to **Basic**.
         /// </summary>
@@ -76,14 +78,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter
         /// 
-        /// > The value cannot start with `http://` or `https://`.
+        /// > The value cannot start with [http:// or https://.](http://https://。)
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The ID of the primary instance.
+        /// The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance IDs.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -97,16 +99,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The storage type of the read-only instance. Valid values:
+        /// The storage type of the instance. Valid values:
         /// 
-        /// *   **local_ssd**: local SSD
-        /// *   **cloud_ssd**: standard SSD
-        /// *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
-        /// *   **cloud_essd2**: ESSD of PL2
-        /// *   **cloud_essd3**: ESSD of PL3
+        /// *   **local_ssd**: local SSDs
+        /// *   **cloud_ssd**: standard SSDs
+        /// *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
+        /// *   **cloud_essd2**: ESSDs of PL2
+        /// *   **cloud_essd3**: ESSDs of PL3
         /// 
-        /// > * If the primary instance runs MySQL with local disks, you must set this parameter to **local\_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud\_ssd, cloud\_essd, cloud\_essd2, or cloud\_essd3.
-        /// > * If the primary instance runs SQL Server, you must set this parameter to cloud\_ssd, cloud\_essd, cloud\_essd2, or cloud\_essd3.
+        /// > 
+        /// 
+        /// *   If the primary instance runs MySQL with local disks, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
+        /// 
+        /// *   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
@@ -123,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// Specifies whether to enable the release protection feature for the read-only instance. Valid values:
         /// 
         /// *   **true**: enables the feature.
-        /// *   **false**: disables the feature. This is the default value.
+        /// *   **false** (default): disables the feature.
         /// 
         /// > This feature can be enabled only when you set the **PayType** parameter to **Postpaid**.
         /// </summary>
@@ -199,6 +204,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
+        /// Supports initializing the port when creating a read-only instance on the RDS MySQL master instance. Valid values: **1000 to 65534**.
+        /// </summary>
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public string Port { get; set; }
+
+        /// <summary>
         /// The private IP address of the read-only instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system assigns a private IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
@@ -206,7 +218,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The region ID of the read-only instance. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -278,7 +290,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The zone ID of the read-only instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
+        /// The zone ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

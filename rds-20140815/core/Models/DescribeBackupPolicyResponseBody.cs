@@ -62,6 +62,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
+        /// <summary>
+        /// The backup settings of the secondary instance. Valid values:
+        /// 
+        /// *   **1**: Secondary instance preferred
+        /// *   **2**: Primary instance preferred
+        /// 
+        /// > This parameter is valid only when the instance runs SQL Server on RDS Cluster Edition. This parameter is returned only when SupportModifyBackupPriority is set to True.
+        /// </summary>
         [NameInMap("BackupPriority")]
         [Validation(Required=false)]
         public int? BackupPriority { get; set; }
@@ -215,6 +223,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the backup settings of a secondary instance can be modified. Valid values:
+        /// 
+        /// *   **True**
+        /// *   **False**
+        /// </summary>
         [NameInMap("SupportModifyBackupPriority")]
         [Validation(Required=false)]
         public bool? SupportModifyBackupPriority { get; set; }

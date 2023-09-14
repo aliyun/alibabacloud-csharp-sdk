@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCharacterSetNameResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the character sets that are supported for the instance.
+        /// The character sets that are supported.
         /// </summary>
         [NameInMap("CharacterSetNameItems")]
         [Validation(Required=false)]
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The database engine that is run on the instance.
+        /// The type of the database engine.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

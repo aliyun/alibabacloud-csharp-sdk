@@ -77,6 +77,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SlotType { get; set; }
 
             /// <summary>
+            /// The current Replication Slot corresponds to the specific delay of the logical subscription of the subscriber, in seconds (s)
+            /// </summary>
+            [NameInMap("SubReplayLag")]
+            [Validation(Required=false)]
+            public string SubReplayLag { get; set; }
+
+            /// <summary>
             /// Indicates whether the replication slot is temporary.
             /// 
             /// Valid values:

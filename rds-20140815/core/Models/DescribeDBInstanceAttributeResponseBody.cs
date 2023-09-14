@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The method that is used to update the minor engine version of the instance. Valid values:
                 /// 
                 /// *   **Auto:** automatic update.
-                /// *   **Manual**: manual update. ApsaraDB RDS automatically updates the minor engine version of the instance only when the minor engine version is phased out.
+                /// *   **Manual**: manual update. The minor engine version of the instance is forcefully updated only when the in-use minor engine version is phased out.
                 /// </summary>
                 [NameInMap("AutoUpgradeMinorVersion")]
                 [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.
                 /// 
-                /// > This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).
+                /// >  This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see Introduction to Babelfish.[](~~428613~~)
                 /// </summary>
                 [NameInMap("BabelfishConfig")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     /// <summary>
                     /// The switch to enable or disable Babelfish.
                     /// 
-                    /// > If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as **true**.
+                    /// >  If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as **true**.
                     /// </summary>
                     [NameInMap("BabelfishEnabled")]
                     [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     /// *   **single-db**
                     /// *   **multi-db**
                     /// 
-                    /// > For more information about migration modes for Babelfish, see [Migration mode](~~428613~~).
+                    /// >  For more information about migration modes for Babelfish, see [Migration modes](~~428613~~).
                     /// </summary>
                     [NameInMap("MigrationMode")]
                     [Validation(Required=false)]
@@ -87,16 +87,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <props="china">预留参数，无需配置。</props>
-                /// <props="intl">无效参数，无需配置。</props>
+                /// An invalid parameter. You can ignore this parameter.
                 /// </summary>
                 [NameInMap("BpeEnabled")]
                 [Validation(Required=false)]
                 public string BpeEnabled { get; set; }
 
                 /// <summary>
-                /// <props="china">预留参数，无需配置。</props>
-                /// <props="intl">无效参数，无需配置。</props>
+                /// An invalid parameter. You can ignore this parameter.
                 /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
@@ -146,7 +144,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **1**: shared proxy
                 /// *   **2**: dedicated proxy
                 /// 
-                /// > We recommend that you use the **ProxyType** parameter instead of this parameter.
+                /// >  We recommend that you use the ProxyType parameter instead of this parameter.
                 /// </summary>
                 [NameInMap("ConsoleVersion")]
                 [Validation(Required=false)]
@@ -160,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The minor engine version of the instance.
+                /// The version of the database engine.
                 /// </summary>
                 [NameInMap("CurrentKernelVersion")]
                 [Validation(Required=false)]
@@ -185,14 +183,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string ClassCode { get; set; }
 
                         /// <summary>
-                        /// The ID of the node.
+                        /// The node ID.
                         /// </summary>
                         [NameInMap("NodeId")]
                         [Validation(Required=false)]
                         public string NodeId { get; set; }
 
                         /// <summary>
-                        /// The ID of the region.
+                        /// The region ID.
                         /// </summary>
                         [NameInMap("NodeRegionId")]
                         [Validation(Required=false)]
@@ -209,7 +207,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string NodeRole { get; set; }
 
                         /// <summary>
-                        /// The zone ID of the instance.
+                        /// The zone ID.
                         /// </summary>
                         [NameInMap("NodeZoneId")]
                         [Validation(Required=false)]
@@ -220,7 +218,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// The number of cores that are configured for the instance.
+                /// The number of CPU cores.
                 /// </summary>
                 [NameInMap("DBInstanceCPU")]
                 [Validation(Required=false)]
@@ -253,14 +251,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The memory size of the instance. Unit: MB.
+                /// The memory capacity of the instance. Unit: MB.
                 /// </summary>
                 [NameInMap("DBInstanceMemory")]
                 [Validation(Required=false)]
@@ -295,7 +293,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// 
                 /// *   **local_ssd** and **ephemeral_ssd**: local SSD
                 /// *   **cloud_ssd**: standard SSD
-                /// *   **cloud_essd**: enhanced SSD
+                /// *   **cloud_essd**: enhanced SSD (ESSD)
                 /// </summary>
                 [NameInMap("DBInstanceStorageType")]
                 [Validation(Required=false)]
@@ -350,7 +348,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The version of the database engine.
+                /// The database engine version of the serverless instance.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -359,7 +357,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The expiration time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// 
-                /// > Pay-as-you-go instances never expire.
+                /// **
+                /// 
+                /// **Description** Pay-as-you-go instances never expire.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra Extra { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra : TeaModel {
                     /// <summary>
-                    /// The details of the instance.
+                    /// The IDs of the instances.
                     /// </summary>
                     [NameInMap("DBInstanceIds")]
                     [Validation(Required=false)]
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string IPType { get; set; }
 
                 /// <summary>
-                /// The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
+                /// The ID of the instance from which the incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
                 /// </summary>
                 [NameInMap("IncrementSourceDBInstanceId")]
                 [Validation(Required=false)]
@@ -418,8 +418,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **Classic**: classic network
-                /// *   **VPC**: virtual private cloud (VPC)
+                /// *   **Classic**
+                /// *   **VPC**
                 /// </summary>
                 [NameInMap("InstanceNetworkType")]
                 [Validation(Required=false)]
@@ -473,7 +473,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The ID of the primary instance.
                 /// 
-                /// > If this parameter is not returned, the instance is the primary instance.
+                /// **
+                /// 
+                /// **Description** If this parameter is not returned, the instance is the primary instance.
                 /// </summary>
                 [NameInMap("MasterInstanceId")]
                 [Validation(Required=false)]
@@ -501,12 +503,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? MaxIOMBPS { get; set; }
 
                 /// <summary>
-                /// The maximum number of I/O requests that is processed by the instance per second.
+                /// The maximum number of I/O requests per second.
                 /// </summary>
                 [NameInMap("MaxIOPS")]
                 [Validation(Required=false)]
                 public int? MaxIOPS { get; set; }
 
+                /// <summary>
+                /// Indicates whether PgBouncer is enabled.
+                /// 
+                /// >  This parameter is returned only for RDS instances that run PostgreSQL. If PgBouncer is enabled, the return value is **true**.
+                /// </summary>
                 [NameInMap("PGBouncerEnabled")]
                 [Validation(Required=false)]
                 public string PGBouncerEnabled { get; set; }
@@ -540,7 +547,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? ProxyType { get; set; }
 
                 /// <summary>
-                /// An array consisting of the IDs of the read-only instances that are attached to the primary instance.
+                /// The IDs of the read-only instances that are attached to the primary instance.
                 /// </summary>
                 [NameInMap("ReadOnlyDBInstanceIds")]
                 [Validation(Required=false)]
@@ -569,14 +576,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ReadonlyInstanceSQLDelayedTime { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -612,14 +619,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     /// *   **true**: The feature is enabled.
                     /// *   **false** (default): The feature is disabled.
                     /// 
-                    /// > After the automatic start and stop feature is enabled, if no connections are established to the instance within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance automatically resumes.
+                    /// >  After the automatic suspension feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.
                     /// </summary>
                     [NameInMap("AutoPause")]
                     [Validation(Required=false)]
                     public bool? AutoPause { get; set; }
 
                     /// <summary>
-                    /// The maximum number of RDS Capacity Units (RCUs).
+                    /// The maximum number of RCUs.
                     /// </summary>
                     [NameInMap("ScaleMax")]
                     [Validation(Required=false)]
@@ -638,7 +645,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     /// *   **true**: The feature is enabled.
                     /// *   **false** (default): The feature is disabled.
                     /// 
-                    /// > In most cases, the RCU scaling of a serverless instance immediately takes effect. In some cases, the RCU scaling does not immediately take effect. If this happens, you can enable the forced scaling feature to forcefully scale the RCUs of the serverless instance.
+                    /// >  In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance.
                     /// </summary>
                     [NameInMap("SwitchForce")]
                     [Validation(Required=false)]
@@ -647,7 +654,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// An array that consists of the details about the secondary zones.
+                /// Information about the zone of the secondary instance.
                 /// </summary>
                 [NameInMap("SlaveZones")]
                 [Validation(Required=false)]
@@ -658,7 +665,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZonesSlaveZone> SlaveZone { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZonesSlaveZone : TeaModel {
                         /// <summary>
-                        /// The ID of the zone.
+                        /// The zone ID.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -669,10 +676,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.
+                /// Indicates whether the instance supports privileged accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.
                 /// 
-                /// *   **Enable**: Superuser accounts are supported.
-                /// *   **Disabled**: Superuser accounts are not supported.
+                /// *   **Enable**: Privileged accounts are supported.
+                /// *   **Disabled**: Privileged accounts are not supported.
                 /// </summary>
                 [NameInMap("SuperPermissionMode")]
                 [Validation(Required=false)]
@@ -710,21 +717,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? TipsLevel { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The VPC ID of the instance. This parameter is returned only when the instance resides in a VPC.
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcCloudInstanceId")]
                 [Validation(Required=false)]
                 public string VpcCloudInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The ID of the virtual private cloud (VPC).
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

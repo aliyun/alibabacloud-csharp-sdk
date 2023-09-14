@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// The information about the price.
+        /// The price information.
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// An array that consists of information about the coupon.
+            /// The information about the coupon.
             /// </summary>
             [NameInMap("Coupons")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public List<DescribePriceResponseBodyPriceInfoCouponsCoupon> Coupon { get; set; }
                 public class DescribePriceResponseBodyPriceInfoCouponsCoupon : TeaModel {
                     /// <summary>
-                    /// The ID of the coupon.
+                    /// The coupon ID.
                     /// </summary>
                     [NameInMap("CouponNo")]
                     [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the details of the promotion rule.
+        /// The details of the promotion rule.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -175,14 +175,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// Indicates whether discounts can be used.
+        /// </summary>
         [NameInMap("ShowDiscount")]
         [Validation(Required=false)]
         public bool? ShowDiscount { get; set; }
 
+        /// <summary>
+        /// The estimated hourly fee that is calculated based on the maximum number of RCUs.
+        /// </summary>
         [NameInMap("TradeMaxRCUAmount")]
         [Validation(Required=false)]
         public float? TradeMaxRCUAmount { get; set; }
 
+        /// <summary>
+        /// The estimated hourly fee that is calculated based on the minimum number of RCUs.
+        /// </summary>
         [NameInMap("TradeMinRCUAmount")]
         [Validation(Required=false)]
         public float? TradeMinRCUAmount { get; set; }

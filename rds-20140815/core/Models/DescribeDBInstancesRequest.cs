@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
+        /// <summary>
+        /// The RDS edition of the instance. Valid values:
+        /// 
+        /// *   **Basic**: RDS Basic Edition
+        /// *   **HighAvailability**: RDS High-availability Edition
+        /// *   **cluster**: RDS Cluster Edition
+        /// *   **serverless_basic**: RDS Serverless Basic Edition
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -47,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -75,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceType { get; set; }
 
         /// <summary>
-        /// The ID of the dedicated cluster.
+        /// The dedicated cluster ID.
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
@@ -103,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance.
+        /// The database engine version.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -120,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Expired { get; set; }
 
         /// <summary>
-        /// 实例过滤条件参数及其值的JSON串
+        /// The JSON string that consists of filter condition parameters and their values.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -175,7 +183,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: any non-zero positive integer.
+        /// The page number. Valid values: any non-zero positive integer.
         /// 
         /// Default value: **1**.
         /// </summary>
@@ -203,7 +211,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -239,14 +247,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// The vSwitch ID of the instance.
+        /// The vSwitch ID.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The VPC ID of the instance.
+        /// The VPC ID.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
@@ -260,7 +268,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// The ID of the proxy mode.
+        /// A deprecated parameter. You do not need to configure this parameter.
         /// </summary>
         [NameInMap("proxyId")]
         [Validation(Required=false)]

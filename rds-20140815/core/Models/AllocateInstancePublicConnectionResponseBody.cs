@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AllocateInstancePublicConnectionResponseBody : TeaModel {
         /// <summary>
-        /// The endpoint of the instance.
+        /// The endpoint that is used to connect to the database instance.
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]

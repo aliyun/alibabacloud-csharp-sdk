@@ -145,12 +145,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// The time at which the system switches your workloads over to the new instance. This parameter is used together with SwitchOver and takes effect only when you set SwitchOver to true.
+        /// The cutover time. This parameter is used together with SwitchOver. This parameter is available only when **SwitchOver** is set to **true**.
         /// 
         /// Valid values:
         /// 
-        /// *   Immediate: After data is migrated to the new instance, the system immediately switches your workloads over to the new instance.
-        /// *   MaintainTime: After data is migrated to the new instance, the system switches your workloads over to the new instance during the maintenance window that you specify. You can call the [ModifyDBInstanceMaintainTime](~~26249~~) operation to change the maintenance window of an instance.
+        /// *   Immediate: The settings immediately take effect.
+        /// *   MaintainTime: The settings take effect during the maintenance window of the instance. You can call the [ModifyDBInstanceMaintainTime](~~610402~~) operation to change the maintenance window of an instance.
         /// </summary>
         [NameInMap("SwitchTimeMode")]
         [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The major engine version of the new instance. The value of this parameter must be the major engine version on which an upgrade check is performed.
         /// 
-        /// > You can call the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation to perform an upgrade check.
+        /// > You can call the [UpgradeDBInstanceMajorVersionPrecheck](~~610417~~) operation to perform an upgrade check.
         /// </summary>
         [NameInMap("TargetMajorVersion")]
         [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// The ID of the VPC in which the original instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the VPC ID of the instance.
+        /// The VPC ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the original instance.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The zone ID of the new instance. You can call the [DescribeRegions](~~26243~~) operation to query the zone ID.
+        /// The zone ID of the new instance. You can call the [DescribeRegions](~~610399~~) operation to query the zone ID.
         /// 
         /// You can select a zone that belongs to the region in which the original instance resides. The zone can be different from the zone of the original instance.
         /// </summary>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// You can select a zone that belongs to the region in which the original instance resides. The zone can be different from the zone of the original instance.
         /// 
-        /// You can call the [DescribeRegions](~~26243~~) operation to query the zone ID.
+        /// You can call the [DescribeRegions](~~610399~~) operation to query the zone ID.
         /// </summary>
         [NameInMap("ZoneIdSlave1")]
         [Validation(Required=false)]

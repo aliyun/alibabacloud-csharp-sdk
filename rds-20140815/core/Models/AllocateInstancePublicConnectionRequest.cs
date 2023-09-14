@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BabelfishPort { get; set; }
 
         /// <summary>
-        /// The prefix of the public endpoint. A valid public endpoint is in the following format: Prefix.Database engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.
+        /// The prefix of the public endpoint. A valid public endpoint is in the following format: `Prefix.Database engine.rds.aliyuncs.com`. Example: `test1234.mysql.rds.aliyuncs.com`.
         /// 
         /// > The value can be 5 to 40 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following characters: ~ ! # % ^ & \* = + | {} ; : \" " , <> / ?
         /// </summary>
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.
+        /// The name of the dedicated cluster to which the instance belongs. This parameter is available only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
         /// </summary>
         [NameInMap("GeneralGroupName")]
         [Validation(Required=false)]
@@ -49,6 +49,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The PgBouncer port.
+        /// 
+        /// > This parameter is available only for instances that run PostgreSQL.
+        /// </summary>
         [NameInMap("PGBouncerPort")]
         [Validation(Required=false)]
         public string PGBouncerPort { get; set; }

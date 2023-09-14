@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListClassesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of available instance types.
+        /// The list of instance specifications.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// The instance family. For more information, see [Instance families](~~57184~~).
+            /// The instance family. For more information, see [Overview of instance families](~~57184~~).
             /// </summary>
             [NameInMap("ClassGroup")]
             [Validation(Required=false)]
             public string ClassGroup { get; set; }
 
             /// <summary>
-            /// The number of cores that are supported by the instance type. Unit: core.
+            /// The number of CPU cores that are supported by the instance type. Unit: cores.
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstructionSetArch { get; set; }
 
             /// <summary>
-            /// The maximum number of connections that are supported by the instance type. Unit: core.
+            /// The maximum number of connections that are supported by the instance type. Unit: connections.
             /// </summary>
             [NameInMap("MaxConnections")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIOPS { get; set; }
 
             /// <summary>
-            /// The memory capacity that is supported by the instance type. Unit: GB.
+            /// The memory size that is supported by the instance type. Unit: GB.
             /// </summary>
             [NameInMap("MemoryClass")]
             [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The fee that you must pay for the instance type.
             /// 
-            /// *   Unit: cent (USD).
+            /// *   Unit: cents (USD).
             /// 
             /// > 
             /// 

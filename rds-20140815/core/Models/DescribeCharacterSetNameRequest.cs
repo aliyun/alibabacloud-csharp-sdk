@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCharacterSetNameRequest : TeaModel {
         /// <summary>
-        /// The database engine that is run on the instance. Valid values:
+        /// The type of the database engine. Valid values:
         /// 
-        /// *   **mysql**: MySQL
-        /// *   **mssql**: SQL Server
-        /// *   **PostgreSQL**: PostgreSQL
-        /// *   **MariaDB**: MariaDB
+        /// *   **mysql**
+        /// *   **mssql**
+        /// *   **PostgreSQL**
+        /// *   **MariaDB**
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

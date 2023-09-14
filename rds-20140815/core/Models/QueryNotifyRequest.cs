@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **true**
         /// *   **false**
         /// 
-        ///     > A confirmed notification is a notification that has been marked as confirmed by calling the ConfirmNotify operation.
+        /// > You can call the [ConfirmNotify](~~610444~~) operation to confirm notifications of an instance.
         /// </summary>
         [NameInMap("WithConfirmed")]
         [Validation(Required=false)]

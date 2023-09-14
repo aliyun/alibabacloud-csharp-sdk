@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
         /// <summary>
-        /// The list of parameters that are being synchronized. After you modify and submit the parameter settings, you must wait for the parameter modifications to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.
+        /// The list of parameters that are being synchronized.
+        /// 
+        /// > After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.
         /// </summary>
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
@@ -53,42 +55,42 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance.
+        /// The version of the database engine.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// Parameter template information.
+        /// The information about the parameter template.
         /// </summary>
         [NameInMap("ParamGroupInfo")]
         [Validation(Required=false)]
         public DescribeParametersResponseBodyParamGroupInfo ParamGroupInfo { get; set; }
         public class DescribeParametersResponseBodyParamGroupInfo : TeaModel {
             /// <summary>
-            /// Parameter template ID.
+            /// The ID of the parameter template.
             /// </summary>
             [NameInMap("ParamGroupId")]
             [Validation(Required=false)]
             public string ParamGroupId { get; set; }
 
             /// <summary>
-            /// Parameter template description.
+            /// The description of the parameter template.
             /// </summary>
             [NameInMap("ParameterGroupDesc")]
             [Validation(Required=false)]
             public string ParameterGroupDesc { get; set; }
 
             /// <summary>
-            /// Parameter template name.
+            /// The name of the parameter template.
             /// </summary>
             [NameInMap("ParameterGroupName")]
             [Validation(Required=false)]
             public string ParameterGroupName { get; set; }
 
             /// <summary>
-            /// Parameter template type.
+            /// The type of the parameter template.
             /// </summary>
             [NameInMap("ParameterGroupType")]
             [Validation(Required=false)]

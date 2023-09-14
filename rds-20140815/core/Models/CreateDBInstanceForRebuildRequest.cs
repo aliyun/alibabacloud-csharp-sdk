@@ -19,16 +19,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The name of the destination instance. The value must be 2 to 256 characters in length. The value must start with a letter and can contain letters, digits, underscores (\_), and hyphens (-).
+        /// The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
         /// 
-        /// > The value cannot start with http:// or https://.
+        /// > : The name cannot start with http:// or https://.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The ID of the instance that you want to rebuild.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceNetType { get; set; }
 
         /// <summary>
-        /// The network type of the destination instance. Valid values:
+        /// The network type of the instance. Valid values:
         /// 
         /// *   **VPC**
         /// *   **Classic**
         /// 
         /// Default value: Classic.
         /// 
-        /// > If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.
+        /// > : If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -82,21 +82,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Year**
         /// *   **Month**
         /// 
-        /// > If you set PayType to **Prepaid**, you must also specify this parameter.
+        /// > : If you set PayType to **Prepaid**, you must also specify this parameter.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. You can leave this parameter empty.
+        /// The ID of the resource group. The value of this parameter can be NULL.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -111,10 +111,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](~~43185~~). If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
+        /// The IP address whitelist of the serverless instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for PostgreSQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. You can specify up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
         /// 
         /// *   IP addresses, such as 10.10.XX.XX.
         /// *   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
+        /// 
+        /// If this parameter is not specified, the default IP address whitelist is used.
         /// </summary>
         [NameInMap("SecurityIPList")]
         [Validation(Required=false)]
@@ -137,9 +139,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// The VPC ID of the destination instance. This parameter is available only when you set **InstanceNetworkType** to **VPC**.
+        /// The VPC ID of the instance. If you set **InstanceNetworkType** to **VPC**, you must specify this parameter.
         /// 
-        /// > If you specify this parameter, you must also specify **ZoneId**.
+        /// > : If you specify this parameter, you must also specify **ZoneId**.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -152,7 +154,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.
         /// 
-        /// *   If you specify ZoneSlaveId1, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
+        /// *   If you specify the ZoneSlaveId1 parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

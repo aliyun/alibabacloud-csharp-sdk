@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MemberInstanceName { get; set; }
 
         /// <summary>
-        /// The region ID of the central node. You can call the [DescribeGadInstances](~~330105~~) operation to query the most recent region list.
+        /// The region ID of the central node. You can call the [DescribeGadInstances](~~330105~~) operation to query the information.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

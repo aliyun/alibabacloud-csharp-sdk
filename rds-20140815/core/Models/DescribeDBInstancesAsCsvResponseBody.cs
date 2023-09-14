@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The connection mode of the instance. Valid values:
                 /// 
-                /// *   **Performance**: standard mode
-                /// *   **Safety**: enhanced mode
+                /// *   **Performance**: standard mode.
+                /// *   **Safety**: safe mode.
                 /// </summary>
                 [NameInMap("ConnectionMode")]
                 [Validation(Required=false)]
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The time when the audio or video file was created.
+                /// The creation time.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The number of cores that are configured for the instance.
+                /// The number of CPU cores.
                 /// </summary>
                 [NameInMap("DBInstanceCPU")]
                 [Validation(Required=false)]
@@ -101,14 +101,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The memory size of the instance. Unit: MB.
+                /// The memory capacity of the instance. Unit: MB.
                 /// </summary>
                 [NameInMap("DBInstanceMemory")]
                 [Validation(Required=false)]
@@ -117,8 +117,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **Internet**
-                /// *   **Intranet**
+                /// *   **Internet**: Internet
+                /// *   **Intranet**: internal network
                 /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? DBMaxQuantity { get; set; }
 
                 /// <summary>
-                /// The type of the database engine.
+                /// The database engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
@@ -178,6 +178,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
+                /// <summary>
+                /// A deprecated parameter. You do not need to configure this parameter.
+                /// </summary>
                 [NameInMap("ExportKey")]
                 [Validation(Required=false)]
                 public string ExportKey { get; set; }
@@ -197,7 +200,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string IncrementSourceDBInstanceId { get; set; }
 
                 /// <summary>
-                /// The type of the network.
+                /// The network type.
                 /// </summary>
                 [NameInMap("InstanceNetworkType")]
                 [Validation(Required=false)]
@@ -232,14 +235,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string MasterInstanceId { get; set; }
 
                 /// <summary>
-                /// The maximum number of concurrent connections that are allowed by the instance.
+                /// The maximum number of concurrent connections.
                 /// </summary>
                 [NameInMap("MaxConnections")]
                 [Validation(Required=false)]
                 public int? MaxConnections { get; set; }
 
                 /// <summary>
-                /// The maximum number of I/O requests that is processed by the instance per second.
+                /// The maximum number of I/O requests per second.
                 /// </summary>
                 [NameInMap("MaxIOPS")]
                 [Validation(Required=false)]
@@ -267,19 +270,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ReadDelayTime { get; set; }
 
                 /// <summary>
-                /// The ID of the region in which the instance resides.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The IP address whitelist of the instance.
+                /// The IP address whitelist.
                 /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
 
+                /// <summary>
+                /// A deprecated parameter. You do not need to configure this parameter.
+                /// </summary>
                 [NameInMap("SlaveZones")]
                 [Validation(Required=false)]
                 public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones SlaveZones { get; set; }
@@ -291,14 +297,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// None.
+                /// N/A.
                 /// </summary>
                 [NameInMap("SupportUpgradeAccountType")]
                 [Validation(Required=false)]
                 public string SupportUpgradeAccountType { get; set; }
 
                 /// <summary>
-                /// The tag.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -312,21 +318,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string TempDBInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The ID of the virtual private cloud (VPC).
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The ID of the zone in which the instance resides.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

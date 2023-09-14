@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceTDEResponseBody : TeaModel {
         /// <summary>
-        /// The details of the TDE status at the database level.
+        /// The TDE status at the database level.
         /// 
-        /// > For the instances that run SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.
+        /// >  If your instance runs SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
@@ -30,7 +30,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// The TDE status at the database level. Valid values: **Enabled and Disabled**.
+                /// The TDE status at the database level. Valid values:
+                /// 
+                /// *   **Enabled**
+                /// *   **Disabled**
                 /// </summary>
                 [NameInMap("TDEStatus")]
                 [Validation(Required=false)]
@@ -48,7 +51,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The TDE status at the instance level. Valid values: **Enabled and Disabled**.
+        /// The key method for instance level TDE encryption, with values:
+        /// - **Aliyun_Generate_Key**
+        /// - **Customer_Provided_Key**
+        /// - **Unknown**
+        /// </summary>
+        [NameInMap("TDEMode")]
+        [Validation(Required=false)]
+        public string TDEMode { get; set; }
+
+        /// <summary>
+        /// The TDE status of the instance. Valid values:
+        /// 
+        /// *   **Enabled**
+        /// *   **Disabled**
         /// </summary>
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]

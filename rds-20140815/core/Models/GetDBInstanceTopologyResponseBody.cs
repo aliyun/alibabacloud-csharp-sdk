@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public GetDBInstanceTopologyResponseBodyData Data { get; set; }
         public class GetDBInstanceTopologyResponseBodyData : TeaModel {
             /// <summary>
-            /// The network connection of the instance.
+            /// The network connection information of the instance.
             /// </summary>
             [NameInMap("Connections")]
             [Validation(Required=false)]
             public List<GetDBInstanceTopologyResponseBodyDataConnections> Connections { get; set; }
             public class GetDBInstanceTopologyResponseBodyDataConnections : TeaModel {
                 /// <summary>
-                /// The endpoint of the instance.
+                /// The endpoint that is used to connect to the database instance.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceName")]
                 [Validation(Required=false)]
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The instance ID.
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// The node information.
+            /// The queried nodes.
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
@@ -87,32 +87,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The ID of the dedicated cluster.
                 /// 
-                /// > If the instance does not reside in the specified dedicated cluster, no value is returned.
+                /// > : If the instance does not reside in the specified dedicated cluster, no value is returned.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
                 public string DedicatedHostGroupId { get; set; }
 
                 /// <summary>
-                /// The ID of the host on which the instance resides in the dedicated cluster.
+                /// The host ID of the instance in the dedicated cluster.
                 /// 
-                /// > If the instance does not reside in the specified dedicated cluster, no value is returned.
+                /// > : If the instance does not reside in the specified dedicated cluster, no value is returned.
                 /// </summary>
                 [NameInMap("DedicatedHostId")]
                 [Validation(Required=false)]
                 public string DedicatedHostId { get; set; }
 
                 /// <summary>
-                /// The unique identifier of the instance.
+                /// The ID of the instance.
                 /// 
-                /// > The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.
+                /// > : The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// The type of the node. Valid values:
+                /// The type of the node. The following result is returned:
                 /// 
                 /// *   **Master**: a primary node
                 /// *   **Slave**: a secondary node

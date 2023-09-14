@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The latency at which data is replicated from the primary instance to the read-only instance. Unit: seconds.
+        /// The latency at which to replicate data from the primary instance to the read-only instance. Unit: seconds.
         /// </summary>
         [NameInMap("ReadSQLReplicationTime")]
         [Validation(Required=false)]
         public string ReadSQLReplicationTime { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the replication task.
+        /// The task ID.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Deadline { get; set; }
 
             /// <summary>
-            /// The ID of the precheck task.
+            /// The task ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The status of the task.
+            /// The task status.
             /// 
             /// *   **3**: pending
             /// *   **4**: being processed
@@ -190,6 +190,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string SwitchTime { get; set; }
 
+            /// <summary>
+            /// The task parameters.
+            /// </summary>
             [NameInMap("TaskParams")]
             [Validation(Required=false)]
             public string TaskParams { get; set; }
@@ -200,7 +203,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   **rds_apsaradb_ha**: primary/secondary switchover
             /// *   **rds_apsaradb_transfer**: instance migration
             /// *   **rds_apsaradb_upgrade**: update of the minor engine version
-            /// *   **rds_apsaradb_maxscale**: update of the minor version of the proxy
+            /// *   **rds_apsaradb_maxscale**: upgrade of the database proxy version
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]

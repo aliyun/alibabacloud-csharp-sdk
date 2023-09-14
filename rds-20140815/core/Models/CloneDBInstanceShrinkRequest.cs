@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CloneDBInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Default value: true. Valid values:
+        /// Specifies whether to automatically complete the payment. Valid values:
         /// 
-        /// *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-        /// *   **false**: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, click **Expenses**. On the page that appears, select **Orders** from the left-side navigation pane. On the Orders page, find the order and complete the payment.
+        /// 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
+        /// 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
+        /// 
+        /// > The default value is true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can pay for the order in the ApsaraDB RDS console.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -41,14 +43,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupType { get; set; }
 
         /// <summary>
-        /// This parameter is not publicly available.
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// This parameter is not publicly available.
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
@@ -62,7 +64,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **AlwaysOn**: RDS Cluster Edition for SQL Server.
         /// *   **cluster**: RDS Cluster Edition for MySQL.
         /// *   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).
-        /// *   **serverless_basic**: RDS Serverless Basic Edition.
+        /// 
+        /// **Serverless instances**
+        /// 
+        /// *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
+        /// *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.
+        /// *   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -94,13 +101,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The storage type of the new instance. Valid values:
+        /// The storage type of the instance. Valid values:
         /// 
-        /// *   **local_ssd**: local SSD
-        /// *   **cloud_ssd**: standard SSD
-        /// *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
-        /// *   **cloud_essd2**: ESSD of PL2
+        /// *   **local_ssd**: local SSDs
+        /// *   **cloud_ssd**: standard SSDs
+        /// *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
+        /// *   **cloud_essd2**: ESSDs of PL2
         /// *   **cloud_essd3**: ESSD of PL3
+        /// 
+        /// > Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
@@ -121,12 +130,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the release protection feature for the new instance. Valid values:
+        /// Specifies whether to enable the release protection feature for the instance. Valid values:
         /// 
-        /// *   **true**
-        /// *   **false**
-        /// 
-        /// Default value: **false**.
+        /// *   **true**: enables the feature.
+        /// *   **false** (default): disables the feature.
         /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
@@ -145,11 +152,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// The billing method of the read-only instance. Valid values:
+        /// The billing method of the instance. Valid values:
         /// 
-        /// *   **Postpaid**: pay-as-you-go
-        /// *   **Prepaid**: subscription
-        /// *   **Serverless**: serverless. This value is supported only for instances that run MySQL. For more information, see [Overview](~~411291~~).
+        /// *   **Postpaid**: pay-as-you-go.
+        /// *   **Prepaid**: subscription.
+        /// *   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCollationTimeZonesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the character set collations and time zones that are available for use in ApsaraDB RDS.
+        /// The list of the character set collations and time zones that are available.
         /// </summary>
         [NameInMap("CollationTimeZones")]
         [Validation(Required=false)]
@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone> CollationTimeZone { get; set; }
             public class DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone : TeaModel {
                 /// <summary>
-                /// The description of the character set collations and time zones.
+                /// The description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The offset of the UTC time. The offset is in the following format: (UTC+\<i>HH:mm\</i>).
+                /// The offset of the UTC time. The offset is in the following format: (UTC+*HH:mm*).
                 /// </summary>
                 [NameInMap("StandardTimeOffset")]
                 [Validation(Required=false)]
                 public string StandardTimeOffset { get; set; }
 
                 /// <summary>
-                /// The time zone that is available for use in ApsaraDB RDS.
+                /// The time zone.
                 /// </summary>
                 [NameInMap("TimeZone")]
                 [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

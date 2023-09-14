@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// A deprecated parameter.
+        /// A deprecated parameter. You do not need to configure this parameter.
         /// </summary>
         [NameInMap("proxyId")]
         [Validation(Required=false)]

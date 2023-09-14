@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~140955~~) operation to query the ID of the proxy endpoint.
+        /// The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// An internal parameter. You do not need to specify this parameter.
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("DBProxyEngineType")]
         [Validation(Required=false)]

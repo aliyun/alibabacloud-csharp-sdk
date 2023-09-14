@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRegionInfosResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of regions.
+        /// A list of regions.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeRegionInfosResponseBodyRegionsRDSRegion> RDSRegion { get; set; }
             public class DescribeRegionInfosResponseBodyRegionsRDSRegion : TeaModel {
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

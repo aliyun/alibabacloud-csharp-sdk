@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableRecoveryTimeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the cross-region backup file.
+        /// The ID of the cross-region data backup file.
         /// </summary>
         [NameInMap("CrossBackupId")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RecoveryEndTime { get; set; }
 
         /// <summary>
-        /// The region ID of the source instance.
+        /// The region where the source instance resides.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

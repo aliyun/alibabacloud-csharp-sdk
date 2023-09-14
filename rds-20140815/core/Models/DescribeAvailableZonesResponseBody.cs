@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableZonesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of available zones and resources available in the zones.
+        /// The available zones in the region.
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
         public List<DescribeAvailableZonesResponseBodyAvailableZones> AvailableZones { get; set; }
         public class DescribeAvailableZonesResponseBodyAvailableZones : TeaModel {
             /// <summary>
-            /// The region ID of the instance.
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// An array that consists of the database engines available in the zone.
+            /// The database engines that are available for purchase.
             /// </summary>
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// An array that consists of the database engine versions available in the zone.
+                /// The database engine versions that are available for purchase.
                 /// </summary>
                 [NameInMap("SupportedEngineVersions")]
                 [Validation(Required=false)]
                 public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> SupportedEngineVersions { get; set; }
                 public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions : TeaModel {
                     /// <summary>
-                    /// An array that consists of the RDS editions available in the zone.
+                    /// The RDS editions that are available that are available for purchase.
                     /// </summary>
                     [NameInMap("SupportedCategorys")]
                     [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string Category { get; set; }
 
                         /// <summary>
-                        /// An array that consists of the storage types available in the zone.
+                        /// The storage types that are available for purchase.
                         /// </summary>
                         [NameInMap("SupportedStorageTypes")]
                         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                     /// <summary>
-                    /// The database engine version of the instance.
+                    /// The database engine version.
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// The zone ID of the instance.
+            /// The zone ID.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
