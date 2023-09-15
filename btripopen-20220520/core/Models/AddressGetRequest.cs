@@ -13,13 +13,37 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? ActionType { get; set; }
 
+        [NameInMap("arr_city_code")]
+        [Validation(Required=false)]
+        public string ArrCityCode { get; set; }
+
+        [NameInMap("arr_city_name")]
+        [Validation(Required=false)]
+        public string ArrCityName { get; set; }
+
         [NameInMap("car_scenes_code")]
         [Validation(Required=false)]
         public string CarScenesCode { get; set; }
 
+        [NameInMap("dep_city_code")]
+        [Validation(Required=false)]
+        public string DepCityCode { get; set; }
+
+        [NameInMap("dep_city_name")]
+        [Validation(Required=false)]
+        public string DepCityName { get; set; }
+
+        [NameInMap("dep_date")]
+        [Validation(Required=false)]
+        public string DepDate { get; set; }
+
         [NameInMap("itinerary_id")]
         [Validation(Required=false)]
         public string ItineraryId { get; set; }
+
+        [NameInMap("order_Id")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
 
         [NameInMap("phone")]
         [Validation(Required=false)]

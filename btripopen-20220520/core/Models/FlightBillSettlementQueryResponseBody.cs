@@ -284,6 +284,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? RefundFee { get; set; }
 
+                [NameInMap("refund_result")]
+                [Validation(Required=false)]
+                public string RefundResult { get; set; }
+
                 [NameInMap("refund_upgrade_cost")]
                 [Validation(Required=false)]
                 public double? RefundUpgradeCost { get; set; }

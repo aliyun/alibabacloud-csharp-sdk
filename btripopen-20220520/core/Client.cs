@@ -223,13 +223,37 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["action_type"] = request.ActionType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArrCityCode))
+            {
+                query["arr_city_code"] = request.ArrCityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArrCityName))
+            {
+                query["arr_city_name"] = request.ArrCityName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CarScenesCode))
             {
                 query["car_scenes_code"] = request.CarScenesCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DepCityCode))
+            {
+                query["dep_city_code"] = request.DepCityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DepCityName))
+            {
+                query["dep_city_name"] = request.DepCityName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DepDate))
+            {
+                query["dep_date"] = request.DepDate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryId))
             {
                 query["itinerary_id"] = request.ItineraryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_Id"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
             {
@@ -288,13 +312,37 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["action_type"] = request.ActionType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArrCityCode))
+            {
+                query["arr_city_code"] = request.ArrCityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArrCityName))
+            {
+                query["arr_city_name"] = request.ArrCityName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CarScenesCode))
             {
                 query["car_scenes_code"] = request.CarScenesCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DepCityCode))
+            {
+                query["dep_city_code"] = request.DepCityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DepCityName))
+            {
+                query["dep_city_name"] = request.DepCityName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DepDate))
+            {
+                query["dep_date"] = request.DepDate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryId))
             {
                 query["itinerary_id"] = request.ItineraryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_Id"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
             {

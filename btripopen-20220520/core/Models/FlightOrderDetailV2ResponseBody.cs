@@ -674,6 +674,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string Pcc { get; set; }
 
+                    [NameInMap("segment_open_ticket_list")]
+                    [Validation(Required=false)]
+                    public List<FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList> SegmentOpenTicketList { get; set; }
+                    public class FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList : TeaModel {
+                        [NameInMap("journey_index")]
+                        [Validation(Required=false)]
+                        public int? JourneyIndex { get; set; }
+
+                        [NameInMap("open_ticket_status")]
+                        [Validation(Required=false)]
+                        public int? OpenTicketStatus { get; set; }
+
+                        [NameInMap("segment_index")]
+                        [Validation(Required=false)]
+                        public int? SegmentIndex { get; set; }
+
+                    }
+
                     [NameInMap("ticket_auth_memo")]
                     [Validation(Required=false)]
                     public string TicketAuthMemo { get; set; }

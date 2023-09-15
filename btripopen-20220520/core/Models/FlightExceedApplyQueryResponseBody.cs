@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo ApplyIntentionInfoDo { get; set; }
             public class FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo : TeaModel {
+                [NameInMap("arr_airport_name")]
+                [Validation(Required=false)]
+                public string ArrAirportName { get; set; }
+
                 [NameInMap("arr_city")]
                 [Validation(Required=false)]
                 public string ArrCity { get; set; }
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("cabin_class_str")]
                 [Validation(Required=false)]
                 public string CabinClassStr { get; set; }
+
+                [NameInMap("dep_airport_name")]
+                [Validation(Required=false)]
+                public string DepAirportName { get; set; }
 
                 [NameInMap("dep_city")]
                 [Validation(Required=false)]
@@ -80,6 +88,64 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public int? Type { get; set; }
+
+            }
+
+            [NameInMap("apply_recommend_flights")]
+            [Validation(Required=false)]
+            public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights ApplyRecommendFlights { get; set; }
+            public class FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights : TeaModel {
+                [NameInMap("arr_airport_name")]
+                [Validation(Required=false)]
+                public string ArrAirportName { get; set; }
+
+                [NameInMap("arr_city_name")]
+                [Validation(Required=false)]
+                public string ArrCityName { get; set; }
+
+                [NameInMap("arr_time")]
+                [Validation(Required=false)]
+                public string ArrTime { get; set; }
+
+                [NameInMap("cabin")]
+                [Validation(Required=false)]
+                public string Cabin { get; set; }
+
+                [NameInMap("cabin_class")]
+                [Validation(Required=false)]
+                public int? CabinClass { get; set; }
+
+                [NameInMap("cabin_class_str")]
+                [Validation(Required=false)]
+                public string CabinClassStr { get; set; }
+
+                [NameInMap("dep_airport_name")]
+                [Validation(Required=false)]
+                public string DepAirportName { get; set; }
+
+                [NameInMap("dep_city_name")]
+                [Validation(Required=false)]
+                public string DepCityName { get; set; }
+
+                [NameInMap("dep_time")]
+                [Validation(Required=false)]
+                public string DepTime { get; set; }
+
+                [NameInMap("discount")]
+                [Validation(Required=false)]
+                public string Discount { get; set; }
+
+                [NameInMap("flight_no")]
+                [Validation(Required=false)]
+                public string FlightNo { get; set; }
+
+                [NameInMap("price")]
+                [Validation(Required=false)]
+                public long? Price { get; set; }
+
+                [NameInMap("transfer_airport_name")]
+                [Validation(Required=false)]
+                public string TransferAirportName { get; set; }
 
             }
 

@@ -144,6 +144,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? Fees { get; set; }
 
+                [NameInMap("fines")]
+                [Validation(Required=false)]
+                public double? Fines { get; set; }
+
                 [NameInMap("fu_point_fee")]
                 [Validation(Required=false)]
                 public double? FuPointFee { get; set; }
@@ -159,6 +163,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("invoice_title")]
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }
+
+                [NameInMap("is_early_departure")]
+                [Validation(Required=false)]
+                public string IsEarlyDeparture { get; set; }
 
                 [NameInMap("is_negotiation")]
                 [Validation(Required=false)]
