@@ -1,3 +1,6 @@
+2023-09-15 Version: 2.1.3
+- Generated csharp 2018-05-10 for Cdn.
+
 2023-09-04 Version: 2.1.2
 - Generated csharp 2018-05-10 for Cdn.
 
