@@ -1449,6 +1449,10 @@ namespace AlibabaCloud.SDK.Eais20190624
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientInstanceId))
+            {
+                query["ClientInstanceId"] = request.ClientInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticAcceleratedInstanceIds))
             {
                 query["ElasticAcceleratedInstanceIds"] = request.ElasticAcceleratedInstanceIds;
@@ -1508,6 +1512,10 @@ namespace AlibabaCloud.SDK.Eais20190624
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientInstanceId))
+            {
+                query["ClientInstanceId"] = request.ClientInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticAcceleratedInstanceIds))
             {
                 query["ElasticAcceleratedInstanceIds"] = request.ElasticAcceleratedInstanceIds;

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
     public class DescribeEaisRequest : TeaModel {
+        [NameInMap("ClientInstanceId")]
+        [Validation(Required=false)]
+        public string ClientInstanceId { get; set; }
+
         [NameInMap("ElasticAcceleratedInstanceIds")]
         [Validation(Required=false)]
         public string ElasticAcceleratedInstanceIds { get; set; }
