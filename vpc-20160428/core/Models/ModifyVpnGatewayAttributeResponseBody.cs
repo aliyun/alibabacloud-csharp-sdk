@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// The timestamp generated when the VPN gateway was created. Unit: milliseconds.
+        /// The timestamp is generated when the VPN gateway was created. Unit: milliseconds.
         /// 
         /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
         /// </summary>

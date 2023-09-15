@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The name of the project of Log Service.
+        /// The name of the Simple Log Service (SLS) project.
         /// </summary>
         [NameInMap("LogProject")]
         [Validation(Required=false)]
         public string LogProject { get; set; }
 
         /// <summary>
-        /// The name of the Logstore of Log Service.
+        /// The name of the Logstore.
         /// </summary>
         [NameInMap("LogStore")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the instance is deployed.
+        /// The region ID of the instance.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
@@ -65,8 +65,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The status of fine-grained monitoring. Valid values:
         /// 
-        /// *   **ON**: enables fine-grained monitoring.
-        /// *   **OFF**: disables fine-grained monitoring.
+        /// *   **ON**
+        /// *   **OFF**
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

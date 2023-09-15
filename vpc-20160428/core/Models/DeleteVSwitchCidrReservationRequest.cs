@@ -8,21 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class CancelCommonBandwidthPackageIpBandwidthRequest : TeaModel {
-        /// <summary>
-        /// The ID of the Internet Shared Bandwidth instance.
-        /// </summary>
-        [NameInMap("BandwidthPackageId")]
-        [Validation(Required=false)]
-        public string BandwidthPackageId { get; set; }
-
-        /// <summary>
-        /// The ID of the EIP that is associated with the Internet Shared Bandwidth instance.
-        /// </summary>
-        [NameInMap("EipId")]
-        [Validation(Required=false)]
-        public string EipId { get; set; }
-
+    public class DeleteVSwitchCidrReservationRequest : TeaModel {
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -31,9 +17,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// The region ID of the Internet Shared Bandwidth instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -45,6 +28,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("VSwitchCidrReservationId")]
+        [Validation(Required=false)]
+        public string VSwitchCidrReservationId { get; set; }
 
     }
 

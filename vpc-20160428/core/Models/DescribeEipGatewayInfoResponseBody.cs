@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

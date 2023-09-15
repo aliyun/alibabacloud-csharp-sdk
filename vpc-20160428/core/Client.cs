@@ -1116,7 +1116,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Before you call this operation, take note of the following limits:
           * *   The CIDR block and the IP address pool must belong to the same region.
           * *   The CIDR block and the IP address pool must use the same line type.
-          * *   The **AddPublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+          * *   **AddPublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
           *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
           *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
           * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
@@ -1192,7 +1192,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Before you call this operation, take note of the following limits:
           * *   The CIDR block and the IP address pool must belong to the same region.
           * *   The CIDR block and the IP address pool must use the same line type.
-          * *   The **AddPublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+          * *   **AddPublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
           *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
           *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
           * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
@@ -1268,7 +1268,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Before you call this operation, take note of the following limits:
           * *   The CIDR block and the IP address pool must belong to the same region.
           * *   The CIDR block and the IP address pool must use the same line type.
-          * *   The **AddPublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+          * *   **AddPublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
           *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
           *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
           * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
@@ -1286,7 +1286,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Before you call this operation, take note of the following limits:
           * *   The CIDR block and the IP address pool must belong to the same region.
           * *   The CIDR block and the IP address pool must use the same line type.
-          * *   The **AddPublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+          * *   **AddPublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
           *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
           *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
           * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
@@ -4923,8 +4923,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the EIP bandwidth plan.
-          * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation to remove the maximum bandwidth configured for an EIP within the specified period of time.
+          * Before you call this operation, take note of the following items:
+          * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the Internet Shared Bandwidth instance.
+          * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation within a specific time period.
           *
           * @param request CancelCommonBandwidthPackageIpBandwidthRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4982,8 +4983,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the EIP bandwidth plan.
-          * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation to remove the maximum bandwidth configured for an EIP within the specified period of time.
+          * Before you call this operation, take note of the following items:
+          * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the Internet Shared Bandwidth instance.
+          * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation within a specific time period.
           *
           * @param request CancelCommonBandwidthPackageIpBandwidthRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5041,8 +5043,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the EIP bandwidth plan.
-          * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation to remove the maximum bandwidth configured for an EIP within the specified period of time.
+          * Before you call this operation, take note of the following items:
+          * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the Internet Shared Bandwidth instance.
+          * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation within a specific time period.
           *
           * @param request CancelCommonBandwidthPackageIpBandwidthRequest
           * @return CancelCommonBandwidthPackageIpBandwidthResponse
@@ -5054,8 +5057,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the EIP bandwidth plan.
-          * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation to remove the maximum bandwidth configured for an EIP within the specified period of time.
+          * Before you call this operation, take note of the following items:
+          * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the Internet Shared Bandwidth instance.
+          * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation within a specific time period.
           *
           * @param request CancelCommonBandwidthPackageIpBandwidthRequest
           * @return CancelCommonBandwidthPackageIpBandwidthResponse
@@ -17513,7 +17517,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an EIP bandwidth plan within the specified period of time.
+          * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an Internet Shared Bandwidth instance within the specified period of time.
           *
           * @param request DeleteCommonBandwidthPackageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17571,7 +17575,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an EIP bandwidth plan within the specified period of time.
+          * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an Internet Shared Bandwidth instance within the specified period of time.
           *
           * @param request DeleteCommonBandwidthPackageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17629,7 +17633,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an EIP bandwidth plan within the specified period of time.
+          * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an Internet Shared Bandwidth instance within the specified period of time.
           *
           * @param request DeleteCommonBandwidthPackageRequest
           * @return DeleteCommonBandwidthPackageResponse
@@ -17641,7 +17645,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an EIP bandwidth plan within the specified period of time.
+          * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an Internet Shared Bandwidth instance within the specified period of time.
           *
           * @param request DeleteCommonBandwidthPackageRequest
           * @return DeleteCommonBandwidthPackageResponse
@@ -20833,12 +20837,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeletePublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+          * Before you call this operation, take note of the following items:
+          * *   Before you delete a CIDR block, make sure that it is not being used.
+          * *   **DeletePublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
           *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
           *     *   If you cannot query the CIDR block, the CIDR block is deleted.
           * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
-          * ## Prerequisites
-          * Before you delete a CIDR block, make sure that it is not being used.
           *
           * @param request DeletePublicIpAddressPoolCidrBlockRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20904,12 +20908,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeletePublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+          * Before you call this operation, take note of the following items:
+          * *   Before you delete a CIDR block, make sure that it is not being used.
+          * *   **DeletePublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
           *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
           *     *   If you cannot query the CIDR block, the CIDR block is deleted.
           * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
-          * ## Prerequisites
-          * Before you delete a CIDR block, make sure that it is not being used.
           *
           * @param request DeletePublicIpAddressPoolCidrBlockRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20975,12 +20979,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeletePublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+          * Before you call this operation, take note of the following items:
+          * *   Before you delete a CIDR block, make sure that it is not being used.
+          * *   **DeletePublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
           *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
           *     *   If you cannot query the CIDR block, the CIDR block is deleted.
           * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
-          * ## Prerequisites
-          * Before you delete a CIDR block, make sure that it is not being used.
           *
           * @param request DeletePublicIpAddressPoolCidrBlockRequest
           * @return DeletePublicIpAddressPoolCidrBlockResponse
@@ -20992,12 +20996,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeletePublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+          * Before you call this operation, take note of the following items:
+          * *   Before you delete a CIDR block, make sure that it is not being used.
+          * *   **DeletePublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
           *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
           *     *   If you cannot query the CIDR block, the CIDR block is deleted.
           * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
-          * ## Prerequisites
-          * Before you delete a CIDR block, make sure that it is not being used.
           *
           * @param request DeletePublicIpAddressPoolCidrBlockRequest
           * @return DeletePublicIpAddressPoolCidrBlockResponse
@@ -22774,6 +22778,112 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVSwitchWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteVSwitchCidrReservationResponse DeleteVSwitchCidrReservationWithOptions(DeleteVSwitchCidrReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationId))
+            {
+                query["VSwitchCidrReservationId"] = request.VSwitchCidrReservationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVSwitchCidrReservation",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVSwitchCidrReservationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteVSwitchCidrReservationResponse> DeleteVSwitchCidrReservationWithOptionsAsync(DeleteVSwitchCidrReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationId))
+            {
+                query["VSwitchCidrReservationId"] = request.VSwitchCidrReservationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVSwitchCidrReservation",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVSwitchCidrReservationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteVSwitchCidrReservationResponse DeleteVSwitchCidrReservation(DeleteVSwitchCidrReservationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteVSwitchCidrReservationWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteVSwitchCidrReservationResponse> DeleteVSwitchCidrReservationAsync(DeleteVSwitchCidrReservationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteVSwitchCidrReservationWithOptionsAsync(request, runtime);
         }
 
         public DeleteVbrHaResponse DeleteVbrHaWithOptions(DeleteVbrHaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -45703,6 +45813,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNextHopId))
+            {
+                query["NewNextHopId"] = request.NewNextHopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNextHopType))
+            {
+                query["NewNextHopType"] = request.NewNextHopType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -45764,6 +45882,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNextHopId))
+            {
+                query["NewNextHopId"] = request.NewNextHopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNextHopType))
+            {
+                query["NewNextHopType"] = request.NewNextHopType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -50806,7 +50932,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   After you call the **ReleaseEipSegmentAddress** operation, all EIPs in the specified group are released.
-          * *   The **ReleaseEipSegmentAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of a group of contiguous EIPs:
+          * *   **ReleaseEipSegmentAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of the task.
           *     *   If the group is in the **Releasing** state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.
           *     *   If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.
           * *   You cannot repeatedly call the **ReleaseEipSegmentAddress** operation to release a group of contiguous EIPs within the specified period of time.
@@ -50868,7 +50994,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   After you call the **ReleaseEipSegmentAddress** operation, all EIPs in the specified group are released.
-          * *   The **ReleaseEipSegmentAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of a group of contiguous EIPs:
+          * *   **ReleaseEipSegmentAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of the task.
           *     *   If the group is in the **Releasing** state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.
           *     *   If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.
           * *   You cannot repeatedly call the **ReleaseEipSegmentAddress** operation to release a group of contiguous EIPs within the specified period of time.
@@ -50930,7 +51056,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   After you call the **ReleaseEipSegmentAddress** operation, all EIPs in the specified group are released.
-          * *   The **ReleaseEipSegmentAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of a group of contiguous EIPs:
+          * *   **ReleaseEipSegmentAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of the task.
           *     *   If the group is in the **Releasing** state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.
           *     *   If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.
           * *   You cannot repeatedly call the **ReleaseEipSegmentAddress** operation to release a group of contiguous EIPs within the specified period of time.
@@ -50946,7 +51072,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   After you call the **ReleaseEipSegmentAddress** operation, all EIPs in the specified group are released.
-          * *   The **ReleaseEipSegmentAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of a group of contiguous EIPs:
+          * *   **ReleaseEipSegmentAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of the task.
           *     *   If the group is in the **Releasing** state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.
           *     *   If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.
           * *   You cannot repeatedly call the **ReleaseEipSegmentAddress** operation to release a group of contiguous EIPs within the specified period of time.
@@ -53241,10 +53367,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **UnassociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+          * *   **UnassociateEipAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task.
           *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
           *     *   If the EIP is in the **Available** state, the EIP is disassociated.
-          * *   You cannot repeatedly call the **UnassociateEipAddress** operation to disassociate an EIP within the specified period of time.
+          * *   You cannot repeatedly call the **UnassociateEipAddress** operation within the specified period of time.
           *
           * @param request UnassociateEipAddressRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -53318,10 +53444,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **UnassociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+          * *   **UnassociateEipAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task.
           *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
           *     *   If the EIP is in the **Available** state, the EIP is disassociated.
-          * *   You cannot repeatedly call the **UnassociateEipAddress** operation to disassociate an EIP within the specified period of time.
+          * *   You cannot repeatedly call the **UnassociateEipAddress** operation within the specified period of time.
           *
           * @param request UnassociateEipAddressRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -53395,10 +53521,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **UnassociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+          * *   **UnassociateEipAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task.
           *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
           *     *   If the EIP is in the **Available** state, the EIP is disassociated.
-          * *   You cannot repeatedly call the **UnassociateEipAddress** operation to disassociate an EIP within the specified period of time.
+          * *   You cannot repeatedly call the **UnassociateEipAddress** operation within the specified period of time.
           *
           * @param request UnassociateEipAddressRequest
           * @return UnassociateEipAddressResponse
@@ -53410,10 +53536,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **UnassociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+          * *   **UnassociateEipAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task.
           *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
           *     *   If the EIP is in the **Available** state, the EIP is disassociated.
-          * *   You cannot repeatedly call the **UnassociateEipAddress** operation to disassociate an EIP within the specified period of time.
+          * *   You cannot repeatedly call the **UnassociateEipAddress** operation within the specified period of time.
           *
           * @param request UnassociateEipAddressRequest
           * @return UnassociateEipAddressResponse

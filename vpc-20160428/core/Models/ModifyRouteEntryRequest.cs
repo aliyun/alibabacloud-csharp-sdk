@@ -18,6 +18,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("NewNextHopId")]
+        [Validation(Required=false)]
+        public string NewNextHopId { get; set; }
+
+        [NameInMap("NewNextHopType")]
+        [Validation(Required=false)]
+        public string NewNextHopType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteCommonBandwidthPackageRequest : TeaModel {
         /// <summary>
-        /// The ID of the EIP bandwidth plan.
+        /// The ID of the Internet Shared Bandwidth instance.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcibly delete the EIP bandwidth plan. Valid values:
+        /// Specifies whether to forcefully delete the Internet Shared Bandwidth instance. Valid values:
         /// 
-        /// *   **false** (default): deletes the EIP bandwidth plan only when no EIPs are associated with the EIP bandwidth plan.
-        /// *   **true**: disassociates all EIPs from the EIP bandwidth plan and deletes the EIP bandwidth plan.
+        /// *   **false** (default): deletes the Internet Shared Bandwidth instance only when no EIPs are associated with the Internet Shared Bandwidth instance.
+        /// *   **true**: disassociates all EIPs from the Internet Shared Bandwidth instance and deletes the Internet Shared Bandwidth instance.
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the EIP bandwidth plan is created.
+        /// The ID of the region where the Internet Shared Bandwidth instance is created.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
