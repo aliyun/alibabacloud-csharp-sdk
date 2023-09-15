@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateProjectRequest : TeaModel {
+        [NameInMap("dataRedundancyType")]
+        [Validation(Required=false)]
+        public string DataRedundancyType { get; set; }
+
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }

@@ -11,11 +11,11 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class LogGroup : TeaModel {
         [NameInMap("LogTags")]
         [Validation(Required=false)]
-        public LogTag LogTags { get; set; }
+        public List<LogTag> LogTags { get; set; }
 
         [NameInMap("Logs")]
         [Validation(Required=false)]
-        public LogItem Logs { get; set; }
+        public List<LogItem> Logs { get; set; }
 
         [NameInMap("Source")]
         [Validation(Required=false)]

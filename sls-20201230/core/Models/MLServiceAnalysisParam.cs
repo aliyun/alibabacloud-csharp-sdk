@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class LogItem : TeaModel {
-        [NameInMap("Contents")]
+    public class MLServiceAnalysisParam : TeaModel {
+        [NameInMap("input")]
         [Validation(Required=false)]
-        public List<LogContent> Contents { get; set; }
+        public List<Dictionary<string, string>> Input { get; set; }
 
-        [NameInMap("Time")]
+        [NameInMap("parameter")]
         [Validation(Required=false)]
-        public int? Time { get; set; }
+        public Dictionary<string, string> Parameter { get; set; }
 
     }
 

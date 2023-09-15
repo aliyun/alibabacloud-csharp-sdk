@@ -921,6 +921,130 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateLoggingWithOptionsAsync(project, request, headers, runtime);
         }
 
+        public CreateLogtailPipelineConfigResponse CreateLogtailPipelineConfigWithOptions(string project, CreateLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Aggregators))
+            {
+                body["aggregators"] = request.Aggregators;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                body["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Flushers))
+            {
+                body["flushers"] = request.Flushers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Global))
+            {
+                body["global"] = request.Global;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Inputs))
+            {
+                body["inputs"] = request.Inputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSample))
+            {
+                body["logSample"] = request.LogSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateLogtailPipelineConfigResponse> CreateLogtailPipelineConfigWithOptionsAsync(string project, CreateLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Aggregators))
+            {
+                body["aggregators"] = request.Aggregators;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                body["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Flushers))
+            {
+                body["flushers"] = request.Flushers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Global))
+            {
+                body["global"] = request.Global;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Inputs))
+            {
+                body["inputs"] = request.Inputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSample))
+            {
+                body["logSample"] = request.LogSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateLogtailPipelineConfigResponse CreateLogtailPipelineConfig(string project, CreateLogtailPipelineConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateLogtailPipelineConfigWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<CreateLogtailPipelineConfigResponse> CreateLogtailPipelineConfigAsync(string project, CreateLogtailPipelineConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateLogtailPipelineConfigWithOptionsAsync(project, request, headers, runtime);
+        }
+
         public CreateMachineGroupResponse CreateMachineGroupWithOptions(string project, CreateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1309,6 +1433,10 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRedundancyType))
+            {
+                body["dataRedundancyType"] = request.DataRedundancyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -1336,7 +1464,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateProjectResponse>(Execute(params_, req, runtime));
         }
@@ -1345,6 +1473,10 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRedundancyType))
+            {
+                body["dataRedundancyType"] = request.DataRedundancyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -1372,7 +1504,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateProjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -2085,6 +2217,68 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteLoggingWithOptionsAsync(project, headers, runtime);
+        }
+
+        public DeleteLogtailPipelineConfigResponse DeleteLogtailPipelineConfigWithOptions(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs/" + configName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteLogtailPipelineConfigResponse> DeleteLogtailPipelineConfigWithOptionsAsync(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs/" + configName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteLogtailPipelineConfigResponse DeleteLogtailPipelineConfig(string project, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteLogtailPipelineConfigWithOptions(project, configName, headers, runtime);
+        }
+
+        public async Task<DeleteLogtailPipelineConfigResponse> DeleteLogtailPipelineConfigAsync(string project, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteLogtailPipelineConfigWithOptionsAsync(project, configName, headers, runtime);
         }
 
         public DeleteMachineGroupResponse DeleteMachineGroupWithOptions(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3635,6 +3829,68 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetLogsV2WithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
+        public GetLogtailPipelineConfigResponse GetLogtailPipelineConfigWithOptions(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs/" + configName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetLogtailPipelineConfigResponse> GetLogtailPipelineConfigWithOptionsAsync(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs/" + configName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetLogtailPipelineConfigResponse GetLogtailPipelineConfig(string project, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetLogtailPipelineConfigWithOptions(project, configName, headers, runtime);
+        }
+
+        public async Task<GetLogtailPipelineConfigResponse> GetLogtailPipelineConfigAsync(string project, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetLogtailPipelineConfigWithOptionsAsync(project, configName, headers, runtime);
+        }
+
         public GetMachineGroupResponse GetMachineGroupWithOptions(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4611,6 +4867,106 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListLogStoresWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public ListLogtailPipelineConfigResponse ListLogtailPipelineConfigWithOptions(string project, ListLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                query["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            {
+                query["logstore"] = request.Logstore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListLogtailPipelineConfigResponse> ListLogtailPipelineConfigWithOptionsAsync(string project, ListLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                query["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            {
+                query["logstore"] = request.Logstore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListLogtailPipelineConfigResponse ListLogtailPipelineConfig(string project, ListLogtailPipelineConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListLogtailPipelineConfigWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<ListLogtailPipelineConfigResponse> ListLogtailPipelineConfigAsync(string project, ListLogtailPipelineConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListLogtailPipelineConfigWithOptionsAsync(project, request, headers, runtime);
         }
 
         public ListMachineGroupResponse ListMachineGroupWithOptions(string project, ListMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6393,6 +6749,130 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateLoggingWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public UpdateLogtailPipelineConfigResponse UpdateLogtailPipelineConfigWithOptions(string project, string configName, UpdateLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Aggregators))
+            {
+                body["aggregators"] = request.Aggregators;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                body["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Flushers))
+            {
+                body["flushers"] = request.Flushers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Global))
+            {
+                body["global"] = request.Global;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Inputs))
+            {
+                body["inputs"] = request.Inputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSample))
+            {
+                body["logSample"] = request.LogSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs/" + configName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateLogtailPipelineConfigResponse> UpdateLogtailPipelineConfigWithOptionsAsync(string project, string configName, UpdateLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Aggregators))
+            {
+                body["aggregators"] = request.Aggregators;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                body["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Flushers))
+            {
+                body["flushers"] = request.Flushers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Global))
+            {
+                body["global"] = request.Global;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Inputs))
+            {
+                body["inputs"] = request.Inputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSample))
+            {
+                body["logSample"] = request.LogSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLogtailPipelineConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/pipelineconfigs/" + configName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateLogtailPipelineConfigResponse UpdateLogtailPipelineConfig(string project, string configName, UpdateLogtailPipelineConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateLogtailPipelineConfigWithOptions(project, configName, request, headers, runtime);
+        }
+
+        public async Task<UpdateLogtailPipelineConfigResponse> UpdateLogtailPipelineConfigAsync(string project, string configName, UpdateLogtailPipelineConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateLogtailPipelineConfigWithOptionsAsync(project, configName, request, headers, runtime);
         }
 
         public UpdateMachineGroupResponse UpdateMachineGroupWithOptions(string project, string groupName, UpdateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

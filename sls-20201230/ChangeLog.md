@@ -1,3 +1,6 @@
+2023-09-15 Version: 2.1.0
+- Generated csharp 2020-12-30 for Sls.
+
 2023-08-01 Version: 2.0.1
 - Support config api.
 
