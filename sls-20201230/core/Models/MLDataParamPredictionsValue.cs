@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("results")]
         [Validation(Required=false)]
-        public List<string> Results { get; set; }
+        public List<Dictionary<string, string>> Results { get; set; }
 
     }
 

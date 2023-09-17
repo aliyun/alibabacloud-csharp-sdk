@@ -257,6 +257,138 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ConsumerGroupHeartBeatWithOptionsAsync(project, logstore, consumerGroup, request, headers, runtime);
         }
 
+        public CreateAnnotationDataSetResponse CreateAnnotationDataSetWithOptions(CreateAnnotationDataSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["datasetId"] = request.DatasetId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAnnotationDataSet",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateAnnotationDataSetResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateAnnotationDataSetResponse> CreateAnnotationDataSetWithOptionsAsync(CreateAnnotationDataSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["datasetId"] = request.DatasetId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAnnotationDataSet",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateAnnotationDataSetResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateAnnotationDataSetResponse CreateAnnotationDataSet(CreateAnnotationDataSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAnnotationDataSetWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateAnnotationDataSetResponse> CreateAnnotationDataSetAsync(CreateAnnotationDataSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAnnotationDataSetWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CreateAnnotationLabelResponse CreateAnnotationLabelWithOptions(CreateAnnotationLabelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAnnotationLabel",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateAnnotationLabelResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateAnnotationLabelResponse> CreateAnnotationLabelWithOptionsAsync(CreateAnnotationLabelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAnnotationLabel",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateAnnotationLabelResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateAnnotationLabelResponse CreateAnnotationLabel(CreateAnnotationLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAnnotationLabelWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateAnnotationLabelResponse> CreateAnnotationLabelAsync(CreateAnnotationLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAnnotationLabelWithOptionsAsync(request, headers, runtime);
+        }
+
         public CreateConfigResponse CreateConfigWithOptions(string project, CreateConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1723,6 +1855,174 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateSavedSearchWithOptionsAsync(project, request, headers, runtime);
         }
 
+        public DeleteAnnotationDataResponse DeleteAnnotationDataWithOptions(string datasetId, string annotationdataId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAnnotationData",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId + "/annotationdata/" + annotationdataId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAnnotationDataResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteAnnotationDataResponse> DeleteAnnotationDataWithOptionsAsync(string datasetId, string annotationdataId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAnnotationData",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId + "/annotationdata/" + annotationdataId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAnnotationDataResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteAnnotationDataResponse DeleteAnnotationData(string datasetId, string annotationdataId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAnnotationDataWithOptions(datasetId, annotationdataId, headers, runtime);
+        }
+
+        public async Task<DeleteAnnotationDataResponse> DeleteAnnotationDataAsync(string datasetId, string annotationdataId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAnnotationDataWithOptionsAsync(datasetId, annotationdataId, headers, runtime);
+        }
+
+        public DeleteAnnotationDataSetResponse DeleteAnnotationDataSetWithOptions(string datasetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAnnotationDataSet",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAnnotationDataSetResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteAnnotationDataSetResponse> DeleteAnnotationDataSetWithOptionsAsync(string datasetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAnnotationDataSet",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAnnotationDataSetResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteAnnotationDataSetResponse DeleteAnnotationDataSet(string datasetId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAnnotationDataSetWithOptions(datasetId, headers, runtime);
+        }
+
+        public async Task<DeleteAnnotationDataSetResponse> DeleteAnnotationDataSetAsync(string datasetId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAnnotationDataSetWithOptionsAsync(datasetId, headers, runtime);
+        }
+
+        public DeleteAnnotationLabelResponse DeleteAnnotationLabelWithOptions(string labelId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAnnotationLabel",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel/" + labelId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAnnotationLabelResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteAnnotationLabelResponse> DeleteAnnotationLabelWithOptionsAsync(string labelId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAnnotationLabel",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel/" + labelId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAnnotationLabelResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteAnnotationLabelResponse DeleteAnnotationLabel(string labelId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAnnotationLabelWithOptions(labelId, headers, runtime);
+        }
+
+        public async Task<DeleteAnnotationLabelResponse> DeleteAnnotationLabelAsync(string labelId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAnnotationLabelWithOptionsAsync(labelId, headers, runtime);
+        }
+
         public DeleteConfigResponse DeleteConfigWithOptions(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2589,6 +2889,174 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteShipperWithOptionsAsync(project, logstore, shipperName, headers, runtime);
+        }
+
+        public GetAnnotationDataResponse GetAnnotationDataWithOptions(string datasetId, string annotationdataId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAnnotationData",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId + "/annotationdata/" + annotationdataId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAnnotationDataResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetAnnotationDataResponse> GetAnnotationDataWithOptionsAsync(string datasetId, string annotationdataId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAnnotationData",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId + "/annotationdata/" + annotationdataId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAnnotationDataResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetAnnotationDataResponse GetAnnotationData(string datasetId, string annotationdataId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAnnotationDataWithOptions(datasetId, annotationdataId, headers, runtime);
+        }
+
+        public async Task<GetAnnotationDataResponse> GetAnnotationDataAsync(string datasetId, string annotationdataId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAnnotationDataWithOptionsAsync(datasetId, annotationdataId, headers, runtime);
+        }
+
+        public GetAnnotationDataSetResponse GetAnnotationDataSetWithOptions(string datasetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAnnotationDataSet",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAnnotationDataSetResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetAnnotationDataSetResponse> GetAnnotationDataSetWithOptionsAsync(string datasetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAnnotationDataSet",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAnnotationDataSetResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetAnnotationDataSetResponse GetAnnotationDataSet(string datasetId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAnnotationDataSetWithOptions(datasetId, headers, runtime);
+        }
+
+        public async Task<GetAnnotationDataSetResponse> GetAnnotationDataSetAsync(string datasetId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAnnotationDataSetWithOptionsAsync(datasetId, headers, runtime);
+        }
+
+        public GetAnnotationLabelResponse GetAnnotationLabelWithOptions(string labelId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAnnotationLabel",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel/" + labelId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAnnotationLabelResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetAnnotationLabelResponse> GetAnnotationLabelWithOptionsAsync(string labelId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAnnotationLabel",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel/" + labelId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAnnotationLabelResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetAnnotationLabelResponse GetAnnotationLabel(string labelId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAnnotationLabelWithOptions(labelId, headers, runtime);
+        }
+
+        public async Task<GetAnnotationLabelResponse> GetAnnotationLabelAsync(string labelId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAnnotationLabelWithOptionsAsync(labelId, headers, runtime);
         }
 
         public GetAppliedConfigsResponse GetAppliedConfigsWithOptions(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4331,6 +4799,240 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetShipperStatusWithOptionsAsync(project, logstore, shipperName, request, headers, runtime);
         }
 
+        public ListAnnotationDataResponse ListAnnotationDataWithOptions(string datasetId, ListAnnotationDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAnnotationData",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId + "/annotationdata",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAnnotationDataResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListAnnotationDataResponse> ListAnnotationDataWithOptionsAsync(string datasetId, ListAnnotationDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAnnotationData",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId + "/annotationdata",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAnnotationDataResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListAnnotationDataResponse ListAnnotationData(string datasetId, ListAnnotationDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAnnotationDataWithOptions(datasetId, request, headers, runtime);
+        }
+
+        public async Task<ListAnnotationDataResponse> ListAnnotationDataAsync(string datasetId, ListAnnotationDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAnnotationDataWithOptionsAsync(datasetId, request, headers, runtime);
+        }
+
+        public ListAnnotationDataSetsResponse ListAnnotationDataSetsWithOptions(ListAnnotationDataSetsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAnnotationDataSets",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAnnotationDataSetsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListAnnotationDataSetsResponse> ListAnnotationDataSetsWithOptionsAsync(ListAnnotationDataSetsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAnnotationDataSets",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAnnotationDataSetsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListAnnotationDataSetsResponse ListAnnotationDataSets(ListAnnotationDataSetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAnnotationDataSetsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListAnnotationDataSetsResponse> ListAnnotationDataSetsAsync(ListAnnotationDataSetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAnnotationDataSetsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListAnnotationLabelsResponse ListAnnotationLabelsWithOptions(ListAnnotationLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAnnotationLabels",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAnnotationLabelsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListAnnotationLabelsResponse> ListAnnotationLabelsWithOptionsAsync(ListAnnotationLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAnnotationLabels",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAnnotationLabelsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListAnnotationLabelsResponse ListAnnotationLabels(ListAnnotationLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAnnotationLabelsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListAnnotationLabelsResponse> ListAnnotationLabelsAsync(ListAnnotationLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAnnotationLabelsWithOptionsAsync(request, headers, runtime);
+        }
+
         public ListConfigResponse ListConfigWithOptions(string project, ListConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5637,6 +6339,96 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await PullDataWithOptionsAsync(project, logstore, shard, request, headers, runtime);
         }
 
+        public PutAnnotationDataResponse PutAnnotationDataWithOptions(string datasetId, PutAnnotationDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnnotationdataId))
+            {
+                query["annotationdataId"] = request.AnnotationdataId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MlDataParam))
+            {
+                body["mlDataParam"] = request.MlDataParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawLog))
+            {
+                body["rawLog"] = request.RawLog;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutAnnotationData",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId + "/annotationdata",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PutAnnotationDataResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<PutAnnotationDataResponse> PutAnnotationDataWithOptionsAsync(string datasetId, PutAnnotationDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnnotationdataId))
+            {
+                query["annotationdataId"] = request.AnnotationdataId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MlDataParam))
+            {
+                body["mlDataParam"] = request.MlDataParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawLog))
+            {
+                body["rawLog"] = request.RawLog;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutAnnotationData",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId + "/annotationdata",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PutAnnotationDataResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public PutAnnotationDataResponse PutAnnotationData(string datasetId, PutAnnotationDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PutAnnotationDataWithOptions(datasetId, request, headers, runtime);
+        }
+
+        public async Task<PutAnnotationDataResponse> PutAnnotationDataAsync(string datasetId, PutAnnotationDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PutAnnotationDataWithOptionsAsync(datasetId, request, headers, runtime);
+        }
+
         public PutProjectPolicyResponse PutProjectPolicyWithOptions(string project, PutProjectPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5801,6 +6593,78 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await PutWebtrackingWithOptionsAsync(project, logstoreName, request, headers, runtime);
+        }
+
+        public QueryMLServiceResultsResponse QueryMLServiceResultsWithOptions(string serviceName, QueryMLServiceResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowBuiltin))
+            {
+                query["allowBuiltin"] = request.AllowBuiltin;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMLServiceResults",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/service/" + serviceName + "/analysis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMLServiceResultsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<QueryMLServiceResultsResponse> QueryMLServiceResultsWithOptionsAsync(string serviceName, QueryMLServiceResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowBuiltin))
+            {
+                query["allowBuiltin"] = request.AllowBuiltin;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMLServiceResults",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/service/" + serviceName + "/analysis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMLServiceResultsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public QueryMLServiceResultsResponse QueryMLServiceResults(string serviceName, QueryMLServiceResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryMLServiceResultsWithOptions(serviceName, request, headers, runtime);
+        }
+
+        public async Task<QueryMLServiceResultsResponse> QueryMLServiceResultsAsync(string serviceName, QueryMLServiceResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryMLServiceResultsWithOptionsAsync(serviceName, request, headers, runtime);
         }
 
         public RemoveConfigFromMachineGroupResponse RemoveConfigFromMachineGroupWithOptions(string project, string machineGroup, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6127,6 +6991,126 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UntagResourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        public UpdateAnnotationDataSetResponse UpdateAnnotationDataSetWithOptions(string datasetId, UpdateAnnotationDataSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAnnotationDataSet",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateAnnotationDataSetResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateAnnotationDataSetResponse> UpdateAnnotationDataSetWithOptionsAsync(string datasetId, UpdateAnnotationDataSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAnnotationDataSet",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationdataset/" + datasetId,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateAnnotationDataSetResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateAnnotationDataSetResponse UpdateAnnotationDataSet(string datasetId, UpdateAnnotationDataSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAnnotationDataSetWithOptions(datasetId, request, headers, runtime);
+        }
+
+        public async Task<UpdateAnnotationDataSetResponse> UpdateAnnotationDataSetAsync(string datasetId, UpdateAnnotationDataSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAnnotationDataSetWithOptionsAsync(datasetId, request, headers, runtime);
+        }
+
+        public UpdateAnnotationLabelResponse UpdateAnnotationLabelWithOptions(UpdateAnnotationLabelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAnnotationLabel",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateAnnotationLabelResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateAnnotationLabelResponse> UpdateAnnotationLabelWithOptionsAsync(UpdateAnnotationLabelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAnnotationLabel",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/annotationlabel",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateAnnotationLabelResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateAnnotationLabelResponse UpdateAnnotationLabel(UpdateAnnotationLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAnnotationLabelWithOptions(request, headers, runtime);
+        }
+
+        public async Task<UpdateAnnotationLabelResponse> UpdateAnnotationLabelAsync(UpdateAnnotationLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAnnotationLabelWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateConfigResponse UpdateConfigWithOptions(string project, string configName, UpdateConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
