@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseSlowLogRecordsRequest : TeaModel {
+        [NameInMap("AcsProduct")]
+        [Validation(Required=false)]
+        public string AcsProduct { get; set; }
+
         /// <summary>
         /// The ID of the Simple Database Service instance.
         /// </summary>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListSnapshotsRequest : TeaModel {
+        [NameInMap("AcsProduct")]
+        [Validation(Required=false)]
+        public string AcsProduct { get; set; }
+
         /// <summary>
         /// The disk ID.
         /// </summary>

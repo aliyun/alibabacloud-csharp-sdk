@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListInstancesTrafficPackagesRequest : TeaModel {
+        [NameInMap("AcsProduct")]
+        [Validation(Required=false)]
+        public string AcsProduct { get; set; }
+
         /// <summary>
         /// The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).
         /// </summary>

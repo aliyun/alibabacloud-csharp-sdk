@@ -2703,6 +2703,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsProduct))
+            {
+                query["AcsProduct"] = request.AcsProduct;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseInstanceId))
             {
                 query["DatabaseInstanceId"] = request.DatabaseInstanceId;
@@ -2760,6 +2764,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsProduct))
+            {
+                query["AcsProduct"] = request.AcsProduct;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseInstanceId))
             {
                 query["DatabaseInstanceId"] = request.DatabaseInstanceId;
@@ -4921,6 +4929,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsProduct))
+            {
+                query["AcsProduct"] = request.AcsProduct;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
@@ -4966,6 +4978,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsProduct))
+            {
+                query["AcsProduct"] = request.AcsProduct;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
@@ -5224,6 +5240,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsProduct))
+            {
+                query["AcsProduct"] = request.AcsProduct;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskId))
             {
                 query["DiskId"] = request.DiskId;
@@ -5284,6 +5304,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsProduct))
+            {
+                query["AcsProduct"] = request.AcsProduct;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskId))
             {
                 query["DiskId"] = request.DiskId;
