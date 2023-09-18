@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ConfigName { get; set; }
 
-        [NameInMap("logstore")]
+        [NameInMap("logstoreName")]
         [Validation(Required=false)]
-        public string Logstore { get; set; }
+        public string LogstoreName { get; set; }
 
         [NameInMap("offset")]
         [Validation(Required=false)]

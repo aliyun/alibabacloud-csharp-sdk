@@ -5581,9 +5581,9 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["configName"] = request.ConfigName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
-                query["logstore"] = request.Logstore;
+                query["logstoreName"] = request.LogstoreName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
@@ -5624,9 +5624,9 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["configName"] = request.ConfigName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
-                query["logstore"] = request.Logstore;
+                query["logstoreName"] = request.LogstoreName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
