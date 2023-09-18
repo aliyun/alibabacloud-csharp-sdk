@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("Region")]
         [Validation(Required=false)]
