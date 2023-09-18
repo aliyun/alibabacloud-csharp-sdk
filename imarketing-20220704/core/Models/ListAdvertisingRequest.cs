@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imarketing20220704.Models
         [Validation(Required=false)]
         public ListAdvertisingRequestApp App { get; set; }
         public class ListAdvertisingRequestApp : TeaModel {
+            [NameInMap("Appid")]
+            [Validation(Required=false)]
+            public string Appid { get; set; }
+
             [NameInMap("Ext")]
             [Validation(Required=false)]
             public Dictionary<string, object> Ext { get; set; }
