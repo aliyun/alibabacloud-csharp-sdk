@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public int? DisputeStatus { get; set; }
 
-        [NameInMap("disputeType")]
-        [Validation(Required=false)]
-        public int? DisputeType { get; set; }
-
         [NameInMap("orderLineId")]
         [Validation(Required=false)]
         public string OrderLineId { get; set; }

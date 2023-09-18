@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ShopPageDataResult : TeaModel {
-        [NameInMap("channelSupplierId")]
+        [NameInMap("cooperationShops")]
         [Validation(Required=false)]
-        public string ChannelSupplierId { get; set; }
+        public List<CooperationShop> CooperationShops { get; set; }
 
         [NameInMap("endDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
+
+        [NameInMap("purchaserId")]
+        [Validation(Required=false)]
+        public string PurchaserId { get; set; }
 
         [NameInMap("shopId")]
         [Validation(Required=false)]

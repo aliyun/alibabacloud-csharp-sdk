@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class Shop : TeaModel {
-        [NameInMap("channelSupplierId")]
+        [NameInMap("cooperationShops")]
         [Validation(Required=false)]
-        public string ChannelSupplierId { get; set; }
+        public List<CooperationShop> CooperationShops { get; set; }
 
         [NameInMap("distributorId")]
         [Validation(Required=false)]
@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [NameInMap("endDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
+
+        [NameInMap("purchaserId")]
+        [Validation(Required=false)]
+        public string PurchaserId { get; set; }
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("shopId")]
         [Validation(Required=false)]

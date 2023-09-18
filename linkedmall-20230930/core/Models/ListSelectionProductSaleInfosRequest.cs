@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
-    public class ListProductSaleInfosRequest : TeaModel {
+    public class ListSelectionProductSaleInfosRequest : TeaModel {
         [NameInMap("body")]
         [Validation(Required=false)]
         public ProductSaleInfoListQuery Body { get; set; }

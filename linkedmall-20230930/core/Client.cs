@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "CancelRefundOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(disputeId) + "/commands/cancel",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(disputeId) + "/commands/cancel",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "CancelRefundOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(disputeId) + "/commands/cancel",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(disputeId) + "/commands/cancel",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "ConfirmDisburse",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/commands/confirmDisburse",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/commands/confirmDisburse",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "ConfirmDisburse",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/commands/confirmDisburse",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/commands/confirmDisburse",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "CreateGoodsShippingNotice",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/command/createGoodsShippingNotice",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/command/createGoodsShippingNotice",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "CreateGoodsShippingNotice",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/command/createGoodsShippingNotice",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/command/createGoodsShippingNotice",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "CreatePurchaseOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "CreatePurchaseOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "CreateRefundOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "CreateRefundOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "GetOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(orderId),
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(orderId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "GetOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(orderId),
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(orderId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -446,162 +446,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             return await GetOrderWithOptionsAsync(orderId, headers, runtime);
         }
 
-        public GetProductResponse GetProductWithOptions(string productId, GetProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorShopId))
-            {
-                query["distributorShopId"] = request.DistributorShopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DivisionCode))
-            {
-                query["divisionCode"] = request.DivisionCode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProduct",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProductResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetProductResponse> GetProductWithOptionsAsync(string productId, GetProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorShopId))
-            {
-                query["distributorShopId"] = request.DistributorShopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DivisionCode))
-            {
-                query["divisionCode"] = request.DivisionCode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProduct",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProductResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetProductResponse GetProduct(string productId, GetProductRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetProductWithOptions(productId, request, headers, runtime);
-        }
-
-        public async Task<GetProductResponse> GetProductAsync(string productId, GetProductRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetProductWithOptionsAsync(productId, request, headers, runtime);
-        }
-
-        public GetProductSaleInfoResponse GetProductSaleInfoWithOptions(string productId, GetProductSaleInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorShopId))
-            {
-                query["distributorShopId"] = request.DistributorShopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DivisionCode))
-            {
-                query["divisionCode"] = request.DivisionCode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProductSaleInfo",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId) + "/saleInfo",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProductSaleInfoResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetProductSaleInfoResponse> GetProductSaleInfoWithOptionsAsync(string productId, GetProductSaleInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorShopId))
-            {
-                query["distributorShopId"] = request.DistributorShopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DivisionCode))
-            {
-                query["divisionCode"] = request.DivisionCode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProductSaleInfo",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId) + "/saleInfo",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProductSaleInfoResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetProductSaleInfoResponse GetProductSaleInfo(string productId, GetProductSaleInfoRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetProductSaleInfoWithOptions(productId, request, headers, runtime);
-        }
-
-        public async Task<GetProductSaleInfoResponse> GetProductSaleInfoAsync(string productId, GetProductSaleInfoRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetProductSaleInfoWithOptionsAsync(productId, request, headers, runtime);
-        }
-
         public GetPurchaseOrderStatusResponse GetPurchaseOrderStatusWithOptions(string purchaseOrderId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -613,7 +457,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "GetPurchaseOrderStatus",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(purchaseOrderId) + "/status",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(purchaseOrderId) + "/status",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -634,7 +478,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "GetPurchaseOrderStatus",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(purchaseOrderId) + "/status",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(purchaseOrderId) + "/status",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -658,6 +502,62 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             return await GetPurchaseOrderStatusWithOptionsAsync(purchaseOrderId, headers, runtime);
         }
 
+        public GetPurchaserShopResponse GetPurchaserShopWithOptions(string purchaserId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPurchaserShop",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaserShops/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(purchaserId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPurchaserShopResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetPurchaserShopResponse> GetPurchaserShopWithOptionsAsync(string purchaserId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPurchaserShop",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaserShops/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(purchaserId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPurchaserShopResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetPurchaserShopResponse GetPurchaserShop(string purchaserId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetPurchaserShopWithOptions(purchaserId, headers, runtime);
+        }
+
+        public async Task<GetPurchaserShopResponse> GetPurchaserShopAsync(string purchaserId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetPurchaserShopWithOptionsAsync(purchaserId, headers, runtime);
+        }
+
         public GetRefundOrderResponse GetRefundOrderWithOptions(string disputeId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -669,7 +569,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "GetRefundOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(disputeId),
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(disputeId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -690,7 +590,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "GetRefundOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(disputeId),
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(disputeId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -714,60 +614,160 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             return await GetRefundOrderWithOptionsAsync(disputeId, headers, runtime);
         }
 
-        public GetShopResponse GetShopWithOptions(string shopId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetSelectionProductResponse GetSelectionProductWithOptions(string productId, GetSelectionProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DivisionCode))
+            {
+                query["divisionCode"] = request.DivisionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PurchaserId))
+            {
+                query["purchaserId"] = request.PurchaserId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetShop",
+                Action = "GetSelectionProduct",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/shops/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shopId),
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetShopResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetSelectionProductResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetShopResponse> GetShopWithOptionsAsync(string shopId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetSelectionProductResponse> GetSelectionProductWithOptionsAsync(string productId, GetSelectionProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DivisionCode))
+            {
+                query["divisionCode"] = request.DivisionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PurchaserId))
+            {
+                query["purchaserId"] = request.PurchaserId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetShop",
+                Action = "GetSelectionProduct",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/shops/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shopId),
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetShopResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetSelectionProductResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetShopResponse GetShop(string shopId)
+        public GetSelectionProductResponse GetSelectionProduct(string productId, GetSelectionProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetShopWithOptions(shopId, headers, runtime);
+            return GetSelectionProductWithOptions(productId, request, headers, runtime);
         }
 
-        public async Task<GetShopResponse> GetShopAsync(string shopId)
+        public async Task<GetSelectionProductResponse> GetSelectionProductAsync(string productId, GetSelectionProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetShopWithOptionsAsync(shopId, headers, runtime);
+            return await GetSelectionProductWithOptionsAsync(productId, request, headers, runtime);
+        }
+
+        public GetSelectionProductSaleInfoResponse GetSelectionProductSaleInfoWithOptions(string productId, GetSelectionProductSaleInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DivisionCode))
+            {
+                query["divisionCode"] = request.DivisionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PurchaserId))
+            {
+                query["purchaserId"] = request.PurchaserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSelectionProductSaleInfo",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId) + "/saleInfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSelectionProductSaleInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetSelectionProductSaleInfoResponse> GetSelectionProductSaleInfoWithOptionsAsync(string productId, GetSelectionProductSaleInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DivisionCode))
+            {
+                query["divisionCode"] = request.DivisionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PurchaserId))
+            {
+                query["purchaserId"] = request.PurchaserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSelectionProductSaleInfo",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(productId) + "/saleInfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSelectionProductSaleInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetSelectionProductSaleInfoResponse GetSelectionProductSaleInfo(string productId, GetSelectionProductSaleInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSelectionProductSaleInfoWithOptions(productId, request, headers, runtime);
+        }
+
+        public async Task<GetSelectionProductSaleInfoResponse> GetSelectionProductSaleInfoAsync(string productId, GetSelectionProductSaleInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSelectionProductSaleInfoWithOptionsAsync(productId, request, headers, runtime);
         }
 
         public ListLogisticsOrdersResponse ListLogisticsOrdersWithOptions(string orderId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -781,7 +781,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "ListLogisticsOrders",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(orderId) + "/logisticsOrders",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(orderId) + "/logisticsOrders",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -802,7 +802,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "ListLogisticsOrders",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(orderId) + "/logisticsOrders",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(orderId) + "/logisticsOrders",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -826,134 +826,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             return await ListLogisticsOrdersWithOptionsAsync(orderId, headers, runtime);
         }
 
-        public ListProductGeneralBillsResponse ListProductGeneralBillsWithOptions(ListProductGeneralBillsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListProductGeneralBills",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/productGeneralBills",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListProductGeneralBillsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListProductGeneralBillsResponse> ListProductGeneralBillsWithOptionsAsync(ListProductGeneralBillsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListProductGeneralBills",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/productGeneralBills",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListProductGeneralBillsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListProductGeneralBillsResponse ListProductGeneralBills(ListProductGeneralBillsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListProductGeneralBillsWithOptions(request, headers, runtime);
-        }
-
-        public async Task<ListProductGeneralBillsResponse> ListProductGeneralBillsAsync(ListProductGeneralBillsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListProductGeneralBillsWithOptionsAsync(request, headers, runtime);
-        }
-
-        public ListProductSaleInfosResponse ListProductSaleInfosWithOptions(ListProductSaleInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListProductSaleInfos",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/saleInfo/commands/list",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListProductSaleInfosResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListProductSaleInfosResponse> ListProductSaleInfosWithOptionsAsync(ListProductSaleInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListProductSaleInfos",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/saleInfo/commands/list",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListProductSaleInfosResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListProductSaleInfosResponse ListProductSaleInfos(ListProductSaleInfosRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListProductSaleInfosWithOptions(request, headers, runtime);
-        }
-
-        public async Task<ListProductSaleInfosResponse> ListProductSaleInfosAsync(ListProductSaleInfosRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListProductSaleInfosWithOptionsAsync(request, headers, runtime);
-        }
-
-        public ListProductsResponse ListProductsWithOptions(ListProductsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPurchaserShopsResponse ListPurchaserShopsWithOptions(ListPurchaserShopsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorShopId))
-            {
-                query["distributorShopId"] = request.DistributorShopId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -969,27 +845,23 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "ListProducts",
+                Action = "ListPurchaserShops",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaserShops",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListPurchaserShopsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListProductsResponse> ListProductsWithOptionsAsync(ListProductsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPurchaserShopsResponse> ListPurchaserShopsWithOptionsAsync(ListPurchaserShopsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorShopId))
-            {
-                query["distributorShopId"] = request.DistributorShopId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -1005,152 +877,34 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "ListProducts",
+                Action = "ListPurchaserShops",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaserShops",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListPurchaserShopsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListProductsResponse ListProducts(ListProductsRequest request)
+        public ListPurchaserShopsResponse ListPurchaserShops(ListPurchaserShopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListProductsWithOptions(request, headers, runtime);
+            return ListPurchaserShopsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListProductsResponse> ListProductsAsync(ListProductsRequest request)
+        public async Task<ListPurchaserShopsResponse> ListPurchaserShopsAsync(ListPurchaserShopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListProductsWithOptionsAsync(request, headers, runtime);
+            return await ListPurchaserShopsWithOptionsAsync(request, headers, runtime);
         }
 
-        public ListShopsResponse ListShopsWithOptions(ListShopsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelSupplierId))
-            {
-                query["channelSupplierId"] = request.ChannelSupplierId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
-            {
-                query["endDate"] = request.EndDate;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["pageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["pageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShopId))
-            {
-                query["shopId"] = request.ShopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShopName))
-            {
-                query["shopName"] = request.ShopName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
-            {
-                query["startDate"] = request.StartDate;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListShops",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/shops",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListShopsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListShopsResponse> ListShopsWithOptionsAsync(ListShopsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelSupplierId))
-            {
-                query["channelSupplierId"] = request.ChannelSupplierId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
-            {
-                query["endDate"] = request.EndDate;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["pageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["pageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShopId))
-            {
-                query["shopId"] = request.ShopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShopName))
-            {
-                query["shopName"] = request.ShopName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
-            {
-                query["startDate"] = request.StartDate;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListShops",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/shops",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListShopsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListShopsResponse ListShops(ListShopsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListShopsWithOptions(request, headers, runtime);
-        }
-
-        public async Task<ListShopsResponse> ListShopsAsync(ListShopsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListShopsWithOptionsAsync(request, headers, runtime);
-        }
-
-        public ListSkuSaleInfosResponse ListSkuSaleInfosWithOptions(ListSkuSaleInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListSelectionProductSaleInfosResponse ListSelectionProductSaleInfosWithOptions(ListSelectionProductSaleInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1160,20 +914,20 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "ListSkuSaleInfos",
+                Action = "ListSelectionProductSaleInfos",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/skus/saleInfo/commands/list",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/saleInfo/commands/list",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListSkuSaleInfosResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListSelectionProductSaleInfosResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListSkuSaleInfosResponse> ListSkuSaleInfosWithOptionsAsync(ListSkuSaleInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListSelectionProductSaleInfosResponse> ListSelectionProductSaleInfosWithOptionsAsync(ListSelectionProductSaleInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1183,31 +937,177 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "ListSkuSaleInfos",
+                Action = "ListSelectionProductSaleInfos",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/skus/saleInfo/commands/list",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/saleInfo/commands/list",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListSkuSaleInfosResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListSelectionProductSaleInfosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListSkuSaleInfosResponse ListSkuSaleInfos(ListSkuSaleInfosRequest request)
+        public ListSelectionProductSaleInfosResponse ListSelectionProductSaleInfos(ListSelectionProductSaleInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListSkuSaleInfosWithOptions(request, headers, runtime);
+            return ListSelectionProductSaleInfosWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListSkuSaleInfosResponse> ListSkuSaleInfosAsync(ListSkuSaleInfosRequest request)
+        public async Task<ListSelectionProductSaleInfosResponse> ListSelectionProductSaleInfosAsync(ListSelectionProductSaleInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListSkuSaleInfosWithOptionsAsync(request, headers, runtime);
+            return await ListSelectionProductSaleInfosWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListSelectionProductsResponse ListSelectionProductsWithOptions(ListSelectionProductsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PurchaserId))
+            {
+                query["purchaserId"] = request.PurchaserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSelectionProducts",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSelectionProductsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListSelectionProductsResponse> ListSelectionProductsWithOptionsAsync(ListSelectionProductsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PurchaserId))
+            {
+                query["purchaserId"] = request.PurchaserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSelectionProducts",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSelectionProductsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListSelectionProductsResponse ListSelectionProducts(ListSelectionProductsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSelectionProductsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListSelectionProductsResponse> ListSelectionProductsAsync(ListSelectionProductsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSelectionProductsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListSelectionSkuSaleInfosResponse ListSelectionSkuSaleInfosWithOptions(ListSelectionSkuSaleInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSelectionSkuSaleInfos",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/skus/saleInfo/commands/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSelectionSkuSaleInfosResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListSelectionSkuSaleInfosResponse> ListSelectionSkuSaleInfosWithOptionsAsync(ListSelectionSkuSaleInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSelectionSkuSaleInfos",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/skus/saleInfo/commands/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSelectionSkuSaleInfosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListSelectionSkuSaleInfosResponse ListSelectionSkuSaleInfos(ListSelectionSkuSaleInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSelectionSkuSaleInfosWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListSelectionSkuSaleInfosResponse> ListSelectionSkuSaleInfosAsync(ListSelectionSkuSaleInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSelectionSkuSaleInfosWithOptionsAsync(request, headers, runtime);
         }
 
         public QueryChildDivisionCodeResponse QueryChildDivisionCodeWithOptions(QueryChildDivisionCodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1223,7 +1123,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "QueryChildDivisionCode",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/division/commands/queryChildDivisionCode",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/division/commands/queryChildDivisionCode",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1246,7 +1146,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "QueryChildDivisionCode",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/division/commands/queryChildDivisionCode",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/division/commands/queryChildDivisionCode",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1283,7 +1183,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "QueryOrders",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/commands/query",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/commands/query",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1306,7 +1206,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "QueryOrders",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/commands/query",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/commands/query",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1343,7 +1243,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "RenderPurchaseOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders/commands/render",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/commands/render",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1366,7 +1266,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "RenderPurchaseOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders/commands/render",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/commands/render",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1403,7 +1303,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "RenderRefundOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/commands/render",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/commands/render",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1426,7 +1326,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
                 Action = "RenderRefundOrder",
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
-                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/commands/render",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/commands/render",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",

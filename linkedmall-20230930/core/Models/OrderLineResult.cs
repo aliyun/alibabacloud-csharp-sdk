@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string OrderLineStatus { get; set; }
 
+        [NameInMap("payFee")]
+        [Validation(Required=false)]
+        public long? PayFee { get; set; }
+
         [NameInMap("productId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [NameInMap("productPic")]
         [Validation(Required=false)]
         public string ProductPic { get; set; }
-
-        [NameInMap("productPrice")]
-        [Validation(Required=false)]
-        public List<ProductPrice> ProductPrice { get; set; }
 
         [NameInMap("productTitle")]
         [Validation(Required=false)]

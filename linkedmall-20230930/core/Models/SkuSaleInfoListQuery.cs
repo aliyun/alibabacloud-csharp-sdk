@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SkuSaleInfoListQuery : TeaModel {
-        [NameInMap("distributorShopId")]
-        [Validation(Required=false)]
-        public string DistributorShopId { get; set; }
-
         [NameInMap("divisionCode")]
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
+
+        [NameInMap("purchaserId")]
+        [Validation(Required=false)]
+        public string PurchaserId { get; set; }
 
         [NameInMap("skuQueryParams")]
         [Validation(Required=false)]

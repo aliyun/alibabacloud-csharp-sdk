@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
-    public class GetProductRequest : TeaModel {
-        [NameInMap("distributorShopId")]
-        [Validation(Required=false)]
-        public string DistributorShopId { get; set; }
-
+    public class GetSelectionProductRequest : TeaModel {
         [NameInMap("divisionCode")]
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
+
+        [NameInMap("purchaserId")]
+        [Validation(Required=false)]
+        public string PurchaserId { get; set; }
 
     }
 

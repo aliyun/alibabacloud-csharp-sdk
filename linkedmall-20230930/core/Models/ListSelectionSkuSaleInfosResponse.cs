@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
-    public class ListProductGeneralBillsResponse : TeaModel {
+    public class ListSelectionSkuSaleInfosResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GeneralBillPageResult Body { get; set; }
+        public SkuSaleInfoListResult Body { get; set; }
 
     }
 

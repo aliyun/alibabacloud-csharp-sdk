@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public int? BizClaimType { get; set; }
 
-        [NameInMap("mainOrderRefund")]
-        [Validation(Required=false)]
-        public bool? MainOrderRefund { get; set; }
-
         [NameInMap("maxRefundFeeData")]
         [Validation(Required=false)]
         public DistributionMaxRefundFee MaxRefundFeeData { get; set; }

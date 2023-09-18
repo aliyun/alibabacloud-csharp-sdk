@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         [NameInMap("orderAmount")]
         [Validation(Required=false)]
-        public string OrderAmount { get; set; }
+        public long? OrderAmount { get; set; }
 
         [NameInMap("orderId")]
         [Validation(Required=false)]
