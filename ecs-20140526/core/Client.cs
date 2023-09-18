@@ -1810,7 +1810,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * @deprecated
+          * @deprecated : AssociateEipAddress is deprecated, please use Vpc::2016-04-28::AssociateEipAddress instead.
           *
           * @param request AssociateEipAddressRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1873,7 +1873,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * @deprecated
+          * @deprecated : AssociateEipAddress is deprecated, please use Vpc::2016-04-28::AssociateEipAddress instead.
           *
           * @param request AssociateEipAddressRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1936,7 +1936,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * @deprecated
+          * @deprecated : AssociateEipAddress is deprecated, please use Vpc::2016-04-28::AssociateEipAddress instead.
           *
           * @param request AssociateEipAddressRequest
           * @return AssociateEipAddressResponse
@@ -1949,7 +1949,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * @deprecated
+          * @deprecated : AssociateEipAddress is deprecated, please use Vpc::2016-04-28::AssociateEipAddress instead.
           *
           * @param request AssociateEipAddressRequest
           * @return AssociateEipAddressResponse
@@ -5115,9 +5115,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /**
           * When you call this operation, take note of the following items:
-          * *   New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
-          * *   Encrypted snapshots cannot be copied.
-          * *   Local snapshots cannot be copied.
+          * - New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
+          * - Encrypted snapshots cannot be copied.
+          * - Local snapshots cannot be copied.
           *
           * @param request CopySnapshotRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5208,9 +5208,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /**
           * When you call this operation, take note of the following items:
-          * *   New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
-          * *   Encrypted snapshots cannot be copied.
-          * *   Local snapshots cannot be copied.
+          * - New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
+          * - Encrypted snapshots cannot be copied.
+          * - Local snapshots cannot be copied.
           *
           * @param request CopySnapshotRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5301,9 +5301,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /**
           * When you call this operation, take note of the following items:
-          * *   New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
-          * *   Encrypted snapshots cannot be copied.
-          * *   Local snapshots cannot be copied.
+          * - New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
+          * - Encrypted snapshots cannot be copied.
+          * - Local snapshots cannot be copied.
           *
           * @param request CopySnapshotRequest
           * @return CopySnapshotResponse
@@ -5316,9 +5316,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /**
           * When you call this operation, take note of the following items:
-          * *   New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
-          * *   Encrypted snapshots cannot be copied.
-          * *   Local snapshots cannot be copied.
+          * - New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
+          * - Encrypted snapshots cannot be copied.
+          * - Local snapshots cannot be copied.
           *
           * @param request CopySnapshotRequest
           * @return CopySnapshotResponse
@@ -17266,7 +17266,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * @deprecated
+          * @deprecated : DeleteNetworkInterfacePermission is deprecated, please use Ecs::2014-05-26::DeleteNetworkInterface instead.
           *
           * @param request DeleteNetworkInterfacePermissionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17329,7 +17329,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * @deprecated
+          * @deprecated : DeleteNetworkInterfacePermission is deprecated, please use Ecs::2014-05-26::DeleteNetworkInterface instead.
           *
           * @param request DeleteNetworkInterfacePermissionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17392,7 +17392,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * @deprecated
+          * @deprecated : DeleteNetworkInterfacePermission is deprecated, please use Ecs::2014-05-26::DeleteNetworkInterface instead.
           *
           * @param request DeleteNetworkInterfacePermissionRequest
           * @return DeleteNetworkInterfacePermissionResponse
@@ -17405,7 +17405,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * @deprecated
+          * @deprecated : DeleteNetworkInterfacePermission is deprecated, please use Ecs::2014-05-26::DeleteNetworkInterface instead.
           *
           * @param request DeleteNetworkInterfacePermissionRequest
           * @return DeleteNetworkInterfacePermissionResponse
@@ -52151,6 +52151,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetentionDays))
+            {
+                query["RetentionDays"] = request.RetentionDays;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
             {
                 query["SnapshotId"] = request.SnapshotId;
@@ -52205,6 +52209,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetentionDays))
+            {
+                query["RetentionDays"] = request.RetentionDays;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
             {
@@ -59989,6 +59997,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandLine))
+            {
+                query["CommandLine"] = request.CommandLine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -60020,6 +60032,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetServer))
+            {
+                query["TargetServer"] = request.TargetServer;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -60060,6 +60076,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandLine))
+            {
+                query["CommandLine"] = request.CommandLine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -60091,6 +60111,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetServer))
+            {
+                query["TargetServer"] = request.TargetServer;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

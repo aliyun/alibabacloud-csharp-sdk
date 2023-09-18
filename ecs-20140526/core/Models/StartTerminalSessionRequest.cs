@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartTerminalSessionRequest : TeaModel {
         /// <summary>
+        /// If you set this parameter to the IP address of an instance, the PortNumber parameter specifies the port number of the instance.
+        /// 
+        /// >If you specify `CommandLine`, you do not need to specify `PortNumber` or `TargetServer`.
+        /// </summary>
+        [NameInMap("CommandLine")]
+        [Validation(Required=false)]
+        public string CommandLine { get; set; }
+
+        /// <summary>
         /// The instance IDs.
         /// </summary>
         [NameInMap("InstanceId")]
@@ -47,6 +56,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// The IP address of the instance.
+        /// 
+        /// >If you set this parameter to the IP address of an instance, the `PortNumber` parameter specifies the port number of the instance.
+        /// </summary>
+        [NameInMap("TargetServer")]
+        [Validation(Required=false)]
+        public string TargetServer { get; set; }
 
     }
 

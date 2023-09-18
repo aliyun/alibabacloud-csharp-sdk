@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSnapshotsResponseBodySnapshotsSnapshot> Snapshot { get; set; }
             public class DescribeSnapshotsResponseBodySnapshotsSnapshot : TeaModel {
+                [NameInMap("Available")]
+                [Validation(Required=false)]
+                public bool? Available { get; set; }
+
                 /// <summary>
                 /// The type of the snapshot.
                 /// 

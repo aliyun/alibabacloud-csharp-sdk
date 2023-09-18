@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CopySnapshotRequest : TeaModel {
         /// <summary>
-        /// > This parameter is currently in invitational preview and unavailable for public use.
+        /// >This parameter is currently in invitational preview and unavailable for public use.
         /// </summary>
         [NameInMap("Arn")]
         [Validation(Required=false)]
         public List<CopySnapshotRequestArn> Arn { get; set; }
         public class CopySnapshotRequestArn : TeaModel {
             /// <summary>
-            /// > This parameter is unavailable.
+            /// > This parameter is not publicly available.
             /// </summary>
             [NameInMap("AssumeRoleFor")]
             [Validation(Required=false)]
             public long? AssumeRoleFor { get; set; }
 
             /// <summary>
-            /// > This parameter is unavailable.
+            /// > This parameter is not publicly available.
             /// </summary>
             [NameInMap("RoleType")]
             [Validation(Required=false)]
             public string RoleType { get; set; }
 
             /// <summary>
-            /// > This parameter is unavailable.
+            /// > This parameter is not publicly available.
             /// </summary>
             [NameInMap("Rolearn")]
             [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The region ID of the new snapshot.
+        /// The ID of the destination region to which to copy the source snapshot.
         /// </summary>
         [NameInMap("DestinationRegionId")]
         [Validation(Required=false)]
         public string DestinationRegionId { get; set; }
 
         /// <summary>
-        /// The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
         /// 
         /// This parameter is empty by default.
         /// </summary>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationSnapshotDescription { get; set; }
 
         /// <summary>
-        /// The name of the new snapshot. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
+        /// The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
         /// 
         /// This parameter is empty by default.
         /// </summary>
@@ -64,15 +64,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string DestinationSnapshotName { get; set; }
 
+        /// <summary>
+        /// > This parameter is not publicly available.
+        /// </summary>
         [NameInMap("DestinationStorageLocationArn")]
         [Validation(Required=false)]
         public string DestinationStorageLocationArn { get; set; }
 
         /// <summary>
-        /// Specifies whether to encrypt the disk. Valid values:
+        /// Specifies whether to encrypt the new snapshot. Valid values:
         /// 
-        /// *   true: encrypts the disk.
-        /// *   false: does not encrypt the disk.
+        /// *   true
+        /// *   false
         /// 
         /// Default value: false.
         /// </summary>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// The customer master keys (CMK) managed by Key Management Service (KMS) in the destination region.
+        /// The ID of the customer master key (CMK) in Key Management Service (KMS) in the destination region.
         /// </summary>
         [NameInMap("KMSKeyId")]
         [Validation(Required=false)]
@@ -92,14 +95,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// This parameter is unavailable.
+        /// This parameter is not publicly available.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -137,14 +140,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CopySnapshotRequestTag> Tag { get; set; }
         public class CopySnapshotRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the new snapshot. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with acs: or aliyun or contain http:// or https://.[](http://https://。)
+            /// The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the new snapshot. The tag value can be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with `acs:` or `aliyun` or contain `http://` or `https://`.
+            /// The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

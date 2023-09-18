@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RetentionDays")]
+        [Validation(Required=false)]
+        public int? RetentionDays { get; set; }
+
         /// <summary>
         /// The ID of the snapshot.
         /// </summary>

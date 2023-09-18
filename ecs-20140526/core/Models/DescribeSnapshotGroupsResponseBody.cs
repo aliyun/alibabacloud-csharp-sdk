@@ -96,6 +96,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot> Snapshot { get; set; }
                     public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot : TeaModel {
+                        [NameInMap("Available")]
+                        [Validation(Required=false)]
+                        public bool? Available { get; set; }
+
                         /// <summary>
                         /// Indicates whether the instant access feature was enabled. Valid values:
                         /// 

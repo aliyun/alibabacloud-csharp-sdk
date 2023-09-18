@@ -249,6 +249,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string Rack { get; set; }
 
+                    /// <summary>
+                    /// The response result of the event. Valid values:
+                    /// 
+                    /// - true: The event was handled.
+                    /// - false: The event failed to be handled.
+                    /// </summary>
                     [NameInMap("ResponseResult")]
                     [Validation(Required=false)]
                     public string ResponseResult { get; set; }
