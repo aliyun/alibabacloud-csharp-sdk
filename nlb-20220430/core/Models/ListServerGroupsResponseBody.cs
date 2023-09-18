@@ -213,6 +213,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
+            [NameInMap("QuicVersion")]
+            [Validation(Required=false)]
+            public string QuicVersion { get; set; }
+
             /// <summary>
             /// The region ID of the NLB instance.
             /// </summary>

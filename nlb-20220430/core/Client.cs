@@ -1103,6 +1103,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             {
                 body["Protocol"] = request.Protocol;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuicVersion))
+            {
+                body["QuicVersion"] = request.QuicVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
@@ -1206,6 +1210,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
             {
                 body["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuicVersion))
+            {
+                body["QuicVersion"] = request.QuicVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5420,6 +5428,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             {
                 body["PreserveClientIpEnabled"] = request.PreserveClientIpEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuicVersion))
+            {
+                body["QuicVersion"] = request.QuicVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
@@ -5488,6 +5500,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreserveClientIpEnabled))
             {
                 body["PreserveClientIpEnabled"] = request.PreserveClientIpEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuicVersion))
+            {
+                body["QuicVersion"] = request.QuicVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
