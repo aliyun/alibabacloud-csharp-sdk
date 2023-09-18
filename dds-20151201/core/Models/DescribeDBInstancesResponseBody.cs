@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstancesResponseBody : TeaModel {
         /// <summary>
-        /// Details of the instances.
+        /// The details of the instances.
         /// </summary>
         [NameInMap("DBInstances")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeDBInstancesResponseBodyDBInstancesDBInstance> DBInstance { get; set; }
             public class DescribeDBInstancesResponseBodyDBInstancesDBInstance : TeaModel {
                 /// <summary>
-                /// The I/O throughput consumed by the instance.
+                /// The read and write throughput consumed by the instance.
                 /// 
-                /// >  This parameter is returned when the instance is a serverless instance.
+                /// > This parameter is returned when the instance is a serverless instance.
                 /// </summary>
                 [NameInMap("CapacityUnit")]
                 [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The state of the instance. For more information, see [Instance states](~~63870~~).
+                /// The status of the instance. For more information, see [Instance states](~~63870~~).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public int? DBInstanceStorage { get; set; }
 
                 /// <summary>
-                /// The architecture of the instance.
+                /// The architecture of the instance. Valid values:
                 /// 
                 /// *   **sharding**: sharded cluster instance
                 /// *   **replicate**: replica set or standalone instance
@@ -92,10 +92,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.  
+                /// The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// 
-                /// > - Subscription instances are released 15 days after expiration. After an instance is released, its data is deleted and cannot be restored.
-                /// > - Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
+                /// > 
+                /// 
+                /// *   Subscription instances are released 15 days after expiration. After the instances are released, the data of the instances is deleted and cannot be restored.
+                /// 
+                /// *   Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
                 /// </summary>
                 [NameInMap("DestroyTime")]
                 [Validation(Required=false)]
@@ -153,6 +156,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// > 
                 /// 
                 /// *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+                /// 
                 /// *   This parameter is returned only if you use the Chine site (aliyun.com).
                 /// </summary>
                 [NameInMap("HiddenZoneId")]
@@ -163,7 +167,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// The kind code of the instance. Valid values:
                 /// 
                 /// *   **0**: physical machine
-                /// *   **1**: Elastic Compute Service (ECS) instance
+                /// *   **1**: ECS instance
                 /// *   **2**: Docker cluster
                 /// *   **18**: Kubernetes cluster
                 /// </summary>
@@ -193,9 +197,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string LockMode { get; set; }
 
                 /// <summary>
-                /// Details of the mongos nodes.
+                /// The details of the mongos nodes.
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("MongosList")]
                 [Validation(Required=false)]
@@ -233,8 +237,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **Classic**: classic network
-                /// *   **VPC**: VPC
+                /// *   **Classic**
+                /// *   **VPC**
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -250,7 +254,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The number of nodes in the instance.
                 /// 
-                /// >  This parameter is returned if the instance is a replica set instance.
+                /// > This parameter is returned if the instance is a replica set instance.
                 /// </summary>
                 [NameInMap("ReplicationFactor")]
                 [Validation(Required=false)]
@@ -288,6 +292,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// > 
                 /// 
                 /// *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+                /// 
                 /// *   This parameter is returned only if you use the Chine site (aliyun.com).
                 /// </summary>
                 [NameInMap("SecondaryZoneId")]
@@ -295,9 +300,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string SecondaryZoneId { get; set; }
 
                 /// <summary>
-                /// Details of the shard nodes.
+                /// The details of the shard nodes.
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("ShardList")]
                 [Validation(Required=false)]
@@ -357,7 +362,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// Details of the resource tags.
+                /// The details of the resource tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -368,14 +373,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribeDBInstancesResponseBodyDBInstancesDBInstanceTagsTag> Tag { get; set; }
                     public class DescribeDBInstancesResponseBodyDBInstancesDBInstanceTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the resource.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value of the resource.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -388,8 +393,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// Indicates whether password-free access within a VPC is enabled. Valid values:
                 /// 
-                /// - **Open**: Password-free access is enabled.
-                /// - **Close**: Password-free access is disabled.
+                /// *   **Open**: Password-free access is enabled.
+                /// *   **Close**: Password-free access is disabled.
                 /// </summary>
                 [NameInMap("VpcAuthMode")]
                 [Validation(Required=false)]
@@ -407,21 +412,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries returned on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

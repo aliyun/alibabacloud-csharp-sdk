@@ -34,18 +34,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The name of the instance. Valid values:
+        /// The name of the instance. The name must meet the following requirements:
         /// 
         /// *   The name must start with a letter.
-        /// *   The name can contain digits, letters, underscores (\_), and hyphens (-).
-        /// *   The name must be 2 to 256 characters in length.
+        /// *   It can contain digits, letters, underscores (\_), and hyphens (-).
+        /// *   It must be 2 to 256 characters in length.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
-        /// The architecture of the instance. Default value: replicate. Valid values:
+        /// The architecture of the instance. Valid values:
         /// 
         /// *   **sharding**: sharded cluster instance
         /// *   **replicate**: replica set or standalone instance
@@ -69,11 +69,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceType { get; set; }
 
         /// <summary>
-        /// Used to filter standard instances or test instances
+        /// The type of the node in the instance. This parameter is used to filter standard or test instance.
         /// 
-        /// 1. Single node instance and dbfs instance: customized
-        /// 2. Standard instance (replicaset and shard cluster): standard
-        /// 3. Default (showing all instances): default
+        /// 1.  Valid value for a standalone or DBFS instance.
+        /// 2.  Valid value for a standard instance that comes in the replica set or sharded cluster architecture: standard
+        /// 3.  Valid value when all instances are displayed: default
         /// </summary>
         [NameInMap("DBNodeType")]
         [Validation(Required=false)]
@@ -89,11 +89,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The database engine version of the instance. Valid values:
         /// 
-        /// * **5.0**
-        /// * **4.4**
-        /// * **4.2**
-        /// * **4.0**
-        /// * **3.4**
+        /// *   **5.0**
+        /// *   **4.4**
+        /// *   **4.2**
+        /// *   **4.0**
+        /// *   **3.4**
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// Specifies whether the instance has expired. Valid values:
         /// 
-        /// *   **true**: The instance has expired.
-        /// *   **false**: The instance has not expired.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Expired")]
         [Validation(Required=false)]
@@ -119,8 +119,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The network type of the instance. Valid values:
         /// 
-        /// *   **Classic**: classic network
-        /// *   **VPC**: Virtual Private Cloud (VPC)
+        /// *   **Classic**
+        /// *   **VPC**
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -142,9 +142,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 30. Valid values:
+        /// The number of entries to return on each page. Valid values:
         /// 
-        /// *   **30**
+        /// *   **30** (default)
         /// *   **50**
         /// *   **100**
         /// </summary>
@@ -190,29 +190,29 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The tags of instances.
+        /// The tags of the instance.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesRequestTag> Tag { get; set; }
         public class DescribeDBInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the instance. Valid values of N: **1** to **20**.
+            /// The tag key of the instance. Valid values of N: **1** to **20**.
             /// 
             /// *   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-            /// *   The key can be up to 64 characters in length.
-            /// *   The key cannot be an empty string.
+            /// *   It can be up to 64 characters in length.
+            /// *   It cannot be an empty string.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the instance. Valid values of N: **1** to **20**.
+            /// The tag value of the instance. Valid values of N: **1** to **20**.
             /// 
             /// *   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
             /// *   The value can be up to 128 characters in length.
-            /// *   The value can be an empty string.
+            /// *   It can be an empty string.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -221,14 +221,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// The vSwitch ID of the instance.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// The VPC ID of the instance.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

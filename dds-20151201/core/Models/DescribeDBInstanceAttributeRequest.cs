@@ -10,26 +10,24 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether the instance is deleted. Valid values:
-        /// 
-        /// *   **false**: queries details about running instances.
-        /// *   **true**: queries details about deleted instances.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
-        /// 
-        /// > This parameter is available only if you use the China site (aliyun.com).
+        /// The database engine of the instance. Set the value to **MongoDB**.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Specifies whether to delete the instance. Valid values:
+        /// 
+        /// *   **false**: queries the details of running instances.
+        /// *   **true**: queries the details of deleted instances.
         /// </summary>
         [NameInMap("IsDelete")]
         [Validation(Required=false)]
@@ -44,7 +42,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Details of the instance.
+        /// The ID of the resource group. For more information, see [View the basic information of a resource group](~~151181~~).
+        /// 
+        /// > This parameter is available only if you use the China site (aliyun.com).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class RestartDBInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the shard or mongos node in the sharded cluster instance.
         /// 
-        /// >  The sharded cluster instance is restarted if you do not specify this parameter.
+        /// > The sharded cluster instance is restarted if you do not specify this parameter.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

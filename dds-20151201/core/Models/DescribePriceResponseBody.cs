@@ -130,6 +130,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
             }
 
+            [NameInMap("ShowDiscountInfo")]
+            [Validation(Required=false)]
+            public bool? ShowDiscountInfo { get; set; }
+
             /// <summary>
             /// The final price of the order.
             /// </summary>
