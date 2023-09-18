@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The service availability of the instance. Unit: %.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("AvailabilityValue")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The number of CPU cores per node.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("CpuCoresPerNode")]
                 [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The instance type of the instance.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The maximum disk throughput of the compute group. Unit: Mbit/s.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("DBInstanceDiskMBPS")]
                 [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The number of compute groups.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("DBInstanceGroupCount")]
                 [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The memory capacity per compute node.
                 /// 
-                /// > The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless or elastic storage mode.
+                /// >  The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless mode or elastic storage mode.
                 /// </summary>
                 [NameInMap("DBInstanceMemory")]
                 [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The encryption key.
                 /// 
-                /// > This parameter is returned only for instances that have disk encryption enabled.
+                /// >  This parameter is returned only for instances that have disk encryption enabled.
                 /// </summary>
                 [NameInMap("EncryptionKey")]
                 [Validation(Required=false)]
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// 
                 /// *   **CloudDisk**: disk encryption.
                 /// 
-                /// > This parameter is returned only for instances that have disk encryption enabled.
+                /// >  This parameter is returned only for instances that have disk encryption enabled.
                 /// </summary>
                 [NameInMap("EncryptionType")]
                 [Validation(Required=false)]
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The expiration time of the instance. The time is displayed in UTC.
                 /// 
-                /// > The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.
+                /// >  The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// *   **0**: SSD.
                 /// *   **1**: HDD.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("HostType")]
                 [Validation(Required=false)]
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The wait period for the instance that has no traffic to become idle. Unit: seconds.
                 /// 
-                /// > This parameter is returned only for instances in Serverless automatic scheduling mode.
+                /// >  This parameter is returned only for instances in Serverless automatic scheduling mode.
                 /// </summary>
                 [NameInMap("IdleTime")]
                 [Validation(Required=false)]
@@ -300,6 +300,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string MaintainStartTime { get; set; }
 
+                /// <summary>
+                /// The amount of coordinator node resources.
+                /// </summary>
                 [NameInMap("MasterCU")]
                 [Validation(Required=false)]
                 public int? MasterCU { get; set; }
@@ -314,7 +317,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The maximum number of concurrent connections to the instance.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("MaxConnections")]
                 [Validation(Required=false)]
@@ -323,7 +326,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The memory capacity per node. The unit of this parameter can be one of the valid values of **MemoryUnit**.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("MemoryPerNode")]
                 [Validation(Required=false)]
@@ -332,7 +335,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The memory capacity per compute node.
                 /// 
-                /// > The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless or elastic storage mode.
+                /// >  The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless mode or elastic storage mode.
                 /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
@@ -341,7 +344,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The unit of the memory capacity.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("MemoryUnit")]
                 [Validation(Required=false)]
@@ -416,7 +419,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The number of compute nodes.
                 /// 
-                /// > This parameter is returned only for instances in Serverless or elastic storage mode.
+                /// >  This parameter is returned only for instances in elastic storage mode or Serverless manual scheduling mode.
                 /// </summary>
                 [NameInMap("SegNodeNum")]
                 [Validation(Required=false)]
@@ -425,7 +428,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The number of compute groups.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("SegmentCounts")]
                 [Validation(Required=false)]
@@ -437,7 +440,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// *   **Manual**: manual scheduling.
                 /// *   **Auto**: automatic scheduling.
                 /// 
-                /// > This parameter is returned only for instances in Serverless mode.
+                /// >  This parameter is returned only for instances in Serverless mode.
                 /// </summary>
                 [NameInMap("ServerlessMode")]
                 [Validation(Required=false)]
@@ -446,7 +449,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The threshold of computing resources. Unit: AnalyticDB compute units (ACUs).
                 /// 
-                /// > This parameter is returned only for instances in Serverless automatic scheduling mode.
+                /// >  This parameter is returned only for instances in Serverless automatic scheduling mode.
                 /// </summary>
                 [NameInMap("ServerlessResource")]
                 [Validation(Required=false)]
@@ -462,7 +465,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The storage capacity per node. The unit of this parameter can be one of the valid values of **StorageUnit**.
                 /// 
-                /// > This parameter is returned only for instances in reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("StoragePerNode")]
                 [Validation(Required=false)]
@@ -481,7 +484,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// *   **cloud_essd**: enhanced SSD (ESSD).
                 /// *   **cloud_efficiency**: ultra disk.
                 /// 
-                /// > This parameter is returned only for instances in elastic storage mode.
+                /// >  This parameter is returned only for instances in elastic storage mode.
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
@@ -494,14 +497,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// *   **TB SSD**
                 /// *   **GB HDD**
                 /// 
-                /// > This parameter is returned only for instances in Serverless or reserved storage mode.
+                /// >  This parameter is returned only for instances in reserved storage mode or Serverless mode.
                 /// </summary>
                 [NameInMap("StorageUnit")]
                 [Validation(Required=false)]
                 public string StorageUnit { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instance supports backup and restoration. Valid values:
+                /// Indicates whether the instance supports backup and restoration.
                 /// 
                 /// *   **true**
                 /// *   **false**
@@ -547,7 +550,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// Indicates whether vector engine optimization is enabled. Valid values:
+                /// Indicates whether vector search engine optimization is enabled. Valid values:
                 /// 
                 /// *   **enabled**
                 /// *   **disabled**

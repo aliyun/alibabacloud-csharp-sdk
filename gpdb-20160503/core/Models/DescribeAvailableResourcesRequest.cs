@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The zone ID.
         /// 
-        /// > You can call the [DescribeRegions](~~86912~~)operation to query the most recent zone list.
+        /// > You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

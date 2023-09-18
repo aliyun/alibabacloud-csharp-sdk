@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the backup set.
+        /// 
+        /// >  You can call the [DescribeDataBackups](~~210093~~) operation to query the IDs of all backup sets in the instance.
+        /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
@@ -23,10 +28,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// Specifies whether to load a sample dataset after the instance is created. Valid values:
         /// 
-        /// - **true**
-        /// - **false**
+        /// *   **true**
+        /// *   **false**
         /// 
-        /// If you do not specify this parameter, no sample dataset is loaded.
+        /// >  If you do not specify this parameter, no sample dataset is loaded.
         /// </summary>
         [NameInMap("CreateSampleData")]
         [Validation(Required=false)]
@@ -130,11 +135,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? IdleTime { get; set; }
 
         /// <summary>
-        /// The network type of the instance. Set the value to VPC.
+        /// The network type of the instance. Set the value to **VPC**.
         /// 
         /// > 
-        /// - Only the Virtual Private Cloud (VPC) type is supported.
-        /// - If you do not specify this parameter, VPC is used.
+        /// 
+        /// *   Only the Virtual Private Cloud (VPC) type is supported in Alibaba Cloud public cloud.
+        /// 
+        /// *   If you do not specify this parameter, VPC is used.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -167,6 +174,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string InstanceSpec { get; set; }
 
+        /// <summary>
+        /// The amount of coordinator node resources. Valid values:
+        /// 
+        /// *   2 CU
+        /// *   4 CU
+        /// *   8 CU
+        /// *   16 CU
+        /// *   32 CU
+        /// 
+        /// >  You are charged for coordinator node resources of more than 8 CUs.
+        /// </summary>
         [NameInMap("MasterCU")]
         [Validation(Required=false)]
         public int? MasterCU { get; set; }
@@ -212,7 +230,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// The private IP address of the instance.
+        /// This parameter is no longer used.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -301,14 +319,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? ServerlessResource { get; set; }
 
+        /// <summary>
+        /// The ID of the source instance.
+        /// 
+        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// </summary>
         [NameInMap("SrcDbInstanceName")]
         [Validation(Required=false)]
         public string SrcDbInstanceName { get; set; }
 
         /// <summary>
-        /// The storage capacity of the instance. Unit: GB. Valid values: 50 to 4000.
+        /// The storage capacity of the instance. Unit: GB. Valid values: 50 to 6000.
         /// 
-        /// > This parameter must be specified when you create an instance in elastic storage mode.
+        /// >  This parameter must be specified when you create an instance in elastic storage mode.
         /// </summary>
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
@@ -367,8 +390,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// The VPC ID of the instance.
         /// 
         /// > 
-        /// - This parameter must be specified.
-        /// - The region where the VPC resides must be the same as the region that is specified by RegionId.
+        /// 
+        /// *   **This parameter** must be specified.
+        /// 
+        /// *   The region where the **VPC** resides must be the same as the region that is specified by **RegionId**.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -378,22 +403,26 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// The vSwitch ID of the instance.
         /// 
         /// > 
-        /// - This parameter must be specified.
-        /// - The zone where the vSwitch resides must be the same as the zone that is specified by ZoneId.
+        /// 
+        /// *   **This parameter** must be specified.
+        /// 
+        /// *   The zone where the **vSwitch** resides must be the same as the zone that is specified by **ZoneId**.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable vector engine optimization. Valid values:
+        /// Specifies whether to enable vector search engine optimization. Valid values:
         /// 
-        /// - **enabled**
-        /// - **disabled** (default)
+        /// *   **enabled**
+        /// *   **disabled** (default)
         /// 
         /// > 
-        /// - We recommend that you do not enable vector engine optimization in mainstream analysis and real-time data warehousing scenarios.
-        /// - We recommend that you enable vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.
+        /// 
+        /// *   We recommend that you **do not enable** vector search engine optimization in mainstream analysis, data warehousing, and real-time data warehousing scenarios.
+        /// 
+        /// *   We recommend that you **enable** vector search engine optimization in AI-generated content (AIGC) and vector retrieval scenarios that require the vector analysis engine.
         /// </summary>
         [NameInMap("VectorConfigurationStatus")]
         [Validation(Required=false)]
