@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RegionCode")]
+        [Validation(Required=false)]
+        public string RegionCode { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
