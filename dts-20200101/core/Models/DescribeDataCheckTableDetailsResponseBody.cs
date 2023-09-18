@@ -17,16 +17,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? DiffTableCount { get; set; }
 
         /// <summary>
-        /// The dynamic error code. This parameter will be removed in the future.
+        /// The dynamic error code. This parameter will be discontinued in the future.
         /// </summary>
         [NameInMap("DynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The dynamic part in the error message. This parameter is used to replace the **%s** variable in the value of **ErrMessage**.
+        /// The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
         /// 
-        /// >  For example, if the return value of **ErrMessage** is **The Value of Input Parameter %s is not valid** and the return value of **DynamicMessage** is **Type**, the specified value of **Type** is invalid.
+        /// > For example, if the returned value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **Type**, the specified **Type** parameter is invalid.
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? FinishedCount { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The details of data verification results.
+        /// The details of the data verification result.
         /// </summary>
         [NameInMap("TableDetails")]
         [Validation(Required=false)]
@@ -103,7 +103,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? DiffCount { get; set; }
 
             /// <summary>
-            /// The error code returned if the request failed.
+            /// 任务运行出错时，返回报错信息的错误编码。
+            /// 
+            /// - **1**：无主键表数量超过限制。
+            /// - **2**：差异数据超过300行。
+            /// - **3**：待查询的表不存在。
+            /// - **4**：查询数据的SQL语法错误。
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
@@ -117,7 +122,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? FinishCount { get; set; }
 
             /// <summary>
-            /// The auto-increment primary key that is used to identify the data in a verification result.
+            /// The auto-increment primary key that is used to identify a data record in a verification result.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -138,11 +143,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string SourceTbName { get; set; }
 
             /// <summary>
-            /// The state of the data verification task. Valid values:
+            /// The status of the data verification result. Valid values:
             /// 
             /// *   **0**: The data verification task was complete.
-            /// *   **2**: The data verification task was being initialized.
-            /// *   **3**: The data verification task was in progress.
+            /// *   **2**: The data verification task was initialized.
+            /// *   **3**: The data verification task was running.
             /// *   **5**: The data verification task failed.
             /// </summary>
             [NameInMap("Status")]
