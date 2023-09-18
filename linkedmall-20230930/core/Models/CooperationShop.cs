@@ -9,11 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class CooperationShop : TeaModel {
-        [NameInMap("CooperationCompanyId")]
+        [NameInMap("cooperationCompanyId")]
         [Validation(Required=false)]
         public string CooperationCompanyId { get; set; }
 
-        [NameInMap("CooperationShopId")]
+        [NameInMap("cooperationShopId")]
         [Validation(Required=false)]
         public string CooperationShopId { get; set; }
 
