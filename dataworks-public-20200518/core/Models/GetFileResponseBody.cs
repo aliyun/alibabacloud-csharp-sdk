@@ -127,6 +127,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string FileFolderId { get; set; }
 
+                [NameInMap("FileId")]
+                [Validation(Required=false)]
+                public long? FileId { get; set; }
+
                 /// <summary>
                 /// The name of the file.
                 /// </summary>

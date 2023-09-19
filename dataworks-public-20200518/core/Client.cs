@@ -500,6 +500,96 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ApprovePermissionApplyOrderWithOptionsAsync(request, runtime);
         }
 
+        public CallbackExtensionResponse CallbackExtensionWithOptions(CallbackExtensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckMessage))
+            {
+                body["CheckMessage"] = request.CheckMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckResult))
+            {
+                body["CheckResult"] = request.CheckResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionCode))
+            {
+                body["ExtensionCode"] = request.ExtensionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
+            {
+                body["MessageId"] = request.MessageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CallbackExtension",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CallbackExtensionResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CallbackExtensionResponse> CallbackExtensionWithOptionsAsync(CallbackExtensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckMessage))
+            {
+                body["CheckMessage"] = request.CheckMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckResult))
+            {
+                body["CheckResult"] = request.CheckResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionCode))
+            {
+                body["ExtensionCode"] = request.ExtensionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
+            {
+                body["MessageId"] = request.MessageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CallbackExtension",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CallbackExtensionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CallbackExtensionResponse CallbackExtension(CallbackExtensionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CallbackExtensionWithOptions(request, runtime);
+        }
+
+        public async Task<CallbackExtensionResponse> CallbackExtensionAsync(CallbackExtensionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CallbackExtensionWithOptionsAsync(request, runtime);
+        }
+
         public ChangeResourceManagerResourceGroupResponse ChangeResourceManagerResourceGroupWithOptions(ChangeResourceManagerResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12944,6 +13034,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 query["ProjectId"] = request.ProjectId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectIdentifier))
+            {
+                query["ProjectIdentifier"] = request.ProjectIdentifier;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -12970,6 +13064,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectIdentifier))
+            {
+                query["ProjectIdentifier"] = request.ProjectIdentifier;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
