@@ -10,26 +10,41 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to TagResources.
+        /// The IDs of the resources for which you want to modify the resource group. The number of resource IDs is 1 to 50.
+        /// 
+        /// *   If you set ResourceType to template, specify ResourceIds in the \["TemplateName1","TemplateName2"] format.
+        /// *   If you set ResourceType to parameter, specify ResourceIds in the \["Name1","Name2"] format.
+        /// *   If you set ResourceType to secretparameter, specify ResourceIds in the \["Name1","Name2"] format.
+        /// *   If you set ResourceType to stateconfiguration, specify ResourceIds in the \["StateConfigurationId 1","StateConfigurationId 2"] format.
+        /// *   If you set ResourceType to application, specify ResourceIds in the \["Name1","Name2"] format.
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public Dictionary<string, object> ResourceIds { get; set; }
 
         /// <summary>
-        /// The IDs of resources. The number of resource IDs ranges from 1 to 50.
+        /// The type of the resource for which you want to modify the resource group. Valid values:
+        /// 
+        /// *   template: template.
+        /// *   parameter: parameter.
+        /// *   secretparameter: encryption parameter.
+        /// *   stateconfiguration: desired-state configuration.
+        /// *   application: application.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The tag keys and values. The number of key-value pairs ranges from 1 to 20.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }

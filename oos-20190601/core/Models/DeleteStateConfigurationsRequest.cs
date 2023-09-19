@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteStateConfigurationsRequest : TeaModel {
         /// <summary>
-        /// Deletes desired-state configurations in batches
+        /// The client token that is used to ensure the idempotence of the request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// ## Debugging
-        /// 
-        /// [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=oos\&api=DeleteStateConfigurations\&type=RPC\&version=2019-06-01)
+        /// The IDs of desired-state configurations.
         /// </summary>
         [NameInMap("StateConfigurationIds")]
         [Validation(Required=false)]

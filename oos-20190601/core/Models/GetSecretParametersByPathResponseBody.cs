@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetSecretParametersByPathResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The information of the encryption parameter.
+        /// The information about the encryption parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// The AccessKey ID.
+            /// The ID of the key.
             /// </summary>
             [NameInMap("KeyId")]
             [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// 执行的描述。
+        /// The description of the execution.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string ExecutionId { get; set; }
 
         /// <summary>
-        /// A JSON string consisting of a collection of parameters. Default value: {}.
+        /// The information about the parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
 
     }
 

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetParameterRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to GetParameter.
+        /// The name of the common parameter. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The time when the common parameter was updated.
+        /// The version number of the common parameter. Valid values: 1 to 100.
         /// </summary>
         [NameInMap("ParameterVersion")]
         [Validation(Required=false)]
         public int? ParameterVersion { get; set; }
 
         /// <summary>
-        /// The name of the common parameter.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The user who created the common parameter.
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

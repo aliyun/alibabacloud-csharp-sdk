@@ -10,86 +10,92 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CreateStateConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The configuration mode.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tag.
+        /// The information about the desired-state configuration.
         /// </summary>
         [NameInMap("StateConfiguration")]
         [Validation(Required=false)]
         public CreateStateConfigurationResponseBodyStateConfiguration StateConfiguration { get; set; }
         public class CreateStateConfigurationResponseBodyStateConfiguration : TeaModel {
             /// <summary>
-            /// The parameters.
+            /// The configuration mode. Valid values:
             /// </summary>
             [NameInMap("ConfigureMode")]
             [Validation(Required=false)]
             public string ConfigureMode { get; set; }
 
             /// <summary>
-            /// The desired-state configuration.
+            /// The time when the desired-state configuration was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// WB502027
+            /// The description.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// CreateStateConfiguration
+            /// The parameters.
             /// </summary>
             [NameInMap("Parameters")]
             [Validation(Required=false)]
             public Dictionary<string, object> Parameters { get; set; }
 
+            /// <summary>
+            /// The resource group ID.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The version number. If you do not specify this parameter, the system uses the latest version.
+            /// The schedule expression.
             /// </summary>
             [NameInMap("ScheduleExpression")]
             [Validation(Required=false)]
             public string ScheduleExpression { get; set; }
 
             /// <summary>
-            /// Creates a desired-state configuration.
+            /// The schedule type.
             /// </summary>
             [NameInMap("ScheduleType")]
             [Validation(Required=false)]
             public string ScheduleType { get; set; }
 
             /// <summary>
-            /// 收集Inventory数据
+            /// The ID of the desired-state configuration.
             /// </summary>
             [NameInMap("StateConfigurationId")]
             [Validation(Required=false)]
             public string StateConfigurationId { get; set; }
 
             /// <summary>
-            /// The required resources.
+            /// The tags added to the configuration.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// 1 hour 或 30 minutes
+            /// The queried resources.
             /// </summary>
             [NameInMap("Targets")]
             [Validation(Required=false)]
             public string Targets { get; set; }
 
+            /// <summary>
+            /// The template ID.
+            /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
@@ -102,7 +108,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The name of the template version.
             /// </summary>
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]

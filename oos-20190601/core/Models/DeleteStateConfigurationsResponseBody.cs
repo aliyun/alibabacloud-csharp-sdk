@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteStateConfigurationsResponseBody : TeaModel {
         /// <summary>
-        /// Deletes desired-state configurations in batches.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

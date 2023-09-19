@@ -11,6 +11,32 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
     public class ListApplicationsRequest : TeaModel {
         /// <summary>
         /// The type of the application.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   ComputeNest
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Custom
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   DingTalk
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("ApplicationType")]
         [Validation(Required=false)]

@@ -10,40 +10,38 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetInventorySchemaRequest : TeaModel {
         /// <summary>
-        /// Specifies whether only to return a combination of specified properties.
+        /// Specifies whether to return only properties that support the aggregate feature in the configuration list. Valid values:
         /// 
-        /// Valid values:
-        /// 
-        /// *   true: only returns a combination of specified properties
-        /// *   false: returns all properties of the component
+        /// *   true: only returns properties that support the aggregate feature in the configuration list.
+        /// *   false: returns all properties in the configuration list.
         /// </summary>
         [NameInMap("Aggregator")]
         [Validation(Required=false)]
         public bool? Aggregator { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 100. Default value: 50.
+        /// The number of entries per page. Valid values: 1 to 100. Default value: 50.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the component. Valid values:
+        /// The configuration list type name. Valid values:
         /// 
         /// *   ACS:InstanceInformation
         /// *   ACS:Application

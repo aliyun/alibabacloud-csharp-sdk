@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteExecutionsResponseBody : TeaModel {
         /// <summary>
-        /// Deletes multiple executions.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

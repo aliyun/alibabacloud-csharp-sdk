@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteTemplatesRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Specifies whether to delete the related executions when a template is deleted.
         /// </summary>
         [NameInMap("AutoDeleteExecutions")]
         [Validation(Required=false)]
         public bool? AutoDeleteExecutions { get; set; }
 
         /// <summary>
-        /// The name list of templates to be deleted.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to delete the related executions when a template is deleted.
+        /// The names of the templates to be deleted.
         /// </summary>
         [NameInMap("TemplateNames")]
         [Validation(Required=false)]

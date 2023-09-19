@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListTemplateVersionsRequest : TeaModel {
         /// <summary>
-        /// The maximum number of results on each page. Valid values: 10 to 100
+        /// The number of entries per page. Valid values: 10 to 100
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

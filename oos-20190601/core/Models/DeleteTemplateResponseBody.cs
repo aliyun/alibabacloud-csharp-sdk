@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteTemplateResponseBody : TeaModel {
         /// <summary>
-        /// You can call this operation to delete a template.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

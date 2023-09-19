@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetInventorySchemaResponseBody : TeaModel {
         /// <summary>
-        /// Max results.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// The pagination token that was used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The detailed configurations of the component.
+        /// The detailed configurations of the configuration list.
         /// </summary>
         [NameInMap("Schemas")]
         [Validation(Required=false)]
         public List<GetInventorySchemaResponseBodySchemas> Schemas { get; set; }
         public class GetInventorySchemaResponseBodySchemas : TeaModel {
             /// <summary>
-            /// The properties of component.
+            /// The properties of the configuration list.
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             }
 
             /// <summary>
-            /// The name of the component.
+            /// The name of the configuration list.
             /// </summary>
             [NameInMap("TypeName")]
             [Validation(Required=false)]
             public string TypeName { get; set; }
 
             /// <summary>
-            /// The version of the component.
+            /// The version of the configuration list.
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]

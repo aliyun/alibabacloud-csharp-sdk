@@ -10,78 +10,105 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetParameterResponseBody : TeaModel {
         /// <summary>
-        /// The description of the common parameter.
+        /// The information about the common parameter.
         /// </summary>
         [NameInMap("Parameter")]
         [Validation(Required=false)]
         public GetParameterResponseBodyParameter Parameter { get; set; }
         public class GetParameterResponseBodyParameter : TeaModel {
+            /// <summary>
+            /// The constraints of the common parameter.
+            /// </summary>
             [NameInMap("Constraints")]
             [Validation(Required=false)]
             public string Constraints { get; set; }
 
+            /// <summary>
+            /// The user who created the common parameter.
+            /// </summary>
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }
 
+            /// <summary>
+            /// The time when the common parameter was created.
+            /// </summary>
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
 
+            /// <summary>
+            /// The description of the common parameter.
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The ID of the common parameter.
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// The name of the common parameter.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The version number of the common parameter.
+            /// </summary>
             [NameInMap("ParameterVersion")]
             [Validation(Required=false)]
             public int? ParameterVersion { get; set; }
 
+            /// <summary>
+            /// The resource group ID.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// The share type of the common parameter.
+            /// </summary>
             [NameInMap("ShareType")]
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The tags added to the common parameter.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// The region ID of the resource.
+            /// The data type of the common parameter.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The value of the common parameter.
+            /// The user who updated the common parameter.
             /// </summary>
             [NameInMap("UpdatedBy")]
             [Validation(Required=false)]
             public string UpdatedBy { get; set; }
 
             /// <summary>
-            /// The information of the common parameter.
+            /// The time when the common parameter was updated.
             /// </summary>
             [NameInMap("UpdatedDate")]
             [Validation(Required=false)]
             public string UpdatedDate { get; set; }
 
             /// <summary>
-            /// Queries a common parameter and its value.
+            /// The value of the common parameter.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -90,7 +117,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// The user who updated the common parameter.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -30,10 +30,16 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public List<ListPatchBaselinesResponseBodyPatchBaselines> PatchBaselines { get; set; }
         public class ListPatchBaselinesResponseBodyPatchBaselines : TeaModel {
+            /// <summary>
+            /// 批准补丁的列表。
+            /// </summary>
             [NameInMap("ApprovedPatches")]
             [Validation(Required=false)]
             public List<string> ApprovedPatches { get; set; }
 
+            /// <summary>
+            /// 批准补丁是否包括除安全性之外的更新
+            /// </summary>
             [NameInMap("ApprovedPatchesEnableNonSecurity")]
             [Validation(Required=false)]
             public bool? ApprovedPatchesEnableNonSecurity { get; set; }
@@ -87,9 +93,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string OperationSystem { get; set; }
 
-            [NameInMap("ResourceGroupld")]
+            [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
-            public string ResourceGroupld { get; set; }
+            public string ResourceGroupId { get; set; }
 
             /// <summary>
             /// Queries the details of patch baselines.
@@ -98,18 +104,30 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
+            /// <summary>
+            /// 补丁源配置列表。
+            /// </summary>
             [NameInMap("Sources")]
             [Validation(Required=false)]
             public List<string> Sources { get; set; }
 
+            /// <summary>
+            /// 标签。
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListPatchBaselinesResponseBodyPatchBaselinesTags> Tags { get; set; }
             public class ListPatchBaselinesResponseBodyPatchBaselinesTags : TeaModel {
+                /// <summary>
+                /// 标签键。
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// 标签值。
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

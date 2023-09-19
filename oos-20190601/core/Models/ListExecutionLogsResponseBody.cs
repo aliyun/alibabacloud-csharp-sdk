@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListExecutionLogsResponseBody : TeaModel {
         /// <summary>
-        /// The execution logs.
+        /// The logs of the execution.
         /// </summary>
         [NameInMap("ExecutionLogs")]
         [Validation(Required=false)]
         public List<ListExecutionLogsResponseBodyExecutionLogs> ExecutionLogs { get; set; }
         public class ListExecutionLogsResponseBodyExecutionLogs : TeaModel {
             /// <summary>
-            /// The type of the log.
+            /// The log type.
             /// </summary>
             [NameInMap("LogType")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// The execution ID of the task.
+            /// The task execution ID.
             /// </summary>
             [NameInMap("TaskExecutionId")]
             [Validation(Required=false)]
@@ -54,21 +54,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

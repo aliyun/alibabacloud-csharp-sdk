@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// The applications.
+        /// The details of the application.
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// The resource group ID.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// A tag of the resource.
+            /// The tags added to the application.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

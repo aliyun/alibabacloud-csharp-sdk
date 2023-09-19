@@ -10,106 +10,112 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateStateConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The idempotency token.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The description.
+        /// The details of the configuration.
         /// </summary>
         [NameInMap("StateConfiguration")]
         [Validation(Required=false)]
         public List<UpdateStateConfigurationResponseBodyStateConfiguration> StateConfiguration { get; set; }
         public class UpdateStateConfigurationResponseBodyStateConfiguration : TeaModel {
             /// <summary>
-            /// The configuration mode. ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied. ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future. ApplyAndAutoCorrect: The configuration is always applied.
+            /// The configuration mode. Valid values:
             /// </summary>
             [NameInMap("ConfigureMode")]
             [Validation(Required=false)]
             public string ConfigureMode { get; set; }
 
             /// <summary>
-            /// The parameters.
+            /// The time when the configuration was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// Updates a desired-state configuration.
+            /// The description of the desired-state configuration.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The parameters.
             /// </summary>
             [NameInMap("Parameters")]
             [Validation(Required=false)]
             public string Parameters { get; set; }
 
+            /// <summary>
+            /// The resource group ID.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The configuration list.
+            /// The CRON expression.
             /// </summary>
             [NameInMap("ScheduleExpression")]
             [Validation(Required=false)]
             public string ScheduleExpression { get; set; }
 
             /// <summary>
-            /// The update time.
+            /// The schedule type.
             /// </summary>
             [NameInMap("ScheduleType")]
             [Validation(Required=false)]
             public string ScheduleType { get; set; }
 
             /// <summary>
-            /// The schedule expression.
+            /// The ID of the desired-state configuration.
             /// </summary>
             [NameInMap("StateConfigurationId")]
             [Validation(Required=false)]
             public string StateConfigurationId { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// The tags added to the configuration.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// The required resources.
+            /// The queried resources.
             /// </summary>
             [NameInMap("Targets")]
             [Validation(Required=false)]
             public string Targets { get; set; }
 
+            /// <summary>
+            /// The template ID.
+            /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// The ID of the desired-state configuration.
+            /// The name of the template.
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// The ID of the template.
+            /// The name of the template version.
             /// </summary>
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]
             public string TemplateVersion { get; set; }
 
             /// <summary>
-            /// The version of the template.
+            /// The time when the configuration was updated.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]

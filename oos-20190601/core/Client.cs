@@ -5171,9 +5171,9 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupld))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
-                query["ResourceGroupld"] = request.ResourceGroupld;
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
             {
@@ -5252,9 +5252,9 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupld))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
-                query["ResourceGroupld"] = request.ResourceGroupld;
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
             {
@@ -7803,6 +7803,14 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7845,6 +7853,14 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

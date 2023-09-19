@@ -10,56 +10,56 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateStateConfigurationRequest : TeaModel {
         /// <summary>
-        /// The schedule type.
+        /// The client token that is used to ensure the idempotence of the request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the desired-state configuration.
+        /// The configuration mode. Valid values: ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied. ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future. ApplyAndAutoCorrect: The configuration is always applied.
         /// </summary>
         [NameInMap("ConfigureMode")]
         [Validation(Required=false)]
         public string ConfigureMode { get; set; }
 
         /// <summary>
-        /// The schedule expression.
+        /// The description.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }
 
         /// <summary>
-        /// The configuration mode.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The parameters.
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The name of the template.
+        /// The schedule expression.
         /// </summary>
         [NameInMap("ScheduleExpression")]
         [Validation(Required=false)]
         public string ScheduleExpression { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The schedule type.
         /// </summary>
         [NameInMap("ScheduleType")]
         [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string StateConfigurationId { get; set; }
 
         /// <summary>
-        /// The tag.
+        /// The tags to be added to the configuration.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
 
         /// <summary>
-        /// The required resources.
+        /// The resources to be queried.
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]

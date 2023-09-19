@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListStateConfigurationsResponseBody : TeaModel {
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// The pagination token that was used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The desired-state configurations.
+        /// The information about the desired-state configurations.
         /// </summary>
         [NameInMap("StateConfigurations")]
         [Validation(Required=false)]
         public List<ListStateConfigurationsResponseBodyStateConfigurations> StateConfigurations { get; set; }
         public class ListStateConfigurationsResponseBodyStateConfigurations : TeaModel {
             /// <summary>
-            /// The configuration mode.
+            /// The configuration mode. Valid values:
             /// </summary>
             [NameInMap("ConfigureMode")]
             [Validation(Required=false)]
             public string ConfigureMode { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// The time when the desired-state configuration was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Parameters { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// The resource group ID.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -87,21 +87,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string StateConfigurationId { get; set; }
 
             /// <summary>
-            /// The tag of the auxiliary media asset.
+            /// The tags added to the configuration.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// The target EMR resource.
+            /// The queried resources.
             /// </summary>
             [NameInMap("Targets")]
             [Validation(Required=false)]
             public string Targets { get; set; }
 
             /// <summary>
-            /// The ID of the cluster template.
+            /// The template ID.
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string TemplateVersion { get; set; }
 
             /// <summary>
-            /// The time when the configuration is updated.
+            /// The time when the configuration was updated.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
