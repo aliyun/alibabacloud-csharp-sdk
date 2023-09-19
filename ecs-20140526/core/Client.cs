@@ -34730,6 +34730,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvocationStatus))
+            {
+                query["InvocationStatus"] = request.InvocationStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvokeId))
             {
                 query["InvokeId"] = request.InvokeId;
@@ -34813,6 +34817,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvocationStatus))
+            {
+                query["InvocationStatus"] = request.InvocationStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvokeId))
             {

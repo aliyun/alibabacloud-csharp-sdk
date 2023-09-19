@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("InvocationStatus")]
+        [Validation(Required=false)]
+        public string InvocationStatus { get; set; }
+
         /// <summary>
         /// The ID of the file sending task.
         /// </summary>
