@@ -138,6 +138,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DelayRuleTime"] = request.DelayRuleTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestCaCertificateOssUrl))
+            {
+                query["DestCaCertificateOssUrl"] = request.DestCaCertificateOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestCaCertificatePassword))
+            {
+                query["DestCaCertificatePassword"] = request.DestCaCertificatePassword;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationEndpointDataBaseName))
             {
                 query["DestinationEndpointDataBaseName"] = request.DestinationEndpointDataBaseName;
@@ -281,6 +289,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointVSwitchID))
             {
                 query["SourceEndpointVSwitchID"] = request.SourceEndpointVSwitchID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCaCertificateOssUrl))
+            {
+                query["SrcCaCertificateOssUrl"] = request.SrcCaCertificateOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCaCertificatePassword))
+            {
+                query["SrcCaCertificatePassword"] = request.SrcCaCertificatePassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructureInitialization))
             {
@@ -362,6 +378,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DelayRuleTime"] = request.DelayRuleTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestCaCertificateOssUrl))
+            {
+                query["DestCaCertificateOssUrl"] = request.DestCaCertificateOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestCaCertificatePassword))
+            {
+                query["DestCaCertificatePassword"] = request.DestCaCertificatePassword;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationEndpointDataBaseName))
             {
                 query["DestinationEndpointDataBaseName"] = request.DestinationEndpointDataBaseName;
@@ -505,6 +529,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointVSwitchID))
             {
                 query["SourceEndpointVSwitchID"] = request.SourceEndpointVSwitchID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCaCertificateOssUrl))
+            {
+                query["SrcCaCertificateOssUrl"] = request.SrcCaCertificateOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCaCertificatePassword))
+            {
+                query["SrcCaCertificatePassword"] = request.SrcCaCertificatePassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructureInitialization))
             {

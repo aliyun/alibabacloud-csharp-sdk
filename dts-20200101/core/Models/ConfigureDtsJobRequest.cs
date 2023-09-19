@@ -88,6 +88,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public long? DelayRuleTime { get; set; }
 
+        [NameInMap("DestCaCertificateOssUrl")]
+        [Validation(Required=false)]
+        public string DestCaCertificateOssUrl { get; set; }
+
+        [NameInMap("DestCaCertificatePassword")]
+        [Validation(Required=false)]
+        public string DestCaCertificatePassword { get; set; }
+
         /// <summary>
         /// The password of the destination database account.
         /// 
@@ -494,6 +502,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [NameInMap("SourceEndpointVSwitchID")]
         [Validation(Required=false)]
         public string SourceEndpointVSwitchID { get; set; }
+
+        [NameInMap("SrcCaCertificateOssUrl")]
+        [Validation(Required=false)]
+        public string SrcCaCertificateOssUrl { get; set; }
+
+        [NameInMap("SrcCaCertificatePassword")]
+        [Validation(Required=false)]
+        public string SrcCaCertificatePassword { get; set; }
 
         /// <summary>
         /// Specifies whether to perform incremental data migration or synchronization. Default value: false. Valid values:
