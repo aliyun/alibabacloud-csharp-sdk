@@ -47,9 +47,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public long? Sample { get; set; }
 
+            [NameInMap("ServiceId")]
+            [Validation(Required=false)]
+            public long? ServiceId { get; set; }
+
+            [NameInMap("ServicePort")]
+            [Validation(Required=false)]
+            public string ServicePort { get; set; }
+
             [NameInMap("TraceEnabled")]
             [Validation(Required=false)]
             public bool? TraceEnabled { get; set; }
+
+            [NameInMap("TraceType")]
+            [Validation(Required=false)]
+            public string TraceType { get; set; }
 
         }
 
