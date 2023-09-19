@@ -57,6 +57,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> ScalingGroupNames { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<DescribeScalingGroupsRequestTags> Tags { get; set; }
+        public class DescribeScalingGroupsRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

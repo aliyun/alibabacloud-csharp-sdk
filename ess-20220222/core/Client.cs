@@ -5738,6 +5738,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["ScalingGroupNames"] = request.ScalingGroupNames;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5808,6 +5812,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroupNames))
             {
                 query["ScalingGroupNames"] = request.ScalingGroupNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

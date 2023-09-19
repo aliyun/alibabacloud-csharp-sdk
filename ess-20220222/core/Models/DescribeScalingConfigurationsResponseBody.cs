@@ -37,20 +37,6 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<DescribeScalingConfigurationsResponseBodyScalingConfigurations> ScalingConfigurations { get; set; }
         public class DescribeScalingConfigurationsResponseBodyScalingConfigurations : TeaModel {
-            [NameInMap("PrivatePoolOptions")]
-            [Validation(Required=false)]
-            public DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions PrivatePoolOptions { get; set; }
-            public class DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions : TeaModel {
-                [NameInMap("Id")]
-                [Validation(Required=false)]
-                public string Id { get; set; }
-
-                [NameInMap("MatchCriteria")]
-                [Validation(Required=false)]
-                public string MatchCriteria { get; set; }
-
-            }
-
             /// <summary>
             /// Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values:
             /// 
@@ -503,6 +489,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("PasswordInherit")]
             [Validation(Required=false)]
             public bool? PasswordInherit { get; set; }
+
+            [NameInMap("PrivatePoolOptions.Id")]
+            [Validation(Required=false)]
+            public string PrivatePoolOptions_id { get; set; }
+
+            [NameInMap("PrivatePoolOptions.MatchCriteria")]
+            [Validation(Required=false)]
+            public string PrivatePoolOptions_matchCriteria { get; set; }
 
             /// <summary>
             /// The name of the RAM role that is associated with the ECS instance. The name is provided and maintained by Resource Access Management (RAM). You can call the ListRoles operation to query the available RAM roles.
