@@ -35385,6 +35385,80 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QuerySchedulePeriodListWithOptionsAsync(request, runtime);
         }
 
+        public QueryShareProductNameByProductKeyResponse QueryShareProductNameByProductKeyWithOptions(QueryShareProductNameByProductKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryShareProductNameByProductKey",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryShareProductNameByProductKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryShareProductNameByProductKeyResponse> QueryShareProductNameByProductKeyWithOptionsAsync(QueryShareProductNameByProductKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryShareProductNameByProductKey",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryShareProductNameByProductKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryShareProductNameByProductKeyResponse QueryShareProductNameByProductKey(QueryShareProductNameByProductKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryShareProductNameByProductKeyWithOptions(request, runtime);
+        }
+
+        public async Task<QueryShareProductNameByProductKeyResponse> QueryShareProductNameByProductKeyAsync(QueryShareProductNameByProductKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryShareProductNameByProductKeyWithOptionsAsync(request, runtime);
+        }
+
         public QuerySharePromotionActivityAuditResultResponse QuerySharePromotionActivityAuditResultWithOptions(QuerySharePromotionActivityAuditResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
