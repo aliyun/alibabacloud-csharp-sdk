@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? InvoiceSubTaskId { get; set; }
 
+        [NameInMap("itinerary_num")]
+        [Validation(Required=false)]
+        public string ItineraryNum { get; set; }
+
         [NameInMap("page_no")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ticket_no")]
+        [Validation(Required=false)]
+        public string TicketNo { get; set; }
 
     }
 

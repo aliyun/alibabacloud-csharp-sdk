@@ -5631,6 +5631,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryNum))
+            {
+                query["itinerary_num"] = request.ItineraryNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -5638,6 +5642,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNo))
+            {
+                query["ticket_no"] = request.TicketNo;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -5684,6 +5692,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryNum))
+            {
+                query["itinerary_num"] = request.ItineraryNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -5691,6 +5703,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNo))
+            {
+                query["ticket_no"] = request.TicketNo;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -15619,6 +15635,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["page_size"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
+            {
+                query["serial_number"] = request.SerialNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNo))
+            {
+                query["ticket_no"] = request.TicketNo;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -15671,6 +15695,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
+            {
+                query["serial_number"] = request.SerialNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNo))
+            {
+                query["ticket_no"] = request.TicketNo;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))

@@ -37,6 +37,42 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
+                [NameInMap("discount_desc")]
+                [Validation(Required=false)]
+                public HotelSearchResponseBodyModuleItemsDiscountDesc DiscountDesc { get; set; }
+                public class HotelSearchResponseBodyModuleItemsDiscountDesc : TeaModel {
+                    [NameInMap("cash_reduce_total")]
+                    [Validation(Required=false)]
+                    public string CashReduceTotal { get; set; }
+
+                    [NameInMap("dinamic_label")]
+                    [Validation(Required=false)]
+                    public string DinamicLabel { get; set; }
+
+                    [NameInMap("discount_detail")]
+                    [Validation(Required=false)]
+                    public List<HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail> DiscountDetail { get; set; }
+                    public class HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail : TeaModel {
+                        [NameInMap("label_name")]
+                        [Validation(Required=false)]
+                        public List<string> LabelName { get; set; }
+
+                        [NameInMap("money_desc")]
+                        [Validation(Required=false)]
+                        public string MoneyDesc { get; set; }
+
+                    }
+
+                    [NameInMap("sub_title")]
+                    [Validation(Required=false)]
+                    public string SubTitle { get; set; }
+
+                    [NameInMap("title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                }
+
                 [NameInMap("distance")]
                 [Validation(Required=false)]
                 public int? Distance { get; set; }

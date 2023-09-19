@@ -205,6 +205,42 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string DailyPriceView { get; set; }
 
+                    [NameInMap("discount_desc")]
+                    [Validation(Required=false)]
+                    public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc DiscountDesc { get; set; }
+                    public class HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc : TeaModel {
+                        [NameInMap("cash_reduce_total")]
+                        [Validation(Required=false)]
+                        public string CashReduceTotal { get; set; }
+
+                        [NameInMap("dinamic_label")]
+                        [Validation(Required=false)]
+                        public string DinamicLabel { get; set; }
+
+                        [NameInMap("discount_detail")]
+                        [Validation(Required=false)]
+                        public List<HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail> DiscountDetail { get; set; }
+                        public class HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail : TeaModel {
+                            [NameInMap("label_name")]
+                            [Validation(Required=false)]
+                            public List<string> LabelName { get; set; }
+
+                            [NameInMap("money_desc")]
+                            [Validation(Required=false)]
+                            public string MoneyDesc { get; set; }
+
+                        }
+
+                        [NameInMap("sub_title")]
+                        [Validation(Required=false)]
+                        public string SubTitle { get; set; }
+
+                        [NameInMap("title")]
+                        [Validation(Required=false)]
+                        public string Title { get; set; }
+
+                    }
+
                     [NameInMap("end_time_daily")]
                     [Validation(Required=false)]
                     public string EndTimeDaily { get; set; }

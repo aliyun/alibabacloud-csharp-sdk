@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("serial_number")]
+        [Validation(Required=false)]
+        public string SerialNumber { get; set; }
+
+        [NameInMap("ticket_no")]
+        [Validation(Required=false)]
+        public string TicketNo { get; set; }
+
     }
 
 }
