@@ -10,49 +10,53 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorTaskListRequest : TeaModel {
         /// <summary>
-        /// The additional information of the instance.
+        /// The ID of the application group.
+        /// 
+        /// For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The timestamp when the metric import task was created.
+        /// Specifies whether the returned result includes metric import tasks for Alibaba Cloud services. Valid values:
         /// 
-        /// Unit: milliseconds.
+        /// *   true (default): The returned result includes metric import tasks for Alibaba Cloud services.
+        /// *   false: The returned result excludes metric import tasks for Alibaba Cloud services.
         /// </summary>
         [NameInMap("IncludeAliyunTask")]
         [Validation(Required=false)]
         public bool? IncludeAliyunTask { get; set; }
 
         /// <summary>
-        /// The conditions that are used to filter logs imported from Log Service.
+        /// The keyword that is used for the search.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.
+        /// The name of the namespace.
         /// 
-        /// *   namespace: the namespace of the Alibaba Cloud service.
-        /// *   metric_list: the metrics of the Alibaba Cloud service.
+        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeHybridMonitorTaskList**.
+        /// The page number.
+        /// 
+        /// Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The number of entries per page.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// Pages start from page 1. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -63,30 +67,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The keyword that is used to search for metric import tasks.
+        /// The ID of the member account.
+        /// 
+        /// > This parameter is required only if you use a management account to call this operation to delete the metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.
         /// </summary>
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]
         public long? TargetUserId { get; set; }
 
         /// <summary>
-        /// The type of the metric import task. Valid values:
-        /// 
-        /// *   aliyun_fc: metric import tasks for Alibaba Cloud services
-        /// *   aliyun_sls: metrics for logs imported from Log Service
+        /// The ID of the metric import task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The interval at which the CloudMonitor agent collects host monitoring data. Valid values:
+        /// The type of the metric import task. Valid values:
         /// 
-        /// *   15
-        /// *   30
-        /// *   60
-        /// 
-        /// Unit: seconds.
+        /// *   aliyun_fc: metric import tasks for Alibaba Cloud services
+        /// *   aliyun_sls: metrics for logs imported from Log Service
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

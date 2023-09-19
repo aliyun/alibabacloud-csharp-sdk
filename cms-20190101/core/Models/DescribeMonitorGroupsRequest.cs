@@ -134,6 +134,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// The type of the application group. Valid values:
+        /// 
+        /// *   custom: a self-managed application group
+        /// *   ehpc_cluster: an application group that is synchronized from an Elastic High Performance Computing (E-HPC) cluster
+        /// *   kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster
+        /// *   tag: an application group that is automatically created by using tags
+        /// *   resMgr: an application group that is created by using resource groups
+        /// *   ess: an application group that is synchronized from Auto Scaling (ESS)
+        /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public string Types { get; set; }

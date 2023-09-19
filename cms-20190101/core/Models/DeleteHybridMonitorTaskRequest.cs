@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteHybridMonitorTaskRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The name of the namespace.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).
+        /// 
+        /// > This parameter is required only if you call this operation to delete metric import tasks for Alibaba Cloud services. In this case, the `TaskType` parameter is set to `aliyun_fc`.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -23,16 +25,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the member account.
+        /// 
+        /// > This parameter is required only if you use a management account to call this operation to query metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.
         /// </summary>
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]
         public string TargetUserId { get; set; }
 
         /// <summary>
-        /// The ID of the member account.
+        /// The ID of the metric import task.
         /// 
-        /// >  This parameter is required only if you call this operation to delete metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.
+        /// For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).
+        /// 
+        /// > This parameter is required only if you call this operation to delete metrics for the logs that are imported from Log Service. In this case, the `TaskType` parameter is set to `aliyun_sls`.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -14,12 +14,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the message resource. Valid values of N: 1 to 5.
+        /// The ID of the alert rule.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }
 
+        /// <summary>
+        /// The resource IDs.
+        /// </summary>
         [NameInMap("TargetIds")]
         [Validation(Required=false)]
         public List<string> TargetIds { get; set; }

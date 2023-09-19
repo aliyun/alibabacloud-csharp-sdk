@@ -10,21 +10,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMetricRuleTargetsResponseBody : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// The HTTP status code.
+        /// 
+        /// **
+        /// 
+        /// **Description** The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The ID of the message resource that failed to be deleted.
+        /// The IDs of the resources that failed to be deleted.
         /// </summary>
         [NameInMap("FailIds")]
         [Validation(Required=false)]
         public DeleteMetricRuleTargetsResponseBodyFailIds FailIds { get; set; }
         public class DeleteMetricRuleTargetsResponseBodyFailIds : TeaModel {
             /// <summary>
-            /// Deletes the message resources of an alert rule. This operation supports only Message Service (MNS) resources.
+            /// The IDs of the resources that failed to be deleted.
             /// </summary>
             [NameInMap("TargetIds")]
             [Validation(Required=false)]
@@ -39,24 +43,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
-        /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The message resources that failed to be deleted.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

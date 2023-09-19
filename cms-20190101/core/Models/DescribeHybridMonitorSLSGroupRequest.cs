@@ -10,27 +10,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorSLSGroupRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Pages start from page 1. Default value: 1.
+        /// The keyword that is used to search for Logstore groups.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The timestamp that was generated when the Logstore group was created.
+        /// The page number.
         /// 
-        /// Unit: milliseconds.
+        /// Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The number of entries per page.
         /// 
-        /// >  The status code 200 indicates that the call is successful.
+        /// Minimum value: 1. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -41,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeHybridMonitorSLSGroup**.
+        /// The name of the Logstore group.
         /// </summary>
         [NameInMap("SLSGroupName")]
         [Validation(Required=false)]

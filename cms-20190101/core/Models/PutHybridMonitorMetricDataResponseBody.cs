@@ -10,25 +10,33 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutHybridMonitorMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// The details of the invalid parameters.
+        /// The HTTP status code.
         /// 
-        /// If the request parameters that you set are invalid, the details of the invalid parameters are displayed.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// For more information about common request parameters, see [Common parameters](~~199331~~).
+        /// The details of invalid parameters.
+        /// 
+        /// If a request parameter is invalid, the details of the invalid parameter are returned.
         /// </summary>
         [NameInMap("ErrorDetail")]
         [Validation(Required=false)]
         public List<PutHybridMonitorMetricDataResponseBodyErrorDetail> ErrorDetail { get; set; }
         public class PutHybridMonitorMetricDataResponseBodyErrorDetail : TeaModel {
+            /// <summary>
+            /// The error message of the invalid parameter.
+            /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
+            /// <summary>
+            /// The position of the error message in the array.
+            /// </summary>
             [NameInMap("Index")]
             [Validation(Required=false)]
             public long? Index { get; set; }
@@ -36,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("IsEnable")]
+        [Validation(Required=false)]
+        public bool? IsEnable { get; set; }
+
         /// <summary>
         /// The HTTP status code.
         /// 

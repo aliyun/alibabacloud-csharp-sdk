@@ -94,18 +94,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string DynamicTagRuleId { get; set; }
 
                 /// <summary>
-                /// The timestamp when the application group was created.
-                /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// The timestamp when the application group was created. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// The timestamp when the application group was last modified.
-                /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// The timestamp when the application group was modified. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
@@ -139,6 +135,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
+                /// <summary>
+                /// The resource ID.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -179,6 +178,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// The ID of the template.
+                /// </summary>
                 [NameInMap("TemplateIds")]
                 [Validation(Required=false)]
                 public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds TemplateIds { get; set; }

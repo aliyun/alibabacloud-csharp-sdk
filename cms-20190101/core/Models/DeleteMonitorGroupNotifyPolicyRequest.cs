@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupNotifyPolicyRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// The policy type.
+        /// 
+        /// Valid value: PauseNotify.
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

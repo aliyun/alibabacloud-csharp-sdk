@@ -10,40 +10,50 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutGroupMetricRuleResponseBody : TeaModel {
         /// <summary>
-        /// The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,). Valid values:
+        /// The HTTP status code.
         /// 
-        /// *   Average: the average value
-        /// *   Minimum: the minimum value
-        /// *   Maximum: the maximum value
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// For more information about common request parameters, see [Common parameters](~~199331~~).
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The result of the request.
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public PutGroupMetricRuleResponseBodyResult Result { get; set; }
         public class PutGroupMetricRuleResponseBodyResult : TeaModel {
+            /// <summary>
+            /// The ID of the alert rule.
+            /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public string RuleId { get; set; }
 
         }
 
+        /// <summary>
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

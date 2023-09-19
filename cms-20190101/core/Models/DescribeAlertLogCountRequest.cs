@@ -17,7 +17,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ContactGroup { get; set; }
 
         /// <summary>
-        /// The statistical period of alert logs. Unit: minutes.
+        /// The end timestamp of the alert logs to be queried.
+        /// 
+        /// Unit: milliseconds.
+        /// 
+        /// You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.
+        /// 
+        /// >  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -138,14 +144,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string SendStatus { get; set; }
 
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
         /// <summary>
-        /// The name of the metric.
+        /// The start timestamp of the alert logs to be queried.
         /// 
-        /// > For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// Unit: milliseconds.
+        /// 
+        /// You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.
+        /// 
+        /// >  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

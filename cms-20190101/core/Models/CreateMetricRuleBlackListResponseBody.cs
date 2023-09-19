@@ -10,36 +10,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMetricRuleBlackListResponseBody : TeaModel {
         /// <summary>
-        /// The effective scope of the blacklist policy. Valid values:
+        /// The status code.
         /// 
-        /// *   USER: The blacklist policy takes effect only for the current Alibaba Cloud account.
-        /// 
-        /// *   GROUP: The blacklist policy takes effect only for the specified application group. This is the default value.
-        /// 
-        ///     For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// > The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The ID of the blacklist policy.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// For more information about common request parameters, see [Common parameters](~~199331~~).
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

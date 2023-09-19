@@ -10,16 +10,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifySiteMonitorResponseBody : TeaModel {
         /// <summary>
-        /// The URL or IP address that is monitored by the task.
+        /// The HTTP status code.
+        /// 
+        /// > The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The result of modifying the task.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifySiteMonitorResponseBodyData Data { get; set; }
         public class ModifySiteMonitorResponseBodyData : TeaModel {
+            /// <summary>
+            /// The number of site monitoring tasks.
+            /// </summary>
             [NameInMap("count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
@@ -27,21 +35,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The monitoring frequency. Valid values: 1, 5, 15, and 15000. Unit: milliseconds. Default value: 1.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The result of modifying the task.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

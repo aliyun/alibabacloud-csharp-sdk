@@ -10,56 +10,60 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleTemplateListRequest : TeaModel {
         /// <summary>
-        /// The name of the alert template.
+        /// Specifies whether to display the history of applying the alert templates to application groups. Valid values:
+        /// 
+        /// *   true
+        /// *   false (default)
         /// </summary>
         [NameInMap("History")]
         [Validation(Required=false)]
         public bool? History { get; set; }
 
         /// <summary>
-        /// The name of the application group.
+        /// The keyword of the alert template name.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The name of the alert template.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The version of the alert template.
+        /// The sorting order. Valid values:
         /// 
-        /// Default value: 0.
+        /// *   true (default): ascending order
+        /// *   false: descending order
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public bool? Order { get; set; }
 
         /// <summary>
-        /// The timestamp when the alert template was created.
+        /// The sorting basis. Valid values:
         /// 
-        /// Unit: milliseconds.
+        /// *   gmtMotified: sorts alert templates by modification time
+        /// *   gmtCreate (default): sorts alert templates by creation time
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The page number.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// Specifies whether to display the application history of the alert templates. Default value: false. Valid values:
-        /// 
-        /// *   true
-        /// *   false
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the alert template.
+        /// The ID of the alert template.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

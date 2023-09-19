@@ -20,14 +20,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public List<string> Ids { get; set; }
 
+        /// <summary>
+        /// The IDs of the instances in the blacklist policy.
+        /// 
+        /// Valid values of N: 0 to 10.
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// The status of the blacklist policy. Valid values:
+        /// 
+        /// *   true: The blacklist policy is enabled.
+        /// *   false: The blacklist policy is disabled.
+        /// </summary>
         [NameInMap("IsEnable")]
         [Validation(Required=false)]
         public bool? IsEnable { get; set; }
 
+        /// <summary>
+        /// The name of the blacklist policy.
+        /// 
+        /// This parameter supports fuzzy match.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -68,6 +84,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The effective scope of the blacklist policy. Valid values:
+        /// 
+        /// *   USER: The blacklist policy takes effect only within the current Alibaba Cloud account.
+        /// *   GROUP: The blacklist policy takes effect only within the specified application group.
+        /// </summary>
         [NameInMap("ScopeType")]
         [Validation(Required=false)]
         public string ScopeType { get; set; }

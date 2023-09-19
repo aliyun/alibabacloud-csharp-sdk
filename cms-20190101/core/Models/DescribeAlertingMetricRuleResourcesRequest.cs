@@ -10,41 +10,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertingMetricRuleResourcesRequest : TeaModel {
         /// <summary>
-        /// The namespace of the cloud service.
-        /// 
-        /// For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// The dimensions that specify the resources whose monitoring data you want to query.
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public string Dimensions { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The ID of the application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The resources that are monitored.
+        /// The namespace of the cloud service.
+        /// 
+        /// For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The timestamp when the last alert was triggered for the resource based on the alert rule.
+        /// The page number.
         /// 
-        /// Unit: milliseconds.
+        /// Default value: 1.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeAlertingMetricRuleResources**.
+        /// The number of entries per page.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -55,14 +55,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The operator that is used to compare the metric value with the threshold. Valid values:
-        /// 
-        /// *   `>=`
-        /// *   `=`
-        /// *   `<=`
-        /// *   `>`
-        /// *   `<`
-        /// *   `!=`
+        /// The ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

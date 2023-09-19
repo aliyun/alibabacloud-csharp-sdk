@@ -39,7 +39,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The number of detection points.
         /// 
-        /// > You must specify one of the `IspCities` and `RandomIspCity` parameters. If you specify the `RandomIspCity` parameter, the `IspCities` parameter automatically becomes invalid.
+        /// > 
+        /// 
+        /// *   You must specify one of the `IspCities` and `RandomIspCity` parameters. If you specify the `RandomIspCity` parameter, the `IspCities` parameter automatically becomes invalid.
         /// </summary>
         [NameInMap("RandomIspCity")]
         [Validation(Required=false)]

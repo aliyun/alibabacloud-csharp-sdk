@@ -26,16 +26,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The group process information.
+        /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public CreateGroupMonitoringAgentProcessResponseBodyResource Resource { get; set; }
         public class CreateGroupMonitoringAgentProcessResponseBodyResource : TeaModel {
+            /// <summary>
+            /// The ID of the group process.
+            /// </summary>
             [NameInMap("GroupProcessId")]
             [Validation(Required=false)]
             public string GroupProcessId { get; set; }

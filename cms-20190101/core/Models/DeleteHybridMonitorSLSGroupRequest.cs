@@ -14,7 +14,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The name of the Logstore group.
+        /// 
+        /// For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](~~429526~~).
         /// </summary>
         [NameInMap("SLSGroupName")]
         [Validation(Required=false)]

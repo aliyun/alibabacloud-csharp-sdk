@@ -538,6 +538,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string Username { get; set; }
 
+                [NameInMap("waitTime_after_completion")]
+                [Validation(Required=false)]
+                public int? WaitTimeAfterCompletion { get; set; }
+
             }
 
             /// <summary>

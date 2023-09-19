@@ -10,30 +10,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateSiteMonitorRequest : TeaModel {
         /// <summary>
-        /// The name of the site monitoring task.
-        /// 
-        /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+        /// The URL or IP address that is monitored by the task.
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// Indicates whether the existing alert rule was associated with the site monitoring task. Valid values:
+        /// The ID of the alert rule.
         /// 
-        /// *   true
-        /// *   false
+        /// For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
         /// </summary>
         [NameInMap("AlertIds")]
         [Validation(Required=false)]
         public string AlertIds { get; set; }
 
+        /// <summary>
+        /// The custom detection period. You can only select a time period from Monday to Sunday for detection.
+        /// </summary>
         [NameInMap("CustomSchedule")]
         [Validation(Required=false)]
         public string CustomSchedule { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **CreateSiteMonitor**.
+        /// The interval at which detection requests are sent.
+        /// 
+        /// Valid values: 1, 5, 15, 30, and 60. Unit: minutes.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string IspCities { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
         /// </summary>
         [NameInMap("OptionsJson")]
         [Validation(Required=false)]
@@ -62,18 +66,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The name of the site monitoring task.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// The ID of the alert rule.
+        /// The type of the site monitoring task.
         /// 
-        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

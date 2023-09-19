@@ -10,25 +10,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitoringAgentProcessRequest : TeaModel {
         /// <summary>
-        /// The ID of the process.
-        /// 
-        /// >  You must specify either the `ProcessId` or the `ProcessName` parameter.
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The process ID.
+        /// 
+        /// > You must configure either `ProcessId` or `ProcessName`.
         /// </summary>
         [NameInMap("ProcessId")]
         [Validation(Required=false)]
         public string ProcessId { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The process name.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// > You must configure either `ProcessId` or `ProcessName`.
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]

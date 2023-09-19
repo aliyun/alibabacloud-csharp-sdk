@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The name of the event-triggered alert rule.
+        /// 
+        /// For more information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The mute period during which new alerts are not sent even if the trigger conditions are met.
+        /// 
+        /// Unit: seconds. Default value: 86400, which indicates one day.
+        /// 
+        /// >  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
         /// </summary>
         [NameInMap("SilenceTime")]
         [Validation(Required=false)]

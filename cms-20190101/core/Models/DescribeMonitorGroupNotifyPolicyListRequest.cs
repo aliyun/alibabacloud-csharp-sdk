@@ -10,32 +10,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupNotifyPolicyListRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10.
+        /// The page number. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The timestamp that specifies the end of the time range to query.
-        /// 
-        /// Unit: milliseconds.
+        /// The number of entries per page. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// The policy type.
+        /// 
+        /// Valid value: PauseNotify.
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

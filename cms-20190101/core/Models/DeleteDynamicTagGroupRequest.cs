@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteDynamicTagGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the tag rule.
+        /// 
+        /// For information about how to obtain the ID of a tag rule, see [DescribeDynamicTagRuleList](~~150126~~).
         /// </summary>
         [NameInMap("DynamicTagRuleId")]
         [Validation(Required=false)]

@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupNotifyPolicyListResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the application group.
+        /// The status code.
+        /// 
+        /// > The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The policies that were returned.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The type of the policy.
-        /// 
-        /// Valid value: PauseNotify.
+        /// The returned policies.
         /// </summary>
         [NameInMap("NotifyPolicyList")]
         [Validation(Required=false)]
@@ -37,29 +37,39 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy> NotifyPolicy { get; set; }
             public class DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy : TeaModel {
                 /// <summary>
-                /// The ID of the policy.
+                /// The end of the time range to query.
+                /// 
+                /// Unit: milliseconds.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public long? EndTime { get; set; }
 
+                /// <summary>
+                /// The ID of the application group.
+                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
+                /// <summary>
+                /// The policy ID.
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The beginning of the time range to query.
+                /// 
+                /// Unit: milliseconds.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// The ID of the application group.
+                /// The policy type.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -70,23 +80,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeMonitorGroupNotifyPolicyList**.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The timestamp that specifies the beginning of the time range to query.
-        /// 
-        /// Unit: milliseconds.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

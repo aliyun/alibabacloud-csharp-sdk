@@ -10,56 +10,74 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMetricRuleBlackListRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The ID of the application group. The value of this parameter is a JSON array.
+        /// The time range within which the blacklist policy is effective.
         /// 
-        /// >  This parameter is required only if the `ScopeType` parameter is set to `GROUP`.
+        /// *   If you do not configure this parameter, the blacklist policy is permanently effective.
+        /// 
+        /// *   If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:
+        /// 
+        ///     *   `03:00-04:59`: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.
+        ///     *   `03:00-04:59 UTC+0700`: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **CreateMetricRuleBlackList**.
+        /// The timestamp when the blacklist policy expires.
+        /// 
+        /// Unit: milliseconds.
         /// </summary>
         [NameInMap("EnableEndTime")]
         [Validation(Required=false)]
         public string EnableEndTime { get; set; }
 
         /// <summary>
-        /// The ID of the blacklist policy.
+        /// The timestamp when the blacklist policy starts to take effect.
+        /// 
+        /// Unit: milliseconds.
         /// </summary>
         [NameInMap("EnableStartTime")]
         [Validation(Required=false)]
         public string EnableStartTime { get; set; }
 
+        /// <summary>
+        /// The IDs of instances that belong to the specified cloud service.
+        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<string> Instances { get; set; }
 
+        /// <summary>
+        /// The metrics of the instance.
+        /// 
+        /// *   If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.
+        /// *   If you configure this parameter, the blacklist policy applies only to the current metric.
+        /// </summary>
         [NameInMap("Metrics")]
         [Validation(Required=false)]
         public List<CreateMetricRuleBlackListRequestMetrics> Metrics { get; set; }
         public class CreateMetricRuleBlackListRequestMetrics : TeaModel {
             /// <summary>
-            /// The timestamp when the blacklist policy starts to take effect.
+            /// The metric name.
             /// 
-            /// Unit: milliseconds.
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
             /// <summary>
-            /// The name of the blacklist policy.
+            /// The extended dimension of the instance. For example, `{"device":"C:"}` specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.
+            /// 
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("Resource")]
             [Validation(Required=false)]
@@ -68,16 +86,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+        /// The name of the blacklist policy.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The timestamp when the blacklist policy expires.
+        /// The namespace of the cloud service.
         /// 
-        /// Unit: milliseconds.
+        /// For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -88,18 +106,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of instances that belong to the specified cloud service. The value of this parameter is a JSON array.
+        /// The effective scope of the blacklist policy. Valid values:
         /// 
-        /// Valid values of N: 1 to 20.
+        /// *   USER: The blacklist policy takes effect only for the current Alibaba Cloud account.
+        /// *   GROUP (default): The blacklist policy takes effect only for the specified application group. For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
         /// </summary>
         [NameInMap("ScopeType")]
         [Validation(Required=false)]
         public string ScopeType { get; set; }
 
         /// <summary>
-        /// The extended dimension of the instance. For example, `{"device":"C:"}` specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.
+        /// The ID of the application group. The value of this parameter is a JSON array.
         /// 
-        /// Valid values of N: 1 to 10
+        /// > This parameter must be specified when `ScopeType` is set to `GROUP`.
         /// </summary>
         [NameInMap("ScopeValue")]
         [Validation(Required=false)]

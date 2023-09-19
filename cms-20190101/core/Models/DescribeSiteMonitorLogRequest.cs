@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorLogRequest : TeaModel {
+        /// <summary>
+        /// 浏览器类型。
+        /// </summary>
         [NameInMap("Browser")]
         [Validation(Required=false)]
         public string Browser { get; set; }
 
+        /// <summary>
+        /// 该参数已废弃，无需关注。
+        /// </summary>
         [NameInMap("BrowserInfo")]
         [Validation(Required=false)]
         public string BrowserInfo { get; set; }
@@ -24,17 +30,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string City { get; set; }
 
+        /// <summary>
+        /// 设备类型（模拟屏幕大小类型）。
+        /// </summary>
         [NameInMap("Device")]
         [Validation(Required=false)]
         public string Device { get; set; }
 
         /// <summary>
-        /// The end of the time range to query data. The following formats are supported:
+        /// The end of the time range to query. Valid values:
         /// 
         /// *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
         /// *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
         /// 
-        /// > We recommend that you use UNIX timestamps to prevent time zone-related issues.
+        /// >  We recommend that you use UNIX timestamps to prevent time zone-related issues.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -84,14 +93,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The start of the time range to query data. The following formats are supported:
+        /// The start of the time range to query. The following formats are supported:
         /// 
         /// *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
         /// *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
         /// 
         /// > 
-        /// *   The specified time range includes the end time and excludes the start time. The `start time` must be earlier than the `end time`.
-        /// *   We recommend that you use UNIX timestamps to prevent time zone-related issues.
+        /// 
+        /// *   The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.\
+        ///     We recommend that you use UNIX timestamps to prevent time zone-related issues.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

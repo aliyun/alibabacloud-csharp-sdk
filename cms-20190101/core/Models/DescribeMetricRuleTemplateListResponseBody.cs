@@ -10,37 +10,40 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleTemplateListResponseBody : TeaModel {
         /// <summary>
-        /// The timestamp when the alert template was applied to the application group.
+        /// The status code.
         /// 
-        /// Unit: milliseconds.
+        /// > The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The list of alert templates.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The keyword of the alert template name.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the alert template.
+        /// The queried alert templates.
         /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate> Template { get; set; }
             public class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate : TeaModel {
                 /// <summary>
-                /// The ID of the request.
+                /// The history of applying the alert templates to application groups.
                 /// </summary>
                 [NameInMap("ApplyHistories")]
                 [Validation(Required=false)]
@@ -61,17 +64,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory> ApplyHistory { get; set; }
                     public class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory : TeaModel {
+                        /// <summary>
+                        /// The timestamp when the alert template was applied to the application group.
+                        /// 
+                        /// Unit: milliseconds.
+                        /// </summary>
                         [NameInMap("ApplyTime")]
                         [Validation(Required=false)]
                         public long? ApplyTime { get; set; }
 
                         /// <summary>
-                        /// For more information about common request parameters, see [Common parameters](~~199331~~).
+                        /// The ID of the application group.
                         /// </summary>
                         [NameInMap("GroupId")]
                         [Validation(Required=false)]
                         public long? GroupId { get; set; }
 
+                        /// <summary>
+                        /// The name of the application group.
+                        /// </summary>
                         [NameInMap("GroupName")]
                         [Validation(Required=false)]
                         public string GroupName { get; set; }
@@ -81,47 +92,48 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The order in which you want to sort alert templates. Default value: true. Valid values:
-                /// 
-                /// *   true: ascending order
-                /// *   false: descending order
+                /// The description of the alert template.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the application group.
+                /// The timestamp when the alert template was created.
+                /// 
+                /// Unit: milliseconds.
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// The number of the page to return.
+                /// The timestamp when the alert template was modified.
                 /// 
-                /// Default value: 1
+                /// Unit: milliseconds.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public long? GmtModified { get; set; }
 
                 /// <summary>
-                /// The application history of the alert template.
+                /// The name of the alert template.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the alert template.
+                /// The version of the alert template.
+                /// 
+                /// Default value: 0.
                 /// </summary>
                 [NameInMap("RestVersion")]
                 [Validation(Required=false)]
                 public long? RestVersion { get; set; }
 
                 /// <summary>
-                /// The description of the alert template.
+                /// The ID of the alert template.
                 /// </summary>
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
@@ -132,10 +144,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The sorting basis. Default value: gmtCreate. Valid values:
-        /// 
-        /// *   gmtMotified: Sorts alert templates by modification time.
-        /// *   gmtCreate: Sorts alert templates by creation time.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

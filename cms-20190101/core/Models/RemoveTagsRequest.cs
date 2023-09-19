@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class RemoveTagsRequest : TeaModel {
+        /// <summary>
+        /// The IDs of the application groups.
+        /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
         public List<string> GroupIds { get; set; }
@@ -17,24 +20,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RemoveTagsRequestTag> Tag { get; set; }
         public class RemoveTagsRequestTag : TeaModel {
             /// <summary>
-            /// Indicates whether the call was successful. Valid values:
+            /// The tag key.
             /// 
-            /// *   true: The call was successful.
-            /// *   false: The call failed.
+            /// > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The tag value.
             /// 
-            /// >  The `Tag.N.Key` and `Tag.N.Value` parameters must be used in pairs.
+            /// > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
