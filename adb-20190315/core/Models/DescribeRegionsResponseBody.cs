@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The list of regions.
+        /// The queried regions.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
+                /// <summary>
+                /// The region name.
+                /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
@@ -32,14 +35,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The list of zones.
+                /// The queried zones.
                 /// </summary>
                 [NameInMap("Zones")]
                 [Validation(Required=false)]
@@ -50,24 +53,24 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                     public List<DescribeRegionsResponseBodyRegionsRegionZonesZone> Zone { get; set; }
                     public class DescribeRegionsResponseBodyRegionsRegionZonesZone : TeaModel {
                         /// <summary>
-                        /// The name of the region.
+                        /// The zone name.
                         /// </summary>
                         [NameInMap("LocalName")]
                         [Validation(Required=false)]
                         public string LocalName { get; set; }
 
                         /// <summary>
-                        /// Indicates whether Virtual Private Cloud (VPC) is available in the zone that you want to select. Valid values:
+                        /// Indicates whether Virtual Private Cloud (VPC) is supported in the zone. Valid values:
                         /// 
-                        /// *   **true**: VPC is available.
-                        /// *   **false**: VPC is unavailable.
+                        /// *   **true**
+                        /// *   **false**
                         /// </summary>
                         [NameInMap("VpcEnabled")]
                         [Validation(Required=false)]
                         public bool? VpcEnabled { get; set; }
 
                         /// <summary>
-                        /// The ID of the zone.
+                        /// The zone ID.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,22 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
-    public class DescribeComputeResourceRequest : TeaModel {
-        [NameInMap("DBClusterId")]
-        [Validation(Required=false)]
-        public string DBClusterId { get; set; }
-
-        /// <summary>
-        /// The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to **3**.
-        /// </summary>
-        [NameInMap("DBClusterVersion")]
-        [Validation(Required=false)]
-        public string DBClusterVersion { get; set; }
-
-        [NameInMap("Migrate")]
-        [Validation(Required=false)]
-        public bool? Migrate { get; set; }
-
+    public class DescribeVSwitchesRequest : TeaModel {
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -33,7 +18,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// The region ID.
         /// 
         /// > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
         /// </summary>
@@ -49,8 +34,25 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
         /// <summary>
-        /// The zone ID of the cluster.
+        /// The virtual private cloud (VPC) ID.
+        /// 
+        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the VPC ID.
+        /// </summary>
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
+        [NameInMap("VswId")]
+        [Validation(Required=false)]
+        public string VswId { get; set; }
+
+        /// <summary>
+        /// The zone ID.
         /// 
         /// > You can call the [DescribeRegions](~~129857~~) operation to query the most recent zone list.
         /// </summary>

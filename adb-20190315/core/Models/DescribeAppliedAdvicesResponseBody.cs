@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAppliedAdvicesResponseBody : TeaModel {
         /// <summary>
-        /// Details of the suggestions.
+        /// The queried suggestions.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -38,9 +38,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string BuildSQL { get; set; }
 
             /// <summary>
-            /// The state of the suggestion execution task.
-            /// 
-            /// Valid values:
+            /// The state of the suggestion execution task. Valid values:
             /// 
             /// *   **SUCCEED**
             /// *   **FAILED**
@@ -50,16 +48,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string JobStatus { get; set; }
 
             /// <summary>
-            /// The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
+            /// The page number. Pages start from page 1. Default value: 1.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 30. Valid values:
+            /// The number of entries per page. Valid values:
             /// 
-            /// *   **30**
+            /// *   **30** (default)
             /// *   **50**
             /// *   **100**
             /// </summary>
@@ -75,16 +73,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string RollbackSQL { get; set; }
 
             /// <summary>
-            /// The SQL statement used to apply the suggestion.
+            /// The SQL statement that is used to apply the suggestion.
             /// </summary>
             [NameInMap("SQL")]
             [Validation(Required=false)]
             public string SQL { get; set; }
 
             /// <summary>
-            /// The submission state of the suggestion.
-            /// 
-            /// Valid values:
+            /// The submission state of the suggestion. Valid values:
             /// 
             /// *   **SUCCEED**
             /// *   **FAILED**
@@ -94,14 +90,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string SubmitStatus { get; set; }
 
             /// <summary>
-            /// The time when the suggestion was submitted. The time follows the yyMMddHHmm format. The time is displayed in UTC.
+            /// The time when the suggestion was submitted. The time follows the ISO 8601 standard in the yyMMddHHmm format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("SubmitTime")]
             [Validation(Required=false)]
             public string SubmitTime { get; set; }
 
             /// <summary>
-            /// The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.
+            /// The total number of entries returned. The value is an integer that is greater than or equal to 0. Default value: 0.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -110,16 +106,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
+        /// The page number. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page. Default value: 30. Valid values:
+        /// The number of entries per page. Valid values:
         /// 
-        /// *   **30**
+        /// *   **30** (default)
         /// *   **50**
         /// *   **100**
         /// </summary>
@@ -128,14 +124,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.
+        /// The total number of entries returned. The value is an integer that is greater than or equal to 0. Default value: 0.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

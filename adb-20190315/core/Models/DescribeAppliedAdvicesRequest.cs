@@ -10,44 +10,44 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAppliedAdvicesRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.
+        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The end date of the time range to query. Specify the date in the yyyyMMdd format. The date must be in UTC.
+        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyyMMdd format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The display language of the suggestion. Default value: zh. Valid values:
+        /// The display language of the suggestion. Valid values:
         /// 
-        /// *   **zh**: simplified Chinese
-        /// *   **en**: English
-        /// *   **ja**: Japanese
-        /// *   **zh-tw**: traditional Chinese
+        /// *   **zh** (default): simplified Chinese.
+        /// *   **en**: English.
+        /// *   **ja**: Japanese.
+        /// *   **zh-tw**: traditional Chinese.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.
+        /// The page number. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 30. Valid values:
+        /// The number of entries per page. Valid values:
         /// 
-        /// *   **30**
+        /// *   **30** (default)
         /// *   **50**
         /// *   **100**
         /// </summary>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// The region ID of the cluster.
         /// 
-        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The start date of the time range to query. Specify the date in the yyyyMMdd format. The date must be in UTC.
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyyMMdd format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

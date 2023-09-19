@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeConnectionCountRecordsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the client IP addresses.
+        /// The queried client IP addresses.
         /// </summary>
         [NameInMap("AccessIpRecords")]
         [Validation(Required=false)]
         public List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> AccessIpRecords { get; set; }
         public class DescribeConnectionCountRecordsResponseBodyAccessIpRecords : TeaModel {
             /// <summary>
-            /// The IP address of the client used to connect to the cluster.
+            /// The IP address of the client.
             /// </summary>
             [NameInMap("AccessIp")]
             [Validation(Required=false)]
@@ -33,21 +33,21 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the users.
+        /// The queried database accounts.
         /// </summary>
         [NameInMap("UserRecords")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// The name of the user used to connect to the cluster.
+            /// The username of the database account.
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Details of the resource group.
+        /// The queried resource group.
         /// </summary>
         [NameInMap("GroupsInfo")]
         [Validation(Required=false)]
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// The query execution mode. Valid values:
             /// 
             /// *   **interactive**
-            /// *   **batch**
+            /// *   **batch** (default)
             /// 
-            /// >  For more information, see [Query execution modes](~~189502~~).
+            /// > For more information, see [Query execution modes](~~189502~~).
             /// </summary>
             [NameInMap("GroupType")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string GroupUsers { get; set; }
 
             /// <summary>
-            /// The number of nodes. Each node consumes 16 cores and 64 GB memory.
+            /// The number of nodes. Each node provides 16 cores and 64 GB memory.
             /// </summary>
             [NameInMap("NodeNum")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

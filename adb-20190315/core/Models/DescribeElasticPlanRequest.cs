@@ -12,17 +12,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether the scaling plan takes effect. Default value: true. Valid values:
+        /// Specifies whether the scaling plan takes effect. Valid values:
         /// 
-        /// *   **true**: The scaling plan takes effect.
-        /// *   **false**: The scaling plan does not take effect.
+        /// *   **true** (default)
+        /// *   **false**
         /// </summary>
         [NameInMap("ElasticPlanEnable")]
         [Validation(Required=false)]
@@ -32,10 +32,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// The name of the scaling plan.
         /// 
         /// *   The name must be 2 to 30 characters in length.
-        /// 
         /// *   The name can contain letters, digits, and underscores (\_).
         /// 
-        /// >  If you do not specify this parameter, the details of all scaling plans for the specified cluster are returned.
+        /// > If you do not specify this parameter, the information about all scaling plans for the specified cluster is returned.
         /// </summary>
         [NameInMap("ElasticPlanName")]
         [Validation(Required=false)]
@@ -60,7 +59,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// The name of the resource group.
         /// 
-        /// > *   You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.
+        /// > You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.
         /// </summary>
         [NameInMap("ResourcePoolName")]
         [Validation(Required=false)]

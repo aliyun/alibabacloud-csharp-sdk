@@ -82,12 +82,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// *   **worker**: scales only elastic I/O resources.
         /// *   **executor**: scales only computing resources.
         /// *   **executorcombineworker** (default): scales both elastic I/O resources and computing resources by proportion.
-        /// 
-        /// > 
-        /// 
-        /// *   If you want to set this parameter to **executorcombineworker**, make sure that the cluster runs a minor version of 3.1.3.2 or later.
-        /// 
-        /// *   If you want to set this parameter to **worker** or **executor**, make sure that the cluster runs a minor version of 3.1.6.1 or later and a ticket is submitted. After your request is approved, you can set this parameter to **worker** or **executor**.
+        /// > - If you want to set this parameter to **executorcombineworker**, make sure that the cluster runs a minor version of 3.1.3.2 or later.
+        /// > - If you want to set this parameter to **worker** or **executor**, make sure that the cluster runs a minor version of 3.1.6.1 or later and a ticket is submitted. After your request is approved, you can set this parameter to **worker** or **executor**.
         /// </summary>
         [NameInMap("ElasticPlanType")]
         [Validation(Required=false)]

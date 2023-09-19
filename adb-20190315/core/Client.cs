@@ -2007,8 +2007,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * ## Precautions
-          * *   This operation is applicable only for elastic clusters of 32 cores or more.
+          * ### Precautions
+          * *   You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
           * *   The default resource group USER_DEFAULT cannot be deleted.
           *
           * @param request DeleteDBResourceGroupRequest
@@ -2063,8 +2063,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * ## Precautions
-          * *   This operation is applicable only for elastic clusters of 32 cores or more.
+          * ### Precautions
+          * *   You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
           * *   The default resource group USER_DEFAULT cannot be deleted.
           *
           * @param request DeleteDBResourceGroupRequest
@@ -2119,8 +2119,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * ## Precautions
-          * *   This operation is applicable only for elastic clusters of 32 cores or more.
+          * ### Precautions
+          * *   You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
           * *   The default resource group USER_DEFAULT cannot be deleted.
           *
           * @param request DeleteDBResourceGroupRequest
@@ -2133,8 +2133,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * ## Precautions
-          * *   This operation is applicable only for elastic clusters of 32 cores or more.
+          * ### Precautions
+          * *   You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
           * *   The default resource group USER_DEFAULT cannot be deleted.
           *
           * @param request DeleteDBResourceGroupRequest
@@ -5121,8 +5121,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * ## Precautions
-          * This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+          * ###
+          * You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
           *
           * @param request DescribeDBResourceGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5176,8 +5176,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * ## Precautions
-          * This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+          * ###
+          * You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
           *
           * @param request DescribeDBResourceGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5231,8 +5231,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * ## Precautions
-          * This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+          * ###
+          * You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
           *
           * @param request DescribeDBResourceGroupRequest
           * @return DescribeDBResourceGroupResponse
@@ -5244,8 +5244,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * ## Precautions
-          * This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+          * ###
+          * You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
           *
           * @param request DescribeDBResourceGroupRequest
           * @return DescribeDBResourceGroupResponse
@@ -6311,7 +6311,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+          * ###
+          * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
           *
           * @param request DescribeElasticPlanRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6373,7 +6374,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+          * ###
+          * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
           *
           * @param request DescribeElasticPlanRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6435,7 +6437,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+          * ###
+          * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
           *
           * @param request DescribeElasticPlanRequest
           * @return DescribeElasticPlanResponse
@@ -6447,7 +6450,8 @@ namespace AlibabaCloud.SDK.Adb20190315
         }
 
         /**
-          * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+          * ###
+          * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
           *
           * @param request DescribeElasticPlanRequest
           * @return DescribeElasticPlanResponse
@@ -9056,6 +9060,136 @@ namespace AlibabaCloud.SDK.Adb20190315
             return await DescribeTaskInfoWithOptionsAsync(request, runtime);
         }
 
+        public DescribeVSwitchesResponse DescribeVSwitchesWithOptions(DescribeVSwitchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswId))
+            {
+                query["VswId"] = request.VswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVSwitches",
+                Version = "2019-03-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVSwitchesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVSwitchesResponse> DescribeVSwitchesWithOptionsAsync(DescribeVSwitchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswId))
+            {
+                query["VswId"] = request.VswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVSwitches",
+                Version = "2019-03-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVSwitchesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVSwitchesResponse DescribeVSwitches(DescribeVSwitchesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVSwitchesWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVSwitchesResponse> DescribeVSwitchesAsync(DescribeVSwitchesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVSwitchesWithOptionsAsync(request, runtime);
+        }
+
         /**
           * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.
           *
@@ -9430,184 +9564,6 @@ namespace AlibabaCloud.SDK.Adb20190315
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DownloadDiagnosisRecordsWithOptionsAsync(request, runtime);
-        }
-
-        public DryRunClusterResponse DryRunClusterWithOptions(DryRunClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeResource))
-            {
-                query["ComputeResource"] = request.ComputeResource;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterDescription))
-            {
-                query["DBClusterDescription"] = request.DBClusterDescription;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
-            {
-                query["DBClusterId"] = request.DBClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterNetworkType))
-            {
-                query["DBClusterNetworkType"] = request.DBClusterNetworkType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterVersion))
-            {
-                query["DBClusterVersion"] = request.DBClusterVersion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDefaultResourcePool))
-            {
-                query["EnableDefaultResourcePool"] = request.EnableDefaultResourcePool;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
-            {
-                query["Operation"] = request.Operation;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
-            {
-                query["PayType"] = request.PayType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
-            {
-                query["Period"] = request.Period;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageResource))
-            {
-                query["StorageResource"] = request.StorageResource;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
-            {
-                query["UsedTime"] = request.UsedTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
-            {
-                query["VPCId"] = request.VPCId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
-            {
-                query["VSwitchId"] = request.VSwitchId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
-            {
-                query["ZoneId"] = request.ZoneId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DryRunCluster",
-                Version = "2019-03-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DryRunClusterResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DryRunClusterResponse> DryRunClusterWithOptionsAsync(DryRunClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeResource))
-            {
-                query["ComputeResource"] = request.ComputeResource;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterDescription))
-            {
-                query["DBClusterDescription"] = request.DBClusterDescription;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
-            {
-                query["DBClusterId"] = request.DBClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterNetworkType))
-            {
-                query["DBClusterNetworkType"] = request.DBClusterNetworkType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterVersion))
-            {
-                query["DBClusterVersion"] = request.DBClusterVersion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDefaultResourcePool))
-            {
-                query["EnableDefaultResourcePool"] = request.EnableDefaultResourcePool;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
-            {
-                query["Operation"] = request.Operation;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
-            {
-                query["PayType"] = request.PayType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
-            {
-                query["Period"] = request.Period;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageResource))
-            {
-                query["StorageResource"] = request.StorageResource;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
-            {
-                query["UsedTime"] = request.UsedTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
-            {
-                query["VPCId"] = request.VPCId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
-            {
-                query["VSwitchId"] = request.VSwitchId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
-            {
-                query["ZoneId"] = request.ZoneId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DryRunCluster",
-                Version = "2019-03-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DryRunClusterResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DryRunClusterResponse DryRunCluster(DryRunClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DryRunClusterWithOptions(request, runtime);
-        }
-
-        public async Task<DryRunClusterResponse> DryRunClusterAsync(DryRunClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DryRunClusterWithOptionsAsync(request, runtime);
         }
 
         public EnableAdviceServiceResponse EnableAdviceServiceWithOptions(EnableAdviceServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

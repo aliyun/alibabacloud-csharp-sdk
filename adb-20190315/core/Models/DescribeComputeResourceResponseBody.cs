@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeComputeResourceResponseBody : TeaModel {
         /// <summary>
-        /// Details of computing resource specifications.
+        /// The queried specifications of computing resources.
         /// </summary>
         [NameInMap("ComputeResource")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

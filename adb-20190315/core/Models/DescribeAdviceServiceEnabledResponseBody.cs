@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAdviceServiceEnabledResponseBody : TeaModel {
         /// <summary>
-        /// The message returned for the operation. Valid values:
+        /// The returned message.
         /// 
-        /// *   **Success** is returned if the operation is successful.
-        /// *   An error message is returned if the operation fails.
+        /// *   If the request was successful, **Success** is returned.
+        /// *   If the request failed, an error message is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// Indicates whether the suggestion feature is enabled. Valid values:
         /// 
-        /// *   **True**: The suggestion feature is enabled.
-        /// *   **False**: The suggestion feature is disabled.
+        /// *   **True**
+        /// *   **False**
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

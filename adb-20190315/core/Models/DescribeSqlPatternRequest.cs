@@ -10,94 +10,97 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSqlPatternRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the details of all AnalyticDB for MySQL clusters within a specified region, including cluster IDs.
+        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"Pattern","Type":"Asc"}]`.
+        /// The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"Pattern","Type":"Asc"}]`. Parameters:
         /// 
-        /// *   `Field` indicates the field that is used to sort the retrieved entries. Valid values:
+        /// *   `Field` specifies the field by which to sort the query results. Valid values:
         /// 
-        ///     *   `Pattern` : the SQL pattern.
+        ///     *   `Pattern`: the SQL pattern.
         ///     *   `AccessIP`: the IP address of the client.
         ///     *   `User`: the username.
-        ///     *   `QueryCount`: the total number of queries.
-        ///     *   `AvgPeakMemory`: the average peak memory. Unit: KB.
-        ///     *   `MaxPeakMemory`: the maximum peak memory. Unit: KB.
-        ///     *   `AvgCpuTime`: the average CPU time. Unit: milliseconds.
-        ///     *   `MaxCpuTime`: the maximum CPU time. Unit: milliseconds.
+        ///     *   `QueryCount`: the number of queries performed in association with the SQL pattern within the time range to query.
+        ///     *   `AvgPeakMemory`: the average peak memory usage of the SQL pattern within the time range to query. Unit: KB.
+        ///     *   `MaxPeakMemory`: the maximum peak memory usage of the SQL pattern within the time range to query. Unit: KB.
+        ///     *   `AvgCpuTime`: the average execution duration of the SQL pattern within the time range to query. Unit: milliseconds.
+        ///     *   `MaxCpuTime`: the maximum execution duration of the SQL pattern within the time range to query. Unit: milliseconds.
         ///     *   `AvgStageCount`: the average number of stages.
         ///     *   `MaxStageCount`: the maximum number of stages.
         ///     *   `AvgTaskCount`: the average number of tasks.
         ///     *   `MaxTaskCount`: the maximum number of tasks.
-        ///     *   `AvgScanSize`: the average scan size. Unit: KB.
-        ///     *   `MaxScanSize`: the maximum scan size. Unit: KB.
+        ///     *   `AvgScanSize`: the average amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.
+        ///     *   `MaxScanSize`: the maximum amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.
         /// 
-        /// *   `Type` indicates the sorting method. Valid values:
+        /// *   `Type` specifies the sorting order. Valid values:
         /// 
         ///     *   `Asc`: ascending order.
         ///     *   `Desc`: descending order.
         /// 
-        /// > *   If this parameter is not specified, query results are sorted in ascending order of `Pattern`.
-        /// > *   If you need to sort query results by `AccessIP`, you must set the `Type` parameter to `accessip`. If you need to sort query results by `User`, you must leave the `Type` parameter empty or set it to `user`.
+        /// > 
+        /// 
+        /// *   If you do not specify this parameter, query results are sorted in ascending order of `Pattern`.
+        /// 
+        /// *   If you want to sort query results by `AccessIP`, you must set the `Type` parameter to `accessip`. If you want to sort query results by `User`, you must leave the `Type` parameter empty or set it to `user`.
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+        /// The page number. Pages start from page 1. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. The value must be a positive integer. Default value: **30**.
+        /// The number of entries per page. The value must be a positive integer. Default value: **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID of the cluster.
         /// 
-        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.
+        /// > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The keyword contained in the SQL pattern.
+        /// The keyword that is used for the query.
         /// 
-        /// >  If this parameter is not specified, all SQL patterns within an AnalyticDB for MySQL cluster for a date specified by `StartTime` are returned.
+        /// > If you do not specify this parameter, all SQL patterns of the AnalyticDB for MySQL cluster within the time period specified by `StartTime` are returned.
         /// </summary>
         [NameInMap("SqlPattern")]
         [Validation(Required=false)]
         public string SqlPattern { get; set; }
 
         /// <summary>
-        /// The date to query. Specify the time in the *yyyy-MM-dd* format. The time must be in UTC.
+        /// The start date to query. Specify the time in the *yyyy-MM-dd* format. The time must be in UTC.
         /// 
-        /// >  Only data for the last 30 days can be queried.
+        /// > Only data within the last 30 days can be queried.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The dimension by which to aggregate the SQL pattern. Valid values:
+        /// The dimension by which to aggregate the SQL patterns. Valid values:
         /// 
-        /// *   `user`: the user.
-        /// *   `accessip`: the IP address of the client.
+        /// *   `user`: aggregates the SQL patterns by user.
+        /// *   `accessip`: aggregates the SQL patterns by client IP address.
         /// 
-        /// >  If this parameter is not specified, the SQL pattern is aggregated by `user`.
+        /// > If you do not specify this parameter, the SQL patterns are aggregated by `user`.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

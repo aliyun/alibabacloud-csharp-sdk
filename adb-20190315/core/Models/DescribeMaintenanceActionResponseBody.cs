@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeMaintenanceActionResponseBody : TeaModel {
         /// <summary>
-        /// The list of events.
+        /// The queried O\&M events.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// The ID of the cluster involved in the O\&M event.
+            /// The ID of the cluster that is involved in the O\&M event.
             /// </summary>
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Deadline { get; set; }
 
             /// <summary>
-            /// The ID of the event.
+            /// The ID of the O\&M event.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public int? Id { get; set; }
 
             /// <summary>
-            /// The point in time at which the O\&M event was switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+            /// The point in time at which the switchover time of the O\&M event was modified. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <summary>
             /// The execution result of the O\&M event.
             /// 
-            /// >  This parameter is valid only when `Status` is set to **FAILED** or **CANCEL**.
+            /// > This parameter is returned only when the value of `Status` is **FAILED** or **CANCEL**.
             /// </summary>
             [NameInMap("ResultInfo")]
             [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// 
             ///     *   **WAITING_MODIFY**: The start time of the O\&M event is waiting to be set.
             ///     *   **WAITING**: The O\&M event is waiting to be processed.
-            ///     *   **PROCESSING**: The O\&M event is being processed. The switching time of an event in this state cannot be changed.
+            ///     *   **PROCESSING**: The O\&M event is being processed. The switchover time of an event in this state cannot be changed.
             /// 
             /// *   If you set `IsHistory` to **1**, the state of the historical O\&M event is returned. Valid values:
             /// 
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The time when the pending event was switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+            /// The time when the pending O\&M event is switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("SwitchTime")]
             [Validation(Required=false)]
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// The type of the O&M event.
+            /// The type of the O\&M event.
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
@@ -131,21 +131,21 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

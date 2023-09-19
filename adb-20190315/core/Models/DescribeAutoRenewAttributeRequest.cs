@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
-        /// 
-        /// Separate multiple clusters with commas (,).
+        /// The cluster ID. Separate multiple clusters with commas (,).
         /// </summary>
         [NameInMap("DBClusterIds")]
         [Validation(Required=false)]
@@ -27,22 +25,20 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than 0.
-        /// 
-        /// Default value: 1
+        /// The page number. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values:
+        /// The number of entries per page. Valid values:
         /// 
         /// *   30
         /// *   50
         /// *   100
         /// 
-        /// Default value: 30
+        /// Default value: 30.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

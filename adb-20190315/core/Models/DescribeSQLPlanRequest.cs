@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSQLPlanRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query details about all AnalyticDB for MySQL clusters in a specific region, including cluster IDs.
+        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the task.
+        /// The query ID.
         /// 
-        /// >  You can call the [DescribeSlowLogRecords](~~143382~~) operation to query the task ID of the SQL statement.
+        /// > You can call the [DescribeProcessList](~~143382~~) operation to query the IDs of queries that are being executed.
         /// </summary>
         [NameInMap("ProcessId")]
         [Validation(Required=false)]

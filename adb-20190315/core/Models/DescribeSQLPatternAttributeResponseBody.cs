@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSQLPatternAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The detailed information of the SQL pattern.
+        /// The queried SQL pattern.
         /// </summary>
         [NameInMap("PatternDetail")]
         [Validation(Required=false)]
         public DescribeSQLPatternAttributeResponseBodyPatternDetail PatternDetail { get; set; }
         public class DescribeSQLPatternAttributeResponseBodyPatternDetail : TeaModel {
             /// <summary>
-            /// The average memory consumption associated with the SQL pattern. Unit: MB.
+            /// The average used memory associated with the SQL pattern. Unit: MB.
             /// </summary>
             [NameInMap("AverageMemory")]
             [Validation(Required=false)]
             public string AverageMemory { get; set; }
 
             /// <summary>
-            /// The average query time associated with the SQL pattern. Unit: milliseconds.
+            /// The average query duration associated with the SQL pattern. Unit: milliseconds.
             /// </summary>
             [NameInMap("AverageQueryTime")]
             [Validation(Required=false)]
             public string AverageQueryTime { get; set; }
 
             /// <summary>
-            /// The number of queries performed based on the SQL pattern.
+            /// The number of queries.
             /// </summary>
             [NameInMap("QueryCount")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string SQLPattern { get; set; }
 
             /// <summary>
-            /// The total query time associated with the SQL pattern. Unit: milliseconds.
+            /// The total query duration associated with the SQL pattern. Unit: milliseconds.
             /// </summary>
             [NameInMap("TotalQueryTime")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -23,29 +23,29 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <summary>
                 /// Indicates whether auto-renewal is enabled for the cluster. Valid values:
                 /// 
-                /// *   **true**: Auto-renewal is enabled.
-                /// *   **false**: Auto-renewal is disabled.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("AutoRenewEnabled")]
                 [Validation(Required=false)]
                 public bool? AutoRenewEnabled { get; set; }
 
                 /// <summary>
-                /// The ID of the cluster.
+                /// The cluster ID.
                 /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// The renewal period.
+                /// The renewal duration.
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// The unit of the renewal period. Valid values:
+                /// The unit of the renewal duration. Valid values:
                 /// 
                 /// *   **Year**
                 /// *   **Month**
@@ -77,21 +77,21 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

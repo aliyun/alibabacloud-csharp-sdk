@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyLogBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string EnableBackupLog { get; set; }
 
         /// <summary>
-        /// The number of days for which to retain data backup files. Valid values: 7 to 730.
+        /// The number of days for which to retain backup files. Valid values: 7 to 730.
         /// 
-        /// >  If you leave this parameter empty, the default value 7 is used.
+        /// > The default value is 7.
         /// </summary>
         [NameInMap("LogBackupRetentionPeriod")]
         [Validation(Required=false)]

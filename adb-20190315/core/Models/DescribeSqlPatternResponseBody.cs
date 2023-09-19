@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSqlPatternResponseBody : TeaModel {
         /// <summary>
-        /// Details about the SQL pattern.
+        /// The queried SQL pattern.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -19,28 +19,28 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <summary>
             /// The IP address of the client.
             /// 
-            /// >  This parameter is returned only when the `Type` parameter is set to `accessip`.
+            /// > This parameter is returned only when `Type` is set to `accessip`.
             /// </summary>
             [NameInMap("AccessIP")]
             [Validation(Required=false)]
             public string AccessIP { get; set; }
 
             /// <summary>
-            /// The average CPU time. Unit: milliseconds.
+            /// The average execution duration of the SQL pattern within the time range to query. Unit: milliseconds.
             /// </summary>
             [NameInMap("AvgCpuTime")]
             [Validation(Required=false)]
             public string AvgCpuTime { get; set; }
 
             /// <summary>
-            /// The average peak memory. Unit: KB.
+            /// The average peak memory usage of the SQL pattern within the query time range. Unit: KB.
             /// </summary>
             [NameInMap("AvgPeakMemory")]
             [Validation(Required=false)]
             public string AvgPeakMemory { get; set; }
 
             /// <summary>
-            /// The average scan size. Unit: KB.
+            /// The average amount of data scanned based on the SQL pattern within the query time range. Unit: KB.
             /// </summary>
             [NameInMap("AvgScanSize")]
             [Validation(Required=false)]
@@ -61,28 +61,28 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string AvgTaskCount { get; set; }
 
             /// <summary>
-            /// The ID of the cluster.
+            /// The cluster ID.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The maximum CPU time. Unit: milliseconds.
+            /// The maximum execution duration of the SQL pattern within the time range to query. Unit: milliseconds.
             /// </summary>
             [NameInMap("MaxCpuTime")]
             [Validation(Required=false)]
             public string MaxCpuTime { get; set; }
 
             /// <summary>
-            /// The maximum peak memory. Unit: KB.
+            /// The maximum peak memory usage of the SQL pattern within the query time range. Unit: KB.
             /// </summary>
             [NameInMap("MaxPeakMemory")]
             [Validation(Required=false)]
             public string MaxPeakMemory { get; set; }
 
             /// <summary>
-            /// The maximum scan size. Unit: KB.
+            /// The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: KB.
             /// </summary>
             [NameInMap("MaxScanSize")]
             [Validation(Required=false)]
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Pattern { get; set; }
 
             /// <summary>
-            /// The total number of queries.
+            /// The number of queries performed in association with the SQL pattern within the query time range.
             /// </summary>
             [NameInMap("QueryCount")]
             [Validation(Required=false)]
             public string QueryCount { get; set; }
 
             /// <summary>
-            /// The query date.
+            /// The start date of the query.
             /// </summary>
             [NameInMap("ReportDate")]
             [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <summary>
             /// The username.
             /// 
-            /// >  This parameter is returned only when the `Type` parameter is left empty or set to `user`.
+            /// > This parameter is returned only when `Type` is left empty or set to `user`.
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]
@@ -135,28 +135,28 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on the current page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
