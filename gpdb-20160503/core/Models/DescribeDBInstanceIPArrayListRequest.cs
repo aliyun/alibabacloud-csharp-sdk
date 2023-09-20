@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceIPArrayListRequest : TeaModel {
+        [NameInMap("DBInstanceIPArrayName")]
+        [Validation(Required=false)]
+        public string DBInstanceIPArrayName { get; set; }
+
         /// <summary>
         /// The instance ID.
         /// 
