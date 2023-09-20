@@ -10092,6 +10092,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcAlias))
+            {
+                query["FcAlias"] = request.FcAlias;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcServiceName))
             {
                 query["FcServiceName"] = request.FcServiceName;
@@ -10148,6 +10152,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcAlias))
+            {
+                query["FcAlias"] = request.FcAlias;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcServiceName))
             {

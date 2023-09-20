@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// > This parameter specifies the instance ID that is passed. Examples:
         /// 
-        /// *   **ResourceId.1** specifies that the first instance ID is passed.
-        /// *   **ResourceId.2** specifies that the second instance ID is passed.
+        /// - ResourceId.0 specifies the first instance ID that is passed.
+        /// - ResourceId.1 specifies the second instance ID that is passed.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
