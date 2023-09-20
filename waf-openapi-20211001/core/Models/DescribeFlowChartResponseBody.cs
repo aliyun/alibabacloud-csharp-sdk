@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeFlowChartResponseBody : TeaModel {
         /// <summary>
-        /// The array of the traffic statistics.
+        /// The traffic statistics.
         /// </summary>
         [NameInMap("FlowChart")]
         [Validation(Required=false)]
@@ -66,21 +66,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string BlacklistBlockSum { get; set; }
 
             /// <summary>
-            /// The number of requests that are monitored by the IP address blacklist module.
+            /// The number of requests that are monitored by IP address blacklist rules.
             /// </summary>
             [NameInMap("BlacklistReportsSum")]
             [Validation(Required=false)]
             public long? BlacklistReportsSum { get; set; }
 
             /// <summary>
-            /// The number of requests that are blocked by HTTP flood protection rules created by the user.
+            /// The number of requests that are blocked by custom HTTP flood protection rules.
             /// </summary>
             [NameInMap("CcCustomBlockSum")]
             [Validation(Required=false)]
             public long? CcCustomBlockSum { get; set; }
 
             /// <summary>
-            /// The number of requests that are monitored by HTTP flood protection rules created by the user.
+            /// The number of requests that are monitored by custom HTTP flood protection rules.
             /// </summary>
             [NameInMap("CcCustomReportsSum")]
             [Validation(Required=false)]
@@ -135,6 +135,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? OutBytes { get; set; }
 
+            [NameInMap("RatelimitBlockSum")]
+            [Validation(Required=false)]
+            public long? RatelimitBlockSum { get; set; }
+
+            [NameInMap("RatelimitReportSum")]
+            [Validation(Required=false)]
+            public long? RatelimitReportSum { get; set; }
+
             /// <summary>
             /// The number of requests that are blocked by region blacklist rules.
             /// </summary>
@@ -149,6 +157,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? RegionBlockReportsSum { get; set; }
 
+            [NameInMap("RobotCount")]
+            [Validation(Required=false)]
+            public long? RobotCount { get; set; }
+
             /// <summary>
             /// The number of requests that are blocked by basic protection rules.
             /// </summary>
@@ -157,7 +169,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? WafBlockSum { get; set; }
 
             /// <summary>
-            /// The number of request that are monitored by basic protection rules.
+            /// The number of requests that are monitored by basic protection rules.
             /// </summary>
             [NameInMap("WafReportSum")]
             [Validation(Required=false)]

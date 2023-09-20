@@ -24,6 +24,39 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeDefenseResourcesResponseBodyResources> Resources { get; set; }
         public class DescribeDefenseResourcesResponseBodyResources : TeaModel {
             /// <summary>
+            /// 跟踪cookie开关状态。
+            /// 
+            /// - **0**：表示关闭。
+            /// 
+            /// - **1**：表示开启。
+            /// </summary>
+            [NameInMap("AcwCookieStatus")]
+            [Validation(Required=false)]
+            public int? AcwCookieStatus { get; set; }
+
+            /// <summary>
+            /// 跟踪cookie的secure属性状态。
+            /// 
+            /// - **0**：表示关闭。
+            /// 
+            /// - **1**：表示开启。
+            /// </summary>
+            [NameInMap("AcwSecureStatus")]
+            [Validation(Required=false)]
+            public int? AcwSecureStatus { get; set; }
+
+            /// <summary>
+            /// 滑块cookie的secure属性状态。
+            /// 
+            /// - **0**：表示关闭。
+            /// 
+            /// - **1**：表示开启。
+            /// </summary>
+            [NameInMap("AcwV3SecureStatus")]
+            [Validation(Required=false)]
+            public int? AcwV3SecureStatus { get; set; }
+
+            /// <summary>
             /// An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.
             /// </summary>
             [NameInMap("CustomHeaders")]

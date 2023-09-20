@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateDomainResponseBody : TeaModel {
         /// <summary>
-        /// $.parameters[3].schema.example
+        /// The information about the domain name.
         /// </summary>
         [NameInMap("DomainInfo")]
         [Validation(Required=false)]
         public CreateDomainResponseBodyDomainInfo DomainInfo { get; set; }
         public class CreateDomainResponseBodyDomainInfo : TeaModel {
             /// <summary>
-            /// $.parameters[3].schema.enumValueTitles
+            /// The CNAME that is assigned by WAF to the domain name.
             /// </summary>
             [NameInMap("Cname")]
             [Validation(Required=false)]
             public string Cname { get; set; }
 
             /// <summary>
-            /// $.parameters[4].schema.properties.Backends.items.description
+            /// The domain name that you added to WAF.
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// $.parameters[3].schema.description
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

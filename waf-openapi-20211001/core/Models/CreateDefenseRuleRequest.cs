@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// The configurations of the protection rule. Specify a string that contains multiple parameters in the JSON format.
         /// 
-        /// >  The parameters vary based on the value of the **DefenseScene** parameter.**** For more information, see the "**Protection rule parameters**" section in this topic.
+        /// >  The parameters vary based on the value of the **DefenseScene** parameter. For more information, see the "**Protection rule parameters**" section in this topic.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeVisitUasRequest : TeaModel {
+        /// <summary>
+        /// The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.
+        /// </summary>
         [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
         public string EndTimestamp { get; set; }
 
+        /// <summary>
+        /// The ID of the Web Application Firewall (WAF) instance.
+        /// 
+        /// >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -21,10 +29,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The protected object.
+        /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string Resource { get; set; }
 
+        /// <summary>
+        /// The beginning of the time range to query. Unit: seconds.
+        /// </summary>
         [NameInMap("StartTimestamp")]
         [Validation(Required=false)]
         public string StartTimestamp { get; set; }

@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// Indicates whether the log collection feature is enabled for the protected object. Valid values:
         /// 
-        /// *   **true:** The log collection feature is enabled.
-        /// *   **false:** The log collection feature is disabled.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

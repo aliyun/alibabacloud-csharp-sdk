@@ -17,18 +17,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the protection rule template.
+        /// The information about the template.
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]
         public DescribeDefenseTemplateResponseBodyTemplate Template { get; set; }
         public class DescribeDefenseTemplateResponseBodyTemplate : TeaModel {
             /// <summary>
-            /// The scenario in which the protection rule template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~ID~~) topic.
+            /// The scenario in which the template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
             /// </summary>
             [NameInMap("DefenseScene")]
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
+
+            [NameInMap("DefenseSubScene")]
+            [Validation(Required=false)]
+            public string DefenseSubScene { get; set; }
 
             /// <summary>
             /// The description of the protection rule template.

@@ -65,14 +65,23 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
+        /// <summary>
+        /// The tag of the resource. You can specify up to 20 tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDefenseResourcesRequestTag> Tag { get; set; }
         public class DescribeDefenseResourcesRequestTag : TeaModel {
+            /// <summary>
+            /// The key of the tag.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

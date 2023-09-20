@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The configurations of the protection rule. The value of this parameter is a string that contains multiple parameters in the JSON format.
+        /// The configurations of the protection rule. The value is a JSON string that contains multiple parameters.
         /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
         public DescribeDefenseRuleResponseBodyRule Rule { get; set; }
         public class DescribeDefenseRuleResponseBodyRule : TeaModel {
             /// <summary>
-            /// The details of the protection rule. The value of this parameter is a string that contains multiple parameters in the JSON format. For more information, see the "**Protection rule parameters**" section in the [CreateDefenseRule](~~ID~~) topic.
+            /// The details of the protection rule. The value is a JSON string that contains multiple parameters. For more information, see the "**Protection rule parameters**" section of the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DefenseOrigin { get; set; }
 
             /// <summary>
-            /// The scenario in which the protection rule template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~ID~~) topic.
+            /// The scenario in which the protection rule is used. For more information, see the description of **DefenseScene** in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
             /// </summary>
             [NameInMap("DefenseScene")]
             [Validation(Required=false)]
