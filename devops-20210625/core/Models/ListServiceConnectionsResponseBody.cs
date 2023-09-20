@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            [NameInMap("uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
+
         }
 
         [NameInMap("success")]
