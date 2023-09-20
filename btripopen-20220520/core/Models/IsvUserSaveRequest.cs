@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Gender { get; set; }
 
+            [NameInMap("is_admin")]
+            [Validation(Required=false)]
+            public bool? IsAdmin { get; set; }
+
             [NameInMap("job_no")]
             [Validation(Required=false)]
             public string JobNo { get; set; }
