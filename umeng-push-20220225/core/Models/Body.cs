@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string Img { get; set; }
 
-        [NameInMap("largeIcon")]
-        [Validation(Required=false)]
-        public string LargeIcon { get; set; }
-
         [NameInMap("playLights")]
         [Validation(Required=false)]
         public bool? PlayLights { get; set; }
