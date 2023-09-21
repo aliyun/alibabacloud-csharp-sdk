@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("Resellable")]
+        [Validation(Required=false)]
+        public bool? Resellable { get; set; }
+
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }

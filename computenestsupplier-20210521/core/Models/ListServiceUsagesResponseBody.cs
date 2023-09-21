@@ -65,6 +65,22 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 [Validation(Required=false)]
                 public string Company { get; set; }
 
+                [NameInMap("ContactEmail")]
+                [Validation(Required=false)]
+                public string ContactEmail { get; set; }
+
+                [NameInMap("ContactNumber")]
+                [Validation(Required=false)]
+                public string ContactNumber { get; set; }
+
+                [NameInMap("ContactPerson")]
+                [Validation(Required=false)]
+                public string ContactPerson { get; set; }
+
+                [NameInMap("ContactPersonTitle")]
+                [Validation(Required=false)]
+                public string ContactPersonTitle { get; set; }
+
                 [NameInMap("Country")]
                 [Validation(Required=false)]
                 public string Country { get; set; }
@@ -81,9 +97,33 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("ProductBusiness")]
+                [Validation(Required=false)]
+                public string ProductBusiness { get; set; }
+
+                [NameInMap("ProductDeliveryTypes")]
+                [Validation(Required=false)]
+                public string ProductDeliveryTypes { get; set; }
+
+                [NameInMap("ProductSellTypes")]
+                [Validation(Required=false)]
+                public string ProductSellTypes { get; set; }
+
                 [NameInMap("Source")]
                 [Validation(Required=false)]
                 public string Source { get; set; }
+
+                [NameInMap("SupplierDesc")]
+                [Validation(Required=false)]
+                public string SupplierDesc { get; set; }
+
+                [NameInMap("SupplierName")]
+                [Validation(Required=false)]
+                public string SupplierName { get; set; }
+
+                [NameInMap("SupplierUrl")]
+                [Validation(Required=false)]
+                public string SupplierUrl { get; set; }
 
                 [NameInMap("Telephone")]
                 [Validation(Required=false)]

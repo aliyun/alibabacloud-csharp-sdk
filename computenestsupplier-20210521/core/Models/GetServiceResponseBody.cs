@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Resellable")]
+        [Validation(Required=false)]
+        public bool? Resellable { get; set; }
+
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -290,6 +294,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("VersionName")]
         [Validation(Required=false)]
         public string VersionName { get; set; }
+
+        [NameInMap("VirtualInternetService")]
+        [Validation(Required=false)]
+        public string VirtualInternetService { get; set; }
 
     }
 

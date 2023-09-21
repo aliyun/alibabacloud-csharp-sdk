@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string RelationType { get; set; }
 
+            [NameInMap("ResellApplyStatus")]
+            [Validation(Required=false)]
+            public string ResellApplyStatus { get; set; }
+
             [NameInMap("ResellServiceId")]
             [Validation(Required=false)]
             public string ResellServiceId { get; set; }
@@ -168,6 +172,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("VersionName")]
             [Validation(Required=false)]
             public string VersionName { get; set; }
+
+            [NameInMap("VirtualInternetService")]
+            [Validation(Required=false)]
+            public string VirtualInternetService { get; set; }
 
         }
 
