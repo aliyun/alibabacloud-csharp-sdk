@@ -21,6 +21,13 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string ReplicaPairId { get; set; }
 
+        /// <summary>
+        /// 反向复制开关：false代表恢复原方向，true代表反向复制。默认值是true。
+        /// </summary>
+        [NameInMap("ReverseReplicate")]
+        [Validation(Required=false)]
+        public bool? ReverseReplicate { get; set; }
+
     }
 
 }

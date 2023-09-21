@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string ReplicaGroupId { get; set; }
 
+        [NameInMap("ReverseReplicate")]
+        [Validation(Required=false)]
+        public bool? ReverseReplicate { get; set; }
+
     }
 
 }
