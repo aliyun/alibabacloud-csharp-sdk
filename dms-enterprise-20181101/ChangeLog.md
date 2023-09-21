@@ -1,3 +1,6 @@
+2023-09-21 Version: 1.54.0
+- Generated csharp 2018-11-01 for dms-enterprise.
+
 2023-08-24 Version: 1.53.1
 - Generated csharp 2018-11-01 for dms-enterprise.
 
