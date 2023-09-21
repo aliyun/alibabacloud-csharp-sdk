@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateOrUpdateNotificationPolicyRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable simple mode.
+        /// </summary>
         [NameInMap("DirectedMode")]
         [Validation(Required=false)]
         public bool? DirectedMode { get; set; }

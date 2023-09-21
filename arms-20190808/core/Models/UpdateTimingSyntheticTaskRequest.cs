@@ -203,6 +203,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public long? TransmissionSize { get; set; }
 
+                [NameInMap("ValidateKeywords")]
+                [Validation(Required=false)]
+                public string ValidateKeywords { get; set; }
+
+                [NameInMap("VerifyWay")]
+                [Validation(Required=false)]
+                public int? VerifyWay { get; set; }
+
+                [NameInMap("WhiteList")]
+                [Validation(Required=false)]
+                public string WhiteList { get; set; }
+
             }
 
             [NameInMap("NetDNS")]
@@ -327,6 +339,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public Dictionary<string, string> CustomHeaderContent { get; set; }
 
+                [NameInMap("DNSHijackWhitelist")]
+                [Validation(Required=false)]
+                public string DNSHijackWhitelist { get; set; }
+
                 [NameInMap("DisableCache")]
                 [Validation(Required=false)]
                 public int? DisableCache { get; set; }
@@ -335,9 +351,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public int? DisableCompression { get; set; }
 
+                [NameInMap("ElementBlacklist")]
+                [Validation(Required=false)]
+                public string ElementBlacklist { get; set; }
+
                 [NameInMap("FilterInvalidIP")]
                 [Validation(Required=false)]
                 public int? FilterInvalidIP { get; set; }
+
+                [NameInMap("FlowHijackJumpTimes")]
+                [Validation(Required=false)]
+                public int? FlowHijackJumpTimes { get; set; }
+
+                [NameInMap("FlowHijackLogo")]
+                [Validation(Required=false)]
+                public string FlowHijackLogo { get; set; }
 
                 [NameInMap("IgnoreCertificateError")]
                 [Validation(Required=false)]
@@ -346,6 +374,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [NameInMap("MonitorTimeout")]
                 [Validation(Required=false)]
                 public long? MonitorTimeout { get; set; }
+
+                [NameInMap("PageTamper")]
+                [Validation(Required=false)]
+                public string PageTamper { get; set; }
 
                 [NameInMap("Redirection")]
                 [Validation(Required=false)]
@@ -358,6 +390,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
+
+                [NameInMap("VerifyStringBlacklist")]
+                [Validation(Required=false)]
+                public string VerifyStringBlacklist { get; set; }
+
+                [NameInMap("VerifyStringWhitelist")]
+                [Validation(Required=false)]
+                public string VerifyStringWhitelist { get; set; }
 
                 [NameInMap("WaitCompletionTime")]
                 [Validation(Required=false)]

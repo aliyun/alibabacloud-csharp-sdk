@@ -1,3 +1,6 @@
+2023-09-21 Version: 3.0.2
+- Generated csharp 2019-08-08 for ARMS.
+
 2023-09-14 Version: 3.0.1
 - Generated csharp 2019-08-08 for ARMS.
 
