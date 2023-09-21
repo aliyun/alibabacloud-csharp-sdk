@@ -12,9 +12,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the data backup file.
         /// 
-        /// > 
-        /// *   When you run a query, you must specify the `BackId` or `RestoreTime` parameter.
-        /// *   You can call the [DescribeBackups](~~98102~~) operation to query the ID of the backup set.
+        /// >*   When you run a query, you must specify the `BackId` or `RestoreTime` parameter.
+        /// >*   You can call the [DescribeBackups](~~98102~~) operation to query the ID of the backup set.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -32,9 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// Specify the specific database name (such as `test_db`) to query the names of all data tables that can be restored in the desired database.
         /// 
-        /// > 
-        /// *   You can specify only one database name each time.
-        /// *   If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.
+        /// >*   You can specify only one database name each time.
+        /// >*   If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.
         /// </summary>
         [NameInMap("GetDbName")]
         [Validation(Required=false)]
