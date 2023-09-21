@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeImageBaselineCheckResultResponseBodyBaselineResult> BaselineResult { get; set; }
         public class DescribeImageBaselineCheckResultResponseBodyBaselineResult : TeaModel {
             /// <summary>
-            /// The key of the type for the image baseline.
+            /// The key of the image baseline type.
             /// </summary>
             [NameInMap("BaselineClassAlias")]
             [Validation(Required=false)]
             public string BaselineClassAlias { get; set; }
 
             /// <summary>
-            /// The number of check items.
+            /// The number of baseline check items.
             /// </summary>
             [NameInMap("BaselineItemCount")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineNameLevel { get; set; }
 
             /// <summary>
-            /// The timestamp when the first scan was performed. Unit: milliseconds.
+            /// The timestamp generated when the first scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("FirstScanTime")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HighRiskItemCount { get; set; }
 
             /// <summary>
-            /// The timestamp when the last scan was performed. Unit: milliseconds.
+            /// The timestamp generated when the last scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]

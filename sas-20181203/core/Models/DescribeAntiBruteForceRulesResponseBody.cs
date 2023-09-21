@@ -54,12 +54,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the defense rules.
+        /// An array that consists of the details of the defense rule.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<DescribeAntiBruteForceRulesResponseBodyRules> Rules { get; set; }
         public class DescribeAntiBruteForceRulesResponseBodyRules : TeaModel {
+            /// <summary>
+            /// The timestamp when the rule was created. Unit: milliseconds.
+            /// </summary>
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
@@ -67,8 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether the defense rule is the default rule. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**: The defense rule is the default rule.
+            /// *   **false**: The defense rule is not the default rule.
             /// 
             /// > The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.
             /// </summary>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? EnableSmartRule { get; set; }
 
             /// <summary>
-            /// The threshold of logon failures that you specify.
+            /// The threshold of logon failures that is specified in the defense rule.
             /// </summary>
             [NameInMap("FailCount")]
             [Validation(Required=false)]
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP addresses of attackers cannot be used to log on to the server within the specified period of time.
+            /// The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.
             /// </summary>
             [NameInMap("Span")]
             [Validation(Required=false)]

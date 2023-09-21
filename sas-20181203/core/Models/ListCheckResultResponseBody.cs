@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckResultResponseBody : TeaModel {
         /// <summary>
-        /// The check items.
+        /// The information about the check items.
         /// </summary>
         [NameInMap("Checks")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// The check policies.
+            /// The information about the check policies.
             /// </summary>
             [NameInMap("CheckPolicies")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? RequirementId { get; set; }
 
                 /// <summary>
-                /// The display name of the requirement item for the check item.
+                /// The display name of the requirement item of the check item.
                 /// </summary>
                 [NameInMap("RequirementShowName")]
                 [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? SectionId { get; set; }
 
                 /// <summary>
-                /// The section display name of the check item.
+                /// The section display name of section of the check item.
                 /// </summary>
                 [NameInMap("SectionShowName")]
                 [Validation(Required=false)]
@@ -102,11 +102,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             ///     *   **POLICY**
             ///     *   **GROUP**
             /// 
-            /// *   If **InstanceType** is set to **WAF**, this parameter supports the following valid values:
+            /// *   If **InstanceType** is set to **WAF**, this parameter supports the following valid value:
             /// 
             ///     *   **DOMAIN**
             /// 
-            /// *   If **InstanceType** is set to other values, this parameter supports the following valid values:
+            /// *   If **InstanceType** is set to other values, this parameter supports the following valid value:
             /// 
             ///     *   **INSTANCE**
             /// </summary>
@@ -117,35 +117,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The asset type of the cloud service. Valid values:
             /// 
-            /// *   **ECS**: ECS
-            /// *   **SLB**: SLB
+            /// *   **ECS**: Elastic Compute Service (ECS)
+            /// *   **SLB**: Server Load Balancer (SLB)
             /// *   **RDS**: ApsaraDB RDS
-            /// *   **MONGODB**: MongoDB
-            /// *   **KVSTORE**: Redis
+            /// *   **MONGODB**: ApsaraDB for MongoDB (MongoDB)
+            /// *   **KVSTORE**: ApsaraDB for Redis
             /// *   **ACR**: Container Registry
-            /// *   **CSK**: ACK
-            /// *   **VPC**: VPC
+            /// *   **CSK**: Container Service for Kubernetes (ACK)
+            /// *   **VPC**: Virtual Private Cloud (VPC)
             /// *   **ACTIONTRAIL**: ActionTrail
-            /// *   **CDN**: CDN
-            /// *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
+            /// *   **CDN**: Alibaba Cloud CDN (CDN)
+            /// *   **CAS**: Certificate Management Service
             /// *   **RDC**: Apsara Devops
-            /// *   **RAM**: RAM
+            /// *   **RAM**: Resource Access Management (RAM)
             /// *   **DDOS**: Anti-DDoS
-            /// *   **WAF**: WAF
-            /// *   **OSS**: OSS
+            /// *   **WAF**: Web Application Firewall (WAF)
+            /// *   **OSS**: Object Storage Service (OSS)
             /// *   **POLARDB**: PolarDB
             /// *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
-            /// *   **MSE**: MSE
-            /// *   **NAS**: NAS
-            /// *   **SDDP**: SDDP
-            /// *   **EIP**: EIP
+            /// *   **MSE**: Microservices Engine (MSE)
+            /// *   **NAS**: Apsara File Storage NAS (NAS)
+            /// *   **SDDP**: Sensitive Data Discovery and Protection (SDDP)
+            /// *   **EIP**: Elastic IP Address (EIP)
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// The timestamp when the last check was performed. Unit: milliseconds.
+            /// The timestamp generated when the last check was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastCheckTime")]
             [Validation(Required=false)]
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? TrialPermission { get; set; }
 
             /// <summary>
-            /// The value of the cloud service provider.
+            /// The cloud service provider.
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]

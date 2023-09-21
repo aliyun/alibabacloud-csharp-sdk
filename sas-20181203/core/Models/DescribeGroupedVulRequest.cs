@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AssetType { get; set; }
 
         /// <summary>
-        /// The type of the vulnerability. This parameter is valid only for application vulnerabilities. Valid values:
+        /// The type of the vulnerability. This parameter is valid only for application vulnerabilities. Separate multiple values with commas (,). Valid values:
         /// 
         /// *   **sca**: vulnerability that is detected based on software component analysis
         /// *   **app**: application vulnerability
@@ -107,6 +107,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// 
+        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -136,14 +141,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// The type of the vulnerabilities. Valid values:
+        /// The type of the vulnerability that you want to query. Default value: cve. Valid values:
         /// 
         /// *   **cve**: Linux software vulnerability
         /// *   **sys**: Windows system vulnerability
         /// *   **cms**: Web-CMS vulnerability
         /// *   **app**: application vulnerability
-        /// *   **emg**: urgent vulnerabilities
-        /// *   **sca**: vulnerability that is detected based on software component analysis
+        /// *   **emg**: urgent vulnerability
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

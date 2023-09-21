@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig> AssetRefreshConfig { get; set; }
         public class ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig : TeaModel {
+            [NameInMap("RefreshConfigType")]
+            [Validation(Required=false)]
+            public int? RefreshConfigType { get; set; }
+
             /// <summary>
             /// The synchronization cycle. Valid values:
             /// 

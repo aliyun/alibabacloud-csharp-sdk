@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeVulListPageResponseBodyData> Data { get; set; }
         public class DescribeVulListPageResponseBodyData : TeaModel {
             /// <summary>
-            /// The CVE ID of the vulnerability.
+            /// The common vulnerabilities and exposures (CVE) ID of the vulnerability.
             /// </summary>
             [NameInMap("CveId")]
             [Validation(Required=false)]

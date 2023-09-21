@@ -45,24 +45,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DatabaseType { get; set; }
 
         /// <summary>
-        /// The policy for full backup. The value of this parameter is a JSON string that contains the following fields:
+        /// The policy for full data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:
         /// 
-        /// *   **start**: the start time of a backup task
-        /// *   **interval**: the interval of backup tasks
-        /// *   **type**: the unit of the interval
-        /// *   **days**: the days of a week on which a backup task is performed
+        /// *   **start**: the start time of a backup task.
+        /// *   **interval**: the interval of backup tasks.
+        /// *   **type**: the unit of the interval.
+        /// *   **days**: the days of a week on which a backup task is performed.
         /// </summary>
         [NameInMap("FullPlan")]
         [Validation(Required=false)]
         public string FullPlanShrink { get; set; }
 
         /// <summary>
-        /// The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:
+        /// The policy for incremental data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:
         /// 
-        /// *   **start**: the start time of a backup task
-        /// *   **interval**: the interval of backup tasks
-        /// *   **type**: the unit of the interval
-        /// *   **days**: the days of a week on which a backup task is performed
+        /// *   **start**: the start time of a backup task.
+        /// *   **interval**: the interval of backup tasks.
+        /// *   **type**: the unit of the interval.
+        /// *   **days**: the days of a week on which a backup task is performed.
         /// </summary>
         [NameInMap("IncPlan")]
         [Validation(Required=false)]

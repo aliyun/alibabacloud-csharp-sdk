@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyOperateVulRequest : TeaModel {
+        [NameInMap("From")]
+        [Validation(Required=false)]
+        public string From { get; set; }
+
         /// <summary>
         /// The details of the vulnerability. The value of this parameter is in the JSON format and contains the following fields:
         /// 

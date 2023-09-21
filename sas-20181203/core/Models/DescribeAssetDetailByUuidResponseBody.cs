@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAssetDetailByUuidResponseBody : TeaModel {
         /// <summary>
-        /// The details of the server.
+        /// The asset details.
         /// </summary>
         [NameInMap("AssetDetail")]
         [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Kernel { get; set; }
 
             /// <summary>
-            /// The media access control (MAC) addresses of the server.
+            /// The Media Access Control (MAC) addresses.
             /// </summary>
             [NameInMap("MacList")]
             [Validation(Required=false)]

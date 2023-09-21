@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeMonitorAccountsResponseBody : TeaModel {
+        /// <summary>
+        /// The IDs of the members.
+        /// </summary>
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
         public List<string> AccountIds { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

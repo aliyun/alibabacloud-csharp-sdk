@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionIdKey { get; set; }
 
         /// <summary>
-        /// The sort type of the instances.
+        /// The types of the conditions based on which the check items are sorted.
         /// </summary>
         [NameInMap("SortTypes")]
         [Validation(Required=false)]

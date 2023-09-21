@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array consisting of the alert events that are triggered by the same rule or of the same alert type.
+        /// The information about the alert events that are triggered by the same rule or of the same alert type.
         /// </summary>
         [NameInMap("SecurityEventsResponse")]
         [Validation(Required=false)]
@@ -68,47 +68,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// The alert type of the alert event. Valid values:
+            /// The type of the alert event. Valid values:
             /// 
-            /// *   Suspicious process
+            /// *   Suspicious Process
             /// *   Webshell
-            /// *   Unusual logon
-            /// *   Exception
-            /// *   Sensitive file tampering
-            /// *   Malicious process (cloud threat detection)
-            /// *   Suspicious network connection
+            /// *   Unusual Logon
+            /// *   Malicious Software
+            /// *   Sensitive File Tampering
+            /// *   Unusual Network Connection
             /// *   Other
-            /// *   Abnormal account
-            /// *   Application intrusion event
+            /// *   Suspicious Account
             /// *   Cloud threat detection
-            /// *   Precise defense
-            /// *   Application whitelist
-            /// *   Persistent webshell
-            /// *   Web application threat detection
-            /// *   Malicious script
-            /// *   Threat intelligence
-            /// *   Malicious network activity
-            /// *   Cluster exception
-            /// *   Webshell (on-premises threat detection)
-            /// *   Vulnerability exploitation
-            /// *   Malicious process (on-premises threat detection)
+            /// *   Precision defense
+            /// *   Application Whitelist
+            /// *   Persistence
+            /// *   Web Application Threat Detection
+            /// *   Malicious scripts
+            /// *   Malicious Network Activity
+            /// *   K8s Abnormal Behavior
+            /// *   Website backdoor (local engine)
+            /// *   Exploit
+            /// *   Image Scan
             /// *   Trusted exception
             /// 
-            /// For more information about alert types, see [Alerts](https://www.alibabacloud.com/help/en/security-center/latest/events-overview).
+            /// For more information about alert types, see [Overview](~~68388~~).
             /// </summary>
             [NameInMap("EventType")]
             [Validation(Required=false)]
             public string EventType { get; set; }
 
             /// <summary>
-            /// The timestamp when the alert event was last detected. Unit: milliseconds.
+            /// The timestamp generated when the alert event was last detected. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastTime")]
             [Validation(Required=false)]
             public long? LastTime { get; set; }
 
             /// <summary>
-            /// The timestamp when the alert event was first detected. Unit: milliseconds.
+            /// The timestamp generated when the alert event was first detected. Unit: milliseconds.
             /// </summary>
             [NameInMap("OccurrenceTime")]
             [Validation(Required=false)]
@@ -122,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? SecurityEventId { get; set; }
 
             /// <summary>
-            /// The UUID of the server that is affected by the alert event.
+            /// The UUID of the server that was affected by the alert event.
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

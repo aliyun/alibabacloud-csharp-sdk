@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public int? InstanceRiskCount { get; set; }
 
+                [NameInMap("Vendor")]
+                [Validation(Required=false)]
+                public int? Vendor { get; set; }
+
             }
 
             [NameInMap("InstanceCountTotal")]

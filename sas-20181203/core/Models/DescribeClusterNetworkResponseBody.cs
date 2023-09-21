@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The type of the destination node. Valid values:
                 /// 
-                /// *   **cluster**: a cluster
+                /// *   Set the value to **cluster**.
                 /// </summary>
                 [NameInMap("DstNodeType")]
                 [Validation(Required=false)]
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The type of the source node. Valid values:
                 /// 
-                /// *   **cluster**: a cluster
-                /// *   **internet**: a network node in another cluster
+                /// *   **cluster**: a cluster.
+                /// *   **internet**: a network node outside the cluster
                 /// </summary>
                 [NameInMap("SrcNodeType")]
                 [Validation(Required=false)]
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<DescribeClusterNetworkResponseBodyClusterNetworkNode> Node { get; set; }
             public class DescribeClusterNetworkResponseBodyClusterNetworkNode : TeaModel {
                 /// <summary>
-                /// The micro-segmentation switch. Valid values:
+                /// The status of the microsegmentation switch. Valid values:
                 /// 
-                /// *   **0**: The switch is turned off.
-                /// *   **1**: The switch is turned on.
+                /// *   **0**: off.
+                /// *   **1**: on.
                 /// </summary>
                 [NameInMap("CnnfSwitch")]
                 [Validation(Required=false)]
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The network type. Valid values:
                 /// 
-                /// *   **0**: classic network
-                /// *   **1**: virtual private cloud (VPC)
+                /// *   **0**: classic network.
+                /// *   **1**: virtual private cloud (VPC).
                 /// </summary>
                 [NameInMap("InterceptionType")]
                 [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The network topology switch. Valid values:
+                /// The status of the network topology switch. Valid values:
                 /// 
                 /// *   **ON**
                 /// *   **OFF**
@@ -126,11 +126,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The risk level. Valid values:
                 /// 
-                /// *   **3**: high
-                /// *   **2**: medium
-                /// *   **1**: low
-                /// *   **0**: warning
-                /// *   **-1**: unknown
+                /// *   **3**: high.
+                /// *   **2**: medium.
+                /// *   **1**: low.
+                /// *   **0**: secure.
+                /// *   **-1**: unknown.
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
@@ -139,8 +139,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The type of the node. Valid values:
                 /// 
-                /// *   **cluster**: a cluster
-                /// *   **internet**: a node in another cluster
+                /// *   **cluster**: a cluster.
+                /// *   **internet**: a network node outside the cluster.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

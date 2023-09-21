@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudAssetInstancesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details of the cloud assets.
+        /// The details of the cloud assets.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -27,63 +27,110 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmStatus { get; set; }
 
             /// <summary>
-            /// The subtype of the cloud asset. The subtype of the cloud service. Valid values:
+            /// The subtype of the cloud service. The subtype of the cloud asset. Valid values:
             /// 
             /// *   **0**: ECS
-            ///     * **0**: instance
-            ///     * **1**: disk (storage)
-            ///     * **2**: security group
+            /// 
+            ///     *   **0**: instance
+            ///     *   **1**: disk (storage)
+            ///     *   **2**: security group
+            /// 
             /// *   **1**: SLB
-            ///     * **0**: SLB
-            ///     * **1**: Application Load Balancer (ALB)
+            /// 
+            ///     *   **0**: SLB
+            ///     *   **1**: Application Load Balancer (ALB)
+            /// 
             /// *   **3**: ApsaraDB RDS
-            ///     * **0**: instance
-            /// *   **4**: MongoDB
-            ///     * **0**: instance
-            /// *   **5**: Redis
-            ///     * **0**: instance
+            /// 
+            ///     *   **0**: instance
+            /// 
+            /// *   **4**: ApsaraDB for MongoDB
+            /// 
+            ///     *   **0**: instance
+            /// 
+            /// *   **5**: ApsaraDB for Redis
+            /// 
+            ///     *   **0**: instance
+            /// 
             /// *   **6**: Container Registry
-            ///     * **1**: Enterprise Edition
-            ///     * **2**: Personal Edition
+            /// 
+            ///     *   **1**: Enterprise Edition
+            ///     *   **2**: Personal Edition
+            /// 
             /// *   **8**: ACK
-            ///     * **0**: cluster
+            /// 
+            ///     *   **0**: cluster
+            /// 
             /// *   **9**: VPC
-            ///     * **0**: NAT gateway
-            ///     * **1**:EIP
-            ///     * **2**:VPN
-            ///     * **3**:FLOW_LOG
+            /// 
+            ///     *   **0**: NAT gateway
+            ///     *   **1**: EIP
+            ///     *   **2**: VPN
+            ///     *   **3**: FLOW_LOG
+            /// 
             /// *   **11**: ActionTrail
-            ///     * **0**: trail
-            /// *   **12**: CDN
-            ///     * **0**: instance
+            /// 
+            ///     *   **0**: trail
+            /// 
+            /// *   **12**: Alibaba Cloud CDN
+            /// 
+            ///     *   **0**: instance
+            /// 
             /// *   **13**: Certificate Management Service (formerly SSL Certificates Service)
-            ///      * **0**: certificate
+            /// 
+            ///     *   **0**: certificate
+            /// 
             /// *   **14**: Apsara Devops
-            ///     * **0**: organization
+            /// 
+            ///     *   **0**: organization
+            /// 
             /// *   **16**: Anti-DDoS
-            ///     * **0**: instance
+            /// 
+            ///     *   **0**: instance
+            /// 
             /// *   **17**: WAF
-            ///     * **0**: domain name
+            /// 
+            ///     *   **0**: domain name
+            /// 
             /// *   **18**: OSS
-            ///     * **0**:Bucket
+            /// 
+            ///     *   **0**: bucket
+            /// 
             /// *   **19**: PolarDB
-            ///     * **0**: cluster
+            /// 
+            ///     *   **0**: cluster
+            /// 
             /// *   **20**: ApsaraDB RDS for PostgreSQL
-            ///     * **0**: instance
+            /// 
+            ///     *   **0**: instance
+            /// 
             /// *   **21**: MSE
-            ///     * **0**: cluster
+            /// 
+            ///     *   **0**: cluster
+            /// 
             /// *   **22**: NAS
-            ///     * **0**: file system
+            /// 
+            ///     *   **0**: file system
+            /// 
             /// *   **23**: DSC
-            ///     * **0**: instance
+            /// 
+            ///     *   **0**: instance
+            /// 
             /// *   **24**: EIP
-            ///     * **0**: Anycast EIP
+            /// 
+            ///     *   **0**: Anycast EIP
+            /// 
             /// *   **25**: IDaaS EIAM
-            ///     * **0**: instance
+            /// 
+            ///     *   **0**: instance
+            /// 
             /// *   **26**: PolarDB-X
-            ///     * **0**: instance
+            /// 
+            ///     *   **0**: instance
+            /// 
             /// *   **27**: Elasticsearch
-            ///     * **0**: instance
+            /// 
+            ///     *   **0**: instance
             /// </summary>
             [NameInMap("AssetSubType")]
             [Validation(Required=false)]
@@ -97,18 +144,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AssetSubTypeName { get; set; }
 
             /// <summary>
-            /// The type of the asset. Valid values:
+            /// The type of the cloud asset. Valid values:
             /// 
             /// *   **0**: Elastic Compute Service (ECS)
             /// *   **1**: Server Load Balancer (SLB)
             /// *   **3**: ApsaraDB RDS
-            /// *   **4**: ApsaraDB for MongoDB (MongoDB)
-            /// *   **5**: ApsaraDB for Redis (Redis)
+            /// *   **4**: ApsaraDB for MongoDB
+            /// *   **5**: ApsaraDB for Redis
             /// *   **6**: Container Registry
             /// *   **8**: Container Service for Kubernetes (ACK)
             /// *   **9**: Virtual Private Cloud (VPC)
             /// *   **11**: ActionTrail
-            /// *   **12**: Alibaba Cloud CDN (CDN)
+            /// *   **12**: Alibaba Cloud CDN
             /// *   **13**: Certificate Management Service (formerly SSL Certificates Service)
             /// *   **14**: Apsara Devops
             /// *   **16**: Anti-DDoS
@@ -120,7 +167,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **22**: Apsara File Storage NAS (NAS)
             /// *   **23**: Data Security Center (DSC)
             /// *   **24**: Elastic IP Address (EIP)
-            /// *   **25**: IDaaS EIAM
+            /// *   **25**: Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM)
             /// *   **26**: PolarDB-X
             /// *   **27**: Elasticsearch
             /// </summary>
@@ -157,14 +204,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The public IP address of the instance.
+            /// The public IP address of the cloud asset.
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// The region ID of the cloud asset.
+            /// The ID of the region to which the cloud asset belongs.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -188,13 +235,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SecurityInfo { get; set; }
 
             /// <summary>
-            /// The type of the cloud asset by source. Valid values:
+            /// The service provider (SP) of the cloud asset. Valid values:
             /// 
-            /// *   **0**: an asset provided by Alibaba Cloud
+            /// *   **0**: a cloud asset provided by Alibaba Cloud
             /// *   **1**: a third-party cloud asset
-            /// *   **2**: an asset in a data center
+            /// *   **2**: a cloud asset in a data center
             /// *   **3**, **4**, **5**, and **7**: other cloud asset
-            /// *   **8**: a lightweight asset
+            /// *   **8**: a lightweight cloud asset
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]

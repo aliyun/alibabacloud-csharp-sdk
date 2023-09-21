@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListInterceptionTargetPageResponseBodyRuleTargetList> RuleTargetList { get; set; }
         public class ListInterceptionTargetPageResponseBodyRuleTargetList : TeaModel {
             /// <summary>
-            /// The name of the application to which the network object belongs.
+            /// The name of the application of the network object.
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// An array that consists of the images of the network object.
+            /// The images of the network object.
             /// </summary>
             [NameInMap("ImageList")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The rule type. Valid values:
+            /// The type of the rule. Valid value:
             /// 
             /// *   customize: custom rule
             /// </summary>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleType { get; set; }
 
             /// <summary>
-            /// An array that consists of the labels specified for the network object.
+            /// The tags specified for the network object.
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// The type of the network object. Valid values:
+            /// The type of the network object. Valid value:
             /// 
             /// *   IMAGE
             /// </summary>

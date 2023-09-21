@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// The starting progress percentage of web tamper proofing. Valid values: 0 to 100.
+            /// The percentage of the starting progress of web tamper proofing. Valid values: 0 to 100.
             /// </summary>
             [NameInMap("Percent")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// The error message for web tamper proofing. Valid values:
+            /// The exception details of web tamper proofing. Valid values:
             /// 
             /// *   **client offline**: The Security Center agent is offline.
             /// *   **timeout**: The connection timed out.
@@ -108,8 +108,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The protection status of the server. Valid values:
             /// 
-            /// *   **on**: protected
-            /// *   **off**: unprotected
+            /// *   **on**: The server is protected.
+            /// *   **off**: The server is not protected.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

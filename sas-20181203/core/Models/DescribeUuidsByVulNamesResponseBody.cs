@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics> MachineInfoStatistics { get; set; }
         public class DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics : TeaModel {
             /// <summary>
-            /// The ID of the server.
+            /// The instance ID.
             /// </summary>
             [NameInMap("MachineInstanceId")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MachineName { get; set; }
 
             /// <summary>
-            /// The name of the operating system that the server runs.
+            /// The operating system that the server runs.
             /// </summary>
             [NameInMap("Os")]
             [Validation(Required=false)]
@@ -67,6 +67,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of vulnerabilities on the server.
+        /// </summary>
         [NameInMap("VulCount")]
         [Validation(Required=false)]
         public int? VulCount { get; set; }

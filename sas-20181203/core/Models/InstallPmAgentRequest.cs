@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The type of the client.
+        /// 
+        /// *   **aliyun_assist**: Cloud Assistant client
         /// *   **aliyun_monitor**: CloudMonitor client
         /// </summary>
         [NameInMap("Type")]

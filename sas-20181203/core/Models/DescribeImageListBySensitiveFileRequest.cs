@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the container image.
+        /// The ID of the specified container image.
         /// 
-        /// > You can call the [ListRepository](~~451339~~) operation to query the IDs of container images from the value of the InstanceId response parameter.
+        /// > You can call the [ListRepository](~~451339~~) operation to obtain the IDs of container images from the value of the **InstanceId** response parameter.
         /// </summary>
         [NameInMap("RepoInstanceId")]
         [Validation(Required=false)]
@@ -88,120 +88,120 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> ScanRange { get; set; }
 
         /// <summary>
-        /// The alert type of the sensitive file. Valid values:
+        /// The type of the alert for the sensitive file. Valid values:
         /// 
-        /// *   **npm_token**: NPM Token
-        /// *   **ftp_cfg**: FTP Config
-        /// *   **google\_oauth_key**: Google OAuth Key
-        /// *   **planetscale_passwd**: Planetscale password
-        /// *   **github\_ssh_key**: Github SSH Key
-        /// *   **msbuild\_publish_profile**: MSBuild publish profile
-        /// *   **fastly\_cdn_token**: Fastly CDN Token
-        /// *   **ssh\_private_key**: SSH Private Key
-        /// *   **aws_cli**: AWS CLI Credentials
-        /// *   **cpanel\_proftpd**: cPanel ProFTPd Credential
-        /// *   **postgresql_passwd**: PostgreSQl Passwd
-        /// *   **discord\_client_cred**: Discord Client Credential
-        /// *   **rails_database**: Rails Database Config
-        /// *   **aws\_access_key**: AWS Access Key
-        /// *   **esmtp_cfg**: ESMTP Config
-        /// *   **docker\_registry_cfg**: Docker Registry Config
-        /// *   **pem**: PEM
-        /// *   **common_cred**: Common Credential
-        /// *   **sftp_cfg**: SFTP Config
-        /// *   **grafana_token**: Grafana Token
-        /// *   **slack_token**: Slack Token
-        /// *   **ec\_private_key**: EC Private Key
-        /// *   **pypi_token**: PyPI Token
-        /// *   **finicity_token**: Finicity Token
-        /// *   **k8s\_client_key**: Kubernetes Client Key
-        /// *   **git_cfg**: Git Config
-        /// *   **django_key**: Django Key
-        /// *   **jenkins_ssh**: Jenkins SSH Config
-        /// *   **openssh\_private_key**: OPENSSH Private Key
-        /// *   **square_oauth**: Square OAuth Token
-        /// *   **typeform_token**: Typeform Token
-        /// *   **common\_database_cfg**: Common Database Config
-        /// *   **wordpress\_database_cfg**: Wordpress Database Config
-        /// *   **googlecloud\_api_key**: Google Cloud API Key
-        /// *   **vscode_sftp**: VSCode SFTP Config
-        /// *   **apache_htpasswd**: Apache htpasswd
-        /// *   **planetscale_token**: Planetscale Token
-        /// *   **contentful\_preview_token**: Contentful Preview Token
-        /// *   **php\_database_cfg**: PHP Database Config
-        /// *   **atom\_remote_sync**: Atom Remote Sync Config
-        /// *   **aws\_session_token**: AWS Session Token
-        /// *   **atom\_sftp_cfg**: Atom SFTP Config
-        /// *   **asana\_client\_private_key**: Asana Client Private Key
-        /// *   **tencentcloud_ak**: Tencent Cloud SecretId
-        /// *   **rsa\_private_key**: RSA Private Key
-        /// *   **github\_personal_token**: Github Personal Token
-        /// *   **pgp**: PGP
-        /// *   **stripe_skpk**: Stripe Secret Key
-        /// *   **square_token**: Square Token
-        /// *   **rails_carrierwave**: Rails Carrierwave Credential
-        /// *   **dbeaver\_database_cfg**: DBeaver Database Config
-        /// *   **robomongo_cred**: Robomongo Credential
-        /// *   **github\_oauth_token**: Github OAuth Token
-        /// *   **pulumi_token**: Pulumi Token
-        /// *   **ventrilo_voip**: Ventrilo VoIP Server Config
-        /// *   **macos_keychain**: macOS Keychain
-        /// *   **amazon\_mws_token**: Amazon MWS Token
-        /// *   **dynatrace_token**: Dynatrace Token
-        /// *   **java_keystore**: Java Keystore
-        /// *   **microsoft_sdf**: Microsoft SDF
-        /// *   **kubernetes\_dashboard_cred**: Kubernetes Dashboard User Credential
-        /// *   **atlassian_token**: Atlassian Token
-        /// *   **rdp**: RDP
-        /// *   **mailgun_key**: Mailgun Webhook Signing Key
-        /// *   **mailchimp\_api_key**: Mailchimp API Key
-        /// *   **netrc_cfg**: .netrc config
-        /// *   **openvpn_cfg**: OpenVPN Config
-        /// *   **github\_refresh_token**: Github Refresh Token
-        /// *   **salesforce**: Salesforce Credential
-        /// *   **sendinblue**: Sendinblue Token
-        /// *   **pkcs\_private_key**: PKCS Private Key
-        /// *   **rubyonrails_passwd**: Ruby on Rails Passwd
-        /// *   **filezilla_ftp**: FileZilla FTP Config
-        /// *   **databricks_token**: Databricks Token
-        /// *   **gitLab\_personal_token**: GitLab Personal Token
-        /// *   **rails\_master_key**: Rails Master Key
-        /// *   **sqlite**: SQLite3/SQLite Database
-        /// *   **firefox_logins**: Firefox Login Config
-        /// *   **mailgun\_private_token**: Mailgun Private Token
-        /// *   **joomla_cfg**: Joomla Config
-        /// *   **hashicorp\_terraform_token**: Hashicorp Terraform Token
-        /// *   **jetbrains_ides**: Jetbrains IDEs Config
-        /// *   **heroku\_api_key**: Heroku API key
-        /// *   **messagebird_token**: MessageBird Token
-        /// *   **github\_app_token**: Github App Token
-        /// *   **hashicorp\_vault_token**: Hashicorp Vault Token
-        /// *   **pgp\_private_key**: PGP Private Key
-        /// *   **sshpasswd**: SSH password
-        /// *   **huaweicloud_ak**: Huaei Cloud Access Key
-        /// *   **aws_s3cmd**: AWS S3cmd Config
-        /// *   **php_config**: php Config
-        /// *   **common\_private_key**: Common Private Key Type
-        /// *   **microsoft_mdf**: Microsoft MDF
-        /// *   **mediawiki_cfg**: MediaWiki Config
-        /// *   **jenkins_cred**: Jenkins Credential
-        /// *   **rubygems_cred**: Rubygems Credential
-        /// *   **clojars_token**: Clojars Token
-        /// *   **phoenix\_web_passwd**: Phoenix Web Credential
-        /// *   **puttygen\_private_key**: PuTTYgen Private Key
-        /// *   **google\_oauth_token**: Google Oauth Token
-        /// *   **rubyonrails_cfg**: Ruby On Rails Database Config
-        /// *   **lob\_api_key**: Lob API Key
-        /// *   **pkcs_cred**: PKCS#12
-        /// *   **otr\_private_key**: OTR Private Key
-        /// *   **contentful\_delivery_token**: Contentful Delivery Token
-        /// *   **digital\_ocean_tugboat**: Digital Ocean Tugboat Config
-        /// *   **dsa\_private_key**: DSA Private Key
-        /// *   **rails\_app_token**: Rails App Token
-        /// *   **git_cred**: Git User Credential
-        /// *   **newrelic\_api_key**: New Relic User API Key
-        /// *   **github_hub**: Github Token
-        /// *   **rubygem**: Rubygem Token
+        /// *   **npm_token**: npm access token.
+        /// *   **ftp_cfg**: FTP configuration.
+        /// *   **google_oauth_key**: Google OAuth key.
+        /// *   **planetscale_passwd**: PlanetScale password.
+        /// *   **github_ssh_key**: Github SSH key.
+        /// *   **msbuild_publish_profile**: MSBuild publish profile.
+        /// *   **fastly_cdn_token**: Fastly CDN token.
+        /// *   **ssh_private_key**: SSH private key.
+        /// *   **aws_cli**: Amazon Web Services (AWS) CLI credential.
+        /// *   **cpanel_proftpd**: cPanel ProFTPD credential.
+        /// *   **postgresql_passwd**: PostgreSQL password file.
+        /// *   **discord_client_cred**: Discord client credential.
+        /// *   **rails_database**: Rails database configuration.
+        /// *   **aws_access_key**: AWS access key.
+        /// *   **esmtp_cfg**: configuration of mail server over Extended Simple Mail Transfer Protocol (ESMTP).
+        /// *   **docker_registry_cfg**: configuration of a Docker image repository.
+        /// *   **pem**: Privacy-Enhanced Mail (PEM).
+        /// *   **common_cred**: common credential.
+        /// *   **sftp_cfg**: configuration of connection over Secure File Transfer Protocol (SFTP).
+        /// *   **grafana_token**: Grafana token.
+        /// *   **slack_token**: Slack token.
+        /// *   **ec_private_key**: Elliptic Curve (EC) private key.
+        /// *   **pypi_token**: Python Package Index (PyPI) token.
+        /// *   **finicity_token**: Finicity token.
+        /// *   **k8s_client_key**: private key for the Kubernetes client.
+        /// *   **git_cfg**: Git configuration.
+        /// *   **django_key**: Django key.
+        /// *   **jenkins_ssh**: SSH configuration file for Jenkins.
+        /// *   **openssh_private_key**: OpenSSH private key.
+        /// *   **square_oauth**: Square OAuth credential.
+        /// *   **typeform_token**: Typeform token.
+        /// *   **common_database_cfg**: configuration of general database connection.
+        /// *   **wordpress_database_cfg**: WordPress database configuration.
+        /// *   **googlecloud_api_key**: API key for Google Cloud.
+        /// *   **vscode_sftp**: VSCode SFTP configuration.
+        /// *   **apache_htpasswd**: Apache htpasswd.
+        /// *   **planetscale_token**: PlanetScale token.
+        /// *   **contentful_preview_token**: preview token for Contentful.
+        /// *   **php_database_cfg**: database password for a PHP application.
+        /// *   **atom_remote_sync**: Atom remote synchronization configuration.
+        /// *   **aws_session_token**: AWS session token.
+        /// *   **atom_sftp_cfg**: Atom SFTP configuration.
+        /// *   **asana_client_private_key**: private key for the Asana client.
+        /// *   **tencentcloud_ak**: secret ID of a third-party cloud.
+        /// *   **rsa_private_key**: Rivest-Shamir-Adleman (RSA) private key.
+        /// *   **github_personal_token**: personal access token for GitHub.
+        /// *   **pgp**: Pretty Good Privacy (PGP) encrypted file.
+        /// *   **stripe_skpk**: Stripe secret key.
+        /// *   **square_token**: Square access token.
+        /// *   **rails_carrierwave**: Rails Carrierwave credential.
+        /// *   **dbeaver_database_cfg**: DBeaver database configuration.
+        /// *   **robomongo_cred**: RoboMongo credential.
+        /// *   **github_oauth_token**: OAuth access token for GitHub.
+        /// *   **pulumi_token**: Pulumi token.
+        /// *   **ventrilo_voip**: configuration of a Ventrilo VoIP server.
+        /// *   **macos_keychain**: macOS keychain.
+        /// *   **amazon_mws_token**: Amazon MWS token.
+        /// *   **dynatrace_token**: Dynatrace token.
+        /// *   **java_keystore**: Java KeyStore (JKS).
+        /// *   **microsoft_sdf**: Microsoft SQL Server Compact Edition (CE) database.
+        /// *   **kubernetes_dashboard_cred**: user credential for Kubernetes Dashboard.
+        /// *   **atlassian_token**: Atlassian token.
+        /// *   **rdp**: remote desktop protocol (RDP).
+        /// *   **mailgun_key**: Mailgun webhook signing key.
+        /// *   **mailchimp_api_key**: API key for Mailchimp.
+        /// *   **netrc_cfg**: .netrc configuration file.
+        /// *   **openvpn_cfg**: configuration of the OpenVPN client.
+        /// *   **github_refresh_token**: GitHub refresh token.
+        /// *   **salesforce**: Salesforce credential.
+        /// *   **salesforce**: Sendinblue token.
+        /// *   **pkcs_private_key**: PKCS#12 private key.
+        /// *   **rubyonrails_passwd**: Ruby on Rails password file.
+        /// *   **filezilla_ftp**: FileZilla FTP configuration.
+        /// *   **databricks_token**: Databricks token.
+        /// *   **gitLab_personal_toke**: personal access token for GitLab.
+        /// *   **rails_master_key**: Rails master key.
+        /// *   **sqlite**: SQLite3 or SQLite database.
+        /// *   **firefox_logins**: Firefox logon configuration.
+        /// *   **mailgun_private_token**: Mailgun private token.
+        /// *   **joomla_cfg**: Joomla configuration.
+        /// *   **hashicorp_terraform_token**: HashiCorp Terraform token.
+        /// *   **jetbrains_ides**: JetBrains IDEs configuration.
+        /// *   **heroku_api_key**: API key for Heroku.
+        /// *   **messagebird_token**: MessageBird token.
+        /// *   **github_app_token**: Github app token.
+        /// *   **hashicorp_vault_token**: HashiCorp Vault token.
+        /// *   **pgp_private_key**: PGP private key.
+        /// *   **sshpasswd**: SSH password.
+        /// *   **huaweicloud_ak**: secret access key of a third-party cloud.
+        /// *   **aws_s3cmd**: AWS S3cmd configuration.
+        /// *   **php_config**: PHP configuration.
+        /// *   **common_private_key**: common private key.
+        /// *   **microsoft_mdf**: Microsoft SQL Server database.
+        /// *   **mediawiki_cfg**: MediaWiki configuration.
+        /// *   **jenkins_cred**: Jenkins credential.
+        /// *   **rubygems_cred**: RubyGems credential.
+        /// *   **clojars_token**: Clojars token.
+        /// *   **phoenix_web_passwd**: Phoenix web credential.
+        /// *   **puttygen_private_key**: PuTTYgen private key.
+        /// *   **google_oauth_token**: Google OAuth access token.
+        /// *   **rubyonrails_cfg**: Ruby On Rails database configuration.
+        /// *   **lob_api_key**: Lob API key for Lob.
+        /// *   **pkcs_cred**: PKCS#12 certificate.
+        /// *   **otr_private_key**: Off-the-Record Messaging (OTR) private key.
+        /// *   **contentful_delivery_token**: Contentful delivery token.
+        /// *   **digital_ocean_tugboat**: DigitalOcean Tugboat configuration.
+        /// *   **dsa_private_key**: Digital Signature Algorithm (DSA) private key.
+        /// *   **rails_app_token**: app token for Rails.
+        /// *   **git_cred**: user credential for Git.
+        /// *   **newrelic_api_key**: User API key for New Relic.
+        /// *   **github_hub**: hub configuration for storing GitHub tokens.
+        /// *   **rubygem**: RubyGem token.
         /// </summary>
         [NameInMap("SensitiveFileKey")]
         [Validation(Required=false)]

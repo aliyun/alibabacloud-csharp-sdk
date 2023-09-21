@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Necessity { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// The number of entries per page. Default value: **10**.
         /// </summary>
@@ -97,6 +101,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
+        [NameInMap("StatusList")]
+        [Validation(Required=false)]
+        public string StatusList { get; set; }
+
         /// <summary>
         /// The type of the vulnerability. Valid values:
         /// 
@@ -110,6 +118,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("UseNextToken")]
+        [Validation(Required=false)]
+        public bool? UseNextToken { get; set; }
 
         /// <summary>
         /// The UUIDs of the servers on which you want to query the vulnerabilities. Separate multiple UUIDs with commas (,).

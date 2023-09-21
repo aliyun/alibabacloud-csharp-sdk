@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the baseline check policies.
+        /// The details of the baseline check policies.
         /// </summary>
         [NameInMap("Strategies")]
         [Validation(Required=false)]
         public List<DescribeStrategyResponseBodyStrategies> Strategies { get; set; }
         public class DescribeStrategyResponseBodyStrategies : TeaModel {
             /// <summary>
-            /// An array consisting of the assets to which the baseline check policy is applied.
+            /// The details of the assets to which the baseline check policy is applied.
             /// </summary>
             [NameInMap("ConfigTargets")]
             [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// Indicates whether the baseline check policy is applied to the asset group. Valid values:
                 /// 
-                /// *   **add**: yes
-                /// *   **del**: no
+                /// *   **add**: The baseline check policy is applied to the asset group.
+                /// *   **del**: the baseline check policy is not applied to the asset group.
                 /// </summary>
                 [NameInMap("Flag")]
                 [Validation(Required=false)]
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the baseline check policy. Valid values:
             /// 
-            /// *   **common**: standard baseline check policy
-            /// *   **custom**: custom baseline check policy
+            /// *   **common**
+            /// *   **custom**
             /// </summary>
             [NameInMap("CustomType")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? EcsCount { get; set; }
 
             /// <summary>
-            /// The time when the baseline check based on the baseline check policy ends.
+            /// The end time of the baseline check policy.
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -110,8 +110,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the baseline check policy. Valid values:
             /// 
-            /// *   **1**: disabled
-            /// *   **2**: enabled
+            /// *   **1**: not executed
+            /// *   **2**: executing
             /// </summary>
             [NameInMap("ExecStatus")]
             [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The proportion of risk items to all baseline check items in the baseline check result.
+            /// The proportion of risky baselines in the baseline check result.
             /// </summary>
             [NameInMap("PassRate")]
             [Validation(Required=false)]
@@ -153,17 +153,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RiskCount { get; set; }
 
             /// <summary>
-            /// The time when the baseline check based on the baseline check policy starts.
+            /// The start time of the baseline check policy.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The source of the baseline check policy. Valid values:
+            /// The source type of the baseline check policy. Valid values:
             /// 
-            /// *   **1**: built-in policy, which indicates that the baseline check policy is provided and performed by Security Center by default.
-            /// *   **2**: user-defined policy, which can be a standard or custom baseline check policy.
+            /// *   **1**: indicates a built-in policy provided and performed by Security Center by default.
+            /// *   **2**: indicates a user-defined policy. It can be a standard or custom baseline check policy.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

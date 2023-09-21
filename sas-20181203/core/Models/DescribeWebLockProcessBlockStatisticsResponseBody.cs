@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeWebLockProcessBlockStatisticsResponseBodyList> List { get; set; }
         public class DescribeWebLockProcessBlockStatisticsResponseBodyList : TeaModel {
             /// <summary>
-            /// The number of processes on the current page.
+            /// The number of processes that are returned on the current page.
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array consisting of the assets to which the baseline check policy is applied.
+        /// The information about the assets to which the baseline check policy is applied.
         /// </summary>
         [NameInMap("StrategyTargets")]
         [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether the baseline check policy is applied to the asset group. Valid values:
             /// 
-            /// *   **add**: yes
-            /// *   **del**: no
+            /// *   **add**: The baseline check policy is applied to the asset group.
+            /// *   **del**: the baseline check policy is not applied to the asset group.
             /// </summary>
             [NameInMap("Flag")]
             [Validation(Required=false)]

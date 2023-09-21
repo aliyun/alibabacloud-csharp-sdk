@@ -27,7 +27,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The UUIDs of the servers. Separate multiple UUIDs with commas (,).
+        /// The UUIDs of servers. Separate multiple UUIDs with commas (,).
+        /// 
+        /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

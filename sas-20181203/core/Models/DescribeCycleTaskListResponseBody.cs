@@ -17,52 +17,52 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeCycleTaskListResponseBodyCycleScheduleResponseList> CycleScheduleResponseList { get; set; }
         public class DescribeCycleTaskListResponseBodyCycleScheduleResponseList : TeaModel {
             /// <summary>
-            /// The ID of the task configuration.
+            /// The configuration ID.
             /// </summary>
             [NameInMap("ConfigId")]
             [Validation(Required=false)]
             public string ConfigId { get; set; }
 
             /// <summary>
-            /// Indicates whether the task is enabled. Valid values:
+            /// Indicates whether the configuration for the task interval was enabled. Valid values:
             /// 
-            /// *   **1**: yes
-            /// *   **0**: no
+            /// *   **1**: enabled.
+            /// *   **0**: disabled.
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public int? Enable { get; set; }
 
             /// <summary>
-            /// The first time when the task starts.
+            /// The time when the task first started.
             /// </summary>
             [NameInMap("FirstDateStr")]
             [Validation(Required=false)]
             public long? FirstDateStr { get; set; }
 
             /// <summary>
-            /// The interval of the task.
+            /// The interval between which two consecutive tasks are run.
             /// </summary>
             [NameInMap("IntervalPeriod")]
             [Validation(Required=false)]
             public int? IntervalPeriod { get; set; }
 
             /// <summary>
-            /// The ID of the task when the task last runs.
+            /// The ID of the last task.
             /// </summary>
             [NameInMap("LastTaskId")]
             [Validation(Required=false)]
             public string LastTaskId { get; set; }
 
             /// <summary>
-            /// The next time when the task starts. The value is a UNIX timestamp. Unit: milliseconds.
+            /// The time when the next task starts. The value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>
             [NameInMap("NextStartTimeStr")]
             [Validation(Required=false)]
             public long? NextStartTimeStr { get; set; }
 
             /// <summary>
-            /// The additional information.
+            /// The extended information.
             /// </summary>
             [NameInMap("Param")]
             [Validation(Required=false)]
@@ -71,22 +71,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The unit of the scan interval. Valid values:
             /// 
-            /// *   **day**: days
-            /// *   **hour**: hours
+            /// *   **day**
+            /// *   **hour**
             /// </summary>
             [NameInMap("PeriodUnit")]
             [Validation(Required=false)]
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// The period of time before the task ends. Unit: hours.
+            /// The end time of the task. The time must be a time frame.
             /// </summary>
             [NameInMap("TargetEndTime")]
             [Validation(Required=false)]
             public int? TargetEndTime { get; set; }
 
             /// <summary>
-            /// The period of time before the task starts for the next time. Unit: hours.
+            /// The start time of the task. The start time must be a time frame.
             /// </summary>
             [NameInMap("TargetStartTime")]
             [Validation(Required=false)]

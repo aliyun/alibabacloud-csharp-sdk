@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The configuration time. Unit: hours.
         /// 
-        /// >  The value **0** indicates that asset fingerprint collection is disabled for this type of asset.
+        /// >  A value **0** indicates that asset fingerprint collection is disabled for this type of asset.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]

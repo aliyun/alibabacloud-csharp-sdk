@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetOperations { get; set; }
 
         /// <summary>
-        /// The dimension based on which you want to configure the feature. Valid values:
+        /// The dimension based on which the asset is selected. Valid values:
         /// 
         /// *   **uuid**: the UUID of the server
         /// *   **Cluster**: the ID of the cluster
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The type of the feature. Valid values:
         /// 
         /// *   **alidetect-scan-enable**: local file detection
-        /// *   **ACTION-TRIAL-PERMISSION**: data delivery of ActionTrail
+        /// *   **ACTION-TRIAL-PERMISSION**: data delivery to ActionTrail
         /// *   **alidetect**: local file detection engine
-        /// *   **container\_prevent\_escape**: container escape prevention
-        /// *   **image\_repo**: repository image scan
-        /// *   **proc\_filter\_switch**: log filtering
+        /// *   **container_prevent_escape**: container escape prevention
+        /// *   **image_repo**: repository image scan
+        /// *   **proc_filter_switch**: log filtering
         /// *   **agentless**: agentless detection
         /// *   **rasp**: application protection
         /// *   **sensitiveFile**: sensitive file detection

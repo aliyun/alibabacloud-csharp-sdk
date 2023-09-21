@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListAvailableHoneypotResponseBodyData> Data { get; set; }
         public class ListAvailableHoneypotResponseBodyData : TeaModel {
             /// <summary>
-            /// The display name of the image that is used for the honeypot.
+            /// The display name of the image.
             /// </summary>
             [NameInMap("HoneypotImageDisplayName")]
             [Validation(Required=false)]
             public string HoneypotImageDisplayName { get; set; }
 
             /// <summary>
-            /// The ID of the image that is used for the honeypot.
+            /// The ID of the image.
             /// </summary>
             [NameInMap("HoneypotImageId")]
             [Validation(Required=false)]
@@ -52,21 +52,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotImageName { get; set; }
 
             /// <summary>
-            /// The type of the image that is used for the honeypot.
+            /// The type of the image.
             /// </summary>
             [NameInMap("HoneypotImageType")]
             [Validation(Required=false)]
             public string HoneypotImageType { get; set; }
 
             /// <summary>
-            /// The version of the image that is used for the honeypot.
+            /// The version of the image.
             /// </summary>
             [NameInMap("HoneypotImageVersion")]
             [Validation(Required=false)]
             public string HoneypotImageVersion { get; set; }
 
             /// <summary>
-            /// The port that is supported by the honeypot. The value is in the JSON format. The value contains the following fields:
+            /// The port that is supported by the honeypot. The value is in the JSON format. Valid values:
             /// 
             /// *   **log_type**: the log type
             /// *   **proto**: the supported protocol

@@ -74,13 +74,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// 
             /// *   **remarkItemName**: the aggregation item of the asset fingerprints. Fuzzy match is supported.
             /// 
-            /// > 
-            /// 
-            /// *   If **Biz** is set to **web_server**, **remarkItemName** specifies a domain name.
-            /// 
-            /// *   If **Biz** is set to **lkm**, **remarkItemName** specifies a module name.
-            /// 
-            /// *   If **Biz** is set to **autorun**, **remarkItemName** specifies the path to a startup item.
+            /// > *   If **Biz** is set to **web_server**, **remarkItemName** specifies a domain name. 
+            /// > *   If **Biz** is set to **lkm**, **remarkItemName** specifies a module name.
+            /// > *   If **Biz** is set to **autorun**, **remarkItemName** specifies the path to a startup item.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

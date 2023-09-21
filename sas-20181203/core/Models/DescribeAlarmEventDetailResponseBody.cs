@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAlarmEventDetailResponseBody : TeaModel {
         /// <summary>
-        /// The details about the alert event.
+        /// The details of the alert event.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmEventDesc { get; set; }
 
             /// <summary>
-            /// The unique ID of the alert event.
+            /// The unique identifier of the alert event.
             /// 
-            /// >  To query the details about an alert event, you must specify the unique ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the unique IDs of alert events.
+            /// > To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the identifier.
             /// </summary>
             [NameInMap("AlarmUniqueInfo")]
             [Validation(Required=false)]
@@ -81,21 +81,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// An array consisting of the value that is used to trace the alert event.
+                /// The value that is used to trace the alert event.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public List<DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue> Value { get; set; }
                 public class DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue : TeaModel {
                     /// <summary>
-                    /// The name of the field that displays tracing information.
+                    /// The name of the field that displays the tracing information.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The type of the field that displays tracing information. Valid values:
+                    /// The type of the field that displays the tracing information. Valid values:
                     /// 
                     /// *   **text**
                     /// *   **html**
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// The value of the field that displays tracing information.
+                    /// The value of the field that displays the tracing information.
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]

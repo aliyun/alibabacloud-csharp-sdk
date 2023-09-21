@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAlarmEventDetailRequest : TeaModel {
         /// <summary>
-        /// The unique ID of the alert event.
+        /// The unique identifier of the alert event.
         /// 
-        /// >  To query the details of an alert event, you must specify the unique ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the unique IDs of alert events.
+        /// > To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the identifier.
         /// </summary>
         [NameInMap("AlarmUniqueInfo")]
         [Validation(Required=false)]

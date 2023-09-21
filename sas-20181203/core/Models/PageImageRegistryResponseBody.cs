@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<PageImageRegistryResponseBodyList> List { get; set; }
         public class PageImageRegistryResponseBodyList : TeaModel {
             /// <summary>
-            /// The blacklist.
+            /// The IP address blacklist.
             /// </summary>
             [NameInMap("BlackList")]
             [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.
+            /// The time when the image repository was created. The time is in the yyyy-MM-dd HH:mm:ss format.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The update time. The time is in the yyyy-MM-dd HH:mm:ss format.
+            /// The time when the image repository was updated. The time is in the yyyy-MM-dd HH:mm:ss format.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The network type. Valid values:
             /// 
-            /// *   **1**: Internet
-            /// *   **2**: Virtual Private Cloud (VPC)
+            /// *   **1**: Internet.
+            /// *   **2**: virtual private cloud (VPC).
             /// </summary>
             [NameInMap("NetType")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// The number of days during which assets can be retained.
+            /// The number of days for which assets are retained.
             /// </summary>
             [NameInMap("PersistenceDay")]
             [Validation(Required=false)]
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the protocol. Valid values:
             /// 
-            /// *   **1**: HTTP
-            /// *   **2**: HTTPS
+            /// *   **1**: HTTP.
+            /// *   **2**: HTTPS.
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
@@ -123,10 +123,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the image repository. Valid values:
             /// 
-            /// *   **acr**: Container Registry
-            /// *   **harbor**: Harbor
-            /// *   **quay**: Quay
-            /// *   **CI/CD**: Jenkins
+            /// *   **acr**: Container Registry.
+            /// *   **harbor**: Harbor.
+            /// *   **quay**: Quay.
+            /// *   **CI/CD**: Jenkins.
             /// </summary>
             [NameInMap("RegistryType")]
             [Validation(Required=false)]
@@ -154,14 +154,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// The ID of the VPC.
+            /// The VPC ID.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
             /// <summary>
-            /// The whitelist.
+            /// The IP address whitelist.
             /// </summary>
             [NameInMap("WhiteList")]
             [Validation(Required=false)]

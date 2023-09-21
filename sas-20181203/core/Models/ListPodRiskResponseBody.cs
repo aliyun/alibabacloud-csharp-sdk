@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// The timestamp when the pod was created. Unit: milliseconds.
+            /// The timestamp that indicates the time when the pod was created. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HcCount { get; set; }
 
             /// <summary>
-            /// The ID of the node.
+            /// The instance ID of the node.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CloudAssetType { get; set; }
 
+        [NameInMap("Vendor")]
+        [Validation(Required=false)]
+        public int? Vendor { get; set; }
+
     }
 
 }

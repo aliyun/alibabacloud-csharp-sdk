@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeVpcListResponseBodyVpcList> VpcList { get; set; }
         public class DescribeVpcListResponseBodyVpcList : TeaModel {
             /// <summary>
-            /// The number of ECS instances.
+            /// The number of Elastic Compute Service (ECS) instances.
             /// </summary>
             [NameInMap("EcsCount")]
             [Validation(Required=false)]
             public int? EcsCount { get; set; }
 
             /// <summary>
-            /// The information about the VPC.
+            /// The information about the virtual private cloud (VPC).
             /// </summary>
             [NameInMap("InstanceDesc")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The region in which the ECS instance resides.
+            /// The region in which the server resides.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

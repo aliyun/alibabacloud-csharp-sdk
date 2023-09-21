@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// The domain name.
+            /// The endpoint.
             /// 
-            /// >  This parameter is returned only when **Biz** is set to **web_server**.
+            /// > This parameter is returned only when **Biz** is set to **web_server**.
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The name of the module.
             /// 
-            /// >  This parameter is returned only when **Biz** is set to **lkm**.
+            /// > This parameter is returned only when **Biz** is set to **lkm**.
             /// </summary>
             [NameInMap("ModuleName")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The path to the startup item.
             /// 
-            /// >  This parameter is returned only when **Biz** is set to **autorun**.
+            /// > This parameter is returned only when **Biz** is set to **autorun**.
             /// </summary>
             [NameInMap("Path")]
             [Validation(Required=false)]

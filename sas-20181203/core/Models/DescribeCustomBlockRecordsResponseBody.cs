@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeCustomBlockRecordsResponseBodyRecordList> RecordList { get; set; }
         public class DescribeCustomBlockRecordsResponseBodyRecordList : TeaModel {
             /// <summary>
-            /// The timestamp when the defense rule expires.
+            /// The timestamp generated when the block action on the IP address becomes invalid.
             /// </summary>
             [NameInMap("BlockExpireDate")]
             [Validation(Required=false)]
@@ -70,22 +70,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The direction of the traffic that is sent by the blocked IP address. Valid values:
             /// 
-            /// *   **in**: inbound
-            /// *   **out**: outbound
+            /// *   **in**
+            /// *   **out**
             /// </summary>
             [NameInMap("Bound")]
             [Validation(Required=false)]
             public string Bound { get; set; }
 
             /// <summary>
-            /// The number of servers to which the defense rule is applied.
+            /// The number of servers for which the defense rule is enabled.
             /// </summary>
             [NameInMap("EnableCount")]
             [Validation(Required=false)]
             public int? EnableCount { get; set; }
 
             /// <summary>
-            /// The ID of the defense rule.
+            /// The record ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -99,41 +99,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ServerCount { get; set; }
 
             /// <summary>
-            /// The source of the defense rule. Valid values:
+            /// The source of the defense rule.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The status of the defense rule. Valid values:
+            /// The status of the defense rule against brute-force attacks. Valid values:
             /// 
-            /// *   **0**: invalid
-            /// *   **1**: enabled
-            /// *   **2**: failed
+            /// *   **0**: invalid.
+            /// *   **1**: enabled.
+            /// *   **2**: failed.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// An array consisting of the servers to which the defense rule is applied.
+            /// The servers for which the defense rule is enabled.
             /// </summary>
             [NameInMap("TargetList")]
             [Validation(Required=false)]
             public List<DescribeCustomBlockRecordsResponseBodyRecordListTargetList> TargetList { get; set; }
             public class DescribeCustomBlockRecordsResponseBodyRecordListTargetList : TeaModel {
                 /// <summary>
-                /// The ID of the server.
+                /// The ID of the destination asset.
                 /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
                 public string Target { get; set; }
 
                 /// <summary>
-                /// The type of the query condition. Valid values:
+                /// The type of the query. Valid values:
                 /// 
-                /// *   **uuid**: the ID of an asset
+                /// *   Set the value to **uuid**.
                 /// </summary>
                 [NameInMap("TargetType")]
                 [Validation(Required=false)]

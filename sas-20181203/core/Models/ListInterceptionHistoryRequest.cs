@@ -45,11 +45,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<int?> InterceptionTypes { get; set; }
 
         /// <summary>
-        /// 设置请求和接收消息的语言类型。默认值**zh**。取值：
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
         /// 
-        /// 
-        /// - **zh**：中文
-        /// - **en**：英文
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

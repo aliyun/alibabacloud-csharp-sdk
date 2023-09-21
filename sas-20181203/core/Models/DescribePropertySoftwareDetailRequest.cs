@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertySoftwareDetailRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// The timestamp at which the software update ends. Unit: milliseconds.
+        /// The timestamp generated when the software update ends. Unit: milliseconds.
         /// </summary>
         [NameInMap("InstallTimeEnd")]
         [Validation(Required=false)]
         public long? InstallTimeEnd { get; set; }
 
         /// <summary>
-        /// The timestamp at which the software update starts. Unit: milliseconds.
+        /// The timestamp generated when the software update starts. Unit: milliseconds.
         /// </summary>
         [NameInMap("InstallTimeStart")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**.
+        /// The number of entries per page. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -31,35 +31,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HealthTotal { get; set; }
 
         /// <summary>
-        /// The total number of fixed baseline risks.
+        /// The total number of fixed baseline risk items. This parameter is deprecated.
         /// </summary>
         [NameInMap("HealthdealedTotal")]
         [Validation(Required=false)]
         public int? HealthdealedTotal { get; set; }
 
         /// <summary>
-        /// The number of baselines whose risk level is high.
+        /// The number of baseline risk items whose severity is high.
         /// </summary>
         [NameInMap("HealthhighTotal")]
         [Validation(Required=false)]
         public int? HealthhighTotal { get; set; }
 
         /// <summary>
-        /// The number of baseline risks whose risk level is low.
+        /// The number of baseline risk items whose severity is low.
         /// </summary>
         [NameInMap("HealthlowTotal")]
         [Validation(Required=false)]
         public int? HealthlowTotal { get; set; }
 
         /// <summary>
-        /// The number of baseline risks whose risk level is medium.
+        /// The number of baseline risk items whose severity is medium.
         /// </summary>
         [NameInMap("HealthmediumTotal")]
         [Validation(Required=false)]
         public int? HealthmediumTotal { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// The number of baseline risk items whose severity is urgent. This parameter is deprecated.
         /// </summary>
         [NameInMap("HealthseriousTotal")]
         [Validation(Required=false)]
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Newsuspicious { get; set; }
 
         /// <summary>
-        /// Indicates whether the Security Center agent is online. Valid values:
+        /// Indicates whether the agent is online. Valid values:
         /// 
-        /// *   **true**: The service is online.
-        /// *   **false**: The service is offline.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Online")]
         [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SuspiciousdealedTotal { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// This parameter is deprecated. This parameter is deprecated.
         /// </summary>
         [NameInMap("SuspicioushighTotal")]
         [Validation(Required=false)]
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? VulLaterSum { get; set; }
 
         /// <summary>
-        /// The number of unfixed vulnerabilities whose severity level is medium.
+        /// The number of unfixed vulnerabilities whose severity level is low.
         /// </summary>
         [NameInMap("VulNntfSum")]
         [Validation(Required=false)]

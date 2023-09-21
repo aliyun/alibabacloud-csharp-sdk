@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// The timestamp when the process was started. Unit: milliseconds.
+            /// The timestamp generated when the process was started. Unit: milliseconds.
             /// 
             /// > This parameter is returned only when **Biz** is set to **web_server**.
             /// </summary>

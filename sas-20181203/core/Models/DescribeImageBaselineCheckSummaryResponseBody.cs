@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineNameLevel { get; set; }
 
             /// <summary>
-            /// The timestamp when the first scan was performed. Unit: milliseconds.
+            /// The timestamp generated when the first scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("FirstScanTime")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HighRiskImage { get; set; }
 
             /// <summary>
-            /// The timestamp when the last scan was performed. Unit: milliseconds.
+            /// The timestamp generated when the last scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]

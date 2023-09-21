@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// *   **zh**: Chinese.
+        /// *   **en**: English.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

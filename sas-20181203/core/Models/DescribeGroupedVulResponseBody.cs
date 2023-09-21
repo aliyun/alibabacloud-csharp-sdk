@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// An array that consists of the details of the vulnerability.
+        /// The information about the vulnerability.
         /// </summary>
         [NameInMap("GroupedVulItems")]
         [Validation(Required=false)]
@@ -84,6 +84,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? RaspDefend { get; set; }
 
+            /// <summary>
+            /// The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.
+            /// </summary>
             [NameInMap("Related")]
             [Validation(Required=false)]
             public string Related { get; set; }
@@ -115,8 +118,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **cve**: Linux software vulnerability
             /// *   **sys**: Windows system vulnerability
             /// *   **cms**: Web-CMS vulnerability
-            /// *   **app**: application vulnerabilitiy
-            /// *   **emg**: urgent vulnerabilities
+            /// *   **app**: application vulnerability
+            /// *   **emg**: urgent vulnerability
             /// *   **sca**: vulnerability that is detected based on software component analysis
             /// </summary>
             [NameInMap("Type")]

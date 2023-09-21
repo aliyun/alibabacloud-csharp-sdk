@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents> HoneypotAlarmEvents { get; set; }
         public class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents : TeaModel {
             /// <summary>
-            /// The ID of the alert event.
+            /// The event ID.
             /// </summary>
             [NameInMap("AlarmEventId")]
             [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? EventCount { get; set; }
 
             /// <summary>
-            /// The timestamp when the alert event was first generated. Unit: milliseconds.
+            /// The timestamp that indicates the time when the alert event was first detected. Unit: milliseconds.
             /// </summary>
             [NameInMap("FirstTime")]
             [Validation(Required=false)]
             public long? FirstTime { get; set; }
 
             /// <summary>
-            /// The timestamp when the alert event was last generated. Unit: milliseconds.
+            /// The timestamp that indicates the time when the alert event was last detected. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastTime")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? OperateStatus { get; set; }
 
             /// <summary>
-            /// The risk level of the alert event. Valid values:
+            /// The risk level. Valid values:
             /// 
             /// *   **2**: low
             /// *   **3**: medium
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: **100**
+            /// The number of entries returned per page. Default value: 100.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]

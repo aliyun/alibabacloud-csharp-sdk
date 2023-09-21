@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// The type of the network object. Valid values:
+            /// The type of the object. Valid values:
             /// 
             /// *   IMAGE
             /// </summary>

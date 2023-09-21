@@ -63,25 +63,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The execution details of the task. The value of this parameter is in the JSON format.
             /// 
-            /// *   **causeCode**: the returned code for the cause
-            /// *   **causeMsg**: the returned information for the cause
-            /// *   **resCode**: the returned code of troubleshooting
-            /// *   **resMsg**: the returned information about troubleshooting
-            /// *   **problemType**: the type of the issue
-            /// *   **dispatchType**: the task delivery method
-            /// *   **uuid**: the UUID of the server
-            /// *   **instanceId**: the instance ID of the server
-            /// *   **internetIp**: the public IP address of the server
-            /// *   **intranetIp**: the private IP address of the server
-            /// *   **instanceName**: the instance name of the server
-            /// *   **url**: the download link of the troubleshooting log
+            /// *   **causeCode**: the returned code for the cause.
+            /// *   **causeMsg**: the returned message for the cause.
+            /// *   **resCode**: the returned code for troubleshooting.
+            /// *   **resMsg**: the returned message for troubleshooting.
+            /// *   **problemType**: the type of the issue.
+            /// *   **dispatchType**: the task delivery method.
+            /// *   **uuid**: the UUID of the server.
+            /// *   **instanceId**: the instance ID of the server.
+            /// *   **internetIp**: the public IP address of the server.
+            /// *   **intranetIp**: the private IP address of the server.
+            /// *   **instanceName**: the instance name of the server.
+            /// *   **url**: the download URL of the troubleshooting log.
             /// </summary>
             [NameInMap("DetailData")]
             [Validation(Required=false)]
             public string DetailData { get; set; }
 
             /// <summary>
-            /// The number of tasks that failed.
+            /// The number of tasks that fail to be executed.
             /// </summary>
             [NameInMap("FailCount")]
             [Validation(Required=false)]
@@ -102,21 +102,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// The number of tasks that succeeded.
+            /// The number of tasks that are executed.
             /// </summary>
             [NameInMap("SuccessCount")]
             [Validation(Required=false)]
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// The timestamp when the task ends. Unit: milliseconds.
+            /// The timestamp that indicates the time when the task ends. Unit: milliseconds.
             /// </summary>
             [NameInMap("TaskEndTime")]
             [Validation(Required=false)]
             public long? TaskEndTime { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// The timestamp when the task starts. Unit: milliseconds.
+            /// The timestamp that indicates the time when the task starts. Unit: milliseconds.
             /// </summary>
             [NameInMap("TaskStartTime")]
             [Validation(Required=false)]
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the task. Valid values:
             /// 
-            /// *   **1**: started
-            /// *   **2**: complete
-            /// *   **3**: failed
-            /// *   **4**: timed out
+            /// *   **1**: The task is started.
+            /// *   **2**: The task is complete.
+            /// *   **3**: The task fails.
+            /// *   **4**: The task times out.
             /// </summary>
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
@@ -165,9 +165,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the task. Valid values:
             /// 
-            /// *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
-            /// *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
-            /// *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
+            /// *   **CLIENT_PROBLEM_CHECK**: a task of the Security Center client
+            /// *   **CLIENT_DEV_OPS**: an O\&M task of Cloud Assistant
+            /// *   **ASSET_SECURITY_CHECK**: a task for asset information collection
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]

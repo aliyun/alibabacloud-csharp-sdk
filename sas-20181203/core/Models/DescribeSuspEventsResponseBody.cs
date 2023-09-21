@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the alert event.
+        /// The information about the alert events.
         /// </summary>
         [NameInMap("SuspEvents")]
         [Validation(Required=false)]
         public List<DescribeSuspEventsResponseBodySuspEvents> SuspEvents { get; set; }
         public class DescribeSuspEventsResponseBodySuspEvents : TeaModel {
             /// <summary>
-            /// Indicates whether the alert was analyzed offline.
+            /// Indicates whether the alert event was analyzed offline.
             /// </summary>
             [NameInMap("Advanced")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmEventName { get; set; }
 
             /// <summary>
-            /// The description of the alert event to which the alert event is associated.
+            /// The name of the alert event.
             /// </summary>
             [NameInMap("AlarmEventNameDisplay")]
             [Validation(Required=false)]
@@ -94,41 +94,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// Indicates whether the exception is automatically blocked.
+            /// Indicates whether automatic defense is enabled.
             /// </summary>
             [NameInMap("AutoBreaking")]
             [Validation(Required=false)]
             public bool? AutoBreaking { get; set; }
 
             /// <summary>
-            /// Indicates whether the online handling of the alert event is supported, such as quarantining the source file of the malicious process. Valid values:
+            /// Indicates whether the alert event can be handled online, such as quarantining the source file of the malicious process. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("CanBeDealOnLine")]
             [Validation(Required=false)]
             public bool? CanBeDealOnLine { get; set; }
 
             /// <summary>
-            /// Indicates whether you can cancel marking the alert event as a false positive.
+            /// Indicates whether you can cancel marking the alert event as a false positive. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("CanCancelFault")]
             [Validation(Required=false)]
             public bool? CanCancelFault { get; set; }
 
             /// <summary>
-            /// Indicates whether the Safeguard Mode For Major Activities mode is enabled for the server. Valid values:
+            /// Indicates whether the safeguard mode for major activities is enabled for the server. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("ContainHwMode")]
             [Validation(Required=false)]
             public bool? ContainHwMode { get; set; }
 
             /// <summary>
-            /// The ID of the container.
+            /// The container ID.
             /// </summary>
             [NameInMap("ContainerId")]
             [Validation(Required=false)]
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerImageId { get; set; }
 
             /// <summary>
-            /// The name of the container image.
+            /// The name of the image to which the container belongs.
             /// </summary>
             [NameInMap("ContainerImageName")]
             [Validation(Required=false)]
@@ -200,38 +203,38 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// Indicates whether the exception can be detected by cloud sandbox. Valid values:
+            /// Indicates whether the alert event can be detected by the cloud sandbox feature. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("DisplaySandboxResult")]
             [Validation(Required=false)]
             public bool? DisplaySandboxResult { get; set; }
 
             /// <summary>
-            /// An array that consists of the remarks on the exception.
+            /// The note information about the alert event.
             /// </summary>
             [NameInMap("EventNotes")]
             [Validation(Required=false)]
             public List<DescribeSuspEventsResponseBodySuspEventsEventNotes> EventNotes { get; set; }
             public class DescribeSuspEventsResponseBodySuspEventsEventNotes : TeaModel {
                 /// <summary>
-                /// The remarks.
+                /// The note.
                 /// </summary>
                 [NameInMap("Note")]
                 [Validation(Required=false)]
                 public string Note { get; set; }
 
                 /// <summary>
-                /// The ID of the event record.
+                /// The ID of the note.
                 /// </summary>
                 [NameInMap("NoteId")]
                 [Validation(Required=false)]
                 public long? NoteId { get; set; }
 
                 /// <summary>
-                /// The time when the event record was created.
+                /// The time when the note was created.
                 /// </summary>
                 [NameInMap("NoteTime")]
                 [Validation(Required=false)]
@@ -242,30 +245,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the alert event. Valid values:
             /// 
-            /// *   **1**: pending handling
-            /// *   **2**: ignored
-            /// *   **4**: confirmed
-            /// *   **8**: marked as a false positive
-            /// *   **16**: being handled
-            /// *   **32**: handled
-            /// *   **64**: expired
+            /// *   **1**: The alert event is not handled.
+            /// *   **2**: The alert event is ignored.
+            /// *   **4**: The alert event is confirmed.
+            /// *   **8**: The alert event is marked as a false positive.
+            /// *   **16**: The alert event is being handled.
+            /// *   **32**: The alert event is handled.
+            /// *   **64**: The alert event expired.
             /// </summary>
             [NameInMap("EventStatus")]
             [Validation(Required=false)]
             public int? EventStatus { get; set; }
 
             /// <summary>
-            /// The name of the alert event.
+            /// The subtype of the alert event.
             /// </summary>
             [NameInMap("EventSubType")]
             [Validation(Required=false)]
             public string EventSubType { get; set; }
 
             /// <summary>
-            /// Indicates whether the alert event has trace information. Valid values:
+            /// Indicates whether the alert event has tracing information. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("HasTraceInfo")]
             [Validation(Required=false)]
@@ -300,7 +303,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The public IP address of the associated instance.
+            /// The public IP address that is associated with instance.
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -314,66 +317,60 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The ID of the Kubernetes cluster.
+            /// The ID of the ACK cluster.
             /// </summary>
             [NameInMap("K8sClusterId")]
             [Validation(Required=false)]
             public string K8sClusterId { get; set; }
 
             /// <summary>
-            /// The name of the Kubernetes cluster.
+            /// The name of the Container Service for Kubernetes (ACK) cluster.
             /// </summary>
             [NameInMap("K8sClusterName")]
             [Validation(Required=false)]
             public string K8sClusterName { get; set; }
 
             /// <summary>
-            /// The namespace of the Kubernetes cluster.
+            /// The namespace of the ACK cluster.
             /// </summary>
             [NameInMap("K8sNamespace")]
             [Validation(Required=false)]
             public string K8sNamespace { get; set; }
 
             /// <summary>
-            /// The ID of the Kubernetes cluster node.
+            /// The ID of the node of the ACK cluster.
             /// </summary>
             [NameInMap("K8sNodeId")]
             [Validation(Required=false)]
             public string K8sNodeId { get; set; }
 
             /// <summary>
-            /// The name of the Kubernetes cluster node.
+            /// The name of the node in the ACK cluster.
             /// </summary>
             [NameInMap("K8sNodeName")]
             [Validation(Required=false)]
             public string K8sNodeName { get; set; }
 
             /// <summary>
-            /// The name of the Kubernetes pod.
+            /// The name of the pod in the ACK cluster.
             /// </summary>
             [NameInMap("K8sPodName")]
             [Validation(Required=false)]
             public string K8sPodName { get; set; }
 
-            /// <summary>
-            /// Indicates whether the alert event can be detected by the cloud sandbox feature. Valid values:
-            /// 
-            /// * **true**
-            /// * **false**
-            /// </summary>
             [NameInMap("LargeModel")]
             [Validation(Required=false)]
             public bool? LargeModel { get; set; }
 
             /// <summary>
-            /// The time when the alert event was last generated.
+            /// The time when the alert event was last detected.
             /// </summary>
             [NameInMap("LastTime")]
             [Validation(Required=false)]
             public string LastTime { get; set; }
 
             /// <summary>
-            /// The timestamp when the exception was last detected. Unit: milliseconds.
+            /// The timestamp generated when the alert event was last detected. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastTimeStamp")]
             [Validation(Required=false)]
@@ -393,8 +390,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the malicious behavior defense rule. Valid values:
             /// 
-            /// *   **open**: enabled
-            /// *   **close**: disabled
+            /// *   **open**: enabled.
+            /// *   **close**: disabled.
             /// </summary>
             [NameInMap("MaliciousRuleStatus")]
             [Validation(Required=false)]
@@ -422,7 +419,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OccurrenceTime { get; set; }
 
             /// <summary>
-            /// The timestamp when the exception was first detected. Unit: milliseconds.
+            /// The timestamp generated when the alert event was first detected. Unit: milliseconds.
             /// </summary>
             [NameInMap("OccurrenceTimeStamp")]
             [Validation(Required=false)]
@@ -436,21 +433,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateErrorCode { get; set; }
 
             /// <summary>
-            /// The description of the handing result of the alert event.
+            /// The handing result message of the alert event.
             /// </summary>
             [NameInMap("OperateMsg")]
             [Validation(Required=false)]
             public string OperateMsg { get; set; }
 
             /// <summary>
-            /// The handling timestamp of the alert event. Unit: milliseconds.
+            /// The timestamp generated when the alert event was handled. Unit: milliseconds.
             /// </summary>
             [NameInMap("OperateTime")]
             [Validation(Required=false)]
             public long? OperateTime { get; set; }
 
             /// <summary>
-            /// The edition of Security Center in which the exception can be detected. Valid values:
+            /// The edition of Security Center in which alert event detection is supported. Valid values:
             /// 
             /// *   **0**: Basic edition
             /// *   **1**: Enterprise edition
@@ -481,14 +478,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<DescribeSuspEventsResponseBodySuspEventsTacticItems> TacticItems { get; set; }
             public class DescribeSuspEventsResponseBodySuspEventsTacticItems : TeaModel {
                 /// <summary>
-                /// The tactic name of ATT\&CK.
+                /// The tactic name of the ATT\&CK attack.
                 /// </summary>
                 [NameInMap("TacticDisplayName")]
                 [Validation(Required=false)]
                 public string TacticDisplayName { get; set; }
 
                 /// <summary>
-                /// The stage information about ATT\&CK.
+                /// The stage information about the ATT\&CK attack.
                 /// </summary>
                 [NameInMap("TacticId")]
                 [Validation(Required=false)]
@@ -497,7 +494,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The unique key of the alert.
+            /// The unique key of the alert event.
             /// </summary>
             [NameInMap("UniqueInfo")]
             [Validation(Required=false)]
@@ -511,7 +508,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// The ID of the cluster.
+            /// The cluster ID.
             /// </summary>
             [NameInMap("clusterId")]
             [Validation(Required=false)]

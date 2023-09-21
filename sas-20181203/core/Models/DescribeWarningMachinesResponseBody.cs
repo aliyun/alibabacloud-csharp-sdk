@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// An array that consists of the servers.
+        /// The information about the servers.
         /// </summary>
         [NameInMap("WarningMachines")]
         [Validation(Required=false)]
@@ -68,22 +68,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether Security Center is authorized to protect the asset. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("Bind")]
             [Validation(Required=false)]
             public bool? Bind { get; set; }
 
             /// <summary>
-            /// The ID of the container.
+            /// The container ID.
             /// </summary>
             [NameInMap("ContainerId")]
             [Validation(Required=false)]
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// The name of container.
+            /// The name of the container.
             /// </summary>
             [NameInMap("ContainerName")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HighWarningCount { get; set; }
 
             /// <summary>
-            /// The ID of the server.
+            /// The server ID.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -148,8 +148,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether a port on the server is accessible over the Internet. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("PortOpen")]
             [Validation(Required=false)]

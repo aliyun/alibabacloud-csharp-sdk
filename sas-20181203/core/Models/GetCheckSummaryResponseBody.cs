@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PassCount { get; set; }
 
             /// <summary>
-            /// An array that consist of the standard IDs of check items.
+            /// The information about the check items.
             /// </summary>
             [NameInMap("Standards")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The number of passed check items.
+                /// The number of check items that passed the check.
                 /// </summary>
                 [NameInMap("PassCount")]
                 [Validation(Required=false)]

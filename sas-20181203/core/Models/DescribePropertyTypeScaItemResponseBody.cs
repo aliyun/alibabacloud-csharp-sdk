@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The middleware type. Valid values:
+            /// The type of the middleware. Valid values:
             /// 
             /// *   **system_service**: system service
             /// *   **software_library**: software library

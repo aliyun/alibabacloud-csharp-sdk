@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineCheckSummaryRequest : TeaModel {
         /// <summary>
-        /// The ID of the container cluster.
+        /// The ID of the specified container cluster.
         /// 
-        /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+        /// > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the ID of the container cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

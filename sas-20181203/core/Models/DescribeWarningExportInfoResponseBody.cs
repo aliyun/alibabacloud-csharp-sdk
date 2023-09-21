@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Link { get; set; }
 
         /// <summary>
-        /// The message that shows the export task result. The value is fixed as **successful**, which indicates that the export task is successful.
+        /// The message that shows the task result. The value is fixed as **successful**, which indicates that the export task is complete.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

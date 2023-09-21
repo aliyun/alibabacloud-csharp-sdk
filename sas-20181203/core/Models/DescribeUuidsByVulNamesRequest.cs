@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUuidsByVulNamesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether the vulnerability is handled. Valid values:
+        /// Specifies whether the vulnerability is fixed. Valid values:
         /// 
-        /// **y**: The vulnerability is handled. **n**: The vulnerability is not handled.
+        /// *   **y**: the vulnerability is fixed.
+        /// *   **n**: the vulnerability is not fixed.
         /// </summary>
         [NameInMap("Dealed")]
         [Validation(Required=false)]

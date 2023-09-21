@@ -10,16 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckConfigResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of days in a week on which an automatic check is performed.
+        /// The days in a week on which an automatic check is performed.
         /// </summary>
         [NameInMap("CycleDays")]
         [Validation(Required=false)]
         public List<int?> CycleDays { get; set; }
 
+        /// <summary>
+        /// Indicates whether the check for new check items in the selected requirement item is enabled by default. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// </summary>
         [NameInMap("EnableAddCheck")]
         [Validation(Required=false)]
         public bool? EnableAddCheck { get; set; }
 
+        /// <summary>
+        /// Indicates whether the automatic check is enabled. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// </summary>
         [NameInMap("EnableAutoCheck")]
         [Validation(Required=false)]
         public bool? EnableAutoCheck { get; set; }
@@ -27,10 +39,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:
         /// 
-        /// *   **00:00 to 06:00:** The StartTime parameter is set to 0 and the EndTime parameter is set to 6.
-        /// *   **06:00 to 12:00**: The StartTime parameter is set to 6 and the EndTime parameter is set to 12.
-        /// *   **12:00 to 18:00**: The StartTime parameter is set to 12 and the EndTime parameter is set to 18.
-        /// *   **18:00 to 24:00:** The StartTime parameter is set to 18 and the EndTime parameter is set to 24.
+        /// *   **00:00 to 06:00**: If StartTime is set to 00:00, EndTime must be set to 06:00.
+        /// *   **06:00 to 12:00**: If StartTime is set to 06:00, EndTime must be set to 12:00.
+        /// *   **12:00 to 18:00**: If StartTime is set to 12:00, EndTime must be set to 18:00.
+        /// *   **18:00 to 24:00**: If StartTime is set to 18:00, EndTime must be set to 24:00.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -43,14 +55,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The check items selected in the policy.
+        /// </summary>
         [NameInMap("SelectedChecks")]
         [Validation(Required=false)]
         public List<GetCheckConfigResponseBodySelectedChecks> SelectedChecks { get; set; }
         public class GetCheckConfigResponseBodySelectedChecks : TeaModel {
+            /// <summary>
+            /// The ID of the check item.
+            /// </summary>
             [NameInMap("CheckId")]
             [Validation(Required=false)]
             public long? CheckId { get; set; }
 
+            /// <summary>
+            /// The section ID of the check item.
+            /// </summary>
             [NameInMap("SectionId")]
             [Validation(Required=false)]
             public long? SectionId { get; set; }
@@ -58,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// An array that consists of the information about the check items.
+        /// The information about the check items.
         /// </summary>
         [NameInMap("Standards")]
         [Validation(Required=false)]
@@ -81,8 +102,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the check item. Valid values:
             /// 
-            /// *   **ON**: enabled
-            /// *   **OFF**: disabled
+            /// *   **ON**: The check item is enabled.
+            /// *   **OFF**: The check item is disabled.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

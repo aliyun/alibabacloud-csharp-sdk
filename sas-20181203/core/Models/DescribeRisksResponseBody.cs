@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of baselines.
+        /// The baselines.
         /// </summary>
         [NameInMap("Risks")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskDetail { get; set; }
 
             /// <summary>
-            /// The ID of the baseline.
+            /// The baseline ID.
             /// </summary>
             [NameInMap("RiskId")]
             [Validation(Required=false)]

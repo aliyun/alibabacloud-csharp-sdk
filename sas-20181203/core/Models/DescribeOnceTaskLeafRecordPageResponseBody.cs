@@ -139,6 +139,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string ClusterName { get; set; }
 
+                [NameInMap("CostTimeInfo")]
+                [Validation(Required=false)]
+                public string CostTimeInfo { get; set; }
+
                 /// <summary>
                 /// The digest of the image.
                 /// </summary>

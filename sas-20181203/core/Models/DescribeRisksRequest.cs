@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The ID of the baseline.
+        /// The baseline ID.
         /// 
-        /// > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of baselines.
+        /// >  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the baseline IDs.
         /// </summary>
         [NameInMap("RiskId")]
         [Validation(Required=false)]

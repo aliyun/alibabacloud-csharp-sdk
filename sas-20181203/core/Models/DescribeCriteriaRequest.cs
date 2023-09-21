@@ -12,17 +12,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The type of the asset. Valid values:
         /// 
-        /// *   **ecs**: Elastic Compute Service (ECS) instance
+        /// *   Set the value to **ecs**, which specifies to query all Elastic Compute Service (ECS) instances.
         /// </summary>
         [NameInMap("MachineTypes")]
         [Validation(Required=false)]
         public string MachineTypes { get; set; }
 
         /// <summary>
-        /// Specifies whether the keyword that you specify for fuzzy search can be automatically matched. default **false**, Valid values:
+        /// Specifies whether the keyword that you specify for fuzzy search can be automatically matched. Default value: **false**. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("SupportAutoTag")]
         [Validation(Required=false)]

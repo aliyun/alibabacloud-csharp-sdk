@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: **10**.
+            /// The number of entries per page. Default value: **10**.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribePropertySoftwareDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertySoftwareDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.
+            /// The timestamp generated when the last asset fingerprint collection is performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstallTime { get; set; }
 
             /// <summary>
-            /// The timestamp at which the software is installed. Unit: milliseconds.
+            /// The timestamp generated when the software is installed. Unit: milliseconds.
             /// </summary>
             [NameInMap("InstallTimeDt")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

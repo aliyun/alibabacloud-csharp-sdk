@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The details about the probe.
+        /// The information about the probe.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<string> CanListenIpList { get; set; }
 
             /// <summary>
-            /// An array consisting of the CIDR blocks that are allowed to access the VPC probe.
+            /// The CIDR blocks of the probe deployed in a virtual private cloud (VPC).
             /// </summary>
             [NameInMap("CidrList")]
             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public GetHoneypotProbeResponseBodyDataHoneyPotProbeScanPort HoneyPotProbeScanPort { get; set; }
             public class GetHoneypotProbeResponseBodyDataHoneyPotProbeScanPort : TeaModel {
                 /// <summary>
-                /// The ID of the monitoring record.
+                /// The unique ID of the service that is monitored.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ProbeId { get; set; }
 
                 /// <summary>
-                /// An array consisting of the IP addresses of the sever on which the probe is deployed.
+                /// The IP addresses that are monitored.
                 /// </summary>
                 [NameInMap("ServiceIpList")]
                 [Validation(Required=false)]
@@ -143,21 +143,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// An array consisting of the honeypots to which the probe forwards traffic.
+            /// The honeypots that are bound to the probe.
             /// </summary>
             [NameInMap("HoneypotProbeBindList")]
             [Validation(Required=false)]
             public List<GetHoneypotProbeResponseBodyDataHoneypotProbeBindList> HoneypotProbeBindList { get; set; }
             public class GetHoneypotProbeResponseBodyDataHoneypotProbeBindList : TeaModel {
                 /// <summary>
-                /// The ID of the binding record.
+                /// The unique ID of the honeypot that is bound to the probe.
                 /// </summary>
                 [NameInMap("BindId")]
                 [Validation(Required=false)]
                 public string BindId { get; set; }
 
                 /// <summary>
-                /// An array consisting of the ports that are bound to the probe.
+                /// The ports that are bound to the probe.
                 /// </summary>
                 [NameInMap("BindPortList")]
                 [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? EndPort { get; set; }
 
                     /// <summary>
-                    /// The error that indicates a binding failure.
+                    /// The error that is returned if an error occurred in the port of the honeypot that is bound to the probe.
                     /// </summary>
                     [NameInMap("Err")]
                     [Validation(Required=false)]
@@ -192,21 +192,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public bool? Fixed { get; set; }
 
                     /// <summary>
-                    /// The ID of the port binding record.
+                    /// The unique ID of the port binding record.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// The details about the error.
+                    /// The error message that is returned if an error occurred in the port of the honeypot that is bound to the probe.
                     /// </summary>
                     [NameInMap("Msg")]
                     [Validation(Required=false)]
                     public string Msg { get; set; }
 
                     /// <summary>
-                    /// The protocol type.
+                    /// The type of the protocol.
                     /// </summary>
                     [NameInMap("Proto")]
                     [Validation(Required=false)]
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? StartPort { get; set; }
 
                     /// <summary>
-                    /// The binding status. Valid values:
+                    /// The status of the port of the honeypot that is bound to the probe. Valid values:
                     /// 
                     /// *   **1**: abnormal
                     /// *   **3**: normal
@@ -239,21 +239,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The ID of the honeypot.
+                /// The honeypot ID.
                 /// </summary>
                 [NameInMap("HoneypotId")]
                 [Validation(Required=false)]
                 public string HoneypotId { get; set; }
 
                 /// <summary>
-                /// An array consisting of the IP addresses that are monitored.
+                /// The IP addresses that are monitored.
                 /// </summary>
                 [NameInMap("ServiceIpList")]
                 [Validation(Required=false)]
                 public List<string> ServiceIpList { get; set; }
 
                 /// <summary>
-                /// The status of the service. Valid values:
+                /// The status of the honeypot that is bound to the probe. Valid values:
                 /// 
                 /// *   **1**: abnormal
                 /// *   **3**: normal
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// The ID of the VPC in which the VPC probe is deployed.
+            /// The ID of the VPC in which the probe is deployed.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]

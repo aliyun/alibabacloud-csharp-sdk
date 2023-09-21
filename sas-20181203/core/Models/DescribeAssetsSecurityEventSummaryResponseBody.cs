@@ -19,20 +19,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the asset. Valid values:
             /// 
-            /// *   **namespace**: namespace
-            /// *   **clusters**: cluster
-            /// *   **applications**: application
-            /// *   **pods**: container group
-            /// *   **containers**: container
-            /// *   **images**: image
-            /// *   **hosts**: node
+            /// *   **namespace**
+            /// *   **clusters**
+            /// *   **applications**
+            /// *   **pods**
+            /// *   **containers**
+            /// *   **images**
+            /// *   **hosts**
             /// </summary>
             [NameInMap("AssetType")]
             [Validation(Required=false)]
             public string AssetType { get; set; }
 
             /// <summary>
-            /// The number of assets that are at risk.
+            /// The number of potential risky assets.
             /// </summary>
             [NameInMap("RiskCount")]
             [Validation(Required=false)]

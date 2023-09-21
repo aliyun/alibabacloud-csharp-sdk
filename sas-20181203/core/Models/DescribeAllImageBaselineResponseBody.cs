@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// An array that consists of baselines.
+                /// The information about the baseline.
                 /// </summary>
                 [NameInMap("BaselineNameList")]
                 [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Alias { get; set; }
 
                     /// <summary>
-                    /// An array that consists of baseline check items.
+                    /// The information about the baseline check item.
                     /// </summary>
                     [NameInMap("BaselineItemList")]
                     [Validation(Required=false)]

@@ -19,7 +19,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The list of destination network objects.
+        /// The destination objects of the rule. The following parameters are included:
+        /// 
+        /// *   targetId: the ID of the destination object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
+        /// *   ports: the destination port ranges.
         /// </summary>
         [NameInMap("DstTarget")]
         [Validation(Required=false)]
@@ -68,7 +71,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleSwitch { get; set; }
 
         /// <summary>
-        /// The list of source network objects.
+        /// The source object of the rule. The following parameters are included:
+        /// 
+        /// *   targetId: the ID of the source object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
         /// </summary>
         [NameInMap("SrcTarget")]
         [Validation(Required=false)]

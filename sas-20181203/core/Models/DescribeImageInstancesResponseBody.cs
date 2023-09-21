@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeImageInstancesResponseBodyImageInstanceList> ImageInstanceList { get; set; }
         public class DescribeImageInstancesResponseBodyImageInstanceList : TeaModel {
             /// <summary>
-            /// The number of alerts that are generated on the image.
+            /// The number of alerts that are generated for the image.
             /// </summary>
             [NameInMap("AlarmCount")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HcCount { get; set; }
 
             /// <summary>
-            /// Indicates whether the image baseline risks exist. Valid values:
+            /// Indicates whether the baseline risks exist. Valid values:
             /// 
             /// *   **NO**
             /// *   **YES**
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HcStatus { get; set; }
 
             /// <summary>
-            /// The timestamp when the image was created. Unit: milliseconds.
+            /// The timestamp generated when the image was created. Unit: milliseconds.
             /// </summary>
             [NameInMap("ImageCreate")]
             [Validation(Required=false)]
             public string ImageCreate { get; set; }
 
             /// <summary>
-            /// The ID of the image.
+            /// The image ID.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
@@ -96,21 +96,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageSize { get; set; }
 
             /// <summary>
-            /// The timestamp when the image was updated. Unit: milliseconds.
+            /// The timestamp generated when the image was updated. Unit: milliseconds.
             /// </summary>
             [NameInMap("ImageUpdate")]
             [Validation(Required=false)]
             public string ImageUpdate { get; set; }
 
             /// <summary>
-            /// The ID of the image instance.
+            /// The ID of the image.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The region ID of the image.
+            /// The ID of the region in which the image resides.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -162,8 +162,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether risks exist. Valid values:
             /// 
-            /// *   **NO**: No risks exist.
-            /// *   **YES**: Risks exist.
+            /// *   **NO**
+            /// *   **YES**
             /// </summary>
             [NameInMap("RiskStatus")]
             [Validation(Required=false)]
@@ -190,29 +190,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The scan status of the image. Valid values:
             /// 
-            /// *   **INIT**: The image scan task is to be started.
+            /// *   **INIT**: The image scan task is pending startup.
             /// *   **START**: The image scan task is started.
             /// *   **MESSAGE_SEND**: The message about the image scan task is sent.
-            /// *   **START_RUN**: The image scan task is started.
+            /// *   **START_RUN**: The image analysis task is started.
             /// *   **DOWNLOAD**: The image scan result is downloaded.
-            /// *   **PRE_ANALYZER**: The image scan task is being processed.
+            /// *   **PRE_ANALYZER**: The image pre-analysis is started.
             /// *   **WEB_SHELL_ANALYZER**: The WebShell analysis is complete.
-            /// *   **CVE_ANALYZER**: The CVE analysis is complete.
+            /// *   **CVE_ANALYZER**: The Common Vulnerabilities and Exposures (CVE) analysis is complete.
             /// *   **BIN_ANALYZER**: The binary analysis of the image is complete.
             /// *   **OTHER_ANALYZER**: The extended analysis of the image is complete.
             /// *   **SUCCESS**: The image scan task is complete.
-            /// *   **PRE_ANALYZER_SUCCESS**: The image scan task is processed.
-            /// *   **FAIL**: The image scan task fails.
-            /// *   **TIMEOUT**: The image scan task times out.
+            /// *   **PRE_ANALYZER_SUCCESS**: The image pre-analysis is complete.
+            /// *   **FAIL**: The image scan task failed.
+            /// *   **TIMEOUT**: The image scan task timed out.
             /// </summary>
             [NameInMap("ScaStatus")]
             [Validation(Required=false)]
             public string ScaStatus { get; set; }
 
             /// <summary>
-            /// The status of the image. Valid values:
+            /// The status of the image. Valid value:
             /// 
-            /// *   **NORMAL**: The image is normal.
+            /// *   **NORMAL**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

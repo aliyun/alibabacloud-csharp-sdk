@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeContainerCriteriaResponseBodyCriteriaList> CriteriaList { get; set; }
         public class DescribeContainerCriteriaResponseBodyCriteriaList : TeaModel {
             /// <summary>
-            /// The name of the filter condition.
+            /// The name of the search condition. Valid values:
             /// 
-            /// *   **instanceId**: the ID of the container.
-            /// *   **clusterId**: the ID of the cluster.
-            /// *   **regionId**: the region of the container.
+            /// *   **instanceId**: the ID of the container instance.
+            /// *   **clusterId**: the cluster ID.
+            /// *   **regionId**: the ID of the region in which the container resides.
             /// *   **clusterName**: the name of the cluster.
             /// *   **image**: the name of the image.
             /// *   **imageRepoName**: the name of the image repository.
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **hostIp**: the public IP address.
             /// *   **pod**: the pod.
             /// *   **podIp**: the IP address of the pod.
-            /// *   **containerId**: the ID of the container.
+            /// *   **containerId**: the container ID.
             /// *   **vulStatus**: indicates whether vulnerabilities exist in the container.
             /// *   **alarmStatus**: indicates whether alerts are generated for the container.
             /// *   **riskStatus**: indicates whether risks exist in the container.
@@ -44,19 +44,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the filter condition. Valid values:
+            /// The type of the search condition. Valid values:
             /// 
-            /// *   **input**: The filter condition needs to be specified.
-            /// *   **select**: The filter condition is an option that can be selected from the drop-down list.
+            /// *   **input**: The search condition needs to be specified.
+            /// *   **select**: The search condition is an option that can be selected from the drop-down list.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The value of the filter condition. This parameter is returned only when the value of **Type** is **select**.
+            /// The values of the search condition. This parameter is returned only if the value of **Type** is set to **select**.
             /// 
-            /// > If the value of **Type** is **input**, the value of this parameter is an empty string.
+            /// > If the value of **Type** is set to **input**, the return value of this parameter is empty.
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]

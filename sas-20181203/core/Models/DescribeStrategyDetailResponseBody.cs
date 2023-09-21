@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The subtype of the baselines.
+            /// The subtype of the baseline check item.
             /// </summary>
             [NameInMap("RiskSubTypeName")]
             [Validation(Required=false)]
@@ -95,31 +95,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// Indicates whether the risk item is selected. Valid values:
+                /// Indicates whether the check item is selected. Valid values:
                 /// 
-                /// *   **true**: yes
-                /// *   **false**: no
+                /// *   **true**: The check item is selected.
+                /// *   **false**: The check item is not selected.
                 /// </summary>
                 [NameInMap("On")]
                 [Validation(Required=false)]
                 public bool? On { get; set; }
 
                 /// <summary>
-                /// An array that consists of sub-risk items.
+                /// The sub-check items.
                 /// </summary>
                 [NameInMap("SubTypes")]
                 [Validation(Required=false)]
                 public List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypes> SubTypes { get; set; }
                 public class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypes : TeaModel {
                     /// <summary>
-                    /// The alias of the sub-check item.
+                    /// The alias of the check item.
                     /// </summary>
                     [NameInMap("Alias")]
                     [Validation(Required=false)]
                     public string Alias { get; set; }
 
                     /// <summary>
-                    /// An array that consists of the details of custom check items.
+                    /// The details of custom check items.
                     /// </summary>
                     [NameInMap("CheckDetails")]
                     [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public string CheckItem { get; set; }
 
                         /// <summary>
-                        /// An array that consists of the details of rules.
+                        /// The details of rules.
                         /// </summary>
                         [NameInMap("Rules")]
                         [Validation(Required=false)]
@@ -161,24 +161,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                             public int? DefaultValue { get; set; }
 
                             /// <summary>
-                            /// Indicates whether the rule is included in the policy. Valid values:
+                            /// Indicates whether the rule can be selected. Valid values:
                             /// 
-                            /// *   **1**: yes
-                            /// *   **0**: no
+                            /// *   **1**: The rule can be selected.
+                            /// *   **0**: The rule cannot be selected.
                             /// </summary>
                             [NameInMap("Optional")]
                             [Validation(Required=false)]
                             public int? Optional { get; set; }
 
                             /// <summary>
-                            /// An array that consists of the rule parameters.
+                            /// The rule parameters.
                             /// </summary>
                             [NameInMap("ParamList")]
                             [Validation(Required=false)]
                             public List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList> ParamList { get; set; }
                             public class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList : TeaModel {
                                 /// <summary>
-                                /// If the value of paramType is 2, this parameter provides the options that can be selected for the rule parameter.
+                                /// The options that can be selected for the rule parameter if the value of ParamType is set to 2.
                                 /// </summary>
                                 [NameInMap("EnumValue")]
                                 [Validation(Required=false)]
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                                 public int? ParamType { get; set; }
 
                                 /// <summary>
-                                /// The specified value of the rule parameter.
+                                /// The configured value of the rule parameter.
                                 /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                             public string RuleDesc { get; set; }
 
                             /// <summary>
-                            /// The ID of the rule.
+                            /// The rule ID.
                             /// </summary>
                             [NameInMap("RuleId")]
                             [Validation(Required=false)]
@@ -257,10 +257,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// Indicates whether the sub-risk item is selected. Valid values:
+                    /// Indicates whether the sub-check item is selected. Valid values:
                     /// 
-                    /// *   **true**: yes
-                    /// *   **false**: no
+                    /// *   **true**: The sub-check item is selected.
+                    /// *   **false**: The sub-check item is not selected.
                     /// </summary>
                     [NameInMap("On")]
                     [Validation(Required=false)]

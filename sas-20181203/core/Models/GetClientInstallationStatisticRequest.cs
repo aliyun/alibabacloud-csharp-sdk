@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClientInstallationStatisticRequest : TeaModel {
+        /// <summary>
+        /// The timestamp that specifies the end of the time range to collect statistics. Unit: millisecond.
+        /// </summary>
         [NameInMap("TimeEnd")]
         [Validation(Required=false)]
         public long? TimeEnd { get; set; }
 
+        /// <summary>
+        /// The timestamp that specifies the beginning of the time range to collect statistics. Unit: millisecond.
+        /// </summary>
         [NameInMap("TimeStart")]
         [Validation(Required=false)]
         public long? TimeStart { get; set; }

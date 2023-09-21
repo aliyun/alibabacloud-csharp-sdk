@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScheduleConfigRequest : TeaModel {
         /// <summary>
-        /// The type of the asset fingerprints to query. Valid values:
+        /// The type of the asset fingerprints. Valid values:
         /// 
         /// *   **scheduler_port_period**: listening port
         /// *   **scheduler_process_period**: running process

@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AgentlessVulSca { get; set; }
 
+            [NameInMap("AgentlessVulSys")]
+            [Validation(Required=false)]
+            public int? AgentlessVulSys { get; set; }
+
             /// <summary>
             /// The number of application vulnerabilities detected on the asset.
             /// </summary>

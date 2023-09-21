@@ -33,18 +33,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the cluster. Valid values:
             /// 
-            /// *   **ManagedKubernetes**: managed Kubernetes cluster
-            /// *   **NotManagedKubernetes**: non-managed Kubernetes cluster
-            /// *   **PrivateKubernetes**: private cluster
-            /// *   **kubernetes**: dedicated Kubernetes cluster
-            /// *   **ask**: dedicated ASK cluster
+            /// *   **ManagedKubernetes**: managed Kubernetes cluster.
+            /// *   **NotManagedKubernetes**: non-managed Kubernetes cluster.
+            /// *   **PrivateKubernetes**: private cluster.
+            /// *   **kubernetes**: dedicated Kubernetes cluster.
+            /// *   **ask**: dedicated serverless Kubernetes (ASK) cluster.
             /// </summary>
             [NameInMap("ClusterType")]
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The region of the container cluster.
+            /// The region in which the cluster resides.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -53,20 +53,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the cluster. Valid values:
             /// 
-            /// *   **unavailable**
-            /// *   **Available**
-            /// *   **Creating**
-            /// *   **CreateFailed**
+            /// *   **unavailable**: The cluster is unavailable.
+            /// *   **Available**: The cluster is available.
+            /// *   **Creating**: The cluster is being created.
+            /// *   **CreateFailed**: The cluster failed to be created.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// Indicates whether the cluster is enabled. Valid values:
+            /// Indicates whether container network topology was enabled. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("TargetResult")]
             [Validation(Required=false)]

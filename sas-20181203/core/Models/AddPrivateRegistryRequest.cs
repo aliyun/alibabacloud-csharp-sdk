@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public int? Port { get; set; }
+
         /// <summary>
         /// The type of the protocol. Valid values:
         /// 

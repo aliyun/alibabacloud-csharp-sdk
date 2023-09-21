@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AuthCount { get; set; }
 
         /// <summary>
-        /// The used quota for web tamper proofing.
+        /// The associated tamper proofing quota.
         /// </summary>
         [NameInMap("BindCount")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DirCount { get; set; }
 
         /// <summary>
-        /// The timestamp when the quota for web tamper proofing expires.
+        /// The timestamp generated when the quota for tamper proofing expires. Unit: millisecond.
         /// </summary>
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of processes that are added to the process whitelist.
+        /// The number of processes in the whitelist.
         /// </summary>
         [NameInMap("WhiteCount")]
         [Validation(Required=false)]

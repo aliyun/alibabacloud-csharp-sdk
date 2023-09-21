@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The details of the policy for incremental backup.
+            /// The policy for incremental data backup.
             /// </summary>
             [NameInMap("IncPlan")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string PlanType { get; set; }
 
                 /// <summary>
-                /// The time when the incremental backup started. The time is in the HH:mm:ss format.
+                /// The time when the incremental data backup starts. The time is in the hh:mm:ss format.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]

@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SceneName { get; set; }
 
             /// <summary>
-            /// An array consisting of the statistics on check items that are used in the risk scenario by baseline type.
+            /// The statistics on check items that are used in the risk scenario by baseline type.
             /// </summary>
             [NameInMap("SubStatistics")]
             [Validation(Required=false)]

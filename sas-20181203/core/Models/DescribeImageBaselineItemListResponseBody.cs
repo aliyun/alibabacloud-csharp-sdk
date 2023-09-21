@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineNameKey { get; set; }
 
             /// <summary>
-            /// The status of the baseline risk item. Valid values:
+            /// The status of the baseline risks. Valid values:
             /// 
             /// *   **0**: unfixed
             /// *   **1**: fixed
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether the baseline check item is added to the whitelist. Valid values:
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// *   **0**: The baseline check item is not added to the whitelist.
+            /// *   **1**: The baseline check item is added to the whitelist.
             /// </summary>
             [NameInMap("WhiteList")]
             [Validation(Required=false)]

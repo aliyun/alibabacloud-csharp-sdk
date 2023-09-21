@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// An array that consists of the information about the images.
+        /// The information about the images.
         /// </summary>
         [NameInMap("ImageInfos")]
         [Validation(Required=false)]
         public List<DescribeImageListBySensitiveFileResponseBodyImageInfos> ImageInfos { get; set; }
         public class DescribeImageListBySensitiveFileResponseBodyImageInfos : TeaModel {
             /// <summary>
-            /// The image digest.
+            /// The digest of the image.
             /// </summary>
             [NameInMap("Digest")]
             [Validation(Required=false)]
             public string Digest { get; set; }
 
             /// <summary>
-            /// The UNIX timestamp of when the first scan was performed. Unit: milliseconds.
+            /// The timestamp generated when the first scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("FirstScanTime")]
             [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The UNIX timestamp of when the last scan was performed. Unit: milliseconds.
+            /// The timestamp when the last scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
 
             /// <summary>
-            /// The region ID of the image instance.
+            /// The ID of the region in which the image instance resides.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -81,16 +81,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// The risk level. Valid values:
-            /// - **high**
-            /// - **medium**
-            /// - **low**
+            /// 
+            /// *   **high**
+            /// *   **medium**
+            /// *   **low**
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// The tag that is added to the image.
+            /// The tag of the image.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]

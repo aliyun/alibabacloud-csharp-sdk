@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class BindAuthToMachineRequest : TeaModel {
         /// <summary>
-        /// The edition of Security Center. Valid values:
+        /// The edition of Security Center that is authorized to protect the asset. Valid values:
         /// 
         /// *   **6**: Anti-virus edition
         /// *   **5**: Advanced edition
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// The logical relationship among multiple search conditions. Valid values:
+        /// The logical relationship that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:
         /// 
-        /// *   **OR**: Search conditions are evaluated by using a logical **OR**.
-        /// *   **AND**: Search conditions are evaluated by using a logical **AND**.
+        /// *   **OR******
+        /// *   **AND******
         /// </summary>
         [NameInMap("LogicalExp")]
         [Validation(Required=false)]

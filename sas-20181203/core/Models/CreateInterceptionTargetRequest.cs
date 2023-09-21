@@ -52,15 +52,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> TagList { get; set; }
 
         /// <summary>
-        /// The object name.
+        /// The name of the object to be blocked.
         /// </summary>
         [NameInMap("TargetName")]
         [Validation(Required=false)]
         public string TargetName { get; set; }
 
         /// <summary>
-        /// The object type. Valid value: 
-        /// - **IMAGE**: specifies an image
+        /// The object type. Valid value:
+        /// 
+        /// *   **IMAGE**
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]
