@@ -1,3 +1,6 @@
+2023-09-21 Version: 1.2.1
+- Generated csharp 2020-06-06 for cams.
+
 2023-09-14 Version: 1.2.0
 - Generated csharp 2020-06-06 for cams.
 

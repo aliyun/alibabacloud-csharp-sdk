@@ -80,9 +80,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string FallBackContent { get; set; }
 
-        /// <summary>
-        /// 消息在指定时间内未返回回执回落
-        /// </summary>
         [NameInMap("FallBackDuration")]
         [Validation(Required=false)]
         public int? FallBackDuration { get; set; }
@@ -93,6 +90,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("FallBackId")]
         [Validation(Required=false)]
         public string FallBackId { get; set; }
+
+        [NameInMap("FallBackRule")]
+        [Validation(Required=false)]
+        public string FallBackRule { get; set; }
 
         /// <summary>
         /// The phone number of the message sender.
@@ -165,30 +166,48 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public List<string> Payload { get; set; }
 
+        /// <summary>
+        /// The information about the products included in the WhatsApp catalog message or multi-product message (MPM).
+        /// </summary>
         [NameInMap("ProductAction")]
         [Validation(Required=false)]
         public SendChatappMessageRequestProductAction ProductAction { get; set; }
         public class SendChatappMessageRequestProductAction : TeaModel {
+            /// <summary>
+            /// The products. Up to 30 products can be added. The products can be divided into up to 10 categories.
+            /// </summary>
             [NameInMap("Sections")]
             [Validation(Required=false)]
             public List<SendChatappMessageRequestProductActionSections> Sections { get; set; }
             public class SendChatappMessageRequestProductActionSections : TeaModel {
+                /// <summary>
+                /// The products.
+                /// </summary>
                 [NameInMap("ProductItems")]
                 [Validation(Required=false)]
                 public List<SendChatappMessageRequestProductActionSectionsProductItems> ProductItems { get; set; }
                 public class SendChatappMessageRequestProductActionSectionsProductItems : TeaModel {
+                    /// <summary>
+                    /// The retailer ID of the product.
+                    /// </summary>
                     [NameInMap("ProductRetailerId")]
                     [Validation(Required=false)]
                     public string ProductRetailerId { get; set; }
 
                 }
 
+                /// <summary>
+                /// The name of the category.
+                /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
             }
 
+            /// <summary>
+            /// The retailer ID of the product.
+            /// </summary>
             [NameInMap("ThumbnailProductRetailerId")]
             [Validation(Required=false)]
             public string ThumbnailProductRetailerId { get; set; }

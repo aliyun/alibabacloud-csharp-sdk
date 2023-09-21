@@ -4009,6 +4009,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["FallBackId"] = request.FallBackId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallBackRule))
+            {
+                body["FallBackRule"] = request.FallBackRule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 body["From"] = request.From;
@@ -4105,6 +4109,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallBackId))
             {
                 body["FallBackId"] = request.FallBackId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallBackRule))
+            {
+                body["FallBackRule"] = request.FallBackRule;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -4249,6 +4257,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["FallBackId"] = request.FallBackId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallBackRule))
+            {
+                body["FallBackRule"] = request.FallBackRule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 body["From"] = request.From;
@@ -4386,6 +4398,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallBackId))
             {
                 body["FallBackId"] = request.FallBackId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallBackRule))
+            {
+                body["FallBackRule"] = request.FallBackRule;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {

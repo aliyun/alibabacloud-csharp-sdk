@@ -80,9 +80,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string FallBackContent { get; set; }
 
-        /// <summary>
-        /// 消息在指定时间内未返回回执回落
-        /// </summary>
         [NameInMap("FallBackDuration")]
         [Validation(Required=false)]
         public int? FallBackDuration { get; set; }
@@ -93,6 +90,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("FallBackId")]
         [Validation(Required=false)]
         public string FallBackId { get; set; }
+
+        [NameInMap("FallBackRule")]
+        [Validation(Required=false)]
+        public string FallBackRule { get; set; }
 
         /// <summary>
         /// The phone number of the message sender.
@@ -165,6 +166,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string PayloadShrink { get; set; }
 
+        /// <summary>
+        /// The information about the products included in the WhatsApp catalog message or multi-product message (MPM).
+        /// </summary>
         [NameInMap("ProductAction")]
         [Validation(Required=false)]
         public string ProductActionShrink { get; set; }
