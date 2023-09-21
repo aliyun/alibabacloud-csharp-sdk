@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string ComponentsShrink { get; set; }
 
+        [NameInMap("HpnZone")]
+        [Validation(Required=false)]
+        public string HpnZone { get; set; }
+
         [NameInMap("IgnoreFailedNodeTasks")]
         [Validation(Required=false)]
         public bool? IgnoreFailedNodeTasks { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [NameInMap("Networks")]
         [Validation(Required=false)]
         public string NetworksShrink { get; set; }
+
+        [NameInMap("NimizVSwitches")]
+        [Validation(Required=false)]
+        public string NimizVSwitchesShrink { get; set; }
 
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]

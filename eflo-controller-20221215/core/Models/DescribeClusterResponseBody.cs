@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("HpnZone")]
+        [Validation(Required=false)]
+        public string HpnZone { get; set; }
+
         [NameInMap("Networks")]
         [Validation(Required=false)]
         public List<DescribeClusterResponseBodyNetworks> Networks { get; set; }

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string Hostname { get; set; }
 
+            [NameInMap("HpnZone")]
+            [Validation(Required=false)]
+            public string HpnZone { get; set; }
+
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }

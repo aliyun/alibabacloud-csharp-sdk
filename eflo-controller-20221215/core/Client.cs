@@ -132,6 +132,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 request.NetworksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Networks, "Networks", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NimizVSwitches))
+            {
+                request.NimizVSwitchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NimizVSwitches, "NimizVSwitches", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeGroups))
             {
                 request.NodeGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeGroups, "NodeGroups", "json");
@@ -158,6 +162,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["Components"] = request.ComponentsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpnZone))
+            {
+                body["HpnZone"] = request.HpnZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFailedNodeTasks))
             {
                 body["IgnoreFailedNodeTasks"] = request.IgnoreFailedNodeTasks;
@@ -165,6 +173,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworksShrink))
             {
                 body["Networks"] = request.NetworksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NimizVSwitchesShrink))
+            {
+                body["NimizVSwitches"] = request.NimizVSwitchesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupsShrink))
             {
@@ -207,6 +219,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 request.NetworksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Networks, "Networks", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NimizVSwitches))
+            {
+                request.NimizVSwitchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NimizVSwitches, "NimizVSwitches", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeGroups))
             {
                 request.NodeGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeGroups, "NodeGroups", "json");
@@ -233,6 +249,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["Components"] = request.ComponentsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpnZone))
+            {
+                body["HpnZone"] = request.HpnZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFailedNodeTasks))
             {
                 body["IgnoreFailedNodeTasks"] = request.IgnoreFailedNodeTasks;
@@ -240,6 +260,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworksShrink))
             {
                 body["Networks"] = request.NetworksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NimizVSwitchesShrink))
+            {
+                body["NimizVSwitches"] = request.NimizVSwitchesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupsShrink))
             {
@@ -979,6 +1003,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpnZone))
+            {
+                body["HpnZone"] = request.HpnZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineType))
             {
                 body["MachineType"] = request.MachineType;
@@ -1014,6 +1042,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpnZone))
+            {
+                body["HpnZone"] = request.HpnZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineType))
             {
                 body["MachineType"] = request.MachineType;

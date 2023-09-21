@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("HpnZone")]
+            [Validation(Required=false)]
+            public string HpnZone { get; set; }
+
             [NameInMap("NodeCount")]
             [Validation(Required=false)]
             public long? NodeCount { get; set; }
