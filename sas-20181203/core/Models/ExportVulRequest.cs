@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string AttachTypes { get; set; }
 
+        [NameInMap("CveId")]
+        [Validation(Required=false)]
+        public string CveId { get; set; }
+
         /// <summary>
         /// Specifies whether the vulnerability is fixed. Valid values:
         /// 

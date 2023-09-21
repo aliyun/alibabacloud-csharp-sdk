@@ -29677,6 +29677,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["AttachTypes"] = request.AttachTypes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
+            {
+                query["CveId"] = request.CveId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
             {
                 query["Dealed"] = request.Dealed;
@@ -29749,6 +29753,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachTypes))
             {
                 query["AttachTypes"] = request.AttachTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
+            {
+                query["CveId"] = request.CveId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
             {
