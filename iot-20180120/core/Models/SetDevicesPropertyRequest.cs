@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
+        [NameInMap("Qos")]
+        [Validation(Required=false)]
+        public int? Qos { get; set; }
+
     }
 
 }
