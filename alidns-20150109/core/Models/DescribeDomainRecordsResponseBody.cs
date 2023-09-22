@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDomainRecordsResponseBodyDomainRecordsRecord> Record { get; set; }
             public class DescribeDomainRecordsResponseBodyDomainRecordsRecord : TeaModel {
+                [NameInMap("CreateTimestamp")]
+                [Validation(Required=false)]
+                public long? CreateTimestamp { get; set; }
+
                 /// <summary>
                 /// The domain name to which the DNS record belongs.
                 /// </summary>
@@ -89,6 +93,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("UpdateTimestamp")]
+                [Validation(Required=false)]
+                public long? UpdateTimestamp { get; set; }
 
                 /// <summary>
                 /// The record value.

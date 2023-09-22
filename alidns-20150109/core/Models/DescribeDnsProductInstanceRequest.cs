@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the **DescribeDomainInfo** operation to obtain the instance ID.
+        /// The instance ID. You can call the **DescribeDomainInfo** operation to obtain the instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

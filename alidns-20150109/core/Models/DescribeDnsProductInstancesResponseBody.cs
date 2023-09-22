@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The type of the overseas line.
+        /// The number of domain names that have been bound to the DNS instance.
         /// </summary>
         [NameInMap("DnsProducts")]
         [Validation(Required=false)]
@@ -20,43 +20,47 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsProductInstancesResponseBodyDnsProductsDnsProduct> DnsProduct { get; set; }
             public class DescribeDnsProductInstancesResponseBodyDnsProductsDnsProduct : TeaModel {
+                [NameInMap("AutoRenewal")]
+                [Validation(Required=false)]
+                public bool? AutoRenewal { get; set; }
+
                 /// <summary>
-                /// The number of subdomain name levels.
+                /// The time when the DNS instance was purchased.
                 /// </summary>
                 [NameInMap("BindCount")]
                 [Validation(Required=false)]
                 public long? BindCount { get; set; }
 
                 /// <summary>
-                /// The time at which the instance expired.
+                /// Indicates whether regional lines were allowed.
                 /// </summary>
                 [NameInMap("BindDomainCount")]
                 [Validation(Required=false)]
                 public long? BindDomainCount { get; set; }
 
                 /// <summary>
-                /// The list of ISP line subdivisions.
+                /// The list of search engine lines.
                 /// </summary>
                 [NameInMap("BindDomainUsedCount")]
                 [Validation(Required=false)]
                 public long? BindDomainUsedCount { get; set; }
 
                 /// <summary>
-                /// The bound domain name.
+                /// The URL forwarding quantity.
                 /// </summary>
                 [NameInMap("BindUsedCount")]
                 [Validation(Required=false)]
                 public long? BindUsedCount { get; set; }
 
                 /// <summary>
-                /// The number of times you can change domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.
+                /// The time at which the instance expired.
                 /// </summary>
                 [NameInMap("DDosDefendFlow")]
                 [Validation(Required=false)]
                 public long? DDosDefendFlow { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud DNS instance.
+                /// The number of subdomain name levels.
                 /// </summary>
                 [NameInMap("DDosDefendQuery")]
                 [Validation(Required=false)]
@@ -66,110 +70,100 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public long? DnsSLBCount { get; set; }
 
-                /// <summary>
-                /// The number of IP addresses supported by a domain name or line.
-                /// </summary>
                 [NameInMap("DnsSecurity")]
                 [Validation(Required=false)]
                 public string DnsSecurity { get; set; }
 
                 /// <summary>
-                /// The monitoring frequency. Unit: minutes.
+                /// The UNIX timestamp representing when the DNS instance was purchased.
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// The time when the DNS instance was purchased.
+                /// Indicates whether global server load balancing (GSLB) was allowed.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The version name of the Alibaba Cloud DNS instance.
+                /// The number of times you have changed domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.
                 /// </summary>
                 [NameInMap("EndTimestamp")]
                 [Validation(Required=false)]
                 public long? EndTimestamp { get; set; }
 
-                /// <summary>
-                /// The DNS security policy. Valid values:
-                /// 
-                /// *   **no**: not required.
-                /// *   **basic**: anti-DDoS basic.
-                /// *   **advanced**: anti-DDoS advanced.
-                /// </summary>
                 [NameInMap("Gslb")]
                 [Validation(Required=false)]
                 public bool? Gslb { get; set; }
 
                 /// <summary>
-                /// The list of search engine lines.
+                /// The version code of the Alibaba Cloud DNS instance.
                 /// </summary>
                 [NameInMap("ISPLines")]
                 [Validation(Required=false)]
                 public string ISPLines { get; set; }
 
                 /// <summary>
-                /// The minimum TTL. Unit: seconds.
+                /// The UNIX timestamp representing the expiration time of the instance.
                 /// </summary>
                 [NameInMap("ISPRegionLines")]
                 [Validation(Required=false)]
                 public string ISPRegionLines { get; set; }
 
                 /// <summary>
-                /// The number of domain names that have been bound to the DNS instance.
+                /// The list of ISP lines.
                 /// </summary>
                 [NameInMap("InBlackHole")]
                 [Validation(Required=false)]
                 public bool? InBlackHole { get; set; }
 
                 /// <summary>
-                /// The URL forwarding quantity.
+                /// The ID of the Alibaba Cloud DNS instance.
                 /// </summary>
                 [NameInMap("InClean")]
                 [Validation(Required=false)]
                 public bool? InClean { get; set; }
 
                 /// <summary>
-                /// The DDoS protection traffic. Unit: GB.
+                /// The number of domain names that can be bound to the DNS instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the request for domain name resolution was being cleared.
+                /// The DDoS protection frequency. Unit: 10,000 QPS.
                 /// </summary>
                 [NameInMap("MonitorFrequency")]
                 [Validation(Required=false)]
                 public long? MonitorFrequency { get; set; }
 
                 /// <summary>
-                /// Indicates whether the request for domain name resolution was in the black hole.
+                /// The minimum TTL. Unit: seconds.
                 /// </summary>
                 [NameInMap("MonitorNodeCount")]
                 [Validation(Required=false)]
                 public long? MonitorNodeCount { get; set; }
 
                 /// <summary>
-                /// The number of times you have changed domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.
+                /// Indicates whether the request for domain name resolution was being cleared.
                 /// </summary>
                 [NameInMap("MonitorTaskCount")]
                 [Validation(Required=false)]
                 public long? MonitorTaskCount { get; set; }
 
                 /// <summary>
-                /// Indicates whether regional lines were allowed.
+                /// The number of IP addresses supported by a domain name or line.
                 /// </summary>
                 [NameInMap("OverseaDDosDefendFlow")]
                 [Validation(Required=false)]
                 public long? OverseaDDosDefendFlow { get; set; }
 
                 /// <summary>
-                /// The number of monitored nodes.
+                /// The list of ISP line subdivisions.
                 /// </summary>
                 [NameInMap("OverseaLine")]
                 [Validation(Required=false)]
@@ -179,64 +173,65 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string PaymentType { get; set; }
 
-                /// <summary>
-                /// Indicates whether global server load balancing (GSLB) was allowed.
-                /// </summary>
                 [NameInMap("RegionLines")]
                 [Validation(Required=false)]
                 public bool? RegionLines { get; set; }
 
                 /// <summary>
-                /// The UNIX timestamp representing the expiration time of the instance.
+                /// The number of monitoring tasks.
                 /// </summary>
                 [NameInMap("SearchEngineLines")]
                 [Validation(Required=false)]
                 public string SearchEngineLines { get; set; }
 
                 /// <summary>
-                /// DDoS protection traffic outside China. Unit: GB.
+                /// The DNS security policy. Valid values:
+                /// 
+                /// *   **no**: not required.
+                /// *   **basic**: anti-DDoS basic.
+                /// *   **advanced**: anti-DDoS advanced.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The DDoS protection frequency. Unit: 10,000 QPS.
+                /// The number of times you can change domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.
                 /// </summary>
                 [NameInMap("StartTimestamp")]
                 [Validation(Required=false)]
                 public long? StartTimestamp { get; set; }
 
                 /// <summary>
-                /// The number of domain names that can be bound to the DNS instance.
+                /// DDoS protection traffic outside China. Unit: GB.
                 /// </summary>
                 [NameInMap("SubDomainLevel")]
                 [Validation(Required=false)]
                 public long? SubDomainLevel { get; set; }
 
                 /// <summary>
-                /// The list of ISP lines.
+                /// The version name of the Alibaba Cloud DNS instance.
                 /// </summary>
                 [NameInMap("TTLMinValue")]
                 [Validation(Required=false)]
                 public long? TTLMinValue { get; set; }
 
                 /// <summary>
-                /// The UNIX timestamp representing when the DNS instance was purchased.
+                /// The DDoS protection traffic. Unit: GB.
                 /// </summary>
                 [NameInMap("URLForwardCount")]
                 [Validation(Required=false)]
                 public long? URLForwardCount { get; set; }
 
                 /// <summary>
-                /// The number of monitoring tasks.
+                /// The monitoring frequency. Unit: minutes.
                 /// </summary>
                 [NameInMap("VersionCode")]
                 [Validation(Required=false)]
                 public string VersionCode { get; set; }
 
                 /// <summary>
-                /// The version code of the Alibaba Cloud DNS instance.
+                /// The bound domain name.
                 /// </summary>
                 [NameInMap("VersionName")]
                 [Validation(Required=false)]
@@ -251,28 +246,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainType { get; set; }
 
         /// <summary>
-        /// The list of Alibaba Cloud DNS instances obtained by this operation.
+        /// Indicates whether the request for domain name resolution was in the black hole.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The type of the overseas line.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of monitored nodes.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The list of Alibaba Cloud DNS instances obtained by this operation.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

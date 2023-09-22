@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainNsResponseBody : TeaModel {
+        /// <summary>
+        /// Indicates whether all the name servers are Alibaba Cloud DNS servers.
+        /// </summary>
         [NameInMap("AllAliDns")]
         [Validation(Required=false)]
         public bool? AllAliDns { get; set; }
@@ -20,6 +23,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DetectFailedReasonCode { get; set; }
 
+        /// <summary>
+        /// The DNS server names configured for the domain name.
+        /// </summary>
         [NameInMap("DnsServers")]
         [Validation(Required=false)]
         public DescribeDomainNsResponseBodyDnsServers DnsServers { get; set; }
@@ -30,6 +36,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         }
 
+        /// <summary>
+        /// The DNS server names assigned by Alibaba Cloud DNS.
+        /// </summary>
         [NameInMap("ExpectDnsServers")]
         [Validation(Required=false)]
         public DescribeDomainNsResponseBodyExpectDnsServers ExpectDnsServers { get; set; }
@@ -40,10 +49,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         }
 
+        /// <summary>
+        /// Indicates whether the name servers include Alibaba Cloud DNS servers.
+        /// </summary>
         [NameInMap("IncludeAliDns")]
         [Validation(Required=false)]
         public bool? IncludeAliDns { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

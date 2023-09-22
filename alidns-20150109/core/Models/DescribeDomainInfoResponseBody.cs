@@ -204,6 +204,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public bool? SlaveDns { get; set; }
 
+        [NameInMap("SubDomain")]
+        [Validation(Required=false)]
+        public bool? SubDomain { get; set; }
+
         /// <summary>
         /// The version of the Alibaba Cloud DNS instance.
         /// </summary>
