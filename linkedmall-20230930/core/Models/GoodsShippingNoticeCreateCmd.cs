@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         [NameInMap("disputeId")]
         [Validation(Required=false)]
-        public long? DisputeId { get; set; }
+        public string DisputeId { get; set; }
 
         [NameInMap("logisticsNo")]
         [Validation(Required=false)]

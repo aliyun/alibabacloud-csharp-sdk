@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string RefunderZipCode { get; set; }
 
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("returnGoodLogisticsStatus")]
         [Validation(Required=false)]
         public int? ReturnGoodLogisticsStatus { get; set; }
