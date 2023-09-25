@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
         /// <summary>
         /// The number of entries per page.
         /// 

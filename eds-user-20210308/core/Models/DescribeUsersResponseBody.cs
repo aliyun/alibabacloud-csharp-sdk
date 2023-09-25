@@ -24,6 +24,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public List<DescribeUsersResponseBodyUsers> Users { get; set; }
         public class DescribeUsersResponseBodyUsers : TeaModel {
+            [NameInMap("Address")]
+            [Validation(Required=false)]
+            public string Address { get; set; }
+
+            [NameInMap("Avatar")]
+            [Validation(Required=false)]
+            public string Avatar { get; set; }
+
             /// <summary>
             /// The email address.
             /// </summary>
@@ -37,6 +45,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
+
+            [NameInMap("Groups")]
+            [Validation(Required=false)]
+            public List<DescribeUsersResponseBodyUsersGroups> Groups { get; set; }
+            public class DescribeUsersResponseBodyUsersGroups : TeaModel {
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
+                public string GroupId { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
+                public string GroupName { get; set; }
+
+            }
 
             /// <summary>
             /// The ID of the user.
@@ -52,6 +74,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public bool? IsTenantManager { get; set; }
 
+            [NameInMap("JobNumber")]
+            [Validation(Required=false)]
+            public string JobNumber { get; set; }
+
             /// <summary>
             /// The nickname of the user.
             /// </summary>
@@ -65,6 +91,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [NameInMap("OrgId")]
             [Validation(Required=false)]
             public string OrgId { get; set; }
+
+            [NameInMap("Orgs")]
+            [Validation(Required=false)]
+            public List<DescribeUsersResponseBodyUsersOrgs> Orgs { get; set; }
+            public class DescribeUsersResponseBodyUsersOrgs : TeaModel {
+                [NameInMap("OrgId")]
+                [Validation(Required=false)]
+                public string OrgId { get; set; }
+
+                [NameInMap("OrgName")]
+                [Validation(Required=false)]
+                public string OrgName { get; set; }
+
+            }
 
             /// <summary>
             /// The type of the convenience account.
