@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ScaleApRoNumMax")]
+        [Validation(Required=false)]
+        public string ScaleApRoNumMax { get; set; }
+
+        [NameInMap("ScaleApRoNumMin")]
+        [Validation(Required=false)]
+        public string ScaleApRoNumMin { get; set; }
+
         /// <summary>
         /// The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.
         /// </summary>
@@ -67,6 +75,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("SecondsUntilAutoPause")]
         [Validation(Required=false)]
         public string SecondsUntilAutoPause { get; set; }
+
+        [NameInMap("Switchs")]
+        [Validation(Required=false)]
+        public string Switchs { get; set; }
 
     }
 
