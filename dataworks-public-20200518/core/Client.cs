@@ -1330,6 +1330,350 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await CreateConnectionWithOptionsAsync(request, runtime);
         }
 
+        public CreateDIAlarmRuleResponse CreateDIAlarmRuleWithOptions(CreateDIAlarmRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDIAlarmRuleShrinkRequest request = new CreateDIAlarmRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationSettings))
+            {
+                request.NotificationSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationSettings, "NotificationSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerConditions))
+            {
+                request.TriggerConditionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConditions, "TriggerConditions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                body["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationSettingsShrink))
+            {
+                body["NotificationSettings"] = request.NotificationSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConditionsShrink))
+            {
+                body["TriggerConditions"] = request.TriggerConditionsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDIAlarmRule",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDIAlarmRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDIAlarmRuleResponse> CreateDIAlarmRuleWithOptionsAsync(CreateDIAlarmRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDIAlarmRuleShrinkRequest request = new CreateDIAlarmRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationSettings))
+            {
+                request.NotificationSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationSettings, "NotificationSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerConditions))
+            {
+                request.TriggerConditionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConditions, "TriggerConditions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                body["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationSettingsShrink))
+            {
+                body["NotificationSettings"] = request.NotificationSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConditionsShrink))
+            {
+                body["TriggerConditions"] = request.TriggerConditionsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDIAlarmRule",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDIAlarmRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDIAlarmRuleResponse CreateDIAlarmRule(CreateDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDIAlarmRuleWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDIAlarmRuleResponse> CreateDIAlarmRuleAsync(CreateDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDIAlarmRuleWithOptionsAsync(request, runtime);
+        }
+
+        public CreateDIJobResponse CreateDIJobWithOptions(CreateDIJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDIJobShrinkRequest request = new CreateDIJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestinationDataSourceSettings))
+            {
+                request.DestinationDataSourceSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestinationDataSourceSettings, "DestinationDataSourceSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSettings))
+            {
+                request.JobSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSettings, "JobSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSettings))
+            {
+                request.ResourceSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSettings, "ResourceSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceDataSourceSettings))
+            {
+                request.SourceDataSourceSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceDataSourceSettings, "SourceDataSourceSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableMappings))
+            {
+                request.TableMappingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableMappings, "TableMappings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransformationRules))
+            {
+                request.TransformationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransformationRules, "TransformationRules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDebug))
+            {
+                query["SystemDebug"] = request.SystemDebug;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceSettingsShrink))
+            {
+                body["DestinationDataSourceSettings"] = request.DestinationDataSourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceType))
+            {
+                body["DestinationDataSourceType"] = request.DestinationDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
+            {
+                body["JobSettings"] = request.JobSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationType))
+            {
+                body["MigrationType"] = request.MigrationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSettingsShrink))
+            {
+                body["ResourceSettings"] = request.ResourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceSettingsShrink))
+            {
+                body["SourceDataSourceSettings"] = request.SourceDataSourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceType))
+            {
+                body["SourceDataSourceType"] = request.SourceDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMappingsShrink))
+            {
+                body["TableMappings"] = request.TableMappingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformationRulesShrink))
+            {
+                body["TransformationRules"] = request.TransformationRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDIJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDIJobResponse> CreateDIJobWithOptionsAsync(CreateDIJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDIJobShrinkRequest request = new CreateDIJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestinationDataSourceSettings))
+            {
+                request.DestinationDataSourceSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestinationDataSourceSettings, "DestinationDataSourceSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSettings))
+            {
+                request.JobSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSettings, "JobSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSettings))
+            {
+                request.ResourceSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSettings, "ResourceSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceDataSourceSettings))
+            {
+                request.SourceDataSourceSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceDataSourceSettings, "SourceDataSourceSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableMappings))
+            {
+                request.TableMappingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableMappings, "TableMappings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransformationRules))
+            {
+                request.TransformationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransformationRules, "TransformationRules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDebug))
+            {
+                query["SystemDebug"] = request.SystemDebug;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceSettingsShrink))
+            {
+                body["DestinationDataSourceSettings"] = request.DestinationDataSourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceType))
+            {
+                body["DestinationDataSourceType"] = request.DestinationDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
+            {
+                body["JobSettings"] = request.JobSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationType))
+            {
+                body["MigrationType"] = request.MigrationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSettingsShrink))
+            {
+                body["ResourceSettings"] = request.ResourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceSettingsShrink))
+            {
+                body["SourceDataSourceSettings"] = request.SourceDataSourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceType))
+            {
+                body["SourceDataSourceType"] = request.SourceDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMappingsShrink))
+            {
+                body["TableMappings"] = request.TableMappingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformationRulesShrink))
+            {
+                body["TransformationRules"] = request.TransformationRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDIJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDIJobResponse CreateDIJob(CreateDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDIJobWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDIJobResponse> CreateDIJobAsync(CreateDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDIJobWithOptionsAsync(request, runtime);
+        }
+
         /**
           * DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
           *
@@ -5672,6 +6016,138 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await DeleteConnectionWithOptionsAsync(request, runtime);
         }
 
+        public DeleteDIAlarmRuleResponse DeleteDIAlarmRuleWithOptions(DeleteDIAlarmRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIAlarmRuleId))
+            {
+                body["DIAlarmRuleId"] = request.DIAlarmRuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDIAlarmRule",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDIAlarmRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDIAlarmRuleResponse> DeleteDIAlarmRuleWithOptionsAsync(DeleteDIAlarmRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIAlarmRuleId))
+            {
+                body["DIAlarmRuleId"] = request.DIAlarmRuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDIAlarmRule",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDIAlarmRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDIAlarmRuleResponse DeleteDIAlarmRule(DeleteDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDIAlarmRuleWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDIAlarmRuleResponse> DeleteDIAlarmRuleAsync(DeleteDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDIAlarmRuleWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteDIJobResponse DeleteDIJobWithOptions(DeleteDIJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDIJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDIJobResponse> DeleteDIJobWithOptionsAsync(DeleteDIJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDIJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDIJobResponse DeleteDIJob(DeleteDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDIJobWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDIJobResponse> DeleteDIJobAsync(DeleteDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDIJobWithOptionsAsync(request, runtime);
+        }
+
         public DeleteDISyncTaskResponse DeleteDISyncTaskWithOptions(DeleteDISyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8374,6 +8850,146 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDDLJobStatusWithOptionsAsync(request, runtime);
+        }
+
+        public GetDIAlarmRuleResponse GetDIAlarmRuleWithOptions(GetDIAlarmRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIAlarmRuleId))
+            {
+                body["DIAlarmRuleId"] = request.DIAlarmRuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDIAlarmRule",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDIAlarmRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetDIAlarmRuleResponse> GetDIAlarmRuleWithOptionsAsync(GetDIAlarmRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIAlarmRuleId))
+            {
+                body["DIAlarmRuleId"] = request.DIAlarmRuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDIAlarmRule",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDIAlarmRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetDIAlarmRuleResponse GetDIAlarmRule(GetDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDIAlarmRuleWithOptions(request, runtime);
+        }
+
+        public async Task<GetDIAlarmRuleResponse> GetDIAlarmRuleAsync(GetDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDIAlarmRuleWithOptionsAsync(request, runtime);
+        }
+
+        public GetDIJobResponse GetDIJobWithOptions(GetDIJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithDetails))
+            {
+                body["WithDetails"] = request.WithDetails;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDIJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetDIJobResponse> GetDIJobWithOptionsAsync(GetDIJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithDetails))
+            {
+                body["WithDetails"] = request.WithDetails;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDIJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetDIJobResponse GetDIJob(GetDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDIJobWithOptions(request, runtime);
+        }
+
+        public async Task<GetDIJobResponse> GetDIJobAsync(GetDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDIJobWithOptionsAsync(request, runtime);
         }
 
         public GetDISyncInstanceInfoResponse GetDISyncInstanceInfoWithOptions(GetDISyncInstanceInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -14746,6 +15362,194 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListConnectionsWithOptionsAsync(request, runtime);
+        }
+
+        public ListDIAlarmRulesResponse ListDIAlarmRulesWithOptions(ListDIAlarmRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDIAlarmRules",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDIAlarmRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListDIAlarmRulesResponse> ListDIAlarmRulesWithOptionsAsync(ListDIAlarmRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDIAlarmRules",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDIAlarmRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListDIAlarmRulesResponse ListDIAlarmRules(ListDIAlarmRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDIAlarmRulesWithOptions(request, runtime);
+        }
+
+        public async Task<ListDIAlarmRulesResponse> ListDIAlarmRulesAsync(ListDIAlarmRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDIAlarmRulesWithOptionsAsync(request, runtime);
+        }
+
+        public ListDIJobsResponse ListDIJobsWithOptions(ListDIJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceType))
+            {
+                body["DestinationDataSourceType"] = request.DestinationDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceType))
+            {
+                body["SourceDataSourceType"] = request.SourceDataSourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDIJobs",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDIJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListDIJobsResponse> ListDIJobsWithOptionsAsync(ListDIJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceType))
+            {
+                body["DestinationDataSourceType"] = request.DestinationDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceType))
+            {
+                body["SourceDataSourceType"] = request.SourceDataSourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDIJobs",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDIJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListDIJobsResponse ListDIJobs(ListDIJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDIJobsWithOptions(request, runtime);
+        }
+
+        public async Task<ListDIJobsResponse> ListDIJobsAsync(ListDIJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDIJobsWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -22196,6 +23000,100 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await SetSuccessInstanceWithOptionsAsync(request, runtime);
         }
 
+        public StartDIJobResponse StartDIJobWithOptions(StartDIJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartDIJobShrinkRequest request = new StartDIJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RealtimeStartSettings))
+            {
+                request.RealtimeStartSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RealtimeStartSettings, "RealtimeStartSettings", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceToRerun))
+            {
+                body["ForceToRerun"] = request.ForceToRerun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealtimeStartSettingsShrink))
+            {
+                body["RealtimeStartSettings"] = request.RealtimeStartSettingsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartDIJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StartDIJobResponse> StartDIJobWithOptionsAsync(StartDIJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartDIJobShrinkRequest request = new StartDIJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RealtimeStartSettings))
+            {
+                request.RealtimeStartSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RealtimeStartSettings, "RealtimeStartSettings", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceToRerun))
+            {
+                body["ForceToRerun"] = request.ForceToRerun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealtimeStartSettingsShrink))
+            {
+                body["RealtimeStartSettings"] = request.RealtimeStartSettingsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartDIJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StartDIJobResponse StartDIJob(StartDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartDIJobWithOptions(request, runtime);
+        }
+
+        public async Task<StartDIJobResponse> StartDIJobAsync(StartDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartDIJobWithOptionsAsync(request, runtime);
+        }
+
         public StartDISyncInstanceResponse StartDISyncInstanceWithOptions(StartDISyncInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22358,6 +23256,72 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartMigrationWithOptionsAsync(request, runtime);
+        }
+
+        public StopDIJobResponse StopDIJobWithOptions(StopDIJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopDIJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StopDIJobResponse> StopDIJobWithOptionsAsync(StopDIJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopDIJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StopDIJobResponse StopDIJob(StopDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopDIJobWithOptions(request, runtime);
+        }
+
+        public async Task<StopDIJobResponse> StopDIJobAsync(StopDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopDIJobWithOptionsAsync(request, runtime);
         }
 
         public StopDISyncInstanceResponse StopDISyncInstanceWithOptions(StopDISyncInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -23680,6 +24644,274 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateConnectionWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateDIAlarmRuleResponse UpdateDIAlarmRuleWithOptions(UpdateDIAlarmRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDIAlarmRuleShrinkRequest request = new UpdateDIAlarmRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationSettings))
+            {
+                request.NotificationSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationSettings, "NotificationSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerConditions))
+            {
+                request.TriggerConditionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConditions, "TriggerConditions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIAlarmRuleId))
+            {
+                body["DIAlarmRuleId"] = request.DIAlarmRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                body["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationSettingsShrink))
+            {
+                body["NotificationSettings"] = request.NotificationSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConditionsShrink))
+            {
+                body["TriggerConditions"] = request.TriggerConditionsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDIAlarmRule",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDIAlarmRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateDIAlarmRuleResponse> UpdateDIAlarmRuleWithOptionsAsync(UpdateDIAlarmRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDIAlarmRuleShrinkRequest request = new UpdateDIAlarmRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationSettings))
+            {
+                request.NotificationSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationSettings, "NotificationSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerConditions))
+            {
+                request.TriggerConditionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConditions, "TriggerConditions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIAlarmRuleId))
+            {
+                body["DIAlarmRuleId"] = request.DIAlarmRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                body["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationSettingsShrink))
+            {
+                body["NotificationSettings"] = request.NotificationSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConditionsShrink))
+            {
+                body["TriggerConditions"] = request.TriggerConditionsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDIAlarmRule",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDIAlarmRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateDIAlarmRuleResponse UpdateDIAlarmRule(UpdateDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDIAlarmRuleWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateDIAlarmRuleResponse> UpdateDIAlarmRuleAsync(UpdateDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDIAlarmRuleWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateDIJobResponse UpdateDIJobWithOptions(UpdateDIJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDIJobShrinkRequest request = new UpdateDIJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSettings))
+            {
+                request.JobSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSettings, "JobSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSettings))
+            {
+                request.ResourceSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSettings, "ResourceSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableMappings))
+            {
+                request.TableMappingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableMappings, "TableMappings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransformationRules))
+            {
+                request.TransformationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransformationRules, "TransformationRules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
+            {
+                body["JobSettings"] = request.JobSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSettingsShrink))
+            {
+                body["ResourceSettings"] = request.ResourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMappingsShrink))
+            {
+                body["TableMappings"] = request.TableMappingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformationRulesShrink))
+            {
+                body["TransformationRules"] = request.TransformationRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDIJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateDIJobResponse> UpdateDIJobWithOptionsAsync(UpdateDIJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDIJobShrinkRequest request = new UpdateDIJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSettings))
+            {
+                request.JobSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSettings, "JobSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSettings))
+            {
+                request.ResourceSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSettings, "ResourceSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableMappings))
+            {
+                request.TableMappingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableMappings, "TableMappings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransformationRules))
+            {
+                request.TransformationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransformationRules, "TransformationRules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
+            {
+                body["JobSettings"] = request.JobSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSettingsShrink))
+            {
+                body["ResourceSettings"] = request.ResourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMappingsShrink))
+            {
+                body["TableMappings"] = request.TableMappingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformationRulesShrink))
+            {
+                body["TransformationRules"] = request.TransformationRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDIJob",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDIJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateDIJobResponse UpdateDIJob(UpdateDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDIJobWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateDIJobResponse> UpdateDIJobAsync(UpdateDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDIJobWithOptionsAsync(request, runtime);
         }
 
         /**
