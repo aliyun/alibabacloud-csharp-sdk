@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class DescribeEmptyNumberRequest : TeaModel {
-        [NameInMap("AuthCode")]
-        [Validation(Required=false)]
-        public string AuthCode { get; set; }
-
-        [NameInMap("InputNumber")]
-        [Validation(Required=false)]
-        public string InputNumber { get; set; }
-
-        [NameInMap("Mask")]
-        [Validation(Required=false)]
-        public string Mask { get; set; }
-
+    public class QueryTagListPageRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public long? PageNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

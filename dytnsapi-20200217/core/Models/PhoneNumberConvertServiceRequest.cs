@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class DescribeEmptyNumberRequest : TeaModel {
+    public class PhoneNumberConvertServiceRequest : TeaModel {
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }

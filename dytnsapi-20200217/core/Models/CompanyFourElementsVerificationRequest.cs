@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,18 +11,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class DescribeEmptyNumberRequest : TeaModel {
+    public class CompanyFourElementsVerificationRequest : TeaModel {
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
-        [NameInMap("InputNumber")]
+        [NameInMap("EpCertName")]
         [Validation(Required=false)]
-        public string InputNumber { get; set; }
+        public string EpCertName { get; set; }
 
-        [NameInMap("Mask")]
+        [NameInMap("EpCertNo")]
         [Validation(Required=false)]
-        public string Mask { get; set; }
+        public string EpCertNo { get; set; }
+
+        [NameInMap("LegalPersonCertName")]
+        [Validation(Required=false)]
+        public string LegalPersonCertName { get; set; }
+
+        [NameInMap("LegalPersonCertNo")]
+        [Validation(Required=false)]
+        public string LegalPersonCertNo { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

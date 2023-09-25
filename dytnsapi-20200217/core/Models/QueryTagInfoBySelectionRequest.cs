@@ -8,18 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class DescribeEmptyNumberRequest : TeaModel {
-        [NameInMap("AuthCode")]
+    public class QueryTagInfoBySelectionRequest : TeaModel {
+        /// <summary>
+        /// 行业id
+        /// </summary>
+        [NameInMap("IndustryId")]
         [Validation(Required=false)]
-        public string AuthCode { get; set; }
-
-        [NameInMap("InputNumber")]
-        [Validation(Required=false)]
-        public string InputNumber { get; set; }
-
-        [NameInMap("Mask")]
-        [Validation(Required=false)]
-        public string Mask { get; set; }
+        public long? IndustryId { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -32,6 +27,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// 场景id
+        /// </summary>
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public long? SceneId { get; set; }
+
+        /// <summary>
+        /// 标签id
+        /// </summary>
+        [NameInMap("TagId")]
+        [Validation(Required=false)]
+        public long? TagId { get; set; }
 
     }
 

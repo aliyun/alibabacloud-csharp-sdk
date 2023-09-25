@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class DescribeEmptyNumberRequest : TeaModel {
+    public class CompanyTwoElementsVerificationRequest : TeaModel {
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
-        [NameInMap("InputNumber")]
+        [NameInMap("EpCertName")]
         [Validation(Required=false)]
-        public string InputNumber { get; set; }
+        public string EpCertName { get; set; }
 
-        [NameInMap("Mask")]
+        [NameInMap("EpCertNo")]
         [Validation(Required=false)]
-        public string Mask { get; set; }
+        public string EpCertNo { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
