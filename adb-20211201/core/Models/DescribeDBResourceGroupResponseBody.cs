@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public List<DescribeDBResourceGroupResponseBodyGroupsInfo> GroupsInfo { get; set; }
         public class DescribeDBResourceGroupResponseBodyGroupsInfo : TeaModel {
+            [NameInMap("ClusterMode")]
+            [Validation(Required=false)]
+            public string ClusterMode { get; set; }
+
+            [NameInMap("ClusterSizeResource")]
+            [Validation(Required=false)]
+            public string ClusterSizeResource { get; set; }
+
             /// <summary>
             /// The time when the resource group was created. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
             /// </summary>
@@ -56,6 +64,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string GroupUsers { get; set; }
 
+            [NameInMap("MaxClusterCount")]
+            [Validation(Required=false)]
+            public int? MaxClusterCount { get; set; }
+
             /// <summary>
             /// The maximum amount of reserved computing resources. Unit: ACU.
             /// </summary>
@@ -63,12 +75,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string MaxComputeResource { get; set; }
 
+            [NameInMap("MinClusterCount")]
+            [Validation(Required=false)]
+            public int? MinClusterCount { get; set; }
+
             /// <summary>
             /// The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).
             /// </summary>
             [NameInMap("MinComputeResource")]
             [Validation(Required=false)]
             public string MinComputeResource { get; set; }
+
+            [NameInMap("RunningClusterCount")]
+            [Validation(Required=false)]
+            public int? RunningClusterCount { get; set; }
 
             /// <summary>
             /// The state of the resource group. Valid values:

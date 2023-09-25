@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBResourceGroupRequest : TeaModel {
+        [NameInMap("ClusterMode")]
+        [Validation(Required=false)]
+        public string ClusterMode { get; set; }
+
+        [NameInMap("ClusterSizeResource")]
+        [Validation(Required=false)]
+        public string ClusterSizeResource { get; set; }
+
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
         /// </summary>
@@ -39,6 +47,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
+        [NameInMap("MaxClusterCount")]
+        [Validation(Required=false)]
+        public int? MaxClusterCount { get; set; }
+
         /// <summary>
         /// The maximum reserved computing resources. Unit: ACU.
         /// 
@@ -48,6 +60,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("MaxComputeResource")]
         [Validation(Required=false)]
         public string MaxComputeResource { get; set; }
+
+        [NameInMap("MinClusterCount")]
+        [Validation(Required=false)]
+        public int? MinClusterCount { get; set; }
 
         /// <summary>
         /// The minimum reserved computing resources. Unit: AnalyticDB Compute Unit (ACU).
