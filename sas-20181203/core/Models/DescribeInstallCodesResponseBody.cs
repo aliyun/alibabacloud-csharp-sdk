@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstallCodesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the installation command.
+        /// The information about the installation commands.
         /// </summary>
         [NameInMap("InstallCodes")]
         [Validation(Required=false)]
         public List<DescribeInstallCodesResponseBodyInstallCodes> InstallCodes { get; set; }
         public class DescribeInstallCodesResponseBodyInstallCodes : TeaModel {
             /// <summary>
-            /// The installation verification code for you to manually install the Security Center agent.
+            /// The verification code for you to manually install the Security Center agent.
             /// </summary>
             [NameInMap("CaptchaCode")]
             [Validation(Required=false)]
             public string CaptchaCode { get; set; }
 
             /// <summary>
-            /// The timestamp when the installation command expires. Unit: milliseconds.
+            /// The timestamp generated when the commands used to install the Security Center agent expire. Unit: milliseconds.
             /// </summary>
             [NameInMap("ExpiredDate")]
             [Validation(Required=false)]
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether an image is used to install the Security Center agent. Valid values:
             /// 
-            /// *   **true**: An image is used to install the Security Center agent.
-            /// *   **false**: An image is not used to install the Security Center agent.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("OnlyImage")]
             [Validation(Required=false)]
@@ -56,13 +56,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// The operating system of the server. Valid values:
-            /// *   **linux**: Linux.
-            /// *   **windows**: Windows.
+            /// 
+            /// *   **linux**
+            /// *   **windows**
             /// </summary>
             [NameInMap("Os")]
             [Validation(Required=false)]
             public string Os { get; set; }
 
+            /// <summary>
+            /// The name of the proxy cluster.
+            /// </summary>
             [NameInMap("ProxyCluster")]
             [Validation(Required=false)]
             public string ProxyCluster { get; set; }

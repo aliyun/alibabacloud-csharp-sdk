@@ -11228,7 +11228,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+          * You can search for an asset by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
           *
           * @param request DescribeCloudCenterInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11306,7 +11306,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+          * You can search for an asset by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
           *
           * @param request DescribeCloudCenterInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11384,7 +11384,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+          * You can search for an asset by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
           *
           * @param request DescribeCloudCenterInstancesRequest
           * @return DescribeCloudCenterInstancesResponse
@@ -11396,7 +11396,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+          * You can search for an asset by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
           *
           * @param request DescribeCloudCenterInstancesRequest
           * @return DescribeCloudCenterInstancesResponse
@@ -18244,9 +18244,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call the DescribeInstallCodes operation to query the commands that are used to manually install the Security Center agent. The returned results contain the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
-          * # Limits
-          * You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the commands that are used to manually install the Security Center agent on the server. The return result contains the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
+          * ### QPS limit
+          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
           *
           * @param request DescribeInstallCodesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18271,9 +18271,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call the DescribeInstallCodes operation to query the commands that are used to manually install the Security Center agent. The returned results contain the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
-          * # Limits
-          * You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the commands that are used to manually install the Security Center agent on the server. The return result contains the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
+          * ### QPS limit
+          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
           *
           * @param request DescribeInstallCodesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18298,9 +18298,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call the DescribeInstallCodes operation to query the commands that are used to manually install the Security Center agent. The returned results contain the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
-          * # Limits
-          * You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the commands that are used to manually install the Security Center agent on the server. The return result contains the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
+          * ### QPS limit
+          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
           *
           * @return DescribeInstallCodesResponse
          */
@@ -18311,9 +18311,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call the DescribeInstallCodes operation to query the commands that are used to manually install the Security Center agent. The returned results contain the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
-          * # Limits
-          * You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to query the commands that are used to manually install the Security Center agent on the server. The return result contains the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
+          * ### QPS limit
+          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
           *
           * @return DescribeInstallCodesResponse
          */
@@ -40663,6 +40663,72 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListVulAutoRepairConfigWithOptionsAsync(request, runtime);
+        }
+
+        public ListVulGlobalConfigResponse ListVulGlobalConfigWithOptions(ListVulGlobalConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVulGlobalConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVulGlobalConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListVulGlobalConfigResponse> ListVulGlobalConfigWithOptionsAsync(ListVulGlobalConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVulGlobalConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVulGlobalConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListVulGlobalConfigResponse ListVulGlobalConfig(ListVulGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVulGlobalConfigWithOptions(request, runtime);
+        }
+
+        public async Task<ListVulGlobalConfigResponse> ListVulGlobalConfigAsync(ListVulGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVulGlobalConfigWithOptionsAsync(request, runtime);
         }
 
         public ModifyAccessKeyLeakDealResponse ModifyAccessKeyLeakDealWithOptions(ModifyAccessKeyLeakDealRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

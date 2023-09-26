@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeFieldStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the servers.
+        /// The information about servers that are returned.
         /// </summary>
         [NameInMap("GroupedFields")]
         [Validation(Required=false)]
         public DescribeFieldStatisticsResponseBodyGroupedFields GroupedFields { get; set; }
         public class DescribeFieldStatisticsResponseBodyGroupedFields : TeaModel {
+            /// <summary>
+            /// The number of assets that are deployed on Alibaba Cloud.
+            /// </summary>
             [NameInMap("AliYunInstanceCount")]
             [Validation(Required=false)]
             public int? AliYunInstanceCount { get; set; }
 
             /// <summary>
-            /// The number of third-party cloud servers.
+            /// The number of servers.
             /// </summary>
             [NameInMap("AwsInstanceCount")]
             [Validation(Required=false)]
@@ -35,66 +38,63 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AzureInstanceCount { get; set; }
 
             /// <summary>
-            /// The data returned.
+            /// The number of exposed servers.
             /// </summary>
             [NameInMap("ExposedInstanceCount")]
             [Validation(Required=false)]
             public int? ExposedInstanceCount { get; set; }
 
             /// <summary>
-            /// The number of server groups.
+            /// The number of assets whose importance is common.
             /// </summary>
             [NameInMap("GeneralAssetCount")]
             [Validation(Required=false)]
             public int? GeneralAssetCount { get; set; }
 
             /// <summary>
-            /// The type of the asset to query. If no asset types are specified, all types of assets are returned. Valid values:
-            /// 
-            /// *   **ecs**: server
-            /// *   **cloud_product**: Alibaba Cloud service
+            /// The number of server groups.
             /// </summary>
             [NameInMap("GroupCount")]
             [Validation(Required=false)]
             public int? GroupCount { get; set; }
 
             /// <summary>
-            /// The number of third-party cloud servers.
+            /// The number of instances that are provisioned by third-party providers.
             /// </summary>
             [NameInMap("HuaweiInstanceCount")]
             [Validation(Required=false)]
             public int? HuaweiInstanceCount { get; set; }
 
             /// <summary>
-            /// DescribeFieldStatistics
+            /// The number of assets that can be protected by Security Center.
             /// </summary>
             [NameInMap("IdcInstanceCount")]
             [Validation(Required=false)]
             public int? IdcInstanceCount { get; set; }
 
             /// <summary>
-            /// The number of assets that are at risk.
+            /// The number of assets whose importance is important.
             /// </summary>
             [NameInMap("ImportantAssetCount")]
             [Validation(Required=false)]
             public int? ImportantAssetCount { get; set; }
 
             /// <summary>
-            /// The number of assets that are deployed on Alibaba Cloud.
+            /// The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
             /// </summary>
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// The number of assets whose importance is common.
+            /// The total number of tasks for the specified type of assets. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
             /// </summary>
             [NameInMap("InstanceSyncTaskCount")]
             [Validation(Required=false)]
             public int? InstanceSyncTaskCount { get; set; }
 
             /// <summary>
-            /// The number of assets whose statuses are unknown.
+            /// The number of newly added servers.
             /// </summary>
             [NameInMap("NewInstanceCount")]
             [Validation(Required=false)]
@@ -108,50 +108,56 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NoRiskInstanceCount { get; set; }
 
             /// <summary>
-            /// WB01224678
+            /// The number of servers that are shut down.
             /// </summary>
             [NameInMap("NotRunningStatusCount")]
             [Validation(Required=false)]
             public int? NotRunningStatusCount { get; set; }
 
             /// <summary>
-            /// The number of unprotected assets.
+            /// The number of servers whose Security Center agent status is Offline.
             /// </summary>
             [NameInMap("OfflineInstanceCount")]
             [Validation(Required=false)]
             public int? OfflineInstanceCount { get; set; }
 
+            /// <summary>
+            /// The number of servers outside the cloud.
+            /// </summary>
             [NameInMap("OutMachineInstanceCount")]
             [Validation(Required=false)]
             public int? OutMachineInstanceCount { get; set; }
 
             /// <summary>
-            /// Queries the statistics of assets that belong to your account.
+            /// The number of servers for which the Security Center agent suspends protection.
             /// </summary>
             [NameInMap("PauseInstanceCount")]
             [Validation(Required=false)]
             public int? PauseInstanceCount { get; set; }
 
             /// <summary>
-            /// The number of virtual private clouds (VPCs).
+            /// The number of regions to which the servers belong.
             /// </summary>
             [NameInMap("RegionCount")]
             [Validation(Required=false)]
             public int? RegionCount { get; set; }
 
+            /// <summary>
+            /// The number of assets that are at risk.
+            /// </summary>
             [NameInMap("RiskInstanceCount")]
             [Validation(Required=false)]
             public int? RiskInstanceCount { get; set; }
 
             /// <summary>
-            /// The number of third-party cloud servers.
+            /// The total number of cloud services that are protected by Security Center.
             /// </summary>
             [NameInMap("TencentInstanceCount")]
             [Validation(Required=false)]
             public int? TencentInstanceCount { get; set; }
 
             /// <summary>
-            /// The number of servers outside the cloud.
+            /// The number of assets whose importance is test.
             /// </summary>
             [NameInMap("TestAssetCount")]
             [Validation(Required=false)]
@@ -172,14 +178,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UnKnowStatusInstanceCount { get; set; }
 
             /// <summary>
-            /// The number of servers whose Security Center agent status is Offline.
+            /// The number of unprotected assets.
             /// </summary>
             [NameInMap("UnprotectedInstanceCount")]
             [Validation(Required=false)]
             public int? UnprotectedInstanceCount { get; set; }
 
             /// <summary>
-            /// The ID of the request, which is used to locate and troubleshoot issues.
+            /// The number of virtual private clouds (VPCs).
             /// </summary>
             [NameInMap("VpcCount")]
             [Validation(Required=false)]
@@ -188,7 +194,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The information about servers that are returned.
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("EmgProof")]
+                [Validation(Required=false)]
+                public string EmgProof { get; set; }
+
                 /// <summary>
                 /// The public IP address of the asset that is associated with the vulnerability.
                 /// </summary>
@@ -323,6 +327,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
+
+                [NameInMap("Target")]
+                [Validation(Required=false)]
+                public string Target { get; set; }
 
                 /// <summary>
                 /// The CVE list.

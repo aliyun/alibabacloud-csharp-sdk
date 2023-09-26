@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class ModifyCycleTaskResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
-        [NameInMap("RequestId")]
+    public class ListVulGlobalConfigRequest : TeaModel {
+        [NameInMap("ConfigKey")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ConfigKey { get; set; }
 
     }
 
