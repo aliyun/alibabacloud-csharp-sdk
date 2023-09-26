@@ -1803,6 +1803,96 @@ namespace AlibabaCloud.SDK.Devops20210625
             return await CreateProtectdBranchWithOptionsAsync(repositoryId, request, headers, runtime);
         }
 
+        public CreatePushRuleResponse CreatePushRuleWithOptions(string repositoryId, CreatePushRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleInfos))
+            {
+                body["ruleInfos"] = request.RuleInfos;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePushRule",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePushRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreatePushRuleResponse> CreatePushRuleWithOptionsAsync(string repositoryId, CreatePushRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleInfos))
+            {
+                body["ruleInfos"] = request.RuleInfos;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePushRule",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePushRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreatePushRuleResponse CreatePushRule(string repositoryId, CreatePushRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreatePushRuleWithOptions(repositoryId, request, headers, runtime);
+        }
+
+        public async Task<CreatePushRuleResponse> CreatePushRuleAsync(string repositoryId, CreatePushRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreatePushRuleWithOptionsAsync(repositoryId, request, headers, runtime);
+        }
+
         public CreateRepositoryResponse CreateRepositoryWithOptions(CreateRepositoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4697,6 +4787,84 @@ namespace AlibabaCloud.SDK.Devops20210625
             return await DeleteProtectedBranchWithOptionsAsync(repositoryId, protectedBranchId, request, headers, runtime);
         }
 
+        public DeletePushRuleResponse DeletePushRuleWithOptions(string repositoryId, string pushRuleId, DeletePushRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePushRule",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pushRuleId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePushRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeletePushRuleResponse> DeletePushRuleWithOptionsAsync(string repositoryId, string pushRuleId, DeletePushRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePushRule",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pushRuleId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePushRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeletePushRuleResponse DeletePushRule(string repositoryId, string pushRuleId, DeletePushRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeletePushRuleWithOptions(repositoryId, pushRuleId, request, headers, runtime);
+        }
+
+        public async Task<DeletePushRuleResponse> DeletePushRuleAsync(string repositoryId, string pushRuleId, DeletePushRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeletePushRuleWithOptionsAsync(repositoryId, pushRuleId, request, headers, runtime);
+        }
+
         public DeleteRepositoryResponse DeleteRepositoryWithOptions(string repositoryId, DeleteRepositoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6293,6 +6461,84 @@ namespace AlibabaCloud.SDK.Devops20210625
             return await GetFlowTagGroupWithOptionsAsync(organizationId, id, headers, runtime);
         }
 
+        public GetGroupByPathResponse GetGroupByPathWithOptions(GetGroupByPathRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identity))
+            {
+                query["identity"] = request.Identity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGroupByPath",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/4/groups/find_by_path",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGroupByPathResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetGroupByPathResponse> GetGroupByPathWithOptionsAsync(GetGroupByPathRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identity))
+            {
+                query["identity"] = request.Identity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGroupByPath",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/4/groups/find_by_path",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGroupByPathResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetGroupByPathResponse GetGroupByPath(GetGroupByPathRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetGroupByPathWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GetGroupByPathResponse> GetGroupByPathAsync(GetGroupByPathRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetGroupByPathWithOptionsAsync(request, headers, runtime);
+        }
+
         public GetGroupDetailResponse GetGroupDetailWithOptions(GetGroupDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7087,6 +7333,84 @@ namespace AlibabaCloud.SDK.Devops20210625
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetProjectMemberWithOptionsAsync(repositoryId, aliyunPk, request, headers, runtime);
+        }
+
+        public GetPushRuleResponse GetPushRuleWithOptions(string repositoryId, string pushRuleId, GetPushRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPushRule",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pushRuleId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPushRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetPushRuleResponse> GetPushRuleWithOptionsAsync(string repositoryId, string pushRuleId, GetPushRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPushRule",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pushRuleId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPushRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetPushRuleResponse GetPushRule(string repositoryId, string pushRuleId, GetPushRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetPushRuleWithOptions(repositoryId, pushRuleId, request, headers, runtime);
+        }
+
+        public async Task<GetPushRuleResponse> GetPushRuleAsync(string repositoryId, string pushRuleId, GetPushRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetPushRuleWithOptionsAsync(repositoryId, pushRuleId, request, headers, runtime);
         }
 
         public GetRepositoryResponse GetRepositoryWithOptions(GetRepositoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -10269,6 +10593,84 @@ namespace AlibabaCloud.SDK.Devops20210625
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListProtectedBranchesWithOptionsAsync(repositoryId, request, headers, runtime);
+        }
+
+        public ListPushRulesResponse ListPushRulesWithOptions(string repositoryId, ListPushRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPushRules",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule/push_rules/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPushRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListPushRulesResponse> ListPushRulesWithOptionsAsync(string repositoryId, ListPushRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPushRules",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule/push_rules/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPushRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListPushRulesResponse ListPushRules(string repositoryId, ListPushRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPushRulesWithOptions(repositoryId, request, headers, runtime);
+        }
+
+        public async Task<ListPushRulesResponse> ListPushRulesAsync(string repositoryId, ListPushRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPushRulesWithOptionsAsync(repositoryId, request, headers, runtime);
         }
 
         public ListRepositoriesResponse ListRepositoriesWithOptions(ListRepositoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -15811,6 +16213,96 @@ namespace AlibabaCloud.SDK.Devops20210625
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdatePushReviewOnOffWithOptionsAsync(repositoryId, request, headers, runtime);
+        }
+
+        public UpdatePushRuleResponse UpdatePushRuleWithOptions(string repositoryId, string pushRuleId, UpdatePushRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleInfos))
+            {
+                body["ruleInfos"] = request.RuleInfos;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePushRule",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pushRuleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePushRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdatePushRuleResponse> UpdatePushRuleWithOptionsAsync(string repositoryId, string pushRuleId, UpdatePushRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleInfos))
+            {
+                body["ruleInfos"] = request.RuleInfos;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePushRule",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(repositoryId) + "/push_rule/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pushRuleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePushRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdatePushRuleResponse UpdatePushRule(string repositoryId, string pushRuleId, UpdatePushRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdatePushRuleWithOptions(repositoryId, pushRuleId, request, headers, runtime);
+        }
+
+        public async Task<UpdatePushRuleResponse> UpdatePushRuleAsync(string repositoryId, string pushRuleId, UpdatePushRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdatePushRuleWithOptionsAsync(repositoryId, pushRuleId, request, headers, runtime);
         }
 
         public UpdateRepositoryResponse UpdateRepositoryWithOptions(string repositoryId, UpdateRepositoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
