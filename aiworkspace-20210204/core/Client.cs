@@ -2353,6 +2353,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
@@ -2381,6 +2385,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;

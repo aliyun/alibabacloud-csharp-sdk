@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetMemberRequest : TeaModel {
+        [NameInMap("MemberId")]
+        [Validation(Required=false)]
+        public string MemberId { get; set; }
+
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
