@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? BuildFee { get; set; }
 
+                [NameInMap("business_trip_result")]
+                [Validation(Required=false)]
+                public string BusinessTripResult { get; set; }
+
                 [NameInMap("cabin")]
                 [Validation(Required=false)]
                 public string Cabin { get; set; }
@@ -148,9 +152,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? ChangeFee { get; set; }
 
+                [NameInMap("change_result")]
+                [Validation(Required=false)]
+                public string ChangeResult { get; set; }
+
                 [NameInMap("corp_pay_order_fee")]
                 [Validation(Required=false)]
                 public double? CorpPayOrderFee { get; set; }
+
+                [NameInMap("corp_settle_price")]
+                [Validation(Required=false)]
+                public double? CorpSettlePrice { get; set; }
 
                 [NameInMap("cost_center")]
                 [Validation(Required=false)]
@@ -200,6 +212,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Discount { get; set; }
 
+                [NameInMap("exceed_reason")]
+                [Validation(Required=false)]
+                public string ExceedReason { get; set; }
+
                 [NameInMap("fee_type")]
                 [Validation(Required=false)]
                 public string FeeType { get; set; }
@@ -212,9 +228,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Index { get; set; }
 
+                [NameInMap("ins_order_id")]
+                [Validation(Required=false)]
+                public string InsOrderId { get; set; }
+
                 [NameInMap("insurance_fee")]
                 [Validation(Required=false)]
                 public double? InsuranceFee { get; set; }
+
+                [NameInMap("insurance_number")]
+                [Validation(Required=false)]
+                public string InsuranceNumber { get; set; }
 
                 [NameInMap("invoice_title")]
                 [Validation(Required=false)]
@@ -227,6 +251,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("itinerary_price")]
                 [Validation(Required=false)]
                 public double? ItineraryPrice { get; set; }
+
+                [NameInMap("mileage")]
+                [Validation(Required=false)]
+                public string Mileage { get; set; }
 
                 [NameInMap("most_difference_dept_time")]
                 [Validation(Required=false)]
@@ -267,6 +295,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("over_apply_id")]
                 [Validation(Required=false)]
                 public string OverApplyId { get; set; }
+
+                [NameInMap("person_settle_price")]
+                [Validation(Required=false)]
+                public double? PersonSettlePrice { get; set; }
+
+                [NameInMap("pre_book_tip")]
+                [Validation(Required=false)]
+                public string PreBookTip { get; set; }
 
                 [NameInMap("primary_id")]
                 [Validation(Required=false)]
@@ -342,6 +378,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("ticket_id")]
                 [Validation(Required=false)]
                 public string TicketId { get; set; }
+
+                [NameInMap("trade")]
+                [Validation(Required=false)]
+                public string Trade { get; set; }
 
                 [NameInMap("traveler_id")]
                 [Validation(Required=false)]

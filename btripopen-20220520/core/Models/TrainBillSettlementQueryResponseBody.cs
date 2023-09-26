@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrCityCode { get; set; }
 
+                [NameInMap("arr_city_name")]
+                [Validation(Required=false)]
+                public string ArrCityName { get; set; }
+
                 [NameInMap("arr_date")]
                 [Validation(Required=false)]
                 public string ArrDate { get; set; }
@@ -100,6 +104,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BookerName { get; set; }
 
+                [NameInMap("business_trip_result")]
+                [Validation(Required=false)]
+                public string BusinessTripResult { get; set; }
+
                 [NameInMap("capital_direction")]
                 [Validation(Required=false)]
                 public string CapitalDirection { get; set; }
@@ -111,6 +119,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("change_fee")]
                 [Validation(Required=false)]
                 public double? ChangeFee { get; set; }
+
+                [NameInMap("change_result")]
+                [Validation(Required=false)]
+                public string ChangeResult { get; set; }
 
                 [NameInMap("coach_no")]
                 [Validation(Required=false)]
@@ -132,6 +144,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepCityCode { get; set; }
 
+                [NameInMap("dep_city_name")]
+                [Validation(Required=false)]
+                public string DepCityName { get; set; }
+
                 [NameInMap("department")]
                 [Validation(Required=false)]
                 public string Department { get; set; }
@@ -152,6 +168,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DeptTime { get; set; }
 
+                [NameInMap("exceed_reason")]
+                [Validation(Required=false)]
+                public string ExceedReason { get; set; }
+
                 [NameInMap("fee_type")]
                 [Validation(Required=false)]
                 public string FeeType { get; set; }
@@ -163,6 +183,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("invoice_title")]
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }
+
+                [NameInMap("is_transfer_order")]
+                [Validation(Required=false)]
+                public string IsTransferOrder { get; set; }
 
                 [NameInMap("order_id")]
                 [Validation(Required=false)]
@@ -192,9 +216,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? RefundFee { get; set; }
 
+                [NameInMap("refund_reason")]
+                [Validation(Required=false)]
+                public string RefundReason { get; set; }
+
                 [NameInMap("remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
+
+                [NameInMap("reserve_mode")]
+                [Validation(Required=false)]
+                public string ReserveMode { get; set; }
 
                 [NameInMap("run_time")]
                 [Validation(Required=false)]
@@ -247,9 +279,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ThirdItineraryId { get; set; }
 
+                [NameInMap("ticket_corp_pay_price")]
+                [Validation(Required=false)]
+                public string TicketCorpPayPrice { get; set; }
+
                 [NameInMap("ticket_no")]
                 [Validation(Required=false)]
                 public string TicketNo { get; set; }
+
+                [NameInMap("ticket_person_pay_price")]
+                [Validation(Required=false)]
+                public string TicketPersonPayPrice { get; set; }
 
                 [NameInMap("ticket_price")]
                 [Validation(Required=false)]

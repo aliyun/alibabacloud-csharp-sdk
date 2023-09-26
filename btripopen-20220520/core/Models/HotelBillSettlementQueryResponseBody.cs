@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillRecordTime { get; set; }
 
+                [NameInMap("book_reason")]
+                [Validation(Required=false)]
+                public string BookReason { get; set; }
+
                 [NameInMap("book_time")]
                 [Validation(Required=false)]
                 public string BookTime { get; set; }
@@ -87,6 +91,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("booker_name")]
                 [Validation(Required=false)]
                 public string BookerName { get; set; }
+
+                [NameInMap("brand_group")]
+                [Validation(Required=false)]
+                public string BrandGroup { get; set; }
+
+                [NameInMap("brand_name")]
+                [Validation(Required=false)]
+                public string BrandName { get; set; }
+
+                [NameInMap("business_trip_result")]
+                [Validation(Required=false)]
+                public string BusinessTripResult { get; set; }
 
                 [NameInMap("capital_direction")]
                 [Validation(Required=false)]
@@ -112,6 +128,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
+                [NameInMap("city_county")]
+                [Validation(Required=false)]
+                public string CityCounty { get; set; }
+
+                [NameInMap("city_county_code")]
+                [Validation(Required=false)]
+                public string CityCountyCode { get; set; }
+
                 [NameInMap("corp_refund_fee")]
                 [Validation(Required=false)]
                 public double? CorpRefundFee { get; set; }
@@ -135,6 +159,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("department_id")]
                 [Validation(Required=false)]
                 public string DepartmentId { get; set; }
+
+                [NameInMap("exceed_reason")]
+                [Validation(Required=false)]
+                public string ExceedReason { get; set; }
 
                 [NameInMap("fee_type")]
                 [Validation(Required=false)]

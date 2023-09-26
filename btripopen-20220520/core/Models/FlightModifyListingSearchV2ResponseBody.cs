@@ -84,6 +84,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrTime { get; set; }
 
+                [NameInMap("cabinClass")]
+                [Validation(Required=false)]
+                public string CabinClass { get; set; }
+
+                [NameInMap("cabinClassName")]
+                [Validation(Required=false)]
+                public string CabinClassName { get; set; }
+
                 [NameInMap("dep_airport_info")]
                 [Validation(Required=false)]
                 public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListDepAirportInfo DepAirportInfo { get; set; }
@@ -461,6 +469,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("arr_time")]
                 [Validation(Required=false)]
                 public string ArrTime { get; set; }
+
+                [NameInMap("cabinClass")]
+                [Validation(Required=false)]
+                public string CabinClass { get; set; }
+
+                [NameInMap("cabinClassName")]
+                [Validation(Required=false)]
+                public string CabinClassName { get; set; }
 
                 [NameInMap("dep_airport_info")]
                 [Validation(Required=false)]

@@ -168,6 +168,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DeptTime { get; set; }
 
+                [NameInMap("driver_add_detail")]
+                [Validation(Required=false)]
+                public string DriverAddDetail { get; set; }
+
+                [NameInMap("driver_add_fee")]
+                [Validation(Required=false)]
+                public double? DriverAddFee { get; set; }
+
                 [NameInMap("estimate_drive_distance")]
                 [Validation(Required=false)]
                 public string EstimateDriveDistance { get; set; }
@@ -187,6 +195,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("invoice_title")]
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }
+
+                [NameInMap("level_name")]
+                [Validation(Required=false)]
+                public string LevelName { get; set; }
 
                 [NameInMap("memo")]
                 [Validation(Required=false)]
@@ -275,6 +287,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("sub_order_id")]
                 [Validation(Required=false)]
                 public string SubOrderId { get; set; }
+
+                [NameInMap("supplement_apply_id")]
+                [Validation(Required=false)]
+                public string SupplementApplyId { get; set; }
 
                 /// <summary>
                 /// 税率
