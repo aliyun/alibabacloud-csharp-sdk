@@ -62,18 +62,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The state of the endpoint service. Valid values:
-            /// 
-            /// *   **Creating**: The endpoint service is being created.
-            /// *   **Pending**: The endpoint service is being modified.
-            /// *   **Active**: The endpoint service is available.
-            /// *   **Deleting**: The endpoint service is being deleted.
-            /// </summary>
-            [NameInMap("ServiceStatus")]
-            [Validation(Required=false)]
-            public string ServiceStatus { get; set; }
-
-            /// <summary>
             /// The ID of the vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.
             /// </summary>
             [NameInMap("VSwitchId")]

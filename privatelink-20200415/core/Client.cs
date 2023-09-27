@@ -178,7 +178,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The request ID.
+          * *   **AddZoneToVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpointZones](~~183560~~) operation to query the state of the zone.
+          *     *   If the zone is in the **Creating** state, the zone is being added.
+          *     *   If the zone is in the Wait state, the zone is added.
+          * *   You cannot repeatedly call the **AddZoneToVpcEndpoint** operation to add a zone to an endpoint within a specified period of time.
           *
           * @param request AddZoneToVpcEndpointRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -240,7 +243,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The request ID.
+          * *   **AddZoneToVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpointZones](~~183560~~) operation to query the state of the zone.
+          *     *   If the zone is in the **Creating** state, the zone is being added.
+          *     *   If the zone is in the Wait state, the zone is added.
+          * *   You cannot repeatedly call the **AddZoneToVpcEndpoint** operation to add a zone to an endpoint within a specified period of time.
           *
           * @param request AddZoneToVpcEndpointRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -302,7 +308,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The request ID.
+          * *   **AddZoneToVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpointZones](~~183560~~) operation to query the state of the zone.
+          *     *   If the zone is in the **Creating** state, the zone is being added.
+          *     *   If the zone is in the Wait state, the zone is added.
+          * *   You cannot repeatedly call the **AddZoneToVpcEndpoint** operation to add a zone to an endpoint within a specified period of time.
           *
           * @param request AddZoneToVpcEndpointRequest
           * @return AddZoneToVpcEndpointResponse
@@ -314,7 +323,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The request ID.
+          * *   **AddZoneToVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpointZones](~~183560~~) operation to query the state of the zone.
+          *     *   If the zone is in the **Creating** state, the zone is being added.
+          *     *   If the zone is in the Wait state, the zone is added.
+          * *   You cannot repeatedly call the **AddZoneToVpcEndpoint** operation to add a zone to an endpoint within a specified period of time.
           *
           * @param request AddZoneToVpcEndpointRequest
           * @return AddZoneToVpcEndpointResponse
@@ -747,91 +759,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             return await CheckProductOpenWithOptionsAsync(runtime);
         }
 
-        public CheckResourceSupportOperateResponse CheckResourceSupportOperateWithOptions(CheckResourceSupportOperateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
-            {
-                query["ResourceId"] = request.ResourceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                query["ResourceType"] = request.ResourceType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
-            {
-                query["ZoneId"] = request.ZoneId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CheckResourceSupportOperate",
-                Version = "2020-04-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CheckResourceSupportOperateResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CheckResourceSupportOperateResponse> CheckResourceSupportOperateWithOptionsAsync(CheckResourceSupportOperateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
-            {
-                query["ResourceId"] = request.ResourceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                query["ResourceType"] = request.ResourceType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
-            {
-                query["ZoneId"] = request.ZoneId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CheckResourceSupportOperate",
-                Version = "2020-04-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CheckResourceSupportOperateResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CheckResourceSupportOperateResponse CheckResourceSupportOperate(CheckResourceSupportOperateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CheckResourceSupportOperateWithOptions(request, runtime);
-        }
-
-        public async Task<CheckResourceSupportOperateResponse> CheckResourceSupportOperateAsync(CheckResourceSupportOperateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CheckResourceSupportOperateWithOptionsAsync(request, runtime);
-        }
-
         /**
-          * The region ID of the endpoint.
-          * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+          * **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointAttribute](~~183568~~) operation to check whether the endpoint is created.
+          * *   If the endpoint is in the **Creating** state, the endpoint is being created.
+          * *   If the endpoint is in the **Active** state, the endpoint is created.
           *
           * @param request CreateVpcEndpointRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -925,8 +856,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The region ID of the endpoint.
-          * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+          * **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointAttribute](~~183568~~) operation to check whether the endpoint is created.
+          * *   If the endpoint is in the **Creating** state, the endpoint is being created.
+          * *   If the endpoint is in the **Active** state, the endpoint is created.
           *
           * @param request CreateVpcEndpointRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1020,8 +952,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The region ID of the endpoint.
-          * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+          * **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointAttribute](~~183568~~) operation to check whether the endpoint is created.
+          * *   If the endpoint is in the **Creating** state, the endpoint is being created.
+          * *   If the endpoint is in the **Active** state, the endpoint is created.
           *
           * @param request CreateVpcEndpointRequest
           * @return CreateVpcEndpointResponse
@@ -1033,8 +966,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The region ID of the endpoint.
-          * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+          * **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointAttribute](~~183568~~) operation to check whether the endpoint is created.
+          * *   If the endpoint is in the **Creating** state, the endpoint is being created.
+          * *   If the endpoint is in the **Active** state, the endpoint is created.
           *
           * @param request CreateVpcEndpointRequest
           * @return CreateVpcEndpointResponse
@@ -1046,7 +980,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The resource group ID.
+          * **CreateVpcEndpointService** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointServiceAttribute](~~183542~~) operation to query the state of the endpoint service.
+          * *   If the endpoint service is in the **Creating** state, the endpoint service is being created.
+          * *   If the endpoint service is in the **Active** state, the endpoint service is created.
           *
           * @param request CreateVpcEndpointServiceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1128,7 +1064,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The resource group ID.
+          * **CreateVpcEndpointService** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointServiceAttribute](~~183542~~) operation to query the state of the endpoint service.
+          * *   If the endpoint service is in the **Creating** state, the endpoint service is being created.
+          * *   If the endpoint service is in the **Active** state, the endpoint service is created.
           *
           * @param request CreateVpcEndpointServiceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1210,7 +1148,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The resource group ID.
+          * **CreateVpcEndpointService** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointServiceAttribute](~~183542~~) operation to query the state of the endpoint service.
+          * *   If the endpoint service is in the **Creating** state, the endpoint service is being created.
+          * *   If the endpoint service is in the **Active** state, the endpoint service is created.
           *
           * @param request CreateVpcEndpointServiceRequest
           * @return CreateVpcEndpointServiceResponse
@@ -1222,7 +1162,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The resource group ID.
+          * **CreateVpcEndpointService** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointServiceAttribute](~~183542~~) operation to query the state of the endpoint service.
+          * *   If the endpoint service is in the **Creating** state, the endpoint service is being created.
+          * *   If the endpoint service is in the **Active** state, the endpoint service is created.
           *
           * @param request CreateVpcEndpointServiceRequest
           * @return CreateVpcEndpointServiceResponse
@@ -1772,7 +1714,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * 671231
+          * *   **DetachSecurityGroupFromVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpoints](~~183558~~) to check whether the endpoint is disassociated from the security group.
+          *     *   If the endpoint is in the **Pending** state, the endpoint is being disassociated from the security group.
+          *     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.
+          * *   You cannot repeatedly call the **DetachSecurityGroupFromVpcEndpoint** operation to disassociate an endpoint from a security group within a specified period of time.
           *
           * @param request DetachSecurityGroupFromVpcEndpointRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1826,7 +1771,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * 671231
+          * *   **DetachSecurityGroupFromVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpoints](~~183558~~) to check whether the endpoint is disassociated from the security group.
+          *     *   If the endpoint is in the **Pending** state, the endpoint is being disassociated from the security group.
+          *     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.
+          * *   You cannot repeatedly call the **DetachSecurityGroupFromVpcEndpoint** operation to disassociate an endpoint from a security group within a specified period of time.
           *
           * @param request DetachSecurityGroupFromVpcEndpointRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1880,7 +1828,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * 671231
+          * *   **DetachSecurityGroupFromVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpoints](~~183558~~) to check whether the endpoint is disassociated from the security group.
+          *     *   If the endpoint is in the **Pending** state, the endpoint is being disassociated from the security group.
+          *     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.
+          * *   You cannot repeatedly call the **DetachSecurityGroupFromVpcEndpoint** operation to disassociate an endpoint from a security group within a specified period of time.
           *
           * @param request DetachSecurityGroupFromVpcEndpointRequest
           * @return DetachSecurityGroupFromVpcEndpointResponse
@@ -1892,7 +1843,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * 671231
+          * *   **DetachSecurityGroupFromVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpoints](~~183558~~) to check whether the endpoint is disassociated from the security group.
+          *     *   If the endpoint is in the **Pending** state, the endpoint is being disassociated from the security group.
+          *     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.
+          * *   You cannot repeatedly call the **DetachSecurityGroupFromVpcEndpoint** operation to disassociate an endpoint from a security group within a specified period of time.
           *
           * @param request DetachSecurityGroupFromVpcEndpointRequest
           * @return DetachSecurityGroupFromVpcEndpointResponse
@@ -2048,9 +2002,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * Specifies whether to only precheck the request. Valid values:
-          * *   **true**: only prechecks the API request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-          * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+          * > You can call this operation only when the state of the endpoint is **Connected** and the state of the zone that is associated with the endpoint is **Connected** or **Migrated**.
           *
           * @param request DisableVpcEndpointZoneConnectionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2112,9 +2064,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * Specifies whether to only precheck the request. Valid values:
-          * *   **true**: only prechecks the API request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-          * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+          * > You can call this operation only when the state of the endpoint is **Connected** and the state of the zone that is associated with the endpoint is **Connected** or **Migrated**.
           *
           * @param request DisableVpcEndpointZoneConnectionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2176,9 +2126,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * Specifies whether to only precheck the request. Valid values:
-          * *   **true**: only prechecks the API request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-          * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+          * > You can call this operation only when the state of the endpoint is **Connected** and the state of the zone that is associated with the endpoint is **Connected** or **Migrated**.
           *
           * @param request DisableVpcEndpointZoneConnectionRequest
           * @return DisableVpcEndpointZoneConnectionResponse
@@ -2190,9 +2138,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * Specifies whether to only precheck the request. Valid values:
-          * *   **true**: only prechecks the API request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-          * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+          * > You can call this operation only when the state of the endpoint is **Connected** and the state of the zone that is associated with the endpoint is **Connected** or **Migrated**.
           *
           * @param request DisableVpcEndpointZoneConnectionRequest
           * @return DisableVpcEndpointZoneConnectionResponse
@@ -2679,10 +2625,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
-            {
-                query["ConnectionId"] = request.ConnectionId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStatus))
             {
                 query["ConnectionStatus"] = request.ConnectionStatus;
@@ -2754,10 +2696,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
-            {
-                query["ConnectionId"] = request.ConnectionId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStatus))
             {
                 query["ConnectionStatus"] = request.ConnectionStatus;
@@ -3707,122 +3645,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             return await ListVpcEndpointsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * The ID of the request.
-          *
-          * @param request NotifyResourceAddressFamilyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return NotifyResourceAddressFamilyResponse
-         */
-        public NotifyResourceAddressFamilyResponse NotifyResourceAddressFamilyWithOptions(NotifyResourceAddressFamilyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressFamily))
-            {
-                query["AddressFamily"] = request.AddressFamily;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Address))
-            {
-                query["Ipv6Address"] = request.Ipv6Address;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
-            {
-                query["ResourceId"] = request.ResourceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                query["ResourceType"] = request.ResourceType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "NotifyResourceAddressFamily",
-                Version = "2020-04-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<NotifyResourceAddressFamilyResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * The ID of the request.
-          *
-          * @param request NotifyResourceAddressFamilyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return NotifyResourceAddressFamilyResponse
-         */
-        public async Task<NotifyResourceAddressFamilyResponse> NotifyResourceAddressFamilyWithOptionsAsync(NotifyResourceAddressFamilyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressFamily))
-            {
-                query["AddressFamily"] = request.AddressFamily;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Address))
-            {
-                query["Ipv6Address"] = request.Ipv6Address;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
-            {
-                query["ResourceId"] = request.ResourceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                query["ResourceType"] = request.ResourceType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "NotifyResourceAddressFamily",
-                Version = "2020-04-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<NotifyResourceAddressFamilyResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * The ID of the request.
-          *
-          * @param request NotifyResourceAddressFamilyRequest
-          * @return NotifyResourceAddressFamilyResponse
-         */
-        public NotifyResourceAddressFamilyResponse NotifyResourceAddressFamily(NotifyResourceAddressFamilyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return NotifyResourceAddressFamilyWithOptions(request, runtime);
-        }
-
-        /**
-          * The ID of the request.
-          *
-          * @param request NotifyResourceAddressFamilyRequest
-          * @return NotifyResourceAddressFamilyResponse
-         */
-        public async Task<NotifyResourceAddressFamilyResponse> NotifyResourceAddressFamilyAsync(NotifyResourceAddressFamilyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await NotifyResourceAddressFamilyWithOptionsAsync(request, runtime);
-        }
-
         public OpenPrivateLinkServiceResponse OpenPrivateLinkServiceWithOptions(OpenPrivateLinkServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4458,7 +4280,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The ID of the endpoint service.
+          * You cannot repeatedly call the **UpdateVpcEndpointConnectionAttribute** operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.
           *
           * @param request UpdateVpcEndpointConnectionAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4516,7 +4338,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The ID of the endpoint service.
+          * You cannot repeatedly call the **UpdateVpcEndpointConnectionAttribute** operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.
           *
           * @param request UpdateVpcEndpointConnectionAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4574,7 +4396,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The ID of the endpoint service.
+          * You cannot repeatedly call the **UpdateVpcEndpointConnectionAttribute** operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.
           *
           * @param request UpdateVpcEndpointConnectionAttributeRequest
           * @return UpdateVpcEndpointConnectionAttributeResponse
@@ -4586,7 +4408,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         }
 
         /**
-          * The ID of the endpoint service.
+          * You cannot repeatedly call the **UpdateVpcEndpointConnectionAttribute** operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.
           *
           * @param request UpdateVpcEndpointConnectionAttributeRequest
           * @return UpdateVpcEndpointConnectionAttributeResponse
@@ -4763,6 +4585,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /**
           * You cannot repeatedly call the **UpdateVpcEndpointServiceResourceAttribute** operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.
+          * ### Limits
+          * *   By default, the feature of replacing a service resource with another service resource in the same zone is disabled. If you want to enable this feature, log on to the [Quota Center console](https://quotas.console.aliyun.com/products?spm=5176.12818093.ProductAndResource--ali--widget-product-recent.dre9.3be916d0NAkhTD), search for the quota ID `privatelink_whitelist/svc_res_mgt_uat`, and then click Apply in the Actions column to submit an application.
+          * *   All instances except for the Network Load Balancer (NLB) instances that serve as service resources of endpoint services can be replaced by other service resources in the same zone.
           *
           * @param request UpdateVpcEndpointServiceResourceAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4825,6 +4650,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /**
           * You cannot repeatedly call the **UpdateVpcEndpointServiceResourceAttribute** operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.
+          * ### Limits
+          * *   By default, the feature of replacing a service resource with another service resource in the same zone is disabled. If you want to enable this feature, log on to the [Quota Center console](https://quotas.console.aliyun.com/products?spm=5176.12818093.ProductAndResource--ali--widget-product-recent.dre9.3be916d0NAkhTD), search for the quota ID `privatelink_whitelist/svc_res_mgt_uat`, and then click Apply in the Actions column to submit an application.
+          * *   All instances except for the Network Load Balancer (NLB) instances that serve as service resources of endpoint services can be replaced by other service resources in the same zone.
           *
           * @param request UpdateVpcEndpointServiceResourceAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4887,6 +4715,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /**
           * You cannot repeatedly call the **UpdateVpcEndpointServiceResourceAttribute** operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.
+          * ### Limits
+          * *   By default, the feature of replacing a service resource with another service resource in the same zone is disabled. If you want to enable this feature, log on to the [Quota Center console](https://quotas.console.aliyun.com/products?spm=5176.12818093.ProductAndResource--ali--widget-product-recent.dre9.3be916d0NAkhTD), search for the quota ID `privatelink_whitelist/svc_res_mgt_uat`, and then click Apply in the Actions column to submit an application.
+          * *   All instances except for the Network Load Balancer (NLB) instances that serve as service resources of endpoint services can be replaced by other service resources in the same zone.
           *
           * @param request UpdateVpcEndpointServiceResourceAttributeRequest
           * @return UpdateVpcEndpointServiceResourceAttributeResponse
@@ -4899,6 +4730,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /**
           * You cannot repeatedly call the **UpdateVpcEndpointServiceResourceAttribute** operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.
+          * ### Limits
+          * *   By default, the feature of replacing a service resource with another service resource in the same zone is disabled. If you want to enable this feature, log on to the [Quota Center console](https://quotas.console.aliyun.com/products?spm=5176.12818093.ProductAndResource--ali--widget-product-recent.dre9.3be916d0NAkhTD), search for the quota ID `privatelink_whitelist/svc_res_mgt_uat`, and then click Apply in the Actions column to submit an application.
+          * *   All instances except for the Network Load Balancer (NLB) instances that serve as service resources of endpoint services can be replaced by other service resources in the same zone.
           *
           * @param request UpdateVpcEndpointServiceResourceAttributeRequest
           * @return UpdateVpcEndpointServiceResourceAttributeResponse

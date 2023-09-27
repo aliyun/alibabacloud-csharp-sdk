@@ -98,24 +98,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public List<ListVpcEndpointConnectionsResponseBodyConnectionsZones> Zones { get; set; }
             public class ListVpcEndpointConnectionsResponseBodyConnectionsZones : TeaModel {
                 /// <summary>
-                /// The endpoint connection ID.
-                /// 
-                /// > This parameter is returned only when a gateway is used for load balancing.
-                /// </summary>
-                [NameInMap("ConnectionId")]
-                [Validation(Required=false)]
-                public long? ConnectionId { get; set; }
-
-                /// <summary>
-                /// The endpoint connection ID.
-                /// 
-                /// > This parameter is returned only when a gateway is used for load balancing. The value of this parameter is the value of the **ConnectionId** parameter in **string** format.
-                /// </summary>
-                [NameInMap("ConnectionStringId")]
-                [Validation(Required=false)]
-                public string ConnectionStringId { get; set; }
-
-                /// <summary>
                 /// The endpoint ENI ID.
                 /// </summary>
                 [NameInMap("EniId")]

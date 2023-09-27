@@ -10,15 +10,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointConnectionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the endpoint connection.
-        /// 
-        /// > This parameter is required only when a gateway is used for load balancing.
-        /// </summary>
-        [NameInMap("ConnectionId")]
-        [Validation(Required=false)]
-        public long? ConnectionId { get; set; }
-
-        /// <summary>
         /// The state of the endpoint connection. Valid values:
         /// 
         /// *   **Pending**: The endpoint connection is being modified.

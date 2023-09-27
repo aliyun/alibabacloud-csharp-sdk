@@ -10,19 +10,16 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class GetVpcEndpointAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the endpoint that you want to query.
+        /// The ID of the endpoint whose attributes you want to query.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// The status of the endpoint. Valid values:
+        /// The region ID of the endpoint whose attributes you want to query.
         /// 
-        /// *   **Creating**: being created
-        /// *   **Active**: available
-        /// *   **Pending**: being modified
-        /// *   **Deleting**: being deleted
+        /// You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
