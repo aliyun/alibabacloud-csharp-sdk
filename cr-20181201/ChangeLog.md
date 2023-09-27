@@ -1,3 +1,6 @@
+2023-09-27 Version: 1.1.0
+- Generated csharp 2018-12-01 for cr.
+
 2023-08-23 Version: 1.0.12
 - Generated csharp 2018-12-01 for cr.
 

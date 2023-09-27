@@ -391,6 +391,88 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await CreateArtifactBuildRuleWithOptionsAsync(request, runtime);
         }
 
+        public CreateBuildRecordByRecordResponse CreateBuildRecordByRecordWithOptions(CreateBuildRecordByRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildRecordId))
+            {
+                query["BuildRecordId"] = request.BuildRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoId))
+            {
+                query["RepoId"] = request.RepoId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBuildRecordByRecord",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBuildRecordByRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateBuildRecordByRecordResponse> CreateBuildRecordByRecordWithOptionsAsync(CreateBuildRecordByRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildRecordId))
+            {
+                query["BuildRecordId"] = request.BuildRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoId))
+            {
+                query["RepoId"] = request.RepoId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBuildRecordByRecord",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBuildRecordByRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateBuildRecordByRecordResponse CreateBuildRecordByRecord(CreateBuildRecordByRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateBuildRecordByRecordWithOptions(request, runtime);
+        }
+
+        public async Task<CreateBuildRecordByRecordResponse> CreateBuildRecordByRecordAsync(CreateBuildRecordByRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateBuildRecordByRecordWithOptionsAsync(request, runtime);
+        }
+
         public CreateBuildRecordByRuleResponse CreateBuildRecordByRuleWithOptions(CreateBuildRecordByRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3279,6 +3361,64 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRepositoryWithOptionsAsync(request, runtime);
+        }
+
+        public GetArtifactBuildRuleResponse GetArtifactBuildRuleWithOptions(GetArtifactBuildRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetArtifactBuildRule",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetArtifactBuildRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetArtifactBuildRuleResponse> GetArtifactBuildRuleWithOptionsAsync(GetArtifactBuildRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetArtifactBuildRule",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetArtifactBuildRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetArtifactBuildRuleResponse GetArtifactBuildRule(GetArtifactBuildRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetArtifactBuildRuleWithOptions(request, runtime);
+        }
+
+        public async Task<GetArtifactBuildRuleResponse> GetArtifactBuildRuleAsync(GetArtifactBuildRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetArtifactBuildRuleWithOptionsAsync(request, runtime);
         }
 
         public GetArtifactBuildTaskResponse GetArtifactBuildTaskWithOptions(GetArtifactBuildTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
