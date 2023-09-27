@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Docmind_api20220729.Models
 {
     public class SubmitGeneralContractExtractJobAdvanceRequest : TeaModel {
+        [NameInMap("ContractModel")]
+        [Validation(Required=false)]
+        public string ContractModel { get; set; }
+
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }

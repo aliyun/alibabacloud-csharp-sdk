@@ -2058,6 +2058,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220729
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContractModel))
+            {
+                query["ContractModel"] = request.ContractModel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["FileName"] = request.FileName;
@@ -2093,6 +2097,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220729
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContractModel))
+            {
+                query["ContractModel"] = request.ContractModel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["FileName"] = request.FileName;
