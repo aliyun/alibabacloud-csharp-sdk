@@ -1,0 +1,26 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
+{
+    public class AssociatePrincipalWithPortfolioRequest : TeaModel {
+        [NameInMap("PortfolioId")]
+        [Validation(Required=false)]
+        public string PortfolioId { get; set; }
+
+        [NameInMap("PrincipalId")]
+        [Validation(Required=false)]
+        public string PrincipalId { get; set; }
+
+        [NameInMap("PrincipalType")]
+        [Validation(Required=false)]
+        public string PrincipalType { get; set; }
+
+    }
+
+}
