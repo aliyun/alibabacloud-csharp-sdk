@@ -9,68 +9,128 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetTopicResponseBody : TeaModel {
+        /// <summary>
+        /// The error code.
+        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The result data that is returned.
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetTopicResponseBodyData Data { get; set; }
         public class GetTopicResponseBodyData : TeaModel {
+            /// <summary>
+            /// The time when the topic was created.
+            /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// The ID of the instance.
+            /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// The message type of the topic.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   TRANSACTION: transactional message
+            /// *   FIFO: ordered message
+            /// *   DELAY: scheduled or delayed message
+            /// *   NORMAL: normal message
+            /// </summary>
             [NameInMap("messageType")]
             [Validation(Required=false)]
             public string MessageType { get; set; }
 
+            /// <summary>
+            /// The ID of the region in which the instance resides.
+            /// </summary>
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The remarks on the topic.
+            /// </summary>
             [NameInMap("remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
+            /// <summary>
+            /// The state of the topic.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   RUNNING: The topic is running.
+            /// *   CREATING: The topic is being created.
+            /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The name of the topic.
+            /// </summary>
             [NameInMap("topicName")]
             [Validation(Required=false)]
             public string TopicName { get; set; }
 
+            /// <summary>
+            /// The time when the topic was last updated.
+            /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
         }
 
+        /// <summary>
+        /// The dynamic error code.
+        /// </summary>
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
+        /// <summary>
+        /// The dynamic error message.
+        /// </summary>
         [NameInMap("dynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
+        /// <summary>
+        /// The HTTP status code.
+        /// </summary>
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the call is successful.
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
