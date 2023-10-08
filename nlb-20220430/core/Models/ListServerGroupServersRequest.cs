@@ -26,6 +26,11 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The region ID of the NLB instance.
+        /// 
+        /// You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

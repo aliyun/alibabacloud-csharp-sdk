@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

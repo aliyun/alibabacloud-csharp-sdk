@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class GetLoadBalancerAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// The protocol version. Valid values:
+        /// 
+        /// *   **ipv4**: IPv4
+        /// *   **DualStack**: dual stack
+        /// </summary>
         [NameInMap("AddressIpVersion")]
         [Validation(Required=false)]
         public string AddressIpVersion { get; set; }
@@ -23,6 +29,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public string AddressType { get; set; }
 
+        /// <summary>
+        /// The ID of the EIP bandwidth plan.
+        /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
@@ -36,6 +45,11 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public int? Cps { get; set; }
 
+        /// <summary>
+        /// The time when the NLB instance was created. This value is a UNIX timestamp.
+        /// 
+        /// Unit: milliseconds.
+        /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
@@ -50,22 +64,40 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public bool? CrossZoneEnabled { get; set; }
 
+        /// <summary>
+        /// The domain name of the NLB instance.
+        /// </summary>
         [NameInMap("DNSName")]
         [Validation(Required=false)]
         public string DNSName { get; set; }
 
+        /// <summary>
+        /// The configuration of the deletion protection feature.
+        /// </summary>
         [NameInMap("DeletionProtectionConfig")]
         [Validation(Required=false)]
         public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig DeletionProtectionConfig { get; set; }
         public class GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig : TeaModel {
+            /// <summary>
+            /// Specifies whether to enable deletion protection. Valid values:
+            /// 
+            /// *   **true**: yes
+            /// *   **false** (default): no
+            /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            /// <summary>
+            /// The time when the deletion protection feature was enabled. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+            /// </summary>
             [NameInMap("EnabledTime")]
             [Validation(Required=false)]
             public string EnabledTime { get; set; }
 
+            /// <summary>
+            /// The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+            /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
@@ -137,22 +169,44 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public string LoadBalancerStatus { get; set; }
 
+        /// <summary>
+        /// The type of the Server Load Balancer (SLB) instance. Set the value to **network**, which specifies NLB.
+        /// </summary>
         [NameInMap("LoadBalancerType")]
         [Validation(Required=false)]
         public string LoadBalancerType { get; set; }
 
+        /// <summary>
+        /// The configuration of the configuration read-only mode.
+        /// </summary>
         [NameInMap("ModificationProtectionConfig")]
         [Validation(Required=false)]
         public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class GetLoadBalancerAttributeResponseBodyModificationProtectionConfig : TeaModel {
+            /// <summary>
+            /// The time when the modification protection feature was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// </summary>
             [NameInMap("EnabledTime")]
             [Validation(Required=false)]
             public string EnabledTime { get; set; }
 
+            /// <summary>
+            /// The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+            /// 
+            /// >  This parameter takes effect only if the **Status** parameter is set to **ConsoleProtection**.
+            /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
+            /// <summary>
+            /// Specifies whether to enable the configuration read-only mode. Valid values:
+            /// 
+            /// *   **NonProtection**: does not enable the configuration read-only mode. You cannot set the **Reason** parameter. If the **Reason** parameter is set, the value is cleared.
+            /// *   **ConsoleProtection**: enables the configuration read-only mode. You can set the **Reason** parameter.
+            /// 
+            /// >  If you set this parameter to **ConsoleProtection**, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -194,10 +248,16 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

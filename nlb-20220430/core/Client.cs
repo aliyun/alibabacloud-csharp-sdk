@@ -147,6 +147,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return await AddServersToServerGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+          * *   If the listener is in the **Associating** state, the additional certificates are being associated.
+          * *   If the listener is in the **Associated** state, the additional certificates are associated.
+          *
+          * @param request AssociateAdditionalCertificatesWithListenerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssociateAdditionalCertificatesWithListenerResponse
+         */
         public AssociateAdditionalCertificatesWithListenerResponse AssociateAdditionalCertificatesWithListenerWithOptions(AssociateAdditionalCertificatesWithListenerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -190,6 +199,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return TeaModel.ToObject<AssociateAdditionalCertificatesWithListenerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+          * *   If the listener is in the **Associating** state, the additional certificates are being associated.
+          * *   If the listener is in the **Associated** state, the additional certificates are associated.
+          *
+          * @param request AssociateAdditionalCertificatesWithListenerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssociateAdditionalCertificatesWithListenerResponse
+         */
         public async Task<AssociateAdditionalCertificatesWithListenerResponse> AssociateAdditionalCertificatesWithListenerWithOptionsAsync(AssociateAdditionalCertificatesWithListenerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -233,12 +251,28 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return TeaModel.ToObject<AssociateAdditionalCertificatesWithListenerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+          * *   If the listener is in the **Associating** state, the additional certificates are being associated.
+          * *   If the listener is in the **Associated** state, the additional certificates are associated.
+          *
+          * @param request AssociateAdditionalCertificatesWithListenerRequest
+          * @return AssociateAdditionalCertificatesWithListenerResponse
+         */
         public AssociateAdditionalCertificatesWithListenerResponse AssociateAdditionalCertificatesWithListener(AssociateAdditionalCertificatesWithListenerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateAdditionalCertificatesWithListenerWithOptions(request, runtime);
         }
 
+        /**
+          * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+          * *   If the listener is in the **Associating** state, the additional certificates are being associated.
+          * *   If the listener is in the **Associated** state, the additional certificates are associated.
+          *
+          * @param request AssociateAdditionalCertificatesWithListenerRequest
+          * @return AssociateAdditionalCertificatesWithListenerResponse
+         */
         public async Task<AssociateAdditionalCertificatesWithListenerResponse> AssociateAdditionalCertificatesWithListenerAsync(AssociateAdditionalCertificatesWithListenerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1103,10 +1137,6 @@ namespace AlibabaCloud.SDK.Nlb20220430
             {
                 body["Protocol"] = request.Protocol;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuicVersion))
-            {
-                body["QuicVersion"] = request.QuicVersion;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
@@ -1210,10 +1240,6 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
             {
                 body["Protocol"] = request.Protocol;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuicVersion))
-            {
-                body["QuicVersion"] = request.QuicVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -2049,6 +2075,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return await DisableLoadBalancerIpv6InternetWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+          * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
+          * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+          *
+          * @param request DisassociateAdditionalCertificatesWithListenerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisassociateAdditionalCertificatesWithListenerResponse
+         */
         public DisassociateAdditionalCertificatesWithListenerResponse DisassociateAdditionalCertificatesWithListenerWithOptions(DisassociateAdditionalCertificatesWithListenerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2092,6 +2127,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return TeaModel.ToObject<DisassociateAdditionalCertificatesWithListenerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+          * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
+          * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+          *
+          * @param request DisassociateAdditionalCertificatesWithListenerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisassociateAdditionalCertificatesWithListenerResponse
+         */
         public async Task<DisassociateAdditionalCertificatesWithListenerResponse> DisassociateAdditionalCertificatesWithListenerWithOptionsAsync(DisassociateAdditionalCertificatesWithListenerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2135,12 +2179,28 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return TeaModel.ToObject<DisassociateAdditionalCertificatesWithListenerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+          * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
+          * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+          *
+          * @param request DisassociateAdditionalCertificatesWithListenerRequest
+          * @return DisassociateAdditionalCertificatesWithListenerResponse
+         */
         public DisassociateAdditionalCertificatesWithListenerResponse DisassociateAdditionalCertificatesWithListener(DisassociateAdditionalCertificatesWithListenerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisassociateAdditionalCertificatesWithListenerWithOptions(request, runtime);
         }
 
+        /**
+          * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+          * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
+          * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+          *
+          * @param request DisassociateAdditionalCertificatesWithListenerRequest
+          * @return DisassociateAdditionalCertificatesWithListenerResponse
+         */
         public async Task<DisassociateAdditionalCertificatesWithListenerResponse> DisassociateAdditionalCertificatesWithListenerAsync(DisassociateAdditionalCertificatesWithListenerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5428,10 +5488,6 @@ namespace AlibabaCloud.SDK.Nlb20220430
             {
                 body["PreserveClientIpEnabled"] = request.PreserveClientIpEnabled;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuicVersion))
-            {
-                body["QuicVersion"] = request.QuicVersion;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
@@ -5500,10 +5556,6 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreserveClientIpEnabled))
             {
                 body["PreserveClientIpEnabled"] = request.PreserveClientIpEnabled;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuicVersion))
-            {
-                body["QuicVersion"] = request.QuicVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

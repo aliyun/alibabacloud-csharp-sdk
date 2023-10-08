@@ -20,12 +20,24 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? AlpnEnabled { get; set; }
 
         /// <summary>
-        /// The ALPN policy.
+        /// The ALPN policy. Valid values:
+        /// 
+        /// *   **HTTP1Only**: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
+        /// *   **HTTP2Only**: uses only HTTP 2.0.
+        /// *   **HTTP2Optional**: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.
+        /// *   **HTTP2Preferred**: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
+        /// 
+        /// > This parameter is required if AlpnEnabled is set to true.
         /// </summary>
         [NameInMap("AlpnPolicy")]
         [Validation(Required=false)]
         public string AlpnPolicy { get; set; }
 
+        /// <summary>
+        /// The CA certificates. Only one CA certificate is supported.
+        /// 
+        /// >  This parameter takes effect only for listeners that use SSL over TCP.
+        /// </summary>
         [NameInMap("CaCertificateIds")]
         [Validation(Required=false)]
         public List<string> CaCertificateIds { get; set; }
@@ -40,6 +52,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public bool? CaEnabled { get; set; }
 
+        /// <summary>
+        /// The server certificates.
+        /// </summary>
         [NameInMap("CertificateIds")]
         [Validation(Required=false)]
         public List<string> CertificateIds { get; set; }
@@ -47,9 +62,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** of each API request may be different.
+        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

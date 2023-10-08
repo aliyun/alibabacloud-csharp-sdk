@@ -329,10 +329,16 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                     [Validation(Required=false)]
                     public string PrivateIPv4Address { get; set; }
 
+                    /// <summary>
+                    /// The health check status of the private IPv4 address.
+                    /// </summary>
                     [NameInMap("PrivateIPv4HcStatus")]
                     [Validation(Required=false)]
                     public string PrivateIPv4HcStatus { get; set; }
 
+                    /// <summary>
+                    /// The health check status of the private IPv6 address.
+                    /// </summary>
                     [NameInMap("PrivateIPv6HcStatus")]
                     [Validation(Required=false)]
                     public string PrivateIPv6HcStatus { get; set; }
@@ -346,6 +352,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
                 }
 
+                /// <summary>
+                /// The state of the task. Valid values:
+                /// 
+                /// *   **Succeeded**: The task is successful.
+                /// *   **processing**: The ticket is being executed.
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
