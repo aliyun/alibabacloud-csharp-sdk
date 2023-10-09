@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags that are used to filter instances.
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }

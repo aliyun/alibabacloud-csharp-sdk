@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// The returned data.
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListInstancesResponseBodyData Data { get; set; }
         public class ListInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// The paginated data.
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyDataList> List { get; set; }
             public class ListInstancesResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// The commodity code of the instance. The commodity code of a ApsaraMQ for RocketMQ 5.0 instance has a similar format as ons_rmqsub_public_cn.
+                /// The commodity code of the instance. The commodity code of ApsaraMQ for RocketMQ 5.0 instances has a similar format to ons_rmqsub_public_cn.
                 /// </summary>
                 [NameInMap("commodityCode")]
                 [Validation(Required=false)]
@@ -52,21 +52,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// The number of consumer groups created in the instance.
+                /// The number of consumer groups that are created on the instance.
                 /// </summary>
                 [NameInMap("groupCount")]
                 [Validation(Required=false)]
                 public long? GroupCount { get; set; }
 
                 /// <summary>
-                /// The ID of the instance
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("instanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// The instance name.
                 /// </summary>
                 [NameInMap("instanceName")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// 
                 /// Valid values:
                 /// 
-                /// *   PayAsYouGo: pay-as-you-go
+                /// *   PayAsYouGo
                 /// *   Subscription
                 /// </summary>
                 [NameInMap("paymentType")]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ReleaseTime { get; set; }
 
                 /// <summary>
-                /// The description of the instance.
+                /// The instance description.
                 /// </summary>
                 [NameInMap("remark")]
                 [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string SeriesCode { get; set; }
 
                 /// <summary>
-                /// The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.
+                /// The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.
                 /// </summary>
                 [NameInMap("serviceCode")]
                 [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The status of the instance.
+                /// The instance status.
                 /// 
                 /// Valid values:
                 /// 
@@ -166,14 +166,23 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string SubSeriesCode { get; set; }
 
+                /// <summary>
+                /// The resource tags.
+                /// </summary>
                 [NameInMap("tags")]
                 [Validation(Required=false)]
                 public List<ListInstancesResponseBodyDataListTags> Tags { get; set; }
                 public class ListInstancesResponseBodyDataListTags : TeaModel {
+                    /// <summary>
+                    /// The tag key of the resource.
+                    /// </summary>
                     [NameInMap("key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
+                    /// <summary>
+                    /// The tag value of the resource.
+                    /// </summary>
                     [NameInMap("value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -181,7 +190,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
-                /// The number of topics created in the instance.
+                /// The number of topics that are created on the instance.
                 /// </summary>
                 [NameInMap("topicCount")]
                 [Validation(Required=false)]

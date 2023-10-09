@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// The returned data.
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -196,6 +196,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
             }
 
+            /// <summary>
+            /// The number of groups.
+            /// </summary>
             [NameInMap("groupCount")]
             [Validation(Required=false)]
             public long? GroupCount { get; set; }
@@ -222,32 +225,32 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public List<GetInstanceResponseBodyDataInstanceQuotas> InstanceQuotas { get; set; }
             public class GetInstanceResponseBodyDataInstanceQuotas : TeaModel {
                 /// <summary>
-                /// The number of free topics in the instance.
+                /// The number of topics that are free of charge on the instance.
                 /// </summary>
                 [NameInMap("freeCount")]
                 [Validation(Required=false)]
                 public double? FreeCount { get; set; }
 
                 /// <summary>
-                /// The name of the quota.
+                /// The quota name.
                 /// 
-                /// Valid values:
+                /// Valid value:
                 /// 
-                /// *   TOPIC_COUNT: the number of topics that you can create in the instance
+                /// *   TOPIC_COUNT: the number of topics that can be created on the instance
                 /// </summary>
                 [NameInMap("quotaName")]
                 [Validation(Required=false)]
                 public string QuotaName { get; set; }
 
                 /// <summary>
-                /// The total number of topics in the instance.
+                /// The total number of topics on the instance.
                 /// </summary>
                 [NameInMap("totalCount")]
                 [Validation(Required=false)]
                 public double? TotalCount { get; set; }
 
                 /// <summary>
-                /// The number of used topics in the instance.
+                /// The number of used topics on the instance.
                 /// </summary>
                 [NameInMap("usedCount")]
                 [Validation(Required=false)]
@@ -274,8 +277,29 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     /// 
                     /// Valid values:
                     /// 
-                    /// *   TCP_VPC: VPC endpoint
-                    /// *   TCP_INTERNET: public endpoint
+                    /// *   TCP_VPC
+                    /// 
+                    ///     <!-- -->
+                    /// 
+                    ///     :
+                    /// 
+                    ///     <!-- -->
+                    /// 
+                    ///     VPC endpoint
+                    /// 
+                    ///     <!-- -->
+                    /// 
+                    /// *   TCP_INTERNET
+                    /// 
+                    ///     <!-- -->
+                    /// 
+                    ///     :
+                    /// 
+                    ///     <!-- -->
+                    /// 
+                    ///     public endpoint
+                    /// 
+                    ///     <!-- -->
                     /// </summary>
                     [NameInMap("endpointType")]
                     [Validation(Required=false)]
@@ -289,12 +313,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string EndpointUrl { get; set; }
 
                     /// <summary>
-                    /// The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only when you use a public endpoint to access the ApsaraMQ for RocketMQ broker.
+                    /// The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the ApsaraMQ for RocketMQ broker.
                     /// 
-                    /// *   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
-                    /// *   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.
+                    /// *   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
+                    /// *   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.
                     /// 
-                    /// We recommend that you configure the internetInfo.ipWhitelist parameter instead of this parameter.
+                    /// We recommend that you configure internetInfo.ipWhitelist instead of this parameter.
                     /// </summary>
                     [NameInMap("ipWhitelist")]
                     [Validation(Required=false)]
@@ -503,18 +527,36 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string ServiceCode { get; set; }
 
+            /// <summary>
+            /// The instance software information.
+            /// </summary>
             [NameInMap("software")]
             [Validation(Required=false)]
             public GetInstanceResponseBodyDataSoftware Software { get; set; }
             public class GetInstanceResponseBodyDataSoftware : TeaModel {
+                /// <summary>
+                /// The period of upgrade time.
+                /// </summary>
                 [NameInMap("maintainTime")]
                 [Validation(Required=false)]
                 public string MaintainTime { get; set; }
 
+                /// <summary>
+                /// The version of software.
+                /// </summary>
                 [NameInMap("softwareVersion")]
                 [Validation(Required=false)]
                 public string SoftwareVersion { get; set; }
 
+                /// <summary>
+                /// The upgrade method.
+                /// 
+                /// Valid values:
+                /// 
+                /// - Auto: automatic upgrade
+                /// 
+                /// - Manual: manual upgrade
+                /// </summary>
                 [NameInMap("upgradeMethod")]
                 [Validation(Required=false)]
                 public string UpgradeMethod { get; set; }
@@ -555,20 +597,32 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string SubSeriesCode { get; set; }
 
+            /// <summary>
+            /// The resource tags.
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<GetInstanceResponseBodyDataTags> Tags { get; set; }
             public class GetInstanceResponseBodyDataTags : TeaModel {
+                /// <summary>
+                /// The tag key of the resource.
+                /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value of the resource.
+                /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// The number of topics.
+            /// </summary>
             [NameInMap("topicCount")]
             [Validation(Required=false)]
             public long? TopicCount { get; set; }
