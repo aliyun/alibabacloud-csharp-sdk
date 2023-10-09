@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DeleteOnRelease")]
+        [Validation(Required=false)]
+        public bool? DeleteOnRelease { get; set; }
+
         /// <summary>
         /// The description of the ENI. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
         /// 

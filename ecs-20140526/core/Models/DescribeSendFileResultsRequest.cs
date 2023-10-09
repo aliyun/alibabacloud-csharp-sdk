@@ -16,6 +16,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The overall sending state of the file. The overall sending state of the file depends on its sending state on all the destination instances. Valid values:
+        /// 
+        /// - Pending: The file is being verified or sent.
+        /// - Invalid: The file is invalid.
+        /// - Running: The file is being sent to the instances.
+        /// - Aborted: The file failed to be sent to the instances. To send a file to an instance, make sure that the instance is in the Running state and the file can be sent within 1 minute.
+        /// - Success: The file is sent.
+        /// - Failed: The file failed to be created on the instances.
+        /// - Error: An error occurs and interrupts the file sending task.
+        /// - Timeout: The file sending task times out.
+        /// - Cancelled: The file sending task is canceled.
+        /// - Stopping: The file sending task is being stopped.
+        /// - Terminated: The file sending task is terminated.
+        /// </summary>
         [NameInMap("InvocationStatus")]
         [Validation(Required=false)]
         public string InvocationStatus { get; set; }

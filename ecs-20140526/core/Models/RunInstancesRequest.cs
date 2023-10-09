@@ -891,6 +891,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<RunInstancesRequestNetworkInterface> NetworkInterface { get; set; }
         public class RunInstancesRequestNetworkInterface : TeaModel {
+            [NameInMap("DeleteOnRelease")]
+            [Validation(Required=false)]
+            public bool? DeleteOnRelease { get; set; }
+
             /// <summary>
             /// The description of ENI N.
             /// 
@@ -955,6 +959,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("NetworkCardIndex")]
             [Validation(Required=false)]
             public int? NetworkCardIndex { get; set; }
+
+            [NameInMap("NetworkInterfaceId")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceId { get; set; }
 
             /// <summary>
             /// The name of ENI N.

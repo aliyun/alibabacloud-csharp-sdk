@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
+                [NameInMap("DeleteOnRelease")]
+                [Validation(Required=false)]
+                public bool? DeleteOnRelease { get; set; }
+
                 /// <summary>
                 /// The description of the ENI.
                 /// </summary>
