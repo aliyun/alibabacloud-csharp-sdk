@@ -45,20 +45,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public List<GetInstanceListRequestTag> Tag { get; set; }
         public class GetInstanceListRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag that is attached to the resource.
+            /// The key of the resource tag.
             /// 
             /// *   If this parameter is left empty, all tag keys are matched.
-            /// *   A tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+            /// *   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag that is attached to the resource.
+            /// The value of the resource tag.
             /// 
-            /// *   If the Key parameter is left empty, this parameter must be left empty. If this parameter is left empty, all tag values are matched.
-            /// *   A tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+            /// *   This parameter must be left empty if the Key parameter is left empty. If this parameter is left empty, the values of all tags are matched.
+            /// *   The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

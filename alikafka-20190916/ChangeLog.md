@@ -1,3 +1,6 @@
+2023-10-09 Version: 2.0.3
+- Generated csharp 2019-09-16 for alikafka.
+
 2023-04-25 Version: 2.0.2
 - Add UpdateConsumerOffset api.
 

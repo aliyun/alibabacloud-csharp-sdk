@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ReleaseInstanceRequest : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// Specifies whether to immediately release the physical resources of the instance. Valid values:
+        /// 
+        /// *   **true**: The physical resources of the instance are immediately released.
+        /// *   **false**: The physical resources of the instance are retained for a period of time before they are released.
         /// </summary>
         [NameInMap("ForceDeleteInstance")]
         [Validation(Required=false)]
         public bool? ForceDeleteInstance { get; set; }
 
         /// <summary>
-        /// Specifies whether to immediately release the physical resources of the instance. Valid values:
-        /// 
-        /// *   **true**: The physical resources of the instance are immediately released.
-        /// *   **false**: The physical resources of the instance are retained for a period of time before they are released.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+        /// The region ID of the instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

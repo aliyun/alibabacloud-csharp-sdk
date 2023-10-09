@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetAllInstanceIdListRequest : TeaModel {
+        /// <summary>
+        /// The region ID of the instance. This parameter is reserved.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

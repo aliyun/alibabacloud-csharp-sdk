@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetAllowedIpListResponseBody : TeaModel {
         /// <summary>
-        /// The IP address whitelist of the instance.
+        /// The IP address whitelist.
         /// </summary>
         [NameInMap("AllowedList")]
         [Validation(Required=false)]
@@ -36,18 +36,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public List<GetAllowedIpListResponseBodyAllowedListInternetList> InternetList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListInternetList : TeaModel {
                 /// <summary>
-                /// The IP address whitelist group.
+                /// The group to which the IP address whitelist belongs.
                 /// </summary>
                 [NameInMap("AllowedIpGroup")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> AllowedIpGroup { get; set; }
 
+                /// <summary>
+                /// The information about the IP address whitelist.
+                /// </summary>
                 [NameInMap("AllowedIpList")]
                 [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }
 
                 /// <summary>
-                /// The port range. Valid values:
+                /// The port range. Valid value:
                 /// 
                 /// **9093/9093**.
                 /// </summary>
@@ -58,22 +61,28 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             }
 
             /// <summary>
-            /// The whitelist for access from a VPC.
+            /// The whitelist for access from a virtual private cloud (VPC).
             /// </summary>
             [NameInMap("VpcList")]
             [Validation(Required=false)]
             public List<GetAllowedIpListResponseBodyAllowedListVpcList> VpcList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListVpcList : TeaModel {
+                /// <summary>
+                /// The group to which the IP address whitelist belongs.
+                /// </summary>
                 [NameInMap("AllowedIpGroup")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> AllowedIpGroup { get; set; }
 
+                /// <summary>
+                /// The information about the IP address whitelist.
+                /// </summary>
                 [NameInMap("AllowedIpList")]
                 [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }
 
                 /// <summary>
-                /// The port range. Valid values:
+                /// The port range. Valid value:
                 /// 
                 /// **9092/9092**.
                 /// </summary>

@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// 
         /// *   **Write**: data writes.
         /// *   **Read**: data reads.
-        /// *   **Describe**: reads of transaction IDs.****
-        /// *   **IdempotentWrite**: idempotent data writes to clusters.
+        /// *   **Describe**: reads of **transaction IDs**.
+        /// *   **IdempotentWrite**: idempotent data writes to **clusters**.
         /// </summary>
         [NameInMap("AclOperationType")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclResourceName { get; set; }
 
         /// <summary>
-        /// The mode that is used to match resources. Valid values:
+        /// The matching mode. Valid values:
         /// 
         /// *   **LITERAL**: exact match
         /// *   **PREFIXED**: prefix match
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The resource type. Valid values:
         /// 
-        /// *   **Topic**: specifies topics.
-        /// *   **Group**: specifies consumer groups.
-        /// *   **Cluster**: specifies instances.
-        /// *   **TransactionalId**: specifies transactions.
+        /// *   **Topic**: topic
+        /// *   **Group**: consumer group
+        /// *   **Cluster**: cluster
+        /// *   **TransactionalId**: transaction
         /// </summary>
         [NameInMap("AclResourceType")]
         [Validation(Required=false)]

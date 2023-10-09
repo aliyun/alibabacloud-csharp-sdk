@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetConsumerProgressRequest : TeaModel {
         /// <summary>
-        /// The region ID of the instance.
+        /// The name of the consumer group.
         /// </summary>
         [NameInMap("ConsumerId")]
         [Validation(Required=false)]
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// The name of the consumer group.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+        /// The region ID of the instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

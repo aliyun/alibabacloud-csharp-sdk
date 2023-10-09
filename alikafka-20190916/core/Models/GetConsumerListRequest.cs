@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetConsumerListRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The name of the consumer group. If you do not configure this parameter, all consumer groups are queried.
         /// </summary>
         [NameInMap("ConsumerId")]
         [Validation(Required=false)]
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// The tags of the topic.
+        /// The ID of the instance to which the consumer group belongs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the consumer group. If you do not configure this parameter, all consumer groups are queried.
+        /// The region ID of the instance to which the consumer group belongs.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

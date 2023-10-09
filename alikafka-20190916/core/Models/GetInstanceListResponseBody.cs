@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the instances.
+        /// The information about the instance.
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public List<GetInstanceListResponseBodyInstanceListInstanceVO> InstanceVO { get; set; }
             public class GetInstanceListResponseBodyInstanceListInstanceVO : TeaModel {
                 /// <summary>
-                /// The configurations of the instance.
+                /// The configurations of the deployed ApsaraMQ for Kafka instance.
                 /// </summary>
                 [NameInMap("AllConfig")]
                 [Validation(Required=false)]
@@ -44,22 +44,22 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 /// <summary>
                 /// The type of the network in which the instance is deployed. Valid values:
                 /// 
-                /// *   **4**: the Internet and virtual private clouds (VPCs).
-                /// *   **5**: VPCs.
+                /// *   **4**: the Internet and VPCs
+                /// *   **5**: VPCs
                 /// </summary>
                 [NameInMap("DeployType")]
                 [Validation(Required=false)]
                 public int? DeployType { get; set; }
 
                 /// <summary>
-                /// The size of the disk.
+                /// The disk size of the instance.
                 /// </summary>
                 [NameInMap("DiskSize")]
                 [Validation(Required=false)]
                 public int? DiskSize { get; set; }
 
                 /// <summary>
-                /// The type of the disk. Unit: GB. Valid values:
+                /// The disk type of the instance. Unit: GB Valid values:
                 /// 
                 /// *   **0**: ultra disk
                 /// *   **1**: standard SSD
@@ -69,27 +69,27 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? DiskType { get; set; }
 
                 /// <summary>
-                /// The default endpoint of the instance in domain name mode. The default endpoint of an instance can be in domain name mode or IP address mode.
+                /// The default endpoint of the instance in domain name mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
                 /// 
-                /// *   Domain name mode: A default endpoint in this mode consists of a domain name of the instance and a port number. The format of a default endpoint in this mode is `{Instance domain name}:{Port number}`.
-                /// *   IP address mode: A default endpoint in this mode consists of the IP address of a broker and a port number. The format of a default endpoint in this mode is `{Broker IP address}:{Port number}`.
+                /// *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+                /// *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
                 /// </summary>
                 [NameInMap("DomainEndpoint")]
                 [Validation(Required=false)]
                 public string DomainEndpoint { get; set; }
 
                 /// <summary>
-                /// The peak public traffic allowed for the instance.
+                /// The peak Internet traffic allowed for the instance.
                 /// </summary>
                 [NameInMap("EipMax")]
                 [Validation(Required=false)]
                 public int? EipMax { get; set; }
 
                 /// <summary>
-                /// The default endpoint of the instance in IP address mode. The default endpoint of an instance can be in domain name mode or IP address mode.
+                /// The default endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
                 /// 
-                /// *   Domain name mode: A default endpoint in this mode consists of a domain name of the instance and a port number. The format of a default endpoint in this mode is `{Instance domain name}:{Port number}`.
-                /// *   IP address mode: A default endpoint in this mode consists of the IP address of a broker and a port number. The format of a default endpoint in this mode is `{Broker IP address}:{Port number}`.
+                /// *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+                /// *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
                 /// </summary>
                 [NameInMap("EndPoint")]
                 [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public long? ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -116,6 +116,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public int? IoMax { get; set; }
 
+                /// <summary>
+                /// The traffic specification.
+                /// </summary>
                 [NameInMap("IoMaxSpec")]
                 [Validation(Required=false)]
                 public string IoMaxSpec { get; set; }
@@ -135,7 +138,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? MsgRetain { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// The instance name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -159,27 +162,27 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The Simple Authentication and Security Layer (SASL) endpoint of the instance in domain name mode. The SASL endpoint of an instance can be in domain name mode or IP address mode.
+                /// The Simple Authentication and Security Layer (SASL) endpoint of the instance in domain name mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
                 /// 
-                /// *   Domain name mode: An SASL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SASL endpoint in this mode is `{Instance domain name}:{Port number}`.
-                /// *   IP address mode: An SASL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SASL endpoint in this mode is `{Broker IP address}:{Port number}`.
+                /// *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+                /// *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
                 /// </summary>
                 [NameInMap("SaslDomainEndpoint")]
                 [Validation(Required=false)]
                 public string SaslDomainEndpoint { get; set; }
 
                 /// <summary>
-                /// The security group of the instance.
+                /// The security group to which the instance belongs.
                 /// 
-                /// *   If the instance is deployed in the Message Queue for Apache Kafka console or by calling the [StartInstance](~~157786~~) operation without configuring a security group, no value is returned for this parameter.
-                /// *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation and a security group is configured, the return value is the configured security group.
+                /// *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, the returned value is empty.
+                /// *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the return value is the configured security group.
                 /// </summary>
                 [NameInMap("SecurityGroup")]
                 [Validation(Required=false)]
@@ -189,8 +192,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 /// The status of the instance. Valid values:
                 /// 
                 /// *   **0**: pending
-                /// *   **1**: deploying
+                /// *   **1**: preparing hardware resources
+                /// *   **2**: initializing
+                /// *   **3**: starting
                 /// *   **5**: running
+                /// *   **6**: migrating
+                /// *   **7**: ready for upgrade
+                /// *   **8**: upgrading
+                /// *   **9**: ready for changes
+                /// *   **10**: released
+                /// *   **11**: changing
                 /// *   **15**: expired
                 /// </summary>
                 [NameInMap("ServiceStatus")]
@@ -198,7 +209,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? ServiceStatus { get; set; }
 
                 /// <summary>
-                /// The edition of the instance. Valid values:
+                /// The instance edition. Valid values:
                 /// 
                 /// *   **professional**: Professional Edition (High Write)
                 /// *   **professionalForHighRead**: Professional Edition (High Read)
@@ -209,34 +220,34 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string SpecType { get; set; }
 
                 /// <summary>
-                /// The SSL endpoint of the instance in domain name mode. The SSL endpoint of an instance can be in domain name mode or IP address mode.
+                /// The SSL endpoint of the instance in domain name mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
                 /// 
-                /// *   Domain name mode: An SSL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SSL endpoint in this mode is `{Instance domain name}:{Port number}`.
-                /// *   IP address mode: An SSL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SSL endpoint in this mode is `{Broker IP address}:{Port number}`.
+                /// *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+                /// *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
                 /// </summary>
                 [NameInMap("SslDomainEndpoint")]
                 [Validation(Required=false)]
                 public string SslDomainEndpoint { get; set; }
 
                 /// <summary>
-                /// The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. The SSL endpoint of an instance can be in domain name mode or IP address mode.
+                /// The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
                 /// 
-                /// *   Domain name mode: An SSL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SSL endpoint in this mode is `{Instance domain name}:{Port number}`.
-                /// *   IP address mode: An SSL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SSL endpoint in this mode is `{Broker IP address}:{Port number}`.
+                /// *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+                /// *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
                 /// </summary>
                 [NameInMap("SslEndPoint")]
                 [Validation(Required=false)]
                 public string SslEndPoint { get; set; }
 
                 /// <summary>
-                /// The ID of the zone.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("StandardZoneId")]
                 [Validation(Required=false)]
                 public string StandardZoneId { get; set; }
 
                 /// <summary>
-                /// The tags that are attached to the instance.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -247,14 +258,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     public List<GetInstanceListResponseBodyInstanceListInstanceVOTagsTagVO> TagVO { get; set; }
                     public class GetInstanceListResponseBodyInstanceListInstanceVOTagsTagVO : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -272,7 +283,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? TopicNumLimit { get; set; }
 
                 /// <summary>
-                /// The upgrade information about the instance.
+                /// The upgrade information of the instance.
                 /// </summary>
                 [NameInMap("UpgradeServiceDetailInfo")]
                 [Validation(Required=false)]
@@ -288,7 +299,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 }
 
                 /// <summary>
-                /// The number of used groups.
+                /// The number of used consumer groups.
                 /// </summary>
                 [NameInMap("UsedGroupCount")]
                 [Validation(Required=false)]
@@ -309,21 +320,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? UsedTopicCount { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID of the instance.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The ID of the virtual private cloud (VPC) to which the instance belongs.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The ID of the zone.
+                /// The zone ID of the instance.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
