@@ -385,6 +385,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public GetInstanceResponseBodyDataNetworkInfoVpcInfo VpcInfo { get; set; }
                 public class GetInstanceResponseBodyDataNetworkInfoVpcInfo : TeaModel {
+                    [NameInMap("securityGroupIds")]
+                    [Validation(Required=false)]
+                    public string SecurityGroupIds { get; set; }
+
                     /// <summary>
                     /// The ID of the vSwitch with which the instance is associated.
                     /// </summary>
@@ -476,6 +480,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [NameInMap("supportAutoScaling")]
                 [Validation(Required=false)]
                 public bool? SupportAutoScaling { get; set; }
+
+                [NameInMap("traceOn")]
+                [Validation(Required=false)]
+                public bool? TraceOn { get; set; }
 
             }
 

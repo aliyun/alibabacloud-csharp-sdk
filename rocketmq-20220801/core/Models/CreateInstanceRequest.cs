@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public int? AutoRenewPeriod { get; set; }
 
+        [NameInMap("commodityCode")]
+        [Validation(Required=false)]
+        public string CommodityCode { get; set; }
+
         /// <summary>
         /// The name of the instance that you want to create.
         /// 
@@ -109,6 +113,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public CreateInstanceRequestNetworkInfoVpcInfo VpcInfo { get; set; }
             public class CreateInstanceRequestNetworkInfoVpcInfo : TeaModel {
+                [NameInMap("securityGroupIds")]
+                [Validation(Required=false)]
+                public string SecurityGroupIds { get; set; }
+
                 /// <summary>
                 /// The ID of the vSwitch with which the instance is associated.
                 /// 
@@ -191,6 +199,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("autoScaling")]
             [Validation(Required=false)]
             public bool? AutoScaling { get; set; }
+
+            [NameInMap("chargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
+            [NameInMap("intranetSpec")]
+            [Validation(Required=false)]
+            public string IntranetSpec { get; set; }
 
             /// <summary>
             /// The retention period of messages. Unit: hours.

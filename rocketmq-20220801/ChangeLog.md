@@ -1,3 +1,6 @@
+2023-10-09 Version: 1.1.2
+- Generated csharp 2022-08-01 for RocketMQ.
+
 2023-10-09 Version: 1.1.1
 - Generated csharp 2022-08-01 for RocketMQ.
 

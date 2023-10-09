@@ -84,6 +84,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string PaymentType { get; set; }
 
+                [NameInMap("productInfo")]
+                [Validation(Required=false)]
+                public ListInstancesResponseBodyDataListProductInfo ProductInfo { get; set; }
+                public class ListInstancesResponseBodyDataListProductInfo : TeaModel {
+                    [NameInMap("traceOn")]
+                    [Validation(Required=false)]
+                    public bool? TraceOn { get; set; }
+
+                }
+
                 /// <summary>
                 /// The ID of the region in which the instance resides.
                 /// </summary>

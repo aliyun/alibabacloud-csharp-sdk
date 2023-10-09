@@ -270,6 +270,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["autoRenewPeriod"] = request.AutoRenewPeriod;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                body["commodityCode"] = request.CommodityCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 body["instanceName"] = request.InstanceName;
@@ -359,6 +363,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewPeriod))
             {
                 body["autoRenewPeriod"] = request.AutoRenewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                body["commodityCode"] = request.CommodityCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
