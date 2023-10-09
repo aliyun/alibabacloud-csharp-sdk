@@ -1,3 +1,6 @@
+2023-10-09 Version: 2.2.1
+- Generated csharp 2020-02-17 for Dytnsapi.
+
 2023-09-25 Version: 2.2.0
 - Generated csharp 2020-02-17 for Dytnsapi.
 
