@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public Stream VideoURLObject { get; set; }
 
+        [NameInMap("WatermarkType")]
+        [Validation(Required=false)]
+        public string WatermarkType { get; set; }
+
     }
 
 }
