@@ -5031,12 +5031,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
+          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
           * > You can call this operation up to 30 times per second per account.
           *
           * @param request DescribeDcdnCertificateListRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return DescribeDcdnCertificateListResponse
          */
+        // Deprecated
         public DescribeDcdnCertificateListResponse DescribeDcdnCertificateListWithOptions(DescribeDcdnCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5073,12 +5075,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
+          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
           * > You can call this operation up to 30 times per second per account.
           *
           * @param request DescribeDcdnCertificateListRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return DescribeDcdnCertificateListResponse
          */
+        // Deprecated
         public async Task<DescribeDcdnCertificateListResponse> DescribeDcdnCertificateListWithOptionsAsync(DescribeDcdnCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5115,11 +5119,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
+          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
           * > You can call this operation up to 30 times per second per account.
           *
           * @param request DescribeDcdnCertificateListRequest
           * @return DescribeDcdnCertificateListResponse
          */
+        // Deprecated
         public DescribeDcdnCertificateListResponse DescribeDcdnCertificateList(DescribeDcdnCertificateListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5127,11 +5133,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
+          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
           * > You can call this operation up to 30 times per second per account.
           *
           * @param request DescribeDcdnCertificateListRequest
           * @return DescribeDcdnCertificateListResponse
          */
+        // Deprecated
         public async Task<DescribeDcdnCertificateListResponse> DescribeDcdnCertificateListAsync(DescribeDcdnCertificateListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18068,6 +18076,120 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHighlightInfoWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeKvUsageDataResponse DescribeKvUsageDataWithOptions(DescribeKvUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
+            {
+                query["AccessType"] = request.AccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Field))
+            {
+                query["Field"] = request.Field;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseType))
+            {
+                query["ResponseType"] = request.ResponseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitBy))
+            {
+                query["SplitBy"] = request.SplitBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKvUsageData",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKvUsageDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeKvUsageDataResponse> DescribeKvUsageDataWithOptionsAsync(DescribeKvUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
+            {
+                query["AccessType"] = request.AccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Field))
+            {
+                query["Field"] = request.Field;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseType))
+            {
+                query["ResponseType"] = request.ResponseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitBy))
+            {
+                query["SplitBy"] = request.SplitBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKvUsageData",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKvUsageDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeKvUsageDataResponse DescribeKvUsageData(DescribeKvUsageDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeKvUsageDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeKvUsageDataResponse> DescribeKvUsageDataAsync(DescribeKvUsageDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeKvUsageDataWithOptionsAsync(request, runtime);
         }
 
         public DescribeRDDomainConfigResponse DescribeRDDomainConfigWithOptions(DescribeRDDomainConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
