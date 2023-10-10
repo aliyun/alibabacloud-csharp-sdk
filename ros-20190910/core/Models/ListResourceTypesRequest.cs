@@ -10,16 +10,30 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListResourceTypesRequest : TeaModel {
         /// <summary>
-        /// The array of resource types.
+        /// The entity type. Valid values:
+        /// 
+        /// *   All: all types of resources.
+        /// *   Resource (default): regular resources. For more information, see [Resources](~~28863~~).
+        /// *   DataSource: DataSource resources. For more information, see [DataSource resources](~~404753~~).
+        /// *   Module: modules.
         /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
+        /// <summary>
+        /// The provider of the resource type. Valid values:
+        /// 
+        /// *   ROS (default): The resource type is provided by Resource Orchestration Service (ROS).
+        /// *   Self: The resource type is provided by you.
+        /// </summary>
         [NameInMap("Provider")]
         [Validation(Required=false)]
         public string Provider { get; set; }
 
+        /// <summary>
+        /// The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

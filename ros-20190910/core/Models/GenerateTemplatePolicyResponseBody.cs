@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public List<string> Action { get; set; }
 
+                /// <summary>
+                /// The condition that is required for the policy to take effect.
+                /// </summary>
                 [NameInMap("Condition")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Condition { get; set; }
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Effect { get; set; }
 
                 /// <summary>
-                /// The object that the statement covers. An asterisk (\*) indicates all resources.
+                /// The objects that the statement covers. An asterisk (\*) indicates all resources.
                 /// </summary>
                 [NameInMap("Resource")]
                 [Validation(Required=false)]

@@ -185,6 +185,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public bool? SourceTagSupported { get; set; }
 
+                [NameInMap("SupportedTemplateScratchTypes")]
+                [Validation(Required=false)]
+                public List<string> SupportedTemplateScratchTypes { get; set; }
+
             }
 
         }

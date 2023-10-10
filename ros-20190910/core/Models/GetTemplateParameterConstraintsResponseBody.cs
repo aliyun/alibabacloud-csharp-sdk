@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   NotSupport: The value of this parameter cannot be queried.
             /// *   QueryError: This parameter failed to be queried.
             /// 
-            /// >  If the AllowedValues parameter is not returned, the Behavior and BehaviorReason parameters are returned.
+            /// > If AllowedValues is not returned, Behavior and BehaviorReason are returned.
             /// </summary>
             [NameInMap("Behavior")]
             [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The values that do not conform to the parameter constraints.
             /// 
-            /// >  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.
+            /// > If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.
             /// </summary>
             [NameInMap("IllegalValueByParameterConstraints")]
             [Validation(Required=false)]
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The values that do not match the rules in the template.
             /// 
-            /// >  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.
+            /// > If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.
             /// </summary>
             [NameInMap("IllegalValueByRules")]
             [Validation(Required=false)]
             public List<object> IllegalValueByRules { get; set; }
 
             /// <summary>
-            /// The unsupported resources in the template.
+            /// The unsupported resource in the template.
             /// </summary>
             [NameInMap("NotSupportResources")]
             [Validation(Required=false)]
@@ -84,8 +84,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
                 /// <summary>
                 /// The resource type.
-                /// 
-                /// You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -93,51 +91,29 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
+            /// <summary>
+            /// The original constraint information.
+            /// </summary>
             [NameInMap("OriginalConstraints")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> OriginalConstraints { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints : TeaModel {
+                /// <summary>
+                /// The values of the parameter.
+                /// </summary>
                 [NameInMap("AllowedValues")]
                 [Validation(Required=false)]
                 public List<object> AllowedValues { get; set; }
 
+                /// <summary>
+                /// The name of the resource property.
+                /// </summary>
                 [NameInMap("PropertyName")]
                 [Validation(Required=false)]
                 public string PropertyName { get; set; }
 
-                [NameInMap("ResourceName")]
-                [Validation(Required=false)]
-                public string ResourceName { get; set; }
-
-                [NameInMap("ResourceType")]
-                [Validation(Required=false)]
-                public string ResourceType { get; set; }
-
-            }
-
-            /// <summary>
-            /// The name of the parameter.
-            /// </summary>
-            [NameInMap("ParameterKey")]
-            [Validation(Required=false)]
-            public string ParameterKey { get; set; }
-
-            /// <summary>
-            /// The error details that are returned if the request fails.
-            /// </summary>
-            [NameInMap("QueryErrors")]
-            [Validation(Required=false)]
-            public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> QueryErrors { get; set; }
-            public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors : TeaModel {
                 /// <summary>
-                /// The error message.
-                /// </summary>
-                [NameInMap("ErrorMessage")]
-                [Validation(Required=false)]
-                public string ErrorMessage { get; set; }
-
-                /// <summary>
-                /// The name of the resource.
+                /// The name of the resource that is defined in the template.
                 /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
@@ -153,7 +129,44 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The type of the parameter.
+            /// The name of the parameter.
+            /// </summary>
+            [NameInMap("ParameterKey")]
+            [Validation(Required=false)]
+            public string ParameterKey { get; set; }
+
+            /// <summary>
+            /// The error that is returned when the request fails.
+            /// </summary>
+            [NameInMap("QueryErrors")]
+            [Validation(Required=false)]
+            public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> QueryErrors { get; set; }
+            public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors : TeaModel {
+                /// <summary>
+                /// The error message.
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// The resource name.
+                /// </summary>
+                [NameInMap("ResourceName")]
+                [Validation(Required=false)]
+                public string ResourceName { get; set; }
+
+                /// <summary>
+                /// The resource type.
+                /// </summary>
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
+            /// <summary>
+            /// The data type of the parameter.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

@@ -46,14 +46,31 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Metadata { get; set; }
 
+        /// <summary>
+        /// The information about the modules from which the resource is created. This parameter is returned only if the resource is created from modules.
+        /// </summary>
         [NameInMap("ModuleInfo")]
         [Validation(Required=false)]
         public GetStackResourceResponseBodyModuleInfo ModuleInfo { get; set; }
         public class GetStackResourceResponseBodyModuleInfo : TeaModel {
+            /// <summary>
+            /// The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (`/`).
+            /// 
+            /// In the following example, the resource is created from Module B nested within Parent Module A:
+            /// 
+            /// `moduleA/moduleB`
+            /// </summary>
             [NameInMap("LogicalIdHierarchy")]
             [Validation(Required=false)]
             public string LogicalIdHierarchy { get; set; }
 
+            /// <summary>
+            /// The concatenated types of one or more modules that contain the resource. The module types are listed from the outermost layer and separated by forward slashes (`/`).
+            /// 
+            /// In the following example, the resource is created from a module of the `MODULE::ROS::Child::Example` type that is nested within a parent module of the `MODULE::ROS::Parent::Example` type:
+            /// 
+            /// `MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example`
+            /// </summary>
             [NameInMap("TypeHierarchy")]
             [Validation(Required=false)]
             public string TypeHierarchy { get; set; }

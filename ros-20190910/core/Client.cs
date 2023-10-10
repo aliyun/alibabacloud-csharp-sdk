@@ -1624,6 +1624,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceResourceGroupShrink))
             {
                 query["SourceResourceGroup"] = request.SourceResourceGroupShrink;
@@ -1717,6 +1721,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceResourceGroupShrink))
             {
@@ -2503,6 +2511,17 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await DeleteTemplateScratchWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   If you delete a resource type, you can no longer use the resource type in Resource Orchestration Service (ROS).
+          * *   If you delete a version of a resource type, you can no longer use the version in ROS.
+          * *   If a resource type has only one version, you can delete the version by calling the operation. If a resource type has more than one version, you must manually delete the remaining versions.
+          * *   When a resource type has more than one version, you cannot delete the default version by calling the operation.
+          * *   When a resource type has only one version, you can delete the resource type and the version by calling the operation.
+          *
+          * @param request DeregisterResourceTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeregisterResourceTypeResponse
+         */
         public DeregisterResourceTypeResponse DeregisterResourceTypeWithOptions(DeregisterResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2534,6 +2553,17 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<DeregisterResourceTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   If you delete a resource type, you can no longer use the resource type in Resource Orchestration Service (ROS).
+          * *   If you delete a version of a resource type, you can no longer use the version in ROS.
+          * *   If a resource type has only one version, you can delete the version by calling the operation. If a resource type has more than one version, you must manually delete the remaining versions.
+          * *   When a resource type has more than one version, you cannot delete the default version by calling the operation.
+          * *   When a resource type has only one version, you can delete the resource type and the version by calling the operation.
+          *
+          * @param request DeregisterResourceTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeregisterResourceTypeResponse
+         */
         public async Task<DeregisterResourceTypeResponse> DeregisterResourceTypeWithOptionsAsync(DeregisterResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2565,12 +2595,32 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<DeregisterResourceTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   If you delete a resource type, you can no longer use the resource type in Resource Orchestration Service (ROS).
+          * *   If you delete a version of a resource type, you can no longer use the version in ROS.
+          * *   If a resource type has only one version, you can delete the version by calling the operation. If a resource type has more than one version, you must manually delete the remaining versions.
+          * *   When a resource type has more than one version, you cannot delete the default version by calling the operation.
+          * *   When a resource type has only one version, you can delete the resource type and the version by calling the operation.
+          *
+          * @param request DeregisterResourceTypeRequest
+          * @return DeregisterResourceTypeResponse
+         */
         public DeregisterResourceTypeResponse DeregisterResourceType(DeregisterResourceTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeregisterResourceTypeWithOptions(request, runtime);
         }
 
+        /**
+          * *   If you delete a resource type, you can no longer use the resource type in Resource Orchestration Service (ROS).
+          * *   If you delete a version of a resource type, you can no longer use the version in ROS.
+          * *   If a resource type has only one version, you can delete the version by calling the operation. If a resource type has more than one version, you must manually delete the remaining versions.
+          * *   When a resource type has more than one version, you cannot delete the default version by calling the operation.
+          * *   When a resource type has only one version, you can delete the resource type and the version by calling the operation.
+          *
+          * @param request DeregisterResourceTypeRequest
+          * @return DeregisterResourceTypeResponse
+         */
         public async Task<DeregisterResourceTypeResponse> DeregisterResourceTypeAsync(DeregisterResourceTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7634,6 +7684,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -7691,6 +7745,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -8283,6 +8341,14 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await PreviewStackWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   Versions increase from v1.
+          * *   If you create a new resource type, v1 is used as the default version of the resource type. You can call the SetResourceType operation to change the default version of a resource type.
+          *
+          * @param request RegisterResourceTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterResourceTypeResponse
+         */
         public RegisterResourceTypeResponse RegisterResourceTypeWithOptions(RegisterResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8332,6 +8398,14 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<RegisterResourceTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Versions increase from v1.
+          * *   If you create a new resource type, v1 is used as the default version of the resource type. You can call the SetResourceType operation to change the default version of a resource type.
+          *
+          * @param request RegisterResourceTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterResourceTypeResponse
+         */
         public async Task<RegisterResourceTypeResponse> RegisterResourceTypeWithOptionsAsync(RegisterResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8381,12 +8455,26 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<RegisterResourceTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Versions increase from v1.
+          * *   If you create a new resource type, v1 is used as the default version of the resource type. You can call the SetResourceType operation to change the default version of a resource type.
+          *
+          * @param request RegisterResourceTypeRequest
+          * @return RegisterResourceTypeResponse
+         */
         public RegisterResourceTypeResponse RegisterResourceType(RegisterResourceTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RegisterResourceTypeWithOptions(request, runtime);
         }
 
+        /**
+          * *   Versions increase from v1.
+          * *   If you create a new resource type, v1 is used as the default version of the resource type. You can call the SetResourceType operation to change the default version of a resource type.
+          *
+          * @param request RegisterResourceTypeRequest
+          * @return RegisterResourceTypeResponse
+         */
         public async Task<RegisterResourceTypeResponse> RegisterResourceTypeAsync(RegisterResourceTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10336,6 +10424,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceResourceGroupShrink))
             {
                 query["SourceResourceGroup"] = request.SourceResourceGroupShrink;
@@ -10423,6 +10515,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceResourceGroupShrink))
             {

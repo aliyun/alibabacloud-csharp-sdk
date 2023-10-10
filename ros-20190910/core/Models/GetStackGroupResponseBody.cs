@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the stack group.
+        /// Details of the stack group.
         /// </summary>
         [NameInMap("StackGroup")]
         [Validation(Required=false)]
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<GetStackGroupResponseBodyStackGroupParameters> Parameters { get; set; }
             public class GetStackGroupResponseBodyStackGroupParameters : TeaModel {
                 /// <summary>
-                /// The value of the parameter.
+                /// The name of the parameter.
                 /// </summary>
                 [NameInMap("ParameterKey")]
                 [Validation(Required=false)]
                 public string ParameterKey { get; set; }
 
                 /// <summary>
-                /// The description of the stack group.
+                /// The value of the parameter.
                 /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
@@ -249,12 +249,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The details of the last drift detection that was performed on the stack group.
+            /// The structure that contains the template body.
+            /// 
+            /// > We recommend that you use TemplateContent instead of TemplateBody.
             /// </summary>
             [NameInMap("TemplateBody")]
             [Validation(Required=false)]
             public string TemplateBody { get; set; }
 
+            /// <summary>
+            /// The JSON-formatted structure that contains the template body. For more information, see [Template syntax](~~28857~~).
+            /// </summary>
             [NameInMap("TemplateContent")]
             [Validation(Required=false)]
             public string TemplateContent { get; set; }

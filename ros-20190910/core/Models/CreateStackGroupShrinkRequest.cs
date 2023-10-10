@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string AutoDeploymentShrink { get; set; }
 
         /// <summary>
-        /// 资源栈组选项列表，最大长度为1。
+        /// The options for the stack group. You can specify up to one option.
         /// </summary>
         [NameInMap("Capabilities")]
         [Validation(Required=false)]

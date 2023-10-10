@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateScratchId { get; set; }
 
+        /// <summary>
+        /// The type of the template that Resource Orchestration Service (ROS) generates. ROS can generate templates of the ROS and Terraform types. Default value: ROS.
+        /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }

@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackResponseBody : TeaModel {
+        /// <summary>
+        /// The number of resources on which drift detection is performed.
+        /// 
+        /// >  This parameter is returned only if the drift detection on the stack is successful.
+        /// </summary>
         [NameInMap("CheckedStackResourceCount")]
         [Validation(Required=false)]
         public int? CheckedStackResourceCount { get; set; }
@@ -94,7 +99,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// The keywords.
+                    /// The keywords of a resource log.
                     /// </summary>
                     [NameInMap("Keys")]
                     [Validation(Required=false)]
@@ -123,12 +128,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<GetStackResponseBodyLogTerraformLogs> TerraformLogs { get; set; }
             public class GetStackResponseBodyLogTerraformLogs : TeaModel {
                 /// <summary>
-                /// The name of a Terraform command that is run. Valid values:
+                /// The name of the Terraform command that is run. Valid values:
                 /// 
-                /// - apply
-                /// - plan
-                /// - destroy
-                /// - version
+                /// *   apply
+                /// *   plan
+                /// *   destroy
+                /// *   version
                 /// 
                 /// For more information about Terraform commands, see [Basic CLI Features](https://www.terraform.io/cli/commands).
                 /// </summary>
@@ -146,8 +151,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// The output stream. Valid values:
                 /// 
-                /// - stdout: the standard output stream.
-                /// - stderr: the standard error stream.
+                /// *   stdout: standard output stream
+                /// *   stderr: standard error stream
                 /// </summary>
                 [NameInMap("Stream")]
                 [Validation(Required=false)]
@@ -157,6 +162,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        /// <summary>
+        /// The number of resources on which drift detection is not performed.
+        /// 
+        /// >  This parameter is returned only if the drift detection on the stack is successful.
+        /// </summary>
         [NameInMap("NotCheckedStackResourceCount")]
         [Validation(Required=false)]
         public int? NotCheckedStackResourceCount { get; set; }
@@ -341,14 +351,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public float? ProgressValue { get; set; }
 
                 /// <summary>
-                /// The name of the resource.
+                /// The resource name.
                 /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// The type of the resource.
+                /// The resource type.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
