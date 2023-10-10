@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
-    public class ListRootStacksResponse : TeaModel {
+    public class InsertSwimmingLaneGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListRootStacksResponseBody Body { get; set; }
+        public InsertSwimmingLaneGroupResponseBody Body { get; set; }
 
     }
 

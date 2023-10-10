@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateK8sApplicationBaseInfoResponseBody : TeaModel {
+        /// <summary>
+        /// The HTTP status code that is returned.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// The additional information that is returned.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The result of the modification.
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public string Result { get; set; }

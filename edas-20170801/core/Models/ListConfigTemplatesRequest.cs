@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListConfigTemplatesRequest : TeaModel {
         /// <summary>
-        /// 页码
+        /// The number of the page to return. Pages start from Page 1.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// 配置模板ID
+        /// The ID of the configuration template.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// 配置模板名称
+        /// The name of the configuration template.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// 页大小
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

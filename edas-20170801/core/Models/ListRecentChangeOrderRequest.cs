@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListRecentChangeOrderRequest : TeaModel {
+        /// <summary>
+        /// The ID of the application.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }

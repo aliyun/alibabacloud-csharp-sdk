@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
-    public class UpdateMockRuleResponse : TeaModel {
+    public class UpdateSwimmingLaneGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public UpdateMockRuleResponseBody Body { get; set; }
+        public UpdateSwimmingLaneGroupResponseBody Body { get; set; }
 
     }
 

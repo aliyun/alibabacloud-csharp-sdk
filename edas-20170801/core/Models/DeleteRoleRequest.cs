@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteRoleRequest : TeaModel {
+        /// <summary>
+        /// The ID of the RAM role.
+        /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]
         public int? RoleId { get; set; }

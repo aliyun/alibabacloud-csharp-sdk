@@ -10,28 +10,35 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class CreateConfigTemplateRequest : TeaModel {
         /// <summary>
-        /// 模板内容
+        /// The content of the configuration template. The value must be in the format that is specified by the Format parameter.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// 模板描述
+        /// The description of the configuration template. The description can be up to 255 characters in length.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// 模板数据格式
+        /// The data format of the configuration template. Valid values:
+        /// 
+        /// *   JSON: JSON format
+        /// *   XML: XML format
+        /// *   YAML: YAML format
+        /// *   Properties: .properties format
+        /// *   KeyValue: key-value pairs
+        /// *   Custom: custom format
         /// </summary>
         [NameInMap("Format")]
         [Validation(Required=false)]
         public string Format { get; set; }
 
         /// <summary>
-        /// 配置模板名称
+        /// The name of the configuration template. The name can be up to 64 characters in length.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

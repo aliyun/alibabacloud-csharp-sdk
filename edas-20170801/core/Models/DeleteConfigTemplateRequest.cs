@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteConfigTemplateRequest : TeaModel {
         /// <summary>
-        /// 配置模板ID
+        /// The ID of the configuration template.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

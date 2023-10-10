@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteConfigTemplateResponseBody : TeaModel {
         /// <summary>
-        /// 响应码
+        /// The HTTP status code that is returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// 响应码文本描述
+        /// The additional information that is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// 请求ID
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

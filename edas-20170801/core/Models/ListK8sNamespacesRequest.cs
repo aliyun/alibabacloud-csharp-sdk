@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListK8sNamespacesRequest : TeaModel {
         /// <summary>
-        /// A short description of struct
+        /// The ID of the cluster in Enterprise Distributed Application Service (EDAS).
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetChangeOrderInfoRequest : TeaModel {
+        /// <summary>
+        /// The ID of the change process.
+        /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]
         public string ChangeOrderId { get; set; }

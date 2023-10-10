@@ -1,3 +1,6 @@
+2023-10-10 Version: 1.0.7
+- Generated csharp 2017-08-01 for Edas.
+
 2022-06-02 Version: 1.0.6
 - Add ListK8sNamespaces.
 

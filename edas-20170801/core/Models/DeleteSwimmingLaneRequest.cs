@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
-    public class EnableMockRuleRequest : TeaModel {
-        [NameInMap("Id")]
+    public class DeleteSwimmingLaneRequest : TeaModel {
+        /// <summary>
+        /// The ID of the lane.
+        /// </summary>
+        [NameInMap("LaneId")]
         [Validation(Required=false)]
-        public long? Id { get; set; }
+        public long? LaneId { get; set; }
 
     }
 
