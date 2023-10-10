@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,7 +11,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sgx_dcap_server20200726.Models
 {
-    public class GetTcbInfoRequest : TeaModel {
+    public class GetQeIdentityRequest : TeaModel {
         [NameInMap("AcsHost")]
         [Validation(Required=false)]
         public string AcsHost { get; set; }
@@ -16,10 +19,6 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726.Models
         [NameInMap("ClientVpcId")]
         [Validation(Required=false)]
         public string ClientVpcId { get; set; }
-
-        [NameInMap("fmspc")]
-        [Validation(Required=false)]
-        public string Fmspc { get; set; }
 
     }
 

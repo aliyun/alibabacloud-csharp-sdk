@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sgx_dcap_server20200726.Models
 {
-    public class GetTcbInfoRequest : TeaModel {
+    public class RootCaCrlRequest : TeaModel {
         [NameInMap("AcsHost")]
         [Validation(Required=false)]
         public string AcsHost { get; set; }
@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726.Models
         [NameInMap("ClientVpcId")]
         [Validation(Required=false)]
         public string ClientVpcId { get; set; }
-
-        [NameInMap("fmspc")]
-        [Validation(Required=false)]
-        public string Fmspc { get; set; }
 
     }
 

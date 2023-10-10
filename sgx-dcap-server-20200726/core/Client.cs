@@ -38,11 +38,22 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public GetQeIdentityResponse GetQeIdentityWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetQeIdentityResponse GetQeIdentityWithOptions(GetQeIdentityRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -59,11 +70,22 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
             return TeaModel.ToObject<GetQeIdentityResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetQeIdentityResponse> GetQeIdentityWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetQeIdentityResponse> GetQeIdentityWithOptionsAsync(GetQeIdentityRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -80,25 +102,36 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
             return TeaModel.ToObject<GetQeIdentityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetQeIdentityResponse GetQeIdentity()
+        public GetQeIdentityResponse GetQeIdentity(GetQeIdentityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetQeIdentityWithOptions(headers, runtime);
+            return GetQeIdentityWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetQeIdentityResponse> GetQeIdentityAsync()
+        public async Task<GetQeIdentityResponse> GetQeIdentityAsync(GetQeIdentityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetQeIdentityWithOptionsAsync(headers, runtime);
+            return await GetQeIdentityWithOptionsAsync(request, headers, runtime);
         }
 
-        public GetQveIdentityResponse GetQveIdentityWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetQveIdentityResponse GetQveIdentityWithOptions(GetQveIdentityRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -115,11 +148,22 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
             return TeaModel.ToObject<GetQveIdentityResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetQveIdentityResponse> GetQveIdentityWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetQveIdentityResponse> GetQveIdentityWithOptionsAsync(GetQveIdentityRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -136,24 +180,32 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
             return TeaModel.ToObject<GetQveIdentityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetQveIdentityResponse GetQveIdentity()
+        public GetQveIdentityResponse GetQveIdentity(GetQveIdentityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetQveIdentityWithOptions(headers, runtime);
+            return GetQveIdentityWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetQveIdentityResponse> GetQveIdentityAsync()
+        public async Task<GetQveIdentityResponse> GetQveIdentityAsync(GetQveIdentityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetQveIdentityWithOptionsAsync(headers, runtime);
+            return await GetQveIdentityWithOptionsAsync(request, headers, runtime);
         }
 
         public GetTcbInfoResponse GetTcbInfoWithOptions(GetTcbInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fmspc))
             {
                 query["fmspc"] = request.Fmspc;
@@ -182,6 +234,14 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fmspc))
             {
                 query["fmspc"] = request.Fmspc;
@@ -224,6 +284,14 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ca))
             {
                 query["ca"] = request.Ca;
@@ -252,6 +320,14 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ca))
             {
                 query["ca"] = request.Ca;
@@ -290,11 +366,22 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
             return await PckCrlWithOptionsAsync(request, headers, runtime);
         }
 
-        public RootCaCrlResponse RootCaCrlWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RootCaCrlResponse RootCaCrlWithOptions(RootCaCrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -311,11 +398,22 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
             return TeaModel.ToObject<RootCaCrlResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<RootCaCrlResponse> RootCaCrlWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RootCaCrlResponse> RootCaCrlWithOptionsAsync(RootCaCrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -332,24 +430,32 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
             return TeaModel.ToObject<RootCaCrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RootCaCrlResponse RootCaCrl()
+        public RootCaCrlResponse RootCaCrl(RootCaCrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RootCaCrlWithOptions(headers, runtime);
+            return RootCaCrlWithOptions(request, headers, runtime);
         }
 
-        public async Task<RootCaCrlResponse> RootCaCrlAsync()
+        public async Task<RootCaCrlResponse> RootCaCrlAsync(RootCaCrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RootCaCrlWithOptionsAsync(headers, runtime);
+            return await RootCaCrlWithOptionsAsync(request, headers, runtime);
         }
 
         public SimplePackagePckCertResponse SimplePackagePckCertWithOptions(SimplePackagePckCertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpusvn))
             {
                 query["cpusvn"] = request.Cpusvn;
@@ -394,6 +500,14 @@ namespace AlibabaCloud.SDK.Sgx_dcap_server20200726
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcsHost))
+            {
+                query["AcsHost"] = request.AcsHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVpcId))
+            {
+                query["ClientVpcId"] = request.ClientVpcId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpusvn))
             {
                 query["cpusvn"] = request.Cpusvn;

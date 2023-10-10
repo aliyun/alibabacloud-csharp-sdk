@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sgx_dcap_server20200726.Models
 {
     public class SimplePackagePckCertRequest : TeaModel {
+        [NameInMap("AcsHost")]
+        [Validation(Required=false)]
+        public string AcsHost { get; set; }
+
+        [NameInMap("ClientVpcId")]
+        [Validation(Required=false)]
+        public string ClientVpcId { get; set; }
+
         [NameInMap("cpusvn")]
         [Validation(Required=false)]
         public string Cpusvn { get; set; }
