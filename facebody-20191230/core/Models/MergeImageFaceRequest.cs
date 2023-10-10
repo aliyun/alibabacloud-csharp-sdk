@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        [NameInMap("WatermarkType")]
+        [Validation(Required=false)]
+        public string WatermarkType { get; set; }
+
     }
 
 }

@@ -7913,6 +7913,10 @@ namespace AlibabaCloud.SDK.Facebody20191230
             {
                 body["TemplateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkType))
+            {
+                body["WatermarkType"] = request.WatermarkType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -7955,6 +7959,10 @@ namespace AlibabaCloud.SDK.Facebody20191230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 body["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkType))
+            {
+                body["WatermarkType"] = request.WatermarkType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
