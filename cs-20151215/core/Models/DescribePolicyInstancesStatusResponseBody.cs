@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> PolicyInstances { get; set; }
         public class DescribePolicyInstancesStatusResponseBodyPolicyInstances : TeaModel {
             /// <summary>
-            /// The type of the policy. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](https://www.alibabacloud.com/help/doc-detail/359819.html).
+            /// The policy type.
             /// </summary>
             [NameInMap("policy_category")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyDescription { get; set; }
 
             /// <summary>
-            /// The number of policy instances that are deployed. If this parameter is empty, it indicates that no policy instance is deployed from the policy.
+            /// The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.
             /// </summary>
             [NameInMap("policy_instances_count")]
             [Validation(Required=false)]

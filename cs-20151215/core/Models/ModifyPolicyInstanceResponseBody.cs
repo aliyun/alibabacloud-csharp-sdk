@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyPolicyInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The policy instance that is updated.
+        /// The list of policy instances that are updated.
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]

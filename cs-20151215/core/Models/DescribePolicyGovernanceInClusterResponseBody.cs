@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribePolicyGovernanceInClusterResponseBody : TeaModel {
         /// <summary>
-        /// The audit logs of policies in the cluster.
+        /// The audit logs of the policies in the cluster.
         /// </summary>
         [NameInMap("admit_log")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public DescribePolicyGovernanceInClusterResponseBodyAdmitLogLog Log { get; set; }
             public class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLog : TeaModel {
                 /// <summary>
-                /// The ID of the cluster that you want to query.
+                /// The cluster ID.
                 /// </summary>
                 [NameInMap("cluster_id")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// The type of the policy.
+                /// The policy type.
                 /// </summary>
                 [NameInMap("constraint_kind")]
                 [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// The type of the resource.
+                /// The resource type.
                 /// </summary>
                 [NameInMap("resource_kind")]
                 [Validation(Required=false)]
                 public string ResourceKind { get; set; }
 
                 /// <summary>
-                /// The name of the resource.
+                /// The resource name.
                 /// </summary>
                 [NameInMap("resource_name")]
                 [Validation(Required=false)]
@@ -116,32 +116,53 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// Details about the blocking and alerting events that are triggered by policies of different severity levels.
+        /// </summary>
         [NameInMap("totalViolations")]
         [Validation(Required=false)]
         public DescribePolicyGovernanceInClusterResponseBodyTotalViolations TotalViolations { get; set; }
         public class DescribePolicyGovernanceInClusterResponseBodyTotalViolations : TeaModel {
+            /// <summary>
+            /// Details about the blocking events that are triggered by the policies of each severity level.
+            /// </summary>
             [NameInMap("deny")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyTotalViolationsDeny Deny { get; set; }
             public class DescribePolicyGovernanceInClusterResponseBodyTotalViolationsDeny : TeaModel {
+                /// <summary>
+                /// The severity level of the policy.
+                /// </summary>
                 [NameInMap("severity")]
                 [Validation(Required=false)]
                 public string Severity { get; set; }
 
+                /// <summary>
+                /// The number of blocking events that are triggered.
+                /// </summary>
                 [NameInMap("violations")]
                 [Validation(Required=false)]
                 public long? Violations { get; set; }
 
             }
 
+            /// <summary>
+            /// Details about the alerting events that are triggered by the policies of each severity level.
+            /// </summary>
             [NameInMap("warn")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyTotalViolationsWarn Warn { get; set; }
             public class DescribePolicyGovernanceInClusterResponseBodyTotalViolationsWarn : TeaModel {
+                /// <summary>
+                /// The severity level of the policy.
+                /// </summary>
                 [NameInMap("severity")]
                 [Validation(Required=false)]
                 public string Severity { get; set; }
 
+                /// <summary>
+                /// The number of alerting events that are triggered.
+                /// </summary>
                 [NameInMap("violations")]
                 [Validation(Required=false)]
                 public long? Violations { get; set; }
@@ -150,48 +171,81 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// Details about the blocking and alerting events that are triggered by different policies.
+        /// </summary>
         [NameInMap("violations")]
         [Validation(Required=false)]
         public DescribePolicyGovernanceInClusterResponseBodyViolations Violations { get; set; }
         public class DescribePolicyGovernanceInClusterResponseBodyViolations : TeaModel {
+            /// <summary>
+            /// Details about the blocking events that are triggered by each policy.
+            /// </summary>
             [NameInMap("deny")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyViolationsDeny Deny { get; set; }
             public class DescribePolicyGovernanceInClusterResponseBodyViolationsDeny : TeaModel {
+                /// <summary>
+                /// The policy description.
+                /// </summary>
                 [NameInMap("policyDescription")]
                 [Validation(Required=false)]
                 public string PolicyDescription { get; set; }
 
+                /// <summary>
+                /// The policy name.
+                /// </summary>
                 [NameInMap("policyName")]
                 [Validation(Required=false)]
                 public string PolicyName { get; set; }
 
+                /// <summary>
+                /// The severity level of the policy.
+                /// </summary>
                 [NameInMap("severity")]
                 [Validation(Required=false)]
                 public string Severity { get; set; }
 
+                /// <summary>
+                /// The total number of blocking events that are triggered by the policy.
+                /// </summary>
                 [NameInMap("violations")]
                 [Validation(Required=false)]
                 public long? Violations { get; set; }
 
             }
 
+            /// <summary>
+            /// Details about the alerting events that are triggered by the policies of each severity level.
+            /// </summary>
             [NameInMap("warn")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyViolationsWarn Warn { get; set; }
             public class DescribePolicyGovernanceInClusterResponseBodyViolationsWarn : TeaModel {
+                /// <summary>
+                /// The policy description.
+                /// </summary>
                 [NameInMap("policyDescription")]
                 [Validation(Required=false)]
                 public string PolicyDescription { get; set; }
 
+                /// <summary>
+                /// The policy name.
+                /// </summary>
                 [NameInMap("policyName")]
                 [Validation(Required=false)]
                 public string PolicyName { get; set; }
 
+                /// <summary>
+                /// The severity level of the policy.
+                /// </summary>
                 [NameInMap("severity")]
                 [Validation(Required=false)]
                 public string Severity { get; set; }
 
+                /// <summary>
+                /// The total number of alerting events that are triggered by the policy.
+                /// </summary>
                 [NameInMap("violations")]
                 [Validation(Required=false)]
                 public long? Violations { get; set; }

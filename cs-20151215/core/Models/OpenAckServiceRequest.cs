@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class OpenAckServiceRequest : TeaModel {
+        /// <summary>
+        /// The type of ACK service that you want to activate. Valid values:
+        /// 
+        /// *   `propayasgo`: ACK Pro
+        /// *   `edgepayasgo`: ACK Edge
+        /// *   `gspayasgo`: ACK for Alibaba Cloud Genomics Service (AGS)
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

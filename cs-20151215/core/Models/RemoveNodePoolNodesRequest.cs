@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RemoveNodePoolNodesRequest : TeaModel {
         /// <summary>
-        /// true
+        /// Specifies whether to drain the nodes that you want to remove. Valid values:
+        /// 
+        /// *   true: drain the nodes that you want to remove.
+        /// *   false: do not drain the nodes that you want to remove.
         /// </summary>
         [NameInMap("drain_node")]
         [Validation(Required=false)]
         public bool? DrainNode { get; set; }
 
         /// <summary>
-        /// i-bp1c70fqbv1nlu9xxxxx
+        /// A list of instances that you want to remove.
         /// </summary>
         [NameInMap("instance_ids")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// cn-hangzhou.172.16.xxx.xxx
+        /// A list of nodes that you want to remove.
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
         public List<string> Nodes { get; set; }
 
         /// <summary>
-        /// true
+        /// Specifies whether to release the nodes after they are removed. Valid values:
+        /// 
+        /// *   true: release the nodes after they are removed.
+        /// *   false: do not release the nodes after they are removed.
         /// </summary>
         [NameInMap("release_node")]
         [Validation(Required=false)]

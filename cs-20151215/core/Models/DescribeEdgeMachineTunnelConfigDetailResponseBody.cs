@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEdgeMachineTunnelConfigDetailResponseBody : TeaModel {
         /// <summary>
-        /// The name of the cloud-native box.
+        /// The device name.
         /// </summary>
         [NameInMap("device_name")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// The product key.
+        /// Product Key
         /// </summary>
         [NameInMap("product_key")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Request ID
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Sn { get; set; }
 
         /// <summary>
-        /// The token.
+        /// Token
         /// </summary>
         [NameInMap("token")]
         [Validation(Required=false)]
         public string Token { get; set; }
 
         /// <summary>
-        /// The backend endpoint of the tunnel.
+        /// The tunnel endpoint.
         /// </summary>
         [NameInMap("tunnel_endpoint")]
         [Validation(Required=false)]

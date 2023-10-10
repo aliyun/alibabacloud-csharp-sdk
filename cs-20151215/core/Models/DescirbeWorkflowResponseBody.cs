@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Duration { get; set; }
 
         /// <summary>
-        /// The time when the workflow ended.
+        /// The end time of the task.
         /// </summary>
         [NameInMap("finish_time")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEdgeMachinesResponseBody : TeaModel {
         /// <summary>
-        /// The list of details about cloud-native boxes.
+        /// The list of cloud-native boxes.
         /// </summary>
         [NameInMap("edge_machines")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// The ID of the cloud-native box.
+            /// The device ID.
             /// </summary>
             [NameInMap("edge_machine_id")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Hostname { get; set; }
 
             /// <summary>
-            /// The lifecycle status of the cloud-native box.
+            /// The lifecycle of the cloud-native box.
             /// </summary>
             [NameInMap("life_state")]
             [Validation(Required=false)]
@@ -59,21 +59,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// The name of the cloud-native box.
+            /// The machine name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The online status of the cloud-native box.
+            /// The status of the cloud-native box.
             /// </summary>
             [NameInMap("online_state")]
             [Validation(Required=false)]
             public string OnlineState { get; set; }
 
             /// <summary>
-            /// The serial number of the cloud-native box.
+            /// The serial number.
             /// </summary>
             [NameInMap("sn")]
             [Validation(Required=false)]
@@ -89,28 +89,32 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The pagination details.
+        /// The paging information.
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeEdgeMachinesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeEdgeMachinesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
+            /// 
+            /// Default value: 1.
             /// </summary>
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The number of entries per page.
+            /// 
+            /// Default value: 10.
             /// </summary>
             [NameInMap("page_size")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// The total number of pages returned.
             /// </summary>
             [NameInMap("total_count")]
             [Validation(Required=false)]

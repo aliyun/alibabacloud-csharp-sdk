@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterNodePoolResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the node pool.
+        /// The node pool ID.
         /// </summary>
         [NameInMap("nodepool_id")]
         [Validation(Required=false)]
         public string NodepoolId { get; set; }
 
         /// <summary>
-        /// The ID of the task.
+        /// The task ID.
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

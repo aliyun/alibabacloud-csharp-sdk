@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterNodesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the nodes that are returned.
+        /// The details of the nodes in the cluster.
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The error message that was generated when the node was created.
+            /// The error message generated when the node was created.
             /// </summary>
             [NameInMap("error_message")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// The expiration time of the node.
+            /// The expiration date of the node.
             /// </summary>
             [NameInMap("expired_time")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The billing method of the instance on which the node is deployed. Valid values:
+            /// The billing method of the node. Valid values:
             /// 
             /// *   `PrePaid`: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.
             /// *   `PostPaid`: the pay-as-you-go billing method.
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceChargeType { get; set; }
 
             /// <summary>
-            /// The ID of the instance on which the node is deployed.
+            /// The ID of the instance.
             /// </summary>
             [NameInMap("instance_id")]
             [Validation(Required=false)]
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// The instance type of the node.
+            /// The type of the node.
             /// </summary>
             [NameInMap("instance_type")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// The Elastic Compute Service (ECS) instance family of the node.
+            /// The ECS instance family of the node.
             /// </summary>
             [NameInMap("instance_type_family")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodeStatus { get; set; }
 
             /// <summary>
-            /// The ID of the node pool.
+            /// The node pool ID.
             /// </summary>
             [NameInMap("nodepool_id")]
             [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// The type of the preemptible instance. Valid values:
+            /// The type of preemptible instance. Valid values:
             /// 
             /// *   NoSpot: a non-preemptible instance.
             /// *   SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.
@@ -183,21 +183,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The pagination details.
+        /// The pagination information.
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public DescribeClusterNodesResponseBodyPage Page { get; set; }
         public class DescribeClusterNodesResponseBodyPage : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("page_size")]
             [Validation(Required=false)]

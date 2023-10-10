@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The ID of the ECS instance.
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// Indicates whether the ECS instances are successfully added to the ACK cluster.
+            /// Indicates whether the ECS instance is successfully added to the ACK cluster.
             /// </summary>
             [NameInMap("message")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The ID of the task.
+        /// The task ID.
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

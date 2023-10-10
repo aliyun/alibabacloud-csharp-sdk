@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpgradeClusterNodepoolResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The task ID.
+        /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

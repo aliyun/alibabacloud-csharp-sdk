@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CancelWorkflowRequest : TeaModel {
+        /// <summary>
+        /// The operation that you want to perform. Set the value to cancel.
+        /// </summary>
         [NameInMap("action")]
         [Validation(Required=false)]
         public string Action { get; set; }

@@ -803,6 +803,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessControlList))
+            {
+                body["access_control_list"] = request.AccessControlList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Addons))
             {
                 body["addons"] = request.Addons;
@@ -1183,6 +1187,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessControlList))
+            {
+                body["access_control_list"] = request.AccessControlList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Addons))
             {
                 body["addons"] = request.Addons;
@@ -2373,10 +2381,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /**
           * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the unschedulable state when they are being removed.
-          * *   You can remove only worker nodes by calling this operation.
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
           *
           * @param request DeleteClusterNodesRequest
           * @param headers map
@@ -2421,10 +2426,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /**
           * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the unschedulable state when they are being removed.
-          * *   You can remove only worker nodes by calling this operation.
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
           *
           * @param request DeleteClusterNodesRequest
           * @param headers map
@@ -2469,10 +2471,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /**
           * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the unschedulable state when they are being removed.
-          * *   You can remove only worker nodes by calling this operation.
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
           *
           * @param request DeleteClusterNodesRequest
           * @return DeleteClusterNodesResponse
@@ -2486,10 +2485,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /**
           * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the unschedulable state when they are being removed.
-          * *   You can remove only worker nodes by calling this operation.
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
           *
           * @param request DeleteClusterNodesRequest
           * @return DeleteClusterNodesResponse
@@ -5446,7 +5442,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  You can call this operation only with an Alibaba Cloud account.
+          * **
+          * ****Only Alibaba Cloud accounts can call this API operation.
           *
           * @param request DescribeSubaccountK8sClusterUserConfigRequest
           * @param headers map
@@ -5486,7 +5483,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  You can call this operation only with an Alibaba Cloud account.
+          * **
+          * ****Only Alibaba Cloud accounts can call this API operation.
           *
           * @param request DescribeSubaccountK8sClusterUserConfigRequest
           * @param headers map
@@ -5526,7 +5524,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  You can call this operation only with an Alibaba Cloud account.
+          * **
+          * ****Only Alibaba Cloud accounts can call this API operation.
           *
           * @param request DescribeSubaccountK8sClusterUserConfigRequest
           * @return DescribeSubaccountK8sClusterUserConfigResponse
@@ -5539,7 +5538,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  You can call this operation only with an Alibaba Cloud account.
+          * **
+          * ****Only Alibaba Cloud accounts can call this API operation.
           *
           * @param request DescribeSubaccountK8sClusterUserConfigRequest
           * @return DescribeSubaccountK8sClusterUserConfigResponse
@@ -6404,10 +6404,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **Precautions**:
-          * *   Make sure that you have granted the specified RAM user at least read permissions on the specified cluster by attaching RAM policies. Otherwise, the `ErrorRamPolicyConfig` error will be returned.
-          *     For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
-          * *   If you call this operation as a RAM user, make sure that this RAM user has the permissions to grant other RAM users the permissions to manage ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` errors will be returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
+          * ****
+          * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
+          * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
           * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
           *
           * @param request GrantPermissionsRequest
@@ -6439,10 +6438,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **Precautions**:
-          * *   Make sure that you have granted the specified RAM user at least read permissions on the specified cluster by attaching RAM policies. Otherwise, the `ErrorRamPolicyConfig` error will be returned.
-          *     For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
-          * *   If you call this operation as a RAM user, make sure that this RAM user has the permissions to grant other RAM users the permissions to manage ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` errors will be returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
+          * ****
+          * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
+          * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
           * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
           *
           * @param request GrantPermissionsRequest
@@ -6474,10 +6472,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **Precautions**:
-          * *   Make sure that you have granted the specified RAM user at least read permissions on the specified cluster by attaching RAM policies. Otherwise, the `ErrorRamPolicyConfig` error will be returned.
-          *     For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
-          * *   If you call this operation as a RAM user, make sure that this RAM user has the permissions to grant other RAM users the permissions to manage ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` errors will be returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
+          * ****
+          * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
+          * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
           * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
           *
           * @param request GrantPermissionsRequest
@@ -6491,10 +6488,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **Precautions**:
-          * *   Make sure that you have granted the specified RAM user at least read permissions on the specified cluster by attaching RAM policies. Otherwise, the `ErrorRamPolicyConfig` error will be returned.
-          *     For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
-          * *   If you call this operation as a RAM user, make sure that this RAM user has the permissions to grant other RAM users the permissions to manage ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` errors will be returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
+          * ****
+          * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
+          * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
           * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
           *
           * @param request GrantPermissionsRequest
@@ -6771,6 +6767,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessControlList))
+            {
+                body["access_control_list"] = request.AccessControlList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEip))
             {
                 body["api_server_eip"] = request.ApiServerEip;
@@ -6778,6 +6778,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEipId))
             {
                 body["api_server_eip_id"] = request.ApiServerEipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                body["cluster_name"] = request.ClusterName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
             {
@@ -6831,6 +6835,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessControlList))
+            {
+                body["access_control_list"] = request.AccessControlList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEip))
             {
                 body["api_server_eip"] = request.ApiServerEip;
@@ -6838,6 +6846,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEipId))
             {
                 body["api_server_eip_id"] = request.ApiServerEipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                body["cluster_name"] = request.ClusterName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
             {
@@ -6905,7 +6917,7 @@ namespace AlibabaCloud.SDK.CS20151215
           * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
           * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
           * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
-          * After you call this operation, the component may be redeployed and restarted. We recommend that you evaluate the impact before you call this operation.
+          * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
           *
           * @param request ModifyClusterAddonRequest
           * @param headers map
@@ -6944,7 +6956,7 @@ namespace AlibabaCloud.SDK.CS20151215
           * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
           * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
           * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
-          * After you call this operation, the component may be redeployed and restarted. We recommend that you evaluate the impact before you call this operation.
+          * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
           *
           * @param request ModifyClusterAddonRequest
           * @param headers map
@@ -6983,7 +6995,7 @@ namespace AlibabaCloud.SDK.CS20151215
           * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
           * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
           * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
-          * After you call this operation, the component may be redeployed and restarted. We recommend that you evaluate the impact before you call this operation.
+          * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
           *
           * @param request ModifyClusterAddonRequest
           * @return ModifyClusterAddonResponse
@@ -6999,7 +7011,7 @@ namespace AlibabaCloud.SDK.CS20151215
           * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
           * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
           * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
-          * After you call this operation, the component may be redeployed and restarted. We recommend that you evaluate the impact before you call this operation.
+          * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
           *
           * @param request ModifyClusterAddonRequest
           * @return ModifyClusterAddonResponse
@@ -7259,6 +7271,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ModifyClusterTagsWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+          * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+          *
+          * @param request ModifyNodePoolNodeConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyNodePoolNodeConfigResponse
+         */
         public ModifyNodePoolNodeConfigResponse ModifyNodePoolNodeConfigWithOptions(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7291,6 +7311,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyNodePoolNodeConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+          *
+          * @param request ModifyNodePoolNodeConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyNodePoolNodeConfigResponse
+         */
         public async Task<ModifyNodePoolNodeConfigResponse> ModifyNodePoolNodeConfigWithOptionsAsync(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7323,6 +7351,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyNodePoolNodeConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+          *
+          * @param request ModifyNodePoolNodeConfigRequest
+          * @return ModifyNodePoolNodeConfigResponse
+         */
         public ModifyNodePoolNodeConfigResponse ModifyNodePoolNodeConfig(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7330,6 +7364,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ModifyNodePoolNodeConfigWithOptions(ClusterId, NodepoolId, request, headers, runtime);
         }
 
+        /**
+          * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+          *
+          * @param request ModifyNodePoolNodeConfigRequest
+          * @return ModifyNodePoolNodeConfigResponse
+         */
         public async Task<ModifyNodePoolNodeConfigResponse> ModifyNodePoolNodeConfigAsync(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7432,7 +7472,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can activate ACK with Alibaba Cloud accounts or RAM users that have the authority of AdministratorAccess.
+          * *   You can activate ACK by using Alibaba Cloud accounts.
+          * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
           *
           * @param request OpenAckServiceRequest
           * @param headers map
@@ -7468,7 +7509,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can activate ACK with Alibaba Cloud accounts or RAM users that have the authority of AdministratorAccess.
+          * *   You can activate ACK by using Alibaba Cloud accounts.
+          * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
           *
           * @param request OpenAckServiceRequest
           * @param headers map
@@ -7504,7 +7546,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can activate ACK with Alibaba Cloud accounts or RAM users that have the authority of AdministratorAccess.
+          * *   You can activate ACK by using Alibaba Cloud accounts.
+          * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
           *
           * @param request OpenAckServiceRequest
           * @return OpenAckServiceResponse
@@ -7517,7 +7560,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can activate ACK with Alibaba Cloud accounts or RAM users that have the authority of AdministratorAccess.
+          * *   You can activate ACK by using Alibaba Cloud accounts.
+          * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
           *
           * @param request OpenAckServiceRequest
           * @return OpenAckServiceResponse
@@ -7816,11 +7860,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the Unschedulable state when they are being removed.
-          * *   You can remove only worker nodes. You cannot remove control planes.
+          * **
+          * ****
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
           *
           * @param tmpReq RemoveNodePoolNodesRequest
           * @param headers map
@@ -7878,11 +7920,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the Unschedulable state when they are being removed.
-          * *   You can remove only worker nodes. You cannot remove control planes.
+          * **
+          * ****
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
           *
           * @param tmpReq RemoveNodePoolNodesRequest
           * @param headers map
@@ -7940,11 +7980,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the Unschedulable state when they are being removed.
-          * *   You can remove only worker nodes. You cannot remove control planes.
+          * **
+          * ****
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
           *
           * @param request RemoveNodePoolNodesRequest
           * @return RemoveNodePoolNodesResponse
@@ -7957,11 +7995,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the Unschedulable state when they are being removed.
-          * *   You can remove only worker nodes. You cannot remove control planes.
+          * **
+          * ****
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
           *
           * @param request RemoveNodePoolNodesRequest
           * @return RemoveNodePoolNodesResponse
@@ -8584,7 +8620,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to an ACK cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
+          * **
+          * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
           *
           * @param request ScaleOutClusterRequest
           * @param headers map
@@ -8700,7 +8737,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to an ACK cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
+          * **
+          * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
           *
           * @param request ScaleOutClusterRequest
           * @param headers map
@@ -8816,7 +8854,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to an ACK cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
+          * **
+          * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
           *
           * @param request ScaleOutClusterRequest
           * @return ScaleOutClusterResponse
@@ -8829,7 +8868,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to an ACK cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
+          * **
+          * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
           *
           * @param request ScaleOutClusterRequest
           * @return ScaleOutClusterResponse
@@ -9706,9 +9746,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   You can call this operation only with an Alibaba Cloud account.
-          * *   After you revoke the kubeconfig file of a cluster, the validity period of the kubeconfig file that you specified becomes invalid. You can call this API operation to specify the validity period again.
+          * **
+          * ****
+          * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
           *
           * @param request UpdateK8sClusterUserConfigExpireRequest
           * @param headers map
@@ -9748,9 +9788,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   You can call this operation only with an Alibaba Cloud account.
-          * *   After you revoke the kubeconfig file of a cluster, the validity period of the kubeconfig file that you specified becomes invalid. You can call this API operation to specify the validity period again.
+          * **
+          * ****
+          * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
           *
           * @param request UpdateK8sClusterUserConfigExpireRequest
           * @param headers map
@@ -9790,9 +9830,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   You can call this operation only with an Alibaba Cloud account.
-          * *   After you revoke the kubeconfig file of a cluster, the validity period of the kubeconfig file that you specified becomes invalid. You can call this API operation to specify the validity period again.
+          * **
+          * ****
+          * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
           *
           * @param request UpdateK8sClusterUserConfigExpireRequest
           * @return UpdateK8sClusterUserConfigExpireResponse
@@ -9805,9 +9845,9 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   You can call this operation only with an Alibaba Cloud account.
-          * *   After you revoke the kubeconfig file of a cluster, the validity period of the kubeconfig file that you specified becomes invalid. You can call this API operation to specify the validity period again.
+          * **
+          * ****
+          * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
           *
           * @param request UpdateK8sClusterUserConfigExpireRequest
           * @return UpdateK8sClusterUserConfigExpireResponse
@@ -10076,7 +10116,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+          * This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
           *
           * @param request UpgradeClusterNodepoolRequest
           * @param headers map
@@ -10124,7 +10164,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+          * This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
           *
           * @param request UpgradeClusterNodepoolRequest
           * @param headers map
@@ -10172,7 +10212,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+          * This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
           *
           * @param request UpgradeClusterNodepoolRequest
           * @return UpgradeClusterNodepoolResponse
@@ -10185,7 +10225,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+          * This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
           *
           * @param request UpgradeClusterNodepoolRequest
           * @return UpgradeClusterNodepoolResponse

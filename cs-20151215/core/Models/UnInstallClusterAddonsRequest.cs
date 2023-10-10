@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public List<UnInstallClusterAddonsRequestAddons> Addons { get; set; }
         public class UnInstallClusterAddonsRequestAddons : TeaModel {
+            [NameInMap("cleanup_cloud_resources")]
+            [Validation(Required=false)]
+            public bool? CleanupCloudResources { get; set; }
+
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }

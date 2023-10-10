@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeployPolicyInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The policy instances that are deployed.
+        /// A list of policy instances.
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]

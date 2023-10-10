@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterAddonsUpgradeStatusRequest : TeaModel {
+        /// <summary>
+        /// The list of component names.
+        /// </summary>
         [NameInMap("componentIds")]
         [Validation(Required=false)]
         public List<string> ComponentIds { get; set; }

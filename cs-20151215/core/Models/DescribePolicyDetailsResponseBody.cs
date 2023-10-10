@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? IsDeleted { get; set; }
 
         /// <summary>
-        /// The name of the policy that is returned.
+        /// The name of the policy.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -61,11 +61,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? NoConfig { get; set; }
 
         /// <summary>
-        /// The severity level of the policy. Valid values:
-        /// 
-        /// *   `high`
-        /// *   `medium`
-        /// *   `low`
+        /// The severity level of the policy.
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]

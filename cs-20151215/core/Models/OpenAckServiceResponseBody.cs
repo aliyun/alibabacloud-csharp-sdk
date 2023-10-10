@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]

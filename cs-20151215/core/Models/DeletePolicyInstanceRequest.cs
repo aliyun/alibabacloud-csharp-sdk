@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeletePolicyInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the policy instance.
+        /// </summary>
         [NameInMap("instance_name")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }

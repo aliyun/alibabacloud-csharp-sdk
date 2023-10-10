@@ -9,68 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyNodePoolNodeConfigRequest : TeaModel {
+        /// <summary>
+        /// The kubelet configuration.
+        /// </summary>
         [NameInMap("kubelet_config")]
         [Validation(Required=false)]
-        public ModifyNodePoolNodeConfigRequestKubeletConfig KubeletConfig { get; set; }
-        public class ModifyNodePoolNodeConfigRequestKubeletConfig : TeaModel {
-            [NameInMap("cpuManagerPolicy")]
-            [Validation(Required=false)]
-            public string CpuManagerPolicy { get; set; }
+        public KubeletConfig KubeletConfig { get; set; }
 
-            [NameInMap("eventBurst")]
-            [Validation(Required=false)]
-            public long? EventBurst { get; set; }
-
-            [NameInMap("eventRecordQPS")]
-            [Validation(Required=false)]
-            public long? EventRecordQPS { get; set; }
-
-            [NameInMap("evictionHard")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> EvictionHard { get; set; }
-
-            [NameInMap("evictionSoft")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> EvictionSoft { get; set; }
-
-            [NameInMap("evictionSoftGracePeriod")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> EvictionSoftGracePeriod { get; set; }
-
-            [NameInMap("kubeAPIBurst")]
-            [Validation(Required=false)]
-            public long? KubeAPIBurst { get; set; }
-
-            [NameInMap("kubeAPIQPS")]
-            [Validation(Required=false)]
-            public long? KubeAPIQPS { get; set; }
-
-            [NameInMap("kubeReserved")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> KubeReserved { get; set; }
-
-            [NameInMap("registryBurst")]
-            [Validation(Required=false)]
-            public long? RegistryBurst { get; set; }
-
-            [NameInMap("registryPullQPS")]
-            [Validation(Required=false)]
-            public long? RegistryPullQPS { get; set; }
-
-            [NameInMap("serializeImagePulls")]
-            [Validation(Required=false)]
-            public bool? SerializeImagePulls { get; set; }
-
-            [NameInMap("systemReserved")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> SystemReserved { get; set; }
-
-        }
-
+        /// <summary>
+        /// The rotation configuration.
+        /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestRollingPolicy RollingPolicy { get; set; }
         public class ModifyNodePoolNodeConfigRequestRollingPolicy : TeaModel {
+            /// <summary>
+            /// The maximum number of nodes in the Unschedulable state.
+            /// </summary>
             [NameInMap("max_parallelism")]
             [Validation(Required=false)]
             public long? MaxParallelism { get; set; }

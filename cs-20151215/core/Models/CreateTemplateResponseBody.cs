@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the template.
+        /// The ID of the orchestration template.
         /// </summary>
         [NameInMap("template_id")]
         [Validation(Required=false)]

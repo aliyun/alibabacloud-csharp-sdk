@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeletePolicyInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The policy instances that are deleted.
+        /// A list of policy instances.
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]

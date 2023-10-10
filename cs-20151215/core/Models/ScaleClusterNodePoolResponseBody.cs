@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ScaleClusterNodePoolResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the scaling task.
+        /// The task ID.
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

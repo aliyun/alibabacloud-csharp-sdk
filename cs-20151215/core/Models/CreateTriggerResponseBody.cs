@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// The name of the project.
+        /// The name of the trigger project.
         /// </summary>
         [NameInMap("project_id")]
         [Validation(Required=false)]

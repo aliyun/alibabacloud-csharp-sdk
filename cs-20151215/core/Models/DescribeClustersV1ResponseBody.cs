@@ -10,36 +10,36 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersV1ResponseBody : TeaModel {
         /// <summary>
-        /// The list of the details of the queried cluster.
+        /// The details of the clusters.
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
         public List<DescribeClustersV1ResponseBodyClusters> Clusters { get; set; }
         public class DescribeClustersV1ResponseBodyClusters : TeaModel {
             /// <summary>
-            /// The ID of the queried cluster.
+            /// The cluster ID.
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The type of the managed Kubernetes cluster. This parameter is returned for a managed Kubernetes cluster. Valid values:
+            /// The type of ACK managed cluster. This parameter is available only for ACK managed clusters. Valid values:
             /// 
-            /// *   `ack.pro.small`: professional managed Kubernetes cluster
-            /// *   `ack.standard`: standard managed Kubernetes cluster
+            /// *   `ack.pro.small`: ACK Pro cluster
+            /// *   `ack.standard`: ACK Basic cluster
             /// </summary>
             [NameInMap("cluster_spec")]
             [Validation(Required=false)]
             public string ClusterSpec { get; set; }
 
             /// <summary>
-            /// The type of the cluster. Valid values:
+            /// The cluster type. Valid values:
             /// 
-            /// *   `Kubernetes`: dedicated Kubernetes cluster
-            /// *   `ManagedKubernetes`: managed Kubernetes cluster
-            /// *   `Ask`: ASK cluster
-            /// *   `ExternalKubernetes`: registered external cluster
+            /// *   `Kubernetes`: ACK dedicated cluster
+            /// *   `ManagedKubernetes`: ACK managed cluster
+            /// *   `Ask`: ACK Serverless cluster
+            /// *   `ExternalKubernetes`: registered cluster
             /// </summary>
             [NameInMap("cluster_type")]
             [Validation(Required=false)]
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CurrentVersion { get; set; }
 
             /// <summary>
-            /// Indicates whether deletion protection is enabled for the cluster. After deletion protection is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:
+            /// Indicates whether deletion protection is enabled for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:
             /// 
-            /// *   `true`: deletion protection is enabled for the cluster. The cluster cannot be deleted in the ACK console or by calling API operations.
-            /// *   `false`: deletion protection is disabled for the cluster. The cluster can be deleted in the ACK console or by calling API operations.
+            /// *   `true`: Deletion protection is enabled for the cluster. The cluster cannot be deleted in the ACK console or by calling API operations.
+            /// *   `false`: Deletion protection is disabled for the cluster. The cluster can be deleted in the ACK console or by calling API operations.
             /// </summary>
             [NameInMap("deletion_protection")]
             [Validation(Required=false)]
@@ -86,23 +86,23 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ExternalLoadbalancerId { get; set; }
 
             /// <summary>
-            /// The Kubernetes version of the cluster. The Kubernetes versions provided by ACK are consistent with the open source Kubernetes versions. We recommend that you select the latest Kubernetes version. If you do not specify a Kubernetes version, the latest Kubernetes version is used by default.
+            /// The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the versions of open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.
             /// 
-            /// You can create clusters of the latest two Kubernetes versions in the ACK console. You can create ACK clusters of earlier Kubernetes versions by calling API operations. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
+            /// You can create clusters of the latest two Kubernetes versions in the ACK console. You can call a specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
             /// </summary>
             [NameInMap("init_version")]
             [Validation(Required=false)]
             public string InitVersion { get; set; }
 
             /// <summary>
-            /// The maintenance window of the cluster. This feature is available only in professional managed Kubernetes clusters.
+            /// The maintenance window of the cluster. This feature is available only for ACK Pro clusters.
             /// </summary>
             [NameInMap("maintenance_window")]
             [Validation(Required=false)]
             public MaintenanceWindow MaintenanceWindow { get; set; }
 
             /// <summary>
-            /// The address of the cluster API server. It includes an internal endpoint and a public endpoint.
+            /// The endpoint of the cluster API server, including an internal endpoint and a public endpoint.
             /// </summary>
             [NameInMap("master_url")]
             [Validation(Required=false)]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The name of the cluster.
             /// 
-            /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).
+            /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NetworkMode { get; set; }
 
             /// <summary>
-            /// The Kubernetes version to which the cluster can be upgraded.
+            /// The Kubernetes version to which the cluster can be updated.
             /// </summary>
             [NameInMap("next_version")]
             [Validation(Required=false)]
@@ -154,17 +154,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? PrivateZone { get; set; }
 
             /// <summary>
-            /// The identifier of the cluster. Valid values:
+            /// The cluster identifier. Valid values:
             /// 
-            /// *   `Edge`: The cluster is a managed edge Kubernetes cluster.
-            /// *   `Default`: The cluster is not a managed edge Kubernetes cluster.
+            /// *   `Edge`: ACK Edge cluster
+            /// *   `Default`: non-ACK Edge cluster
             /// </summary>
             [NameInMap("profile")]
             [Validation(Required=false)]
             public string Profile { get; set; }
 
             /// <summary>
-            /// The ID of the region where the cluster is deployed.
+            /// The region ID of the associated cluster.
             /// </summary>
             [NameInMap("region_id")]
             [Validation(Required=false)]
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The ID of the security group to which the instances of the cluster belong.
+            /// The ID of the security group to which the cluster belongs.
             /// </summary>
             [NameInMap("security_group_id")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// The number of nodes in the cluster. Master nodes and worker nodes are included.
+            /// The number of nodes in the cluster, including master nodes and worker nodes.
             /// </summary>
             [NameInMap("size")]
             [Validation(Required=false)]
@@ -197,8 +197,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// *   `initial`: The cluster is being created.
             /// *   `failed`: The cluster failed to be created.
             /// *   `running`: The cluster is running.
-            /// *   `updating`: The cluster is being upgraded.
-            /// *   `updating_failed`: The cluster failed to be upgraded.
+            /// *   `updating`: The cluster is being updated.
+            /// *   `updating_failed`: The cluster failed to be updated.
             /// *   `scaling`: The cluster is being scaled.
             /// *   `stopped`: The cluster is stopped.
             /// *   `deleting`: The cluster is being deleted.
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             /// The CIDR block of pods cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after the cluster is created.
             /// 
-            /// For more information about subnetting for ACK clusters, see [Plan CIDR blocks for ACK clusters in a VPC](~~86500~~).
+            /// For more information, see [Plan CIDR blocks for an ACK cluster](~~86500~~).
             /// </summary>
             [NameInMap("subnet_cidr")]
             [Validation(Required=false)]
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Updated { get; set; }
 
             /// <summary>
-            /// The ID of the VPC where the cluster is deployed. You must specify a VPC when you create a cluster.
+            /// The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.
             /// </summary>
             [NameInMap("vpc_id")]
             [Validation(Required=false)]
@@ -253,14 +253,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VswitchId { get; set; }
 
             /// <summary>
-            /// The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes that are created on Elastic Compute Service (ECS) instances.
+            /// The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.
             /// </summary>
             [NameInMap("worker_ram_role_name")]
             [Validation(Required=false)]
             public string WorkerRamRoleName { get; set; }
 
             /// <summary>
-            /// The ID of the zone where the cluster is deployed.
+            /// The zone ID.
             /// </summary>
             [NameInMap("zone_id")]
             [Validation(Required=false)]
@@ -269,21 +269,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The pagination details.
+        /// The pagination information.
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeClustersV1ResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeClustersV1ResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("page_size")]
             [Validation(Required=false)]

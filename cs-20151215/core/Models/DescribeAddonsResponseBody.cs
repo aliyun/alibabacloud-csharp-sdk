@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeAddonsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the returned components.
+        /// The list of the returned components.
         /// </summary>
         [NameInMap("ComponentGroups")]
         [Validation(Required=false)]
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// Standard components.
+        /// </summary>
         [NameInMap("StandardComponents")]
         [Validation(Required=false)]
         public Dictionary<string, StandardComponentsValue> StandardComponents { get; set; }

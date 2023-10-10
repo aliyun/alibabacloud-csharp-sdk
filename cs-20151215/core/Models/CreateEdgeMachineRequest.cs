@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateEdgeMachineRequest : TeaModel {
+        /// <summary>
+        /// The `hostname` of the cloud-native box.
+        /// 
+        /// >  After the cloud-native box is activated, the `hostname` is automatically modified. The `hostname` is prefixed with the model and the prefix is followed by a random string.
+        /// </summary>
         [NameInMap("hostname")]
         [Validation(Required=false)]
         public string Hostname { get; set; }
 
+        /// <summary>
+        /// The model of the cloud-native box.
+        /// </summary>
         [NameInMap("model")]
         [Validation(Required=false)]
         public string Model { get; set; }
 
+        /// <summary>
+        /// The serial number of the cloud-native box.
+        /// </summary>
         [NameInMap("sn")]
         [Validation(Required=false)]
         public string Sn { get; set; }

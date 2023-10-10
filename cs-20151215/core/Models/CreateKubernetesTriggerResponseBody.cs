@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// The ID of the ACK cluster.
+        /// The ID of the cluster.
         /// </summary>
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// The name of the project.
+        /// The name of the trigger project.
         /// </summary>
         [NameInMap("project_id")]
         [Validation(Required=false)]

@@ -266,6 +266,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public long? MaxNodes { get; set; }
 
+            [NameInMap("node_config")]
+            [Validation(Required=false)]
+            public DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig NodeConfig { get; set; }
+            public class DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig : TeaModel {
+                [NameInMap("kubelet_configuration")]
+                [Validation(Required=false)]
+                public KubeletConfig KubeletConfiguration { get; set; }
+
+            }
+
             /// <summary>
             /// The information about the node pool.
             /// </summary>

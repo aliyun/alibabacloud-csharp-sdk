@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class StartWorkflowResponseBody : TeaModel {
         /// <summary>
-        /// The name of the workflow that is created.
+        /// The name of the workflow.
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]

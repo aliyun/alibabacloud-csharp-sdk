@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The pagination details.
+        /// The pagination information.
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeTemplatesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeTemplatesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The maximum number of entries returned per page.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("page_size")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The list of the templates returned .
+        /// The list of returned templates.
         /// </summary>
         [NameInMap("templates")]
         [Validation(Required=false)]
@@ -88,24 +88,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The tag of the template. By default, the value is the name of the template.
+            /// The label of the template. By default, the value is the name of the template.
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public string Tags { get; set; }
 
             /// <summary>
-            /// The template content in YAML format.
+            /// The template content in the YAML format.
             /// </summary>
             [NameInMap("template")]
             [Validation(Required=false)]
             public string Template { get; set; }
 
             /// <summary>
-            /// The type of the template. The value can be a custom value.
+            /// The type of template. This parameter can be set to a custom value.
             /// 
-            /// *   If the value is `kubernetes`, it indicates that the template is displayed on the Templates page in the ACK console.
-            /// *   If the value is `compose`, it indicates that the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.
+            /// *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
+            /// *   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.
             /// </summary>
             [NameInMap("template_type")]
             [Validation(Required=false)]
