@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Aliding20230426.Models
+{
+    public class CreateSubscribedCalendarRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("Managers")]
+        [Validation(Required=false)]
+        public List<string> Managers { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("SubscribeScope")]
+        [Validation(Required=false)]
+        public CreateSubscribedCalendarRequestSubscribeScope SubscribeScope { get; set; }
+        public class CreateSubscribedCalendarRequestSubscribeScope : TeaModel {
+            [NameInMap("UserIds")]
+            [Validation(Required=false)]
+            public List<string> UserIds { get; set; }
+
+        }
+
+    }
+
+}
