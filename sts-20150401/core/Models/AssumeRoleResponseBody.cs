@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.Sts20150401.Models
 
             /// <summary>
             /// The STS token.
+            /// 
+            /// > Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.
             /// </summary>
             [NameInMap("SecurityToken")]
             [Validation(Required=false)]
