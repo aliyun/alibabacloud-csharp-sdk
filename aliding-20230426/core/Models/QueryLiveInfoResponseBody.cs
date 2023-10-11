@@ -27,11 +27,15 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         [NameInMap("liveId")]
         [Validation(Required=false)]
-        public int? LiveId { get; set; }
+        public string LiveId { get; set; }
 
         [NameInMap("livePlayUrl")]
         [Validation(Required=false)]
         public string LivePlayUrl { get; set; }
+
+        [NameInMap("liveStatus")]
+        [Validation(Required=false)]
+        public int? LiveStatus { get; set; }
 
         [NameInMap("playbackDuration")]
         [Validation(Required=false)]
