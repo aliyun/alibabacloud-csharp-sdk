@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string ArchiveMethod { get; set; }
 
-            [NameInMap("DbSchema")]
+            [NameInMap("CronStr")]
             [Validation(Required=false)]
-            public string DbSchema { get; set; }
+            public string CronStr { get; set; }
 
             [NameInMap("Logic")]
             [Validation(Required=false)]
@@ -37,9 +37,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string RunMethod { get; set; }
 
-            [NameInMap("SourceDatabaseId")]
+            [NameInMap("SourceCatalogName")]
             [Validation(Required=false)]
-            public long? SourceDatabaseId { get; set; }
+            public string SourceCatalogName { get; set; }
+
+            [NameInMap("SourceInstanceName")]
+            [Validation(Required=false)]
+            public string SourceInstanceName { get; set; }
+
+            [NameInMap("SourceSchemaName")]
+            [Validation(Required=false)]
+            public string SourceSchemaName { get; set; }
 
             [NameInMap("TableIncludes")]
             [Validation(Required=false)]
@@ -59,13 +67,23 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<string> TableMapping { get; set; }
 
-            [NameInMap("TargetInstanceId")]
+            [NameInMap("TargetInstanceHost")]
             [Validation(Required=false)]
-            public string TargetInstanceId { get; set; }
+            public string TargetInstanceHost { get; set; }
 
             [NameInMap("Variables")]
             [Validation(Required=false)]
-            public List<string> Variables { get; set; }
+            public List<CreateDataArchiveOrderRequestParamVariables> Variables { get; set; }
+            public class CreateDataArchiveOrderRequestParamVariables : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Pattern")]
+                [Validation(Required=false)]
+                public string Pattern { get; set; }
+
+            }
 
         }
 
