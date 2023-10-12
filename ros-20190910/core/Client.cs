@@ -705,6 +705,88 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await CreateChangeSetWithOptionsAsync(request, runtime);
         }
 
+        public CreateDiagnosticResponse CreateDiagnosticWithOptions(CreateDiagnosticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticKey))
+            {
+                query["DiagnosticKey"] = request.DiagnosticKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticType))
+            {
+                query["DiagnosticType"] = request.DiagnosticType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
+            {
+                query["Product"] = request.Product;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDiagnostic",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDiagnosticResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDiagnosticResponse> CreateDiagnosticWithOptionsAsync(CreateDiagnosticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticKey))
+            {
+                query["DiagnosticKey"] = request.DiagnosticKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticType))
+            {
+                query["DiagnosticType"] = request.DiagnosticType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
+            {
+                query["Product"] = request.Product;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDiagnostic",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDiagnosticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDiagnosticResponse CreateDiagnostic(CreateDiagnosticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDiagnosticWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDiagnosticResponse> CreateDiagnosticAsync(CreateDiagnosticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDiagnosticWithOptionsAsync(request, runtime);
+        }
+
         /**
           * A stack is a collection of ROS resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).\\
           * When you call the operation, take note of the following limits:
@@ -1915,6 +1997,72 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteChangeSetWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteDiagnosticResponse DeleteDiagnosticWithOptions(DeleteDiagnosticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDiagnostic",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDiagnosticResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDiagnosticResponse> DeleteDiagnosticWithOptionsAsync(DeleteDiagnosticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDiagnostic",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDiagnosticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDiagnosticResponse DeleteDiagnostic(DeleteDiagnosticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDiagnosticWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDiagnosticResponse> DeleteDiagnosticAsync(DeleteDiagnosticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDiagnosticWithOptionsAsync(request, runtime);
         }
 
         public DeleteStackResponse DeleteStackWithOptions(DeleteStackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3433,6 +3581,72 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetChangeSetWithOptionsAsync(request, runtime);
+        }
+
+        public GetDiagnosticResponse GetDiagnosticWithOptions(GetDiagnosticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDiagnostic",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDiagnosticResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetDiagnosticResponse> GetDiagnosticWithOptionsAsync(GetDiagnosticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDiagnostic",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDiagnosticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetDiagnosticResponse GetDiagnostic(GetDiagnosticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDiagnosticWithOptions(request, runtime);
+        }
+
+        public async Task<GetDiagnosticResponse> GetDiagnosticAsync(GetDiagnosticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDiagnosticWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -5857,6 +6071,104 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListChangeSetsWithOptionsAsync(request, runtime);
+        }
+
+        public ListDiagnosticsResponse ListDiagnosticsWithOptions(ListDiagnosticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticKey))
+            {
+                query["DiagnosticKey"] = request.DiagnosticKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticProduct))
+            {
+                query["DiagnosticProduct"] = request.DiagnosticProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDiagnostics",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDiagnosticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListDiagnosticsResponse> ListDiagnosticsWithOptionsAsync(ListDiagnosticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticKey))
+            {
+                query["DiagnosticKey"] = request.DiagnosticKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticProduct))
+            {
+                query["DiagnosticProduct"] = request.DiagnosticProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDiagnostics",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDiagnosticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListDiagnosticsResponse ListDiagnostics(ListDiagnosticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDiagnosticsWithOptions(request, runtime);
+        }
+
+        public async Task<ListDiagnosticsResponse> ListDiagnosticsAsync(ListDiagnosticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDiagnosticsWithOptionsAsync(request, runtime);
         }
 
         public ListResourceTypeRegistrationsResponse ListResourceTypeRegistrationsWithOptions(ListResourceTypeRegistrationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
