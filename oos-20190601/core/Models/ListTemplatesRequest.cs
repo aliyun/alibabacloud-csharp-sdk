@@ -137,6 +137,32 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The type of the template.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   Automation
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   State
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Package
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

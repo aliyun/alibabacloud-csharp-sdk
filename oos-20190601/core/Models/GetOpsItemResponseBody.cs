@@ -9,84 +9,144 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetOpsItemResponseBody : TeaModel {
+        /// <summary>
+        /// The information about the O\&M item.
+        /// </summary>
         [NameInMap("OpsItem")]
         [Validation(Required=false)]
         public GetOpsItemResponseBodyOpsItem OpsItem { get; set; }
         public class GetOpsItemResponseBodyOpsItem : TeaModel {
+            /// <summary>
+            /// The information about the attributes of the O\&M item.
+            /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public Dictionary<string, object> Attributes { get; set; }
 
+            /// <summary>
+            /// The category of the O\&M item.
+            /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
+            /// <summary>
+            /// The user who created the O\&M item.
+            /// </summary>
             [NameInMap("CreateBy")]
             [Validation(Required=false)]
             public string CreateBy { get; set; }
 
+            /// <summary>
+            /// The time when the O\&M item was created.
+            /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
+            /// <summary>
+            /// The duplicated string.
+            /// </summary>
             [NameInMap("DedupString")]
             [Validation(Required=false)]
             public string DedupString { get; set; }
 
+            /// <summary>
+            /// The description.
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The user who modified the O\&M item.
+            /// </summary>
             [NameInMap("LastModifiedBy")]
             [Validation(Required=false)]
             public string LastModifiedBy { get; set; }
 
+            /// <summary>
+            /// The O\&M item ID.
+            /// </summary>
             [NameInMap("OpsItemId")]
             [Validation(Required=false)]
             public string OpsItemId { get; set; }
 
+            /// <summary>
+            /// The priority of the O\&M item.
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// The Alibaba Cloud Resource Names (ARNs) of the associated resources.
+            /// </summary>
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public List<string> Resources { get; set; }
 
+            /// <summary>
+            /// The severity level of the O\&M item.
+            /// </summary>
             [NameInMap("Severity")]
             [Validation(Required=false)]
             public string Severity { get; set; }
 
+            /// <summary>
+            /// The solutions to the O\&M item.
+            /// </summary>
             [NameInMap("Solutions")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Solutions { get; set; }
 
+            /// <summary>
+            /// The source business of the O\&M item.
+            /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
+            /// <summary>
+            /// The status of the O\&M item.
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The tags attached to the O\&M item.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public Dictionary<string, object> Tags { get; set; }
 
+            /// <summary>
+            /// The title of the O\&M item.
+            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
+            /// <summary>
+            /// The time when the O\&M item was updated.
+            /// </summary>
             [NameInMap("UpdateDate")]
             [Validation(Required=false)]
             public string UpdateDate { get; set; }
 
         }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

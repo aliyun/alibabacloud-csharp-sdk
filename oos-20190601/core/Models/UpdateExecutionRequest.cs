@@ -44,10 +44,16 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The resource group ID.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags of the execution.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }

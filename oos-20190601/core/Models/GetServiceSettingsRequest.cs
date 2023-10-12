@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetServiceSettingsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -59,12 +59,15 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the operating system.
+            /// The operating system.
             /// </summary>
             [NameInMap("OperationSystem")]
             [Validation(Required=false)]
             public string OperationSystem { get; set; }
 
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

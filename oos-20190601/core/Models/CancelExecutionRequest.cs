@@ -12,10 +12,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CancelExecutionRequest : TeaModel {
+        /// <summary>
+        /// The ID of the execution.
+        /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
         public string ExecutionId { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

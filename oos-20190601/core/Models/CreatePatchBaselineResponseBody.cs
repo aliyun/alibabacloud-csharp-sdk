@@ -23,10 +23,16 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ApprovalRules { get; set; }
 
+            /// <summary>
+            /// The approved patches.
+            /// </summary>
             [NameInMap("ApprovedPatches")]
             [Validation(Required=false)]
             public List<string> ApprovedPatches { get; set; }
 
+            /// <summary>
+            /// Indicates whether the approved patch involves updates other than security-related updates.
+            /// </summary>
             [NameInMap("ApprovedPatchesEnableNonSecurity")]
             [Validation(Required=false)]
             public bool? ApprovedPatchesEnableNonSecurity { get; set; }
@@ -73,14 +79,23 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string OperationSystem { get; set; }
 
+            /// <summary>
+            /// The rejected patches.
+            /// </summary>
             [NameInMap("RejectedPatches")]
             [Validation(Required=false)]
             public List<string> RejectedPatches { get; set; }
 
+            /// <summary>
+            /// The action of the rejected patch.
+            /// </summary>
             [NameInMap("RejectedPatchesAction")]
             [Validation(Required=false)]
             public string RejectedPatchesAction { get; set; }
 
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -92,18 +107,30 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
+            /// <summary>
+            /// The patch source configurations.
+            /// </summary>
             [NameInMap("Sources")]
             [Validation(Required=false)]
             public List<string> Sources { get; set; }
 
+            /// <summary>
+            /// The tags.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<CreatePatchBaselineResponseBodyPatchBaselineTags> Tags { get; set; }
             public class CreatePatchBaselineResponseBodyPatchBaselineTags : TeaModel {
+                /// <summary>
+                /// The key of the tag.
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// The value of the tag.
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

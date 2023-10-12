@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetParametersRequest : TeaModel {
+        /// <summary>
+        /// The names of the common parameters.
+        /// </summary>
         [NameInMap("Names")]
         [Validation(Required=false)]
         public string Names { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

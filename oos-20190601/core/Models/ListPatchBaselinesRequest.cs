@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public List<string> ApprovedPatches { get; set; }
 
         /// <summary>
-        /// Whether the approved patch includes updates other than security.
+        /// Specifies whether the approved patch involves updates other than security-related updates.
         /// </summary>
         [NameInMap("ApprovedPatchesEnableNonSecurity")]
         [Validation(Required=false)]
@@ -67,6 +67,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The resource group ID.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string ShareType { get; set; }
 
         /// <summary>
-        /// The list of patch source configurations.
+        /// The patch source configurations.
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
@@ -96,14 +99,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public List<ListPatchBaselinesRequestTags> Tags { get; set; }
         public class ListPatchBaselinesRequestTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// The key of the tag.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The value of the tag.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

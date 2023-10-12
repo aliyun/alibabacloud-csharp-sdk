@@ -109,6 +109,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string LastSuccessfulTriggerTime { get; set; }
 
+            /// <summary>
+            /// The outputs of last trigger.
+            /// </summary>
             [NameInMap("LastTriggerOutputs")]
             [Validation(Required=false)]
             public string LastTriggerOutputs { get; set; }
@@ -120,6 +123,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string LastTriggerStatus { get; set; }
 
+            /// <summary>
+            /// The status message of last trigger.
+            /// </summary>
             [NameInMap("LastTriggerStatusMessage")]
             [Validation(Required=false)]
             public string LastTriggerStatusMessage { get; set; }

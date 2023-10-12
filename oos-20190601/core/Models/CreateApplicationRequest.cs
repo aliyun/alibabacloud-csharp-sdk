@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CreateApplicationRequest : TeaModel {
+        /// <summary>
+        /// The configurations of application alerts.
+        /// </summary>
         [NameInMap("AlarmConfig")]
         [Validation(Required=false)]
         public CreateApplicationRequestAlarmConfig AlarmConfig { get; set; }
         public class CreateApplicationRequestAlarmConfig : TeaModel {
+            /// <summary>
+            /// The alert contact groups.
+            /// </summary>
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
             public List<string> ContactGroups { get; set; }
 
+            /// <summary>
+            /// The health check URL of the application.
+            /// </summary>
             [NameInMap("HealthCheckUrl")]
             [Validation(Required=false)]
             public string HealthCheckUrl { get; set; }
 
+            /// <summary>
+            /// The alert templates.
+            /// </summary>
             [NameInMap("TemplateIds")]
             [Validation(Required=false)]
             public List<string> TemplateIds { get; set; }
@@ -61,6 +73,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
 
         /// <summary>
         /// The tags.

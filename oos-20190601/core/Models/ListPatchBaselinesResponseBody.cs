@@ -10,123 +10,126 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListPatchBaselinesResponseBody : TeaModel {
         /// <summary>
-        /// The type of the operating system.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC
+        /// The token that is used to retrieve the next page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Indicates whether the patch baseline is set as the default patch baseline.
+        /// The patch baselines.
         /// </summary>
         [NameInMap("PatchBaselines")]
         [Validation(Required=false)]
         public List<ListPatchBaselinesResponseBodyPatchBaselines> PatchBaselines { get; set; }
         public class ListPatchBaselinesResponseBodyPatchBaselines : TeaModel {
             /// <summary>
-            /// 批准补丁的列表。
+            /// The approved patches.
             /// </summary>
             [NameInMap("ApprovedPatches")]
             [Validation(Required=false)]
             public List<string> ApprovedPatches { get; set; }
 
             /// <summary>
-            /// 批准补丁是否包括除安全性之外的更新
+            /// Indicates whether the approved patch involves updates other than security-related updates.
             /// </summary>
             [NameInMap("ApprovedPatchesEnableNonSecurity")]
             [Validation(Required=false)]
             public bool? ApprovedPatchesEnableNonSecurity { get; set; }
 
             /// <summary>
-            /// The name of the patch baseline.
+            /// The user who created the patch baseline.
             /// </summary>
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// The ID of the patch baseline.
+            /// The time when the patch baseline was created.
             /// </summary>
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
 
             /// <summary>
-            /// The user who last modified the patch baseline.
+            /// The description of the patch baseline.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// Queries the details of patch baselines.
+            /// The ID of the patch baseline.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The time when the patch baseline was last modified.
+            /// Indicates whether the patch baseline is set as the default patch baseline.
             /// </summary>
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// The share type of the patch baseline.
+            /// The name of the patch baseline.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The description of the patch baseline.
+            /// The type of the operating system.
             /// </summary>
             [NameInMap("OperationSystem")]
             [Validation(Required=false)]
             public string OperationSystem { get; set; }
 
+            /// <summary>
+            /// The resource group ID.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// Queries the details of patch baselines.
+            /// The share type of the patch baseline.
             /// </summary>
             [NameInMap("ShareType")]
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
             /// <summary>
-            /// 补丁源配置列表。
+            /// The patch source configurations.
             /// </summary>
             [NameInMap("Sources")]
             [Validation(Required=false)]
             public List<string> Sources { get; set; }
 
             /// <summary>
-            /// 标签。
+            /// The tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListPatchBaselinesResponseBodyPatchBaselinesTags> Tags { get; set; }
             public class ListPatchBaselinesResponseBodyPatchBaselinesTags : TeaModel {
                 /// <summary>
-                /// 标签键。
+                /// The key of the tag.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// 标签值。
+                /// The value of the tag.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -135,14 +138,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             }
 
             /// <summary>
-            /// The time when the patch baseline was created.
+            /// The user who last updated the patch baseline.
             /// </summary>
             [NameInMap("UpdatedBy")]
             [Validation(Required=false)]
             public string UpdatedBy { get; set; }
 
             /// <summary>
-            /// The creator of the patch baseline.
+            /// The time when the patch baseline was updated.
             /// </summary>
             [NameInMap("UpdatedDate")]
             [Validation(Required=false)]
@@ -151,7 +154,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// The details of the patch baselines.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string Depth { get; set; }
 
+        /// <summary>
+        /// The description of the execution.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

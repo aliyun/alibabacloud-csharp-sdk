@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CreateApplicationShrinkRequest : TeaModel {
+        /// <summary>
+        /// The configurations of application alerts.
+        /// </summary>
         [NameInMap("AlarmConfig")]
         [Validation(Required=false)]
         public string AlarmConfigShrink { get; set; }
@@ -47,6 +50,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
 
         /// <summary>
         /// The tags.
