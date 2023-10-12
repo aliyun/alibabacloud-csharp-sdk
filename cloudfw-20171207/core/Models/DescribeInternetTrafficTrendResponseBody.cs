@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? Time { get; set; }
 
+            [NameInMap("TotalBps")]
+            [Validation(Required=false)]
+            public long? TotalBps { get; set; }
+
         }
 
         [NameInMap("MaxBandwidthTime")]

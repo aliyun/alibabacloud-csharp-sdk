@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string AclGroupName { get; set; }
 
+            [NameInMap("AclRuleCount")]
+            [Validation(Required=false)]
+            public int? AclRuleCount { get; set; }
+
             /// <summary>
             /// The UID of the member that is managed by your Alibaba Cloud account.
             /// </summary>

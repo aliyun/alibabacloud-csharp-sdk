@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 入侵防御事件的名称。
+        /// The name of the intrusion event.
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]

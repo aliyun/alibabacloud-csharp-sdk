@@ -27,30 +27,54 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string FirewallSwitchStatus { get; set; }
 
+        /// <summary>
+        /// The VPC that is automatically created for the firewall.
+        /// </summary>
         [NameInMap("FirewallVpc")]
         [Validation(Required=false)]
         public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc FirewallVpc { get; set; }
         public class DescribeVpcFirewallCenDetailResponseBodyFirewallVpc : TeaModel {
+            /// <summary>
+            /// Indicates whether you can specify a CIDR block when you create a VPC firewall for a Basic Edition transit router of a CEN instance. Valid values:
+            /// 
+            /// *   **1**: yes
+            /// *   **0**: no
+            /// </summary>
             [NameInMap("AllowConfiguration")]
             [Validation(Required=false)]
             public int? AllowConfiguration { get; set; }
 
+            /// <summary>
+            /// The CIDR block of the VPC.
+            /// </summary>
             [NameInMap("VpcCidr")]
             [Validation(Required=false)]
             public string VpcCidr { get; set; }
 
+            /// <summary>
+            /// The VPC ID.
+            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
+            /// <summary>
+            /// The CIDR block of the vSwitch.
+            /// </summary>
             [NameInMap("VswitchCidr")]
             [Validation(Required=false)]
             public string VswitchCidr { get; set; }
 
+            /// <summary>
+            /// The vSwitch ID.
+            /// </summary>
             [NameInMap("VswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
 
+            /// <summary>
+            /// The zone ID.
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
@@ -86,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<string> DefendCidrList { get; set; }
 
             /// <summary>
-            /// An array that consists of the elastic network interfaces (ENIs).
+            /// The Elastic Network Interfaces (ENIs).
             /// </summary>
             [NameInMap("EniList")]
             [Validation(Required=false)]
@@ -106,6 +130,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [Validation(Required=false)]
                 public string EniPrivateIpAddress { get; set; }
 
+                /// <summary>
+                /// The ID of the vSwitch to which the ENI is connected.
+                /// </summary>
                 [NameInMap("EniVSwitchId")]
                 [Validation(Required=false)]
                 public string EniVSwitchId { get; set; }
@@ -199,7 +226,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableList> VpcCidrTableList { get; set; }
             public class DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableList : TeaModel {
                 /// <summary>
-                /// An array that consists of the route entries for the VPC.
+                /// The route entries for the VPC.
                 /// </summary>
                 [NameInMap("RouteEntryList")]
                 [Validation(Required=false)]

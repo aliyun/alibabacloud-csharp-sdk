@@ -9,77 +9,238 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateNatFirewallControlPolicyRequest : TeaModel {
+        /// <summary>
+        /// The action that Cloud Firewall performs on the traffic.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   **accept**: allows the traffic.
+        /// *   **drop**: denies the traffic.
+        /// *   **log**: monitors the traffic.
+        /// </summary>
         [NameInMap("AclAction")]
         [Validation(Required=false)]
         public string AclAction { get; set; }
 
+        /// <summary>
+        /// The application types supported by the access control policy.
+        /// </summary>
         [NameInMap("ApplicationNameList")]
         [Validation(Required=false)]
         public List<string> ApplicationNameList { get; set; }
 
+        /// <summary>
+        /// The description of the access control policy.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The destination port in the access control policy. Valid values:
+        /// 
+        /// *   If Proto is set to ICMP, DestPort is automatically left empty.
+        /// 
+        /// > If Proto is set to ICMP, access control does not take effect on the destination port.
+        /// 
+        /// *   If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, DestPort is empty.
+        /// 
+        /// > If DestPortType is set to group, you do not need to specify the destination port number. All ports on which the access control policy takes effect are included in the destination port address book.
+        /// 
+        /// *   If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.
+        /// </summary>
         [NameInMap("DestPort")]
         [Validation(Required=false)]
         public string DestPort { get; set; }
 
+        /// <summary>
+        /// The name of the destination port address book in the access control policy.
+        /// 
+        /// > If DestPortType is set to group, you must specify the name of the destination port address book.
+        /// </summary>
         [NameInMap("DestPortGroup")]
         [Validation(Required=false)]
         public string DestPortGroup { get; set; }
 
+        /// <summary>
+        /// The type of the destination port in the access control policy. Valid values:
+        /// 
+        /// *   **port**: port
+        /// *   **group**: port address book
+        /// </summary>
         [NameInMap("DestPortType")]
         [Validation(Required=false)]
         public string DestPortType { get; set; }
 
+        /// <summary>
+        /// The destination address in the access control policy.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   If DestinationType is set to net, the value of this parameter is a CIDR block.
+        /// 
+        ///     Example: 1.2.XX.XX/24
+        /// 
+        /// *   If DestinationType is set to group, the value of this parameter is an address book.
+        /// 
+        ///     Example: db_group
+        /// 
+        /// *   If DestinationType is set to domain, the value of this parameter is a domain name.
+        /// 
+        ///     Example: \*.aliyuncs.com
+        /// 
+        /// *   If DestinationType is set to location, the value of this parameter is a location.
+        /// 
+        ///     Example: \["BJ11", "ZB"]
+        /// </summary>
         [NameInMap("Destination")]
         [Validation(Required=false)]
         public string Destination { get; set; }
 
+        /// <summary>
+        /// The type of the destination address in the access control policy.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   **net**: CIDR block
+        /// *   **group**: address book
+        /// *   **domain**: domain name
+        /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
         public string DestinationType { get; set; }
 
+        /// <summary>
+        /// The direction of the traffic to which the access control policy applies. Valid values:
+        /// 
+        /// *   **out**: outbound traffic
+        /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
+        /// <summary>
+        /// The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
+        /// 
+        /// *   **0**: Fully qualified domain name (FQDN)-based resolution
+        /// *   **1**: Domain Name System (DNS)-based dynamic resolution
+        /// *   **2**: FQDN and DNS-based dynamic resolution
+        /// </summary>
         [NameInMap("DomainResolveType")]
         [Validation(Required=false)]
         public int? DomainResolveType { get; set; }
 
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        /// <summary>
+        /// The IP version supported by the access control policy. Valid values:
+        /// 
+        /// *   **4**: IPv4 (default)
+        /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }
 
+        /// <summary>
+        /// The language of the content within the response.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   **zh**: Chinese (default)
+        /// *   **en**: English
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The ID of the NAT gateway.
+        /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
+        /// <summary>
+        /// The new priority of the access control policy.
+        /// </summary>
         [NameInMap("NewOrder")]
         [Validation(Required=false)]
         public string NewOrder { get; set; }
 
+        /// <summary>
+        /// The protocol type in the access control policy.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   ANY: all types of protocols
+        /// *   TCP
+        /// *   UDP
+        /// *   ICMP
+        /// </summary>
         [NameInMap("Proto")]
         [Validation(Required=false)]
         public string Proto { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the access control policy. By default, an access control policy is enabled after it is created. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// </summary>
         [NameInMap("Release")]
         [Validation(Required=false)]
         public string Release { get; set; }
 
+        [NameInMap("RepeatDays")]
+        [Validation(Required=false)]
+        public List<long?> RepeatDays { get; set; }
+
+        [NameInMap("RepeatEndTime")]
+        [Validation(Required=false)]
+        public string RepeatEndTime { get; set; }
+
+        [NameInMap("RepeatStartTime")]
+        [Validation(Required=false)]
+        public string RepeatStartTime { get; set; }
+
+        [NameInMap("RepeatType")]
+        [Validation(Required=false)]
+        public string RepeatType { get; set; }
+
+        /// <summary>
+        /// The source address in the access control policy.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   If **SourceType** is set to `net`, the value of Source is a CIDR block.
+        /// 
+        ///     Example: 10.2.4.0/24
+        /// 
+        /// *   If **SourceType** is set to `group`, the value of this parameter must be an address book name.
+        /// 
+        ///     Example: db_group
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        /// <summary>
+        /// The type of the source address in the access control policy.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   **net**: source CIDR block
+        /// *   **group**: source address book
+        /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

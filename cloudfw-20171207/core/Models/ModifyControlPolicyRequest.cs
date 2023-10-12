@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Direction { get; set; }
 
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Valid values:
         /// 
@@ -159,6 +163,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Release { get; set; }
 
+        [NameInMap("RepeatDays")]
+        [Validation(Required=false)]
+        public List<long?> RepeatDays { get; set; }
+
+        [NameInMap("RepeatEndTime")]
+        [Validation(Required=false)]
+        public string RepeatEndTime { get; set; }
+
+        [NameInMap("RepeatStartTime")]
+        [Validation(Required=false)]
+        public string RepeatStartTime { get; set; }
+
+        [NameInMap("RepeatType")]
+        [Validation(Required=false)]
+        public string RepeatType { get; set; }
+
         /// <summary>
         /// The source address in the access control policy.
         /// 
@@ -180,6 +200,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

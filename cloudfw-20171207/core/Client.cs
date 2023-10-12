@@ -259,6 +259,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Direction"] = request.Direction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
             {
                 query["IpVersion"] = request.IpVersion;
@@ -279,6 +283,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -290,6 +310,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -363,6 +387,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Direction"] = request.Direction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
             {
                 query["IpVersion"] = request.IpVersion;
@@ -383,6 +411,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -394,6 +438,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -678,6 +726,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await BatchCopyVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+          *
+          * @param request CreateNatFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNatFirewallControlPolicyResponse
+         */
         public CreateNatFirewallControlPolicyResponse CreateNatFirewallControlPolicyWithOptions(CreateNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -722,6 +777,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DomainResolveType"] = request.DomainResolveType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
             {
                 query["IpVersion"] = request.IpVersion;
@@ -746,6 +805,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -753,6 +828,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -773,6 +852,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+          *
+          * @param request CreateNatFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNatFirewallControlPolicyResponse
+         */
         public async Task<CreateNatFirewallControlPolicyResponse> CreateNatFirewallControlPolicyWithOptionsAsync(CreateNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -817,6 +903,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DomainResolveType"] = request.DomainResolveType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
             {
                 query["IpVersion"] = request.IpVersion;
@@ -841,6 +931,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -848,6 +954,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -868,12 +978,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+          *
+          * @param request CreateNatFirewallControlPolicyRequest
+          * @return CreateNatFirewallControlPolicyResponse
+         */
         public CreateNatFirewallControlPolicyResponse CreateNatFirewallControlPolicy(CreateNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNatFirewallControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+          *
+          * @param request CreateNatFirewallControlPolicyRequest
+          * @return CreateNatFirewallControlPolicyResponse
+         */
         public async Task<CreateNatFirewallControlPolicyResponse> CreateNatFirewallControlPolicyAsync(CreateNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1549,6 +1671,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["ApplicationName"] = request.ApplicationName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationNameList))
+            {
+                query["ApplicationNameList"] = request.ApplicationNameList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -1573,6 +1699,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DestinationType"] = request.DestinationType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -1593,6 +1723,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -1600,6 +1746,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallId))
             {
@@ -1645,6 +1795,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["ApplicationName"] = request.ApplicationName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationNameList))
+            {
+                query["ApplicationNameList"] = request.ApplicationNameList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -1669,6 +1823,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DestinationType"] = request.DestinationType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -1689,6 +1847,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -1696,6 +1870,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallId))
             {
@@ -2170,6 +2348,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DeleteInstanceMembersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
+          *
+          * @param request DeleteNatFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNatFirewallControlPolicyResponse
+         */
         public DeleteNatFirewallControlPolicyResponse DeleteNatFirewallControlPolicyWithOptions(DeleteNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2209,6 +2394,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
+          *
+          * @param request DeleteNatFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNatFirewallControlPolicyResponse
+         */
         public async Task<DeleteNatFirewallControlPolicyResponse> DeleteNatFirewallControlPolicyWithOptionsAsync(DeleteNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2248,12 +2440,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
+          *
+          * @param request DeleteNatFirewallControlPolicyRequest
+          * @return DeleteNatFirewallControlPolicyResponse
+         */
         public DeleteNatFirewallControlPolicyResponse DeleteNatFirewallControlPolicy(DeleteNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNatFirewallControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
+          *
+          * @param request DeleteNatFirewallControlPolicyRequest
+          * @return DeleteNatFirewallControlPolicyResponse
+         */
         public async Task<DeleteNatFirewallControlPolicyResponse> DeleteNatFirewallControlPolicyAsync(DeleteNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3079,6 +3283,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -3162,6 +3370,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Release))
             {
                 query["Release"] = request.Release;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
@@ -3289,7 +3501,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+          * You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -3341,7 +3553,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+          * You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -3393,7 +3605,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+          * You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -3407,7 +3619,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+          * You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -3421,7 +3633,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+          * You can use this operation to query the information about members in Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -3473,7 +3685,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+          * You can use this operation to query the information about members in Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -3525,7 +3737,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+          * You can use this operation to query the information about members in Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -3539,7 +3751,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+          * You can use this operation to query the information about members in Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -3550,6 +3762,168 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceMembersWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeInternetOpenIpResponse DescribeInternetOpenIpWithOptions(DescribeInternetOpenIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetsInstanceId))
+            {
+                query["AssetsInstanceId"] = request.AssetsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetsInstanceName))
+            {
+                query["AssetsInstanceName"] = request.AssetsInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetsType))
+            {
+                query["AssetsType"] = request.AssetsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicIp))
+            {
+                query["PublicIp"] = request.PublicIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                query["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInternetOpenIp",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInternetOpenIpResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeInternetOpenIpResponse> DescribeInternetOpenIpWithOptionsAsync(DescribeInternetOpenIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetsInstanceId))
+            {
+                query["AssetsInstanceId"] = request.AssetsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetsInstanceName))
+            {
+                query["AssetsInstanceName"] = request.AssetsInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetsType))
+            {
+                query["AssetsType"] = request.AssetsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicIp))
+            {
+                query["PublicIp"] = request.PublicIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                query["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInternetOpenIp",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInternetOpenIpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeInternetOpenIpResponse DescribeInternetOpenIp(DescribeInternetOpenIpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInternetOpenIpWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeInternetOpenIpResponse> DescribeInternetOpenIpAsync(DescribeInternetOpenIpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInternetOpenIpWithOptionsAsync(request, runtime);
         }
 
         public DescribeInternetTrafficTrendResponse DescribeInternetTrafficTrendWithOptions(DescribeInternetTrafficTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3876,6 +4250,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DescribeInvadeEventListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
+          *
+          * @param request DescribeNatFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeNatFirewallControlPolicyResponse
+         */
         public DescribeNatFirewallControlPolicyResponse DescribeNatFirewallControlPolicyWithOptions(DescribeNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3924,6 +4305,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -3947,6 +4332,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
+          *
+          * @param request DescribeNatFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeNatFirewallControlPolicyResponse
+         */
         public async Task<DescribeNatFirewallControlPolicyResponse> DescribeNatFirewallControlPolicyWithOptionsAsync(DescribeNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3995,6 +4387,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -4018,18 +4414,37 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
+          *
+          * @param request DescribeNatFirewallControlPolicyRequest
+          * @return DescribeNatFirewallControlPolicyResponse
+         */
         public DescribeNatFirewallControlPolicyResponse DescribeNatFirewallControlPolicy(DescribeNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNatFirewallControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
+          *
+          * @param request DescribeNatFirewallControlPolicyRequest
+          * @return DescribeNatFirewallControlPolicyResponse
+         */
         public async Task<DescribeNatFirewallControlPolicyResponse> DescribeNatFirewallControlPolicyAsync(DescribeNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNatFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
+          *
+          * @param request DescribeNatFirewallPolicyPriorUsedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeNatFirewallPolicyPriorUsedResponse
+         */
         public DescribeNatFirewallPolicyPriorUsedResponse DescribeNatFirewallPolicyPriorUsedWithOptions(DescribeNatFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4069,6 +4484,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallPolicyPriorUsedResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
+          *
+          * @param request DescribeNatFirewallPolicyPriorUsedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeNatFirewallPolicyPriorUsedResponse
+         */
         public async Task<DescribeNatFirewallPolicyPriorUsedResponse> DescribeNatFirewallPolicyPriorUsedWithOptionsAsync(DescribeNatFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4108,12 +4530,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeNatFirewallPolicyPriorUsedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
+          *
+          * @param request DescribeNatFirewallPolicyPriorUsedRequest
+          * @return DescribeNatFirewallPolicyPriorUsedResponse
+         */
         public DescribeNatFirewallPolicyPriorUsedResponse DescribeNatFirewallPolicyPriorUsed(DescribeNatFirewallPolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNatFirewallPolicyPriorUsedWithOptions(request, runtime);
         }
 
+        /**
+          * You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
+          *
+          * @param request DescribeNatFirewallPolicyPriorUsedRequest
+          * @return DescribeNatFirewallPolicyPriorUsedResponse
+         */
         public async Task<DescribeNatFirewallPolicyPriorUsedResponse> DescribeNatFirewallPolicyPriorUsedAsync(DescribeNatFirewallPolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6233,6 +6667,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -6312,6 +6750,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Release))
             {
                 query["Release"] = request.Release;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
@@ -7331,6 +7773,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Direction"] = request.Direction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -7343,6 +7789,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -7350,6 +7812,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7427,6 +7893,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Direction"] = request.Direction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -7439,6 +7909,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -7446,6 +7932,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7962,6 +8452,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await ModifyInstanceMemberAttributesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
+          *
+          * @param request ModifyNatFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyNatFirewallControlPolicyResponse
+         */
         public ModifyNatFirewallControlPolicyResponse ModifyNatFirewallControlPolicyWithOptions(ModifyNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8006,6 +8503,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DomainResolveType"] = request.DomainResolveType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -8022,6 +8523,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -8029,6 +8546,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8049,6 +8570,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyNatFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
+          *
+          * @param request ModifyNatFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyNatFirewallControlPolicyResponse
+         */
         public async Task<ModifyNatFirewallControlPolicyResponse> ModifyNatFirewallControlPolicyWithOptionsAsync(ModifyNatFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8093,6 +8621,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DomainResolveType"] = request.DomainResolveType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -8109,6 +8641,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -8116,6 +8664,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8136,12 +8688,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyNatFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
+          *
+          * @param request ModifyNatFirewallControlPolicyRequest
+          * @return ModifyNatFirewallControlPolicyResponse
+         */
         public ModifyNatFirewallControlPolicyResponse ModifyNatFirewallControlPolicy(ModifyNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyNatFirewallControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
+          *
+          * @param request ModifyNatFirewallControlPolicyRequest
+          * @return ModifyNatFirewallControlPolicyResponse
+         */
         public async Task<ModifyNatFirewallControlPolicyResponse> ModifyNatFirewallControlPolicyAsync(ModifyNatFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9093,6 +9657,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["ApplicationName"] = request.ApplicationName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationNameList))
+            {
+                query["ApplicationNameList"] = request.ApplicationNameList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -9117,6 +9685,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DestinationType"] = request.DestinationType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -9129,6 +9701,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -9136,6 +9724,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallId))
             {
@@ -9185,6 +9777,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["ApplicationName"] = request.ApplicationName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationNameList))
+            {
+                query["ApplicationNameList"] = request.ApplicationNameList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -9209,6 +9805,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DestinationType"] = request.DestinationType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -9221,6 +9821,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Release"] = request.Release;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatDays))
+            {
+                query["RepeatDays"] = request.RepeatDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatEndTime))
+            {
+                query["RepeatEndTime"] = request.RepeatEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatStartTime))
+            {
+                query["RepeatStartTime"] = request.RepeatStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatType))
+            {
+                query["RepeatType"] = request.RepeatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -9228,6 +9844,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallId))
             {
@@ -9281,7 +9901,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -9333,7 +9953,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -9385,7 +10005,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -9399,7 +10019,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *

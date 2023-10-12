@@ -198,6 +198,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public long? DnsResultTime { get; set; }
 
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
             /// <summary>
             /// The timestamp when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.
             /// </summary>
@@ -260,6 +264,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string Release { get; set; }
 
+            [NameInMap("RepeatDays")]
+            [Validation(Required=false)]
+            public List<long?> RepeatDays { get; set; }
+
+            [NameInMap("RepeatEndTime")]
+            [Validation(Required=false)]
+            public string RepeatEndTime { get; set; }
+
+            [NameInMap("RepeatStartTime")]
+            [Validation(Required=false)]
+            public string RepeatStartTime { get; set; }
+
+            [NameInMap("RepeatType")]
+            [Validation(Required=false)]
+            public string RepeatType { get; set; }
+
             /// <summary>
             /// The source address in the access control policy. Valid values:
             /// 
@@ -310,6 +330,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("SpreadCnt")]
             [Validation(Required=false)]
             public int? SpreadCnt { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
 
         }
 

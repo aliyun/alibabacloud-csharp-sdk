@@ -9,17 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyVpcFirewallControlPolicyPositionRequest : TeaModel {
+        /// <summary>
+        /// The UUID of the access control policy.
+        /// 
+        /// If you want to modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the [DescribeVpcFirewallControlPolicy](~~159758~~) operation to query the UUID.
+        /// </summary>
         [NameInMap("AclUuid")]
         [Validation(Required=false)]
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// The natural language of the request and response. 
+        /// The language of the content within the request and the response.
         /// 
         /// Valid values:
         /// 
-        /// - **zh**: Chinese (default)
-        /// - **en**: English
+        /// *   **zh**: Chinese (default)
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -34,22 +39,25 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The original priority of the access control policy.
+        /// 
+        /// > This parameter is not recommended. We recommend that you use the AclUuid parameter to specify the policy that you want to modify.
         /// </summary>
         [NameInMap("OldOrder")]
         [Validation(Required=false)]
         public string OldOrder { get; set; }
 
         /// <summary>
-        /// The ID of the policy group to which the access control policy belongs. You can call the DescribeVpcFirewallAclGroupList operation to query the ID.  
+        /// The ID of the group to which the access control policy belongs. You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the ID.
         /// 
         /// Valid values:
         /// 
-        /// - If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.  
+        /// *   If the VPC firewall is used to protect a CEN instance, the value of this parameter must be the ID of the CEN instance.
         /// 
-        /// Example: cen-ervw0g12b5jbw****
-        /// - If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.  
+        ///     Example: cen-ervw0g12b5jbw\*\*\*\*
         /// 
-        /// Example: vfw-a42bbb7b887148c9****
+        /// *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.
+        /// 
+        ///     Example: vfw-a42bbb7b887148c9\*\*\*\*
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

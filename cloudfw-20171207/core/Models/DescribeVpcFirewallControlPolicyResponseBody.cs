@@ -63,6 +63,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
+            [NameInMap("ApplicationNameList")]
+            [Validation(Required=false)]
+            public List<string> ApplicationNameList { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
+
             /// <summary>
             /// The description of the access control policy.
             /// </summary>
@@ -140,12 +148,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string DestinationType { get; set; }
 
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
+            [NameInMap("HitLastTime")]
+            [Validation(Required=false)]
+            public long? HitLastTime { get; set; }
+
             /// <summary>
             /// The number of hits for the access control policy.
             /// </summary>
             [NameInMap("HitTimes")]
             [Validation(Required=false)]
-            public int? HitTimes { get; set; }
+            public long? HitTimes { get; set; }
 
             /// <summary>
             /// The UID of the member that is managed by your Alibaba Cloud account.
@@ -153,6 +169,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("MemberUid")]
             [Validation(Required=false)]
             public string MemberUid { get; set; }
+
+            [NameInMap("ModifyTime")]
+            [Validation(Required=false)]
+            public long? ModifyTime { get; set; }
 
             /// <summary>
             /// The priority of the access control policy.
@@ -184,6 +204,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("Release")]
             [Validation(Required=false)]
             public string Release { get; set; }
+
+            [NameInMap("RepeatDays")]
+            [Validation(Required=false)]
+            public List<long?> RepeatDays { get; set; }
+
+            [NameInMap("RepeatEndTime")]
+            [Validation(Required=false)]
+            public string RepeatEndTime { get; set; }
+
+            [NameInMap("RepeatStartTime")]
+            [Validation(Required=false)]
+            public string RepeatStartTime { get; set; }
+
+            [NameInMap("RepeatType")]
+            [Validation(Required=false)]
+            public string RepeatType { get; set; }
 
             /// <summary>
             /// The source address in the access control policy. Valid values:
@@ -218,6 +254,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("SourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
+
+            [NameInMap("SpreadCnt")]
+            [Validation(Required=false)]
+            public long? SpreadCnt { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
 
         }
 

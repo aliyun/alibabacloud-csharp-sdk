@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Release { get; set; }
 
+        [NameInMap("RepeatType")]
+        [Validation(Required=false)]
+        public string RepeatType { get; set; }
+
         /// <summary>
         /// The source address in the access control policy. Fuzzy match is supported. The value of this parameter depends on the value of the SourceType parameter.
         /// 

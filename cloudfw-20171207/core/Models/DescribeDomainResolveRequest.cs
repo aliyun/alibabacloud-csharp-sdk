@@ -17,9 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// The IP version of the asset that is protected by Cloud Firewall.
-        /// 
-        /// Valid values:
+        /// The IP version of the asset that is protected by Cloud Firewall. Valid values:
         /// 
         /// *   **4**: IPv4 (default)
         /// *   **6**: IPv6
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// The natural language of the response.
+        /// The language of the content within the response.
         /// 
         /// Valid values:
         /// 

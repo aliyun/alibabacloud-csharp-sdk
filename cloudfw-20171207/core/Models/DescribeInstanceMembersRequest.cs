@@ -10,37 +10,35 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceMembersRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Pages start from page 1. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// The remarks of the member in Cloud Firewall. The length is 1 ~ 256 characters.
+        /// The remarks of the member. The remarks must be 1 to 256 characters in length.
         /// </summary>
         [NameInMap("MemberDesc")]
         [Validation(Required=false)]
         public string MemberDesc { get; set; }
 
         /// <summary>
-        /// The name of the member in Cloud Firewall.
+        /// The name of the member.
         /// </summary>
         [NameInMap("MemberDisplayName")]
         [Validation(Required=false)]
         public string MemberDisplayName { get; set; }
 
         /// <summary>
-        /// The unique identifier (UID) of the member in Cloud Firewall.
+        /// The UID of the member.
         /// </summary>
         [NameInMap("MemberUid")]
         [Validation(Required=false)]
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
         /// Default value: **20**.
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetListRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// The page number. Valid values: 1 to 50.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -43,12 +43,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? MemberUid { get; set; }
 
+        /// <summary>
+        /// The time when the asset was added. Valid values:
+        /// 
+        /// *   **discovered in 1 hour**: within one hour.
+        /// *   **discovered in 1 day**: within one day.
+        /// *   **discovered in 7 days**: within seven days.
+        /// </summary>
         [NameInMap("NewResourceTag")]
         [Validation(Required=false)]
         public string NewResourceTag { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page. Valid values: 1 to 50.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
