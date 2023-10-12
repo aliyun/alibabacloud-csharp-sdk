@@ -82,6 +82,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public long? AutoCreate { get; set; }
 
+            [NameInMap("dependencies")]
+            [Validation(Required=false)]
+            public DescribeClusterResourcesResponseBodyDependencies Dependencies { get; set; }
+            public class DescribeClusterResourcesResponseBodyDependencies : TeaModel {
+                [NameInMap("cluster_id")]
+                [Validation(Required=false)]
+                public string ClusterId { get; set; }
+
+                [NameInMap("resource_type")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+                [NameInMap("instance_id")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+            }
+
         }
 
     }
