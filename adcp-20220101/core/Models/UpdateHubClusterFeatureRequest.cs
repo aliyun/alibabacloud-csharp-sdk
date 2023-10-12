@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class UpdateHubClusterFeatureRequest : TeaModel {
+        /// <summary>
+        /// The Internet access control list (ACL). This parameter takes effect only if PublicAccessEnabled is set to true.
+        /// </summary>
         [NameInMap("AccessControlList")]
         [Validation(Required=false)]
         public List<string> AccessControlList { get; set; }
@@ -20,18 +23,42 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public string ApiServerEipId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable Argo CD. This parameter takes effect only if Profile is set to XFlow. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("ArgoCDEnabled")]
         [Validation(Required=false)]
         public bool? ArgoCDEnabled { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable high availability for Argo CD. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("ArgoCDHAEnabled")]
         [Validation(Required=false)]
         public bool? ArgoCDHAEnabled { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable ArgoEvents. Valid values:
+        /// 
+        /// - true
+        /// - false
+        /// </summary>
         [NameInMap("ArgoEventsEnabled")]
         [Validation(Required=false)]
         public bool? ArgoEventsEnabled { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("ArgoServerEnabled")]
         [Validation(Required=false)]
         public bool? ArgoServerEnabled { get; set; }
@@ -47,37 +74,50 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public bool? AuditLogEnabled { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable deletion protection for the cluster. After you enable deletion protection, you cannot delete the master instance in the console or by calling the DeleteHubCluster operation. Valid values:
+        /// Specifies whether to enable the deletion protection feature for the cluster. After you enable the deletion protection feature for the cluster, you cannot delete the cluster in the console or by calling the DeleteHubCluster operation. Valid values:
         /// 
-        /// *   true: enables deletion protection for the cluster.
-        /// *   false: disables deletion protection for the cluster. This is the default value.
+        /// *   true
+        /// *   false
+        /// 
+        /// Default value: false.
         /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Alibaba Cloud Service Mesh (ASM). Valid values:
+        /// Specifies whether to enable Service Mesh (ASM). Valid values:
         /// 
-        /// true: enables ASM. false: disables ASM.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("EnableMesh")]
         [Validation(Required=false)]
         public bool? EnableMesh { get; set; }
 
+        [NameInMap("MSEEnabled")]
+        [Validation(Required=false)]
+        public bool? MSEEnabled { get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable the monitoring dashboard feature for the workflow instance. This parameter takes effect only if Profile is set to XFlow. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("MonitorEnabled")]
         [Validation(Required=false)]
         public bool? MonitorEnabled { get; set; }
 
         /// <summary>
-        /// The name of the cluster. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).
+        /// The name of the master instance. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -90,6 +130,12 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public string PriceLimit { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("PublicAccessEnabled")]
         [Validation(Required=false)]
         public bool? PublicAccessEnabled { get; set; }
@@ -97,17 +143,26 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         /// <summary>
         /// Specifies whether to associate an elastic IP address (EIP) with the API server. Valid values:
         /// 
-        /// *   true: associates an EIP with the API server. You can specify the ApiServerEipId parameter. If you do not specify the ApiServerEipId parameter, the system automatically creates an EIP.
+        /// *   true: associates an EIP with the API server. You can specify ApiServerEipId. If you do not specify ApiServerEipId, the system automatically creates an EIP.
         /// *   false: disassociates an EIP from the API server.
         /// </summary>
         [NameInMap("PublicApiServerEnabled")]
         [Validation(Required=false)]
         public bool? PublicApiServerEnabled { get; set; }
 
+        /// <summary>
+        /// The vSwitches.
+        /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
         public List<string> VSwitches { get; set; }
 
+        /// <summary>
+        /// The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:
+        /// 
+        /// *   cost-optimized: cost-prioritized scheduling mode.
+        /// *   stock-optimized: inventory-prioritized scheduling mode.
+        /// </summary>
         [NameInMap("WorkflowScheduleMode")]
         [Validation(Required=false)]
         public string WorkflowScheduleMode { get; set; }

@@ -1790,6 +1790,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["EnableMesh"] = request.EnableMesh;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MSEEnabled))
+            {
+                query["MSEEnabled"] = request.MSEEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorEnabled))
             {
                 query["MonitorEnabled"] = request.MonitorEnabled;
@@ -1890,6 +1894,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMesh))
             {
                 query["EnableMesh"] = request.EnableMesh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MSEEnabled))
+            {
+                query["MSEEnabled"] = request.MSEEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorEnabled))
             {

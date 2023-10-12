@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class GrantUserPermissionsResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
