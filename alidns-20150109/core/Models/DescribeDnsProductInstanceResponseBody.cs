@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstanceResponseBody : TeaModel {
+        [NameInMap("AutoRenewal")]
+        [Validation(Required=false)]
+        public bool? AutoRenewal { get; set; }
+
         /// <summary>
         /// The number of times that you can change the domain names that are bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of the custom edition.
         /// </summary>
