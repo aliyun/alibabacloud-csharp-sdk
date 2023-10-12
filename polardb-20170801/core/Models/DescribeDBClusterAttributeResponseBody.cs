@@ -398,6 +398,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        [NameInMap("ProvisionedIops")]
+        [Validation(Required=false)]
+        public string ProvisionedIops { get; set; }
+
         /// <summary>
         /// The number of CPU cores for PolarProxy.
         /// </summary>
