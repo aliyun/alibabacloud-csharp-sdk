@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public GetOrderBaseInfoResponseBodyOrderBaseInfo OrderBaseInfo { get; set; }
         public class GetOrderBaseInfoResponseBodyOrderBaseInfo : TeaModel {
+            [NameInMap("AttachmentKey")]
+            [Validation(Required=false)]
+            public string AttachmentKey { get; set; }
+
             /// <summary>
             /// The remarks of the ticket.
             /// </summary>
@@ -71,6 +75,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("OrderId")]
             [Validation(Required=false)]
             public long? OrderId { get; set; }
+
+            [NameInMap("OriginAttachmentName")]
+            [Validation(Required=false)]
+            public string OriginAttachmentName { get; set; }
 
             /// <summary>
             /// The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](~~465865~~) operation.
