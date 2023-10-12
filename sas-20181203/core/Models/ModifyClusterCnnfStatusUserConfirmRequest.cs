@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// Specifies whether to fix the blocking status of the cluster. Valid values:
         /// 
         /// *   true: yes
-        /// *   fasle: no
+        /// *   false: no
         /// </summary>
         [NameInMap("UserConfirm")]
         [Validation(Required=false)]

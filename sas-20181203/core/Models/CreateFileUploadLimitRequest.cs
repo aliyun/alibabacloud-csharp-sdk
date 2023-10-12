@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class CreateAgentlessScanTaskResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
-        [NameInMap("RequestId")]
+    public class CreateFileUploadLimitRequest : TeaModel {
+        [NameInMap("Limit")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? Limit { get; set; }
 
     }
 

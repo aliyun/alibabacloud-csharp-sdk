@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string AttachTypes { get; set; }
 
+        [NameInMap("ContainerName")]
+        [Validation(Required=false)]
+        public string ContainerName { get; set; }
+
         [NameInMap("CveId")]
         [Validation(Required=false)]
         public string CveId { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("ImageName")]
+        [Validation(Required=false)]
+        public string ImageName { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Default value: **zh**. Valid values:
         /// 
@@ -68,6 +76,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Necessity")]
         [Validation(Required=false)]
         public string Necessity { get; set; }
+
+        [NameInMap("Path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// The tag that is used to search for the vulnerabilities. Valid values:

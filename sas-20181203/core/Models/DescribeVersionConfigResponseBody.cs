@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVersionConfigResponseBody : TeaModel {
+        /// <summary>
+        /// The quota for agentless detection.
+        /// 
+        /// >  The agentless detection feature is unavailable for purchase. You can ignore this parameter.
+        /// </summary>
         [NameInMap("AgentlessCapacity")]
         [Validation(Required=false)]
         public long? AgentlessCapacity { get; set; }
@@ -49,6 +54,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AssetLevel { get; set; }
 
+        /// <summary>
+        /// The quota for configuration assessment. Unit: times/month.
+        /// </summary>
         [NameInMap("CspmCapacity")]
         [Validation(Required=false)]
         public long? CspmCapacity { get; set; }
@@ -158,6 +166,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? OpenTime { get; set; }
 
+        /// <summary>
+        /// The quota for application protection. Unit: process/month.
+        /// </summary>
         [NameInMap("RaspCapacity")]
         [Validation(Required=false)]
         public long? RaspCapacity { get; set; }
@@ -244,6 +255,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? VmCores { get; set; }
 
+        /// <summary>
+        /// The quota for vulnerability fixing. Unit: times/month.
+        /// </summary>
         [NameInMap("VulFixCapacity")]
         [Validation(Required=false)]
         public long? VulFixCapacity { get; set; }

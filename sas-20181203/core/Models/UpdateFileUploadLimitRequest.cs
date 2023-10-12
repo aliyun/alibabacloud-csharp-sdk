@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class CreateAgentlessScanTaskResponseBody : TeaModel {
+    public class UpdateFileUploadLimitRequest : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// The QPS limit on the files uploaded from the client. Valid values: 100 to 10000.
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Limit")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? Limit { get; set; }
 
     }
 

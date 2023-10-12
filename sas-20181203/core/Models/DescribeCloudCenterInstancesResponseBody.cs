@@ -475,7 +475,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// 使用NextToken方式下返回的NextToken值。
+            /// The value of NextToken that is returned when the NextToken method is used.
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]

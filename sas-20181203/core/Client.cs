@@ -3443,6 +3443,72 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await CreateFileProtectRuleWithOptionsAsync(request, runtime);
         }
 
+        public CreateFileUploadLimitResponse CreateFileUploadLimitWithOptions(CreateFileUploadLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFileUploadLimit",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFileUploadLimitResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateFileUploadLimitResponse> CreateFileUploadLimitWithOptionsAsync(CreateFileUploadLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFileUploadLimit",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFileUploadLimitResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateFileUploadLimitResponse CreateFileUploadLimit(CreateFileUploadLimitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateFileUploadLimitWithOptions(request, runtime);
+        }
+
+        public async Task<CreateFileUploadLimitResponse> CreateFileUploadLimitAsync(CreateFileUploadLimitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateFileUploadLimitWithOptionsAsync(request, runtime);
+        }
+
         public CreateHoneypotResponse CreateHoneypotWithOptions(CreateHoneypotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29485,6 +29551,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["From"] = request.From;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -29496,6 +29566,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateErrorCodeList))
+            {
+                query["OperateErrorCodeList"] = request.OperateErrorCodeList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -29528,6 +29602,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStart))
             {
                 query["TimeStart"] = request.TimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UniqueInfo))
+            {
+                query["UniqueInfo"] = request.UniqueInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -29580,6 +29662,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["From"] = request.From;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -29591,6 +29677,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateErrorCodeList))
+            {
+                query["OperateErrorCodeList"] = request.OperateErrorCodeList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -29623,6 +29713,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStart))
             {
                 query["TimeStart"] = request.TimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UniqueInfo))
+            {
+                query["UniqueInfo"] = request.UniqueInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -29677,6 +29775,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["AttachTypes"] = request.AttachTypes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerName))
+            {
+                query["ContainerName"] = request.ContainerName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
             {
                 query["CveId"] = request.CveId;
@@ -29689,6 +29791,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["GroupId"] = request.GroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -29696,6 +29802,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
             {
                 query["Necessity"] = request.Necessity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchTags))
             {
@@ -29754,6 +29864,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["AttachTypes"] = request.AttachTypes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerName))
+            {
+                query["ContainerName"] = request.ContainerName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
             {
                 query["CveId"] = request.CveId;
@@ -29766,6 +29880,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["GroupId"] = request.GroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -29773,6 +29891,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
             {
                 query["Necessity"] = request.Necessity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchTags))
             {
@@ -32489,6 +32611,54 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await GetFileProtectRuleWithOptionsAsync(request, runtime);
         }
 
+        public GetFileUploadLimitResponse GetFileUploadLimitWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFileUploadLimit",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFileUploadLimitResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetFileUploadLimitResponse> GetFileUploadLimitWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFileUploadLimit",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFileUploadLimitResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetFileUploadLimitResponse GetFileUploadLimit()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetFileUploadLimitWithOptions(runtime);
+        }
+
+        public async Task<GetFileUploadLimitResponse> GetFileUploadLimitAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetFileUploadLimitWithOptionsAsync(runtime);
+        }
+
         public GetHoneypotAttackStatisticsResponse GetHoneypotAttackStatisticsWithOptions(GetHoneypotAttackStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -33349,6 +33519,72 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetLastOnceTaskInfoWithOptionsAsync(request, runtime);
+        }
+
+        public GetLogMetaResponse GetLogMetaWithOptions(GetLogMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStore))
+            {
+                query["LogStore"] = request.LogStore;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLogMeta",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLogMetaResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetLogMetaResponse> GetLogMetaWithOptionsAsync(GetLogMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStore))
+            {
+                query["LogStore"] = request.LogStore;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLogMeta",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLogMetaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetLogMetaResponse GetLogMeta(GetLogMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetLogMetaWithOptions(request, runtime);
+        }
+
+        public async Task<GetLogMetaResponse> GetLogMetaAsync(GetLogMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetLogMetaWithOptionsAsync(request, runtime);
         }
 
         public GetModuleConfigResponse GetModuleConfigWithOptions(GetModuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -50855,6 +51091,72 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateFileProtectRuleWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateFileUploadLimitResponse UpdateFileUploadLimitWithOptions(UpdateFileUploadLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFileUploadLimit",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFileUploadLimitResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateFileUploadLimitResponse> UpdateFileUploadLimitWithOptionsAsync(UpdateFileUploadLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFileUploadLimit",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFileUploadLimitResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateFileUploadLimitResponse UpdateFileUploadLimit(UpdateFileUploadLimitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateFileUploadLimitWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateFileUploadLimitResponse> UpdateFileUploadLimitAsync(UpdateFileUploadLimitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateFileUploadLimitWithOptionsAsync(request, runtime);
         }
 
         public UpdateHoneypotResponse UpdateHoneypotWithOptions(UpdateHoneypotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

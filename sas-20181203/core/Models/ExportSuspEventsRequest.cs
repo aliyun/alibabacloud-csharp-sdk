@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string From { get; set; }
 
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Default value: **zh**. Valid values:
         /// 
@@ -103,6 +107,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("OperateErrorCodeList")]
+        [Validation(Required=false)]
+        public List<string> OperateErrorCodeList { get; set; }
 
         /// <summary>
         /// The number of entries to return on each page. Default value: **20**.
@@ -197,6 +205,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("TimeStart")]
         [Validation(Required=false)]
         public string TimeStart { get; set; }
+
+        [NameInMap("UniqueInfo")]
+        [Validation(Required=false)]
+        public string UniqueInfo { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

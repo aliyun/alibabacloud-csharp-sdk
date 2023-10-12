@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the information about the baseline check policy.
+        /// The information about the baseline check policy.
         /// </summary>
         [NameInMap("Strategy")]
         [Validation(Required=false)]
