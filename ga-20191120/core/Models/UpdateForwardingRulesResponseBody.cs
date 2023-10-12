@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<UpdateForwardingRulesResponseBodyForwardingRules> ForwardingRules { get; set; }
         public class UpdateForwardingRulesResponseBodyForwardingRules : TeaModel {
             /// <summary>
-            /// The ID of the forwarding rule.
+            /// The forwarding rule ID.
             /// </summary>
             [NameInMap("ForwardingRuleId")]
             [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

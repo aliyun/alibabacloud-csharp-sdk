@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListEndpointGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The configurations of the endpoint group.
+        /// The configurations of the endpoint groups.
         /// </summary>
         [NameInMap("EndpointGroups")]
         [Validation(Required=false)]
         public List<ListEndpointGroupsResponseBodyEndpointGroups> EndpointGroups { get; set; }
         public class ListEndpointGroupsResponseBodyEndpointGroups : TeaModel {
             /// <summary>
-            /// The ID of the GA instance.
+            /// The GA instance ID.
             /// </summary>
             [NameInMap("AcceleratorId")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The configurations of the endpoint.
+            /// The configurations of the endpoints in the endpoint group.
             /// </summary>
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// Indicates whether the client IP address preservation feature is enabled. Valid values:
                 /// 
-                /// *   **true**: The client IP address preservation feature is enabled.
-                /// *   **false**: The client IP address preservation feature is disabled.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("EnableClientIPPreservation")]
                 [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// The ID of the endpoint.
+                /// The endpoint ID.
                 /// </summary>
                 [NameInMap("EndpointId")]
                 [Validation(Required=false)]
@@ -71,13 +71,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The protocol that is used to monitor latency. Valid values:
                 /// 
-                /// *   **icmp**: ICMP
-                /// *   **tcp**: TCP
+                /// *   **icmp**
+                /// *   **tcp**
                 /// </summary>
                 [NameInMap("ProbeProtocol")]
                 [Validation(Required=false)]
                 public string ProbeProtocol { get; set; }
 
+                /// <summary>
+                /// 弹性网卡的私网IP地址。
+                /// </summary>
                 [NameInMap("SubAddress")]
                 [Validation(Required=false)]
                 public string SubAddress { get; set; }
@@ -107,21 +110,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The ID of an endpoint group.
+            /// The endpoint group ID.
             /// </summary>
             [NameInMap("EndpointGroupId")]
             [Validation(Required=false)]
             public string EndpointGroupId { get; set; }
 
             /// <summary>
-            /// The list of endpoint group IP addresses.
+            /// The endpoint group IP addresses.
             /// </summary>
             [NameInMap("EndpointGroupIpList")]
             [Validation(Required=false)]
             public List<string> EndpointGroupIpList { get; set; }
 
             /// <summary>
-            /// The ID of the region where the endpoint group is deployed.
+            /// The region ID of the endpoint group.
             /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
@@ -130,15 +133,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of the endpoint group. Valid values:
             /// 
-            /// *   **default**: a default endpoint group
-            /// *   **virtual**: a virtual endpoint group
+            /// *   **default**
+            /// *   **virtual**
             /// </summary>
             [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
 
             /// <summary>
-            /// The endpoint group IP addresses to be confirmed after the GA instance is upgraded.
+            /// The endpoint group IP addresses to be confirmed. After the GA instance is upgraded, the IP addresses that are added to the endpoint group need to be confirmed.
             /// </summary>
             [NameInMap("EndpointGroupUnconfirmedIpList")]
             [Validation(Required=false)]
@@ -147,15 +150,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The protocol that is used by the backend service. Valid values:
             /// 
-            /// *   **HTTP**: HTTP
-            /// *   **HTTPS**: HTTPS
+            /// *   **HTTP**
+            /// *   **HTTPS**
             /// </summary>
             [NameInMap("EndpointRequestProtocol")]
             [Validation(Required=false)]
             public string EndpointRequestProtocol { get; set; }
 
             /// <summary>
-            /// The ID of the forwarding rule that is associated with the endpoint group.
+            /// The IDs of the forwarding rules that are associated with the endpoint group.
             /// </summary>
             [NameInMap("ForwardingRuleIds")]
             [Validation(Required=false)]
@@ -164,8 +167,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// Indicates whether the health check feature is enabled. Valid values:
             /// 
-            /// *   **true**: The health check feature is enabled.
-            /// *   **false**: The health check feature is disabled.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
@@ -179,7 +182,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? HealthCheckIntervalSeconds { get; set; }
 
             /// <summary>
-            /// The path to which health check requests are sent.
+            /// The path based on which the system performs health checks.
             /// </summary>
             [NameInMap("HealthCheckPath")]
             [Validation(Required=false)]
@@ -195,16 +198,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The protocol over which health check requests are sent. Valid values:
             /// 
-            /// *   **tcp**: TCP
-            /// *   **http**: HTTP
-            /// *   **https**: HTTPS
+            /// *   **tcp**
+            /// *   **http**
+            /// *   **https**
             /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// The ID of the listener.
+            /// The listener ID.
             /// </summary>
             [NameInMap("ListenerId")]
             [Validation(Required=false)]
@@ -218,7 +221,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The mappings between ports.
+            /// The port mapping.
             /// </summary>
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
@@ -241,66 +244,71 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The service ID to which the managed instance belongs.
+            /// The service that manages the instance.
             /// 
-            /// >  Valid only when the ServiceManaged parameter is True.
+            /// >  This parameter is valid only if **ServiceManaged** is set to **True**.
             /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// Is it a managed instance. Valid values:
+            /// Indicates whether the GA instance is managed. Valid values:
             /// 
-            /// - true
-            /// - false
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("ServiceManaged")]
             [Validation(Required=false)]
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// A list of action policies that users can execute on this managed instance.
+            /// The actions that users can perform on the managed instance.
+            /// 
+            /// >  This parameter is valid only if **ServiceManaged** is set to **True**.
+            /// 
+            /// *   Users can perform only specific actions on a managed instance.
             /// </summary>
             [NameInMap("ServiceManagedInfos")]
             [Validation(Required=false)]
             public List<ListEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> ServiceManagedInfos { get; set; }
             public class ListEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos : TeaModel {
                 /// <summary>
-                /// Managed policy action name, Valid values:
-                /// - Create
-                /// - Update
-                /// - Delete
-                /// - Associate
-                /// - UserUnmanaged
-                /// - CreateChild
+                /// The name of the action on the managed instance. Valid values:
+                /// 
+                /// *   **Create**
+                /// *   **Update**
+                /// *   **Delete**
+                /// *   **Associate**
+                /// *   **UserUnmanaged**
+                /// *   **CreateChild**
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
                 /// <summary>
-                /// Sub resource type, Valid values:
+                /// The type of the child resource. Valid values:
                 /// 
-                /// - Listener
-                /// - IpSet
-                /// - EndpointGroup
-                /// - ForwardingRule
-                /// - Endpoint
-                /// - EndpointGroupDestination
-                /// - EndpointPolicy
-                /// >Only valid when the Action parameter is CreateChild.
+                /// *   **Listener**: listener
+                /// *   **IpSet**: acceleration region
+                /// *   **EndpointGroup**: endpoint group
+                /// *   **ForwardingRule**: forwarding rule
+                /// *   **Endpoint**: endpoint
+                /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
+                /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
+                /// 
+                /// >  This parameter is valid only if **Action** is set to **CreateChild**.
                 /// </summary>
                 [NameInMap("ChildType")]
                 [Validation(Required=false)]
                 public string ChildType { get; set; }
 
                 /// <summary>
-                /// Is the managed policy action managed, Valid values:
+                /// Indicates whether the specified actions are managed. Valid values:
                 /// 
-                /// - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-                /// 
-                /// - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+                /// *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+                /// *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
                 /// </summary>
                 [NameInMap("IsManaged")]
                 [Validation(Required=false)]
@@ -309,19 +317,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The state of the endpoint group. Valid values:
+            /// The status of the endpoint group. Valid values:
             /// 
-            /// *   **init**: The endpoint group is being initialized.
-            /// *   **active**: The endpoint group is running normally.
-            /// *   **updating**:The endpoint group is being updated.
-            /// *   **deleteing**: The endpoint group is being deleted.
+            /// *   **init**
+            /// *   **active**
+            /// *   **updating**
+            /// *   **deleteing**
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The tags of the endpoint groups.
+            /// The tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

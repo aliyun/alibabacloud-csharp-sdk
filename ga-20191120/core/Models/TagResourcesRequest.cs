@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The tag value of the GA resource. The tag value can be an empty string.
             /// 
-            /// The tag value can be up to 128 characters in length and and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
             /// 
             /// You can specify up to 20 tag values.
             /// </summary>

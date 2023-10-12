@@ -93,6 +93,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string ProbeProtocol { get; set; }
 
+            /// <summary>
+            /// The private IP address of the ENI.
+            /// </summary>
             [NameInMap("SubAddress")]
             [Validation(Required=false)]
             public string SubAddress { get; set; }
@@ -103,10 +106,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// *   **Domain:** a custom domain name.
             /// *   **Ip:** a custom IP address.
             /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-            /// *   **ECS:** an Elastic Compute Service (ECS) instance.
-            /// *   **SLB:** a Server Load Balancer (SLB) instance.
-            /// *   **ALB:** an Application Load Balancer (ALB) instance.
-            /// *   **OSS:** an Object Storage Service (OSS) bucket.
+            /// *   **ECS:** Elastic Compute Service (ECS) instance.
+            /// *   **SLB:** Server Load Balancer (SLB) instance.
+            /// *   **ALB:** Application Load Balancer (ALB) instance.
+            /// *   **OSS:** Object Storage Service (OSS) bucket.
+            /// *   **ENI:** Elastic Network interface (ENI).
+            /// *   **NLB:** Network Load Balancer (NLB) instance.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

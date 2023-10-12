@@ -126,6 +126,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? SilenceTime { get; set; }
 
         /// <summary>
+        /// The state of the application monitor task. Valid values:
+        /// 
+        /// - **init**
+        /// 
+        /// - **active**
+        /// 
+        /// - **updating**
+        /// 
+        /// - **inactive**
+        /// 
+        /// - **deleting**
+        /// </summary>
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
+        /// <summary>
         /// The ID of the origin probing task.
         /// </summary>
         [NameInMap("TaskId")]

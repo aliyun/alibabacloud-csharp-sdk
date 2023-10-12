@@ -71,20 +71,27 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// The private IP address of the ENI.
+                /// 
+                /// > - When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.
+                /// </summary>
                 [NameInMap("SubAddress")]
                 [Validation(Required=false)]
                 public string SubAddress { get; set; }
 
                 /// <summary>
-                /// The type of the endpoint.
+                /// The type of the endpoint. Valid values:
                 /// 
                 /// *   **Domain:** a custom domain name.
                 /// *   **Ip:** a custom IP address.
                 /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-                /// *   **ECS:** an Elastic Compute Service (ECS) instance.
-                /// *   **SLB:** a Server Load Balancer (SLB) instance.
-                /// *   **ALB:** an Application Load Balancer (ALB) instance.
-                /// *   **OSS:** an Object Storage Service (OSS) bucket.
+                /// *   **ECS:** Elastic Compute Service (ECS) instance.
+                /// *   **SLB:** Server Load Balancer (SLB) instance.
+                /// *   **ALB:** Application Load Balancer (ALB) instance.
+                /// *   **OSS:** Object Storage Service (OSS) bucket.
+                /// *   **ENI:** Elastic Network interface (ENI).
+                /// *   **NLB:** Network Load Balancer (NLB) instance.
                 /// 
                 /// > 
                 /// 

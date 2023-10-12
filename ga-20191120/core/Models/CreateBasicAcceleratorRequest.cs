@@ -64,9 +64,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string BandwidthBillingType { get; set; }
 
         /// <summary>
-        /// The billing method of the basic GA instance. Valid values:
-        /// - **PREPAY**: subscription. This is the default value.
-        /// - **POSTPAY**: pay-as-you-go.
+        /// The billing method. Valid values:
+        /// 
+        /// *   **PREPAY** (default)
+        /// *   **POSTPAY**
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -96,18 +97,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The subscription duration of the GA instance.
         /// 
-        /// *   If you set the **PricingCycle** parameter to **Month**, the valid values for the **Duration** parameter are **1** to **9**.
-        /// *   If you set the **PricingCycle** parameter to **Year**, the valid values for the **Duration** parameter are **1** to **3**.
+        /// *   If you set **PricingCycle** to **Month**, the valid values for **Duration** are **1** to **9**.
+        /// *   If you set **PricingCycle** to **Year**, the valid values for **Duration** are **1** to **3**.
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// The billing cycle of the basic GA instance. Valid values:
+        /// The billing cycle. Valid values:
         /// 
-        /// *   **Month:** billed on a monthly basis.
-        /// *   **Year:** billed on an annual basis.
+        /// *   **Month**
+        /// *   **Year**
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
@@ -144,9 +145,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateBasicAcceleratorRequestTag> Tag { get; set; }
         public class CreateBasicAcceleratorRequestTag : TeaModel {
             /// <summary>
-            /// The tag key of the basic GA instance. The tag key cannot be an empty string.
+            /// The tag key. The tag key cannot be an empty string.
             /// 
-            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
             /// 
             /// You can specify up to 20 tag keys.
             /// </summary>
@@ -155,9 +156,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the basic GA instance. The tag value cannot be an empty string.
+            /// The tag value. The tag value cannot be an empty string.
             /// 
-            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
             /// 
             /// You can specify up to 20 tag values.
             /// </summary>
