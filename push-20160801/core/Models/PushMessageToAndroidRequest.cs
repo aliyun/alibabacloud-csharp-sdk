@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public string JobKey { get; set; }
 
+        [NameInMap("StoreOffline")]
+        [Validation(Required=false)]
+        public bool? StoreOffline { get; set; }
+
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }

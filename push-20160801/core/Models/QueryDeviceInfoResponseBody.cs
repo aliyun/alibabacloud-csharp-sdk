@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string Alias { get; set; }
 
+            [NameInMap("Brand")]
+            [Validation(Required=false)]
+            public string Brand { get; set; }
+
             [NameInMap("DeviceId")]
             [Validation(Required=false)]
             public string DeviceId { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("LastOnlineTime")]
             [Validation(Required=false)]
             public string LastOnlineTime { get; set; }
+
+            [NameInMap("Model")]
+            [Validation(Required=false)]
+            public string Model { get; set; }
 
             [NameInMap("Online")]
             [Validation(Required=false)]

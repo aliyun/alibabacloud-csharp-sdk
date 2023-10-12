@@ -489,7 +489,7 @@ namespace AlibabaCloud.SDK.Push20160801
         }
 
         /**
-          * @deprecated
+          * @deprecated : CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
           *
           * @param request CheckDeviceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.Push20160801
         }
 
         /**
-          * @deprecated
+          * @deprecated : CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
           *
           * @param request CheckDeviceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -567,7 +567,7 @@ namespace AlibabaCloud.SDK.Push20160801
         }
 
         /**
-          * @deprecated
+          * @deprecated : CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
           *
           * @param request CheckDeviceRequest
           * @return CheckDeviceResponse
@@ -580,7 +580,7 @@ namespace AlibabaCloud.SDK.Push20160801
         }
 
         /**
-          * @deprecated
+          * @deprecated : CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
           *
           * @param request CheckDeviceRequest
           * @return CheckDeviceResponse
@@ -831,7 +831,7 @@ namespace AlibabaCloud.SDK.Push20160801
         }
 
         /**
-          * @deprecated
+          * @deprecated : ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
           *
           * @param request ListSummaryAppsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -857,7 +857,7 @@ namespace AlibabaCloud.SDK.Push20160801
         }
 
         /**
-          * @deprecated
+          * @deprecated : ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
           *
           * @param request ListSummaryAppsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -883,7 +883,7 @@ namespace AlibabaCloud.SDK.Push20160801
         }
 
         /**
-          * @deprecated
+          * @deprecated : ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
           *
           * @return ListSummaryAppsResponse
          */
@@ -895,7 +895,7 @@ namespace AlibabaCloud.SDK.Push20160801
         }
 
         /**
-          * @deprecated
+          * @deprecated : ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
           *
           * @return ListSummaryAppsResponse
          */
@@ -1074,6 +1074,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidExtParameters"] = request.AndroidExtParameters;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHonorTargetUserType))
+            {
+                query["AndroidHonorTargetUserType"] = request.AndroidHonorTargetUserType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiReceiptId))
             {
                 query["AndroidHuaweiReceiptId"] = request.AndroidHuaweiReceiptId;
@@ -1173,6 +1177,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidRenderStyle))
             {
                 query["AndroidRenderStyle"] = request.AndroidRenderStyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidTargetUserType))
+            {
+                query["AndroidTargetUserType"] = request.AndroidTargetUserType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoPushMode))
             {
@@ -1377,6 +1385,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidExtParameters"] = request.AndroidExtParameters;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHonorTargetUserType))
+            {
+                query["AndroidHonorTargetUserType"] = request.AndroidHonorTargetUserType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiReceiptId))
             {
                 query["AndroidHuaweiReceiptId"] = request.AndroidHuaweiReceiptId;
@@ -1476,6 +1488,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidRenderStyle))
             {
                 query["AndroidRenderStyle"] = request.AndroidRenderStyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidTargetUserType))
+            {
+                query["AndroidTargetUserType"] = request.AndroidTargetUserType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoPushMode))
             {
@@ -1684,6 +1700,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["JobKey"] = request.JobKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreOffline))
+            {
+                query["StoreOffline"] = request.StoreOffline;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
             {
                 query["Target"] = request.Target;
@@ -1730,6 +1750,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobKey))
             {
                 query["JobKey"] = request.JobKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreOffline))
+            {
+                query["StoreOffline"] = request.StoreOffline;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
             {
@@ -1790,6 +1814,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["JobKey"] = request.JobKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreOffline))
+            {
+                query["StoreOffline"] = request.StoreOffline;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
             {
                 query["Target"] = request.Target;
@@ -1836,6 +1864,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobKey))
             {
                 query["JobKey"] = request.JobKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreOffline))
+            {
+                query["StoreOffline"] = request.StoreOffline;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
             {
@@ -1900,6 +1932,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["JobKey"] = request.JobKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreOffline))
+            {
+                query["StoreOffline"] = request.StoreOffline;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
             {
                 query["Target"] = request.Target;
@@ -1950,6 +1986,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobKey))
             {
                 query["JobKey"] = request.JobKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreOffline))
+            {
+                query["StoreOffline"] = request.StoreOffline;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
             {

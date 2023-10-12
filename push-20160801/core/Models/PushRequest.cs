@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public string AndroidExtParameters { get; set; }
 
+        [NameInMap("AndroidHonorTargetUserType")]
+        [Validation(Required=false)]
+        public int? AndroidHonorTargetUserType { get; set; }
+
         [NameInMap("AndroidHuaweiReceiptId")]
         [Validation(Required=false)]
         public string AndroidHuaweiReceiptId { get; set; }
@@ -128,6 +132,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [NameInMap("AndroidRenderStyle")]
         [Validation(Required=false)]
         public int? AndroidRenderStyle { get; set; }
+
+        [NameInMap("AndroidTargetUserType")]
+        [Validation(Required=false)]
+        public int? AndroidTargetUserType { get; set; }
 
         [NameInMap("AndroidVivoPushMode")]
         [Validation(Required=false)]
