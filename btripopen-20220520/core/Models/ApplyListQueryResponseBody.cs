@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ProjectTitle { get; set; }
 
+                [NameInMap("thirdpart_itinerary_id")]
+                [Validation(Required=false)]
+                public string ThirdpartItineraryId { get; set; }
+
                 [NameInMap("traffic_type")]
                 [Validation(Required=false)]
                 public int? TrafficType { get; set; }
@@ -194,6 +198,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("project_title")]
                 [Validation(Required=false)]
                 public string ProjectTitle { get; set; }
+
+                [NameInMap("thirdpart_itinerary_id")]
+                [Validation(Required=false)]
+                public string ThirdpartItineraryId { get; set; }
 
                 [NameInMap("traffic_type")]
                 [Validation(Required=false)]

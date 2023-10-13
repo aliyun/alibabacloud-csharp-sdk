@@ -168,6 +168,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ItineraryId { get; set; }
 
+            [NameInMap("itinerary_travel_standard")]
+            [Validation(Required=false)]
+            public ApplyAddRequestItineraryListItineraryTravelStandard ItineraryTravelStandard { get; set; }
+            public class ApplyAddRequestItineraryListItineraryTravelStandard : TeaModel {
+                [NameInMap("hotel_available_nights_per_day")]
+                [Validation(Required=false)]
+                public int? HotelAvailableNightsPerDay { get; set; }
+
+            }
+
             [NameInMap("need_hotel")]
             [Validation(Required=false)]
             public bool? NeedHotel { get; set; }
@@ -237,6 +247,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("itinerary_id")]
             [Validation(Required=false)]
             public string ItineraryId { get; set; }
+
+            [NameInMap("itinerary_travel_standard")]
+            [Validation(Required=false)]
+            public ApplyAddRequestItinerarySetListItineraryTravelStandard ItineraryTravelStandard { get; set; }
+            public class ApplyAddRequestItinerarySetListItineraryTravelStandard : TeaModel {
+                [NameInMap("hotel_available_nights_per_day")]
+                [Validation(Required=false)]
+                public int? HotelAvailableNightsPerDay { get; set; }
+
+            }
 
             [NameInMap("project_code")]
             [Validation(Required=false)]

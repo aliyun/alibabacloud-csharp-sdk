@@ -220,6 +220,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ItineraryId { get; set; }
 
+                [NameInMap("itinerary_travel_standard")]
+                [Validation(Required=false)]
+                public ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard ItineraryTravelStandard { get; set; }
+                public class ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard : TeaModel {
+                    [NameInMap("hotel_available_nights_per_day")]
+                    [Validation(Required=false)]
+                    public int? HotelAvailableNightsPerDay { get; set; }
+
+                }
+
                 [NameInMap("project_code")]
                 [Validation(Required=false)]
                 public string ProjectCode { get; set; }
@@ -227,6 +237,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("project_title")]
                 [Validation(Required=false)]
                 public string ProjectTitle { get; set; }
+
+                [NameInMap("thirdpart_itinerary_id")]
+                [Validation(Required=false)]
+                public string ThirdpartItineraryId { get; set; }
 
                 [NameInMap("traffic_type")]
                 [Validation(Required=false)]
@@ -274,6 +288,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ItineraryId { get; set; }
 
+                [NameInMap("itinerary_travel_standard")]
+                [Validation(Required=false)]
+                public ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard ItineraryTravelStandard { get; set; }
+                public class ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard : TeaModel {
+                    [NameInMap("hotel_available_nights_per_day")]
+                    [Validation(Required=false)]
+                    public int? HotelAvailableNightsPerDay { get; set; }
+
+                }
+
                 [NameInMap("project_code")]
                 [Validation(Required=false)]
                 public string ProjectCode { get; set; }
@@ -281,6 +305,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("project_title")]
                 [Validation(Required=false)]
                 public string ProjectTitle { get; set; }
+
+                [NameInMap("thirdpart_itinerary_id")]
+                [Validation(Required=false)]
+                public string ThirdpartItineraryId { get; set; }
 
                 [NameInMap("traffic_type")]
                 [Validation(Required=false)]

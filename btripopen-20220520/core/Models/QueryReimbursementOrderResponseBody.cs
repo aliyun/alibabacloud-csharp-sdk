@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string CorpId { get; set; }
 
+            [NameInMap("cost_center_code")]
+            [Validation(Required=false)]
+            public string CostCenterCode { get; set; }
+
+            [NameInMap("cost_center_name")]
+            [Validation(Required=false)]
+            public string CostCenterName { get; set; }
+
             [NameInMap("expenses")]
             [Validation(Required=false)]
             public List<QueryReimbursementOrderResponseBodyModuleExpenses> Expenses { get; set; }
@@ -64,6 +72,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("fee_type")]
                     [Validation(Required=false)]
                     public string FeeType { get; set; }
+
+                    [NameInMap("order_id")]
+                    [Validation(Required=false)]
+                    public string OrderId { get; set; }
 
                     [NameInMap("remark")]
                     [Validation(Required=false)]
@@ -112,6 +124,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string SettlementType { get; set; }
 
             }
+
+            [NameInMap("expenses_cover_dept_id")]
+            [Validation(Required=false)]
+            public string ExpensesCoverDeptId { get; set; }
+
+            [NameInMap("expenses_cover_dept_name")]
+            [Validation(Required=false)]
+            public string ExpensesCoverDeptName { get; set; }
+
+            [NameInMap("expenses_cover_invoice_title")]
+            [Validation(Required=false)]
+            public string ExpensesCoverInvoiceTitle { get; set; }
 
             [NameInMap("gmt_create")]
             [Validation(Required=false)]
@@ -172,6 +196,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("personal_amount")]
             [Validation(Required=false)]
             public string PersonalAmount { get; set; }
+
+            [NameInMap("project_code")]
+            [Validation(Required=false)]
+            public string ProjectCode { get; set; }
+
+            [NameInMap("project_name")]
+            [Validation(Required=false)]
+            public string ProjectName { get; set; }
 
             [NameInMap("reason")]
             [Validation(Required=false)]
