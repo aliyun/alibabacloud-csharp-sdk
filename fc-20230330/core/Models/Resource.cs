@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class Resource : TeaModel {
+        [NameInMap("resouceType")]
+        [Validation(Required=false)]
+        public string ResouceType { get; set; }
+
         [NameInMap("resourceArn")]
         [Validation(Required=false)]
         public string ResourceArn { get; set; }

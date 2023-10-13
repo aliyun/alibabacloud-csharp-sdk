@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("resourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
     }
 
 }
