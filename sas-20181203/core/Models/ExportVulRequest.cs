@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ContainerName { get; set; }
 
+        [NameInMap("CreateTsEnd")]
+        [Validation(Required=false)]
+        public long? CreateTsEnd { get; set; }
+
+        [NameInMap("CreateTsStart")]
+        [Validation(Required=false)]
+        public long? CreateTsStart { get; set; }
+
         [NameInMap("CveId")]
         [Validation(Required=false)]
         public string CveId { get; set; }
