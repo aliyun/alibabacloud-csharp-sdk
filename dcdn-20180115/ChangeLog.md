@@ -1,3 +1,6 @@
+2023-10-16 Version: 1.5.1
+- Generated csharp 2018-01-15 for dcdn.
+
 2023-10-10 Version: 1.5.0
 - Generated csharp 2018-01-15 for dcdn.
 

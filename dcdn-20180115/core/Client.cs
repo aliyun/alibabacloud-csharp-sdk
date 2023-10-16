@@ -5031,7 +5031,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
+          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnSSLCertificateList instead.
           * > You can call this operation up to 30 times per second per account.
           *
           * @param request DescribeDcdnCertificateListRequest
@@ -5075,7 +5075,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
+          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnSSLCertificateList instead.
           * > You can call this operation up to 30 times per second per account.
           *
           * @param request DescribeDcdnCertificateListRequest
@@ -5119,7 +5119,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
+          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnSSLCertificateList instead.
           * > You can call this operation up to 30 times per second per account.
           *
           * @param request DescribeDcdnCertificateListRequest
@@ -5133,7 +5133,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
+          * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnSSLCertificateList instead.
           * > You can call this operation up to 30 times per second per account.
           *
           * @param request DescribeDcdnCertificateListRequest
@@ -14939,6 +14939,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             {
                 query["FuncId"] = request.FuncId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchType))
+            {
+                query["MatchType"] = request.MatchType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -14992,6 +14996,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuncId))
             {
                 query["FuncId"] = request.FuncId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchType))
+            {
+                query["MatchType"] = request.MatchType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {

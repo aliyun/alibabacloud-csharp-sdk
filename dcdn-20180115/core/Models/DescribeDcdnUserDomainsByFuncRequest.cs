@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public int? FuncId { get; set; }
 
+        [NameInMap("MatchType")]
+        [Validation(Required=false)]
+        public string MatchType { get; set; }
+
         /// <summary>
         /// The number of the page to return. Default value: **1**. Valid values: **1 to 100000**.
         /// </summary>
