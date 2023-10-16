@@ -1,3 +1,6 @@
+2023-10-16 Version: 3.0.11
+- Generated csharp 2014-05-26 for Ecs.
+
 2023-10-09 Version: 3.0.10
 - Generated csharp 2014-05-26 for Ecs.
 

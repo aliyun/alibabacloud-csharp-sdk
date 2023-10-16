@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
 
+        [NameInMap("LaunchTemplateVersionNumber")]
+        [Validation(Required=false)]
+        public long? LaunchTemplateVersionNumber { get; set; }
+
         /// <summary>
         /// The ID of the request.
         /// </summary>
