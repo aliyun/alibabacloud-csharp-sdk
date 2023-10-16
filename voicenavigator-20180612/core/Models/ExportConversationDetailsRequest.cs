@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public List<string> Options { get; set; }
 
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public int? Result { get; set; }
+
         [NameInMap("RoundsLeftRange")]
         [Validation(Required=false)]
         public int? RoundsLeftRange { get; set; }

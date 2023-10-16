@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class CollectedNumberRequest : TeaModel {
+        [NameInMap("AdditionalContext")]
+        [Validation(Required=false)]
+        public string AdditionalContext { get; set; }
+
         [NameInMap("ConversationId")]
         [Validation(Required=false)]
         public string ConversationId { get; set; }

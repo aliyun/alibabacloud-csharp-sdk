@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [Validation(Required=false)]
             public long? Concurrency { get; set; }
 
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -41,9 +45,25 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("NluServiceParamsJson")]
+            [Validation(Required=false)]
+            public string NluServiceParamsJson { get; set; }
+
+            [NameInMap("Numbers")]
+            [Validation(Required=false)]
+            public List<string> Numbers { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("UnionInstanceId")]
+            [Validation(Required=false)]
+            public string UnionInstanceId { get; set; }
+
+            [NameInMap("UnionSource")]
+            [Validation(Required=false)]
+            public string UnionSource { get; set; }
 
         }
 

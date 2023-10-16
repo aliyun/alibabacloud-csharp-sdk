@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [Validation(Required=false)]
             public string FinalPrompt { get; set; }
 
+            /// <summary>
+            /// ""
+            /// </summary>
             [NameInMap("IntentTrigger")]
             [Validation(Required=false)]
             public string IntentTrigger { get; set; }

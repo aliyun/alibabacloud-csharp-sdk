@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("NluServiceParamsJson")]
+        [Validation(Required=false)]
+        public string NluServiceParamsJson { get; set; }
+
+        [NameInMap("NluServiceType")]
+        [Validation(Required=false)]
+        public string NluServiceType { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -20,6 +28,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("UnionSource")]
+        [Validation(Required=false)]
+        public string UnionSource { get; set; }
 
     }
 

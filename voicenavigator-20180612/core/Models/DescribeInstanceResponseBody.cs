@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeInstanceResponseBody : TeaModel {
+        [NameInMap("AbilityType")]
+        [Validation(Required=false)]
+        public string AbilityType { get; set; }
+
         [NameInMap("ApplicableOperations")]
         [Validation(Required=false)]
         public List<string> ApplicableOperations { get; set; }
@@ -37,6 +41,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("NluServiceParamsJson")]
+        [Validation(Required=false)]
+        public string NluServiceParamsJson { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -44,6 +52,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("UnionInstanceId")]
+        [Validation(Required=false)]
+        public string UnionInstanceId { get; set; }
+
+        [NameInMap("UnionSource")]
+        [Validation(Required=false)]
+        public string UnionSource { get; set; }
 
     }
 

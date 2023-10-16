@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListInstancesRequest : TeaModel {
+        [NameInMap("InstanceIdListJsonString")]
+        [Validation(Required=false)]
+        public string InstanceIdListJsonString { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("NluServiceTypeListJsonString")]
         [Validation(Required=false)]
         public string NluServiceTypeListJsonString { get; set; }
+
+        [NameInMap("Number")]
+        [Validation(Required=false)]
+        public string Number { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -20,6 +32,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("UnionInstanceId")]
+        [Validation(Required=false)]
+        public string UnionInstanceId { get; set; }
+
+        [NameInMap("UnionSource")]
+        [Validation(Required=false)]
+        public string UnionSource { get; set; }
 
     }
 
