@@ -9,10 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnCertificateDetailByIdRequest : TeaModel {
+        /// <summary>
+        /// The ID of the certificate.
+        /// </summary>
         [NameInMap("CertId")]
         [Validation(Required=false)]
         public string CertId { get; set; }
 
+        /// <summary>
+        /// The region of the certificate. Valid values:
+        /// 
+        /// *   **ap-southeast-1**: Singapore
+        /// *   **cn-hangzhou**: China (Hangzhou)
+        /// 
+        /// Default value: **cn-hangzhou**
+        /// </summary>
         [NameInMap("CertRegion")]
         [Validation(Required=false)]
         public string CertRegion { get; set; }
