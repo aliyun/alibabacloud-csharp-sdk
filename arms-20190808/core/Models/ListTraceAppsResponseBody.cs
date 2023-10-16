@@ -84,6 +84,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<string> Labels { get; set; }
 
+            [NameInMap("Language")]
+            [Validation(Required=false)]
+            public string Language { get; set; }
+
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }

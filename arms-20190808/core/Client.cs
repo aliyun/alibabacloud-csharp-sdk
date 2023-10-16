@@ -1194,6 +1194,186 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await BindPrometheusGrafanaInstanceWithOptionsAsync(request, runtime);
         }
 
+        public BlockAlarmNotificationResponse BlockAlarmNotificationWithOptions(BlockAlarmNotificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            {
+                query["AlarmId"] = request.AlarmId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerId))
+            {
+                query["HandlerId"] = request.HandlerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                query["Timeout"] = request.Timeout;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BlockAlarmNotification",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BlockAlarmNotificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<BlockAlarmNotificationResponse> BlockAlarmNotificationWithOptionsAsync(BlockAlarmNotificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            {
+                query["AlarmId"] = request.AlarmId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerId))
+            {
+                query["HandlerId"] = request.HandlerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                query["Timeout"] = request.Timeout;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BlockAlarmNotification",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BlockAlarmNotificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public BlockAlarmNotificationResponse BlockAlarmNotification(BlockAlarmNotificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BlockAlarmNotificationWithOptions(request, runtime);
+        }
+
+        public async Task<BlockAlarmNotificationResponse> BlockAlarmNotificationAsync(BlockAlarmNotificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BlockAlarmNotificationWithOptionsAsync(request, runtime);
+        }
+
+        public ChangeAlarmSeverityResponse ChangeAlarmSeverityWithOptions(ChangeAlarmSeverityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            {
+                query["AlarmId"] = request.AlarmId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerId))
+            {
+                query["HandlerId"] = request.HandlerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
+            {
+                query["Severity"] = request.Severity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeAlarmSeverity",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeAlarmSeverityResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ChangeAlarmSeverityResponse> ChangeAlarmSeverityWithOptionsAsync(ChangeAlarmSeverityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            {
+                query["AlarmId"] = request.AlarmId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerId))
+            {
+                query["HandlerId"] = request.HandlerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
+            {
+                query["Severity"] = request.Severity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeAlarmSeverity",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeAlarmSeverityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ChangeAlarmSeverityResponse ChangeAlarmSeverity(ChangeAlarmSeverityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeAlarmSeverityWithOptions(request, runtime);
+        }
+
+        public async Task<ChangeAlarmSeverityResponse> ChangeAlarmSeverityAsync(ChangeAlarmSeverityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeAlarmSeverityWithOptionsAsync(request, runtime);
+        }
+
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1356,6 +1536,178 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckServiceStatusWithOptionsAsync(request, runtime);
+        }
+
+        public ClaimAlarmResponse ClaimAlarmWithOptions(ClaimAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            {
+                query["AlarmId"] = request.AlarmId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerId))
+            {
+                query["HandlerId"] = request.HandlerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClaimAlarm",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClaimAlarmResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ClaimAlarmResponse> ClaimAlarmWithOptionsAsync(ClaimAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            {
+                query["AlarmId"] = request.AlarmId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerId))
+            {
+                query["HandlerId"] = request.HandlerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClaimAlarm",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClaimAlarmResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ClaimAlarmResponse ClaimAlarm(ClaimAlarmRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ClaimAlarmWithOptions(request, runtime);
+        }
+
+        public async Task<ClaimAlarmResponse> ClaimAlarmAsync(ClaimAlarmRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ClaimAlarmWithOptionsAsync(request, runtime);
+        }
+
+        public CloseAlarmResponse CloseAlarmWithOptions(CloseAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            {
+                query["AlarmId"] = request.AlarmId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerId))
+            {
+                query["HandlerId"] = request.HandlerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Solution))
+            {
+                query["Solution"] = request.Solution;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloseAlarm",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloseAlarmResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CloseAlarmResponse> CloseAlarmWithOptionsAsync(CloseAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            {
+                query["AlarmId"] = request.AlarmId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerId))
+            {
+                query["HandlerId"] = request.HandlerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Solution))
+            {
+                query["Solution"] = request.Solution;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloseAlarm",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloseAlarmResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CloseAlarmResponse CloseAlarm(CloseAlarmRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CloseAlarmWithOptions(request, runtime);
+        }
+
+        public async Task<CloseAlarmResponse> CloseAlarmAsync(CloseAlarmRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CloseAlarmWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -1956,6 +2308,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 body["Notice"] = request.Notice;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyMode))
+            {
+                body["NotifyMode"] = request.NotifyMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyStrategy))
             {
                 body["NotifyStrategy"] = request.NotifyStrategy;
@@ -2082,6 +2438,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notice))
             {
                 body["Notice"] = request.Notice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyMode))
+            {
+                body["NotifyMode"] = request.NotifyMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyStrategy))
             {

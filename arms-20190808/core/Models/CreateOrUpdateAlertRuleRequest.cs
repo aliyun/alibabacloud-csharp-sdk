@@ -221,6 +221,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Notice { get; set; }
 
+        [NameInMap("NotifyMode")]
+        [Validation(Required=false)]
+        public string NotifyMode { get; set; }
+
         /// <summary>
         /// The notification policy.
         /// 

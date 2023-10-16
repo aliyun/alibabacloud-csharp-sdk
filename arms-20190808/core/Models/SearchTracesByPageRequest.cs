@@ -40,9 +40,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// 是否过滤错误的调用链。
-        /// - `true`：过滤
-        /// - `false`（默认）：不过滤
+        /// Specifies whether to include the traces of abnormal calls.
+        /// 
+        /// *   `true`: No
+        /// *   `false` (default): Yes
         /// </summary>
         [NameInMap("IsError")]
         [Validation(Required=false)]
@@ -122,7 +123,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// The tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -134,7 +135,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// *   traceId: the ID of the trace.
             /// *   serverApp: the name of the server application.
             /// *   clientApp: the name of the client application.
-            /// *   service: the name of the operation.
+            /// *   service: the name of the API operation.
             /// *   rpc: the type of the call.
             /// *   msOfSpan: the duration exceeds a specific value.
             /// *   clientIp: the IP address of the client.
