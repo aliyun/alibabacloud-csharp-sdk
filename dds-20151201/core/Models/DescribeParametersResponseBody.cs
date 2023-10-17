@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
         /// <summary>
-        /// The parameter settings in the configuration template.
+        /// The settings of parameters that are being configured.
         /// </summary>
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string CheckingCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether a restart is required for parameter modifications to take effect.
+                /// Indicates whether a restart is required for parameter modifications to take effect. Valid values:
                 /// 
                 /// *   **false**: A restart is not required. Modifications take effect immediately.
                 /// *   **true**: A restart is required for parameter modifications to take effect.
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public bool? ForceRestart { get; set; }
 
                 /// <summary>
-                /// Indicates whether the parameter value can be changed.
+                /// Indicates whether the parameter value can be modified. Valid values:
                 /// 
-                /// *   **false**: The parameter value cannot be changed.
-                /// *   **true**: The parameter value can be changed.
+                /// *   **false**: The parameter value cannot be modified.
+                /// *   **true**: The parameter value can be modified.
                 /// </summary>
                 [NameInMap("ModifiableStatus")]
                 [Validation(Required=false)]
@@ -80,21 +80,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// The version of the database engine.
+        /// The database engine version of the instance.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The parameter settings for the running instance.
+        /// The settings of the parameters that have taken effect.
         /// </summary>
         [NameInMap("RunningParameters")]
         [Validation(Required=false)]
@@ -105,11 +105,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
             public class DescribeParametersResponseBodyRunningParametersParameter : TeaModel {
                 /// <summary>
-                /// 实例的角色类型，取值说明：
+                /// The role of the instance. Valid values:
                 /// 
-                /// - **db**：shard角色。
-                /// - **cs**：config server角色。
-                /// - **mongos**：mongos角色。
+                /// *   **db**: a shard node.
+                /// *   **cs**: a Configserver node.
+                /// *   **mongos**: a mongos node.
                 /// </summary>
                 [NameInMap("CharacterType")]
                 [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string CheckingCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether a restart is required for parameter modifications to take effect.
+                /// Indicates whether a restart is required for parameter modifications to take effect. Valid values:
                 /// 
                 /// *   **false**: A restart is not required. Modifications take effect immediately.
                 /// *   **true**: A restart is required for parameter modifications to take effect.
@@ -133,10 +133,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string ForceRestart { get; set; }
 
                 /// <summary>
-                /// Indicates whether the parameter value can be changed.
+                /// Indicates whether the parameter value can be modified. Valid values:
                 /// 
-                /// *   **false**: The parameter value cannot be changed.
-                /// *   **true**: The parameter value can be changed.
+                /// *   **false**: The parameter value cannot be modified.
+                /// *   **true**: The parameter value can be modified.
                 /// </summary>
                 [NameInMap("ModifiableStatus")]
                 [Validation(Required=false)]

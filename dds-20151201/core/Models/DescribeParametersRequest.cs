@@ -10,26 +10,27 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParametersRequest : TeaModel {
         /// <summary>
-        /// The type of the database account. Valid values:
+        /// The role of the instance. Valid values:
         /// 
-        /// *   mongos: an account that can be used to log on to a mongos node.
-        /// *   shard: an account that can be used to log on to a shard node.
+        /// *   db: a shard node.
+        /// *   cs: a Configserver node.
+        /// *   mongos: a mongos node.
         /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// The ID of the instance
+        /// The instance ID.
         /// 
-        /// > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+        /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// terrform use
+        /// The parameter that is available in the future.
         /// </summary>
         [NameInMap("ExtraParam")]
         [Validation(Required=false)]
@@ -38,7 +39,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the mongos or shard node in the specified sharded cluster instance.
         /// 
-        /// > This parameter is valid when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.
+        /// >  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

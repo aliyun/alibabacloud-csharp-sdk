@@ -572,6 +572,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["SourceDBInstance"] = request.SourceDBInstance;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstance))
+            {
+                query["SourceDBInstance"] = request.SourceDBInstance;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -637,6 +641,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstance))
+            {
+                query["SourceDBInstance"] = request.SourceDBInstance;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstance))
             {
@@ -3987,6 +3995,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["SourceDBInstance"] = request.SourceDBInstance;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstance))
+            {
+                query["SourceDBInstance"] = request.SourceDBInstance;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4063,6 +4075,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstance))
+            {
+                query["SourceDBInstance"] = request.SourceDBInstance;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstance))
             {
@@ -10569,6 +10585,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassicExpendExpiredDays))
             {
                 query["ClassicExpendExpiredDays"] = request.ClassicExpendExpiredDays;
@@ -10634,6 +10654,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassicExpendExpiredDays))
             {
                 query["ClassicExpendExpiredDays"] = request.ClassicExpendExpiredDays;

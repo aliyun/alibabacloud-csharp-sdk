@@ -769,6 +769,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
                 }
 
+                [NameInMap("UseClusterBackup")]
+                [Validation(Required=false)]
+                public bool? UseClusterBackup { get; set; }
+
                 /// <summary>
                 /// The instance ID.
                 /// 
