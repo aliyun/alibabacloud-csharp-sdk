@@ -178,6 +178,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> ScanRange { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
     }
 
 }

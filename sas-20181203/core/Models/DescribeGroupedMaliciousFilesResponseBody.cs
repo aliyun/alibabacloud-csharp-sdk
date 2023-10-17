@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Level { get; set; }
 
+            [NameInMap("MaliciousKey")]
+            [Validation(Required=false)]
+            public string MaliciousKey { get; set; }
+
             /// <summary>
             /// The MD5 hash value of the malicious image sample.
             /// </summary>

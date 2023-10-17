@@ -88,6 +88,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeImageSensitiveFileListResponseBodySensitiveFileList> SensitiveFileList { get; set; }
         public class DescribeImageSensitiveFileListResponseBodySensitiveFileList : TeaModel {
+            [NameInMap("ClassKey")]
+            [Validation(Required=false)]
+            public string ClassKey { get; set; }
+
+            [NameInMap("ClassName")]
+            [Validation(Required=false)]
+            public string ClassName { get; set; }
+
             /// <summary>
             /// The number of scans that are performed on the sensitive file.
             /// </summary>

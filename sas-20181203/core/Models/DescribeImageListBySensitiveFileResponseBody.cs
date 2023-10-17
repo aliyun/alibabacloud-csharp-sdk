@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
             /// <summary>
             /// The tag of the image.
             /// </summary>

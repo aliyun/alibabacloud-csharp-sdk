@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Advice { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             /// <summary>
             /// The file path.
             /// </summary>
@@ -122,6 +126,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("LayerDigest")]
             [Validation(Required=false)]
             public string LayerDigest { get; set; }
+
+            [NameInMap("Md5")]
+            [Validation(Required=false)]
+            public string Md5 { get; set; }
 
             /// <summary>
             /// The sensitive content.
