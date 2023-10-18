@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("IsGroupResource")]
+        [Validation(Required=false)]
+        public string IsGroupResource { get; set; }
+
         /// <summary>
         /// The region where the WAF instance resides. Valid values:
         /// 

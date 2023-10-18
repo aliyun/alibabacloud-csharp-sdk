@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The tag of the resource. You can specify up to 20 tags.
+        /// The tags of the resources that you want to query. You can specify up to 20 tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

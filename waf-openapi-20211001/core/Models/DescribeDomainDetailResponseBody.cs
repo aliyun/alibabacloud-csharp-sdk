@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<DescribeDomainDetailResponseBodyRedirectBackends> Backends { get; set; }
             public class DescribeDomainDetailResponseBodyRedirectBackends : TeaModel {
                 /// <summary>
-                /// The back-to-origin IP address or domain name.
+                /// The IP address or domain name of the origin server.
                 /// </summary>
                 [NameInMap("Backend")]
                 [Validation(Required=false)]
@@ -382,30 +382,51 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The information about the SM certificate.
+        /// </summary>
         [NameInMap("SM2CertDetail")]
         [Validation(Required=false)]
         public DescribeDomainDetailResponseBodySM2CertDetail SM2CertDetail { get; set; }
         public class DescribeDomainDetailResponseBodySM2CertDetail : TeaModel {
+            /// <summary>
+            /// The domain name of your website.
+            /// </summary>
             [NameInMap("CommonName")]
             [Validation(Required=false)]
             public string CommonName { get; set; }
 
+            /// <summary>
+            /// The end of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
+            /// <summary>
+            /// The ID of the SSL certificate.
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// The name of the SSL certificate.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// All domain names that are bound to the certificate.
+            /// </summary>
             [NameInMap("Sans")]
             [Validation(Required=false)]
             public List<string> Sans { get; set; }
 
+            /// <summary>
+            /// The beginning of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
