@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// Indicate whether the endpoint service supports the access policy. Valid values:
             /// 
-            /// *   **false**: no
-            /// *   **true**: yes
+            /// *   **false**
+            /// *   **true**
             /// </summary>
             [NameInMap("SupportPolicy")]
             [Validation(Required=false)]
@@ -80,6 +80,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }

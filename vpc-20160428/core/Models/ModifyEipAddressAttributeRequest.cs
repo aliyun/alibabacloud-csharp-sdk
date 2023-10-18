@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The new description of the EIP.
         /// 
-        /// The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+        /// The description must be 2 to 256 characters in length and start with a letter. The description cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

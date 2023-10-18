@@ -10,56 +10,59 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DownloadVpnConnectionConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The configuration of the IPsec-VPN connection.
+        /// The configurations of the peer gateway device.
         /// </summary>
         [NameInMap("VpnConnectionConfig")]
         [Validation(Required=false)]
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig VpnConnectionConfig { get; set; }
         public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig : TeaModel {
             /// <summary>
-            /// The IKE configuration.
+            /// The configurations of Phase 1 negotiations.
             /// </summary>
             [NameInMap("IkeConfig")]
             [Validation(Required=false)]
             public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig IkeConfig { get; set; }
             public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig : TeaModel {
                 /// <summary>
-                /// The IKE authentication algorithm. Valid values: **sha1** and **MD5**.
+                /// The authentication algorithm in the IKE phase.
                 /// </summary>
                 [NameInMap("IkeAuthAlg")]
                 [Validation(Required=false)]
                 public string IkeAuthAlg { get; set; }
 
                 /// <summary>
-                /// The IKE encryption algorithm.
+                /// The encryption algorithm in the IKE phase.
                 /// </summary>
                 [NameInMap("IkeEncAlg")]
                 [Validation(Required=false)]
                 public string IkeEncAlg { get; set; }
 
                 /// <summary>
-                /// The IKE lifetime. Unit: seconds.
+                /// The lifetime in the IKE phase. Unit: seconds.
                 /// </summary>
                 [NameInMap("IkeLifetime")]
                 [Validation(Required=false)]
                 public long? IkeLifetime { get; set; }
 
                 /// <summary>
-                /// The IKE mode. Valid values: **main** and **aggressive**. The **main** mode offers higher security. If NAT traversal is enabled, we recommend that you use the **aggressive** mode.
+                /// The IKE negotiation mode. Valid values:
+                /// 
+                /// *   **main**: This mode offers higher security during negotiations.
+                /// *   **aggressive**: This mode is faster and has a higher success rate.
                 /// </summary>
                 [NameInMap("IkeMode")]
                 [Validation(Required=false)]
                 public string IkeMode { get; set; }
 
                 /// <summary>
-                /// The DH group.
+                /// The DH group in the IKE phase.
                 /// </summary>
                 [NameInMap("IkePfs")]
                 [Validation(Required=false)]
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeVersion { get; set; }
 
                 /// <summary>
-                /// The local ID. The default value is the IP address of the VPN gateway. You can specify the value as an IP address or in the FQDN format.
+                /// The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.
                 /// </summary>
                 [NameInMap("LocalId")]
                 [Validation(Required=false)]
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Psk { get; set; }
 
                 /// <summary>
-                /// The peer ID. The default value is the IP address of the customer gateway. You can specify the value as an IP address or in the fully qualified domain name (FQDN) format.
+                /// The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.
                 /// </summary>
                 [NameInMap("RemoteId")]
                 [Validation(Required=false)]
@@ -96,35 +99,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The configuration of the IPsec-VPN connection.
+            /// The configurations of Phase 2 negotiations.
             /// </summary>
             [NameInMap("IpsecConfig")]
             [Validation(Required=false)]
             public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig IpsecConfig { get; set; }
             public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig : TeaModel {
                 /// <summary>
-                /// The IPsec authentication algorithm. Valid values: **sha1** and **md5**.
+                /// The authentication algorithm in the IPsec phase.
                 /// </summary>
                 [NameInMap("IpsecAuthAlg")]
                 [Validation(Required=false)]
                 public string IpsecAuthAlg { get; set; }
 
                 /// <summary>
-                /// The IPsec encryption algorithm.
+                /// The encryption algorithm in the IPsec phase.
                 /// </summary>
                 [NameInMap("IpsecEncAlg")]
                 [Validation(Required=false)]
                 public string IpsecEncAlg { get; set; }
 
                 /// <summary>
-                /// The IPsec lifetime. Unit: seconds.
+                /// The lifetime in the IPsec phase. Unit: seconds.
                 /// </summary>
                 [NameInMap("IpsecLifetime")]
                 [Validation(Required=false)]
                 public long? IpsecLifetime { get; set; }
 
                 /// <summary>
-                /// The DH group.
+                /// The DH group in the IPsec phase.
                 /// </summary>
                 [NameInMap("IpsecPfs")]
                 [Validation(Required=false)]
@@ -133,35 +136,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The identifier of the VPN gateway.
+            /// The identifier of the customer gateway.
             /// </summary>
             [NameInMap("Local")]
             [Validation(Required=false)]
             public string Local { get; set; }
 
             /// <summary>
-            /// The CIDR block on the virtual private cloud (VPC) side.
+            /// The CIDR block on the data center side.
             /// </summary>
             [NameInMap("LocalSubnet")]
             [Validation(Required=false)]
             public string LocalSubnet { get; set; }
 
             /// <summary>
-            /// The identifier of the customer gateway.
+            /// The identifier of the VPN gateway.
             /// </summary>
             [NameInMap("Remote")]
             [Validation(Required=false)]
             public string Remote { get; set; }
 
             /// <summary>
-            /// The CIDR block on the data center side.
+            /// The CIDR block on the virtual private cloud (VPC) side.
             /// </summary>
             [NameInMap("RemoteSubnet")]
             [Validation(Required=false)]
             public string RemoteSubnet { get; set; }
 
             /// <summary>
-            /// The tunnel configuration of the peer gateway device. Parameters in TunnelsConfig are returned only if the IPsec-VPN connection is in dual-tunnel mode.
+            /// The tunnel configurations of the peer gateway device.
+            /// 
+            /// The parameters in **TunnelsConfig** are returned only when the IPsec-VPN connection supports the dual-tunnel mode.
             /// </summary>
             [NameInMap("TunnelsConfig")]
             [Validation(Required=false)]
@@ -200,10 +205,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public long? IkeLifetime { get; set; }
 
                         /// <summary>
-                        /// The IKE negotiation mode. Valid values: 
+                        /// The IKE negotiation mode. Valid values:
                         /// 
-                        /// - **main**: This mode offers higher security during negotiations. 
-                        /// - **aggressive**: This mode is faster and has a higher success rate.
+                        /// *   **main**: This mode offers higher security during negotiations.
+                        /// *   **aggressive**: This mode is faster and has a higher success rate.
                         /// </summary>
                         [NameInMap("IkeMode")]
                         [Validation(Required=false)]

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSnatTableEntriesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the SNAT entries.
+        /// Details of SNAT entries.
         /// </summary>
         [NameInMap("SnatTableEntries")]
         [Validation(Required=false)]
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry> SnatTableEntry { get; set; }
             public class DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry : TeaModel {
+                /// <summary>
+                /// The ID of the NAT gateway to which the SNAT entry belongs.
+                /// </summary>
                 [NameInMap("NatGatewayId")]
                 [Validation(Required=false)]
                 public string NatGatewayId { get; set; }
@@ -92,9 +95,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the SNAT entry. Valid values:
                 /// 
-                /// *   **Pending**: being created or modified
-                /// *   **Available**: available
-                /// *   **Deleting**: being deleted
+                /// *   **Pending**
+                /// *   **Available**
+                /// *   **Deleting**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The number of returned entries.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

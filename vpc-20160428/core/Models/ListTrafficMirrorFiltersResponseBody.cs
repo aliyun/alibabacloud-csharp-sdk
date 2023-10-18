@@ -9,26 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTrafficMirrorFiltersResponseBody : TeaModel {
+        /// <summary>
+        /// The number of entries returned.
+        /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
+        /// <summary>
+        /// The maximum number of entries returned.
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If the return value of **NextToken** is not empty, the value indicates the token that is used for the next query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -58,8 +64,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The action of the outbound rule. Valid values:
                 /// 
-                /// *   **accept**: collects network traffic.
-                /// *   **drop**: does not collect network traffic.
+                /// *   **accept**
+                /// *   **drop**
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
@@ -89,10 +95,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The protocol that is used by the outbound traffic to be mirrored. Valid values:
                 /// 
-                /// *   **ALL**: all protocols
-                /// *   **ICMP**: ICMP
-                /// *   **TCP**: TCP
-                /// *   **UDP**: UDP
+                /// *   **ALL**
+                /// *   **ICMP**
+                /// *   **TCP**
+                /// *   **UDP**
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
@@ -115,8 +121,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The direction of the network traffic. Valid values:
                 /// 
-                /// *   **egress**: outbound
-                /// *   **ingress**: inbound
+                /// *   **egress**
+                /// *   **ingress**
                 /// </summary>
                 [NameInMap("TrafficDirection")]
                 [Validation(Required=false)]
@@ -160,8 +166,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The action of the inbound rule. Valid values:
                 /// 
-                /// *   **accept**: accepts network traffic.
-                /// *   **drop**: does not collect network traffic.
+                /// *   **accept**
+                /// *   **drop**
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
@@ -191,10 +197,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The protocol that is used by the inbound traffic to be mirrored. Valid values:
                 /// 
-                /// *   **ALL**: all protocols
-                /// *   **ICMP**: ICMP
-                /// *   **TCP**: TCP
-                /// *   **UDP**: UDP
+                /// *   **ALL**
+                /// *   **ICMP**
+                /// *   **TCP**
+                /// *   **UDP**
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
@@ -217,8 +223,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The direction of the network traffic. Valid values:
                 /// 
-                /// *   **egress**: outbound
-                /// *   **ingress**: inbound
+                /// *   **egress**
+                /// *   **ingress**
                 /// </summary>
                 [NameInMap("TrafficDirection")]
                 [Validation(Required=false)]
@@ -267,14 +273,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags> Tags { get; set; }
             public class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The key of tag N.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The value of tag N.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -290,7 +296,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string TrafficMirrorFilterDescription { get; set; }
 
             /// <summary>
-            /// The ID of the filter.
+            /// The ID of the traffic mirror filter.
             /// </summary>
             [NameInMap("TrafficMirrorFilterId")]
             [Validation(Required=false)]

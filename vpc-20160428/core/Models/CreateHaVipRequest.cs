@@ -77,14 +77,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tag of the resource.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateHaVipRequestTag> Tag { get; set; }
         public class CreateHaVipRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

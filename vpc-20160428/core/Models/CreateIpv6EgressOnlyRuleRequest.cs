@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// 
-        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId for each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the value of RequestId as the client token. The value of RequestId is different for each API request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The type of the instance for which you want to create an egress-only rule.
         /// 
-        /// Set the value to **Ipv6Address** (default). This value specifies the IPv6 address type.
+        /// Default value: **Ipv6Address**
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the IPv6 gateway.
+        /// The ID of the region in which the IPv6 gateway is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("DeleteHealthCheckIp")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The rate of the heath check. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.
+        /// The rate of health checks. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.
         /// 
         /// In this example, **HcThreshold** is set to **8** and **HcRate** is set to **2000**. In this example, probe packets are sent from **HealthCheckSourceIp** (source address) to **HealthCheckTargetIp** (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.
         /// </summary>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? HcRate { get; set; }
 
         /// <summary>
-        /// The health check threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.
+        /// The healthy threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.
         /// </summary>
         [NameInMap("HcThreshold")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).
         /// 
-        /// >  You can set this parameter if an Express Connect circuit is used.
+        /// >  You can set this parameter when an Express Connect circuit is used.
         /// </summary>
         [NameInMap("HealthCheckSourceIp")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The destination IP address that is used to perform health checks.
         /// 
-        /// >  This parameter is required when the **HealthCheckSourceIp** parameter is set.
+        /// >  This parameter is required when **HealthCheckSourceIp** is specified.
         /// </summary>
         [NameInMap("HealthCheckTargetIp")]
         [Validation(Required=false)]
@@ -95,8 +95,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The type of router to which the peer router interface belongs. Valid values:
         /// 
-        /// *   **VRouter**: vRouter
-        /// *   **VBR** (default): virtual border router (VBR)
+        /// *   **VRouter**
+        /// *   **VBR** (default)
         /// </summary>
         [NameInMap("OppositeRouterType")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the router interface belongs.
+        /// The region ID of the router interface.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>

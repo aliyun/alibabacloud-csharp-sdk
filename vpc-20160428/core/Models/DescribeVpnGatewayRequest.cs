@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnGatewayRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return information about pending orders. Valid values:
+        /// Specifies whether to include the data about pending orders. Valid values:
         /// 
         /// *   **false** (default)
         /// *   **true**

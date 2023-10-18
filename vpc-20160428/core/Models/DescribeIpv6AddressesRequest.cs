@@ -25,6 +25,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string AssociatedInstanceType { get; set; }
 
+        /// <summary>
+        /// Specifies whether to return information about pending orders. Valid values:
+        /// 
+        /// *   **false** (default)
+        /// *   **true**
+        /// </summary>
         [NameInMap("IncludeReservationData")]
         [Validation(Required=false)]
         public bool? IncludeReservationData { get; set; }
@@ -37,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6Address { get; set; }
 
         /// <summary>
-        /// The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 IDs in each API request. Separate IPv6 IDs with commas (,).
+        /// The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 address IDs in each API request. Separate IPv6 address IDs with commas (,).
         /// </summary>
         [NameInMap("Ipv6AddressId")]
         [Validation(Required=false)]
@@ -62,8 +68,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The type of communication supported by the IPv6 address. Valid values:
         /// 
-        /// *   **Private**: communication within private networks
-        /// *   **Public**: communication over the Internet
+        /// *   **Private**
+        /// *   **Public**
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]

@@ -12,9 +12,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. `The token can contain only ASCII characters.`
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `client token` can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// **
+        /// 
+        /// **Description** If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -26,7 +28,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **0**: no
         /// *   **1**: yes
         /// 
-        /// >  If EIP affinity is enabled and the SNAT entry is associated with multiple EIPs, a client uses the same EIP to access the Internet. Otherwise, the client uses an EIP selected from the associated EIPs to access the Internet.
+        /// **
+        /// 
+        /// **Description** After you enable EIP affinity, if multiple EIPs are associated with an SNAT entry, each client uses one EIP to access the Internet. If EIP affinity is disabled, each client uses a random EIP to access the Internet.
         /// </summary>
         [NameInMap("EipAffinity")]
         [Validation(Required=false)]
@@ -41,9 +45,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the NAT gateway is deployed.
+        /// The region ID of the NAT gateway.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   ap-northeast-2-pop
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     ap-northeast-2-pop
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     .
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -58,7 +78,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Enter a name for the SNAT entry.
+        /// The name of the SNAT entry.
         /// 
         /// The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
@@ -69,7 +89,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// *   The EIPs in the SNAT entry when you add an SNAT entry to an Internet NAT gateway. Separate EIPs with commas (,).
         /// 
-        /// >  If you select multiple EIPs to create an SNAT address pool, connections are hashed to these EIPs. Network traffic may not be evenly distributed to the EIPs because the amount of traffic that passes through each connection varies. We recommend that you associate these EIPs with the same EIP bandwidth plan to prevent service interruptions due to the bandwidth limit of an individual EIP.
+        /// **
+        /// 
+        /// **Description** If you specify multiple EIPs in the SNAT IP address pool, the service connection is allocated to multiple EIPs by using the hashing algorithm. The traffic of each EIP may be different. Therefore, we recommend that you associate the EIPs with an Internet Shared Bandwidth instance to prevent service interruptions caused by bandwidth exhaustion.
         /// 
         /// *   When you add an SNAT entry to a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.
         /// </summary>
@@ -98,7 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// If **SnatIp** is set to multiple EIPs, the ECS instance randomly selects an EIP specified in the **SnatIp** parameter to access the Internet.
         /// 
-        /// You cannot set this parameter and **SourceVSwtichId** at the same time. If the **SourceVSwitchId** parameter is set, you cannot set the **SourceCIDR** parameter. If the **SourceCIDR** parameter is set, you cannot set the **SourceVSwitchId** parameter.
+        /// You cannot specify this parameter and **SourceVSwtichId** at the same time. If **SourceVSwitchId** is specified, you cannot specify **SourceCIDR**. If **SourceCIDR** is specified, you cannot specify **SourceVSwitchId**.
         /// </summary>
         [NameInMap("SourceCIDR")]
         [Validation(Required=false)]

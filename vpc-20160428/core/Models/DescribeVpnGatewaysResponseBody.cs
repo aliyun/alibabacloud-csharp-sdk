@@ -38,9 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// If the order type is **TEMP_UPGRADE** (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.
-        /// 
-        /// If the order type is **RENEWCHANGE** (renewal with a specification change) or **RENEW** (renewal), this parameter indicates the time when the renewal or renewal with a specification change takes effect.
+        /// The information about VPN gateways.
         /// </summary>
         [NameInMap("VpnGateways")]
         [Validation(Required=false)]
@@ -53,8 +51,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether BGP routes are automatically advertised to the VPC. Valid values:
                 /// 
-                /// *   **true**: yes
-                /// *   **false**: no
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("AutoPropagate")]
                 [Validation(Required=false)]
@@ -63,8 +61,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The payment status of the VPN gateway.
                 /// 
-                /// *   **Normal:** The VPN gateway is running as expected.
-                /// *   **FinancialLocked**: The VPN gateway is locked due to overdue payments.
+                /// *   **Normal**
+                /// *   **FinancialLocked**
                 /// </summary>
                 [NameInMap("BusinessStatus")]
                 [Validation(Required=false)]
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The billing method of the VPN gateway.
                 /// 
-                /// The value is set to **POSTPAY**, which indicates the pay-as-you-go billing method.
+                /// The value is fixed as **POSTPAY**, which indicates the pay-as-you-go billing method.
                 /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
@@ -82,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The timestamp when the VPN gateway was created. Unit: milliseconds.
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -96,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The second IP address assigned by the system to create an IPsec-VPN connection. 
+                /// The second IP address assigned by the system to create an IPsec-VPN connection.
                 /// 
                 /// This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
                 /// </summary>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DisasterRecoveryInternetIp { get; set; }
 
                 /// <summary>
-                /// The ID of the second vSwitch associated with the VPN gateway. 
+                /// The ID of the second vSwitch associated with the VPN gateway.
                 /// 
                 /// This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
                 /// </summary>
@@ -114,10 +112,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DisasterRecoveryVSwitchId { get; set; }
 
                 /// <summary>
-                /// The BGP status of the VPN gateway.
+                /// Indicates whether BGP is enabled for the VPN gateway.
                 /// 
-                /// *   **true**: enabled
-                /// *   **false**: disabled
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("EnableBgp")]
                 [Validation(Required=false)]
@@ -126,17 +124,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The timestamp when the VPN gateway expires. Unit: milliseconds.
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// - If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection. 
-                /// - If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection. 
+                /// *   If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.
                 /// 
-                /// If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.
+                /// *   If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection.
+                /// 
+                ///     If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.
                 /// </summary>
                 [NameInMap("InternetIp")]
                 [Validation(Required=false)]
@@ -145,8 +144,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether IPsec-VPN is enabled for the VPN gateway.
                 /// 
-                /// *   **enable**: enabled
-                /// *   **disable**: disabled
+                /// *   **enable**
+                /// *   **disable**
                 /// </summary>
                 [NameInMap("IpsecVpn")]
                 [Validation(Required=false)]
@@ -162,15 +161,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The network type of the VPN gateway.
                 /// 
-                /// *   **public**: public VPN gateway
-                /// *   **private**: private VPN gateway
+                /// *   **public**
+                /// *   **private**
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The information about the pending orders. 
+                /// The information about pending orders.
                 /// 
                 /// >  This parameter is returned only when **IncludeReservationData** is set to **true**.
                 /// </summary>
@@ -179,19 +178,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData ReservationData { get; set; }
                 public class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData : TeaModel {
                     /// <summary>
-                    /// If the order type is **TEMP_UPGRADE** (temporary upgrade), this parameter specifies the time when the temporary upgrade expires. 
+                    /// If the order type is **TEMP_UPGRADE** (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.
                     /// 
-                    /// If the order type is **RENEWCHANGE** (renewal with an upgrade or a downgrade) or **RENEW** (renewal), this parameter indicates the time when the renewal or renewal with an upgrade or a downgrade takes effect.
+                    /// If the order type is **RENEWCHANGE** (renewal with a specification change) or **RENEW** (renewal), this parameter indicates the time when the renewal or renewal with a specification change takes effect.
                     /// </summary>
                     [NameInMap("ReservationEndTime")]
                     [Validation(Required=false)]
                     public string ReservationEndTime { get; set; }
 
                     /// <summary>
-                    /// The IPsec-VPN status of the order that has not taken effect. Valid values: 
+                    /// The IPsec-VPN status of the order that has not taken effect. Valid values:
                     /// 
-                    /// - **enable**: enabled
-                    /// - **disable**: disabled
+                    /// *   **enable**
+                    /// *   **disable**
                     /// </summary>
                     [NameInMap("ReservationIpsec")]
                     [Validation(Required=false)]
@@ -205,38 +204,38 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public int? ReservationMaxConnections { get; set; }
 
                     /// <summary>
-                    /// The type of the order that has not taken effect. Valid values: 
+                    /// The type of the order that has not taken effect. Valid values:
                     /// 
-                    /// - **RENEWCHANGE**: renewal with a specification change
-                    /// - **TEMP_UPGRADE**: temporary upgrade
-                    /// - **RENEW**: renewal
+                    /// *   **RENEWCHANGE**: renewal with a specification change
+                    /// *   **TEMP_UPGRADE**: temporary upgrade
+                    /// *   **RENEW**: renewal
                     /// </summary>
                     [NameInMap("ReservationOrderType")]
                     [Validation(Required=false)]
                     public string ReservationOrderType { get; set; }
 
                     /// <summary>
-                    /// The bandwidth specification of the order that has not taken effect. Unit: Mbit/s.
+                    /// The bandwidth of the pending order. Unit: Mbit/s.
                     /// </summary>
                     [NameInMap("ReservationSpec")]
                     [Validation(Required=false)]
                     public string ReservationSpec { get; set; }
 
                     /// <summary>
-                    /// The SSL-VPN status of the order that has not taken effect. Valid values: 
+                    /// The SSL-VPN status of the order that has not taken effect. Valid values:
                     /// 
-                    /// - **enable**: enabled
-                    /// - **disable**: disabled
+                    /// *   **enable**
+                    /// *   **disable**
                     /// </summary>
                     [NameInMap("ReservationSsl")]
                     [Validation(Required=false)]
                     public string ReservationSsl { get; set; }
 
                     /// <summary>
-                    /// The status of the pending order. 
+                    /// The status of the order that has not taken effect.
                     /// 
-                    /// - **1**: indicates that the order for renewal or the order for renewal with a specification change has not taken effect.
-                    /// - **2**: indicates that the order for a temporary upgrade has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specification.
+                    /// *   **1**: indicates that the order is an order for renewal or renewal with a specification change and the order has not taken effect.
+                    /// *   **2**: indicates that the order is an order for temporary upgrade and the order has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specification.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -261,15 +260,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether SSL-VPN is enabled for the VPN gateway.
                 /// 
-                /// *   **enable**: enabled
-                /// *   **disable**: disabled
+                /// *   **enable**
+                /// *   **disable**
                 /// </summary>
                 [NameInMap("SslVpn")]
                 [Validation(Required=false)]
                 public string SslVpn { get; set; }
 
                 /// <summary>
-                /// The IP address of the SSL-VPN connection. 
+                /// The IP address of the SSL-VPN connection.
                 /// 
                 /// This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.
                 /// </summary>
@@ -278,10 +277,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string SslVpnInternetIp { get; set; }
 
                 /// <summary>
-                /// The status of the pending order.
+                /// The status of the VPN gateway. Valid values:
                 /// 
-                /// *   **1**: indicates that the order for renewal or the order for renewal with a specification change has not taken effect.
-                /// *   **2**: indicates that the order for a temporary upgrade has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specification.
+                /// *   **init**
+                /// *   **provisioning**
+                /// *   **active**
+                /// *   **updating**
+                /// *   **deleting**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -292,34 +294,34 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// 
                 /// *   **VpnEnableBgp**: indicates whether the VPN gateway supports BGP. Valid values:
                 /// 
-                ///     *   **true**: yes
-                ///     *   **false**: no
+                ///     *   **true**
+                ///     *   **false**
                 /// 
                 /// *   **VisuallySsl**: indicates whether the VPN gateway allows you to view information about connected SSL clients.
                 /// 
-                ///     *   **true**: yes
-                ///     *   **false**: no
+                ///     *   **true**
+                ///     *   **false**
                 /// 
                 /// *   **PbrPriority**: indicates whether the VPN gateway allows you to configure priorities for policy-based routes.
                 /// 
-                ///     *   **true**: yes
-                ///     *   **false**: no
+                ///     *   **true**
+                ///     *   **false**
                 /// 
                 /// *   **VpnNewImage**: indicates whether the VPN gateway is upgraded.
                 /// 
-                ///     *   **true**: yes
-                ///     *   **false**: no
+                ///     *   **true**
+                ///     *   **false**
                 /// 
-                /// *   **description**: the description of the VPN gateway. This parameter is for internal system use only.
+                /// *   **description**
                 /// 
-                /// *   **VpnVersion**: the version of the VPN gateway.
+                /// *   **VpnVersion**
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// The list of tags added to the VPN gateway.
+                /// The tags to be added to the VPN gateway.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -330,14 +332,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTagsTag> Tag { get; set; }
                     public class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The key of tag N added to the resource.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The value of tag N added to the resource.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -355,7 +357,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC to which the VPN gateway belongs.
+                /// The ID of the virtual private cloud (VPC) to which the VPN gateway belongs.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -371,7 +373,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The type of the VPN gateway.
                 /// 
-                /// The value is set to **Normal**, which indicates a standard NAT gateway.
+                /// Only **Normal** may be returned, which indicates a standard NAT gateway.
                 /// </summary>
                 [NameInMap("VpnType")]
                 [Validation(Required=false)]

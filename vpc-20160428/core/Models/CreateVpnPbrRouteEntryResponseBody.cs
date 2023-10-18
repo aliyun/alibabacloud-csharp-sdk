@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnPbrRouteEntryResponseBody : TeaModel {
         /// <summary>
-        /// The timestamp generated when the policy-based route was created. Unit: milliseconds.
+        /// The time when the policy-based route was created.
         /// 
-        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.
+        /// The tunneling protocol. The value is **Ipsec**.
         /// </summary>
         [NameInMap("OverlayMode")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string State { get; set; }
 
         /// <summary>
-        /// The ID of the VPN gateway.
+        /// The VPN gateway ID.
         /// </summary>
         [NameInMap("VpnInstanceId")]
         [Validation(Required=false)]
         public string VpnInstanceId { get; set; }
 
         /// <summary>
-        /// The weight of the policy-based route.
+        /// The weight of the policy-based route. Valid values:
         /// 
         /// *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
         /// *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.

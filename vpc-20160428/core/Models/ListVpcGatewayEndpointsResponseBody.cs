@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<string> AssociatedRouteTables { get; set; }
 
             /// <summary>
-            /// The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+            /// The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -74,6 +74,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string PolicyDocument { get; set; }
 
+            /// <summary>
+            /// The ID of the resource group to which the gateway endpoint belongs.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -85,14 +88,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            /// <summary>
+            /// The tag list.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListVpcGatewayEndpointsResponseBodyEndpointsTags> Tags { get; set; }
             public class ListVpcGatewayEndpointsResponseBodyEndpointsTags : TeaModel {
+                /// <summary>
+                /// The key of tag N added to the resource.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The value of tag N added to the resource.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -109,31 +121,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
         /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+        /// *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

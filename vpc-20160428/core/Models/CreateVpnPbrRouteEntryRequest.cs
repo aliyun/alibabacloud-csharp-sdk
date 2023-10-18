@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate a token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token.******** ****The request ID may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -55,8 +55,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The priority of the policy-based route. Valid values: **1** to **100**. Default value: **10**.
         /// 
         /// A smaller value indicates a higher priority.
-        /// 
-        /// >  Only some VPN gateways in specific regions allow you to configure priorities for policy-based routes. For more information about the regions, see [Match rules of policy-based routes](~~110777~~).
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -65,15 +63,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to advertise the policy-based route to a virtual private cloud (VPC) route table. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("PublishVpc")]
         [Validation(Required=false)]
         public bool? PublishVpc { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The region ID of the VPN gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -102,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteSource { get; set; }
 
         /// <summary>
-        /// The ID of the VPN gateway.
+        /// The VPN gateway ID.
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]
@@ -111,14 +109,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The weight of the policy-based route.
         /// 
-        /// If you use the same VPN gateway to establish active/standby IPsec-VPN connections, you can configure route weights to specify which connection is active. A value of 100 specifies the active connection while a value of 0 specifies the standby connection.
+        /// If you use the same VPN gateway to establish active/standby IPsec-VPN connections, you can configure route weights to specify which connection is active. A value of 100 specifies the active connection, whereas a value of 0 specifies the standby connection.
         /// 
-        /// You can configure health checks to automatically check the connection connectivity. If the active connection is down, the standby connection automatically takes over. For more information, see [CreateVpnConnection](~~120391~~).
+        /// You can configure health checks to automatically check the connectivity of IPsec-VPN connections. If the active connection is down, the standby connection automatically takes over. For more information, see [CreateVpnConnection](~~120391~~).
         /// 
         /// *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
         /// *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.
         /// 
-        /// >  When you specify the active or standby connection, the primary route and secondary route must use the same source CIDR block and destination CIDR block.
+        /// >  If you specify active/standby IPsec-VPN connections, the active policy-based route and the standby policy-based route must have the same source and destination CIDR blocks.
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

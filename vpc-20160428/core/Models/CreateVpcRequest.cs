@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// Specifies whether to perform a dry run, without performing the actual request. Valid values:
         /// 
-        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -52,33 +52,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable IPv6. Valid values:
         /// 
-        /// *   **false** (default): no
-        /// *   **true**: yes
+        /// *   **false** (default)
+        /// *   **true**
         /// </summary>
         [NameInMap("EnableIpv6")]
         [Validation(Required=false)]
         public bool? EnableIpv6 { get; set; }
 
+        /// <summary>
+        /// The ID of the IP Address Manager (IPAM) pool of the IPv4 type.
+        /// </summary>
         [NameInMap("Ipv4IpamPoolId")]
         [Validation(Required=false)]
         public string Ipv4IpamPoolId { get; set; }
 
         /// <summary>
-        /// The IPv6 CIDR blocks of the VPC.
+        /// The IPv6 CIDR block of the VPC.
         /// </summary>
         [NameInMap("Ipv6CidrBlock")]
         [Validation(Required=false)]
         public string Ipv6CidrBlock { get; set; }
 
         /// <summary>
-        /// The type of the IPv6 CIDR block. Valid values:
+        /// The type of the IPv6 CIDR block of the VPC. Valid values:
         /// 
-        /// *   **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP)
-        /// *   **ChinaMobile**: China Mobile (single ISP).
-        /// *   **ChinaUnicom**: China Unicom (single ISP).
-        /// *   **ChinaTelecom**: China Telecom (single ISP).
+        /// *   **BGP** (default)
+        /// *   **ChinaMobile**
+        /// *   **ChinaUnicom**
+        /// *   **ChinaTelecom**
         /// 
-        /// >  If your Alibaba Cloud account is allowed to use single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
+        /// >  If you are allowed to use single-ISP bandwidth, you can set the value to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
         /// </summary>
         [NameInMap("Ipv6Isp")]
         [Validation(Required=false)]
@@ -118,14 +121,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tag of the resource.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateVpcRequestTag> Tag { get; set; }
         public class CreateVpcRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

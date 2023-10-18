@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string AssociatedInstanceType { get; set; }
 
                 /// <summary>
-                /// The IPv6 address.
+                /// The IPv6 address of the instance.
                 /// </summary>
                 [NameInMap("Ipv6Address")]
                 [Validation(Required=false)]
@@ -86,22 +86,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The status of the Internet bandwidth of the IPv6 address. Valid values:
                     /// 
-                    /// *   **Normal**: normal
-                    /// *   **FinancialLocked**: locked due to overdue payments
-                    /// *   **SecurityLocked**: locked due to security reasons
+                    /// *   **Normal**
+                    /// *   **FinancialLocked**
+                    /// *   **SecurityLocked**
                     /// </summary>
                     [NameInMap("BusinessStatus")]
                     [Validation(Required=false)]
                     public string BusinessStatus { get; set; }
 
+                    /// <summary>
+                    /// Indicates whether renewal data is included.
+                    /// 
+                    /// *   **false**
+                    /// *   **true** This parameter returns **true** only if **IncludeReservationData** is set to **true** and some orders have not taken effect.
+                    /// </summary>
                     [NameInMap("HasReservationData")]
                     [Validation(Required=false)]
                     public bool? HasReservationData { get; set; }
 
                     /// <summary>
-                    /// The billing method of the Internet bandwidth of the IPv6 address. Valid values:
+                    /// The billing method of the Internet bandwidth of the IPv6 address.
                     /// 
-                    /// **PostPaid**: pay-as-you-go
+                    /// Only **PostPaid** may be returned, which indicates the pay-as-you-go billing method.
                     /// </summary>
                     [NameInMap("InstanceChargeType")]
                     [Validation(Required=false)]
@@ -124,18 +130,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public string Ipv6InternetBandwidthId { get; set; }
 
+                    /// <summary>
+                    /// The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+                    /// </summary>
                     [NameInMap("ReservationActiveTime")]
                     [Validation(Required=false)]
                     public string ReservationActiveTime { get; set; }
 
+                    /// <summary>
+                    /// The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.
+                    /// </summary>
                     [NameInMap("ReservationBandwidth")]
                     [Validation(Required=false)]
                     public long? ReservationBandwidth { get; set; }
 
+                    /// <summary>
+                    /// The metering method that is used after the renewal takes effect.
+                    /// 
+                    /// *   **PayByTraffic**: pay-by-data-transfer
+                    /// *   **PayByBandwidth**: pay-by-bandwidth
+                    /// </summary>
                     [NameInMap("ReservationInternetChargeType")]
                     [Validation(Required=false)]
                     public string ReservationInternetChargeType { get; set; }
 
+                    /// <summary>
+                    /// The type of the renewal order. Only **RENEW** may be returned, which indicates that the order is placed for service renewal.
+                    /// </summary>
                     [NameInMap("ReservationOrderType")]
                     [Validation(Required=false)]
                     public string ReservationOrderType { get; set; }
@@ -145,10 +166,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The service provider of the IPv6 address. Valid values:
                 /// 
-                /// *   **BGP**: Alibaba Cloud Border Gateway Protocol (BGP) IPv6. This is the default value.
-                /// *   **ChinaMobile**: China Mobile (single ISP).
-                /// *   **ChinaUnicom**: China Unicom (single ISP).
-                /// *   **ChinaTelecom**: China Telecom (single ISP).
+                /// *   **BGP** (default)
+                /// *   **ChinaMobile**
+                /// *   **ChinaUnicom**
+                /// *   **ChinaTelecom**
                 /// </summary>
                 [NameInMap("Ipv6Isp")]
                 [Validation(Required=false)]
@@ -157,8 +178,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The type of communication supported by the IPv6 address. Valid values:
                 /// 
-                /// *   **Private**: communication within private networks
-                /// *   **Public**: communication over the Internet
+                /// *   **Private**
+                /// *   **Public**
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -178,8 +199,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the IPv6 address. Valid values:
                 /// 
-                /// *   **Pending**: being configured
-                /// *   **Available**: available
+                /// *   **Pending**
+                /// *   **Available**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -204,28 +225,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of the returned page. Default value: **1**.
+        /// The page number of the returned page. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries returned per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of returned entries.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

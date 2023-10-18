@@ -49,7 +49,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the DNAT table.
         /// 
-        /// >  You must set at least one of the **ForwardTableId** and **NatGatewayId** parameters.
+        /// **
+        /// 
+        /// **Description** You must specify at least one of **ForwardTableId** and **NatGatewayId**.
         /// </summary>
         [NameInMap("ForwardTableId")]
         [Validation(Required=false)]
@@ -76,9 +78,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The protocol. Valid values:
         /// 
-        /// *   **TCP**: The NAT gateway forwards TCP packets.
-        /// *   **UDP**: The NAT gateway forwards UDP packets.
-        /// *   **Any**: The NAT gateway forwards packets of all protocols.
+        /// *   **TCP**
+        /// *   **UDP**
+        /// *   **Any**
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
@@ -87,7 +89,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the NAT gateway.
         /// 
-        /// >  You must set at least one of the **ForwardTableId** and **NatGatewayId** parameters.
+        /// **
+        /// 
+        /// **Description** You must specify at least one of **ForwardTableId** and **NatGatewayId**.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -102,21 +106,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the NAT gateway.
+        /// The ID of the region where you want to create the NAT gateway.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>

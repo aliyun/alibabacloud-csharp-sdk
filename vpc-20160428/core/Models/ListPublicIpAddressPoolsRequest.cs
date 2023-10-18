@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPublicIpAddressPoolsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// Specifies whether to perform a dry run, without performing the actual request. Valid values:
         /// 
-        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.
+        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -22,21 +22,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The line type. Valid values:
         /// 
-        /// *   **BGP** (default): BGP (Multi-ISP) lines
-        /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
+        /// *   **BGP** (default): BGP (Multi-ISP) line
+        /// *   **BGP_PRO**: BGP (Multi-ISP) Pro line
         /// 
-        /// For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+        /// For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the "Line types" section of [What is EIP?](~~32321~~)
         /// 
         /// If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
         /// 
-        /// *   **ChinaTelecom**: China Telecom
-        /// *   **ChinaUnicom**: China Unicom
-        /// *   **ChinaMobile**: China Mobile
-        /// *   **ChinaTelecom_L2**: China Telecom L2
-        /// *   **ChinaUnicom_L2**: China Unicom L2
-        /// *   **ChinaMobile_L2**: China Mobile L2
+        /// *   **ChinaTelecom**
+        /// *   **ChinaUnicom**
+        /// *   **ChinaMobile**
+        /// *   **ChinaTelecom_L2**
+        /// *   **ChinaUnicom_L2**
+        /// *   **ChinaMobile_L2**
         /// 
-        /// If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
+        /// If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to **BGP_FinanceCloud**.
         /// </summary>
         [NameInMap("Isp")]
         [Validation(Required=false)]
@@ -52,17 +52,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the IP address pool.
         /// 
-        /// This parameter is optional. The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// 
-        /// *   If this is your first query and no subsequent queries are to be sent, ignore this parameter.
-        /// *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   You must specify the token that is obtained from the previous query as the value of NextToken.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -76,14 +76,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The IDs of the IP address pool.
+        /// 
+        /// You can enter up to 100 IDs.
+        /// </summary>
         [NameInMap("PublicIpAddressPoolIds")]
         [Validation(Required=false)]
         public List<string> PublicIpAddressPoolIds { get; set; }
 
         /// <summary>
-        /// The ID of the region where you want to query IP address pools.
+        /// The ID of the region in which the IP address pool that you want to query resides.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -107,31 +112,34 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The status of the IP address pool. Valid values:
         /// 
-        /// *   **Created**: The IP address pool is available.
-        /// *   **Deleting**: The IP address pool is being deleted.
-        /// *   **Modifying**: The IP address pool is being modified.
+        /// *   **Created**
+        /// *   **Deleting**
+        /// *   **Modifying**
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// The tags to add to the resource.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListPublicIpAddressPoolsRequestTags> Tags { get; set; }
         public class ListPublicIpAddressPoolsRequestTags : TeaModel {
             /// <summary>
-            /// The key of the tag. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// The tag key to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
             /// 
-            /// The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

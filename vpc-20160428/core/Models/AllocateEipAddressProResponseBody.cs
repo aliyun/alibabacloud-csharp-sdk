@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipAddressProResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the specified EIP.
+        /// The EIP ID.
         /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// The IP address of the requested EIP.
+        /// The IP address that is allocated to the EIP. This parameter is returned only when **InstanceChargeType** is set to **PostPaid**.
         /// </summary>
         [NameInMap("EipAddress")]
         [Validation(Required=false)]
         public string EipAddress { get; set; }
 
         /// <summary>
-        /// The order number. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.
+        /// The order ID. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The ID of the resource group. This parameter is returned only when **InstanceChargeType** is set to **PostPaid**.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

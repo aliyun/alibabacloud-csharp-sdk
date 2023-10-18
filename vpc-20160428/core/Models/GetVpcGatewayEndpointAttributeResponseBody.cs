@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcGatewayEndpointAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.
+        /// The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
@@ -40,12 +40,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The status of the gateway endpoint. Valid values:
         /// 
-        /// *   **Creating**: being created
-        /// *   **Created**: created
-        /// *   **Modifying**: being modified
-        /// *   **Associating**: being associated
-        /// *   **Dissociating**: being disassociated
-        /// *   **Deleting**: being deleted
+        /// *   **Creating**
+        /// *   **Created**
+        /// *   **Modifying**
+        /// *   **Associating**
+        /// *   **Dissociating**
+        /// *   **Deleting**
         /// </summary>
         [NameInMap("EndpointStatus")]
         [Validation(Required=false)]
@@ -59,12 +59,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PolicyDocument { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the gateway endpoint belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -83,14 +86,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetVpcGatewayEndpointAttributeResponseBodyTags> Tags { get; set; }
         public class GetVpcGatewayEndpointAttributeResponseBodyTags : TeaModel {
+            /// <summary>
+            /// The key of tag N added to the resource.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N added to the resource.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

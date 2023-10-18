@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHighDefinitionMonitorLogAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the fine-grained monitoring instance.
+        /// The ID of the instance whose fine-grained monitoring configurations you want to query.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the instance. Set the value to **EIP**.
+        /// The type of the instance. Set the value to **EIP**.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the instance is deployed.
+        /// The region ID of the instance.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

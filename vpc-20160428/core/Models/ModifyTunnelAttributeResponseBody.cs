@@ -19,18 +19,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether DPD is enabled. Valid values:
         /// 
-        /// - **true** 
-        /// - **false**
+        /// *   **false**
+        /// *   **true**
         /// </summary>
         [NameInMap("EnableDpd")]
         [Validation(Required=false)]
         public bool? EnableDpd { get; set; }
 
         /// <summary>
-        /// Indicates whether BAT traversal is enabled. Valid values:
+        /// Indicates whether NAT traversal is enabled. Valid values:
         /// 
-        /// - **true** 
-        /// - **false**
+        /// *   **false**
+        /// *   **true**
         /// </summary>
         [NameInMap("EnableNatTraversal")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// The peer CA certificate when a ShangMi (SM) VPN gateway is associated with the IPsec connection.
+        /// The peer CA certificate when a VPN gateway that uses an SM certificate is used to create the IPsec connection.
         /// </summary>
         [NameInMap("RemoteCaCertificate")]
         [Validation(Required=false)]
@@ -58,38 +58,38 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tunnel role. Valid values: 
+        /// The tunnel role. Valid values:
         /// 
-        /// - **master**
-        /// - **slave**
+        /// *   **master**
+        /// *   **slave**
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
         /// <summary>
-        /// The tunnel status. Valid values: 
+        /// The tunnel status. Valid values:
         /// 
-        /// - **active** 
-        /// - **updating** 
-        /// - d**eleting**
+        /// *   **active**
+        /// *   **updating**
+        /// *   **deleting**
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
 
         /// <summary>
-        /// The BGP configurations.
+        /// The BGP configuration.
         /// </summary>
         [NameInMap("TunnelBgpConfig")]
         [Validation(Required=false)]
         public ModifyTunnelAttributeResponseBodyTunnelBgpConfig TunnelBgpConfig { get; set; }
         public class ModifyTunnelAttributeResponseBodyTunnelBgpConfig : TeaModel {
             /// <summary>
-            /// Indicates whether BGP is enabled. Valid values: 
+            /// Indicates whether the BGP feature is enabled. Valid values:
             /// 
-            /// - **true** 
-            /// - **false**
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("EnableBgp")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TunnelId { get; set; }
 
         /// <summary>
-        /// The IKE settings for Phase 1 negotiations.
+        /// The configurations of IKE Phase 1.
         /// </summary>
         [NameInMap("TunnelIkeConfig")]
         [Validation(Required=false)]
@@ -168,27 +168,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? IkeLifetime { get; set; }
 
             /// <summary>
-            /// The IKE negotiation mode. Valid values: 
+            /// The IKE negotiation mode. Valid values:
             /// 
-            /// - **main**: This mode offers higher security during negotiations. 
-            /// - **aggressive**: This mode is faster and has a higher success rate.
+            /// *   **main:** This mode offers higher security during negotiations.
+            /// *   **aggressive:** This mode is faster and has a higher success rate.
             /// </summary>
             [NameInMap("IkeMode")]
             [Validation(Required=false)]
             public string IkeMode { get; set; }
 
             /// <summary>
-            /// The Diffie-Hellman group.
+            /// The DH group.
             /// </summary>
             [NameInMap("IkePfs")]
             [Validation(Required=false)]
             public string IkePfs { get; set; }
 
             /// <summary>
-            /// The version of the IKE protocol. 
+            /// The IKE version. Valid values:
             /// 
-            /// - **ikev1**
-            /// - **ikev2**
+            /// *   **ikev1**
+            /// *   **ikev2**
             /// 
             /// Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
             /// </summary>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkeVersion { get; set; }
 
             /// <summary>
-            /// The tunnel identifier. The identifier supports FQDNs and IP addresses. The default identifier is the tunnel IP address.
+            /// The tunnel identifier. The identifier supports FQDNs and IP addresses. The default value is the tunnel IP address.
             /// </summary>
             [NameInMap("LocalId")]
             [Validation(Required=false)]
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The IPsec settings for Phase 2 negotiations.
+        /// The configurations of IPsec Phase 2.
         /// </summary>
         [NameInMap("TunnelIpsecConfig")]
         [Validation(Required=false)]
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? IpsecLifetime { get; set; }
 
             /// <summary>
-            /// The Diffie-Hellman group.
+            /// The DH group.
             /// </summary>
             [NameInMap("IpsecPfs")]
             [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.
+        /// The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.
         /// 
         /// If the value of seconds (ss) is not 00, the end time is automatically rounded up to the next minute.
         /// </summary>
@@ -44,9 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the EIP belongs.
-        /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query available regions.
+        /// The ID of the region to which the EIP belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipAddressProRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values:
+        /// Specifies whether to enable automatic payment. Default value: true. Valid values:
         /// 
-        /// *   **false**: disables automatic payment. After an order is generated, you must go to the Order Center to complete the payment.
-        /// *   **true**: enabled. Payments are automatically completed.
+        /// *   **false**: Automatic payment is disabled. After an order is generated, you must go to the Order Center to complete the payment.
+        /// *   **true**: Automatic payment is enabled. After an order is generated, the payment is automatically completed.
         /// 
-        /// When **InstanceChargeType** is set to **PrePaid**, this parameter is required. When **InstanceChargeType** is set to **PostPaid**, this parameter is not required.
+        /// This parameter is required if **InstanceChargeType** is set to **PrePaid**. This parameter is optional if **InstanceChargeType** is set to **PostPaid**.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth of the specified EIP. Unit: Mbit/s.
+        /// The maximum bandwidth of the EIP. Unit: Mbit/s.
         /// 
-        /// *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, valid values for **Bandwidth** are **1** to **500**.
-        /// *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, valid values for **Bandwidth** are **1** to **200**.
-        /// *   When **InstanceChargeType** is set to **PrePaid**, valid values for **Bandwidth** are **1** to **1000**.
+        /// *   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**: **1** to **500**.****
+        /// *   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**: **1** to **200**.****
+        /// *   Valid values when **InstanceChargeType** is set to **PrePaid**: **1** to **1000**.****
         /// 
         /// Default value: **5**. Unit: Mbit/s.
         /// </summary>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+        /// You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -48,74 +48,74 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The line type. Valid values:
         /// 
-        /// *   **BGP** (default): BGP (Multi-ISP) lines All regions support BGP (Multi-ISP) EIPs.
-        /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
+        /// *   **BGP** (default): BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.
+        /// *   **BGP_PRO**: BGP (Multi-ISP) Pro line The BGP (Multi-ISP) Pro line is supported in the China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.
         /// 
-        /// For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+        /// For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the "Line types" section of [What is EIP?](~~32321~~)
         /// 
         /// *   If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
         /// 
-        ///     *   **ChinaTelecom**: China Telecom
-        ///     *   **ChinaUnicom**: China Unicom
-        ///     *   **ChinaMobile**: China Mobile
-        ///     *   **ChinaTelecom_L2**: China Telecom L2
-        ///     *   **ChinaUnicom_L2**: China Unicom L2
-        ///     *   **ChinaMobile_L2**: China Mobile L2
+        ///     *   **ChinaTelecom**
+        ///     *   **ChinaUnicom**
+        ///     *   **ChinaMobile**
+        ///     *   **ChinaTelecom_L2**
+        ///     *   **ChinaUnicom_L2**
+        ///     *   **ChinaMobile_L2**
         /// 
-        /// *   If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
+        /// *   If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to **BGP_FinanceCloud**.
         /// </summary>
         [NameInMap("ISP")]
         [Validation(Required=false)]
         public string ISP { get; set; }
 
         /// <summary>
-        /// The billing method of the specified EIP. Valid values:
+        /// The billing method of the EIP. Valid values:
         /// 
         /// *   **PrePaid**: subscription
         /// *   **PostPaid** (default): pay-as-you-go
         /// 
-        /// When **InstanceChargeType** is set to **PrePaid**, you must set **InternetChargeType** to **PayByBandwidth**.
+        /// Set the value of **InternetChargeType** to **PayByBandwidth** if **InstanceChargeType** is set to **PrePaid**.
         /// 
-        /// When **InstanceChargeType** is set to **PostPaid**, you must set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.
+        /// Valid values when **InstanceChargeType** is set to **PostPaid**: **PayByBandwidth** or **PayByTraffic**.
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The ID of the EIP.
+        /// The EIP ID.
         /// 
-        /// Set **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.
+        /// Specify **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The metering method of the specified EIP. Valid values:
+        /// The metering method of the EIP. Valid values:
         /// 
-        /// *   **PayByBandwidth** (default): pay-by-bandwidth
-        /// *   **PayByTraffic**: pay-by-data-transfer
+        /// *   **PayByBandwidth** (default)
+        /// *   **PayByTraffic**
         /// 
-        /// When **InstanceChargeType** is set to **PrePaid**, you must set **InternetChargeType** to **PayByBandwidth**.
+        /// Set the value of **InternetChargeType** to **PayByBandwidth** if **InstanceChargeType** is set to **PrePaid**.
         /// 
-        /// When **InstanceChargeType** is set to **PostPaid**, you must set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.
+        /// Valid values when **InstanceChargeType** is set to **PostPaid**: **PayByBandwidth** or **PayByTraffic**.
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// The IP address of the EIP that you want to request.
+        /// The IP address of the EIP.
         /// 
-        /// Set **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.
+        /// Specify **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.
         /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// The network type. Set the value to **public**, which specifies the Internet.
+        /// The network type. By default, this value is set to **public**, which specifies the public network type.
         /// </summary>
         [NameInMap("Netmode")]
         [Validation(Required=false)]
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The subscription duration of the bandwidth plan.
+        /// The subscription duration.
         /// 
-        /// *   If **PricingCycle** is set to **Month**, set **Period** to a value from **1 to 9**.
-        /// *   If **PricingCycle** is set to **Year**, set **Period** to a value from **1 to 3**.
+        /// *   Valid values when **PricingCycle** is set to **Month**: **1 to 9**.****
+        /// *   Valid values when **PricingCycle** is set to **Year**: **1 to 3**.****
         /// 
-        /// When **InstanceChargeType** is set to **PrePaid**, this parameter is required.
+        /// This parameter is required if **InstanceChargeType** is set to **PrePaid**.
         /// 
-        /// Ignore this parameter when **InstanceChargeType** is set to **PostPaid**.
+        /// Leave this parameter empty if **InstanceChargeType** is set to **PostPaid**.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -146,10 +146,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The billing cycle of the subscription EIP. Valid values:
         /// 
-        /// *   **Month** (default): The EIP is billed on a monthly basis.
-        /// *   **Year**: The EIP is billed on an annual basis.
+        /// *   **Month** (default)
+        /// *   **Year**
         /// 
-        /// When **InstanceChargeType** is set to **PrePaid**, this parameter is required. When **InstanceChargeType** is set to **PostPaid**, this parameter is not required.
+        /// This parameter is required if **InstanceChargeType** is set to **PrePaid**. This parameter is optional if **InstanceChargeType** is set to **PostPaid**.
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
@@ -160,16 +160,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// The EIP is allocated from the IP address pool.
         /// 
-        /// You cannot use the IP address pool feature by default. To use this feature, apply for the privilege in the Quota Center console. For more information, see [Request a quota increase in the Quota Center console](~~108213~~).
+        /// By default, you cannot use the IP address pool. To use this feature, apply for the privilege in the Quota Center console. For more information, see the "Request a quota increase in the Quota Center console" section of [Manage EIP quotas](~~108213~~).
         /// </summary>
         [NameInMap("PublicIpAddressPoolId")]
         [Validation(Required=false)]
         public string PublicIpAddressPoolId { get; set; }
 
         /// <summary>
-        /// The ID of the region where you want to request a specified EIP.
+        /// The ID of the region to which the EIP belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -190,6 +190,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The editions of Anti-DDoS.
+        /// 
+        /// *   If you do not specify this parameter, Anti-DDoS Origin Basic is used.
+        /// *   If you set the parameter to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.
+        /// 
+        /// You can configure Anti-DDoS editions for up to 10 EIPs.
+        /// </summary>
         [NameInMap("SecurityProtectionTypes")]
         [Validation(Required=false)]
         public List<string> SecurityProtectionTypes { get; set; }

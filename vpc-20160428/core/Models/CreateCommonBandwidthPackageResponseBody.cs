@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCommonBandwidthPackageResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the EIP bandwidth plan.
+        /// The ID of the Internet Shared Bandwidth instance.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

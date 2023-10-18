@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHighDefinitionMonitorLogAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the fine-grained monitoring instance.
+        /// The ID of the instance whose fine-grained monitoring configurations you want to query.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The type of the monitoring instance that is queried. The value is set to **EIP**.
+        /// The type of instance for which you want to query fine-grained monitoring. Only **EIP** may be returned.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The name of the log project of Log Service.
+        /// The name of the project.
         /// </summary>
         [NameInMap("LogProject")]
         [Validation(Required=false)]
         public string LogProject { get; set; }
 
         /// <summary>
-        /// The name of the Logstore of Log Service.
+        /// The name of the Logstore.
         /// </summary>
         [NameInMap("LogStore")]
         [Validation(Required=false)]
         public string LogStore { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether the operation is performed. Valid values:
         /// 
-        /// *   **true**: The operation is performed.
-        /// *   **false**: The operation is not performed.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

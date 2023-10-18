@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListVpnCertificateAssociationsResponseBodyVpnCertificateRelations> VpnCertificateRelations { get; set; }
         public class ListVpnCertificateAssociationsResponseBodyVpnCertificateRelations : TeaModel {
             /// <summary>
-            /// The time when the certificate was associated.
+            /// The time when the Anycast EIP was associated.
             /// 
-            /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+            /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("AssociationTime")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CertificateId { get; set; }
 
             /// <summary>
-            /// The certificate type.
+            /// The type of the certificate.
             /// 
             /// *   **Encryption**
             /// *   **Signature**

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIpv6GatewaysResponseBody : TeaModel {
         /// <summary>
-        /// The details about the IPv6 gateways.
+        /// The information about the IPv6 gateway.
         /// </summary>
         [NameInMap("Ipv6Gateways")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// The state of the IPv6 gateway. Valid values:
                 /// 
                 /// *   **Normal**: The IPv6 gateway runs as expected.
-                /// *   **FinancialLocked**: The IPv6 gateway is locked due to overdue payments.
+                /// *   **FinancialLocked:** The IPv6 gateway is locked due to overdue payments.
                 /// </summary>
                 [NameInMap("BusinessStatus")]
                 [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The billing method of the IPv6 gateway.
                 /// 
-                /// The value is set to **PostPaid**. This value indicates the pay-as-you-go billing method.
+                /// Only **PostPaid** may be returned, which indicates that the IPv6 gateway uses the pay-as-you-go billing method.
                 /// </summary>
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The region ID of the IPv6 gateway.
+                /// The ID of the region in which the IPv6 gateway is deployed.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The state of the IPv6 gateway. Valid values:
+                /// The status of the IPv6 gateway. Valid values:
                 /// 
                 /// *   **Pending**: The IPv6 gateway is being configured.
                 /// *   **Available**: The IPv6 gateway is available.
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The list of tags.
+                /// The information about the tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag> Tag { get; set; }
                     public class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -139,21 +139,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifySslVpnServerRequest : TeaModel {
         /// <summary>
-        /// The encryption algorithm that is used by the SSL server. Valid values:
+        /// The encryption algorithm that is used in the SSL-VPN connection. Valid values:
         /// 
-        /// *   **AES-128-CBC** (default): AES-128-CBC
-        /// *   **AES-192-CBC**: AES-192-CBC
-        /// *   **AES-256-CBC**: AES-256-CBC
-        /// *   **none**: does not use an encryption algorithm.
+        /// *   **AES-128-CBC** (default)
+        /// *   **AES-192-CBC**
+        /// *   **AES-256-CBC**
+        /// *   **none**
         /// </summary>
         [NameInMap("Cipher")]
         [Validation(Required=false)]
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable data compression. Valid values:
         /// 
-        /// *   **true** (default): yes
-        /// *   **false**: no
+        /// *   **true** (default)
+        /// *   **false**
         /// </summary>
         [NameInMap("Compress")]
         [Validation(Required=false)]
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable two-factor authentication.
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("EnableMultiFactorAuth")]
         [Validation(Required=false)]
@@ -109,15 +109,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The protocol that is used by the SSL server. Valid values:
         /// 
-        /// *   **TCP**: TCP
-        /// *   **UDP** (default): UDP
+        /// *   **TCP**
+        /// *   **UDP** (default)
         /// </summary>
         [NameInMap("Proto")]
         [Validation(Required=false)]
         public string Proto { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VPN gateway is created.
+        /// The region ID of the VPN gateway.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>

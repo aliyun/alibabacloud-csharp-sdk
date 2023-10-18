@@ -9,16 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePublicIpAddressPoolRequest : TeaModel {
+        /// <summary>
+        /// The service type of the IP address pool. Valid values:
+        /// 
+        /// *   **CloudBox** Only cloud box users can select this type.
+        /// *   **Default**: This is the default value.
+        /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
         /// <summary>
-        /// The client token that you want to use to ensure the idempotence of the request.
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among all requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request is different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -34,10 +40,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// Specifies whether to precheck only this request. Valid values:
         /// 
-        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// *   **true**: prechecks the request without creating an IP address pool. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+        /// *   **false**: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the IP address pool is created.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -46,19 +52,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The line type. Valid values:
         /// 
-        /// *   **BGP** (default): BGP (Multi-ISP) lines.
-        /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
+        /// *   **BGP** (default)
+        /// *   **BGP_PRO**
         /// 
-        /// For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+        /// For more information about BGP (Multi-ISP) lines and BGP (Multi-ISP) Pro lines, see the "Line types" section in the [What is EIP?](~~32321~~) topic.
         /// 
-        /// *   If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
+        /// *   If you are allowed to use single-ISP bandwidth, you can also use one of the following values:
         /// 
-        ///     *   **ChinaTelecom**: China Telecom
-        ///     *   **ChinaUnicom**: China Unicom
-        ///     *   **ChinaMobile**: China Mobile
-        ///     *   **ChinaTelecom_L2**: China Telecom L2
-        ///     *   **ChinaUnicom_L2**: China Unicom L2
-        ///     *   **ChinaMobile_L2**: China Mobile L2
+        ///     *   **ChinaTelecom**
+        ///     *   **ChinaUnicom**
+        ///     *   **ChinaMobile**
+        ///     *   **ChinaTelecom_L2**
+        ///     *   **ChinaUnicom_L2**
+        ///     *   **ChinaMobile_L2**
         /// 
         /// *   If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
         /// </summary>
@@ -69,7 +75,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the IP address pool.
         /// 
-        /// This parameter is optional. The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// This parameter is optional. The name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -105,20 +111,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tag of the resource.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreatePublicIpAddressPoolRequestTag> Tag { get; set; }
         public class CreatePublicIpAddressPoolRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// A tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
+        /// <summary>
+        /// The zone of the IP address pool. If you set **BizType** to **CloudBox**, this parameter is required.
+        /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public List<string> Zones { get; set; }

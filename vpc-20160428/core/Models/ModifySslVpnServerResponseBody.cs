@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether two-factor authentication is enabled.
         /// 
-        /// *   **true**: enabled
-        /// *   **false** (default): disabled
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("EnableMultiFactorAuth")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

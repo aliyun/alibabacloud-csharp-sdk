@@ -78,14 +78,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The protocol. Valid values:
                 /// 
-                /// *   **TCP**: The NAT gateway forwards TCP packets.
-                /// *   **UDP**: The NAT gateway forwards UDP packets.
-                /// *   **Any**: The NAT gateway forwards packets of all protocols.
+                /// *   **TCP**
+                /// *   **UDP**
+                /// *   **Any**
                 /// </summary>
                 [NameInMap("IpProtocol")]
                 [Validation(Required=false)]
                 public string IpProtocol { get; set; }
 
+                /// <summary>
+                /// The ID of the NAT gateway to which the DNAT entry belongs.
+                /// </summary>
                 [NameInMap("NatGatewayId")]
                 [Validation(Required=false)]
                 public string NatGatewayId { get; set; }
@@ -93,9 +96,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the DNAT entry. Valid values:
                 /// 
-                /// *   **Pending**: being created or modified
-                /// *   **Available**: available
-                /// *   **Deleting**: being deleted
+                /// *   **Pending**
+                /// *   **Available**
+                /// *   **Deleting**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -106,21 +109,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

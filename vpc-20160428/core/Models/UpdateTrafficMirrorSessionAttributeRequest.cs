@@ -12,18 +12,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to precheck the request without performing the operation. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **true**: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+        /// *   **true**: performs a dry run, without performing the actual request. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
         /// *   **false**: sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed. This is the default value.
         /// </summary>
         [NameInMap("DryRun")]
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the traffic mirror session.
+        /// Specifies whether to enable the traffic mirror session. Valid values:
         /// 
-        /// *   **false**: disables the traffic mirror session. This is the default value.
-        /// *   **true**: enables the traffic mirror session.
+        /// *   **false** (default)
+        /// *   **true**
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
@@ -48,21 +48,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The maximum transmission unit (MTU).
+        /// 
+        /// Valid values: **64 to 9600**. Default value: **1500**.
+        /// </summary>
         [NameInMap("PacketLength")]
         [Validation(Required=false)]
         public int? PacketLength { get; set; }
 
         /// <summary>
-        /// The priority of the traffic mirror session. Valid values: **1** to **32766**.
+        /// The new priority of the traffic mirror session. Valid values: **1** to **32766**.
         /// 
-        /// A smaller value specifies a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
+        /// A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
         /// <summary>
-        /// The region ID of the traffic mirror session. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+        /// The region ID of the traffic mirror session. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about the regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -84,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorFilterId { get; set; }
 
         /// <summary>
-        /// The description of the traffic mirror session.
+        /// The new description of the traffic mirror session.
         /// 
         /// The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
         /// </summary>
@@ -100,9 +105,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorSessionId { get; set; }
 
         /// <summary>
-        /// The name of the traffic mirror session.
+        /// The new name of the traffic mirror session.
         /// 
-        /// The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+        /// The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("TrafficMirrorSessionName")]
         [Validation(Required=false)]
@@ -116,9 +121,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorTargetId { get; set; }
 
         /// <summary>
-        /// The type of the traffic mirror destination. Valid values:
+        /// The new type of the traffic mirror destination. Valid values:
         /// 
-        /// *   **NetworkInterface**: an ENI
+        /// *   **NetworkInterface**: an elastic network interface (ENI)
         /// *   **SLB**: an internal-facing Server Load Balancer (SLB) instance
         /// </summary>
         [NameInMap("TrafficMirrorTargetType")]

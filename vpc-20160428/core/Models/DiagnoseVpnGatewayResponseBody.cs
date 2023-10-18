@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DiagnoseVpnGatewayResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the diagnostic operation.
+        /// The ID of the diagnostic.
         /// </summary>
         [NameInMap("DiagnoseId")]
         [Validation(Required=false)]
         public string DiagnoseId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

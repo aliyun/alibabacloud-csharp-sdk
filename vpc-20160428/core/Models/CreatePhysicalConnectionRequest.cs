@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DeviceAdvancedCapacity")]
+        [Validation(Required=false)]
+        public List<string> DeviceAdvancedCapacity { get; set; }
+
         /// <summary>
         /// The connectivity provider of the Express Connect circuit. Valid values:
         /// 

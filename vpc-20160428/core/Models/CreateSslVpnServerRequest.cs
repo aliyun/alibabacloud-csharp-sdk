@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateSslVpnServerRequest : TeaModel {
         /// <summary>
-        /// The encryption algorithm that is used in the SSL-VPN connection. Valid values:
+        /// The encryption algorithm that is used for the SSL-VPN connection. Valid values:
         /// 
-        /// *   **AES-128-CBC** (default): AES-128-CBC
-        /// *   **AES-192-CBC**: AES-192-CBC
-        /// *   **AES-256-CBC**: AES-256-CBC
-        /// *   **none**: does not use an encryption algorithm.
+        /// *   **AES-128-CBC** (default)
+        /// *   **AES-192-CBC**
+        /// *   **AES-256-CBC**
+        /// *   **none**
         /// </summary>
         [NameInMap("Cipher")]
         [Validation(Required=false)]
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client CIDR block.
         /// 
-        /// The CIDR block that is allocated to the virtual network interface of the client. It is not the CIDR block where the client resides.
+        /// The client CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client. It is not the CIDR block where the client resides.
         /// 
-        /// When the client accesses the destination network through an SSL-VPN connection, the VPN gateway allocates an IP address from the client CIDR block to the client.
+        /// When the client accesses the local virtual private cloud (VPC) by using an SSL-VPN connection, the VPN gateway allocates an IP address from the client CIDR block to the client.
         /// 
-        /// >  This CIDR block cannot conflict with the CIDR block specified by **LocalSubnet**.
+        /// >  This CIDR block cannot overlap with the CIDR block specified by **LocalSubnet**.
         /// </summary>
         [NameInMap("ClientIpPool")]
         [Validation(Required=false)]
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable data compression. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("Compress")]
         [Validation(Required=false)]
@@ -58,17 +58,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable two-factor authentication. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**
+        /// *   **false** (default):
         /// 
-        /// >  To enable two-factor authentication, make sure that the VPN gateway was created after 00:00:00 (UTC+8), March 5, 2020. Otherwise, two-factor authentication is not supported.
+        /// >  If you want to use the two-factor authentication feature, you must make sure that your VPN gateway is created after 00:00:00, March 5, 2020. Otherwise, the two-factor authentication feature is not supported.
         /// </summary>
         [NameInMap("EnableMultiFactorAuth")]
         [Validation(Required=false)]
         public bool? EnableMultiFactorAuth { get; set; }
 
         /// <summary>
-        /// The ID of the IDaaS instance.
+        /// The Identity as a Service (IDaaS) instance ID.
         /// </summary>
         [NameInMap("IDaaSInstanceId")]
         [Validation(Required=false)]
@@ -84,18 +84,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The local CIDR block.
         /// 
-        /// The CIDR block to be accessed by the client through the SSL-VPN connection.
+        /// The CIDR block to be accessed by the client by using the SSL-VPN connection.
         /// 
-        /// This value can be the CIDR block of a virtual private cloud (VPC), a vSwitch, a data center that is connected to a VPC through an Express Connect circuit, or Object Storage Service (OSS).
+        /// This value can be the CIDR block of a VPC, a vSwitch, a data center that is connected to a VPC by using an Express Connect circuit, or an Alibaba Cloud service such as Object Storage Service (OSS).
         /// </summary>
         [NameInMap("LocalSubnet")]
         [Validation(Required=false)]
         public string LocalSubnet { get; set; }
 
         /// <summary>
-        /// The name of the SSL server.
+        /// The SSL server name.
         /// 
-        /// The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
+        /// The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The port used by the SSL server. Default value: **1194**. The following ports cannot be used:
+        /// The port that is used by the SSL server. Default value: **1194**. The following ports cannot be used:
         /// 
         /// **22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, and 4500**.
         /// </summary>
@@ -121,15 +121,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The protocol that is used by the SSL server. Valid values:
         /// 
-        /// *   **TCP**: TCP
-        /// *   **UDP** (default): UDP
+        /// *   **TCP**
+        /// *   **UDP** (default)
         /// </summary>
         [NameInMap("Proto")]
         [Validation(Required=false)]
         public string Proto { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VPN gateway is created.
+        /// The region ID of the VPN gateway.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>

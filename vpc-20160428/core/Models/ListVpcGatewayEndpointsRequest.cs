@@ -26,17 +26,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EndpointName { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+        /// The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
-        /// *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the gateway endpoint belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -78,14 +81,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListVpcGatewayEndpointsRequestTags> Tags { get; set; }
         public class ListVpcGatewayEndpointsRequestTags : TeaModel {
+            /// <summary>
+            /// The key of tag N added to the resource. You can specify at most 20 tag keys. It cannot be an empty string.
+            /// 
+            /// The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

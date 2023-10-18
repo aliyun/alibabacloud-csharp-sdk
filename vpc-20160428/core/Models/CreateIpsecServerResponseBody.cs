@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// The ID of the IPsec server.
+        /// The IPsec server ID.
         /// </summary>
         [NameInMap("IpsecServerId")]
         [Validation(Required=false)]
         public string IpsecServerId { get; set; }
 
         /// <summary>
-        /// The name of the IPsec server.
+        /// The IPsec server name.
         /// </summary>
         [NameInMap("IpsecServerName")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

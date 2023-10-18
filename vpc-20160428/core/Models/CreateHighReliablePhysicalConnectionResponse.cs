@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class AssociateGlobalAccelerationInstanceResponse : TeaModel {
+    public class CreateHighReliablePhysicalConnectionResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public AssociateGlobalAccelerationInstanceResponseBody Body { get; set; }
+        public CreateHighReliablePhysicalConnectionResponseBody Body { get; set; }
 
     }
 
