@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the distributed instance to which the instance belongs. This parameter is applicable to only China site (aliyun.com).
+        /// </summary>
         [NameInMap("GlobalInstanceId")]
         [Validation(Required=false)]
         public string GlobalInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the distributed instance to which the instance belongs. This parameter is applicable to only China site (aliyun.com).
+        /// The ID of the instance that you want to release.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -34,10 +34,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string SecurityIpGroupAttribute { get; set; }
 
+                /// <summary>
+                /// The name of the security group.
+                /// </summary>
                 [NameInMap("SecurityIpGroupName")]
                 [Validation(Required=false)]
                 public string SecurityIpGroupName { get; set; }
 
+                /// <summary>
+                /// The IP addresses in the whitelist.
+                /// </summary>
                 [NameInMap("SecurityIpList")]
                 [Validation(Required=false)]
                 public string SecurityIpList { get; set; }

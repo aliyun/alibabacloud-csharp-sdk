@@ -182,6 +182,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? Period { get; set; }
 
+        /// <summary>
+        /// The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.
+        /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }

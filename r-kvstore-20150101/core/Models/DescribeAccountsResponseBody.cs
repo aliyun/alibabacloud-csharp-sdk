@@ -62,6 +62,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     [Validation(Required=false)]
                     public List<DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege> DatabasePrivilege { get; set; }
                     public class DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege : TeaModel {
+                        /// <summary>
+                        /// The permissions of the account. Valid values:
+                        /// 
+                        /// *   **RoleReadOnly**: The account has read-only permissions.
+                        /// *   **RoleReadWrite**: The account has read and write permissions.
+                        /// </summary>
                         [NameInMap("AccountPrivilege")]
                         [Validation(Required=false)]
                         public string AccountPrivilege { get; set; }

@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class RemoveSubInstanceRequest : TeaModel {
-        /// <summary>
-        /// 分布式实例中的子实例ID，可调用[DescribeGlobalDistributeCache](~~188699~~)接口获取。
-        /// </summary>
-        [NameInMap("InstanceId")]
+    public class LockDBInstanceWriteRequest : TeaModel {
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("LockReason")]
+        [Validation(Required=false)]
+        public string LockReason { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

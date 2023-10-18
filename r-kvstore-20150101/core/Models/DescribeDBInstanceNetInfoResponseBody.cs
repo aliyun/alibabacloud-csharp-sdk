@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
+                /// <summary>
+                /// The IP address of the instance in the classic network.
+                /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }

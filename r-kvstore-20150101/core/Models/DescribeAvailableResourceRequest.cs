@@ -50,6 +50,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// Redis产品系列，取值如下：
+        /// 
+        /// - **professional**：标准版，支持单副本、主备、读写分离、集群四种架构，扩展性强。
+        ///  <props="china">
+        /// -  **economical**：仅支持主备架构，具有价格优势，更多信息请参见[经济版实例](~~2489678~~)。</props>
+        /// </summary>
         [NameInMap("InstanceScene")]
         [Validation(Required=false)]
         public string InstanceScene { get; set; }

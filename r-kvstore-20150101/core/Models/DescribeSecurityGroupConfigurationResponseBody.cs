@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation> EcsSecurityGroupRelation { get; set; }
             public class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation : TeaModel {
+                /// <summary>
+                /// The network type of the ECS security group. Valid values:
+                /// 
+                /// *   **vpc**
+                /// *   **classic**
+                /// </summary>
                 [NameInMap("NetType")]
                 [Validation(Required=false)]
                 public string NetType { get; set; }

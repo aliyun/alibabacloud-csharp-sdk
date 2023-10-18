@@ -394,6 +394,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public int? ShardCount { get; set; }
 
+                [NameInMap("Storage")]
+                [Validation(Required=false)]
+                public string Storage { get; set; }
+
+                [NameInMap("StorageType")]
+                [Validation(Required=false)]
+                public string StorageType { get; set; }
+
                 /// <summary>
                 /// Details of the tags.
                 /// </summary>

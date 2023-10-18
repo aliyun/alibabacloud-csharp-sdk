@@ -50,6 +50,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        /// <summary>
+        /// 是否开启强制传输，取值：
+        /// - **false**（默认）：在变配前，系统会检查实例当前的内核小版本，若内核版本过低则会报错，您需要升级内核小版本后重试。
+        /// - **true**：跳过检查项，直接执行变配操作。
+        /// </summary>
         [NameInMap("ForceTrans")]
         [Validation(Required=false)]
         public bool? ForceTrans { get; set; }

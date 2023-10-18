@@ -23,13 +23,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 {"cn-qingdao", "r-kvstore.aliyuncs.com"},
                 {"cn-beijing", "r-kvstore.aliyuncs.com"},
+                {"cn-wulanchabu", "r-kvstore.aliyuncs.com"},
                 {"cn-hangzhou", "r-kvstore.aliyuncs.com"},
                 {"cn-shanghai", "r-kvstore.aliyuncs.com"},
                 {"cn-shenzhen", "r-kvstore.aliyuncs.com"},
                 {"cn-heyuan", "r-kvstore.aliyuncs.com"},
+                {"cn-guangzhou", "r-kvstore.aliyuncs.com"},
+                {"cn-hongkong", "r-kvstore.aliyuncs.com"},
                 {"ap-southeast-1", "r-kvstore.aliyuncs.com"},
-                {"us-west-1", "r-kvstore.aliyuncs.com"},
-                {"us-east-1", "r-kvstore.aliyuncs.com"},
                 {"cn-hangzhou-finance", "r-kvstore.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "r-kvstore.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "r-kvstore.aliyuncs.com"},
@@ -49,7 +50,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 {"cn-hangzhou-internal-test-3", "r-kvstore.aliyuncs.com"},
                 {"cn-hangzhou-test-306", "r-kvstore.aliyuncs.com"},
                 {"cn-hongkong-finance-pop", "r-kvstore.aliyuncs.com"},
-                {"cn-huhehaote-nebula-1", "r-kvstore.aliyuncs.com"},
                 {"cn-qingdao-nebula", "r-kvstore.aliyuncs.com"},
                 {"cn-shanghai-et15-b01", "r-kvstore.aliyuncs.com"},
                 {"cn-shanghai-et2-b01", "r-kvstore.aliyuncs.com"},
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 {"cn-shenzhen-st4-d01", "r-kvstore.aliyuncs.com"},
                 {"cn-shenzhen-su18-b01", "r-kvstore.aliyuncs.com"},
                 {"cn-wuhan", "r-kvstore.aliyuncs.com"},
-                {"cn-wulanchabu", "r-kvstore.aliyuncs.com"},
                 {"cn-yushanfang", "r-kvstore.aliyuncs.com"},
+                {"cn-zhangbei", "r-kvstore.aliyuncs.com"},
                 {"cn-zhangbei-na61-b01", "r-kvstore.aliyuncs.com"},
                 {"cn-zhangjiakou-na62-a01", "r-kvstore.aliyuncs.com"},
                 {"cn-zhengzhou-nebula-1", "r-kvstore.aliyuncs.com"},
@@ -2138,9 +2138,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /**
           * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
           * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * > 
-          * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
-          * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+          * > *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+          * >*   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
           *
           * @param request CreateTairInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2328,9 +2327,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /**
           * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
           * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * > 
-          * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
-          * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+          * > *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+          * >*   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
           *
           * @param request CreateTairInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2518,9 +2516,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /**
           * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
           * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * > 
-          * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
-          * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+          * > *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+          * >*   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
           *
           * @param request CreateTairInstanceRequest
           * @return CreateTairInstanceResponse
@@ -2534,9 +2531,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /**
           * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
           * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * > 
-          * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
-          * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+          * > *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+          * >*   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
           *
           * @param request CreateTairInstanceRequest
           * @return CreateTairInstanceResponse
@@ -10543,8 +10539,124 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        public LockDBInstanceWriteResponse LockDBInstanceWriteWithOptions(LockDBInstanceWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LockReason))
+            {
+                query["LockReason"] = request.LockReason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LockDBInstanceWrite",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LockDBInstanceWriteResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<LockDBInstanceWriteResponse> LockDBInstanceWriteWithOptionsAsync(LockDBInstanceWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LockReason))
+            {
+                query["LockReason"] = request.LockReason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LockDBInstanceWrite",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LockDBInstanceWriteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public LockDBInstanceWriteResponse LockDBInstanceWrite(LockDBInstanceWriteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LockDBInstanceWriteWithOptions(request, runtime);
+        }
+
+        public async Task<LockDBInstanceWriteResponse> LockDBInstanceWriteAsync(LockDBInstanceWriteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LockDBInstanceWriteWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * The ID of the request.
+          * For more information about how to migrate an instance across zones in the ApsaraDB for Redis console, see [Migrate an instance across zones](~~106272~~).
+          * > *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
+          * > *   After the data is migrated, the endpoint of an instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
           *
           * @param request MigrateToOtherZoneRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10614,7 +10726,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The ID of the request.
+          * For more information about how to migrate an instance across zones in the ApsaraDB for Redis console, see [Migrate an instance across zones](~~106272~~).
+          * > *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
+          * > *   After the data is migrated, the endpoint of an instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
           *
           * @param request MigrateToOtherZoneRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10684,7 +10798,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The ID of the request.
+          * For more information about how to migrate an instance across zones in the ApsaraDB for Redis console, see [Migrate an instance across zones](~~106272~~).
+          * > *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
+          * > *   After the data is migrated, the endpoint of an instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
           *
           * @param request MigrateToOtherZoneRequest
           * @return MigrateToOtherZoneResponse
@@ -10696,7 +10812,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The ID of the request.
+          * For more information about how to migrate an instance across zones in the ApsaraDB for Redis console, see [Migrate an instance across zones](~~106272~~).
+          * > *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
+          * > *   After the data is migrated, the endpoint of an instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
           *
           * @param request MigrateToOtherZoneRequest
           * @return MigrateToOtherZoneResponse
@@ -16323,6 +16441,112 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransformToPrePaidWithOptionsAsync(request, runtime);
+        }
+
+        public UnlockDBInstanceWriteResponse UnlockDBInstanceWriteWithOptions(UnlockDBInstanceWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnlockDBInstanceWrite",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UnlockDBInstanceWriteResponse> UnlockDBInstanceWriteWithOptionsAsync(UnlockDBInstanceWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnlockDBInstanceWrite",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UnlockDBInstanceWriteResponse UnlockDBInstanceWrite(UnlockDBInstanceWriteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnlockDBInstanceWriteWithOptions(request, runtime);
+        }
+
+        public async Task<UnlockDBInstanceWriteResponse> UnlockDBInstanceWriteAsync(UnlockDBInstanceWriteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnlockDBInstanceWriteWithOptionsAsync(request, runtime);
         }
 
         /**

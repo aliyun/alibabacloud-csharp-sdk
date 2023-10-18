@@ -9,6 +9,62 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEngineVersionResponseBody : TeaModel {
+        [NameInMap("DBLatestMinorVersion")]
+        [Validation(Required=false)]
+        public DescribeEngineVersionResponseBodyDBLatestMinorVersion DBLatestMinorVersion { get; set; }
+        public class DescribeEngineVersionResponseBodyDBLatestMinorVersion : TeaModel {
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            [NameInMap("MinorVersion")]
+            [Validation(Required=false)]
+            public string MinorVersion { get; set; }
+
+            [NameInMap("VersionRelease")]
+            [Validation(Required=false)]
+            public DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionRelease VersionRelease { get; set; }
+            public class DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionRelease : TeaModel {
+                [NameInMap("ReleaseInfo")]
+                [Validation(Required=false)]
+                public DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfo ReleaseInfo { get; set; }
+                public class DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfo : TeaModel {
+                    [NameInMap("ReleaseInfoList")]
+                    [Validation(Required=false)]
+                    public List<DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList> ReleaseInfoList { get; set; }
+                    public class DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList : TeaModel {
+                        [NameInMap("CreateTime")]
+                        [Validation(Required=false)]
+                        public string CreateTime { get; set; }
+
+                        [NameInMap("Level")]
+                        [Validation(Required=false)]
+                        public string Level { get; set; }
+
+                        [NameInMap("ReleaseNote")]
+                        [Validation(Required=false)]
+                        public string ReleaseNote { get; set; }
+
+                        [NameInMap("ReleaseNoteEn")]
+                        [Validation(Required=false)]
+                        public string ReleaseNoteEn { get; set; }
+
+                        [NameInMap("ReleaseVersion")]
+                        [Validation(Required=false)]
+                        public string ReleaseVersion { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("VersionChangesLevel")]
+                [Validation(Required=false)]
+                public string VersionChangesLevel { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// The release notes for the minor version of the instance, including the release date, minor version number, release type such as new feature, and description.
         /// </summary>
@@ -46,6 +102,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
+
+        [NameInMap("IsAutoUpgradeOpen")]
+        [Validation(Required=false)]
+        public string IsAutoUpgradeOpen { get; set; }
 
         /// <summary>
         /// Indicates whether the instance uses the latest minor version. Valid values:
@@ -91,6 +151,62 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("MinorVersion")]
         [Validation(Required=false)]
         public string MinorVersion { get; set; }
+
+        [NameInMap("ProxyLatestMinorVersion")]
+        [Validation(Required=false)]
+        public DescribeEngineVersionResponseBodyProxyLatestMinorVersion ProxyLatestMinorVersion { get; set; }
+        public class DescribeEngineVersionResponseBodyProxyLatestMinorVersion : TeaModel {
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            [NameInMap("MinorVersion")]
+            [Validation(Required=false)]
+            public string MinorVersion { get; set; }
+
+            [NameInMap("VersionRelease")]
+            [Validation(Required=false)]
+            public DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionRelease VersionRelease { get; set; }
+            public class DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionRelease : TeaModel {
+                [NameInMap("ReleaseInfo")]
+                [Validation(Required=false)]
+                public DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfo ReleaseInfo { get; set; }
+                public class DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfo : TeaModel {
+                    [NameInMap("ReleaseInfoList")]
+                    [Validation(Required=false)]
+                    public List<DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList> ReleaseInfoList { get; set; }
+                    public class DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList : TeaModel {
+                        [NameInMap("CreateTime")]
+                        [Validation(Required=false)]
+                        public string CreateTime { get; set; }
+
+                        [NameInMap("Level")]
+                        [Validation(Required=false)]
+                        public string Level { get; set; }
+
+                        [NameInMap("ReleaseNote")]
+                        [Validation(Required=false)]
+                        public string ReleaseNote { get; set; }
+
+                        [NameInMap("ReleaseNoteEn")]
+                        [Validation(Required=false)]
+                        public string ReleaseNoteEn { get; set; }
+
+                        [NameInMap("ReleaseVersion")]
+                        [Validation(Required=false)]
+                        public string ReleaseVersion { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("VersionChangesLevel")]
+                [Validation(Required=false)]
+                public string VersionChangesLevel { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// The minor version of proxy nodes.

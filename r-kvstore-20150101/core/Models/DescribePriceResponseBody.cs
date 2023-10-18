@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
             }
 
+            [NameInMap("ShowDiscountInfo")]
+            [Validation(Required=false)]
+            public bool? ShowDiscountInfo { get; set; }
+
             /// <summary>
             /// The transaction price of the order.
             /// </summary>

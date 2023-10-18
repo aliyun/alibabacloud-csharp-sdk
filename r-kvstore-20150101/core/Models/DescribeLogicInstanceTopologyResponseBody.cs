@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo : TeaModel {
                 /// <summary>
-                /// The bandwidth throttling of the node. Unit: MB/s.
+                /// The maximum bandwidth of the node. Unit: Mbit/s.
                 /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Connection { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The node ID.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
@@ -69,6 +69,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        /// <summary>
+        /// Details of data shards, including node information such as NodeInfo.
+        /// </summary>
         [NameInMap("RedisShardList")]
         [Validation(Required=false)]
         public DescribeLogicInstanceTopologyResponseBodyRedisShardList RedisShardList { get; set; }
@@ -77,26 +80,50 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo : TeaModel {
+                /// <summary>
+                /// The maximum bandwidth of the node. Unit: Mbit/s.
+                /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public string Bandwidth { get; set; }
 
+                /// <summary>
+                /// The storage capacity of the node. Unit: MB.
+                /// </summary>
                 [NameInMap("Capacity")]
                 [Validation(Required=false)]
                 public string Capacity { get; set; }
 
+                /// <summary>
+                /// The maximum number of connections.
+                /// </summary>
                 [NameInMap("Connection")]
                 [Validation(Required=false)]
                 public string Connection { get; set; }
 
+                /// <summary>
+                /// The node ID.
+                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
+                /// <summary>
+                /// The node type. Valid values:
+                /// 
+                /// *   **proxy**: proxy node
+                /// *   **db**: data node
+                /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
+                /// <summary>
+                /// The type of the child instance. Valid values:
+                /// 
+                /// *   **master**: master node
+                /// *   **readonly**: read-only instance
+                /// </summary>
                 [NameInMap("SubInstanceType")]
                 [Validation(Required=false)]
                 public string SubInstanceType { get; set; }
