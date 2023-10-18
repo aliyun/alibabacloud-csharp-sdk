@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             {
                 body["gatewayCount"] = request.GatewayCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialDatabases))
+            {
+                body["initialDatabases"] = request.InitialDatabases;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 body["instanceName"] = request.InstanceName;
@@ -212,6 +216,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayCount))
             {
                 body["gatewayCount"] = request.GatewayCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialDatabases))
+            {
+                body["initialDatabases"] = request.InitialDatabases;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {

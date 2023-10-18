@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public long? GatewayCount { get; set; }
 
+        [NameInMap("initialDatabases")]
+        [Validation(Required=false)]
+        public string InitialDatabases { get; set; }
+
         /// <summary>
         /// The name of the Hologres instance that you want to purchase. The name must be 2 to 64 characters in length.
         /// </summary>
