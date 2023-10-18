@@ -268,6 +268,48 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public bool? AutoRepair { get; set; }
 
+            [NameInMap("auto_repair_policy")]
+            [Validation(Required=false)]
+            public CreateClusterNodePoolRequestManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
+            public class CreateClusterNodePoolRequestManagementAutoRepairPolicy : TeaModel {
+                [NameInMap("restart_node")]
+                [Validation(Required=false)]
+                public bool? RestartNode { get; set; }
+
+            }
+
+            [NameInMap("auto_upgrade")]
+            [Validation(Required=false)]
+            public bool? AutoUpgrade { get; set; }
+
+            [NameInMap("auto_upgrade_policy")]
+            [Validation(Required=false)]
+            public CreateClusterNodePoolRequestManagementAutoUpgradePolicy AutoUpgradePolicy { get; set; }
+            public class CreateClusterNodePoolRequestManagementAutoUpgradePolicy : TeaModel {
+                [NameInMap("auto_upgrade_kubelet")]
+                [Validation(Required=false)]
+                public bool? AutoUpgradeKubelet { get; set; }
+
+            }
+
+            [NameInMap("auto_vul_fix")]
+            [Validation(Required=false)]
+            public bool? AutoVulFix { get; set; }
+
+            [NameInMap("auto_vul_fix_policy")]
+            [Validation(Required=false)]
+            public CreateClusterNodePoolRequestManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
+            public class CreateClusterNodePoolRequestManagementAutoVulFixPolicy : TeaModel {
+                [NameInMap("restart_node")]
+                [Validation(Required=false)]
+                public bool? RestartNode { get; set; }
+
+                [NameInMap("vul_level")]
+                [Validation(Required=false)]
+                public string VulLevel { get; set; }
+
+            }
+
             /// <summary>
             /// Specifies whether to enable the managed node pool feature. Valid values:
             /// 

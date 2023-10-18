@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterNodepoolRequest : TeaModel {
         /// <summary>
-        /// false
+        /// Specifies whether to forcefully delete the node pool.
         /// </summary>
         [NameInMap("force")]
         [Validation(Required=false)]

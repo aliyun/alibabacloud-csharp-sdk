@@ -6811,6 +6811,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["resource_group_id"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemEventsLogging))
+            {
+                body["system_events_logging"] = request.SystemEventsLogging;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6878,6 +6882,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["resource_group_id"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemEventsLogging))
+            {
+                body["system_events_logging"] = request.SystemEventsLogging;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7743,6 +7751,11 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /**
           * @deprecated
+          * ****
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+          * *   Nodes remain in the Unschedulable state when they are being removed.
+          * *   You can remove only worker nodes. You cannot remove master nodes.
           *
           * @param request RemoveClusterNodesRequest
           * @param headers map
@@ -7788,6 +7801,11 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /**
           * @deprecated
+          * ****
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+          * *   Nodes remain in the Unschedulable state when they are being removed.
+          * *   You can remove only worker nodes. You cannot remove master nodes.
           *
           * @param request RemoveClusterNodesRequest
           * @param headers map
@@ -7833,6 +7851,11 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /**
           * @deprecated
+          * ****
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+          * *   Nodes remain in the Unschedulable state when they are being removed.
+          * *   You can remove only worker nodes. You cannot remove master nodes.
           *
           * @param request RemoveClusterNodesRequest
           * @return RemoveClusterNodesResponse
@@ -7847,6 +7870,11 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /**
           * @deprecated
+          * ****
+          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+          * *   Nodes remain in the Unschedulable state when they are being removed.
+          * *   You can remove only worker nodes. You cannot remove master nodes.
           *
           * @param request RemoveClusterNodesRequest
           * @return RemoveClusterNodesResponse

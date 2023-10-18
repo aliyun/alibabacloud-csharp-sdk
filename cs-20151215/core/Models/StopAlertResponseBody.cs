@@ -17,7 +17,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// A value of True indicates that the call succeeds. A value of False indicates that the call failed.
+        /// The operation result. Valid values:
+        /// 
+        /// *   True: The operation is successful.
+        /// *   False: The operation failed.
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

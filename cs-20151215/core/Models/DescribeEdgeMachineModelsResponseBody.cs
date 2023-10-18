@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEdgeMachineModelsResponseBody : TeaModel {
         /// <summary>
-        /// The list of details about the models of cloud-native boxes.
+        /// The cloud-native box models.
         /// </summary>
         [NameInMap("models")]
         [Validation(Required=false)]
         public List<DescribeEdgeMachineModelsResponseBodyModels> Models { get; set; }
         public class DescribeEdgeMachineModelsResponseBodyModels : TeaModel {
             /// <summary>
-            /// The number of CPU cores.
+            /// The number of vCores.
             /// </summary>
             [NameInMap("cpu")]
             [Validation(Required=false)]
@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// The description.
+            /// The description of the cloud-native box.
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// Indicates whether the Docker runtime is managed.
+            /// Indicates whether the cloud-native box model manages the Docker runtime.
             /// </summary>
             [NameInMap("manage_runtime")]
             [Validation(Required=false)]
             public int? ManageRuntime { get; set; }
 
             /// <summary>
-            /// The memory size. Unit: GB.
+            /// The memory. Unit: GB.
             /// </summary>
             [NameInMap("memory")]
             [Validation(Required=false)]

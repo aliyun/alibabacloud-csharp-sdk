@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeWorkflowsResponseBody : TeaModel {
         /// <summary>
-        /// The list of the jobs.
+        /// The list of jobs.
         /// </summary>
         [NameInMap("jobs")]
         [Validation(Required=false)]
         public List<DescribeWorkflowsResponseBodyJobs> Jobs { get; set; }
         public class DescribeWorkflowsResponseBodyJobs : TeaModel {
             /// <summary>
-            /// The ID of the ACK cluster.
+            /// The cluster ID.
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]

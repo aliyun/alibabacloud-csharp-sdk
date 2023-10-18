@@ -69,9 +69,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string DockerVersion { get; set; }
 
-        /// <summary>
-        /// The ID of the Server Load Balancer (SLB) instance that is used for the Ingress of the cluster.
-        /// </summary>
         [NameInMap("external_loadbalancer_id")]
         [Validation(Required=false)]
         public string ExternalLoadbalancerId { get; set; }
@@ -113,23 +110,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// The network mode of the cluster. Valid values:
-        /// 
-        /// *   `classic`: classic network
-        /// *   `vpc`: virtual private cloud (VPC)
-        /// *   `overlay`: overlay network
-        /// *   `calico`: network powered by Calico
-        /// 
-        /// Default value: `vpc`.
-        /// </summary>
         [NameInMap("network_mode")]
         [Validation(Required=false)]
         public string NetworkMode { get; set; }
 
-        /// <summary>
-        /// The Kubernetes version to which the cluster can be updated.
-        /// </summary>
         [NameInMap("next_version")]
         [Validation(Required=false)]
         public string NextVersion { get; set; }
@@ -141,12 +125,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Parameters { get; set; }
 
-        /// <summary>
-        /// Indicates whether Alibaba Cloud DNS PrivateZone is enabled.
-        /// 
-        /// *   `true`: Alibaba Cloud DNS PrivateZone is enabled.
-        /// *   `false`: Alibaba Cloud DNS PrivateZone is disabled.
-        /// </summary>
         [NameInMap("private_zone")]
         [Validation(Required=false)]
         public bool? PrivateZone { get; set; }
@@ -259,9 +237,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string WorkerRamRoleName { get; set; }
 
-        /// <summary>
-        /// The ID of the zone where the cluster is deployed.
-        /// </summary>
         [NameInMap("zone_id")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }

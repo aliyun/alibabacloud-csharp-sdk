@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeExternalAgentResponseBody : TeaModel {
         /// <summary>
-        /// The agent configurations in YAML format.
+        /// The agent configurations in the YAML format.
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]

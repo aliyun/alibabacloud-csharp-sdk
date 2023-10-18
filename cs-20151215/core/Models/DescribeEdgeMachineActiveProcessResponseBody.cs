@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEdgeMachineActiveProcessResponseBody : TeaModel {
         /// <summary>
-        /// The list of details about the activation progress.
+        /// The activation progress list.
         /// </summary>
         [NameInMap("logs")]
         [Validation(Required=false)]
@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? Progress { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the cloud-native box.
+        /// The activation status.
         /// </summary>
         [NameInMap("state")]
         [Validation(Required=false)]
         public string State { get; set; }
 
         /// <summary>
-        /// The current step of the activation process.
+        /// The activation step.
         /// </summary>
         [NameInMap("step")]
         [Validation(Required=false)]

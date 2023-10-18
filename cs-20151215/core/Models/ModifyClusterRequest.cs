@@ -104,6 +104,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("system_events_logging")]
+        [Validation(Required=false)]
+        public ModifyClusterRequestSystemEventsLogging SystemEventsLogging { get; set; }
+        public class ModifyClusterRequestSystemEventsLogging : TeaModel {
+            [NameInMap("enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("logging_project")]
+            [Validation(Required=false)]
+            public string LoggingProject { get; set; }
+
+        }
+
     }
 
 }
