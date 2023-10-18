@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// 
         /// *   Valid values for watermarks: **png, gif, apng, and mov**
         /// *   Valid values for subtitles: **srt, ass, stl, ttml, and vtt**
-        /// *   Valid values for materials: **jpg, gif, png, mp4, mat, and zip**
+        /// *   Valid values for materials: **jpg, gif, png, mp4, mat, zip, and apk**
         /// </summary>
         [NameInMap("MediaExt")]
         [Validation(Required=false)]

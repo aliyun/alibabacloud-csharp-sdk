@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The ID of the produced video.
         /// 
-        /// > *   This operation returns the ID of the produced video in synchronous mode.
-        /// > *   If this operation returns the MediaId parameter, the video production task is being asynchronously processed.
+        /// > *   This parameter is returned for each request.
+        /// > *   If a value is returned for this parameter, the video production task is being asynchronously processed.
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]

@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The ID of the video.
+        /// The video ID.
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

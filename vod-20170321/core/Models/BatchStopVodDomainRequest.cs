@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class BatchStopVodDomainRequest : TeaModel {
         /// <summary>
-        /// The domain name for CDN. Separate multiple domain names with commas (,).
+        /// The accelerated domain name. Separate multiple domain names with commas (,).
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainLogResponseBody : TeaModel {
         /// <summary>
-        /// The detailed data of Alibaba Cloud CDN logs.
+        /// The details of CDN logs.
         /// </summary>
         [NameInMap("DomainLogDetails")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? LogCount { get; set; }
 
                 /// <summary>
-                /// The detailed information about Alibaba Cloud CDN logs.
+                /// The queried CDN logs.
                 /// </summary>
                 [NameInMap("LogInfos")]
                 [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> LogInfoDetail { get; set; }
                     public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail : TeaModel {
                         /// <summary>
-                        /// The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                        /// The end of the time range during which data was queried. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("EndTime")]
                         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public long? LogSize { get; set; }
 
                         /// <summary>
-                        /// The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                        /// The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
@@ -85,21 +85,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// The pagination settings of Alibaba Cloud CDN logs.
+                /// The pagination information.
                 /// </summary>
                 [NameInMap("PageInfos")]
                 [Validation(Required=false)]
                 public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos PageInfos { get; set; }
                 public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos : TeaModel {
                     /// <summary>
-                    /// The page number of the returned page.
+                    /// The page number.
                     /// </summary>
                     [NameInMap("PageNumber")]
                     [Validation(Required=false)]
                     public long? PageNumber { get; set; }
 
                     /// <summary>
-                    /// The number of entries returned per page.
+                    /// The number of entries per page.
                     /// </summary>
                     [NameInMap("PageSize")]
                     [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

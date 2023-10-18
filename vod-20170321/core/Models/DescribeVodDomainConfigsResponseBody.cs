@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig> DomainConfig { get; set; }
             public class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig : TeaModel {
                 /// <summary>
-                /// The ID of the configuration.
+                /// The configuration ID.
                 /// </summary>
                 [NameInMap("ConfigId")]
                 [Validation(Required=false)]
                 public string ConfigId { get; set; }
 
                 /// <summary>
-                /// The parameters of each feature.
+                /// The feature parameters.
                 /// </summary>
                 [NameInMap("FunctionArgs")]
                 [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public List<DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg> FunctionArg { get; set; }
                     public class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg : TeaModel {
                         /// <summary>
-                        /// The name of the parameter.
+                        /// The parameter name.
                         /// </summary>
                         [NameInMap("ArgName")]
                         [Validation(Required=false)]
                         public string ArgName { get; set; }
 
                         /// <summary>
-                        /// The value of the parameter.
+                        /// The parameter value.
                         /// </summary>
                         [NameInMap("ArgValue")]
                         [Validation(Required=false)]
@@ -57,18 +57,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// The name of the function.
+                /// The feature name.
                 /// </summary>
                 [NameInMap("FunctionName")]
                 [Validation(Required=false)]
                 public string FunctionName { get; set; }
 
                 /// <summary>
-                /// The status of the configuration. Valid values:
-                /// - **success**
-                /// - **testing**
-                /// - **failed**
-                /// - **configuring**
+                /// The configuration status. Valid values:
+                /// 
+                /// *   **success**
+                /// *   **testing**
+                /// *   **failed**
+                /// *   **configuring**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -79,7 +80,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

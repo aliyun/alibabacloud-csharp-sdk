@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAuditSecurityIpRequest : TeaModel {
         /// <summary>
-        /// The name of the review security group where you want to query IP addresses. If you do not set this parameter, IP addresses in all review security groups are queried.
+        /// The name of the review security group in which you want to query IP addresses. If you do not specify this parameter, IP addresses in all review security groups are queried.
         /// </summary>
         [NameInMap("SecurityGroupName")]
         [Validation(Required=false)]

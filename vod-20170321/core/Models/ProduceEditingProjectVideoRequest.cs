@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The metadata of the produced video, in JSON format. For more information about the structure, see [MediaMetadata](~~52839~~).
+        /// The video metadata. The value must be in JSON format. For more information about the parameter structure, see [MediaMetadata](~~52839#title_rtf_ry5\_gjp~~).
         /// </summary>
         [NameInMap("MediaMetadata")]
         [Validation(Required=false)]
@@ -35,14 +35,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The configuration of video production, in JSON format. For more information about the structure, see [ProduceConfig](~~52839~~).
+        /// The configuration of video production. The value must be in JSON format. For more information about the parameter structure, see [ProduceConfig](~~52839#title_ybl\_7cs_y7d~~).
+        /// 
+        /// > The StorageLocation field is required if you create an online editing project in a region other than the China (Shanghai) region.
         /// </summary>
         [NameInMap("ProduceConfig")]
         [Validation(Required=false)]
         public string ProduceConfig { get; set; }
 
         /// <summary>
-        /// The ID of the online editing project.
+        /// The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:
+        /// 
+        /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to view the ID of the online editing project.
+        /// *   Obtain the value of ProjectId from the response to the [AddEditingProject](~~69048~~) operation.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -57,7 +62,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](~~52839~~).
+        /// The timeline of the online editing project. The value must be in JSON format. For more information about the parameter structure, see [Timeline](~~52839#07bc7fe0f2xuh~~).
         /// </summary>
         [NameInMap("Timeline")]
         [Validation(Required=false)]
@@ -71,9 +76,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// The custom configuration, such as the callback configuration. The value is a JSON-formatted string. For more information about the structure, see [UserData](~~86952~~).
+        /// The custom configurations, such as the callback configuration. The value must be a JSON string. For more information about the parameter structure, see [UserData](~~86952#title_vz7\_xzs\_0c5~~).
         /// 
-        /// > To use the MessageCallback parameter, you must set an HTTP callback URL and select a callback event type in the ApsaraVideo VOD console. Otherwise, the callback configuration does not take effect.
+        /// > The callback configurations take effect only after you specify an HTTP URL for receiving callback notifications and select the event types in the ApsaraVideo VOD console.
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

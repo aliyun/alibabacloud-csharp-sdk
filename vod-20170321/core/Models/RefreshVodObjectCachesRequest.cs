@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class RefreshVodObjectCachesRequest : TeaModel {
         /// <summary>
-        /// The path of the resource to be refreshed. Separate multiple paths with line breaks (\n or \r\n).
+        /// The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).
         /// </summary>
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]
         public string ObjectPath { get; set; }
 
         /// <summary>
-        /// The granularity of the resources to be refreshed. Valid values:
+        /// The type of the object that you want to refresh. Valid values:
         /// 
-        /// *   **File**: refreshes one or more files. This is the default value.
-        /// *   **Directory**: refreshes the files under one or more directories.
+        /// *   **File** (default): refreshes files.
+        /// *   **Directory**: refreshes the files in specified directories.
         /// </summary>
         [NameInMap("ObjectType")]
         [Validation(Required=false)]

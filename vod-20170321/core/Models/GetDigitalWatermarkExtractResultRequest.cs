@@ -8,7 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
-    public class DeleteEditingProjectRequest : TeaModel {
+    public class GetDigitalWatermarkExtractResultRequest : TeaModel {
+        [NameInMap("ExtractType")]
+        [Validation(Required=false)]
+        public string ExtractType { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
+        [NameInMap("MediaId")]
+        [Validation(Required=false)]
+        public string MediaId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,13 +28,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
-
-        /// <summary>
-        /// The ID of the online editing project. Separate multiple IDs with commas (,).
-        /// </summary>
-        [NameInMap("ProjectIds")]
-        [Validation(Required=false)]
-        public string ProjectIds { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

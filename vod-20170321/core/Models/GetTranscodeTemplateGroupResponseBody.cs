@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string Container { get; set; }
 
+                [NameInMap("CopyrightMark")]
+                [Validation(Required=false)]
+                public string CopyrightMark { get; set; }
+
                 /// <summary>
                 /// Valid values for the definition of a common transcoding template:
                 /// *   **LD**: low definition.
@@ -172,6 +176,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]
                 public string TemplateName { get; set; }
+
+                [NameInMap("TraceMark")]
+                [Validation(Required=false)]
+                public string TraceMark { get; set; }
 
                 /// <summary>
                 /// The conditional transcoding configurations. This parameter can be used if you want to determine the basic logic based on the bitrate and resolution of the mezzanine file before the video is transcoded. The value is a JSON-formatted string.

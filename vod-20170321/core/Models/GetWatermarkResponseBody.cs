@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// The time when the watermark was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the watermark was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The Object Storage Service (OSS) URL or Content Delivery Network (CDN) URL of the watermark file. A text watermark does not have a file URL.
+            /// The Object Storage Service (OSS) URL or CDN URL of the watermark file. A text watermark does not have a file URL.
             /// </summary>
             [NameInMap("FileUrl")]
             [Validation(Required=false)]
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// Indicates whether the watermark is the default one. Valid values:
             /// 
-            /// *   **Default**: The watermark is the default one.
-            /// *   **NotDefault**: The watermark is not the default one.
+            /// *   **Default**
+            /// *   **NotDefault**
             /// </summary>
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
+            /// The configuration information such as the position and effect about the text watermark or image watermark. The value is a JSON string. For more information about the data structure, see the "WatermarkConfig: specifies the watermark configurations" section of the [Parameters for media processing](~~98618~~) topic.
             /// </summary>
             [NameInMap("WatermarkConfig")]
             [Validation(Required=false)]

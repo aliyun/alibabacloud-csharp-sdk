@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Bitrate { get; set; }
 
                 /// <summary>
-                /// The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The creation time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The quality of the video stream. Valid values:
+                /// The quality of the media stream. Valid values:
                 /// 
                 /// *   **FD**: low definition
                 /// *   **LD**: standard definition
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Duration { get; set; }
 
                 /// <summary>
-                /// Indicates whether the video stream was encrypted. Valid values:
+                /// Indicates whether the media stream was encrypted. Valid values:
                 /// 
                 /// *   **0**: no
-                /// *   **1**: yes
+                /// *   **1**: yes.
                 /// </summary>
                 [NameInMap("Encrypt")]
                 [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// *   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography
                 /// *   **HLSEncryption**: HTTP Live Streaming (HLS) encryption
                 /// 
-                /// > If the encryption type is **AliyunVoDEncryption**, only ApsaraVideo Player SDK can be used to play videos.
+                /// >  If the encryption type is AliyunVoDEncryption, only ApsaraVideo Player SDK can be used to play videos.
                 /// </summary>
                 [NameInMap("EncryptType")]
                 [Validation(Required=false)]
@@ -120,18 +120,26 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string HDRType { get; set; }
 
                 /// <summary>
-                /// The height of the media stream. Unit: pixels.
+                /// The height of the media stream. Unit: pixel.
                 /// </summary>
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public long? Height { get; set; }
 
+                [NameInMap("JobExt")]
+                [Validation(Required=false)]
+                public string JobExt { get; set; }
+
                 /// <summary>
-                /// The ID of the media transcoding job. This ID uniquely identifies a media stream.
+                /// The job ID for transcoding the media stream. This ID uniquely identifies a media stream.
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
+
+                [NameInMap("JobType")]
+                [Validation(Required=false)]
+                public int? JobType { get; set; }
 
                 /// <summary>
                 /// The update time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
@@ -143,7 +151,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The type of Narrowband HD transcoding. Valid values:
                 /// 
-                /// *   **0**: regular
+                /// *   **0**: normal transcoding
                 /// *   **1.0**: Narrowband HD 1.0
                 /// *   **2.0**: Narrowband HD 2.0
                 /// 
@@ -154,7 +162,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string NarrowBandType { get; set; }
 
                 /// <summary>
-                /// The playback URL of the video stream.
+                /// The playback URL of the media stream.
                 /// </summary>
                 [NameInMap("PlayURL")]
                 [Validation(Required=false)]
@@ -199,7 +207,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string WatermarkId { get; set; }
 
                 /// <summary>
-                /// The width of the media stream. Unit: pixels.
+                /// The width of the media stream. Unit: pixel.
                 /// </summary>
                 [NameInMap("Width")]
                 [Validation(Required=false)]

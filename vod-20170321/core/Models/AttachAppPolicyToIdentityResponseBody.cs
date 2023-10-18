@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AttachAppPolicyToIdentityResponseBody : TeaModel {
         /// <summary>
-        /// The name of the policy that failed to be attached to the identity.
+        /// The names of the policies that failed to be granted to the RAM user or RAM role.
         /// </summary>
         [NameInMap("FailedPolicyNames")]
         [Validation(Required=false)]
         public List<string> FailedPolicyNames { get; set; }
 
         /// <summary>
-        /// The name of the policy that was not found.
+        /// The names of the policies that were not found.
         /// </summary>
         [NameInMap("NonExistPolicyNames")]
         [Validation(Required=false)]

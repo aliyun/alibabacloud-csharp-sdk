@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateAITemplateRequest : TeaModel {
         /// <summary>
-        /// The detailed configurations of the AI template. The value is a JSON string.
+        /// The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]

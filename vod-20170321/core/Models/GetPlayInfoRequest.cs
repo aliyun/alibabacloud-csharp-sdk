@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Definition { get; set; }
 
+        [NameInMap("DigitalWatermarkType")]
+        [Validation(Required=false)]
+        public string DigitalWatermarkType { get; set; }
+
         /// <summary>
         /// The format of the media stream. Separate multiple formats with commas (,). Valid values:
         /// 
@@ -87,7 +91,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// The custom playback configuration. The value is a JSON string. For more information, see [PlayConfig](~~86952~~).
         /// 
         /// >-   If you do not specify PlayConfig or `PlayDomain` in PlayConfig, the default domain name configured in ApsaraVideo VOD is used in this operation. If no default domain name is configured, the domain names are queried in reverse chronological order based on the time when the domain names were modified. The domain name that was last modified is used as the streaming domain name. To prevent domain name issues, we recommend that you specify the default streaming domain name. You can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Configuration Management** > **Media Management** > **Storage** > **Manage** > **Origin Domain Name** to set the default streaming domain name.
-        /// 
         /// >-   If the `EncryptType` parameter in PlayConfig is set to `AliyunVoDEncryption`, the playback URL of the stream encrypted by using proprietary cryptography is not returned to ensure video security. If you want to return such URL, you must set the `ResultType` parameter to `Multiple`.
         /// </summary>
         [NameInMap("PlayConfig")]
@@ -122,6 +125,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("StreamType")]
         [Validation(Required=false)]
         public string StreamType { get; set; }
+
+        [NameInMap("Trace")]
+        [Validation(Required=false)]
+        public string Trace { get; set; }
 
         /// <summary>
         /// The ID of the media file. You can specify only one ID. You can use one of the following methods to obtain the media ID:

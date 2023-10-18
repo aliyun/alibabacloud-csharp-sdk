@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateMediaStorageClassRequest : TeaModel {
         /// <summary>
-        /// The ID of the media asset. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:
+        /// The media asset ID. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:
         /// 
         /// *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, you can view the ID of the media asset. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
-        /// *   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media assets.
-        /// *   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation that you call to query the media ID after the media asset is uploaded.
+        /// *   Obtain the value of the VideoId parameter from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media assets.
+        /// *   Obtain the value of the VideoId parameter from the response to the [SearchMedia](~~86044~~) operation that you call to query the media ID after the media asset is uploaded.
         /// </summary>
         [NameInMap("MediaIds")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The modification range. Valid values:
         /// 
-        /// *   **All**: modifies the storage classes of all resources including the source files, transcoded streams, and snapshots.
+        /// *   **All**: modifies the storage classes of all resources including the source files and transcoded streams.
         /// *   **SourceFile**: modifies the storage classes of only the source files. The storage class of other resources is Standard.
         /// </summary>
         [NameInMap("Scope")]

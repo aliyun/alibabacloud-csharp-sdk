@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteTranscodeTemplateGroupRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to forcibly delete the entire transcoding template group. Valid values:
+        /// Specifies whether to forcibly delete the transcoding template group. Valid values:
         /// 
-        /// *   **true**: deletes the entire transcoding template group and its transcoding templates.
-        /// *   **false**: removes the specified transcoding templates from the transcoding template group. This is the default value.
+        /// *   **true**: deletes the transcoding template group and all the transcoding templates in the group.
+        /// *   **false** (default): deletes only the specified transcoding templates from the transcoding template group.
         /// </summary>
         [NameInMap("ForceDelGroup")]
         [Validation(Required=false)]
@@ -27,10 +27,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string TranscodeTemplateGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of the transcoding templates that you want to remove.
+        /// The IDs of the transcoding templates that you want to delete.
         /// 
         /// *   Separate multiple IDs with commas (,).
         /// *   You can specify a maximum of 10 IDs.
+        /// *   This parameter is required if you set ForceDelGroup to false or leave ForceDelGroup empty.
         /// </summary>
         [NameInMap("TranscodeTemplateIds")]
         [Validation(Required=false)]

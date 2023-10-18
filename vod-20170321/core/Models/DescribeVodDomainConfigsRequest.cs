@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The name of the feature. Separate multiple names with commas (,). For more information, see the **Feature description** section.
+        /// The feature name. Separate multiple names with commas (,). For more information, see **Feature description**.
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]

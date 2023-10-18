@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// Indicates whether callback authentication is enabled. This parameter is returned only for HTTP callbacks. Valid values:
             /// 
-            /// *   **on**: indicates that authentication is enabled.
-            /// *   **off**: indicates that authentication is disabled.
+            /// *   **on**
+            /// *   **off**
             /// </summary>
             [NameInMap("AuthSwitch")]
             [Validation(Required=false)]
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string EventTypeList { get; set; }
 
             /// <summary>
-            /// The public endpoint of Message Service (MNS). This parameter is returned only for MNS callbacks.
+            /// The public endpoint of MNS. This parameter is returned only for MNS callbacks.
             /// </summary>
             [NameInMap("MnsEndpoint")]
             [Validation(Required=false)]
             public string MnsEndpoint { get; set; }
 
             /// <summary>
-            /// The name of the MNS queue. This parameter is returned only for MNS callbacks.
+            /// The name of the Message Service (MNS) queue. This parameter is returned only for MNS callbacks.
             /// </summary>
             [NameInMap("MnsQueueName")]
             [Validation(Required=false)]

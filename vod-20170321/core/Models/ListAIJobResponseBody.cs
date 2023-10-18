@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAIJobResponseBody : TeaModel {
         /// <summary>
-        /// The information about the jobs.
+        /// The list of jobs.
         /// </summary>
         [NameInMap("AIJobList")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The time when the job is complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CompleteTime")]
                 [Validation(Required=false)]
@@ -42,21 +42,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The returned data. The value is a JSON string.
+                /// The returned data. The value is a JSON string. For more information, see [AITemplateConfig](~~89863~~).
                 /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public string Data { get; set; }
 
                 /// <summary>
-                /// The ID of the job.
+                /// The job ID.
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// The ID of the video.
+                /// The ID of the video file.
                 /// </summary>
                 [NameInMap("MediaId")]
                 [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The status of the job. Valid values:
                 /// 
-                /// *   **success**: The job is complete.
+                /// *   **success**: The job is successful.
                 /// *   **fail**: The job failed.
                 /// *   **init**: The job is being initialized.
                 /// *   **Processing**: The job is in progress.
@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The type of the job. Valid values:
                 /// 
-                /// *   **AIMediaDNA**: The media fingerprinting job.
-                /// *   **AIVideoTag**: The smart tagging job.
+                /// *   **AIMediaDNA**: video fingerprinting
+                /// *   **AIVideoTag**: smart tagging
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

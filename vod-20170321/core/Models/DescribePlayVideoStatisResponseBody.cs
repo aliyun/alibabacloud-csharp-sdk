@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribePlayVideoStatisResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail> VideoPlayStatisDetail { get; set; }
             public class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail : TeaModel {
                 /// <summary>
-                /// The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
+                /// The date. The date is displayed in the *yyyy-MM-dd* format.
                 /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]
                 public string Date { get; set; }
 
                 /// <summary>
-                /// The playback duration. Unit: milliseconds.
+                /// The playback duration. Unit: millisecond.
                 /// </summary>
                 [NameInMap("PlayDuration")]
                 [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string PlayRange { get; set; }
 
                 /// <summary>
-                /// The title of the video.
+                /// The video title.
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]

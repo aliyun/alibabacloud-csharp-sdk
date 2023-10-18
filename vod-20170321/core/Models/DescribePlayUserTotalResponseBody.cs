@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The statistics on total playback each day.
+        /// The daily playback statistics.
         /// </summary>
         [NameInMap("UserPlayStatisTotals")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal> UserPlayStatisTotal { get; set; }
             public class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal : TeaModel {
                 /// <summary>
-                /// The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
+                /// The date. The date is displayed in the *yyyy-MM-dd* format.
                 /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Android { get; set; }
 
                     /// <summary>
-                    /// The total number of unique visitors who use ApsaraVideo Player SDK for Flash.
+                    /// The total number of unique visitors who use the Flash player.
                     /// </summary>
                     [NameInMap("Flash")]
                     [Validation(Required=false)]
                     public string Flash { get; set; }
 
                     /// <summary>
-                    /// The total number of unique visitors who use ApsaraVideo Player SDK for HTML5.
+                    /// The total number of unique visitors who use the HTML5 player.
                     /// </summary>
                     [NameInMap("HTML5")]
                     [Validation(Required=false)]
@@ -93,28 +93,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV VV { get; set; }
                 public class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV : TeaModel {
                     /// <summary>
-                    /// The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Android.
+                    /// The total number of video views played by using ApsaraVideo Player SDK for Android.
                     /// </summary>
                     [NameInMap("Android")]
                     [Validation(Required=false)]
                     public string Android { get; set; }
 
                     /// <summary>
-                    /// The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Flash.
+                    /// The total number of video views played by using the Flash player.
                     /// </summary>
                     [NameInMap("Flash")]
                     [Validation(Required=false)]
                     public string Flash { get; set; }
 
                     /// <summary>
-                    /// The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for HTML5.
+                    /// The total number of video views played by using the HTML5 player.
                     /// </summary>
                     [NameInMap("HTML5")]
                     [Validation(Required=false)]
                     public string HTML5 { get; set; }
 
                     /// <summary>
-                    /// The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for iOS.
+                    /// The total number of video views played by using ApsaraVideo Player SDK for iOS.
                     /// </summary>
                     [NameInMap("iOS")]
                     [Validation(Required=false)]
