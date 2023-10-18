@@ -238,6 +238,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string StorageResourceTotal { get; set; }
 
+                [NameInMap("SupportedFeatures")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> SupportedFeatures { get; set; }
+
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeDBClusterAttributeResponseBodyItemsDBClusterTags Tags { get; set; }
