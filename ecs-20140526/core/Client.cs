@@ -10000,6 +10000,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["AutoReleaseTime"] = request.AutoReleaseTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditSpecification))
+            {
+                query["CreditSpecification"] = request.CreditSpecification;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisk))
             {
                 query["DataDisk"] = request.DataDisk;
@@ -10223,6 +10227,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoReleaseTime))
             {
                 query["AutoReleaseTime"] = request.AutoReleaseTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditSpecification))
+            {
+                query["CreditSpecification"] = request.CreditSpecification;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisk))
             {
@@ -10478,6 +10486,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["AutoReleaseTime"] = request.AutoReleaseTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditSpecification))
+            {
+                query["CreditSpecification"] = request.CreditSpecification;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisk))
             {
                 query["DataDisk"] = request.DataDisk;
@@ -10691,6 +10703,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoReleaseTime))
             {
                 query["AutoReleaseTime"] = request.AutoReleaseTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditSpecification))
+            {
+                query["CreditSpecification"] = request.CreditSpecification;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisk))
             {

@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string AutoReleaseTime { get; set; }
 
+                    [NameInMap("CreditSpecification")]
+                    [Validation(Required=false)]
+                    public string CreditSpecification { get; set; }
+
                     /// <summary>
                     /// Details about the data disks.
                     /// </summary>
