@@ -1,3 +1,6 @@
+2023-10-19 Version: 1.2.0
+- Generated csharp 2017-12-14 for BssOpenApi.
+
 2023-09-04 Version: 1.1.0
 - Generated csharp 2017-12-14 for BssOpenApi.
 

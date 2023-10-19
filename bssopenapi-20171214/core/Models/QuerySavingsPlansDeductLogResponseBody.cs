@@ -10,71 +10,77 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySavingsPlansDeductLogResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page.
+        /// The error code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The type of the savings plan. Valid values:
-        /// 
-        /// *   universal: general-purpose
-        /// *   ecs: ECS compute
+        /// The return data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QuerySavingsPlansDeductLogResponseBodyData Data { get; set; }
         public class QuerySavingsPlansDeductLogResponseBodyData : TeaModel {
             /// <summary>
-            /// The deduction rate.
+            /// The deduction details.
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<QuerySavingsPlansDeductLogResponseBodyDataItems> Items { get; set; }
             public class QuerySavingsPlansDeductLogResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// The total number of entries.
+                /// The billable item for which the fee is deducted.
                 /// </summary>
                 [NameInMap("BillModule")]
                 [Validation(Required=false)]
                 public string BillModule { get; set; }
 
+                /// <summary>
+                /// The service for which the fee is deducted.
+                /// </summary>
                 [NameInMap("DeductCommodity")]
                 [Validation(Required=false)]
                 public string DeductCommodity { get; set; }
 
+                /// <summary>
+                /// The deducted amount.
+                /// </summary>
                 [NameInMap("DeductFee")]
                 [Validation(Required=false)]
                 public string DeductFee { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The ID of the instance for which the fee is deducted.
                 /// </summary>
                 [NameInMap("DeductInstanceId")]
                 [Validation(Required=false)]
                 public string DeductInstanceId { get; set; }
 
+                /// <summary>
+                /// The deduction rate.
+                /// </summary>
                 [NameInMap("DeductRate")]
                 [Validation(Required=false)]
                 public string DeductRate { get; set; }
 
                 /// <summary>
-                /// The billable item for which the fee is deducted.
+                /// The discount used for the current deduction.
                 /// </summary>
                 [NameInMap("DiscountRate")]
                 [Validation(Required=false)]
                 public string DiscountRate { get; set; }
 
                 /// <summary>
-                /// The page number of the returned page.
+                /// The end of the billing cycle for which the fee is deducted.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The service for which the fee is deducted.
+                /// The ID of the savings plan instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -85,7 +91,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? OwnerId { get; set; }
 
                 /// <summary>
-                /// The ID of the instance for which the fee is deducted.
+                /// The type of the savings plan. Valid values:
+                /// 
+                /// *   universal: general-purpose
+                /// *   ecs: ECS compute
                 /// </summary>
                 [NameInMap("SavingsType")]
                 [Validation(Required=false)]
@@ -99,7 +108,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The number of the page to return.
+                /// The ID of the user.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
@@ -108,24 +117,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// The number of entries to return on each page.
+            /// The page number of the returned page.
             /// </summary>
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// The language of the return data. Valid values:
-            /// 
-            /// *   ZH: Chinese
-            /// *   EN: English
+            /// The number of entries returned per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+            /// The total number of entries.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -134,21 +140,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The ID of the savings plan instance.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The deduction details.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The return data.
+        /// Indicates whether the operation was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

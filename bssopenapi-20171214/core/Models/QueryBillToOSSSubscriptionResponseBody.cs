@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// The details of the subscribed bills.
+            /// The details of the subscribed bill.
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -49,19 +49,22 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public List<QueryBillToOSSSubscriptionResponseBodyDataItemsItem> Item { get; set; }
                 public class QueryBillToOSSSubscriptionResponseBodyDataItemsItem : TeaModel {
                     /// <summary>
-                    /// The owner ID of the OSS bucket.
+                    /// The owner ID of the Object Storage Service (OSS) bucket.
                     /// </summary>
                     [NameInMap("BucketOwnerId")]
                     [Validation(Required=false)]
                     public long? BucketOwnerId { get; set; }
 
                     /// <summary>
-                    /// The directory of the OSS bucket.
+                    /// The path in the OSS bucket.
                     /// </summary>
                     [NameInMap("BucketPath")]
                     [Validation(Required=false)]
                     public string BucketPath { get; set; }
 
+                    /// <summary>
+                    /// The maximum number of data rows in a single file. If the number of data rows in a bill exceeds the upper limit, the bill is split into multiple files. Then, multiple files are merged and compressed into a package.
+                    /// </summary>
                     [NameInMap("RowLimitPerFile")]
                     [Validation(Required=false)]
                     public int? RowLimitPerFile { get; set; }
@@ -75,6 +78,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
                     /// <summary>
                     /// The code of the language.
+                    /// 
+                    /// Valid values:
+                    /// 
+                    /// *   en: English
+                    /// *   zh: Chinese
                     /// </summary>
                     [NameInMap("SubscribeLanguage")]
                     [Validation(Required=false)]
@@ -90,8 +98,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     /// <summary>
                     /// The type of the subscribed bill. Valid values:
                     /// 
-                    /// *   BillingItemDetailForBillingPeriod: bill of a billable item
-                    /// *   InstanceDetailForBillingPeriod: bill of an instance
+                    /// *   BillingItemDetailForBillingPeriod: the bill of a billable item.
+                    /// *   InstanceDetailForBillingPeriod: the bill of an instance.
                     /// </summary>
                     [NameInMap("SubscribeType")]
                     [Validation(Required=false)]
