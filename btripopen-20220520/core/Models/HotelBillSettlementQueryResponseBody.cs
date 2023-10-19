@@ -292,6 +292,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string SettlementType { get; set; }
 
+                [NameInMap("star")]
+                [Validation(Required=false)]
+                public string Star { get; set; }
+
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
@@ -318,6 +322,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("traveler_job_no")]
                 [Validation(Required=false)]
                 public string TravelerJobNo { get; set; }
+
+                [NameInMap("traveler_member_type_name")]
+                [Validation(Required=false)]
+                public string TravelerMemberTypeName { get; set; }
 
                 [NameInMap("traveler_name")]
                 [Validation(Required=false)]

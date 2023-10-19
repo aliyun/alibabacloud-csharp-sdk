@@ -204,6 +204,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public long? PrimaryId { get; set; }
 
+                [NameInMap("print_ticket_price")]
+                [Validation(Required=false)]
+                public double? PrintTicketPrice { get; set; }
+
                 [NameInMap("project_code")]
                 [Validation(Required=false)]
                 public string ProjectCode { get; set; }
@@ -310,6 +314,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("traveler_job_no")]
                 [Validation(Required=false)]
                 public string TravelerJobNo { get; set; }
+
+                [NameInMap("traveler_member_type_name")]
+                [Validation(Required=false)]
+                public string TravelerMemberTypeName { get; set; }
 
                 [NameInMap("traveler_name")]
                 [Validation(Required=false)]
