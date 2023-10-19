@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [Validation(Required=false)]
                 public string AutofillText { get; set; }
 
+                [NameInMap("CouponCode")]
+                [Validation(Required=false)]
+                public string CouponCode { get; set; }
+
                 /// <summary>
                 /// The unsubscribe button. This parameter is valid only when Category is set to MARKETING and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY in a WhatsApp message template. After you configure message sending in the ChatApp Message Service console, marketing messages will not be sent to customers if they click this button.
                 /// </summary>
@@ -144,6 +148,60 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string Caption { get; set; }
 
+            [NameInMap("Cards")]
+            [Validation(Required=false)]
+            public List<ModifyChatappTemplateRequestComponentsCards> Cards { get; set; }
+            public class ModifyChatappTemplateRequestComponentsCards : TeaModel {
+                [NameInMap("CardComponents")]
+                [Validation(Required=false)]
+                public List<ModifyChatappTemplateRequestComponentsCardsCardComponents> CardComponents { get; set; }
+                public class ModifyChatappTemplateRequestComponentsCardsCardComponents : TeaModel {
+                    [NameInMap("Buttons")]
+                    [Validation(Required=false)]
+                    public List<ModifyChatappTemplateRequestComponentsCardsCardComponentsButtons> Buttons { get; set; }
+                    public class ModifyChatappTemplateRequestComponentsCardsCardComponentsButtons : TeaModel {
+                        [NameInMap("PhoneNumber")]
+                        [Validation(Required=false)]
+                        public string PhoneNumber { get; set; }
+
+                        [NameInMap("Text")]
+                        [Validation(Required=false)]
+                        public string Text { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                        [NameInMap("Url")]
+                        [Validation(Required=false)]
+                        public string Url { get; set; }
+
+                        [NameInMap("UrlType")]
+                        [Validation(Required=false)]
+                        public string UrlType { get; set; }
+
+                    }
+
+                    [NameInMap("Format")]
+                    [Validation(Required=false)]
+                    public string Format { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                    [NameInMap("Url")]
+                    [Validation(Required=false)]
+                    public string Url { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// The validity period of the verification code in the WhatsApp authentication template. Unit: minutes. This parameter is valid only when Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to FOOTER in a WhatsApp message template. The validity period of the verification code is displayed in the footer.
             /// </summary>
@@ -185,6 +243,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [NameInMap("Format")]
             [Validation(Required=false)]
             public string Format { get; set; }
+
+            [NameInMap("HasExpiration")]
+            [Validation(Required=false)]
+            public bool? HasExpiration { get; set; }
 
             /// <summary>
             /// The text of the message that you want to send.

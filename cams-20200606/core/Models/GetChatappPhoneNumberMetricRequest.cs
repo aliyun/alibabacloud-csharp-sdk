@@ -9,26 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappPhoneNumberMetricRequest : TeaModel {
+        /// <summary>
+        /// The space ID of the user under the ISV account.
+        /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
+        /// <summary>
+        /// The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
+        /// </summary>
         [NameInMap("End")]
         [Validation(Required=false)]
         public long? End { get; set; }
 
+        /// <summary>
+        /// Metric granularity. Valid values:
+        /// 
+        /// - DAILY
+        /// - HALF_HOUR
+        /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }
 
+        /// <summary>
+        /// The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+        /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
+        /// <summary>
+        /// The business phone number.
+        /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
+        /// <summary>
+        /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]
         public long? Start { get; set; }

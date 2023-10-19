@@ -2311,6 +2311,80 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await GetChatappVerifyCodeWithOptionsAsync(request, runtime);
         }
 
+        public GetCommerceSettingResponse GetCommerceSettingWithOptions(GetCommerceSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
+            {
+                query["PhoneNumber"] = request.PhoneNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCommerceSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCommerceSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetCommerceSettingResponse> GetCommerceSettingWithOptionsAsync(GetCommerceSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
+            {
+                query["PhoneNumber"] = request.PhoneNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCommerceSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCommerceSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetCommerceSettingResponse GetCommerceSetting(GetCommerceSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCommerceSettingWithOptions(request, runtime);
+        }
+
+        public async Task<GetCommerceSettingResponse> GetCommerceSettingAsync(GetCommerceSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCommerceSettingWithOptionsAsync(request, runtime);
+        }
+
         /**
           * The ID of the phone number.
           *
@@ -2601,6 +2675,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await GetPreValidatePhoneIdWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetWhatsappConnectionCatalogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetWhatsappConnectionCatalogResponse
+         */
         public GetWhatsappConnectionCatalogResponse GetWhatsappConnectionCatalogWithOptions(GetWhatsappConnectionCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2644,6 +2725,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetWhatsappConnectionCatalogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetWhatsappConnectionCatalogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetWhatsappConnectionCatalogResponse
+         */
         public async Task<GetWhatsappConnectionCatalogResponse> GetWhatsappConnectionCatalogWithOptionsAsync(GetWhatsappConnectionCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2687,12 +2775,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetWhatsappConnectionCatalogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetWhatsappConnectionCatalogRequest
+          * @return GetWhatsappConnectionCatalogResponse
+         */
         public GetWhatsappConnectionCatalogResponse GetWhatsappConnectionCatalog(GetWhatsappConnectionCatalogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetWhatsappConnectionCatalogWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetWhatsappConnectionCatalogRequest
+          * @return GetWhatsappConnectionCatalogResponse
+         */
         public async Task<GetWhatsappConnectionCatalogResponse> GetWhatsappConnectionCatalogAsync(GetWhatsappConnectionCatalogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2955,6 +3055,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await ListChatappTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListProductRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListProductResponse
+         */
         public ListProductResponse ListProductWithOptions(ListProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3018,6 +3125,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ListProductResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListProductRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListProductResponse
+         */
         public async Task<ListProductResponse> ListProductWithOptionsAsync(ListProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3081,18 +3195,37 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ListProductResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListProductRequest
+          * @return ListProductResponse
+         */
         public ListProductResponse ListProduct(ListProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListProductWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListProductRequest
+          * @return ListProductResponse
+         */
         public async Task<ListProductResponse> ListProductAsync(ListProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListProductWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListProductCatalogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListProductCatalogResponse
+         */
         public ListProductCatalogResponse ListProductCatalogWithOptions(ListProductCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3152,6 +3285,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ListProductCatalogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListProductCatalogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListProductCatalogResponse
+         */
         public async Task<ListProductCatalogResponse> ListProductCatalogWithOptionsAsync(ListProductCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3211,12 +3351,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ListProductCatalogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListProductCatalogRequest
+          * @return ListProductCatalogResponse
+         */
         public ListProductCatalogResponse ListProductCatalog(ListProductCatalogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListProductCatalogWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListProductCatalogRequest
+          * @return ListProductCatalogResponse
+         */
         public async Task<ListProductCatalogResponse> ListProductCatalogAsync(ListProductCatalogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4757,6 +4909,96 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAccountWebhookWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateCommerceSettingResponse UpdateCommerceSettingWithOptions(UpdateCommerceSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CartEnable))
+            {
+                query["CartEnable"] = request.CartEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogVisible))
+            {
+                query["CatalogVisible"] = request.CatalogVisible;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
+            {
+                query["PhoneNumber"] = request.PhoneNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCommerceSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCommerceSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateCommerceSettingResponse> UpdateCommerceSettingWithOptionsAsync(UpdateCommerceSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CartEnable))
+            {
+                query["CartEnable"] = request.CartEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogVisible))
+            {
+                query["CatalogVisible"] = request.CatalogVisible;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
+            {
+                query["PhoneNumber"] = request.PhoneNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCommerceSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCommerceSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateCommerceSettingResponse UpdateCommerceSetting(UpdateCommerceSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCommerceSettingWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateCommerceSettingResponse> UpdateCommerceSettingAsync(UpdateCommerceSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCommerceSettingWithOptionsAsync(request, runtime);
         }
 
         /**

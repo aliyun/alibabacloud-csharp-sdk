@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     [Validation(Required=false)]
                     public string AutofillText { get; set; }
 
+                    [NameInMap("CouponCode")]
+                    [Validation(Required=false)]
+                    public string CouponCode { get; set; }
+
                     /// <summary>
                     /// 扩展字段
                     /// </summary>
@@ -219,6 +223,60 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [Validation(Required=false)]
                 public string Caption { get; set; }
 
+                [NameInMap("Cards")]
+                [Validation(Required=false)]
+                public List<GetChatappTemplateDetailResponseBodyDataComponentsCards> Cards { get; set; }
+                public class GetChatappTemplateDetailResponseBodyDataComponentsCards : TeaModel {
+                    [NameInMap("CardComponents")]
+                    [Validation(Required=false)]
+                    public List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents> CardComponents { get; set; }
+                    public class GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents : TeaModel {
+                        [NameInMap("Buttons")]
+                        [Validation(Required=false)]
+                        public List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons> Buttons { get; set; }
+                        public class GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons : TeaModel {
+                            [NameInMap("PhoneNumber")]
+                            [Validation(Required=false)]
+                            public string PhoneNumber { get; set; }
+
+                            [NameInMap("Text")]
+                            [Validation(Required=false)]
+                            public string Text { get; set; }
+
+                            [NameInMap("Type")]
+                            [Validation(Required=false)]
+                            public string Type { get; set; }
+
+                            [NameInMap("Url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                            [NameInMap("UrlType")]
+                            [Validation(Required=false)]
+                            public string UrlType { get; set; }
+
+                        }
+
+                        [NameInMap("Format")]
+                        [Validation(Required=false)]
+                        public string Format { get; set; }
+
+                        [NameInMap("Text")]
+                        [Validation(Required=false)]
+                        public string Text { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                        [NameInMap("Url")]
+                        [Validation(Required=false)]
+                        public string Url { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// Whatsapp Authentication模板验证码有效期（分钟），只在Whatsapp类型消息，Category为Authentication并且Component Type为Footer时有效（此信息显示在Footer位置）
                 /// </summary>
@@ -282,6 +340,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [Validation(Required=false)]
                 public string Longitude { get; set; }
 
+                [NameInMap("OfferExpirationTimeMs")]
+                [Validation(Required=false)]
+                public string OfferExpirationTimeMs { get; set; }
+
                 /// <summary>
                 /// The text of the message that you want to send.
                 /// </summary>
@@ -326,6 +388,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [NameInMap("Url")]
                 [Validation(Required=false)]
                 public string Url { get; set; }
+
+                [NameInMap("hasExpiration")]
+                [Validation(Required=false)]
+                public bool? HasExpiration { get; set; }
 
             }
 
