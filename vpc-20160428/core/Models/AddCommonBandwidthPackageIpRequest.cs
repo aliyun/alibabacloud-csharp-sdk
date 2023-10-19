@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpInstanceId { get; set; }
 
         /// <summary>
-        /// The type of the IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.
+        /// The type of IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.
         /// </summary>
         [NameInMap("IpType")]
         [Validation(Required=false)]

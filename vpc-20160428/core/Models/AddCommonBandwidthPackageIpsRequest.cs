@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> IpInstanceIds { get; set; }
 
         /// <summary>
-        /// The type of the IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.
+        /// The type of the IP address. Set the value to **EIP** to associate EIPs with the EIP bandwidth plan.
         /// </summary>
         [NameInMap("IpType")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the Internet Shared Bandwidth instance.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~448570~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

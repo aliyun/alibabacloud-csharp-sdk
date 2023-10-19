@@ -284,6 +284,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string RemoteCaCertificate { get; set; }
 
+            [NameInMap("Role")]
+            [Validation(Required=false)]
+            public string Role { get; set; }
+
             /// <summary>
             /// The BGP configuration to be modified for the IPsec tunnel.
             /// </summary>

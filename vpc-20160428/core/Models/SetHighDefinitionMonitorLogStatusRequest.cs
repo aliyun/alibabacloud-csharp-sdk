@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The type of the instance. Set the value to **EIP**.
+        /// The instance type. Set the value to **EIP**.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]

@@ -243,6 +243,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
                 /// <summary>
                 /// The maximum bandwidth of the VPN gateway. **M** indicates Mbit/s.
                 /// </summary>
