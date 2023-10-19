@@ -10,35 +10,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SwitchApiRequest : TeaModel {
         /// <summary>
-        /// The description of the switch operation.
+        /// The ID of the API.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The description of the switch operation.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the runtime environment. Valid values:
-        /// 
-        /// *   **RELEASE**
-        /// *   **TEST**
+        /// The ID of the API group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// *   This API is intended for API providers.
-        /// *   The historical version can be obtained through the DescribeHistoryApis API.****
-        /// *   Only APIs that have been published more than once have historical versions to switch to.
-        /// *   This operation can only be performed on running APIs. Use caution when performing this operation because the operation cannot be undone after it has been completed and takes effect within 5 seconds.
-        /// *   The switch operation is in essence a publish operation, and the reason for this operation must be provided.
+        /// The historical version that you want to switch to.
         /// </summary>
         [NameInMap("HistoryVersion")]
         [Validation(Required=false)]
@@ -49,7 +42,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The historical version you want to switch to.
+        /// The name of the runtime environment. Valid values:
+        /// 
+        /// *   **RELEASE**
+        /// *   **TEST**
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

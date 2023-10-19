@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteAllTrafficSpecialControlRequest : TeaModel {
+        /// <summary>
+        /// The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+        /// </summary>
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// *   This API is intended for API providers.
+        /// The ID of the throttling policy.
         /// </summary>
         [NameInMap("TrafficControlId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteApiStageVariableRequest : TeaModel {
         /// <summary>
-        /// The name of the variable to be deleted. This parameter is case-sensitive.
+        /// The ID of the API group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the runtime environment.
         /// </summary>
         [NameInMap("StageId")]
         [Validation(Required=false)]
         public string StageId { get; set; }
 
         /// <summary>
-        /// *   This operation is intended for API providers.
+        /// The name of the variable to be deleted. This parameter is case-sensitive.
         /// </summary>
         [NameInMap("VariableName")]
         [Validation(Required=false)]

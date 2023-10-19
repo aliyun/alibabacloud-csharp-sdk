@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class BatchDeployApisRequest : TeaModel {
         /// <summary>
-        /// b4f5c342b8bc4ef88ccda0332402e0fa
+        /// The APIs that you want to operate.
         /// </summary>
         [NameInMap("Api")]
         [Validation(Required=false)]
         public List<BatchDeployApisRequestApi> Api { get; set; }
         public class BatchDeployApisRequestApi : TeaModel {
             /// <summary>
-            /// Publishes multiple APIs at a time.
+            /// The ID of the API.
             /// </summary>
             [NameInMap("ApiUid")]
             [Validation(Required=false)]
             public string ApiUid { get; set; }
 
             /// <summary>
-            /// The APIs that you want to operate.
+            /// The ID of the API group.
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// 2b35dd68345b472f8051647306a16415
+        /// The description.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -44,7 +44,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The description.
+        /// The name of the runtime environment. Valid values:
+        /// 
+        /// *   **RELEASE**
+        /// *   **TEST**
+        /// *   PRE: the pre-release environment
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

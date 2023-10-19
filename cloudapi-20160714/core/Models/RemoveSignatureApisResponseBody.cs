@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveSignatureApisResponseBody : TeaModel {
         /// <summary>
-        /// Unbinds a backend signature key from APIs.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

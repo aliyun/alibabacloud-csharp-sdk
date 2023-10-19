@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAbolishApiTaskRequest : TeaModel {
+        /// <summary>
+        /// The ID of the unpublishing operation.
+        /// </summary>
         [NameInMap("OperationUid")]
         [Validation(Required=false)]
         public string OperationUid { get; set; }

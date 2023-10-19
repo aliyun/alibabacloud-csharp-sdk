@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveTrafficControlApisResponseBody : TeaModel {
         /// <summary>
-        /// Unbinds a specified throttling policy from APIs.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

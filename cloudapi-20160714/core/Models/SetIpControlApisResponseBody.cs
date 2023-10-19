@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetIpControlApisResponseBody : TeaModel {
         /// <summary>
-        /// Creates a binding relationship between specified access control lists (ACLs) and APIs.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

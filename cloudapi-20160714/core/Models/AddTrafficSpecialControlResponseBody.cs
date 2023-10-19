@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class AddTrafficSpecialControlResponseBody : TeaModel {
         /// <summary>
-        /// Adds a custom special policy to a specified throttling policy.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeSignaturesRequest : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of the page to return. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// The IDs of the keys to query.
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
         public string SignatureId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
+        /// The names of the keys to query.
         /// </summary>
         [NameInMap("SignatureName")]
         [Validation(Required=false)]

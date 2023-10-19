@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyTrafficControlResponseBody : TeaModel {
         /// <summary>
-        /// Modifies the settings of a custom throttling policy.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

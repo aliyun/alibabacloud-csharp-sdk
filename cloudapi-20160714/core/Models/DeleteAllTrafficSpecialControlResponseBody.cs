@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteAllTrafficSpecialControlResponseBody : TeaModel {
         /// <summary>
-        /// Deletes all custom special policies of a specified throttling policy.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

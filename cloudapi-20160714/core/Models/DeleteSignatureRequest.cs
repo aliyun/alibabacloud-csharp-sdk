@@ -9,15 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteSignatureRequest : TeaModel {
+        /// <summary>
+        /// The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+        /// </summary>
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// *   This API is intended for API providers.
-        /// *   This API operation deletes an existing backend signature key.
-        /// *   You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.
-        /// *   The QPS limit on this operation is 50 per user.
+        /// The ID of the key to be deleted.
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]

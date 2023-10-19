@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
+        /// <summary>
+        /// The new AppKey that you set must be globally unique.
+        /// </summary>
         [NameInMap("NewAppKey")]
         [Validation(Required=false)]
         public string NewAppKey { get; set; }

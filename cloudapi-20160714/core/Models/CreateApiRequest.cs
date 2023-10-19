@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateApiRequest : TeaModel {
         /// <summary>
-        /// If the **AuthType** is **APP** authentication, you need to pass this value to specify the signature algorithm. If you do not specify this parameter, the default value HmacSHA256 is used. Valid values:
+        /// The type of the two-way communication API.
         /// 
-        /// *   HmacSHA256
-        /// *   HmacSHA1,HmacSHA256
+        /// *   **COMMON**: normal APIs
+        /// *   **REGISTER**: registered APIs
+        /// *   **UNREGISTER**: unregistered APIs
+        /// *   **NOTIFY**: downstream notification APIs
         /// </summary>
         [NameInMap("AllowSignatureMethod")]
         [Validation(Required=false)]
@@ -27,23 +29,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ApiName { get; set; }
 
         /// <summary>
-        /// If the **AuthType** parameter is set to **APP**, the valid values are:
-        /// 
-        /// *   **DEFAULT**: The default value that is used if no other values are passed. This value indicates that the settings of the group are used.
-        /// *   **DISABLE**: The authentication is disabled.
-        /// *   **HEADER**: AppCode can be placed in the Header parameter for authentication.
-        /// *   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.
+        /// The IDof the backend service
         /// </summary>
         [NameInMap("AppCodeAuthType")]
         [Validation(Required=false)]
         public string AppCodeAuthType { get; set; }
 
         /// <summary>
-        /// API安全认证类型，目前可以取值：
+        /// The configuration items of API requests sent by the consumer to API Gateway.
         /// 
-        /// - **APP**：只允许已授权的APP调用
-        /// - **ANONYMOUS**：允许匿名调用，设置为允许匿名调用需要注意：
-        ///   任何能够获取该API服务信息的人，都将能够调用该API。网关不会对调用者做身份认证，也无法设置按用户的流量控制，若开放该API请设置好按API的流量控制。
+        /// For more information, see [RequestConfig](~~43985~~).
         /// </summary>
         [NameInMap("AuthType")]
         [Validation(Required=false)]
@@ -57,7 +52,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public bool? BackendEnable { get; set; }
 
         /// <summary>
-        /// The IDof the backend service
+        /// Specifies whether to enable backend services.
         /// </summary>
         [NameInMap("BackendId")]
         [Validation(Required=false)]
@@ -75,8 +70,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// *   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.
-        /// *   If you set **DisableInternet** to **false**, the limit is lifted. The default value is false when you create an API.
+        /// If **AuthType** is set to **APP**, the valid values are:
+        /// 
+        /// *   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.
+        /// *   **DISABLE**: The authentication is disabled.
+        /// *   **HEADER**: AppCode can be placed in the Header parameter for authentication.
+        /// *   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.
         /// </summary>
         [NameInMap("DisableInternet")]
         [Validation(Required=false)]
@@ -91,8 +90,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string FailResultSample { get; set; }
 
         /// <summary>
-        /// *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
-        /// *   If you set **ForceNonceCheck** to **false**, the check is not performed. The default value is false when you create an API.
+        /// *   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.
+        /// *   If you set **DisableInternet** to **false**, the limit is lifted. The default value is false when you create an API.
         /// </summary>
         [NameInMap("ForceNonceCheck")]
         [Validation(Required=false)]
@@ -106,16 +105,19 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The switch status of ACL. Valid values:- **on** and **off**.
+        /// If the **AuthType** is **APP** authentication, you need to pass this value to specify the signature algorithm. If you do not specify this parameter, the default value HmacSHA256 is used. Valid values:
+        /// 
+        /// *   HmacSHA256
+        /// *   HmacSHA1,HmacSHA256
         /// </summary>
         [NameInMap("OpenIdConnectConfig")]
         [Validation(Required=false)]
         public string OpenIdConnectConfig { get; set; }
 
         /// <summary>
-        /// The configuration items of API requests sent by the consumer to API Gateway.
+        /// The configuration items of API requests sent by API Gateway to the backend service.
         /// 
-        /// For more information, see [RequestConfig](~~43985~~).
+        /// For more information, see [ServiceConfig](~~43987~~).
         /// </summary>
         [NameInMap("RequestConfig")]
         [Validation(Required=false)]
@@ -126,7 +128,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string RequestParameters { get; set; }
 
         /// <summary>
-        /// The return description of the API.
+        /// *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
+        /// *   If you set **ForceNonceCheck** to **false**, the check is not performed. The default value is false when you create an API.
         /// </summary>
         [NameInMap("ResultBodyModel")]
         [Validation(Required=false)]
@@ -141,7 +144,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ResultSample { get; set; }
 
         /// <summary>
-        /// The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. Default value: JSON.
+        /// The sample response from the backend service.
         /// </summary>
         [NameInMap("ResultType")]
         [Validation(Required=false)]
@@ -152,9 +155,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The configuration items of API requests sent by API Gateway to the backend service.
+        /// The parameters of API requests sent by the consumer to API Gateway.
         /// 
-        /// For more information, see [ServiceConfig](~~43987~~).
+        /// For more information, see [RequestParameter](~~43986~~).
         /// </summary>
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
@@ -183,12 +186,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// The type of the two-way communication API.
-        /// 
-        /// *   **COMMON**: common API
-        /// *   **REGISTER**: registered API
-        /// *   **UNREGISTER**: unregistered API
-        /// *   **NOTIFY**: downstream notification API
+        /// The return description of the API.
         /// </summary>
         [NameInMap("WebSocketApiType")]
         [Validation(Required=false)]

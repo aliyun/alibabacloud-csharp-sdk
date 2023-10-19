@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ReactivateDomainResponseBody : TeaModel {
         /// <summary>
-        /// Reactivates a custom domain name whose validity status is Abnormal.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeSystemParametersResponseBody : TeaModel {
         /// <summary>
-        /// Examples
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The description of a parameter.
+        /// The returned information about system parameters. It is an array that consists of SystemParam data.
         /// </summary>
         [NameInMap("SystemParams")]
         [Validation(Required=false)]
@@ -28,29 +28,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeSystemParametersResponseBodySystemParamsSystemParamItem> SystemParamItem { get; set; }
             public class DescribeSystemParametersResponseBodySystemParamsSystemParamItem : TeaModel {
                 /// <summary>
-                /// Client IP Address
+                /// Examples
                 /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
                 /// <summary>
-                /// The name of the parameter.
+                /// The description of a parameter.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// *   This API is intended for API callers.
-                /// *   The response of this API contains the system parameters that are optional in API definitions.
+                /// The name of the parameter.
                 /// </summary>
                 [NameInMap("ParamName")]
                 [Validation(Required=false)]
                 public string ParamName { get; set; }
 
                 /// <summary>
-                /// Queries the common parameters supported by the system.
+                /// The type of the parameter.
                 /// </summary>
                 [NameInMap("ParamType")]
                 [Validation(Required=false)]

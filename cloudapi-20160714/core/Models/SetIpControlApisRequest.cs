@@ -10,25 +10,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetIpControlApisRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The API IDs. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
         /// </summary>
         [NameInMap("ApiIds")]
         [Validation(Required=false)]
         public string ApiIds { get; set; }
 
         /// <summary>
-        /// The name of the runtime environment. Valid values:
-        /// 
-        /// *   **RELEASE**
-        /// *   **PRE**
-        /// *   **TEST**
+        /// The ID of the API group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The API IDs. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+        /// The ID of the ACL.
         /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
@@ -39,8 +35,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// *   This operation is intended for API callers.
-        /// *   A maximum of 100 APIs can be bound at a time.
+        /// The name of the runtime environment. Valid values:
+        /// 
+        /// *   **RELEASE**
+        /// *   **PRE**
+        /// *   **TEST**
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

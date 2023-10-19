@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The description of the plug-in.
+                /// The plug-in description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -63,21 +63,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string PluginData { get; set; }
 
                 /// <summary>
-                /// The ID of the plug-in.
+                /// The plug-in ID.
                 /// </summary>
                 [NameInMap("PluginId")]
                 [Validation(Required=false)]
                 public string PluginId { get; set; }
 
                 /// <summary>
-                /// The name of the plug-in.
+                /// The plug-in name.
                 /// </summary>
                 [NameInMap("PluginName")]
                 [Validation(Required=false)]
                 public string PluginName { get; set; }
 
                 /// <summary>
-                /// The type of the plug-in.
+                /// The plug-in type.
                 /// </summary>
                 [NameInMap("PluginType")]
                 [Validation(Required=false)]

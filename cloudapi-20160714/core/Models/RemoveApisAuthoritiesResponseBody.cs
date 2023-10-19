@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveApisAuthoritiesResponseBody : TeaModel {
         /// <summary>
-        /// Revokes the access permissions on multiple APIs from a specified app.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

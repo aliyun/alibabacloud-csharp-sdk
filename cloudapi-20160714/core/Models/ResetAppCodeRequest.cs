@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ResetAppCodeRequest : TeaModel {
         /// <summary>
-        /// The current AppCode of the application.
+        /// The AppCode of the app.
         /// </summary>
         [NameInMap("AppCode")]
         [Validation(Required=false)]
         public string AppCode { get; set; }
 
         /// <summary>
-        /// The new AppCode of the application.
+        /// The new AppCode of the app.
         /// </summary>
         [NameInMap("NewAppCode")]
         [Validation(Required=false)]
