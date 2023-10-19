@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddServiceSourceRequest : TeaModel {
         /// <summary>
-        /// The return value.
+        /// The language of the response. Valid values:
+        /// 
+        /// *   zh-CN (default): Chinese
+        /// *   en-US: English
+        /// *   ja: Japanese
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -93,14 +97,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<string> PathList { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Ingress.
+        /// The service source.
+        /// 
+        /// *   K8s: ACK cluster
+        /// *   NACOS: MSE Nacos instance
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The unique ID of the gateway.
+        /// The type of the service source.
+        /// 
+        /// *   K8s: Container Service for Kubernetes (ACK) cluster
+        /// *   NACOS: Nacos instance
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

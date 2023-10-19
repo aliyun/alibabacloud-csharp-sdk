@@ -160,14 +160,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<QueryClusterDetailResponseBodyDataInstanceModels> InstanceModels { get; set; }
             public class QueryClusterDetailResponseBodyDataInstanceModels : TeaModel {
                 /// <summary>
-                /// The timestamp when the instance node was created.
+                /// The timestamp when the instance was created.
                 /// </summary>
                 [NameInMap("CreationTimestamp")]
                 [Validation(Required=false)]
                 public string CreationTimestamp { get; set; }
 
                 /// <summary>
-                /// The health status of the instance node.
+                /// The health status of the instance.
                 /// </summary>
                 [NameInMap("HealthStatus")]
                 [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string InternetIp { get; set; }
 
                 /// <summary>
-                /// The IP address of the node.
+                /// The IP address of the instance.
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string SingleTunnelVip { get; set; }
 
                 /// <summary>
-                /// The zone.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("Zone")]
                 [Validation(Required=false)]

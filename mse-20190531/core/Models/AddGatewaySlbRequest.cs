@@ -78,22 +78,40 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string VServerGroupId { get; set; }
 
+        /// <summary>
+        /// The SLB monitoring information.
+        /// </summary>
         [NameInMap("VServiceList")]
         [Validation(Required=false)]
         public List<AddGatewaySlbRequestVServiceList> VServiceList { get; set; }
         public class AddGatewaySlbRequestVServiceList : TeaModel {
+            /// <summary>
+            /// The port number.
+            /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
+            /// <summary>
+            /// The protocol type. Valid values:
+            /// 
+            /// *   HTTP
+            /// *   HTTPS
+            /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
+            /// <summary>
+            /// The ID of the virtual server group.
+            /// </summary>
             [NameInMap("VServerGroupId")]
             [Validation(Required=false)]
             public string VServerGroupId { get; set; }
 
+            /// <summary>
+            /// The name of the virtual server group.
+            /// </summary>
             [NameInMap("VServerGroupName")]
             [Validation(Required=false)]
             public string VServerGroupName { get; set; }

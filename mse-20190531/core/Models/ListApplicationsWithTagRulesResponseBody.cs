@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListApplicationsWithTagRulesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the data.
+        /// The response parameters.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The data structure.
+            /// The returned data.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -45,38 +45,38 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The name of the application.
+                /// The application name.
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// 应用所属的MSE命名空间。
+                /// The MSE namespace to which the application belongs.
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The information about the rules.
+                /// The queried rules.
                 /// </summary>
                 [NameInMap("RouteRules")]
                 [Validation(Required=false)]
                 public List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> RouteRules { get; set; }
                 public class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules : TeaModel {
                     /// <summary>
-                    /// Indicates whether the alert rule is enabled. Valid value:
+                    /// Indicates whether the alert rule is enabled. Valid values:
                     /// 
-                    /// *   `true`: enabled.
-                    /// *   `false`: disabled.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("Enable")]
                     [Validation(Required=false)]
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// The ID of the rule.
+                    /// The rule ID.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? InstanceNum { get; set; }
 
                     /// <summary>
-                    /// The name of the rule.
+                    /// The rule name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -301,7 +301,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// The status of the route. Valid values: -0: disabled. -1: enabled.
+                /// The route state. Valid values:
+                /// 
+                /// *   0: disabled
+                /// *   1: enabled
                 /// </summary>
                 [NameInMap("RouteStatus")]
                 [Validation(Required=false)]

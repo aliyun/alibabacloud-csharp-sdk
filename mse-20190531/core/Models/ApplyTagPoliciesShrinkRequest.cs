@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Obsolete]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// The name of the application.
+        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
@@ -38,6 +41,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// The Microservices Engine (MSE) namespace to which the application belongs.
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }

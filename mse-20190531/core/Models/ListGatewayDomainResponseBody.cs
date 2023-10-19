@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data of the node.
+        /// The details of the data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListGatewayDomainResponseBodyData> Data { get; set; }
         public class ListGatewayDomainResponseBodyData : TeaModel {
             /// <summary>
-            /// The expiration time.
+            /// The time when the certificate expires.
             /// </summary>
             [NameInMap("CertBeforeDate")]
             [Validation(Required=false)]
             public string CertBeforeDate { get; set; }
 
             /// <summary>
-            /// The ID of the certificate.
+            /// The certificate ID.
             /// </summary>
             [NameInMap("CertIdentifier")]
             [Validation(Required=false)]
             public string CertIdentifier { get; set; }
 
             /// <summary>
-            /// The route comment (ingress).
+            /// The route comment. This parameter is returned only in ingress scenarios.
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public ListGatewayDomainResponseBodyDataComment Comment { get; set; }
             public class ListGatewayDomainResponseBodyDataComment : TeaModel {
                 /// <summary>
-                /// The status.
+                /// The route status.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -54,21 +54,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The ID of the gateway.
+            /// The gateway ID.
             /// </summary>
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// The time when the domain name was created.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The update time.
+            /// The time when the domain name was updated.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Http2 { get; set; }
 
             /// <summary>
-            /// The domain ID.
+            /// The ID of the domain name.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -114,9 +114,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// The status of the domain name. Valid values:
+            /// The state of the domain name. Valid values:
             /// 
-            /// *   0: unpublish
+            /// *   0: unpublished
             /// *   2: publishing
             /// *   3: published
             /// *   4: editing
@@ -142,7 +142,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string TlsMin { get; set; }
 
             /// <summary>
-            /// The type.
+            /// The type of the domain name source. Valid values:
+            /// 
+            /// *   Op: console
+            /// *   Ingress: MSE Ingress
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

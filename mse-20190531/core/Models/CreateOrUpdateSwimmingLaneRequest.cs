@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateOrUpdateSwimmingLaneRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:****
-        /// 
-        /// *   **zh-CN**: Chinese
-        /// *   **en-US**: English
-        /// 
-        /// > Default value: **zh-CN**.
+        /// The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -106,40 +101,74 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         }
 
+        /// <summary>
+        /// The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.
+        /// </summary>
         [NameInMap("GatewaySwimmingLaneRouteJson")]
         [Validation(Required=false)]
         public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson GatewaySwimmingLaneRouteJson { get; set; }
         public class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson : TeaModel {
+            /// <summary>
+            /// The matching conditions.
+            /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions> Conditions { get; set; }
             public class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions : TeaModel {
+                /// <summary>
+                /// The matching condition. Valid values:
+                /// 
+                /// *   PRE: prefix matching
+                /// *   EQUAL: exact matching
+                /// *   ERGULAR: regular expression matching
+                /// </summary>
                 [NameInMap("Cond")]
                 [Validation(Required=false)]
                 public string Cond { get; set; }
 
+                /// <summary>
+                /// The name of the parameter.
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The type of the parameter. Valid values:
+                /// 
+                /// *   header
+                /// *   param
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
+                /// <summary>
+                /// The value of the parameter.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// The ID of the gateway.
+            /// </summary>
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
 
+            /// <summary>
+            /// The unique ID of the gateway.
+            /// </summary>
             [NameInMap("GatewayUniqueId")]
             [Validation(Required=false)]
             public string GatewayUniqueId { get; set; }
 
+            /// <summary>
+            /// The route IDs.
+            /// </summary>
             [NameInMap("RouteIdList")]
             [Validation(Required=false)]
             public List<long?> RouteIdList { get; set; }
@@ -159,14 +188,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
+        /// The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The name of the MSE namespace.
+        /// The name of the lane.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data structure.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// The time when the consumer authentication record was created.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The update time.
+            /// The time when the consumer authentication record was modified.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<GetGatewayAuthConsumerDetailResponseBodyDataResourceList> ResourceList { get; set; }
             public class GetGatewayAuthConsumerDetailResponseBodyDataResourceList : TeaModel {
                 /// <summary>
-                /// The ID of the consumer.
+                /// The consumer ID.
                 /// </summary>
                 [NameInMap("ConsumerId")]
                 [Validation(Required=false)]
@@ -135,14 +135,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GatewayUniqueId { get; set; }
 
                 /// <summary>
-                /// The creation time.
+                /// The time when the resource associated with the consumer authentication record was created.
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The modification time.
+                /// The time when the resource associated with the consumer authentication record was modified.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
@@ -156,10 +156,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The resource authorization status. Valid values:
+                /// The resource authorization state. Valid values:
                 /// 
-                /// *   true: enabled
-                /// *   false: disabled
+                /// *   true: Resource authorization is enabled.
+                /// *   false: Resource authorization is disabled.
                 /// </summary>
                 [NameInMap("ResourceStatus")]
                 [Validation(Required=false)]

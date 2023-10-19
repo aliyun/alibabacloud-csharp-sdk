@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? CarryData { get; set; }
 
             /// <summary>
-            /// Indicates whether the routing rule is enabled.
+            /// Indicates whether the rule is enabled. Valid values:
             /// 
-            /// *   `true`: enabled
-            /// *   `false`: disabled
+            /// *   `true`: The rule is enabled.
+            /// *   `false`: The rule is disabled.
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Rate { get; set; }
 
             /// <summary>
-            /// Indicates whether the routing rule is deleted.
+            /// Indicates whether the routing rule was deleted.
             /// </summary>
             [NameInMap("Remove")]
             [Validation(Required=false)]

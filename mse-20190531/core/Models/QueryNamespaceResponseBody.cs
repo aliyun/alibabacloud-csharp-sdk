@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryNamespaceResponseBody : TeaModel {
+        /// <summary>
+        /// The data returned.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryNamespaceResponseBodyData> Data { get; set; }
         public class QueryNamespaceResponseBodyData : TeaModel {
+            /// <summary>
+            /// The name of the namespace.
+            /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            /// <summary>
+            /// The region to which the namespace belongs.
+            /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
@@ -24,7 +33,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// 错误码。
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ConfigType { get; set; }
 
+        [NameInMap("ConsoleUIEnabled")]
+        [Validation(Required=false)]
+        public bool? ConsoleUIEnabled { get; set; }
+
         [NameInMap("EurekaSupported")]
         [Validation(Required=false)]
         public bool? EurekaSupported { get; set; }

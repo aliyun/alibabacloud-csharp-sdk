@@ -26,18 +26,104 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? AuthId { get; set; }
 
+        /// <summary>
+        /// The authentication resource headers.
+        /// </summary>
         [NameInMap("AuthResourceHeaderList")]
         [Validation(Required=false)]
         public List<AddAuthResourceRequestAuthResourceHeaderList> AuthResourceHeaderList { get; set; }
         public class AddAuthResourceRequestAuthResourceHeaderList : TeaModel {
+            /// <summary>
+            /// The parameter of the HTTP header.
+            /// </summary>
             [NameInMap("HeaderKey")]
             [Validation(Required=false)]
             public string HeaderKey { get; set; }
 
+            /// <summary>
+            /// The header matching mode.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   SUFFIX
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   EXIST
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   PREFIX
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   EQUAL
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   EXCLUDE
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   NOT_EQUAL
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   NOT_EXIST
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   REGREX
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   INCLUDE
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// </summary>
             [NameInMap("HeaderMethod")]
             [Validation(Required=false)]
             public string HeaderMethod { get; set; }
 
+            /// <summary>
+            /// The parameter value of the HTTP header.
+            /// </summary>
             [NameInMap("HeaderValue")]
             [Validation(Required=false)]
             public string HeaderValue { get; set; }
@@ -58,16 +144,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        /// <summary>
+        /// Specifies whether the matching is not case-sensitive. Default value: true.
+        /// </summary>
         [NameInMap("IgnoreCase")]
         [Validation(Required=false)]
         public bool? IgnoreCase { get; set; }
 
         /// <summary>
-        /// The matching type.
+        /// The matching type. Valid values:
         /// 
-        /// *   exact: exact matching
-        /// *   prefix: prefix matching
-        /// *   regex: regular expression matching
+        /// *   EQUAL
+        /// *   PRE
+        /// *   ERGULAR
         /// </summary>
         [NameInMap("MatchType")]
         [Validation(Required=false)]

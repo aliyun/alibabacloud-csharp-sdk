@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MaintenanceEndTime")]
+        [Validation(Required=false)]
+        public string MaintenanceEndTime { get; set; }
+
+        [NameInMap("MaintenanceStartTime")]
+        [Validation(Required=false)]
+        public string MaintenanceStartTime { get; set; }
+
         /// <summary>
         /// The extended request parameters in the JSON format.
         /// </summary>

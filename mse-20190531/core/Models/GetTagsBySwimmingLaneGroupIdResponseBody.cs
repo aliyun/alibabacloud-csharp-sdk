@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetTagsBySwimmingLaneGroupIdResponseBody : TeaModel {
         /// <summary>
-        /// The details of the data.
+        /// The data of the tag.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

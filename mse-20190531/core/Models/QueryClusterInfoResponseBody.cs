@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryClusterInfoResponseBody : TeaModel {
         /// <summary>
-        /// The details of the data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -114,14 +114,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string DiskType { get; set; }
 
+            /// <summary>
+            /// 弹性公网IP（EIP）的实例ID
+            /// </summary>
             [NameInMap("EipInstanceId")]
             [Validation(Required=false)]
             public string EipInstanceId { get; set; }
 
+            /// <summary>
+            /// 到期时间（包年包月）
+            /// </summary>
             [NameInMap("EndDate")]
             [Validation(Required=false)]
             public string EndDate { get; set; }
 
+            /// <summary>
+            /// The zones to which the current cluster can be distributed.
+            /// </summary>
             [NameInMap("ExpectZones")]
             [Validation(Required=false)]
             public List<string> ExpectZones { get; set; }
@@ -268,6 +277,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string IntranetPort { get; set; }
 
+            [NameInMap("MaintenancePeriod")]
+            [Validation(Required=false)]
+            public QueryClusterInfoResponseBodyDataMaintenancePeriod MaintenancePeriod { get; set; }
+            public class QueryClusterInfoResponseBodyDataMaintenancePeriod : TeaModel {
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public string EndTime { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
+                public string StartTime { get; set; }
+
+            }
+
             /// <summary>
             /// A deprecated parameter.
             /// </summary>
@@ -311,10 +334,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// ENI网络接入的安全组ID
+            /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
+            /// <summary>
+            /// ENI网络接入的安全组类型
+            /// </summary>
             [NameInMap("SecurityGroupType")]
             [Validation(Required=false)]
             public string SecurityGroupType { get; set; }

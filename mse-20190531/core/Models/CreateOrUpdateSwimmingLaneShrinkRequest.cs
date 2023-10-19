@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateOrUpdateSwimmingLaneShrinkRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:****
-        /// 
-        /// *   **zh-CN**: Chinese
-        /// *   **en-US**: English
-        /// 
-        /// > Default value: **zh-CN**.
+        /// The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -106,6 +101,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         }
 
+        /// <summary>
+        /// The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.
+        /// </summary>
         [NameInMap("GatewaySwimmingLaneRouteJson")]
         [Validation(Required=false)]
         public string GatewaySwimmingLaneRouteJsonShrink { get; set; }
@@ -123,14 +121,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
+        /// The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The name of the MSE namespace.
+        /// The name of the lane.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

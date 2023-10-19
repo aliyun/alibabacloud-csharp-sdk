@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The detailed configurations of the gateway.
         /// 
-        /// *   **TraceDetails**: the sampling description of Tracing Analysis. Content: TraceEnabled specifies whether to activate Tracing Analysis. Sample specifies the sampling rate of Tracing Analysis.
-        /// *   **LogConfigDetails**: the description of Log Service. Content: LogEnabled specifies whether to activate Log Service. ProjectName specifies the Log Service project to which logs are delivered. LogStoreName specifies the name of the Logstore.
-        /// *   **EnableHardwareAcceleration**: specifies whether to enable hardware acceleration.
-        /// *   **DisableHttp2Alpn**: specifies whether to disable the HTTP/2 protocol.
-        /// *   **EnableWaf**: specifies whether to activate Web Application Firewall (WAF).
+        /// *   **TraceDetails**: the sampling description of Managed Service for OpenTelemetry. Content: TraceEnabled indicates whether Managed Service for OpenTelemetry is activated. Sample indicates the sampling rate of Managed Service for OpenTelemetry.
+        /// *   **LogConfigDetails**: the description of Simple Log Service. Content: LogEnabled indicates whether Simple Log Service is activated. ProjectName indicates the Simple Log Service project to which logs are delivered. LogStoreName indicates the name of the Logstore.
+        /// *   **EnableHardwareAcceleration**: indicates whether hardware acceleration is enabled.
+        /// *   **DisableHttp2Alpn**: indicates whether the HTTP/2 protocol is disabled.
+        /// *   **EnableWaf**: indicates whether Web Application Firewall (WAF) is enabled.
         /// </summary>
         [NameInMap("GatewayOption")]
         [Validation(Required=false)]

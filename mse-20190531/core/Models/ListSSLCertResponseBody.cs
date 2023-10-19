@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ListSSLCertResponseBodyData> Data { get; set; }
         public class ListSSLCertResponseBodyData : TeaModel {
             /// <summary>
-            /// The validation time.
+            /// The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("AfterDate")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Algorithm { get; set; }
 
             /// <summary>
-            /// The expiration time.
+            /// The time when the certificate took effect. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("BeforeDate")]
             [Validation(Required=false)]
@@ -66,21 +66,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// The validation time.
+            /// The time when the certificate expires. This value is a GMT timestamp.
             /// </summary>
             [NameInMap("GmtAfter")]
             [Validation(Required=false)]
             public string GmtAfter { get; set; }
 
             /// <summary>
-            /// The expiration time.
+            /// The time when the certificate took effect. This value is a GMT timestamp.
             /// </summary>
             [NameInMap("GmtBefore")]
             [Validation(Required=false)]
             public string GmtBefore { get; set; }
 
             /// <summary>
-            /// The issuer.
+            /// The issuer of the certificate.
             /// </summary>
             [NameInMap("Issuer")]
             [Validation(Required=false)]

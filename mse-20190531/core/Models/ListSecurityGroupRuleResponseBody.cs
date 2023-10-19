@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ListSecurityGroupRuleResponseBodyData> Data { get; set; }
         public class ListSecurityGroupRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// The description of the rule.
+            /// The rule description.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the gateway.
+            /// The gateway ID.
             /// </summary>
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
@@ -45,21 +45,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// The time when the instance was created.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The last modification time.
+            /// The time when the instance configuration was last modified.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The ID.
+            /// The authorization record ID of the security group.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]

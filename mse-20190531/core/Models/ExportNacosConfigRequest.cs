@@ -20,10 +20,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The tag of the application.
+        /// The application tag.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string AppName { get; set; }
 
         /// <summary>
@@ -32,14 +33,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// > 
         /// 
         /// *   Multiple export methods are supported.
+        /// 
         /// *   If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string DataId { get; set; }
 
         /// <summary>
-        /// The configuration group name and the ID of the data that you want to export. Separate multiple configurations with comma (,).
+        /// The configuration group name and the ID of the configuration that you want to export. Separate multiple configurations with comma (,).
         /// </summary>
         [NameInMap("DataIds")]
         [Validation(Required=false)]
@@ -50,6 +53,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Group { get; set; }
 
         /// <summary>
@@ -59,6 +63,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Ids { get; set; }
 
         /// <summary>

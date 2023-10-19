@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClientPort { get; set; }
 
             /// <summary>
-            /// The creation time. The value of this parameter is a timestamp.
+            /// The creation time.
             /// </summary>
             [NameInMap("CreationTimestamp")]
             [Validation(Required=false)]
@@ -73,12 +73,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SingleTunnelVip { get; set; }
 
             /// <summary>
-            /// The zone.
+            /// The zone ID.
             /// </summary>
             [NameInMap("Zone")]
             [Validation(Required=false)]
             public string Zone { get; set; }
 
+            /// <summary>
+            /// Indicates whether all pods in the cluster are distributed in the specified zones.
+            /// </summary>
             [NameInMap("ZoneDistributed")]
             [Validation(Required=false)]
             public bool? ZoneDistributed { get; set; }

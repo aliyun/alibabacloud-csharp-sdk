@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to obtain the information about all Kubernetes clusters. If you set the value to false, only the information about unassociated clusters is obtained.
+        /// </summary>
         [NameInMap("IsAll")]
         [Validation(Required=false)]
         public bool? IsAll { get; set; }

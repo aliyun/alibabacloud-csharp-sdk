@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string SlbPort { get; set; }
 
+            [NameInMap("SlbType")]
+            [Validation(Required=false)]
+            public string SlbType { get; set; }
+
             /// <summary>
             /// The description of the status.
             /// </summary>

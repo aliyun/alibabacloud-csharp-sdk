@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data of the node.
+        /// Indicates whether the subscription was successful.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

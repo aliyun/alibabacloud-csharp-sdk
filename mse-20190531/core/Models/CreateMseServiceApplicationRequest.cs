@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// *   zh: Chinese.
-        /// *   en: English.
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SentinelEnable { get; set; }
 
         /// <summary>
-        /// The source.
+        /// The service source.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

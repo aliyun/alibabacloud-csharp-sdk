@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// *   **zh-CN**: Chinese
-        /// *   **en-US**: English.
+        /// *   **zh-CN** (default): Chinese
+        /// *   **en-US**: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

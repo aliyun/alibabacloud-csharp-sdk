@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
     }
 
 }

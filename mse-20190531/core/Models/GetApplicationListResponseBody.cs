@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetApplicationListResponseBody : TeaModel {
         /// <summary>
-        /// The data structure.
+        /// The details of the data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The returned information.
+            /// The data returned.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -72,12 +72,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Language { get; set; }
 
+                /// <summary>
+                /// The microservice namespace to which the application belongs.
+                /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? Status { get; set; }
 
                 /// <summary>
-                /// The ID of the user.
+                /// The user ID.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]

@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// 应用所属的MSE命名空间。
+        /// The Microservices Engine (MSE) namespace to which the application belongs.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

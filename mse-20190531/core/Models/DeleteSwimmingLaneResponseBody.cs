@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteSwimmingLaneResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

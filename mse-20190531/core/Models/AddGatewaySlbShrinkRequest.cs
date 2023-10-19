@@ -78,6 +78,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string VServerGroupId { get; set; }
 
+        /// <summary>
+        /// The SLB monitoring information.
+        /// </summary>
         [NameInMap("VServiceList")]
         [Validation(Required=false)]
         public string VServiceListShrink { get; set; }

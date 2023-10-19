@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// Specifies whether to create a whitelist.
+        /// The whitelist. Default value: No.
         /// </summary>
         [NameInMap("IsWhite")]
         [Validation(Required=false)]
@@ -62,7 +62,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceIdJsonList { get; set; }
 
         /// <summary>
-        /// The resource type to which the blacklist or whitelist applies.
+        /// The effective scope of the blacklist or whitelist. Valid values:
+        /// 
+        /// *   GATEWAY
+        /// *   DOMAIN
+        /// *   ROUTE
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

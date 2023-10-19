@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? LaneId { get; set; }
 
         /// <summary>
-        /// MSE命名空间名字
+        /// The name of the Microservices Engine (MSE) namespace.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

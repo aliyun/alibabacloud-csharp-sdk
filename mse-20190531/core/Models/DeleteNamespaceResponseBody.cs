@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// 错误码。
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

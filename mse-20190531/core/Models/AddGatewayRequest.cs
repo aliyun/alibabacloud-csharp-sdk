@@ -10,14 +10,43 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddGatewayRequest : TeaModel {
         /// <summary>
-        /// The data structure.
+        /// The language of the response. Valid values:
+        /// 
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// 付费类型。
+        /// The billing method.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   PREPAY
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     the subscription billing method
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   POSTPAY
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     the pay-as-you-go billing method
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -59,11 +88,32 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InternetSlbSpec { get; set; }
 
         /// <summary>
+        /// The MSE instance type. Valid values:
+        /// 
+        /// *   mse_pro: ordinary instance.
+        /// *   mse_serverless: serverless instance.
+        /// </summary>
+        [NameInMap("MserVersion")]
+        [Validation(Required=false)]
+        public string MserVersion { get; set; }
+
+        /// <summary>
         /// The ID of the region.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// The network type of the Network Load Balancer (NLB) instance when the serverless NLB instance is purchased. Valid values:
+        /// 
+        /// *   pubnet
+        /// *   privatenet
+        /// *   privatepubnet
+        /// </summary>
+        [NameInMap("NlbNetworkType")]
+        [Validation(Required=false)]
+        public string NlbNetworkType { get; set; }
 
         /// <summary>
         /// The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
@@ -80,21 +130,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// The specifications of the Internet-facing SLB instance. Valid values:
-        /// 
-        /// *   slb.s1.small
-        /// *   slb.s2.small
-        /// *   slb.s2.medium
-        /// *   slb.s3.small
-        /// *   slb.s3.medium
-        /// *   slb.s3.large
+        /// The number of nodes.
         /// </summary>
         [NameInMap("Replica")]
         [Validation(Required=false)]
         public int? Replica { get; set; }
 
         /// <summary>
-        /// 扩展字段。
+        /// The extended field.
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
@@ -111,14 +154,26 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC).
+        /// The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
+        /// 
+        /// *   slb.s1.small
+        /// *   slb.s2.small
+        /// *   slb.s2.medium
+        /// *   slb.s3.small
+        /// *   slb.s3.medium
+        /// *   slb.s3.large
         /// </summary>
         [NameInMap("SlbSpec")]
         [Validation(Required=false)]
         public string SlbSpec { get; set; }
 
         /// <summary>
-        /// The number of nodes.
+        /// The node specifications. Valid values:
+        /// 
+        /// *   MSE_GTW\_16\_32\_200\_c(16C32G)
+        /// *   MSE_GTW\_2\_4\_200\_c(2C4G)
+        /// *   MSE_GTW\_4\_8\_200\_c(4C8G)
+        /// *   MSE_GTW\_8\_16\_200\_c(8C16G)
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]
@@ -148,12 +203,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The node specifications. Valid values:
-        /// 
-        /// *   MSE_GTW\_16\_32\_200\_c(16C32G)
-        /// *   MSE_GTW\_2\_4\_200\_c(2C4G)
-        /// *   MSE_GTW\_4\_8\_200\_c(4C8G)
-        /// *   MSE_GTW\_8\_16\_200\_c(8C16G)
+        /// The ID of the primary vSwitch.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -181,21 +231,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string XtraceRatio { get; set; }
 
         /// <summary>
-        /// 可用区信息。
+        /// The details of the zone.
         /// </summary>
         [NameInMap("ZoneInfo")]
         [Validation(Required=false)]
         public List<AddGatewayRequestZoneInfo> ZoneInfo { get; set; }
         public class AddGatewayRequestZoneInfo : TeaModel {
             /// <summary>
-            /// 交换机ID。
+            /// The vSwitch ID.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// 可用区ID。
+            /// The zone ID.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

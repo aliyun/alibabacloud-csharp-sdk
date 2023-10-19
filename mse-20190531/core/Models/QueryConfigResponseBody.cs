@@ -91,6 +91,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? ConfigSecretSupported { get; set; }
 
+            [NameInMap("ConsoleUIEnabled")]
+            [Validation(Required=false)]
+            public bool? ConsoleUIEnabled { get; set; }
+
+            /// <summary>
+            /// Indicates whether access port 8761 was enabled for Eureka. If this port is disabled, applications cannot use the Eureka protocol for service registration and discovery.
+            /// </summary>
             [NameInMap("EurekaSupported")]
             [Validation(Required=false)]
             public bool? EurekaSupported { get; set; }
@@ -252,6 +259,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string SyncLimit { get; set; }
 
+            /// <summary>
+            /// MSE Nacos supports TLS transmission link encryption since version 2.1.2.1. Nacos clients must be upgraded to version 2.2.1 or later. After TLS is enabled, the system performance will decrease by about 10%. You must evaluate the system capacity. For more information about the relevant operations, see Nacos TLS transmission encryption.
+            /// </summary>
             [NameInMap("TLSEnabled")]
             [Validation(Required=false)]
             public bool? TLSEnabled { get; set; }

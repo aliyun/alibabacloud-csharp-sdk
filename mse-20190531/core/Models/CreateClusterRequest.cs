@@ -19,6 +19,35 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// The billing method.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   PREPAY
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     the subscription billing method
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   POSTPAY
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     the pay-as-you-go billing method
+        /// 
+        ///     <!-- -->
+        /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
@@ -78,7 +107,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ConnectionType { get; set; }
 
         /// <summary>
-        /// The disk type. Valid values:
+        /// The type of the disk. Valid values:
         /// 
         /// *   alicloud-disk-ssd
         /// *   alicloud-disk-essd-pl1
@@ -88,6 +117,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Obsolete]
         public string DiskType { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to `single_eni`.
+        /// </summary>
         [NameInMap("EipEnabled")]
         [Validation(Required=false)]
         public bool? EipEnabled { get; set; }
@@ -108,17 +140,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? InstanceCount { get; set; }
 
         /// <summary>
-        /// The name of the instance.
+        /// The name of the MSE instance.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// Set this parameter unless otherwise specified. Valid values:
+        /// Configure this parameter unless otherwise specified. Valid values:
         /// 
         /// *   `mse_pro`: Professional Edition
-        /// *   `mse_dev`: Developer Edition
+        /// *   `mse_dev`: Developer Edition.
         /// </summary>
         [NameInMap("MseVersion")]
         [Validation(Required=false)]
@@ -146,8 +178,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PrivateSlbSpecification { get; set; }
 
         /// <summary>
-        /// The public bandwidth. Unit: Mbit/s.\
-        /// Valid values: 0 to 5000. The value 0 indicates no access to the Internet.
+        /// The public bandwidth. Unit: Mbit/s. This parameter is required.\
+        /// Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.
         /// </summary>
         [NameInMap("PubNetworkFlow")]
         [Validation(Required=false)]
@@ -191,6 +223,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The type of the security group to which the instance belongs. This parameter is valid only when the ConnectionType parameter is set to `single_eni`.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   enterprise
+        /// *   normal
+        /// </summary>
         [NameInMap("SecurityGroupType")]
         [Validation(Required=false)]
         public string SecurityGroupType { get; set; }

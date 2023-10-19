@@ -20,49 +20,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The destination service type.
-        /// 
-        /// Enumeration values:
-        /// 
-        /// *   VersionOriented
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Multiple
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// The type of the destination service. Valid values:
         /// 
         /// *   Single
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Mock\"\"
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
+        /// *   Multiple
+        /// *   VersionOriented
+        /// *   Mock
         /// *   Redirect
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
         /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
@@ -99,7 +63,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? DomainId { get; set; }
 
         /// <summary>
-        /// The list of domain IDs.
+        /// The domain IDs.
         /// </summary>
         [NameInMap("DomainIdListJSON")]
         [Validation(Required=false)]

@@ -10,48 +10,82 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAnsServiceClustersResponseBody : TeaModel {
         /// <summary>
-        /// The details of the data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListAnsServiceClustersResponseBodyData Data { get; set; }
         public class ListAnsServiceClustersResponseBodyData : TeaModel {
+            /// <summary>
+            /// The information about the associated application for which Microservices Governance is enabled when the Source parameter is set to governance.
+            /// </summary>
             [NameInMap("AppDetail")]
             [Validation(Required=false)]
             public ListAnsServiceClustersResponseBodyDataAppDetail AppDetail { get; set; }
             public class ListAnsServiceClustersResponseBodyDataAppDetail : TeaModel {
+                /// <summary>
+                /// The ID of the application for which Microservices Governance is enabled.
+                /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
+                /// <summary>
+                /// The name of the application for which Microservices Governance is enabled.
+                /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                /// <summary>
+                /// The health check interval. Unit: seconds.
+                /// </summary>
                 [NameInMap("CheckInternal")]
                 [Validation(Required=false)]
                 public int? CheckInternal { get; set; }
 
+                /// <summary>
+                /// The path of the health check. This parameter is required only when the CheckType parameter is set to http.
+                /// </summary>
                 [NameInMap("CheckPath")]
                 [Validation(Required=false)]
                 public string CheckPath { get; set; }
 
+                /// <summary>
+                /// The timeout period of the health check response. Unit: seconds.
+                /// </summary>
                 [NameInMap("CheckTimeout")]
                 [Validation(Required=false)]
                 public int? CheckTimeout { get; set; }
 
+                /// <summary>
+                /// The type of the health check. Valid values:
+                /// 
+                /// *   connection: connection status check
+                /// *   tcp: TCP connection check
+                /// *   http: HTTP connection check
+                /// </summary>
                 [NameInMap("CheckType")]
                 [Validation(Required=false)]
                 public string CheckType { get; set; }
 
+                /// <summary>
+                /// The maximum number of health check retries when the instance state changes from unhealthy to healthy.
+                /// </summary>
                 [NameInMap("HealthyCheckTimes")]
                 [Validation(Required=false)]
                 public int? HealthyCheckTimes { get; set; }
 
+                /// <summary>
+                /// The port number of the application for which Microservices Governance is enabled.
+                /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
+                /// <summary>
+                /// The maximum number of health check retries when the instance state changes from healthy to unhealthy.
+                /// </summary>
                 [NameInMap("UnhealthyCheckTimes")]
                 [Validation(Required=false)]
                 public int? UnhealthyCheckTimes { get; set; }
@@ -59,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The information about the clusters.
+            /// The cluster information.
             /// </summary>
             [NameInMap("Clusters")]
             [Validation(Required=false)]
@@ -80,7 +114,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? DefaultPort { get; set; }
 
                 /// <summary>
-                /// The type of health check.
+                /// The type of the health check.
                 /// </summary>
                 [NameInMap("HealthCheckerType")]
                 [Validation(Required=false)]
@@ -94,7 +128,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public Dictionary<string, object> Metadata { get; set; }
 
                 /// <summary>
-                /// The name of the cluster.
+                /// The cluster name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -108,7 +142,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// Indicates whether an end-to-end health check is initiated by the server. This parameter is valid only if the service is a temporary service.
+                /// Indicates whether an end-to-end health check was initiated by the server. This parameter is valid only if the service is not a temporary service.
                 /// </summary>
                 [NameInMap("UseIPPort4Check")]
                 [Validation(Required=false)]
@@ -127,7 +161,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Ephemeral { get; set; }
 
             /// <summary>
-            /// The name of the contact group.
+            /// The service group to which the service belongs.
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -161,6 +195,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string SelectorType { get; set; }
 
+            /// <summary>
+            /// The source type of the service. Valid values:
+            /// 
+            /// *   console: The service was registered in the console.
+            /// *   sdk: The service was registered by using the SDK.
+            /// *   governance: The service was registered on Microservices Governance.
+            /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
@@ -174,6 +215,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The HTTP status code.
+        /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public string HttpCode { get; set; }

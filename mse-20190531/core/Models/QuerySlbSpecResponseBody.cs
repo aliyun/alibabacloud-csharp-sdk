@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string MaxConnection { get; set; }
 
             /// <summary>
-            /// The name.
+            /// The name of the instance.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The maximum connections per second (CPS).
+            /// The number of connections per second.
             /// </summary>
             [NameInMap("NewConnectionPerSecond")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Qps { get; set; }
 
             /// <summary>
-            /// The specifications.
+            /// The specification of the instance.
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]

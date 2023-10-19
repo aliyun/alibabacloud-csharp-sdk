@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<GetGatewayRouteDetailResponseBodyDataFallbackServices> FallbackServices { get; set; }
             public class GetGatewayRouteDetailResponseBodyDataFallbackServices : TeaModel {
                 /// <summary>
-                /// The type of the protocol. Valid values:
+                /// The protocol type.
                 /// </summary>
                 [NameInMap("AgreementType")]
                 [Validation(Required=false)]
@@ -224,35 +224,35 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Percent { get; set; }
 
                 /// <summary>
-                /// The ID of the service.
+                /// The service ID.
                 /// </summary>
                 [NameInMap("ServiceId")]
                 [Validation(Required=false)]
                 public long? ServiceId { get; set; }
 
                 /// <summary>
-                /// The name of a service.
+                /// The service name.
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// The service port number.
+                /// The port number of the service.
                 /// </summary>
                 [NameInMap("ServicePort")]
                 [Validation(Required=false)]
                 public int? ServicePort { get; set; }
 
                 /// <summary>
-                /// The type of the service source.
+                /// The source type of the service.
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// The version of a service.
+                /// The service version.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -260,26 +260,47 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             }
 
+            /// <summary>
+            /// 流量镜像配置。
+            /// </summary>
             [NameInMap("FlowMirror")]
             [Validation(Required=false)]
             public GetGatewayRouteDetailResponseBodyDataFlowMirror FlowMirror { get; set; }
             public class GetGatewayRouteDetailResponseBodyDataFlowMirror : TeaModel {
+                /// <summary>
+                /// 流量复制比例（%），取值0-100。
+                /// </summary>
                 [NameInMap("Percentage")]
                 [Validation(Required=false)]
                 public int? Percentage { get; set; }
 
+                /// <summary>
+                /// 目标服务端口。
+                /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
+                /// <summary>
+                /// 开启状态，取值：
+                /// 
+                /// - on：开启
+                /// - off：关闭
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// 目标服务ID。
+                /// </summary>
                 [NameInMap("TargetServiceId")]
                 [Validation(Required=false)]
                 public long? TargetServiceId { get; set; }
 
+                /// <summary>
+                /// 目标服务名称。
+                /// </summary>
                 [NameInMap("TargetServiceName")]
                 [Validation(Required=false)]
                 public string TargetServiceName { get; set; }
@@ -394,7 +415,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// The operation type.
+                    /// The type of the operation.
                     /// </summary>
                     [NameInMap("OpType")]
                     [Validation(Required=false)]
@@ -432,6 +453,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The routing policy in a JSON string.
+            /// </summary>
             [NameInMap("Policies")]
             [Validation(Required=false)]
             public string Policies { get; set; }
@@ -539,7 +563,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// The type.
+                    /// The route type.
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -599,14 +623,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public List<GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates> QueryPredicates { get; set; }
                 public class GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates : TeaModel {
                     /// <summary>
-                    /// The name of the parameter.
+                    /// The parameter name.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// The type.
+                    /// The route type.
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -631,21 +655,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<GetGatewayRouteDetailResponseBodyDataRouteServices> RouteServices { get; set; }
             public class GetGatewayRouteDetailResponseBodyDataRouteServices : TeaModel {
                 /// <summary>
-                /// The type of the protocol. Valid values:
+                /// The protocol type.
                 /// </summary>
                 [NameInMap("AgreementType")]
                 [Validation(Required=false)]
                 public string AgreementType { get; set; }
 
                 /// <summary>
-                /// The name of the group to which a service belongs.
+                /// The name of the group to which the service belongs.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The name of a service.
+                /// The service name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -666,35 +690,35 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Percent { get; set; }
 
                 /// <summary>
-                /// The ID of a service.
+                /// The service ID.
                 /// </summary>
                 [NameInMap("ServiceId")]
                 [Validation(Required=false)]
                 public long? ServiceId { get; set; }
 
                 /// <summary>
-                /// The name of a service.
+                /// The service name.
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// The service port number.
+                /// The port number of the service.
                 /// </summary>
                 [NameInMap("ServicePort")]
                 [Validation(Required=false)]
                 public int? ServicePort { get; set; }
 
                 /// <summary>
-                /// The source type of a service.
+                /// The source type of the service.
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// The version of a service.
+                /// The service version.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]

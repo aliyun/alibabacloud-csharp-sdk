@@ -494,9 +494,17 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["InternetSlbSpec"] = request.InternetSlbSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MserVersion))
+            {
+                query["MserVersion"] = request.MserVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlbNetworkType))
+            {
+                query["NlbNetworkType"] = request.NlbNetworkType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -603,9 +611,17 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["InternetSlbSpec"] = request.InternetSlbSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MserVersion))
+            {
+                query["MserVersion"] = request.MserVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlbNetworkType))
+            {
+                query["NlbNetworkType"] = request.NlbNetworkType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -5667,7 +5683,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          * >  The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
           *
           * @param request DeleteNacosConfigsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5713,7 +5729,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          * >  The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
           *
           * @param request DeleteNacosConfigsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5759,7 +5775,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          * >  The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
           *
           * @param request DeleteNacosConfigsRequest
           * @return DeleteNacosConfigsResponse
@@ -5771,7 +5787,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          * >  The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
           *
           * @param request DeleteNacosConfigsRequest
           * @return DeleteNacosConfigsResponse
@@ -14170,6 +14186,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["GatewayUniqueId"] = request.GatewayUniqueId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14200,6 +14220,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
             {
                 query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17754,6 +17778,14 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceEndTime))
+            {
+                query["MaintenanceEndTime"] = request.MaintenanceEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceStartTime))
+            {
+                query["MaintenanceStartTime"] = request.MaintenanceStartTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPars))
             {
                 query["RequestPars"] = request.RequestPars;
@@ -17793,6 +17825,14 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceEndTime))
+            {
+                query["MaintenanceEndTime"] = request.MaintenanceEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceStartTime))
+            {
+                query["MaintenanceStartTime"] = request.MaintenanceStartTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPars))
             {
                 query["RequestPars"] = request.RequestPars;
@@ -17829,7 +17869,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
+          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go or subscription MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see "Pricing" (`~~1806469~~`).
           *
           * @param request UpdateClusterSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17883,7 +17923,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
+          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go or subscription MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see "Pricing" (`~~1806469~~`).
           *
           * @param request UpdateClusterSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17937,7 +17977,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
+          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go or subscription MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see "Pricing" (`~~1806469~~`).
           *
           * @param request UpdateClusterSpecRequest
           * @return UpdateClusterSpecResponse
@@ -17949,7 +17989,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
+          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go or subscription MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see "Pricing" (`~~1806469~~`).
           *
           * @param request UpdateClusterSpecRequest
           * @return UpdateClusterSpecResponse
@@ -17991,6 +18031,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
             {
                 query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsoleUIEnabled))
+            {
+                query["ConsoleUIEnabled"] = request.ConsoleUIEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EurekaSupported))
             {
@@ -18116,6 +18160,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
             {
                 query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsoleUIEnabled))
+            {
+                query["ConsoleUIEnabled"] = request.ConsoleUIEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EurekaSupported))
             {
@@ -20539,7 +20587,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing](~~250950~~).
+          * You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see [Pricing](~~250950~~).
           *
           * @param request UpdateGatewaySpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20585,7 +20633,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing](~~250950~~).
+          * You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see [Pricing](~~250950~~).
           *
           * @param request UpdateGatewaySpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20631,7 +20679,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing](~~250950~~).
+          * You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see [Pricing](~~250950~~).
           *
           * @param request UpdateGatewaySpecRequest
           * @return UpdateGatewaySpecResponse
@@ -20643,7 +20691,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing](~~250950~~).
+          * You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see [Pricing](~~250950~~).
           *
           * @param request UpdateGatewaySpecRequest
           * @return UpdateGatewaySpecResponse
@@ -21147,7 +21195,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          * >  The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
           *
           * @param request UpdateNacosConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21229,7 +21277,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          * >  The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
           *
           * @param request UpdateNacosConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21311,7 +21359,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          * >  The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
           *
           * @param request UpdateNacosConfigRequest
           * @return UpdateNacosConfigResponse
@@ -21323,7 +21371,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          * >  The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
           *
           * @param request UpdateNacosConfigRequest
           * @return UpdateNacosConfigResponse

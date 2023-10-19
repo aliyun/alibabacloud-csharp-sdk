@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// The type of the event. Valid values: For tracks of the Notify type:
+            /// The type of the event. For trajectory of the Notify type:
             /// 
             /// *   NodeCreated
             /// *   NodeDeleted
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? MultiSize { get; set; }
 
             /// <summary>
-            /// The operation type. For tracks of the Push type:
+            /// The type of the operation. For trajectory of the Push type:
             /// 
             /// *   Create
             /// *   Update
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// *   SetAcl
             /// *   Multi
             /// 
-            /// For tracks of the Pull type:
+            /// For trajectory of the Pull type:
             /// 
             /// *   GetData
             /// *   GetChild
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// The result.
+            /// The returned result.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -166,14 +166,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// The timestamp (not available).
+            /// The timestamp. It is not available.
             /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
             public string Timestamp { get; set; }
 
             /// <summary>
-            /// The type of the track. Valid values:
+            /// The type of the trajectory. Valid values:
             /// 
             /// *   Push
             /// *   Pull
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Ttl { get; set; }
 
             /// <summary>
-            /// Indicates whether to enable the monitoring feature.
+            /// Indicates whether the monitoring feature is enabled.
             /// </summary>
             [NameInMap("Watch")]
             [Validation(Required=false)]

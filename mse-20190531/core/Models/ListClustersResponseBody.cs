@@ -38,35 +38,35 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The alias of the instance.
+            /// The alias of the cluster.
             /// </summary>
             [NameInMap("ClusterAliasName")]
             [Validation(Required=false)]
             public string ClusterAliasName { get; set; }
 
             /// <summary>
-            /// The name of the instance.
+            /// The name of the cluster.
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+            /// The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
             /// </summary>
             [NameInMap("ClusterType")]
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The time when the instance was created.
+            /// The time when the cluster was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The time when the instance expires.
+            /// The time when the cluster expires.
             /// </summary>
             [NameInMap("EndDate")]
             [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InitStatus { get; set; }
 
             /// <summary>
-            /// The number of instance nodes.
+            /// The number of clusters.
             /// </summary>
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public long? InstanceCount { get; set; }
 
             /// <summary>
-            /// The ID of the instance
+            /// The instance ID.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InternetAddress { get; set; }
 
             /// <summary>
-            /// The public endpoint of the instance.
+            /// The public endpoint.
             /// </summary>
             [NameInMap("InternetDomain")]
             [Validation(Required=false)]
@@ -115,14 +115,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string IntranetAddress { get; set; }
 
             /// <summary>
-            /// The internal endpoint of the instance.
+            /// The internal endpoint.
             /// </summary>
             [NameInMap("IntranetDomain")]
             [Validation(Required=false)]
             public string IntranetDomain { get; set; }
 
+            [NameInMap("MaintenancePeriod")]
+            [Validation(Required=false)]
+            public ListClustersResponseBodyDataMaintenancePeriod MaintenancePeriod { get; set; }
+            public class ListClustersResponseBodyDataMaintenancePeriod : TeaModel {
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public string EndTime { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
+                public string StartTime { get; set; }
+
+            }
+
             /// <summary>
-            /// The edition of the instance.
+            /// The edition of the cluster.
             /// </summary>
             [NameInMap("MseVersion")]
             [Validation(Required=false)]

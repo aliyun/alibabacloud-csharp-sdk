@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The data entries returned.
+            /// The data returned.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -79,42 +79,74 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string CurrentVersion { get; set; }
 
+                /// <summary>
+                /// Indicates whether auto scale-out is enabled.
+                /// </summary>
                 [NameInMap("Elastic")]
                 [Validation(Required=false)]
                 public bool? Elastic { get; set; }
 
+                /// <summary>
+                /// The ID of the elastic gateway. This parameter is returned if auto scale-out is used.
+                /// </summary>
                 [NameInMap("ElasticInstanceId")]
                 [Validation(Required=false)]
                 public string ElasticInstanceId { get; set; }
 
+                /// <summary>
+                /// The auto scale-out policy.
+                /// </summary>
                 [NameInMap("ElasticPolicy")]
                 [Validation(Required=false)]
                 public ListGatewayResponseBodyDataResultElasticPolicy ElasticPolicy { get; set; }
                 public class ListGatewayResponseBodyDataResultElasticPolicy : TeaModel {
+                    /// <summary>
+                    /// Indicates whether auto scale-out is enabled.
+                    /// </summary>
                     [NameInMap("Elastic")]
                     [Validation(Required=false)]
                     public bool? Elastic { get; set; }
 
+                    /// <summary>
+                    /// The type of auto scale-out. Valid value:
+                    /// 
+                    /// *   CronHPA: scale-out by time
+                    /// </summary>
                     [NameInMap("ElasticType")]
                     [Validation(Required=false)]
                     public string ElasticType { get; set; }
 
+                    /// <summary>
+                    /// The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.
+                    /// </summary>
                     [NameInMap("MaxReplica")]
                     [Validation(Required=false)]
                     public int? MaxReplica { get; set; }
 
+                    /// <summary>
+                    /// The time policy list for auto scale-out.
+                    /// </summary>
                     [NameInMap("TimePolicyList")]
                     [Validation(Required=false)]
                     public List<ListGatewayResponseBodyDataResultElasticPolicyTimePolicyList> TimePolicyList { get; set; }
                     public class ListGatewayResponseBodyDataResultElasticPolicyTimePolicyList : TeaModel {
+                        /// <summary>
+                        /// The expected number of replicas for auto scale-out.
+                        /// </summary>
                         [NameInMap("DesiredReplica")]
                         [Validation(Required=false)]
                         public int? DesiredReplica { get; set; }
 
+                        /// <summary>
+                        /// The end time of auto scale-out.
+                        /// </summary>
                         [NameInMap("EndTime")]
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
 
+                        /// <summary>
+                        /// The start time of auto scale-out.
+                        /// </summary>
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
                         public string StartTime { get; set; }
@@ -123,23 +155,31 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
                 }
 
+                /// <summary>
+                /// The number of replicas that are automatically scaled out.
+                /// </summary>
                 [NameInMap("ElasticReplica")]
                 [Validation(Required=false)]
                 public int? ElasticReplica { get; set; }
 
+                /// <summary>
+                /// The type of auto scale-out. Valid value:
+                /// 
+                /// *   CronHPA: scale-out by time
+                /// </summary>
                 [NameInMap("ElasticType")]
                 [Validation(Required=false)]
                 public string ElasticType { get; set; }
 
                 /// <summary>
-                /// The time when the subscription gateway expires.
+                /// The time when the instance expires.
                 /// </summary>
                 [NameInMap("EndDate")]
                 [Validation(Required=false)]
                 public string EndDate { get; set; }
 
                 /// <summary>
-                /// The type of the gateway.
+                /// The gateway type.
                 /// </summary>
                 [NameInMap("GatewayType")]
                 [Validation(Required=false)]
@@ -160,21 +200,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GatewayVersion { get; set; }
 
                 /// <summary>
-                /// The creation time.
+                /// The time when the gateway was created.
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The modification time.
+                /// The time when the gateway was modified.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The ID of the gateway.
+                /// The gateway ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -204,7 +244,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -225,7 +265,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string GatewaySlbMode { get; set; }
 
                     /// <summary>
-                    /// The status of the SLB instance.
+                    /// The state of the SLB instance.
                     /// </summary>
                     [NameInMap("GatewaySlbStatus")]
                     [Validation(Required=false)]
@@ -267,14 +307,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string SlbSpec { get; set; }
 
                     /// <summary>
-                    /// The description of the status.
+                    /// The description of the state.
                     /// </summary>
                     [NameInMap("StatusDesc")]
                     [Validation(Required=false)]
                     public string StatusDesc { get; set; }
 
                     /// <summary>
-                    /// The type.
+                    /// The type of the SLB instance.
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -289,29 +329,51 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string LatestVersion { get; set; }
 
+                [NameInMap("MaintenancePeriod")]
+                [Validation(Required=false)]
+                public ListGatewayResponseBodyDataResultMaintenancePeriod MaintenancePeriod { get; set; }
+                public class ListGatewayResponseBodyDataResultMaintenancePeriod : TeaModel {
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public string EndTime { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
+                    [NameInMap("TimeZone")]
+                    [Validation(Required=false)]
+                    public string TimeZone { get; set; }
+
+                }
+
                 /// <summary>
-                /// The tag of the instance.
+                /// The resource tag.
                 /// </summary>
                 [NameInMap("MseTag")]
                 [Validation(Required=false)]
                 public string MseTag { get; set; }
 
+                [NameInMap("MseVersion")]
+                [Validation(Required=false)]
+                public string MseVersion { get; set; }
+
                 /// <summary>
-                /// Indicates whether the gateway can be forcefully updated.
+                /// Indicates whether the instance was forcefully upgraded.
                 /// </summary>
                 [NameInMap("MustUpgrade")]
                 [Validation(Required=false)]
                 public bool? MustUpgrade { get; set; }
 
                 /// <summary>
-                /// The name of the gateway.
+                /// The gateway name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The information about the user.
+                /// The user information.
                 /// </summary>
                 [NameInMap("PrimaryUser")]
                 [Validation(Required=false)]
@@ -332,7 +394,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Replica { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -346,7 +408,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? RollBack { get; set; }
 
                 /// <summary>
-                /// The details of the Server Load Balancer (SLB) instances.
+                /// The details of Server Load Balancer (SLB) instances.
                 /// </summary>
                 [NameInMap("Slb")]
                 [Validation(Required=false)]
@@ -360,7 +422,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string GatewaySlbMode { get; set; }
 
                     /// <summary>
-                    /// The status of the SLB instance.
+                    /// The state of the SLB instance.
                     /// </summary>
                     [NameInMap("GatewaySlbStatus")]
                     [Validation(Required=false)]
@@ -395,14 +457,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string SlbSpec { get; set; }
 
                     /// <summary>
-                    /// The description of the status.
+                    /// The description of the state.
                     /// </summary>
                     [NameInMap("StatusDesc")]
                     [Validation(Required=false)]
                     public string StatusDesc { get; set; }
 
                     /// <summary>
-                    /// The type.
+                    /// The network type. Valid values:
+                    /// 
+                    /// *   PUB_NET
+                    /// *   PRIVATE_NET
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -418,27 +483,27 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// The gateway status.
+                /// The gateway state. Valid values:
                 /// 
                 /// *   0: The gateway is being created.
-                /// *   1: The gateway fails to be created.
+                /// *   1: The gateway failed to be created.
                 /// *   2: The gateway is running.
-                /// *   3: The gateway is changing.
-                /// *   4: The gateway is scaling down.
-                /// *   6: The gateway is scaling up.
+                /// *   3: The gateway is being changed.
+                /// *   4: The gateway is scaling in.
+                /// *   6: The gateway is scaling out.
                 /// *   8: The gateway is being deleted.
-                /// *   9: The gateway is suspended and to be released.
+                /// *   9: The gateway is suspended and is to be released.
                 /// *   10: The gateway is restarting.
                 /// *   11: The gateway is being rebuilt.
-                /// *   12: The gateway is updating.
-                /// *   13: The gateway fails to be updated.
+                /// *   12: The gateway is being upgraded.
+                /// *   13: The gateway failed to be upgraded.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// The description of the status.
+                /// The description of the gateway state.
                 /// </summary>
                 [NameInMap("StatusDesc")]
                 [Validation(Required=false)]
@@ -458,17 +523,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
+                /// <summary>
+                /// The total number of replicas, including the number of replicas that are automatically scaled out.
+                /// </summary>
                 [NameInMap("TotalReplica")]
                 [Validation(Required=false)]
                 public int? TotalReplica { get; set; }
 
                 /// <summary>
-                /// Indicates whether the gateway can be updated.
+                /// Indicates whether the instance was upgraded.
                 /// </summary>
                 [NameInMap("Upgrade")]
                 [Validation(Required=false)]
                 public bool? Upgrade { get; set; }
 
+                /// <summary>
+                /// The ID of the virtual private cloud (VPC) to which the gateway belongs.
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }

@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The key of the tag.
+                /// The tag values.
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GatewayUniqueId { get; set; }
 
                 /// <summary>
-                /// The creation time.
+                /// The time when the service was created.
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The modification time.
+                /// The time when the service was modified.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The ID of the service.
+                /// The service ID.
                 /// </summary>
                 [NameInMap("ServiceId")]
                 [Validation(Required=false)]
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion ServiceVersion { get; set; }
                 public class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion : TeaModel {
                     /// <summary>
-                    /// The tag.
+                    /// The tags.
                     /// </summary>
                     [NameInMap("Labels")]
                     [Validation(Required=false)]
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -307,14 +307,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The type.
+                /// The type of the service.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The key of the tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

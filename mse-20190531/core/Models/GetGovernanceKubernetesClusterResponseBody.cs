@@ -45,18 +45,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string NamespaceInfos { get; set; }
 
             /// <summary>
-            /// The list of namespaces.
+            /// The queried namespaces.
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> Namespaces { get; set; }
             public class GetGovernanceKubernetesClusterResponseBodyDataNamespaces : TeaModel {
+                /// <summary>
+                /// The name of the MSE namespace that you want to access.
+                /// </summary>
                 [NameInMap("MseNamespace")]
                 [Validation(Required=false)]
                 public string MseNamespace { get; set; }
 
                 /// <summary>
-                /// The name.
+                /// The name of the namespace in the ACK cluster.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The time when the ack-onepilot component was started.
+            /// The time when the pilot component was started.
             /// </summary>
             [NameInMap("PilotStartTime")]
             [Validation(Required=false)]

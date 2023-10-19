@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID.
+                /// The serial number.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -87,28 +87,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ImageVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the user to which the instance belongs.
+                /// The ID of the user to which the cluster belongs.
                 /// </summary>
                 [NameInMap("PrimaryUser")]
                 [Validation(Required=false)]
                 public string PrimaryUser { get; set; }
 
                 /// <summary>
-                /// The number of nodes in the instance.
+                /// The number of nodes in the cluster.
                 /// </summary>
                 [NameInMap("Replica")]
                 [Validation(Required=false)]
                 public string Replica { get; set; }
 
                 /// <summary>
-                /// The list of risk items.
+                /// The risk items.
                 /// </summary>
                 [NameInMap("RiskList")]
                 [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The ID.
+                    /// The instance ID.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Module { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the risk item notification feature is disabled.
+                    /// Indicates whether the risk item notification feature is disabled. Valid values:
                     /// 
                     /// *   true: disabled
                     /// *   false: enabled
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string PrimaryUser { get; set; }
 
                     /// <summary>
-                    /// The risk code.
+                    /// The code of the risk.
                     /// </summary>
                     [NameInMap("RiskCode")]
                     [Validation(Required=false)]
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// The status of the task.
+                /// The task state.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The last update time.
+                /// The time when the task was last updated.
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteNamespaceRequest : TeaModel {
+        /// <summary>
+        /// The language in which you want to display the results. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }

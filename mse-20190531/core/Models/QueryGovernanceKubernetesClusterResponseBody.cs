@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryGovernanceKubernetesClusterResponseBody : TeaModel {
         /// <summary>
-        /// The response data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The data structure.
+            /// The details of the data.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<QueryGovernanceKubernetesClusterResponseBodyDataResult> Result { get; set; }
             public class QueryGovernanceKubernetesClusterResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The ID of cluster.
+                /// The ID of the cluster.
                 /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string K8sVersion { get; set; }
 
                 /// <summary>
-                /// The information of the namespace.
+                /// The information about the namespace.
                 /// </summary>
                 [NameInMap("NamespaceInfos")]
                 [Validation(Required=false)]
                 public string NamespaceInfos { get; set; }
 
                 /// <summary>
-                /// The time when the ack-onepilot component was started.
+                /// The time when the pilot component was started.
                 /// </summary>
                 [NameInMap("PilotStartTime")]
                 [Validation(Required=false)]

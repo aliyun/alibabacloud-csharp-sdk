@@ -30,34 +30,60 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            /// <summary>
+            /// Indicates whether auto scale-out is enabled.
+            /// </summary>
             [NameInMap("Elastic")]
             [Validation(Required=false)]
             public bool? Elastic { get; set; }
 
+            /// <summary>
+            /// The auto scale-out policy.
+            /// </summary>
             [NameInMap("ElasticPolicy")]
             [Validation(Required=false)]
             public GetGatewayResponseBodyDataElasticPolicy ElasticPolicy { get; set; }
             public class GetGatewayResponseBodyDataElasticPolicy : TeaModel {
+                /// <summary>
+                /// The type of auto scale-out. Valid value:
+                /// 
+                /// *   CronHPA: scale-out by time
+                /// </summary>
                 [NameInMap("ElasticType")]
                 [Validation(Required=false)]
                 public string ElasticType { get; set; }
 
+                /// <summary>
+                /// The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.
+                /// </summary>
                 [NameInMap("MaxReplica")]
                 [Validation(Required=false)]
                 public int? MaxReplica { get; set; }
 
+                /// <summary>
+                /// The policy of scale-out by time.
+                /// </summary>
                 [NameInMap("TimePolicyList")]
                 [Validation(Required=false)]
                 public List<GetGatewayResponseBodyDataElasticPolicyTimePolicyList> TimePolicyList { get; set; }
                 public class GetGatewayResponseBodyDataElasticPolicyTimePolicyList : TeaModel {
+                    /// <summary>
+                    /// The number of expected replicas.
+                    /// </summary>
                     [NameInMap("DesiredReplica")]
                     [Validation(Required=false)]
                     public int? DesiredReplica { get; set; }
 
+                    /// <summary>
+                    /// The end time of auto scale-out.
+                    /// </summary>
                     [NameInMap("EndTime")]
                     [Validation(Required=false)]
                     public string EndTime { get; set; }
 
+                    /// <summary>
+                    /// The start time of auto scale-out.
+                    /// </summary>
                     [NameInMap("StartTime")]
                     [Validation(Required=false)]
                     public string StartTime { get; set; }
@@ -66,10 +92,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             }
 
+            /// <summary>
+            /// The number of replicas that are automatically scaled out.
+            /// </summary>
             [NameInMap("ElasticReplica")]
             [Validation(Required=false)]
             public int? ElasticReplica { get; set; }
 
+            /// <summary>
+            /// The type of auto scale-out. Valid value:
+            /// 
+            /// *   CronHPA: scale-out by time
+            /// </summary>
             [NameInMap("ElasticType")]
             [Validation(Required=false)]
             public string ElasticType { get; set; }
@@ -216,6 +250,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string StatusDesc { get; set; }
 
+            /// <summary>
+            /// The total number of replicas, including the number of replicas that are automatically scaled out.
+            /// </summary>
             [NameInMap("TotalReplica")]
             [Validation(Required=false)]
             public int? TotalReplica { get; set; }
