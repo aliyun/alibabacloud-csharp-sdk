@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<CreateTemplateScratchRequestSourceResources> SourceResources { get; set; }
         public class CreateTemplateScratchRequestSourceResources : TeaModel {
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
             /// <summary>
             /// The ID of the resource.
             /// </summary>
