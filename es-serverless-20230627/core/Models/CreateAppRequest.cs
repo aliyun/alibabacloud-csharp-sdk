@@ -86,6 +86,24 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 
         }
 
+        [NameInMap("quotaInfo")]
+        [Validation(Required=false)]
+        public CreateAppRequestQuotaInfo QuotaInfo { get; set; }
+        public class CreateAppRequestQuotaInfo : TeaModel {
+            [NameInMap("appType")]
+            [Validation(Required=false)]
+            public string AppType { get; set; }
+
+            [NameInMap("cu")]
+            [Validation(Required=false)]
+            public int? Cu { get; set; }
+
+            [NameInMap("storage")]
+            [Validation(Required=false)]
+            public int? Storage { get; set; }
+
+        }
+
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -93,6 +111,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }
+
+        [NameInMap("dryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
     }
 
