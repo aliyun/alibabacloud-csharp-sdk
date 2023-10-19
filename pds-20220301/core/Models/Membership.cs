@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class CreateUserResponseBody : TeaModel {
-        [NameInMap("avatar")]
-        [Validation(Required=false)]
-        public string Avatar { get; set; }
-
+    public class Membership : TeaModel {
         [NameInMap("created_at")]
         [Validation(Required=false)]
         public long? CreatedAt { get; set; }
@@ -20,10 +16,6 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("creator")]
         [Validation(Required=false)]
         public string Creator { get; set; }
-
-        [NameInMap("default_drive_id")]
-        [Validation(Required=false)]
-        public string DefaultDriveId { get; set; }
 
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -33,41 +25,29 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string DomainId { get; set; }
 
-        [NameInMap("email")]
+        [NameInMap("group_id")]
         [Validation(Required=false)]
-        public string Email { get; set; }
+        public string GroupId { get; set; }
 
-        [NameInMap("nick_name")]
+        [NameInMap("member_role")]
         [Validation(Required=false)]
-        public string NickName { get; set; }
+        public string MemberRole { get; set; }
 
-        [NameInMap("phone")]
+        [NameInMap("member_type")]
         [Validation(Required=false)]
-        public string Phone { get; set; }
+        public string MemberType { get; set; }
 
-        [NameInMap("role")]
+        [NameInMap("sub_group_id")]
         [Validation(Required=false)]
-        public string Role { get; set; }
-
-        [NameInMap("status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
+        public string SubGroupId { get; set; }
 
         [NameInMap("updated_at")]
         [Validation(Required=false)]
         public long? UpdatedAt { get; set; }
 
-        [NameInMap("user_data")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> UserData { get; set; }
-
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }
-
-        [NameInMap("user_name")]
-        [Validation(Required=false)]
-        public string UserName { get; set; }
 
     }
 

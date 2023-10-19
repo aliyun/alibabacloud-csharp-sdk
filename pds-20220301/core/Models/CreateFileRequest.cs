@@ -73,6 +73,20 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             [Validation(Required=false)]
             public string ContentMd5 { get; set; }
 
+            [NameInMap("parallel_sha1_ctx")]
+            [Validation(Required=false)]
+            public CreateFileRequestPartInfoListParallelSha1Ctx ParallelSha1Ctx { get; set; }
+            public class CreateFileRequestPartInfoListParallelSha1Ctx : TeaModel {
+                [NameInMap("h")]
+                [Validation(Required=false)]
+                public List<long?> H { get; set; }
+
+                [NameInMap("part_offset")]
+                [Validation(Required=false)]
+                public long? PartOffset { get; set; }
+
+            }
+
             [NameInMap("part_number")]
             [Validation(Required=false)]
             public int? PartNumber { get; set; }

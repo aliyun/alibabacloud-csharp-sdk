@@ -139,6 +139,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public Dictionary<string, string> UserTags { get; set; }
 
+        [NameInMap("video_media_metadata")]
+        [Validation(Required=false)]
+        public VideoMediaMetadata VideoMediaMetadata { get; set; }
+
     }
 
 }

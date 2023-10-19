@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         [NameInMap("user_data")]
         [Validation(Required=false)]
-        public string UserData { get; set; }
+        public Dictionary<string, object> UserData { get; set; }
 
         [NameInMap("user_id")]
         [Validation(Required=false)]

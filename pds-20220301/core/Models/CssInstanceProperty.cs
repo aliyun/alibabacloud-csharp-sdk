@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class SearchDomainsRequest : TeaModel {
-        [NameInMap("instance_id")]
+    public class CssInstanceProperty : TeaModel {
+        [NameInMap("code")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("limit")]
+        [NameInMap("globalKey")]
         [Validation(Required=false)]
-        public long? Limit { get; set; }
-
-        [NameInMap("marker")]
-        [Validation(Required=false)]
-        public string Marker { get; set; }
+        public string GlobalKey { get; set; }
 
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("order_by")]
+        [NameInMap("unit")]
         [Validation(Required=false)]
-        public string OrderBy { get; set; }
+        public string Unit { get; set; }
+
+        [NameInMap("value")]
+        [Validation(Required=false)]
+        public string Value { get; set; }
 
     }
 
