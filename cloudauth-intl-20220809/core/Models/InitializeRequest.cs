@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string Authorize { get; set; }
 
+        [NameInMap("CallbackToken")]
+        [Validation(Required=false)]
+        public string CallbackToken { get; set; }
+
+        [NameInMap("CallbackUrl")]
+        [Validation(Required=false)]
+        public string CallbackUrl { get; set; }
+
         [NameInMap("Crop")]
         [Validation(Required=false)]
         public string Crop { get; set; }
