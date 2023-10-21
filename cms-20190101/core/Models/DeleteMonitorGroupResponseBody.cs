@@ -10,21 +10,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupResponseBody : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The name of the application group.
+        /// The deleted application group.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public DeleteMonitorGroupResponseBodyGroup Group { get; set; }
         public class DeleteMonitorGroupResponseBodyGroup : TeaModel {
             /// <summary>
-            /// The name of the alert group.
+            /// The alert groups that receive alert notifications for the application group.
             /// </summary>
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public List<DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup> ContactGroup { get; set; }
                 public class DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup : TeaModel {
                     /// <summary>
-                    /// Deletes an application group.
+                    /// The name of the alert group.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The alert groups that receive alert notifications for the application group.
+            /// The name of the application group.
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -55,21 +57,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The deleted application group.
+        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

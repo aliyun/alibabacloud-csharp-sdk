@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteSiteMonitorsRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// *   true (default value)
+        /// *   false
         /// </summary>
         [NameInMap("IsDeleteAlarms")]
         [Validation(Required=false)]
@@ -23,10 +24,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:
-        /// 
-        /// *   true (default value)
-        /// *   false
+        /// The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

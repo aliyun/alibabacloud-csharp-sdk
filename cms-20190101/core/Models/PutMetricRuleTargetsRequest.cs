@@ -14,7 +14,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The list of resources that failed to be created or modified.
+        /// The ID of the alert rule.
+        /// 
+        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public class PutMetricRuleTargetsRequestTargets : TeaModel {
             /// <summary>
             /// The ARN of the resource.
+            /// 
+            /// For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).
             /// 
             /// Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
             /// 
@@ -48,16 +52,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// The ID of the resource for which alerts are triggered.
+            /// The parameters of the alert callback. The parameters are in the JSON format.
             /// </summary>
             [NameInMap("JsonParams")]
             [Validation(Required=false)]
             public string JsonParams { get; set; }
 
             /// <summary>
-            /// The HTTP status code.
+            /// The level of the alert. Valid values:
             /// 
-            /// >  The status code 200 indicates that the call was successful.
+            /// *   INFO: information
+            /// *   WARN: warning
+            /// *   CRITICAL: critical
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]

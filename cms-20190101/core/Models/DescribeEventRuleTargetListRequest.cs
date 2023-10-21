@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the alert group.
+        /// The name of the event-triggered alert rule.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

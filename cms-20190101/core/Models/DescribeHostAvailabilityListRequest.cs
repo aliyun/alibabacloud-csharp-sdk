@@ -10,41 +10,39 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHostAvailabilityListRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Pages start from page 1. Default value: 1.
+        /// The ID of the availability monitoring task.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
-        /// 
-        /// Default value: 10.
+        /// The IDs of the availability monitoring tasks. Separate multiple IDs with commas (,).
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The number of the page to return.
         /// 
-        /// >  The value 200 indicates that the call was successful.
+        /// Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The number of entries to return on each page.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -55,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// The name of the availability monitoring task.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

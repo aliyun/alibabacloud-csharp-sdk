@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Specifies whether to return the information of the alert rules that are configured for the site monitoring task. Valid values:
+        /// 
+        /// *   true: The system returns the information of the alert rules that are configured for the site monitoring task.
+        /// *   false (default): The system does not return the information of the alert rules that are configured for the site monitoring task.
         /// </summary>
         [NameInMap("IncludeAlert")]
         [Validation(Required=false)]
@@ -21,9 +24,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The ID of the site monitoring task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

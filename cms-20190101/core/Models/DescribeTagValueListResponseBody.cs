@@ -10,11 +10,27 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeTagValueListResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The HTTP status code.
+        /// 
+        /// >  The value 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        /// <summary>
+        /// The error message.
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// Indicates whether the call was successful. Valid values:
@@ -22,26 +38,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   true: The call was successful.
         /// *   false: The call failed.
         /// </summary>
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// The tag values returned.
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// This topic provides an example of how to query the tag values corresponding to `tagKey1`. The return results are `tagValue1` and `tagValue2`.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// For more information about common request parameters, see [Common parameters](~~199331~~).
+        /// The tag values returned.
         /// </summary>
         [NameInMap("TagValues")]
         [Validation(Required=false)]

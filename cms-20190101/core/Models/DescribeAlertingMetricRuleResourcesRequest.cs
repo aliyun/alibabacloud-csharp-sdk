@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertingMetricRuleResourcesRequest : TeaModel {
+        [NameInMap("AlertBeforeTime")]
+        [Validation(Required=false)]
+        public string AlertBeforeTime { get; set; }
+
         /// <summary>
         /// The dimensions that specify the resources whose monitoring data you want to query.
         /// </summary>

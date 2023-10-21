@@ -10,50 +10,44 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The information about the virtual private cloud (VPC).
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Valid values: 1 to 1000000000.
-        /// 
-        /// Default value: 1.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
-        /// 
-        /// Valid values: 1 to 1000000000.
-        /// 
-        /// Default value: 10.
+        /// The total number of returned pages.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The dimensions of the resource that is associated with the application group.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The resources that are associated with the application group.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -64,45 +58,42 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResource> Resource { get; set; }
             public class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResource : TeaModel {
                 /// <summary>
-                /// The network type.
+                /// The name of the cloud service.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The total number of returned pages.
+                /// The description of the resource.
                 /// </summary>
                 [NameInMap("Desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The dimensions of the resource that is associated with the application group.
                 /// </summary>
                 [NameInMap("Dimension")]
                 [Validation(Required=false)]
                 public string Dimension { get; set; }
 
                 /// <summary>
-                /// Specifies whether to return the total number of resources in the specified application group. Valid values:
-                /// 
-                /// *   true (default value)
-                /// *   false
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The resources that are associated with the application group.
+                /// The name of the instance.
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The page number of the returned page.
+                /// The network type.
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -134,14 +125,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceTagsTag> Tag { get; set; }
                     public class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceTagsTag : TeaModel {
                         /// <summary>
-                        /// The name of the instance.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The description of the resource.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -152,16 +143,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The information about the virtual private cloud (VPC).
                 /// </summary>
                 [NameInMap("Vpc")]
                 [Validation(Required=false)]
                 public DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceVpc Vpc { get; set; }
                 public class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceVpc : TeaModel {
+                    /// <summary>
+                    /// The ID of the VPC.
+                    /// </summary>
                     [NameInMap("VpcInstanceId")]
                     [Validation(Required=false)]
                     public string VpcInstanceId { get; set; }
 
+                    /// <summary>
+                    /// The ID of the vSwitch to which the instance belongs.
+                    /// </summary>
                     [NameInMap("VswitchInstanceId")]
                     [Validation(Required=false)]
                     public string VswitchInstanceId { get; set; }
@@ -173,14 +170,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// Indicates whether the call was successful. Valid values:
+        /// 
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the resource. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources in each request.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

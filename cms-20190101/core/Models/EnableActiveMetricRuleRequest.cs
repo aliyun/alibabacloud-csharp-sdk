@@ -10,9 +10,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class EnableActiveMetricRuleRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The cloud service for which you want to enable initiative alert. Valid values:
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// *   ecs: Elastic Compute Service (ECS)
+        /// *   rds: ApsaraDB RDS
+        /// *   slb: Server Load Balancer (SLB)
+        /// *   redis_standard: ApsaraDB for Redis of the standard architecture
+        /// *   redis_sharding: ApsaraDB for Redis of the cluster architecture
+        /// *   redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture
+        /// *   mongodb: ApsaraDB for MongoDB of the replica set architecture
+        /// *   mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture
+        /// *   hbase: ApsaraDB for HBase
+        /// *   elasticsearch: Elasticsearch
+        /// *   opensearch: OpenSearch
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]

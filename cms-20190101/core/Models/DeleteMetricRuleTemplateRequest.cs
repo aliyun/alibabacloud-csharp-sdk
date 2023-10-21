@@ -14,9 +14,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The ID of the alert template.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

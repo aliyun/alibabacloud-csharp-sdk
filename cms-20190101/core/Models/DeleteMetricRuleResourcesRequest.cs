@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMetricRuleResourcesRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The resources to be disassociated from the alert rule.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public string Resources { get; set; }
 
         /// <summary>
-        /// The resources to be disassociated from the alert rule.
+        /// The ID of the alert rule.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

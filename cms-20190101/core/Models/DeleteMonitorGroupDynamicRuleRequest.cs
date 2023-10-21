@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupDynamicRuleRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The service to which the rule applies. Valid values: ecs, rds, and slb.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The service to which the rule applies. Valid values: ecs, rds, and slb.
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

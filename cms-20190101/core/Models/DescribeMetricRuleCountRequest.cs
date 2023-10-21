@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleCountRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+        /// The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

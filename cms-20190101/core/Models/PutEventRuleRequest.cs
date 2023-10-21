@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutEventRuleRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **PutEventRule**.
+        /// The description of the event-triggered alert rule.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -21,9 +21,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<PutEventRuleRequestEventPattern> EventPattern { get; set; }
         public class PutEventRuleRequestEventPattern : TeaModel {
             /// <summary>
-            /// The SQL condition that is used to filter events. If the content of an event meets the specified SQL condition, an alert is automatically triggered.
-            /// 
-            /// >  The syntax of SQL event filtering is consistent with the query syntax of Log Service.
+            /// The keyword that is used to filter events. If the content of an event contains the specified keyword, an alert is automatically triggered.
             /// </summary>
             [NameInMap("CustomFilters")]
             [Validation(Required=false)]
@@ -42,14 +40,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<string> NameList { get; set; }
 
             /// <summary>
-            /// The name of the event-triggered alert rule.
+            /// The type of the cloud service. Valid values of N: 1 to 50.
+            /// 
+            /// >  You can call the DescribeSystemEventMetaList operation to query the cloud services that support event-triggered alerts. For more information, see [DescribeSystemEventMetaList](~~114972~~).
             /// </summary>
             [NameInMap("Product")]
             [Validation(Required=false)]
             public string Product { get; set; }
 
             /// <summary>
-            /// The description of the event-triggered alert rule.
+            /// The SQL condition that is used to filter events. If the content of an event meets the specified SQL condition, an alert is automatically triggered.
+            /// 
+            /// >  The syntax of SQL event filtering is consistent with the query syntax of Log Service.
             /// </summary>
             [NameInMap("SQLFilter")]
             [Validation(Required=false)]
@@ -62,21 +64,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The type of the cloud service. Valid values of N: 1 to 50.
+        /// The type of the event-triggered alert rule. Valid values:
         /// 
-        /// >  You can call the DescribeSystemEventMetaList operation to query the cloud services that support event-triggered alerts. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+        /// *   SYSTEM: system event-triggered alert rule
+        /// *   CUSTOM: custom event-triggered alert rule
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// The type of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:
-        /// 
-        /// *   StatusNotification: fault notifications
-        /// *   Exception: exceptions
-        /// *   Maintenance: O\&M
-        /// *   \*: all types
+        /// The ID of the application group to which the event-triggered alert rule belongs.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -87,16 +85,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The name of the event-triggered alert rule.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The number of event-triggered alert rules that were created or modified.
+        /// The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds.
         /// </summary>
         [NameInMap("SilenceTime")]
         [Validation(Required=false)]

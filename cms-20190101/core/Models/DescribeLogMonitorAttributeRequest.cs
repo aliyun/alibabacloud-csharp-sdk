@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeLogMonitorAttributeRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The name of the log monitoring metric. Exact match is supported.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// For more information, see [Appendix 1: Metrics](~~163515~~).
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]

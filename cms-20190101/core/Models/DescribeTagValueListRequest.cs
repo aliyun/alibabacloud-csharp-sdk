@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeTagValueListRequest : TeaModel {
         /// <summary>
-        /// The key of the tag whose values you want to query.
+        /// The number of the page to return.
         /// 
-        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+        /// Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The number of entries to return on each page.
         /// 
-        /// >  The value 200 indicates that the call was successful.
+        /// Valid values: 1 to 100. Pages start from page 1. Default value: 50.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -32,7 +32,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The key of the tag whose values you want to query.
+        /// 
+        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

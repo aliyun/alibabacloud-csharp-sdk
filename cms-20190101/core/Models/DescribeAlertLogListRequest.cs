@@ -10,88 +10,90 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogListRequest : TeaModel {
         /// <summary>
-        /// The start timestamp of the alert logs to be queried. Unit: milliseconds.
+        /// The alert contact group.
         /// </summary>
         [NameInMap("ContactGroup")]
         [Validation(Required=false)]
         public string ContactGroup { get; set; }
 
         /// <summary>
-        /// The alert contact group.
+        /// The end timestamp of the alert logs to be queried. Unit: milliseconds.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The alert information in a JSON string.
+        /// The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
+        /// 
+        /// *   `product`: aggregates data by cloud service.
+        /// *   `level`: aggregates data by alert level.
+        /// *   `groupId`: aggregates data by application group.
+        /// *   `contactGroup`: aggregates data by alert contact group.
+        /// *   `product,metricName`: aggregates data both by cloud service and by metric.
         /// </summary>
         [NameInMap("GroupBy")]
         [Validation(Required=false)]
         public string GroupBy { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeAlertLogList**.
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The name of the blacklist policy.
+        /// The statistical period of alert logs. Unit: minutes.
         /// </summary>
         [NameInMap("LastMin")]
         [Validation(Required=false)]
         public string LastMin { get; set; }
 
         /// <summary>
-        /// The webhook URLs of alert contacts.
+        /// The severity level and notification methods of the alert. Valid values:
+        /// 
+        /// *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
+        /// *   OK: No alert is generated.
         /// </summary>
         [NameInMap("Level")]
         [Validation(Required=false)]
         public string Level { get; set; }
 
         /// <summary>
-        /// The message returned for the alert callback.
+        /// The metric name.
+        /// 
+        /// > For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful.
+        /// The namespace of the cloud service.
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// > For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The page number. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The severity level and notification methods of the alert. Valid values:
-        /// 
-        /// *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
-        /// 
-        /// <!---->
-        /// 
-        /// *   OK: No alert is generated.
+        /// The number of entries per page. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The email addresses of alert contacts.
+        /// The abbreviation of the cloud service name.
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]
@@ -102,33 +104,36 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The phone numbers of alert contacts that can receive alert text messages.
-        /// 
-        /// >  This parameter can be returned only on the China site (aliyun.com).
+        /// The ID of the alert rule. For more information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }
 
         /// <summary>
-        /// The identifier of the cloud service. Valid values:
-        /// 
-        /// *   If the cloud service is provided by Alibaba Cloud, the abbreviation of the service name is returned. Example: ECS.
-        /// *   If the cloud service is not provided by Alibaba Cloud, a value in the `acs_Service keyword` format is returned. Example: acs_networkmonitor.
+        /// The name of the alert rule.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The ID of the log.
+        /// The search keyword that is used to query alert logs.
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// The sending results of alert notifications.
+        /// The status of the alert. Valid values:
+        /// 
+        /// *   0: The alert is triggered or cleared.
+        /// *   1: The alert is ineffective.
+        /// *   2: The alert is muted.
+        /// *   3: The host is restarting.
+        /// *   4: No alert notification is sent.
+        /// 
+        /// If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.
         /// </summary>
         [NameInMap("SendStatus")]
         [Validation(Required=false)]
@@ -139,10 +144,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// Indicates whether the alert level was changed. Valid values:
-        /// 
-        /// *   `P4->OK`: The alert level was changed from P4 to OK.
-        /// *   `P4->P4`: The alert level was still P4.
+        /// The start timestamp of the alert logs to be queried. Unit: milliseconds.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

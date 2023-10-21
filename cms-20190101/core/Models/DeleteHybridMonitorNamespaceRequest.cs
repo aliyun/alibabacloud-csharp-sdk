@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteHybridMonitorNamespaceRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The name of the namespace.
+        /// 
+        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

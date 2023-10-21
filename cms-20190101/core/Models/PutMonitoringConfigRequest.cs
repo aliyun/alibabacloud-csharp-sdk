@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutMonitoringConfigRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:
+        /// Specifies whether to automatically install the CloudMonitor agent on existing Elastic Compute Service (ECS) instances. Valid values:
         /// 
         /// *   true (default value)
         /// *   false
@@ -20,9 +20,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? AutoInstall { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// *   true (default value)
+        /// *   false
         /// </summary>
         [NameInMap("EnableInstallAgentNewECS")]
         [Validation(Required=false)]

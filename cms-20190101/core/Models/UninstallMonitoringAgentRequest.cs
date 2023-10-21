@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class UninstallMonitoringAgentRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The HTTP status code 200 indicates that the call was successful.
+        /// The ID of the host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

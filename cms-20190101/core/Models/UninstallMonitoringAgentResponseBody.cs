@@ -10,31 +10,33 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class UninstallMonitoringAgentResponseBody : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// The HTTP status code.
+        /// 
+        /// >  The HTTP status code 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
-        /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// >  This API operation is not applicable to ECS instances. To uninstall the agent from an ECS instance, see [Install and uninstall the Cloud Monitor agent](~~183482~~).
+        /// Indicates whether the call was successful. Valid values:
+        /// 
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

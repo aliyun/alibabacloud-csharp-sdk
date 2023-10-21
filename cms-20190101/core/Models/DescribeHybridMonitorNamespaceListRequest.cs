@@ -10,31 +10,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorNamespaceListRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:
-        /// 
-        /// *   true
-        /// *   false (default value)
+        /// The keyword that is used to search for namespaces.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The name of the namespace.
+        /// 
+        /// The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeHybridMonitorNamespaceList**.
+        /// The number of the page to return.
+        /// 
+        /// Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The number of entries to return on each page.
+        /// 
+        /// A minimum of 1 entry can be returned on each page. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -45,7 +48,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The details of the namespaces.
+        /// Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:
+        /// 
+        /// *   true
+        /// *   false (default value)
         /// </summary>
         [NameInMap("ShowTaskStatistic")]
         [Validation(Required=false)]

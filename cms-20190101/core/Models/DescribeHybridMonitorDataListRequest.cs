@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorDataListRequest : TeaModel {
         /// <summary>
-        /// The interval at which monitoring data is collected.
+        /// The timestamp that specifies the end of the time range to query.
         /// 
         /// Unit: seconds.
         /// </summary>
@@ -19,23 +19,27 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public long? End { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The name of the namespace.
         /// 
-        /// >  The status code 200 indicates that the call is successful.
+        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The interval at which monitoring data is collected.
+        /// 
+        /// Unit: seconds.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeHybridMonitorDataList**.
+        /// The name of the metric.
+        /// 
+        /// >  PromQL statements are supported.
         /// </summary>
         [NameInMap("PromSQL")]
         [Validation(Required=false)]
@@ -46,7 +50,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The metric values that are collected at different timestamps.
+        /// The timestamp that specifies the beginning of the time range to query.
+        /// 
+        /// Unit: seconds.
         /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]

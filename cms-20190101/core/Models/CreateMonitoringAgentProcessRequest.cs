@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitoringAgentProcessRequest : TeaModel {
         /// <summary>
-        /// The user who launches the process.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The name of the process.
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]
         public string ProcessName { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The user who launches the process.
         /// </summary>
         [NameInMap("ProcessUser")]
         [Validation(Required=false)]

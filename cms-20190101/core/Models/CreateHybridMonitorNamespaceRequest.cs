@@ -10,11 +10,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateHybridMonitorNamespaceRequest : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// The description of the namespace.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// The name of the namespace.
+        /// 
+        /// The name can contain lowercase letters, digits, and hyphens (-).
+        /// </summary>
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         /// <summary>
         /// The data retention period of the namespace. Valid values:
@@ -27,17 +40,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   cms.s1.12xlarge: 376 days
         /// 
         /// For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).
-        /// </summary>
-        [NameInMap("Namespace")]
-        [Validation(Required=false)]
-        public string Namespace { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        /// <summary>
-        /// The ID of the request.
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

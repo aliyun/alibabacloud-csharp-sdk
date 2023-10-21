@@ -9,28 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutEventRuleTargetsRequest : TeaModel {
+        /// <summary>
+        /// The information about the alert contact groups that receive alert notifications.
+        /// </summary>
         [NameInMap("ContactParameters")]
         [Validation(Required=false)]
         public List<PutEventRuleTargetsRequestContactParameters> ContactParameters { get; set; }
         public class PutEventRuleTargetsRequestContactParameters : TeaModel {
             /// <summary>
-            /// The operation that you want to perform. Set the value to **PutEventRuleTargets**.
+            /// The name of the alert contact group. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("ContactGroupName")]
             [Validation(Required=false)]
             public string ContactGroupName { get; set; }
 
             /// <summary>
-            /// The HTTP request method. Valid values of N: 1 to 5.
-            /// 
-            /// Valid values: GET and POST.
+            /// The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the event-triggered alert rule.
+            /// The alert level and the corresponding notification methods. Valid values of N: 1 to 5. Valid values:
+            /// 
+            /// 4: Alert notifications are sent by using DingTalk chatbots and emails.
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
@@ -38,35 +41,36 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// The information about the recipients in Function Compute.
+        /// </summary>
         [NameInMap("FcParameters")]
         [Validation(Required=false)]
         public List<PutEventRuleTargetsRequestFcParameters> FcParameters { get; set; }
         public class PutEventRuleTargetsRequestFcParameters : TeaModel {
             /// <summary>
-            /// The number of resources that failed to be created or modified.
+            /// The name of the function. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("FunctionName")]
             [Validation(Required=false)]
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// The HTTP status code.
-            /// 
-            /// >  The status code 200 indicates that the call was successful.
+            /// The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The MNS topic.
+            /// The region where Function Compute is deployed. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The region where Log Service is deployed. Valid values of N: 1 to 5.
+            /// The name of the Function Compute service. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
@@ -74,6 +78,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// The information about the recipients in Message Service (MNS).
+        /// </summary>
         [NameInMap("MnsParameters")]
         [Validation(Required=false)]
         public List<PutEventRuleTargetsRequestMnsParameters> MnsParameters { get; set; }
@@ -86,29 +93,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// The version of the API.
+            /// The name of the MNS queue. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Queue")]
             [Validation(Required=false)]
             public string Queue { get; set; }
 
             /// <summary>
-            /// The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
+            /// The region where Message Service (MNS) is deployed. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5.
-            /// 
-            /// Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
-            /// 
-            /// *   Service: the code of a cloud service
-            /// *   Region: the region ID
-            /// *   Account: the ID of an Alibaba Cloud account
-            /// *   ResourceType: the resource type
-            /// *   ResourceId: the resource ID
+            /// The MNS topic.
             /// </summary>
             [NameInMap("Topic")]
             [Validation(Required=false)]
@@ -116,61 +115,70 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// The parameters of API callback notification.
+        /// </summary>
         [NameInMap("OpenApiParameters")]
         [Validation(Required=false)]
         public List<PutEventRuleTargetsRequestOpenApiParameters> OpenApiParameters { get; set; }
         public class PutEventRuleTargetsRequestOpenApiParameters : TeaModel {
             /// <summary>
-            /// The ID of the recipient that receives alert notifications sent by an API callback.
+            /// The API name.
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// The error message.
+            /// The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5. Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
+            /// 
+            /// *   Service: the code of a cloud service
+            /// *   Region: the region ID
+            /// *   Account: the ID of an Alibaba Cloud account
+            /// *   ResourceType: the resource type
+            /// *   ResourceId: the resource ID
             /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
 
             /// <summary>
-            /// The region where Function Compute is deployed. Valid values of N: 1 to 5.
+            /// The ID of the recipient that receives alert notifications sent by an API callback.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The region where Message Service (MNS) is deployed. Valid values of N: 1 to 5.
+            /// The parameters of the alert callback. Specify the parameters in the JSON format.
             /// </summary>
             [NameInMap("JsonParams")]
             [Validation(Required=false)]
             public string JsonParams { get; set; }
 
             /// <summary>
-            /// The name of the Log Service project. Valid values of N: 1 to 5.
+            /// The ID of the cloud service to which the API operation belongs.
             /// </summary>
             [NameInMap("Product")]
             [Validation(Required=false)]
             public string Product { get; set; }
 
             /// <summary>
-            /// The callback URL. Valid values of N: 1 to 5.
+            /// The region where the resource resides.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// This parameter is returned if the specified alert contact groups in the request failed to be created or modified.
+            /// The name of the role.
             /// </summary>
             [NameInMap("Role")]
             [Validation(Required=false)]
             public string Role { get; set; }
 
             /// <summary>
-            /// The name of the alert contact group.
+            /// The version of the API.
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -183,43 +191,42 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the protocol. Valid values of N: 1 to 5. Valid values:
-        /// 
-        /// *   http
-        /// *   telnet
-        /// *   ping
+        /// The name of the alert rule.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
+        /// <summary>
+        /// The information about the recipients in Simple Log Service.
+        /// </summary>
         [NameInMap("SlsParameters")]
         [Validation(Required=false)]
         public List<PutEventRuleTargetsRequestSlsParameters> SlsParameters { get; set; }
         public class PutEventRuleTargetsRequestSlsParameters : TeaModel {
             /// <summary>
-            /// The name of the alert contact group. Valid values of N: 1 to 5.
+            /// The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the Log Service Logstore. Valid values of N: 1 to 5.
+            /// The name of the Simple Log Service Logstore. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("LogStore")]
             [Validation(Required=false)]
             public string LogStore { get; set; }
 
             /// <summary>
-            /// The parameters of the alert callback. The parameters are in the JSON format.
+            /// The name of the Simple Log Service project. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Project")]
             [Validation(Required=false)]
             public string Project { get; set; }
 
             /// <summary>
-            /// The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
+            /// The region where Simple Log Service is deployed. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -227,35 +234,42 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// The information about the callback URLs that are used to receive alert notifications.
+        /// </summary>
         [NameInMap("WebhookParameters")]
         [Validation(Required=false)]
         public List<PutEventRuleTargetsRequestWebhookParameters> WebhookParameters { get; set; }
         public class PutEventRuleTargetsRequestWebhookParameters : TeaModel {
             /// <summary>
-            /// The alert notification methods. Valid values of N: 1 to 5. Valid values:
-            /// 
-            /// 4: Alert notifications are sent by using DingTalk chatbots and emails.
+            /// The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The region where the resource resides.
+            /// The HTTP request method. Valid values of N: 1 to 5.
+            /// 
+            /// Valid values: GET and POST.
             /// </summary>
             [NameInMap("Method")]
             [Validation(Required=false)]
             public string Method { get; set; }
 
             /// <summary>
-            /// The ID of the recipient.
+            /// The name of the protocol. Valid values of N: 1 to 5. Valid values:
+            /// 
+            /// *   http
+            /// *   telnet
+            /// *   ping
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
             /// <summary>
-            /// The name of the function. Valid values of N: 1 to 5.
+            /// The callback URL. Valid values of N: 1 to 5.
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]

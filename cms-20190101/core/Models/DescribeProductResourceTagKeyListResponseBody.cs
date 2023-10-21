@@ -10,44 +10,46 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeProductResourceTagKeyListResponseBody : TeaModel {
         /// <summary>
-        /// The error message.
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The pagination cursor. If more entries are to be returned on the next page, a pagination cursor is returned.
-        /// 
-        /// >  If the value of this parameter is not null, more entries are to be returned on the next page. You can use the returned pagination cursor as a request parameter to obtain entries on the next page. If the value of this parameter is null, all the entries have been returned.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The pagination cursor. If more entries are to be returned on the next page, a pagination cursor is returned.
+        /// 
+        /// >  If the value of this parameter is not null, more entries are to be returned on the next page. You can use the returned pagination cursor as a request parameter to obtain entries on the next page. If the value of this parameter is null, all the entries have been returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The keys of tags.
+        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// >  If a tag is attached to multiple cloud resources in the region, the key of the tag is returned only once.
+        /// The keys of tags.
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]

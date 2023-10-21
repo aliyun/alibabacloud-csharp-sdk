@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteGroupMonitoringAgentProcessRequest : TeaModel {
         /// <summary>
-        /// The ID of the process monitoring task.
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The ID of the process monitoring task.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

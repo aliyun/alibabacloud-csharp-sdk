@@ -10,63 +10,70 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutMonitorGroupDynamicRuleRequest : TeaModel {
         /// <summary>
-        /// The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:
-        /// 
-        /// *   contains: contains
-        /// *   notContains: excludes
-        /// *   startWith: starts with a prefix
-        /// *   endWith: ends with a suffix
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
+        /// <summary>
+        /// None.
+        /// </summary>
         [NameInMap("GroupRules")]
         [Validation(Required=false)]
         public List<PutMonitorGroupDynamicRuleRequestGroupRules> GroupRules { get; set; }
         public class PutMonitorGroupDynamicRuleRequestGroupRules : TeaModel {
             /// <summary>
-            /// The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:
+            /// The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:
             /// 
-            /// *   and: The instances that meet all the conditional expressions are automatically added to the application group.
-            /// *   or: The instances that meet one of the conditional expressions are automatically added to the application group.
+            /// *   ecs: Elastic Compute Service (ECS)
+            /// *   rds: ApsaraDB RDS
+            /// *   slb: Server Load Balancer (SLB)
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
             /// <summary>
-            /// The mode for creating the alert rule. Valid values:
+            /// The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:
             /// 
-            /// *   true: creates asynchronously
-            /// *   false (default value): creates synchronously
+            /// *   and: The instances that meet all the conditional expressions are automatically added to the application group.
+            /// *   or: The instances that meet one of the conditional expressions are automatically added to the application group.
             /// </summary>
             [NameInMap("FilterRelation")]
             [Validation(Required=false)]
             public string FilterRelation { get; set; }
 
+            /// <summary>
+            /// None.
+            /// </summary>
             [NameInMap("Filters")]
             [Validation(Required=false)]
             public List<PutMonitorGroupDynamicRuleRequestGroupRulesFilters> Filters { get; set; }
             public class PutMonitorGroupDynamicRuleRequestGroupRulesFilters : TeaModel {
                 /// <summary>
-                /// The error message.
+                /// The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:
+                /// 
+                /// *   contains: contains
+                /// *   notContains: does not contain
+                /// *   startWith: starts with a prefix
+                /// *   endWith: ends with a suffix
                 /// </summary>
                 [NameInMap("Function")]
                 [Validation(Required=false)]
                 public string Function { get; set; }
 
                 /// <summary>
-                /// The operation that you want to perform. Set the value to **PutMonitorGroupDynamicRule**.
+                /// The name of the field based on which instances are filtered. Valid values of N: 1 to 3.
+                /// 
+                /// Only hostnames are supported. Example: hostName.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The HTTP status code.
-                /// 
-                /// >  The status code 200 indicates that the call was successful.
+                /// The value to be matched with the specified field. Valid values of N: 1 to 3.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -77,7 +84,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the application group.
+        /// The mode for creating the alert rule. Valid values:
+        /// 
+        /// *   true: creates asynchronously
+        /// *   false (default): creates synchronously
         /// </summary>
         [NameInMap("IsAsync")]
         [Validation(Required=false)]

@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorListRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The keyword to be matched.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// >  You can search for tasks by name or address. Fuzzy search is supported.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The number of hops for the PING protocol.
+        /// The number of the page to return. Default value: 1.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeSiteMonitorList**.
+        /// The number of entries to return on each page. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -37,24 +37,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The parsing path of the assertion.
-        /// 
-        /// *   If the assertion type is `body_json`, the path is `json path`.
-        /// *   If the assertion type is `body_xml`, the path is `xml path`.
+        /// The ID of the site monitoring task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The ID of the site monitoring task.
+        /// The status of the task. Valid values:
+        /// 
+        /// *   1: The task is enabled.
+        /// *   2: The task is disabled.
         /// </summary>
         [NameInMap("TaskState")]
         [Validation(Required=false)]
         public string TaskState { get; set; }
 
         /// <summary>
-        /// The time when the site monitoring task was updated.
+        /// The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

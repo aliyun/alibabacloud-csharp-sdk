@@ -10,28 +10,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricMetaListResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The response code.
+        /// 
+        /// >  The HTTP 200 code indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The total number of returned records.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. The value true indicates success. The value false indicates failure.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The description of the metric.
+        /// The configuration of the metric.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -42,25 +44,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeMetricMetaListResponseBodyResourcesResource> Resource { get; set; }
             public class DescribeMetricMetaListResponseBodyResourcesResource : TeaModel {
                 /// <summary>
-                /// The unit of the metric.
+                /// The description of the metric.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The statistical period of the metric. Multiple statistical periods are separated with commas (,).
+                /// The dimensions of the metric. Multiple dimensions are separated with commas (,).
                 /// </summary>
                 [NameInMap("Dimensions")]
                 [Validation(Required=false)]
                 public string Dimensions { get; set; }
-
-                /// <summary>
-                /// The dimensions of the metric. Multiple dimensions are separated with commas (,).
-                /// </summary>
-                [NameInMap("Labels")]
-                [Validation(Required=false)]
-                public string Labels { get; set; }
 
                 /// <summary>
                 /// The tags of the metric, including one or more JSON strings. Format: `[{"name":"tag name","value":"tag value"}]`. The `name` can be repeated.
@@ -74,30 +69,40 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// *   minAlertPeriod: the minimum time interval to report a new alert.
                 /// *   productCategory: the category of the service.
                 /// </summary>
+                [NameInMap("Labels")]
+                [Validation(Required=false)]
+                public string Labels { get; set; }
+
+                /// <summary>
+                /// The name of the metric.
+                /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
                 public string MetricName { get; set; }
 
                 /// <summary>
-                /// The statistical method. Multiple statistic methods are separated with commas (,).
+                /// The namespace of the service. The value is usually in the format of acs_Service.
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// This operation is usually used with DescribeMetricList and DescribeMetricLast. For more information, see [DescribeMetricList](~~51936~~) and [DescribeMetricLast](~~51939~~).
+                /// The statistical period of the metric. Multiple statistical periods are separated with commas (,).
                 /// </summary>
                 [NameInMap("Periods")]
                 [Validation(Required=false)]
                 public string Periods { get; set; }
 
+                /// <summary>
+                /// The statistical method. Multiple statistic methods are separated with commas (,).
+                /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]
                 public string Statistics { get; set; }
 
                 /// <summary>
-                /// The namespace of the service. The value is usually in the format of acs_Service.
+                /// The unit of the metric.
                 /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
@@ -108,14 +113,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The name of the metric.
+        /// Indicates whether the request was successful. The value true indicates success. The value false indicates failure.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The configuration of the metric.
+        /// The total number of returned records.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeContactListByContactGroupRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The name of the alert group.
         /// </summary>
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]

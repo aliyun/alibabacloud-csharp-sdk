@@ -14,47 +14,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<ModifyGroupMonitoringAgentProcessRequestAlertConfig> AlertConfig { get; set; }
         public class ModifyGroupMonitoringAgentProcessRequestAlertConfig : TeaModel {
             /// <summary>
-            /// The level of the alert. Valid values:
+            /// The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:
             /// 
-            /// *   INFO: information
-            /// *   WARN: warning
-            /// *   CRITICAL: critical
+            /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
+            /// *   GreaterThanThreshold: greater than the threshold
+            /// *   LessThanOrEqualToThreshold: less than or equal to the threshold
+            /// *   LessThanThreshold: less than the threshold.
+            /// *   NotEqualToThreshold: not equal to the threshold
+            /// *   GreaterThanYesterday: greater than the metric value at the same time yesterday.
+            /// *   LessThanYesterday: less than the metric value at the same time yesterday
+            /// *   GreaterThanLastWeek: greater than the metric value at the same time last week
+            /// *   LessThanLastWeek: less than the metric value at the same time last week
+            /// *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
+            /// *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
             /// </summary>
             [NameInMap("ComparisonOperator")]
             [Validation(Required=false)]
             public string ComparisonOperator { get; set; }
 
             /// <summary>
-            /// The error message.
+            /// The time period during which the alert rule is effective. Valid values of N: 1 to 200.
             /// </summary>
             [NameInMap("EffectiveInterval")]
             [Validation(Required=false)]
             public string EffectiveInterval { get; set; }
-
-            /// <summary>
-            /// The time period during which the alert rule is effective. Valid values of N: 1 to 200.
-            /// </summary>
-            [NameInMap("EscalationsLevel")]
-            [Validation(Required=false)]
-            public string EscalationsLevel { get; set; }
-
-            /// <summary>
-            /// The ID of the process monitoring task.
-            /// </summary>
-            [NameInMap("NoEffectiveInterval")]
-            [Validation(Required=false)]
-            public string NoEffectiveInterval { get; set; }
-
-            /// <summary>
-            /// The logical operator used between conditional expressions that are used to match instances. Valid values:
-            /// 
-            /// *   all
-            /// *   and
-            /// *   or
-            /// </summary>
-            [NameInMap("SilenceTime")]
-            [Validation(Required=false)]
-            public string SilenceTime { get; set; }
 
             /// <summary>
             /// The level of the alert. Valid values of N: 1 to 200. Valid values:
@@ -62,6 +45,33 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   critical (default value): critical
             /// *   warn: warning
             /// *   info: information
+            /// </summary>
+            [NameInMap("EscalationsLevel")]
+            [Validation(Required=false)]
+            public string EscalationsLevel { get; set; }
+
+            /// <summary>
+            /// The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.
+            /// </summary>
+            [NameInMap("NoEffectiveInterval")]
+            [Validation(Required=false)]
+            public string NoEffectiveInterval { get; set; }
+
+            /// <summary>
+            /// The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.
+            /// 
+            /// Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
+            /// 
+            /// >  Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.
+            /// </summary>
+            [NameInMap("SilenceTime")]
+            [Validation(Required=false)]
+            public string SilenceTime { get; set; }
+
+            /// <summary>
+            /// The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.
+            /// 
+            /// >  Set the value to Average.
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
@@ -88,21 +98,27 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.
+                /// The ID of the resource for which alerts are triggered.
+                /// 
+                /// For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The alert threshold. Valid values of N: 1 to 200.
+                /// The parameters of the alert callback. The parameters are in the JSON format.
                 /// </summary>
                 [NameInMap("JsonParams")]
                 [Validation(Required=false)]
                 public string JsonParams { get; set; }
 
                 /// <summary>
-                /// The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.
+                /// The level of the alert. Valid values:
+                /// 
+                /// *   INFO: information
+                /// *   WARN: warning
+                /// *   CRITICAL: critical
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
@@ -111,27 +127,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.
-            /// 
-            /// Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
-            /// 
-            /// >  Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.
+            /// The alert threshold. Valid values of N: 1 to 200.
             /// </summary>
             [NameInMap("Threshold")]
             [Validation(Required=false)]
             public string Threshold { get; set; }
 
             /// <summary>
-            /// The operation that you want to perform. Set the value to **ModifyGroupMonitoringAgentProcess**.
+            /// The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.
+            /// 
+            /// >  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.
             /// </summary>
             [NameInMap("Times")]
             [Validation(Required=false)]
             public string Times { get; set; }
 
             /// <summary>
-            /// The HTTP status code.
-            /// 
-            /// >  The status code 200 indicates that the call was successful.
+            /// The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.
             /// </summary>
             [NameInMap("Webhook")]
             [Validation(Required=false)]
@@ -147,28 +159,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.
-        /// 
-        /// >  Set the value to Average.
+        /// The ID of the process monitoring task.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:
+        /// The logical operator used between conditional expressions that are used to match instances. Valid values:
         /// 
-        /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-        /// *   GreaterThanThreshold: greater than the threshold
-        /// *   LessThanOrEqualToThreshold: less than or equal to the threshold
-        /// *   LessThanThreshold: less than the threshold.
-        /// *   NotEqualToThreshold: not equal to the threshold
-        /// *   GreaterThanYesterday: greater than the metric value at the same time yesterday.
-        /// *   LessThanYesterday: less than the metric value at the same time yesterday
-        /// *   GreaterThanLastWeek: greater than the metric value at the same time last week
-        /// *   LessThanLastWeek: less than the metric value at the same time last week
-        /// *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-        /// *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+        /// *   all
+        /// *   and
+        /// *   or
         /// </summary>
         [NameInMap("MatchExpressFilterRelation")]
         [Validation(Required=false)]

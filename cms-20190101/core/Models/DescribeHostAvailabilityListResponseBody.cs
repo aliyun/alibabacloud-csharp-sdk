@@ -10,42 +10,40 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHostAvailabilityListResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// The HTTP status code.
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// >  The value 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The details of the availability monitoring tasks.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The type of the availability monitoring task. Valid values:
+        /// Indicates whether the call was successful. Valid values:
         /// 
-        /// *   PING
-        /// *   TELNET
-        /// *   HTTP
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the application group.
+        /// The details of the availability monitoring tasks.
         /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
@@ -56,33 +54,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig> NodeTaskConfig { get; set; }
             public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig : TeaModel {
                 /// <summary>
-                /// The beginning of the time period during which the alert rule is effective. Valid values: 0 to 23.
-                /// 
-                /// For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
-                /// 
-                /// >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
+                /// The configurations of the alert rule.
                 /// </summary>
                 [NameInMap("AlertConfig")]
                 [Validation(Required=false)]
                 public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig AlertConfig { get; set; }
                 public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig : TeaModel {
                     /// <summary>
-                    /// The alert notification methods. Valid values:
+                    /// The end of the time period during which the alert rule is effective. Valid values: 0 to 23.
                     /// 
-                    /// 0: Alert notifications are sent by using emails and DingTalk chatbots.
+                    /// For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
+                    /// 
+                    /// >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
                     /// </summary>
                     [NameInMap("EndTime")]
                     [Validation(Required=false)]
                     public int? EndTime { get; set; }
 
                     /// <summary>
-                    /// The comparison operator that is used in the alert rule. Valid values:
-                    /// 
-                    /// *   `>`
-                    /// *   `>=`
-                    /// *   `<`
-                    /// *   `<=`
-                    /// *   `=`
+                    /// The trigger conditions of the alert rule.
                     /// </summary>
                     [NameInMap("EscalationList")]
                     [Validation(Required=false)]
@@ -93,13 +83,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public List<DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList> EscalationList { get; set; }
                         public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList : TeaModel {
                             /// <summary>
-                            /// For more information about common request parameters, see [Common parameters](~~199331~~).
-                            /// </summary>
-                            [NameInMap("Aggregate")]
-                            [Validation(Required=false)]
-                            public string Aggregate { get; set; }
-
-                            /// <summary>
                             /// The method used to calculate metric values that trigger alerts. Valid values:
                             /// 
                             /// *   Value: the value of the HTTP status code
@@ -108,26 +91,45 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                             /// *   TelnetLatency: the average Telnet response time
                             /// *   Average: the average Ping packet loss rate
                             /// </summary>
+                            [NameInMap("Aggregate")]
+                            [Validation(Required=false)]
+                            public string Aggregate { get; set; }
+
+                            /// <summary>
+                            /// The name of the metric. Valid values:
+                            /// 
+                            /// *   HttpStatus: HTTP status code
+                            /// *   HttpLatency: HTTP response time
+                            /// *   TelnetStatus: Telnet status code
+                            /// *   TelnetLatency: Telnet response time
+                            /// *   PingLostRate: Ping packet loss rate
+                            /// </summary>
                             [NameInMap("MetricName")]
                             [Validation(Required=false)]
                             public string MetricName { get; set; }
 
                             /// <summary>
-                            /// This topic provides an example to show how to query all the availability monitoring tasks of your Alibaba Cloud account. The sample responses indicate that the account has one availability monitoring task named `ecs_instance`.
+                            /// The comparison operator that is used in the alert rule. Valid values:
+                            /// 
+                            /// *   `>`
+                            /// *   `>=`
+                            /// *   `<`
+                            /// *   `<=`
+                            /// *   `=`
                             /// </summary>
                             [NameInMap("Operator")]
                             [Validation(Required=false)]
                             public string Operator { get; set; }
 
                             /// <summary>
-                            /// Queries availability monitoring tasks.
+                            /// The consecutive number of times for which the metric value is measured before an alert is triggered.
                             /// </summary>
                             [NameInMap("Times")]
                             [Validation(Required=false)]
                             public string Times { get; set; }
 
                             /// <summary>
-                            /// The consecutive number of times for which the metric value is measured before an alert is triggered.
+                            /// The alert threshold.
                             /// </summary>
                             [NameInMap("Value")]
                             [Validation(Required=false)]
@@ -138,29 +140,27 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                     /// <summary>
-                    /// The name of the metric. Valid values:
+                    /// The alert notification methods. Valid values:
                     /// 
-                    /// *   HttpStatus: HTTP status code
-                    /// *   HttpLatency: HTTP response time
-                    /// *   TelnetStatus: Telnet status code
-                    /// *   TelnetLatency: Telnet response time
-                    /// *   PingLostRate: Ping packet loss rate
+                    /// 0: Alert notifications are sent by using emails and DingTalk chatbots.
                     /// </summary>
                     [NameInMap("NotifyType")]
                     [Validation(Required=false)]
                     public int? NotifyType { get; set; }
 
                     /// <summary>
-                    /// The callback URL.
-                    /// 
-                    /// CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.
+                    /// The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
                     /// </summary>
                     [NameInMap("SilenceTime")]
                     [Validation(Required=false)]
                     public int? SilenceTime { get; set; }
 
                     /// <summary>
-                    /// The trigger conditions of the alert rule.
+                    /// The beginning of the time period during which the alert rule is effective. Valid values: 0 to 23.
+                    /// 
+                    /// For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
+                    /// 
+                    /// >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
                     /// </summary>
                     [NameInMap("StartTime")]
                     [Validation(Required=false)]
@@ -195,7 +195,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                     /// <summary>
-                    /// The alert threshold.
+                    /// The callback URL.
+                    /// 
+                    /// CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.
                     /// </summary>
                     [NameInMap("WebHook")]
                     [Validation(Required=false)]
@@ -204,45 +206,38 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The ECS instances that are monitored.
+                /// Indicates whether the availability monitoring task is disabled. Valid values:
+                /// 
+                /// *   true: The availability monitoring task is disabled.
+                /// *   false: The availability monitoring task is enabled.
                 /// </summary>
                 [NameInMap("Disabled")]
                 [Validation(Required=false)]
                 public bool? Disabled { get; set; }
 
                 /// <summary>
-                /// The range of instances that are monitored by the availability monitoring task. Valid values:
-                /// 
-                /// *   GROUP: All ECS instances in the application group are monitored.
-                /// *   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored.
+                /// The ID of the application group.
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public long? GroupId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the availability monitoring task is disabled. Valid values:
-                /// 
-                /// *   true: The availability monitoring task is disabled.
-                /// *   false: The availability monitoring task is enabled.
+                /// The name of the application group.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The HTTP request method. Valid values:
-                /// 
-                /// *   GET
-                /// *   POST
-                /// *   HEAD
+                /// The ID of the availability monitoring task.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The interval at which detection requests are sent. Unit: seconds.
+                /// The ECS instances that are monitored.
                 /// </summary>
                 [NameInMap("Instances")]
                 [Validation(Required=false)]
@@ -255,77 +250,77 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The ID of the availability monitoring task.
+                /// The name of the availability monitoring task.
                 /// </summary>
                 [NameInMap("TaskName")]
                 [Validation(Required=false)]
                 public string TaskName { get; set; }
 
                 /// <summary>
-                /// The URI that you want to monitor. If the TaskType parameter is set to HTTP, this parameter is required.
+                /// The optional parameters of the availability monitoring task.
                 /// </summary>
                 [NameInMap("TaskOption")]
                 [Validation(Required=false)]
                 public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption TaskOption { get; set; }
                 public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption : TeaModel {
                     /// <summary>
-                    /// The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
+                    /// The response to the HTTP request.
                     /// </summary>
                     [NameInMap("HttpKeyword")]
                     [Validation(Required=false)]
                     public string HttpKeyword { get; set; }
 
                     /// <summary>
-                    /// The domain name or IP address that you want to monitor.
+                    /// The HTTP request method. Valid values:
+                    /// 
+                    /// *   GET
+                    /// *   POST
+                    /// *   HEAD
                     /// </summary>
                     [NameInMap("HttpMethod")]
                     [Validation(Required=false)]
                     public string HttpMethod { get; set; }
 
                     /// <summary>
-                    /// The end of the time period during which the alert rule is effective. Valid values: 0 to 23.
+                    /// The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:
                     /// 
-                    /// For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
-                    /// 
-                    /// >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
+                    /// *   true: If the HTTP response body includes the alert rule, an alert is triggered.
+                    /// *   false: If the HTTP response does not include the alert rule, an alert is triggered.
                     /// </summary>
                     [NameInMap("HttpNegative")]
                     [Validation(Required=false)]
                     public bool? HttpNegative { get; set; }
 
                     /// <summary>
-                    /// The configurations of the alert rule.
+                    /// The content of the HTTP POST request.
                     /// </summary>
                     [NameInMap("HttpPostContent")]
                     [Validation(Required=false)]
                     public string HttpPostContent { get; set; }
 
                     /// <summary>
-                    /// The response to the HTTP request.
+                    /// The character set that is used in the HTTP response.
                     /// </summary>
                     [NameInMap("HttpResponseCharset")]
                     [Validation(Required=false)]
                     public string HttpResponseCharset { get; set; }
 
                     /// <summary>
-                    /// The content of the HTTP POST request.
+                    /// The URI that you want to monitor. If the TaskType parameter is set to HTTP, this parameter is required.
                     /// </summary>
                     [NameInMap("HttpURI")]
                     [Validation(Required=false)]
                     public string HttpURI { get; set; }
 
                     /// <summary>
-                    /// The character set that is used in the HTTP response.
+                    /// The interval at which detection requests are sent. Unit: seconds.
                     /// </summary>
                     [NameInMap("Interval")]
                     [Validation(Required=false)]
                     public int? Interval { get; set; }
 
                     /// <summary>
-                    /// The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:
-                    /// 
-                    /// *   true: If the HTTP response body includes the alert rule, an alert is triggered.
-                    /// *   false: If the HTTP response does not include the alert rule, an alert is triggered.
+                    /// The domain name or IP address that you want to monitor.
                     /// </summary>
                     [NameInMap("TelnetOrPingHost")]
                     [Validation(Required=false)]
@@ -334,14 +329,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The optional parameters of the availability monitoring task.
+                /// The range of instances that are monitored by the availability monitoring task. Valid values:
+                /// 
+                /// *   GROUP: All ECS instances in the application group are monitored.
+                /// *   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored.
                 /// </summary>
                 [NameInMap("TaskScope")]
                 [Validation(Required=false)]
                 public string TaskScope { get; set; }
 
                 /// <summary>
-                /// The name of the availability monitoring task.
+                /// The type of the availability monitoring task. Valid values:
+                /// 
+                /// *   PING
+                /// *   TELNET
+                /// *   HTTP
                 /// </summary>
                 [NameInMap("TaskType")]
                 [Validation(Required=false)]
@@ -352,7 +354,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The name of the application group.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

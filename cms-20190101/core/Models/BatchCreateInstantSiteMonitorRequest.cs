@@ -18,20 +18,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<BatchCreateInstantSiteMonitorRequestTaskList> TaskList { get; set; }
         public class BatchCreateInstantSiteMonitorRequestTaskList : TeaModel {
             /// <summary>
-            /// The HTTP status code.
+            /// The URL or IP address that is monitored by the task.
             /// 
-            /// >  The status code 200 indicates that the call was successful.
+            /// >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
             /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]
             public string Address { get; set; }
-
-            /// <summary>
-            /// The ID of the site monitoring task.
-            /// </summary>
-            [NameInMap("IspCities")]
-            [Validation(Required=false)]
-            public string IspCities { get; set; }
 
             /// <summary>
             /// The detection points. If you leave this parameter empty, the system randomly selects three detection points.
@@ -40,19 +33,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).
             /// </summary>
+            [NameInMap("IspCities")]
+            [Validation(Required=false)]
+            public string IspCities { get; set; }
+
+            /// <summary>
+            /// The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
+            /// </summary>
             [NameInMap("OptionsJson")]
             [Validation(Required=false)]
             public string OptionsJson { get; set; }
 
             /// <summary>
-            /// The operation that you want to perform. Set the value to **BatchCreateInstantSiteMonitor**.
+            /// The name of the site monitoring task.
+            /// 
+            /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+            /// 
+            /// >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
             /// <summary>
-            /// The name of the site monitoring task.
+            /// The type of the site monitoring task.
+            /// 
+            /// Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
+            /// 
+            /// >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]

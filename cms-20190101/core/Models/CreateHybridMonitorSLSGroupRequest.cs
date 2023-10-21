@@ -13,43 +13,50 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The configurations of the Logstore group.
+        /// 
+        /// Valid values of N: 1 to 25.
+        /// </summary>
         [NameInMap("SLSGroupConfig")]
         [Validation(Required=false)]
         public List<CreateHybridMonitorSLSGroupRequestSLSGroupConfig> SLSGroupConfig { get; set; }
         public class CreateHybridMonitorSLSGroupRequestSLSGroupConfig : TeaModel {
             /// <summary>
-            /// The name of the Logstore group.
+            /// The Logstore.
             /// 
-            /// The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (\_). The name must start with a letter.
+            /// Valid values of N: 1 to 25.
             /// </summary>
             [NameInMap("SLSLogstore")]
             [Validation(Required=false)]
             public string SLSLogstore { get; set; }
 
             /// <summary>
-            /// The IDs of the member accounts.
+            /// The Simple Log Service project.
             /// 
             /// Valid values of N: 1 to 25.
-            /// 
-            /// If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in Resource Directory to Hybrid Cloud Monitoring. You can use Resource Directory to monitor Alibaba Cloud services across enterprise accounts.
-            /// 
-            /// >  If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see [Manage the service-linked role for CloudMonitor](~~170423~~).
             /// </summary>
             [NameInMap("SLSProject")]
             [Validation(Required=false)]
             public string SLSProject { get; set; }
 
             /// <summary>
-            /// The error message.
+            /// The region ID.
+            /// 
+            /// Valid values of N: 1 to 25.
             /// </summary>
             [NameInMap("SLSRegion")]
             [Validation(Required=false)]
             public string SLSRegion { get; set; }
 
             /// <summary>
-            /// The Logstores.
+            /// The member ID.
             /// 
             /// Valid values of N: 1 to 25.
+            /// 
+            /// If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
+            /// 
+            /// > If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see [Manage the service-linked role for CloudMonitor](~~170423~~).
             /// </summary>
             [NameInMap("SLSUserId")]
             [Validation(Required=false)]
@@ -58,16 +65,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **CreateHybridMonitorSLSGroup**.
+        /// The description of the Logstore group.
         /// </summary>
         [NameInMap("SLSGroupDescription")]
         [Validation(Required=false)]
         public string SLSGroupDescription { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The name of the Logstore group.
         /// 
-        /// >  The status code 200 indicates that the call is successful.
+        /// The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (\_). The name must start with a letter.
         /// </summary>
         [NameInMap("SLSGroupName")]
         [Validation(Required=false)]

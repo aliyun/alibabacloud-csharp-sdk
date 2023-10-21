@@ -10,63 +10,54 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeDynamicTagRuleListResponseBody : TeaModel {
         /// <summary>
-        /// The tag value.
+        /// The HTTP status code.
         /// 
-        /// The `TagValue` and `TagValueMatchFunction` parameters must be used in pairs.
+        /// >  The status code 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The tag value.
-        /// 
-        /// For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The status of adding instances that meet the tag rule to the application group. Valid values:
-        /// 
-        /// *   `RUNNING`
-        /// *   `FINISH`
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the tags belong.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The logical operator that is used between conditional expressions. Valid values:
-        /// 
-        /// *   `and`
-        /// *   `or`
-        /// 
-        /// >  Only one logical operator can be used in a request.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tag key.
+        /// Indicates whether the call was successful. Valid values:
         /// 
-        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the tag rule.
+        /// The tag rules of application groups.
         /// </summary>
         [NameInMap("TagGroupList")]
         [Validation(Required=false)]
@@ -76,6 +67,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup> TagGroup { get; set; }
             public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup : TeaModel {
+                /// <summary>
+                /// The alert contact group.
+                /// </summary>
                 [NameInMap("ContactGroupList")]
                 [Validation(Required=false)]
                 public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList ContactGroupList { get; set; }
@@ -87,14 +81,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The tag key.
+                /// The ID of the tag rule.
                 /// </summary>
                 [NameInMap("DynamicTagRuleId")]
                 [Validation(Required=false)]
                 public string DynamicTagRuleId { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The conditional expressions used to create an application group based on the tag.
                 /// </summary>
                 [NameInMap("MatchExpress")]
                 [Validation(Required=false)]
@@ -104,19 +98,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress> MatchExpress { get; set; }
                     public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress : TeaModel {
+                        /// <summary>
+                        /// The tag key.
+                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// For more information about common request parameters, see [Common parameters](~~199331~~).
+                        /// The tag value.
+                        /// 
+                        /// The `TagValue` and `TagValueMatchFunction` parameters must be used in pairs.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
 
                         /// <summary>
-                        /// Queries tag rules.
+                        /// The method that is used to match tag values. Valid values:
+                        /// 
+                        /// *   all: includes all
+                        /// *   startWith: starts with a prefix
+                        /// *   endWith: ends with a suffix
+                        /// *   contains: contains
+                        /// *   notContains: does not contain
+                        /// *   equals: equals
                         /// </summary>
                         [NameInMap("TagValueMatchFunction")]
                         [Validation(Required=false)]
@@ -127,35 +133,44 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The number of the page to return.
+                /// The logical operator that is used between conditional expressions. Valid values:
                 /// 
-                /// Pages start from page 1. Default value: 1.
+                /// *   `and`
+                /// *   `or`
+                /// 
+                /// >  Only one logical operator can be used in a request.
                 /// </summary>
                 [NameInMap("MatchExpressFilterRelation")]
                 [Validation(Required=false)]
                 public string MatchExpressFilterRelation { get; set; }
 
                 /// <summary>
-                /// The page number of the returned page.
+                /// The ID of the region to which the tags belong.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The alert contact group.
+                /// The status of adding instances that meet the tag rule to the application group. Valid values:
+                /// 
+                /// *   `RUNNING`
+                /// *   `FINISH`
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The number of entries returned per page.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// The IDs of the alert templates.
+                /// </summary>
                 [NameInMap("TemplateIdList")]
                 [Validation(Required=false)]
                 public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTemplateIdList TemplateIdList { get; set; }
@@ -171,7 +186,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The tag rules of application groups.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

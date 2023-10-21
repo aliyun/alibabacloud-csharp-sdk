@@ -10,44 +10,50 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeDynamicTagRuleListRequest : TeaModel {
         /// <summary>
-        /// The total number of returned entries.
+        /// The ID of the tag rule.
         /// </summary>
         [NameInMap("DynamicTagRuleId")]
         [Validation(Required=false)]
         public string DynamicTagRuleId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the tags belong.
+        /// The number of the page to return.
+        /// 
+        /// Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The conditional expressions used to create an application group based on the tag.
+        /// The number of entries to return on each page.
+        /// 
+        /// Minimum value: 1. Default value: 30.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The tag key.
+        /// 
+        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public string TagKey { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
-        /// 
-        /// Minimum value: 1. Default value: 30.
+        /// The ID of the region to which the tags belong.
         /// </summary>
         [NameInMap("TagRegionId")]
         [Validation(Required=false)]
         public string TagRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the tag rule.
+        /// The tag value.
+        /// 
+        /// For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
         /// </summary>
         [NameInMap("TagValue")]
         [Validation(Required=false)]

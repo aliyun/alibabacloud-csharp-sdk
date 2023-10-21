@@ -10,40 +10,43 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorDataRequest : TeaModel {
         /// <summary>
-        /// The interval at which monitoring data is returned. The value is an integral multiple of 60. Unit: seconds.
+        /// The end of the time range for the query. Supported formats:
         /// 
-        /// >  The default value equals the minimum interval at which detection requests are sent to the monitored address.
+        /// *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// *   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The returned monitoring data.
+        /// The number of data points to return.
         /// </summary>
         [NameInMap("Length")]
         [Validation(Required=false)]
         public int? Length { get; set; }
 
         /// <summary>
-        /// The beginning of the time range for the query. Supported formats:
+        /// The name of the metric. Valid values:
         /// 
-        /// *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-        /// *   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.
+        /// *   Availability
+        /// *   ResponseTime
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The number of data points to return.
+        /// The pagination cursor.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The pagination cursor.
+        /// The interval at which monitoring data is returned. The value is an integral multiple of 60. Unit: seconds.
+        /// 
+        /// >  The default value equals the minimum interval at which detection requests are sent to the monitored address.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The end of the time range for the query. Supported formats:
+        /// The beginning of the time range for the query. Supported formats:
         /// 
         /// *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
         /// *   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.
@@ -64,20 +67,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The type of the monitored object whose monitoring data is to be queried. Valid values:
-        /// 
-        /// *   metric
-        /// *   event
+        /// The ID of the site monitoring task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The name of the metric. Valid values:
+        /// The type of the monitored object whose monitoring data is to be queried. Valid values:
         /// 
-        /// *   Availability
-        /// *   ResponseTime
+        /// *   metric
+        /// *   event
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

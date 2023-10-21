@@ -10,58 +10,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeLogMonitorAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:
-        /// 
-        /// *   and
-        /// *   or
+        /// The details of the log monitoring metric.
         /// </summary>
         [NameInMap("LogMonitor")]
         [Validation(Required=false)]
         public DescribeLogMonitorAttributeResponseBodyLogMonitor LogMonitor { get; set; }
         public class DescribeLogMonitorAttributeResponseBodyLogMonitor : TeaModel {
             /// <summary>
-            /// The maximum value.
+            /// The aggregate functions.
             /// </summary>
             [NameInMap("Aggregates")]
             [Validation(Required=false)]
             public List<DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates> Aggregates { get; set; }
             public class DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates : TeaModel {
                 /// <summary>
-                /// The name of the field in logs.
+                /// The alias of the aggregate function.
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.
-                /// 
-                /// If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
+                /// The name of the field in logs.
                 /// </summary>
                 [NameInMap("FieldName")]
                 [Validation(Required=false)]
                 public string FieldName { get; set; }
-
-                /// <summary>
-                /// The alias of the aggregate function.
-                /// </summary>
-                [NameInMap("Function")]
-                [Validation(Required=false)]
-                public string Function { get; set; }
-
-                /// <summary>
-                /// The minimum value.
-                /// </summary>
-                [NameInMap("Max")]
-                [Validation(Required=false)]
-                public string Max { get; set; }
 
                 /// <summary>
                 /// The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values:
@@ -75,6 +58,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// *   sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.
                 /// *   distinct: counts the number of logs where the specified field appears within the aggregation period.
                 /// </summary>
+                [NameInMap("Function")]
+                [Validation(Required=false)]
+                public string Function { get; set; }
+
+                /// <summary>
+                /// The maximum value.
+                /// </summary>
+                [NameInMap("Max")]
+                [Validation(Required=false)]
+                public string Max { get; set; }
+
+                /// <summary>
+                /// The minimum value.
+                /// </summary>
                 [NameInMap("Min")]
                 [Validation(Required=false)]
                 public string Min { get; set; }
@@ -82,96 +79,94 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The name of the Log Service project.
+            /// The time when the log monitoring metric was created.
+            /// 
+            /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// The ID returned by Log Service.
+            /// The ID of the application group.
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }
 
+            /// <summary>
+            /// The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.
+            /// </summary>
             [NameInMap("Groupbys")]
             [Validation(Required=false)]
             public List<string> Groupbys { get; set; }
 
             /// <summary>
-            /// The extended field. The extended field allows you to perform basic operations on the aggregation results.
-            /// 
-            /// Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
+            /// The ID returned by Log Service.
             /// </summary>
             [NameInMap("LogId")]
             [Validation(Required=false)]
             public long? LogId { get; set; }
 
             /// <summary>
-            /// The ID of the region where the Log Service Logstore resides.
+            /// The extended field. The extended field allows you to perform basic operations on the aggregation results.
+            /// 
+            /// Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
             /// </summary>
             [NameInMap("MetricExpress")]
             [Validation(Required=false)]
             public string MetricExpress { get; set; }
 
             /// <summary>
-            /// The ID of the application group.
+            /// The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
             /// <summary>
-            /// The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+            /// The name of the Log Service Logstore.
             /// </summary>
             [NameInMap("SlsLogstore")]
             [Validation(Required=false)]
             public string SlsLogstore { get; set; }
 
             /// <summary>
-            /// The aggregate functions.
+            /// The name of the Log Service project.
             /// </summary>
             [NameInMap("SlsProject")]
             [Validation(Required=false)]
             public string SlsProject { get; set; }
 
             /// <summary>
-            /// The time when the log monitoring metric was created.
-            /// 
-            /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+            /// The ID of the region where the Log Service Logstore resides.
             /// </summary>
             [NameInMap("SlsRegionId")]
             [Validation(Required=false)]
             public string SlsRegionId { get; set; }
 
             /// <summary>
-            /// The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.
+            /// The size of the tumbling window for calculation. Unit: seconds. The system performs an aggregation for each tumbling window.
             /// </summary>
             [NameInMap("Tumblingwindows")]
             [Validation(Required=false)]
             public List<string> Tumblingwindows { get; set; }
 
             /// <summary>
-            /// The name of the log field used for matching in the filter condition.
+            /// The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.
+            /// 
+            /// If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
             /// </summary>
             [NameInMap("ValueFilter")]
             [Validation(Required=false)]
             public List<DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter> ValueFilter { get; set; }
             public class DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter : TeaModel {
                 /// <summary>
-                /// The field value to be matched in the filter condition.
+                /// The name of the log field used for matching in the filter condition.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
-
-                /// <summary>
-                /// The size of the tumbling window for calculation. Unit: seconds. The system performs an aggregation for each tumbling window.
-                /// </summary>
-                [NameInMap("Operator")]
-                [Validation(Required=false)]
-                public string Operator { get; set; }
 
                 /// <summary>
                 /// The method that is used to match the field value. Valid values:
@@ -183,6 +178,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// *   `>=`: greater than or equal to
                 /// *   `<=`: less than or equal to
                 /// </summary>
+                [NameInMap("Operator")]
+                [Validation(Required=false)]
+                public string Operator { get; set; }
+
+                /// <summary>
+                /// The field value to be matched in the filter condition.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -190,7 +192,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The name of the Log Service Logstore.
+            /// The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:
+            /// 
+            /// *   and
+            /// *   or
             /// </summary>
             [NameInMap("ValueFilterRelation")]
             [Validation(Required=false)]
@@ -199,24 +204,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
-        /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the log monitoring metric.
+        /// Indicates whether the call was successful. Valid values:
+        /// 
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

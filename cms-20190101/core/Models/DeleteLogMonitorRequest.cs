@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteLogMonitorRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The ID returned by Log Service.
         /// </summary>
         [NameInMap("LogId")]
         [Validation(Required=false)]

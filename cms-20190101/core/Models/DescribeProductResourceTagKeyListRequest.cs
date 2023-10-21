@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeProductResourceTagKeyListRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// The pagination cursor.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

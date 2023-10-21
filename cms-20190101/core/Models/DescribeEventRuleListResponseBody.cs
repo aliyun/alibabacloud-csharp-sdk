@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeEventRuleListResponseBody : TeaModel {
         /// <summary>
-        /// The prefix in the name of the event-triggered alert rule.
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Pages start from page 1. Default value: 1.
+        /// The event-triggered alert rules.
         /// </summary>
         [NameInMap("EventRules")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeEventRuleListResponseBodyEventRulesEventRule> EventRule { get; set; }
             public class DescribeEventRuleListResponseBodyEventRulesEventRule : TeaModel {
                 /// <summary>
-                /// The filter keyword.
+                /// The description of the event-triggered alert rule.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the application group.
+                /// The mode of the event-triggered alert rule.
                 /// </summary>
                 [NameInMap("EventPattern")]
                 [Validation(Required=false)]
@@ -48,14 +48,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern> EventPattern { get; set; }
                     public class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern : TeaModel {
                         /// <summary>
-                        /// The ID of the request.
+                        /// The custom filter condition. If an event contains a specified keyword, the event triggers an alert.
                         /// </summary>
                         [NameInMap("CustomFilters")]
                         [Validation(Required=false)]
                         public string CustomFilters { get; set; }
 
                         /// <summary>
-                        /// The keywords that are used to match events.
+                        /// The type of the event-triggered alert rule.
+                        /// 
+                        /// `*` indicates all types of alert rules.
                         /// </summary>
                         [NameInMap("EventTypeList")]
                         [Validation(Required=false)]
@@ -68,12 +70,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         }
 
                         /// <summary>
-                        /// Queries event-triggered alert rules.
+                        /// The filter keyword.
                         /// </summary>
                         [NameInMap("KeywordFilter")]
                         [Validation(Required=false)]
                         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter KeywordFilter { get; set; }
                         public class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter : TeaModel {
+                            /// <summary>
+                            /// The keywords that are used to match events.
+                            /// </summary>
                             [NameInMap("Keywords")]
                             [Validation(Required=false)]
                             public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords Keywords { get; set; }
@@ -84,6 +89,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                             }
 
+                            /// <summary>
+                            /// The relationship between multiple keywords in a condition. Valid values:
+                            /// 
+                            /// *   OR: The relationship between keywords is OR.
+                            /// *   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.
+                            /// </summary>
                             [NameInMap("Relation")]
                             [Validation(Required=false)]
                             public string Relation { get; set; }
@@ -91,9 +102,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         }
 
                         /// <summary>
-                        /// The type of the event-triggered alert rule.
+                        /// The level of the event. Valid values:
                         /// 
-                        /// `*` indicates all types of alert rules.
+                        /// *   CRITICAL: critical
+                        /// *   WARN: warning
+                        /// *   INFO: information
                         /// </summary>
                         [NameInMap("LevelList")]
                         [Validation(Required=false)]
@@ -106,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         }
 
                         /// <summary>
-                        /// Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.
+                        /// The list of event names.
                         /// </summary>
                         [NameInMap("NameList")]
                         [Validation(Required=false)]
@@ -119,12 +132,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         }
 
                         /// <summary>
-                        /// The ID of the application group.
+                        /// The abbreviation of the service name.
                         /// </summary>
                         [NameInMap("Product")]
                         [Validation(Required=false)]
                         public string Product { get; set; }
 
+                        /// <summary>
+                        /// Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.
+                        /// </summary>
                         [NameInMap("SQLFilter")]
                         [Validation(Required=false)]
                         public string SQLFilter { get; set; }
@@ -134,41 +150,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The mode of the event-triggered alert rule.
+                /// The type of the event. Valid values:
+                /// 
+                /// - SYSTEM: system event
+                /// - CUSTOM: custom event
                 /// </summary>
                 [NameInMap("EventType")]
                 [Validation(Required=false)]
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// The number of entries to return on each page.
-                /// 
-                /// A minimum of one entry can be returned on each page. Default value: 10.
+                /// The ID of the application group.
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The relationship between multiple keywords in a condition. Valid values:
-                /// 
-                /// *   OR: The relationship between keywords is OR.
-                /// *   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.
+                /// The name of the event-triggered alert rule.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The mute period during which new alerts are not sent even if the trigger conditions are met.
+                /// </summary>
                 [NameInMap("SilenceTime")]
                 [Validation(Required=false)]
                 public long? SilenceTime { get; set; }
 
                 /// <summary>
-                /// The level of the event. Valid values:
+                /// The status of the event-triggered alert rule. Valid values:
                 /// 
-                /// *   CRITICAL: critical
-                /// *   WARN: warning
-                /// *   INFO: information
+                /// *   ENABLED: enabled
+                /// *   DISABLED: disabled
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
@@ -179,28 +195,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The event-triggered alert rules.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The name of the event-triggered alert rule.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// Indicates whether the call was successful. Valid values:
+        /// 
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The list of event names.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

@@ -10,41 +10,44 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupInstancesRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// The instances that you want to add to the application group.
+        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<CreateMonitorGroupInstancesRequestInstances> Instances { get; set; }
         public class CreateMonitorGroupInstancesRequestInstances : TeaModel {
             /// <summary>
-            /// The HTTP status code.
+            /// The abbreviation of the Alibaba Cloud service name.
             /// 
-            /// >  The status code 200 indicates that the call was successful.
+            /// To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The instance ID.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the instance.
+            /// The instance name.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The operation that you want to perform. Set the value to **CreateMonitorGroupInstances**.
+            /// The region ID of the instance.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

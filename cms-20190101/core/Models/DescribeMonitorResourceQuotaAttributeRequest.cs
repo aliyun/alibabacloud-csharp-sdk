@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the instance to be monitored.
+        /// Specifies whether to return information about used quotas. Valid values:
+        /// 
+        /// *   true (default): yes
+        /// *   false: no
         /// </summary>
         [NameInMap("ShowUsed")]
         [Validation(Required=false)]

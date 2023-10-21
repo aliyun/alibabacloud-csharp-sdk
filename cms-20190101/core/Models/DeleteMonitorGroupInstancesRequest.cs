@@ -10,22 +10,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupInstancesRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The status code 200 indicates that the call was successful.
-        /// </summary>
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
-        /// <summary>
-        /// The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.
-        /// </summary>
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public long? GroupId { get; set; }
-
-        /// <summary>
         /// The abbreviation of the service name. Valid values:
         /// 
         /// *   ECS: Elastic Compute Service (ECS) instances provided by Alibaba Cloud and hosts not provided by Alibaba Cloud
@@ -63,6 +47,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   SHAREBANDWIDTHPACKAGES: EIP Bandwidth Plan
         /// *   SLS: Log Service
         /// *   VPN: VPN Gateway
+        /// </summary>
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
+        /// <summary>
+        /// The ID of the application group.
+        /// </summary>
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public long? GroupId { get; set; }
+
+        /// <summary>
+        /// The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.
         /// </summary>
         [NameInMap("InstanceIdList")]
         [Validation(Required=false)]

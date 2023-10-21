@@ -10,39 +10,40 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorDataListResponseBody : TeaModel {
         /// <summary>
-        /// The name of the metric.
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the call is successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned monitoring data.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
-        /// 
-        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The timestamp that indicates the time when the metric value is collected.
+        /// Indicates whether the call is successful. Valid values:
         /// 
-        /// Unit: seconds.
+        /// *   true: The call is successful.
+        /// *   false: The call fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The metric value.
+        /// The returned monitoring data.
         /// </summary>
         [NameInMap("TimeSeries")]
         [Validation(Required=false)]
@@ -56,16 +57,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeHybridMonitorDataListResponseBodyTimeSeriesLabels> Labels { get; set; }
             public class DescribeHybridMonitorDataListResponseBodyTimeSeriesLabels : TeaModel {
                 /// <summary>
-                /// The timestamp that specifies the end of the time range to query.
-                /// 
-                /// Unit: seconds.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("K")]
                 [Validation(Required=false)]
                 public string K { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("V")]
                 [Validation(Required=false)]
@@ -74,23 +73,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The tag value.
+            /// The name of the metric.
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
             /// <summary>
-            /// For more information about common request parameters, see [Common parameters](~~199331~~).
+            /// The metric values that are collected at different timestamps.
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<DescribeHybridMonitorDataListResponseBodyTimeSeriesValues> Values { get; set; }
             public class DescribeHybridMonitorDataListResponseBodyTimeSeriesValues : TeaModel {
+                /// <summary>
+                /// The timestamp that indicates the time when the metric value is collected.
+                /// 
+                /// Unit: seconds.
+                /// </summary>
                 [NameInMap("Ts")]
                 [Validation(Required=false)]
                 public string Ts { get; set; }
 
+                /// <summary>
+                /// The metric value.
+                /// </summary>
                 [NameInMap("V")]
                 [Validation(Required=false)]
                 public string V { get; set; }

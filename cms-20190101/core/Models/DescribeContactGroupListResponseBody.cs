@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeContactGroupListResponseBody : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The description of the alert group.
+        /// The information about alert groups that were queried.
         /// </summary>
         [NameInMap("ContactGroupList")]
         [Validation(Required=false)]
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeContactGroupListResponseBodyContactGroupListContactGroup> ContactGroup { get; set; }
             public class DescribeContactGroupListResponseBodyContactGroupListContactGroup : TeaModel {
                 /// <summary>
-                /// Queries alert groups.
+                /// The alert contacts in the alert group.
                 /// </summary>
                 [NameInMap("Contacts")]
                 [Validation(Required=false)]
@@ -41,37 +43,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the alert group can subscribe to weekly reports. Valid values:
-                /// 
-                /// *   true: The alert group can subscribe to weekly reports.
-                /// *   false: The alert group cannot subscribe to weekly reports.
-                /// 
-                /// >  The weekly report subscription feature is only available for Alibaba Cloud accounts with more than five Elastic Compute Service (ECS) instances.
+                /// The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// The description of the alert group.
                 /// </summary>
                 [NameInMap("Describe")]
                 [Validation(Required=false)]
                 public string Describe { get; set; }
-
-                /// <summary>
-                /// The alert contacts in the alert group.
-                /// </summary>
-                [NameInMap("EnableSubscribed")]
-                [Validation(Required=false)]
-                public bool? EnableSubscribed { get; set; }
-
-                /// <summary>
-                /// The name of the alert group.
-                /// </summary>
-                [NameInMap("EnabledWeeklyReport")]
-                [Validation(Required=false)]
-                public bool? EnabledWeeklyReport { get; set; }
 
                 /// <summary>
                 /// Indicates whether the alert group subscribes to weekly reports. Valid values:
@@ -79,12 +62,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// *   true: The alert group subscribes to weekly reports.
                 /// *   false: The alert group does not subscribe to weekly reports.
                 /// </summary>
+                [NameInMap("EnableSubscribed")]
+                [Validation(Required=false)]
+                public bool? EnableSubscribed { get; set; }
+
+                /// <summary>
+                /// Indicates whether the alert group can subscribe to weekly reports. Valid values:
+                /// 
+                /// *   true: The alert group can subscribe to weekly reports.
+                /// *   false: The alert group cannot subscribe to weekly reports.
+                /// 
+                /// >  The weekly report subscription feature is only available for Alibaba Cloud accounts with more than five Elastic Compute Service (ECS) instances.
+                /// </summary>
+                [NameInMap("EnabledWeeklyReport")]
+                [Validation(Required=false)]
+                public bool? EnabledWeeklyReport { get; set; }
+
+                /// <summary>
+                /// The name of the alert group.
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The information about alert groups that were queried.
+        /// The names of alert groups.
         /// </summary>
         [NameInMap("ContactGroups")]
         [Validation(Required=false)]
@@ -108,31 +110,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The total number of the returned entries.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The names of alert groups.
+        /// Indicates whether the call was successful. Valid values:
+        /// 
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
-        /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// The total number of the returned entries.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

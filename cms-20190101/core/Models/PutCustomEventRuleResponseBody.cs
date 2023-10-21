@@ -10,31 +10,33 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomEventRuleResponseBody : TeaModel {
         /// <summary>
-        /// The error message.
+        /// The HTTP status code.
+        /// 
+        /// >  The value 200 indicates that the call was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
-        /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Before you call this operation, call the PutCustomEvent operation to report the monitoring data of the custom event. For more information, see [PutCustomEvent](~~115012~~).
+        /// Indicates whether the call was successful. Valid values:
+        /// 
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

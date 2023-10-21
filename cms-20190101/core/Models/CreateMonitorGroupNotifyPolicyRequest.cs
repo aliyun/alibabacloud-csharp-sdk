@@ -10,25 +10,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupNotifyPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The timestamp that indicates the end time of the validity period for the policy.
+        /// 
+        /// This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
-        /// 
-        /// >  The HTTP status code 200 indicates that the call succeeds.
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The timestamp that indicates the end time of the validity period for the policy.
-        /// 
-        /// This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// The type of the policy. Valid value: PauseNotify.
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
@@ -39,7 +37,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The timestamp that indicates the start time of the validity period for the policy.
+        /// 
+        /// This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
