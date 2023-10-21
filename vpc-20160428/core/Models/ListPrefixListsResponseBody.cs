@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPrefixListsResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page. Valid values: **1** to **100**. Default value: **20**.
+        /// The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If a value is returned for **NextToken**, the value indicates the token that is used for the next query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value indicates the token that is used for the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The IP version of the prefix list. Valid values:
             /// 
-            /// *   **IPv4**
+            /// *   **IPV4**
             /// *   **IPV6**
             /// </summary>
             [NameInMap("IpVersion")]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// Indicates whether the prefix list is shared. Valid values:
             /// 
             /// *   **Shared**: The prefix list is shared.
-            /// *   If an empty value is returned, it indicates that the prefix list is not shared.
+            /// *   If an empty value is returned, the prefix list is not shared.
             /// </summary>
             [NameInMap("ShareType")]
             [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The list of tags that are added to the resource group.
+            /// The tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

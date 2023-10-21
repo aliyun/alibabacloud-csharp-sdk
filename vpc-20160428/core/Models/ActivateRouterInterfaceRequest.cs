@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the router interface belongs.
+        /// The region ID of the router interface.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>

@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
 
+                [NameInMap("Ipv6AddressDescription")]
+                [Validation(Required=false)]
+                public string Ipv6AddressDescription { get; set; }
+
                 /// <summary>
                 /// The ID of the IPv6 address.
                 /// </summary>
@@ -196,6 +200,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public int? RealBandwidth { get; set; }
 
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
                 /// <summary>
                 /// The status of the IPv6 address. Valid values:
                 /// 
@@ -205,6 +213,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTags Tags { get; set; }
+                public class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTagsTag> Tag { get; set; }
+                    public class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// The ID of the vSwitch to which the IPv6 address belongs.

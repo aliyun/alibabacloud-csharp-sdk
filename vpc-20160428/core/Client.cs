@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+          * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
           * >  You cannot activate a router interface that has overdue payments.
           *
           * @param request ActivateRouterInterfaceRequest
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+          * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
           * >  You cannot activate a router interface that has overdue payments.
           *
           * @param request ActivateRouterInterfaceRequest
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+          * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
           * >  You cannot activate a router interface that has overdue payments.
           *
           * @param request ActivateRouterInterfaceRequest
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+          * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
           * >  You cannot activate a router interface that has overdue payments.
           *
           * @param request ActivateRouterInterfaceRequest
@@ -3782,6 +3782,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["GatewayId"] = request.GatewayId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["GatewayType"] = request.GatewayType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -3844,6 +3848,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
             {
                 query["GatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["GatewayType"] = request.GatewayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -7188,6 +7196,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await CreateDefaultVpcWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   **CreateDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetDhcpOptionsSet](~~448820~~) to query the status of the task.
+          *     *   If the vSwitch is in the **Pending** state, the DHCP options set is being configured.
+          *     *   If the vSwitch is in the **Available** state, the DHCP options set is available.
+          *
+          * @param request CreateDhcpOptionsSetRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDhcpOptionsSetResponse
+         */
         public CreateDhcpOptionsSetResponse CreateDhcpOptionsSetWithOptions(CreateDhcpOptionsSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7271,6 +7288,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<CreateDhcpOptionsSetResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   **CreateDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetDhcpOptionsSet](~~448820~~) to query the status of the task.
+          *     *   If the vSwitch is in the **Pending** state, the DHCP options set is being configured.
+          *     *   If the vSwitch is in the **Available** state, the DHCP options set is available.
+          *
+          * @param request CreateDhcpOptionsSetRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDhcpOptionsSetResponse
+         */
         public async Task<CreateDhcpOptionsSetResponse> CreateDhcpOptionsSetWithOptionsAsync(CreateDhcpOptionsSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7354,12 +7380,28 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<CreateDhcpOptionsSetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   **CreateDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetDhcpOptionsSet](~~448820~~) to query the status of the task.
+          *     *   If the vSwitch is in the **Pending** state, the DHCP options set is being configured.
+          *     *   If the vSwitch is in the **Available** state, the DHCP options set is available.
+          *
+          * @param request CreateDhcpOptionsSetRequest
+          * @return CreateDhcpOptionsSetResponse
+         */
         public CreateDhcpOptionsSetResponse CreateDhcpOptionsSet(CreateDhcpOptionsSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDhcpOptionsSetWithOptions(request, runtime);
         }
 
+        /**
+          * *   **CreateDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetDhcpOptionsSet](~~448820~~) to query the status of the task.
+          *     *   If the vSwitch is in the **Pending** state, the DHCP options set is being configured.
+          *     *   If the vSwitch is in the **Available** state, the DHCP options set is available.
+          *
+          * @param request CreateDhcpOptionsSetRequest
+          * @return CreateDhcpOptionsSetResponse
+         */
         public async Task<CreateDhcpOptionsSetResponse> CreateDhcpOptionsSetAsync(CreateDhcpOptionsSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21010,11 +21052,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * When you call this operation, take note of the following items:
-          * *   You can delete only route entries that are in the **Available** state.
-          * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
-          * *   **DeleteRouteEntries** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-          *     *   If the route entry is in the **Deleting** state, the route entry is being deleted.
-          *     *   If you cannot query the route entry, the route entry is deleted.
+          * *   You can delete only routes that are in the **Available** state.
+          * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or another route is being created or deleted.
+          * *   **DeleteRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
+          *     *   If the route is in the **Deleting** state, the route is being deleted.
+          *     *   If you cannot query the route, the route is deleted.
           * *   You cannot repeatedly call **DeleteRouteEntries** within a specific period of time.
           *
           * @param request DeleteRouteEntriesRequest
@@ -21074,11 +21116,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * When you call this operation, take note of the following items:
-          * *   You can delete only route entries that are in the **Available** state.
-          * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
-          * *   **DeleteRouteEntries** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-          *     *   If the route entry is in the **Deleting** state, the route entry is being deleted.
-          *     *   If you cannot query the route entry, the route entry is deleted.
+          * *   You can delete only routes that are in the **Available** state.
+          * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or another route is being created or deleted.
+          * *   **DeleteRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
+          *     *   If the route is in the **Deleting** state, the route is being deleted.
+          *     *   If you cannot query the route, the route is deleted.
           * *   You cannot repeatedly call **DeleteRouteEntries** within a specific period of time.
           *
           * @param request DeleteRouteEntriesRequest
@@ -21138,11 +21180,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * When you call this operation, take note of the following items:
-          * *   You can delete only route entries that are in the **Available** state.
-          * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
-          * *   **DeleteRouteEntries** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-          *     *   If the route entry is in the **Deleting** state, the route entry is being deleted.
-          *     *   If you cannot query the route entry, the route entry is deleted.
+          * *   You can delete only routes that are in the **Available** state.
+          * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or another route is being created or deleted.
+          * *   **DeleteRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
+          *     *   If the route is in the **Deleting** state, the route is being deleted.
+          *     *   If you cannot query the route, the route is deleted.
           * *   You cannot repeatedly call **DeleteRouteEntries** within a specific period of time.
           *
           * @param request DeleteRouteEntriesRequest
@@ -21156,11 +21198,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * When you call this operation, take note of the following items:
-          * *   You can delete only route entries that are in the **Available** state.
-          * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
-          * *   **DeleteRouteEntries** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-          *     *   If the route entry is in the **Deleting** state, the route entry is being deleted.
-          *     *   If you cannot query the route entry, the route entry is deleted.
+          * *   You can delete only routes that are in the **Available** state.
+          * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or another route is being created or deleted.
+          * *   **DeleteRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
+          *     *   If the route is in the **Deleting** state, the route is being deleted.
+          *     *   If you cannot query the route, the route is deleted.
           * *   You cannot repeatedly call **DeleteRouteEntries** within a specific period of time.
           *
           * @param request DeleteRouteEntriesRequest
@@ -22621,7 +22663,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).
           * *   You can delete only vSwitches that are in the **Available** state.
           * *   You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.
-          * *   **DeleteVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * *   **DeleteVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
           *     *   If the vSwitch is in the **Pending** state, the vSwitch is being deleted.
           *     *   If you cannot query the vSwitch, the vSwitch is deleted.
           * *   You cannot repeatedly call the **DeleteVSwitch** operation to delete a vSwitch within the specified period of time.
@@ -22682,7 +22724,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).
           * *   You can delete only vSwitches that are in the **Available** state.
           * *   You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.
-          * *   **DeleteVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * *   **DeleteVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
           *     *   If the vSwitch is in the **Pending** state, the vSwitch is being deleted.
           *     *   If you cannot query the vSwitch, the vSwitch is deleted.
           * *   You cannot repeatedly call the **DeleteVSwitch** operation to delete a vSwitch within the specified period of time.
@@ -22743,7 +22785,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).
           * *   You can delete only vSwitches that are in the **Available** state.
           * *   You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.
-          * *   **DeleteVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * *   **DeleteVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
           *     *   If the vSwitch is in the **Pending** state, the vSwitch is being deleted.
           *     *   If you cannot query the vSwitch, the vSwitch is deleted.
           * *   You cannot repeatedly call the **DeleteVSwitch** operation to delete a vSwitch within the specified period of time.
@@ -22762,7 +22804,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).
           * *   You can delete only vSwitches that are in the **Available** state.
           * *   You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.
-          * *   **DeleteVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * *   **DeleteVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
           *     *   If the vSwitch is in the **Pending** state, the vSwitch is being deleted.
           *     *   If you cannot query the vSwitch, the vSwitch is deleted.
           * *   You cannot repeatedly call the **DeleteVSwitch** operation to delete a vSwitch within the specified period of time.
@@ -28238,6 +28280,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -28245,6 +28291,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -28333,6 +28383,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -28340,6 +28394,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -35242,6 +35300,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["GatewayId"] = request.GatewayId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["GatewayType"] = request.GatewayType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -35304,6 +35366,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
             {
                 query["GatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["GatewayType"] = request.GatewayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -54686,6 +54752,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayRouteTableId))
+            {
+                query["GatewayRouteTableId"] = request.GatewayRouteTableId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPv4GatewayRouteTableId))
             {
                 query["IPv4GatewayRouteTableId"] = request.IPv4GatewayRouteTableId;
@@ -54764,6 +54834,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayRouteTableId))
+            {
+                query["GatewayRouteTableId"] = request.GatewayRouteTableId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPv4GatewayRouteTableId))
             {

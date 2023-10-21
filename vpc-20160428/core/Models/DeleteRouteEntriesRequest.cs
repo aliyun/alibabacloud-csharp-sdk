@@ -34,14 +34,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The information about the routes that you want to delete.
+        /// </summary>
         [NameInMap("RouteEntries")]
         [Validation(Required=false)]
         public List<DeleteRouteEntriesRequestRouteEntries> RouteEntries { get; set; }
         public class DeleteRouteEntriesRequestRouteEntries : TeaModel {
             /// <summary>
-            /// The destination CIDR block of the route entry that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.
+            /// The destination CIDR block of the route that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.
             /// 
-            /// >  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.
+            /// >  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.
             /// </summary>
             [NameInMap("DstCidrBlock")]
             [Validation(Required=false)]
@@ -50,23 +53,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The ID of the next hop that you want to delete. You can specify up to 50 next hop IDs.
             /// 
-            /// >  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.
+            /// >  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.
             /// </summary>
             [NameInMap("NextHop")]
             [Validation(Required=false)]
             public string NextHop { get; set; }
 
             /// <summary>
-            /// The ID of the route entry that you want to delete. You can specify up to 50 route entry IDs.
+            /// The ID of the route that you want to delete. You can specify up to 50 route IDs.
             /// 
-            /// >  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.
+            /// >  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.
             /// </summary>
             [NameInMap("RouteEntryId")]
             [Validation(Required=false)]
             public string RouteEntryId { get; set; }
 
             /// <summary>
-            /// The ID of the route table in which the route entry to be deleted resides. You can specify up to 50 route table IDs.
+            /// The ID of the route table to which the routes to be deleted belongs. You can specify up to 50 route table IDs.
             /// </summary>
             [NameInMap("RouteTableId")]
             [Validation(Required=false)]

@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value indicates the token that is used for the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

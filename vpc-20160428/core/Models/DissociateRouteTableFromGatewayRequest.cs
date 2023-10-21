@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
+        [NameInMap("GatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

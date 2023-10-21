@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
+        [NameInMap("GatewayRouteTableId")]
+        [Validation(Required=false)]
+        public string GatewayRouteTableId { get; set; }
+
         /// <summary>
         /// The metering method of the IPv6 gateway.
         /// </summary>
