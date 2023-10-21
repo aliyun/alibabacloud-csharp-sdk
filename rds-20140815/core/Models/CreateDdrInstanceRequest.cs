@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The method that is used to restore data. Valid values:
         /// 
         /// *   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetID**.
-        /// *   **BackupTime**: restores data to a point in time. You must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.
+        /// *   **BackupTime**: restores data to a point in time. If you use this value, you must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.
         /// </summary>
         [NameInMap("RestoreType")]
         [Validation(Required=false)]

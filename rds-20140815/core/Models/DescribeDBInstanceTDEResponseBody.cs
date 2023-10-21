@@ -51,10 +51,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The key method for instance level TDE encryption, with values:
-        /// - **Aliyun_Generate_Key**
-        /// - **Customer_Provided_Key**
-        /// - **Unknown**
+        /// The method that is used to generate the key for TDE at the instance level. Valid values:
+        /// 
+        /// *   **Aliyun_Generate_Key**
+        /// *   **Customer_Provided_Key**
+        /// *   **Unknown**
         /// </summary>
         [NameInMap("TDEMode")]
         [Validation(Required=false)]

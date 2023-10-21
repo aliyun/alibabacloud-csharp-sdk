@@ -44,11 +44,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The ID of the instance for which you want to change the specifications or the instance that you want to renew.
         /// 
-        /// > 
-        /// 
-        /// *   If you want to query the price of an specification change order or a renewal order, you must specify this parameter.
-        /// 
-        /// *   If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.
+        /// > *   If you want to query the price of an specification change order or a renewal order, you must specify this parameter.
+        /// > *   If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -98,10 +95,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The database engine version of the instance.
         /// 
-        /// *   Valid values when you set the Engine parameter to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
-        /// *   Valid values when you set the Engine parameter to SQLServer: **2008r2**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**
-        /// *   Valid values if you set the Engine parameter to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
-        /// *   Valid value when you set the Engine parameter to MariaDB: **10.3**
+        /// *   Valid values if you set Engine to **MySQL**: **5.5**, **5.6**, **5.7**, and **8.0**
+        /// *   Valid values if you set Engine to **SQLServer**: **08r2\_ent_ha** (cloud disks, discontinued), **2008r2**(local disks, discontinued), **2012** (SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**
+        /// *   Valid values if you set Engine to **PostgreSQL**: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
+        /// *   Valid value if you set Engine to **MariaDB**: **10.3**
+        /// 
+        /// >  The following information describes the valid values when you set Engine to SQLServer: `_ent` specifies SQL Server EE on RDS Cluster Edition, `_ent_ha` specifies SQL Server EE, `_std_ha` specifies SQL Server SE, and `_web` specifies SQL Server Web.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -178,7 +177,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
-        /// The unit that is used to calculate the subscription duration of the instance. If you set the **CommodityCode** parameter to **RDS**, **rds_rordspre_public_cn**, **rds_intl**, or **rds_rordspre_public_intl**, you must also specify this parameter. Valid values:
+        /// The billing cycle of the subscription instance. This parameter is required when **CommodityCode** is set to **rds**, **rds_rordspre_public_cn**, **rds_intl**, or **rds_rordspre_public_intl**. Valid values:
         /// 
         /// *   **Year**
         /// *   **Month**

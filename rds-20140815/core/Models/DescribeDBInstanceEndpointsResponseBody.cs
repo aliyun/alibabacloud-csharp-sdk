@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceEndpointsResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDBInstanceEndpointsResponseBodyData Data { get; set; }
         public class DescribeDBInstanceEndpointsResponseBodyData : TeaModel {
             /// <summary>
-            /// An array that consists of details of the endpoint.
+            /// The information of the endpoints of the instance.
             /// </summary>
             [NameInMap("DBInstanceEndpoints")]
             [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public List<DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpoint> DBInstanceEndpoint { get; set; }
                 public class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpoint : TeaModel {
                     /// <summary>
-                    /// An array that consists of the details of the endpoint.
+                    /// The information about the endpoint.
                     /// </summary>
                     [NameInMap("AddressItems")]
                     [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public List<DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItemsAddressItem> AddressItem { get; set; }
                         public class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItemsAddressItem : TeaModel {
                             /// <summary>
-                            /// The endpoint of the instance.
+                            /// The endpoints of the instance.
                             /// </summary>
                             [NameInMap("ConnectionString")]
                             [Validation(Required=false)]
                             public string ConnectionString { get; set; }
 
                             /// <summary>
-                            /// The IP address of the endpoint.
+                            /// The IP address.
                             /// </summary>
                             [NameInMap("IpAddress")]
                             [Validation(Required=false)]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                             public string Port { get; set; }
 
                             /// <summary>
-                            /// The ID of the vSwitch.
+                            /// The vSwitch ID.
                             /// </summary>
                             [NameInMap("VSwitchId")]
                             [Validation(Required=false)]
                             public string VSwitchId { get; set; }
 
                             /// <summary>
-                            /// The ID of the virtual private cloud (VPC).
+                            /// The VPC ID.
                             /// </summary>
                             [NameInMap("VpcId")]
                             [Validation(Required=false)]
@@ -104,15 +104,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     /// <summary>
                     /// The type of the endpoint. Valid values:
                     /// 
-                    /// *   **Primary**: read/write endpoint of the instance
-                    /// *   **Readonly**: read-only endpoint of the instance
+                    /// *   **Primary**: the read/write endpoint of the instance
+                    /// *   **Readonly**: the read-only endpoint of the instance
                     /// </summary>
                     [NameInMap("EndpointType")]
                     [Validation(Required=false)]
                     public string EndpointType { get; set; }
 
                     /// <summary>
-                    /// An array consisting of the details of the node that is configured for the endpoint.
+                    /// The information about the node that is configured for the endpoint.
                     /// </summary>
                     [NameInMap("NodeItems")]
                     [Validation(Required=false)]
@@ -123,14 +123,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public List<DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItemsNodeItem> NodeItem { get; set; }
                         public class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItemsNodeItem : TeaModel {
                             /// <summary>
-                            /// The ID of the instance.
+                            /// The instance ID.
                             /// </summary>
                             [NameInMap("DBInstanceId")]
                             [Validation(Required=false)]
                             public string DBInstanceId { get; set; }
 
                             /// <summary>
-                            /// The ID of the node.
+                            /// The node ID.
                             /// </summary>
                             [NameInMap("NodeId")]
                             [Validation(Required=false)]

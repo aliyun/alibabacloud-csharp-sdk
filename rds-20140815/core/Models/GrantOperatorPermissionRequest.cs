@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class GrantOperatorPermissionRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The time when the permissions of the service account expire. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// The expiration time of the permissions. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The permissions that you want to grant to the service account. Valid values:
         /// 
-        /// - **Control**: the configuration permissions, which allow you to view and modify the configuration of the instance.
-        /// - **Data**: the data permissions, which allow you to view the schemas, indexes, and SQL statements of the instance.
+        /// *   **Control**: the configuration permissions, which allow you to view and modify configurations of the instance.
+        /// *   **Data**: the data permissions, which allow you to view schemas, indexes, and SQL statements of the instance.
         /// </summary>
         [NameInMap("Privileges")]
         [Validation(Required=false)]

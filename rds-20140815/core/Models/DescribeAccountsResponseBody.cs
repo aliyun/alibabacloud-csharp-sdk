@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the accounts.
+        /// The details of the account.
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string AccountDescription { get; set; }
 
                 /// <summary>
-                /// The username of the account.
+                /// The name of the database account.
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **t**: yes
                 /// *   **f**: no
                 /// 
-                /// > This parameter is returned only for instances that run PostgreSQL.
+                /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
                 [NameInMap("BypassRLS")]
                 [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **t**: yes
                 /// *   **f**: no
                 /// 
-                /// > This parameter is returned only for instances that run PostgreSQL.
+                /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
                 [NameInMap("CreateDB")]
                 [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **t**: yes
                 /// *   **f**: no
                 /// 
-                /// > This parameter is returned only for instances that run PostgreSQL.
+                /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
                 [NameInMap("CreateRole")]
                 [Validation(Required=false)]
@@ -112,11 +112,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         /// <summary>
                         /// The type of the permissions. Valid values:
                         /// 
-                        /// *   **ReadWrite**: read and write permissions
-                        /// *   **ReadOnly**: read-only permissions
-                        /// *   **DDLOnly**: DDL-only permissions
-                        /// *   **DMLOnly**: DML-only permissions
-                        /// *   **Custom**: custom permissions (You can modify the permissions of the account by using SQL commands.)
+                        /// *   **ReadWrite**: read and write permissions.
+                        /// *   **ReadOnly**: read-only permissions.
+                        /// *   **DDLOnly**: DDL-only permissions.
+                        /// *   **DMLOnly**: DML-only permissions.
+                        /// *   **Custom**: custom permissions. You can modify the permissions of the account by using SQL commands.
                         /// </summary>
                         [NameInMap("AccountPrivilege")]
                         [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **t**: yes
                 /// *   **f**: no
                 /// 
-                /// > This parameter is returned only for instances that run PostgreSQL.
+                /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
                 [NameInMap("Replication")]
                 [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **Empty**: The expiration time is not specified.
                 /// *   **Actual expiration time** in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.
                 /// 
-                /// > This parameter is returned only for instances that run PostgreSQL.
+                /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
                 [NameInMap("ValidUntil")]
                 [Validation(Required=false)]

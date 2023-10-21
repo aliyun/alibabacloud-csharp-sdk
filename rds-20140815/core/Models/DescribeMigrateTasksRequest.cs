@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: any non-zero positive integer.
+        /// The page number. Valid values: any non-zero positive integer.
         /// 
         /// Default value: **1**.
         /// </summary>

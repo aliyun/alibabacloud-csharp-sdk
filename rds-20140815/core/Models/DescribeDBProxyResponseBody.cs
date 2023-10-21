@@ -43,31 +43,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The network type of the proxy endpoint.
                 /// 
-                /// Valid values:
-                /// 
-                /// *   OuterString
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     Internet
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   InnerString
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     internal network
-                /// 
-                ///     <!-- -->
+                /// *   OuterString: Internet
+                /// *   InnerString: internal network
                 /// </summary>
                 [NameInMap("DBProxyConnectStringNetType")]
                 [Validation(Required=false)]
@@ -76,43 +53,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The network type of the database proxy.
                 /// 
-                /// Valid values:
-                /// 
-                /// *   0
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     Internet
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   1
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     classic network
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   2
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     virtual private cloud (VPC)
-                /// 
-                ///     <!-- -->
+                /// *   0: Internet
+                /// *   1: classic network
+                /// *   2: virtual private cloud (VPC)
                 /// </summary>
                 [NameInMap("DBProxyConnectStringNetWorkType")]
                 [Validation(Required=false)]
@@ -213,39 +156,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The status of the proxy instance.
         /// 
-        /// Valid values:
-        /// 
-        /// *   DBInstanceClassChanging
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Creating
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Running
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Deleting
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// *   DBInstanceClassChanging: The specifications of the proxy instance are being changed.
+        /// *   Creating: The proxy instance is being created.
+        /// *   Running: The proxy instance is being running.
+        /// *   Deleting: The proxy instance is being deleted.
         /// </summary>
         [NameInMap("DBProxyInstanceStatus")]
         [Validation(Required=false)]
@@ -254,33 +168,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The type of the database proxy that is enabled on the instance.
         /// 
-        /// > ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.
+        /// *   1: shared proxy
+        /// *   2: dedicated proxy
         /// 
-        /// Valid values:
-        /// 
-        /// *   1
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     shared proxy
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   2
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     dedicated proxy
-        /// 
-        ///     <!-- -->
+        /// >  ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.
         /// </summary>
         [NameInMap("DBProxyInstanceType")]
         [Validation(Required=false)]
@@ -289,23 +180,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The status of the database proxy.
         /// 
-        /// Valid values:
-        /// 
-        /// *   Shutdown
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Startup
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// *   Shutdown: disabled
+        /// *   Startup: enabled
         /// </summary>
         [NameInMap("DBProxyServiceStatus")]
         [Validation(Required=false)]
@@ -339,31 +215,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The type of the proxy terminal.
                 /// 
-                /// Valid values:
-                /// 
-                /// *   Custom
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     custom proxy terminal
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   RWSplit
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     default proxy terminal
-                /// 
-                ///     <!-- -->
+                /// *   Custom: custom proxy terminal
+                /// *   RWSplit: default proxy terminal
                 /// </summary>
                 [NameInMap("DbProxyEndpointType")]
                 [Validation(Required=false)]
@@ -372,23 +225,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The read and write attributes of the proxy terminal.
                 /// 
-                /// Valid values:
-                /// 
-                /// *   ReadOnly
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   ReadWrite
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
+                /// *   ReadOnly: The proxy terminal supports only read requests.
+                /// *   ReadWrite: The proxy terminal supports read and write requests.
                 /// </summary>
                 [NameInMap("DbProxyReadWriteMode")]
                 [Validation(Required=false)]

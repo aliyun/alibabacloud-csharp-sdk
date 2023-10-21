@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyEndpointRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The proxy endpoint that you want to query. You can call the [DescribeDBProxy](~~141055~~) operation to query the proxy endpoint.
+        /// The proxy endpoint that you want to query. You can call the [DescribeDBProxy](~~610506~~) operation to query the proxy endpoint.
         /// </summary>
         [NameInMap("DBProxyConnectString")]
         [Validation(Required=false)]
         public string DBProxyConnectString { get; set; }
 
         /// <summary>
-        /// The name of the proxy terminal to which the proxy endpoint belongs. You can call the [DescribeDBProxy](~~141055~~) operation to query the name of the proxy terminal.
+        /// The name of the proxy terminal to which the proxy endpoint belongs. You can call the [DescribeDBProxy](~~610506~~) operation to query the name of the proxy terminal.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// An internal parameter. You do not need to specify this parameter.
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("DBProxyEngineType")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

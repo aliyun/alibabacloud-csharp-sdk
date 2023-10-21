@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).
         /// 
-        /// > When you set **IsOnlineDB** to **True**, the value of this parameter is valid.
+        /// >  This parameter is valid when IsOnlineDB is set to **True**.
         /// </summary>
         [NameInMap("CheckDBMode")]
         [Validation(Required=false)]

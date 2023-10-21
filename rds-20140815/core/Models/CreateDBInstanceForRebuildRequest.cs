@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// Default value: Classic.
         /// 
-        /// > : If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.
+        /// >  The **VPCId** and **VSwitchId** parameters must be specified when this parameter is set to **VPC**.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Year**
         /// *   **Month**
         /// 
-        /// > : If you set PayType to **Prepaid**, you must also specify this parameter.
+        /// >  This parameter must be specified when the PayType parameter is set to **Prepaid**.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

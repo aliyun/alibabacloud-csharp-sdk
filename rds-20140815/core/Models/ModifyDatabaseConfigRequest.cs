@@ -10,28 +10,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDatabaseConfigRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// The database name.
+        /// 
+        /// >  You can specify only one database name.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
         /// <summary>
-        /// The name of the database property expected to be modified.
+        /// The name of the database property that you want to modify.
         /// </summary>
         [NameInMap("DatabasePropertyName")]
         [Validation(Required=false)]
         public string DatabasePropertyName { get; set; }
 
         /// <summary>
-        /// The database property value that is expected to be modified.
+        /// The value of the database property that you want to modify.
         /// </summary>
         [NameInMap("DatabasePropertyValue")]
         [Validation(Required=false)]

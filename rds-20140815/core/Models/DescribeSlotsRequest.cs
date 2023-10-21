@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// 实例ID。可调用[DescribeDBInstances](~~26232~~)查询。
+        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// 资源组ID，可以为空。
+        /// The ID of the resource group. You can leave this parameter empty.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

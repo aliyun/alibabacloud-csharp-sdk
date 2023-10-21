@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1.
+        /// The page number. Valid values: any non-zero positive integer.
         /// 
         /// Default value: **1**.
         /// </summary>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// The number of entries to return on each page.
         /// 
         /// Valid values: **30** to **100**.
         /// 

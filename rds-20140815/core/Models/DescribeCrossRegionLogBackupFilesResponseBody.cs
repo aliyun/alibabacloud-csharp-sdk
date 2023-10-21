@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionLogBackupFilesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The end of the time range queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+        /// The end of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// An array that consists of cross-region log backup files.
+        /// The cross-region log backup files.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeCrossRegionLogBackupFilesResponseBodyItemsItem> Item { get; set; }
             public class DescribeCrossRegionLogBackupFilesResponseBodyItemsItem : TeaModel {
                 /// <summary>
-                /// The ID of the destination region where the cross-region log backup file is stored.
+                /// The ID of the destination region within which the cross-region backup file is stored.
                 /// </summary>
                 [NameInMap("CrossBackupRegion")]
                 [Validation(Required=false)]
@@ -70,28 +70,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? CrossLogBackupSize { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public int? InstanceId { get; set; }
 
                 /// <summary>
-                /// The time when the download URL of the cross-region log backup file expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the URL expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("LinkExpiredTime")]
                 [Validation(Required=false)]
                 public string LinkExpiredTime { get; set; }
 
                 /// <summary>
-                /// The start time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+                /// The start time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("LogBeginTime")]
                 [Validation(Required=false)]
                 public string LogBeginTime { get; set; }
 
                 /// <summary>
-                /// The end time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+                /// The end time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("LogEndTime")]
                 [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the returned page. Pages start from page 1.
+        /// The page number. Pages start from page 1.
         /// 
         /// Default value: **1**.
         /// </summary>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of cross-region log backup files on the current page.
+        /// The number of cross-region backup files on the current page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
@@ -132,21 +132,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+        /// The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The total number of entries that are returned.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

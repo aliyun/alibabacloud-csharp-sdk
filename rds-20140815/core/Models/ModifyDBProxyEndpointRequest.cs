@@ -30,27 +30,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConfigDBProxyFeatures { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~140955~~) operation to query the ID of the proxy endpoint.
+        /// The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.
         /// 
-        /// > 
-        /// 
-        /// *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.
-        /// 
-        /// *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.
+        /// > *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.
+        /// > *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// An internal parameter. You do not need to specify this parameter.
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("DBProxyEngineType")]
         [Validation(Required=false)]
@@ -80,11 +77,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **ReadWrite**: The proxy terminal connects to the primary instance and can receive both read and write requests.
         /// *   **ReadOnly**: The proxy terminal does not connect to the primary instance and can receive only read requests. This is the default value.
         /// 
-        /// > 
-        /// 
-        /// *   If you set **DbEndpointOperator** to **Create**, you must also specify DbEndpointReadWriteMode.
-        /// 
-        /// *   If the instance runs MySQL and you change the value of this parameter from **ReadWrite** to **ReadOnly**, the transaction splitting feature is disabled.
+        /// > *   If you set **DbEndpointOperator** to **Create**, you must also specify DbEndpointReadWriteMode.
+        /// > *   If the instance runs MySQL and you change the value of this parameter from **ReadWrite** to **ReadOnly**, the transaction splitting feature is disabled.
         /// </summary>
         [NameInMap("DbEndpointReadWriteMode")]
         [Validation(Required=false)]
@@ -127,22 +121,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   Standard instance: `{"ID of the primary instance":"Weight","ID of the read-only instance":"Weight"...}`
         /// 
-        ///     Example: `{"rm-uf6wjk5xxxx":"500","rr-tfhfgk5xxx":"200"...}`
+        ///     Example: `{"rm-uf6wjk5****":"500","rr-tfhfgk5xxx":"200"...}`
         /// 
-        /// *   Instance on RDS Cluster Edition: `{"ID of the read-only instance ID":"Weight","DBClusterNode":{"ID of the primary node":"Weight","ID of the secondary node ID":"Weight","ID of the secondary node ID":"Weight"...}}`
+        /// *   Instance on RDS Cluster Edition: `{"ID of the read-only instance":"Weight","DBClusterNode":{"ID of the primary node":"Weight","ID of the secondary node":"Weight","ID of the secondary node":"Weight"...}}`
         /// 
-        ///     Example: `{"rr-tfhfgk5xxx":"200","DBClusterNode":{"rn-2z****":"0","rn-2z****":"400","rn-2z****":"400"...}}`
+        ///     Example: `{"rr-tfhfgk5****":"200","DBClusterNode":{"rn-2z****":"0","rn-2z****":"400","rn-2z****":"400"...}}`
         /// 
         ///     **
         /// 
-        ///     **Note****DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes.
+        ///     **Note** **DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes..
         /// </summary>
         [NameInMap("ReadOnlyInstanceWeight")]
         [Validation(Required=false)]
         public string ReadOnlyInstanceWeight { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -14,13 +14,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// Valid values: **1** to **20**. Default value: **1**.
         /// 
-        /// > 
-        /// 
-        /// *   If you want to create multiple ApsaraDB RDS for MySQL instances at a time by using a single request, you can add tags to all the instances by using the **Tag.Key** parameter and the **Tag.Value** parameter. After the instances are created, you can manage the instances based on the tags.
-        /// 
-        /// *   After you submit a request to create multiple ApsaraDB RDS for MySQL instances, this operation returns **TaskId**, **RequestId**, and **Message**. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the details of an instance.
-        /// 
-        /// *   If the value of the **Engine** parameter is not **MySQL** and the value of the Amount parameter is greater than **1**, this operation fails and returns an error code `InvalidParam.Engine`.
+        /// > *   If you want to create multiple ApsaraDB RDS for MySQL instances at a time by using a single request, you can add tags to all the instances by using the **Tag.Key** parameter and the **Tag.Value** parameter. After the instances are created, you can manage the instances based on the tags.
+        /// > *   After you submit a request to create multiple ApsaraDB RDS for MySQL instances, this operation returns **TaskId**, **RequestId**, and **Message**. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the details of an instance.
+        /// > *   If the value of the **Engine** parameter is not **MySQL** and the value of the Amount parameter is greater than **1**, this operation fails and returns an error code `InvalidParam.Engine`.
         /// </summary>
         [NameInMap("Amount")]
         [Validation(Required=false)]
@@ -29,10 +25,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// Specifies whether to automatically complete the payment. Valid values:
         /// 
-        /// *   **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
-        /// *   **false**: does not automatically complete the payment. An unpaid order is generated.
+        /// *   **true**: enables the feature. Make sure that your account balance is sufficient.
+        /// *   **false**: disables the feature. An unpaid order is generated.
         /// 
-        /// > : The default value is true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can pay for the order in the ApsaraDB RDS console.
+        /// >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -44,11 +40,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **true**
         /// *   **false**
         /// 
-        /// > 
-        /// 
-        /// *   The auto-renewal cycle is one month for a monthly subscription.
-        /// 
-        /// *   The auto-renewal cycle is one year for a yearly subscription.
+        /// > *   The auto-renewal cycle is one month for a monthly subscription.
+        /// > *   The auto-renewal cycle is one year for a yearly subscription.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
@@ -96,7 +89,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The RDS edition of the instance. Valid values:
         /// 
-        /// *   Regular RDS instance
+        /// *   Regular instance
         /// 
         ///     *   **Basic**: RDS Basic Edition
         ///     *   **HighAvailability**: RDS High-availability Edition
@@ -107,12 +100,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   Serverless instance
         /// 
         ///     *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
-        ///     *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL
+        ///     *   **serverless_standard**: RDS Serverless High-availability Edition. This edition is available only for instances that run MySQL and PostgreSQL.
         ///     *   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.
         /// 
-        ///     **
-        /// 
-        ///     **Note**: This parameter is required if you want to create a serverless instance.
+        /// > This parameter must be specified when you create a serverless instance.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -157,14 +148,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CreateStrategy { get; set; }
 
         /// <summary>
-        /// The instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+        /// The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
         /// 
-        /// To create a serverless instance, set this parameter to one of the following values:
+        /// To create a serverless instance, configure this parameter based on the following rules:
         /// 
         /// *   If you want to create a serverless instance that runs MySQL on RDS Basic Edition, set this parameter to **mysql.n2.serverless.1c**.
         /// *   If you want to create a serverless instance that runs MySQL on RDS High-availability Edition, set this parameter to **mysql.n2.serverless.2c**.
         /// *   If you want to create a serverless instance that runs SQL Server, set this parameter to **mssql.mem2.serverless.s2**.
-        /// *   If you want to create a serverless instance that runs PostgreSQL, set this parameter to **pg.n2.serverless.1c**.
+        /// *   If you want to create a serverless instance that runs PostgreSQL on RDS Basic Edition, set this parameter to **pg.n2.serverless.1c**
+        /// *   If you want to create a serverless instance that runs PostgreSQL on RDS High-availability Edition, set this parameter to **pg.n2.serverless.2c**
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -199,7 +191,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **local_ssd**: local SSD. This is the recommended storage type.
         /// *   **cloud_ssd**: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.
         /// *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1).
-        /// *   **cloud_essd2**: ESSD of PL2
+        /// *   **cloud_essd2**: ESSD of PL2.
         /// *   **cloud_essd3**: ESSD of PL3.
         /// 
         /// The default value of this parameter is determined by the instance type specified by the **DBInstanceClass** parameter.
@@ -207,7 +199,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   If the instance type specifies the local SSD storage type, the default value of this parameter is **local_ssd**.
         /// *   If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is **cloud_essd**.
         /// 
-        /// > : Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.
+        /// >  Serverless instances use only ESSDs of PL1. If you create a serverless instance, you must set this parameter to **cloud_essd**.
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
@@ -245,11 +237,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   The time zone of the instance is not in UTC. For more information, see [Time zones](~~297356~~).
         ///     *   You can specify this parameter only when the instance runs PostgreSQL with standard SSDs or ESSDs.
         /// 
-        /// > 
-        /// 
-        /// *   You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.
-        /// 
-        /// *   If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.
+        /// > *   You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.
+        /// > *   If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.
         /// </summary>
         [NameInMap("DBTimeZone")]
         [Validation(Required=false)]
@@ -288,9 +277,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the key that is used for disk encryption in the region in which the instance resides. If you specify the EncryptionKey parameter, disk encryption is automatically enabled. In this case, you must also specify the **RoleARN** parameter. Disk encryption cannot be disabled after it is enabled.
+        /// The ID of the key that is used to encrypt data on standard SSDs or ESSDs in the region of the instance. If you specify the EncryptionKey parameter, cloud disk encryption is automatically enabled. In this case, you must also specify the **RoleARN** parameter. Cloud disk encryption cannot be disabled after it is enabled.
         /// 
         /// You can obtain the ID of the key from the Key Management Service (KMS) console. You can also create a key. For more information, see [Create a CMK](~~181610~~).
+        /// 
+        /// >  This parameter is optional when you create an ApsaraDB RDS for PostgreSQL instance. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
@@ -335,16 +326,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The network type of the instance. Valid values:
         /// 
-        /// *   **VPC**: a VPC
-        /// *   **Classic**: the classic network
+        /// *   **VPC**: virtual private cloud (VPC)
+        /// *   **Classic**: classic network
         /// 
-        /// > 
-        /// 
-        /// *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
-        /// 
-        /// *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
-        /// 
-        /// *   RDS instances that run SQL Server Basic and SQL Server Web can reside in the classic network and virtual private clouds (VPCs). If the instance runs other database engines, you must set this parameter to **VPC**.
+        /// > *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
+        /// > *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
+        /// > *   If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engines, you must set this parameter to **VPC**.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -369,7 +356,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Year**
         /// *   **Month**
         /// 
-        /// > : If you set PayType to **Prepaid**, you must also specify this parameter.
+        /// >  If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -427,7 +414,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The settings of the serverless instance. This parameter is required when you create a serverless instance.
         /// 
-        /// > : ApsaraDB RDS for MariaDB does not support serverless instances.
+        /// >  ApsaraDB RDS for MariaDB does not support serverless instances.
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
@@ -436,10 +423,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// Specifies whether to enable the smart startup and stop feature for the serverless instance. Valid values:
             /// 
-            /// *   **true**: enables the feature.
-            /// *   **false** (default): disables the feature.
+            /// *   **true**
+            /// *   **false** (default)
             /// 
-            /// > : This parameter is required only for serverless instances that run MySQL and PostgreSQL. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is resumed.
+            /// >  This parameter is required only for serverless instances that run MySQL and PostgreSQL. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is resumed.
             /// </summary>
             [NameInMap("AutoPause")]
             [Validation(Required=false)]
@@ -452,7 +439,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**
             /// *   Serverless ApsaraDB RDS for PostgreSQL instances: **1 to 12**
             /// 
-            /// > : The value of this parameter must be greater than or equal to the value of **MinCapacity** and must be an **integer**.
+            /// >  The value of this parameter must be greater than or equal to the value of the **MinCapacity** parameter and must be an **integer**.
             /// </summary>
             [NameInMap("MaxCapacity")]
             [Validation(Required=false)]
@@ -465,7 +452,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.
             /// *   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 12**.
             /// 
-            /// > : The value of this parameter must be less than or equal to the value of **MaxCapacity**.
+            /// >  The value of this parameter must be less than or equal to the value of the **MaxCapacity** parameter.
             /// </summary>
             [NameInMap("MinCapacity")]
             [Validation(Required=false)]
@@ -474,14 +461,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// Specifies whether to enable the forced scaling feature for the serverless instance. Valid values:
             /// 
-            /// *   **true**: enables the feature.
-            /// *   **false** (default): disables the feature.
+            /// *   **true**
+            /// *   **false** (default)
             /// 
-            /// > 
-            /// 
-            /// *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a transient connection that lasts approximately 1 minute occurs during forced scaling. Process with caution.
-            /// 
-            /// *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
+            /// > *   This parameter is required if you want to create a serverless instance that run MySQL and PostgreSQL. If you set this parameter to true, a transient connection that lasts approximately 1 minute occurs during forced scaling. Process with caution.
+            /// > *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
             /// </summary>
             [NameInMap("SwitchForce")]
             [Validation(Required=false)]
@@ -490,19 +474,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if your RDS instance runs MySQL or PostgreSQL. Valid values:
+        /// Specifies whether to enable the automatic storage expansion feature for the instance. The feature is supported if the instance runs MySQL or PostgreSQL. Valid values:
         /// 
         /// *   **Enable**: enables the feature.
         /// *   **Disable** (default): disables the feature.
         /// 
-        /// > : After the instance is created, you can call the [ModifyDasInstanceConfig](~~610391~~) operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~).
+        /// >  After the instance is created, you can call the [ModifyDasInstanceConfig](~~610391~~) operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~).
         /// </summary>
         [NameInMap("StorageAutoScale")]
         [Validation(Required=false)]
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// The thresholdon which automatic storage expansion is triggered. Unit: percent. Valid values:
+        /// The threshold based on which automatic storage expansion is triggered. Unit: percent. Valid values:
         /// 
         /// *   **10**
         /// *   **20**
@@ -510,7 +494,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **40**
         /// *   **50**
         /// 
-        /// > : If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.
+        /// >  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.
         /// </summary>
         [NameInMap("StorageThreshold")]
         [Validation(Required=false)]
@@ -519,11 +503,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The maximum storage capacity that is allowed for automatic storage expansion. The storage capacity of the instance cannot exceed the maximum storage capacity. Unit: GB.
         /// 
-        /// > 
-        /// 
-        /// *   Valid values: an integer greater than or equal to 0.
-        /// 
-        /// *   If you set **StorageAutoScale** to **Enable**, you must specify this parameter.
+        /// > *   Valid values: an integer greater than or equal to 0.
+        /// > *   If you set **StorageAutoScale** to **Enable**, you must specify this parameter.
         /// </summary>
         [NameInMap("StorageUpperBound")]
         [Validation(Required=false)]
@@ -613,30 +594,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
         ///     *   xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
         /// 
-        ///     **
-        /// 
-        ///     **Note**: You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the minor engine version. For more information about minor engine versions, see [Release notes of minor AliSQL versions](~~96060~~).
+        /// > You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the minor engine version. For more information about minor engine versions, see [Release notes of minor AliSQL versions](~~96060~~).
         /// 
         /// *   If you create an instance that runs PostgreSQL, the value is in the following format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1400_20220830`. The following list describes the fields in the example value:
         /// 
         ///     *   1400: The major engine version is PostgreSQL 14.
         ///     *   20220830: the AliPG version. You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).
         /// 
-        ///     **
-        /// 
-        ///     **Note**: If you configure the **BabelfishConfig** parameter for your instance that runs PostgreSQL and set the babelfishEnabled field to true, the value of this parameter is in the following format: `rds_postgres_Major engine version00_AliPG version_babelfish`.
+        /// > If you configure the **BabelfishConfig** parameter for your instance that runs PostgreSQL and set the babelfishEnabled field to true, the value of this parameter is in the following format: `rds_postgres_Major engine version00_AliPG version_babelfish`.
         /// </summary>
         [NameInMap("TargetMinorVersion")]
         [Validation(Required=false)]
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// The subscription duration of the instance.
+        /// The subscription duration of the instance. Valid values:
         /// 
         /// *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1 to 5**.
         /// *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1 to 11**.
         /// 
-        /// > : If you set the PayType parameter to **Prepaid**, you must specify this parameter.
+        /// >  If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
@@ -688,14 +665,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// The ID of the zone in which the secondary instance resides. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to different values, the multi-zone deployment method is used.
+        /// The zone ID of the secondary instance.
+        /// 
+        /// *   If you set this parameter to **Auto**, the multi-zone deployment method is used and the zone of the secondary instance is automatically configured.
+        /// *   If you set this parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used.
+        /// *   If you set this parameter to a value that is different from the value of the **ZoneId** parameter, the multiple-zone deployment method is used.
         /// </summary>
         [NameInMap("ZoneIdSlave1")]
         [Validation(Required=false)]
         public string ZoneIdSlave1 { get; set; }
 
         /// <summary>
-        /// The ID of the zone in which the secondary instance or logger instance resides. If you set the ZoneIdSlave2 parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used. If you set the ZoneIdSlave2 parameter to a different value from the **ZoneId** parameter, the multi-zone deployment method is used.
+        /// The ID of the zone in which the secondary instance or logger instance resides.
+        /// 
+        /// *   If you set this parameter to **Auto**, the multi-zone deployment method is used and the zone of the secondary instance or logger instance is automatically configured.
+        /// *   If you set this parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used.
+        /// *   If you set this parameter to a value that is different from the value of the **ZoneId** parameter, the multiple-zone deployment method is used.
         /// </summary>
         [NameInMap("ZoneIdSlave2")]
         [Validation(Required=false)]

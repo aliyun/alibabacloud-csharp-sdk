@@ -21,8 +21,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The username of the account.
         /// 
-        /// > 
-        /// 
         /// *   The value must be unique.
         /// 
         /// *   The value must start with a lowercase letter, and end with a lowercase letter or a digit.
@@ -46,8 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The password of the account.
-        /// 
-        /// > 
+        ///  
         /// 
         /// *   The value must be 8 to 32 characters in length.
         /// 

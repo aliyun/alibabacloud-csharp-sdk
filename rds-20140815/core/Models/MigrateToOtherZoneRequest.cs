@@ -14,7 +14,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **Basic**: RDS Basic Edition
         /// *   **HighAvailability**: RDS High-availability Edition
-        /// *   **AlwaysOn**: RDS Cluster Edition
+        /// *   **AlwaysOn**: RDS Cluster Edition for SQL Server
+        /// *   **cluster**: RDS Cluster Edition for MySQL
         /// *   **Finance**: RDS Enterprise Edition
         /// </summary>
         [NameInMap("Category")]
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -47,13 +48,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The time when you want to migrate the instance. Valid values:
+        /// The effective time. Valid values:
         /// 
         /// *   **Immediate**: The instance is immediately migrated. This is the default value.
         /// *   **MaintainTime**: The instance is migrated during the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).
         /// *   **ScheduleTime**: The instance is migrated at the point in time that you specify.
         /// 
-        /// > If you set this parameter to **ScheduleTime**, you must also specify **SwitchTime**.
+        /// >  If you set this parameter to **ScheduleTime**, you must specify the **SwitchTime** parameter.
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
@@ -97,7 +98,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the instance belongs. Do not change the VPC of the instance when you migrate the instance across zones.
+        /// The ID of the virtual private cloud (VPC). Do not change the VPC of the instance when you migrate the instance across zones.
         /// 
         /// *   This parameter must be specified when the instance resides in a VPC.
         /// *   If the instance runs SQL Server, you can change the VPC of the instance.
@@ -107,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// The vSwitch ID.
         /// 
         /// *   This parameter must be specified when the instance resides in a VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query the vSwitch ID.
         /// *   If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).
@@ -117,7 +118,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the destination zone. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
+        /// The zone ID of the new instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -15,11 +15,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **true**
         /// *   **false**
         /// 
-        /// > 
-        /// 
-        /// *   This parameter is valid only when you change the billing method from pay-as-you-go to subscription.
-        /// 
-        /// *   All strings except **true** are considered **false**.
+        /// > - This parameter is valid only when you change the billing method from pay-as-you-go to subscription.
+        /// > - All strings except **true** are considered **false**.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]

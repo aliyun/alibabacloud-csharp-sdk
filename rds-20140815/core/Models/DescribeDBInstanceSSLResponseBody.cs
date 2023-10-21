@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientCACert { get; set; }
 
         /// <summary>
-        /// The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.
+        /// The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.
         /// </summary>
         [NameInMap("ClientCACertExpireTime")]
         [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequireUpdate { get; set; }
 
         /// <summary>
-        /// The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
+        /// The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disk.
         /// </summary>
         [NameInMap("RequireUpdateItem")]
         [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequireUpdateReason { get; set; }
 
         /// <summary>
-        /// The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is valid only when CAType is set to aliyun.
+        /// The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is valid only when the CAType parameter value is aliyun.
         /// </summary>
         [NameInMap("SSLCreateTime")]
         [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SSLExpireTime { get; set; }
 
         /// <summary>
-        /// The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
+        /// The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disk.
         /// </summary>
         [NameInMap("ServerCAUrl")]
         [Validation(Required=false)]

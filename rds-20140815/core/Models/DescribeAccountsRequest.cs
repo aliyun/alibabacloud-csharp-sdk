@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// 
-        /// > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+        /// >  This operation is not supported for instances that run SQL Server 2017 (cluster edition).
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid value: **30 to 200**. Default value: **30**.
+        /// The number of entries to return on each page. Valid value: **30 to 200**. Default value: **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

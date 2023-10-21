@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The details of the AD domain.
+        /// An array that consists of the details of the AD domain services.
         /// </summary>
         [NameInMap("HbaItem")]
         [Validation(Required=false)]
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The name of the database. If you set this parameter to all, the specified users are allowed to access all databases on the instance.
             /// 
-            /// If you specify multiple users, separate the usernames with commas (,).
+            /// If you specify multiple entries, separate the entries with commas (,).
             /// </summary>
             [NameInMap("Database")]
             [Validation(Required=false)]
             public string Database { get; set; }
 
             /// <summary>
-            /// The mask of the instance. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.
+            /// The mask of the IP address. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.
             /// </summary>
             [NameInMap("Mask")]
             [Validation(Required=false)]
             public string Mask { get; set; }
 
             /// <summary>
-            /// The authentication method. Valid values: authorization_code and refresh_token.
+            /// The authentication method. Valid values:
             /// 
             /// *   **trust**
             /// *   **reject**
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// Optional. The value of this parameter varies based on the value of the Method parameter. In this topic, LDAP is used as an example. You must configure this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).
+            /// The options of the authentication method. In this topic, LDAP is used as an example. You must configure this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).
             /// </summary>
             [NameInMap("Option")]
             [Validation(Required=false)]
@@ -93,18 +93,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// 
             /// Valid values:
             /// 
-            /// *   **host**: The AD domain verifies TCP/IP connections, including SSL connections and non-SSL connections.
+            /// *   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.
             /// *   **hostssl**: The record matches only TCP/IP connections that are established over SSL.
-            /// *   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL.
+            /// *   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL connections.
             /// 
-            /// > You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see [Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance](~~229518~~).
+            /// >  You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance.[](~~229518~~)
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The user who is allowed to access the specified databases. You must specify the user that is used to log on to the RDS instance. If you specify multiple users, separate the usernames with commas (,).
+            /// The user who is allowed to access the specified databases. You must specify the user that is used to log on to the RDS instance. If you specify multiple entries, separate the entries with commas (,).
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]

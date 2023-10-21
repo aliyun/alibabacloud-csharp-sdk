@@ -182,6 +182,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         [Validation(Required=false)]
                         public string ClassCode { get; set; }
 
+                        [NameInMap("ClassType")]
+                        [Validation(Required=false)]
+                        public string ClassType { get; set; }
+
+                        [NameInMap("Cpu")]
+                        [Validation(Required=false)]
+                        public string Cpu { get; set; }
+
+                        [NameInMap("Memory")]
+                        [Validation(Required=false)]
+                        public string Memory { get; set; }
+
                         /// <summary>
                         /// The node ID.
                         /// </summary>
@@ -212,6 +224,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         [NameInMap("NodeZoneId")]
                         [Validation(Required=false)]
                         public string NodeZoneId { get; set; }
+
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
 
                     }
 

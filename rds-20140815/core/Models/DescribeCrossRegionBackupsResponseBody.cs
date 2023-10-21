@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionBackupsResponseBody : TeaModel {
         /// <summary>
-        /// The end of the time range that is queried.
+        /// The end of the time range to query.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// An array that consists of details of the cross-region data backup files.
+        /// The cross-region data backup files.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The RDS edition of the instance. Valid values:
                 /// 
-                /// *   **Basic**: Basic Edition.
-                /// *   **HighAvailability**: High-availability Edition.
+                /// *   **Basic**: RDS Basic Edition
+                /// *   **HighAvailability**: RDS High-availability Edition
                 /// *   **Finance**: Enterprise Edition. This edition is supported only by the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("Category")]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? CrossBackupId { get; set; }
 
                 /// <summary>
-                /// The ID of the destination region where the cross-region data backup file of the instance is stored.
+                /// The ID of the region in which the cross-region backup files of the instance are stored.
                 /// </summary>
                 [NameInMap("CrossBackupRegion")]
                 [Validation(Required=false)]
@@ -146,21 +146,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// 
                 /// *   **local_ssd**: local SSD. This is the recommended storage type.
                 /// *   **cloud_ssd**: standard SSD.
-                /// *   **cloud_essd**: enhanced SSD (ESSD).
+                /// *   **cloud_essd**: enhanced SSD (ESSD)
                 /// </summary>
                 [NameInMap("DBInstanceStorageType")]
                 [Validation(Required=false)]
                 public string DBInstanceStorageType { get; set; }
 
                 /// <summary>
-                /// The engine of the database.
+                /// The database engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The version of the database engine.
+                /// The database engine version of the instance.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the returned page. Valid values: any non-zero positive integer.
+        /// The page number. Pages start from page 1.
         /// 
         /// Default value: **1**.
         /// </summary>
@@ -214,21 +214,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range that is queried.
+        /// The beginning of the time range to query.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The total number of entries that are returned.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CalculateDBInstanceWeightResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the system-assigned read weights.
+        /// An array that consists of information about the system-assigned read weight.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight> DBInstanceWeight { get; set; }
             public class CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight : TeaModel {
                 /// <summary>
-                /// The ID of instance.
+                /// The instance ID
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The role of the instance. Valid values:
+                /// The type of the instance. Valid values:
                 /// 
                 /// *   **Master**: primary instance
                 /// *   **Readonly**: read-only instance
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// The threshold for the latency of data replication from the primary instance to the read-only instances. The read-only instances start to synchronize data from the primary instance after the time specified by the **ReadonlyInstanceSQLDelayedTime** parameter elapses. Unit: seconds.
+                /// The latency at which the read-only instances replicate data. The read-only instances replicate data from the primary instance at the latency that is specified by the **ReadonlyInstanceSQLDelayedTime** parameter. Unit: seconds.
                 /// </summary>
                 [NameInMap("ReadonlyInstanceSQLDelayedTime")]
                 [Validation(Required=false)]
                 public string ReadonlyInstanceSQLDelayedTime { get; set; }
 
                 /// <summary>
-                /// The read weight that ApsaraDB RDS calculates in real time for the instance.
+                /// The read weight that the system calculates in real time for the instance.
                 /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePGHbaConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// An array that consists of the default configuration items in the pg_hba.conf file.
+        /// The default configuration items of the pg_hba.conf file.
         /// </summary>
         [NameInMap("DefaultHbaItems")]
         [Validation(Required=false)]
@@ -95,13 +95,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HbaModifyTime { get; set; }
 
         /// <summary>
-        /// The status of the previous modification to the pg_hba.conf file.
+        /// The status of the previous modification to the pg_hba.conf file. Valid values:
         /// 
-        /// Valid values:
-        /// 
-        /// *   **success**: The modification is successful.
-        /// *   **setting**: The modification is being applied.
-        /// *   **failed**: The modification fails.
+        /// *   **success**
+        /// *   **setting**
+        /// *   **failed**
         /// </summary>
         [NameInMap("LastModifyStatus")]
         [Validation(Required=false)]
@@ -115,14 +113,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ModifyStatusReason { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the current configuration items in the pg_hba.conf file.
+        /// The current configuration items of the pg_hba.conf file.
         /// </summary>
         [NameInMap("RunningHbaItems")]
         [Validation(Required=false)]
@@ -140,14 +138,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Address { get; set; }
 
                 /// <summary>
-                /// The name of the database that the specified users are allowed to access.
+                /// The name of the database.
                 /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
                 /// <summary>
-                /// The mask of the instance.
+                /// The mask of the IP address.
                 /// </summary>
                 [NameInMap("Mask")]
                 [Validation(Required=false)]
@@ -168,25 +166,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Option { get; set; }
 
                 /// <summary>
-                /// The priority of the instance.
+                /// The priority.
                 /// </summary>
                 [NameInMap("PriorityId")]
                 [Validation(Required=false)]
                 public int? PriorityId { get; set; }
 
                 /// <summary>
-                /// The type of the connection. 
+                /// The connection type. Valor:
                 /// 
-                /// - **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.
-                /// - **hostssl**: The record matches only TCP/IP connections that are established over SSL.
-                /// - **hostnossl**: The record matches only TCP/IP connections that are not established over SSL.
+                /// *   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.
+                /// *   **hostssl**: The record matches only TCP/IP connections that are established over SSL.
+                /// *   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL connections.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The username of the account that is used to connect to the instance.
+                /// The username of the account.
                 /// </summary>
                 [NameInMap("User")]
                 [Validation(Required=false)]

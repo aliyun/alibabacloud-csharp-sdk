@@ -41,11 +41,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **true**
         /// *   **false**
         /// 
-        /// > 
-        /// 
-        /// *   If the system does not perform a dry run, this parameter is not returned.
-        /// 
-        /// *   If the request failed the dry run, an error message is returned.
+        /// > *   If the system does not perform a dry run, this parameter is not returned.
+        /// > *   If the request failed the dry run, an error message is returned.
         /// </summary>
         [NameInMap("DryRunResult")]
         [Validation(Required=false)]

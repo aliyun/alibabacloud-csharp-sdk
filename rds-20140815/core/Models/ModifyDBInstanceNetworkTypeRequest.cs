@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The internal IP address of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. ApsaraDB RDS automatically assigns an internal IP address to the instance based on the values of the **VPCId** and **VSwitchId** parameters.
+        /// The internal IP address of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -50,16 +50,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The number of days for which you want to retain the read/write splitting endpoint of the classic network type. Valid values: **1 to 120**. Default value: **7**.
         /// 
-        /// > This parameter takes effect only when a read/write splitting endpoint of the classic network type exists and the **RetainClassic** parameter is set to **True**.
+        /// >  This parameter takes effect only when a read/write splitting endpoint of the classic network type exists and the **RetainClassic** parameter is set to **True**.
         /// </summary>
         [NameInMap("ReadWriteSplittingClassicExpiredDays")]
         [Validation(Required=false)]
         public int? ReadWriteSplittingClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// The internal IP address that corresponds to the read/write splitting endpoint of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.
+        /// The internal IP address that corresponds to the read/write splitting endpoint of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.
         /// 
-        /// > This value is valid when a read/write splitting endpoint of the classic network type exists.
+        /// >  This parameter is valid when a read/write splitting endpoint of the classic network type exists.
         /// </summary>
         [NameInMap("ReadWriteSplittingPrivateIpAddress")]
         [Validation(Required=false)]
@@ -77,16 +77,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// Specifies whether to retain the classic network endpoint. Valid values:
         /// 
         /// *   **True**: retains the classic network endpoint.
-        /// *   **False**: does not retain the classic network endpoint.
-        /// 
-        /// Default value: **False**.
+        /// *   **False** (default): does not retain the classic network endpoint.
         /// </summary>
         [NameInMap("RetainClassic")]
         [Validation(Required=false)]
         public string RetainClassic { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// The VPC ID.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]

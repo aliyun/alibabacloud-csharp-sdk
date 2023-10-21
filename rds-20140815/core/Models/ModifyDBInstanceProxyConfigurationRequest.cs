@@ -32,34 +32,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ProxyConfigurationKey { get; set; }
 
         /// <summary>
-        /// The value of the **configuration item** for the database proxy. Valid values:
+        /// The features and status of the database proxy:
         /// 
-        /// *   If you set the ProxyConfigurationKey parameter to **TransparentSwitch**, you can set this parameter to one of the following values:
+        /// *   **TransparentSwitch**: transparent switchover. Valid values:
         /// 
-        ///     *   **Enable**. This is the default value.
-        ///     *   **Disable**. Example: {"status":"Enable"}.
+        ///     *   **Enable**: The feature is enabled. This is the default value.
+        ///     *   **Disable**: The feature is disabled.
         /// 
-        /// *   If you set the ProxyConfigurationKey parameter to **PersistentConnections**, you can set this parameter to one of the following values:
+        /// *   **PersistentConnections**: short-lived connection optimization. Valid values:
         /// 
-        ///     *   **Enable**.
-        ///     *   **Disable**. This is the default value. Example: {"status":"Disable"}.
+        ///     *   **Enable**: The feature is enabled.
+        ///     *   **Disable**: The feature is disabled. This is the default value.
         /// 
-        /// *   If you set the ProxyConfigurationKey parameter to **AttacksProtection**, you can set this parameter to one of the following values:
+        /// *   **AttacksProtection**: brute-force attack protection. Valid values:
         /// 
-        ///     *   **Enable**.
-        ///     *   **Disable**. This is the default value. Example: {"status":"Disable"}.
+        ///     *   **Enable**: The feature is enabled.
+        ///     *   **Disable**: The feature is disabled. This is the default value.
         /// 
-        /// In this case, the return value is a JSON string. Example:
-        /// 
-        ///     {"status":"Disable", "check_interval_seconds": 60,
-        ///                     "max_failed_login_attempts": 60, "blocking_seconds": 600}
-        /// 
-        /// Description and valid values:
-        /// 
-        /// *   Each client allows {max_failed_login_attempts} logon attempts upon failure within {check_interval_seconds} seconds. If the number of logon attempts exceeds the limit, the client is disabled for {blocking_seconds} seconds before the client can try again.
-        /// *   The following list describes the valid values of each field in the preceding example.
-        /// 
-        /// check_interval_seconds: **30 to 600**. Unit: seconds. max_failed_login_attempts: **10 to 5000**. Unit: number of times. blocking_seconds: **30 to 3600**. Unit: seconds.
+        /// Format: {"Feature 1":"Status 1","Feature 2":"Status 2"...}
         /// </summary>
         [NameInMap("ProxyConfigurationValue")]
         [Validation(Required=false)]

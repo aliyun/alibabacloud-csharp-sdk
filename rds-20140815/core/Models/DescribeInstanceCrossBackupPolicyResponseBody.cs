@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The status of the cross-region backup feature on the instance. Valid values:
         /// 
-        /// *   **Disable**: The feature is disabled.
-        /// *   **Enable**: The feature is enabled.
+        /// *   **Disable**
+        /// *   **Enable**
         /// </summary>
         [NameInMap("BackupEnabled")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupEnabledTime { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the cross-region backup files of the instance is stored.
+        /// The ID of the destination region where the cross-region backup files of the instance are stored.
         /// </summary>
         [NameInMap("CrossBackupRegion")]
         [Validation(Required=false)]
@@ -41,16 +41,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CrossBackupType { get; set; }
 
         /// <summary>
-        /// The name of the instance. It must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
         /// 
-        /// > The name cannot start with http:// or https://.
+        /// >  The value cannot start with http:// or https://.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The ID of the instance
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
-        /// The type of the database engine.
+        /// The database engine of the instance.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance.
+        /// The database engine version.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Unlock**: The instance is not locked.
         /// *   **ManualLock**: The instance is manually locked.
         /// *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-        /// *   **LockByRestoration**: The instance is automatically locked due to instance restoration.
+        /// *   **LockByRestoration**: The instance is automatically locked before a rollback.
         /// *   **LockByDiskQuota**: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.
         /// </summary>
         [NameInMap("LockMode")]
@@ -93,15 +93,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The status of the cross-region log backup feature on the instance. Valid values:
         /// 
-        /// *   **Disable**: The feature is disabled.
-        /// *   **Enable**: The feature is enabled.
+        /// *   **Disable**
+        /// *   **Enable**
         /// </summary>
         [NameInMap("LogBackupEnabled")]
         [Validation(Required=false)]
         public string LogBackupEnabled { get; set; }
 
         /// <summary>
-        /// The time when cross-region log backup was enabled on the instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("LogBackupEnabledTime")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

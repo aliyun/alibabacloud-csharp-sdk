@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string FreshWhiteListReadins { get; set; }
 
         /// <summary>
-        /// The method that is used to modify the IP address whitelist. Valid values:
+        /// The method that is used to modify the whitelist. Valid values:
         /// 
         /// *   **Cover**: Use the IP addresses and CIDR blocks that are specified in the **SecurityIps** parameter to overwrite the existing IP addresses and CIDR blocks in the IP address whitelist.
         /// *   **Append**: Add the IP addresses and CIDR blocks that are specified in the **SecurityIps** parameter to the IP address whitelist.

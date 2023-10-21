@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The status of the backup task. Valid values:
         /// 
-        /// *   **NoStart**: The backup task is not started.
-        /// *   **Progressing**: The backup task is in progress.
+        /// *   **NoStart**
+        /// *   **Progressing**
         /// 
         /// By default, this operation returns backup tasks in both states.
         /// </summary>
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
