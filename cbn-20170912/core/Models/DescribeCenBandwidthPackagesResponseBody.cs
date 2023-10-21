@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenBandwidthPackagesResponseBody : TeaModel {
         /// <summary>
-        /// The expiration time of the temporary upgrade.
+        /// The details about the bandwidth plan.
         /// </summary>
         [NameInMap("CenBandwidthPackages")]
         [Validation(Required=false)]
@@ -21,33 +21,40 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage> CenBandwidthPackage { get; set; }
             public class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage : TeaModel {
                 /// <summary>
-                /// The ID of the bandwidth plan.
+                /// The maximum bandwidth of the bandwidth plan.
                 /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public long? Bandwidth { get; set; }
 
                 /// <summary>
-                /// The maximum bandwidth of the bandwidth plan.
+                /// The billing method of the bandwidth plan.
                 /// </summary>
                 [NameInMap("BandwidthPackageChargeType")]
                 [Validation(Required=false)]
                 public string BandwidthPackageChargeType { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The status of the bandwidth plan. Valid values:
+                /// 
+                /// *   **Normal**: running as expected.
+                /// *   **FinancialLocked**: locked due to overdue payments.
+                /// *   **SecurityLocked**: locked due to security reasons
                 /// </summary>
                 [NameInMap("BusinessStatus")]
                 [Validation(Required=false)]
                 public string BusinessStatus { get; set; }
 
                 /// <summary>
-                /// The ID of the connected area.
+                /// The ID of the bandwidth plan.
                 /// </summary>
                 [NameInMap("CenBandwidthPackageId")]
                 [Validation(Required=false)]
                 public string CenBandwidthPackageId { get; set; }
 
+                /// <summary>
+                /// A list of CEN instances that are associated with the bandwidth plan.
+                /// </summary>
                 [NameInMap("CenIds")]
                 [Validation(Required=false)]
                 public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds CenIds { get; set; }
@@ -59,88 +66,90 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The connected regions.
+                /// The time when the bandwidth plan was created. The time is displayed in the ISO8601 standard in the YYYY-MM-DDThh:mmZ format.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The timeout period of the bandwidth plan.
+                /// The description of the bandwidth plan.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The new billing method.
+                /// The time when the bandwidth plan expires.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The name of the bandwidth plan.
+                /// The ID of the area that you want to query. Valid values:
+                /// 
+                /// *   **china**: Chinese mainland.
+                /// *   **asia-pacific**: Asia Pacific
+                /// *   **europe**: Europe
+                /// *   **australia**: Australia
+                /// *   **north-america**: North America
                 /// </summary>
                 [NameInMap("GeographicRegionAId")]
                 [Validation(Required=false)]
                 public string GeographicRegionAId { get; set; }
 
                 /// <summary>
-                /// The number of entries returned per page.
+                /// The ID of the other area connected by the bandwidth plan. Valid values:
+                /// 
+                /// *   **china**: Chinese mainland.
+                /// *   **asia-pacific**: Asia Pacific
+                /// *   **europe**: Europe
+                /// *   **australia**: Australia
+                /// *   **north-america**: North America
                 /// </summary>
                 [NameInMap("GeographicRegionBId")]
                 [Validation(Required=false)]
                 public string GeographicRegionBId { get; set; }
 
                 /// <summary>
-                /// The page number of the returned page.
+                /// The ID of the connected area.
                 /// </summary>
                 [NameInMap("GeographicSpanId")]
                 [Validation(Required=false)]
                 public string GeographicSpanId { get; set; }
 
                 /// <summary>
-                /// Queries details about Cloud Enterprise Network (CEN) bandwidth plans within the current Alibaba Cloud account.
+                /// Indicates whether renewal data is included.
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// 
+                /// >  This parameter returns **true** only when the **IncludeReservationData** parameter is set to **true** and a pending order exists.
                 /// </summary>
                 [NameInMap("HasReservationData")]
                 [Validation(Required=false)]
                 public string HasReservationData { get; set; }
 
                 /// <summary>
-                /// The filter condition.
+                /// Indicates whether the bandwidth plan supports cross-border communication.
                 /// 
-                /// You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:
-                /// 
-                /// *   **CenId**: CEN instance ID
-                /// 
-                /// *   **Status**: bandwidth plan status. Valid values:
-                /// 
-                ///     *   **Idle**: not associated with a CEN instance.
-                ///     *   **InUse**: associated with a CEN instance.
-                /// 
-                /// *   **CenBandwidthPackageId**: bandwidth plan ID
-                /// 
-                /// *   **Name**: bandwidth plan name
-                /// 
-                ///     You can specify one or more filter conditions. The maximum value of **N** is **5**.
+                /// *   **false**
+                /// *   **true**
                 /// </summary>
                 [NameInMap("IsCrossBorder")]
                 [Validation(Required=false)]
                 public bool? IsCrossBorder { get; set; }
 
                 /// <summary>
-                /// The renewal method.
-                /// 
-                /// *   **TEMP_UPGRADE**: temporary upgrade
-                /// *   **UPGRADE**: upgrade
+                /// The name of the bandwidth plan.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// DescribeCenBandwidthPackages
+                /// The details about the connected regions.
                 /// </summary>
                 [NameInMap("OrginInterRegionBandwidthLimits")]
                 [Validation(Required=false)]
@@ -151,20 +160,29 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit> OrginInterRegionBandwidthLimit { get; set; }
                     public class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit : TeaModel {
                         /// <summary>
-                        /// WB01235021
+                        /// The maximum bandwidth value for the inter-region connection.
                         /// </summary>
                         [NameInMap("BandwidthLimit")]
                         [Validation(Required=false)]
                         public string BandwidthLimit { get; set; }
 
+                        /// <summary>
+                        /// The connected regions.
+                        /// </summary>
                         [NameInMap("GeographicSpanId")]
                         [Validation(Required=false)]
                         public string GeographicSpanId { get; set; }
 
+                        /// <summary>
+                        /// The ID of the local region.
+                        /// </summary>
                         [NameInMap("LocalRegionId")]
                         [Validation(Required=false)]
                         public string LocalRegionId { get; set; }
 
+                        /// <summary>
+                        /// The ID of the peer region.
+                        /// </summary>
                         [NameInMap("OppositeRegionId")]
                         [Validation(Required=false)]
                         public string OppositeRegionId { get; set; }
@@ -174,50 +192,56 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The maximum bandwidth value for the inter-region connection.
+                /// The expiration time of the temporary upgrade.
                 /// </summary>
                 [NameInMap("ReservationActiveTime")]
                 [Validation(Required=false)]
                 public string ReservationActiveTime { get; set; }
 
                 /// <summary>
-                /// The logical operator between the filter conditions. Valid values:
-                /// 
-                /// *   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.
-                /// *   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.
+                /// The bandwidth value to which the bandwidth plan is restored when the temporary upgrade ends.
                 /// </summary>
                 [NameInMap("ReservationBandwidth")]
                 [Validation(Required=false)]
                 public string ReservationBandwidth { get; set; }
 
                 /// <summary>
-                /// Indicates whether the bandwidth plan is associated with a CEN instance.
-                /// 
-                /// *   **Idle**: no
-                /// *   **InUse**: yes
+                /// The new billing method.
                 /// </summary>
                 [NameInMap("ReservationInternetChargeType")]
                 [Validation(Required=false)]
                 public string ReservationInternetChargeType { get; set; }
 
                 /// <summary>
-                /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+                /// The renewal method.
+                /// 
+                /// *   **TEMP_UPGRADE**: temporary upgrade
+                /// *   **UPGRADE**: upgrade
                 /// </summary>
                 [NameInMap("ReservationOrderType")]
                 [Validation(Required=false)]
                 public string ReservationOrderType { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group to which the ACL belongs.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The number of the page to return. Default value: **1**.
+                /// Indicates whether the bandwidth plan is associated with a CEN instance.
+                /// 
+                /// *   **Idle**
+                /// *   **InUse**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The tags of the bandwidth plan.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageTags Tags { get; set; }
@@ -226,10 +250,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     [Validation(Required=false)]
                     public List<DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageTagsTag> Tag { get; set; }
                     public class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageTagsTag : TeaModel {
+                        /// <summary>
+                        /// The tag key.
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// The tag value.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -243,34 +273,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// A list of CEN instances that are associated with the bandwidth plan.
+        /// The number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the source region.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the area that you want to query. Valid values:
-        /// 
-        /// *   **china**: Chinese mainland.
-        /// *   **asia-pacific**: Asia Pacific
-        /// *   **europe**: Europe
-        /// *   **australia**: Australia
-        /// *   **north-america**: North America
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The bandwidth value to which the bandwidth plan is rolled back when the temporary upgrade ends.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

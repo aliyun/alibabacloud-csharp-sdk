@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<ListTransitRouterRouteTablePropagationsResponseBodyTransitRouterPropagations> TransitRouterPropagations { get; set; }
         public class ListTransitRouterRouteTablePropagationsResponseBodyTransitRouterPropagations : TeaModel {
             /// <summary>
-            /// The ID of the next hop.
+            /// The ID of the network instance.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of next hop. Valid values:
+            /// The type of the network instance. Valid values:
             /// 
             /// *   **VPC**: VPC
             /// *   **VBR**: VBR
@@ -69,7 +69,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// *   **Enabling**: being enabled
             /// *   **Disabling**: being disabled
             /// *   **Active**: available
-            /// *   **Deleted**: deleted
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

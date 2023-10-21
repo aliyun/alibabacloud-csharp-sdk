@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string NextHop { get; set; }
 
+        /// <summary>
+        /// The ID of the network instance associated with the next hop connection.
+        /// </summary>
         [NameInMap("NextHopInstanceId")]
         [Validation(Required=false)]
         public string NextHopInstanceId { get; set; }
@@ -87,6 +90,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The status of the prefix list. Valid values:
+        /// 
+        /// *   **Active**
+        /// *   **Updating**
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

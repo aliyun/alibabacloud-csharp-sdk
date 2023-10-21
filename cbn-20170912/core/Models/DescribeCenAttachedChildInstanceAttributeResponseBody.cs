@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Ipv6CidrBlock { get; set; }
 
             /// <summary>
-            /// The information about the IPv6 CIDR blocks of the VPC.
+            /// The IPv6 CIDR blocks of the VPC.
             /// </summary>
             [NameInMap("Ipv6CidrBlocks")]
             [Validation(Required=false)]
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public string Ipv6CidrBlock { get; set; }
 
                     /// <summary>
-                    /// The type of the IPv6 CIDR block. Valid values:
+                    /// The type of the IPv6 CIDR block of the VPC. Valid values:
                     /// 
-                    /// * **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6
-                    /// * **ChinaMobile:** China Mobile (single line)
-                    /// * **ChinaUnicom:** China Unicom (single line)
-                    /// * **ChinaTelecom:** China Telecom (single line)
+                    /// *   BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6
+                    /// *   ChinaMobile: China Mobile (single line)
+                    /// *   ChinaUnicom: China Unicom (single line)
+                    /// *   ChinaTelecom: China Telecom (single line)
                     /// 
-                    /// > If your Alibaba Cloud account has the required permissions to activate single-ISP bandwidth, you can set Ipv6Isp to ChinaTelecom, ChinaUnicom, or ChinaMobile.
+                    /// >  If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.
                     /// </summary>
                     [NameInMap("Ipv6Isp")]
                     [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// The secondary IPv4 CIDR block of the VPC.
+            /// The information about the VPC secondary CIDR block.
             /// </summary>
             [NameInMap("SecondaryCidrBlocks")]
             [Validation(Required=false)]

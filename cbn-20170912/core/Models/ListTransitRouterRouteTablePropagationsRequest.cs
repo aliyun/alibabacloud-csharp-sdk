@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// The ID of the next hop.
+        /// The ID of the network instance.
         /// </summary>
         [NameInMap("TransitRouterAttachmentResourceId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentResourceId { get; set; }
 
         /// <summary>
-        /// The type of next hop. Valid values:
+        /// The type of the network instance. Valid values:
         /// 
         /// *   **VPC**: virtual private cloud (VPC)
         /// *   **VBR**: virtual border router (VBR)

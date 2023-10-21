@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeChildInstanceRegionsRequest : TeaModel {
+        /// <summary>
+        /// The language of the response. Valid values: zh-CN (Chinese, which is the default language), en-US (English), and ja (Japanese).
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }

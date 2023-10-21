@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:
         /// 
         /// *   **false** (default): sends the request. If the request passes the precheck, the route entry is added.
-        /// *   **true**: sends a precheck request but does not add the route. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.
+        /// *   **true**: sends a precheck request but does not add the route. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The description of the route.
         /// 
-        /// The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.
+        /// The description must be 0 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.
         /// </summary>
         [NameInMap("TransitRouterRouteEntryDescription")]
         [Validation(Required=false)]

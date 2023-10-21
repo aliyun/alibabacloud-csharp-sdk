@@ -9,20 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateTransitRouterVbrAttachmentAttributeRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// </summary>
         [NameInMap("AutoPublishRouteEnabled")]
         [Validation(Required=false)]
         public bool? AutoPublishRouteEnabled { get; set; }
 
         /// <summary>
-        /// Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+        /// 
+        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Specifies whether to perform only a dry run, without performing the actual request. Default values:
+        /// 
+        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -43,14 +56,27 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The new description of the VBR connection.
+        /// 
+        /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+        /// </summary>
         [NameInMap("TransitRouterAttachmentDescription")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentDescription { get; set; }
 
+        /// <summary>
+        /// The ID of the VBR connection.
+        /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
 
+        /// <summary>
+        /// The new name of the VBR connection.
+        /// 
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// </summary>
         [NameInMap("TransitRouterAttachmentName")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentName { get; set; }
