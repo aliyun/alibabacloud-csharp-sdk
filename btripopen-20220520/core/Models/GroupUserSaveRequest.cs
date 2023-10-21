@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<string> DepartIds { get; set; }
 
+            [NameInMap("email")]
+            [Validation(Required=false)]
+            public string Email { get; set; }
+
             [NameInMap("leave_status")]
             [Validation(Required=false)]
             public int? LeaveStatus { get; set; }

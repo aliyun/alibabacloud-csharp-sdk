@@ -244,6 +244,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }
 
+                [NameInMap("item_type")]
+                [Validation(Required=false)]
+                public string ItemType { get; set; }
+
                 [NameInMap("itinerary_num")]
                 [Validation(Required=false)]
                 public string ItineraryNum { get; set; }
@@ -406,6 +410,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("voucher_type")]
                 [Validation(Required=false)]
                 public int? VoucherType { get; set; }
+
+                [NameInMap("voyage_name")]
+                [Validation(Required=false)]
+                public string VoyageName { get; set; }
 
             }
 
