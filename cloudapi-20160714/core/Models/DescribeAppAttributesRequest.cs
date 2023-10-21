@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public bool? EnableTagAuth { get; set; }
 
+        /// <summary>
+        /// Extended Fields.
+        /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The key of the tag.
+            /// The value of the tag.
             /// 
             /// N can be an integer from 1 to 20.``
             /// </summary>

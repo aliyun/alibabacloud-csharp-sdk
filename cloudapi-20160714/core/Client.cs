@@ -19708,6 +19708,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthValidTime))
+            {
+                query["AuthValidTime"] = request.AuthValidTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -19752,6 +19756,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthValidTime))
+            {
+                query["AuthValidTime"] = request.AuthValidTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {

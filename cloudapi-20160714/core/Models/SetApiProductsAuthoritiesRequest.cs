@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public long? AppId { get; set; }
 
+        [NameInMap("AuthValidTime")]
+        [Validation(Required=false)]
+        public string AuthValidTime { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
