@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public string Labels { get; set; }
+
         [NameInMap("Option")]
         [Validation(Required=false)]
         public string Option { get; set; }
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ProductTypes { get; set; }
 
+        [NameInMap("QuotaIds")]
+        [Validation(Required=false)]
+        public string QuotaIds { get; set; }
+
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
@@ -40,6 +48,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("Verbose")]
         [Validation(Required=false)]
         public bool? Verbose { get; set; }
+
+        [NameInMap("VerboseFields")]
+        [Validation(Required=false)]
+        public string VerboseFields { get; set; }
 
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

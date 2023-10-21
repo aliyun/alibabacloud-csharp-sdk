@@ -65,6 +65,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
+            [NameInMap("Labels")]
+            [Validation(Required=false)]
+            public List<ListResourcesResponseBodyResourcesLabels> Labels { get; set; }
+            public class ListResourcesResponseBodyResourcesLabels : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public string Labels { get; set; }
+
         [NameInMap("Option")]
         [Validation(Required=false)]
         public string Option { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
+
+        [NameInMap("ResourceIds")]
+        [Validation(Required=false)]
+        public string ResourceIds { get; set; }
 
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
