@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public long? ReadyTime { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// 地域ID。
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -124,6 +124,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [NameInMap("StateChangeReason")]
         [Validation(Required=false)]
         public ClusterStateChangeReason StateChangeReason { get; set; }
+
+        /// <summary>
+        /// 集群状态，值同clusterState
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
         /// <summary>
         /// 预付费配置。

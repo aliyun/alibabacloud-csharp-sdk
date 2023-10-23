@@ -115,6 +115,21 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public ClusterStateChangeReason StateChangeReason { get; set; }
 
         /// <summary>
+        /// 集群状态。取值范围：
+        /// - STARTING：启动中。
+        /// - START_FAILED：启动失败。
+        /// - BOOTSTRAPPING：引导操作初始化。
+        /// - RUNNING：运行中。
+        /// - TERMINATING：终止中。
+        /// - TERMINATED：已终止。
+        /// - TERMINATED_WITH_ERRORS：发生异常导致终止。
+        /// - TERMINATE_FAILED：终止失败。
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        /// <summary>
         /// 标签列表。
         /// </summary>
         [NameInMap("Tags")]

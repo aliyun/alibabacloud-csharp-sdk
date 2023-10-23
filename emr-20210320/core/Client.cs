@@ -467,13 +467,6 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await DecreaseNodesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * 删除集群。
-          *
-          * @param request DeleteClusterRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteClusterResponse
-         */
         public DeleteClusterResponse DeleteClusterWithOptions(DeleteClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -505,13 +498,6 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<DeleteClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * 删除集群。
-          *
-          * @param request DeleteClusterRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteClusterResponse
-         */
         public async Task<DeleteClusterResponse> DeleteClusterWithOptionsAsync(DeleteClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -543,24 +529,12 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<DeleteClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * 删除集群。
-          *
-          * @param request DeleteClusterRequest
-          * @return DeleteClusterResponse
-         */
         public DeleteClusterResponse DeleteCluster(DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteClusterWithOptions(request, runtime);
         }
 
-        /**
-          * 删除集群。
-          *
-          * @param request DeleteClusterRequest
-          * @return DeleteClusterResponse
-         */
         public async Task<DeleteClusterResponse> DeleteClusterAsync(DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6099,6 +6073,13 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await RemoveAutoScalingPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * 执行应用操作。
+          *
+          * @param request RunApplicationActionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RunApplicationActionResponse
+         */
         public RunApplicationActionResponse RunApplicationActionWithOptions(RunApplicationActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6158,6 +6139,13 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<RunApplicationActionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * 执行应用操作。
+          *
+          * @param request RunApplicationActionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RunApplicationActionResponse
+         */
         public async Task<RunApplicationActionResponse> RunApplicationActionWithOptionsAsync(RunApplicationActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6217,25 +6205,30 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<RunApplicationActionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * 执行应用操作。
+          *
+          * @param request RunApplicationActionRequest
+          * @return RunApplicationActionResponse
+         */
         public RunApplicationActionResponse RunApplicationAction(RunApplicationActionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RunApplicationActionWithOptions(request, runtime);
         }
 
+        /**
+          * 执行应用操作。
+          *
+          * @param request RunApplicationActionRequest
+          * @return RunApplicationActionResponse
+         */
         public async Task<RunApplicationActionResponse> RunApplicationActionAsync(RunApplicationActionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RunApplicationActionWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * 给资源打标签。
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
-         */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6275,13 +6268,6 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * 给资源打标签。
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
-         */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6321,24 +6307,12 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * 给资源打标签。
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
-         */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-          * 给资源打标签。
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
-         */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

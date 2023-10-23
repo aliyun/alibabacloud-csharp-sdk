@@ -50,16 +50,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// 运行失败策略。取值范围：
-        /// - FAILED_BLOCK：失败后阻塞。
-        /// - FAILED_CONTINUE：失败后继续。
+        /// 运行策略。
         /// </summary>
         [NameInMap("ExecuteStrategy")]
         [Validation(Required=false)]
         public string ExecuteStrategy { get; set; }
 
         /// <summary>
-        /// 滚动执行间隔时间。
+        /// 间隔时间。
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]

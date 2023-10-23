@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// 地域ID。
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
