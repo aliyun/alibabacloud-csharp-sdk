@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Linkvisual20230630</AssemblyName>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud LinkVisual (20230630) SDK Library for .NET</Description>
@@ -42,6 +42,7 @@
     </PackageReference>
     <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.17"/>
     <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.6"/>
+    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.1.1"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="Tea" Version="1.1.2"/>
   </ItemGroup>
