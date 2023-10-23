@@ -343,6 +343,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -390,6 +394,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -449,9 +457,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
+            {
+                query["Line"] = request.Line;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
@@ -480,6 +496,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
             {
                 query["Value"] = request.Value;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Weight))
+            {
+                query["Weight"] = request.Weight;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
@@ -508,9 +528,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
+            {
+                query["Line"] = request.Line;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
@@ -539,6 +567,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
             {
                 query["Value"] = request.Value;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Weight))
+            {
+                query["Weight"] = request.Weight;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
@@ -661,6 +693,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -700,6 +736,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -1055,6 +1095,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -1090,6 +1134,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -1137,6 +1185,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -1172,6 +1224,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -1361,6 +1417,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                query["Scene"] = request.Scene;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserClientIp))
             {
                 query["UserClientIp"] = request.UserClientIp;
@@ -1403,6 +1463,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                query["Scene"] = request.Scene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserClientIp))
             {
@@ -2853,6 +2917,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -2888,6 +2956,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -2935,6 +3007,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -2974,6 +3050,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -3025,6 +3105,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -3064,6 +3148,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -3311,6 +3399,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -3346,6 +3438,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -3663,9 +3759,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
+            {
+                query["Line"] = request.Line;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
@@ -3694,6 +3798,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
             {
                 query["Value"] = request.Value;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Weight))
+            {
+                query["Weight"] = request.Weight;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3718,9 +3826,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
+            {
+                query["Line"] = request.Line;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
@@ -3749,6 +3865,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
             {
                 query["Value"] = request.Value;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Weight))
+            {
+                query["Weight"] = request.Weight;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3785,6 +3905,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -3824,6 +3948,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;

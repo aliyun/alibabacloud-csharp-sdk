@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class AddZoneRecordRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        [NameInMap("Line")]
+        [Validation(Required=false)]
+        public string Line { get; set; }
 
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -40,6 +48,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [NameInMap("Value")]
         [Validation(Required=false)]
         public string Value { get; set; }
+
+        [NameInMap("Weight")]
+        [Validation(Required=false)]
+        public int? Weight { get; set; }
 
         /// <summary>
         /// Zone ID。

@@ -25,6 +25,18 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             [Validation(Required=false)]
             public List<DescribeZoneRecordsResponseBodyRecordsRecord> Record { get; set; }
             public class DescribeZoneRecordsResponseBodyRecordsRecord : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                [NameInMap("CreateTimestamp")]
+                [Validation(Required=false)]
+                public long? CreateTimestamp { get; set; }
+
+                [NameInMap("Line")]
+                [Validation(Required=false)]
+                public string Line { get; set; }
+
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public int? Priority { get; set; }
@@ -53,9 +65,25 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
+                public string UpdateTime { get; set; }
+
+                [NameInMap("UpdateTimestamp")]
+                [Validation(Required=false)]
+                public long? UpdateTimestamp { get; set; }
+
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
+
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
+                public int? Weight { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
 
             }
 

@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             [Validation(Required=false)]
             public long? AuthorizedUserId { get; set; }
 
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("CreateTimestamp")]
+            [Validation(Required=false)]
+            public long? CreateTimestamp { get; set; }
+
         }
 
     }

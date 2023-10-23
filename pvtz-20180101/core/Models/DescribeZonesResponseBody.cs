@@ -45,6 +45,22 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
 
+                [NameInMap("Creator")]
+                [Validation(Required=false)]
+                public string Creator { get; set; }
+
+                [NameInMap("CreatorSubType")]
+                [Validation(Required=false)]
+                public string CreatorSubType { get; set; }
+
+                [NameInMap("DnsGroup")]
+                [Validation(Required=false)]
+                public string DnsGroup { get; set; }
+
+                [NameInMap("DnsGroupChanging")]
+                [Validation(Required=false)]
+                public bool? DnsGroupChanging { get; set; }
+
                 [NameInMap("IsPtr")]
                 [Validation(Required=false)]
                 public bool? IsPtr { get; set; }

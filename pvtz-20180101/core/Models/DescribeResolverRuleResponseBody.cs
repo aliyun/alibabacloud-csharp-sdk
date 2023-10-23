@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             [Validation(Required=false)]
             public string VpcType { get; set; }
 
+            [NameInMap("VpcUserId")]
+            [Validation(Required=false)]
+            public string VpcUserId { get; set; }
+
         }
 
         [NameInMap("CreateTime")]

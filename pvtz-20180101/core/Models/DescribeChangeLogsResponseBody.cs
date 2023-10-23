@@ -21,6 +21,18 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
+                [NameInMap("CreatorId")]
+                [Validation(Required=false)]
+                public string CreatorId { get; set; }
+
+                [NameInMap("CreatorSubType")]
+                [Validation(Required=false)]
+                public string CreatorSubType { get; set; }
+
+                [NameInMap("CreatorType")]
+                [Validation(Required=false)]
+                public string CreatorType { get; set; }
+
                 [NameInMap("EntityId")]
                 [Validation(Required=false)]
                 public string EntityId { get; set; }
