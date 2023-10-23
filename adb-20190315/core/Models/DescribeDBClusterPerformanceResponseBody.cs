@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public string Tags { get; set; }
+
                 /// <summary>
                 /// The values of the queried performance metrics.
                 /// </summary>
