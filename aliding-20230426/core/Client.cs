@@ -65,6 +65,14 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["EventId"] = request.EventId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatNotification))
+            {
+                body["chatNotification"] = request.ChatNotification;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushNotification))
+            {
+                body["pushNotification"] = request.PushNotification;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -121,6 +129,14 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
             {
                 body["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatNotification))
+            {
+                body["chatNotification"] = request.ChatNotification;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushNotification))
+            {
+                body["pushNotification"] = request.PushNotification;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -3947,6 +3963,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["EventId"] = request.EventId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushNotification))
+            {
+                body["pushNotification"] = request.PushNotification;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -3993,6 +4013,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
             {
                 body["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushNotification))
+            {
+                body["pushNotification"] = request.PushNotification;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))

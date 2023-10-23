@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string EventId { get; set; }
 
+        [NameInMap("pushNotification")]
+        [Validation(Required=false)]
+        public bool? PushNotification { get; set; }
+
     }
 
 }
