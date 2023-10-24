@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ProcessStartedEnd { get; set; }
 
         /// <summary>
-        /// The timestamp generated when the process starts. Unit: milliseconds.
+        /// The timestamp when the process starts. Unit: milliseconds.
         /// </summary>
         [NameInMap("ProcessStartedStart")]
         [Validation(Required=false)]

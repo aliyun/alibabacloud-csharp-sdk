@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// 
             /// *   System service
             /// *   Software library
-            /// *   Docker component
+            /// *   Container component
             /// *   Database
             /// *   Web container
             /// *   JAR package
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerName { get; set; }
 
             /// <summary>
-            /// The timestamp of the latest collection , which indicates the last timestamp generated when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.
+            /// The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ListenIp { get; set; }
 
             /// <summary>
-            /// The listener protocol. Valid values:
+            /// The protocol of the traffic on which the process listens. Valid values:
             /// 
             /// *   **UDP**
             /// *   **TCP**
@@ -173,8 +173,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The listening status of the process. Valid values:
             /// 
-            /// *   **NONE**: The process is not listened.
-            /// *   **LISTEN**: The process is listened.
+            /// *   **NONE**: not listening
+            /// *   **LISTEN**: listening
             /// </summary>
             [NameInMap("ListenStatus")]
             [Validation(Required=false)]
@@ -195,11 +195,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// The process ID.
+            /// The PID.
             /// </summary>
             [NameInMap("Pid")]
             [Validation(Required=false)]
             public string Pid { get; set; }
+
+            /// <summary>
+            /// The name of the Kubernetes pod.
+            /// </summary>
+            [NameInMap("PodName")]
+            [Validation(Required=false)]
+            public string PodName { get; set; }
 
             /// <summary>
             /// The port of the middleware, database, or web service.
@@ -216,7 +223,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ppid { get; set; }
 
             /// <summary>
-            /// The timestamp generated when the process starts. Unit: milliseconds.
+            /// The timestamp when the process starts. Unit: milliseconds.
             /// </summary>
             [NameInMap("ProcessStarted")]
             [Validation(Required=false)]
@@ -239,7 +246,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The version of the runtime environment.
             /// 
-            /// > The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.
+            /// >  The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.
             /// </summary>
             [NameInMap("RuntimeEnvVersion")]
             [Validation(Required=false)]

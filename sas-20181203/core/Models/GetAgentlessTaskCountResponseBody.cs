@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ScanMachine { get; set; }
 
         /// <summary>
-        /// The number of windows system vulnerabilities.
+        /// The total number of Windows system vulnerabilities.
         /// </summary>
         [NameInMap("SysVulCount")]
         [Validation(Required=false)]

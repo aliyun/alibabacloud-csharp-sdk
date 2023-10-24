@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string CveId { get; set; }
 
+            [NameInMap("CveLink")]
+            [Validation(Required=false)]
+            public string CveLink { get; set; }
+
             /// <summary>
             /// The Common Vulnerability Scoring System (CVSS) score of the vulnerability in the Alibaba Cloud vulnerability library.
             /// </summary>
