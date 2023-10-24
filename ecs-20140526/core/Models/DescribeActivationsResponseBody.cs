@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public int? RegisteredCount { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             /// <summary>
             /// The tags of the activation code.
             /// </summary>
