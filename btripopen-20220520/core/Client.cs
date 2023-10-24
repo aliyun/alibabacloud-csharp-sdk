@@ -12915,6 +12915,372 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsureOrderPayWithOptionsAsync(insOrderId, request, headers, runtime);
         }
 
+        public InsureOrderRefundResponse InsureOrderRefundWithOptions(string insOrderId, InsureOrderRefundRequest tmpReq, InsureOrderRefundHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InsureOrderRefundShrinkRequest request = new InsureOrderRefundShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyNoList))
+            {
+                request.PolicyNoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyNoList, "policy_no_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubInsOrderIds))
+            {
+                request.SubInsOrderIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubInsOrderIds, "sub_ins_order_ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
+            {
+                body["btrip_user_id"] = request.BtripUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuyerName))
+            {
+                body["buyer_name"] = request.BuyerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
+            {
+                body["isv_name"] = request.IsvName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutApplyId))
+            {
+                body["out_apply_id"] = request.OutApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyNoListShrink))
+            {
+                body["policy_no_list"] = request.PolicyNoListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubInsOrderIdsShrink))
+            {
+                body["sub_ins_order_ids"] = request.SubInsOrderIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplierCode))
+            {
+                body["supplier_code"] = request.SupplierCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsureOrderRefund",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-flight/v1/insurances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(insOrderId) + "/action/refund",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsureOrderRefundResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<InsureOrderRefundResponse> InsureOrderRefundWithOptionsAsync(string insOrderId, InsureOrderRefundRequest tmpReq, InsureOrderRefundHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InsureOrderRefundShrinkRequest request = new InsureOrderRefundShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyNoList))
+            {
+                request.PolicyNoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyNoList, "policy_no_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubInsOrderIds))
+            {
+                request.SubInsOrderIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubInsOrderIds, "sub_ins_order_ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
+            {
+                body["btrip_user_id"] = request.BtripUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuyerName))
+            {
+                body["buyer_name"] = request.BuyerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
+            {
+                body["isv_name"] = request.IsvName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutApplyId))
+            {
+                body["out_apply_id"] = request.OutApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyNoListShrink))
+            {
+                body["policy_no_list"] = request.PolicyNoListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubInsOrderIdsShrink))
+            {
+                body["sub_ins_order_ids"] = request.SubInsOrderIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplierCode))
+            {
+                body["supplier_code"] = request.SupplierCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsureOrderRefund",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-flight/v1/insurances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(insOrderId) + "/action/refund",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsureOrderRefundResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public InsureOrderRefundResponse InsureOrderRefund(string insOrderId, InsureOrderRefundRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsureOrderRefundHeaders headers = new InsureOrderRefundHeaders();
+            return InsureOrderRefundWithOptions(insOrderId, request, headers, runtime);
+        }
+
+        public async Task<InsureOrderRefundResponse> InsureOrderRefundAsync(string insOrderId, InsureOrderRefundRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsureOrderRefundHeaders headers = new InsureOrderRefundHeaders();
+            return await InsureOrderRefundWithOptionsAsync(insOrderId, request, headers, runtime);
+        }
+
+        public InsureOrderUrlDetailResponse InsureOrderUrlDetailWithOptions(string insOrderId, InsureOrderUrlDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsureOrderUrlDetail",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-flight/v1/insurances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(insOrderId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsureOrderUrlDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<InsureOrderUrlDetailResponse> InsureOrderUrlDetailWithOptionsAsync(string insOrderId, InsureOrderUrlDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsureOrderUrlDetail",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-flight/v1/insurances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(insOrderId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsureOrderUrlDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public InsureOrderUrlDetailResponse InsureOrderUrlDetail(string insOrderId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsureOrderUrlDetailHeaders headers = new InsureOrderUrlDetailHeaders();
+            return InsureOrderUrlDetailWithOptions(insOrderId, headers, runtime);
+        }
+
+        public async Task<InsureOrderUrlDetailResponse> InsureOrderUrlDetailAsync(string insOrderId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsureOrderUrlDetailHeaders headers = new InsureOrderUrlDetailHeaders();
+            return await InsureOrderUrlDetailWithOptionsAsync(insOrderId, headers, runtime);
+        }
+
+        public InsureRefundDetailResponse InsureRefundDetailWithOptions(InsureRefundDetailRequest request, InsureRefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyId))
+            {
+                query["apply_id"] = request.ApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
+            {
+                query["btrip_user_id"] = request.BtripUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuyerName))
+            {
+                query["buyer_name"] = request.BuyerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsOrderId))
+            {
+                query["ins_order_id"] = request.InsOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
+            {
+                query["isv_name"] = request.IsvName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutApplyId))
+            {
+                query["out_apply_id"] = request.OutApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplierCode))
+            {
+                query["supplier_code"] = request.SupplierCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsureRefundDetail",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-flight/v1/insurances/action/refund-detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsureRefundDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<InsureRefundDetailResponse> InsureRefundDetailWithOptionsAsync(InsureRefundDetailRequest request, InsureRefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyId))
+            {
+                query["apply_id"] = request.ApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
+            {
+                query["btrip_user_id"] = request.BtripUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuyerName))
+            {
+                query["buyer_name"] = request.BuyerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsOrderId))
+            {
+                query["ins_order_id"] = request.InsOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
+            {
+                query["isv_name"] = request.IsvName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutApplyId))
+            {
+                query["out_apply_id"] = request.OutApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplierCode))
+            {
+                query["supplier_code"] = request.SupplierCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsureRefundDetail",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-flight/v1/insurances/action/refund-detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsureRefundDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public InsureRefundDetailResponse InsureRefundDetail(InsureRefundDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsureRefundDetailHeaders headers = new InsureRefundDetailHeaders();
+            return InsureRefundDetailWithOptions(request, headers, runtime);
+        }
+
+        public async Task<InsureRefundDetailResponse> InsureRefundDetailAsync(InsureRefundDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsureRefundDetailHeaders headers = new InsureRefundDetailHeaders();
+            return await InsureRefundDetailWithOptionsAsync(request, headers, runtime);
+        }
+
         public InvoiceAddResponse InvoiceAddWithOptions(InvoiceAddRequest request, InvoiceAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
