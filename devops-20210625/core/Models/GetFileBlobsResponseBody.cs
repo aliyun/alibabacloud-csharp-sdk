@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            [NameInMap("size")]
+            [Validation(Required=false)]
+            public long? Size { get; set; }
+
             [NameInMap("totalLines")]
             [Validation(Required=false)]
             public int? TotalLines { get; set; }
