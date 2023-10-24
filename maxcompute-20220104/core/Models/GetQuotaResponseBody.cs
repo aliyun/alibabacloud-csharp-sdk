@@ -73,10 +73,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             [Validation(Required=false)]
             public string CreatorId { get; set; }
 
-            [NameInMap("groupName")]
-            [Validation(Required=false)]
-            public string GroupName { get; set; }
-
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
@@ -190,10 +186,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [NameInMap("creatorId")]
                 [Validation(Required=false)]
                 public string CreatorId { get; set; }
-
-                [NameInMap("groupName")]
-                [Validation(Required=false)]
-                public string GroupName { get; set; }
 
                 [NameInMap("id")]
                 [Validation(Required=false)]

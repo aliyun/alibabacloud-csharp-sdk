@@ -8,16 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
-    public class KillJobsRequest : TeaModel {
-        /// <summary>
-        /// The request body parameters.
-        /// </summary>
-        [NameInMap("body")]
+    public class GetQuotaScheduleRequest : TeaModel {
+        [NameInMap("displayTimezone")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public string DisplayTimezone { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]

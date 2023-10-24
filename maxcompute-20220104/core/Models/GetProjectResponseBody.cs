@@ -96,13 +96,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? AllowFullScan { get; set; }
 
                 /// <summary>
-                /// This operation does not return a value for this parameter.
-                /// </summary>
-                [NameInMap("elderTunnelQuota")]
-                [Validation(Required=false)]
-                public string ElderTunnelQuota { get; set; }
-
-                /// <summary>
                 /// Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.
                 /// </summary>
                 [NameInMap("enableDecimal2")]
@@ -159,6 +152,52 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [NameInMap("sqlMeteringMax")]
                 [Validation(Required=false)]
                 public string SqlMeteringMax { get; set; }
+
+                /// <summary>
+                /// The information about the tiered storage.
+                /// </summary>
+                [NameInMap("storageTierInfo")]
+                [Validation(Required=false)]
+                public GetProjectResponseBodyDataPropertiesStorageTierInfo StorageTierInfo { get; set; }
+                public class GetProjectResponseBodyDataPropertiesStorageTierInfo : TeaModel {
+                    /// <summary>
+                    /// The backup storage.
+                    /// </summary>
+                    [NameInMap("projectBackupSize")]
+                    [Validation(Required=false)]
+                    public long? ProjectBackupSize { get; set; }
+
+                    /// <summary>
+                    /// The tiered storage.
+                    /// </summary>
+                    [NameInMap("storageTierSize")]
+                    [Validation(Required=false)]
+                    public GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize StorageTierSize { get; set; }
+                    public class GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize : TeaModel {
+                        /// <summary>
+                        /// The long-term storage.
+                        /// </summary>
+                        [NameInMap("longTermSize")]
+                        [Validation(Required=false)]
+                        public long? LongTermSize { get; set; }
+
+                        /// <summary>
+                        /// The IA storage.
+                        /// </summary>
+                        [NameInMap("lowFrequencySize")]
+                        [Validation(Required=false)]
+                        public long? LowFrequencySize { get; set; }
+
+                        /// <summary>
+                        /// The standard storage.
+                        /// </summary>
+                        [NameInMap("standardSize")]
+                        [Validation(Required=false)]
+                        public long? StandardSize { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// The lifecycle of the table in the project.

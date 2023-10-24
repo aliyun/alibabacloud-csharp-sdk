@@ -85,10 +85,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [Validation(Required=false)]
                     public bool? AllowFullScan { get; set; }
 
-                    [NameInMap("elderTunnelQuota")]
-                    [Validation(Required=false)]
-                    public string ElderTunnelQuota { get; set; }
-
                     [NameInMap("enableDecimal2")]
                     [Validation(Required=false)]
                     public bool? EnableDecimal2 { get; set; }
