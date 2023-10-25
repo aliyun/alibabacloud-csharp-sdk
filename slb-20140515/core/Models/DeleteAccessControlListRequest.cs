@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DeleteAccessControlListRequest : TeaModel {
+        /// <summary>
+        /// The ACL ID.
+        /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
@@ -21,6 +24,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the ACL.
+        /// 
+        /// You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

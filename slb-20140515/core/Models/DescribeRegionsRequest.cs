@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeRegionsRequest : TeaModel {
+        /// <summary>
+        /// The supported language. Valid values:
+        /// 
+        /// *   zh-CN: Chinese
+        /// *   en-US: English
+        /// *   ja: Japanese
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
@@ -21,6 +28,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class RemoveTagsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the SLB instance.
+        /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region to which the SLB instance belongs.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// A list of tags to be removed.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetTLSCipherPolicyAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the asynchronous task.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

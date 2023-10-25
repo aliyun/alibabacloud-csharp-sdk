@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DeleteCACertificateRequest : TeaModel {
+        /// <summary>
+        /// The CA certificate ID.
+        /// </summary>
         [NameInMap("CACertificateId")]
         [Validation(Required=false)]
         public string CACertificateId { get; set; }
@@ -21,6 +24,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region of the CA certificates.
+        /// 
+        /// You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

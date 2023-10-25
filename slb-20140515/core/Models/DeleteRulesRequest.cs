@@ -17,6 +17,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the Server Load Balancer (SLB) instance is deployed.
+        /// 
+        /// You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,6 +34,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The list of forwarding rules that you want to delete.
+        /// 
+        /// >  The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.
+        /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]
         public string RuleIds { get; set; }

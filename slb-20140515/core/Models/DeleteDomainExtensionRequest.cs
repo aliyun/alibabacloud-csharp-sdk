@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DeleteDomainExtensionRequest : TeaModel {
+        /// <summary>
+        /// The ID of the domain name extension to be deleted.
+        /// </summary>
         [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
         public string DomainExtensionId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region to which the SLB instance belongs.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -17,6 +17,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region where the Server Load Balancer (SLB) instance is created.
+        /// 
+        /// You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,6 +34,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the server certificate.
+        /// </summary>
         [NameInMap("ServerCertificateId")]
         [Validation(Required=false)]
         public string ServerCertificateId { get; set; }

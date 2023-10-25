@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeDomainExtensionAttributeRequest : TeaModel {
+        /// <summary>
+        /// The ID of the additional certificate.
+        /// </summary>
         [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
         public string DomainExtensionId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the Server Load Balancer (SLB) instance is deployed.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

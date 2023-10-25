@@ -9,14 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeListenerAccessControlAttributeRequest : TeaModel {
+        /// <summary>
+        /// The frontend port that is used by the CLB instance.
+        /// 
+        /// Valid values: **1 to 65535**.
+        /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
+        /// <summary>
+        /// The frontend protocol that is used by the CLB instance.
+        /// 
+        /// > This parameter is required if the same port is specified for listeners of different protocols.
+        /// </summary>
         [NameInMap("ListenerProtocol")]
         [Validation(Required=false)]
         public string ListenerProtocol { get; set; }
 
+        /// <summary>
+        /// The CLB instance ID.
+        /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
@@ -29,6 +42,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region where the Classic Load Balancer (CLB) instance is created.
+        /// 
+        /// You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

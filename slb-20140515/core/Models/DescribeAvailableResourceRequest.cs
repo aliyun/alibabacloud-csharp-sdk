@@ -9,10 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeAvailableResourceRequest : TeaModel {
+        /// <summary>
+        /// The type of the IP address.
+        /// 
+        /// Valid values: **ipv4 and ipv6**.
+        /// </summary>
         [NameInMap("AddressIPVersion")]
         [Validation(Required=false)]
         public string AddressIPVersion { get; set; }
 
+        /// <summary>
+        /// The network type.
+        /// 
+        /// Valid values: **vpc, classic-internet, and classic-intranet**.
+        /// 
+        /// vpc: an internal Classic Load Balancer (CLB) instance that is deployed in a virtual private cloud (VPC).
+        /// 
+        /// classic_internet: a public-facing CLB instance.
+        /// 
+        /// classic_intranet: an internal CLB instance that is deployed in a classic network.
+        /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
         public string AddressType { get; set; }
@@ -25,6 +41,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

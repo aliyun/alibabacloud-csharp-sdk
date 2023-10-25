@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateMasterSlaveServerGroupResponseBody : TeaModel {
+        /// <summary>
+        /// The list of backend servers in the primary/secondary server group.
+        /// </summary>
         [NameInMap("MasterSlaveBackendServers")]
         [Validation(Required=false)]
         public CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServers MasterSlaveBackendServers { get; set; }
@@ -17,19 +20,67 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer> MasterSlaveBackendServer { get; set; }
             public class CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer : TeaModel {
+                /// <summary>
+                /// The description of the primary/secondary server group.
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
-                public int? Port { get; set; }
-                public string ServerId { get; set; }
-                public string ServerType { get; set; }
-                public string Type { get; set; }
-                public int? Weight { get; set; }
-            }
-        };
 
+                /// <summary>
+                /// The port number used by the backend server.
+                /// </summary>
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public int? Port { get; set; }
+
+                /// <summary>
+                /// The ID of the ECS instance or ENI that is added.
+                /// </summary>
+                [NameInMap("ServerId")]
+                [Validation(Required=false)]
+                public string ServerId { get; set; }
+
+                /// <summary>
+                /// The type of the backend server.
+                /// 
+                /// Valid values: **Master** and **Slave**.
+                /// </summary>
+                [NameInMap("ServerType")]
+                [Validation(Required=false)]
+                public string ServerType { get; set; }
+
+                /// <summary>
+                /// The type of the backend server. Valid values:
+                /// 
+                /// *   **ecs**: an ECS instance
+                /// *   **eni**: an ENI
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                /// <summary>
+                /// The weight of the backend server.
+                /// </summary>
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
+                public int? Weight { get; set; }
+
+            }
+
+        }
+
+        /// <summary>
+        /// The ID of the primary/secondary server group.
+        /// </summary>
         [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
         public string MasterSlaveServerGroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

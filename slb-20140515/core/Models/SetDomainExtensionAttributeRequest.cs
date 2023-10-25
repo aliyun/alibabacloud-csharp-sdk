@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetDomainExtensionAttributeRequest : TeaModel {
+        /// <summary>
+        /// The ID of the domain name that is associated with the additional certificate to be replaced.
+        /// </summary>
         [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
         public string DomainExtensionId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the SLB instance is created.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the new certificate.
+        /// </summary>
         [NameInMap("ServerCertificateId")]
         [Validation(Required=false)]
         public string ServerCertificateId { get; set; }
