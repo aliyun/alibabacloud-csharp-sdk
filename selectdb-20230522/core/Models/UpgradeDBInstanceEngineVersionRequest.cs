@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SwitchTimeMode")]
+        [Validation(Required=false)]
+        public string SwitchTimeMode { get; set; }
+
     }
 
 }
