@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
-    public class QueryMetricResponseBody : TeaModel {
-        /// <summary>
-        /// The returned statistics.
-        /// </summary>
-        [NameInMap("Data")]
+    public class OpenXtraceServiceResponseBody : TeaModel {
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public string OrderId { get; set; }
 
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

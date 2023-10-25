@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
-    public class GetTraceResponse : TeaModel {
+    public class OpenXtraceServiceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetTraceResponseBody Body { get; set; }
+        public OpenXtraceServiceResponseBody Body { get; set; }
 
     }
 

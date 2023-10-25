@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
     public class GetTagValResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The tag values.
+        /// </summary>
         [NameInMap("TagValues")]
         [Validation(Required=false)]
         public GetTagValResponseBodyTagValues TagValues { get; set; }
@@ -20,7 +26,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public List<string> TagValue { get; set; }
-        };
+
+        }
 
     }
 
