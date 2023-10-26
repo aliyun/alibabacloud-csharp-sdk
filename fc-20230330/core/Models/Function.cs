@@ -85,6 +85,18 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string LastModifiedTime { get; set; }
 
+        [NameInMap("lastUpdateStatus")]
+        [Validation(Required=false)]
+        public string LastUpdateStatus { get; set; }
+
+        [NameInMap("lastUpdateStatusReason")]
+        [Validation(Required=false)]
+        public string LastUpdateStatusReason { get; set; }
+
+        [NameInMap("lastUpdateStatusReasonCode")]
+        [Validation(Required=false)]
+        public string LastUpdateStatusReasonCode { get; set; }
+
         [NameInMap("layers")]
         [Validation(Required=false)]
         public List<FunctionLayer> Layers { get; set; }
@@ -112,6 +124,18 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("runtime")]
         [Validation(Required=false)]
         public string Runtime { get; set; }
+
+        [NameInMap("state")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
+        [NameInMap("stateReason")]
+        [Validation(Required=false)]
+        public string StateReason { get; set; }
+
+        [NameInMap("stateReasonCode")]
+        [Validation(Required=false)]
+        public string StateReasonCode { get; set; }
 
         [NameInMap("timeout")]
         [Validation(Required=false)]
