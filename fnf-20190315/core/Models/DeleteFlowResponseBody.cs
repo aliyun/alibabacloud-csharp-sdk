@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class DeleteFlowResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
