@@ -1,3 +1,6 @@
+2023-10-26 Version: 2.11.0
+- Generated csharp 2020-07-01 for CCC.
+
 2023-05-09 Version: 2.10.2
 - Supported GetVideo Api.
 

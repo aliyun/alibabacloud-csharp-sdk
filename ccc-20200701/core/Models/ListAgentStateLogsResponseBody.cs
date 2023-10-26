@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public List<ListAgentStateLogsResponseBodyData> Data { get; set; }
         public class ListAgentStateLogsResponseBodyData : TeaModel {
+            [NameInMap("BreakCode")]
+            [Validation(Required=false)]
+            public string BreakCode { get; set; }
+
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public long? Duration { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("StateCode")]
             [Validation(Required=false)]
             public string StateCode { get; set; }
+
+            [NameInMap("WorkMode")]
+            [Validation(Required=false)]
+            public string WorkMode { get; set; }
 
         }
 

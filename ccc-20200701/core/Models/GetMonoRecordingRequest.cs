@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
+        [NameInMap("ExpireSeconds")]
+        [Validation(Required=false)]
+        public long? ExpireSeconds { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

@@ -8,19 +8,85 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ListIntervalAgentReportResponseBody : TeaModel {
+    public class ListIntervalAgentSkillGroupReportResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<ListIntervalAgentReportResponseBodyData> Data { get; set; }
-        public class ListIntervalAgentReportResponseBodyData : TeaModel {
+        public List<ListIntervalAgentSkillGroupReportResponseBodyData> Data { get; set; }
+        public class ListIntervalAgentSkillGroupReportResponseBodyData : TeaModel {
+            [NameInMap("Back2Back")]
+            [Validation(Required=false)]
+            public ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back Back2Back { get; set; }
+            public class ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back : TeaModel {
+                [NameInMap("AgentAnswerRate")]
+                [Validation(Required=false)]
+                public float? AgentAnswerRate { get; set; }
+
+                [NameInMap("AnswerRate")]
+                [Validation(Required=false)]
+                public float? AnswerRate { get; set; }
+
+                [NameInMap("AverageCustomerRingTime")]
+                [Validation(Required=false)]
+                public float? AverageCustomerRingTime { get; set; }
+
+                [NameInMap("AverageRingTime")]
+                [Validation(Required=false)]
+                public float? AverageRingTime { get; set; }
+
+                [NameInMap("AverageTalkTime")]
+                [Validation(Required=false)]
+                public long? AverageTalkTime { get; set; }
+
+                [NameInMap("CallsAnswered")]
+                [Validation(Required=false)]
+                public long? CallsAnswered { get; set; }
+
+                [NameInMap("CallsCustomerHandled")]
+                [Validation(Required=false)]
+                public long? CallsCustomerHandled { get; set; }
+
+                [NameInMap("CallsDialed")]
+                [Validation(Required=false)]
+                public long? CallsDialed { get; set; }
+
+                [NameInMap("CustomerHandleRate")]
+                [Validation(Required=false)]
+                public float? CustomerHandleRate { get; set; }
+
+                [NameInMap("MaxCustomerRingTime")]
+                [Validation(Required=false)]
+                public long? MaxCustomerRingTime { get; set; }
+
+                [NameInMap("MaxRingTime")]
+                [Validation(Required=false)]
+                public long? MaxRingTime { get; set; }
+
+                [NameInMap("MaxTalkTime")]
+                [Validation(Required=false)]
+                public long? MaxTalkTime { get; set; }
+
+                [NameInMap("TotalCustomerRingTime")]
+                [Validation(Required=false)]
+                public long? TotalCustomerRingTime { get; set; }
+
+                [NameInMap("TotalRingTime")]
+                [Validation(Required=false)]
+                public long? TotalRingTime { get; set; }
+
+                [NameInMap("TotalTalkTime")]
+                [Validation(Required=false)]
+                public long? TotalTalkTime { get; set; }
+
+            }
+
             [NameInMap("Inbound")]
             [Validation(Required=false)]
-            public ListIntervalAgentReportResponseBodyDataInbound Inbound { get; set; }
-            public class ListIntervalAgentReportResponseBodyDataInbound : TeaModel {
+            public ListIntervalAgentSkillGroupReportResponseBodyDataInbound Inbound { get; set; }
+            public class ListIntervalAgentSkillGroupReportResponseBodyDataInbound : TeaModel {
                 [NameInMap("AverageHoldTime")]
                 [Validation(Required=false)]
                 public float? AverageHoldTime { get; set; }
@@ -123,10 +189,48 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
             }
 
+            [NameInMap("Internal")]
+            [Validation(Required=false)]
+            public ListIntervalAgentSkillGroupReportResponseBodyDataInternal Internal { get; set; }
+            public class ListIntervalAgentSkillGroupReportResponseBodyDataInternal : TeaModel {
+                [NameInMap("AverageTalkTime")]
+                [Validation(Required=false)]
+                public float? AverageTalkTime { get; set; }
+
+                [NameInMap("CallsAnswered")]
+                [Validation(Required=false)]
+                public long? CallsAnswered { get; set; }
+
+                [NameInMap("CallsDialed")]
+                [Validation(Required=false)]
+                public long? CallsDialed { get; set; }
+
+                [NameInMap("CallsHandled")]
+                [Validation(Required=false)]
+                public long? CallsHandled { get; set; }
+
+                [NameInMap("CallsOffered")]
+                [Validation(Required=false)]
+                public long? CallsOffered { get; set; }
+
+                [NameInMap("CallsTalk")]
+                [Validation(Required=false)]
+                public long? CallsTalk { get; set; }
+
+                [NameInMap("MaxTalkTime")]
+                [Validation(Required=false)]
+                public long? MaxTalkTime { get; set; }
+
+                [NameInMap("TotalTalkTime")]
+                [Validation(Required=false)]
+                public long? TotalTalkTime { get; set; }
+
+            }
+
             [NameInMap("Outbound")]
             [Validation(Required=false)]
-            public ListIntervalAgentReportResponseBodyDataOutbound Outbound { get; set; }
-            public class ListIntervalAgentReportResponseBodyDataOutbound : TeaModel {
+            public ListIntervalAgentSkillGroupReportResponseBodyDataOutbound Outbound { get; set; }
+            public class ListIntervalAgentSkillGroupReportResponseBodyDataOutbound : TeaModel {
                 [NameInMap("AnswerRate")]
                 [Validation(Required=false)]
                 public float? AnswerRate { get; set; }
@@ -243,8 +347,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
             [NameInMap("Overall")]
             [Validation(Required=false)]
-            public ListIntervalAgentReportResponseBodyDataOverall Overall { get; set; }
-            public class ListIntervalAgentReportResponseBodyDataOverall : TeaModel {
+            public ListIntervalAgentSkillGroupReportResponseBodyDataOverall Overall { get; set; }
+            public class ListIntervalAgentSkillGroupReportResponseBodyDataOverall : TeaModel {
                 [NameInMap("AverageBreakTime")]
                 [Validation(Required=false)]
                 public float? AverageBreakTime { get; set; }
@@ -267,8 +371,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
                 [NameInMap("BreakCodeDetailList")]
                 [Validation(Required=false)]
-                public List<ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList> BreakCodeDetailList { get; set; }
-                public class ListIntervalAgentReportResponseBodyDataOverallBreakCodeDetailList : TeaModel {
+                public List<ListIntervalAgentSkillGroupReportResponseBodyDataOverallBreakCodeDetailList> BreakCodeDetailList { get; set; }
+                public class ListIntervalAgentSkillGroupReportResponseBodyDataOverallBreakCodeDetailList : TeaModel {
                     [NameInMap("BreakCode")]
                     [Validation(Required=false)]
                     public string BreakCode { get; set; }
@@ -346,18 +450,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [NameInMap("TotalLoggedInTime")]
                 [Validation(Required=false)]
                 public long? TotalLoggedInTime { get; set; }
-
-                [NameInMap("TotalOffSiteOnlineTime")]
-                [Validation(Required=false)]
-                public long? TotalOffSiteOnlineTime { get; set; }
-
-                [NameInMap("TotalOfficePhoneOnlineTime")]
-                [Validation(Required=false)]
-                public long? TotalOfficePhoneOnlineTime { get; set; }
-
-                [NameInMap("TotalOnSiteOnlineTime")]
-                [Validation(Required=false)]
-                public long? TotalOnSiteOnlineTime { get; set; }
 
                 [NameInMap("TotalOutboundScenarioReadyTime")]
                 [Validation(Required=false)]

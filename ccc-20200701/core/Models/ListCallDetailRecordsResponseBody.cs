@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public long? EstablishedTime { get; set; }
 
+                [NameInMap("HeldTime")]
+                [Validation(Required=false)]
+                public long? HeldTime { get; set; }
+
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }

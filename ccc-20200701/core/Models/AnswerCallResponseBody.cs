@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public string ChannelState { get; set; }
 
+                    [NameInMap("ChannelVariables")]
+                    [Validation(Required=false)]
+                    public string ChannelVariables { get; set; }
+
                     [NameInMap("Destination")]
                     [Validation(Required=false)]
                     public string Destination { get; set; }
