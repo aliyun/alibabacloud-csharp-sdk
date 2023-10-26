@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? BudgetMerge { get; set; }
 
+        [NameInMap("car_rule")]
+        [Validation(Required=false)]
+        public string CarRuleShrink { get; set; }
+
         [NameInMap("corp_name")]
         [Validation(Required=false)]
         public string CorpName { get; set; }

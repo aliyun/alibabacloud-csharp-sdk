@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class CarApplyAddRequest : TeaModel {
+    public class CarApplyAddShrinkRequest : TeaModel {
         [NameInMap("cause")]
         [Validation(Required=false)]
         public string Cause { get; set; }
@@ -71,27 +71,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         [NameInMap("traveler_standard")]
         [Validation(Required=false)]
-        public List<CarApplyAddRequestTravelerStandard> TravelerStandard { get; set; }
-        public class CarApplyAddRequestTravelerStandard : TeaModel {
-            [NameInMap("car_city_set")]
-            [Validation(Required=false)]
-            public List<CarApplyAddRequestTravelerStandardCarCitySet> CarCitySet { get; set; }
-            public class CarApplyAddRequestTravelerStandardCarCitySet : TeaModel {
-                [NameInMap("city_code")]
-                [Validation(Required=false)]
-                public string CityCode { get; set; }
-
-                [NameInMap("city_name")]
-                [Validation(Required=false)]
-                public string CityName { get; set; }
-
-            }
-
-            [NameInMap("user_id")]
-            [Validation(Required=false)]
-            public string UserId { get; set; }
-
-        }
+        public string TravelerStandardShrink { get; set; }
 
         [NameInMap("user_id")]
         [Validation(Required=false)]

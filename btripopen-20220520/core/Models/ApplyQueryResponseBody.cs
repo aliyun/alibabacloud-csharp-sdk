@@ -67,6 +67,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? BudgetMerge { get; set; }
 
+            [NameInMap("car_rule")]
+            [Validation(Required=false)]
+            public ApplyQueryResponseBodyModuleCarRule CarRule { get; set; }
+            public class ApplyQueryResponseBodyModuleCarRule : TeaModel {
+                [NameInMap("scenario_template_id")]
+                [Validation(Required=false)]
+                public string ScenarioTemplateId { get; set; }
+
+                [NameInMap("scenario_template_name")]
+                [Validation(Required=false)]
+                public string ScenarioTemplateName { get; set; }
+
+            }
+
             [NameInMap("corp_id")]
             [Validation(Required=false)]
             public string CorpId { get; set; }
@@ -351,6 +365,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("business_discount")]
                 [Validation(Required=false)]
                 public int? BusinessDiscount { get; set; }
+
+                [NameInMap("car_city_set")]
+                [Validation(Required=false)]
+                public List<ApplyQueryResponseBodyModuleTravelerListCarCitySet> CarCitySet { get; set; }
+                public class ApplyQueryResponseBodyModuleTravelerListCarCitySet : TeaModel {
+                    [NameInMap("city_code")]
+                    [Validation(Required=false)]
+                    public string CityCode { get; set; }
+
+                    [NameInMap("city_name")]
+                    [Validation(Required=false)]
+                    public string CityName { get; set; }
+
+                }
 
                 [NameInMap("economy_discount")]
                 [Validation(Required=false)]

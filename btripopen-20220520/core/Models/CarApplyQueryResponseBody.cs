@@ -137,6 +137,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ThirdpartId { get; set; }
 
+            [NameInMap("traveler_standard")]
+            [Validation(Required=false)]
+            public List<CarApplyQueryResponseBodyApplyListTravelerStandard> TravelerStandard { get; set; }
+            public class CarApplyQueryResponseBodyApplyListTravelerStandard : TeaModel {
+                [NameInMap("car_city_set")]
+                [Validation(Required=false)]
+                public List<CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet> CarCitySet { get; set; }
+                public class CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet : TeaModel {
+                    [NameInMap("city_code")]
+                    [Validation(Required=false)]
+                    public string CityCode { get; set; }
+
+                    [NameInMap("city_name")]
+                    [Validation(Required=false)]
+                    public string CityName { get; set; }
+
+                }
+
+                [NameInMap("user_id")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
+
+            }
+
             [NameInMap("trip_cause")]
             [Validation(Required=false)]
             public string TripCause { get; set; }

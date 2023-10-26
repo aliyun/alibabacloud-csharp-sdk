@@ -59,6 +59,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("car_rule")]
+            [Validation(Required=false)]
+            public ApplyListQueryResponseBodyModuleListCarRule CarRule { get; set; }
+            public class ApplyListQueryResponseBodyModuleListCarRule : TeaModel {
+                [NameInMap("scenario_template_id")]
+                [Validation(Required=false)]
+                public string ScenarioTemplateId { get; set; }
+
+                [NameInMap("scenario_template_name")]
+                [Validation(Required=false)]
+                public string ScenarioTemplateName { get; set; }
+
+            }
+
             [NameInMap("corp_id")]
             [Validation(Required=false)]
             public string CorpId { get; set; }
@@ -233,6 +247,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyListQueryResponseBodyModuleListTravelerList> TravelerList { get; set; }
             public class ApplyListQueryResponseBodyModuleListTravelerList : TeaModel {
+                [NameInMap("car_city_set")]
+                [Validation(Required=false)]
+                public List<ApplyListQueryResponseBodyModuleListTravelerListCarCitySet> CarCitySet { get; set; }
+                public class ApplyListQueryResponseBodyModuleListTravelerListCarCitySet : TeaModel {
+                    [NameInMap("city_code")]
+                    [Validation(Required=false)]
+                    public string CityCode { get; set; }
+
+                    [NameInMap("city_name")]
+                    [Validation(Required=false)]
+                    public string CityName { get; set; }
+
+                }
+
                 [NameInMap("job_no")]
                 [Validation(Required=false)]
                 public string JobNo { get; set; }
