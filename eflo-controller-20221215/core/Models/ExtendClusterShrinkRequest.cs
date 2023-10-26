@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string NodeGroupsShrink { get; set; }
 
+        [NameInMap("VSwitchZoneId")]
+        [Validation(Required=false)]
+        public string VSwitchZoneId { get; set; }
+
         [NameInMap("VpdSubnets")]
         [Validation(Required=false)]
         public string VpdSubnetsShrink { get; set; }

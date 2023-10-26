@@ -133,7 +133,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string UserData { get; set; }
 
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
         }
+
+        [NameInMap("VSwitchZoneId")]
+        [Validation(Required=false)]
+        public string VSwitchZoneId { get; set; }
 
         [NameInMap("VpdSubnets")]
         [Validation(Required=false)]

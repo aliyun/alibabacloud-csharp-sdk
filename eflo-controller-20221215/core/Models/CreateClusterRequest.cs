@@ -183,6 +183,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             }
 
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+            [NameInMap("VSwitchZoneId")]
+            [Validation(Required=false)]
+            public string VSwitchZoneId { get; set; }
+
             /// <summary>
             /// 复用VPD信息
             /// </summary>

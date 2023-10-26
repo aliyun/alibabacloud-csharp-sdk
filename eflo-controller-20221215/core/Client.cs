@@ -735,6 +735,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["NodeGroups"] = request.NodeGroupsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchZoneId))
+            {
+                body["VSwitchZoneId"] = request.VSwitchZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdSubnetsShrink))
             {
                 body["VpdSubnets"] = request.VpdSubnetsShrink;
@@ -791,6 +795,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupsShrink))
             {
                 body["NodeGroups"] = request.NodeGroupsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchZoneId))
+            {
+                body["VSwitchZoneId"] = request.VSwitchZoneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdSubnetsShrink))
             {
