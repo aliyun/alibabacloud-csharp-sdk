@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ConfigStandardIdsShrink { get; set; }
 
+        [NameInMap("Configure")]
+        [Validation(Required=false)]
+        public string Configure { get; set; }
+
         [NameInMap("CycleDays")]
         [Validation(Required=false)]
         public List<int?> CycleDays { get; set; }
@@ -91,6 +95,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public int? StartTime { get; set; }
+
+        [NameInMap("Vendors")]
+        [Validation(Required=false)]
+        public List<string> Vendors { get; set; }
 
     }
 

@@ -1685,6 +1685,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ConfigStandardIds"] = request.ConfigStandardIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configure))
+            {
+                query["Configure"] = request.Configure;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleDays))
             {
                 query["CycleDays"] = request.CycleDays;
@@ -1716,6 +1720,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendors))
+            {
+                query["Vendors"] = request.Vendors;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1762,6 +1770,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ConfigStandardIds"] = request.ConfigStandardIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configure))
+            {
+                query["Configure"] = request.Configure;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleDays))
             {
                 query["CycleDays"] = request.CycleDays;
@@ -1793,6 +1805,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendors))
+            {
+                query["Vendors"] = request.Vendors;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
