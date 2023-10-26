@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string Pid { get; set; }
 
+            [NameInMap("ProblemId")]
+            [Validation(Required=false)]
+            public string ProblemId { get; set; }
+
             /// <summary>
             /// The overall response time of the \[HTTP] service of the application \[sd] spikes at \[2022-07-27 10:57:00]
             /// </summary>

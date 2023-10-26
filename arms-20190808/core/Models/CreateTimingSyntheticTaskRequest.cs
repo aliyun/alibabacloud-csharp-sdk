@@ -67,9 +67,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public int? IpType { get; set; }
 
+            [NameInMap("IsOpenTrace")]
+            [Validation(Required=false)]
+            public bool? IsOpenTrace { get; set; }
+
             [NameInMap("MonitorSamples")]
             [Validation(Required=false)]
             public int? MonitorSamples { get; set; }
+
+            [NameInMap("TraceClientType")]
+            [Validation(Required=false)]
+            public int? TraceClientType { get; set; }
+
+            [NameInMap("XtraceRegion")]
+            [Validation(Required=false)]
+            public string XtraceRegion { get; set; }
 
         }
 

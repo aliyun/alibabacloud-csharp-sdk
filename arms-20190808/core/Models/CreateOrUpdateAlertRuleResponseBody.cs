@@ -363,6 +363,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string MetricsType { get; set; }
 
+            [NameInMap("NotifyMode")]
+            [Validation(Required=false)]
+            public string NotifyMode { get; set; }
+
             /// <summary>
             /// The name of the notification policy.
             /// </summary>
