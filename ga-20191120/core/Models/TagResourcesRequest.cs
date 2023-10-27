@@ -28,28 +28,28 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the GA resource.
+        /// The ID of the resource to which you want to add tags.
         /// 
-        /// *   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
-        /// *   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
-        /// *   If you set the **ResourceType** parameter to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
-        /// *   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an ACL.
-        /// *   If you set the **ResourceType** parameter to **endpointgroup**, set the value of ResourceId to the ID of an EndpointGroup.
+        /// *   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
+        /// *   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
+        /// *   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
+        /// *   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an ACL.
+        /// *   If you set **ResourceType** to **endpointgroup**, set the value of ResourceId to the ID of an endpoint group.
         /// 
-        /// You can specify 1 to 50 GA resource IDs.
+        /// The parameter is required. You can enter up to 50 GA resource IDs.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the GA resource. Valid values:
+        /// The type of the resource to which you want to add tags. Valid values:
         /// 
-        /// *   **accelerator:** a standard GA instance.
-        /// *   **basicaccelerator:** a basic GA instance.
-        /// *   **bandwidthpackage:** a bandwidth plan.
-        /// *   **acl:** an access control list (ACL).
-        /// *   **endpointgroup:** an endpoint group (EndpointGroup).
+        /// *   **accelerator**: a standard GA instance
+        /// *   **basicaccelerator**: a basic GA instance
+        /// *   **bandwidthpackage**: a bandwidth plan
+        /// *   **acl**: an ACL
+        /// *   **endpointgroup**: an endpoint group
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

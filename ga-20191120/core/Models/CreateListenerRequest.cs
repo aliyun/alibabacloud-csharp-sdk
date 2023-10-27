@@ -338,6 +338,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                [NameInMap("SubAddress")]
+                [Validation(Required=false)]
+                public string SubAddress { get; set; }
+
                 /// <summary>
                 /// The endpoint type of the intelligent routing listener. Valid values:
                 /// 

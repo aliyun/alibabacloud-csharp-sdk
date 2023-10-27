@@ -17,31 +17,34 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<ListAvailableBusiRegionsResponseBodyRegions> Regions { get; set; }
         public class ListAvailableBusiRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// Whether China Mainland.
+            /// Indicates whether the region is in the Chinese mainland. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("ChinaMainland")]
             [Validation(Required=false)]
             public bool? ChinaMainland { get; set; }
 
             /// <summary>
-            /// The name of the region.
+            /// The region name.
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// Indicates whether the region is a point of presence (PoP). Valid values:
+            /// Indicates whether the region is a point of presence (PoP) of Alibaba Cloud. Valid values:
             /// 
-            /// *   **true**: The region is a PoP.
-            /// *   **false**: The region is not a PoP.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("Pop")]
             [Validation(Required=false)]
             public bool? Pop { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

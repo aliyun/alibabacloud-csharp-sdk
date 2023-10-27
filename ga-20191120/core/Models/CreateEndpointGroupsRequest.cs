@@ -279,6 +279,38 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             }
 
+            [NameInMap("SystemTag")]
+            [Validation(Required=false)]
+            public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag> SystemTag { get; set; }
+            public class CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Scope")]
+                [Validation(Required=false)]
+                public string Scope { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsTag> Tag { get; set; }
+            public class CreateEndpointGroupsRequestEndpointGroupConfigurationsTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.
             /// 
