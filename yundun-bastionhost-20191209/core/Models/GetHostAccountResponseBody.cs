@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostAccountResponseBody : TeaModel {
         /// <summary>
-        /// The details of the host account that were queried.
+        /// The details of the host account that was queried.
         /// </summary>
         [NameInMap("HostAccount")]
         [Validation(Required=false)]
         public GetHostAccountResponseBodyHostAccount HostAccount { get; set; }
         public class GetHostAccountResponseBodyHostAccount : TeaModel {
             /// <summary>
-            /// Indicates whether a password is set for the host account. Valid values:
+            /// Indicates whether a password is configured for the host account. Valid values:
             /// 
-            /// *   **true**: indicates that a password is set for the host account.
-            /// *   **false**: indicates that no password is set for the host account.
+            /// *   **true**: yes
+            /// *   **false**: no
             /// </summary>
             [NameInMap("HasPassword")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string PrivateKeyFingerprint { get; set; }
 
             /// <summary>
-            /// The protocol used by the host account. Valid values:
+            /// The protocol that is used by the host. Valid values:
             /// 
             /// *   **SSH**
             /// *   **RDP**

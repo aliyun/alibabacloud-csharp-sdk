@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// Specifies whether to support SSL. Valid values:
         /// 
-        /// *   **true**: supports SSL.
-        /// *   **false**: does not support SSL.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("IsSSL")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NameMapping { get; set; }
 
         /// <summary>
-        /// The password of the account that is used for the LDAP server.
+        /// The password of the account that is used for the LDAP server. You must configure a password when you configure LDAP authentication. If you leave this parameter empty when you modify the settings of LDAP authentication, the current password is used.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]

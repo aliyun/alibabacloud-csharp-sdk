@@ -10,52 +10,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostResponseBody : TeaModel {
         /// <summary>
-        /// The information of the host that was queried.
+        /// The fingerprint of the host. This parameter uniquely identifies a host.
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
         public GetHostResponseBodyHost Host { get; set; }
         public class GetHostResponseBodyHost : TeaModel {
             /// <summary>
-            /// The endpoint type of the host. Valid values:
-            /// 
-            /// *   **Public**: a public endpoint
-            /// *   **Private**: an internal endpoint
+            /// The public endpoint of the host. You can set this parameter to a domain name or an IP address.
             /// </summary>
             [NameInMap("ActiveAddressType")]
             [Validation(Required=false)]
             public string ActiveAddressType { get; set; }
 
             /// <summary>
-            /// The description of the host.
+            /// The ID of the ECS instance or dedicated cluster host that was queried.
+            /// 
+            /// >  No value is returned for this parameter if the **Source** parameter is set to **Local**.
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// The ID of the host.
+            /// The ID of the request.
             /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
 
             /// <summary>
-            /// The name of the host.
+            /// The ID of the Bastionhost instance where you want to query the host.
+            /// 
+            /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
             /// </summary>
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
 
             /// <summary>
-            /// The internal endpoint of the host. You can set this parameter to a domain name or an IP address.
+            /// The description of the host.
             /// </summary>
             [NameInMap("HostPrivateAddress")]
             [Validation(Required=false)]
             public string HostPrivateAddress { get; set; }
 
             /// <summary>
-            /// The public endpoint of the host. You can set this parameter to a domain name or an IP address.
+            /// The status of the host. Valid values:
+            /// 
+            /// - **Normal**: The host is normal.
+            /// 
+            /// - **Release**: The host is released.
             /// </summary>
             [NameInMap("HostPublicAddress")]
             [Validation(Required=false)]
@@ -72,32 +77,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string OSType { get; set; }
 
             /// <summary>
-            /// The protocol information of the host.
+            /// GetHost
             /// </summary>
             [NameInMap("Protocols")]
             [Validation(Required=false)]
             public List<GetHostResponseBodyHostProtocols> Protocols { get; set; }
             public class GetHostResponseBodyHostProtocols : TeaModel {
                 /// <summary>
-                /// The fingerprint of the host. This parameter uniquely identifies a host.
+                /// WB662865
                 /// </summary>
                 [NameInMap("HostFingerPrint")]
                 [Validation(Required=false)]
                 public string HostFingerPrint { get; set; }
 
                 /// <summary>
-                /// The service port of the host.
+                /// GetHost
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
-                /// <summary>
-                /// The protocol that is used to connect to the host. Valid values:
-                /// 
-                /// *   **SSH**
-                /// *   **RDP**
-                /// </summary>
                 [NameInMap("ProtocolName")]
                 [Validation(Required=false)]
                 public string ProtocolName { get; set; }
@@ -105,31 +104,23 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             }
 
             /// <summary>
-            /// The source of the host. Valid values:
-            /// 
-            /// *   **Local**: an on-premises host
-            /// *   **Ecs**: an Elastic Compute Service (ECS) instance
-            /// *   **Rds**: a host in a dedicated cluster
+            /// The protocol information of the host.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The ID of the ECS instance or dedicated cluster host that was queried.
-            /// 
-            /// >  No value is returned for this parameter if the **Source** parameter is set to **Local**.
+            /// Queries the details of a specified host, such as the name, source, endpoint, protocol, and service port of the host.
             /// </summary>
             [NameInMap("SourceInstanceId")]
             [Validation(Required=false)]
             public string SourceInstanceId { get; set; }
 
             /// <summary>
-            /// The status of the host. Valid values:
+            /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
             /// 
-            /// - **Normal**: The host is normal.
-            /// 
-            /// - **Release**: The host is released.
+            /// For more information about sample requests, see the "Examples" section of this topic.
             /// </summary>
             [NameInMap("SourceInstanceState")]
             [Validation(Required=false)]
@@ -138,7 +129,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The endpoint type of the host. Valid values:
+        /// 
+        /// *   **Public**: a public endpoint
+        /// *   **Private**: an internal endpoint
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

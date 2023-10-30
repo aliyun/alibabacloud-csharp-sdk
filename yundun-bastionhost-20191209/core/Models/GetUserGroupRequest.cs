@@ -10,27 +10,23 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetUserGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the Bastionhost instance where you want to query the details of the user group.
-        /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the Bastionhost instance where you want to query the details of the user group.
-        /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// The name of the user group.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the user group to be queried.
+        /// All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
         /// 
-        /// >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+        /// For more information about sample requests, see the "Examples" section of this topic.
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]

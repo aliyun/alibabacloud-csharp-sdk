@@ -12,25 +12,25 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The ID of the host account that you want to query.
         /// 
-        /// >  You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
+        /// > You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
         /// </summary>
         [NameInMap("HostAccountId")]
         [Validation(Required=false)]
         public string HostAccountId { get; set; }
 
         /// <summary>
-        /// The ID of the Bastionhost instance where you want to query the details of the host account.
+        /// The ID of the bastion host in which you want to query the details of the host account.
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the Bastionhost instance where you want to query the details of the host account.
+        /// The region ID of the bastion host in which you want to query the details of the host account.
         /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

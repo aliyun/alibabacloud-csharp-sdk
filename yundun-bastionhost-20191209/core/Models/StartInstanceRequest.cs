@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The ID of the bastion host that you want to enable.
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to obtain the ID of the bastion host.
+        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the security groups.
+        /// An array consisting of the IDs of security groups to which the bastion host is added.
         /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]

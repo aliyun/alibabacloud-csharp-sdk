@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DeleteUserPublicKeyRequest : TeaModel {
         /// <summary>
-        /// Specifies the region ID of the bastion host on which you want to delete the public key from the user.
+        /// The region ID of the bastion host on which you want to delete the public key from the user.
         /// 
         /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>

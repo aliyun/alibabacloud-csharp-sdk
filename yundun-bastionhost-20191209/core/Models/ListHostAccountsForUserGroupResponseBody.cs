@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsForUserGroupResponseBody : TeaModel {
         /// <summary>
-        /// The host accounts returned.
+        /// An array that consists of the queried host accounts.
         /// </summary>
         [NameInMap("HostAccounts")]
         [Validation(Required=false)]
@@ -40,15 +40,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// Indicates whether the user group is authorized to manage the host account. Valid values:
             /// 
-            /// *   **true**: The user group is authorized to manage the host account.
-            /// *   **false**: The user group is not authorized to manage the host account.
+            /// *   **true**: yes
+            /// *   **false**: no
             /// </summary>
             [NameInMap("IsAuthorized")]
             [Validation(Required=false)]
             public bool? IsAuthorized { get; set; }
 
             /// <summary>
-            /// The protocol that is used by the host account. Valid values:
+            /// The protocol that is used by the host. Valid values:
             /// 
             /// *   **SSH**
             /// *   **RDP**
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of host accounts returned.
+        /// The total number of host accounts that were queried.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

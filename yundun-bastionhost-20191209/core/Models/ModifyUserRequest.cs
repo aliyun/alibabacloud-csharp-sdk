@@ -93,7 +93,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string MobileCountryCode { get; set; }
 
         /// <summary>
-        /// The original password of the user. The password must be 8 to 128 characters in length and must contain lowercase letters, uppercase letters, digits, and special characters.
+        /// Specifies whether password reset is required upon the next logon. Valid values:
+        /// 
+        /// - true: yes
+        /// - false: no
         /// </summary>
         [NameInMap("NeedResetPassword")]
         [Validation(Required=false)]
@@ -123,9 +126,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// *   **dingtalk:** DingTalk
         /// *   **totp OTP:** time-based one-time password (TOTP) app
         /// 
-        /// > 
-        /// 
-        /// *   When the TwoFactorStatus parameter is set to Enable, you must specify one of the preceding values.
+        /// > *   When the TwoFactorStatus parameter is set to Enable, you must specify one of the preceding values.
         /// </summary>
         [NameInMap("TwoFactorMethods")]
         [Validation(Required=false)]

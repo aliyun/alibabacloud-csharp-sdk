@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The state of the bastion host. Valid values:
+            /// The status of the bastion host. Valid values:
             /// 
             /// *   **PENDING**: The bastion host is not initialized.
             /// *   **CREATING**: The bastion host is being created.

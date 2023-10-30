@@ -22,14 +22,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The region ID of the bastion host to query.
         /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource IDs. You can specify a maximum of 20 resource IDs.
+        /// An array that consists of IDs of bastion hosts.
+        /// 
+        /// Valid values: 1 to 20.
+        /// 
+        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -45,7 +49,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag keys of the resource.
+        /// The key of tag N.
+        /// 
+        /// Valid values of N: 1 to 20.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

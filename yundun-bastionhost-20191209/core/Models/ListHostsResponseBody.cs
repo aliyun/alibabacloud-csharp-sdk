@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsResponseBody : TeaModel {
         /// <summary>
-        /// The hosts that were queried.
+        /// An array that consists of the hosts returned.
         /// </summary>
         [NameInMap("Hosts")]
         [Validation(Required=false)]
         public List<ListHostsResponseBodyHosts> Hosts { get; set; }
         public class ListHostsResponseBodyHosts : TeaModel {
             /// <summary>
-            /// The endpoint type of the host. Valid values:
+            /// The address type of the host. Valid values:
             /// 
-            /// *   **Public**: a public endpoint
-            /// *   **Private**: an internal endpoint
+            /// *   **Public**: a public address
+            /// *   **Private**: a private address
             /// </summary>
             [NameInMap("ActiveAddressType")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// The number of host accounts of the host.
+            /// The number of host accounts.
             /// </summary>
             [NameInMap("HostAccountCount")]
             [Validation(Required=false)]
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostName { get; set; }
 
             /// <summary>
-            /// The internal endpoint of the host. You can set this parameter to a domain name or an IP address.
+            /// The private address of the host. The value is a domain name or an IP address.
             /// </summary>
             [NameInMap("HostPrivateAddress")]
             [Validation(Required=false)]
             public string HostPrivateAddress { get; set; }
 
             /// <summary>
-            /// The public endpoint of the host. You can set this parameter to a domain name or an IP address.
+            /// The public address of the host. The value is a domain name or an IP address.
             /// </summary>
             [NameInMap("HostPublicAddress")]
             [Validation(Required=false)]
@@ -81,18 +81,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// The source of the host. Valid values:
             /// 
-            /// *   **Local**: an on-premises host
-            /// *   **Ecs**: an Elastic Compute Service (ECS) instance
-            /// *   **Rds**: a host in a dedicated cluster
+            /// *   **Local**: a host in a data center
+            /// *   **Ecs**: an ECS instance
+            /// *   **Rds**: a host in an ApsaraDB MyBase dedicated cluster
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The ID of the ECS instance or dedicated cluster host that was queried.
+            /// The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.
             /// 
-            /// >  No value is returned for this parameter if the **Source** parameter is set to **Local**.
+            /// > No value is returned for this parameter if the **Source** parameter is set to **Local**.
             /// </summary>
             [NameInMap("SourceInstanceId")]
             [Validation(Required=false)]
@@ -101,9 +101,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// The status of the host. Valid values:
             /// 
-            /// - **Normal**: The host is normal.
-            /// 
-            /// - **Release**: The host is released.
+            /// *   **Normal**: normal
+            /// *   **Release**: released
             /// </summary>
             [NameInMap("SourceInstanceState")]
             [Validation(Required=false)]
@@ -112,14 +111,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of hosts that were queried.
+        /// The total number of hosts returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

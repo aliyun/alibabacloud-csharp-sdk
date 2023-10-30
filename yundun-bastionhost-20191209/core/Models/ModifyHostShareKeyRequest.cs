@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The password of the private key. The value is a Base64-encoded string.
+        /// The passphrase of the private key. The value is a Base64-encoded string.
         /// </summary>
         [NameInMap("PassPhrase")]
         [Validation(Required=false)]

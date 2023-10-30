@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The ID of the host group that you want to delete.
         /// 
-        /// >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
+        /// > You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
         /// </summary>
         [NameInMap("HostGroupId")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The ID of the bastion host from which you want to delete the host group.
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The region ID of the bastion host from which you want to delete the host group.
         /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

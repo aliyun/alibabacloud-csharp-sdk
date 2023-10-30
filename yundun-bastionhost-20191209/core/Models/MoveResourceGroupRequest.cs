@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The ID of the resource group to which the bastion host is moved.
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the resource group ID of the bastion host.
+        /// > You can call the [DescribeInstances](~~153281~~) operation to query the resource group ID of the bastion host.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The ID of the bastion host for which you want to change the resource group.
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

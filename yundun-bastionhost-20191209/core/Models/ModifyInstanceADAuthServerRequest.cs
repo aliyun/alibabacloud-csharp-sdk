@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// Specifies whether to support SSL. Valid values:
         /// 
-        /// *   **true**: supports SSL.
-        /// *   **false**: does not support SSL.
+        /// *   **true**: yes
+        /// *   **false**: no
         /// </summary>
         [NameInMap("IsSSL")]
         [Validation(Required=false)]

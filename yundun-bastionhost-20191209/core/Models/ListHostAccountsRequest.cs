@@ -10,32 +10,40 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsRequest : TeaModel {
         /// <summary>
-        /// The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.
+        /// Indicates whether a password is configured for the host account.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true: A password is configured for the host account.
+        /// *   false: No passwords are configured for the host account.
         /// </summary>
         [NameInMap("HostAccountName")]
         [Validation(Required=false)]
         public string HostAccountName { get; set; }
 
         /// <summary>
-        /// The ID of the specified host whose accounts you want to query.
+        /// The protocol used by the host whose accounts you want to query.
         /// 
-        /// >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
+        /// Valid values:
+        /// 
+        /// *   SSH
+        /// *   RDP
         /// </summary>
         [NameInMap("HostId")]
         [Validation(Required=false)]
         public string HostId { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host in which you want to query accounts of the specified host.
-        /// 
-        /// >  You can call the DescribeInstances operation to query the ID of the bastion host.
+        /// The ID of the shared key.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The operation that you want to perform.
+        /// 
+        /// Set the value to **ListHostAccounts**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -53,21 +61,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The protocol used by the host whose accounts you want to query.
-        /// 
-        /// Valid values:
-        /// 
-        /// *   SSH
-        /// *   RDP
+        /// The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.
         /// </summary>
         [NameInMap("ProtocolName")]
         [Validation(Required=false)]
         public string ProtocolName { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host in which you want to query accounts of the specified host.
+        /// The ID of the specified host whose accounts you want to query.
         /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

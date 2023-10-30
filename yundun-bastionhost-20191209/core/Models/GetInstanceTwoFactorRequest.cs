@@ -10,18 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetInstanceTwoFactorRequest : TeaModel {
         /// <summary>
-        /// The ID of the bastion host to query.
-        /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host to query.
-        /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// The operation that you want to perform. Set the value to **GetInstanceTwoFactor**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -37,11 +37,228 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public AcceptApproveCommandResponse AcceptApproveCommandWithOptions(AcceptApproveCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandId))
+            {
+                query["CommandId"] = request.CommandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AcceptApproveCommand",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AcceptApproveCommandResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AcceptApproveCommandResponse> AcceptApproveCommandWithOptionsAsync(AcceptApproveCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandId))
+            {
+                query["CommandId"] = request.CommandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AcceptApproveCommand",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AcceptApproveCommandResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AcceptApproveCommandResponse AcceptApproveCommand(AcceptApproveCommandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AcceptApproveCommandWithOptions(request, runtime);
+        }
+
+        public async Task<AcceptApproveCommandResponse> AcceptApproveCommandAsync(AcceptApproveCommandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AcceptApproveCommandWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * ## Usage notes
-          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.  
-          * ## QPS limit
+          * You can call this operation as a Bastionhost administrator to approve an O\\&M application of an O\\&M engineer.
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AcceptOperationTicketRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AcceptOperationTicketResponse
+         */
+        public AcceptOperationTicketResponse AcceptOperationTicketWithOptions(AcceptOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectCount))
+            {
+                query["EffectCount"] = request.EffectCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectEndTime))
+            {
+                query["EffectEndTime"] = request.EffectEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectStartTime))
+            {
+                query["EffectStartTime"] = request.EffectStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTicketId))
+            {
+                query["OperationTicketId"] = request.OperationTicketId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AcceptOperationTicket",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AcceptOperationTicketResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation as a Bastionhost administrator to approve an O\\&M application of an O\\&M engineer.
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AcceptOperationTicketRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AcceptOperationTicketResponse
+         */
+        public async Task<AcceptOperationTicketResponse> AcceptOperationTicketWithOptionsAsync(AcceptOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectCount))
+            {
+                query["EffectCount"] = request.EffectCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectEndTime))
+            {
+                query["EffectEndTime"] = request.EffectEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectStartTime))
+            {
+                query["EffectStartTime"] = request.EffectStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTicketId))
+            {
+                query["OperationTicketId"] = request.OperationTicketId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AcceptOperationTicket",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AcceptOperationTicketResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation as a Bastionhost administrator to approve an O\\&M application of an O\\&M engineer.
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AcceptOperationTicketRequest
+          * @return AcceptOperationTicketResponse
+         */
+        public AcceptOperationTicketResponse AcceptOperationTicket(AcceptOperationTicketRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AcceptOperationTicketWithOptions(request, runtime);
+        }
+
+        /**
+          * You can call this operation as a Bastionhost administrator to approve an O\\&M application of an O\\&M engineer.
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AcceptOperationTicketRequest
+          * @return AcceptOperationTicketResponse
+         */
+        public async Task<AcceptOperationTicketResponse> AcceptOperationTicketAsync(AcceptOperationTicketRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AcceptOperationTicketWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
+          * # Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
           *
           * @param request AddHostsToGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -87,10 +304,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
+          * # Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
           *
           * @param request AddHostsToGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -136,10 +352,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
+          * # Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
           *
           * @param request AddHostsToGroupRequest
           * @return AddHostsToGroupResponse
@@ -151,10 +366,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
+          * # Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
           *
           * @param request AddHostsToGroupRequest
           * @return AddHostsToGroupResponse
@@ -166,10 +380,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/createusergroup) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * This parameter is deprecated.
           *
           * @param request AddUsersToGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -215,10 +426,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/createusergroup) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * This parameter is deprecated.
           *
           * @param request AddUsersToGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -264,10 +472,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/createusergroup) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * This parameter is deprecated.
           *
           * @param request AddUsersToGroupRequest
           * @return AddUsersToGroupResponse
@@ -279,10 +484,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/createusergroup) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * This parameter is deprecated.
           *
           * @param request AddUsersToGroupRequest
           * @return AddUsersToGroupResponse
@@ -860,10 +1062,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
-          * ## Limits
-          * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The ID of the request, which is used to locate and troubleshoot issues.
           *
           * @param request ConfigInstanceWhiteListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -905,10 +1104,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
-          * ## Limits
-          * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The ID of the request, which is used to locate and troubleshoot issues.
           *
           * @param request ConfigInstanceWhiteListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -950,10 +1146,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
-          * ## Limits
-          * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The ID of the request, which is used to locate and troubleshoot issues.
           *
           * @param request ConfigInstanceWhiteListRequest
           * @return ConfigInstanceWhiteListResponse
@@ -965,10 +1158,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
-          * ## Limits
-          * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The ID of the request, which is used to locate and troubleshoot issues.
           *
           * @param request ConfigInstanceWhiteListRequest
           * @return ConfigInstanceWhiteListResponse
@@ -1668,9 +1858,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/adduserstogroup) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.  
-          * ## Limits
+          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](~~204600~~) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request CreateUserGroupRequest
@@ -1717,9 +1905,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/adduserstogroup) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.  
-          * ## Limits
+          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](~~204600~~) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request CreateUserGroupRequest
@@ -1766,9 +1952,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/adduserstogroup) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.  
-          * ## Limits
+          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](~~204600~~) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request CreateUserGroupRequest
@@ -1781,9 +1965,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/adduserstogroup) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.  
-          * ## Limits
+          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](~~204600~~) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request CreateUserGroupRequest
@@ -2010,11 +2192,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
-          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
+          * For more information about sample requests, see the "Examples" section of this topic.
           *
           * @param request DeleteHostAccountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2056,11 +2235,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
-          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
+          * For more information about sample requests, see the "Examples" section of this topic.
           *
           * @param request DeleteHostAccountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2102,11 +2278,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
-          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
+          * For more information about sample requests, see the "Examples" section of this topic.
           *
           * @param request DeleteHostAccountRequest
           * @return DeleteHostAccountResponse
@@ -2118,11 +2291,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
-          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
+          * For more information about sample requests, see the "Examples" section of this topic.
           *
           * @param request DeleteHostAccountRequest
           * @return DeleteHostAccountResponse
@@ -2134,9 +2304,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to delete a single host group. If you no longer need to perform O&M operations on all hosts in a host group, you can call this operation to delete the host group.  
-          * ## Limits
+          * You can call this operation to delete a single host group. If you no longer need to perform O\\&M operations on all hosts in a host group, you can call this operation to delete the host group.
+          * ### Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DeleteHostGroupRequest
@@ -2179,9 +2348,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to delete a single host group. If you no longer need to perform O&M operations on all hosts in a host group, you can call this operation to delete the host group.  
-          * ## Limits
+          * You can call this operation to delete a single host group. If you no longer need to perform O\\&M operations on all hosts in a host group, you can call this operation to delete the host group.
+          * ### Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DeleteHostGroupRequest
@@ -2224,9 +2392,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to delete a single host group. If you no longer need to perform O&M operations on all hosts in a host group, you can call this operation to delete the host group.  
-          * ## Limits
+          * You can call this operation to delete a single host group. If you no longer need to perform O\\&M operations on all hosts in a host group, you can call this operation to delete the host group.
+          * ### Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DeleteHostGroupRequest
@@ -2239,9 +2406,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to delete a single host group. If you no longer need to perform O&M operations on all hosts in a host group, you can call this operation to delete the host group.  
-          * ## Limits
+          * You can call this operation to delete a single host group. If you no longer need to perform O\\&M operations on all hosts in a host group, you can call this operation to delete the host group.
+          * ### Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DeleteHostGroupRequest
@@ -3830,10 +3996,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O&M operations on servers.  
-          * ## Limits
-          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The condition that is used to filter users.
           *
           * @param request GetInstanceADAuthServerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3871,10 +4034,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O&M operations on servers.  
-          * ## Limits
-          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The condition that is used to filter users.
           *
           * @param request GetInstanceADAuthServerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3912,10 +4072,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O&M operations on servers.  
-          * ## Limits
-          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The condition that is used to filter users.
           *
           * @param request GetInstanceADAuthServerRequest
           * @return GetInstanceADAuthServerResponse
@@ -3927,10 +4084,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O&M operations on servers.  
-          * ## Limits
-          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The condition that is used to filter users.
           *
           * @param request GetInstanceADAuthServerRequest
           * @return GetInstanceADAuthServerResponse
@@ -4016,10 +4170,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.  
-          * ## Limits
-          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Indicates whether two-factor authentication is enabled. Valid values:
+          * *   **true**: enabled
+          * *   **false**: disabled
           *
           * @param request GetInstanceTwoFactorRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4057,10 +4210,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.  
-          * ## Limits
-          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Indicates whether two-factor authentication is enabled. Valid values:
+          * *   **true**: enabled
+          * *   **false**: disabled
           *
           * @param request GetInstanceTwoFactorRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4098,10 +4250,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.  
-          * ## Limits
-          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Indicates whether two-factor authentication is enabled. Valid values:
+          * *   **true**: enabled
+          * *   **false**: disabled
           *
           * @param request GetInstanceTwoFactorRequest
           * @return GetInstanceTwoFactorResponse
@@ -4113,10 +4264,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.  
-          * ## Limits
-          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * Indicates whether two-factor authentication is enabled. Valid values:
+          * *   **true**: enabled
+          * *   **false**: disabled
           *
           * @param request GetInstanceTwoFactorRequest
           * @return GetInstanceTwoFactorResponse
@@ -4289,6 +4439,96 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserGroupWithOptionsAsync(request, runtime);
+        }
+
+        public ListApproveCommandsResponse ListApproveCommandsWithOptions(ListApproveCommandsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApproveCommands",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApproveCommandsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListApproveCommandsResponse> ListApproveCommandsWithOptionsAsync(ListApproveCommandsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApproveCommands",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApproveCommandsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListApproveCommandsResponse ListApproveCommands(ListApproveCommandsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListApproveCommandsWithOptions(request, runtime);
+        }
+
+        public async Task<ListApproveCommandsResponse> ListApproveCommandsAsync(ListApproveCommandsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListApproveCommandsWithOptionsAsync(request, runtime);
         }
 
         public ListHostAccountsResponse ListHostAccountsWithOptions(ListHostAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5733,14 +5973,104 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return await ListHostsForUserGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Yundun-bastionhost\\&api=ListTagKeys\\&type=RPC\\&version=2019-12-09)
-          *
-          * @param request ListTagKeysRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagKeysResponse
-         */
+        public ListOperationTicketsResponse ListOperationTicketsWithOptions(ListOperationTicketsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetAddress))
+            {
+                query["AssetAddress"] = request.AssetAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOperationTickets",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOperationTicketsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListOperationTicketsResponse> ListOperationTicketsWithOptionsAsync(ListOperationTicketsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetAddress))
+            {
+                query["AssetAddress"] = request.AssetAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOperationTickets",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOperationTicketsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListOperationTicketsResponse ListOperationTickets(ListOperationTicketsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListOperationTicketsWithOptions(request, runtime);
+        }
+
+        public async Task<ListOperationTicketsResponse> ListOperationTicketsAsync(ListOperationTicketsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListOperationTicketsWithOptionsAsync(request, runtime);
+        }
+
         public ListTagKeysResponse ListTagKeysWithOptions(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5780,14 +6110,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Yundun-bastionhost\\&api=ListTagKeys\\&type=RPC\\&version=2019-12-09)
-          *
-          * @param request ListTagKeysRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagKeysResponse
-         */
         public async Task<ListTagKeysResponse> ListTagKeysWithOptionsAsync(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5827,26 +6149,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Yundun-bastionhost\\&api=ListTagKeys\\&type=RPC\\&version=2019-12-09)
-          *
-          * @param request ListTagKeysRequest
-          * @return ListTagKeysResponse
-         */
         public ListTagKeysResponse ListTagKeys(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagKeysWithOptions(request, runtime);
         }
 
-        /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Yundun-bastionhost\\&api=ListTagKeys\\&type=RPC\\&version=2019-12-09)
-          *
-          * @param request ListTagKeysRequest
-          * @return ListTagKeysResponse
-         */
         public async Task<ListTagKeysResponse> ListTagKeysAsync(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6294,9 +6602,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/unlockusers) operation.  
-          * ## QPS limit
+          * # Description
+          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\\&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\\&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](~~204590~~) operation.
+          * # Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request LockUsersRequest
@@ -6339,9 +6647,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/unlockusers) operation.  
-          * ## QPS limit
+          * # Description
+          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\\&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\\&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](~~204590~~) operation.
+          * # Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request LockUsersRequest
@@ -6384,9 +6692,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/unlockusers) operation.  
-          * ## QPS limit
+          * # Description
+          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\\&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\\&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](~~204590~~) operation.
+          * # Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request LockUsersRequest
@@ -6399,9 +6707,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/unlockusers) operation.  
-          * ## QPS limit
+          * # Description
+          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\\&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\\&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](~~204590~~) operation.
+          * # Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request LockUsersRequest
@@ -6414,8 +6722,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * You can call this operation to modify the basic information of an on-premises host, an Elastic Compute Service (ECS) instance, or a host in a dedicated cluster.
-          * >  The basic information of ECS instances and hosts in dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information of an ECS instance or a host in a dedicated cluster, the modification result may be overwritten by the synchronized information.
+          * The ID of the request.
           *
           * @param request ModifyHostRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6477,8 +6784,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * You can call this operation to modify the basic information of an on-premises host, an Elastic Compute Service (ECS) instance, or a host in a dedicated cluster.
-          * >  The basic information of ECS instances and hosts in dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information of an ECS instance or a host in a dedicated cluster, the modification result may be overwritten by the synchronized information.
+          * The ID of the request.
           *
           * @param request ModifyHostRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6540,8 +6846,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * You can call this operation to modify the basic information of an on-premises host, an Elastic Compute Service (ECS) instance, or a host in a dedicated cluster.
-          * >  The basic information of ECS instances and hosts in dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information of an ECS instance or a host in a dedicated cluster, the modification result may be overwritten by the synchronized information.
+          * The ID of the request.
           *
           * @param request ModifyHostRequest
           * @return ModifyHostResponse
@@ -6553,8 +6858,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * You can call this operation to modify the basic information of an on-premises host, an Elastic Compute Service (ECS) instance, or a host in a dedicated cluster.
-          * >  The basic information of ECS instances and hosts in dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information of an ECS instance or a host in a dedicated cluster, the modification result may be overwritten by the synchronized information.
+          * The ID of the request.
           *
           * @param request ModifyHostRequest
           * @return ModifyHostResponse
@@ -7999,6 +8303,170 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return await MoveResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        public RejectApproveCommandResponse RejectApproveCommandWithOptions(RejectApproveCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandId))
+            {
+                query["CommandId"] = request.CommandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RejectApproveCommand",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RejectApproveCommandResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RejectApproveCommandResponse> RejectApproveCommandWithOptionsAsync(RejectApproveCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandId))
+            {
+                query["CommandId"] = request.CommandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RejectApproveCommand",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RejectApproveCommandResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RejectApproveCommandResponse RejectApproveCommand(RejectApproveCommandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RejectApproveCommandWithOptions(request, runtime);
+        }
+
+        public async Task<RejectApproveCommandResponse> RejectApproveCommandAsync(RejectApproveCommandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RejectApproveCommandWithOptionsAsync(request, runtime);
+        }
+
+        public RejectOperationTicketResponse RejectOperationTicketWithOptions(RejectOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTicketId))
+            {
+                query["OperationTicketId"] = request.OperationTicketId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RejectOperationTicket",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RejectOperationTicketResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RejectOperationTicketResponse> RejectOperationTicketWithOptionsAsync(RejectOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTicketId))
+            {
+                query["OperationTicketId"] = request.OperationTicketId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RejectOperationTicket",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RejectOperationTicketResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RejectOperationTicketResponse RejectOperationTicket(RejectOperationTicketRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RejectOperationTicketWithOptions(request, runtime);
+        }
+
+        public async Task<RejectOperationTicketResponse> RejectOperationTicketAsync(RejectOperationTicketRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RejectOperationTicketWithOptionsAsync(request, runtime);
+        }
+
         public RemoveHostsFromGroupResponse RemoveHostsFromGroupWithOptions(RemoveHostsFromGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8090,10 +8558,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * This parameter is deprecated.
           *
           * @param request RemoveUsersFromGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8139,10 +8604,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * This parameter is deprecated.
           *
           * @param request RemoveUsersFromGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8188,10 +8650,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * This parameter is deprecated.
           *
           * @param request RemoveUsersFromGroupRequest
           * @return RemoveUsersFromGroupResponse
@@ -8203,10 +8662,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * This parameter is deprecated.
           *
           * @param request RemoveUsersFromGroupRequest
           * @return RemoveUsersFromGroupResponse
@@ -8488,9 +8944,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * After you call the [LockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/lockusers) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O&M operations by using the bastion host.  
-          * ## QPS limit
+          * After you call the [LockUsers](~~204591~~) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\\&M operations by using the bastion host.
+          * # Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request UnlockUsersRequest
@@ -8533,9 +8988,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * After you call the [LockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/lockusers) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O&M operations by using the bastion host.  
-          * ## QPS limit
+          * After you call the [LockUsers](~~204591~~) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\\&M operations by using the bastion host.
+          * # Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request UnlockUsersRequest
@@ -8578,9 +9032,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * After you call the [LockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/lockusers) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O&M operations by using the bastion host.  
-          * ## QPS limit
+          * After you call the [LockUsers](~~204591~~) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\\&M operations by using the bastion host.
+          * # Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request UnlockUsersRequest
@@ -8593,9 +9046,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * ## Usage notes
-          * After you call the [LockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/lockusers) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O&M operations by using the bastion host.  
-          * ## QPS limit
+          * After you call the [LockUsers](~~204591~~) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\\&M operations by using the bastion host.
+          * # Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request UnlockUsersRequest

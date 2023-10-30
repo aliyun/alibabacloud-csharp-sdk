@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The ID of the bastion host whose Internet access you want to disable.
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to obtain the ID of the bastion host.
+        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

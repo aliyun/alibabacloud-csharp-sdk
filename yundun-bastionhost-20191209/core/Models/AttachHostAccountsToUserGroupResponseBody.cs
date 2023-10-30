@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// The ID of the group.
+            /// The ID of the user group.
             /// </summary>
             [NameInMap("UserGroupId")]
             [Validation(Required=false)]

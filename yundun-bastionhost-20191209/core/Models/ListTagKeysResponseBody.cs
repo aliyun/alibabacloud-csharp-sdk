@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of tags.
+        /// An array that consists of tags.
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public List<ListTagKeysResponseBodyTagKeys> TagKeys { get; set; }
         public class ListTagKeysResponseBodyTagKeys : TeaModel {
             /// <summary>
-            /// The number of times the tag key was used.
+            /// The total number of tag keys.
             /// </summary>
             [NameInMap("TagCount")]
             [Validation(Required=false)]

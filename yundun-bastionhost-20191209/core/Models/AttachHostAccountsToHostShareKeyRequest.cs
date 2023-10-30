@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The IDs of the host accounts.
         /// 
-        /// >  You must specify this parameter.
+        /// > You must specify this parameter.
         /// </summary>
         [NameInMap("HostAccountIds")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The ID of the shared key.
         /// 
-        /// >  You must specify this parameter.
+        /// > You must specify this parameter.
         /// </summary>
         [NameInMap("HostShareKeyId")]
         [Validation(Required=false)]

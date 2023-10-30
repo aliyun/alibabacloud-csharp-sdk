@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the user that was queried.
+        /// The details of the user that was queried.
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
@@ -37,10 +37,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
+            /// </summary>
             [NameInMap("EffectiveEndTime")]
             [Validation(Required=false)]
             public long? EffectiveEndTime { get; set; }
 
+            /// <summary>
+            /// The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
+            /// </summary>
             [NameInMap("EffectiveStartTime")]
             [Validation(Required=false)]
             public long? EffectiveStartTime { get; set; }
@@ -53,18 +59,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// The mobile number of the user.
+            /// The mobile phone number of the user.
             /// </summary>
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
 
             /// <summary>
-            /// The country where the mobile number of the user is registered. Valid values:
+            /// The location in which the mobile number of the user is registered. Valid values:
             /// 
             /// *   **CN**: the Chinese mainland, whose country calling code is +86
             /// *   **HK**: Hong Kong (China), whose country calling code is +852
-            /// *   **MO**: Macau (China), whose country calling code is +853
+            /// *   **MO**: Macao (China), whose country calling code is +853
             /// *   **TW**: Taiwan (China), whose country calling code is +886
             /// *   **RU**: Russia, whose country calling code is +7
             /// *   **SG**: Singapore, whose country calling code is +65
@@ -72,12 +78,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// *   **ID**: Indonesia, whose country calling code is +62
             /// *   **DE**: Germany, whose country calling code is +49
             /// *   **AU**: Australia, whose country calling code is +61
-            /// *   **US**: United States, whose country calling code is +1
+            /// *   **US**: US, whose country calling code is +1
             /// *   **AE**: United Arab Emirates, whose country calling code is +971
-            /// *   **JP**: Japan, whose country calling code is +81
-            /// *   **GB**: United Kingdom, whose country calling code is +44
+            /// *   **JP:** Japan, whose country calling code is +81
+            /// *   **GB**: UK, whose country calling code is +44
             /// *   **IN**: India, whose country calling code is +91
-            /// *   **KR**: South Korea, whose country calling code is +82
+            /// *   **KR**: Republic of Korea, whose country calling code is +82
             /// *   **PH**: Philippines, whose country calling code is +63
             /// *   **CH**: Switzerland, whose country calling code is +41
             /// *   **SE**: Sweden, whose country calling code is +46
@@ -86,6 +92,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string MobileCountryCode { get; set; }
 
+            /// <summary>
+            /// Specifies whether password reset is required upon the next logon. Valid values:
+            /// 
+            /// *   **true**: yes
+            /// *   **false**: no
+            /// </summary>
             [NameInMap("NeedResetPassword")]
             [Validation(Required=false)]
             public bool? NeedResetPassword { get; set; }
@@ -103,16 +115,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// The unique ID of the user.
             /// 
-            /// >  This parameter uniquely identifies a RAM user of the Bastionhost instance. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.
+            /// > This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.
             /// </summary>
             [NameInMap("SourceUserId")]
             [Validation(Required=false)]
             public string SourceUserId { get; set; }
 
+            /// <summary>
+            /// An array that consists of the details of the two-factor authentication method.
+            /// </summary>
             [NameInMap("TwoFactorMethods")]
             [Validation(Required=false)]
             public List<string> TwoFactorMethods { get; set; }
 
+            /// <summary>
+            /// The two-factor authentication status of the user. Valid values:
+            /// 
+            /// *   **Global**: The global settings are used.
+            /// *   **Disable**: The two-factor authentication is disabled.
+            /// *   **Enable**: The two-factor authentication is enabled and the user-specific setting is used.
+            /// </summary>
             [NameInMap("TwoFactorStatus")]
             [Validation(Required=false)]
             public string TwoFactorStatus { get; set; }
@@ -132,7 +154,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// The statuses of the user.
+            /// An array that consists of the details of the user status.
             /// </summary>
             [NameInMap("UserState")]
             [Validation(Required=false)]

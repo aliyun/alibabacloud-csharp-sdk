@@ -10,28 +10,30 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostGroupResponseBody : TeaModel {
         /// <summary>
-        /// The details of the host group returned.
+        /// The ID of the host group that you want to query.
+        /// 
+        /// >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
         /// </summary>
         [NameInMap("HostGroup")]
         [Validation(Required=false)]
         public GetHostGroupResponseBodyHostGroup HostGroup { get; set; }
         public class GetHostGroupResponseBodyHostGroup : TeaModel {
             /// <summary>
-            /// The description of the host group.
+            /// The details of the host group returned.
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// The ID of the host group.
+            /// The description of the host group.
             /// </summary>
             [NameInMap("HostGroupId")]
             [Validation(Required=false)]
             public string HostGroupId { get; set; }
 
             /// <summary>
-            /// The name of the host group.
+            /// The ID of the host group.
             /// </summary>
             [NameInMap("HostGroupName")]
             [Validation(Required=false)]
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// my host group.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

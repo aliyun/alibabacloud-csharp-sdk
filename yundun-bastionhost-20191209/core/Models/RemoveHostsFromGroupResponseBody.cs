@@ -10,48 +10,41 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class RemoveHostsFromGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
+        /// 
+        /// For more information about sample requests, see the "Examples" section of this topic.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of the call.
+        /// Removes one or more hosts from a host group.
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<RemoveHostsFromGroupResponseBodyResults> Results { get; set; }
         public class RemoveHostsFromGroupResponseBodyResults : TeaModel {
             /// <summary>
-            /// The return code that indicates whether the call was successful. Valid values:
-            /// 
-            /// *   **OK**: The call was successful.
-            /// *   **UNEXPECTED**: An unknown error occurred.
-            /// *   **INVALID_ARGUMENT**: A request parameter is invalid.
-            /// *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-            /// *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+            /// RemoveHostsFromGroup
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The ID of the host group.
+            /// RemoveHostsFromGroup
             /// </summary>
             [NameInMap("HostGroupId")]
             [Validation(Required=false)]
             public string HostGroupId { get; set; }
 
-            /// <summary>
-            /// The ID of the host.
-            /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
 
             /// <summary>
-            /// This parameter is deprecated.
+            /// WB662865
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

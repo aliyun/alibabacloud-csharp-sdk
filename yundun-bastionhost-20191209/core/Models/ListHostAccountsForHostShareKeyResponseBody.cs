@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostsAccountId { get; set; }
 
             /// <summary>
-            /// The O&M protocol.
+            /// The O\&M protocol.
             /// </summary>
             [NameInMap("ProtocolName")]
             [Validation(Required=false)]

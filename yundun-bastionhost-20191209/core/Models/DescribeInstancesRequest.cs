@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeInstancesRequest : TeaModel {
         /// <summary>
-        /// The IDs of the bastion hosts.
+        /// An array that consists of the IDs of the bastion hosts.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// The state of the bastion host. Valid values:
+        /// The status of the bastion host. Valid values:
         /// 
         /// *   **PENDING**: The bastion host is not initialized.
         /// *   **CREATING**: The bastion host is being created.
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// An array consisting of the tags that are added to the bastion hosts.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeInstancesRequestTag> Tag { get; set; }
         public class DescribeInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key of the bastion host.
+            /// The key of the tag.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the bastion host.
+            /// The value of the tag.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

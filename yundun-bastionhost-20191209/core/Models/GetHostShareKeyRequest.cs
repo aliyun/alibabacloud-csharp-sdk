@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostShareKeyRequest : TeaModel {
         /// <summary>
-        /// The ID of the shared key whose details you want to query.
+        /// The time when the information about the shared key was last modified.
         /// </summary>
         [NameInMap("HostShareKeyId")]
         [Validation(Required=false)]
         public string HostShareKeyId { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// The ID of the shared key whose details you want to query.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// The name of the shared key.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

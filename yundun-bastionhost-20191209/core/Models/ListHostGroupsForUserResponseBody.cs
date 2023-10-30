@@ -10,29 +10,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupsForUserResponseBody : TeaModel {
         /// <summary>
-        /// The host groups returned.
+        /// ListHostGroupsForUser
         /// </summary>
         [NameInMap("HostGroups")]
         [Validation(Required=false)]
         public List<ListHostGroupsForUserResponseBodyHostGroups> HostGroups { get; set; }
         public class ListHostGroupsForUserResponseBodyHostGroups : TeaModel {
             /// <summary>
-            /// The description of the host group.
+            /// ListHostGroupsForUser
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// The ID of the host group.
+            /// WB662865
             /// </summary>
             [NameInMap("HostGroupId")]
             [Validation(Required=false)]
             public string HostGroupId { get; set; }
 
-            /// <summary>
-            /// The name of the host group.
-            /// </summary>
             [NameInMap("HostGroupName")]
             [Validation(Required=false)]
             public string HostGroupName { get; set; }
@@ -40,14 +37,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// Queries the host groups that a specified user is authorized or not authorized to manage.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of host groups returned.
+        /// All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).
+        /// 
+        /// For more information about sample requests, see the "Examples" section of this topic.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,37 +10,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupsForUserRequest : TeaModel {
         /// <summary>
-        /// The name of the host group that you want to query. The name can be up to 128 characters in length. Only exact match is supported.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("HostGroupName")]
         [Validation(Required=false)]
         public string HostGroupName { get; set; }
 
         /// <summary>
-        /// The ID of the Bastionhost instance where you want to query the host groups that the user is authorized or not authorized to manage.
-        /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+        /// The host groups returned.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        /// <summary>
-        /// The category of the host group that you want to query. Valid values:
-        /// 
-        /// *   **Authorized**: Query the host groups that the user is authorized to manage. This is the default value.
-        /// *   **Unauthorized**: Query the host groups that the user is not authorized to manage.
-        /// </summary>
-        [NameInMap("Mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
-
-        /// <summary>
-        /// The number of the page to return. Default value: **1**.
-        /// </summary>
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public string PageNumber { get; set; }
 
         /// <summary>
         /// The number of entries to return on each page.
@@ -49,23 +30,37 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// 
         /// >  We recommend that you do not leave the PageSize parameter empty.
         /// </summary>
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
+        /// <summary>
+        /// The ID of the host group.
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public string PageNumber { get; set; }
+
+        /// <summary>
+        /// The ID of the user.
+        /// 
+        /// >  You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the Bastionhost instance where you want to query the host groups that the user is authorized or not authorized to manage.
-        /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the user.
+        /// The ID of the Bastionhost instance where you want to query the host groups that the user is authorized or not authorized to manage.
         /// 
-        /// >  You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
+        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

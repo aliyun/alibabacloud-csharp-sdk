@@ -10,62 +10,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsForUserGroupResponseBody : TeaModel {
         /// <summary>
-        /// The hosts returned.
+        /// The ID of the user group for which you want to query hosts.
+        /// 
+        /// >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
         /// </summary>
         [NameInMap("Hosts")]
         [Validation(Required=false)]
         public List<ListHostsForUserGroupResponseBodyHosts> Hosts { get; set; }
         public class ListHostsForUserGroupResponseBodyHosts : TeaModel {
             /// <summary>
-            /// The endpoint type of the host. Valid values:
+            /// All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).
             /// 
-            /// *   **Public**: a public endpoint
-            /// *   **Private**: an internal endpoint
+            /// For more information about sample requests, see the "Examples" section of this topic.
             /// </summary>
             [NameInMap("ActiveAddressType")]
             [Validation(Required=false)]
             public string ActiveAddressType { get; set; }
 
             /// <summary>
-            /// The description of the host.
+            /// The ID of the request.
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
-            /// <summary>
-            /// The ID of the host.
-            /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
 
             /// <summary>
-            /// The name of the host.
+            /// ListHostsForUserGroup
             /// </summary>
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
 
             /// <summary>
-            /// The internal endpoint of the host. The value is a domain name or an IP address.
+            /// WB662865
             /// </summary>
             [NameInMap("HostPrivateAddress")]
             [Validation(Required=false)]
             public string HostPrivateAddress { get; set; }
 
             /// <summary>
-            /// The public endpoint of the host. The value is a domain name or an IP address.
+            /// Queries the hosts that a specified user group is authorized or not authorized to manage.
             /// </summary>
             [NameInMap("HostPublicAddress")]
             [Validation(Required=false)]
             public string HostPublicAddress { get; set; }
 
             /// <summary>
-            /// The operating system of the host. Valid values:
-            /// 
-            /// *   **Linux**
-            /// *   **Windows**
+            /// ListHostsForUserGroup
             /// </summary>
             [NameInMap("OSType")]
             [Validation(Required=false)]
@@ -74,14 +69,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The hosts returned.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of hosts returned.
+        /// The public endpoint of the host. The value is a domain name or an IP address.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

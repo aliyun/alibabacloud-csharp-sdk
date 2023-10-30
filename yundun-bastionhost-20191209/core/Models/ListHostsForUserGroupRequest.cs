@@ -10,27 +10,23 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsForUserGroupRequest : TeaModel {
         /// <summary>
-        /// The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
+        /// The operating system of the host that you want to query. Valid values:
+        /// 
+        /// *   **Linux**
+        /// *   **Windows**
         /// </summary>
         [NameInMap("HostAddress")]
         [Validation(Required=false)]
         public string HostAddress { get; set; }
 
         /// <summary>
-        /// The name of the host that you want to query. Only exact match is supported.
-        /// </summary>
-        [NameInMap("HostName")]
-        [Validation(Required=false)]
-        public string HostName { get; set; }
-
-        /// <summary>
         /// The ID of the Bastionhost instance where you want to query the hosts that the user group is authorized or not authorized to manage.
         /// 
         /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("HostName")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string HostName { get; set; }
 
         /// <summary>
         /// The category of the host that you want to query. Valid values:
@@ -38,22 +34,32 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// *   **Authorized**: Query the hosts that the user group is authorized to manage. This is the default value.
         /// *   **Unauthorized**: Query the hosts that the user group is not authorized to manage.
         /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// The operating system of the host. Valid values:
+        /// 
+        /// *   **Linux**
+        /// *   **Windows**
+        /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// The operating system of the host that you want to query. Valid values:
-        /// 
-        /// *   **Linux**
-        /// *   **Windows**
+        /// The internal endpoint of the host. The value is a domain name or an IP address.
         /// </summary>
         [NameInMap("OSType")]
         [Validation(Required=false)]
         public string OSType { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// The endpoint type of the host. Valid values:
+        /// 
+        /// *   **Public**: a public endpoint
+        /// *   **Private**: an internal endpoint
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -71,18 +77,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the Bastionhost instance where you want to query the hosts that the user group is authorized or not authorized to manage.
-        /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the user group for which you want to query hosts.
-        /// 
-        /// >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+        /// The number of the page to return. Default value: 1.
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]

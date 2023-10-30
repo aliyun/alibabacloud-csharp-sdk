@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the Bastionhost instance.
+        /// The region ID of the bastion host.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The type of the resource.
         /// 
-        /// Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.
+        /// Set the value to INSTANCE, which indicates that the resource is a bastion host.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

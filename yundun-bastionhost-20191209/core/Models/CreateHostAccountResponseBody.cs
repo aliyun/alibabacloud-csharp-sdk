@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateHostAccountResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the host account.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("HostAccountId")]
         [Validation(Required=false)]
         public string HostAccountId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The operation that you want to perform. Set the value to **CreateHostAccount**.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

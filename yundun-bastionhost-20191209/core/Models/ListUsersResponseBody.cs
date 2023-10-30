@@ -44,10 +44,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
+            /// </summary>
             [NameInMap("EffectiveEndTime")]
             [Validation(Required=false)]
             public long? EffectiveEndTime { get; set; }
 
+            /// <summary>
+            /// The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
+            /// </summary>
             [NameInMap("EffectiveStartTime")]
             [Validation(Required=false)]
             public long? EffectiveStartTime { get; set; }
@@ -93,6 +99,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string MobileCountryCode { get; set; }
 
+            /// <summary>
+            /// Specifies whether password reset is required upon the next logon. Valid values:
+            /// 
+            /// - true: yes
+            /// - false: no
+            /// </summary>
             [NameInMap("NeedResetPassword")]
             [Validation(Required=false)]
             public bool? NeedResetPassword { get; set; }
@@ -116,10 +128,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string SourceUserId { get; set; }
 
+            /// <summary>
+            /// The two-factor authentication method.
+            /// </summary>
             [NameInMap("TwoFactorMethods")]
             [Validation(Required=false)]
             public List<string> TwoFactorMethods { get; set; }
 
+            /// <summary>
+            /// The two-factor authentication status of the user. Valid values:
+            /// 
+            /// *   **Global:** follows the global settings
+            /// *   **Disable:** disables two-factor authentication
+            /// *   **Enable:** enable two-factor authentication and follows settings of the single user
+            /// </summary>
             [NameInMap("TwoFactorStatus")]
             [Validation(Required=false)]
             public string TwoFactorStatus { get; set; }

@@ -17,19 +17,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostGroupName { get; set; }
 
         /// <summary>
-        /// The ID of the Bastionhost instance where you want to query the host groups that the user group is authorized or not authorized to manage.
+        /// The ID of the bastion host to which the user group belongs.
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The category of the host group that you want to query. Valid values:
+        /// Specifies the category of the host group that you want to query. Valid values:
         /// 
-        /// *   **Authorized**: Query the host groups that the user group is authorized to manage. This is the default value.
-        /// *   **Unauthorized**: Query the host groups that the user group is not authorized to manage.
+        /// *   **Authorized**: queries the host groups that the user group is authorized to manage. This is the default value.
+        /// *   **Unauthorized**: queries the host groups that the user group is not authorized to manage.
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
@@ -43,20 +43,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries to return on each page.\
+        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
         /// 
-        /// The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.
-        /// 
-        /// >  We recommend that you do not leave the PageSize parameter empty.
+        /// > We recommend that you do not leave this parameter empty.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the Bastionhost instance where you want to query the host groups that the user group is authorized or not authorized to manage.
+        /// The region ID of the bastion host to which the user group belongs.
         /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -65,7 +64,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The ID of the user group.
         /// 
-        /// >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+        /// > You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
