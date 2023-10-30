@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? ConnectionDrainEnabled { get; set; }
 
         /// <summary>
-        /// The timeout period of connection draining. Unit: seconds. Valid values: **10** to **900**.
+        /// The timeout period of connection draining. Unit: seconds. Valid values: **0** to **900**.
         /// </summary>
         [NameInMap("ConnectionDrainTimeout")]
         [Validation(Required=false)]
