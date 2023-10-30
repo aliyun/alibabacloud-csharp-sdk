@@ -180,6 +180,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<CreateLoadBalancerRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateLoadBalancerRequestZoneMappings : TeaModel {
+            [NameInMap("IntranetAddress")]
+            [Validation(Required=false)]
+            public string IntranetAddress { get; set; }
+
             /// <summary>
             /// The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 vSwitch IDs.
             /// </summary>
