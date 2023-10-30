@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string AddedCpuCores { get; set; }
 
+            [NameInMap("CpuCores")]
+            [Validation(Required=false)]
+            public string CpuCores { get; set; }
+
             /// <summary>
             /// The time when the node was created.
             /// </summary>
@@ -206,6 +210,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("MaxIOPS")]
             [Validation(Required=false)]
             public int? MaxIOPS { get; set; }
+
+            [NameInMap("MemorySize")]
+            [Validation(Required=false)]
+            public string MemorySize { get; set; }
 
             /// <summary>
             /// Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:
