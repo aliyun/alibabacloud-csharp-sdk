@@ -16186,6 +16186,128 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await ModifyApiGroupWithOptionsAsync(request, runtime);
         }
 
+        public ModifyApiGroupNetworkPolicyResponse ModifyApiGroupNetworkPolicyWithOptions(ModifyApiGroupNetworkPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsPolicy))
+            {
+                query["HttpsPolicy"] = request.HttpsPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InnerDomainEnable))
+            {
+                query["InnerDomainEnable"] = request.InnerDomainEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetEnable))
+            {
+                query["InternetEnable"] = request.InternetEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetIPV6Enable))
+            {
+                query["InternetIPV6Enable"] = request.InternetIPV6Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcIntranetEnable))
+            {
+                query["VpcIntranetEnable"] = request.VpcIntranetEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcSlbIntranetEnable))
+            {
+                query["VpcSlbIntranetEnable"] = request.VpcSlbIntranetEnable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiGroupNetworkPolicy",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiGroupNetworkPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyApiGroupNetworkPolicyResponse> ModifyApiGroupNetworkPolicyWithOptionsAsync(ModifyApiGroupNetworkPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsPolicy))
+            {
+                query["HttpsPolicy"] = request.HttpsPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InnerDomainEnable))
+            {
+                query["InnerDomainEnable"] = request.InnerDomainEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetEnable))
+            {
+                query["InternetEnable"] = request.InternetEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetIPV6Enable))
+            {
+                query["InternetIPV6Enable"] = request.InternetIPV6Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcIntranetEnable))
+            {
+                query["VpcIntranetEnable"] = request.VpcIntranetEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcSlbIntranetEnable))
+            {
+                query["VpcSlbIntranetEnable"] = request.VpcSlbIntranetEnable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiGroupNetworkPolicy",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiGroupNetworkPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyApiGroupNetworkPolicyResponse ModifyApiGroupNetworkPolicy(ModifyApiGroupNetworkPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApiGroupNetworkPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyApiGroupNetworkPolicyResponse> ModifyApiGroupNetworkPolicyAsync(ModifyApiGroupNetworkPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApiGroupNetworkPolicyWithOptionsAsync(request, runtime);
+        }
+
         public ModifyApiGroupVpcWhitelistResponse ModifyApiGroupVpcWhitelistWithOptions(ModifyApiGroupVpcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
