@@ -10797,10 +10797,6 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
-            {
-                query["Category"] = request.Category;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassicExpendExpiredDays))
             {
                 query["ClassicExpendExpiredDays"] = request.ClassicExpendExpiredDays;
@@ -10866,10 +10862,6 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
-            {
-                query["Category"] = request.Category;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassicExpendExpiredDays))
             {
                 query["ClassicExpendExpiredDays"] = request.ClassicExpendExpiredDays;

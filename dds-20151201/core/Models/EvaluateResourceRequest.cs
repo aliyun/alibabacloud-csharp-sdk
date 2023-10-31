@@ -131,8 +131,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ShardsInfo { get; set; }
 
         /// <summary>
-        /// 副本集的存储空间，单位为GB。
-        /// > 实例规格为云盘型时，该参数必填。</props>
+        /// The storage capacity of the replica set instance. Unit: GB.
+        /// 
+        /// > This parameter is required for the instances that use cloud disks.
         /// </summary>
         [NameInMap("Storage")]
         [Validation(Required=false)]

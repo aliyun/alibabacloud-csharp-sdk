@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceNetExpireTimeRequest : TeaModel {
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
         /// <summary>
         /// The retention period of the original classic network address. Valid values: **14**, **30**, **60**, and** 120**. Unit: day.
         /// </summary>
