@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
                 [Validation(Required=false)]
                 public string AlphaUrl { get; set; }
 
+                [NameInMap("AttachmentUrl")]
+                [Validation(Required=false)]
+                public string AttachmentUrl { get; set; }
+
                 [NameInMap("FailCode")]
                 [Validation(Required=false)]
                 public string FailCode { get; set; }

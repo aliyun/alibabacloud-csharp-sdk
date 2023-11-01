@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [Validation(Required=false)]
             public string SessionId { get; set; }
 
+            [NameInMap("Token")]
+            [Validation(Required=false)]
+            public string Token { get; set; }
+
             [NameInMap("User")]
             [Validation(Required=false)]
             public QueryRunningInstanceResponseBodyDataUser User { get; set; }
