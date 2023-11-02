@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class BatchJobCheckRequest : TeaModel {
+    public class SetStorageRequest : TeaModel {
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("SubmitId")]
+        [NameInMap("Ttl")]
         [Validation(Required=false)]
-        public string SubmitId { get; set; }
+        public int? Ttl { get; set; }
 
     }
 

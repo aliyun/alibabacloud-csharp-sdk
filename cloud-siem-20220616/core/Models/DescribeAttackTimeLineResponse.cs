@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class SendMessageResponse : TeaModel {
+    public class DescribeAttackTimeLineResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public SendMessageResponseBody Body { get; set; }
+        public DescribeAttackTimeLineResponseBody Body { get; set; }
 
     }
 

@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class BatchJobCheckRequest : TeaModel {
+    public class PostEventWhiteruleListRequest : TeaModel {
+        [NameInMap("IncidentUuid")]
+        [Validation(Required=false)]
+        public string IncidentUuid { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("SubmitId")]
+        [NameInMap("WhiteruleList")]
         [Validation(Required=false)]
-        public string SubmitId { get; set; }
+        public string WhiteruleList { get; set; }
 
     }
 

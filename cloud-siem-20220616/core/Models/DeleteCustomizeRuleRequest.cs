@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class BatchJobCheckRequest : TeaModel {
+    public class DeleteCustomizeRuleRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("SubmitId")]
+        [NameInMap("RuleId")]
         [Validation(Required=false)]
-        public string SubmitId { get; set; }
+        public long? RuleId { get; set; }
 
     }
 

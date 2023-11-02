@@ -8,14 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class BatchJobCheckRequest : TeaModel {
+    public class GetHistogramsRequest : TeaModel {
+        [NameInMap("From")]
+        [Validation(Required=false)]
+        public int? From { get; set; }
+
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("SubmitId")]
+        [NameInMap("To")]
         [Validation(Required=false)]
-        public string SubmitId { get; set; }
+        public int? To { get; set; }
 
     }
 

@@ -8,18 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class SendMessageResponseBody : TeaModel {
+    public class DescribeDisposeStrategyPlaybookResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public List<DescribeDisposeStrategyPlaybookResponseBodyData> Data { get; set; }
+        public class DescribeDisposeStrategyPlaybookResponseBodyData : TeaModel {
+            [NameInMap("PlaybookName")]
+            [Validation(Required=false)]
+            public string PlaybookName { get; set; }
 
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
+            [NameInMap("PlaybookUuid")]
+            [Validation(Required=false)]
+            public string PlaybookUuid { get; set; }
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

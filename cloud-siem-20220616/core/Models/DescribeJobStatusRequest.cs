@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class BatchJobCheckRequest : TeaModel {
+    public class DescribeJobStatusRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class SendMessageRequest : TeaModel {
-        [NameInMap("ChannelType")]
+    public class DescribeAlertSourceWithEventRequest : TeaModel {
+        [NameInMap("IncidentUuid")]
         [Validation(Required=false)]
-        public int? ChannelType { get; set; }
-
-        [NameInMap("ReceiveUid")]
-        [Validation(Required=false)]
-        public long? ReceiveUid { get; set; }
+        public string IncidentUuid { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

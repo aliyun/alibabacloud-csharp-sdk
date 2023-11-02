@@ -8,14 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class BatchJobCheckRequest : TeaModel {
+    public class PostRuleStatusChangeRequest : TeaModel {
+        [NameInMap("Ids")]
+        [Validation(Required=false)]
+        public string Ids { get; set; }
+
+        [NameInMap("InUse")]
+        [Validation(Required=false)]
+        public bool? InUse { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("SubmitId")]
+        [NameInMap("RuleType")]
         [Validation(Required=false)]
-        public string SubmitId { get; set; }
+        public string RuleType { get; set; }
 
     }
 
