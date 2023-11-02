@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class ListConfigResponseBody : TeaModel {
         [NameInMap("configs")]
         [Validation(Required=false)]
-        public List<LogtailConfig> Configs { get; set; }
+        public List<string> Configs { get; set; }
 
         [NameInMap("count")]
         [Validation(Required=false)]

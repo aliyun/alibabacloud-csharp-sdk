@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("resourceId")]
         [Validation(Required=false)]
-        public string ResourceId { get; set; }
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("resourceType")]
         [Validation(Required=false)]

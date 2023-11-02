@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? Number { get; set; }
 
-        [NameInMap("policy")]
-        [Validation(Required=false)]
-        public string Policy { get; set; }
-
         [NameInMap("ticket")]
         [Validation(Required=false)]
         public string Ticket_ { get; set; }
@@ -48,6 +44,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("ticketId")]
         [Validation(Required=false)]
         public string TicketId { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
         [NameInMap("unlimitedExpiration")]
         [Validation(Required=false)]
