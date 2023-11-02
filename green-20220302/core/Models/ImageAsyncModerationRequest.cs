@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220302.Models
 {
-    public class DescribeImageResultExtRequest : TeaModel {
-        [NameInMap("InfoType")]
+    public class ImageAsyncModerationRequest : TeaModel {
+        [NameInMap("Service")]
         [Validation(Required=false)]
-        public string InfoType { get; set; }
+        public string Service { get; set; }
 
-        [NameInMap("ReqId")]
+        [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
-        public string ReqId { get; set; }
+        public string ServiceParameters { get; set; }
 
     }
 

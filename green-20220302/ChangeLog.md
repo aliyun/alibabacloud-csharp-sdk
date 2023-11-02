@@ -1,3 +1,6 @@
+2023-11-02 Version: 1.1.0
+- Generated csharp 2022-03-02 for Green.
+
 2023-07-17 Version: 1.0.7
 - Add Query Upload Token API.
 
