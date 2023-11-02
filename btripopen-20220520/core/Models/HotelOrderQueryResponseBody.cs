@@ -44,9 +44,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CityAdCode { get; set; }
 
+                [NameInMap("hotel_address")]
+                [Validation(Required=false)]
+                public string HotelAddress { get; set; }
+
                 [NameInMap("hotel_name")]
                 [Validation(Required=false)]
                 public string HotelName { get; set; }
+
+                [NameInMap("hotel_phone")]
+                [Validation(Required=false)]
+                public string HotelPhone { get; set; }
 
                 [NameInMap("hotel_support_vat_invoice_type")]
                 [Validation(Required=false)]
@@ -107,6 +115,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("depart_name")]
                 [Validation(Required=false)]
                 public string DepartName { get; set; }
+
+                [NameInMap("exceed_apply_nos")]
+                [Validation(Required=false)]
+                public List<string> ExceedApplyNos { get; set; }
 
                 [NameInMap("extend_field")]
                 [Validation(Required=false)]
