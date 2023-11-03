@@ -3484,9 +3484,17 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
+            {
+                query["DBInstanceClass"] = request.DBInstanceClass;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
             {
                 query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeSecondaryZoneId))
             {
@@ -3578,9 +3586,17 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
+            {
+                query["DBInstanceClass"] = request.DBInstanceClass;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
             {
                 query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeSecondaryZoneId))
             {
@@ -3791,9 +3807,17 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
+            {
+                query["DBInstanceClass"] = request.DBInstanceClass;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
             {
                 query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
@@ -3858,9 +3882,17 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
+            {
+                query["DBInstanceClass"] = request.DBInstanceClass;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
             {
                 query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {

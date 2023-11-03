@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("DBInstanceClass")]
+        [Validation(Required=false)]
+        public string DBInstanceClass { get; set; }
+
         /// <summary>
         /// The database engine type of the instance. Valid values:
         /// 
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
+
+        [NameInMap("EngineVersion")]
+        [Validation(Required=false)]
+        public string EngineVersion { get; set; }
 
         [NameInMap("ExcludeSecondaryZoneId")]
         [Validation(Required=false)]

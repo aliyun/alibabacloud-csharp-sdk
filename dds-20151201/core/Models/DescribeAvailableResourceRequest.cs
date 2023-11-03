@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAvailableResourceRequest : TeaModel {
+        [NameInMap("DBInstanceClass")]
+        [Validation(Required=false)]
+        public string DBInstanceClass { get; set; }
+
         /// <summary>
         /// The architecture of the instance. Valid values:
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
+
+        [NameInMap("EngineVersion")]
+        [Validation(Required=false)]
+        public string EngineVersion { get; set; }
 
         /// <summary>
         /// The billing method of the instance. Default value: PrePaid. Valid values:
