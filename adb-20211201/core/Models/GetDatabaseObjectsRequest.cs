@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// *   Asc
         /// *   Desc
         /// 
-        /// Valid values for Field: DatabaseName, CreateTime, and UpdateTime.
+        /// Valid values for Field: DatabaseName, CreateTime, and UpdateTime. -CreateTime; -UpdateTime;
         /// 
         /// Default value: {"Type": "Desc","Field": "DatabaseName"}.
         /// </summary>

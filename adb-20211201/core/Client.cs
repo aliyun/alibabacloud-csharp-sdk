@@ -7216,6 +7216,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await GetSparkTemplateFullTreeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetTableResponse
+         */
+        // Deprecated
         public GetTableResponse GetTableWithOptions(GetTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7255,6 +7263,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetTableResponse
+         */
+        // Deprecated
         public async Task<GetTableResponse> GetTableWithOptionsAsync(GetTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7294,12 +7310,26 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetTableRequest
+          * @return GetTableResponse
+         */
+        // Deprecated
         public GetTableResponse GetTable(GetTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTableWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetTableRequest
+          * @return GetTableResponse
+         */
+        // Deprecated
         public async Task<GetTableResponse> GetTableAsync(GetTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
