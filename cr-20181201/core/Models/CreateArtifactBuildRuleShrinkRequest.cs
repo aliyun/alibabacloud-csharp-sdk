@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class CreateArtifactBuildRuleRequest : TeaModel {
+    public class CreateArtifactBuildRuleShrinkRequest : TeaModel {
         [NameInMap("ArtifactType")]
         [Validation(Required=false)]
         public string ArtifactType { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Parameters { get; set; }
+        public string ParametersShrink { get; set; }
 
         [NameInMap("ScopeId")]
         [Validation(Required=false)]

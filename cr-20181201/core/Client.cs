@@ -278,13 +278,19 @@ namespace AlibabaCloud.SDK.Cr20181201
         /**
           * The ID of the rule.
           *
-          * @param request CreateArtifactBuildRuleRequest
+          * @param tmpReq CreateArtifactBuildRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return CreateArtifactBuildRuleResponse
          */
-        public CreateArtifactBuildRuleResponse CreateArtifactBuildRuleWithOptions(CreateArtifactBuildRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateArtifactBuildRuleResponse CreateArtifactBuildRuleWithOptions(CreateArtifactBuildRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateArtifactBuildRuleShrinkRequest request = new CreateArtifactBuildRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactType))
             {
@@ -293,6 +299,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParametersShrink))
+            {
+                query["Parameters"] = request.ParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeId))
             {
@@ -324,13 +334,19 @@ namespace AlibabaCloud.SDK.Cr20181201
         /**
           * The ID of the rule.
           *
-          * @param request CreateArtifactBuildRuleRequest
+          * @param tmpReq CreateArtifactBuildRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return CreateArtifactBuildRuleResponse
          */
-        public async Task<CreateArtifactBuildRuleResponse> CreateArtifactBuildRuleWithOptionsAsync(CreateArtifactBuildRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateArtifactBuildRuleResponse> CreateArtifactBuildRuleWithOptionsAsync(CreateArtifactBuildRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateArtifactBuildRuleShrinkRequest request = new CreateArtifactBuildRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactType))
             {
@@ -339,6 +355,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParametersShrink))
+            {
+                query["Parameters"] = request.ParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeId))
             {
