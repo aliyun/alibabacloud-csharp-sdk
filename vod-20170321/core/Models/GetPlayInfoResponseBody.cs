@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Bitrate { get; set; }
 
                 /// <summary>
-                /// The creation time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Duration { get; set; }
 
                 /// <summary>
-                /// Indicates whether the media stream was encrypted. Valid values:
+                /// Indicates whether the media stream is encrypted. Valid values:
                 /// 
-                /// *   **0**: no
-                /// *   **1**: yes.
+                /// *   **0**: The media stream is not encrypted.
+                /// *   **1**: The media stream is encrypted.
                 /// </summary>
                 [NameInMap("Encrypt")]
                 [Validation(Required=false)]
@@ -120,12 +120,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string HDRType { get; set; }
 
                 /// <summary>
-                /// The height of the media stream. Unit: pixel.
+                /// The height of the media stream. Unit: pixels.
                 /// </summary>
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public long? Height { get; set; }
 
+                /// <summary>
+                /// The custom watermark information of the copyright watermark. This parameter is returned if you set `JobType` to `2`.
+                /// </summary>
                 [NameInMap("JobExt")]
                 [Validation(Required=false)]
                 public string JobExt { get; set; }
@@ -137,6 +140,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string JobId { get; set; }
 
+                /// <summary>
+                /// The type of the digital watermark. Valid values:
+                /// 
+                /// *   **1**: tracing watermark
+                /// *   **2**: copyright watermark
+                /// </summary>
                 [NameInMap("JobType")]
                 [Validation(Required=false)]
                 public int? JobType { get; set; }
@@ -183,7 +192,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Specification { get; set; }
 
                 /// <summary>
-                /// The status of the media stream. Valid values:
+                /// The status of the audio or video stream. Valid values:
                 /// 
                 /// *   **Normal**: The latest transcoded stream in each quality and format is in the Normal status.
                 /// *   **Invisible**: If multiple streams are transcoded in the same quality and format, the latest transcoded stream is in the Normal status and other streams are in the Invisible status.
@@ -207,7 +216,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string WatermarkId { get; set; }
 
                 /// <summary>
-                /// The width of the media stream. Unit: pixel.
+                /// The width of the media stream. Unit: pixels.
                 /// </summary>
                 [NameInMap("Width")]
                 [Validation(Required=false)]

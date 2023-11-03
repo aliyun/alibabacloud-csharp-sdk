@@ -59,6 +59,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Definition { get; set; }
 
+        /// <summary>
+        /// The type of the digital watermark. Valid values:
+        /// 
+        /// *   TraceMark: tracing watermark
+        /// *   CopyrightMark: copyright watermark
+        /// </summary>
         [NameInMap("DigitalWatermarkType")]
         [Validation(Required=false)]
         public string DigitalWatermarkType { get; set; }
@@ -126,6 +132,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string StreamType { get; set; }
 
+        /// <summary>
+        /// The custom digital watermark.
+        /// 
+        /// *   If you set `DigitalWatermarkType` to `TraceMark`, specify this parameter to configure the video tracing watermark and return the video stream that contains the watermark. The value can be up to 1,024 characters in length and can contain letters and digits.
+        /// *   If you set `DigitalWatermarkType` to `CopyrightMark`, specify the **watermark text** that you created for the watermark template for this parameter.`` You can specify this parameter to query and return the video stream that contains the specified watermark text.
+        /// </summary>
         [NameInMap("Trace")]
         [Validation(Required=false)]
         public string Trace { get; set; }

@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetDigitalWatermarkExtractResultRequest : TeaModel {
+        /// <summary>
+        /// The type of the digital watermark. Valid values:
+        /// 
+        /// *   TraceMark: tracing watermark
+        /// *   CopyrightMark: copyright watermark
+        /// </summary>
         [NameInMap("ExtractType")]
         [Validation(Required=false)]
         public string ExtractType { get; set; }
 
+        /// <summary>
+        /// The ID of the job.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// The ID of the video file. You can query the video ID by using the ApsaraVideo VOD console or calling the SearchMedia operation.
+        /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }

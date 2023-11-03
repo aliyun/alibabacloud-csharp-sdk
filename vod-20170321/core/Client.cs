@@ -22,6 +22,7 @@ namespace AlibabaCloud.SDK.Vod20170321
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
+                {"cn-hangzhou", "vod.cn-shanghai.aliyuncs.com"},
                 {"ap-northeast-2-pop", "vod.aliyuncs.com"},
                 {"ap-southeast-2", "vod.aliyuncs.com"},
                 {"ap-southeast-3", "vod.aliyuncs.com"},
@@ -33,7 +34,6 @@ namespace AlibabaCloud.SDK.Vod20170321
                 {"cn-edge-1", "vod.aliyuncs.com"},
                 {"cn-fujian", "vod.aliyuncs.com"},
                 {"cn-haidian-cm12-c01", "vod.aliyuncs.com"},
-                {"cn-hangzhou", "vod.aliyuncs.com"},
                 {"cn-hangzhou-bj-b01", "vod.aliyuncs.com"},
                 {"cn-hangzhou-finance", "vod.aliyuncs.com"},
                 {"cn-hangzhou-internal-prod-1", "vod.aliyuncs.com"},
@@ -41,7 +41,6 @@ namespace AlibabaCloud.SDK.Vod20170321
                 {"cn-hangzhou-internal-test-2", "vod.aliyuncs.com"},
                 {"cn-hangzhou-internal-test-3", "vod.aliyuncs.com"},
                 {"cn-hangzhou-test-306", "vod.aliyuncs.com"},
-                {"cn-hongkong", "vod.aliyuncs.com"},
                 {"cn-hongkong-finance-pop", "vod.aliyuncs.com"},
                 {"cn-huhehaote", "vod.aliyuncs.com"},
                 {"cn-huhehaote-nebula-1", "vod.aliyuncs.com"},
@@ -61,15 +60,12 @@ namespace AlibabaCloud.SDK.Vod20170321
                 {"cn-yushanfang", "vod.aliyuncs.com"},
                 {"cn-zhangbei", "vod.aliyuncs.com"},
                 {"cn-zhangbei-na61-b01", "vod.aliyuncs.com"},
-                {"cn-zhangjiakou", "vod.aliyuncs.com"},
                 {"cn-zhangjiakou-na62-a01", "vod.aliyuncs.com"},
                 {"cn-zhengzhou-nebula-1", "vod.aliyuncs.com"},
-                {"eu-west-1", "vod.aliyuncs.com"},
                 {"eu-west-1-oxs", "vod.aliyuncs.com"},
                 {"me-east-1", "vod.aliyuncs.com"},
                 {"rus-west-1-pop", "vod.aliyuncs.com"},
                 {"us-east-1", "vod.aliyuncs.com"},
-                {"us-west-1", "vod.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("vod", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -8331,6 +8327,13 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await GetDefaultAITemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to query the results of digital watermark extraction jobs that are created in the last two years.
+          *
+          * @param request GetDigitalWatermarkExtractResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDigitalWatermarkExtractResultResponse
+         */
         public GetDigitalWatermarkExtractResultResponse GetDigitalWatermarkExtractResultWithOptions(GetDigitalWatermarkExtractResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8382,6 +8385,13 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<GetDigitalWatermarkExtractResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to query the results of digital watermark extraction jobs that are created in the last two years.
+          *
+          * @param request GetDigitalWatermarkExtractResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDigitalWatermarkExtractResultResponse
+         */
         public async Task<GetDigitalWatermarkExtractResultResponse> GetDigitalWatermarkExtractResultWithOptionsAsync(GetDigitalWatermarkExtractResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8433,12 +8443,24 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<GetDigitalWatermarkExtractResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to query the results of digital watermark extraction jobs that are created in the last two years.
+          *
+          * @param request GetDigitalWatermarkExtractResultRequest
+          * @return GetDigitalWatermarkExtractResultResponse
+         */
         public GetDigitalWatermarkExtractResultResponse GetDigitalWatermarkExtractResult(GetDigitalWatermarkExtractResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDigitalWatermarkExtractResultWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to query the results of digital watermark extraction jobs that are created in the last two years.
+          *
+          * @param request GetDigitalWatermarkExtractResultRequest
+          * @return GetDigitalWatermarkExtractResultResponse
+         */
         public async Task<GetDigitalWatermarkExtractResultResponse> GetDigitalWatermarkExtractResultAsync(GetDigitalWatermarkExtractResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10066,7 +10088,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10100,7 +10122,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10134,7 +10156,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @return GetTranscodeTemplateGroupResponse
@@ -10146,7 +10168,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @return GetTranscodeTemplateGroupResponse
@@ -12504,6 +12526,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverURL))
             {
                 query["CoverURL"] = request.CoverURL;
@@ -12588,6 +12614,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverURL))
             {
                 query["CoverURL"] = request.CoverURL;
@@ -13499,8 +13529,8 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
+          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
+          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
           *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
           *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
           *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
@@ -13562,8 +13592,8 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
+          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
+          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
           *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
           *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
           *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
@@ -13625,8 +13655,8 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
+          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
+          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
           *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
           *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
           *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
@@ -13642,8 +13672,8 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
+          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
+          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
           *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
           *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
           *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
@@ -15063,6 +15093,14 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await SubmitAIMediaAuditJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You must upload the video from which you want to extract the digital watermark to ApsaraVideo VOD.
+          * *   The duration of the video from which you want to extract the digital watermark must exceed 3 minutes.
+          *
+          * @param request SubmitDigitalWatermarkExtractJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SubmitDigitalWatermarkExtractJobResponse
+         */
         public SubmitDigitalWatermarkExtractJobResponse SubmitDigitalWatermarkExtractJobWithOptions(SubmitDigitalWatermarkExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15110,6 +15148,14 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<SubmitDigitalWatermarkExtractJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You must upload the video from which you want to extract the digital watermark to ApsaraVideo VOD.
+          * *   The duration of the video from which you want to extract the digital watermark must exceed 3 minutes.
+          *
+          * @param request SubmitDigitalWatermarkExtractJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SubmitDigitalWatermarkExtractJobResponse
+         */
         public async Task<SubmitDigitalWatermarkExtractJobResponse> SubmitDigitalWatermarkExtractJobWithOptionsAsync(SubmitDigitalWatermarkExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15157,12 +15203,26 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<SubmitDigitalWatermarkExtractJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You must upload the video from which you want to extract the digital watermark to ApsaraVideo VOD.
+          * *   The duration of the video from which you want to extract the digital watermark must exceed 3 minutes.
+          *
+          * @param request SubmitDigitalWatermarkExtractJobRequest
+          * @return SubmitDigitalWatermarkExtractJobResponse
+         */
         public SubmitDigitalWatermarkExtractJobResponse SubmitDigitalWatermarkExtractJob(SubmitDigitalWatermarkExtractJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitDigitalWatermarkExtractJobWithOptions(request, runtime);
         }
 
+        /**
+          * *   You must upload the video from which you want to extract the digital watermark to ApsaraVideo VOD.
+          * *   The duration of the video from which you want to extract the digital watermark must exceed 3 minutes.
+          *
+          * @param request SubmitDigitalWatermarkExtractJobRequest
+          * @return SubmitDigitalWatermarkExtractJobResponse
+         */
         public async Task<SubmitDigitalWatermarkExtractJobResponse> SubmitDigitalWatermarkExtractJobAsync(SubmitDigitalWatermarkExtractJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

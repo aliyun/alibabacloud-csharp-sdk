@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ProduceEditingProjectVideoRequest : TeaModel {
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
         /// <summary>
         /// The thumbnail URL of the online editing project.
         /// </summary>
