@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudAssetInstancesRequest : TeaModel {
         /// <summary>
-        /// The cloud service assets.
+        /// The cloud assets.
         /// </summary>
         [NameInMap("CloudAssetTypes")]
         [Validation(Required=false)]

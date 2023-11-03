@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// An array that consists of the urgent vulnerabilities returned.
+        /// The information about the urgent vulnerabilities.
         /// </summary>
         [NameInMap("GroupedVulItems")]
         [Validation(Required=false)]
@@ -68,12 +68,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The progress of the urgent vulnerability detection task. Valid values: 0 to 100.
             /// 
-            /// > This parameter is returned only when an urgent vulnerability is being detected.
+            /// >  This parameter takes effect only when an urgent vulnerability is being detected.
             /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public int? Progress { get; set; }
 
+            /// <summary>
+            /// Indicates whether the application protection feature is supported. Valid values:
+            /// 
+            /// *   **0**: no
+            /// *   **1**: yes
+            /// 
+            /// >  If this parameter is not returned, the application protection is not supported.
+            /// </summary>
             [NameInMap("RaspDefend")]
             [Validation(Required=false)]
             public int? RaspDefend { get; set; }

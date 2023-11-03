@@ -25,14 +25,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string AttachTypes { get; set; }
 
+        /// <summary>
+        /// 要查询漏洞影响的容器名称。
+        /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
         public string ContainerName { get; set; }
 
+        /// <summary>
+        /// 首次扫描时间结束时间。
+        /// > 时间戳，单位为毫秒。
+        /// </summary>
         [NameInMap("CreateTsEnd")]
         [Validation(Required=false)]
         public long? CreateTsEnd { get; set; }
 
+        /// <summary>
+        /// 首次扫描时间起始时间。
+        /// > 时间戳，单位为毫秒。
+        /// </summary>
         [NameInMap("CreateTsStart")]
         [Validation(Required=false)]
         public long? CreateTsStart { get; set; }
@@ -60,6 +71,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// 要查询漏洞影响的镜像名称。
+        /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
@@ -85,6 +99,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Necessity { get; set; }
 
+        /// <summary>
+        /// 要查询漏洞影响的进程路径。
+        /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]
         public string Path { get; set; }

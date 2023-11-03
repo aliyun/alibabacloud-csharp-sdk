@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperateTimeStart { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**. Maximum value: 100.
+        /// The number of entries per page. Default value: **20**. Maximum value: 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The Alibaba Cloud account ID of the member in the resource directory.
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the ID.
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
@@ -255,11 +255,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **2**: ignored
         /// *   **4**: confirmed
         /// *   **8**: marked as a false positive
-        /// *   **16**: being handled
+        /// *   **16**: handling
         /// *   **32**: handled
         /// *   **64**: expired
         /// *   **128**: deleted
-        /// *   **512**: being automatically blocked
+        /// *   **512**: automatically blocking
         /// *   **513**: automatically blocked
         /// </summary>
         [NameInMap("Status")]

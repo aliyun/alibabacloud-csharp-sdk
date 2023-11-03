@@ -90,8 +90,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The status of the vulnerability. Separate multiple states with commas (,). Valid values:
         /// 
         /// *   **1**: unfixed
-        /// *   **4**: being fixed
-        /// *   **7**: fixed
+        /// *   **2**: fix failed
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
@@ -119,10 +118,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **cve**: Linux software vulnerability
         /// *   **sys**: Windows system vulnerability
-        /// *   **cms**: Web-CMS vulnerability
-        /// *   **app**: application vulnerability
-        /// *   **emg**: urgent vulnerability
-        /// *   **sca**: vulnerability that is detected based on software component analysis
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

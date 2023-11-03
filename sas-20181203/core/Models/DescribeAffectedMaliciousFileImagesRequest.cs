@@ -78,7 +78,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The severity of the malicious image sample. Separate multiple severities with commas (,). Valid values: serious suspicious remind
+        /// The severity. Separate multiple severities with commas (,). Valid values:
+        /// 
+        /// *   **serious**
+        /// *   **suspicious**
+        /// *   **remind**
         /// </summary>
         [NameInMap("Levels")]
         [Validation(Required=false)]
@@ -178,6 +182,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> ScanRange { get; set; }
 
+        /// <summary>
+        /// 镜像恶意样本处理状态。取值：
+        /// - **0**：未处理
+        /// - **1**：已处理
+        /// - **2**：验证中
+        /// - **3**：已加白
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

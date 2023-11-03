@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeOnceTaskLeafRecordPageResponseBody : TeaModel {
         /// <summary>
-        /// The sub-tasks returned.
+        /// The details of the sub-tasks.
         /// </summary>
         [NameInMap("OnceTasks")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Finish { get; set; }
 
             /// <summary>
-            /// The number of assets that are scanned.
+            /// The number of the assets that are scanned.
             /// </summary>
             [NameInMap("FinishCount")]
             [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RealRunTime { get; set; }
 
             /// <summary>
-            /// The execution result of the task.
+            /// The execution result of the sub-task.
             /// </summary>
             [NameInMap("ResultInfo")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// The status information.
+            /// The status.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **INIT**: The sub-task is not started.
             /// *   **START**: The sub-task is started.
             /// *   **SUCCESS**: The sub-task is complete.
-            /// *   **TIMEOUT**: The sub-task timed out.
+            /// *   **TIMEOUT**: The task timed out.
             /// </summary>
             [NameInMap("StatusText")]
             [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// The type of the asset on which the sub-task is performed.
+            /// The type of the assets that are scanned.
             /// 
             /// *   **IMAGE_REPO**: image repository
             /// *   **IMAGE**: image
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Image { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID of the node.
                 /// </summary>
                 [NameInMap("NodeInstanceId")]
                 [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Pod { get; set; }
 
                 /// <summary>
-                /// The region of the server image.
+                /// The region ID of the server image.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]

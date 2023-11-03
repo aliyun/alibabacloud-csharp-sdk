@@ -65,9 +65,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegistryHostIp { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// 
-        /// > You can call the [ListImageRegistryRegion](~~ListImageRegistryRegion~~) operation to query the IDs of supported regions.
+        /// >  You can call the [ListImageRegistryRegion](~~ListImageRegistryRegion~~) operation to query the IDs of supported regions.
         /// </summary>
         [NameInMap("RegistryRegionId")]
         [Validation(Required=false)]

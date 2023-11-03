@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteFileProtectRuleRequest : TeaModel {
+        /// <summary>
+        /// The IDs of the core file monitoring rules that you want to delete.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public List<long?> Id { get; set; }
