@@ -2286,6 +2286,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["UchConfig"] = request.UchConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamKeepaliveEnabled))
+            {
+                query["UpstreamKeepaliveEnabled"] = request.UpstreamKeepaliveEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
@@ -2369,6 +2373,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UchConfig))
             {
                 query["UchConfig"] = request.UchConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamKeepaliveEnabled))
+            {
+                query["UpstreamKeepaliveEnabled"] = request.UpstreamKeepaliveEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -9341,6 +9349,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["UchConfig"] = request.UchConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamKeepaliveEnabled))
+            {
+                query["UpstreamKeepaliveEnabled"] = request.UpstreamKeepaliveEnabled;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9409,6 +9421,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UchConfig))
             {
                 query["UchConfig"] = request.UchConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamKeepaliveEnabled))
+            {
+                query["UpstreamKeepaliveEnabled"] = request.UpstreamKeepaliveEnabled;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

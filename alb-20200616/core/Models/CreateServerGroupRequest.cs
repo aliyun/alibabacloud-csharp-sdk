@@ -333,6 +333,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        [NameInMap("UpstreamKeepaliveEnabled")]
+        [Validation(Required=false)]
+        public bool? UpstreamKeepaliveEnabled { get; set; }
+
         /// <summary>
         /// The ID of the virtual private cloud (VPC). You can add only backend servers that are deployed in the specified VPC to the server group.
         /// 

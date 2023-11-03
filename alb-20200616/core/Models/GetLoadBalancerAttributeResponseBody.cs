@@ -333,6 +333,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public string EipType { get; set; }
 
+                [NameInMap("IntranetAddress")]
+                [Validation(Required=false)]
+                public string IntranetAddress { get; set; }
+
                 /// <summary>
                 /// The protocol version. Valid values:
                 /// 

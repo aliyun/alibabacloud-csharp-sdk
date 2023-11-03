@@ -281,6 +281,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        [NameInMap("UpstreamKeepaliveEnabled")]
+        [Validation(Required=false)]
+        public bool? UpstreamKeepaliveEnabled { get; set; }
+
     }
 
 }

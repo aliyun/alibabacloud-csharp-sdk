@@ -180,6 +180,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<CreateLoadBalancerRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateLoadBalancerRequestZoneMappings : TeaModel {
+            [NameInMap("AllocationId")]
+            [Validation(Required=false)]
+            public string AllocationId { get; set; }
+
             [NameInMap("IntranetAddress")]
             [Validation(Required=false)]
             public string IntranetAddress { get; set; }
