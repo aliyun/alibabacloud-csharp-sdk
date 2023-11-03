@@ -8,9 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class ListEnvPodMonitorsRequest : TeaModel {
+    public class ListAddonReleasesRequest : TeaModel {
         /// <summary>
-        /// The environment ID.
+        /// Name of Addon.
+        /// </summary>
+        [NameInMap("AddonName")]
+        [Validation(Required=false)]
+        public string AddonName { get; set; }
+
+        /// <summary>
+        /// Environment instance ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]

@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class ListEnvPodMonitorsRequest : TeaModel {
+    public class DescribeAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// The environment ID.
+        /// Environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
@@ -22,6 +22,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// Name of Release.
+        /// </summary>
+        [NameInMap("ReleaseName")]
+        [Validation(Required=false)]
+        public string ReleaseName { get; set; }
 
     }
 

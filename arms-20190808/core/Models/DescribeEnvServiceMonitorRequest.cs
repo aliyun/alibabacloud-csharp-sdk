@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvServiceMonitorRequest : TeaModel {
         /// <summary>
-        /// Environment instance ID.
+        /// The ID of the environment instance.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// The namespace where the ServiceMonitor is located.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// ServiceMonitor name.
+        /// The name of the ServiceMonitor.
         /// </summary>
         [NameInMap("ServiceMonitorName")]
         [Validation(Required=false)]

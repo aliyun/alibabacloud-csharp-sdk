@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvServiceMonitorResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful.
+        /// The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public DescribeEnvServiceMonitorResponseBodyData Data { get; set; }
         public class DescribeEnvServiceMonitorResponseBodyData : TeaModel {
             /// <summary>
-            /// ServiceMonitor\"s yaml configuration string.
+            /// The YAML configuration string of the ServiceMonitor.
             /// </summary>
             [NameInMap("ConfigYaml")]
             [Validation(Required=false)]
             public string ConfigYaml { get; set; }
 
             /// <summary>
-            /// Environment instance ID.
+            /// The ID of the environment instance.
             /// </summary>
             [NameInMap("EnvironmentId")]
             [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// ServiceMonitor name.
+            /// The name of the ServiceMonitor.
             /// </summary>
             [NameInMap("ServiceMonitorName")]
             [Validation(Required=false)]
             public string ServiceMonitorName { get; set; }
 
             /// <summary>
-            /// Status: run, stop.
+            /// The status of the ServiceMonitor. Valid values: run and stop.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

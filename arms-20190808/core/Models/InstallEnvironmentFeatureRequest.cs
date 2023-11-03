@@ -8,48 +8,48 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class UpdateEnvPodMonitorRequest : TeaModel {
+    public class InstallEnvironmentFeatureRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values: zh and en. Default value: zh.
+        /// Language,the default language is Chinese.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// The YAML configuration string.
+        /// Config information of Feature.
         /// </summary>
-        [NameInMap("ConfigYaml")]
+        [NameInMap("Config")]
         [Validation(Required=false)]
-        public string ConfigYaml { get; set; }
+        public string Config { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request.
-        /// </summary>
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
-
-        /// <summary>
-        /// The environment ID.
+        /// Environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The namespace where the PodMonitor is located.
+        /// Name of Feature.
         /// </summary>
-        [NameInMap("Namespace")]
+        [NameInMap("FeatureName")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public string FeatureName { get; set; }
 
         /// <summary>
-        /// The name of the PodMonitor.
+        /// Version of Feature.
         /// </summary>
-        [NameInMap("PodMonitorName")]
+        [NameInMap("FeatureVersion")]
         [Validation(Required=false)]
-        public string PodMonitorName { get; set; }
+        public string FeatureVersion { get; set; }
+
+        /// <summary>
+        /// Region of Feature.
+        /// </summary>
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
         /// <summary>
         /// The region ID.

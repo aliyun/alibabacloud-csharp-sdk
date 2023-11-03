@@ -8,13 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class ListEnvPodMonitorsRequest : TeaModel {
+    public class DeleteAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// The environment ID.
+        /// Environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
+
+        /// <summary>
+        /// Whether to be forcibly deleted. The default value is false.
+        /// </summary>
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
 
         /// <summary>
         /// The region ID.
@@ -22,6 +29,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// Name of Release.
+        /// </summary>
+        [NameInMap("ReleaseName")]
+        [Validation(Required=false)]
+        public string ReleaseName { get; set; }
 
     }
 

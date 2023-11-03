@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateEnvServiceMonitorResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// The HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public CreateEnvServiceMonitorResponseBodyData Data { get; set; }
         public class CreateEnvServiceMonitorResponseBodyData : TeaModel {
             /// <summary>
-            /// target matching prompt information.
+            /// Indicates whether targets are matched.
             /// </summary>
             [NameInMap("MatchedMsg")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The name of the serviceMonitor successfully created.
+            /// The name of the created ServiceMonitor.
             /// </summary>
             [NameInMap("ServiceMonitorName")]
             [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

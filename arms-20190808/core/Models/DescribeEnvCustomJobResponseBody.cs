@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvCustomJobResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful.
+        /// The HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public DescribeEnvCustomJobResponseBodyData Data { get; set; }
         public class DescribeEnvCustomJobResponseBodyData : TeaModel {
             /// <summary>
-            /// If the request parameter encryptYaml is true, the base64-encoded yaml string is returned. Otherwise, the plaintext yaml string is returned.
+            /// If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
             /// </summary>
             [NameInMap("ConfigYaml")]
             [Validation(Required=false)]
             public string ConfigYaml { get; set; }
 
             /// <summary>
-            /// Custom job name.
+            /// The name of the custom job.
             /// </summary>
             [NameInMap("CustomJobName")]
             [Validation(Required=false)]
             public string CustomJobName { get; set; }
 
             /// <summary>
-            /// Environment instance ID.
+            /// The ID of the environment instance.
             /// </summary>
             [NameInMap("EnvironmentId")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// Status: run, stop.
+            /// The status of the custom job. Valid values: run and stop.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

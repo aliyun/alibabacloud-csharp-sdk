@@ -10,63 +10,63 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvCustomJobsResponseBody : TeaModel {
         /// <summary>
-        /// The response code. The status code 200 indicates that the request was successful.
+        /// The HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned information.
+        /// The returned struct.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListEnvCustomJobsResponseBodyData> Data { get; set; }
         public class ListEnvCustomJobsResponseBodyData : TeaModel {
             /// <summary>
-            /// The attributed component name.
+            /// The name of the component to which the custom job belongs.
             /// </summary>
             [NameInMap("AddonName")]
             [Validation(Required=false)]
             public string AddonName { get; set; }
 
             /// <summary>
-            /// The attributed component instance name.
+            /// The instance name of the component.
             /// </summary>
             [NameInMap("AddonReleaseName")]
             [Validation(Required=false)]
             public string AddonReleaseName { get; set; }
 
             /// <summary>
-            /// The attributed component version.
+            /// The version of the component.
             /// </summary>
             [NameInMap("AddonVersion")]
             [Validation(Required=false)]
             public string AddonVersion { get; set; }
 
             /// <summary>
-            /// If the request parameter encryptYaml is true, the base64-encoded yaml string is returned. Otherwise, the plaintext yaml string is returned.
+            /// If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
             /// </summary>
             [NameInMap("ConfigYaml")]
             [Validation(Required=false)]
             public string ConfigYaml { get; set; }
 
             /// <summary>
-            /// Creation time (timestamp).
+            /// The time when the custom job was created. The value of this parameter is a timestamp.
             /// </summary>
             [NameInMap("CreationTimestamp")]
             [Validation(Required=false)]
             public string CreationTimestamp { get; set; }
 
             /// <summary>
-            /// Custom job name.
+            /// The name of the custom job.
             /// </summary>
             [NameInMap("CustomJobName")]
             [Validation(Required=false)]
             public string CustomJobName { get; set; }
 
             /// <summary>
-            /// Environment instance ID.
+            /// The ID of the environment instance.
             /// </summary>
             [NameInMap("EnvironmentId")]
             [Validation(Required=false)]
@@ -80,35 +80,35 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// scrape configuration.
+            /// The capture configurations.
             /// </summary>
             [NameInMap("ScrapeConfigs")]
             [Validation(Required=false)]
             public List<ListEnvCustomJobsResponseBodyDataScrapeConfigs> ScrapeConfigs { get; set; }
             public class ListEnvCustomJobsResponseBodyDataScrapeConfigs : TeaModel {
                 /// <summary>
-                /// Job name.
+                /// The name of the job.
                 /// </summary>
                 [NameInMap("JobName")]
                 [Validation(Required=false)]
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// scrape the path of the metric.
+                /// The path of the metric.
                 /// </summary>
                 [NameInMap("MetricsPath")]
                 [Validation(Required=false)]
                 public string MetricsPath { get; set; }
 
                 /// <summary>
-                /// List of service discovery methods.
+                /// The service discovery methods.
                 /// </summary>
                 [NameInMap("ScrapeDiscoverys")]
                 [Validation(Required=false)]
                 public List<string> ScrapeDiscoverys { get; set; }
 
                 /// <summary>
-                /// scrape interval.
+                /// The capture interval.
                 /// </summary>
                 [NameInMap("ScrapeInterval")]
                 [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// state.
+            /// The status of the custom job.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

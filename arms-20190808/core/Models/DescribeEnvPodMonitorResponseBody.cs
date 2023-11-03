@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvPodMonitorResponseBody : TeaModel {
         /// <summary>
-        /// The response code. The status code 200 indicates that the request was successful.
+        /// The HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public DescribeEnvPodMonitorResponseBodyData Data { get; set; }
         public class DescribeEnvPodMonitorResponseBodyData : TeaModel {
             /// <summary>
-            /// PodMonitor\"s yaml configuration string.
+            /// The YAML configuration string of the PodMonitor.
             /// </summary>
             [NameInMap("ConfigYaml")]
             [Validation(Required=false)]
             public string ConfigYaml { get; set; }
 
             /// <summary>
-            /// Environment instance ID.
+            /// The ID of the environment instance.
             /// </summary>
             [NameInMap("EnvironmentId")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// PodMonitor name.
+            /// The name of the PodMonitor.
             /// </summary>
             [NameInMap("PodMonitorName")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// Status: run, stop.
+            /// The status of the PodMonitor. Valid values: run and stop.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

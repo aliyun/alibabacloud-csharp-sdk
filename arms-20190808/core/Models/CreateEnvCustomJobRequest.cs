@@ -10,29 +10,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateEnvCustomJobRequest : TeaModel {
         /// <summary>
-        /// Locale: zh | en. 
-        /// The default value is zh.
+        /// The language. Valid values: zh and en. Default value: zh.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// Customize the Job\"s yaml configuration string.
+        /// The YAML configuration string of the custom job.
         /// </summary>
         [NameInMap("ConfigYaml")]
         [Validation(Required=false)]
         public string ConfigYaml { get; set; }
 
         /// <summary>
-        /// Customize job name.
+        /// The name of the custom job.
         /// </summary>
         [NameInMap("CustomJobName")]
         [Validation(Required=false)]
         public string CustomJobName { get; set; }
 
         /// <summary>
-        /// Environment instance ID.
+        /// The ID of the environment instance.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvCustomJobRequest : TeaModel {
         /// <summary>
-        /// Custom job name.
+        /// The name of the custom job.
         /// </summary>
         [NameInMap("CustomJobName")]
         [Validation(Required=false)]
         public string CustomJobName { get; set; }
 
         /// <summary>
-        /// Whether to return the encrypted yaml string.
+        /// Specifies whether to return the encrypted YAML string.
         /// </summary>
         [NameInMap("EncryptYaml")]
         [Validation(Required=false)]
         public bool? EncryptYaml { get; set; }
 
         /// <summary>
-        /// Environment instance ID.
+        /// The ID of the environment instance.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]

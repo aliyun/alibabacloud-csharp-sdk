@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string EnvironmentName { get; set; }
 
+            [NameInMap("EnvironmentSubType")]
+            [Validation(Required=false)]
+            public string EnvironmentSubType { get; set; }
+
             /// <summary>
             /// Environment type:
             /// - CS: Container Service.

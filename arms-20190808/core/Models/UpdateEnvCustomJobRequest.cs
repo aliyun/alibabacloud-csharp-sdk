@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateEnvCustomJobRequest : TeaModel {
         /// <summary>
-        /// Locale, the default is Chinese zh | en.
+        /// The language. Valid values: zh and en. Default value: zh.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// yaml configuration string.
+        /// The YAML configuration string.
         /// </summary>
         [NameInMap("ConfigYaml")]
         [Validation(Required=false)]
         public string ConfigYaml { get; set; }
 
         /// <summary>
-        /// Custom job name.
+        /// The name of the custom job.
         /// </summary>
         [NameInMap("CustomJobName")]
         [Validation(Required=false)]
         public string CustomJobName { get; set; }
 
         /// <summary>
-        /// Environment ID.
+        /// The environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Custom task status: run or stop.
+        /// The status of the custom job. Valid values: run and stop.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

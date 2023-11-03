@@ -8,41 +8,41 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class UpdateEnvServiceMonitorRequest : TeaModel {
+    public class InstallAddonRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values: zh and en. Default value: zh.
+        /// Version of Addon.
+        /// </summary>
+        [NameInMap("AddonVersion")]
+        [Validation(Required=false)]
+        public string AddonVersion { get; set; }
+
+        /// <summary>
+        /// Locale, the default is Chinese zh.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// The YAML configuration string.
-        /// </summary>
-        [NameInMap("ConfigYaml")]
-        [Validation(Required=false)]
-        public string ConfigYaml { get; set; }
-
-        /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request.
+        /// Whether to test run. The default value is false.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The environment ID.
+        /// Environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The namespace where the ServiceMonitor is located.
+        /// Name of Addon.
         /// </summary>
-        [NameInMap("Namespace")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// The region ID.
@@ -52,11 +52,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the ServiceMonitor.
+        /// The release name after installation, if not specified, generates the default rule name.
         /// </summary>
-        [NameInMap("ServiceMonitorName")]
+        [NameInMap("ReleaseName")]
         [Validation(Required=false)]
-        public string ServiceMonitorName { get; set; }
+        public string ReleaseName { get; set; }
+
+        /// <summary>
+        /// Config information.
+        /// </summary>
+        [NameInMap("Values")]
+        [Validation(Required=false)]
+        public string Values { get; set; }
 
     }
 

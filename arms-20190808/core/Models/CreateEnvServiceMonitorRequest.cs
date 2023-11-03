@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateEnvServiceMonitorRequest : TeaModel {
         /// <summary>
-        /// Locale, default is Chinese zh | en.
+        /// The language. Valid values: zh and en. Default value: zh.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// ServiceMonitor\"s yaml configuration string.
+        /// The YAML configuration string of the ServiceMonitor.
         /// </summary>
         [NameInMap("ConfigYaml")]
         [Validation(Required=false)]
         public string ConfigYaml { get; set; }
 
         /// <summary>
-        /// Trial run: Check whether the format is legal and whether it can match targets.
+        /// Specifies whether to perform only a dry run, without performing the actual request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Environment instance ID.
+        /// The ID of the environment instance.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

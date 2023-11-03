@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class ListEnvPodMonitorsRequest : TeaModel {
-        /// <summary>
-        /// The environment ID.
-        /// </summary>
+    public class ListEnvironmentFeaturesRequest : TeaModel {
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
-        /// <summary>
-        /// The region ID.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
