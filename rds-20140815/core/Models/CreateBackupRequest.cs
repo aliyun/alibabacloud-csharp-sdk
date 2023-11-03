@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// The backup type. Valid values:
+        /// The backup type of the instance. Valid values:
         /// 
         /// *   **Logical**: logical backup
         /// *   **Physical**: physical backup
@@ -18,13 +18,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// Default value: **Physical**.
         /// 
-        /// > 
-        /// 
-        /// *   You can perform a logical backup only when databases are created on the instance.
-        /// 
-        /// *   When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to **Physical**.
-        /// *   For more information about the supported backup types, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
-        /// *   When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to **Snapshot**.
+        /// > *   You can perform a logical backup only when databases are created on the instance.
+        /// > *   When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to **Physical**.
+        /// > *   For more information about the supported backup types, see [Use the data backup feature](~~98818~~).
+        /// > *   When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to **Snapshot**.
         /// </summary>
         [NameInMap("BackupMethod")]
         [Validation(Required=false)]
@@ -50,11 +47,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// Default value: **Auto**.
         /// 
-        /// > 
-        /// 
-        /// *   You must set this parameter only when the instance runs SQL Server.
-        /// 
-        /// *   This parameter is valid only when you set the **BackupMethod** parameter to **Physical**.
+        /// > *   You must set this parameter only when the instance runs SQL Server.
+        /// > *   This parameter is valid only when you set the **BackupMethod** parameter to **Physical**.
         /// </summary>
         [NameInMap("BackupType")]
         [Validation(Required=false)]

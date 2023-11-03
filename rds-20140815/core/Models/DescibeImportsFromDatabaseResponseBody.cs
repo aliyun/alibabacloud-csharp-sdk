@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The type of the migration task. Valid values:
                 /// 
                 /// *   **Full**: full migration
-                /// *   **Incremental:**: incremental migration
+                /// *   **Incremental**: incremental migration
                 /// </summary>
                 [NameInMap("ImportDataType")]
                 [Validation(Required=false)]

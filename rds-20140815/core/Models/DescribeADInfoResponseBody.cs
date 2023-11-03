@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ADStatus { get; set; }
 
         /// <summary>
-        /// The cause of the exception.
+        /// The cause of the error.
         /// </summary>
         [NameInMap("AbnormalReason")]
         [Validation(Required=false)]
         public string AbnormalReason { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The information of instances.
+        /// The details of the instance.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the buffer pool extension (BPE) feature is enabled. Valid values:
                 /// 
-                /// *   **1**: The feature is enabled.
-                /// *   **0**: The feature is disabled.
+                /// *   **1**
+                /// *   **0**
                 /// </summary>
                 [NameInMap("BpeEnabled")]
                 [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the I/O burst feature is enabled. Valid values:
                 /// 
-                /// *   **true**: The feature is enabled.
-                /// *   **false**: The feature is disabled.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The RDS edition of the instance. Valid values:
                 /// 
                 /// *   **Basic**: RDS Basic Edition
-                /// *   **HighAvailability**: High-availability Edition
+                /// *   **HighAvailability**: RDS High-availability Edition
                 /// *   **Finance**: RDS Enterprise Edition
                 /// 
-                /// > This parameter is returned only when **InstanceLevel** is set to **1**.
+                /// >  This parameter is returned only when the **InstanceLevel** parameter is set to **1**.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// The dedicated cluster ID.
+                /// The ID of the dedicated cluster.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
@@ -214,8 +214,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the release protection feature is enabled for the instance. Valid values:
                 /// 
-                /// *   **true**: The feature is enabled.
-                /// *   **false**: The feature is disabled.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("DeletionProtection")]
                 [Validation(Required=false)]
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DestroyTime { get; set; }
 
                 /// <summary>
-                /// The database engine of the serverless instance.
+                /// The database engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// 
-                /// > Pay-as-you-go instances never expire.
+                /// >  Pay-as-you-go instances never expire.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **Unlock**: The instance is not locked.
                 /// *   **ManualLock**: The instance is manually locked.
                 /// *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-                /// *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
+                /// *   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.
                 /// *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
                 /// *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
                 /// </summary>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **true**
                 /// *   **false**
                 /// 
-                /// > If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: `cn-hangzhou-MAZ10(h,i)`.
+                /// >  If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: `cn-hangzhou-MAZ10(h,i)`.
                 /// </summary>
                 [NameInMap("MutriORsignle")]
                 [Validation(Required=false)]
@@ -348,14 +348,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// The region ID.
+                /// The region ID of the instance.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The severity level of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
                 /// 
                 /// *   **1**: The instance is normal.
-                /// *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and the performance is affected. You must adjust the specifications of these instances based on your business requirements.
+                /// *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.
                 /// </summary>
                 [NameInMap("TipsLevel")]
                 [Validation(Required=false)]
@@ -410,7 +410,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string VpcCloudInstanceId { get; set; }
 
                 /// <summary>
-                /// The VPC ID.
+                /// The virtual private cloud (VPC) ID of the instance.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string VpcName { get; set; }
 
                 /// <summary>
-                /// The zone ID of the instance.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

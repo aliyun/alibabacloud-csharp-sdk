@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCloudMigrationPrecheckResultResponseBody : TeaModel {
         /// <summary>
-        /// The details of the assessment report.
+        /// The details about the assessment report.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The username of the account.
+            /// The username.
             /// </summary>
             [NameInMap("SourceAccount")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceIpAddress { get; set; }
 
             /// <summary>
-            /// The password of the account.
+            /// The password.
             /// </summary>
             [NameInMap("SourcePassword")]
             [Validation(Required=false)]
@@ -76,28 +76,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? SourcePort { get; set; }
 
             /// <summary>
-            /// A reserved parameter. The return value of this parameter is null.
+            /// A reserved parameter. The return value of this parameter is empty.
             /// </summary>
             [NameInMap("TargetEip")]
             [Validation(Required=false)]
             public string TargetEip { get; set; }
 
             /// <summary>
-            /// The ID of the destination instance.
+            /// The instance ID.
             /// </summary>
             [NameInMap("TargetInstanceName")]
             [Validation(Required=false)]
             public string TargetInstanceName { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// The name of the task.
+            /// The task name.
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]

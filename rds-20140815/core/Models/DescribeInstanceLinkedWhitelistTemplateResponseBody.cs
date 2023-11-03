@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Ips { get; set; }
 
                 /// <summary>
-                /// The ID of the whitelist template.
+                /// The whitelist template ID.
                 /// </summary>
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
                 public int? TemplateId { get; set; }
 
                 /// <summary>
-                /// The name of the whitelist template.
+                /// The whitelist template name.
                 /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]

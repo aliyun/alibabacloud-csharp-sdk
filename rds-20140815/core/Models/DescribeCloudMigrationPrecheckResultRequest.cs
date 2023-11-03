@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// The page number. Valid values: any non-zero positive integer. The default value is 1.
+        /// The page number. Pages start from page 1. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 30 to 100. The default value is 30.
+        /// The number of entries per page. Valid values: **30** to **100**. Default value: 30.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

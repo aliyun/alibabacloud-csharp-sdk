@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The version of the database engine.
+                /// The database engine version of the instance.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -131,9 +131,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The instance to which the parameter template was applied.
+        /// The information about the instance to which the parameter template is applied.
         /// 
-        /// > This parameter is available only for ApsaraDB RDS for PostgreSQL instances.
+        /// >  This parameter is available only for ApsaraDB RDS for PostgreSQL instances.
         /// </summary>
         [NameInMap("RelatedCustinsInfo")]
         [Validation(Required=false)]

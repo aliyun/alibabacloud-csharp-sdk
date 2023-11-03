@@ -182,14 +182,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         [Validation(Required=false)]
                         public string ClassCode { get; set; }
 
+                        /// <summary>
+                        /// Node specification type. Value range:
+                        /// 
+                        /// *   **d**: Exclusive specifications
+                        /// *   **x**: General specifications
+                        /// </summary>
                         [NameInMap("ClassType")]
                         [Validation(Required=false)]
                         public string ClassType { get; set; }
 
+                        /// <summary>
+                        /// The number of vCPUs that you want to allocate to the elastic container instance. Unit: cores.
+                        /// </summary>
                         [NameInMap("Cpu")]
                         [Validation(Required=false)]
                         public string Cpu { get; set; }
 
+                        /// <summary>
+                        /// The memory size that you applied for each instance. Unit: MB.
+                        /// </summary>
                         [NameInMap("Memory")]
                         [Validation(Required=false)]
                         public string Memory { get; set; }
@@ -225,6 +237,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         [Validation(Required=false)]
                         public string NodeZoneId { get; set; }
 
+                        /// <summary>
+                        /// The status of the migration task. Valid values:
+                        /// 
+                        /// *   **NoStart**: The task has not started.
+                        /// *   **Running**:The task is in progress.
+                        /// *   **Success**: The task is successful.
+                        /// *   **Failed**: The task failed.
+                        /// *   **Waiting**: The task is waiting for an incremental backup file to be imported.
+                        /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
                         public string Status { get; set; }

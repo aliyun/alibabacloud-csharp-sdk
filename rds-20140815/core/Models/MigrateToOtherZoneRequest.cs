@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **Basic**: RDS Basic Edition
         /// *   **HighAvailability**: RDS High-availability Edition
-        /// *   **AlwaysOn**: RDS Cluster Edition for SQL Server
-        /// *   **cluster**: RDS Cluster Edition for MySQL
+        /// *   **AlwaysOn**: SQL Server on RDS Cluster Edition
+        /// *   **cluster**: MySQL on RDS Cluster Edition
         /// *   **Finance**: RDS Enterprise Edition
         /// </summary>
         [NameInMap("Category")]
@@ -125,18 +125,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// The zone ID of the secondary instance.
+        /// The secondary zone 1 of the instance.
         /// 
-        /// > If the instance does not run RDS Basic Edition, you must specify this parameter.
+        /// >  This parameter must be configured if the instance runs RDS editions other than RDS Basic Edition.
         /// </summary>
         [NameInMap("ZoneIdSlave1")]
         [Validation(Required=false)]
         public string ZoneIdSlave1 { get; set; }
 
         /// <summary>
-        /// The zone ID of the logger instance.
+        /// The secondary zone 2 of the instance.
         /// 
-        /// > This parameter is available only when the instance runs RDS Enterprise Edition.
+        /// >  You can specify this parameter only for instances that run RDS Enterprise Edition.
         /// </summary>
         [NameInMap("ZoneIdSlave2")]
         [Validation(Required=false)]

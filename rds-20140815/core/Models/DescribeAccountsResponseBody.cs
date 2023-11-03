@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the account.
+        /// The details about the account.
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// 
                 /// *   **Normal**: standard account
                 /// *   **Super**: privileged account
-                /// *   **Sysadmin**: superuser account that has the system administrator permissions
+                /// *   **Sysadmin**: system admin account, which is supported only for instances running SQL Server
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the account has the row-level security (RLS) permissions. Valid values:
                 /// 
-                /// *   **t**: yes
-                /// *   **f**: no
+                /// *   **t**: The account has the RLS permissions.
+                /// *   **f**: The account does not have the RLS permissions.
                 /// 
                 /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the account has the permissions to create databases. Valid values:
                 /// 
-                /// *   **t**: yes
-                /// *   **f**: no
+                /// *   **t**: The account has the permissions to create databases.
+                /// *   **f**: The account does not have the permissions to create databases.
                 /// 
                 /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the account has the permissions to create roles. Valid values:
                 /// 
-                /// *   **t**: yes
-                /// *   **f**: no
+                /// *   **t**: The account has the permissions to create roles.
+                /// *   **f**: The account does not have the permissions to create roles.
                 /// 
                 /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The details of the permissions that are granted to the account.
+                /// The details about the permissions that are granted to the account.
                 /// </summary>
                 [NameInMap("DatabasePrivileges")]
                 [Validation(Required=false)]
@@ -143,8 +143,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:
                 /// 
-                /// *   **1**: yes
-                /// *   **0**: no
+                /// *   **1**: The number of databases that are managed by the account exceeds the upper limit.
+                /// *   **0**: The number of databases that are managed by the account does not exceed the upper limit.
                 /// </summary>
                 [NameInMap("PrivExceeded")]
                 [Validation(Required=false)]
@@ -153,8 +153,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the account has the replication permissions. Valid values:
                 /// 
-                /// *   **t**: yes
-                /// *   **f**: no
+                /// *   **t**: The account has the replication permissions.
+                /// *   **f**: The account does not have the replication permissions.
                 /// 
                 /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// 
                 /// *   **infinity**: The password never expires.
                 /// *   **Empty**: The expiration time is not specified.
-                /// *   **Actual expiration time** in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.
+                /// *   **Actual expiration time**: in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.
                 /// 
                 /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
@@ -187,28 +187,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The first time when the superuser account was enabled. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// 
+        /// >  This parameter is returned only for instances that run SQL Server.
         /// </summary>
         [NameInMap("SystemAdminAccountFirstActivationTime")]
         [Validation(Required=false)]
         public string SystemAdminAccountFirstActivationTime { get; set; }
 
         /// <summary>
-        /// Indicates whether the superuser account is enabled.
+        /// Indicates whether the system admin account was enabled. Valid values:
+        /// 
+        /// *   **true**: The system admin account was enabled.
+        /// *   **false**: The system admin account was disabled.
+        /// 
+        /// >  The [system admin account](~~170736~~) is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.
         /// </summary>
         [NameInMap("SystemAdminAccountStatus")]
         [Validation(Required=false)]
         public string SystemAdminAccountStatus { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The total number of entries that are returned.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

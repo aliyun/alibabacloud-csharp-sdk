@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteUserBackupFileRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the ID of the file.
+        /// The ID of the full backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the ID of the file.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
+        /// The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

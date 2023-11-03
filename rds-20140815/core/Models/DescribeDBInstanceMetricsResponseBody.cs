@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceMetricsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// An array consisting of the enhanced monitoring metrics that are enabled for the instance.
+        /// An array consisting of the Enhanced Monitoring metrics that are enabled for the instance.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]

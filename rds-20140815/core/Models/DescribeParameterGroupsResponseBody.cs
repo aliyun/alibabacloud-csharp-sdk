@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The version of the database engine.
+                /// The database engine version.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -114,9 +114,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// Indicates whether parameter templates exist in the specified region. Valid values:
-        /// 
         /// *   true
         /// *   false
+        /// ><notice>This parameter is deprecated.></notice>
         /// </summary>
         [NameInMap("SignalForOptimizeParams")]
         [Validation(Required=false)]

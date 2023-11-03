@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -291,19 +291,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The ID of the virtual private cloud (VPC).
         /// 
-        /// > Make sure that the VPC belongs to the required region.
+        /// >  Make sure that the VPC belongs to the required region.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch. The vSwitch must belong to the zone that is specified by the **ZoneId** parameter.
+        /// The ID of the vSwitch. The vSwitch must belong to the zone that is specified by **ZoneId**.
         /// 
-        /// > 
-        /// 
-        /// *   If you set the **InstanceNetworkType** parameter to **VPC**, you must also specify this parameter.
-        /// 
+        /// *   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.
         /// *   If you specify the **ZoneSlaveId1** parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
         /// </summary>
         [NameInMap("VSwitchId")]

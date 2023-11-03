@@ -12,35 +12,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The RDS edition of the instance. Valid values:
         /// 
-        /// *   **Basic:** The instance is of the Basic Edition.
-        /// *   **HighAvailability:** The instance is of the High-availability Edition.
-        /// *   **Finance:** The instance is of the Enterprise Edition.
+        /// *   **Basic**: RDS Basic Edition
+        /// *   **HighAvailability**: RDS High-availability Edition
+        /// *   **Finance**: RDS Enterprise Edition
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The database engine that the instance runs. Valid values:
+        /// The database engine of the instance. Valid values:
         /// 
-        /// *   **mysql:** The instance runs MySQL.
-        /// *   **mssql:** The instance runs SQL Server.
-        /// *   **PostgreSQL:** The instance runs PostgreSQL.
-        /// *   **MariaDB:** The instance runs MariaDB.
+        /// *   **mysql**: MySQL
+        /// *   **mssql**: SQL Server
+        /// *   **PostgreSQL**: PostgreSQL
+        /// *   **MariaDB**: MariaDB
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The version of the database engine. Valid values:
         /// 
-        /// *   MySQL: **5.5 | 5.6 | 5.7 | 8.0**
-        /// *   SQL Server: **2008r2**
-        /// *   PostgreSQL: **9.4 | 10.0 | 11.0 | 12.0 | 13.0 | 14.0**
-        /// *   MariaDB: **10.3**
+        /// *   Valid values when you set the Engine parameter to mysql: **5.5, 5.6, 5.7, and 8.0**.
+        /// *   Valid values when you set the Engine parameter to mssql: **2008r2**.
+        /// *   Valid values when you set the Engine parameter to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**.
+        /// *   Valid values when you set the Engine parameter to MariaDB: **10.3**.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

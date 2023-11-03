@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// An array consisting of the information about the proxy endpoint that is created for the instance.
+        /// An array consisting of the information about the database proxy endpoint that is created for the instance.
         /// </summary>
         [NameInMap("DBProxyConnectStringItems")]
         [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBProxyVpcInstanceId { get; set; }
 
                 /// <summary>
-                /// The vSwitch that is associated with the proxy endpoint.
+                /// The vSwitch of the proxy service.
                 /// </summary>
                 [NameInMap("DBProxyVswitchId")]
                 [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   DBInstanceClassChanging: The specifications of the proxy instance are being changed.
         /// *   Creating: The proxy instance is being created.
-        /// *   Running: The proxy instance is being running.
+        /// *   Running: The proxy instance is running.
         /// *   Deleting: The proxy instance is being deleted.
         /// </summary>
         [NameInMap("DBProxyInstanceStatus")]

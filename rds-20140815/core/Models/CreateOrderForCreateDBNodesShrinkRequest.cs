@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// Specifies whether to automatically complete the payment. Valid values:
         /// 
-        /// 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
-        /// 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
+        /// *   **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
+        /// *   **false**: does not automatically complete the payment. An unpaid order is generated.
         /// 
         /// >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
         /// </summary>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -68,10 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The database engine version of the instance. Valid values:
         /// 
-        /// *   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**
-        /// *   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
-        /// *   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, and 14.0**
-        /// *   Valid value if you set Engine to MariaDB: **10.3**
+        /// If the instance runs **MySQL**, set this parameter to **5.5**, **5.6**, **5.7**, or **8.0**.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -99,7 +96,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

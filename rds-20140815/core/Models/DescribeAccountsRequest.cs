@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAccountsRequest : TeaModel {
         /// <summary>
-        /// The username of the account.
+        /// The name of the database account.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
         /// 
-        /// >  This operation is not supported for instances that run SQL Server 2017 (cluster edition).
+        /// >  This parameter is not supported if your RDS instance runs RDS Cluster Edition and SQL Server 2017.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).
         /// 
-        /// >  This parameter is valid when IsOnlineDB is set to **True**.
+        /// >  This parameter is valid when **IsOnlineDB** is set to **True**.
         /// </summary>
         [NameInMap("CheckDBMode")]
         [Validation(Required=false)]
         public string CheckDBMode { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -65,11 +65,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   If you set **BackupMode** to **FULL**, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.
         /// *   If you set **BackupMode** to **UPDF**, the value of this parameter is the ID of the required full migration task.
         /// 
-        /// > 
-        /// 
-        /// *   If you set **IsOnlineDB** to **True**, the value of **BackupMode** must be **FULL**.
-        /// 
-        /// *   If you set **IsOnlineDB** to **False**, the value of **BackupMode** must be **UPDF**.
+        /// > *   If you set **IsOnlineDB** to **True**, the value of **BackupMode** must be **FULL**.
+        /// > *   If you set **IsOnlineDB** to **False**, the value of **BackupMode** must be **UPDF**.
         /// </summary>
         [NameInMap("MigrateTaskId")]
         [Validation(Required=false)]
@@ -80,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// If you specify multiple URLs, separate them with vertical bars (|) and then encode them.
         /// 
-        /// > This parameter is required for instances that run SQL Server 2008 R2.
+        /// >  This parameter is required for instances that run SQL Server 2008 R2.
         /// </summary>
         [NameInMap("OSSUrls")]
         [Validation(Required=false)]
@@ -95,11 +92,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   Name of the OSS bucket: rdsmssqlsingapore.
         /// *   Key of the backup file in the OSS bucket: autotest\_2008R2\_TestMigration_FULL.bak.
         /// 
-        /// > 
-        /// 
-        /// *   This parameter is optional for instances that run SQL Server 2008 R2.
-        /// 
-        /// *   This parameter is required for instances that run a database engine version later than SQL Server 2008 R2.
+        /// > *   This parameter is optional for instances that run SQL Server 2008 R2.
+        /// > *   This parameter is required for instances that run a major engine version later than SQL Server 2008 R2.
         /// </summary>
         [NameInMap("OssObjectPositions")]
         [Validation(Required=false)]

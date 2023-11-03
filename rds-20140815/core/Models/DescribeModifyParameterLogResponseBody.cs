@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeModifyParameterLogResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the RDS instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The database engine that the RDS instance runs.
+        /// The database engine of the instance.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The version of the database engine that the RDS instance runs.
+        /// The database engine version of the instance.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// An array that consists of parameter reconfiguration log entries.
+        /// An array that consists of parameter modification log entries.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeModifyParameterLogResponseBodyItemsParameterChangeLog> ParameterChangeLog { get; set; }
             public class DescribeModifyParameterLogResponseBodyItemsParameterChangeLog : TeaModel {
                 /// <summary>
-                /// The time when the parameter was reconfigured. This value is a UNIX timestamp. Unit: milliseconds.
+                /// The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("ModifyTime")]
                 [Validation(Required=false)]
@@ -84,21 +84,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

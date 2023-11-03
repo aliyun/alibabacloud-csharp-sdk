@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -54,19 +54,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **40**
         /// *   **50**
         /// 
-        /// >  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.
+        /// >  If you set the StorageAutoScale parameter to **Enable**, you must specify this parameter.
         /// </summary>
         [NameInMap("StorageThreshold")]
         [Validation(Required=false)]
         public int? StorageThreshold { get; set; }
 
         /// <summary>
-        /// The maximum storage capacity that is allowed by automatic storage expansion. The value of this parameter must be equal to or greater than the current storage capacity of the instance.
+        /// The maximum storage capacity that is allowed for an automatic storage expansion. The value of this parameter must be greater than or equal to the current storage capacity of the RDS instance.
         /// 
-        /// *   Valid value for instances with ESSDs: 32000. Unit: GB
-        /// *   Valid value for instances with standard SSDs: 6000. Unit: GB
+        /// *   If the RDS instance uses ESSDs, the maximum value of this parameter can be set to 32000 GB.
+        /// *   If the RDS instance uses standard SSDs, the maximum value of this parameter can be set to 6000 GB.
         /// 
-        ///     > If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.
+        /// >  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.
         /// </summary>
         [NameInMap("StorageUpperBound")]
         [Validation(Required=false)]

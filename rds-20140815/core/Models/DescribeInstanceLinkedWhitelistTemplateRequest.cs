@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InsName { get; set; }
 
         /// <summary>
-        /// 资源组ID，可以为空。
+        /// The resource group ID. You can leave this parameter empty.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

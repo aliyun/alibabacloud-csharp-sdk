@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParameterTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The database engine.
+        /// The database engine of the instance.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterCount { get; set; }
 
         /// <summary>
-        /// The list of parameters.
+        /// The details of the parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -42,21 +42,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeParameterTemplatesResponseBodyParametersTemplateRecord> TemplateRecord { get; set; }
             public class DescribeParameterTemplatesResponseBodyParametersTemplateRecord : TeaModel {
                 /// <summary>
-                /// The value range of the parameter.
+                /// The valid values of the parameter.
                 /// </summary>
                 [NameInMap("CheckingCode")]
                 [Validation(Required=false)]
                 public string CheckingCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the parameter can be modified. Valid values: **true | false**
+                /// Indicates whether the parameter can be modified. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("ForceModify")]
                 [Validation(Required=false)]
                 public string ForceModify { get; set; }
 
                 /// <summary>
-                /// Indicates whether the modified parameter takes effect only after a database restart. Valid values: **true | false**
+                /// Indicates whether you must restart the instance for the modifications to take effect. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("ForceRestart")]
                 [Validation(Required=false)]
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

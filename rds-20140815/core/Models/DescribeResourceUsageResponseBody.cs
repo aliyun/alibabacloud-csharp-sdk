@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ColdBackupSize { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DiskUsed { get; set; }
 
         /// <summary>
-        /// The database engine that the instance runs.
+        /// The database engine of the instance.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? LogSize { get; set; }
 
         /// <summary>
-        /// The backup storage for which you must pay. ApsaraDB RDS provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.
+        /// The backup storage for which you must pay. The system provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.
         /// </summary>
         [NameInMap("PaidBackupSize")]
         [Validation(Required=false)]
         public long? PaidBackupSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

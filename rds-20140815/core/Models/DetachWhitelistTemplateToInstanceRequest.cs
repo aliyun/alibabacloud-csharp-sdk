@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InsName { get; set; }
 
         /// <summary>
-        /// 资源组ID。 关于资源组的更多信息，请参见什么是资源组。
+        /// The resource group ID. For more information about resource groups, see Resource groups.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

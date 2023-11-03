@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePostgresExtensionsResponseBody : TeaModel {
         /// <summary>
-        /// The extensions that are installed on the database.
+        /// The list of extensions that are installed on the specified database.
         /// </summary>
         [NameInMap("InstalledExtensions")]
         [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The extensions that are not installed on the database.
+        /// The list of extensions that are not installed on the specified database.
         /// </summary>
         [NameInMap("UninstalledExtensions")]
         [Validation(Required=false)]

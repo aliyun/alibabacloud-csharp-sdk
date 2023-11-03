@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCloudMigrationResultResponseBody : TeaModel {
         /// <summary>
-        /// The details of the cloud migration tasks.
+        /// The details about the cloud migration task.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeCloudMigrationResultResponseBodyItems> Items { get; set; }
         public class DescribeCloudMigrationResultResponseBodyItems : TeaModel {
             /// <summary>
-            /// The details of the task.
+            /// The details about the migration task.
             /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The migration phase in which the task stays.
+            /// The migration phase of the migration task.
             /// 
             /// *   **precheck**: precheck
             /// *   **basebackup**: full data backup
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReplicationState { get; set; }
 
             /// <summary>
-            /// The username of the account.
+            /// The username.
             /// </summary>
             [NameInMap("SourceAccount")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceIpAddress { get; set; }
 
             /// <summary>
-            /// The password of the account.
+            /// The password.
             /// </summary>
             [NameInMap("SourcePassword")]
             [Validation(Required=false)]
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? SourcePort { get; set; }
 
             /// <summary>
-            /// The time when a switchover was performed.
+            /// The time when the switchover was performed.
             /// </summary>
             [NameInMap("SwitchTime")]
             [Validation(Required=false)]
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// A reserved parameter. The return value of this parameter is null.
+            /// A reserved parameter. The return value of this parameter is empty.
             /// </summary>
             [NameInMap("TargetEip")]
             [Validation(Required=false)]
@@ -131,14 +131,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TargetInstanceName { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// The name of the task.
+            /// The task name.
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]

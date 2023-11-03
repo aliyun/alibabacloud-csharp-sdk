@@ -136,12 +136,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReadOnlyInstanceMaxDelayTime { get; set; }
 
         /// <summary>
-        /// The read weights of the instance and its read-only instances. The value of this parameter is a JSON string that consists of the following fields:
+        /// The read weights of the instance and its read-only instances. The value of this parameter is a JSON string that consists of the following parameters:
         /// 
         /// *   **DBInstanceId**: the ID of the instance.
         /// *   **DBInstanceType**: the role of the instance. Valid values: **Master** and **ReadOnly**.
-        /// *   **NodeID**: the IDs of the primary and secondary nodes on the primary instance if the instance runs RDS Cluster Edition.
-        /// *   **NodeType**: the type of the node if the instance runs RDS Cluster Edition. Valid values: **Primary** and **Secondary**. The value Primary indicates the primary node on the primary instance. The value Secondary indicates the secondary node on the primary instance.
+        /// *   **NodeID**: The IDs of the primary and secondary nodes of the cluster. An instance that runs RDS Cluster Edition refers to a cluster.
+        /// *   **NodeType**: The node type. Valid values: **Primary** and **Secondary**.
         /// *   **Weight**: the read weight of the instance. The read weight increases in increments of **100** and cannot exceed **10000**.
         /// </summary>
         [NameInMap("ReadOnlyInstanceWeight")]

@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of instances. You can remove tags from N instances at a time. Valid values of N: **1** to **50**.
+        /// The instance ID. You can remove tags from N instances at a time. Valid values of N: **1** to **50**.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

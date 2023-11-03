@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
                 /// <summary>
-                /// Specify the name of the performance metric.
+                /// The name of the performance metric.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The format in which the value of the performance metric is returned.
                 /// 
-                /// >  Multiple performance metric values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.
+                /// >  If a performance metric value consists of multiple fields, the values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.
                 /// </summary>
                 [NameInMap("ValueFormat")]
                 [Validation(Required=false)]
                 public string ValueFormat { get; set; }
 
                 /// <summary>
-                /// An array that consists of the values of the performance metric in the following format: {value1, value2, ...}.
+                /// The performance metric values.
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string Date { get; set; }
 
                         /// <summary>
-                        /// The queried values of the performance metric.
+                        /// The value of the performance metric.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

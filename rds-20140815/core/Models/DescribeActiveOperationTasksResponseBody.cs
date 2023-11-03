@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// The O\&M tasks of the instance.
+        /// The details about the O\&M task.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Deadline { get; set; }
 
             /// <summary>
-            /// The task ID.
+            /// The ID of the task.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InsComment { get; set; }
 
             /// <summary>
-            /// The name of the instance.
+            /// The instance ID.
             /// </summary>
             [NameInMap("InsName")]
             [Validation(Required=false)]
@@ -198,12 +198,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TaskParams { get; set; }
 
             /// <summary>
-            /// The type of the task. Valid values:
+            /// The type of the O\&M task. Valid values:
             /// 
             /// *   **rds_apsaradb_ha**: primary/secondary switchover
             /// *   **rds_apsaradb_transfer**: instance migration
             /// *   **rds_apsaradb_upgrade**: update of the minor engine version
-            /// *   **rds_apsaradb_maxscale**: upgrade of the database proxy version
+            /// *   **rds_apsaradb_maxscale**: minor version update of the database proxy
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]

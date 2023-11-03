@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeOssDownloadsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The description of the file.
+                /// The description of the backup file.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The end of the time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The state of the backup file. Valid values:
                 /// 
-                /// *   **NoStart**:
+                /// *   **NoStart**
                 /// *   **Downloading**
                 /// *   **Finished**
                 /// *   **DownloadFailed**
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **CheckFailed**
                 /// *   **Restoring**
                 /// *   **Restored**
-                /// *   **RestoredFailed**
+                /// *   **RestoreFailed**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MigrateTaskId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

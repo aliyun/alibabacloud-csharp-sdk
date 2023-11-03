@@ -56,25 +56,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SlotName { get; set; }
 
         /// <summary>
-        /// The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot.
-        /// 
-        /// Valid values:
+        /// The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot. Valid values:
         /// 
         /// *   ACTIVE
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
         /// *   INACTIVE
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
         /// </summary>
         [NameInMap("SlotStatus")]
         [Validation(Required=false)]
