@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpgradeDBVersionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// This parameter is no longer returned.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

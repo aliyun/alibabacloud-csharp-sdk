@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The major version of the instance.
+        /// This parameter is no longer used and does not need to be specified.
         /// </summary>
         [NameInMap("MajorVersion")]
         [Validation(Required=false)]
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The upgrade time.
+        /// This parameter is no longer used and does not need to be specified.
         /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// The upgrade method.
+        /// This parameter is no longer used and does not need to be specified.
         /// </summary>
         [NameInMap("SwitchTimeMode")]
         [Validation(Required=false)]

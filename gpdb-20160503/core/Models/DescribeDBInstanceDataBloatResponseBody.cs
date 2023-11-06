@@ -72,8 +72,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// The storage type of the table. Valid values:
             /// 
-            /// *   **Heap**: heap table
-            /// *   **AO**: append-optimized (AO) table
+            /// *   **Heap Table**
+            /// *   **Append-Only Heap Table**
+            /// *   **Append-Only Columnar Table**
             /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]
