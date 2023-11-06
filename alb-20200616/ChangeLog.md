@@ -1,3 +1,6 @@
+2023-11-06 Version: 1.1.2
+- Generated csharp 2020-06-16 for Alb.
+
 2023-11-03 Version: 1.1.1
 - Generated csharp 2020-06-16 for Alb.
 

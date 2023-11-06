@@ -5601,9 +5601,21 @@ namespace AlibabaCloud.SDK.Alb20200616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressIpVersion))
+            {
+                query["AddressIpVersion"] = request.AddressIpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
             {
                 query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSName))
+            {
+                query["DNSName"] = request.DNSName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6AddressType))
+            {
+                query["Ipv6AddressType"] = request.Ipv6AddressType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerBussinessStatus))
             {
@@ -5672,9 +5684,21 @@ namespace AlibabaCloud.SDK.Alb20200616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressIpVersion))
+            {
+                query["AddressIpVersion"] = request.AddressIpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
             {
                 query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSName))
+            {
+                query["DNSName"] = request.DNSName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6AddressType))
+            {
+                query["Ipv6AddressType"] = request.Ipv6AddressType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerBussinessStatus))
             {

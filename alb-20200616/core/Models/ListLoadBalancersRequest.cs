@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListLoadBalancersRequest : TeaModel {
+        [NameInMap("AddressIpVersion")]
+        [Validation(Required=false)]
+        public string AddressIpVersion { get; set; }
+
         /// <summary>
         /// The network type. Valid values:
         /// 
@@ -18,6 +22,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("AddressType")]
         [Validation(Required=false)]
         public string AddressType { get; set; }
+
+        [NameInMap("DNSName")]
+        [Validation(Required=false)]
+        public string DNSName { get; set; }
+
+        [NameInMap("Ipv6AddressType")]
+        [Validation(Required=false)]
+        public string Ipv6AddressType { get; set; }
 
         /// <summary>
         /// The service status of the ALB instance. Valid values:

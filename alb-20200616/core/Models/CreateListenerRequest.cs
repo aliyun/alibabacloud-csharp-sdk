@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<CreateListenerRequestCaCertificates> CaCertificates { get; set; }
         public class CreateListenerRequestCaCertificates : TeaModel {
+            [NameInMap("CertificateId")]
+            [Validation(Required=false)]
+            public string CertificateId { get; set; }
+
         }
 
         /// <summary>
