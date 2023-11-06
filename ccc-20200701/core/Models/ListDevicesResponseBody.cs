@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string DeviceId { get; set; }
 
+            [NameInMap("DeviceType")]
+            [Validation(Required=false)]
+            public string DeviceType { get; set; }
+
             [NameInMap("Expires")]
             [Validation(Required=false)]
             public long? Expires { get; set; }
