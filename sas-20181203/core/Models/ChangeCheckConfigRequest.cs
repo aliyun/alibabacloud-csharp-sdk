@@ -9,60 +9,113 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeCheckConfigRequest : TeaModel {
+        /// <summary>
+        /// The list of check items that you want to add to the policy.
+        /// 
+        /// >  If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.
+        /// </summary>
         [NameInMap("AddedCheck")]
         [Validation(Required=false)]
         public List<ChangeCheckConfigRequestAddedCheck> AddedCheck { get; set; }
         public class ChangeCheckConfigRequestAddedCheck : TeaModel {
+            /// <summary>
+            /// The ID of the check item.
+            /// 
+            /// >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the ID of the check item.
+            /// </summary>
             [NameInMap("CheckId")]
             [Validation(Required=false)]
             public long? CheckId { get; set; }
 
+            /// <summary>
+            /// The section ID of the check item.
+            /// </summary>
             [NameInMap("SectionId")]
             [Validation(Required=false)]
             public long? SectionId { get; set; }
 
         }
 
+        /// <summary>
+        /// The requirement IDs that you want to specify for the check policy.
+        /// 
+        /// >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the requirement ID. If the ConfigStandardIds parameter is configured, this parameter does not take effect.
+        /// </summary>
         [NameInMap("ConfigRequirementIds")]
         [Validation(Required=false)]
         public ChangeCheckConfigRequestConfigRequirementIds ConfigRequirementIds { get; set; }
         public class ChangeCheckConfigRequestConfigRequirementIds : TeaModel {
+            /// <summary>
+            /// The requirement IDs that you want to add to the policy.
+            /// </summary>
             [NameInMap("AddIds")]
             [Validation(Required=false)]
             public List<long?> AddIds { get; set; }
 
+            /// <summary>
+            /// The requirement IDs that you want to remove from the policy.
+            /// </summary>
             [NameInMap("RemoveIds")]
             [Validation(Required=false)]
             public List<long?> RemoveIds { get; set; }
 
         }
 
+        /// <summary>
+        /// The standard IDs that you want to specify for the check policy.
+        /// 
+        /// >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the standard ID.
+        /// </summary>
         [NameInMap("ConfigStandardIds")]
         [Validation(Required=false)]
         public ChangeCheckConfigRequestConfigStandardIds ConfigStandardIds { get; set; }
         public class ChangeCheckConfigRequestConfigStandardIds : TeaModel {
+            /// <summary>
+            /// The standard IDs that you want to add to the policy.
+            /// </summary>
             [NameInMap("AddIds")]
             [Validation(Required=false)]
             public List<long?> AddIds { get; set; }
 
+            /// <summary>
+            /// The standard IDs that you want to remove from the policy.
+            /// </summary>
             [NameInMap("RemoveIds")]
             [Validation(Required=false)]
             public List<long?> RemoveIds { get; set; }
 
         }
 
+        /// <summary>
+        /// The configuration of the check item. Valid values:
+        /// - **all**
+        /// </summary>
         [NameInMap("Configure")]
         [Validation(Required=false)]
         public string Configure { get; set; }
 
+        /// <summary>
+        /// The days in a week on which a check is performed.
+        /// </summary>
         [NameInMap("CycleDays")]
         [Validation(Required=false)]
         public List<int?> CycleDays { get; set; }
 
+        /// <summary>
+        /// Specifies whether to check the new check items in the selected requirement item. Valid values:
+        /// - **true**
+        /// - **false**
+        /// </summary>
         [NameInMap("EnableAddCheck")]
         [Validation(Required=false)]
         public bool? EnableAddCheck { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the automatic periodical check feature. Valid values:
+        /// 
+        /// - **true**
+        /// - **false**
+        /// </summary>
         [NameInMap("EnableAutoCheck")]
         [Validation(Required=false)]
         public bool? EnableAutoCheck { get; set; }
@@ -88,14 +141,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The list of the check items that you want to remove from the policy.
+        /// 
+        /// >  If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.
+        /// </summary>
         [NameInMap("RemovedCheck")]
         [Validation(Required=false)]
         public List<ChangeCheckConfigRequestRemovedCheck> RemovedCheck { get; set; }
         public class ChangeCheckConfigRequestRemovedCheck : TeaModel {
+            /// <summary>
+            /// The ID of the check item.
+            /// 
+            /// >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the ID of the check item.
+            /// </summary>
             [NameInMap("CheckId")]
             [Validation(Required=false)]
             public long? CheckId { get; set; }
 
+            /// <summary>
+            /// The section ID of the check item.
+            /// </summary>
             [NameInMap("SectionId")]
             [Validation(Required=false)]
             public long? SectionId { get; set; }
@@ -116,6 +182,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? StartTime { get; set; }
 
+        /// <summary>
+        /// The service provider (SP) of the cloud asset.
+        /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]
         public List<string> Vendors { get; set; }

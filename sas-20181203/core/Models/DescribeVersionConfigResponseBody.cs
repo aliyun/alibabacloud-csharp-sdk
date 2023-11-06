@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public bool? IsOverBalance { get; set; }
 
+        [NameInMap("IsPostpay")]
+        [Validation(Required=false)]
+        public bool? IsPostpay { get; set; }
+
         /// <summary>
         /// Indicates whether Security Center runs the free trial edition. Valid values:
         /// 
@@ -165,6 +169,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("OpenTime")]
         [Validation(Required=false)]
         public long? OpenTime { get; set; }
+
+        [NameInMap("PostPayInstanceId")]
+        [Validation(Required=false)]
+        public string PostPayInstanceId { get; set; }
+
+        [NameInMap("PostPayModuleSwitch")]
+        [Validation(Required=false)]
+        public string PostPayModuleSwitch { get; set; }
+
+        [NameInMap("PostPayOpenTime")]
+        [Validation(Required=false)]
+        public long? PostPayOpenTime { get; set; }
+
+        [NameInMap("PostPayStatus")]
+        [Validation(Required=false)]
+        public int? PostPayStatus { get; set; }
 
         /// <summary>
         /// The quota for application protection. Unit: process/month.
