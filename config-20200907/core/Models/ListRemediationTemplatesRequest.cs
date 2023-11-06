@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ManagedRuleIdentifier { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1.
+        /// The page number. Pages start from 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

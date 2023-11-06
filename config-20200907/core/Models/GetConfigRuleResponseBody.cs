@@ -277,15 +277,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public Dictionary<string, object> OptionalInputParameterDetails { get; set; }
 
                 /// <summary>
-                /// The interval at which the rule is triggered. Valid values:
-                /// 
-                /// *   One_Hour: 1 hour
-                /// *   Three_Hours: 3 hours
-                /// *   Six_Hours: 6 hours
-                /// *   Twelve_Hours: 12 hours
-                /// *   TwentyFour_Hours: 24 hours
-                /// 
-                /// > This parameter is returned if the rule is periodically triggered.
+                /// The details of the source of the managed rule.
                 /// </summary>
                 [NameInMap("SourceDetails")]
                 [Validation(Required=false)]
@@ -294,22 +286,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The event source.
                     /// 
-                    /// > Only events related to Cloud Config are supported. The value is fixed to aliyun.config.
+                    /// >  Only events related to Cloud Config are supported. Valid value: aliyun.config.
                     /// </summary>
                     [NameInMap("EventSource")]
                     [Validation(Required=false)]
                     public string EventSource { get; set; }
 
                     /// <summary>
-                    /// The interval at which the rule was triggered. Valid values:
+                    /// The interval at which the rule is triggered. Valid values:
                     /// 
-                    /// *   One_Hour: 1 hour.
-                    /// *   Three_Hours: 3 hours.
+                    /// *   One_Hour: 1 hour
+                    /// *   Three_Hours: 3 hours
                     /// *   Six_Hours: 6 hours.
-                    /// *   Twelve_Hours: 12 hours.
-                    /// *   TwentyFour_Hours: 24 hours.
+                    /// *   Twelve_Hours: 12 hours
+                    /// *   TwentyFour_Hours: 24 hours
                     /// 
-                    /// > This parameter is returned if the managed rule is periodically triggered.
+                    /// >  This parameter is returned if the managed rule is periodically triggered.
                     /// </summary>
                     [NameInMap("MaximumExecutionFrequency")]
                     [Validation(Required=false)]
@@ -318,8 +310,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The trigger type of the rule. Valid values:
                     /// 
-                    /// *   ConfigurationItemChangeNotification: The rule was triggered by configuration changes.
-                    /// *   ScheduledNotification: The rule was periodically triggered.
+                    /// *   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.
+                    /// *   ScheduledNotification: The rule is periodically triggered.
                     /// </summary>
                     [NameInMap("MessageType")]
                     [Validation(Required=false)]
@@ -427,15 +419,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The interval at which the rule is triggered. Valid values:
-                /// 
-                /// *   One_Hour: 1 hour
-                /// *   Three_Hours: 3 hours
-                /// *   Six_Hours: 6 hours
-                /// *   Twelve_Hours: 12 hours
-                /// *   TwentyFour_Hours: 24 hours
-                /// 
-                /// > This parameter is returned if the rule is periodically triggered.
+                /// The details of the source of the rule.
                 /// </summary>
                 [NameInMap("SourceDetails")]
                 [Validation(Required=false)]
@@ -444,22 +428,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The event source.
                     /// 
-                    /// > Only events related to Cloud Config are supported. The value is fixed to aliyun.config.
+                    /// >  Only events related to Cloud Config are supported. Valid value: aliyun.config.
                     /// </summary>
                     [NameInMap("EventSource")]
                     [Validation(Required=false)]
                     public string EventSource { get; set; }
 
                     /// <summary>
-                    /// The interval at which the rule was triggered. Valid values:
+                    /// The interval at which the rule is triggered. Valid values:
                     /// 
-                    /// *   One_Hour: 1 hour.
-                    /// *   Three_Hours: 3 hours.
-                    /// *   Six_Hours: 6 hours.
-                    /// *   Twelve_Hours: 12 hours.
-                    /// *   TwentyFour_Hours: 24 hours.
+                    /// *   One_Hour: 1 hour
+                    /// *   Three_Hours: 3 hours
+                    /// *   Six_Hours: 6 hours
+                    /// *   Twelve_Hours: 12 hours
+                    /// *   TwentyFour_Hours: 24 hours
                     /// 
-                    /// > This parameter is returned if the managed rule is periodically triggered.
+                    /// >  This parameter is returned if the rule is periodically triggered.
                     /// </summary>
                     [NameInMap("MaximumExecutionFrequency")]
                     [Validation(Required=false)]
@@ -468,8 +452,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The trigger type of the rule. Valid values:
                     /// 
-                    /// *   ConfigurationItemChangeNotification: The rule was triggered by configuration changes.
-                    /// *   ScheduledNotification: The rule was periodically triggered.
+                    /// *   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.
+                    /// *   ScheduledNotification: The rule is periodically triggered.
                     /// </summary>
                     [NameInMap("MessageType")]
                     [Validation(Required=false)]

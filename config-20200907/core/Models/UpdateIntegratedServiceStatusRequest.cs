@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateIntegratedServiceStatusRequest : TeaModel {
+        [NameInMap("IntegratedTypes")]
+        [Validation(Required=false)]
+        public string IntegratedTypes { get; set; }
+
         /// <summary>
         /// The product code of the cloud product. Valid values:
         /// 

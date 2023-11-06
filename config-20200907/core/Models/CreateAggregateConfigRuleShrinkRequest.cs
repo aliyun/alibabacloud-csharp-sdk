@@ -166,8 +166,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The type of the rule. Valid values:
         /// 
-        /// *   ALIYUN: a managed rule.
-        /// *   CUSTOM_FC: a custom rule.
+        /// *   ALIYUN: managed rule
+        /// *   CUSTOM_FC: custom rule
         /// </summary>
         [NameInMap("SourceOwner")]
         [Validation(Required=false)]

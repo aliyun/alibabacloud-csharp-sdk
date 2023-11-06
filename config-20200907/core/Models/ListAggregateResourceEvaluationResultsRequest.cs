@@ -19,12 +19,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The compliance evaluation result of the resources. Valid values:
+        /// The compliance evaluation result of the resource. Valid values:
         /// 
-        /// *   COMPLIANT: The resources are evaluated as compliant.
-        /// *   NON_COMPLIANT: The resources are evaluated as incompliant.
-        /// *   NOT_APPLICABLE: The rule does not apply to your resources.
-        /// *   INSUFFICIENT_DATA: No resource data is available.
+        /// *   COMPLIANT: The resource is evaluated as compliant.
+        /// *   NON_COMPLIANT: The resource is evaluated as non-compliant.
+        /// *   NOT_APPLICABLE: The rule does not apply to the resource.
+        /// *   INSUFFICIENT_DATA: No data is available.
         /// *   IGNORED: The resource is ignored during compliance evaluation.
         /// </summary>
         [NameInMap("ComplianceType")]

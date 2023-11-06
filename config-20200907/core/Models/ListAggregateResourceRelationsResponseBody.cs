@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
-                public int? AccountId { get; set; }
+                public long? AccountId { get; set; }
 
                 /// <summary>
                 /// The type of the relationship between the resource and the object.

@@ -28,13 +28,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string CompliancePackId { get; set; }
 
         /// <summary>
-        /// The compliance evaluation results of the resources. Valid values:
+        /// The compliance evaluation result of the resource. Valid values:
         /// 
-        /// *   COMPLIANT: The resources are evaluated as compliant.
-        /// *   NON_COMPLIANT: The resources are evaluated as non-compliant.
-        /// *   NOT_APPLICABLE: The rule does not apply to the resources.
-        /// *   INSUFFICIENT_DATA: No data is available.
-        /// *   IGNORED: The resources are ignored during compliance evaluation.
+        /// *   COMPLIANT: The resource is evaluated as compliant.
+        /// *   NON_COMPLIANT: The resource is evaluated as non-compliant.
+        /// *   NOT_APPLICABLE: The rule does not apply to the resource.
+        /// *   INSUFFICIENT_DATA: No resource data is available.
+        /// *   IGNORED: The resource is ignored during compliance evaluation.
         /// </summary>
         [NameInMap("ComplianceType")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return in a request. Valid values: 1 to 100.
+        /// The maximum number of entries to return for a single request. Valid values: 1 to 100.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -70,6 +70,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Regions { get; set; }
 
+        /// <summary>
+        /// Member accountId to which the resource to be queried belongs.
+        /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
         public long? ResourceAccountId { get; set; }

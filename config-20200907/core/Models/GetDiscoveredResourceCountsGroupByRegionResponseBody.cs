@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetDiscoveredResourceCountsGroupByRegionResponseBody : TeaModel {
         /// <summary>
-        /// The statistics on resources.
+        /// The statistics on the resources.
         /// </summary>
         [NameInMap("DiscoveredResourceCountsSummary")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The dimension by which statistics are collected.
             /// 
-            /// >  In most cases, the `Region` parameter is returned instead of the GroupName parameter.
+            /// >  In most cases, the `Region` parameter instead of the GroupName parameter is returned.
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// The total number of resources in the region.
+            /// The total number of resources.
             /// </summary>
             [NameInMap("ResourceCount")]
             [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

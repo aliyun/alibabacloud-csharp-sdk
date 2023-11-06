@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The type of the resource evaluated by the rule.
+        /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public string ResourceTypes { get; set; }

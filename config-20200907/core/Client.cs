@@ -646,6 +646,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await CreateAdvancedSearchFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to create a downloadable resource file for an account group whose ID is `ca-edd3626622af00b3****`. The resource file includes all the ECS instances in the account group.
+          *
+          * @param request CreateAggregateAdvancedSearchFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAggregateAdvancedSearchFileResponse
+         */
         public CreateAggregateAdvancedSearchFileResponse CreateAggregateAdvancedSearchFileWithOptions(CreateAggregateAdvancedSearchFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -677,6 +684,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<CreateAggregateAdvancedSearchFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to create a downloadable resource file for an account group whose ID is `ca-edd3626622af00b3****`. The resource file includes all the ECS instances in the account group.
+          *
+          * @param request CreateAggregateAdvancedSearchFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAggregateAdvancedSearchFileResponse
+         */
         public async Task<CreateAggregateAdvancedSearchFileResponse> CreateAggregateAdvancedSearchFileWithOptionsAsync(CreateAggregateAdvancedSearchFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -708,12 +722,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<CreateAggregateAdvancedSearchFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to create a downloadable resource file for an account group whose ID is `ca-edd3626622af00b3****`. The resource file includes all the ECS instances in the account group.
+          *
+          * @param request CreateAggregateAdvancedSearchFileRequest
+          * @return CreateAggregateAdvancedSearchFileResponse
+         */
         public CreateAggregateAdvancedSearchFileResponse CreateAggregateAdvancedSearchFile(CreateAggregateAdvancedSearchFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAggregateAdvancedSearchFileWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to create a downloadable resource file for an account group whose ID is `ca-edd3626622af00b3****`. The resource file includes all the ECS instances in the account group.
+          *
+          * @param request CreateAggregateAdvancedSearchFileRequest
+          * @return CreateAggregateAdvancedSearchFileResponse
+         */
         public async Task<CreateAggregateAdvancedSearchFileResponse> CreateAggregateAdvancedSearchFileAsync(CreateAggregateAdvancedSearchFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2057,9 +2083,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+          * ### Limits
+          * You can use an ordinary account to create up to 200 rules.
+          * ### Usage notes
           * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
-          * ## Limits
-          * You can use a common account to create up to 200 rules.
           *
           * @param tmpReq CreateConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2163,9 +2190,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+          * ### Limits
+          * You can use an ordinary account to create up to 200 rules.
+          * ### Usage notes
           * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
-          * ## Limits
-          * You can use a common account to create up to 200 rules.
           *
           * @param tmpReq CreateConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2269,9 +2297,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+          * ### Limits
+          * You can use an ordinary account to create up to 200 rules.
+          * ### Usage notes
           * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
-          * ## Limits
-          * You can use a common account to create up to 200 rules.
           *
           * @param request CreateConfigRuleRequest
           * @return CreateConfigRuleResponse
@@ -2283,9 +2312,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+          * ### Limits
+          * You can use an ordinary account to create up to 200 rules.
+          * ### Usage notes
           * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
-          * ## Limits
-          * You can use a common account to create up to 200 rules.
           *
           * @param request CreateConfigRuleRequest
           * @return CreateConfigRuleResponse
@@ -3720,10 +3750,69 @@ namespace AlibabaCloud.SDK.Config20200907
             return await DeleteRemediationsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeRemediationResponse DescribeRemediationWithOptions(DescribeRemediationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRemediation",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRemediationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeRemediationResponse> DescribeRemediationWithOptionsAsync(DescribeRemediationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRemediation",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRemediationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeRemediationResponse DescribeRemediation(DescribeRemediationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRemediationWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeRemediationResponse> DescribeRemediationAsync(DescribeRemediationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRemediationWithOptionsAsync(request, runtime);
+        }
+
         /**
+          * ### Prerequisites
+          * One or more rules are added to a compliance package.
+          * ### Usage notes
           * The sample request in this topic shows you how to remove the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group from the `cp-5bb1626622af00bd****` compliance package.
-          * ## Prerequisites
-          * One or more rules in an account group are added to a compliance package.
           *
           * @param request DetachAggregateConfigRuleToCompliancePackRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3765,9 +3854,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+          * ### Prerequisites
+          * One or more rules are added to a compliance package.
+          * ### Usage notes
           * The sample request in this topic shows you how to remove the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group from the `cp-5bb1626622af00bd****` compliance package.
-          * ## Prerequisites
-          * One or more rules in an account group are added to a compliance package.
           *
           * @param request DetachAggregateConfigRuleToCompliancePackRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3809,9 +3899,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+          * ### Prerequisites
+          * One or more rules are added to a compliance package.
+          * ### Usage notes
           * The sample request in this topic shows you how to remove the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group from the `cp-5bb1626622af00bd****` compliance package.
-          * ## Prerequisites
-          * One or more rules in an account group are added to a compliance package.
           *
           * @param request DetachAggregateConfigRuleToCompliancePackRequest
           * @return DetachAggregateConfigRuleToCompliancePackResponse
@@ -3823,9 +3914,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+          * ### Prerequisites
+          * One or more rules are added to a compliance package.
+          * ### Usage notes
           * The sample request in this topic shows you how to remove the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group from the `cp-5bb1626622af00bd****` compliance package.
-          * ## Prerequisites
-          * One or more rules in an account group are added to a compliance package.
           *
           * @param request DetachAggregateConfigRuleToCompliancePackRequest
           * @return DetachAggregateConfigRuleToCompliancePackResponse
@@ -4258,6 +4350,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await GenerateAggregateConfigRulesReportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GenerateAggregateResourceInventoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GenerateAggregateResourceInventoryResponse
+         */
         public GenerateAggregateResourceInventoryResponse GenerateAggregateResourceInventoryWithOptions(GenerateAggregateResourceInventoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4297,6 +4396,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GenerateAggregateResourceInventoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GenerateAggregateResourceInventoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GenerateAggregateResourceInventoryResponse
+         */
         public async Task<GenerateAggregateResourceInventoryResponse> GenerateAggregateResourceInventoryWithOptionsAsync(GenerateAggregateResourceInventoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4336,12 +4442,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GenerateAggregateResourceInventoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GenerateAggregateResourceInventoryRequest
+          * @return GenerateAggregateResourceInventoryResponse
+         */
         public GenerateAggregateResourceInventoryResponse GenerateAggregateResourceInventory(GenerateAggregateResourceInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GenerateAggregateResourceInventoryWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GenerateAggregateResourceInventoryRequest
+          * @return GenerateAggregateResourceInventoryResponse
+         */
         public async Task<GenerateAggregateResourceInventoryResponse> GenerateAggregateResourceInventoryAsync(GenerateAggregateResourceInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4556,6 +4674,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await GenerateConfigRulesReportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to generate a resource inventory for global resources of the current account.
+          *
+          * @param request GenerateResourceInventoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GenerateResourceInventoryResponse
+         */
         public GenerateResourceInventoryResponse GenerateResourceInventoryWithOptions(GenerateResourceInventoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4587,6 +4712,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GenerateResourceInventoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to generate a resource inventory for global resources of the current account.
+          *
+          * @param request GenerateResourceInventoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GenerateResourceInventoryResponse
+         */
         public async Task<GenerateResourceInventoryResponse> GenerateResourceInventoryWithOptionsAsync(GenerateResourceInventoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4618,12 +4750,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GenerateResourceInventoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to generate a resource inventory for global resources of the current account.
+          *
+          * @param request GenerateResourceInventoryRequest
+          * @return GenerateResourceInventoryResponse
+         */
         public GenerateResourceInventoryResponse GenerateResourceInventory(GenerateResourceInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GenerateResourceInventoryWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to generate a resource inventory for global resources of the current account.
+          *
+          * @param request GenerateResourceInventoryRequest
+          * @return GenerateResourceInventoryResponse
+         */
         public async Task<GenerateResourceInventoryResponse> GenerateResourceInventoryAsync(GenerateResourceInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5000,6 +5144,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await GetAggregateCompliancePackReportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GetAggregateComplianceSummaryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAggregateComplianceSummaryResponse
+         */
         public GetAggregateComplianceSummaryResponse GetAggregateComplianceSummaryWithOptions(GetAggregateComplianceSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5027,6 +5178,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetAggregateComplianceSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GetAggregateComplianceSummaryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAggregateComplianceSummaryResponse
+         */
         public async Task<GetAggregateComplianceSummaryResponse> GetAggregateComplianceSummaryWithOptionsAsync(GetAggregateComplianceSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5054,12 +5212,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetAggregateComplianceSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GetAggregateComplianceSummaryRequest
+          * @return GetAggregateComplianceSummaryResponse
+         */
         public GetAggregateComplianceSummaryResponse GetAggregateComplianceSummary(GetAggregateComplianceSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAggregateComplianceSummaryWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GetAggregateComplianceSummaryRequest
+          * @return GetAggregateComplianceSummaryResponse
+         */
         public async Task<GetAggregateComplianceSummaryResponse> GetAggregateComplianceSummaryAsync(GetAggregateComplianceSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5597,7 +5767,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+          * This topic provides an example on how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
           *
           * @param request GetAggregateResourceComplianceByConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5647,7 +5817,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+          * This topic provides an example on how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
           *
           * @param request GetAggregateResourceComplianceByConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5697,7 +5867,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+          * This topic provides an example on how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
           *
           * @param request GetAggregateResourceComplianceByConfigRuleRequest
           * @return GetAggregateResourceComplianceByConfigRuleResponse
@@ -5709,7 +5879,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+          * This topic provides an example on how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
           *
           * @param request GetAggregateResourceComplianceByConfigRuleRequest
           * @return GetAggregateResourceComplianceByConfigRuleResponse
@@ -6368,6 +6538,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await GetAggregateResourceCountsGroupByResourceTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the most recently generated resource inventory of an account group whose ID is ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GetAggregateResourceInventoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAggregateResourceInventoryResponse
+         */
         public GetAggregateResourceInventoryResponse GetAggregateResourceInventoryWithOptions(GetAggregateResourceInventoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6395,6 +6572,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetAggregateResourceInventoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the most recently generated resource inventory of an account group whose ID is ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GetAggregateResourceInventoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAggregateResourceInventoryResponse
+         */
         public async Task<GetAggregateResourceInventoryResponse> GetAggregateResourceInventoryWithOptionsAsync(GetAggregateResourceInventoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6422,12 +6606,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetAggregateResourceInventoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the most recently generated resource inventory of an account group whose ID is ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GetAggregateResourceInventoryRequest
+          * @return GetAggregateResourceInventoryResponse
+         */
         public GetAggregateResourceInventoryResponse GetAggregateResourceInventory(GetAggregateResourceInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAggregateResourceInventoryWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the most recently generated resource inventory of an account group whose ID is ca-a91d626622af0035\\*\\*\\*\\*.
+          *
+          * @param request GetAggregateResourceInventoryRequest
+          * @return GetAggregateResourceInventoryResponse
+         */
         public async Task<GetAggregateResourceInventoryResponse> GetAggregateResourceInventoryAsync(GetAggregateResourceInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6690,6 +6886,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await GetCompliancePackReportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.
+          *
+          * @param request GetComplianceSummaryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetComplianceSummaryResponse
+         */
         public GetComplianceSummaryResponse GetComplianceSummaryWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -6708,6 +6911,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetComplianceSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.
+          *
+          * @param request GetComplianceSummaryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetComplianceSummaryResponse
+         */
         public async Task<GetComplianceSummaryResponse> GetComplianceSummaryWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -6726,12 +6936,22 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetComplianceSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.
+          *
+          * @return GetComplianceSummaryResponse
+         */
         public GetComplianceSummaryResponse GetComplianceSummary()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetComplianceSummaryWithOptions(runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.
+          *
+          * @return GetComplianceSummaryResponse
+         */
         public async Task<GetComplianceSummaryResponse> GetComplianceSummaryAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7148,6 +7368,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await GetConfigRulesReportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.
+          *
+          * @param request GetConfigurationRecorderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetConfigurationRecorderResponse
+         */
         public GetConfigurationRecorderResponse GetConfigurationRecorderWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -7166,6 +7393,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetConfigurationRecorderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.
+          *
+          * @param request GetConfigurationRecorderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetConfigurationRecorderResponse
+         */
         public async Task<GetConfigurationRecorderResponse> GetConfigurationRecorderWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -7184,12 +7418,22 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetConfigurationRecorderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.
+          *
+          * @return GetConfigurationRecorderResponse
+         */
         public GetConfigurationRecorderResponse GetConfigurationRecorder()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetConfigurationRecorderWithOptions(runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.
+          *
+          * @return GetConfigurationRecorderResponse
+         */
         public async Task<GetConfigurationRecorderResponse> GetConfigurationRecorderAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7281,7 +7525,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This topic provides an example of how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
+          * This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
           *
           * @param request GetDiscoveredResourceCountsGroupByRegionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7315,7 +7559,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This topic provides an example of how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
+          * This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
           *
           * @param request GetDiscoveredResourceCountsGroupByRegionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7349,7 +7593,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This topic provides an example of how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
+          * This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
           *
           * @param request GetDiscoveredResourceCountsGroupByRegionRequest
           * @return GetDiscoveredResourceCountsGroupByRegionResponse
@@ -7361,7 +7605,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This topic provides an example of how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
+          * This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
           *
           * @param request GetDiscoveredResourceCountsGroupByRegionRequest
           * @return GetDiscoveredResourceCountsGroupByRegionResponse
@@ -7622,6 +7866,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await GetManagedRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.
+          *
+          * @param request GetRemediationTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetRemediationTemplateResponse
+         */
         public GetRemediationTemplateResponse GetRemediationTemplateWithOptions(GetRemediationTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7649,6 +7900,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetRemediationTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.
+          *
+          * @param request GetRemediationTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetRemediationTemplateResponse
+         */
         public async Task<GetRemediationTemplateResponse> GetRemediationTemplateWithOptionsAsync(GetRemediationTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7676,12 +7934,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetRemediationTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.
+          *
+          * @param request GetRemediationTemplateRequest
+          * @return GetRemediationTemplateResponse
+         */
         public GetRemediationTemplateResponse GetRemediationTemplate(GetRemediationTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetRemediationTemplateWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.
+          *
+          * @param request GetRemediationTemplateRequest
+          * @return GetRemediationTemplateResponse
+         */
         public async Task<GetRemediationTemplateResponse> GetRemediationTemplateAsync(GetRemediationTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8156,6 +8426,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await GetResourceConfigurationTimelineWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the most recently generated resource inventory of the current Alibaba Cloud account.
+          *
+          * @param request GetResourceInventoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetResourceInventoryResponse
+         */
         public GetResourceInventoryResponse GetResourceInventoryWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -8174,6 +8451,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetResourceInventoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the most recently generated resource inventory of the current Alibaba Cloud account.
+          *
+          * @param request GetResourceInventoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetResourceInventoryResponse
+         */
         public async Task<GetResourceInventoryResponse> GetResourceInventoryWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -8192,12 +8476,22 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<GetResourceInventoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the most recently generated resource inventory of the current Alibaba Cloud account.
+          *
+          * @return GetResourceInventoryResponse
+         */
         public GetResourceInventoryResponse GetResourceInventory()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetResourceInventoryWithOptions(runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the most recently generated resource inventory of the current Alibaba Cloud account.
+          *
+          * @return GetResourceInventoryResponse
+         */
         public async Task<GetResourceInventoryResponse> GetResourceInventoryAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8930,6 +9224,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await ListAggregateConfigRuleEvaluationResultsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\\*\\*\\*\\*.
+          *
+          * @param request ListAggregateConfigRuleEvaluationStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAggregateConfigRuleEvaluationStatisticsResponse
+         */
         public ListAggregateConfigRuleEvaluationStatisticsResponse ListAggregateConfigRuleEvaluationStatisticsWithOptions(ListAggregateConfigRuleEvaluationStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8957,6 +9258,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListAggregateConfigRuleEvaluationStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\\*\\*\\*\\*.
+          *
+          * @param request ListAggregateConfigRuleEvaluationStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAggregateConfigRuleEvaluationStatisticsResponse
+         */
         public async Task<ListAggregateConfigRuleEvaluationStatisticsResponse> ListAggregateConfigRuleEvaluationStatisticsWithOptionsAsync(ListAggregateConfigRuleEvaluationStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8984,12 +9292,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListAggregateConfigRuleEvaluationStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\\*\\*\\*\\*.
+          *
+          * @param request ListAggregateConfigRuleEvaluationStatisticsRequest
+          * @return ListAggregateConfigRuleEvaluationStatisticsResponse
+         */
         public ListAggregateConfigRuleEvaluationStatisticsResponse ListAggregateConfigRuleEvaluationStatistics(ListAggregateConfigRuleEvaluationStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAggregateConfigRuleEvaluationStatisticsWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\\*\\*\\*\\*.
+          *
+          * @param request ListAggregateConfigRuleEvaluationStatisticsRequest
+          * @return ListAggregateConfigRuleEvaluationStatisticsResponse
+         */
         public async Task<ListAggregateConfigRuleEvaluationStatisticsResponse> ListAggregateConfigRuleEvaluationStatisticsAsync(ListAggregateConfigRuleEvaluationStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9308,6 +9628,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await ListAggregateDiscoveredResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the remediation records of the `cr-d04a626622af00af****` rule in the `ca-edd3626622af00b3****` account group.
+          *
+          * @param request ListAggregateRemediationExecutionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAggregateRemediationExecutionsResponse
+         */
         public ListAggregateRemediationExecutionsResponse ListAggregateRemediationExecutionsWithOptions(ListAggregateRemediationExecutionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9355,6 +9682,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListAggregateRemediationExecutionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the remediation records of the `cr-d04a626622af00af****` rule in the `ca-edd3626622af00b3****` account group.
+          *
+          * @param request ListAggregateRemediationExecutionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAggregateRemediationExecutionsResponse
+         */
         public async Task<ListAggregateRemediationExecutionsResponse> ListAggregateRemediationExecutionsWithOptionsAsync(ListAggregateRemediationExecutionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9402,12 +9736,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListAggregateRemediationExecutionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the remediation records of the `cr-d04a626622af00af****` rule in the `ca-edd3626622af00b3****` account group.
+          *
+          * @param request ListAggregateRemediationExecutionsRequest
+          * @return ListAggregateRemediationExecutionsResponse
+         */
         public ListAggregateRemediationExecutionsResponse ListAggregateRemediationExecutions(ListAggregateRemediationExecutionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAggregateRemediationExecutionsWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the remediation records of the `cr-d04a626622af00af****` rule in the `ca-edd3626622af00b3****` account group.
+          *
+          * @param request ListAggregateRemediationExecutionsRequest
+          * @return ListAggregateRemediationExecutionsResponse
+         */
         public async Task<ListAggregateRemediationExecutionsResponse> ListAggregateRemediationExecutionsAsync(ListAggregateRemediationExecutionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10694,6 +11040,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await ListDiscoveredResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
+          *
+          * @param request ListIntegratedServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListIntegratedServiceResponse
+         */
         public ListIntegratedServiceResponse ListIntegratedServiceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -10712,6 +11065,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListIntegratedServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
+          *
+          * @param request ListIntegratedServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListIntegratedServiceResponse
+         */
         public async Task<ListIntegratedServiceResponse> ListIntegratedServiceWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -10730,12 +11090,22 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListIntegratedServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
+          *
+          * @return ListIntegratedServiceResponse
+         */
         public ListIntegratedServiceResponse ListIntegratedService()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListIntegratedServiceWithOptions(runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
+          *
+          * @return ListIntegratedServiceResponse
+         */
         public async Task<ListIntegratedServiceResponse> ListIntegratedServiceAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10960,6 +11330,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await ListPreManagedRulesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\\*\\*\\*\\*.
+          *
+          * @param request ListRemediationExecutionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListRemediationExecutionsResponse
+         */
         public ListRemediationExecutionsResponse ListRemediationExecutionsWithOptions(ListRemediationExecutionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10999,6 +11376,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListRemediationExecutionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\\*\\*\\*\\*.
+          *
+          * @param request ListRemediationExecutionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListRemediationExecutionsResponse
+         */
         public async Task<ListRemediationExecutionsResponse> ListRemediationExecutionsWithOptionsAsync(ListRemediationExecutionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11038,12 +11422,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListRemediationExecutionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\\*\\*\\*\\*.
+          *
+          * @param request ListRemediationExecutionsRequest
+          * @return ListRemediationExecutionsResponse
+         */
         public ListRemediationExecutionsResponse ListRemediationExecutions(ListRemediationExecutionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListRemediationExecutionsWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\\*\\*\\*\\*.
+          *
+          * @param request ListRemediationExecutionsRequest
+          * @return ListRemediationExecutionsResponse
+         */
         public async Task<ListRemediationExecutionsResponse> ListRemediationExecutionsAsync(ListRemediationExecutionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11554,6 +11950,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await ListResourceRelationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query all resources with the business tag key and the online tag value in the current Alibaba Cloud account.
+          *
+          * @param request ListResourcesByAdvancedSearchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListResourcesByAdvancedSearchResponse
+         */
         public ListResourcesByAdvancedSearchResponse ListResourcesByAdvancedSearchWithOptions(ListResourcesByAdvancedSearchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11581,6 +11984,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListResourcesByAdvancedSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query all resources with the business tag key and the online tag value in the current Alibaba Cloud account.
+          *
+          * @param request ListResourcesByAdvancedSearchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListResourcesByAdvancedSearchResponse
+         */
         public async Task<ListResourcesByAdvancedSearchResponse> ListResourcesByAdvancedSearchWithOptionsAsync(ListResourcesByAdvancedSearchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11608,18 +12018,37 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListResourcesByAdvancedSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query all resources with the business tag key and the online tag value in the current Alibaba Cloud account.
+          *
+          * @param request ListResourcesByAdvancedSearchRequest
+          * @return ListResourcesByAdvancedSearchResponse
+         */
         public ListResourcesByAdvancedSearchResponse ListResourcesByAdvancedSearch(ListResourcesByAdvancedSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListResourcesByAdvancedSearchWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query all resources with the business tag key and the online tag value in the current Alibaba Cloud account.
+          *
+          * @param request ListResourcesByAdvancedSearchRequest
+          * @return ListResourcesByAdvancedSearchResponse
+         */
         public async Task<ListResourcesByAdvancedSearchResponse> ListResourcesByAdvancedSearchAsync(ListResourcesByAdvancedSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListResourcesByAdvancedSearchWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the cloud services and resource types that are supported by Cloud Config.
+          *
+          * @param request ListSupportedProductsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSupportedProductsResponse
+         */
         public ListSupportedProductsResponse ListSupportedProductsWithOptions(ListSupportedProductsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11651,6 +12080,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListSupportedProductsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the cloud services and resource types that are supported by Cloud Config.
+          *
+          * @param request ListSupportedProductsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSupportedProductsResponse
+         */
         public async Task<ListSupportedProductsResponse> ListSupportedProductsWithOptionsAsync(ListSupportedProductsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11682,12 +12118,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<ListSupportedProductsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the cloud services and resource types that are supported by Cloud Config.
+          *
+          * @param request ListSupportedProductsRequest
+          * @return ListSupportedProductsResponse
+         */
         public ListSupportedProductsResponse ListSupportedProducts(ListSupportedProductsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSupportedProductsWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the cloud services and resource types that are supported by Cloud Config.
+          *
+          * @param request ListSupportedProductsRequest
+          * @return ListSupportedProductsResponse
+         */
         public async Task<ListSupportedProductsResponse> ListSupportedProductsAsync(ListSupportedProductsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12370,6 +12818,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await StartAggregateRemediationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
+          *
+          * @param request StartConfigRuleEvaluationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartConfigRuleEvaluationResponse
+         */
         public StartConfigRuleEvaluationResponse StartConfigRuleEvaluationWithOptions(StartConfigRuleEvaluationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12405,6 +12860,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<StartConfigRuleEvaluationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
+          *
+          * @param request StartConfigRuleEvaluationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartConfigRuleEvaluationResponse
+         */
         public async Task<StartConfigRuleEvaluationResponse> StartConfigRuleEvaluationWithOptionsAsync(StartConfigRuleEvaluationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12440,18 +12902,37 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<StartConfigRuleEvaluationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
+          *
+          * @param request StartConfigRuleEvaluationRequest
+          * @return StartConfigRuleEvaluationResponse
+         */
         public StartConfigRuleEvaluationResponse StartConfigRuleEvaluation(StartConfigRuleEvaluationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartConfigRuleEvaluationWithOptions(request, runtime);
         }
 
+        /**
+          * In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
+          *
+          * @param request StartConfigRuleEvaluationRequest
+          * @return StartConfigRuleEvaluationResponse
+         */
         public async Task<StartConfigRuleEvaluationResponse> StartConfigRuleEvaluationAsync(StartConfigRuleEvaluationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartConfigRuleEvaluationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.
+          *
+          * @param request StartConfigurationRecorderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartConfigurationRecorderResponse
+         */
         public StartConfigurationRecorderResponse StartConfigurationRecorderWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -12470,6 +12951,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<StartConfigurationRecorderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.
+          *
+          * @param request StartConfigurationRecorderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartConfigurationRecorderResponse
+         */
         public async Task<StartConfigurationRecorderResponse> StartConfigurationRecorderWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -12488,12 +12976,22 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<StartConfigurationRecorderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.
+          *
+          * @return StartConfigurationRecorderResponse
+         */
         public StartConfigurationRecorderResponse StartConfigurationRecorder()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartConfigurationRecorderWithOptions(runtime);
         }
 
+        /**
+          * This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.
+          *
+          * @return StartConfigurationRecorderResponse
+         */
         public async Task<StartConfigurationRecorderResponse> StartConfigurationRecorderAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14340,6 +14838,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return await UpdateConfigRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.
+          *
+          * @param request UpdateConfigurationRecorderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateConfigurationRecorderResponse
+         */
         public UpdateConfigurationRecorderResponse UpdateConfigurationRecorderWithOptions(UpdateConfigurationRecorderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14367,6 +14872,13 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<UpdateConfigurationRecorderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.
+          *
+          * @param request UpdateConfigurationRecorderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateConfigurationRecorderResponse
+         */
         public async Task<UpdateConfigurationRecorderResponse> UpdateConfigurationRecorderWithOptionsAsync(UpdateConfigurationRecorderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14394,12 +14906,24 @@ namespace AlibabaCloud.SDK.Config20200907
             return TeaModel.ToObject<UpdateConfigurationRecorderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.
+          *
+          * @param request UpdateConfigurationRecorderRequest
+          * @return UpdateConfigurationRecorderResponse
+         */
         public UpdateConfigurationRecorderResponse UpdateConfigurationRecorder(UpdateConfigurationRecorderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateConfigurationRecorderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.
+          *
+          * @param request UpdateConfigurationRecorderRequest
+          * @return UpdateConfigurationRecorderResponse
+         */
         public async Task<UpdateConfigurationRecorderResponse> UpdateConfigurationRecorderAsync(UpdateConfigurationRecorderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14598,6 +15122,10 @@ namespace AlibabaCloud.SDK.Config20200907
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntegratedTypes))
+            {
+                body["IntegratedTypes"] = request.IntegratedTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCode))
             {
                 body["ServiceCode"] = request.ServiceCode;
@@ -14629,6 +15157,10 @@ namespace AlibabaCloud.SDK.Config20200907
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntegratedTypes))
+            {
+                body["IntegratedTypes"] = request.IntegratedTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCode))
             {
                 body["ServiceCode"] = request.ServiceCode;

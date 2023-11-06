@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetDiscoveredResourceResponseBody : TeaModel {
         /// <summary>
-        /// The information about the resource.
+        /// The details of the resource.
         /// </summary>
         [NameInMap("DiscoveredResourceDetail")]
         [Validation(Required=false)]
@@ -38,55 +38,55 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Configuration { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the resource resides.
+            /// The region ID.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The timestamp when the resource was created.
+            /// The time when the resource was created.
             /// </summary>
             [NameInMap("ResourceCreationTime")]
             [Validation(Required=false)]
             public long? ResourceCreationTime { get; set; }
 
             /// <summary>
-            /// Indicates whether the resource is deleted. Valid values:
+            /// Indicates whether the resource was deleted. Valid values:
             /// 
-            /// *   1: The resource is retained.
-            /// *   0: The resource is deleted.
+            /// *   1: The resource was not deleted.
+            /// *   0: The resource was deleted.
             /// </summary>
             [NameInMap("ResourceDeleted")]
             [Validation(Required=false)]
             public int? ResourceDeleted { get; set; }
 
             /// <summary>
-            /// The ID of the resource.
+            /// The resource ID.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The name of the resource.
+            /// The resource name.
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:
+            /// The status of the resource. The value of this parameter varies with the resource type and may be empty. Examples:
             /// 
-            /// *   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
-            /// *   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that does not have a specific state. In this case, this parameter is left empty.
+            /// *   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.
+            /// *   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.
             /// </summary>
             [NameInMap("ResourceStatus")]
             [Validation(Required=false)]
             public string ResourceStatus { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// The resource type.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

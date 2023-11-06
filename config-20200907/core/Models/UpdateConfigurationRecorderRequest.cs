@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateConfigurationRecorderRequest : TeaModel {
+        /// <summary>
+        /// The resource types. Separate multiple resource types with commas (,).
+        /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public string ResourceTypes { get; set; }

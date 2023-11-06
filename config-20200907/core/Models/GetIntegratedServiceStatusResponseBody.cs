@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
+        [NameInMap("IntegratedTypes")]
+        [Validation(Required=false)]
+        public string IntegratedTypes { get; set; }
+
         /// <summary>
         /// The request ID.
         /// </summary>

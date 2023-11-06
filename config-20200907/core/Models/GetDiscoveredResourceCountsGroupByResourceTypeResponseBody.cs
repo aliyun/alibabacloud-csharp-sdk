@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The resource type by which the statistics are collected.
             /// 
-            /// >  We recommend that you use the `ResourceType` parameter.
+            /// > We recommend that you use the `ResourceType` parameter.
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

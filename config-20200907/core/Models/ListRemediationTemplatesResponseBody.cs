@@ -24,32 +24,35 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The description of the remediation template.
+        /// The queried remediation templates.
         /// </summary>
         [NameInMap("RemediationTemplates")]
         [Validation(Required=false)]
         public List<ListRemediationTemplatesResponseBodyRemediationTemplates> RemediationTemplates { get; set; }
         public class ListRemediationTemplatesResponseBodyRemediationTemplates : TeaModel {
             /// <summary>
-            /// The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.
+            /// The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.
             /// </summary>
             [NameInMap("RemediationType")]
             [Validation(Required=false)]
             public string RemediationType { get; set; }
 
             /// <summary>
-            /// The configuration of the remediation template.
+            /// The definition of the remediation template.
             /// </summary>
             [NameInMap("TemplateDefinition")]
             [Validation(Required=false)]
             public string TemplateDefinition { get; set; }
 
+            /// <summary>
+            /// The description of the remediation template.
+            /// </summary>
             [NameInMap("TemplateDescription")]
             [Validation(Required=false)]
             public string TemplateDescription { get; set; }
 
             /// <summary>
-            /// The identifier of the remediation template.
+            /// The ID of the remediation template.
             /// </summary>
             [NameInMap("TemplateIdentifier")]
             [Validation(Required=false)]

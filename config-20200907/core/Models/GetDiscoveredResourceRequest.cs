@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// The resource IDs.
         /// 
         /// For more information about how to query the ID of a resource, see [ListDiscoveredResources](~~411702~~).
         /// </summary>
@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource.
+        /// The resource type.
         /// 
-        /// For more information about how to query the type of a resource, see [ListDiscoveredResources](~~411702~~).
+        /// For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~411702~~).
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

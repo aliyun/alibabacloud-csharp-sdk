@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// 
-        /// > If this parameter is left empty, no subsequent query exists.
+        /// > If NextToken is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// A tag key.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// A tag value.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

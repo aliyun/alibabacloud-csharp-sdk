@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListCompliancePackTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the compliance package templates returned.
+        /// The information about the compliance package templates.
         /// </summary>
         [NameInMap("CompliancePackTemplatesResult")]
         [Validation(Required=false)]
         public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult CompliancePackTemplatesResult { get; set; }
         public class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult : TeaModel {
             /// <summary>
-            /// An array that contains the compliance package templates.
+            /// The compliance package templates.
             /// </summary>
             [NameInMap("CompliancePackTemplates")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string CompliancePackTemplateName { get; set; }
 
                 /// <summary>
-                /// An array that contains the managed rules in the compliance package.
+                /// The information about managed rules in the compliance package.
                 /// </summary>
                 [NameInMap("ConfigRules")]
                 [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         /// <summary>
                         /// Indicates whether the input parameter is required. Valid values:
                         /// 
-                        /// *   true: The input parameter is required.
+                        /// *   true: The parameter is required.
                         /// *   false: The input parameter is optional.
                         /// </summary>
                         [NameInMap("Required")]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The ID of the managed rule.
+                    /// The identifier of the managed rule.
                     /// </summary>
                     [NameInMap("ManagedRuleIdentifier")]
                     [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ManagedRuleName { get; set; }
 
                     /// <summary>
-                    /// 规则评估的资源类型。
+                    /// The type of the resource evaluated based on the rule.
                     /// </summary>
                     [NameInMap("ResourceTypesScope")]
                     [Validation(Required=false)]

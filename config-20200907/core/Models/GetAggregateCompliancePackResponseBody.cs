@@ -52,25 +52,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string CompliancePackTemplateId { get; set; }
 
             /// <summary>
-            /// The risk level of the resources that are not compliant with the rule. Valid values:
-            /// 
-            /// *   1: high
-            /// *   2: medium
-            /// *   3: low
+            /// The rules in the compliance package.
             /// </summary>
             [NameInMap("ConfigRules")]
             [Validation(Required=false)]
             public List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRules> ConfigRules { get; set; }
             public class GetAggregateCompliancePackResponseBodyCompliancePackConfigRules : TeaModel {
                 /// <summary>
-                /// The ID of the rule.
+                /// The rule ID.
                 /// </summary>
                 [NameInMap("ConfigRuleId")]
                 [Validation(Required=false)]
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The name of the rule.
+                /// The rule name.
                 /// </summary>
                 [NameInMap("ConfigRuleName")]
                 [Validation(Required=false)]
@@ -98,10 +94,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ParameterValue { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the input parameter was required. Valid values:
+                    /// Indicates whether the input parameter is required. Valid values:
                     /// 
-                    /// *   true: required
-                    /// *   false: optional
+                    /// *   true: The input parameter is required.
+                    /// *   false: The input parameter is optional.
                     /// </summary>
                     [NameInMap("Required")]
                     [Validation(Required=false)]
@@ -117,18 +113,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the managed rule.
+                /// The identifier of the managed rule.
                 /// </summary>
                 [NameInMap("ManagedRuleIdentifier")]
                 [Validation(Required=false)]
                 public string ManagedRuleIdentifier { get; set; }
 
+                /// <summary>
+                /// The types of the resources evaluated based on the rule. Multiple resource types are separated with commas (,).
+                /// </summary>
                 [NameInMap("ResourceTypesScope")]
                 [Validation(Required=false)]
                 public string ResourceTypesScope { get; set; }
 
                 /// <summary>
-                /// The risk level of the resources that were not compliant with the rule. Valid values:
+                /// The risk level of the resources that are not compliant with the rule. Valid values:
                 /// 
                 /// *   1: high
                 /// *   2: medium

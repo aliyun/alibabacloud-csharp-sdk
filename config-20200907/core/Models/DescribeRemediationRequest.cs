@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class ListAggregateResourcesByAdvancedSearchRequest : TeaModel {
+    public class DescribeRemediationRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// The rule ID.
         /// </summary>
-        [NameInMap("AggregatorId")]
+        [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
-        public string AggregatorId { get; set; }
+        public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The SQL statement used to query resources.
+        /// The ID of the remediation configuration.
         /// </summary>
-        [NameInMap("Sql")]
+        [NameInMap("RemediationId")]
         [Validation(Required=false)]
-        public string Sql { get; set; }
+        public string RemediationId { get; set; }
 
     }
 

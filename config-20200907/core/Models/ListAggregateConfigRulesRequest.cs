@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The compliance evaluation result. Valid values:
         /// 
-        /// *   COMPLIANT: The resource was evaluated as compliant.
-        /// *   NON_COMPLIANT: The resource was evaluated as incompliant.
-        /// *   NOT_APPLICABLE: The rule did not apply to your resources.
-        /// *   INSUFFICIENT_DATA: No resource data was available.
+        /// *   COMPLIANT: The resource is evaluated as compliant.
+        /// *   NON_COMPLIANT: The resource is evaluated as non-compliant.
+        /// *   NOT_APPLICABLE: The rule does not apply to the resource.
+        /// *   INSUFFICIENT_DATA: No resource data is available.
         /// </summary>
         [NameInMap("ComplianceType")]
         [Validation(Required=false)]
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The status of the rule. Valid values:
         /// 
-        /// *   ACTIVE: The rule is being used to monitor resource configurations.
+        /// *   ACTIVE: The rule is enabled.
         /// *   DELETING: The rule is being deleted.
-        /// *   EVALUATING: The rule is triggered and is being used to monitor resource configurations.
+        /// *   EVALUATING: The rule is being used to evaluate resource configurations.
         /// *   INACTIVE: The rule is disabled.
         /// </summary>
         [NameInMap("ConfigRuleState")]
@@ -59,16 +59,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
-        /// Minimum value: 1. Default value: 1.
+        /// Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
         /// Valid values: 1 to 100. Minimum value: 1. Default value: 10.
         /// </summary>
@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// Resource type for the rule to evaluate.
+        /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public string ResourceTypes { get; set; }

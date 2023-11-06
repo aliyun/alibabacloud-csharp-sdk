@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAdvancedSearchFileRequest : TeaModel {
+        /// <summary>
+        /// The SQL statement used to query resources.
+        /// </summary>
         [NameInMap("Sql")]
         [Validation(Required=false)]
         public string Sql { get; set; }

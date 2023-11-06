@@ -45,11 +45,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string CompliancePackTemplateId { get; set; }
 
             /// <summary>
-            /// The risk level of the resources that are not compliant with the rule. Valid values:
-            /// 
-            /// *   1: high
-            /// *   2: medium
-            /// *   3: low
+            /// The rules in the compliance package.
             /// </summary>
             [NameInMap("ConfigRules")]
             [Validation(Required=false)]
@@ -63,14 +59,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The name of the rule.
+                /// The rule name.
                 /// </summary>
                 [NameInMap("ConfigRuleName")]
                 [Validation(Required=false)]
                 public string ConfigRuleName { get; set; }
 
                 /// <summary>
-                /// The details of the input parameter of the rule.
+                /// The input parameters of the rule.
                 /// </summary>
                 [NameInMap("ConfigRuleParameters")]
                 [Validation(Required=false)]
@@ -116,6 +112,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string ManagedRuleIdentifier { get; set; }
 
+                /// <summary>
+                /// The types of the resources evaluated based on the rule. Multiple resource types are separated with commas (,).
+                /// </summary>
                 [NameInMap("ResourceTypesScope")]
                 [Validation(Required=false)]
                 public string ResourceTypesScope { get; set; }

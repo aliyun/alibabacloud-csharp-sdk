@@ -52,16 +52,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// The tags of the managed rule.
+                /// Classification description of the managed rule.
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public List<string> Labels { get; set; }
 
+                /// <summary>
+                /// Supported remediation template id.
+                /// </summary>
                 [NameInMap("RemediationTemplateIdentifier")]
                 [Validation(Required=false)]
                 public string RemediationTemplateIdentifier { get; set; }
 
+                /// <summary>
+                /// Supported remediation template name.
+                /// </summary>
                 [NameInMap("RemediationTemplateName")]
                 [Validation(Required=false)]
                 public string RemediationTemplateName { get; set; }
@@ -77,16 +83,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public int? RiskLevel { get; set; }
 
+                /// <summary>
+                /// The effective scope of the managed rule.
+                /// </summary>
                 [NameInMap("Scope")]
                 [Validation(Required=false)]
                 public ListManagedRulesResponseBodyManagedRulesManagedRuleListScope Scope { get; set; }
                 public class ListManagedRulesResponseBodyManagedRulesManagedRuleListScope : TeaModel {
+                    /// <summary>
+                    /// The type of resource to which the managed rule applies.
+                    /// </summary>
                     [NameInMap("ComplianceResourceTypes")]
                     [Validation(Required=false)]
                     public List<string> ComplianceResourceTypes { get; set; }
 
                 }
 
+                /// <summary>
+                /// Whether pre-check is supported. Value:
+                /// 
+                /// - true: Supported
+                /// 
+                /// - false: not supported
+                /// </summary>
                 [NameInMap("SupportPreviewManagedRule")]
                 [Validation(Required=false)]
                 public bool? SupportPreviewManagedRule { get; set; }

@@ -9,20 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateConfigurationRecorderResponseBody : TeaModel {
+        /// <summary>
+        /// The details of the configuration recorder.
+        /// </summary>
         [NameInMap("ConfigurationRecorder")]
         [Validation(Required=false)]
         public UpdateConfigurationRecorderResponseBodyConfigurationRecorder ConfigurationRecorder { get; set; }
         public class UpdateConfigurationRecorderResponseBodyConfigurationRecorder : TeaModel {
+            /// <summary>
+            /// The status of the configuration recorder. Valid values:
+            /// 
+            /// *   REGISTRABLE: The configuration recorder has not been registered.
+            /// *   BUILDING: The configuration recorder is being deployed.
+            /// *   REGISTERED: The configuration recorder has been registered.
+            /// *   REBUILDING: The configuration recorder is being redeployed.
+            /// </summary>
             [NameInMap("ConfigurationRecorderStatus")]
             [Validation(Required=false)]
             public string ConfigurationRecorderStatus { get; set; }
 
+            /// <summary>
+            /// The types of the resources that are monitored by Cloud Config.
+            /// </summary>
             [NameInMap("ResourceTypes")]
             [Validation(Required=false)]
             public List<string> ResourceTypes { get; set; }
 
         }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

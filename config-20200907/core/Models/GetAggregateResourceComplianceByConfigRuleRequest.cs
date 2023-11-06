@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to query the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The compliance evaluation result of the resources. Valid values:
         /// 
-        /// *   COMPLIANT: The resources are evaluated as compliant.
-        /// *   NON_COMPLIANT: The resources are evaluated as non-compliant.
+        /// *   COMPLIANT: The resource is evaluated as compliant.
+        /// *   NON_COMPLIANT: The resource is evaluated as incompliant.
         /// *   NOT_APPLICABLE: The rule does not apply to your resources.
         /// *   INSUFFICIENT_DATA: No resource data is available.
         /// </summary>
@@ -33,12 +33,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the rule.
         /// 
-        /// For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
+        /// <summary>
+        /// The ID of the Alibaba Cloud account to which the resources in the account group belong.
+        /// 
+        /// > You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.
+        /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
         public long? ResourceAccountId { get; set; }

@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The error code returned if the request failed.
+                /// The error code.
                 /// 
-                /// *   If the rule is deleted, no error code is returned.
-                /// *   If the rule fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://api.aliyun.com/document/Config/2020-09-07/errorCode).
+                /// *   If the rule is disabled, no error code is returned.
+                /// *   If the rule fails to be disabled, an error code is returned. For more information about error codes, see [Error codes](https://api.alibabacloud.com/document/Config/2020-09-07/errorCode).
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]

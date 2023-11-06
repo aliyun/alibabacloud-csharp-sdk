@@ -39,10 +39,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Regions { get; set; }
 
-        /// <summary>
-        /// 账号组内待查询资源所属的阿里云账号ID。 
-        /// > 参数ResourceAccountId和ResourceOwnerId二选一，推荐使用本参数。
-        /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
         public long? ResourceAccountId { get; set; }
