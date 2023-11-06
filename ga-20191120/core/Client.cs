@@ -4777,6 +4777,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             {
                 query["EndpointGroupConfigurations"] = request.EndpointGroupConfigurations;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                query["IdleTimeout"] = request.IdleTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -4796,6 +4800,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                query["RequestTimeout"] = request.RequestTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyId))
             {
@@ -4872,6 +4880,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             {
                 query["EndpointGroupConfigurations"] = request.EndpointGroupConfigurations;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                query["IdleTimeout"] = request.IdleTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -4891,6 +4903,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                query["RequestTimeout"] = request.RequestTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyId))
             {
@@ -18545,6 +18561,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                query["IdleTimeout"] = request.IdleTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerId))
             {
                 query["ListenerId"] = request.ListenerId;
@@ -18568,6 +18588,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                query["RequestTimeout"] = request.RequestTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyId))
             {
@@ -18632,6 +18656,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                query["IdleTimeout"] = request.IdleTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerId))
             {
                 query["ListenerId"] = request.ListenerId;
@@ -18655,6 +18683,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                query["RequestTimeout"] = request.RequestTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyId))
             {

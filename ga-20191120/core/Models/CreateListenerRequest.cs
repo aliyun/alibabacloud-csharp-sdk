@@ -590,6 +590,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
+        [NameInMap("IdleTimeout")]
+        [Validation(Required=false)]
+        public int? IdleTimeout { get; set; }
+
         /// <summary>
         /// The name of the listener.
         /// 
@@ -664,6 +668,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RequestTimeout")]
+        [Validation(Required=false)]
+        public int? RequestTimeout { get; set; }
 
         /// <summary>
         /// The ID of the security policy. Valid values:
