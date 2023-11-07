@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160701.Models
         [Validation(Required=false)]
         public string DataFormat { get; set; }
 
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
     }
 
 }
