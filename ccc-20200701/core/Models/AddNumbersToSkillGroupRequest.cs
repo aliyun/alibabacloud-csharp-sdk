@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AddNumbersToSkillGroupRequest : TeaModel {
+        [NameInMap("InstNumberGroupIdList")]
+        [Validation(Required=false)]
+        public string InstNumberGroupIdList { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

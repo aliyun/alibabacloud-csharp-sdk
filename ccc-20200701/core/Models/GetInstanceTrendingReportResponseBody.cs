@@ -69,6 +69,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
             }
 
+            [NameInMap("Overall")]
+            [Validation(Required=false)]
+            public List<GetInstanceTrendingReportResponseBodyDataOverall> Overall { get; set; }
+            public class GetInstanceTrendingReportResponseBodyDataOverall : TeaModel {
+                [NameInMap("MaxLoggedInAgents")]
+                [Validation(Required=false)]
+                public long? MaxLoggedInAgents { get; set; }
+
+                [NameInMap("StatsTime")]
+                [Validation(Required=false)]
+                public long? StatsTime { get; set; }
+
+            }
+
         }
 
         [NameInMap("HttpStatusCode")]

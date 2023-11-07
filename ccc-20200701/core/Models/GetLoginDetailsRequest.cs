@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetLoginDetailsRequest : TeaModel {
+        [NameInMap("ChatDeviceId")]
+        [Validation(Required=false)]
+        public string ChatDeviceId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

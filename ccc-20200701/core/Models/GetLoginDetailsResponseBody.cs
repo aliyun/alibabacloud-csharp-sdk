@@ -21,6 +21,34 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string AgentServerUrl { get; set; }
 
+            [NameInMap("AvatarUrl")]
+            [Validation(Required=false)]
+            public string AvatarUrl { get; set; }
+
+            [NameInMap("ChatAppId")]
+            [Validation(Required=false)]
+            public string ChatAppId { get; set; }
+
+            [NameInMap("ChatAppKey")]
+            [Validation(Required=false)]
+            public string ChatAppKey { get; set; }
+
+            [NameInMap("ChatDeviceId")]
+            [Validation(Required=false)]
+            public string ChatDeviceId { get; set; }
+
+            [NameInMap("ChatLoginToken")]
+            [Validation(Required=false)]
+            public string ChatLoginToken { get; set; }
+
+            [NameInMap("ChatServerUrl")]
+            [Validation(Required=false)]
+            public string ChatServerUrl { get; set; }
+
+            [NameInMap("ChatUserId")]
+            [Validation(Required=false)]
+            public string ChatUserId { get; set; }
+
             [NameInMap("DeviceExt")]
             [Validation(Required=false)]
             public string DeviceExt { get; set; }
@@ -40,6 +68,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("Extension")]
             [Validation(Required=false)]
             public string Extension { get; set; }
+
+            [NameInMap("Nickname")]
+            [Validation(Required=false)]
+            public string Nickname { get; set; }
 
             [NameInMap("Signature")]
             [Validation(Required=false)]

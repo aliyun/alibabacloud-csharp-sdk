@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public GetUserResponseBodyData Data { get; set; }
         public class GetUserResponseBodyData : TeaModel {
+            [NameInMap("AvatarUrl")]
+            [Validation(Required=false)]
+            public string AvatarUrl { get; set; }
+
             [NameInMap("DeviceExt")]
             [Validation(Required=false)]
             public string DeviceExt { get; set; }
@@ -57,6 +61,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string Mobile { get; set; }
 
+            [NameInMap("Nickname")]
+            [Validation(Required=false)]
+            public string Nickname { get; set; }
+
             [NameInMap("RoleId")]
             [Validation(Required=false)]
             public string RoleId { get; set; }
@@ -82,6 +90,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public List<string> Params { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

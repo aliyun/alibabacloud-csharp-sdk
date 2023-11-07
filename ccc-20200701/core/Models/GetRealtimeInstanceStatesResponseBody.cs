@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public GetRealtimeInstanceStatesResponseBodyData Data { get; set; }
         public class GetRealtimeInstanceStatesResponseBodyData : TeaModel {
+            [NameInMap("BreakCodeDetailList")]
+            [Validation(Required=false)]
+            public List<GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList> BreakCodeDetailList { get; set; }
+            public class GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList : TeaModel {
+                [NameInMap("BreakCode")]
+                [Validation(Required=false)]
+                public string BreakCode { get; set; }
+
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public long? Count { get; set; }
+
+            }
+
             [NameInMap("BreakingAgents")]
             [Validation(Required=false)]
             public long? BreakingAgents { get; set; }

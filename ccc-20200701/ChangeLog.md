@@ -1,3 +1,6 @@
+2023-11-07 Version: 2.11.2
+- Generated csharp 2020-07-01 for CCC.
+
 2023-11-06 Version: 2.11.1
 - Generated csharp 2020-07-01 for CCC.
 

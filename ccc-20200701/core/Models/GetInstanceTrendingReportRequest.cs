@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MediaType")]
+        [Validation(Required=false)]
+        public string MediaType { get; set; }
+
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }

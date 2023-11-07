@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? CallPriority { get; set; }
 
+        [NameInMap("ContactFlowVariables")]
+        [Validation(Required=false)]
+        public string ContactFlowVariables { get; set; }
+
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Transferee")]
         [Validation(Required=false)]
         public string Transferee { get; set; }
+
+        [NameInMap("TransfereeType")]
+        [Validation(Required=false)]
+        public string TransfereeType { get; set; }
 
         [NameInMap("Transferor")]
         [Validation(Required=false)]

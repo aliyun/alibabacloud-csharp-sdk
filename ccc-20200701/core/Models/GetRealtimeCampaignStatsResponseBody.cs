@@ -29,6 +29,22 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public long? LoggedInAgents { get; set; }
 
+            [NameInMap("OutboundScenarioBreakingAgents")]
+            [Validation(Required=false)]
+            public long? OutboundScenarioBreakingAgents { get; set; }
+
+            [NameInMap("OutboundScenarioReadyAgents")]
+            [Validation(Required=false)]
+            public long? OutboundScenarioReadyAgents { get; set; }
+
+            [NameInMap("OutboundScenarioTalkingAgents")]
+            [Validation(Required=false)]
+            public long? OutboundScenarioTalkingAgents { get; set; }
+
+            [NameInMap("OutboundScenarioWorkingAgents")]
+            [Validation(Required=false)]
+            public long? OutboundScenarioWorkingAgents { get; set; }
+
             [NameInMap("ReadyAgents")]
             [Validation(Required=false)]
             public long? ReadyAgents { get; set; }
