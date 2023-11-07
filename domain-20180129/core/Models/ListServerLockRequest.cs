@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string LockProductId { get; set; }
 
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
+        [NameInMap("OrderByType")]
+        [Validation(Required=false)]
+        public string OrderByType { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }

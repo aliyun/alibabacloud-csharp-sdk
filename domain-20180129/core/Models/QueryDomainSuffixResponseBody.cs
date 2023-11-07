@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [NameInMap("Suffix")]
             [Validation(Required=false)]
             public List<string> Suffix { get; set; }
-        };
+
+        }
 
     }
 

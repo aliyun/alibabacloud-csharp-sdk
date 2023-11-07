@@ -16,18 +16,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [NameInMap("Dns")]
             [Validation(Required=false)]
             public List<string> Dns { get; set; }
-        };
 
-        /// <summary>
-        /// 域名分组ID
-        /// </summary>
+        }
+
         [NameInMap("DomainGroupId")]
         [Validation(Required=false)]
         public long? DomainGroupId { get; set; }
 
-        /// <summary>
-        /// 域名分组名称
-        /// </summary>
         [NameInMap("DomainGroupName")]
         [Validation(Required=false)]
         public string DomainGroupName { get; set; }
@@ -116,9 +111,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public long? RegistrationDateLong { get; set; }
 
-        /// <summary>
-        /// 备注
-        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
@@ -126,6 +118,30 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public QueryDomainByInstanceIdResponseBodyTag Tag { get; set; }
+        public class QueryDomainByInstanceIdResponseBodyTag : TeaModel {
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<QueryDomainByInstanceIdResponseBodyTagTag> Tag { get; set; }
+            public class QueryDomainByInstanceIdResponseBodyTagTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+        }
 
         [NameInMap("TransferOutStatus")]
         [Validation(Required=false)]

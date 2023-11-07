@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision> AdminDivision { get; set; }
             public class QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision : TeaModel {
+                [NameInMap("Children")]
+                [Validation(Required=false)]
                 public QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivisionChildren Children { get; set; }
                 public class QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivisionChildren : TeaModel {
                     [NameInMap("Children")]
@@ -30,9 +32,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                     }
 
                 }
+
+                [NameInMap("DivisionName")]
+                [Validation(Required=false)]
                 public string DivisionName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

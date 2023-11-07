@@ -21,14 +21,33 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<QueryChangeLogListResponseBodyDataChangeLog> ChangeLog { get; set; }
             public class QueryChangeLogListResponseBodyDataChangeLog : TeaModel {
+                [NameInMap("Details")]
+                [Validation(Required=false)]
                 public string Details { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("Operation")]
+                [Validation(Required=false)]
                 public string Operation { get; set; }
+
+                [NameInMap("OperationIPAddress")]
+                [Validation(Required=false)]
                 public string OperationIPAddress { get; set; }
+
+                [NameInMap("Result")]
+                [Validation(Required=false)]
                 public string Result { get; set; }
+
+                [NameInMap("Time")]
+                [Validation(Required=false)]
                 public string Time { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("NextPage")]
         [Validation(Required=false)]

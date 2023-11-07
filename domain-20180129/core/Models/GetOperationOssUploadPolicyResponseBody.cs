@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string FileDir { get; set; }
 
+        /// <summary>
+        /// OSS Endpoint。
+        /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
         public string Host { get; set; }

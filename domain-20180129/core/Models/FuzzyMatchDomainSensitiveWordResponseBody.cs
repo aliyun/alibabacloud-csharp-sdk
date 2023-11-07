@@ -25,9 +25,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<FuzzyMatchDomainSensitiveWordResponseBodyMatchedSentiveWordsMatchedSensitiveWord> MatchedSensitiveWord { get; set; }
             public class FuzzyMatchDomainSensitiveWordResponseBodyMatchedSentiveWordsMatchedSensitiveWord : TeaModel {
+                [NameInMap("Word")]
+                [Validation(Required=false)]
                 public string Word { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

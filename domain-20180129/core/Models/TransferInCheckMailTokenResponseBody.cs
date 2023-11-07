@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [NameInMap("FailDomain")]
             [Validation(Required=false)]
             public List<string> FailDomain { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -29,7 +30,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [NameInMap("SuccessDomain")]
             [Validation(Required=false)]
             public List<string> SuccessDomain { get; set; }
-        };
+
+        }
 
     }
 

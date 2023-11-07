@@ -16,31 +16,40 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [NameInMap("Clientip")]
             [Validation(Required=false)]
             public string Clientip { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("CreateTimeLong")]
             [Validation(Required=false)]
             public long? CreateTimeLong { get; set; }
+
             [NameInMap("TaskNo")]
             [Validation(Required=false)]
             public string TaskNo { get; set; }
+
             [NameInMap("TaskNum")]
             [Validation(Required=false)]
             public int? TaskNum { get; set; }
+
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
+
             [NameInMap("TaskStatusCode")]
             [Validation(Required=false)]
             public int? TaskStatusCode { get; set; }
+
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
+
             [NameInMap("TaskTypeDescription")]
             [Validation(Required=false)]
             public string TaskTypeDescription { get; set; }
-        };
+
+        }
 
         [NameInMap("NextPageCursor")]
         [Validation(Required=false)]
@@ -49,31 +58,40 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [NameInMap("Clientip")]
             [Validation(Required=false)]
             public string Clientip { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("CreateTimeLong")]
             [Validation(Required=false)]
             public long? CreateTimeLong { get; set; }
+
             [NameInMap("TaskNo")]
             [Validation(Required=false)]
             public string TaskNo { get; set; }
+
             [NameInMap("TaskNum")]
             [Validation(Required=false)]
             public int? TaskNum { get; set; }
+
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
+
             [NameInMap("TaskStatusCode")]
             [Validation(Required=false)]
             public int? TaskStatusCode { get; set; }
+
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
+
             [NameInMap("TaskTypeDescription")]
             [Validation(Required=false)]
             public string TaskTypeDescription { get; set; }
-        };
+
+        }
 
         [NameInMap("Objects")]
         [Validation(Required=false)]
@@ -128,31 +146,40 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [NameInMap("Clientip")]
             [Validation(Required=false)]
             public string Clientip { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("CreateTimeLong")]
             [Validation(Required=false)]
             public long? CreateTimeLong { get; set; }
+
             [NameInMap("TaskNo")]
             [Validation(Required=false)]
             public string TaskNo { get; set; }
+
             [NameInMap("TaskNum")]
             [Validation(Required=false)]
             public int? TaskNum { get; set; }
+
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
+
             [NameInMap("TaskStatusCode")]
             [Validation(Required=false)]
             public int? TaskStatusCode { get; set; }
+
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
+
             [NameInMap("TaskTypeDescription")]
             [Validation(Required=false)]
             public string TaskTypeDescription { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

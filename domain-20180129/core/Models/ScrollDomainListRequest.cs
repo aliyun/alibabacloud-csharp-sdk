@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string ProductDomainType { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("ScrollId")]
         [Validation(Required=false)]
         public string ScrollId { get; set; }

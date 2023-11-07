@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public string RegistrantType { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("SubscriptionDuration")]
             [Validation(Required=false)]
             public int? SubscriptionDuration { get; set; }

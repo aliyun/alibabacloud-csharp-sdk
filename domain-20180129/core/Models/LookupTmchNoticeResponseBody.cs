@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<LookupTmchNoticeResponseBodyClaimsClaim> Claim { get; set; }
             public class LookupTmchNoticeResponseBodyClaimsClaim : TeaModel {
+                [NameInMap("ClassDescs")]
+                [Validation(Required=false)]
                 public LookupTmchNoticeResponseBodyClaimsClaimClassDescs ClassDescs { get; set; }
                 public class LookupTmchNoticeResponseBodyClaimsClaimClassDescs : TeaModel {
                     [NameInMap("ClassDesc")]
@@ -34,6 +36,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                     }
 
                 }
+
+                [NameInMap("Contacts")]
+                [Validation(Required=false)]
                 public LookupTmchNoticeResponseBodyClaimsClaimContacts Contacts { get; set; }
                 public class LookupTmchNoticeResponseBodyClaimsClaimContacts : TeaModel {
                     [NameInMap("Contact")]
@@ -47,15 +52,19 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                             [NameInMap("Cc")]
                             [Validation(Required=false)]
                             public string Cc { get; set; }
+
                             [NameInMap("City")]
                             [Validation(Required=false)]
                             public string City { get; set; }
+
                             [NameInMap("Pc")]
                             [Validation(Required=false)]
                             public string Pc { get; set; }
+
                             [NameInMap("Sp")]
                             [Validation(Required=false)]
                             public string Sp { get; set; }
+
                             [NameInMap("Street")]
                             [Validation(Required=false)]
                             public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet Street { get; set; }
@@ -65,7 +74,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                                 public List<string> Street { get; set; }
 
                             }
-                        };
+
+                        }
 
                         [NameInMap("Email")]
                         [Validation(Required=false)]
@@ -94,7 +104,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                     }
 
                 }
+
+                [NameInMap("GoodsAndServices")]
+                [Validation(Required=false)]
                 public string GoodsAndServices { get; set; }
+
+                [NameInMap("Holders")]
+                [Validation(Required=false)]
                 public LookupTmchNoticeResponseBodyClaimsClaimHolders Holders { get; set; }
                 public class LookupTmchNoticeResponseBodyClaimsClaimHolders : TeaModel {
                     [NameInMap("Holder")]
@@ -108,15 +124,19 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                             [NameInMap("Cc")]
                             [Validation(Required=false)]
                             public string Cc { get; set; }
+
                             [NameInMap("City")]
                             [Validation(Required=false)]
                             public string City { get; set; }
+
                             [NameInMap("Pc")]
                             [Validation(Required=false)]
                             public string Pc { get; set; }
+
                             [NameInMap("Sp")]
                             [Validation(Required=false)]
                             public string Sp { get; set; }
+
                             [NameInMap("Street")]
                             [Validation(Required=false)]
                             public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddrStreet Street { get; set; }
@@ -126,7 +146,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                                 public List<string> Street { get; set; }
 
                             }
-                        };
+
+                        }
 
                         [NameInMap("Entitlement")]
                         [Validation(Required=false)]
@@ -139,6 +160,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                     }
 
                 }
+
+                [NameInMap("JurDesc")]
+                [Validation(Required=false)]
                 public LookupTmchNoticeResponseBodyClaimsClaimJurDesc JurDesc { get; set; }
                 public class LookupTmchNoticeResponseBodyClaimsClaimJurDesc : TeaModel {
                     [NameInMap("Desc")]
@@ -150,9 +174,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                     public string JurCC { get; set; }
 
                 }
+
+                [NameInMap("MarkName")]
+                [Validation(Required=false)]
                 public string MarkName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Id")]
         [Validation(Required=false)]

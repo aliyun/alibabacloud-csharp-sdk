@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public bool? RegistrationDateSort { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("StartExpirationDate")]
         [Validation(Required=false)]
         public long? StartExpirationDate { get; set; }
@@ -104,6 +108,20 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("Suffixs")]
         [Validation(Required=false)]
         public string Suffixs { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<QueryAdvancedDomainListRequestTag> Tag { get; set; }
+        public class QueryAdvancedDomainListRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("TradeType")]
         [Validation(Required=false)]

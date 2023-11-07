@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [NameInMap("Dns")]
             [Validation(Required=false)]
             public List<string> Dns { get; set; }
-        };
+
+        }
 
         [NameInMap("DomainGroupId")]
         [Validation(Required=false)]
@@ -37,6 +38,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("DomainNameVerificationStatus")]
         [Validation(Required=false)]
         public string DomainNameVerificationStatus { get; set; }
+
+        [NameInMap("DomainStatus")]
+        [Validation(Required=false)]
+        public string DomainStatus { get; set; }
 
         [NameInMap("DomainType")]
         [Validation(Required=false)]
@@ -114,6 +119,30 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public QueryDomainByDomainNameResponseBodyTag Tag { get; set; }
+        public class QueryDomainByDomainNameResponseBodyTag : TeaModel {
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<QueryDomainByDomainNameResponseBodyTagTag> Tag { get; set; }
+            public class QueryDomainByDomainNameResponseBodyTagTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Vaue")]
+                [Validation(Required=false)]
+                public string Vaue { get; set; }
+
+            }
+
+        }
+
         [NameInMap("TransferOutStatus")]
         [Validation(Required=false)]
         public string TransferOutStatus { get; set; }
@@ -137,10 +166,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("ZhRegistrantOrganization")]
         [Validation(Required=false)]
         public string ZhRegistrantOrganization { get; set; }
-
-        [NameInMap("domainStatus")]
-        [Validation(Required=false)]
-        public string DomainStatus { get; set; }
 
     }
 

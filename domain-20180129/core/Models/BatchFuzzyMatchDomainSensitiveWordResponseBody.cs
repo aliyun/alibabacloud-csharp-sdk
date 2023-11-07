@@ -21,8 +21,16 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult> SensitiveWordMatchResult { get; set; }
             public class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult : TeaModel {
+                [NameInMap("Exist")]
+                [Validation(Required=false)]
                 public bool? Exist { get; set; }
+
+                [NameInMap("Keyword")]
+                [Validation(Required=false)]
                 public string Keyword { get; set; }
+
+                [NameInMap("MatchedSentiveWords")]
+                [Validation(Required=false)]
                 public BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWords MatchedSentiveWords { get; set; }
                 public class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWords : TeaModel {
                     [NameInMap("MatchedSensitiveWord")]
@@ -36,8 +44,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
     }
 
