@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string FaceContrastPictureUrl { get; set; }
 
+        [NameInMap("FaceGuardOutput")]
+        [Validation(Required=false)]
+        public string FaceGuardOutput { get; set; }
+
         [NameInMap("Ip")]
         [Validation(Required=false)]
         public string Ip { get; set; }

@@ -1635,6 +1635,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["FaceContrastPictureUrl"] = request.FaceContrastPictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGuardOutput))
+            {
+                query["FaceGuardOutput"] = request.FaceGuardOutput;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
             {
                 query["Ip"] = request.Ip;
@@ -1783,6 +1787,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceContrastPictureUrl))
             {
                 query["FaceContrastPictureUrl"] = request.FaceContrastPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGuardOutput))
+            {
+                query["FaceGuardOutput"] = request.FaceGuardOutput;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
             {
