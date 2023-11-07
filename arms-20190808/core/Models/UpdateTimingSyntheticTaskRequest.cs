@@ -335,6 +335,40 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             }
 
+            [NameInMap("Stream")]
+            [Validation(Required=false)]
+            public UpdateTimingSyntheticTaskRequestMonitorConfStream Stream { get; set; }
+            public class UpdateTimingSyntheticTaskRequestMonitorConfStream : TeaModel {
+                [NameInMap("CustomHeaderContent")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> CustomHeaderContent { get; set; }
+
+                [NameInMap("PlayerType")]
+                [Validation(Required=false)]
+                public int? PlayerType { get; set; }
+
+                [NameInMap("StreamAddressType")]
+                [Validation(Required=false)]
+                public int? StreamAddressType { get; set; }
+
+                [NameInMap("StreamMonitorTimeout")]
+                [Validation(Required=false)]
+                public int? StreamMonitorTimeout { get; set; }
+
+                [NameInMap("StreamType")]
+                [Validation(Required=false)]
+                public int? StreamType { get; set; }
+
+                [NameInMap("TargetUrl")]
+                [Validation(Required=false)]
+                public string TargetUrl { get; set; }
+
+                [NameInMap("WhiteList")]
+                [Validation(Required=false)]
+                public string WhiteList { get; set; }
+
+            }
+
             [NameInMap("Website")]
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestMonitorConfWebsite Website { get; set; }
