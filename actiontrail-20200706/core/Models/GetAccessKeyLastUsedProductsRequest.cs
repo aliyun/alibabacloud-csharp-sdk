@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class GetAccessKeyLastUsedProductsRequest : TeaModel {
+        /// <summary>
+        /// The AccessKey ID.
+        /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]
         public string AccessKey { get; set; }

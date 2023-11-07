@@ -8,14 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
-    public class CreateDeliveryHistoryJobResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the historical event delivery task.
-        /// </summary>
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public int? JobId { get; set; }
-
+    public class UpdateGlobalEventsStorageRegionResponseBody : TeaModel {
         /// <summary>
         /// The ID of the request.
         /// </summary>
