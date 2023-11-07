@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetPathName { get; set; }
 
             /// <summary>
-            /// The type of the task object. The value is fixed as RD-Account, which indicates an account your resource directory.
+            /// The type of the task object. The value is fixed as RD-Account, which indicates an account in your resource directory.
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]

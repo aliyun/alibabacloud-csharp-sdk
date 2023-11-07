@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string NotBefore { get; set; }
 
             /// <summary>
-            /// The public key of the certificate. The value of this paremeter is in the PEM format and is Base64-encoded.
+            /// The public key of the certificate. The value of this parameter is in the PEM format and is Base64-encoded.
             /// </summary>
             [NameInMap("PublicKey")]
             [Validation(Required=false)]

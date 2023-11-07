@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DirectoryName { get; set; }
 
             /// <summary>
-            /// The number of groups.
+            /// The number of user groups.
             /// </summary>
             [NameInMap("GroupCount")]
             [Validation(Required=false)]
             public int? GroupCount { get; set; }
 
             /// <summary>
-            /// The quota for groups.
+            /// The quota for user groups.
             /// </summary>
             [NameInMap("GroupQuota")]
             [Validation(Required=false)]
@@ -89,23 +89,26 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// Indicates whether SCIM synchronization is enabled. Valid values:
             /// 
-            /// *   true: SCIM synchronization is enabled.
-            /// *   false: SCIM synchronization is disabled.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("SCIMSyncEnabled")]
             [Validation(Required=false)]
             public bool? SCIMSyncEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether SSO logon is enabled. Valid values:
+            /// Indicates whether SSO is enabled. Valid values:
             /// 
-            /// *   true: SSO logon is enabled.
-            /// *   false: SSO logon is disabled.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("SSOEnabled")]
             [Validation(Required=false)]
             public bool? SSOEnabled { get; set; }
 
+            /// <summary>
+            /// The quota for system policies that can be configured for an access configuration.
+            /// </summary>
             [NameInMap("SystemPolicyPerAccessConfigurationQuota")]
             [Validation(Required=false)]
             public int? SystemPolicyPerAccessConfigurationQuota { get; set; }
@@ -127,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
