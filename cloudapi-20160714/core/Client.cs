@@ -20304,6 +20304,104 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await SetApisAuthoritiesWithOptionsAsync(request, runtime);
         }
 
+        public SetAppsAuthToApiProductResponse SetAppsAuthToApiProductWithOptions(SetAppsAuthToApiProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiProductId))
+            {
+                query["ApiProductId"] = request.ApiProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["AppIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthValidTime))
+            {
+                query["AuthValidTime"] = request.AuthValidTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAppsAuthToApiProduct",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAppsAuthToApiProductResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SetAppsAuthToApiProductResponse> SetAppsAuthToApiProductWithOptionsAsync(SetAppsAuthToApiProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiProductId))
+            {
+                query["ApiProductId"] = request.ApiProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["AppIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthValidTime))
+            {
+                query["AuthValidTime"] = request.AuthValidTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAppsAuthToApiProduct",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAppsAuthToApiProductResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SetAppsAuthToApiProductResponse SetAppsAuthToApiProduct(SetAppsAuthToApiProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAppsAuthToApiProductWithOptions(request, runtime);
+        }
+
+        public async Task<SetAppsAuthToApiProductResponse> SetAppsAuthToApiProductAsync(SetAppsAuthToApiProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAppsAuthToApiProductWithOptionsAsync(request, runtime);
+        }
+
         /**
           * *   This operation is intended for API providers and callers.
           * *   API providers can authorize any apps to call their APIs.
