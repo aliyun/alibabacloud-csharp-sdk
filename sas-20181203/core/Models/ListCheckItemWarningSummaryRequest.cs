@@ -102,6 +102,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        [NameInMap("UuidList")]
+        [Validation(Required=false)]
+        public List<string> UuidList { get; set; }
+
     }
 
 }

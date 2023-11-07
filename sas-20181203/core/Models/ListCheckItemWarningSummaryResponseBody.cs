@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Advice { get; set; }
 
+            [NameInMap("AffiliatedRiskTypes")]
+            [Validation(Required=false)]
+            public List<string> AffiliatedRiskTypes { get; set; }
+
+            [NameInMap("AffiliatedRisks")]
+            [Validation(Required=false)]
+            public List<string> AffiliatedRisks { get; set; }
+
             /// <summary>
             /// The alias of the baseline type.
             /// </summary>

@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
+
     }
 
 }
