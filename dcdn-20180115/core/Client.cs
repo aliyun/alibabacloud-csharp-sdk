@@ -23580,7 +23580,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         public UpdateDcdnUserRealTimeDeliveryFieldResponse UpdateDcdnUserRealTimeDeliveryFieldWithOptions(UpdateDcdnUserRealTimeDeliveryFieldRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                query["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                query["Fields"] = request.Fields;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -23591,7 +23599,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
                 Version = "2018-01-15",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -23610,7 +23618,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         public async Task<UpdateDcdnUserRealTimeDeliveryFieldResponse> UpdateDcdnUserRealTimeDeliveryFieldWithOptionsAsync(UpdateDcdnUserRealTimeDeliveryFieldRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                query["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                query["Fields"] = request.Fields;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -23621,7 +23637,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
                 Version = "2018-01-15",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
