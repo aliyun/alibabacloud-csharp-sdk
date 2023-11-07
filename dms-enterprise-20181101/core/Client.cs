@@ -521,6 +521,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await AddTaskFlowEdgesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The following conditions must be met before you call this API operation.
+          * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
+          * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](~~151629~~).
+          *
+          * @param request AnalyzeSQLLineageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AnalyzeSQLLineageResponse
+         */
         public AnalyzeSQLLineageResponse AnalyzeSQLLineageWithOptions(AnalyzeSQLLineageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -556,6 +565,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<AnalyzeSQLLineageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The following conditions must be met before you call this API operation.
+          * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
+          * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](~~151629~~).
+          *
+          * @param request AnalyzeSQLLineageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AnalyzeSQLLineageResponse
+         */
         public async Task<AnalyzeSQLLineageResponse> AnalyzeSQLLineageWithOptionsAsync(AnalyzeSQLLineageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -591,12 +609,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<AnalyzeSQLLineageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The following conditions must be met before you call this API operation.
+          * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
+          * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](~~151629~~).
+          *
+          * @param request AnalyzeSQLLineageRequest
+          * @return AnalyzeSQLLineageResponse
+         */
         public AnalyzeSQLLineageResponse AnalyzeSQLLineage(AnalyzeSQLLineageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AnalyzeSQLLineageWithOptions(request, runtime);
         }
 
+        /**
+          * The following conditions must be met before you call this API operation.
+          * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
+          * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](~~151629~~).
+          *
+          * @param request AnalyzeSQLLineageRequest
+          * @return AnalyzeSQLLineageResponse
+         */
         public async Task<AnalyzeSQLLineageResponse> AnalyzeSQLLineageAsync(AnalyzeSQLLineageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4353,6 +4387,80 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUploadOSSFileJobWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteAuthorityTemplateResponse DeleteAuthorityTemplateWithOptions(DeleteAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAuthorityTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteAuthorityTemplateResponse> DeleteAuthorityTemplateWithOptionsAsync(DeleteAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAuthorityTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteAuthorityTemplateResponse DeleteAuthorityTemplate(DeleteAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAuthorityTemplateWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteAuthorityTemplateResponse> DeleteAuthorityTemplateAsync(DeleteAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAuthorityTemplateWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -11421,6 +11529,96 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await InspectProxyAccessSecretWithOptionsAsync(request, runtime);
         }
 
+        public ListAuthorityTemplateResponse ListAuthorityTemplateWithOptions(ListAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuthorityTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListAuthorityTemplateResponse> ListAuthorityTemplateWithOptionsAsync(ListAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuthorityTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListAuthorityTemplateResponse ListAuthorityTemplate(ListAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAuthorityTemplateWithOptions(request, runtime);
+        }
+
+        public async Task<ListAuthorityTemplateResponse> ListAuthorityTemplateAsync(ListAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAuthorityTemplateWithOptionsAsync(request, runtime);
+        }
+
         public ListClassificationTemplatesResponse ListClassificationTemplatesWithOptions(ListClassificationTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17346,6 +17544,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DbaUid"] = request.DbaUid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbaUidByString))
+            {
+                query["DbaUidByString"] = request.DbaUidByString;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DdlOnline))
             {
                 query["DdlOnline"] = request.DdlOnline;
@@ -17475,6 +17677,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbaUid))
             {
                 query["DbaUid"] = request.DbaUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbaUidByString))
+            {
+                query["DbaUidByString"] = request.DbaUidByString;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DdlOnline))
             {

@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? DbaUid { get; set; }
 
+        [NameInMap("DbaUidByString")]
+        [Validation(Required=false)]
+        public string DbaUidByString { get; set; }
+
         /// <summary>
         /// Specifies whether to enable the lock-free schema change feature for the database instance. Valid values:
         /// 

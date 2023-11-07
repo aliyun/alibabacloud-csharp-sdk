@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public GetOrderBaseInfoResponseBodyOrderBaseInfo OrderBaseInfo { get; set; }
         public class GetOrderBaseInfoResponseBodyOrderBaseInfo : TeaModel {
+            /// <summary>
+            /// The Key of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.
+            /// </summary>
             [NameInMap("AttachmentKey")]
             [Validation(Required=false)]
             public string AttachmentKey { get; set; }
@@ -76,6 +79,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public long? OrderId { get; set; }
 
+            /// <summary>
+            /// The original file name of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.
+            /// </summary>
             [NameInMap("OriginAttachmentName")]
             [Validation(Required=false)]
             public string OriginAttachmentName { get; set; }

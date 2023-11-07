@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class BackFillResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the execution record of the task flow.
+        /// </summary>
         [NameInMap("DagInstanceId")]
         [Validation(Required=false)]
         public long? DagInstanceId { get; set; }

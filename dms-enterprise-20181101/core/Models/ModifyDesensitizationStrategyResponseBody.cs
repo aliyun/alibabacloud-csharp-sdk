@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ModifyDesensitizationStrategyResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The status code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// The error message returned.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

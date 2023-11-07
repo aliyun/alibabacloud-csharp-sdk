@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string DataLinkName { get; set; }
 
                 /// <summary>
-                /// The password that is used to log on to the database.
+                /// The password that is used to log on to the database instance.
                 /// </summary>
                 [NameInMap("DatabasePassword")]
                 [Validation(Required=false)]
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string DatabaseUser { get; set; }
 
                 /// <summary>
-                /// The ID of the database administrator (DBA) for the database instance.
+                /// The ID of the database administrator (DBA) of the database instance.
                 /// </summary>
                 [NameInMap("DbaId")]
                 [Validation(Required=false)]
                 public string DbaId { get; set; }
 
                 /// <summary>
-                /// The nickname of the DBA for the database instance.
+                /// The nickname of the DBA of the instance.
                 /// </summary>
                 [NameInMap("DbaNickName")]
                 [Validation(Required=false)]
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The type of the environment to which the database instance belongs. Valid values:
                 /// 
-                /// *   **product**: production environment
+                /// *   **product:** production environment
                 /// *   **dev**: development environment
-                /// *   **pre**: staging environment
+                /// *   **pre**: pre-release environment
                 /// *   **test**: test environment
                 /// *   **sit**: SIT environment
                 /// *   **uat**: UAT environment
                 /// *   **pet**: stress testing environment
-                /// *   **stag**: STAG environment
+                /// *   **stag:** staging environment
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string InstanceAlias { get; set; }
 
                 /// <summary>
-                /// The ID of the database instance.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// The ID of the owner for the database instance.
+                /// The IDs of the owners of the database instance.
                 /// </summary>
                 [NameInMap("OwnerIdList")]
                 [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The nickname of the owner for the database instance.
+                /// The nicknames of the owners of the database instance.
                 /// </summary>
                 [NameInMap("OwnerNameList")]
                 [Validation(Required=false)]
@@ -189,12 +189,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public int? QueryTimeout { get; set; }
 
                 /// <summary>
-                /// The ID of the security rule set for the database instance.
+                /// The ID of the security rule set of the database instance.
                 /// </summary>
                 [NameInMap("SafeRuleId")]
                 [Validation(Required=false)]
                 public string SafeRuleId { get; set; }
 
+                /// <summary>
+                /// Indicates whether the sensitive data protection feature is enabled. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// </summary>
                 [NameInMap("SellSitd")]
                 [Validation(Required=false)]
                 public bool? SellSitd { get; set; }
@@ -225,7 +231,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string GroupMode { get; set; }
 
                     /// <summary>
-                    /// The name of the security rule set corresponding to the control mode.
+                    /// The name of the security rule corresponding to the control mode.
                     /// </summary>
                     [NameInMap("GroupName")]
                     [Validation(Required=false)]
@@ -244,7 +250,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// Indicates whether the cross-database query feature is enabled for the database instance. Valid values:
                 /// 
                 /// *   **0**: disabled
-                /// *   **1**: enabled
+                /// *   **1:**: enabled
                 /// </summary>
                 [NameInMap("UseDsql")]
                 [Validation(Required=false)]
@@ -262,7 +268,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -271,8 +277,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

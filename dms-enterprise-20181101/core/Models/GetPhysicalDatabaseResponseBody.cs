@@ -74,6 +74,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string Host { get; set; }
 
+            /// <summary>
+            /// The alias of the database instance.
+            /// </summary>
             [NameInMap("InstanceAlias")]
             [Validation(Required=false)]
             public string InstanceAlias { get; set; }

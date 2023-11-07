@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The type of the environment to which the database instance belongs. Valid values:
         /// 
-        /// *   **product**: production environment
+        /// *   **product:** production environment
         /// *   **dev**: development environment
-        /// *   **pre**: staging environment
+        /// *   **pre**: pre-release environment
         /// *   **test**: test environment
         /// *   **sit**: system integration testing (SIT) environment
         /// *   **uat**: user acceptance testing (UAT) environment
         /// *   **pet**: stress testing environment
-        /// *   **stag**: STAG environment
+        /// *   **stag:** staging environment
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The status of the database instance. Valid values:
         /// 
-        /// *   **NORMAL**: normal
-        /// *   **DISABLE**: disabled
+        /// *   **NORMAL**
+        /// *   **DISABLE**
         /// </summary>
         [NameInMap("InstanceState")]
         [Validation(Required=false)]
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The network type of the database instance. Valid values:
         /// 
-        /// *   **CLASSIC**: classic network
-        /// *   **VPC**: VPC
+        /// *   **CLASSIC:** classic network
+        /// *   **VPC:** VPC
         /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]

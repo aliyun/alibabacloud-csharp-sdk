@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class AddDesensitizationRuleResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The error code that is returned.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// The error message that is returned.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID generated for the masking rule.
+        /// The ID generated for the data masking rule.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

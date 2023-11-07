@@ -24,17 +24,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// Indicates whether the request is successful. Valid values:
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
