@@ -9,6 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class GroupUserSaveRequest : TeaModel {
+        [NameInMap("base_city_code")]
+        [Validation(Required=false)]
+        public string BaseCityCode { get; set; }
+
+        [NameInMap("birthday")]
+        [Validation(Required=false)]
+        public string Birthday { get; set; }
+
+        [NameInMap("cert_list")]
+        [Validation(Required=false)]
+        public List<GroupUserSaveRequestCertList> CertList { get; set; }
+        public class GroupUserSaveRequestCertList : TeaModel {
+            [NameInMap("cert_expired_time")]
+            [Validation(Required=false)]
+            public string CertExpiredTime { get; set; }
+
+            [NameInMap("cert_nation")]
+            [Validation(Required=false)]
+            public string CertNation { get; set; }
+
+            [NameInMap("cert_no")]
+            [Validation(Required=false)]
+            public string CertNo { get; set; }
+
+            [NameInMap("cert_type")]
+            [Validation(Required=false)]
+            public int? CertType { get; set; }
+
+            [NameInMap("nationality")]
+            [Validation(Required=false)]
+            public string Nationality { get; set; }
+
+        }
+
+        [NameInMap("gender")]
+        [Validation(Required=false)]
+        public string Gender { get; set; }
+
         [NameInMap("job_no")]
         [Validation(Required=false)]
         public string JobNo { get; set; }

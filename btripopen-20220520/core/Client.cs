@@ -9496,11 +9496,31 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GroupUserSaveShrinkRequest request = new GroupUserSaveShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertList))
+            {
+                request.CertListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertList, "cert_list", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCorpIdList))
             {
                 request.SubCorpIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCorpIdList, "sub_corp_id_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseCityCode))
+            {
+                body["base_city_code"] = request.BaseCityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertListShrink))
+            {
+                body["cert_list"] = request.CertListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNo))
             {
                 body["job_no"] = request.JobNo;
@@ -9559,11 +9579,31 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GroupUserSaveShrinkRequest request = new GroupUserSaveShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertList))
+            {
+                request.CertListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertList, "cert_list", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCorpIdList))
             {
                 request.SubCorpIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCorpIdList, "sub_corp_id_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseCityCode))
+            {
+                body["base_city_code"] = request.BaseCityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertListShrink))
+            {
+                body["cert_list"] = request.CertListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNo))
             {
                 body["job_no"] = request.JobNo;
