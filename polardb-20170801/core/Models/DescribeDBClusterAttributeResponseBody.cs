@@ -302,13 +302,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? DeletionLock { get; set; }
 
         /// <summary>
-        /// The unit to which the cluster belongs.
-        /// </summary>
-        [NameInMap("DeployUnit")]
-        [Validation(Required=false)]
-        public string DeployUnit { get; set; }
-
-        /// <summary>
         /// The database type.
         /// </summary>
         [NameInMap("Engine")]

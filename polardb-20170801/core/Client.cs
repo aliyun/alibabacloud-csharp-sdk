@@ -7377,6 +7377,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -7426,6 +7430,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -17196,10 +17204,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
-            {
-                query["DescribeType"] = request.DescribeType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
             {
                 query["NodeType"] = request.NodeType;
@@ -17262,10 +17266,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
-            {
-                query["DescribeType"] = request.DescribeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
             {

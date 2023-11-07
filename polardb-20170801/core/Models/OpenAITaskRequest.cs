@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        [NameInMap("DescribeType")]
-        [Validation(Required=false)]
-        public string DescribeType { get; set; }
-
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }

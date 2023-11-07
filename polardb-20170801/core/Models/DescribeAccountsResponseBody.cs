@@ -41,13 +41,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// The password of the account that is used to log on to the database.
-            /// </summary>
-            [NameInMap("AccountPassword")]
-            [Validation(Required=false)]
-            public string AccountPassword { get; set; }
-
-            /// <summary>
             /// The validity period of the password.
             /// </summary>
             [NameInMap("AccountPasswordValidTime")]
