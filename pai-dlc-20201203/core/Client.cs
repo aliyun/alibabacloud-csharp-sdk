@@ -1312,6 +1312,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsShared))
+            {
+                query["IsShared"] = request.IsShared;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodUid))
             {
                 query["PodUid"] = request.PodUid;
@@ -1340,6 +1344,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsShared))
+            {
+                query["IsShared"] = request.IsShared;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodUid))
             {
                 query["PodUid"] = request.PodUid;

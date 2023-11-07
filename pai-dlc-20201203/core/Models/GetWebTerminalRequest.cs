@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetWebTerminalRequest : TeaModel {
+        [NameInMap("IsShared")]
+        [Validation(Required=false)]
+        public bool? IsShared { get; set; }
+
         /// <summary>
         /// Pod UID。
         /// </summary>
