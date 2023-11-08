@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class CreateExchangeRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("AlternateExchange")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string AlternateExchange { get; set; }
 
-        [NameInMap("VirtualHost")]
+        [NameInMap("AutoDeleteState")]
         [Validation(Required=false)]
-        public string VirtualHost { get; set; }
+        public bool? AutoDeleteState { get; set; }
 
         [NameInMap("ExchangeName")]
         [Validation(Required=false)]
@@ -25,17 +25,17 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string ExchangeType { get; set; }
 
-        [NameInMap("AutoDeleteState")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public bool? AutoDeleteState { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("Internal")]
         [Validation(Required=false)]
         public bool? Internal { get; set; }
 
-        [NameInMap("AlternateExchange")]
+        [NameInMap("VirtualHost")]
         [Validation(Required=false)]
-        public string AlternateExchange { get; set; }
+        public string VirtualHost { get; set; }
 
     }
 

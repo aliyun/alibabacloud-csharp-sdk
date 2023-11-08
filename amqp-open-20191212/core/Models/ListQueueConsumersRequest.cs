@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("VirtualHost")]
-        [Validation(Required=false)]
-        public string VirtualHost { get; set; }
-
-        [NameInMap("Queue")]
-        [Validation(Required=false)]
-        public string Queue { get; set; }
-
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [NameInMap("QueryCount")]
         [Validation(Required=false)]
         public int? QueryCount { get; set; }
+
+        [NameInMap("Queue")]
+        [Validation(Required=false)]
+        public string Queue { get; set; }
+
+        [NameInMap("VirtualHost")]
+        [Validation(Required=false)]
+        public string VirtualHost { get; set; }
 
     }
 

@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("VirtualHost")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string VirtualHost { get; set; }
-
-        [NameInMap("QueueName")]
-        [Validation(Required=false)]
-        public string QueueName { get; set; }
+        public int? MaxResults { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("QueueName")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string QueueName { get; set; }
+
+        [NameInMap("VirtualHost")]
+        [Validation(Required=false)]
+        public string VirtualHost { get; set; }
 
     }
 

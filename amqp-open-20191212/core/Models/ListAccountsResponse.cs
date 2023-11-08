@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
-    public class DeleteBindingResponse : TeaModel {
+    public class ListAccountsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DeleteBindingResponseBody Body { get; set; }
+        public ListAccountsResponseBody Body { get; set; }
 
     }
 

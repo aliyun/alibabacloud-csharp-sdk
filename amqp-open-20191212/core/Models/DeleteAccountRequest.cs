@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
-    public class ListInstancesRequest : TeaModel {
-        [NameInMap("MaxResults")]
+    public class DeleteAccountRequest : TeaModel {
+        [NameInMap("CreateTimestamp")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public long? CreateTimestamp { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("UserName")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string UserName { get; set; }
 
     }
 

@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
-    public class DeleteExchangeRequest : TeaModel {
-        [NameInMap("ExchangeName")]
-        [Validation(Required=false)]
-        public string ExchangeName { get; set; }
-
+    public class ListAccountsRequest : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("VirtualHost")]
-        [Validation(Required=false)]
-        public string VirtualHost { get; set; }
 
     }
 
