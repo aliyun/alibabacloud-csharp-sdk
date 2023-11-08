@@ -1,3 +1,6 @@
+2023-11-08 Version: 2.11.0
+- Generated csharp 2018-12-03 for Sas.
+
 2023-11-07 Version: 2.10.0
 - Generated csharp 2018-12-03 for Sas.
 
