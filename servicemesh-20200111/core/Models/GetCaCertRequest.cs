@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetCaCertRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

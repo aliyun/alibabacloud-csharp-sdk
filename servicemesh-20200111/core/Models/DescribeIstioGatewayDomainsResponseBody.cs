@@ -31,12 +31,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// The domain name.
+            /// The list of domain names.
             /// </summary>
             [NameInMap("Domains")]
             [Validation(Required=false)]
             public List<string> Domains { get; set; }
 
+            /// <summary>
+            /// The name of the Istio gateway.
+            /// </summary>
             [NameInMap("GatewayCRName")]
             [Validation(Required=false)]
             public string GatewayCRName { get; set; }
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The name of the port.
+            /// The port name.
             /// </summary>
             [NameInMap("PortName")]
             [Validation(Required=false)]
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// 交换机所属的可用区。
+            /// The zone to which the switch belongs.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

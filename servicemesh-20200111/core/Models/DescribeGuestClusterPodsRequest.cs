@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string GuestClusterID { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// The namespace.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

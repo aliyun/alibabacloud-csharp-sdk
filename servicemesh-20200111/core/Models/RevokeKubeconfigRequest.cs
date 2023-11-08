@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public bool? PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance for which you want to revoke a kubeconfig file.
+        /// The ID of the ASM instance for which you want to revoke its kubeconfig file.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

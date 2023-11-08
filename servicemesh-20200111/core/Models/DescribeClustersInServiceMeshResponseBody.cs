@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeClustersInServiceMeshResponseBody : TeaModel {
         /// <summary>
-        /// The clusters in the ASM instance.
+        /// The list of the clusters in the ASM instance.
         /// </summary>
         [NameInMap("Clusters")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             }
 
             /// <summary>
-            /// The domain of the cluster.
+            /// The domain name of the cluster.
             /// </summary>
             [NameInMap("ClusterDomain")]
             [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The point in time when the cluster was created.
+            /// The time when the cluster was created.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The error message that is returned when the call failed.
+            /// The error message.
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             /// 
             /// \-`logtail_uninstalled`: The Logtail component is not installed.
             /// 
-            /// *   `logtail_state_get_error`: The Logtail component fails to be installed.
+            /// *   `logtail_state_get_error`: The Logtail component failed to be installed.
             /// </summary>
             [NameInMap("LogtailInstalledState")]
             [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string State { get; set; }
 
             /// <summary>
-            /// The point in time when the cluster was last modified.
+            /// The time when the cluster was last modified.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

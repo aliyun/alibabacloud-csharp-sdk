@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string IngressService { get; set; }
 
         /// <summary>
-        /// Fixed value: **ASM_TRAFFIC_TAG**.
+        /// The label key of the associated service workload. The value is fixed as **ASM_TRAFFIC_TAG**.
         /// </summary>
         [NameInMap("LabelSelectorKey")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string LabelSelectorValue { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

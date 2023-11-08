@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetGrafanaDashboardUrlRequest : TeaModel {
         /// <summary>
-        /// The ID of the Container Service for Kubernetes (ACK) or serverless Kubernetes (ASK) cluster.
+        /// The ID of the Container Service for Kubernetes (ACK) or ACK Serverless cluster.
         /// </summary>
         [NameInMap("K8sClusterId")]
         [Validation(Required=false)]
         public string K8sClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+        /// The ID of the Service Mesh (ASM) instance.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

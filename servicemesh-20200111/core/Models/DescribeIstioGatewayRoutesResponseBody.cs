@@ -30,10 +30,16 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// Destination hosts list.
+            /// </summary>
             [NameInMap("DestinationHost")]
             [Validation(Required=false)]
             public List<string> DestinationHost { get; set; }
 
+            /// <summary>
+            /// Destination subset list.
+            /// </summary>
             [NameInMap("DestinationSubSet")]
             [Validation(Required=false)]
             public List<string> DestinationSubSet { get; set; }

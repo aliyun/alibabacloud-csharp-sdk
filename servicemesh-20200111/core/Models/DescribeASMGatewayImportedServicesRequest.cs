@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string ASMGatewayName { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
         /// <summary>
-        /// The namespace in which the service resides.
+        /// The namespace in which the services reside.
         /// </summary>
         [NameInMap("ServiceNamespace")]
         [Validation(Required=false)]

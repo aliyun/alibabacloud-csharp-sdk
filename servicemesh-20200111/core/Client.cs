@@ -1542,6 +1542,184 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await CreateSwimLaneGroupWithOptionsAsync(request, runtime);
         }
 
+        public CreateWaypointResponse CreateWaypointWithOptions(CreateWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAEnabled))
+            {
+                body["HPAEnabled"] = request.HPAEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAMaxReplicas))
+            {
+                body["HPAMaxReplicas"] = request.HPAMaxReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAMinReplicas))
+            {
+                body["HPAMinReplicas"] = request.HPAMinReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPATargetCPU))
+            {
+                body["HPATargetCPU"] = request.HPATargetCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPATargetMemory))
+            {
+                body["HPATargetMemory"] = request.HPATargetMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitCPU))
+            {
+                body["LimitCPU"] = request.LimitCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitMemory))
+            {
+                body["LimitMemory"] = request.LimitMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferECI))
+            {
+                body["PreferECI"] = request.PreferECI;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestCPU))
+            {
+                body["RequestCPU"] = request.RequestCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestMemory))
+            {
+                body["RequestMemory"] = request.RequestMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceAccount))
+            {
+                body["ServiceAccount"] = request.ServiceAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWaypoint",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWaypointResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateWaypointResponse> CreateWaypointWithOptionsAsync(CreateWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAEnabled))
+            {
+                body["HPAEnabled"] = request.HPAEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAMaxReplicas))
+            {
+                body["HPAMaxReplicas"] = request.HPAMaxReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAMinReplicas))
+            {
+                body["HPAMinReplicas"] = request.HPAMinReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPATargetCPU))
+            {
+                body["HPATargetCPU"] = request.HPATargetCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPATargetMemory))
+            {
+                body["HPATargetMemory"] = request.HPATargetMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitCPU))
+            {
+                body["LimitCPU"] = request.LimitCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitMemory))
+            {
+                body["LimitMemory"] = request.LimitMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferECI))
+            {
+                body["PreferECI"] = request.PreferECI;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestCPU))
+            {
+                body["RequestCPU"] = request.RequestCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestMemory))
+            {
+                body["RequestMemory"] = request.RequestMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceAccount))
+            {
+                body["ServiceAccount"] = request.ServiceAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWaypoint",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWaypointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateWaypointResponse CreateWaypoint(CreateWaypointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWaypointWithOptions(request, runtime);
+        }
+
+        public async Task<CreateWaypointResponse> CreateWaypointAsync(CreateWaypointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWaypointWithOptionsAsync(request, runtime);
+        }
+
         public DeleteGatewayRouteResponse DeleteGatewayRouteWithOptions(DeleteGatewayRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2048,6 +2226,96 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSwimLaneGroupWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteWaypointResponse DeleteWaypointWithOptions(DeleteWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWaypoint",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWaypointResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteWaypointResponse> DeleteWaypointWithOptionsAsync(DeleteWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWaypoint",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWaypointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteWaypointResponse DeleteWaypoint(DeleteWaypointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteWaypointWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteWaypointResponse> DeleteWaypointAsync(DeleteWaypointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteWaypointWithOptionsAsync(request, runtime);
         }
 
         public DescribeASMGatewayImportedServicesResponse DescribeASMGatewayImportedServicesWithOptions(DescribeASMGatewayImportedServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5612,6 +5880,88 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await GrantUserPermissionsWithOptionsAsync(request, runtime);
         }
 
+        public ListServiceAccountsResponse ListServiceAccountsWithOptions(ListServiceAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceAccounts",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceAccountsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListServiceAccountsResponse> ListServiceAccountsWithOptionsAsync(ListServiceAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceAccounts",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceAccountsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListServiceAccountsResponse ListServiceAccounts(ListServiceAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListServiceAccountsWithOptions(request, runtime);
+        }
+
+        public async Task<ListServiceAccountsResponse> ListServiceAccountsAsync(ListServiceAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListServiceAccountsWithOptionsAsync(request, runtime);
+        }
+
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5708,6 +6058,112 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        public ListWaypointsResponse ListWaypointsWithOptions(ListWaypointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Continue))
+            {
+                body["Continue"] = request.Continue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWaypoints",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWaypointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListWaypointsResponse> ListWaypointsWithOptionsAsync(ListWaypointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Continue))
+            {
+                body["Continue"] = request.Continue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWaypoints",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWaypointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListWaypointsResponse ListWaypoints(ListWaypointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWaypointsWithOptions(request, runtime);
+        }
+
+        public async Task<ListWaypointsResponse> ListWaypointsAsync(ListWaypointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWaypointsWithOptionsAsync(request, runtime);
         }
 
         public ModifyApiServerEipResourceResponse ModifyApiServerEipResourceWithOptions(ModifyApiServerEipResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5867,7 +6323,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods of Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
+          * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
           *
           * @param request ReActivateAuditRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5905,7 +6361,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods of Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
+          * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
           *
           * @param request ReActivateAuditRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5943,7 +6399,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods of Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
+          * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
           *
           * @param request ReActivateAuditRequest
           * @return ReActivateAuditResponse
@@ -5955,7 +6411,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods of Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
+          * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
           *
           * @param request ReActivateAuditRequest
           * @return ReActivateAuditResponse
@@ -8632,6 +9088,184 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSwimLaneGroupWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateWaypointResponse UpdateWaypointWithOptions(UpdateWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAEnabled))
+            {
+                body["HPAEnabled"] = request.HPAEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAMaxReplicas))
+            {
+                body["HPAMaxReplicas"] = request.HPAMaxReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAMinReplicas))
+            {
+                body["HPAMinReplicas"] = request.HPAMinReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPATargetCPU))
+            {
+                body["HPATargetCPU"] = request.HPATargetCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPATargetMemory))
+            {
+                body["HPATargetMemory"] = request.HPATargetMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitCPU))
+            {
+                body["LimitCPU"] = request.LimitCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitMemory))
+            {
+                body["LimitMemory"] = request.LimitMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferECI))
+            {
+                body["PreferECI"] = request.PreferECI;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestCPU))
+            {
+                body["RequestCPU"] = request.RequestCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestMemory))
+            {
+                body["RequestMemory"] = request.RequestMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWaypoint",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWaypointResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateWaypointResponse> UpdateWaypointWithOptionsAsync(UpdateWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAEnabled))
+            {
+                body["HPAEnabled"] = request.HPAEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAMaxReplicas))
+            {
+                body["HPAMaxReplicas"] = request.HPAMaxReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPAMinReplicas))
+            {
+                body["HPAMinReplicas"] = request.HPAMinReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPATargetCPU))
+            {
+                body["HPATargetCPU"] = request.HPATargetCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPATargetMemory))
+            {
+                body["HPATargetMemory"] = request.HPATargetMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitCPU))
+            {
+                body["LimitCPU"] = request.LimitCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitMemory))
+            {
+                body["LimitMemory"] = request.LimitMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferECI))
+            {
+                body["PreferECI"] = request.PreferECI;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestCPU))
+            {
+                body["RequestCPU"] = request.RequestCPU;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestMemory))
+            {
+                body["RequestMemory"] = request.RequestMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWaypoint",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWaypointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateWaypointResponse UpdateWaypoint(UpdateWaypointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWaypointWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateWaypointResponse> UpdateWaypointAsync(UpdateWaypointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWaypointWithOptionsAsync(request, runtime);
         }
 
         public UpgradeMeshEditionPartiallyResponse UpgradeMeshEditionPartiallyWithOptions(UpgradeMeshEditionPartiallyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

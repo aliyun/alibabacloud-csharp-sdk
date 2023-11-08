@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string Kubeconfig { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

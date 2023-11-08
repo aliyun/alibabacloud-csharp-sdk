@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         /// Specifies whether to enable the Kubernetes API on the data plane to access Istio resources in the ASM instance. Valid values:
         /// 
         /// *   `true`: enables the Kubernetes API to access Istio resources in the ASM instance.
-        /// *   `false`: does not enable the Kubernetes API to access Istio resources in the ASM instance.
+        /// *   `false`: disables the Kubernetes API to access Istio resources in the ASM instance.
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string MemoryRequirement { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+        /// The Service Mesh (ASM) instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

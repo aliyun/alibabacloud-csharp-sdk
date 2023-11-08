@@ -562,7 +562,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string OPAInjectorCPURequirement { get; set; }
 
         /// <summary>
-        /// Specifies whether to create an SLB instance for accessing the ASM mesh topology.
+        /// Specifies whether to create a CLB instance for accessing the ASM mesh topology.
         /// </summary>
         [NameInMap("OPAInjectorMemoryLimit")]
         [Validation(Required=false)]

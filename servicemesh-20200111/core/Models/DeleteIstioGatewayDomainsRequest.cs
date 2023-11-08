@@ -24,28 +24,28 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string IstioGatewayName { get; set; }
 
         /// <summary>
-        /// The maximum number of ASM gateways to query.
+        /// The maximum number of Istio gateways to query.
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public string Limit { get; set; }
 
         /// <summary>
-        /// The namespace in which the ASM gateway resides.
+        /// The name of the namespace.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The name of the port.
+        /// The port name.
         /// </summary>
         [NameInMap("PortName")]
         [Validation(Required=false)]
         public string PortName { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

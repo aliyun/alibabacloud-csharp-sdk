@@ -38,18 +38,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string RouteName { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
         /// <summary>
-        /// The status of the routing rule. Valid values:
-        /// 
-        /// *   `0`: The routing rule is valid.
-        /// *   `1`: The routing rule is invalid.
-        /// *   `2`: An error occurs during the creation or update of the routing rule.
+        /// The status of the routing rule. Valid values: 0: The routing rule is valid. 1: The routing rule is invalid. 2: An error occurs during the creation or update of the routing rule.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

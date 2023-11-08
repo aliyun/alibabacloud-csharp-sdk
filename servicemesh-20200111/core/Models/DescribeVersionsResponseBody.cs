@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeVersionsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string Edition { get; set; }
 
             /// <summary>
-            /// The ASM versions available for the ASM instance of the current edition.
+            /// The list of ASM versions available for the ASM instance of the current edition.
             /// </summary>
             [NameInMap("Versions")]
             [Validation(Required=false)]

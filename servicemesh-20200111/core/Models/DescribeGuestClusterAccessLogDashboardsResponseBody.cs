@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeGuestClusterAccessLogDashboardsResponseBody : TeaModel {
         /// <summary>
-        /// The access log reports of a cluster on the data plane.
+        /// The access log dashboards of the cluster on the data plane.
         /// </summary>
         [NameInMap("Dashboards")]
         [Validation(Required=false)]
         public List<DescribeGuestClusterAccessLogDashboardsResponseBodyDashboards> Dashboards { get; set; }
         public class DescribeGuestClusterAccessLogDashboardsResponseBodyDashboards : TeaModel {
             /// <summary>
-            /// The title of the report.
+            /// The title of the dashboard.
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// The URL of the report.
+            /// The URL of a dashboard.
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string K8sClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

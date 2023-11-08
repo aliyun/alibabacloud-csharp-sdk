@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string FallbackTarget { get; set; }
 
             /// <summary>
-            /// The name of the lane group.
+            /// The name of a lane group.
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]

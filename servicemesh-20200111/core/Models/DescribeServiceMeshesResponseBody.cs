@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -26,30 +26,30 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             /// <summary>
             /// The edition of the ASM instance. Valid values:
             /// 
-            /// - `standard`: Standard Edition
-            /// - `enterprise`: Enterprise Edition
-            /// - `ultimate`: Ultimate Edition
+            /// *   `standard`: Standard Edition
+            /// *   `enterprise`: Enterprise Edition
+            /// *   `ultimate`: Ultimate Edition
             /// </summary>
             [NameInMap("ClusterSpec")]
             [Validation(Required=false)]
             public string ClusterSpec { get; set; }
 
             /// <summary>
-            /// The information about the clusters.
+            /// The clusters.
             /// </summary>
             [NameInMap("Clusters")]
             [Validation(Required=false)]
             public List<string> Clusters { get; set; }
 
             /// <summary>
-            /// All endpoints of the ASM instance.
+            /// The information about all endpoints of the ASM instances.
             /// </summary>
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
             public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints Endpoints { get; set; }
             public class DescribeServiceMeshesResponseBodyServiceMeshesEndpoints : TeaModel {
                 /// <summary>
-                /// The endpoint that is used to access the API server from the internal network.
+                /// The endpoint that is used to access the API server over the internal network.
                 /// </summary>
                 [NameInMap("IntranetApiServerEndpoint")]
                 [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string IntranetPilotEndpoint { get; set; }
 
                 /// <summary>
-                /// The endpoint that is used to expose the API server to the Internet.
+                /// The endpoint that is used to access the API server over the Internet.
                 /// </summary>
                 [NameInMap("PublicApiServerEndpoint")]
                 [Validation(Required=false)]
@@ -95,29 +95,29 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             /// <summary>
             /// The Alibaba Cloud service for which the ASM instance is created. Valid values:
             /// 
-            /// - `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-            /// - An empty value indicates that the ASM instance is created by the user.
+            /// *   `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+            /// *   An empty value indicates that the ASM instance is created by the user.
             /// </summary>
             [NameInMap("OwnerType")]
             [Validation(Required=false)]
             public string OwnerType { get; set; }
 
             /// <summary>
-            /// The basic information about the ASM instance.
+            /// The basic information about the ASM instances.
             /// </summary>
             [NameInMap("ServiceMeshInfo")]
             [Validation(Required=false)]
             public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo ServiceMeshInfo { get; set; }
             public class DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo : TeaModel {
                 /// <summary>
-                /// The point in time when the ASM instance was created.
+                /// The time when the ASM instance was created.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The error message that is returned when the call failed.
+                /// The error message.
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string Profile { get; set; }
 
                 /// <summary>
-                /// The ID of the region in which the ASM instance resides.
+                /// The region ID of the ASM instance.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -155,14 +155,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string ServiceMeshId { get; set; }
 
                 /// <summary>
-                /// The status of the ASM instance.
+                /// The state of the ASM instance.
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }
 
                 /// <summary>
-                /// The point in time when the ASM instance was last modified.
+                /// The time when the ASM instance was last modified.
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
@@ -199,10 +199,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public string ApiServerLoadbalancerId { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the API Server is exposed to the Internet. Valid values:
+                    /// Indicates whether the API server is exposed to the Internet. Valid values:
                     /// 
-                    /// *   `true`: The API server is exposed to the Internet.
-                    /// *   `false`: The API server is not exposed to the Internet.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("ApiServerPublicEip")]
                     [Validation(Required=false)]
@@ -211,8 +211,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     /// <summary>
                     /// Indicates whether Istio Pilot is exposed to the Internet. Valid values:
                     /// 
-                    /// *   `true`: Istio Pilot is exposed to the Internet.
-                    /// *   `false`: Istio Pilot is not exposed to the Internet.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("PilotPublicEip")]
                     [Validation(Required=false)]
@@ -235,10 +235,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig MeshConfig { get; set; }
                 public class DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig : TeaModel {
                     /// <summary>
-                    /// Indicates whether the feature of routing traffic to the nearest instance is enabled. Valid values:
+                    /// Indicates whether nearby access is enabled. Valid values:
                     /// 
-                    /// *   `true`: The feature is enabled.
-                    /// *   `false`: The feature is disabled.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("Mtls")]
                     [Validation(Required=false)]
@@ -264,15 +264,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether the support for HTTP 1.0 is enabled. Valid values:
                         /// 
-                        /// *   `true`: The support for HTTP 1.0 is enabled.
-                        /// *   `false`: The support for HTTP 1.0 is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Http10Enabled")]
                         [Validation(Required=false)]
                         public bool? Http10Enabled { get; set; }
 
                         /// <summary>
-                        /// The sampling percentage of tracing.
+                        /// The sampling rate when Tracing Analysis is enabled.
                         /// </summary>
                         [NameInMap("TraceSampling")]
                         [Validation(Required=false)]
@@ -281,24 +281,24 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     }
 
                     /// <summary>
-                    /// The configurations of sidecar injection.
+                    /// The configurations of sidecar proxy injection.
                     /// </summary>
                     [NameInMap("SidecarInjector")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector SidecarInjector { get; set; }
                     public class DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector : TeaModel {
                         /// <summary>
-                        /// Indicates whether automatic sidecar injection is enabled by using annotations.
+                        /// Indicates whether automatic sidecar proxy injection is enabled by using annotations.
                         /// </summary>
                         [NameInMap("AutoInjectionPolicyEnabled")]
                         [Validation(Required=false)]
                         public bool? AutoInjectionPolicyEnabled { get; set; }
 
                         /// <summary>
-                        /// Indicates whether automatic sidecar injection is enabled for all namespaces. Valid values:
+                        /// Indicates whether automatic sidecar proxy injection is enabled for all namespaces. Valid values:
                         /// 
-                        /// *   `true`: Automatic sidecar injection is enabled for all namespaces.
-                        /// *   `false`: Automatic sidecar injection is disabled for all namespaces.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("EnableNamespacesByDefault")]
                         [Validation(Required=false)]
@@ -314,15 +314,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             /// <summary>
                             /// Indicates whether elevated privileges are required for the istio-init container when you perform traffic redirection for the istio-proxy container. Valid values:
                             /// 
-                            /// *   `true`: Elevated privileges are required for the istio-init container.
-                            /// *   `false`: Elevated privileges are not required for the istio-init container.
+                            /// *   `true`
+                            /// *   `false`
                             /// </summary>
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
                             public bool? Enabled { get; set; }
 
                             /// <summary>
-                            /// The namespace for which sidecar injection is disabled.
+                            /// The namespace for which sidecar proxy injection is disabled.
                             /// </summary>
                             [NameInMap("ExcludeNamespaces")]
                             [Validation(Required=false)]
@@ -340,10 +340,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public bool? StrictMtls { get; set; }
 
                     /// <summary>
-                    /// Indicates whether Prometheus monitoring is enabled. We recommend that you use Prometheus Service of Application Real-Time Monitoring Service (ARMS). Valid values:
+                    /// Indicates whether Prometheus monitoring is enabled. We recommend that you use Managed Service for Prometheus. Valid values:
                     /// 
-                    /// *   `true`: Prometheus monitoring is enabled.
-                    /// *   `false`: Prometheus monitoring is disabled.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("Telemetry")]
                     [Validation(Required=false)]
@@ -352,8 +352,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     /// <summary>
                     /// Indicates whether the tracing feature is enabled. This feature can be enabled only after Tracing Analysis is activated. Valid values:
                     /// 
-                    /// *   `true`: The tracing feature is enabled.
-                    /// *   `false`: The tracing feature is disabled.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("Tracing")]
                     [Validation(Required=false)]
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// The IDs of vSwitches.
+                    /// The IDs of the vSwitches.
                     /// </summary>
                     [NameInMap("VSwitches")]
                     [Validation(Required=false)]
@@ -406,6 +406,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string Value { get; set; }
 
             }
+
+            [NameInMap("Upgradable")]
+            [Validation(Required=false)]
+            public bool? Upgradable { get; set; }
 
         }
 

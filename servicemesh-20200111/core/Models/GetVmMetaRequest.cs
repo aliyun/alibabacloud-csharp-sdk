@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetVmMetaRequest : TeaModel {
         /// <summary>
-        /// The namespace. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.
+        /// The name of the namespace. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string ServiceAccount { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

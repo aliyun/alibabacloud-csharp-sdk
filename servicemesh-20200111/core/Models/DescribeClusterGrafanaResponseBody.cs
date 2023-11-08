@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// The endpoint of the Grafana dashboard.
+            /// The endpoint of a Grafana dashboard.
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

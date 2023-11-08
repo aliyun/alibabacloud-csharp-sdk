@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public bool? ForceHttps { get; set; }
 
         /// <summary>
-        /// The domain names of the one or more hosts that are exposed by the ASM gateway. Separate multiple domain names with commas (,).
+        /// The one or more domain names that are exposed by the ASM gateway. Separate multiple domain names with commas (,).
         /// </summary>
         [NameInMap("Hosts")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

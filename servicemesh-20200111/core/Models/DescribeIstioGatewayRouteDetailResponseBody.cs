@@ -310,6 +310,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 
             }
 
+            /// <summary>
+            /// If the value is true, the original YAML file contains features that are not supported on the current interface.
+            /// </summary>
             [NameInMap("HasUnsafeFeatures")]
             [Validation(Required=false)]
             public bool? HasUnsafeFeatures { get; set; }
@@ -414,6 +417,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 
             }
 
+            /// <summary>
+            /// The original YAML file of the virtual service that is serialized into a JSON string.
+            /// </summary>
             [NameInMap("RawVSRoute")]
             [Validation(Required=false)]
             public string RawVSRoute { get; set; }
@@ -440,7 +446,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public string Host { get; set; }
 
                     /// <summary>
-                    /// The ports.
+                    /// The ports of the specified hosts from which the traffic is routed.
                     /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
@@ -465,7 +471,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 }
 
                 /// <summary>
-                /// The request headers to be matched.
+                /// The list of the request headers to be matched.
                 /// </summary>
                 [NameInMap("Headers")]
                 [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ID of the Service Mesh (ASM) instance.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

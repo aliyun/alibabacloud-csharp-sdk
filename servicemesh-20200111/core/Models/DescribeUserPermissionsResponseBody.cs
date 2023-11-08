@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string IsRamRole { get; set; }
 
             /// <summary>
-            /// This parameter is required by the system. The return value is fixed to `0`.
+            /// The value is fixed as `0`.
             /// </summary>
             [NameInMap("ParentId")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// This parameter is required by the system. The return value is fixed to `cluster`.
+            /// The value is fixed as `cluster`.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             /// <summary>
             /// The name of the permissions. Valid values:
             /// 
-            /// *   `istio-admin`: the permissions of Alibaba Cloud Service Mesh (ASM) administrators.
+            /// *   `istio-admin`: the permissions of ASM administrators.
             /// *   `istio-ops`: the permissions of ASM restricted users.
             /// *   `istio-readonly`: the read-only permissions.
             /// </summary>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// This parameter is required by the system. The return value is fixed to `custom`.
+            /// The value is fixed as `custom`.
             /// </summary>
             [NameInMap("RoleType")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

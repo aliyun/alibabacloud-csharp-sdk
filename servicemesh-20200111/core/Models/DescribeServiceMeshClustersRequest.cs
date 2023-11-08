@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshClustersRequest : TeaModel {
         /// <summary>
-        /// The maximum number of clusters in a cluster list.
+        /// The maximum number of entries per page.
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public long? Offset { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

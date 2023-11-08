@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshDetailResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -26,16 +26,16 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             /// <summary>
             /// The specification of the ASM instance. Valid values:
             /// 
-            /// - `standard`: Standard Edition
-            /// - `enterprise`: Enterprise Edition
-            /// - `ultimate`: Ultimate Edition
+            /// *   `standard`: Standard Edition
+            /// *   `enterprise`: Enterprise Edition
+            /// *   `ultimate`: Ultimate Edition
             /// </summary>
             [NameInMap("ClusterSpec")]
             [Validation(Required=false)]
             public string ClusterSpec { get; set; }
 
             /// <summary>
-            /// The list of clusters.
+            /// The clusters.
             /// </summary>
             [NameInMap("Clusters")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string IntranetPilotEndpoint { get; set; }
 
                 /// <summary>
-                /// The endpoint that is used to expose the API server to the Internet.
+                /// The endpoint that is used to access the API server over the Internet.
                 /// </summary>
                 [NameInMap("PublicApiServerEndpoint")]
                 [Validation(Required=false)]
@@ -88,8 +88,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             /// <summary>
             /// The Alibaba Cloud service for which the ASM instance is created. Valid values:
             /// 
-            /// - `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-            /// - An empty value indicates that the ASM instance is created by the user.
+            /// *   `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+            /// *   An empty value indicates that the ASM instance is created by the user.
             /// </summary>
             [NameInMap("OwnerType")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The error message that is returned when the call failed.
+                /// The returned error message.
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 /// The edition of the ASM instance. Valid values:
                 /// 
                 /// *   `Default`: Standard Edition
-                /// *   `Pro`: Professional Edition
+                /// *   `Pro`: Enterprise Edition and Ultimate Edition
                 /// </summary>
                 [NameInMap("Profile")]
                 [Validation(Required=false)]
@@ -141,14 +141,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the ASM instance.
+                /// The ASM instance ID.
                 /// </summary>
                 [NameInMap("ServiceMeshId")]
                 [Validation(Required=false)]
                 public string ServiceMeshId { get; set; }
 
                 /// <summary>
-                /// The status of the ASM instance.
+                /// The state of the ASM instance.
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer LoadBalancer { get; set; }
                 public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer : TeaModel {
                     /// <summary>
-                    /// The ID of the SLB instance that is used when the API server is exposed to the Internet.
+                    /// The ID of the CLB instance that is used when the API server is exposed to the Internet.
                     /// </summary>
                     [NameInMap("ApiServerLoadbalancerId")]
                     [Validation(Required=false)]
@@ -194,8 +194,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     /// <summary>
                     /// Indicates whether the API server is exposed to the Internet. Valid values:
                     /// 
-                    /// *   `true`: The API server is exposed to the Internet.
-                    /// *   `false`: The API server is not exposed to the Internet.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("ApiServerPublicEip")]
                     [Validation(Required=false)]
@@ -204,15 +204,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     /// <summary>
                     /// Indicates whether Istio Pilot is exposed to the Internet. Valid values:
                     /// 
-                    /// *   `true`: Istio Pilot is exposed to the Internet.
-                    /// *   `false`: Istio Pilot is not exposed to the Internet.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("PilotPublicEip")]
                     [Validation(Required=false)]
                     public bool? PilotPublicEip { get; set; }
 
                     /// <summary>
-                    /// The ID of the Server Load Balancer (SLB) instance that is used when Istio Pilot is exposed to the Internet.
+                    /// The ID of the Classic Load Balancer (CLB) instance that is used when Istio Pilot is exposed to the Internet.
                     /// </summary>
                     [NameInMap("PilotPublicLoadbalancerId")]
                     [Validation(Required=false)]
@@ -237,15 +237,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether access log collection is enabled. Valid values:
                         /// 
-                        /// *   `true`: Access log collection is enabled.
-                        /// *   `false`: Access log collection is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
                         public bool? Enabled { get; set; }
 
                         /// <summary>
-                        /// The name of the Log Service project that stores access logs.
+                        /// The name of the Simple Log Service project that stores access logs.
                         /// </summary>
                         [NameInMap("Project")]
                         [Validation(Required=false)]
@@ -273,15 +273,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether mesh audit is enabled. Valid values:
                         /// 
-                        /// *   `true`: Mesh audit is enabled.
-                        /// *   `false`: Mesh audit is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
                         public bool? Enabled { get; set; }
 
                         /// <summary>
-                        /// The name of the Log Service project that is used for mesh audit.
+                        /// The name of the Simple Log Service project that is used for mesh audit.
                         /// </summary>
                         [NameInMap("Project")]
                         [Validation(Required=false)]
@@ -290,17 +290,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     }
 
                     /// <summary>
-                    /// The configurations of control-plane log collection.
+                    /// The configurations of control plane log collection.
                     /// </summary>
                     [NameInMap("ControlPlaneLogInfo")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo ControlPlaneLogInfo { get; set; }
                     public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo : TeaModel {
                         /// <summary>
-                        /// Indicates whether the collection of control-plane logs is enabled. Valid values:
+                        /// Indicates whether the collection of control plane logs is enabled. Valid values:
                         /// 
-                        /// *   `true`: The collection of control-plane logs is enabled.
-                        /// *   `false`: The collection of control-plane logs is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public int? LogTTL { get; set; }
 
                         /// <summary>
-                        /// The name of the Log Service project that stores control-plane logs.
+                        /// The name of the Simple Log Service project that stores control plane logs.
                         /// </summary>
                         [NameInMap("Project")]
                         [Validation(Required=false)]
@@ -322,8 +322,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     /// <summary>
                     /// Indicates whether a custom Zipkin system is used. Valid values:
                     /// 
-                    /// *   `true`: A custom Zipkin system is used.
-                    /// *   `false`: No custom Zipkin system is used.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("CustomizedZipkin")]
                     [Validation(Required=false)]
@@ -362,8 +362,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     /// <summary>
                     /// Indicates whether the feature that routes traffic to the nearest instance is enabled. Valid values:
                     /// 
-                    /// *   `true`: The feature is enabled.
-                    /// *   `false`: The feature is disabled.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("EnableLocalityLB")]
                     [Validation(Required=false)]
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration ExtraConfiguration { get; set; }
                     public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration : TeaModel {
                         /// <summary>
-                        /// The configurations of additional features for access log collection
+                        /// The configurations of additional features for access log collection.
                         /// </summary>
                         [NameInMap("AccessLogExtraConf")]
                         [Validation(Required=false)]
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             public bool? GatewayEnabled { get; set; }
 
                             /// <summary>
-                            /// The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.
+                            /// The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.
                             /// </summary>
                             [NameInMap("GatewayLifecycle")]
                             [Validation(Required=false)]
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             public bool? SidecarEnabled { get; set; }
 
                             /// <summary>
-                            /// The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.
+                            /// The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.
                             /// </summary>
                             [NameInMap("SidecarLifecycle")]
                             [Validation(Required=false)]
@@ -528,14 +528,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         }
 
                         /// <summary>
-                        /// The configurations of automatic diagnosis for the ASM instance.
+                        /// The configurations of automatic diagnostics for the ASM instance.
                         /// </summary>
                         [NameInMap("AutoDiagnosis")]
                         [Validation(Required=false)]
                         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis AutoDiagnosis { get; set; }
                         public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis : TeaModel {
                             /// <summary>
-                            /// Indicates whether automatic diagnosis is enabled for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed five minutes after you modify an Istio resource.
+                            /// Indicates whether automatic diagnostics is enabled for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed 5 minutes after you modify an Istio resource.
                             /// </summary>
                             [NameInMap("AutoDiagnosisEnabled")]
                             [Validation(Required=false)]
@@ -562,15 +562,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether the Kubernetes API of clusters on the data plane can be used to access Istio resources. Valid values:
                         /// 
-                        /// *   `true`: The Kubernetes API of clusters on the data plane can be used to access Istio resources.
-                        /// *   `false`: The Kubernetes API of clusters on the data plane cannot be used to access Istio resources.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("CRAggregationEnabled")]
                         [Validation(Required=false)]
                         public bool? CRAggregationEnabled { get; set; }
 
                         /// <summary>
-                        /// The label selectors used to specify namespaces on the data plane. The control plane discovers and process only application services in the specified namespaces.
+                        /// The label selectors used to specify the namespaces of the clusters on the data plane. The control plane discovers and processes only application services in the specified namespaces.
                         /// </summary>
                         [NameInMap("DiscoverySelectors")]
                         [Validation(Required=false)]
@@ -586,8 +586,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             /// <summary>
                             /// Indicates whether the rollback feature for Istio resources is enabled. Valid values:
                             /// 
-                            /// *   `true`: The rollback feature for Istio resources is enabled.
-                            /// *   `false`: The rollback feature for Istio resources is disabled.
+                            /// *   `true`
+                            /// *   `false`
                             /// </summary>
                             [NameInMap("EnableHistory")]
                             [Validation(Required=false)]
@@ -617,7 +617,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                                 public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec Exec { get; set; }
                                 public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec : TeaModel {
                                     /// <summary>
-                                    /// The executed command.
+                                    /// The executed commands. The value is a string that consists of JSON arrays.
                                     /// </summary>
                                     [NameInMap("command")]
                                     [Validation(Required=false)]
@@ -718,7 +718,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                                 public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec Exec { get; set; }
                                 public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec : TeaModel {
                                     /// <summary>
-                                    /// The executed command.
+                                    /// The executed commands. The value is a string that consists of JSON arrays.
                                     /// </summary>
                                     [NameInMap("command")]
                                     [Validation(Required=false)]
@@ -816,8 +816,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             /// <summary>
                             /// Indicates whether MulitiBuffer-based TLS acceleration is enabled. Valid values:
                             /// 
-                            /// *   `true`: MulitiBuffer-based TLS acceleration is enabled.
-                            /// *   `false`: MulitiBuffer-based TLS acceleration is disabled.
+                            /// *   `true`
+                            /// *   `false`
                             /// </summary>
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
@@ -865,8 +865,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             /// <summary>
                             /// Indicates whether the feature of controlling the OPA injection scope is enabled. Valid values:
                             /// 
-                            /// *   `true`: The feature is enabled.
-                            /// *   `false`: The feature is disabled.
+                            /// *   `true`
+                            /// *   `false`
                             /// </summary>
                             [NameInMap("OPAScopeInjected")]
                             [Validation(Required=false)]
@@ -898,7 +898,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         }
 
                         /// <summary>
-                        /// The resources that are requested by the istio-init container.
+                        /// The resources that are required by the istio-init container.
                         /// </summary>
                         [NameInMap("SidecarProxyInitResourceRequest")]
                         [Validation(Required=false)]
@@ -946,8 +946,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether Gateway API is enabled. Valid values:
                         /// 
-                        /// *   `true`: Gateway API is enabled.
-                        /// *   `false`: Gateway API is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("GatewayAPIEnabled")]
                         [Validation(Required=false)]
@@ -963,10 +963,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigKiali Kiali { get; set; }
                     public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigKiali : TeaModel {
                         /// <summary>
-                        /// Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to `false`. Valid values:
+                        /// Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to `false`.`` Valid values:
                         /// 
-                        /// *   `true`: Mesh topology is enabled.
-                        /// *   `false`: Mesh topology is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
@@ -991,7 +991,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// The configurations of cross-region traffic distribution.
                         /// 
-                        /// >  Only one of `Failover` and Distribute parameters can be set. If you set the `Distribute` parameter, you cannot set the Failover parameter.
+                        /// >  Either `Failover` or Distribute can be set. If you set `Distribute`, you cannot set Failover.
                         /// </summary>
                         [NameInMap("Distribute")]
                         [Validation(Required=false)]
@@ -1000,8 +1000,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether cross-region load balancing is enabled. Valid values:
                         /// 
-                        /// *   `true`: Cross-region load balancing is enabled.
-                        /// *   `false`: Cross-region load balancing is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
@@ -1010,7 +1010,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// The configurations of cross-region failover.
                         /// 
-                        /// >  Only one of Failover and `Distribute` parameters can be set. If you set the `Failover` parameter, you cannot set the `Distribute` parameter.
+                        /// >  Either Failover or `Distribute` can be set. If you set `Failover`, you cannot set `Distribute`.
                         /// </summary>
                         [NameInMap("Failover")]
                         [Validation(Required=false)]
@@ -1028,8 +1028,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether MSE is enabled. Valid values:
                         /// 
-                        /// - `true`: MSE is enabled.
-                        /// - `false`: MSE is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
@@ -1047,8 +1047,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether the OPA plug-in is installed. Valid values:
                         /// 
-                        /// *   `true`: The OPA plug-in is installed.
-                        /// *   `false`: The OPA plug-in is not installed.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
@@ -1083,7 +1083,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string RequestCPU { get; set; }
 
                         /// <summary>
-                        /// The size of the memory that is requested by the OPA proxy container.
+                        /// The size of the memory that is requested by OPA.
                         /// </summary>
                         [NameInMap("RequestMemory")]
                         [Validation(Required=false)]
@@ -1118,8 +1118,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             /// <summary>
                             /// Indicates whether communication is allowed between external services and services in the mesh. Valid values:
                             /// 
-                            /// *   `true`: The communication is allowed.
-                            /// *   `false`: The communication is not allowed.
+                            /// *   `true`
+                            /// *   `false`
                             /// </summary>
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
@@ -1144,8 +1144,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             /// <summary>
                             /// Indicates whether Secret Discovery Service (SDS) is enabled. Valid values:
                             /// 
-                            /// *   `true`: SDS is enabled.
-                            /// *   `false`: SDS is disabled.
+                            /// *   `true`
+                            /// *   `false`
                             /// </summary>
                             [NameInMap("EnableSDSServer")]
                             [Validation(Required=false)]
@@ -1154,8 +1154,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             /// <summary>
                             /// Indicates whether gateway configuration filtering is enabled. Valid values:
                             /// 
-                            /// *   `true`: Gateway configuration filtering is enabled.
-                            /// *   `false`: Gateway configuration filtering is disabled.
+                            /// *   `true`
+                            /// *   `false`
                             /// </summary>
                             [NameInMap("FilterGatewayClusterConfig")]
                             [Validation(Required=false)]
@@ -1166,8 +1166,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether HTTP/1.0 is supported. Valid values:
                         /// 
-                        /// *   `true`: HTTP/1.0 is supported.
-                        /// *   `false`: HTTP/1.0 is not supported.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Http10Enabled")]
                         [Validation(Required=false)]
@@ -1199,8 +1199,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether a custom Prometheus instance is used. Valid values:
                         /// 
-                        /// *   `true`: A custom Prometheus instance is used.
-                        /// *   `false`: No custom Prometheus instance is used.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("UseExternal")]
                         [Validation(Required=false)]
@@ -1218,8 +1218,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether Dubbo Filter is enabled. Valid values:
                         /// 
-                        /// *   `true`: Dubbo Filter is enabled.
-                        /// *   `false`: Dubbo Filter is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("DubboFilterEnabled")]
                         [Validation(Required=false)]
@@ -1228,8 +1228,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether MySQL Filter is enabled. Valid values:
                         /// 
-                        /// *   `true`: MySQL Filter is enabled.
-                        /// *   `false`: MySQL Filter is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("MysqlFilterEnabled")]
                         [Validation(Required=false)]
@@ -1238,8 +1238,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether Redis Filter is enabled. Valid values:
                         /// 
-                        /// *   `true`: Redis Filter is enabled.
-                        /// *   `false`: Redis Filter is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("RedisFilterEnabled")]
                         [Validation(Required=false)]
@@ -1248,8 +1248,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether Thrift Filter is enabled. Valid values:
                         /// 
-                        /// *   `true`: Thrift Filter is enabled.
-                        /// *   `false`: Thrift Filter is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("ThriftFilterEnabled")]
                         [Validation(Required=false)]
@@ -1281,8 +1281,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether gRPC Access Log Service (ALS) for Envoy is enabled. Valid values:
                         /// 
-                        /// *   `true`: gRPC ALS for Envoy is enabled.
-                        /// *   `false`: gRPC ALS for Envoy is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("AccessLogServiceEnabled")]
                         [Validation(Required=false)]
@@ -1310,10 +1310,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string ClusterDomain { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values: Valid values:
+                        /// Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:
                         /// 
-                        /// *   `true`: The DNS proxy feature is enabled.
-                        /// *   `false`: The DNS proxy feature is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("EnableDNSProxying")]
                         [Validation(Required=false)]
@@ -1357,20 +1357,20 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector SidecarInjector { get; set; }
                     public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector : TeaModel {
                         /// <summary>
-                        /// Indicates whether automatic sidecar injection can be enabled by using pod annotations. Valid values:
+                        /// Indicates whether automatic sidecar proxy injection can be enabled by using pod annotations. Valid values:
                         /// 
-                        /// *   `true`: Automatic sidecar injection can be enabled by using pod annotations.
-                        /// *   `false`: Automatic sidecar injection cannot be enabled by using pod annotations.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("AutoInjectionPolicyEnabled")]
                         [Validation(Required=false)]
                         public bool? AutoInjectionPolicyEnabled { get; set; }
 
                         /// <summary>
-                        /// Indicates whether automatic sidecar injection is enabled for all namespaces. Valid values:
+                        /// Indicates whether automatic sidecar proxy injection is enabled for all namespaces. Valid values:
                         /// 
-                        /// *   `true`: Automatic sidecar injection is enabled for all namespaces.
-                        /// *   `false`: Automatic sidecar injection is not enabled for all namespaces.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("EnableNamespacesByDefault")]
                         [Validation(Required=false)]
@@ -1386,8 +1386,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             /// <summary>
                             /// Indicates whether the CNI plug-in is enabled. Valid values:
                             /// 
-                            /// *   `true`: The CNI plug-in is enabled.
-                            /// *   `false`: The CNI plug-in is disabled.
+                            /// *   `true`
+                            /// *   `false`
                             /// </summary>
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
@@ -1403,42 +1403,42 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         }
 
                         /// <summary>
-                        /// The maximum number of CPU cores that are available to the sidecar injector pod.
+                        /// The maximum number of CPU cores that are available to the pod where the sidecar injector resides.
                         /// </summary>
                         [NameInMap("LimitCPU")]
                         [Validation(Required=false)]
                         public string LimitCPU { get; set; }
 
                         /// <summary>
-                        /// The maximum size of the memory that is available to the sidecar injector pod.
+                        /// The maximum size of the memory that is available to the pod where the sidecar injector resides.
                         /// </summary>
                         [NameInMap("LimitMemory")]
                         [Validation(Required=false)]
                         public string LimitMemory { get; set; }
 
                         /// <summary>
-                        /// The number of CPU cores that are requested by the sidecar injector pod.
+                        /// The number of CPU cores that are requested by the pod where the sidecar injector resides.
                         /// </summary>
                         [NameInMap("RequestCPU")]
                         [Validation(Required=false)]
                         public string RequestCPU { get; set; }
 
                         /// <summary>
-                        /// The size of the memory that is requested by the sidecar injector pod.
+                        /// The size of the memory that is requested by the pod where the sidecar injector resides.
                         /// </summary>
                         [NameInMap("RequestMemory")]
                         [Validation(Required=false)]
                         public string RequestMemory { get; set; }
 
                         /// <summary>
-                        /// The number of component replicas that are used for sidecar injection. Default value: `1`.
+                        /// The number of component replicas that are used for sidecar proxy injection. Default value: `1`.
                         /// </summary>
                         [NameInMap("SidecarInjectorNum")]
                         [Validation(Required=false)]
                         public int? SidecarInjectorNum { get; set; }
 
                         /// <summary>
-                        /// Other configurations of automatic sidecar injection, in the YAML format. For more information, see [Enable automatic sidecar injection by using multiple methods](~~186136~~).
+                        /// Other configurations of automatic sidecar proxy injection, in the YAML format. For more information, see [Enable automatic sidecar proxy injection](~~186136~~).
                         /// </summary>
                         [NameInMap("SidecarInjectorWebhookAsYaml")]
                         [Validation(Required=false)]
@@ -1447,20 +1447,20 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     }
 
                     /// <summary>
-                    /// Indicates whether Prometheus monitoring is enabled. We recommend that you use [Prometheus Service of Application Real-Time Monitoring Service (ARMS)](https://arms.console.aliyun.com/). Valid values:
+                    /// Indicates whether Prometheus monitoring is enabled. We recommend that you use [Managed Service for Prometheus](https://arms.console.aliyun.com/). Valid values:
                     /// 
-                    /// *   `true`: Prometheus monitoring is enabled.
-                    /// *   `false`: Prometheus monitoring is disabled.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("Telemetry")]
                     [Validation(Required=false)]
                     public bool? Telemetry { get; set; }
 
                     /// <summary>
-                    /// Indicates whether tracing analysis is enabled. This feature can be enabled only after [Tracing Analysis](https://tracing-analysis.console.aliyun.com/) is activated. Valid values:
+                    /// Indicates whether tracing analysis is enabled. This feature can be enabled only after [Managed Service for OpenTelemetry](https://tracing-analysis.console.aliyun.com/) is activated. Valid values:
                     /// 
-                    /// *   `true`: Tracing analysis is enabled.
-                    /// *   `false`: Tracing analysis is disabled.
+                    /// *   `true`
+                    /// *   `false`
                     /// </summary>
                     [NameInMap("Tracing")]
                     [Validation(Required=false)]
@@ -1476,8 +1476,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         /// <summary>
                         /// Indicates whether WebAssembly Filter is enabled. Valid values:
                         /// 
-                        /// *   `true`:WebAssembly Filter is enabled.
-                        /// *   `false`: WebAssembly Filter is disabled.
+                        /// *   `true`
+                        /// *   `false`
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
@@ -1495,14 +1495,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public DescribeServiceMeshDetailResponseBodyServiceMeshSpecNetwork Network { get; set; }
                 public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecNetwork : TeaModel {
                     /// <summary>
-                    /// The ID of the security group.
+                    /// The security group ID.
                     /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// The ID of the vSwitch.
+                    /// The virtual switches (vSwitches).
                     /// </summary>
                     [NameInMap("VSwitches")]
                     [Validation(Required=false)]

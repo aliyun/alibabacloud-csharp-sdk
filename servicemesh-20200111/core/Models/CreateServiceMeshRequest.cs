@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public int? AccessLogServicePort { get; set; }
 
         /// <summary>
-        /// The type of the SLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
+        /// The type of the CLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
         /// </summary>
         [NameInMap("ApiServerLoadBalancerSpec")]
         [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string AuditProject { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for the SLB instance if the SLB instance uses the subscription billing method. Valid values:
+        /// Specifies whether to enable auto-renewal for the CLB instance if the CLB instance uses the subscription billing method. Valid values:
         /// 
         /// - true
         /// 
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The auto-renewal period of the SLB instance. This parameter is valid only if the `ChargeType` parameter is set to `PrePay`. If the original subscription period of the SLB instance is less than one year, the value of this parameter indicates the number of months for auto-renewal. If the original subscription period of the SLB instance is more than one year, the value of this parameter indicates the number of years for auto-renewal.
+        /// The auto-renewal period of the CLB instance. This parameter is valid only if the `ChargeType` parameter is set to `PrePay`. If the original subscription period of the CLB instance is less than one year, the value of this parameter indicates the number of months for auto-renewal. If the original subscription period of the CLB instance is more than one year, the value of this parameter indicates the number of years for auto-renewal.
         /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public bool? CRAggregationEnabled { get; set; }
 
         /// <summary>
-        /// The billing method of the SLB instance. Valid values:
+        /// The billing method of the CLB instance. Valid values:
         /// 
         /// *   `PayOnDemand`: pay-as-you-go.
         /// *   `PrePay`: subscription.
@@ -247,6 +247,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string Edition { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the Ambient Mesh mode for the ASM instance.
+        /// </summary>
         [NameInMap("EnableAmbient")]
         [Validation(Required=false)]
         public bool? EnableAmbient { get; set; }
@@ -371,8 +374,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public bool? GatewayAPIEnabled { get; set; }
 
         /// <summary>
-        /// After this ASM instance is successfully created, automatically add an ACK cluster to it. 
-        /// Make sure this ASM instance and ACK cluster have same VPC, VSwitch, cluster domain.
+        /// When you create an ASM instance, you can add a cluster to the ASM instance. If you do not specify this parameter, no cluster is added to the ASM instance. The cluster and the ASM instance must be in the same vSwitch of the same VPC and have the same domain name.
         /// </summary>
         [NameInMap("GuestCluster")]
         [Validation(Required=false)]
@@ -535,14 +537,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public bool? OpenAgentPolicy { get; set; }
 
         /// <summary>
-        /// The auto-renewal period of the SLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the SLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.
+        /// The auto-renewal period of the CLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the CLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The type of the SLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
+        /// The type of the CLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
         /// </summary>
         [NameInMap("PilotLoadBalancerSpec")]
         [Validation(Required=false)]
@@ -602,14 +604,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// Tag of the ASM instance. A tag contains the following information:
+        /// 
+        /// *   key: the name of the tag
+        /// *   value: the value of the tag
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateServiceMeshRequestTag> Tag { get; set; }
         public class CreateServiceMeshRequestTag : TeaModel {
+            /// <summary>
+            /// The name of the tag.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

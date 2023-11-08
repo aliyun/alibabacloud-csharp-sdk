@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// The Server Name Indication (SNI) value that indicates the hostname of the service.
+            /// The Server Name Indication (SNI) value.
             /// </summary>
             [NameInMap("SNI")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string LabelSelectorValue { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ID of the Service Mesh (ASM) instance.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
         /// <summary>
-        /// The list of services associated with the lane. The value is a JSON array. The format of a single service is `$Cluster name /$Cluster ID/$Namespace/$Service name`.
+        /// The list of services associated with the lane. The value is a JSON array. The format of a single service is `$Cluster name/$Cluster ID/$Namespace/$Service name`.
         /// </summary>
         [NameInMap("ServicesList")]
         [Validation(Required=false)]

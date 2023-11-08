@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string Log { get; set; }
 
             /// <summary>
-            /// The ID of the ASM instance.
+            /// The ASM instance ID.
             /// </summary>
             [NameInMap("ServiceMeshId")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string CurrentVersion { get; set; }
 
                 /// <summary>
-                /// The CRDs of the versions.
+                /// The CRDs of all ASM versions.
                 /// </summary>
                 [NameInMap("VersionCrds")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> VersionCrds { get; set; }
 
                 /// <summary>
-                /// The ASM version and the corresponding Istio version.
+                /// The Istio versions corresponding to the ASM versions.
                 /// </summary>
                 [NameInMap("VersionRegistry")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> VersionRegistry { get; set; }
 
                 /// <summary>
-                /// The supported versions.
+                /// The list of ASM versions.
                 /// </summary>
                 [NameInMap("Versions")]
                 [Validation(Required=false)]
@@ -68,21 +68,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public List<string> Regions { get; set; }
 
             /// <summary>
-            /// The Custom Resource Definitions (CRDs) of the versions.
+            /// The custom resource definitions (CRDs) of all ASM versions.
             /// </summary>
             [NameInMap("VersionCrds")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> VersionCrds { get; set; }
 
             /// <summary>
-            /// The ASM version and the corresponding Istio version.
+            /// The Istio versions corresponding to the ASM versions.
             /// </summary>
             [NameInMap("VersionRegistry")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> VersionRegistry { get; set; }
 
             /// <summary>
-            /// The supported versions.
+            /// The list of ASM versions.
             /// </summary>
             [NameInMap("Versions")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

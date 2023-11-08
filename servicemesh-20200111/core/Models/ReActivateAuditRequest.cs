@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public bool? EnableAudit { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+        /// The ID of the Service Mesh (ASM) instance.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

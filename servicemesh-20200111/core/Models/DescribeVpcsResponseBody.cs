@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the VPC.
+            /// The ID of a VPC.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]

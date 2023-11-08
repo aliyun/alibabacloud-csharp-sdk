@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string IstioGatewayName { get; set; }
 
         /// <summary>
-        /// The maximum number of ASM gateways to query.
+        /// The maximum number of Istio gateways to query.
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

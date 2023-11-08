@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeASMGatewayImportedServicesResponseBody : TeaModel {
         /// <summary>
-        /// The imported services.
+        /// The list of the imported services.
         /// </summary>
         [NameInMap("ImportedServices")]
         [Validation(Required=false)]
         public List<DescribeASMGatewayImportedServicesResponseBodyImportedServices> ImportedServices { get; set; }
         public class DescribeASMGatewayImportedServicesResponseBodyImportedServices : TeaModel {
             /// <summary>
-            /// The name of the service.
+            /// The name of a service.
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

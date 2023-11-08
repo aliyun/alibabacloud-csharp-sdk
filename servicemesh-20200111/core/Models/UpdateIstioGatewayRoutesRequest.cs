@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public UpdateIstioGatewayRoutesRequestGatewayRoute GatewayRoute { get; set; }
         public class UpdateIstioGatewayRoutesRequestGatewayRoute : TeaModel {
+            /// <summary>
+            /// The list of requested domain names.
+            /// </summary>
             [NameInMap("Domains")]
             [Validation(Required=false)]
             public List<string> Domains { get; set; }
@@ -207,7 +210,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetries Retries { get; set; }
                 public class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetries : TeaModel {
                     /// <summary>
-                    /// The number of retries allowed for a request.
+                    /// The number of retries that are allowed for a request.
                     /// </summary>
                     [NameInMap("Attempts")]
                     [Validation(Required=false)]
@@ -383,12 +386,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             }
 
             /// <summary>
-            /// The namespace in which the destination service resides.
+            /// The namespace.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            /// <summary>
+            /// The original YAML file of the virtual service that is serialized in a JSON string.
+            /// </summary>
             [NameInMap("RawVSRoute")]
             [Validation(Required=false)]
             public object RawVSRoute { get; set; }
@@ -414,10 +420,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [Validation(Required=false)]
                     public string Host { get; set; }
 
+                    /// <summary>
+                    /// The port of the destination service.
+                    /// 
+                    /// >  If the destination service of the route has only one port, this field can be left empty. If the destination service has multiple ports, you must specify the port number.
+                    /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort Port { get; set; }
                     public class UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort : TeaModel {
+                        /// <summary>
+                        /// The port number.
+                        /// </summary>
                         [NameInMap("Number")]
                         [Validation(Required=false)]
                         public int? Number { get; set; }

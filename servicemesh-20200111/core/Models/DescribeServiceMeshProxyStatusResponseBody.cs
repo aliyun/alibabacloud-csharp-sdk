@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         /// <summary>
         /// The status code. Valid values:
         /// 
-        /// `200`: The status code returned because the operation is successful.
+        /// `200`: The operation is successful.
         /// 
-        /// *   `403`: The status code returned because you are not authorized to perform this operation.
-        /// *   `503`: The status code returned because a backend server error occurs.
+        /// *   `403`: You are not authorized to perform this operation.
+        /// *   `503`: A backend server error occurs.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             public string ProxyId { get; set; }
 
             /// <summary>
-            /// The version number of the proxy on the data plane.
+            /// The version number of a proxy on the data plane.
             /// </summary>
             [NameInMap("ProxyVersion")]
             [Validation(Required=false)]
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeGuestClusterNamespacesResponseBody : TeaModel {
         /// <summary>
-        /// The labels of the namespaces. Labels are returned only when the `ShowNsLabels` parameter is set to `true`.
+        /// The labels of the namespaces. Labels are returned only when `ShowNsLabels` is set to `true`.
         /// </summary>
         [NameInMap("NsLabels")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public List<string> NsList { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
