@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
         [Validation(Required=false)]
         public string AppShrink { get; set; }
 
+        [NameInMap("BizId")]
+        [Validation(Required=false)]
+        public string BizId { get; set; }
+
         [NameInMap("Channel")]
         [Validation(Required=false)]
         public string ChannelShrink { get; set; }

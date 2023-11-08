@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
 
         }
 
+        [NameInMap("BizId")]
+        [Validation(Required=false)]
+        public string BizId { get; set; }
+
         [NameInMap("Channel")]
         [Validation(Required=false)]
         public StartInstanceRequestChannel Channel { get; set; }

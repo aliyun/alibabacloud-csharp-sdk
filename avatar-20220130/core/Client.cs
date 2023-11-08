@@ -1941,6 +1941,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 query["App"] = request.AppShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelShrink))
             {
                 query["Channel"] = request.ChannelShrink;
@@ -2001,6 +2005,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppShrink))
             {
                 query["App"] = request.AppShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelShrink))
             {
