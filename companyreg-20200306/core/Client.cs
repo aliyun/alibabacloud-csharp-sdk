@@ -2724,6 +2724,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             {
                 query["IntentionBizId"] = request.IntentionBizId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Solution))
             {
                 query["Solution"] = request.Solution;
@@ -2762,6 +2766,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentionBizId))
             {
                 query["IntentionBizId"] = request.IntentionBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Solution))
             {

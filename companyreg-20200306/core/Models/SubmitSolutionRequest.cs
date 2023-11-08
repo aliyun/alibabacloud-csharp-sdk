@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
         [Validation(Required=false)]
         public string IntentionBizId { get; set; }
 
+        [NameInMap("OperateType")]
+        [Validation(Required=false)]
+        public string OperateType { get; set; }
+
         [NameInMap("Solution")]
         [Validation(Required=false)]
         public string Solution { get; set; }
