@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderCancelRequest : TeaModel {
+        [NameInMap("btrip_order_id")]
+        [Validation(Required=false)]
+        public string BtripOrderId { get; set; }
+
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }

@@ -10439,6 +10439,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripOrderId))
+            {
+                query["btrip_order_id"] = request.BtripOrderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisOrderId))
             {
                 query["dis_order_id"] = request.DisOrderId;
@@ -10476,6 +10480,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripOrderId))
+            {
+                query["btrip_order_id"] = request.BtripOrderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisOrderId))
             {
                 query["dis_order_id"] = request.DisOrderId;
@@ -10811,6 +10819,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripOrderId))
+            {
+                query["btrip_order_id"] = request.BtripOrderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisOrderId))
             {
                 query["dis_order_id"] = request.DisOrderId;
@@ -10848,6 +10860,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripOrderId))
+            {
+                query["btrip_order_id"] = request.BtripOrderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisOrderId))
             {
                 query["dis_order_id"] = request.DisOrderId;
@@ -14219,6 +14235,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 request.BookuserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BookuserList, "bookuser_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyNeed))
+            {
+                body["apply_need"] = request.ApplyNeed;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BookType))
             {
                 body["book_type"] = request.BookType;
@@ -14226,6 +14246,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BookuserListShrink))
             {
                 body["bookuser_list"] = request.BookuserListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNeed))
+            {
+                body["rule_need"] = request.RuleNeed;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -14274,6 +14298,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 request.BookuserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BookuserList, "bookuser_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyNeed))
+            {
+                body["apply_need"] = request.ApplyNeed;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BookType))
             {
                 body["book_type"] = request.BookType;
@@ -14281,6 +14309,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BookuserListShrink))
             {
                 body["bookuser_list"] = request.BookuserListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNeed))
+            {
+                body["rule_need"] = request.RuleNeed;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {

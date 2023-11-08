@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IsvRuleSaveShrinkRequest : TeaModel {
+        [NameInMap("apply_need")]
+        [Validation(Required=false)]
+        public bool? ApplyNeed { get; set; }
+
         [NameInMap("book_type")]
         [Validation(Required=false)]
         public string BookType { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("bookuser_list")]
         [Validation(Required=false)]
         public string BookuserListShrink { get; set; }
+
+        [NameInMap("rule_need")]
+        [Validation(Required=false)]
+        public bool? RuleNeed { get; set; }
 
         [NameInMap("status")]
         [Validation(Required=false)]
