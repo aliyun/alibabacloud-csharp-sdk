@@ -30,15 +30,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public List<ModifyGovernanceKubernetesClusterRequestNamespaceInfos> NamespaceInfos { get; set; }
         public class ModifyGovernanceKubernetesClusterRequestNamespaceInfos : TeaModel {
-            [NameInMap("labels")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> Labels { get; set; }
-
-            [NameInMap("mseNamespace")]
+            [NameInMap("MseNamespace")]
             [Validation(Required=false)]
             public string MseNamespace { get; set; }
 
-            [NameInMap("name")]
+            [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 

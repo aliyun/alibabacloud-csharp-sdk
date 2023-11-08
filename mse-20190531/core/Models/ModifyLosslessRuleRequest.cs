@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.
         /// </summary>
         [NameInMap("Aligned")]
         [Validation(Required=false)]
@@ -34,31 +34,31 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// The microservice namespace to which the rule applies.
+        /// The name of the application.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable graceful start. Valid values:
-        /// 
-        /// *   true: enabled
-        /// *   false: disabled
+        /// The registration latency.
         /// </summary>
         [NameInMap("DelayTime")]
         [Validation(Required=false)]
         public int? DelayTime { get; set; }
 
         /// <summary>
-        /// The prefetching duration.
+        /// Specifies whether to enable the alert rule. Valid values:
+        /// 
+        /// *   `true`: enables the rule.
+        /// *   `false`: disables the rule.
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// The registration latency.
+        /// The slope of the prefetching curve.
         /// </summary>
         [NameInMap("FuncType")]
         [Validation(Required=false)]
@@ -86,21 +86,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Notice { get; set; }
 
         /// <summary>
-        /// The slope of the prefetching curve.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to complete service registration before readiness probe.
+        /// Specifies whether to associate with service prefetching.
         /// </summary>
         [NameInMap("Related")]
         [Validation(Required=false)]
         public bool? Related { get; set; }
 
         /// <summary>
-        /// Specifies whether to complete service prefetching before readiness probe.
+        /// The prefetching duration.
         /// </summary>
         [NameInMap("WarmupTime")]
         [Validation(Required=false)]

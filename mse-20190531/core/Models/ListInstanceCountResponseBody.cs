@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The dynamic part in the error message. This parameter is used to replace `%s` in the `ErrMessage` parameter.
         /// 
-        /// > If the return value of the `ErrMessage` parameter is `The Value of Input Parameter %s is not valid` and the return value of the `DynamicMessage` parameter is `DtsJobId`, the specified `DtsJobId` parameter is invalid.
+        /// >  If the return value of the `ErrMessage` parameter is `The Value of Input Parameter %s is not valid` and the return value of the `DynamicMessage` parameter is `DtsJobId`, the specified `DtsJobId` parameter is invalid.
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.
+        /// The returned message. If the request is successful, a success message is returned. If the request fails, an error message is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
         /// *   `true`: The request was successful.
         /// *   `false`: The request failed.

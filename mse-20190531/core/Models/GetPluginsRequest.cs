@@ -19,20 +19,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the plug-in.
-        /// </summary>
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public int? Category { get; set; }
-
-        /// <summary>
-        /// The name of the plug-in.
-        /// </summary>
-        [NameInMap("EnableOnly")]
-        [Validation(Required=false)]
-        public bool? EnableOnly { get; set; }
-
-        /// <summary>
         /// The type of the plug-in. Valid values:
         /// 
         /// *   0: custom
@@ -42,14 +28,26 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// *   4: traffic control
         /// *   5: traffic observation
         /// </summary>
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public int? Category { get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable the plug-in.
+        /// </summary>
+        [NameInMap("EnableOnly")]
+        [Validation(Required=false)]
+        public bool? EnableOnly { get; set; }
+
+        /// <summary>
+        /// The ID of the gateway.
+        /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The language of the response. Valid values:
-        /// 
-        /// zh: Chinese en: English
+        /// The name of the plug-in.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

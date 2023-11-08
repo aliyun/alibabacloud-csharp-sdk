@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("EntryRule")]
         [Validation(Required=false)]
+        [Obsolete]
         public string EntryRule { get; set; }
 
         [NameInMap("EntryRules")]

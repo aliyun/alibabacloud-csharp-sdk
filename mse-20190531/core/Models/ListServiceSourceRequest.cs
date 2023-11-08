@@ -26,6 +26,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        /// <summary>
+        /// Specifies the type of the returned service source. If this parameter is not specified, service sources of all types are returned. Valid values:
+        /// 
+        /// *   K8S
+        /// *   MSE
+        /// *   MSE_ZK
+        /// *   SAE
+        /// *   EDAS
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

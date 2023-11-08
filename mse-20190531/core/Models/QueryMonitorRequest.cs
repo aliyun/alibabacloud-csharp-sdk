@@ -20,45 +20,69 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// system error
+        /// The timestamp when the monitoring ends.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The language of the response. Valid values:
-        /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// mse-100-001
+        /// The metric type. The following metric types are supported:
+        /// 
+        /// \[Basic system metrics]
+        /// 
+        /// *   cpuUsage
+        /// *   memoryUsage
+        /// *   diskUsage
+        /// *   gcCount
+        /// *   gcTime
+        /// 
+        /// \[Nacos registry]
+        /// 
+        /// *   serviceCount
+        /// *   writeCostTime
+        /// *   readCostTime
+        /// *   TPS regCenterTps
+        /// *   QPS regCenterQps
+        /// 
+        /// \[Nacos configuration center]
+        /// 
+        /// *   publish
+        /// *   getConfig
+        /// 
+        /// \[zookeeper]
+        /// 
+        /// *   TPS zk_TpsCount
+        /// *   QPS zk_QpsCount
+        /// *   zookeeper_AvgRequestLatency
         /// </summary>
         [NameInMap("MonitorType")]
         [Validation(Required=false)]
         public string MonitorType { get; set; }
 
         /// <summary>
-        /// cluster not found
+        /// The extended request parameters in the JSON format.
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// systemError
+        /// The timestamp when the monitoring starts.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The extended request parameters in the JSON format.
+        /// The interval between data points. Unit: seconds.
         /// </summary>
         [NameInMap("Step")]
         [Validation(Required=false)]

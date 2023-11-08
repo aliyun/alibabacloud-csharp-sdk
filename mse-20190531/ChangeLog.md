@@ -1,3 +1,6 @@
+2023-11-08 Version: 5.2.3
+- Generated csharp 2019-05-31 for mse.
+
 2023-10-19 Version: 5.2.2
 - Generated csharp 2019-05-31 for mse.
 

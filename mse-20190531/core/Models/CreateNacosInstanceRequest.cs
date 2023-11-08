@@ -20,80 +20,77 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The port number of the Nacos instance.
+        /// The name of the Nacos instance.
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The language of the response. Valid values:
-        /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// Specifies whether to enable the service for the instance.
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the service for the instance.
+        /// Specifies whether to mark the instance as a temporary node.
         /// </summary>
         [NameInMap("Ephemeral")]
         [Validation(Required=false)]
         public bool? Ephemeral { get; set; }
 
         /// <summary>
-        /// The name of the Nacos instance.
+        /// The name of the group.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The name of the group.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Specifies whether to mark the instance as a temporary node.
+        /// The IP address of the Nacos instance.
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
         public string Ip { get; set; }
 
         /// <summary>
-        /// The data structure.
+        /// The node metadata of the instance.
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public string Metadata { get; set; }
 
         /// <summary>
-        /// The IP address of the Nacos instance.
+        /// The ID of the namespace.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
+        /// The port number of the Nacos instance.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }
 
         /// <summary>
-        /// The ID of the namespace.
+        /// The name of the service.
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The node metadata of the instance.
+        /// The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

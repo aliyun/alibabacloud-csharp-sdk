@@ -20,38 +20,35 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The name of the group.
+        /// The ID of the data.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
         public string DataId { get; set; }
 
         /// <summary>
-        /// The ID of the namespace.
+        /// The name of the group.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public string Group { get; set; }
 
         /// <summary>
-        /// The ID of the data.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The version ID of the configuration.
+        /// The ID of the namespace.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// The language of the response. Valid values:
-        /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// The version ID of the configuration.
         /// </summary>
         [NameInMap("Nid")]
         [Validation(Required=false)]

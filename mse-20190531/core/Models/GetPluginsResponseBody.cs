@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetPluginsResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The returned code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The data entries returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// 
             /// 0: custom
             /// 
-            /// 1: permission authentication
+            /// 1: permission authorization
             /// 
             /// 2: security protection
             /// 
@@ -56,19 +56,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
-            /// <summary>
-            /// The latest version of the plug-in.
-            /// </summary>
             [NameInMap("MaxVersion")]
             [Validation(Required=false)]
             public string MaxVersion { get; set; }
 
-            /// <summary>
-            /// The plug-in language. Valid values:
-            /// 
-            /// *   0: the WebAssembly plug-in
-            /// *   2: the Lua plug-in
-            /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public int? Mode { get; set; }
@@ -80,9 +71,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// Indicates whether the latest version is being released.
-            /// </summary>
             [NameInMap("NewVersionPublishingFlag")]
             [Validation(Required=false)]
             public bool? NewVersionPublishingFlag { get; set; }
@@ -114,18 +102,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The release state of the plug-in. Valid values:
-            /// 
-            /// *   0: The plug-in was released.
-            /// *   1: The plug-in is being released.
-            /// *   2: The plug-in failed to be released.
+            /// The publish status.
             /// </summary>
             [NameInMap("PublishState")]
             [Validation(Required=false)]
             public int? PublishState { get; set; }
 
             /// <summary>
-            /// Indicates whether the plug-in is enabled. Valid values:
+            /// Indicates whether the plug-in is enabled.
             /// 
             /// *   0: disabled
             /// *   1: enabled
@@ -171,49 +155,49 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The dynamic error message.
+        /// The dynamic part in the error message.
         /// </summary>
         [NameInMap("DynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The data entries returned.
+        /// The dynamic error message.
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The dynamic part in the error message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned code.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
