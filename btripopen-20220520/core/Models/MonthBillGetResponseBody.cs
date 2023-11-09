@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? IeFlightAmount { get; set; }
 
+                [NameInMap("ieHotelAmount")]
+                [Validation(Required=false)]
+                public double? IeHotelAmount { get; set; }
+
                 /// <summary>
                 /// 账期日：YYYYMMDD
                 /// </summary>

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<IsvUserSaveRequestUserList> UserList { get; set; }
         public class IsvUserSaveRequestUserList : TeaModel {
+            [NameInMap("base_city_code")]
+            [Validation(Required=false)]
+            public string BaseCityCode { get; set; }
+
             [NameInMap("birthday")]
             [Validation(Required=false)]
             public string Birthday { get; set; }
