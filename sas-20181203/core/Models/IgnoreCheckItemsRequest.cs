@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        /// <summary>
+        /// Data Sources. Valid values:
+        /// 
+        /// *   **default**: Host baseline
+        /// *   **agentless**: Agentless baseline
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

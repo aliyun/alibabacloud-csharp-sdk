@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeLoginBaseConfigsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the configurations.
+        /// The description of the configuration.
         /// </summary>
         [NameInMap("BaseConfigs")]
         [Validation(Required=false)]
@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Location { get; set; }
 
+            /// <summary>
+            /// Corresponding configuration remark information.
+            /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }

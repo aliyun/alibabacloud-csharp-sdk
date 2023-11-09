@@ -16,40 +16,71 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Advice { get; set; }
 
+        /// <summary>
+        /// List of asset details to check.
+        /// </summary>
         [NameInMap("CheckDetailAssetInfo")]
         [Validation(Required=false)]
         public List<Dictionary<string, string>> CheckDetailAssetInfo { get; set; }
 
+        /// <summary>
+        /// Detection content details.
+        /// </summary>
         [NameInMap("CheckDetailColumns")]
         [Validation(Required=false)]
         public List<DescribeCheckWarningDetailResponseBodyCheckDetailColumns> CheckDetailColumns { get; set; }
         public class DescribeCheckWarningDetailResponseBodyCheckDetailColumns : TeaModel {
+            /// <summary>
+            /// Detection content list.
+            /// </summary>
             [NameInMap("Grids")]
             [Validation(Required=false)]
             public List<DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids> Grids { get; set; }
             public class DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids : TeaModel {
+                /// <summary>
+                /// Key to detect content.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The detection content key corresponds to the display name.
+                /// </summary>
                 [NameInMap("ShowName")]
                 [Validation(Required=false)]
                 public string ShowName { get; set; }
 
+                /// <summary>
+                /// Display type. Value:
+                /// - **grid**：Detection grid
+                /// - **text**：text
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
             }
 
+            /// <summary>
+            /// Key to detect content.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The detection content key corresponds to the display name.
+            /// </summary>
             [NameInMap("ShowName")]
             [Validation(Required=false)]
             public string ShowName { get; set; }
 
+            /// <summary>
+            /// Display type. Value:
+            /// - **grid**：Detection grid
+            /// - **text**：text
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -104,6 +135,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The type of the check item. Valid values:
+        /// 
+        /// *   **hc_exploit**: unauthorized access
+        /// *   **hc_djbh**: classified protection compliance
+        /// *   **hc_best_secruity**: best security practice
+        /// *   **hc_container**: container security
+        /// *   **hc_custom**: custom baseline
+        /// *   **cis**: Center for Internet Security (CIS) compliance
+        /// *   **weak_password**: weak password
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

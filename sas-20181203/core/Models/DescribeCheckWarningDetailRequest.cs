@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckWarningId { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and the response. Valid values:
+        /// The language of the content within the request and response. Valid values:
         /// 
         /// *   **zh**: Chinese
         /// *   **en**: English

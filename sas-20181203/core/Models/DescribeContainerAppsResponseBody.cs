@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class RefreshAssetsResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
-        /// </summary>
+    public class DescribeContainerAppsResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TagValues")]
+        [Validation(Required=false)]
+        public List<string> TagValues { get; set; }
 
     }
 
