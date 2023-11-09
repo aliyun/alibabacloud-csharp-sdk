@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string Document { get; set; }
 
+            [NameInMap("finishTime")]
+            [Validation(Required=false)]
+            public long? FinishTime { get; set; }
+
             [NameInMap("gmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
