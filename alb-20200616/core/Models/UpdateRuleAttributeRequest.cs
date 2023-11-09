@@ -202,6 +202,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig InsertHeaderConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig : TeaModel {
+                [NameInMap("CoverEnabled")]
+                [Validation(Required=false)]
+                public bool? CoverEnabled { get; set; }
+
                 /// <summary>
                 /// The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.
                 /// 
@@ -330,6 +334,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [NameInMap("Query")]
                 [Validation(Required=false)]
                 public string Query { get; set; }
+
+            }
+
+            [NameInMap("RemoveHeaderConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig RemoveHeaderConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
 
             }
 
@@ -618,6 +632,30 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Value { get; set; }
 
                 }
+
+            }
+
+            [NameInMap("ResponseHeaderConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig ResponseHeaderConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
+
+            }
+
+            [NameInMap("ResponseStatusCodeConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig ResponseStatusCodeConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig : TeaModel {
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
 
             }
 

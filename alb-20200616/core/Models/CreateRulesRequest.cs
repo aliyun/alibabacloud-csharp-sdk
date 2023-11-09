@@ -359,6 +359,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
                 }
 
+                [NameInMap("RemoveHeaderConfig")]
+                [Validation(Required=false)]
+                public CreateRulesRequestRulesRuleActionsRemoveHeaderConfig RemoveHeaderConfig { get; set; }
+                public class CreateRulesRequestRulesRuleActionsRemoveHeaderConfig : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                }
+
                 [NameInMap("RewriteConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleActionsRewriteConfig RewriteConfig { get; set; }
@@ -599,6 +609,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
+                    [NameInMap("Values")]
+                    [Validation(Required=false)]
+                    public List<string> Values { get; set; }
+
+                }
+
+                [NameInMap("ResponseStatusCodeConfig")]
+                [Validation(Required=false)]
+                public CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig ResponseStatusCodeConfig { get; set; }
+                public class CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig : TeaModel {
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }
