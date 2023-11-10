@@ -12235,6 +12235,126 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IeFlightBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        public IeHotelBillSettlementQueryResponse IeHotelBillSettlementQueryWithOptions(IeHotelBillSettlementQueryRequest request, IeHotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IeHotelBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/ie-hotel/v1/bill-settlement",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IeHotelBillSettlementQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<IeHotelBillSettlementQueryResponse> IeHotelBillSettlementQueryWithOptionsAsync(IeHotelBillSettlementQueryRequest request, IeHotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IeHotelBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/ie-hotel/v1/bill-settlement",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IeHotelBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public IeHotelBillSettlementQueryResponse IeHotelBillSettlementQuery(IeHotelBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IeHotelBillSettlementQueryHeaders headers = new IeHotelBillSettlementQueryHeaders();
+            return IeHotelBillSettlementQueryWithOptions(request, headers, runtime);
+        }
+
+        public async Task<IeHotelBillSettlementQueryResponse> IeHotelBillSettlementQueryAsync(IeHotelBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IeHotelBillSettlementQueryHeaders headers = new IeHotelBillSettlementQueryHeaders();
+            return await IeHotelBillSettlementQueryWithOptionsAsync(request, headers, runtime);
+        }
+
         public InsInvoiceScanQueryResponse InsInvoiceScanQueryWithOptions(InsInvoiceScanQueryRequest request, InsInvoiceScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
