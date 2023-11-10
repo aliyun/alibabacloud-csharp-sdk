@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHostGroupElasticStrategyParametersResponseBody : TeaModel {
         /// <summary>
-        /// The current CPU usage rate of the instance.
+        /// The CPU utilization of the instance. Unit: percentage.
         /// </summary>
         [NameInMap("CpuShar")]
         [Validation(Required=false)]
         public int? CpuShar { get; set; }
 
         /// <summary>
-        /// The CPU usage of the instance.
+        /// The number of CPU cores used by the instance. Unit: cores.
         /// </summary>
         [NameInMap("CpuZoom")]
         [Validation(Required=false)]
         public int? CpuZoom { get; set; }
 
         /// <summary>
-        /// Number of IO requests.
+        /// The number of I/O requests.
         /// </summary>
         [NameInMap("IopsZoom")]
         [Validation(Required=false)]
         public int? IopsZoom { get; set; }
 
         /// <summary>
-        /// The maximum number of concurrent connections for instance specifications.
+        /// The maximum number of concurrent connections supported by the instance type.
         /// </summary>
         [NameInMap("MaxConnZoom")]
         [Validation(Required=false)]
         public int? MaxConnZoom { get; set; }
 
         /// <summary>
-        /// The total amount of memory for instances in the current exclusive cluster.
+        /// The total memory size of the instance in the dedicated cluster. Unit: MB.
         /// </summary>
         [NameInMap("MemoryZoom")]
         [Validation(Required=false)]

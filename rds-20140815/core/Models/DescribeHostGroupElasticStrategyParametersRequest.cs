@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHostGroupElasticStrategyParametersRequest : TeaModel {
         /// <summary>
-        /// Dedicated Host Group Name.
+        /// The name of the dedicated cluster.
         /// </summary>
         [NameInMap("DedicatedHostGroupName")]
         [Validation(Required=false)]
         public string DedicatedHostGroupName { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

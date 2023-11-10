@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The username of the account. You can call the [DescribeAccounts](~~610454~~) operation to query the username of the account.
+        /// The username of the account. You can call the DescribeAccounts operation to obtain the username of the account.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Year**
         /// *   **Month**
         /// 
-        /// >  This parameter must be specified when the PayType parameter is set to **Prepaid**.
+        /// >  If you set the PayType parameter to **Prepaid**, you must specify this parameter.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The zone ID of the secondary instance.
         /// 
-        /// > If the instance does not run RDS Basic Edition, you must specify this parameter.
+        /// >  If the instance does not run RDS Basic Edition, you must specify this parameter.
         /// </summary>
         [NameInMap("ZoneIdSlave1")]
         [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The zone ID of the logger instance.
         /// 
-        /// > This parameter is available only when the instance runs RDS Enterprise Edition.
+        /// >  This parameter is available only when the instance runs RDS Enterprise Edition.
         /// </summary>
         [NameInMap("ZoneIdSlave2")]
         [Validation(Required=false)]

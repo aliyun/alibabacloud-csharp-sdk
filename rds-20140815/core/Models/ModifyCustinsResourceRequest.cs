@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyCustinsResourceRequest : TeaModel {
         /// <summary>
-        /// AdjustDeadline
+        /// The deadline for the modification.
         /// </summary>
         [NameInMap("AdjustDeadline")]
         [Validation(Required=false)]
         public string AdjustDeadline { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// IncreaseRatio
+        /// The increase rate.
         /// </summary>
         [NameInMap("IncreaseRatio")]
         [Validation(Required=false)]
@@ -35,21 +35,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **INSTANCE**.
+        /// The resource type.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// RestoreOriginalSpecification
+        /// The original value. This parameter must be specified when **ResourceType** is set to **instance**.
         /// </summary>
         [NameInMap("RestoreOriginalSpecification")]
         [Validation(Required=false)]
         public string RestoreOriginalSpecification { get; set; }
 
         /// <summary>
-        /// Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.
+        /// The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.
         /// </summary>
         [NameInMap("TargetValue")]
         [Validation(Required=false)]

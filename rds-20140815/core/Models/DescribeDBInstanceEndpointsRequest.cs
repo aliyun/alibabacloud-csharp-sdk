@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The endpoint ID of the instance.
         /// 
-        /// If this parameter is not specified, the information about all endpoints is returned.
+        /// >  If this parameter is not specified, the information about all endpoints is returned.
         /// </summary>
         [NameInMap("DBInstanceEndpointId")]
         [Validation(Required=false)]

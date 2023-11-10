@@ -14,17 +14,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   Regular instance
         /// 
-        ///     *   **Basic**: RDS Basic Edition
-        ///     *   **HighAvailability**: RDS High-availability Edition
-        ///     *   **cluster**: RDS Cluster Edition for MySQL
-        ///     *   **AlwaysOn**: RDS Cluster Edition for SQL Server
-        ///     *   **Finance**: RDS Enterprise Edition
+        ///     *   **Basic**: RDS Basic Edition.
+        ///     *   **HighAvailability**: RDS High-availability Edition.
+        ///     *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.
+        ///     *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.
+        ///     *   **Finance**: RDS Enterprise Edition.
         /// 
         /// *   Serverless instance
         /// 
-        ///     *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
-        ///     *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.
-        ///     *   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.
+        ///     *   **serverless_basic**: RDS Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
+        ///     *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.
+        ///     *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **1** (default): returns the zones.
         /// *   **0**: does not return the zones.
         /// 
-        /// > The single-zone deployment method allows you to deploy an instance that runs RDS Enterprise Edition in a single zone.
+        /// >  The single-zone deployment method allows you to deploy an instance that runs RDS Enterprise Edition in a single zone.
         /// </summary>
         [NameInMap("DispenseMode")]
         [Validation(Required=false)]

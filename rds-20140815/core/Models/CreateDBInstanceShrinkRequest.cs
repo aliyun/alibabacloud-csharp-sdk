@@ -23,12 +23,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically complete the payment. Valid values:
+        /// Specifies whether to automatically complete the payment. Default value: true. Valid values:
         /// 
-        /// *   **true**: enables the feature. Make sure that your account balance is sufficient.
-        /// *   **false**: disables the feature. An unpaid order is generated.
+        /// *   **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
+        /// *   **false**: does not automatically complete the payment. An unpaid order is generated.
         /// 
-        /// >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.
+        /// >  Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can pay for the order in the ApsaraDB RDS console.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -89,21 +89,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The RDS edition of the instance. Valid values:
         /// 
-        /// *   Regular instance
+        /// *   Regular RDS instance
         /// 
-        ///     *   **Basic**: RDS Basic Edition
-        ///     *   **HighAvailability**: RDS High-availability Edition
-        ///     *   **cluster**: RDS Cluster Edition for MySQL
-        ///     *   **AlwaysOn**: RDS Cluster Edition for SQL Server
-        ///     *   **Finance**: RDS Enterprise Edition
+        ///     *   **Basic**: RDS Basic Edition.
+        ///     *   **HighAvailability**: RDS High-availability Edition.
+        ///     *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.
+        ///     *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.
+        ///     *   **Finance**: RDS Enterprise Edition.
         /// 
         /// *   Serverless instance
         /// 
-        ///     *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
-        ///     *   **serverless_standard**: RDS Serverless High-availability Edition. This edition is available only for instances that run MySQL and PostgreSQL.
-        ///     *   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.
+        ///     *   **serverless_basic**: RDS Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
+        ///     *   **serverless_standard**: RDS High-availability Edition. This edition is available only for instances that run MySQL and PostgreSQL.
+        ///     *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.
         /// 
-        /// > This parameter must be specified when you create a serverless instance.
+        ///     **
+        /// 
+        ///     **Note** This parameter is required when you create a serverless instance.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -150,13 +152,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
         /// 
-        /// To create a serverless instance, configure this parameter based on the following rules:
+        /// To create a serverless instance, set this parameter to one of the following values:
         /// 
         /// *   If you want to create a serverless instance that runs MySQL on RDS Basic Edition, set this parameter to **mysql.n2.serverless.1c**.
         /// *   If you want to create a serverless instance that runs MySQL on RDS High-availability Edition, set this parameter to **mysql.n2.serverless.2c**.
         /// *   If you want to create a serverless instance that runs SQL Server, set this parameter to **mssql.mem2.serverless.s2**.
-        /// *   If you want to create a serverless instance that runs PostgreSQL on RDS Basic Edition, set this parameter to **pg.n2.serverless.1c**
-        /// *   If you want to create a serverless instance that runs PostgreSQL on RDS High-availability Edition, set this parameter to **pg.n2.serverless.2c**
+        /// *   If you want to create a serverless instance that runs PostgreSQL on RDS Basic Edition, set this parameter to **pg.n2.serverless.1c**.
+        /// *   If you want to create a serverless instance that runs PostgreSQL on RDS High-availability Edition, set this parameter to **pg.n2.serverless.2c**.
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -259,8 +261,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// Specifies whether to enable the release protection feature for the instance. This feature is available only for pay-as-you-go instances. Valid values:
         /// 
-        /// *   **true**: enables the feature.
-        /// *   **false** (default): disables the feature.
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
@@ -304,20 +306,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   Regular RDS instance
         /// 
-        ///     *   Valid values if you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
-        ///     *   Valid values when you set the Engine parameter to SQLServer: **2008r2**, **08r2\_ent_ha**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**
-        ///     *   Valid values when you set the Engine parameter to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
+        ///     *   Valid values when you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
+        ///     *   Valid values when you set Engine to SQLServer: **08r2\_ent_ha**(cloud disks, discontinued), **2008r2**(local disks, discontinued), **2012**(SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_ent_ha**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**
+        ///     *   Valid values when you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
         ///     *   Valid value when you set Engine to MariaDB: **10.3**
         /// 
         /// *   Serverless instance
         /// 
         ///     *   Valid values when you set Engine to MySQL: **5.7** and **8.0**
-        ///     *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**
-        ///     *   Valid value if you set Engine to PostgreSQL: **14.0**
+        ///     *   Valid values when you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**
+        ///     *   Valid value when you set Engine to PostgreSQL: **14.0**
         /// 
-        ///     **
+        /// <!---->
         /// 
-        ///     **Note**: ApsaraDB RDS for MariaDB does not support serverless instances.
+        /// *   ApsaraDB RDS for MariaDB does not support serverless instances.
+        /// *   For ApsaraDB RDS for SQL Server instances, `_ent` indicates SQL Server EE on RDS Cluster Edition, `_ent_ha` indicates SQL Server EE, `_std_ha` indicates SQL Server SE, and `_web` indicates SQL Server Web.
+        /// 
+        /// > 
+        /// 
+        /// *   ApsaraDB RDS for MariaDB does not support serverless instances.
+        /// 
+        /// *   Valid value if you set Engine to SQL Server: `_ent` specifies SQL Server EE on RDS Cluster Edition, `_ent_ha` specifies SQL Server EE, `_std_ha` specifies SQL Server SE, and `_web` specifies SQL Server Web.
+        /// 
+        /// *   RDS instances that run SQL Server 2014 are not available for purchase on the international site.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -326,12 +337,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The network type of the instance. Valid values:
         /// 
-        /// *   **VPC**: virtual private cloud (VPC)
-        /// *   **Classic**: classic network
+        /// *   **VPC**: virtual private cloud (VPC).
+        /// *   **Classic**: the classic network
         /// 
-        /// > *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
-        /// > *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
-        /// > *   If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engines, you must set this parameter to **VPC**.
+        /// > 
+        /// 
+        /// *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
+        /// 
+        /// *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
+        /// 
+        /// *   RDS instances that run SQL Server Basic and SQL Server Web can reside in the classic network and virtual private clouds (VPCs). If the instance runs other database engines, you must set this parameter to **VPC**.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -363,7 +378,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// The port. You can initialize the port when you create the instance. Valid values: 1000 to 5999.
+        /// The port. You can initialize the port when you create the instance.
+        /// 
+        /// *   Valid values if the instance runs MySQL: 1000 to 65534
+        /// *   Valid values if the instance runs PostgreSQL, SQL Server, or MariaDB: 1000 to 5999
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
@@ -421,10 +439,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the automatic storage expansion feature for the instance. The feature is supported if the instance runs MySQL or PostgreSQL. Valid values:
+        /// Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if your RDS instance runs MySQL or PostgreSQL. Valid values:
         /// 
-        /// *   **Enable**: enables the feature.
-        /// *   **Disable** (default): disables the feature.
+        /// *   **Enable**
+        /// *   **Disable** (default)
         /// 
         /// >  After the instance is created, you can call the [ModifyDasInstanceConfig](~~610391~~) operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~).
         /// </summary>
@@ -433,7 +451,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// The threshold based on which automatic storage expansion is triggered. Unit: percent. Valid values:
+        /// The threshold in percentage based on which automatic storage expansion is triggered.
         /// 
         /// *   **10**
         /// *   **20**
@@ -499,7 +517,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The ID of the host to which the logger instance belongs in the specified dedicated cluster.
         /// 
-        /// If the instance runs RDS Enterprise Edition and you create the instance in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.
+        /// If you want to create an instance that runs RDS Enterprise Edition in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.
         /// 
         /// *   You can call the [DescribeDedicatedHosts](~~610641~~) operation to query the details of the hosts in a dedicated cluster.
         /// *   If no hosts are created, you can call the [CreateDedicatedHost](~~210864~~) operation to create a host.
@@ -523,7 +541,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The ID of the host to which the secondary instance belongs in the specified dedicated cluster.
         /// 
-        /// If the instance runs RDS High-availability Edition or RDS Enterprise Edition and you create the instance in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.
+        /// If you want to create an instance that runs RDS High-availability Edition or RDS Enterprise Edition in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.
         /// 
         /// *   You can call the [DescribeDedicatedHosts](~~610641~~) operation to query the details of the hosts in a dedicated cluster.
         /// *   If no hosts are created, you can call the [CreateDedicatedHost](~~210864~~) operation to create a host.
@@ -537,25 +555,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   If you create an instance that runs MySQL, the value is in the following format: `<RDS edition>_<Minor engine version>`. Examples: `rds_20200229`, `xcluster_20200229`, and `xcluster80_20200229`. The following list describes the fields in the example values:
         /// 
-        ///     *   rds: The instance runs RDS Basic Edition or High-availability Edition.
+        ///     *   rds: The instance runs RDS Basic Edition or RDS High-availability Edition.
         ///     *   xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
         ///     *   xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
         /// 
-        /// > You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the minor engine version. For more information about minor engine versions, see [Release notes of minor AliSQL versions](~~96060~~).
+        ///     **
         /// 
-        /// *   If you create an instance that runs PostgreSQL, the value is in the following format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1400_20220830`. The following list describes the fields in the example value:
+        ///     **Note** You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the minor engine version. For more information about minor engine versions, see [Release notes of minor AliSQL versions](~~96060~~).
+        /// 
+        /// *   If you create an instance that runs PostgreSQL, the value is in the following format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1400_20220830`. The following list describes the fields in the example values:
         /// 
         ///     *   1400: The major engine version is PostgreSQL 14.
         ///     *   20220830: the AliPG version. You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).
         /// 
-        /// > If you configure the **BabelfishConfig** parameter for your instance that runs PostgreSQL and set the babelfishEnabled field to true, the value of this parameter is in the following format: `rds_postgres_Major engine version00_AliPG version_babelfish`.
+        ///     **
+        /// 
+        ///     **Note** If you configure the **BabelfishConfig** parameter for your instance that runs PostgreSQL and set the babelfishEnabled field to true, the value of this parameter is in the following format: `rds_postgres_Major engine version00_AliPG version_babelfish`.
         /// </summary>
         [NameInMap("TargetMinorVersion")]
         [Validation(Required=false)]
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// The subscription duration of the instance. Valid values:
+        /// The subscription duration of the instance.
         /// 
         /// *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1 to 5**.
         /// *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1 to 11**.
@@ -603,8 +625,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The zone ID of the primary instance.
         /// 
         /// *   If you specify a virtual private cloud (VPC) and a vSwitch, you must specify the ID of the zone to which the specified vSwitch belongs. Otherwise, the instance cannot be created.
-        /// *   If the instance runs RDS High-availability Edition, you must specify the **ZoneIdSlave1** parameter, which specifies whether to use the single-zone deployment method or the multi-zone deployment method.
-        /// *   If the instance runs RDS Enterprise Edition, you must specify the **ZoneIdSlave1** and **ZoneIdSlave2** parameters, which specify whether to use the single-zone deployment method or the multi-zone deployment method.
+        /// *   If the instance runs RDS High-availability Edition, you must specify the **ZoneIdSlave1** parameter. The ZoneIdSlave1 parameter specifies whether to use the single-zone deployment method or the multi-zone deployment method.
+        /// *   If the instance runs RDS Enterprise Edition, you must specify the **ZoneIdSlave1** and **ZoneIdSlave2** parameters. The ZoneIdSlave1 and ZoneIdSlave2 parameters specify whether to use the single-zone deployment method or the multi-zone deployment method.
         /// *   If the instance runs MySQL on RDS Cluster Edition, you must specify the **ZoneIdSlave1** parameter for the RDS cluster that has two nodes and the **ZoneIdSlave1** and **ZoneIdSlave2** parameters for the RDS cluster that has three nodes.
         /// </summary>
         [NameInMap("ZoneId")]
@@ -623,11 +645,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneIdSlave1 { get; set; }
 
         /// <summary>
-        /// The ID of the zone in which the secondary instance or logger instance resides.
-        /// 
-        /// *   If you set this parameter to **Auto**, the multi-zone deployment method is used and the zone of the secondary instance or logger instance is automatically configured.
-        /// *   If you set this parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used.
-        /// *   If you set this parameter to a value that is different from the value of the **ZoneId** parameter, the multiple-zone deployment method is used.
+        /// This parameter is deprecated.
         /// </summary>
         [NameInMap("ZoneIdSlave2")]
         [Validation(Required=false)]

@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// The new billing method of the instance. Valid values:
         /// 
         /// *   **Postpaid**: pay-as-you-go
         /// *   **Prepaid**: subscription

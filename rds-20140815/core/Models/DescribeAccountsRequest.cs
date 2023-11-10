@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// >  This parameter is not supported if your RDS instance runs RDS Cluster Edition and SQL Server 2017.
+        /// >  This parameter is not supported for RDS instances that run SQL Server 2017 on RDS Cluster Edition.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

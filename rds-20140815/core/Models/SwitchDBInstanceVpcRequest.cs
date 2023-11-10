@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceVpcRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The private IP address of the instance. The private IP address must be within the CIDR block of the vSwitch that is specified by the **VSwitchId** parameter.
         /// 
-        /// > You can call the [DescribeVSwitches](~~35748~~) operation to query the CIDR block of a specified vSwitch.
+        /// >  You can call the DescribeVSwitches operation to query the CIDR block of the vSwitch.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

@@ -12137,6 +12137,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeAnalyticdbByPrimaryDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeAvailableClassesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailableClassesResponse
+         */
         public DescribeAvailableClassesResponse DescribeAvailableClassesWithOptions(DescribeAvailableClassesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12204,6 +12215,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAvailableClassesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeAvailableClassesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailableClassesResponse
+         */
         public async Task<DescribeAvailableClassesResponse> DescribeAvailableClassesWithOptionsAsync(DescribeAvailableClassesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12271,12 +12293,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAvailableClassesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeAvailableClassesRequest
+          * @return DescribeAvailableClassesResponse
+         */
         public DescribeAvailableClassesResponse DescribeAvailableClasses(DescribeAvailableClassesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAvailableClassesWithOptions(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeAvailableClassesRequest
+          * @return DescribeAvailableClassesResponse
+         */
         public async Task<DescribeAvailableClassesResponse> DescribeAvailableClassesAsync(DescribeAvailableClassesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -25425,6 +25467,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeReadDBInstanceDelayWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeRegionInfosRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRegionInfosResponse
+         */
         public DescribeRegionInfosResponse DescribeRegionInfosWithOptions(DescribeRegionInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25468,6 +25521,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeRegionInfosResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeRegionInfosRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRegionInfosResponse
+         */
         public async Task<DescribeRegionInfosResponse> DescribeRegionInfosWithOptionsAsync(DescribeRegionInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25511,12 +25575,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeRegionInfosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeRegionInfosRequest
+          * @return DescribeRegionInfosResponse
+         */
         public DescribeRegionInfosResponse DescribeRegionInfos(DescribeRegionInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionInfosWithOptions(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeRegionInfosRequest
+          * @return DescribeRegionInfosResponse
+         */
         public async Task<DescribeRegionInfosResponse> DescribeRegionInfosAsync(DescribeRegionInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -30044,14 +30128,18 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Description
           * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-          * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          * *   The source and destination instances must be created by using the same user credentials.
-          * *   The instance is in the Running state.
-          * *   The source and destination databases must be in the Running state.
-          * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+          * ### [](#)Precautions
+          * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+          * *   Before you call this operation, make sure that the following requirements are met:
+          *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+          *     *   The source and destination instances must be created by using the same user credentials.
+          *     *   The instance is in the Running state.
+          *     *   The source and destination databases must be in the Running state.
+          *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
           * > 
           * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           * *   You can migrate the data of multiple databases at a time.
@@ -30112,14 +30200,18 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Description
           * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-          * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          * *   The source and destination instances must be created by using the same user credentials.
-          * *   The instance is in the Running state.
-          * *   The source and destination databases must be in the Running state.
-          * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+          * ### [](#)Precautions
+          * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+          * *   Before you call this operation, make sure that the following requirements are met:
+          *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+          *     *   The source and destination instances must be created by using the same user credentials.
+          *     *   The instance is in the Running state.
+          *     *   The source and destination databases must be in the Running state.
+          *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
           * > 
           * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           * *   You can migrate the data of multiple databases at a time.
@@ -30180,14 +30272,18 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Description
           * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-          * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          * *   The source and destination instances must be created by using the same user credentials.
-          * *   The instance is in the Running state.
-          * *   The source and destination databases must be in the Running state.
-          * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+          * ### [](#)Precautions
+          * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+          * *   Before you call this operation, make sure that the following requirements are met:
+          *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+          *     *   The source and destination instances must be created by using the same user credentials.
+          *     *   The instance is in the Running state.
+          *     *   The source and destination databases must be in the Running state.
+          *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
           * > 
           * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           * *   You can migrate the data of multiple databases at a time.
@@ -30202,14 +30298,18 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Description
           * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-          * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          * *   The source and destination instances must be created by using the same user credentials.
-          * *   The instance is in the Running state.
-          * *   The source and destination databases must be in the Running state.
-          * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+          * ### [](#)Precautions
+          * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+          * *   Before you call this operation, make sure that the following requirements are met:
+          *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+          *     *   The source and destination instances must be created by using the same user credentials.
+          *     *   The instance is in the Running state.
+          *     *   The source and destination databases must be in the Running state.
+          *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
           * > 
           * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           * *   You can migrate the data of multiple databases at a time.
@@ -36475,6 +36575,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await ModifyDBInstanceTDEWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * ### [](#)References
+          * > Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
+          * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](~~96061~~)
+          *
+          * @param tmpReq ModifyDBNodeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBNodeResponse
+         */
         public ModifyDBNodeResponse ModifyDBNodeWithOptions(ModifyDBNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -36552,6 +36663,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * ### [](#)References
+          * > Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
+          * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](~~96061~~)
+          *
+          * @param tmpReq ModifyDBNodeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBNodeResponse
+         */
         public async Task<ModifyDBNodeResponse> ModifyDBNodeWithOptionsAsync(ModifyDBNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -36629,12 +36751,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * ### [](#)References
+          * > Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
+          * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](~~96061~~)
+          *
+          * @param request ModifyDBNodeRequest
+          * @return ModifyDBNodeResponse
+         */
         public ModifyDBNodeResponse ModifyDBNode(ModifyDBNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBNodeWithOptions(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * ### [](#)References
+          * > Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
+          * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](~~96061~~)
+          *
+          * @param request ModifyDBNodeRequest
+          * @return ModifyDBNodeResponse
+         */
         public async Task<ModifyDBNodeResponse> ModifyDBNodeAsync(ModifyDBNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -41572,8 +41714,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * ## Prerequisites
-          * A disaster recovery instance is created.
+          * The operation is phased out.
           *
           * @param request ReceiveDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -41627,8 +41768,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * ## Prerequisites
-          * A disaster recovery instance is created.
+          * The operation is phased out.
           *
           * @param request ReceiveDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -41682,8 +41822,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * ## Prerequisites
-          * A disaster recovery instance is created.
+          * The operation is phased out.
           *
           * @param request ReceiveDBInstanceRequest
           * @return ReceiveDBInstanceResponse
@@ -41695,8 +41834,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * ## Prerequisites
-          * A disaster recovery instance is created.
+          * The operation is phased out.
           *
           * @param request ReceiveDBInstanceRequest
           * @return ReceiveDBInstanceResponse
@@ -44941,6 +45079,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await SwitchDBInstanceVpcWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request SwitchGuardToMasterInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchGuardToMasterInstanceResponse
+         */
         public SwitchGuardToMasterInstanceResponse SwitchGuardToMasterInstanceWithOptions(SwitchGuardToMasterInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44988,6 +45133,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<SwitchGuardToMasterInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request SwitchGuardToMasterInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchGuardToMasterInstanceResponse
+         */
         public async Task<SwitchGuardToMasterInstanceResponse> SwitchGuardToMasterInstanceWithOptionsAsync(SwitchGuardToMasterInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -45035,12 +45187,24 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<SwitchGuardToMasterInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request SwitchGuardToMasterInstanceRequest
+          * @return SwitchGuardToMasterInstanceResponse
+         */
         public SwitchGuardToMasterInstanceResponse SwitchGuardToMasterInstance(SwitchGuardToMasterInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchGuardToMasterInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request SwitchGuardToMasterInstanceRequest
+          * @return SwitchGuardToMasterInstanceResponse
+         */
         public async Task<SwitchGuardToMasterInstanceResponse> SwitchGuardToMasterInstanceAsync(SwitchGuardToMasterInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

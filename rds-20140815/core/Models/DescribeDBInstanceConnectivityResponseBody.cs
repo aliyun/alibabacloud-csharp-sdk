@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnCheckResult { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DbInstanceName")]
         [Validation(Required=false)]
         public string DbInstanceName { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.
                 /// 
-                /// > If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.
+                /// >  If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.
                 /// </summary>
                 [NameInMap("ConsistentTime")]
                 [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceComment { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]

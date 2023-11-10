@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class TransformDBInstancePayTypeResponseBody : TeaModel {
         /// <summary>
-        /// The billing method.
+        /// The payment type.
+        /// 
+        /// *   Valid value if the new billing method is pay-as-you-go: POSTPAY
+        /// *   Valid value if the new billing method is subscription: PREPAY
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]

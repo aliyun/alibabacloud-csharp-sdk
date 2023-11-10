@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   If the original instance runs RDS Basic Edition, you must enter the vSwitch ID of the new instance.
         /// *   If the original instance runs RDS High-availability Edition, you must enter the vSwitch ID of the new instance and the vSwitch ID of the secondary instance of the new instance. Make sure that you separate the vSwitch IDs with commas (,).
         /// 
-        /// > The vSwitches that you specify must reside in the same zone as the original instance. You can call the [DescribeVSwitches](~~35748~~) operation to query the ID of the vSwitch.
+        /// >  The vSwitches that you specify must reside in the same zone as the original instance. You can call the [DescribeVSwitches](~~35748~~) operation to query the ID of the vSwitch.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
