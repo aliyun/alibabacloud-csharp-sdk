@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// The maximum number of entries per page.
         /// 
         /// Valid values: 1 to 100.
         /// 

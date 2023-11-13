@@ -83,6 +83,28 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public string ExpireTime { get; set; }
+
+            [NameInMap("IpAddressAttributes")]
+            [Validation(Required=false)]
+            public List<SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes> IpAddressAttributes { get; set; }
+            public class SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes : TeaModel {
+                [NameInMap("IpAddress")]
+                [Validation(Required=false)]
+                public List<string> IpAddress { get; set; }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public string NetworkType { get; set; }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
+
+            }
+
             /// <summary>
             /// The IP addresses.
             /// 

@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
-    public class DisableMultiAccountResourceCenterResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
-        [NameInMap("RequestId")]
+    public class DeleteSavedQueryRequest : TeaModel {
+        [NameInMap("QueryId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string QueryId { get; set; }
 
     }
 
