@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvironmentResponseBody : TeaModel {
         /// <summary>
-        /// The status code or error code.
+        /// The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,119 +24,126 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public DescribeEnvironmentResponseBodyData Data { get; set; }
         public class DescribeEnvironmentResponseBodyData : TeaModel {
             /// <summary>
-            /// Resource instance ID bound to the environment, including container instance ID or VpcId.
+            /// The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
             /// </summary>
             [NameInMap("BindResourceId")]
             [Validation(Required=false)]
             public string BindResourceId { get; set; }
 
             /// <summary>
-            /// Profile of bound resources.
+            /// The profile of the resource.
             /// </summary>
             [NameInMap("BindResourceProfile")]
             [Validation(Required=false)]
             public string BindResourceProfile { get; set; }
 
             /// <summary>
-            /// The state of the bound resource.
+            /// The status of the resource.
             /// </summary>
             [NameInMap("BindResourceStatus")]
             [Validation(Required=false)]
             public string BindResourceStatus { get; set; }
 
             /// <summary>
-            /// The storage duration of bound resources (days).
+            /// The retention period of the resource. Unit: days.
             /// </summary>
             [NameInMap("BindResourceStoreDuration")]
             [Validation(Required=false)]
             public string BindResourceStoreDuration { get; set; }
 
             /// <summary>
-            /// The bound resource type.
+            /// The resource type.
             /// </summary>
             [NameInMap("BindResourceType")]
             [Validation(Required=false)]
             public string BindResourceType { get; set; }
 
             /// <summary>
-            /// Bind the network segment of the vpc.
+            /// The VPC CIDR block.
             /// </summary>
             [NameInMap("BindVpcCidr")]
             [Validation(Required=false)]
             public string BindVpcCidr { get; set; }
 
             /// <summary>
-            /// Environment instance ID.
+            /// The ID of the environment instance.
             /// </summary>
             [NameInMap("EnvironmentId")]
             [Validation(Required=false)]
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// Environment name.
+            /// The environment name.
             /// </summary>
             [NameInMap("EnvironmentName")]
             [Validation(Required=false)]
             public string EnvironmentName { get; set; }
 
+            /// <summary>
+            /// Environment subtypes:
+            /// - CS: Currently supports ACK.
+            /// - ECS: ECS is currently supported.
+            /// - Cloud: Currently supports Cloud.
+            /// </summary>
             [NameInMap("EnvironmentSubType")]
             [Validation(Required=false)]
             public string EnvironmentSubType { get; set; }
 
             /// <summary>
-            /// Environment type:
-            /// - CS: Container Service.
-            /// - ECS.
-            /// - Cloud: cloud service.
+            /// The type of the environment. Valid values:
+            /// 
+            /// *   CS: Container Service for Kubernetes (ACK)
+            /// *   ECS: Elastic Compute Service
+            /// *   Cloud: cloud service
             /// </summary>
             [NameInMap("EnvironmentType")]
             [Validation(Required=false)]
             public string EnvironmentType { get; set; }
 
             /// <summary>
-            /// Grafana data source name.
+            /// The name of the Grafana data source.
             /// </summary>
             [NameInMap("GrafaDataSourceName")]
             [Validation(Required=false)]
             public string GrafaDataSourceName { get; set; }
 
             /// <summary>
-            /// Grafana data source unique ID.
+            /// The unique ID of the Grafana data source.
             /// </summary>
             [NameInMap("GrafanaDatasourceUid")]
             [Validation(Required=false)]
             public string GrafanaDatasourceUid { get; set; }
 
             /// <summary>
-            /// Grafana directory name.
+            /// The name of the Grafana directory.
             /// </summary>
             [NameInMap("GrafanaFolderTitle")]
             [Validation(Required=false)]
             public string GrafanaFolderTitle { get; set; }
 
             /// <summary>
-            /// Grafana directory unique ID.
+            /// The unique ID of the Grafana directory.
             /// </summary>
             [NameInMap("GrafanaFolderUid")]
             [Validation(Required=false)]
             public string GrafanaFolderUid { get; set; }
 
             /// <summary>
-            /// Grafana directory URL.
+            /// The URL of the Grafana directory.
             /// </summary>
             [NameInMap("GrafanaFolderUrl")]
             [Validation(Required=false)]
             public string GrafanaFolderUrl { get; set; }
 
             /// <summary>
-            /// The bound prometheus instance ID.
+            /// The ID of the Prometheus instance.
             /// </summary>
             [NameInMap("PrometheusInstanceId")]
             [Validation(Required=false)]
             public string PrometheusInstanceId { get; set; }
 
             /// <summary>
-            /// The name of the bound prometheus instance.
+            /// The name of the Prometheus instance.
             /// </summary>
             [NameInMap("PrometheusInstanceName")]
             [Validation(Required=false)]
@@ -163,10 +170,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<DescribeEnvironmentResponseBodyDataTags> Tags { get; set; }
             public class DescribeEnvironmentResponseBodyDataTags : TeaModel {
+                /// <summary>
+                /// Tag的键。
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// Tag的值
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -174,12 +187,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// UserId.
+            /// The user ID.
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
+            /// <summary>
+            /// VPC ID。
+            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
@@ -194,7 +210,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

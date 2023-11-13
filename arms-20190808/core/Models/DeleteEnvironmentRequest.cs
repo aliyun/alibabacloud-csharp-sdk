@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteEnvironmentRequest : TeaModel {
+        [NameInMap("DeletePromInstance")]
+        [Validation(Required=false)]
+        public bool? DeletePromInstance { get; set; }
+
         /// <summary>
         /// Environment instance ID.
         /// </summary>

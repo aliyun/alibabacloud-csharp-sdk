@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class DescribeEnvironmentRequest : TeaModel {
-        /// <summary>
-        /// The ID of the environment instance.
-        /// </summary>
-        [NameInMap("EnvironmentId")]
+    public class GetCommercialStatusRequest : TeaModel {
+        [NameInMap("CommodityCode")]
         [Validation(Required=false)]
-        public string EnvironmentId { get; set; }
+        public string CommodityCode { get; set; }
 
-        /// <summary>
-        /// The region ID.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
