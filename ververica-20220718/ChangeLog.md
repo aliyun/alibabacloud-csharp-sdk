@@ -1,3 +1,6 @@
+2023-11-13 Version: 1.1.1
+- Generated csharp 2022-07-18 for ververica.
+
 2023-11-09 Version: 1.1.0
 - Generated csharp 2022-07-18 for ververica.
 

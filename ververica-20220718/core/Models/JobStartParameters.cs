@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string DeploymentId { get; set; }
 
+        [NameInMap("resourceQueueName")]
+        [Validation(Required=false)]
+        public string ResourceQueueName { get; set; }
+
         [NameInMap("restoreStrategy")]
         [Validation(Required=false)]
         public DeploymentRestoreStrategy RestoreStrategy { get; set; }
