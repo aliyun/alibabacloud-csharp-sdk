@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public string CertName { get; set; }
 
+            [NameInMap("CertRegion")]
+            [Validation(Required=false)]
+            public string CertRegion { get; set; }
+
             [NameInMap("Cname")]
             [Validation(Required=false)]
             public string Cname { get; set; }
@@ -60,13 +64,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [NameInMap("CertId")]
                 [Validation(Required=false)]
                 public string CertId { get; set; }
+
                 [NameInMap("GmEnable")]
                 [Validation(Required=false)]
                 public long? GmEnable { get; set; }
+
                 [NameInMap("GmOnly")]
                 [Validation(Required=false)]
                 public long? GmOnly { get; set; }
-            };
+
+            }
 
             [NameInMap("Http2Enable")]
             [Validation(Required=false)]

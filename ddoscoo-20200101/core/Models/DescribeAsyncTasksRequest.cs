@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeAsyncTasksRequest : TeaModel {
+        /// <summary>
+        /// The number of the page to return.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the instance belongs in Resource Management.
+        /// 
+        /// If you do not configure this parameter, the instance belongs to the default resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

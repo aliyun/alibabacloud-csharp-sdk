@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeUdpReflectResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// An array consisting of the source ports of the UDP traffic that are filtered out by the filtering policies for UDP reflection attacks.
+        /// </summary>
         [NameInMap("UdpSports")]
         [Validation(Required=false)]
         public List<string> UdpSports { get; set; }

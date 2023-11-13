@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyPortResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

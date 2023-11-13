@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                     public string CloudInstanceId { get; set; }
 
                 }
+
                 [NameInMap("ParamType")]
                 [Validation(Required=false)]
                 public string ParamType { get; set; }
-            };
+
+            }
 
             [NameInMap("RuleName")]
             [Validation(Required=false)]

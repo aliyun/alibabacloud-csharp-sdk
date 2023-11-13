@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class EnableSceneDefensePolicyRequest : TeaModel {
+        /// <summary>
+        /// The ID of the policy that you want to enable.
+        /// 
+        /// > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
+        /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }

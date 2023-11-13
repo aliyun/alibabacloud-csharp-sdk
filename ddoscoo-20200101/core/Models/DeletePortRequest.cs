@@ -9,22 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DeletePortRequest : TeaModel {
+        /// <summary>
+        /// The port of the origin server. Valid values: **0** to **65535**.
+        /// </summary>
         [NameInMap("BackendPort")]
         [Validation(Required=false)]
         public string BackendPort { get; set; }
 
+        /// <summary>
+        /// The forwarding port. Valid values: **0** to **65535**.
+        /// </summary>
         [NameInMap("FrontendPort")]
         [Validation(Required=false)]
         public string FrontendPort { get; set; }
 
+        /// <summary>
+        /// The type of the protocol. Valid values:
+        /// 
+        /// *   **tcp**
+        /// *   **udp**
+        /// </summary>
         [NameInMap("FrontendProtocol")]
         [Validation(Required=false)]
         public string FrontendProtocol { get; set; }
 
+        /// <summary>
+        /// The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.
+        /// 
+        /// > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// An array that consists of the IP addresses of origin servers.
+        /// </summary>
         [NameInMap("RealServers")]
         [Validation(Required=false)]
         public List<string> RealServers { get; set; }

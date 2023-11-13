@@ -9,40 +9,73 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribePortResponseBody : TeaModel {
+        /// <summary>
+        /// An array that consists of port forwarding rules.
+        /// </summary>
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]
         public List<DescribePortResponseBodyNetworkRules> NetworkRules { get; set; }
         public class DescribePortResponseBodyNetworkRules : TeaModel {
+            /// <summary>
+            /// The port of the origin server.
+            /// </summary>
             [NameInMap("BackendPort")]
             [Validation(Required=false)]
             public int? BackendPort { get; set; }
 
+            /// <summary>
+            /// The forwarding port.
+            /// </summary>
             [NameInMap("FrontendPort")]
             [Validation(Required=false)]
             public int? FrontendPort { get; set; }
 
+            /// <summary>
+            /// The type of the protocol. Valid values:
+            /// 
+            /// *   **tcp**
+            /// *   **udp**
+            /// </summary>
             [NameInMap("FrontendProtocol")]
             [Validation(Required=false)]
             public string FrontendProtocol { get; set; }
 
+            /// <summary>
+            /// The ID of the instance to which the port forwarding rule is applied.
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// Indicates whether the port forwarding rule is automatically created by the instance. Valid values:
+            /// 
+            /// *   **true**: yes
+            /// *   **false**: no
+            /// </summary>
             [NameInMap("IsAutoCreate")]
             [Validation(Required=false)]
             public bool? IsAutoCreate { get; set; }
 
+            /// <summary>
+            /// An array that consists of IP addresses of origin servers.
+            /// </summary>
             [NameInMap("RealServers")]
             [Validation(Required=false)]
             public List<string> RealServers { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The number of port forwarding rules returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

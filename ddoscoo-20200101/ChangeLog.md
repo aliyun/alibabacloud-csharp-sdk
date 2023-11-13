@@ -1,3 +1,6 @@
+2023-11-13 Version: 1.1.0
+- Generated csharp 2020-01-01 for ddoscoo.
+
 2022-06-30 Version: 1.0.1
 - Update sdk.
 

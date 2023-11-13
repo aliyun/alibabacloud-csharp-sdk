@@ -9,14 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDomainTopAttackListRequest : TeaModel {
+        /// <summary>
+        /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
