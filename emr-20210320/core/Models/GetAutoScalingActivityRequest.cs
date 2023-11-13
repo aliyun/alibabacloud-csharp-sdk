@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetAutoScalingActivityRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 伸缩活动ID。
+        /// The ID of the scaling activity.
         /// </summary>
         [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]

@@ -10,68 +10,72 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class RunApplicationActionRequest : TeaModel {
         /// <summary>
-        /// 操作名称。取值范围：
-        /// - start：启动。
-        /// - stop：停止。
-        /// - config: 下发配置。
-        /// - refresh_queues: 刷新yarn队列。
-        /// 等
+        /// The name of the action. Valid values:
+        /// 
+        /// *   start
+        /// *   stop
+        /// *   config
+        /// *   restart
+        /// *   refresh_queues
         /// </summary>
         [NameInMap("ActionName")]
         [Validation(Required=false)]
         public string ActionName { get; set; }
 
         /// <summary>
-        /// 每批数量。
+        /// The number of applications in each batch.
         /// </summary>
         [NameInMap("BatchSize")]
         [Validation(Required=false)]
         public int? BatchSize { get; set; }
 
         /// <summary>
-        /// 集群ID。
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 组件实例选择器。
+        /// The name of the operation.
         /// </summary>
         [NameInMap("ComponentInstanceSelector")]
         [Validation(Required=false)]
         public ComponentInstanceSelector ComponentInstanceSelector { get; set; }
 
         /// <summary>
-        /// 描述。
+        /// The description of the execution.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// 运行策略。
+        /// The execution policy. Valid values:
+        /// 
+        /// *   FAILED_BLOCK: The system stops the execution if the execution fails.
+        /// *   FAILED_CONTINUE: The system continues the execution if the execution fails.
         /// </summary>
         [NameInMap("ExecuteStrategy")]
         [Validation(Required=false)]
         public string ExecuteStrategy { get; set; }
 
         /// <summary>
-        /// 间隔时间。
+        /// The interval for rolling execution. Unit: seconds.
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public long? Interval { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 是否滚动执行。
+        /// Specifies whether to enable rolling execution.
         /// </summary>
         [NameInMap("RollingExecute")]
         [Validation(Required=false)]

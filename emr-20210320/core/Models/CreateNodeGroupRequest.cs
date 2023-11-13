@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateNodeGroupRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 节点组信息。
+        /// The information about a machine group.
         /// </summary>
         [NameInMap("NodeGroup")]
         [Validation(Required=false)]
         public NodeGroupConfig NodeGroup { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

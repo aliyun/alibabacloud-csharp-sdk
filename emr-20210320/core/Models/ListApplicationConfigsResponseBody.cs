@@ -9,96 +9,99 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListApplicationConfigsResponseBody : TeaModel {
+        /// <summary>
+        /// The application configurations.
+        /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
         public List<ListApplicationConfigsResponseBodyApplicationConfigs> ApplicationConfigs { get; set; }
         public class ListApplicationConfigsResponseBodyApplicationConfigs : TeaModel {
             /// <summary>
-            /// 应用名称。
+            /// The name of the application.
             /// </summary>
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// 配置值生效状态。
+            /// The status of the configuration value.
             /// </summary>
             [NameInMap("ConfigEffectState")]
             [Validation(Required=false)]
             public string ConfigEffectState { get; set; }
 
             /// <summary>
-            /// 配置文件名称。
+            /// The name of the configuration file.
             /// </summary>
             [NameInMap("ConfigFileName")]
             [Validation(Required=false)]
             public string ConfigFileName { get; set; }
 
             /// <summary>
-            /// 配置项键。
+            /// The name of the configuration item.
             /// </summary>
             [NameInMap("ConfigItemKey")]
             [Validation(Required=false)]
             public string ConfigItemKey { get; set; }
 
             /// <summary>
-            /// 配置项值。
+            /// The value of the configuration item.
             /// </summary>
             [NameInMap("ConfigItemValue")]
             [Validation(Required=false)]
             public string ConfigItemValue { get; set; }
 
             /// <summary>
-            /// 创建时间。
+            /// The time when the application was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// 是否是自定义配置。
+            /// Indicates whether the configurations are custom.
             /// </summary>
             [NameInMap("Custom")]
             [Validation(Required=false)]
             public bool? Custom { get; set; }
 
             /// <summary>
-            /// 描述。
+            /// The description.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// 初始值。
+            /// The initial value.
             /// </summary>
             [NameInMap("InitValue")]
             [Validation(Required=false)]
             public string InitValue { get; set; }
 
             /// <summary>
-            /// 修改人。
+            /// The person who modified the configurations.
             /// </summary>
             [NameInMap("Modifier")]
             [Validation(Required=false)]
             public string Modifier { get; set; }
 
             /// <summary>
-            /// 节点组ID。
+            /// The ID of the node group.
             /// </summary>
             [NameInMap("NodeGroupId")]
             [Validation(Required=false)]
             public string NodeGroupId { get; set; }
 
             /// <summary>
-            /// 节点ID。
+            /// The node ID.
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
             /// <summary>
-            /// 更新时间。
+            /// The time when the application was updated.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -107,28 +110,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// 本次请求所返回的最大记录条数。
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 返回读取到的数据位置，空代表数据已经读取完毕。
+        /// The page number of the next page returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 本次请求条件下的数据总量。
+        /// The total number of pages.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

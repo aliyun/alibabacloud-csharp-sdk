@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
+        /// MASTER节点root密码。
+        /// </summary>
+        [NameInMap("MasterRootPassword")]
+        [Validation(Required=false)]
+        public string MasterRootPassword { get; set; }
+
+        /// <summary>
         /// ECS访问资源绑定的角色。
         /// </summary>
         [NameInMap("RamRole")]

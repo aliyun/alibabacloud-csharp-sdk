@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateNodeGroupResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the machine group.
+        /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

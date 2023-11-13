@@ -10,39 +10,42 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetAutoScalingPolicyResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The information about the auto scaling policy.
+        /// </summary>
         [NameInMap("ScalingPolicy")]
         [Validation(Required=false)]
         public GetAutoScalingPolicyResponseBodyScalingPolicy ScalingPolicy { get; set; }
         public class GetAutoScalingPolicyResponseBodyScalingPolicy : TeaModel {
             /// <summary>
-            /// 集群ID。
+            /// The cluster ID.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// 最大最小值约束
+            /// The maximum and minimum numbers of node groups.
             /// </summary>
             [NameInMap("Constraints")]
             [Validation(Required=false)]
             public GetAutoScalingPolicyResponseBodyScalingPolicyConstraints Constraints { get; set; }
             public class GetAutoScalingPolicyResponseBodyScalingPolicyConstraints : TeaModel {
                 /// <summary>
-                /// 最大值
+                /// The maximum number of nodes in the node group. Default value: 2000.
                 /// </summary>
                 [NameInMap("MaxCapacity")]
                 [Validation(Required=false)]
                 public int? MaxCapacity { get; set; }
 
                 /// <summary>
-                /// 最小值
+                /// The minimum number of nodes in the node group. Default value: 0.
                 /// </summary>
                 [NameInMap("MinCapacity")]
                 [Validation(Required=false)]
@@ -51,74 +54,76 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             }
 
             /// <summary>
-            /// 节点组ID。
+            /// The ID of the node group.
             /// </summary>
             [NameInMap("NodeGroupId")]
             [Validation(Required=false)]
             public string NodeGroupId { get; set; }
 
             /// <summary>
-            /// 伸缩策略ID。
+            /// The ID of the scaling policy.
             /// </summary>
             [NameInMap("ScalingPolicyId")]
             [Validation(Required=false)]
             public string ScalingPolicyId { get; set; }
 
             /// <summary>
-            /// 伸缩规则列表
+            /// The scaling rules.
             /// </summary>
             [NameInMap("ScalingRules")]
             [Validation(Required=false)]
             public List<GetAutoScalingPolicyResponseBodyScalingPolicyScalingRules> ScalingRules { get; set; }
             public class GetAutoScalingPolicyResponseBodyScalingPolicyScalingRules : TeaModel {
                 /// <summary>
-                /// 伸缩类型。取值范围：
-                /// - SCALE_OUT：扩容
-                /// - SCALE_IN：缩容
+                /// The type of the scaling activity. Valid values:
+                /// 
+                /// *   SCALE_OUT: scale-out rules
+                /// *   SCALE_IN: scale-in rules
                 /// </summary>
                 [NameInMap("ActivityType")]
                 [Validation(Required=false)]
                 public string ActivityType { get; set; }
 
                 /// <summary>
-                /// 调整类型。CHANGE_IN_CAPACITY/EXACT_CAPACITY。
+                /// The adjustment type.
                 /// </summary>
                 [NameInMap("AdjustmentType")]
                 [Validation(Required=false)]
                 public string AdjustmentType { get; set; }
 
                 /// <summary>
-                /// 调整值。需要为正数，代表需要扩容或者缩容的实例数量。
+                /// The adjustment value. The value must be a positive number, which indicates the number of instances to be scaled out or in.
                 /// </summary>
                 [NameInMap("AdjustmentValue")]
                 [Validation(Required=false)]
                 public int? AdjustmentValue { get; set; }
 
                 /// <summary>
-                /// 按照负载伸缩描述。
+                /// The description of scaling by load.
                 /// </summary>
                 [NameInMap("MetricsTrigger")]
                 [Validation(Required=false)]
                 public MetricsTrigger MetricsTrigger { get; set; }
 
                 /// <summary>
-                /// 弹性伸缩规则名称。
+                /// The name of the auto scaling rule.
                 /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// 按照时间伸缩描述。
+                /// The description of scaling by time.
                 /// </summary>
                 [NameInMap("TimeTrigger")]
                 [Validation(Required=false)]
                 public TimeTrigger TimeTrigger { get; set; }
 
                 /// <summary>
-                /// 伸缩规则类型。取值范围：
-                /// - TIME_TRIGGER: 按时间伸缩。
-                /// - METRICS_TRIGGER: 按负载伸缩。
+                /// The type of the scaling rule. Valid values:
+                /// 
+                /// *   TIME_TRIGGER: scaling by time.
+                /// *   METRICS_TRIGGER: scaling by load.
                 /// </summary>
                 [NameInMap("TriggerType")]
                 [Validation(Required=false)]

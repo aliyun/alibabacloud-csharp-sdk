@@ -10,70 +10,70 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListApplicationConfigsRequest : TeaModel {
         /// <summary>
-        /// 应用名称。
+        /// The name of the application.
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// 集群ID。
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 配置文件名称。
+        /// The name of the configuration file.
         /// </summary>
         [NameInMap("ConfigFileName")]
         [Validation(Required=false)]
         public string ConfigFileName { get; set; }
 
         /// <summary>
-        /// 配置键值，支持模糊查询。
+        /// The name of the configuration item.
         /// </summary>
         [NameInMap("ConfigItemKey")]
         [Validation(Required=false)]
         public string ConfigItemKey { get; set; }
 
         /// <summary>
-        /// 配置项值。
+        /// The value of the configuration item.
         /// </summary>
         [NameInMap("ConfigItemValue")]
         [Validation(Required=false)]
         public string ConfigItemValue { get; set; }
 
         /// <summary>
-        /// 一次获取的最大记录数。取值范围：1~100。
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 标记当前开始读取的位置，置空表示从头开始。
+        /// The page number of the next page returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 节点组ID。
+        /// The ID of the node group.
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// 节点ID。
+        /// The node ID.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

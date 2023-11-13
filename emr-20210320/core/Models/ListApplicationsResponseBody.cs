@@ -9,26 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListApplicationsResponseBody : TeaModel {
+        /// <summary>
+        /// The information about applications.
+        /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<ListApplicationsResponseBodyApplications> Applications { get; set; }
         public class ListApplicationsResponseBodyApplications : TeaModel {
             /// <summary>
-            /// 应用名称。
+            /// The application name.
             /// </summary>
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// 应用操作状态
+            /// The status of the application operation.
             /// </summary>
             [NameInMap("ApplicationState")]
             [Validation(Required=false)]
             public string ApplicationState { get; set; }
 
             /// <summary>
-            /// 应用版本。
+            /// The version of the application.
             /// </summary>
             [NameInMap("ApplicationVersion")]
             [Validation(Required=false)]
@@ -36,7 +39,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ApplicationVersion { get; set; }
 
             /// <summary>
-            /// 社区版本。
+            /// The community edition.
             /// </summary>
             [NameInMap("CommunityVersion")]
             [Validation(Required=false)]
@@ -45,28 +48,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// 本次请求所返回的最大记录条数。
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 返回读取到的数据位置，空代表数据已经读取完毕。
+        /// The page number of the next page returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 本次请求条件下的数据总量。
+        /// The total number of pages.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

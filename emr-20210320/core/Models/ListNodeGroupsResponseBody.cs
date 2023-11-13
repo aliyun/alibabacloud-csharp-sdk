@@ -10,32 +10,35 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListNodeGroupsResponseBody : TeaModel {
         /// <summary>
-        /// 本次请求所返回的最大记录条数。
+        /// The maximum number of entries returned.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 返回读取到的数据位置，空代表数据已经读取完毕。
+        /// Returns the location of the data that was read. Empty indicates that the data has been read.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The array of node groups.
+        /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public List<NodeGroup> NodeGroups { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 本次请求条件下的数据总量。
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

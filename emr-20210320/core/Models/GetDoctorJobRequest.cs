@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorJobRequest : TeaModel {
         /// <summary>
-        /// app id
+        /// The ID of the job that is submitted to YARN.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// 集群ID。
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

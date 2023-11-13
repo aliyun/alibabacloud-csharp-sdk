@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListApplicationsRequest : TeaModel {
         /// <summary>
-        /// 应用名称列表。
+        /// The application names.
         /// </summary>
         [NameInMap("ApplicationNames")]
         [Validation(Required=false)]
         public List<string> ApplicationNames { get; set; }
 
         /// <summary>
-        /// 集群ID。
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 一次获取的最大记录数。取值范围：1~100。
+        /// The total number of pages.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 标记当前开始读取的位置，置空表示从头开始。
+        /// The page number of the next page returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
