@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList> FlightChangeTicketInfoList { get; set; }
             public class FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList : TeaModel {
+                [NameInMap("apply_id")]
+                [Validation(Required=false)]
+                public string ApplyId { get; set; }
+
                 [NameInMap("arr_time")]
                 [Validation(Required=false)]
                 public string ArrTime { get; set; }
@@ -73,9 +77,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string OriginTicketNo { get; set; }
 
+                [NameInMap("out_apply_id")]
+                [Validation(Required=false)]
+                public string OutApplyId { get; set; }
+
                 [NameInMap("ticket_no")]
                 [Validation(Required=false)]
                 public string TicketNo { get; set; }
+
+                [NameInMap("ticket_status")]
+                [Validation(Required=false)]
+                public string TicketStatus { get; set; }
+
+                [NameInMap("ticket_status_code")]
+                [Validation(Required=false)]
+                public int? TicketStatusCode { get; set; }
 
                 [NameInMap("upgrade_fee")]
                 [Validation(Required=false)]
@@ -165,6 +181,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList> FlightRefundTicketInfoList { get; set; }
             public class FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList : TeaModel {
+                [NameInMap("apply_id")]
+                [Validation(Required=false)]
+                public string ApplyId { get; set; }
+
                 [NameInMap("gmt_create")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
@@ -172,6 +192,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("gmt_modify")]
                 [Validation(Required=false)]
                 public string GmtModify { get; set; }
+
+                [NameInMap("out_apply_id")]
+                [Validation(Required=false)]
+                public string OutApplyId { get; set; }
 
                 [NameInMap("refund_order_id")]
                 [Validation(Required=false)]
@@ -210,6 +234,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("discount")]
                 [Validation(Required=false)]
                 public int? Discount { get; set; }
+
+                [NameInMap("flight_no")]
+                [Validation(Required=false)]
+                public string FlightNo { get; set; }
 
                 [NameInMap("gmt_create")]
                 [Validation(Required=false)]
@@ -320,6 +348,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("depart_name")]
                 [Validation(Required=false)]
                 public string DepartName { get; set; }
+
+                [NameInMap("exceed_apply_id")]
+                [Validation(Required=false)]
+                public string ExceedApplyId { get; set; }
+
+                [NameInMap("exceed_third_part_apply_id")]
+                [Validation(Required=false)]
+                public string ExceedThirdPartApplyId { get; set; }
 
                 [NameInMap("gmt_create")]
                 [Validation(Required=false)]
