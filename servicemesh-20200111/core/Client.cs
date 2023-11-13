@@ -725,6 +725,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterDomain))
+            {
+                body["ClusterDomain"] = request.ClusterDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {
                 body["ClusterSpec"] = request.ClusterSpec;
@@ -1045,6 +1049,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 body["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterDomain))
+            {
+                body["ClusterDomain"] = request.ClusterDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {

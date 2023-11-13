@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("ClusterDomain")]
+        [Validation(Required=false)]
+        public string ClusterDomain { get; set; }
+
         /// <summary>
         /// The edition of the ASM instance. Valid values:
         /// 
