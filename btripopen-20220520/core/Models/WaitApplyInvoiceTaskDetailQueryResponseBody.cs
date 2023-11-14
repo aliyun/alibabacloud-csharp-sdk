@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string InternationalFlightInvoiceFee { get; set; }
 
+            [NameInMap("international_hotel_invoice_fee")]
+            [Validation(Required=false)]
+            public string InternationalHotelInvoiceFee { get; set; }
+
             [NameInMap("invoice_third_part_id")]
             [Validation(Required=false)]
             public string InvoiceThirdPartId { get; set; }
