@@ -60,6 +60,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             [Validation(Required=false)]
             public string Plan { get; set; }
 
+            /// <summary>
+            /// The time zone.
+            /// </summary>
             [NameInMap("timezone")]
             [Validation(Required=false)]
             public string Timezone { get; set; }
@@ -73,14 +76,24 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         }
 
+        /// <summary>
+        /// *   If the value of success was false, an error code was returned.
+        /// *   If the value of success was true, a null value was returned.
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
+        /// </summary>
         [NameInMap("httpCode")]
         [Validation(Required=false)]
         public int? HttpCode { get; set; }

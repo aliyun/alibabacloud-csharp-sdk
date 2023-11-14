@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public long? CreationTime { get; set; }
 
+                [NameInMap("displayName")]
+                [Validation(Required=false)]
+                public string DisplayName { get; set; }
+
                 /// <summary>
                 /// The name of the function.
                 /// </summary>

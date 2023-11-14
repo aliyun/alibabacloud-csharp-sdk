@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("schemaName")]
+        [Validation(Required=false)]
+        public string SchemaName { get; set; }
+
     }
 
 }

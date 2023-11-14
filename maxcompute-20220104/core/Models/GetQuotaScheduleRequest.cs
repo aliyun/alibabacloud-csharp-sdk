@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetQuotaScheduleRequest : TeaModel {
+        /// <summary>
+        /// The time zone.
+        /// </summary>
         [NameInMap("displayTimezone")]
         [Validation(Required=false)]
         public string DisplayTimezone { get; set; }
