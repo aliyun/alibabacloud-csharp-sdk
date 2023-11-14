@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListAgentlessMaliciousFilesResponseBodyList> List { get; set; }
         public class ListAgentlessMaliciousFilesResponseBodyList : TeaModel {
             /// <summary>
-            /// The details of the exception.
+            /// The details of the alert event.
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<ListAgentlessMaliciousFilesResponseBodyListDetails> Details { get; set; }
             public class ListAgentlessMaliciousFilesResponseBodyListDetails : TeaModel {
                 /// <summary>
-                /// The name of the exception.
+                /// The name of the detailed item.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The name key of the exception.
+                /// The name key of the detailed item.
                 /// </summary>
                 [NameInMap("NameKey")]
                 [Validation(Required=false)]
                 public string NameKey { get; set; }
 
                 /// <summary>
-                /// The type of the exception.
+                /// The type of the detailed item.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The value of the exception.
+                /// The value of the detailed item.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -141,6 +141,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string MaliciousName { get; set; }
 
+            /// <summary>
+            /// The type of the virus.
+            /// </summary>
             [NameInMap("MaliciousType")]
             [Validation(Required=false)]
             public string MaliciousType { get; set; }
@@ -176,14 +179,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The handling result of the exception.
+            /// The handling result of the alert.
             /// </summary>
             [NameInMap("OperateResult")]
             [Validation(Required=false)]
             public string OperateResult { get; set; }
 
             /// <summary>
-            /// The timestamp generated when the exception is handled. Unit: milliseconds.
+            /// The timestamp generated when the alert is handled. Unit: milliseconds.
             /// </summary>
             [NameInMap("OperateTimestamp")]
             [Validation(Required=false)]

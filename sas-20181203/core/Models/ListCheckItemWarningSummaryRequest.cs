@@ -98,6 +98,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RiskType { get; set; }
 
+        /// <summary>
+        /// The data source. Default value: **default**. Valid value:
+        /// 
+        /// *   **agentless**: The check items of baselines for agentless detection.
+        /// *   **default**: The check items of baselines for hosts.
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

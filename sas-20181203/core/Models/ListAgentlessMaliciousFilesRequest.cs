@@ -70,6 +70,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string MaliciousMd5 { get; set; }
 
+        /// <summary>
+        /// The alert type.
+        /// 
+        /// Valid values when Lang is set to zh:
+        /// 
+        /// *   WebShell
+        /// *   Malicious Software
+        /// *   Malicious Script
+        /// 
+        /// Valid values when Lang is set to en:
+        /// 
+        /// *   WebShell
+        /// *   Malicious Software
+        /// *   Malicious Script
+        /// </summary>
         [NameInMap("MaliciousType")]
         [Validation(Required=false)]
         public string MaliciousType { get; set; }

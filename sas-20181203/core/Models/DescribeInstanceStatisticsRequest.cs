@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The UUIDs of the assets to query. Separate multiple UUIDs with commas (,). You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
+        /// The UUIDs of the assets to query. Separate multiple UUIDs with commas (,). You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of assets.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

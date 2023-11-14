@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckItemWarningMachineResponseBody : TeaModel {
         /// <summary>
-        /// An array consisting of the servers on which the alerts are generated.
+        /// The servers on which the alerts are generated.
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The edition of Security Center that is authorized to protect the asset. Valid values:
             /// 
-            /// *   **1**: Basic edition (Unauthorized)
+            /// *   **1**: Basic edition
             /// *   **6**: Anti-virus edition
             /// *   **5**: Advanced edition
             /// *   **3**: Enterprise edition
@@ -31,17 +31,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AuthVersion { get; set; }
 
             /// <summary>
-            /// Indicates whether Security Center is authorized to scan the asset. Valid values:
+            /// Indicates whether Security Center is authorized to protect the asset. Valid values:
             /// 
-            /// *   **true**: Security Center is authorized to scan the asset.
-            /// *   **false**: Security Center is not authorized to scan the asset.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("Bind")]
             [Validation(Required=false)]
             public bool? Bind { get; set; }
 
             /// <summary>
-            /// The ID of the container.
+            /// The container ID.
             /// </summary>
             [NameInMap("ContainerId")]
             [Validation(Required=false)]
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerName { get; set; }
 
             /// <summary>
-            /// An array consisting of the details about the baselines for which the risk item can be fixed.
+            /// The details of the baselines for which the risk item can be fixed.
             /// </summary>
             [NameInMap("FixList")]
             [Validation(Required=false)]
             public List<ListCheckItemWarningMachineResponseBodyListFixList> FixList { get; set; }
             public class ListCheckItemWarningMachineResponseBodyListFixList : TeaModel {
                 /// <summary>
-                /// The ID of the baseline.
+                /// The baseline ID.
                 /// </summary>
                 [NameInMap("RiskId")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The ID of the server.
+            /// The instance ID of the server.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -105,6 +105,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            /// <summary>
+            /// The timestamp generated when the last scan was performed. Unit: milliseconds.
+            /// </summary>
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
@@ -112,8 +115,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether a port on the server is accessible over the Internet. Valid values:
             /// 
-            /// *   **true**: A port on the server is accessible over the Internet.
-            /// *   **false**: No ports on the server are accessible over the Internet.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("PortOpen")]
             [Validation(Required=false)]
@@ -137,27 +140,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// The status of the check item. Valid values:
             /// 
             /// *   1: failed
-            /// 
             /// *   2: verifying
-            /// 
             /// *   3: passed
-            /// 
             /// *   6: ignored
-            /// 
             /// *   7: fixing
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            /// <summary>
+            /// The ID of the asset that is scanned.
+            /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
+            /// <summary>
+            /// The name of the asset that is scanned.
+            /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
             public string TargetName { get; set; }
 
+            /// <summary>
+            /// The type of the asset. Valid values:
+            /// 
+            /// *   **ECS_SNAPSHOT**
+            /// *   **ECS_IMAGE**
+            /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
             public string TargetType { get; set; }
@@ -170,14 +181,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// An array consisting of the details about the baselines based on which the risk item is detected.
+            /// The information about the baselines on which the risk item is detected.
             /// </summary>
             [NameInMap("WarningRiskList")]
             [Validation(Required=false)]
             public List<ListCheckItemWarningMachineResponseBodyListWarningRiskList> WarningRiskList { get; set; }
             public class ListCheckItemWarningMachineResponseBodyListWarningRiskList : TeaModel {
                 /// <summary>
-                /// The ID of the baseline.
+                /// The baseline ID.
                 /// </summary>
                 [NameInMap("RiskId")]
                 [Validation(Required=false)]

@@ -63,10 +63,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
-        /// The ID of the baseline risk item.
+        /// The ID of the risk item.
         /// 
-        /// > To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.
+        /// >  To query the information about the risk items and check items of a server, you must provide the IDs of risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.
         /// </summary>
         [NameInMap("RiskId")]
         [Validation(Required=false)]

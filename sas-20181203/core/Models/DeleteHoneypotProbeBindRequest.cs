@@ -9,14 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteHoneypotProbeBindRequest : TeaModel {
+        /// <summary>
+        /// The unique ID of the bound service.
+        /// </summary>
         [NameInMap("BindId")]
         [Validation(Required=false)]
         public string BindId { get; set; }
 
+        /// <summary>
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The probe ID.
+        /// 
+        /// >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+        /// </summary>
         [NameInMap("ProbeId")]
         [Validation(Required=false)]
         public string ProbeId { get; set; }

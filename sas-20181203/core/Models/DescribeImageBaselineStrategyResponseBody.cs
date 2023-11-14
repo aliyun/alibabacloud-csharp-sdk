@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public DescribeImageBaselineStrategyResponseBodyStrategy Strategy { get; set; }
         public class DescribeImageBaselineStrategyResponseBodyStrategy : TeaModel {
+            /// <summary>
+            /// The baseline check policy for agentless detection.
+            /// </summary>
             [NameInMap("BaselineItem")]
             [Validation(Required=false)]
             public string BaselineItem { get; set; }

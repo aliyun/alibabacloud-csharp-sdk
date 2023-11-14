@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The information about the exceptions of check items.
+            /// </summary>
             [NameInMap("StatusMessage")]
             [Validation(Required=false)]
             public string StatusMessage { get; set; }
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListCheckInstanceResultResponseBodyColumns> Columns { get; set; }
         public class ListCheckInstanceResultResponseBodyColumns : TeaModel {
             /// <summary>
-            /// The metadata information about the details of the instances.
+            /// The metadata information about the details of the instance.
             /// </summary>
             [NameInMap("Grids")]
             [Validation(Required=false)]
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// The format of the check results for the instances. Valid values:
+                /// The format of the check results for the instance. Valid values:
                 /// 
                 /// *   **text**
                 /// *   **link**
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// Indicates whether the search condition is used. Valid values:
+            /// Indicates whether the search condition is supported. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ShowName { get; set; }
 
             /// <summary>
-            /// The type of the check result for the instance. Valid values:
+            /// The format of the check result for the instance. Valid values:
             /// 
             /// *   **text**
             /// *   **link**

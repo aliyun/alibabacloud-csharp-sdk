@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
         /// The ID of the baseline.
         /// 

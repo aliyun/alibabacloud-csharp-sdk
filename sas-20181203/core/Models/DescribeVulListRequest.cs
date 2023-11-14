@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Necessity { get; set; }
 
+        /// <summary>
+        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken. You do not need to specify this parameter for the first request.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -97,10 +100,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Remark { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// 
+        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
+        /// <summary>
+        /// The status of the vulnerability. Separate multiple statuses with commas (,). Valid values:
+        /// 
+        /// - 1: unfixed
+        /// - 2: fix failed
+        /// - 3: rollback failed
+        /// - 4: being fixed
+        /// - 5: being rolled back
+        /// - 6: being verified
+        /// - 7: fixed
+        /// - 8: fixed and to be restarted
+        /// - 9: rolled back
+        /// - 10: ignored
+        /// - 11: rolled back and to be restarted
+        /// - 12: not found
+        /// - 20: expired
+        /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public string StatusList { get; set; }
@@ -119,6 +144,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// Specifies whether to use NextToken to query the data of vulnerabilities. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// </summary>
         [NameInMap("UseNextToken")]
         [Validation(Required=false)]
         public bool? UseNextToken { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateFileUploadLimitRequest : TeaModel {
+        /// <summary>
+        /// The QPS limit on the files uploaded from the client. Valid values: 100 to 10000.
+        /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public long? Limit { get; set; }

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstanceStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the risk information about the asset.
+        /// An array that consists of the risk information about assets.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeInstanceStatisticsResponseBodyData> Data { get; set; }
         public class DescribeInstanceStatisticsResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of unusual logons to the asset.
+            /// The number of unusual logons by using the account of the asset.
             /// </summary>
             [NameInMap("Account")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ScaNum { get; set; }
 
             /// <summary>
-            /// The number of alerts generated for the asset.
+            /// The number of alerts generated on the asset.
             /// </summary>
             [NameInMap("Suspicious")]
             [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Trojan { get; set; }
 
             /// <summary>
-            /// The UUID of the asset.
+            /// The instance UUID of the asset.
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

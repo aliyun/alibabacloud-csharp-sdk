@@ -68,10 +68,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
 
+            /// <summary>
+            /// The container is exposed.
+            /// </summary>
             [NameInMap("Exposed")]
             [Validation(Required=false)]
             public int? Exposed { get; set; }
 
+            /// <summary>
+            /// The container exposed details .
+            /// </summary>
             [NameInMap("ExposedDetail")]
             [Validation(Required=false)]
             public string ExposedDetail { get; set; }

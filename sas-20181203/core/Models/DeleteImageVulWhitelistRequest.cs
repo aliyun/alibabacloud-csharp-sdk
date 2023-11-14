@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteImageVulWhitelistRequest : TeaModel {
+        /// <summary>
+        /// The ID of the whitelist. Separate multiple IDs with commas (,).
+        /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }
 
+        /// <summary>
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyOperateVulRequest : TeaModel {
         /// <summary>
-        /// The ID of the request source. Set the value to **sas**.
+        /// The request ID. Set the value to **sas**.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]

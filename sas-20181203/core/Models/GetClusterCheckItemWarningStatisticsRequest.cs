@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The UUID of the server.
+        /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }

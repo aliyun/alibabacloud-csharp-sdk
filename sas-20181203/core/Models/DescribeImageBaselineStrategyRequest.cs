@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The data source. Default value: default. Valid values:
+        /// 
+        /// *   **default**: queries the information about a baseline check policy for images.
+        /// *   **agentless**: queries the information about a baseline check policy for agentless detection.
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

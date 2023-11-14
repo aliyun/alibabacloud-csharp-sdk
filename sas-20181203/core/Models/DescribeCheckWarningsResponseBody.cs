@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details about the check item.
+        /// The information about the check item.
         /// </summary>
         [NameInMap("CheckWarnings")]
         [Validation(Required=false)]
@@ -31,17 +31,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckWarningId { get; set; }
 
             /// <summary>
-            /// The error message in check result.
+            /// The error message in the check result.
             /// </summary>
             [NameInMap("ExecErrorMessage")]
             [Validation(Required=false)]
             public string ExecErrorMessage { get; set; }
 
             /// <summary>
-            /// The fixing status of the check item. Valid values:
+            /// Indicates whether the fix is supported. Valid values:
             /// 
-            /// *   **0**: disabled
-            /// *   **1**: enabled
+            /// *   **0**: The fix is not supported.
+            /// *   **1**: The fix is supported.
             /// </summary>
             [NameInMap("FixStatus")]
             [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Item { get; set; }
 
             /// <summary>
-            /// The risk level of the risk item. Valid values:
+            /// The severity level of a risk item. Valid values:
             /// 
             /// *   **high**
             /// *   **medium**
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// The description of the check item.
+            /// The remarks.
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
