@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Trademark20180724.Models
 {
-    public class QueryTradeMarkApplicationsRequest : TeaModel {
+    public class QueryTradeMarkApplicationsShrinkRequest : TeaModel {
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Trademark20180724.Models
 
         [NameInMap("StatusList")]
         [Validation(Required=false)]
-        public List<int?> StatusList { get; set; }
+        public string StatusListShrink { get; set; }
 
         [NameInMap("SupplementStatus")]
         [Validation(Required=false)]

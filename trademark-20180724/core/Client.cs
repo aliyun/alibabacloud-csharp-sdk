@@ -7049,9 +7049,15 @@ namespace AlibabaCloud.SDK.Trademark20180724
             return await QueryTradeMarkApplicationLogsWithOptionsAsync(request, runtime);
         }
 
-        public QueryTradeMarkApplicationsResponse QueryTradeMarkApplicationsWithOptions(QueryTradeMarkApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public QueryTradeMarkApplicationsResponse QueryTradeMarkApplicationsWithOptions(QueryTradeMarkApplicationsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryTradeMarkApplicationsShrinkRequest request = new QueryTradeMarkApplicationsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
+            {
+                request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "StatusList", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
             {
@@ -7108,6 +7114,10 @@ namespace AlibabaCloud.SDK.Trademark20180724
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListShrink))
+            {
+                query["StatusList"] = request.StatusListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplementStatus))
             {
@@ -7144,9 +7154,15 @@ namespace AlibabaCloud.SDK.Trademark20180724
             return TeaModel.ToObject<QueryTradeMarkApplicationsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<QueryTradeMarkApplicationsResponse> QueryTradeMarkApplicationsWithOptionsAsync(QueryTradeMarkApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<QueryTradeMarkApplicationsResponse> QueryTradeMarkApplicationsWithOptionsAsync(QueryTradeMarkApplicationsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryTradeMarkApplicationsShrinkRequest request = new QueryTradeMarkApplicationsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
+            {
+                request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "StatusList", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
             {
@@ -7203,6 +7219,10 @@ namespace AlibabaCloud.SDK.Trademark20180724
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListShrink))
+            {
+                query["StatusList"] = request.StatusListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplementStatus))
             {
