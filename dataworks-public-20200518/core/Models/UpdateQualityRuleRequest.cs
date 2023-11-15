@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
+        [NameInMap("TaskSetting")]
+        [Validation(Required=false)]
+        public string TaskSetting { get; set; }
+
         /// <summary>
         /// The ID of the monitoring template. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring template that is used to create the monitoring rule.
         /// </summary>

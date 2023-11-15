@@ -4552,6 +4552,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["RuleType"] = request.RuleType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskSetting))
+            {
+                body["TaskSetting"] = request.TaskSetting;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 body["TemplateId"] = request.TemplateId;
@@ -4650,6 +4654,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
             {
                 body["RuleType"] = request.RuleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskSetting))
+            {
+                body["TaskSetting"] = request.TaskSetting;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -26652,6 +26660,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["RuleType"] = request.RuleType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskSetting))
+            {
+                body["TaskSetting"] = request.TaskSetting;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 body["TemplateId"] = request.TemplateId;
@@ -26758,6 +26770,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
             {
                 body["RuleType"] = request.RuleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskSetting))
+            {
+                body["TaskSetting"] = request.TaskSetting;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
