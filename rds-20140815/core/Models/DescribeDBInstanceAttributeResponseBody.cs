@@ -286,6 +286,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
 
+                [NameInMap("DBInstanceDiskUsed")]
+                [Validation(Required=false)]
+                public string DBInstanceDiskUsed { get; set; }
+
                 /// <summary>
                 /// The instance ID.
                 /// </summary>
