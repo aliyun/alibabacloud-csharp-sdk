@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        [NameInMap("SimpleMode")]
+        [Validation(Required=false)]
+        public bool? SimpleMode { get; set; }
+
         [NameInMap("TagIds")]
         [Validation(Required=false)]
         public List<string> TagIds { get; set; }
