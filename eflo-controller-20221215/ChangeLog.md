@@ -1,3 +1,6 @@
+2023-11-16 Version: 1.1.2
+- Generated csharp 2022-12-15 for eflo-controller.
+
 2023-11-14 Version: 1.1.1
 - Generated csharp 2022-12-15 for eflo-controller.
 
