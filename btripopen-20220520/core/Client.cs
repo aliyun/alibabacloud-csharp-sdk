@@ -3571,6 +3571,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["alipay_no"] = request.AlipayNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disable))
+            {
+                body["disable"] = request.Disable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
             {
                 body["number"] = request.Number;
@@ -3623,6 +3627,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlipayNo))
             {
                 body["alipay_no"] = request.AlipayNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disable))
+            {
+                body["disable"] = request.Disable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
             {
@@ -3687,6 +3695,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disable))
+            {
+                query["disable"] = request.Disable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedOrgEntity))
             {
                 query["need_org_entity"] = request.NeedOrgEntity;
@@ -3736,6 +3748,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disable))
+            {
+                query["disable"] = request.Disable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedOrgEntity))
             {
                 query["need_org_entity"] = request.NeedOrgEntity;
@@ -3803,6 +3819,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["alipay_no"] = request.AlipayNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disable))
+            {
+                body["disable"] = request.Disable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
             {
                 body["number"] = request.Number;
@@ -3855,6 +3875,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlipayNo))
             {
                 body["alipay_no"] = request.AlipayNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disable))
+            {
+                body["disable"] = request.Disable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
             {

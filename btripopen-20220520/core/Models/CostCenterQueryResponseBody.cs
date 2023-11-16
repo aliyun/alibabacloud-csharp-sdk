@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string CorpId { get; set; }
 
+            [NameInMap("disable")]
+            [Validation(Required=false)]
+            public long? Disable { get; set; }
+
             [NameInMap("entity_d_o_s")]
             [Validation(Required=false)]
             public List<CostCenterQueryResponseBodyModuleEntityDOS> EntityDOS { get; set; }

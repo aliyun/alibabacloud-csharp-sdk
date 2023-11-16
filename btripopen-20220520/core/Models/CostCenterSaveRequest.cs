@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string AlipayNo { get; set; }
 
+        [NameInMap("disable")]
+        [Validation(Required=false)]
+        public long? Disable { get; set; }
+
         [NameInMap("number")]
         [Validation(Required=false)]
         public string Number { get; set; }
