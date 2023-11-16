@@ -314,6 +314,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Period { get; set; }
 
+        [NameInMap("ProvisionedIops")]
+        [Validation(Required=false)]
+        public long? ProvisionedIops { get; set; }
+
         /// <summary>
         /// 标准版数据库代理规格。
         /// </summary>

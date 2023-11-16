@@ -1402,6 +1402,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Period"] = request.Period;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionedIops))
+            {
+                query["ProvisionedIops"] = request.ProvisionedIops;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyClass))
             {
                 query["ProxyClass"] = request.ProxyClass;
@@ -1636,6 +1640,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionedIops))
+            {
+                query["ProvisionedIops"] = request.ProvisionedIops;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyClass))
             {
