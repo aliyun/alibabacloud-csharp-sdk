@@ -33,6 +33,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
+        /// <summary>
+        /// The UUID of the asset.
+        /// 
+        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
+        /// </summary>
+        [NameInMap("Uuids")]
+        [Validation(Required=false)]
+        public string Uuids { get; set; }
+
     }
 
 }
