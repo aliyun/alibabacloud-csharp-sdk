@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UninstallPromClusterRequest : TeaModel {
+        [NameInMap("AliyunLang")]
+        [Validation(Required=false)]
+        public string AliyunLang { get; set; }
+
         /// <summary>
         /// The cluster ID.
         /// </summary>

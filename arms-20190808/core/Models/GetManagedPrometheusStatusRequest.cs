@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The type of the monitoring object. Valid values: ask and ecs.
+        /// The type of the monitoring object. Valid values: ask , acs , one and ecs.
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]

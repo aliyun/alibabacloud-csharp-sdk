@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<DescribeEnvironmentResponseBodyDataTags> Tags { get; set; }
             public class DescribeEnvironmentResponseBodyDataTags : TeaModel {
                 /// <summary>
-                /// Tag的键。
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// Tag的值
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// VPC ID。
+            /// VPC ID.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]

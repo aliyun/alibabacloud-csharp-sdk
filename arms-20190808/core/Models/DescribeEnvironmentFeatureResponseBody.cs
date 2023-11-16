@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Status of Feature.
+                /// Installation status of Feature.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -155,8 +155,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                 /// <summary>
                 /// Running status.
-                /// - Success: Normal operation
-                /// - Failed: running exception
+                /// - Success: Running normal
+                /// - Failed: Running exception
                 /// - Not Found: Not installed
                 /// </summary>
                 [NameInMap("Status")]
