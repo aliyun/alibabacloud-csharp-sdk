@@ -1,3 +1,6 @@
+2023-11-17 Version: 4.0.0
+- Generated csharp 2021-07-01 for eas.
+
 2023-11-17 Version: 3.0.0
 - Generated csharp 2021-07-01 for eas.
 
