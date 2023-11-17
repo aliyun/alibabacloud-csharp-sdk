@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? IsSpot { get; set; }
 
+        [NameInMap("Isolated")]
+        [Validation(Required=false)]
+        public bool? Isolated { get; set; }
+
         [NameInMap("LastState")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> LastState { get; set; }

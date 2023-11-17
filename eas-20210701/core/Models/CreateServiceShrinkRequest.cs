@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string LabelsShrink { get; set; }
 
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=false)]
         public string Body { get; set; }

@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        [NameInMap("AppConfig")]
+        [Validation(Required=false)]
+        public string AppConfig { get; set; }
+
+        [NameInMap("AppSpecName")]
+        [Validation(Required=false)]
+        public string AppSpecName { get; set; }
+
+        [NameInMap("AppType")]
+        [Validation(Required=false)]
+        public string AppType { get; set; }
+
+        [NameInMap("AppVersion")]
+        [Validation(Required=false)]
+        public string AppVersion { get; set; }
+
         [NameInMap("CallerUid")]
         [Validation(Required=false)]
         public string CallerUid { get; set; }
@@ -170,6 +186,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("Weight")]
         [Validation(Required=false)]
         public int? Weight { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

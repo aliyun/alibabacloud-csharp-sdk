@@ -111,6 +111,136 @@ namespace AlibabaCloud.SDK.Eas20210701
             return await CommitServiceWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
         }
 
+        public CreateAppServiceResponse CreateAppServiceWithOptions(CreateAppServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                body["AppType"] = request.AppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersion))
+            {
+                body["AppVersion"] = request.AppVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                body["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceSpec))
+            {
+                body["ServiceSpec"] = request.ServiceSpec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAppService",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/app_services",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateAppServiceResponse> CreateAppServiceWithOptionsAsync(CreateAppServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                body["AppType"] = request.AppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersion))
+            {
+                body["AppVersion"] = request.AppVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                body["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceSpec))
+            {
+                body["ServiceSpec"] = request.ServiceSpec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAppService",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/app_services",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateAppServiceResponse CreateAppService(CreateAppServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAppServiceWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateAppServiceResponse> CreateAppServiceAsync(CreateAppServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAppServiceWithOptionsAsync(request, headers, runtime);
+        }
+
         public CreateBenchmarkTaskResponse CreateBenchmarkTaskWithOptions(CreateBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -171,6 +301,190 @@ namespace AlibabaCloud.SDK.Eas20210701
             return await CreateBenchmarkTaskWithOptionsAsync(request, headers, runtime);
         }
 
+        public CreateGatewayResponse CreateGatewayWithOptions(CreateGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                query["ResourceName"] = request.ResourceName;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInternet))
+            {
+                body["EnableInternet"] = request.EnableInternet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIntranet))
+            {
+                body["EnableIntranet"] = request.EnableIntranet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGateway",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateGatewayResponse> CreateGatewayWithOptionsAsync(CreateGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                query["ResourceName"] = request.ResourceName;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInternet))
+            {
+                body["EnableInternet"] = request.EnableInternet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIntranet))
+            {
+                body["EnableIntranet"] = request.EnableIntranet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGateway",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateGatewayResponse CreateGateway(CreateGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGatewayWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateGatewayResponse> CreateGatewayAsync(CreateGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGatewayWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CreateGatewayIntranetLinkedVpcResponse CreateGatewayIntranetLinkedVpcWithOptions(string ClusterId, string GatewayId, CreateGatewayIntranetLinkedVpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGatewayIntranetLinkedVpc",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayIntranetLinkedVpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateGatewayIntranetLinkedVpcResponse> CreateGatewayIntranetLinkedVpcWithOptionsAsync(string ClusterId, string GatewayId, CreateGatewayIntranetLinkedVpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGatewayIntranetLinkedVpc",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayIntranetLinkedVpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateGatewayIntranetLinkedVpcResponse CreateGatewayIntranetLinkedVpc(string ClusterId, string GatewayId, CreateGatewayIntranetLinkedVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGatewayIntranetLinkedVpcWithOptions(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        public async Task<CreateGatewayIntranetLinkedVpcResponse> CreateGatewayIntranetLinkedVpcAsync(string ClusterId, string GatewayId, CreateGatewayIntranetLinkedVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGatewayIntranetLinkedVpcWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
+        }
+
         public CreateResourceResponse CreateResourceWithOptions(CreateResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -191,25 +505,13 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 body["EcsInstanceType"] = request.EcsInstanceType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalClusterId))
-            {
-                body["ExternalClusterId"] = request.ExternalClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeMatchLabels))
-            {
-                body["NodeMatchLabels"] = request.NodeMatchLabels;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTolerations))
-            {
-                body["NodeTolerations"] = request.NodeTolerations;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 body["ResourceType"] = request.ResourceType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelfManagedResourceOptions))
             {
-                body["RoleName"] = request.RoleName;
+                body["SelfManagedResourceOptions"] = request.SelfManagedResourceOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
             {
@@ -259,25 +561,13 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 body["EcsInstanceType"] = request.EcsInstanceType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalClusterId))
-            {
-                body["ExternalClusterId"] = request.ExternalClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeMatchLabels))
-            {
-                body["NodeMatchLabels"] = request.NodeMatchLabels;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTolerations))
-            {
-                body["NodeTolerations"] = request.NodeTolerations;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 body["ResourceType"] = request.ResourceType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelfManagedResourceOptions))
             {
-                body["RoleName"] = request.RoleName;
+                body["SelfManagedResourceOptions"] = request.SelfManagedResourceOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
             {
@@ -535,6 +825,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["Labels"] = request.LabelsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -573,6 +867,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
             {
                 query["Labels"] = request.LabelsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -913,6 +1211,140 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+        }
+
+        public DeleteGatewayResponse DeleteGatewayWithOptions(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGateway",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteGatewayResponse> DeleteGatewayWithOptionsAsync(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGateway",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteGatewayResponse DeleteGateway(string ClusterId, string GatewayId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteGatewayWithOptions(ClusterId, GatewayId, headers, runtime);
+        }
+
+        public async Task<DeleteGatewayResponse> DeleteGatewayAsync(string ClusterId, string GatewayId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteGatewayWithOptionsAsync(ClusterId, GatewayId, headers, runtime);
+        }
+
+        public DeleteGatewayIntranetLinkedVpcResponse DeleteGatewayIntranetLinkedVpcWithOptions(string ClusterId, string GatewayId, DeleteGatewayIntranetLinkedVpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGatewayIntranetLinkedVpc",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGatewayIntranetLinkedVpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteGatewayIntranetLinkedVpcResponse> DeleteGatewayIntranetLinkedVpcWithOptionsAsync(string ClusterId, string GatewayId, DeleteGatewayIntranetLinkedVpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGatewayIntranetLinkedVpc",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGatewayIntranetLinkedVpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteGatewayIntranetLinkedVpcResponse DeleteGatewayIntranetLinkedVpc(string ClusterId, string GatewayId, DeleteGatewayIntranetLinkedVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteGatewayIntranetLinkedVpcWithOptions(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        public async Task<DeleteGatewayIntranetLinkedVpcResponse> DeleteGatewayIntranetLinkedVpcAsync(string ClusterId, string GatewayId, DeleteGatewayIntranetLinkedVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteGatewayIntranetLinkedVpcWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
         }
 
         public DeleteResourceResponse DeleteResourceWithOptions(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1677,6 +2109,62 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeBenchmarkTaskReportWithOptionsAsync(ClusterId, TaskName, request, headers, runtime);
+        }
+
+        public DescribeGatewayResponse DescribeGatewayWithOptions(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGateway",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeGatewayResponse> DescribeGatewayWithOptionsAsync(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGateway",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeGatewayResponse DescribeGateway(string ClusterId, string GatewayId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeGatewayWithOptions(ClusterId, GatewayId, headers, runtime);
+        }
+
+        public async Task<DescribeGatewayResponse> DescribeGatewayAsync(string ClusterId, string GatewayId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeGatewayWithOptionsAsync(ClusterId, GatewayId, headers, runtime);
         }
 
         public DescribeGroupResponse DescribeGroupWithOptions(string ClusterId, string GroupName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2647,6 +3135,62 @@ namespace AlibabaCloud.SDK.Eas20210701
             return await ListBenchmarkTaskWithOptionsAsync(request, headers, runtime);
         }
 
+        public ListGatewayIntranetLinkedVpcResponse ListGatewayIntranetLinkedVpcWithOptions(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayIntranetLinkedVpc",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayIntranetLinkedVpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListGatewayIntranetLinkedVpcResponse> ListGatewayIntranetLinkedVpcWithOptionsAsync(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayIntranetLinkedVpc",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayIntranetLinkedVpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListGatewayIntranetLinkedVpcResponse ListGatewayIntranetLinkedVpc(string ClusterId, string GatewayId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListGatewayIntranetLinkedVpcWithOptions(ClusterId, GatewayId, headers, runtime);
+        }
+
+        public async Task<ListGatewayIntranetLinkedVpcResponse> ListGatewayIntranetLinkedVpcAsync(string ClusterId, string GatewayId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListGatewayIntranetLinkedVpcWithOptionsAsync(ClusterId, GatewayId, headers, runtime);
+        }
+
         public ListGroupsResponse ListGroupsWithOptions(ListGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2662,6 +3206,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2698,6 +3246,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3495,6 +4047,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["Sort"] = request.Sort;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3576,6 +4132,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
             {
                 query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3969,6 +4529,128 @@ namespace AlibabaCloud.SDK.Eas20210701
             return await StopServiceWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
         }
 
+        public UpdateAppServiceResponse UpdateAppServiceWithOptions(string ClusterId, string ServiceName, UpdateAppServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                body["AppType"] = request.AppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersion))
+            {
+                body["AppVersion"] = request.AppVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceSpec))
+            {
+                body["ServiceSpec"] = request.ServiceSpec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAppService",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/app_services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAppServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateAppServiceResponse> UpdateAppServiceWithOptionsAsync(string ClusterId, string ServiceName, UpdateAppServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                body["AppType"] = request.AppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersion))
+            {
+                body["AppVersion"] = request.AppVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceSpec))
+            {
+                body["ServiceSpec"] = request.ServiceSpec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAppService",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/app_services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAppServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateAppServiceResponse UpdateAppService(string ClusterId, string ServiceName, UpdateAppServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAppServiceWithOptions(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        public async Task<UpdateAppServiceResponse> UpdateAppServiceAsync(string ClusterId, string ServiceName, UpdateAppServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAppServiceWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
+        }
+
         public UpdateBenchmarkTaskResponse UpdateBenchmarkTaskWithOptions(string ClusterId, string TaskName, UpdateBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4029,21 +4711,111 @@ namespace AlibabaCloud.SDK.Eas20210701
             return await UpdateBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, request, headers, runtime);
         }
 
+        public UpdateGatewayResponse UpdateGatewayWithOptions(string GatewayId, string ClusterId, UpdateGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInternet))
+            {
+                body["EnableInternet"] = request.EnableInternet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIntranet))
+            {
+                body["EnableIntranet"] = request.EnableIntranet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGateway",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateGatewayResponse> UpdateGatewayWithOptionsAsync(string GatewayId, string ClusterId, UpdateGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInternet))
+            {
+                body["EnableInternet"] = request.EnableInternet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIntranet))
+            {
+                body["EnableIntranet"] = request.EnableIntranet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGateway",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateGatewayResponse UpdateGateway(string GatewayId, string ClusterId, UpdateGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateGatewayWithOptions(GatewayId, ClusterId, request, headers, runtime);
+        }
+
+        public async Task<UpdateGatewayResponse> UpdateGatewayAsync(string GatewayId, string ClusterId, UpdateGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateGatewayWithOptionsAsync(GatewayId, ClusterId, request, headers, runtime);
+        }
+
         public UpdateResourceResponse UpdateResourceWithOptions(string ClusterId, string ResourceId, UpdateResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeMatchLabels))
-            {
-                body["NodeMatchLabels"] = request.NodeMatchLabels;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTolerations))
-            {
-                body["NodeTolerations"] = request.NodeTolerations;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
                 body["ResourceName"] = request.ResourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelfManagedResourceOptions))
+            {
+                body["SelfManagedResourceOptions"] = request.SelfManagedResourceOptions;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4069,17 +4841,13 @@ namespace AlibabaCloud.SDK.Eas20210701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeMatchLabels))
-            {
-                body["NodeMatchLabels"] = request.NodeMatchLabels;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTolerations))
-            {
-                body["NodeTolerations"] = request.NodeTolerations;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
                 body["ResourceName"] = request.ResourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelfManagedResourceOptions))
+            {
+                body["SelfManagedResourceOptions"] = request.SelfManagedResourceOptions;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4509,6 +5277,76 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateServiceCronScalerWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        public UpdateServiceInstanceResponse UpdateServiceInstanceWithOptions(string ClusterId, string ServiceName, string InstanceName, UpdateServiceInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isolate))
+            {
+                body["Isolate"] = request.Isolate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceInstance",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateServiceInstanceResponse> UpdateServiceInstanceWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, UpdateServiceInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isolate))
+            {
+                body["Isolate"] = request.Isolate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceInstance",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateServiceInstanceResponse UpdateServiceInstance(string ClusterId, string ServiceName, string InstanceName, UpdateServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateServiceInstanceWithOptions(ClusterId, ServiceName, InstanceName, request, headers, runtime);
+        }
+
+        public async Task<UpdateServiceInstanceResponse> UpdateServiceInstanceAsync(string ClusterId, string ServiceName, string InstanceName, UpdateServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateServiceInstanceWithOptionsAsync(ClusterId, ServiceName, InstanceName, request, headers, runtime);
         }
 
         public UpdateServiceLabelResponse UpdateServiceLabelWithOptions(string ClusterId, string ServiceName, UpdateServiceLabelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

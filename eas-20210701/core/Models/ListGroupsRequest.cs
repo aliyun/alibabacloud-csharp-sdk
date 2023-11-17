@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
+
     }
 
 }
