@@ -85,6 +85,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string CveId { get; set; }
 
+            /// <summary>
+            /// The link of the CVE content.
+            /// </summary>
             [NameInMap("CveLink")]
             [Validation(Required=false)]
             public string CveLink { get; set; }
