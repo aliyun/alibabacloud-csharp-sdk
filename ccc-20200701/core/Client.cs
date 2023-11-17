@@ -934,6 +934,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AppendCasesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
+          *
+          * @param request AssignUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssignUsersResponse
+         */
+        // Deprecated
         public AssignUsersResponse AssignUsersWithOptions(AssignUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -977,6 +985,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AssignUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
+          *
+          * @param request AssignUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssignUsersResponse
+         */
+        // Deprecated
         public async Task<AssignUsersResponse> AssignUsersWithOptionsAsync(AssignUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1020,12 +1036,26 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AssignUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
+          *
+          * @param request AssignUsersRequest
+          * @return AssignUsersResponse
+         */
+        // Deprecated
         public AssignUsersResponse AssignUsers(AssignUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssignUsersWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
+          *
+          * @param request AssignUsersRequest
+          * @return AssignUsersResponse
+         */
+        // Deprecated
         public async Task<AssignUsersResponse> AssignUsersAsync(AssignUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3338,6 +3368,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await EndConferenceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
+          *
+          * @param request ExportCustomCallTaggingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportCustomCallTaggingResponse
+         */
+        // Deprecated
         public ExportCustomCallTaggingResponse ExportCustomCallTaggingWithOptions(ExportCustomCallTaggingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3365,6 +3403,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ExportCustomCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
+          *
+          * @param request ExportCustomCallTaggingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportCustomCallTaggingResponse
+         */
+        // Deprecated
         public async Task<ExportCustomCallTaggingResponse> ExportCustomCallTaggingWithOptionsAsync(ExportCustomCallTaggingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3392,12 +3438,26 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ExportCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
+          *
+          * @param request ExportCustomCallTaggingRequest
+          * @return ExportCustomCallTaggingResponse
+         */
+        // Deprecated
         public ExportCustomCallTaggingResponse ExportCustomCallTagging(ExportCustomCallTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExportCustomCallTaggingWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
+          *
+          * @param request ExportCustomCallTaggingRequest
+          * @return ExportCustomCallTaggingResponse
+         */
+        // Deprecated
         public async Task<ExportCustomCallTaggingResponse> ExportCustomCallTaggingAsync(ExportCustomCallTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5862,6 +5922,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ImportAdminsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
+          *
+          * @param request ImportCustomCallTaggingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportCustomCallTaggingResponse
+         */
+        // Deprecated
         public ImportCustomCallTaggingResponse ImportCustomCallTaggingWithOptions(ImportCustomCallTaggingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5893,6 +5961,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ImportCustomCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
+          *
+          * @param request ImportCustomCallTaggingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportCustomCallTaggingResponse
+         */
+        // Deprecated
         public async Task<ImportCustomCallTaggingResponse> ImportCustomCallTaggingWithOptionsAsync(ImportCustomCallTaggingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5924,12 +6000,26 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ImportCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
+          *
+          * @param request ImportCustomCallTaggingRequest
+          * @return ImportCustomCallTaggingResponse
+         */
+        // Deprecated
         public ImportCustomCallTaggingResponse ImportCustomCallTagging(ImportCustomCallTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ImportCustomCallTaggingWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
+          *
+          * @param request ImportCustomCallTaggingRequest
+          * @return ImportCustomCallTaggingResponse
+         */
+        // Deprecated
         public async Task<ImportCustomCallTaggingResponse> ImportCustomCallTaggingAsync(ImportCustomCallTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6834,6 +6924,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Usage))
+            {
+                query["Usage"] = request.Usage;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6868,6 +6966,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Usage))
+            {
+                query["Usage"] = request.Usage;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6908,6 +7014,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
+            {
+                query["MediaType"] = request.MediaType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -6946,6 +7056,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
+            {
+                query["MediaType"] = request.MediaType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -7788,6 +7902,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListContactFlowsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
+          *
+          * @param request ListCustomCallTaggingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCustomCallTaggingResponse
+         */
+        // Deprecated
         public ListCustomCallTaggingResponse ListCustomCallTaggingWithOptions(ListCustomCallTaggingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7831,6 +7953,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCustomCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
+          *
+          * @param request ListCustomCallTaggingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCustomCallTaggingResponse
+         */
+        // Deprecated
         public async Task<ListCustomCallTaggingResponse> ListCustomCallTaggingWithOptionsAsync(ListCustomCallTaggingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7874,12 +8004,26 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
+          *
+          * @param request ListCustomCallTaggingRequest
+          * @return ListCustomCallTaggingResponse
+         */
+        // Deprecated
         public ListCustomCallTaggingResponse ListCustomCallTagging(ListCustomCallTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCustomCallTaggingWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
+          *
+          * @param request ListCustomCallTaggingRequest
+          * @return ListCustomCallTaggingResponse
+         */
+        // Deprecated
         public async Task<ListCustomCallTaggingResponse> ListCustomCallTaggingAsync(ListCustomCallTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11408,6 +11552,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["OssFileKey"] = request.OssFileKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Usage))
+            {
+                query["Usage"] = request.Usage;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -11450,6 +11598,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssFileKey))
             {
                 query["OssFileKey"] = request.OssFileKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Usage))
+            {
+                query["Usage"] = request.Usage;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11912,6 +12064,10 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarUrl))
+            {
+                query["AvatarUrl"] = request.AvatarUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayId))
             {
                 query["DisplayId"] = request.DisplayId;
@@ -11931,6 +12087,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
             {
                 query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nickname))
+            {
+                query["Nickname"] = request.Nickname;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
             {
@@ -11967,6 +12127,10 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarUrl))
+            {
+                query["AvatarUrl"] = request.AvatarUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayId))
             {
                 query["DisplayId"] = request.DisplayId;
@@ -11986,6 +12150,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
             {
                 query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nickname))
+            {
+                query["Nickname"] = request.Nickname;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
             {
@@ -13688,6 +13856,10 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                query["FilePath"] = request.FilePath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 query["Force"] = request.Force;
@@ -13695,6 +13867,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationEmail))
+            {
+                query["NotificationEmail"] = request.NotificationEmail;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdList))
             {
@@ -13723,6 +13899,10 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                query["FilePath"] = request.FilePath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 query["Force"] = request.Force;
@@ -13730,6 +13910,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationEmail))
+            {
+                query["NotificationEmail"] = request.NotificationEmail;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdList))
             {
@@ -14808,6 +14992,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Additivity))
+            {
+                query["Additivity"] = request.Additivity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatDeviceId))
+            {
+                query["ChatDeviceId"] = request.ChatDeviceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
             {
                 query["DeviceId"] = request.DeviceId;
@@ -14847,6 +15039,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Additivity))
+            {
+                query["Additivity"] = request.Additivity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatDeviceId))
+            {
+                query["ChatDeviceId"] = request.ChatDeviceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
             {
                 query["DeviceId"] = request.DeviceId;

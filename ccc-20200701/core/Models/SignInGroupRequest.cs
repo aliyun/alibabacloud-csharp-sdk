@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class SignInGroupRequest : TeaModel {
+        [NameInMap("Additivity")]
+        [Validation(Required=false)]
+        public bool? Additivity { get; set; }
+
+        [NameInMap("ChatDeviceId")]
+        [Validation(Required=false)]
+        public string ChatDeviceId { get; set; }
+
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }

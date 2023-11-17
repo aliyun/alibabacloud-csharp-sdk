@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ModifyUserRequest : TeaModel {
+        [NameInMap("AvatarUrl")]
+        [Validation(Required=false)]
+        public string AvatarUrl { get; set; }
+
         [NameInMap("DisplayId")]
         [Validation(Required=false)]
         public string DisplayId { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Mobile")]
         [Validation(Required=false)]
         public string Mobile { get; set; }
+
+        [NameInMap("Nickname")]
+        [Validation(Required=false)]
+        public string Nickname { get; set; }
 
         [NameInMap("RoleId")]
         [Validation(Required=false)]

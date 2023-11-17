@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string OssFileKey { get; set; }
 
+        [NameInMap("Usage")]
+        [Validation(Required=false)]
+        public string Usage { get; set; }
+
     }
 
 }

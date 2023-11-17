@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("Usage")]
+        [Validation(Required=false)]
+        public string Usage { get; set; }
+
     }
 
 }

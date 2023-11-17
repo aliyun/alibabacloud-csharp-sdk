@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
+                public long? CreatedTime { get; set; }
+
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public string Creator { get; set; }
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public List<string> Params { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

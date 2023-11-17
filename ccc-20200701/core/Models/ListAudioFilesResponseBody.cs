@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string AudioResourceId { get; set; }
 
+                [NameInMap("AuditResult")]
+                [Validation(Required=false)]
+                public string AuditResult { get; set; }
+
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
@@ -45,9 +49,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string OssFileKey { get; set; }
 
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
                 [NameInMap("UpdatedTime")]
                 [Validation(Required=false)]
                 public string UpdatedTime { get; set; }
+
+                [NameInMap("Usage")]
+                [Validation(Required=false)]
+                public string Usage { get; set; }
 
             }
 

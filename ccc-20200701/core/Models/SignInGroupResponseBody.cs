@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string BreakCode { get; set; }
 
+            [NameInMap("ChatDeviceId")]
+            [Validation(Required=false)]
+            public string ChatDeviceId { get; set; }
+
             [NameInMap("DeviceId")]
             [Validation(Required=false)]
             public string DeviceId { get; set; }

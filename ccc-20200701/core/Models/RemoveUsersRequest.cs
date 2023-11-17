@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class RemoveUsersRequest : TeaModel {
+        [NameInMap("FilePath")]
+        [Validation(Required=false)]
+        public string FilePath { get; set; }
+
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("NotificationEmail")]
+        [Validation(Required=false)]
+        public string NotificationEmail { get; set; }
 
         [NameInMap("UserIdList")]
         [Validation(Required=false)]

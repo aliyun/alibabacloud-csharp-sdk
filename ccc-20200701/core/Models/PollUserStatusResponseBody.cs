@@ -105,6 +105,62 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
             }
 
+            [NameInMap("ChatContexts")]
+            [Validation(Required=false)]
+            public List<PollUserStatusResponseBodyDataChatContexts> ChatContexts { get; set; }
+            public class PollUserStatusResponseBodyDataChatContexts : TeaModel {
+                [NameInMap("CallVariables")]
+                [Validation(Required=false)]
+                public string CallVariables { get; set; }
+
+                [NameInMap("ChatType")]
+                [Validation(Required=false)]
+                public string ChatType { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
+                public string JobId { get; set; }
+
+                [NameInMap("Members")]
+                [Validation(Required=false)]
+                public List<PollUserStatusResponseBodyDataChatContextsMembers> Members { get; set; }
+                public class PollUserStatusResponseBodyDataChatContextsMembers : TeaModel {
+                    [NameInMap("Index")]
+                    [Validation(Required=false)]
+                    public int? Index { get; set; }
+
+                    [NameInMap("ReleaseInitiator")]
+                    [Validation(Required=false)]
+                    public string ReleaseInitiator { get; set; }
+
+                    [NameInMap("ReleaseReason")]
+                    [Validation(Required=false)]
+                    public string ReleaseReason { get; set; }
+
+                    [NameInMap("SkillGroupId")]
+                    [Validation(Required=false)]
+                    public string SkillGroupId { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("UserId")]
+                    [Validation(Required=false)]
+                    public string UserId { get; set; }
+
+                    [NameInMap("UserType")]
+                    [Validation(Required=false)]
+                    public string UserType { get; set; }
+
+                }
+
+            }
+
             [NameInMap("ContextId")]
             [Validation(Required=false)]
             public long? ContextId { get; set; }
@@ -144,6 +200,24 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [NameInMap("OutboundScenario")]
                 [Validation(Required=false)]
                 public bool? OutboundScenario { get; set; }
+
+                [NameInMap("ParallelJobList")]
+                [Validation(Required=false)]
+                public List<PollUserStatusResponseBodyDataUserContextParallelJobList> ParallelJobList { get; set; }
+                public class PollUserStatusResponseBodyDataUserContextParallelJobList : TeaModel {
+                    [NameInMap("JobId")]
+                    [Validation(Required=false)]
+                    public string JobId { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("Timestamp")]
+                    [Validation(Required=false)]
+                    public long? Timestamp { get; set; }
+
+                }
 
                 [NameInMap("Reserved")]
                 [Validation(Required=false)]
