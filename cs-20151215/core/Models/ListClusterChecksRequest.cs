@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class FixNodePoolVulsResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the CVE patching task.
-        /// </summary>
-        [NameInMap("task_id")]
+    public class ListClusterChecksRequest : TeaModel {
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string Type { get; set; }
 
     }
 

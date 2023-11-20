@@ -84,25 +84,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             [NameInMap("dependencies")]
             [Validation(Required=false)]
-            public DescribeClusterResourcesResponseBodyDependencies Dependencies { get; set; }
+            public List<DescribeClusterResourcesResponseBodyDependencies> Dependencies { get; set; }
             public class DescribeClusterResourcesResponseBodyDependencies : TeaModel {
-                /// <summary>
-                /// 依赖资源的集群ID。
-                /// </summary>
                 [NameInMap("cluster_id")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
 
-                /// <summary>
-                /// 依赖资源类型。
-                /// </summary>
                 [NameInMap("resource_type")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
-                /// <summary>
-                /// 依赖资源实例ID。
-                /// </summary>
                 [NameInMap("instance_id")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }

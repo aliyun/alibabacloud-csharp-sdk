@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RepairClusterNodePoolRequest : TeaModel {
+        [NameInMap("auto_restart")]
+        [Validation(Required=false)]
+        public bool? AutoRestart { get; set; }
+
         /// <summary>
         /// The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.
         /// </summary>

@@ -235,42 +235,69 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public bool? AutoRepair { get; set; }
 
+                /// <summary>
+                /// 自动修复节点策略。
+                /// </summary>
                 [NameInMap("auto_repair_policy")]
                 [Validation(Required=false)]
                 public DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
                 public class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoRepairPolicy : TeaModel {
+                    /// <summary>
+                    /// 是否允许重启节点。
+                    /// </summary>
                     [NameInMap("restart_node")]
                     [Validation(Required=false)]
                     public bool? RestartNode { get; set; }
 
                 }
 
+                /// <summary>
+                /// 是否自动升级。
+                /// </summary>
                 [NameInMap("auto_upgrade")]
                 [Validation(Required=false)]
                 public bool? AutoUpgrade { get; set; }
 
+                /// <summary>
+                /// 自动升级策略。
+                /// </summary>
                 [NameInMap("auto_upgrade_policy")]
                 [Validation(Required=false)]
                 public DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoUpgradePolicy AutoUpgradePolicy { get; set; }
                 public class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoUpgradePolicy : TeaModel {
+                    /// <summary>
+                    /// 是否允许自动升级kubelet。
+                    /// </summary>
                     [NameInMap("auto_upgrade_kubelet")]
                     [Validation(Required=false)]
                     public bool? AutoUpgradeKubelet { get; set; }
 
                 }
 
+                /// <summary>
+                /// 是否自动修复CVE。
+                /// </summary>
                 [NameInMap("auto_vul_fix")]
                 [Validation(Required=false)]
                 public bool? AutoVulFix { get; set; }
 
+                /// <summary>
+                /// 自动修复CVE策略。
+                /// </summary>
                 [NameInMap("auto_vul_fix_policy")]
                 [Validation(Required=false)]
                 public DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
                 public class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoVulFixPolicy : TeaModel {
+                    /// <summary>
+                    /// 是否允许重启节点。
+                    /// </summary>
                     [NameInMap("restart_node")]
                     [Validation(Required=false)]
                     public bool? RestartNode { get; set; }
 
+                    /// <summary>
+                    /// 允许自动修复的漏洞级别，以逗号分隔。
+                    /// </summary>
                     [NameInMap("vul_level")]
                     [Validation(Required=false)]
                     public string VulLevel { get; set; }

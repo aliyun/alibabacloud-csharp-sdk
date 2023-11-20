@@ -18,17 +18,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ComponentName { get; set; }
 
         /// <summary>
-        /// Specifies whether to upgrade only master nodes. Valid values:
+        /// Specifies whether to update only master nodes. Valid values:
         /// 
-        /// *   true: upgrade only master nodes.
-        /// *   false: upgrade master and worker nodes.
+        /// *   true: update only master nodes.
+        /// *   false: update master and worker nodes.
         /// </summary>
         [NameInMap("master_only")]
         [Validation(Required=false)]
         public bool? MasterOnly { get; set; }
 
         /// <summary>
-        /// The Kubernetes version to which the cluster can be upgraded.
+        /// The Kubernetes version to which the cluster can be updated.
         /// </summary>
         [NameInMap("next_version")]
         [Validation(Required=false)]
