@@ -4027,5 +4027,203 @@ namespace AlibabaCloud.SDK.Dm20170622
             return await SingleSendMailWithOptionsAsync(request, runtime);
         }
 
+        public SingleSendMailV2Response SingleSendMailV2WithOptions(SingleSendMailV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SingleSendMailV2ShrinkRequest request = new SingleSendMailV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HtmlBodyPlaceHolders))
+            {
+                request.HtmlBodyPlaceHoldersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HtmlBodyPlaceHolders, "HtmlBodyPlaceHolders", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClickTrace))
+            {
+                query["ClickTrace"] = request.ClickTrace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromAlias))
+            {
+                query["FromAlias"] = request.FromAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HtmlBody))
+            {
+                query["HtmlBody"] = request.HtmlBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HtmlBodyPlaceHoldersShrink))
+            {
+                query["HtmlBodyPlaceHolders"] = request.HtmlBodyPlaceHoldersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplyAddress))
+            {
+                query["ReplyAddress"] = request.ReplyAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplyAddressAlias))
+            {
+                query["ReplyAddressAlias"] = request.ReplyAddressAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplyToAddress))
+            {
+                query["ReplyToAddress"] = request.ReplyToAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
+            {
+                query["Subject"] = request.Subject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagName))
+            {
+                query["TagName"] = request.TagName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextBody))
+            {
+                query["TextBody"] = request.TextBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToAddress))
+            {
+                query["ToAddress"] = request.ToAddress;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SingleSendMailV2",
+                Version = "2017-06-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SingleSendMailV2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SingleSendMailV2Response> SingleSendMailV2WithOptionsAsync(SingleSendMailV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SingleSendMailV2ShrinkRequest request = new SingleSendMailV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HtmlBodyPlaceHolders))
+            {
+                request.HtmlBodyPlaceHoldersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HtmlBodyPlaceHolders, "HtmlBodyPlaceHolders", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClickTrace))
+            {
+                query["ClickTrace"] = request.ClickTrace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromAlias))
+            {
+                query["FromAlias"] = request.FromAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HtmlBody))
+            {
+                query["HtmlBody"] = request.HtmlBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HtmlBodyPlaceHoldersShrink))
+            {
+                query["HtmlBodyPlaceHolders"] = request.HtmlBodyPlaceHoldersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplyAddress))
+            {
+                query["ReplyAddress"] = request.ReplyAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplyAddressAlias))
+            {
+                query["ReplyAddressAlias"] = request.ReplyAddressAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplyToAddress))
+            {
+                query["ReplyToAddress"] = request.ReplyToAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
+            {
+                query["Subject"] = request.Subject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagName))
+            {
+                query["TagName"] = request.TagName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextBody))
+            {
+                query["TextBody"] = request.TextBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToAddress))
+            {
+                query["ToAddress"] = request.ToAddress;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SingleSendMailV2",
+                Version = "2017-06-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SingleSendMailV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SingleSendMailV2Response SingleSendMailV2(SingleSendMailV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SingleSendMailV2WithOptions(request, runtime);
+        }
+
+        public async Task<SingleSendMailV2Response> SingleSendMailV2Async(SingleSendMailV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SingleSendMailV2WithOptionsAsync(request, runtime);
+        }
+
     }
 }
