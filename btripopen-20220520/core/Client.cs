@@ -14175,6 +14175,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["entities"] = request.EntitiesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                body["scope"] = request.Scope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartId))
             {
                 body["third_part_id"] = request.ThirdPartId;
@@ -14225,6 +14229,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntitiesShrink))
             {
                 body["entities"] = request.EntitiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                body["scope"] = request.Scope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartId))
             {

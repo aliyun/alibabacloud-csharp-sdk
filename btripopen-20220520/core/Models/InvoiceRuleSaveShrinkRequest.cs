@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string EntitiesShrink { get; set; }
 
+        [NameInMap("scope")]
+        [Validation(Required=false)]
+        public int? Scope { get; set; }
+
         [NameInMap("third_part_id")]
         [Validation(Required=false)]
         public string ThirdPartId { get; set; }
