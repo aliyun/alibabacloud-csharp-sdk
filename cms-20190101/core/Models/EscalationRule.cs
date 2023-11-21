@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public List<EscalationRuleEscalations> Escalations { get; set; }
         public class EscalationRuleEscalations : TeaModel {
+            [NameInMap("BackupContactGroups")]
+            [Validation(Required=false)]
+            public List<string> BackupContactGroups { get; set; }
+
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
             public List<string> ContactGroups { get; set; }

@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        [NameInMap("NamespaceRegion")]
+        [Validation(Required=false)]
+        public string NamespaceRegion { get; set; }
+
+        [NameInMap("NamespaceType")]
+        [Validation(Required=false)]
+        public string NamespaceType { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertingMetricRuleResourcesRequest : TeaModel {
+        /// <summary>
+        /// Queries the alerts that were triggered before the specified time. Timestamps in milliseconds are supported.
+        /// </summary>
         [NameInMap("AlertBeforeTime")]
         [Validation(Required=false)]
         public string AlertBeforeTime { get; set; }

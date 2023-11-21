@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorListResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The status code.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -26,21 +26,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -64,6 +64,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string Address { get; set; }
 
+                /// <summary>
+                /// The detection point type. Valid values:
+                /// 
+                /// *   PC
+                /// *   MOBILE
+                /// </summary>
                 [NameInMap("AgentGroup")]
                 [Validation(Required=false)]
                 public string AgentGroup { get; set; }
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                             public string Target { get; set; }
 
                             /// <summary>
-                            /// The type of the assertion. Valid values:
+                            /// The assertion type. Valid values:
                             /// 
                             /// *   response_time: checks whether the response time meets expectations.
                             /// *   status_code: checks whether the HTTP status code meets expectations.
@@ -180,7 +186,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// Indicates whether the certificate is verified. Valid values:
                     /// 
-                    /// *   false (default value): The certificate is not verified.
+                    /// *   false (default): The certificate is not verified.
                     /// *   true: The certificate is verified.
                     /// </summary>
                     [NameInMap("cert_verify")]
@@ -197,7 +203,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// Indicates whether MTR is automatically used to diagnose network issues if a task fails. Valid values:
                     /// 
-                    /// *   false (default value): MTR is not automatically used to diagnose network issues if a task fails.
+                    /// *   false (default): MTR is not automatically used to diagnose network issues if a task fails.
                     /// *   true: MTR is automatically used to diagnose network issues if a task fails.
                     /// </summary>
                     [NameInMap("diagnosis_mtr")]
@@ -207,7 +213,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// Indicates whether ping requests are automatically sent to detect network latency if a detection task fails. Valid values:
                     /// 
-                    /// *   false (default value): Ping requests are not automatically sent to detect network latency if a detection task fails.
+                    /// *   false (default): Ping requests are not automatically sent to detect network latency if a detection task fails.
                     /// *   true: Ping requests are automatically sent to detect network latency if a detection task fails.
                     /// </summary>
                     [NameInMap("diagnosis_ping")]
@@ -236,7 +242,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:
                     /// 
-                    /// *   A (default value): a record that specifies an IP address related to the specified host name or domain name.
+                    /// *   A (default): a record that specifies an IP address related to the specified host name or domain name.
                     /// *   CNAME: a record that maps multiple domain names to a domain name.
                     /// *   NS: a record that specifies a DNS server used to parse domain names.
                     /// *   MX: a record that links domain names to the address of a mail server.
@@ -250,7 +256,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// Indicates whether the DNS server of the carrier is used.
                     /// 
-                    /// *   true (default value): The DNS server of the carrier is used.
+                    /// *   true (default): The DNS server of the carrier is used.
                     /// *   false: The DNS server of the carrier is not used. The default DNS server or the specified DNS server is used.
                     /// </summary>
                     [NameInMap("enable_operator_dns")]
@@ -288,7 +294,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// Indicates whether the password is decoded by using the Base64 algorithm. Valid values:
                     /// 
                     /// *   true: The password is decoded by using the Base64 algorithm.
-                    /// *   false (default value): The password is not decoded by using the Base64 algorithm.
+                    /// *   false (default): The password is not decoded by using the Base64 algorithm.
                     /// </summary>
                     [NameInMap("isBase64Encode")]
                     [Validation(Required=false)]
@@ -328,7 +334,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// The protocol type of DNS detection. Valid values:
                     /// 
-                    /// *   udp (default value)
+                    /// *   udp (default)
                     /// *   tcp
                     /// *   tcp-tls
                     /// </summary>
@@ -339,7 +345,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// Indicates whether the PROXY protocol is enabled. Valid values:
                     /// 
-                    /// *   false (default value): The PROXY protocol is disabled.
+                    /// *   false (default): The PROXY protocol is disabled.
                     /// *   true: The PROXY protocol is enabled.
                     /// </summary>
                     [NameInMap("proxy_protocol")]
@@ -401,7 +407,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// Indicates whether redirects are followed if the status code 301 or 302 is returned. Valid values:
                     /// 
                     /// *   true: Redirects are not followed.
-                    /// *   false (default value): Redirects are followed.
+                    /// *   false (default): Redirects are followed.
                     /// </summary>
                     [NameInMap("unfollow_redirect")]
                     [Validation(Required=false)]
@@ -431,7 +437,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string TaskName { get; set; }
 
                 /// <summary>
-                /// The status of the task. Valid values:
+                /// The task status. Valid values:
                 /// 
                 /// *   1: The task is enabled.
                 /// *   2: The task is disabled.
@@ -459,17 +465,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

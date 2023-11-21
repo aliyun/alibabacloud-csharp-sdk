@@ -31,12 +31,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig> AlertInitConfig { get; set; }
                     public class DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig : TeaModel {
+                        [NameInMap("ComparisonOperator")]
+                        [Validation(Required=false)]
+                        public string ComparisonOperator { get; set; }
+
                         /// <summary>
                         /// The consecutive number of times for which the metric value is measured before an alert is triggered.
                         /// </summary>
                         [NameInMap("EvaluationCount")]
                         [Validation(Required=false)]
                         public string EvaluationCount { get; set; }
+
+                        [NameInMap("Level")]
+                        [Validation(Required=false)]
+                        public string Level { get; set; }
 
                         /// <summary>
                         /// The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).

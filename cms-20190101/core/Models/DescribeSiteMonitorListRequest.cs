@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// The page number. Default value: 1.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10.
+        /// The number of entries per page. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The status of the task. Valid values:
+        /// The task status. Valid values:
         /// 
         /// *   1: The task is enabled.
         /// *   2: The task is disabled.

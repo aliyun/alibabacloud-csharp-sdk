@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The alert level. Valid values:
             /// 
-            /// *   critical (default)
-            /// *   warn
-            /// *   info
+            /// *   critical (default): critical
+            /// *   warn: warning
+            /// *   info: information
             /// 
             /// Valid values of N: 1 to 3.
             /// </summary>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string NoEffectiveInterval { get; set; }
 
             /// <summary>
-            /// The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to 1 hour. Default value: 86400, which is equivalent to one day.
+            /// The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
             /// 
             /// Valid values of N: 1 to 3.
             /// 

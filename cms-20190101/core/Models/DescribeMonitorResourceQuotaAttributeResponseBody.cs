@@ -256,18 +256,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             }
 
+            /// <summary>
+            /// The quota of browser detection tasks.
+            /// </summary>
             [NameInMap("SiteMonitorBrowser")]
             [Validation(Required=false)]
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorBrowser SiteMonitorBrowser { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorBrowser : TeaModel {
+                /// <summary>
+                /// The total quota of browser detection tasks.
+                /// </summary>
                 [NameInMap("QuotaLimit")]
                 [Validation(Required=false)]
                 public int? QuotaLimit { get; set; }
 
+                /// <summary>
+                /// The quota of browser detection tasks in your resource plan.
+                /// </summary>
                 [NameInMap("QuotaPackage")]
                 [Validation(Required=false)]
                 public int? QuotaPackage { get; set; }
 
+                /// <summary>
+                /// The used quota of browser detection tasks in your resource plan.
+                /// </summary>
                 [NameInMap("QuotaUsed")]
                 [Validation(Required=false)]
                 public int? QuotaUsed { get; set; }
@@ -308,18 +320,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             }
 
+            /// <summary>
+            /// The quota of mobile detection tasks.
+            /// </summary>
             [NameInMap("SiteMonitorMobile")]
             [Validation(Required=false)]
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorMobile SiteMonitorMobile { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorMobile : TeaModel {
+                /// <summary>
+                /// The total quota of mobile detection tasks.
+                /// </summary>
                 [NameInMap("QuotaLimit")]
                 [Validation(Required=false)]
                 public int? QuotaLimit { get; set; }
 
+                /// <summary>
+                /// The quota of mobile detection tasks in your resource plan.
+                /// </summary>
                 [NameInMap("QuotaPackage")]
                 [Validation(Required=false)]
                 public int? QuotaPackage { get; set; }
 
+                /// <summary>
+                /// The used quota of mobile detection tasks in your resource plan.
+                /// </summary>
                 [NameInMap("QuotaUsed")]
                 [Validation(Required=false)]
                 public int? QuotaUsed { get; set; }

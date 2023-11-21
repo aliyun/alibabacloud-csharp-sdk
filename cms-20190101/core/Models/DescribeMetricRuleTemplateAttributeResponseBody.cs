@@ -12,21 +12,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The HTTP status code.
         /// 
-        /// >  The status code 200 indicates that the call is successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public DescribeMetricRuleTemplateAttributeResponseBodyResource Resource { get; set; }
         public class DescribeMetricRuleTemplateAttributeResponseBodyResource : TeaModel {
             /// <summary>
-            /// The list of alert templates.
+            /// The queried alert templates.
             /// </summary>
             [NameInMap("AlertTemplates")]
             [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public List<DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate> AlertTemplate { get; set; }
                 public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate : TeaModel {
                     /// <summary>
-                    /// The abbreviation of the cloud service name.
+                    /// The abbreviation of the Alibaba Cloud service name.
                     /// </summary>
                     [NameInMap("Category")]
                     [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical Critical { get; set; }
                         public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical : TeaModel {
                             /// <summary>
-                            /// The comparison operator that is used to compare the metric value with the threshold. Valid values:
+                            /// The comparison operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:
                             /// 
                             /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
                             /// *   GreaterThanThreshold: greater than the threshold
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo Info { get; set; }
                         public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo : TeaModel {
                             /// <summary>
-                            /// The comparison operator that is used to compare the metric value with the threshold. Valid values:
+                            /// The comparison operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:
                             /// 
                             /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
                             /// *   GreaterThanThreshold: greater than the threshold
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn Warn { get; set; }
                         public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn : TeaModel {
                             /// <summary>
-                            /// The comparison operator that is used to compare the metric value with the threshold. Valid values:
+                            /// The comparison operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:
                             /// 
                             /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
                             /// *   GreaterThanThreshold: greater than the threshold
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                     /// <summary>
-                    /// 报警模板标签。
+                    /// The tags of the alert template.
                     /// </summary>
                     [NameInMap("Labels")]
                     [Validation(Required=false)]
@@ -231,14 +231,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public List<DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateLabelsLabels> Labels { get; set; }
                         public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateLabelsLabels : TeaModel {
                             /// <summary>
-                            /// 报警模板的标签键。
+                            /// The tag key of the alert template.
                             /// </summary>
                             [NameInMap("Key")]
                             [Validation(Required=false)]
                             public string Key { get; set; }
 
                             /// <summary>
-                            /// 报警模板的标签值。
+                            /// The tag value of the alert template.
                             /// </summary>
                             [NameInMap("Value")]
                             [Validation(Required=false)]
@@ -248,23 +248,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                     }
 
+                    /// <summary>
+                    /// The metric name.
+                    /// </summary>
                     [NameInMap("MetricName")]
                     [Validation(Required=false)]
                     public string MetricName { get; set; }
 
                     /// <summary>
-                    /// The namespace of the cloud service.
+                    /// The namespace of the Alibaba Cloud service.
                     /// </summary>
                     [NameInMap("Namespace")]
                     [Validation(Required=false)]
                     public string Namespace { get; set; }
 
                     /// <summary>
-                    /// The processing method of alerts when no monitoring data is found. Valid values:
+                    /// The method that is used to handle alerts when no monitoring data is found. Valid values:
                     /// 
-                    /// *   KEEP_LAST_STATE (default value): No operation is performed.
+                    /// *   KEEP_LAST_STATE (default): No operation is performed.
                     /// *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
-                    /// *   OK: The alert rule has no active alerts.
+                    /// *   OK: The status is considered normal.
                     /// </summary>
                     [NameInMap("NoDataPolicy")]
                     [Validation(Required=false)]
@@ -295,6 +298,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             }
 
+            /// <summary>
+            /// The description of the alert template.
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -323,10 +329,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call is successful.
-        /// *   false: The call fails.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

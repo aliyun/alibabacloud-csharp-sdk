@@ -1553,6 +1553,14 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["Namespace"] = request.Namespace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceRegion))
+            {
+                query["NamespaceRegion"] = request.NamespaceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceType))
+            {
+                query["NamespaceType"] = request.NamespaceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
             {
                 query["Spec"] = request.Spec;
@@ -1595,6 +1603,14 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceRegion))
+            {
+                query["NamespaceRegion"] = request.NamespaceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceType))
+            {
+                query["NamespaceType"] = request.NamespaceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
             {
@@ -9494,7 +9510,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * This topic provides an example to show how to query the details of an alert template whose ID is `70****`.
+          * This topic provides an example on how to query the details of an alert template whose ID is `70****`.
           *
           * @param request DescribeMetricRuleTemplateAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9532,7 +9548,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * This topic provides an example to show how to query the details of an alert template whose ID is `70****`.
+          * This topic provides an example on how to query the details of an alert template whose ID is `70****`.
           *
           * @param request DescribeMetricRuleTemplateAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9570,7 +9586,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * This topic provides an example to show how to query the details of an alert template whose ID is `70****`.
+          * This topic provides an example on how to query the details of an alert template whose ID is `70****`.
           *
           * @param request DescribeMetricRuleTemplateAttributeRequest
           * @return DescribeMetricRuleTemplateAttributeResponse
@@ -9582,7 +9598,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * This topic provides an example to show how to query the details of an alert template whose ID is `70****`.
+          * This topic provides an example on how to query the details of an alert template whose ID is `70****`.
           *
           * @param request DescribeMetricRuleTemplateAttributeRequest
           * @return DescribeMetricRuleTemplateAttributeResponse

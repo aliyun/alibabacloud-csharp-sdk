@@ -16,6 +16,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the event-triggered alert rule. Valid values:
+        /// 
+        /// true (default)
+        /// 
+        /// false
+        /// </summary>
         [NameInMap("IsEnable")]
         [Validation(Required=false)]
         public bool? IsEnable { get; set; }
@@ -28,7 +35,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string NamePrefix { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Pages start from page 1. Default value: 1.
         /// </summary>
@@ -37,9 +44,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// A minimum of one entry can be returned on each page. Default value: 10.
+        /// Pages start from page 1. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

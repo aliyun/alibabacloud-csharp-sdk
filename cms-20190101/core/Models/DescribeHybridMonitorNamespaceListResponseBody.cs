@@ -107,6 +107,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail Detail { get; set; }
             public class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail : TeaModel {
+                [NameInMap("NamespaceRegion")]
+                [Validation(Required=false)]
+                public string NamespaceRegion { get; set; }
+
+                [NameInMap("SLSProject")]
+                [Validation(Required=false)]
+                public string SLSProject { get; set; }
+
                 /// <summary>
                 /// The data retention period. Valid values:
                 /// 
@@ -153,6 +161,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
+
+            [NameInMap("NamespaceType")]
+            [Validation(Required=false)]
+            public string NamespaceType { get; set; }
 
             /// <summary>
             /// The number of metric import tasks for third-party services.

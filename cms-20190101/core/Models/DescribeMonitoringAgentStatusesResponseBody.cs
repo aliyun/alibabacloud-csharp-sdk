@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The HTTP status code.
         /// 
-        /// >  The status code 200 indicates that the request was successful.
+        /// > The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The host status information.
+        /// The status information.
         /// </summary>
         [NameInMap("NodeStatusList")]
         [Validation(Required=false)]
@@ -54,10 +54,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the SysAK monitoring feature is enabled.`` Valid values:
+                /// SysOM插件的配置信息`sysak`是否开启监控。取值：
                 /// 
-                /// *   `true`: The SysAK monitoring feature is enabled.
-                /// *   `false`: the SysAK monitoring feature is disabled.
+                /// - true：`sysak`开启监控。
+                /// 
+                /// - false：`sysak`未开启监控。
                 /// </summary>
                 [NameInMap("OsMonitorConfig")]
                 [Validation(Required=false)]
@@ -103,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string OsMonitorStatus { get; set; }
 
                 /// <summary>
-                /// The SysOM version.
+                /// SysOM监控的插件版本。
                 /// </summary>
                 [NameInMap("OsMonitorVersion")]
                 [Validation(Required=false)]

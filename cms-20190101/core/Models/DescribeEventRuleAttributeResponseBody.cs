@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The event pattern. This parameter specifies the trigger conditions of an event.
+            /// The event pattern. This parameter describes the trigger conditions of an event.
             /// </summary>
             [NameInMap("EventPattern")]
             [Validation(Required=false)]
@@ -66,10 +66,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// 过滤关键词。
+                /// </summary>
                 [NameInMap("KeywordFilterObj")]
                 [Validation(Required=false)]
                 public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj KeywordFilterObj { get; set; }
                 public class DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj : TeaModel {
+                    /// <summary>
+                    /// 事件匹配的关键字列表。
+                    /// </summary>
                     [NameInMap("Keywords")]
                     [Validation(Required=false)]
                     public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords Keywords { get; set; }
@@ -80,6 +86,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                     }
 
+                    /// <summary>
+                    /// 多个关键字的条件。取值：
+                    /// 
+                    /// - OR： 多个关键字之间或的关系。
+                    /// - NOT：不包含关键字。表示匹配非关键字列表中的所有事件。
+                    /// </summary>
                     [NameInMap("Relation")]
                     [Validation(Required=false)]
                     public string Relation { get; set; }
@@ -113,6 +125,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string Product { get; set; }
 
+                /// <summary>
+                /// 按照SQL过滤日志。如果符合条件，则触发报警。
+                /// </summary>
                 [NameInMap("SQLFilter")]
                 [Validation(Required=false)]
                 public string SQLFilter { get; set; }
@@ -130,7 +145,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The type of the event. Valid values: Valid values:
+            /// The event type. Valid values:
             /// 
             /// *   SYSTEM: system event
             /// *   CUSTOM: custom event

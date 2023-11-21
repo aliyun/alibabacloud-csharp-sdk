@@ -16,14 +16,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the event-triggered alert rule.
         /// 
-        /// For more information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).
+        /// For information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The mute period during which new alerts are not sent even if the trigger conditions are met.
+        /// The mute period during which new alert notifications are not sent even if the trigger conditions are met.
         /// 
         /// Unit: seconds. Default value: 86400, which indicates one day.
         /// 

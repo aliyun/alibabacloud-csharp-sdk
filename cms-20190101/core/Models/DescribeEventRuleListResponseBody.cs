@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The HTTP status code.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The event-triggered alert rules.
+        /// The event-triggered alert rule.
         /// </summary>
         [NameInMap("EventRules")]
         [Validation(Required=false)]
@@ -48,16 +48,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern> EventPattern { get; set; }
                     public class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern : TeaModel {
                         /// <summary>
-                        /// The custom filter condition. If an event contains a specified keyword, the event triggers an alert.
+                        /// The custom filter conditions.
                         /// </summary>
                         [NameInMap("CustomFilters")]
                         [Validation(Required=false)]
                         public string CustomFilters { get; set; }
 
                         /// <summary>
-                        /// The type of the event-triggered alert rule.
-                        /// 
-                        /// `*` indicates all types of alert rules.
+                        /// The types of the event-triggered alert rules.
                         /// </summary>
                         [NameInMap("EventTypeList")]
                         [Validation(Required=false)]
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         }
 
                         /// <summary>
-                        /// The filter keyword.
+                        /// The keyword for filtering.
                         /// </summary>
                         [NameInMap("KeywordFilter")]
                         [Validation(Required=false)]
@@ -102,11 +100,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         }
 
                         /// <summary>
-                        /// The level of the event. Valid values:
-                        /// 
-                        /// *   CRITICAL: critical
-                        /// *   WARN: warning
-                        /// *   INFO: information
+                        /// The levels of the event-triggered alerts.
                         /// </summary>
                         [NameInMap("LevelList")]
                         [Validation(Required=false)]
@@ -119,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         }
 
                         /// <summary>
-                        /// The list of event names.
+                        /// The event names.
                         /// </summary>
                         [NameInMap("NameList")]
                         [Validation(Required=false)]
@@ -132,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         }
 
                         /// <summary>
-                        /// The abbreviation of the service name.
+                        /// The abbreviation of the Alibaba Cloud service name.
                         /// </summary>
                         [NameInMap("Product")]
                         [Validation(Required=false)]
@@ -150,10 +144,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The type of the event. Valid values:
+                /// The type of the event-triggered alert rule. Valid values:
                 /// 
-                /// - SYSTEM: system event
-                /// - CUSTOM: custom event
+                /// *   SYSTEM: system event-triggered alert rule
+                /// *   CUSTOM: custom event-triggered alert rule
                 /// </summary>
                 [NameInMap("EventType")]
                 [Validation(Required=false)]
@@ -174,7 +168,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The mute period during which new alerts are not sent even if the trigger conditions are met.
+                /// The mute period during which new alert notifications are not sent even if the trigger conditions are met.
                 /// </summary>
                 [NameInMap("SilenceTime")]
                 [Validation(Required=false)]
@@ -183,8 +177,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The status of the event-triggered alert rule. Valid values:
                 /// 
-                /// *   ENABLED: enabled
-                /// *   DISABLED: disabled
+                /// *   ENABLED
+                /// *   DISABLED
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
@@ -195,31 +189,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
