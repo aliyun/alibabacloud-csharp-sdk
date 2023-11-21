@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The promotion ID. You can call the [GetResourcePrice](~~428503~~) operation to query the promotion ID.
+        /// The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public long? PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

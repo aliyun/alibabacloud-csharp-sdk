@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The network type of the instance. Valid values:
         /// 
-        /// *   **VPC**
-        /// *   **Classic**
+        /// *   **0**: virtual private cloud (VPC)
+        /// *   **1**: classic network
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]

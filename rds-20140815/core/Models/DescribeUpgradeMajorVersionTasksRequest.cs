@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeUpgradeMajorVersionTasksRequest : TeaModel {
         /// <summary>
-        /// The ID of the original instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
-        /// Valid values: any non-zero positive integer.
+        /// Pages start from 1.
         /// 
         /// Default value: **1**.
         /// </summary>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
         /// Valid values: **30** to **100**.
         /// 
@@ -61,13 +61,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **11.0**
         /// *   **12.0**
         /// *   **13.0**
+        /// *   **14.0**
+        /// *   **15.0**
         /// </summary>
         [NameInMap("TargetMajorVersion")]
         [Validation(Required=false)]
         public string TargetMajorVersion { get; set; }
 
         /// <summary>
-        /// This parameter is reserved. You do not need to specify this parameter.
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

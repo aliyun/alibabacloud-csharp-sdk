@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the information returned.
+        /// The data returned.
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GadInstanceName { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("TaskID")]
             [Validation(Required=false)]

@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeUpgradeMajorVersionTasksResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the tasks that are returned.
+        /// The tasks for major engine version upgrades.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeUpgradeMajorVersionTasksResponseBodyItems> Items { get; set; }
         public class DescribeUpgradeMajorVersionTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// The time at which ApsaraDB RDS collects the statistics of the new RDS instance.
+            /// The time when the system collects the statistics.
             /// 
             /// Valid values:
             /// 
-            /// *   **After**: ApsaraDB RDS collects the statistics of the new instance after a switchover.
-            /// *   **Before**: ApsaraDB RDS collects the statistics of the new instance before a switchover.
+            /// *   **After**: The system collects the statistics after a switchover.
+            /// *   **Before**: The system collects the statistics before a switchover.
             /// </summary>
             [NameInMap("CollectStatMode")]
             [Validation(Required=false)]
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// The time at which the task ended.
+            /// The end time of the task.
             /// 
-            /// The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+            /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceMajorVersion { get; set; }
 
             /// <summary>
-            /// The time at which the task started.
+            /// The start time of the task.
             /// 
-            /// The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+            /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The time at which your workloads are switched over from the original instance to the new instance.
             /// 
-            /// The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+            /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
             /// </summary>
             [NameInMap("SwitchTime")]
             [Validation(Required=false)]
@@ -101,25 +101,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   **11.0**
             /// *   **12.0**
             /// *   **13.0**
+            /// *   **14.0**
+            /// *   **15.0**
             /// </summary>
             [NameInMap("TargetMajorVersion")]
             [Validation(Required=false)]
             public string TargetMajorVersion { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public int? TaskId { get; set; }
 
             /// <summary>
-            /// Indicates whether ApsaraDB RDS migrates data to the new instance and switches your workloads over to the new instance.
+            /// The upgrade mode.
             /// 
             /// Valid values:
             /// 
-            /// *   **clone**: ApsaraDB RDS does not migrate data to the new instance and does not switch your workloads over to the new instance.
-            /// *   **switch**: ApsaraDB RDS migrates data to the new instance and switches your workloads over to the new instance.
+            /// *   **clone**: The system does not migrate data to the new instance and does not switch your workloads over to the new instance.
+            /// *   **switch**: The system migrates data to the new instance and switches your workloads over to the new instance.
             /// </summary>
             [NameInMap("UpgradeMode")]
             [Validation(Required=false)]
@@ -128,28 +130,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

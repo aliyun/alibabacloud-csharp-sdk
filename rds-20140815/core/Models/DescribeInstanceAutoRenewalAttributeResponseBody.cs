@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceAutoRenewalAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The renewal information of the instance.
+        /// The renewal information about the instance.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,35 +21,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem> Item { get; set; }
             public class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem : TeaModel {
                 /// <summary>
-                /// Indicates whether auto-renewal is enabled.
+                /// Indicates whether to enable auto-renewal for the instance.
                 /// </summary>
                 [NameInMap("AutoRenew")]
                 [Validation(Required=false)]
                 public string AutoRenew { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The billing cycle of renewal.
+                /// The renewal period.
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The status of the instance.
+                /// The instance status.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on the current page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

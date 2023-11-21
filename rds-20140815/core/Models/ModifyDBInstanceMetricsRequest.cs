@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceMetricsRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The keys of the Enhanced Monitoring metrics that you want to display for the instance. You can enter a maximum of 30 metric keys. If you enter multiple metric keys, you must separate the metric keys with commas (,).
         /// 
-        /// You can call the [DescribeAvailableMetrics](~~314326~~) operation to query the keys of metrics.
+        /// You can call the DescribeAvailableMetrics operation to query the keys of metrics.
         /// </summary>
         [NameInMap("MetricsConfig")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescibeImportsFromDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of migration tasks.
+        /// The migration tasks.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **FullExporting**: The migration task is exporting full data.
                 /// *   **FullImporting**: The migration task is importing full data.
                 /// *   **Success**: The migration task is successful.
-                /// *   **Failed**: The migration task fails.
+                /// *   **Failed**: The migration task failed.
                 /// *   **Canceled**: The migration task is canceled.
                 /// *   **Canceling**: The migration task is being canceled.
                 /// *   **IncrementalWaiting**: The migration task is waiting to synchronize incremental data.
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The type of the migration task. Valid values:
                 /// 
                 /// *   **Full**: full migration
-                /// *   **Incremental**: incremental migration
+                /// *   **Incremental:**: incremental migration
                 /// </summary>
                 [NameInMap("ImportDataType")]
                 [Validation(Required=false)]

@@ -10,13 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateGADInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of instance. The primary instance serves as the central node of the global active database cluster.
+        /// The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID. The primary instance serves as the central node of the global active database cluster.
         /// 
-        /// > 
-        /// 
-        /// *   A primary instance can serve as the central node only of a single global active database cluster.
-        /// 
-        /// *   Only a primary instance that is created in one of the following regions can serve as the central node of a global active database cluster: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
+        /// > *   A primary instance can serve as the central node only of a single global active database cluster.
+        /// > *   Only a primary instance that is created in one of the following regions can serve as the central node of a global active database cluster: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
         /// </summary>
         [NameInMap("CentralDBInstanceId")]
         [Validation(Required=false)]
@@ -64,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -94,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// An array that consists of the details about the unit node.
+        /// The information about the unit node.
         /// </summary>
         [NameInMap("UnitNode")]
         [Validation(Required=false)]
@@ -105,7 +102,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// 
             /// *   The name must be **2 to 255** characters in length.
             /// *   The name can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.
-            /// *   It cannot start with `http://` or `https://`.
+            /// *   The name cannot start with `http://` or `https://`.
             /// 
             /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
@@ -114,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceDescription { get; set; }
 
             /// <summary>
-            /// The storage capacity of the unit node that you want to create. Unit: GB. The storage capacity increases in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableResource](~~134039~~) operation to query the storage capacity range that is supported for a specified instance type in a region.
+            /// The storage capacity of the unit node that you want to create. Unit: GB. The storage capacity increases at a step size of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableResource](~~134039~~) operation to query the storage capacity range that is supported for a specified instance type in a region.
             /// 
             /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
@@ -123,17 +120,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? DBInstanceStorage { get; set; }
 
             /// <summary>
-            /// The storage type that is used by the instance. Valid values:
+            /// The storage type of the instance. Valid values:
             /// 
-            /// *   **local_ssd**: local SSD (recommended).
+            /// *   **local_ssd**: local SSD. This is the recommended storage type.
             /// *   **cloud_ssd**: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.
-            /// *   **cloud_essd**: ESSD of performance level 1 (PL1).
-            /// *   **cloud_essd2**: ESSD of PL2.
-            /// *   **cloud_essd3**: ESSDs of PL3.
+            /// *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1).
+            /// *   **cloud_essd2**: ESSD of PL2
+            /// *   **cloud_essd3**: ESSD of PL3.
             /// 
             /// The default value of this parameter is determined by the instance type specified by the **DBInstanceClass** parameter.
             /// 
-            /// *   If the instance type specifies the local disk storage type, the default value of this parameter is **local_ssd**.
+            /// *   If the instance type specifies the local SSD storage type, the default value of this parameter is **local_ssd**.
             /// *   If the instance type specifies the cloud disk storage type, the default value of this parameter is **cloud_essd**.
             /// </summary>
             [NameInMap("DBInstanceStorageType")]
@@ -170,7 +167,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   **large**
             /// *   **micro**
             /// 
-            /// > For more information, see [Specifications of data synchronization tasks](~~26605~~).
+            /// >  For more information, see [Specifications of data synchronization tasks](~~26605~~).
             /// 
             /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
@@ -204,10 +201,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The billing method of the unit node that you want to create. Valid values:
             /// 
-            /// *   **Postpaid**: pay-as-you-go.
-            /// *   **Prepaid**: subscription.
+            /// *   **Postpaid**: pay-as-you-go
+            /// *   **Prepaid**: subscription
             /// 
-            /// > The system automatically generates a purchase order and completes the payment.
+            /// >  The system automatically generates a purchase order and completes the payment. You do not need to manually confirm the purchase order or complete the payment.
             /// 
             /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
@@ -228,7 +225,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// The IP address whitelist of the unit node that you want to create. For more information, see [IP address whitelist](~~43185~~). If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
             /// 
             /// *   IP addresses, such as `10.10.10.10`.
-            /// *   CIDR blocks, such as `10.10.10.10/24`. In this example, **24** indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of **1 to 32**.
+            /// *   CIDR blocks, such as `10.10.10.10/24`. In this example, **24** indicates that the prefix of the IP address is 24 bits in length. You can replace 24 with a value within the range of **1 to 32**.
             /// 
             /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>

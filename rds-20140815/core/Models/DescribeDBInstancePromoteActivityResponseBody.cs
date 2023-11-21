@@ -17,14 +17,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AliUid { get; set; }
 
         /// <summary>
-        /// China site: 26842 International site: 26888
+        /// *   China site: 26842
+        /// *   International site: 26888
         /// </summary>
         [NameInMap("Bid")]
         [Validation(Required=false)]
         public string Bid { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -49,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// The activity information about the instance. For more information, see [Instance activities](~~26312~~).
+        /// The activity information about the instance. For more information, see [Instance activities](~~2391834~~).
         /// </summary>
         [NameInMap("IsActivity")]
         [Validation(Required=false)]

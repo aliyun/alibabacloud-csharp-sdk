@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the database. You can call the [DescribeDatabases](~~610471~~) to obtain the name of the database.
+        /// The database name. You can call the DescribeDatabases operation to query the database name.
         /// </summary>
         [NameInMap("DBNames")]
         [Validation(Required=false)]

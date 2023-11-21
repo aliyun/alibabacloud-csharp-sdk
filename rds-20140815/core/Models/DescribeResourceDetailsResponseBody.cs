@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// VPC ID。
+        /// VPC ID.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

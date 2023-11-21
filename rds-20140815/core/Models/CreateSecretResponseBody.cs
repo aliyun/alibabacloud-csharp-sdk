@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ARN of the credential for the created Data API account.
+        /// The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.
         /// </summary>
         [NameInMap("SecretArn")]
         [Validation(Required=false)]

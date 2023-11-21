@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupDesc { get; set; }
 
         /// <summary>
-        /// The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the most recent parameter templates in a region.
+        /// The ID of the parameter template. You can call the DescribeParameterGroups operation to query the parameter template ID.
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// The ID of the source region to which the parameter template belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The ID of the source region to which the parameter template belongs. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the destination region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The ID of the destination region. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("TargetRegionId")]
         [Validation(Required=false)]

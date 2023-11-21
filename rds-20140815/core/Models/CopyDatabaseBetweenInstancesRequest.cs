@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CopyDatabaseBetweenInstancesRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set by which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the [DescribeBackups](~~610544~~) operation to obtain the ID of the backup set.
+        /// The ID of the backup set by which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the DescribeBackups operation to obtain the ID of the backup set.
         /// 
         /// > : You must specify one of the **BackupId** and **RestoreTime** parameters.
         /// </summary>
@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The ID of the source instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The source instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The names of the databases. Format: `{"Original database name 1":"New database name 1","Original database name 2":"New database name 2"}`.
+        /// The names of the databases that you want to copy. Format: `Source database name 1,Source database name 2`.
         /// </summary>
         [NameInMap("DbNames")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SyncUserPrivilege { get; set; }
 
         /// <summary>
-        /// The ID of the destination instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The destination instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("TargetDBInstanceId")]
         [Validation(Required=false)]

@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public string Status { get; set; }
 
             /// <summary>
             /// The task details provided in the form of a JSON string. The JSON string can be customized and extended to include additional information about the task. The details vary based on the task type.

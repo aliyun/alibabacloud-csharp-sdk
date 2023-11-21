@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLCollectorPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SQLCollectorStatus { get; set; }
 
         /// <summary>
-        /// None
+        /// A reserved parameter.
         /// </summary>
         [NameInMap("StoragePeriod")]
         [Validation(Required=false)]

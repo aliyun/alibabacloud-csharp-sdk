@@ -286,6 +286,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
 
+                /// <summary>
+                /// The disk usage of the instance.
+                /// </summary>
                 [NameInMap("DBInstanceDiskUsed")]
                 [Validation(Required=false)]
                 public string DBInstanceDiskUsed { get; set; }

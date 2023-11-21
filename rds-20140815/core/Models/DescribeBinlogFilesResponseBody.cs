@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The ID of the instance to which the log file belongs. This parameter helps determine whether the log file is generated on the primary instance or the secondary instance.
                 /// 
-                /// > You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click **Service Availability** to view the values of **Primary Instance No.** and **Secondary Instance No.**.
+                /// >  You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click **Service Availability** to view the values of **Primary Instance No.** and **Secondary Instance No.**.
                 /// </summary>
                 [NameInMap("HostInstanceID")]
                 [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string LinkExpiredTime { get; set; }
 
                 /// <summary>
-                /// The start time of the log file.
+                /// The beginning of the time range to query.
                 /// 
                 /// The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string LogBeginTime { get; set; }
 
                 /// <summary>
-                /// The end time of the log file.
+                /// The end of the time range to query.
                 /// 
                 /// The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>

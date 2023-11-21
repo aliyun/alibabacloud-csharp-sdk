@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeEventsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the events.
+        /// The events.
         /// </summary>
         [NameInMap("EventItems")]
         [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? CallerUid { get; set; }
 
                 /// <summary>
-                /// The ID of the event.
+                /// The event ID.
                 /// </summary>
                 [NameInMap("EventId")]
                 [Validation(Required=false)]
                 public int? EventId { get; set; }
 
                 /// <summary>
-                /// The name of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+                /// The event name.
                 /// </summary>
                 [NameInMap("EventName")]
                 [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventPayload { get; set; }
 
                 /// <summary>
-                /// The source of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+                /// The source of the event.
                 /// </summary>
                 [NameInMap("EventReason")]
                 [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventTime { get; set; }
 
                 /// <summary>
-                /// The type of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+                /// The event type.
                 /// </summary>
                 [NameInMap("EventType")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventUserType { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -109,21 +109,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

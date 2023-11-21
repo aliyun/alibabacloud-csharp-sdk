@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// > If you use **CommodityCode** to query the instance types that are available to read-only instances, you must specify DBInstanceId.
+        /// >  If you set the **CommodityCode** parameter to the commodity code of read-only instances, you must specify this parameter.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// > If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify RegionId.
+        /// >  If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify this parameter.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

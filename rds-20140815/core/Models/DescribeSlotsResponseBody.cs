@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the replication slot.
+        /// The information about the replication slot.
         /// </summary>
         [NameInMap("Slots")]
         [Validation(Required=false)]
@@ -32,89 +32,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             /// <summary>
             /// The extension used by the replication slot.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   test_decoding
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   pgoutput
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   wal2json
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("Plugin")]
             [Validation(Required=false)]
             public string Plugin { get; set; }
 
             /// <summary>
-            /// The name of the replication slot.
+            /// The replication slot name.
             /// </summary>
             [NameInMap("SlotName")]
             [Validation(Required=false)]
             public string SlotName { get; set; }
 
             /// <summary>
-            /// The status of the replication slot.
-            /// 
-            /// Valid values:
+            /// The replication slot status. Valid values:
             /// 
             /// *   ACTIVE
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   INACTIVE
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("SlotStatus")]
             [Validation(Required=false)]
             public string SlotStatus { get; set; }
 
             /// <summary>
-            /// The type of the replication slot.
-            /// 
-            /// Valid values:
+            /// The replication slot type. Valid values:
             /// 
             /// *   physical
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   logical
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("SlotType")]
             [Validation(Required=false)]
@@ -128,25 +72,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SubReplayLag { get; set; }
 
             /// <summary>
-            /// Indicates whether the replication slot is a temporary replication slot.
-            /// 
-            /// Valid values:
+            /// Indicates whether the replication slot is a temporary replication slot. Valid values:
             /// 
             /// *   true
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   false
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("Temporary")]
             [Validation(Required=false)]

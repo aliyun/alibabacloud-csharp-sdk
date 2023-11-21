@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -48,11 +48,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The effective time. Valid values:
+        /// The time when you want the change to take effect. Valid values:
         /// 
-        /// *   **Immediate**: The instance is immediately migrated. This is the default value.
-        /// *   **MaintainTime**: The instance is migrated during the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).
-        /// *   **ScheduleTime**: The instance is migrated at the point in time that you specify.
+        /// *   **Immediately** (default): The change immediately takes effect.
+        /// *   **MaintainTime**: The change takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.
+        /// *   **ScheduleTime**: The change takes effect at the point in time that you specify.
         /// 
         /// >  If you set this parameter to **ScheduleTime**, you must specify the **SwitchTime** parameter.
         /// </summary>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The vSwitch ID.
         /// 
-        /// *   This parameter must be specified when the instance resides in a VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query the vSwitch ID.
+        /// *   This parameter must be specified when the instance resides in a VPC. You can call the DescribeVSwitches operation to query existing vSwitches.
         /// *   If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).
         /// </summary>
         [NameInMap("VSwitchId")]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The zone ID of the new instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The ID of the destination zone. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

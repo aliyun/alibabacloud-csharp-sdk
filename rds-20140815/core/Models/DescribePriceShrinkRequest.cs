@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The information about the node.
         /// 
-        /// > This parameter is suitable for RDS instances that run MySQL on RDS Cluster Edition.
+        /// >  This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
         /// </summary>
         [NameInMap("DBNode")]
         [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -199,9 +199,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// The zone ID of the primary instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
+        /// The zone ID of the primary instance. You can call the DescribeRegions operation to query the most recent zone list.
         /// 
-        /// > If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.
+        /// >  If you specify a virtual private cloud (VPC) and a vSwitch, this parameter is required to identify the zone for the vSwitch.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

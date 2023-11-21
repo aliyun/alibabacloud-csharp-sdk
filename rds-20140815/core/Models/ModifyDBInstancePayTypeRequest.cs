@@ -10,27 +10,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstancePayTypeRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
-        /// 
-        /// *   Postpaid: pay-as-you-go
-        /// *   Prepaid: subscription
+        /// The billing method of the instance. The value is fixed as **Prepaid**, which indicates the subscription billing method.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The subscription method of the instance. This parameter must be specified when PayType is set to Prepaid.
+        /// The renewal cycle of the instance.
         /// 
-        /// *   Year
-        /// *   Month
+        /// *   **Year**
+        /// *   **Month**
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -41,7 +38,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Valid values when Period is set to Year: 1 to 9. Valid values when Period is set to Month: 1, 2, and 3.
+        /// The subscription duration of the instance. Valid values:
+        /// 
+        /// *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from 1 to 5.
+        /// *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from 1 to 11.
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]

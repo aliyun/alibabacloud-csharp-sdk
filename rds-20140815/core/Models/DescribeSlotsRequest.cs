@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. You can leave this parameter empty.
+        /// The resource group ID. You can leave this parameter empty.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -17,17 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
-        /// 
-        /// > 
-        /// 
-        /// *   Before you call the DescribeDBInstances operation, make sure that your instance is one of the following instances:
-        /// 
-        ///     *   The instance runs MySQL.
-        ///     *   The instance runs PostgreSQL.
-        ///     *   The instance runs MariaDB.
-        /// 
-        /// *   The instance is a pay-as-you-go instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

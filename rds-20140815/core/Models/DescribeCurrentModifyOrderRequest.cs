@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.htm?spm=a2c4g.11186623.0.0.7cb2e918SkH1L2) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]

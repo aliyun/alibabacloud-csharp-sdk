@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The increase rate.
+        /// The increase rate in percentage.
         /// </summary>
         [NameInMap("IncreaseRatio")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The original value. This parameter must be specified when **ResourceType** is set to **instance**.
+        /// The original value. This parameter must be specified when the **ResourceType** parameter is set to **instance**.
         /// </summary>
         [NameInMap("RestoreOriginalSpecification")]
         [Validation(Required=false)]

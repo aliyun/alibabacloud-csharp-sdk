@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListUserBackupFilesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the full backup files that are returned.
+        /// The information about the full backup files.
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// The database engine version of the instance.
+            /// The database engine version.
             /// </summary>
             [NameInMap("EngineVersion")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateTempDBInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set. You can call the [DescribeBackups](~~610544~~) operation to query backup set IDs.
+        /// The ID of the backup set. You can call the DescribeBackups operation to query backup set IDs.
         /// 
         /// >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
         /// </summary>
