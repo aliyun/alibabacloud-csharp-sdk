@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class DeleteSavedQueryResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
