@@ -95,6 +95,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string FallBackRule { get; set; }
 
+        [NameInMap("FlowAction")]
+        [Validation(Required=false)]
+        public SendChatappMessageRequestFlowAction FlowAction { get; set; }
+        public class SendChatappMessageRequestFlowAction : TeaModel {
+            [NameInMap("FlowActionData")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> FlowActionData { get; set; }
+
+            [NameInMap("FlowToken")]
+            [Validation(Required=false)]
+            public string FlowToken { get; set; }
+
+        }
+
         /// <summary>
         /// The phone number of the message sender.
         /// 

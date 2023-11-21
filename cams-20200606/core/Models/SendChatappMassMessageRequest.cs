@@ -91,6 +91,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public List<SendChatappMassMessageRequestSenderList> SenderList { get; set; }
         public class SendChatappMassMessageRequestSenderList : TeaModel {
+            [NameInMap("FlowAction")]
+            [Validation(Required=false)]
+            public SendChatappMassMessageRequestSenderListFlowAction FlowAction { get; set; }
+            public class SendChatappMassMessageRequestSenderListFlowAction : TeaModel {
+                [NameInMap("FlowActionData")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> FlowActionData { get; set; }
+
+                [NameInMap("FlowToken")]
+                [Validation(Required=false)]
+                public string FlowToken { get; set; }
+
+            }
+
             /// <summary>
             /// payload
             /// </summary>

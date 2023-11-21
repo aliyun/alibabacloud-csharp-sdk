@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("ConfigId")]
+        [Validation(Required=false)]
+        public string ConfigId { get; set; }
+
         /// <summary>
         /// The error message returned.
         /// </summary>

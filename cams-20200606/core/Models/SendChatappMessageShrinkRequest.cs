@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string FallBackRule { get; set; }
 
+        [NameInMap("FlowAction")]
+        [Validation(Required=false)]
+        public string FlowActionShrink { get; set; }
+
         /// <summary>
         /// The phone number of the message sender.
         /// 

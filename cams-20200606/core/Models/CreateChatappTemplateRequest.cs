@@ -73,6 +73,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [Validation(Required=false)]
                 public string CouponCode { get; set; }
 
+                [NameInMap("FlowAction")]
+                [Validation(Required=false)]
+                public string FlowAction { get; set; }
+
+                [NameInMap("FlowId")]
+                [Validation(Required=false)]
+                public string FlowId { get; set; }
+
                 /// <summary>
                 /// The unsubscribe button. This parameter is valid if Category is set to MARKETING and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY in a WhatsApp message template. After you configure message sending in the ChatApp Message Service console, marketing messages will not be sent to customers if they click this button.
                 /// </summary>
@@ -147,6 +155,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [NameInMap("UrlType")]
                 [Validation(Required=false)]
                 public string UrlType { get; set; }
+
+                [NameInMap("navigateScreen")]
+                [Validation(Required=false)]
+                public string NavigateScreen { get; set; }
 
             }
 

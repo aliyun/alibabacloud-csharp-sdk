@@ -143,12 +143,24 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                     }
 
+                    [NameInMap("FlowAction")]
+                    [Validation(Required=false)]
+                    public string FlowAction { get; set; }
+
+                    [NameInMap("FlowId")]
+                    [Validation(Required=false)]
+                    public string FlowId { get; set; }
+
                     /// <summary>
                     /// Whatsapp模板，在Category为Marketing,并且Button type为QUICK_REPLY时有效，表示按钮为营销退订按钮，客户如果点击了此按钮，并且在chatapp平台上配置了发送控制操作，则后续Marketing消息则不会发送到客户
                     /// </summary>
                     [NameInMap("IsOptOut")]
                     [Validation(Required=false)]
                     public bool? IsOptOut { get; set; }
+
+                    [NameInMap("NavigateScreen")]
+                    [Validation(Required=false)]
+                    public string NavigateScreen { get; set; }
 
                     /// <summary>
                     /// Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的包名

@@ -2810,6 +2810,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permissions))
+            {
+                body["Permissions"] = request.Permissions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["Type"] = request.Type;
@@ -2844,6 +2848,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permissions))
+            {
+                body["Permissions"] = request.Permissions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["Type"] = request.Type;
@@ -4359,6 +4367,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SendChatappMessageShrinkRequest request = new SendChatappMessageShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FlowAction))
+            {
+                request.FlowActionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FlowAction, "FlowAction", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Payload))
             {
                 request.PayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Payload, "Payload", "json");
@@ -4412,6 +4424,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallBackRule))
             {
                 body["FallBackRule"] = request.FallBackRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowActionShrink))
+            {
+                body["FlowAction"] = request.FlowActionShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -4501,6 +4517,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SendChatappMessageShrinkRequest request = new SendChatappMessageShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FlowAction))
+            {
+                request.FlowActionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FlowAction, "FlowAction", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Payload))
             {
                 request.PayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Payload, "Payload", "json");
@@ -4554,6 +4574,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallBackRule))
             {
                 body["FallBackRule"] = request.FallBackRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowActionShrink))
+            {
+                body["FlowAction"] = request.FlowActionShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
