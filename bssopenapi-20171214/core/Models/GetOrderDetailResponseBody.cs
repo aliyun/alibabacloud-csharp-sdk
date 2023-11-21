@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public List<GetOrderDetailResponseBodyDataOrderListOrder> Order { get; set; }
                 public class GetOrderDetailResponseBodyDataOrderListOrder : TeaModel {
                     /// <summary>
-                    /// The aftertaxt amount of the order.
+                    /// The after-tax amount of the order.
                     /// </summary>
                     [NameInMap("AfterTaxAmount")]
                     [Validation(Required=false)]

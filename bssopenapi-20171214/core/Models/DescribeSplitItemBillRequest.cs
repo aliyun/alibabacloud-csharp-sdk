@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string InstanceID { get; set; }
 
+        [NameInMap("IsHideZeroCharge")]
+        [Validation(Required=false)]
+        public bool? IsHideZeroCharge { get; set; }
+
         /// <summary>
         /// The maximum number of entries to query. Default value: 20. Maximum value: 300.
         /// </summary>

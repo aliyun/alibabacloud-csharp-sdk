@@ -4013,6 +4013,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             {
                 query["InstanceID"] = request.InstanceID;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsHideZeroCharge))
+            {
+                query["IsHideZeroCharge"] = request.IsHideZeroCharge;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -4096,6 +4100,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceID))
             {
                 query["InstanceID"] = request.InstanceID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsHideZeroCharge))
+            {
+                query["IsHideZeroCharge"] = request.IsHideZeroCharge;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {

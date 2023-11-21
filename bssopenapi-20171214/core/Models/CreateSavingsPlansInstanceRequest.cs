@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateSavingsPlansInstanceRequest : TeaModel {
+        /// <summary>
+        /// The code of the service.
+        /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
+        /// <summary>
+        /// The service duration. This parameter is used together with the PricingCycle parameter.
+        /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public string Duration { get; set; }
 
+        /// <summary>
+        /// The time when the savings plan takes effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// </summary>
         [NameInMap("EffectiveDate")]
         [Validation(Required=false)]
         public string EffectiveDate { get; set; }
@@ -25,30 +34,65 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public Dictionary<string, string> ExtendMap { get; set; }
 
+        /// <summary>
+        /// The payment mode. Valid values:
+        /// 
+        /// *   total: all upfront
+        /// *   half: partial upfront
+        /// *   zero: no upfront
+        /// </summary>
         [NameInMap("PayMode")]
         [Validation(Required=false)]
         public string PayMode { get; set; }
 
+        /// <summary>
+        /// The contracted amount. unit: CNY
+        /// </summary>
         [NameInMap("PoolValue")]
         [Validation(Required=false)]
         public string PoolValue { get; set; }
 
+        /// <summary>
+        /// The unit of the service duration. This parameter is used together with the During parameter. Valid values:
+        /// 
+        /// *   Year
+        /// *   Month
+        /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
+        /// <summary>
+        /// The ID of the region in which you create the savings plan. You must specify this parameter if the Type parameter is not set to universal.
+        /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// The specification type. This parameter is used together with the Specification parameter. You must specify this parameter if the Type parameter is not set to universal. Valid values:
+        /// 
+        /// *   group: specification group
+        /// *   family: specification family
+        /// </summary>
         [NameInMap("SpecType")]
         [Validation(Required=false)]
         public string SpecType { get; set; }
 
+        /// <summary>
+        /// The specifications of the savings plan. This parameter is used together with the SpecType parameter.
+        /// </summary>
         [NameInMap("Specification")]
         [Validation(Required=false)]
         public string Specification { get; set; }
 
+        /// <summary>
+        /// The type of the savings plan. Valid values:
+        /// 
+        /// *   universal: general-purpose type
+        /// *   ecs: ECS compute type
+        /// *   elasticy: elastic type
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
