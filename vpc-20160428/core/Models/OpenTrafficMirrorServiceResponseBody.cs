@@ -9,16 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class OpenTrafficMirrorServiceResponseBody : TeaModel {
+        /// <summary>
+        /// The error code.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The information returned after traffic mirroring is enabled.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

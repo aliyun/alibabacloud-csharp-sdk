@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AuthKey { get; set; }
 
         /// <summary>
-        /// The ID of the BGP group.
+        /// The BGP group ID.
         /// </summary>
         [NameInMap("BgpGroupId")]
         [Validation(Required=false)]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to clear the secret key. Valid values:
         /// 
-        /// *   **true:** clears the secret key.
-        /// *   **false:** does not clear the secret key.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("ClearAuthKey")]
         [Validation(Required=false)]
@@ -36,16 +36,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the BGP group.
+        /// The BGP group description.
         /// 
         /// The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
         /// </summary>
@@ -56,32 +56,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to use a fake ASN. Valid values:
         /// 
-        /// *   **false:** does not use a fake ASN.
-        /// *   **true:** uses a fake ASN.
+        /// *   **false** (default)
+        /// *   **true**
         /// 
-        /// >  A router that runs BGP typically belongs to only one autonomous system. If you want to use a different ASN to communicate with the peer but you cannot modify the BGP configuration because it may cause service interruptions, you can use a fake ASN. For example, you can use a fake ASN to communicate with the peer when you migrate or merge autonomous systems. This prevents service interruptions.
+        /// >  A router that runs BGP typically belongs only to one AS. If you need to replace an existing ASN with a new ASN and you cannot immediately modify BGP configurations, you can use fake ASNs to ensure service continuity.
         /// </summary>
         [NameInMap("IsFakeAsn")]
         [Validation(Required=false)]
         public bool? IsFakeAsn { get; set; }
 
         /// <summary>
-        /// The custom autonomous system number (ASN) of the BGP on the Alibaba Cloud side. Default value: 45104. Valid values:
+        /// The custom autonomous system number (ASN) of the BGP on the Alibaba Cloud side. Valid values:
         /// 
         /// *   **45104**
         /// *   **64512~65534**
         /// *   **4200000000~4294967294**
         /// 
-        /// >  The value of **65025** is reserved by Alibaba Cloud. If you do not use the default value (45104) in scenarios where multiple connections are established, BGP loops may occur. Proceed with caution.
+        /// >  **65025** is reserved by Alibaba Cloud. Alibaba Cloud uses **45104** as the **local ASN** by default. Custom **local ASNs** may cause loops in multi-line scenarios. Proceed with caution.
         /// </summary>
         [NameInMap("LocalAsn")]
         [Validation(Required=false)]
         public long? LocalAsn { get; set; }
 
         /// <summary>
-        /// The name of the BGP group.
+        /// The BGP group name.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
+        /// The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -103,9 +103,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? PeerAsn { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the BGP group belongs.
+        /// The region ID of the BGP group.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

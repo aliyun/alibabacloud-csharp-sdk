@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTagResourcesForExpressConnectResponseBody : TeaModel {
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// 
-        /// *   If the return value of **NextToken** is empty, no next query is to be sent.
-        /// *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details about the tag.
+        /// The tags that are added to the resource.
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -38,14 +38,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<ListTagResourcesForExpressConnectResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesForExpressConnectResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// The ID of the resource.
+                /// The resource ID.
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.
+                /// The type of the resource. Valid values:
+                /// 
+                /// *   **PHYSICALCONNECTION**: Express Connect circuit.
+                /// *   **VIRTUALBORDERROUTER**: VBR.
+                /// *   **ROUTERINTERFACE**: router interface.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]

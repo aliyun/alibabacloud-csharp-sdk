@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeBgpPeersResponseBody : TeaModel {
         /// <summary>
-        /// The detailed information about the BGP peers.
+        /// The information about the BGP peer.
         /// </summary>
         [NameInMap("BgpPeers")]
         [Validation(Required=false)]
@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the BGP connection. Valid values:
                 /// 
-                /// *   **Idle**: not connected
-                /// *   **Connect**: in use
-                /// *   **Active**: available
-                /// *   **Established**: established
-                /// *   **Down**: unavailable
+                /// *   **Idle**: The BGP connection is not used.
+                /// *   **Connect**: The BGP connection is used.
+                /// *   **Active**: The BGP connection is available.
+                /// *   **Established**: The BGP connection is established.
+                /// *   **Down**: The BGP connection is unavailable.
                 /// </summary>
                 [NameInMap("BgpStatus")]
                 [Validation(Required=false)]
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether BFD is enabled. Valid values:
                 /// 
-                /// *   **true**: enabled
-                /// *   **false**: disabled
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("EnableBfd")]
                 [Validation(Required=false)]
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpVersion { get; set; }
 
                 /// <summary>
-                /// Indicates whether a fake ASN is used. Valid values:
+                /// Indicates whether a fake autonomous system number (ASN) is used. Valid values:
                 /// 
-                /// *   **true**: yes
-                /// *   **false**: no
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("IsFake")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Keepalive { get; set; }
 
                 /// <summary>
-                /// The AS number of the device on the Alibaba Cloud side.
+                /// The ASN of the device on the Alibaba Cloud side.
                 /// </summary>
                 [NameInMap("LocalAsn")]
                 [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The autonomous system (AS) number of the BGP peer.
+                /// The autonomous system number (ASN)of the BGP peer.
                 /// </summary>
                 [NameInMap("PeerAsn")]
                 [Validation(Required=false)]
@@ -166,14 +166,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The limit on routes.
+                /// The maximum number of routes.
                 /// </summary>
                 [NameInMap("RouteLimit")]
                 [Validation(Required=false)]
                 public string RouteLimit { get; set; }
 
                 /// <summary>
-                /// The ID of the router.
+                /// The Router ID.
                 /// </summary>
                 [NameInMap("RouterId")]
                 [Validation(Required=false)]
@@ -197,21 +197,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

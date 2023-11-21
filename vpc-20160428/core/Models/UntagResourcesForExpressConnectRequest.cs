@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to remove all tags from the specified resource. Valid values:
         /// 
-        /// *   **true**: removes all tags from the specified resource.
-        /// *   **false**: does not remove all tags from the specified resource. This is the default value.
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -28,14 +28,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource.
+        /// The ID of the region in which the resource is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The IDs of the resources from which you want to remove tags.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -49,12 +52,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.
+        /// The type of the resource. Valid values:
+        /// 
+        /// *   **PHYSICALCONNECTION**: Express Connect circuit.
+        /// *   **VIRTUALBORDERROUTER**: virtual border router (VBR).
+        /// *   **ROUTERINTERFACE**: router interface.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The tags to remove from the specified resource.
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

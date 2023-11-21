@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the access point to which the VBR belongs.
         /// 
-        /// You can call the [DescribeAccessPoints](~~36062~~) operation to query the most recent access point list.
+        /// You can call the [DescribeAccessPoints](~~36062~~) operation to obtain the IDs of access points.
         /// 
-        /// >  This parameter is required if an Express Connect circuit is used.
+        /// >  This parameter is required if the VBR is connected to an Express Connect circuit.
         /// </summary>
         [NameInMap("AccessPointId")]
         [Validation(Required=false)]
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable automatic payment. Valid values:
         /// 
-        /// *   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
-        /// *   **true**: enables automatic payment. Payments are automatically completed.
+        /// *   **false** (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
+        /// *   **true**: The automatic payment is enabled. Payments are automatically complete after an order is generated.
         /// 
         /// >  This parameter is required if **InstanceChargeType** is set to **PrePaid**.
         /// </summary>
@@ -32,6 +32,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable auto-renewal. Valid values:
+        /// 
+        /// *   **false** (default)
+        /// *   **true**
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
@@ -39,9 +45,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests.
         /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -50,21 +56,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The description of the router interface.
         /// 
-        /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+        /// The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:
+        /// Specifies whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// *   **true**
+        /// *   **false**
         /// 
         /// > 
+        /// 
         /// *   This parameter takes effect only if **RouterType** is set to **VBR** and **OppositeRouterType** is set to **VRouter**.
-        /// *   If **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.
+        /// 
+        /// *   If **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. In this case, **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.
         /// </summary>
         [NameInMap("FastLinkMode")]
         [Validation(Required=false)]
@@ -73,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).
         /// 
-        /// >  You can set this parameter if an Express Connect circuit is used.
+        /// >  You can set this parameter when an Express Connect circuit is used.
         /// </summary>
         [NameInMap("HealthCheckSourceIp")]
         [Validation(Required=false)]
@@ -82,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The destination IP address that is used to perform health checks.
         /// 
-        /// >  This parameter is required if the **HealthCheckSourceIp** parameter is set.
+        /// >  This parameter is required if you specify **HealthCheckSourceIp**
         /// </summary>
         [NameInMap("HealthCheckTargetIp")]
         [Validation(Required=false)]
@@ -101,7 +109,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the router interface.
         /// 
-        /// The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -131,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OppositeInterfaceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the acceptor is deployed.
+        /// The ID of the region in which the acceptor is deployed.
         /// </summary>
         [NameInMap("OppositeRegionId")]
         [Validation(Required=false)]
@@ -165,8 +173,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The subscription duration. Valid values:
         /// 
-        /// *   Valid values if the PricingCycle parameter is set to Month: **1 to 9**.
-        /// *   Valid values if the PricingCycle parameter is set to Year: **1 to 3**.
+        /// *   Valid values when PricingCycle is set to Month: **1 to 9**.
+        /// *   Valid values when PricingCycle is set to Year: **1 to 3**.
         /// 
         /// >  This parameter is required if **InstanceChargeType** is set to **PrePaid**.
         /// </summary>
@@ -177,8 +185,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The billing cycle of the subscription. Valid values:
         /// 
-        /// *   **Month** (default): monthly subscription
-        /// *   **Year**: annual subscription
+        /// *   **Month** (default)
+        /// *   **Year**
         /// 
         /// >  This parameter is required if **InstanceChargeType** is set to **PrePaid**.
         /// </summary>
@@ -189,12 +197,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region to which the router interface belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// 
+        /// For more information about resource group, see [What is Resource Management?](~~94475~~)
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -225,7 +238,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouterId { get; set; }
 
         /// <summary>
-        /// The type of router associated with the router interface. Valid values:
+        /// The type of router that is associated with the router interface. Valid values:
         /// 
         /// *   **VRouter**
         /// *   **VBR**
@@ -235,7 +248,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouterType { get; set; }
 
         /// <summary>
-        /// The specification of the router interface. Valid specifications and bandwidth values:
+        /// The specification of the router interface and the corresponding bandwidth. Valid values:
         /// 
         /// *   **Mini.2**: 2 Mbit/s
         /// *   **Mini.5**: 5 Mbit/s
@@ -250,20 +263,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **Large.5**: 5,000 Mbit/s
         /// *   **Xlarge.1**: 10,000 Mbit/s
         /// 
-        /// >  If **Role** is set to **AcceptingSide** (acceptor), set **Spec** to **Negative**. You do not need to specify specifications when you create an acceptor router interface.
+        /// >  If **Role** is set to **AcceptingSide**, set **Spec** to **Negative**. This indicates that you do not need to specify the specification when you create an acceptor router interface.
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]
         public string Spec { get; set; }
 
+        /// <summary>
+        /// The tag to add to the resource.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateRouterInterfaceRequestTags> Tags { get; set; }
         public class CreateRouterInterfaceRequestTags : TeaModel {
+            /// <summary>
+            /// The tag key to add to the resource. You must enter at least one tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// A tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

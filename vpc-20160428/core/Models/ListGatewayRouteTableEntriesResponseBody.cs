@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels> GatewayRouteEntryModels { get; set; }
         public class ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels : TeaModel {
             /// <summary>
-            /// The name of the route.
+            /// The name of the route entry.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// The name of the route.
+            /// The name of the route entry.
             /// 
-            /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+            /// The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The type of the next hop. Valid values:
             /// 
-            /// *   **EcsInstance**: an Elastic Compute Service (ECS) instance
-            /// *   **NetworkInterface**: an elastic network interface (ENI)
-            /// *   **Local**: a local next hop
+            /// *   **EcsInstance**: Elastic Compute Service (ECS) instance
+            /// *   **NetworkInterface**: elastic network interfaces (ENIs).
+            /// *   **Local**: local next hop
             /// </summary>
             [NameInMap("NextHopType")]
             [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// The type of the next hop. Valid values:
                 /// 
                 /// *   **Instance** (default): an ECS instance
-                /// *   **HaVip**: a high-availability virtual IP address (HAVIP)
+                /// *   **HaVip**: a high-availability virtual IP address (HAVIP).
                 /// *   **VpnGateway**: a VPN gateway
                 /// *   **NatGateway**: a NAT gateway
                 /// *   **NetworkInterface**: a secondary ENI
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The status of the route. Valid values:
+            /// The status of the route entry. Valid values:
             /// 
             /// *   **Pending**
             /// *   **Available**
@@ -120,10 +120,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

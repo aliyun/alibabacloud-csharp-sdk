@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The description of the vRouter.
         /// 
-        /// The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the vRouter is deployed.
+        /// The region ID of the vRouter.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the vRouter.
+        /// The vRouter ID.
         /// </summary>
         [NameInMap("VRouterId")]
         [Validation(Required=false)]

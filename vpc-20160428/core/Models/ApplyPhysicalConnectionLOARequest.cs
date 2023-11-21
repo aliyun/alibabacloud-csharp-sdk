@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+        /// The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("ConstructionTime")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The type of Express Connect circuit. Valid values:
+        /// The type of the Express Connect circuit. Valid values:
         /// 
         /// *   **MSTP**: MSTP line
         /// *   **MPLSVPN**: MPLSVPN line
@@ -70,6 +70,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The information about the construction engineer.
+        /// </summary>
         [NameInMap("PMInfo")]
         [Validation(Required=false)]
         public List<ApplyPhysicalConnectionLOARequestPMInfo> PMInfo { get; set; }
@@ -86,8 +89,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The type of the identity document of the construction engineer. Valid values:
             /// 
-            /// *   **IDCard**: identity card
-            /// *   **Passport**: international passport
+            /// *   **IDCard**
+            /// *   **Passport**
             /// </summary>
             [NameInMap("PMCertificateType")]
             [Validation(Required=false)]
@@ -117,7 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The geographical location where the Express Connect circuit is deployed.
+        /// The geographic location where the Express Connect circuit is deployed.
         /// </summary>
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]

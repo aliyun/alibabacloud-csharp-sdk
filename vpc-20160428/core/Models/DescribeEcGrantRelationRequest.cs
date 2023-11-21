@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The name of the FULLNAT entry.
             /// 
-            /// The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
             /// </summary>
             [NameInMap("FullNatEntryName")]
             [Validation(Required=false)]
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The status of the FULLNAT entry. Valid values:
             /// 
-            /// *   **Pending**: The FULLNAT entry is being configured.
-            /// *   **Available**: The FULLNAT entry is available.
-            /// *   **Deleting**: The FULLNAT entry is being deleted.
-            /// *   **Deleted**: The FULLNAT entry is deleted.
+            /// *   **Pending**
+            /// *   **Available**
+            /// *   **Deleting**
+            /// *   **Deleted**
             /// </summary>
             [NameInMap("FullNatEntryStatus")]
             [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIpPort { get; set; }
 
             /// <summary>
-            /// The ID of the ENI.
+            /// The ID of the elastic network interface (ENI).
             /// </summary>
             [NameInMap("NetworkInterfaceId")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

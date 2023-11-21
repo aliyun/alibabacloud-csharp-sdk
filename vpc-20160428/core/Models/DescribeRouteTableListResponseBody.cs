@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteTableListResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The type of the route table. Valid values:
                 /// 
-                /// *   **Custom**: a custom route table
-                /// *   **System**: a system route table
+                /// *   **Custom**
+                /// *   **System**
                 /// </summary>
                 [NameInMap("RouteTableType")]
                 [Validation(Required=false)]
@@ -126,8 +126,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The type of the router to which the route table belongs. Valid values:
                 /// 
-                /// *   **VRouter**: a vRouter
-                /// *   **VBR**: a VBR
+                /// *   **VRouter**
+                /// *   **VBR**
                 /// </summary>
                 [NameInMap("RouterType")]
                 [Validation(Required=false)]
@@ -136,9 +136,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the route table. Valid values:
                 /// 
-                /// *   **Pending**: being created
-                /// *   **Available**: available
-                /// *   **Deleting**: being deleted
+                /// *   **Pending**
+                /// *   **Available**
+                /// *   **Deleting**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -156,14 +156,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag> Tag { get; set; }
                     public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag that is added to the route table.
+                        /// The key of tag N added to the resource.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag that is added to the route table.
+                        /// The value of tag N added to the resource.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The information about the vSwitches.
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

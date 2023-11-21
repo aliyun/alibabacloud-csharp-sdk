@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListGatewayRouteTableEntriesRequest : TeaModel {
         /// <summary>
-        /// The destination CIDR block of the route in the gateway route table.
+        /// The destination CIDR block of the route entry in the gateway route table.
         /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the gateway route table.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

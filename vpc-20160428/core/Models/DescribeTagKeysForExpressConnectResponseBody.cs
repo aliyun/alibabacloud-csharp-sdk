@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeTagKeysForExpressConnectResponseBody : TeaModel {
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of tag keys.
+        /// The tag keys.
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeTagKeysForExpressConnectResponseBodyTagKeysTagKey> TagKey { get; set; }
             public class DescribeTagKeysForExpressConnectResponseBodyTagKeysTagKey : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The key of the tag.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]

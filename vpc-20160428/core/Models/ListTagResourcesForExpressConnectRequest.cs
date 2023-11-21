@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTagResourcesForExpressConnectRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+        /// The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// 
-        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the value to the value of **NextToken** that is returned in the last call.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -35,14 +35,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource.
+        /// The ID of the region to which the resource resides.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The resource IDs.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -56,29 +59,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies the Express Connect circuit.
+        /// The type of the resource. Valid values:
+        /// 
+        /// *   **PHYSICALCONNECTION**: Express Connect circuit.
+        /// *   **VIRTUALBORDERROUTER**: virtual border router (VBR).
+        /// *   **ROUTERINTERFACE**: router interface.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesForExpressConnectRequestTag> Tag { get; set; }
         public class ListTagResourcesForExpressConnectRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// The value of the tag to add to the resource. You can specify up to 20 tag values The tag value can be an empty string.
             /// 
-            /// The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

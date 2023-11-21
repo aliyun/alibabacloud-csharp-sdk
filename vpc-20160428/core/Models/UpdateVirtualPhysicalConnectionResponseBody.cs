@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateVirtualPhysicalConnectionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether the VLAN ID of the hosted connection is changed. Valid values:
         /// 
-        /// *   **true**: The VLAN ID of the hosted connection is changed.
-        /// *   **false**: The VLAN ID of the hosted connection is not changed.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

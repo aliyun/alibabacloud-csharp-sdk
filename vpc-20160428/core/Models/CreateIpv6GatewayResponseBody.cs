@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6GatewayId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The ID of the resource group to which the IPv6 gateway belongs.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

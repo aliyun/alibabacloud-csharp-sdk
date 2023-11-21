@@ -109,21 +109,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

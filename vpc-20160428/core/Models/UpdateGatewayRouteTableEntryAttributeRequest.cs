@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -80,11 +80,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// The new next hop type of the route entry. Valid values:
+        /// The new next hop type of the route. Valid values:
         /// 
-        /// *   **EcsInstance**: an Elastic Compute Service (ECS) instance.
-        /// *   **NetworkInterface**: an elastic network interface (ENI).
-        /// *   **Local**: a local next hop.
+        /// *   **Instance**: Elastic Compute Service (ECS) instance
+        /// *   **NetworkInterface**: elastic network interface (ENI)
+        /// *   **Local**: local next hop
         /// </summary>
         [NameInMap("NextHopType")]
         [Validation(Required=false)]

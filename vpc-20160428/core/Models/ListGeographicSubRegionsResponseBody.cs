@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListGeographicSubRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned.
+        /// The number of entries.
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public long? Count { get; set; }
 
         /// <summary>
-        /// The list of regions available for Express Connect circuits.
+        /// The region list.
         /// </summary>
         [NameInMap("GeographicSubRegions")]
         [Validation(Required=false)]
         public List<string> GeographicSubRegions { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteEntryListResponseBody : TeaModel {
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If **NextToken** is empty, it indicates that no next query is to be sent.
-        /// *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+        /// *   If no value is returned for **NextToken**, no next queries are sent.
+        /// *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the routes.
+        /// The information about the route.
         /// </summary>
         [NameInMap("RouteEntrys")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The destination CIDR blocks of the route.
+                /// The destination CIDR block of the route.
                 /// </summary>
                 [NameInMap("DestinationCidrBlock")]
                 [Validation(Required=false)]
                 public string DestinationCidrBlock { get; set; }
 
                 /// <summary>
-                /// The time when the route was modified. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format in UTC.
+                /// The time when the route was modified. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpVersion { get; set; }
 
                 /// <summary>
-                /// The information about the next hops.
+                /// The information about the next hop.
                 /// </summary>
                 [NameInMap("NextHops")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                             /// <summary>
                             /// The type of the instance associated with the next hop. Valid values:
                             /// 
-                            /// *   **VPC**: a virtual private cloud (VPC)
+                            /// *   **VPC**: a VPC
                             /// *   **VBR**: a VBR
                             /// *   **PCONN**: an Express Connect circuit
                             /// </summary>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RouteEntryId { get; set; }
 
                 /// <summary>
-                /// The name of the route.
+                /// The route name.
                 /// </summary>
                 [NameInMap("RouteEntryName")]
                 [Validation(Required=false)]
@@ -192,9 +192,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RouteTableId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the route is hosted. If the parameter is empty, the route is not hosted. 
+                /// Indicates whether the route is hosted. If the parameter is empty, the route is not hosted.
                 /// 
-                /// If the value is set to **TR**, the route is hosted by a transit router.
+                /// If **TR** is returned, the route is hosted by a transit router.
                 /// </summary>
                 [NameInMap("ServiceType")]
                 [Validation(Required=false)]
@@ -203,21 +203,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the route. Valid values:
                 /// 
-                /// *   **Pending**: The route is being configured.
-                /// *   **Available**: The route is available.
-                /// *   **Modifying**: The route is being modified.
+                /// *   **Pending**
+                /// *   **Available**
+                /// *   **Modifying**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The type of the route. Valid values:
+                /// The route type. Valid values:
                 /// 
-                /// *   **Custom**: a custom route
-                /// *   **System**: a system route
-                /// *   **BGP**: a BGP route
-                /// *   **CEN**: a CEN route
+                /// *   **Custom**
+                /// *   **System**
+                /// *   **BGP**
+                /// *   **CEN**
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

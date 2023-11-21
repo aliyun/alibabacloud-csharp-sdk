@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The number of returned entries.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("CrossAccountAuthorized")]
             [Validation(Required=false)]

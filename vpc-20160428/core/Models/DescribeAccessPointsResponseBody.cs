@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The colocation provider of the access point.
+                /// The Internet service provider (ISP) of the access point. Valid values:
                 /// </summary>
                 [NameInMap("HostOperator")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the access point. Valid values:
                 /// 
-                /// *   **Recommended**: The access point is ready for use.
+                /// *   **recommended**: The access point is ready for use.
                 /// *   **hot**: A large number of Express Connect circuits are connected to the access point.
                 /// *   **full**: The number of Express Connect circuits connected to the access point has reached the upper limit.
                 /// *   **disabled**: The access point is unavailable.
@@ -115,28 +115,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of the returned page. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries returned per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to check the request without performing the operation. Valid values:
+        /// Specifies whether to perform a dry run, without performing the actual request. Valid values:
         /// 
-        /// *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-        /// *   **false**: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
+        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the default vSwitch in the specified region. Valid values:
+        /// Specifies whether to query the default vSwitches in the specified region. Valid values:
         /// 
-        /// *   **true**: queries the default vSwitch in the specified region.
-        /// *   **false**: does not query the default vSwitch in the specified region.
+        /// *   **true**
+        /// *   **false**
         /// 
-        /// If you do not specify this parameter, the system queries all vSwitches in the specified region by default.
+        /// If you do not set this parameter, the system queries all vSwitches in the specified region by default.
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// 
-        /// >  You must set at least one of the **RegionId** and **VpcId** parameters.
+        /// >  You must set at least one of **RegionId** and **VpcId**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -84,14 +84,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeVSwitchesRequestTag> Tag { get; set; }
         public class DescribeVSwitchesRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -106,7 +119,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The name of the vSwitch.
+        /// The vSwitch name.
         /// 
         /// The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
         /// </summary>
@@ -115,23 +128,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchName { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the resource belongs.
+        /// The ID of the Alibaba Cloud account to which the vSwitch belongs.
         /// </summary>
         [NameInMap("VSwitchOwnerId")]
         [Validation(Required=false)]
         public long? VSwitchOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC to which the vSwitches belong.
+        /// The ID of the virtual private cloud (VPC) to which the vSwitches belong.
         /// 
-        /// >  You must set at least one of the **RegionId** and **VpcId** parameters.
+        /// >  You must set at least one of **RegionId** and **VpcId**.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The ID of the zone to which the vSwitch belongs. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+        /// The ID of the zone to which the vSwitches belong. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

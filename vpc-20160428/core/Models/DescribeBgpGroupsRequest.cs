@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether the BGP group is the default one. Valid values:
         /// 
-        /// *   **false**: yes
-        /// *   **true**: no
+        /// *   **false**
+        /// *   **true**
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -35,23 +35,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. The maximum value is **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the VBR.
+        /// The ID of the region in which the VBR is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether the IPv4 gateway is activated. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv4GatewayRouteTableId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<GetIpv4GatewayAttributeResponseBodyTags> Tags { get; set; }
         public class GetIpv4GatewayAttributeResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// The key of tag N added to the resource.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The value of tag N added to the resource.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) with which the IPv4 gateway is associated.
+        /// The ID of the VPC with which the IPv4 gateway is associated.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

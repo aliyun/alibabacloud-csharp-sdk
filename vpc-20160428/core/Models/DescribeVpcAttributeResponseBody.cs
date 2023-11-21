@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether the ClassicLink feature is enabled. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("ClassicLinkEnabled")]
         [Validation(Required=false)]
@@ -87,9 +87,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The type of resources deployed in the VPC. Valid values:
                 /// 
-                /// - **VSwitch**: vSwitches
-                /// - **VRouter**: vRouters
-                /// - **RouteTable**: route tables
+                /// *   **VSwitch**
+                /// *   **VRouter**
+                /// *   **RouteTable**
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -123,10 +123,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The status of the DHCP options set. Valid values:
         /// 
-        /// *   **Available**: available
-        /// *   **InUse**: in use
-        /// *   **Deleted**: deleted
-        /// *   **Pending**: being configured
+        /// *   **Available**
+        /// *   **InUse**
+        /// *   **Deleted**
+        /// *   **Pending**
         /// </summary>
         [NameInMap("DhcpOptionsSetStatus")]
         [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6CidrBlock { get; set; }
 
         /// <summary>
-        /// The information about the IPv6 CIDR blocks of the VPC.
+        /// The IPv6 CIDR block of the VPC.
         /// </summary>
         [NameInMap("Ipv6CidrBlocks")]
         [Validation(Required=false)]
@@ -167,12 +167,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The type of the IPv6 CIDR block. Valid values:
                 /// 
-                /// - **BGP** (default): an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)
-                /// - **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)
-                /// - **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)
-                /// - **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)
+                /// *   **BGP** (default)
+                /// *   **ChinaMobile**
+                /// *   **ChinaUnicom**
+                /// *   **ChinaTelecom**
                 /// 
-                /// >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
+                /// >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
                 /// </summary>
                 [NameInMap("Ipv6Isp")]
                 [Validation(Required=false)]
@@ -185,8 +185,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether the VPC is the default VPC. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -200,14 +200,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the VPC.
+        /// The ID of the region to which the VPC belongs.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -236,23 +236,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The status of the VPC. Valid values:
         /// 
-        /// *   **Available**: available
-        /// *   **Pending**: being configured
+        /// *   **Available**
+        /// *   **Pending**
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Indicates whether the VPC supports IPv4 gateways. 
+        /// Indicates whether the VPC supports IPv4 gateways.
         /// 
-        /// - **true**: yes
-        /// - **false**: no
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("SupportIpv4Gateway")]
         [Validation(Required=false)]
         public bool? SupportIpv4Gateway { get; set; }
 
+        /// <summary>
+        /// The information about the tags.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodyTags Tags { get; set; }
@@ -261,10 +264,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVpcAttributeResponseBodyTagsTag : TeaModel {
+                /// <summary>
+                /// The key of tag N added to the resource.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The value of tag N added to the resource.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

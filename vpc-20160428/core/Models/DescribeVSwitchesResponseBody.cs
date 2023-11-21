@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVSwitchesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -70,12 +70,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the vSwitches.
+                /// The description of the vSwitch.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// Indicates whether IPv6 is enabled for the vSwitch. If you enable IPv6, you must configure an IPv6 CIDR block for the vSwitch. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// </summary>
                 [NameInMap("EnabledIpv6")]
                 [Validation(Required=false)]
                 public bool? EnabledIpv6 { get; set; }
@@ -90,8 +96,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether the vSwitch is the default vSwitch. Valid values:
                 /// 
-                /// *   **true**: The vSwitch is the default vSwitch.
-                /// *   **false**: The vSwitch is not the default vSwitch.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("IsDefault")]
                 [Validation(Required=false)]
@@ -133,10 +139,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string RouteTableId { get; set; }
 
                     /// <summary>
-                    /// The type of the route table that is associated with the vSwitch. Valid values:
+                    /// The type of the route table. Valid values:
                     /// 
-                    /// - **System**: system route table
-                    /// - **Custom**: custom route table
+                    /// *   **System**
+                    /// *   **Custom**
                     /// </summary>
                     [NameInMap("RouteTableType")]
                     [Validation(Required=false)]
@@ -144,6 +150,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                /// <summary>
+                /// Indicates whether the vSwitch is shared.
+                /// 
+                /// *   If no value is returned, the vSwitch is a regular vSwitch.
+                /// *   If **Shared** is returned, the vSwitch is shared.
+                /// *   If **Sharing** is returned, the vSwitch is being shared.
+                /// </summary>
                 [NameInMap("ShareType")]
                 [Validation(Required=false)]
                 public string ShareType { get; set; }
@@ -151,15 +164,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the vSwitch. Valid values:
                 /// 
-                /// *   **Pending**: The vSwitch is being configured.
-                /// *   **Available**: The vSwitch is available.
+                /// *   **Pending**
+                /// *   **Available**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tag information about the vSwitch.
+                /// The tags of the vSwitch.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -170,14 +183,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag> Tag { get; set; }
                     public class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag that is added to the vSwitch.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag that is added to the vSwitch.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -188,14 +201,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The name of the vSwitch.
+                /// The vSwitch name.
                 /// </summary>
                 [NameInMap("VSwitchName")]
                 [Validation(Required=false)]

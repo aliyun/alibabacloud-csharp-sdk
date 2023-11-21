@@ -116,6 +116,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// VPN网关实例所属的资源组ID。
+        /// 
+        /// 您可以调用[ListResourceGroups](~~158855~~)接口查询资源组信息。
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

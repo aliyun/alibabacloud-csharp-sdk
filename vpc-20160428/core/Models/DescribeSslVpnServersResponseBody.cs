@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnServersResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether data compression is enabled. Valid values:
                 /// 
-                /// *   **true**: yes
-                /// *   **false** (default): no
+                /// *   **true**
+                /// *   **false** (default)
                 /// </summary>
                 [NameInMap("Compress")]
                 [Validation(Required=false)]
@@ -80,17 +80,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether two-factor authentication is enabled. Valid values:
+                /// Indicates whether two-factor authentication is enabled.
                 /// 
-                /// *   **true**: yes
-                /// *   **false** (default): no
+                /// *   **true**
+                /// *   **false** (default)
                 /// </summary>
                 [NameInMap("EnableMultiFactorAuth")]
                 [Validation(Required=false)]
                 public bool? EnableMultiFactorAuth { get; set; }
 
                 /// <summary>
-                /// The ID of the Identity as a Service (IDaaS) instance.
+                /// The ID of the IDaaS instance.
                 /// </summary>
                 [NameInMap("IDaaSInstanceId")]
                 [Validation(Required=false)]
@@ -152,6 +152,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group to which the SSL server belongs.
+                /// 
+                /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -175,7 +180,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

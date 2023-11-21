@@ -12,32 +12,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether the hosted connection is accepted by the tenant. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("IsConfirmed")]
         [Validation(Required=false)]
         public bool? IsConfirmed { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+        /// The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   You must specify the token that is obtained from the previous query as the value of NextToken.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the Express Connect circuit over which the hosted connection is created.
+        /// The ID of the Express Connect circuit over which the hosted connections are created.
         /// 
         /// Express Connect circuits in this topic refer to Express Connect circuits over which hosted connections are created.
         /// </summary>
@@ -54,27 +54,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the hosted connection belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListVirtualPhysicalConnectionsRequestTags> Tags { get; set; }
         public class ListVirtualPhysicalConnectionsRequestTags : TeaModel {
             /// <summary>
-            /// The key of the tag that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
             /// 
-            /// The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
+            /// It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -82,6 +88,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// The information about the Alibaba Cloud account that owns the hosted connection.
+        /// </summary>
         [NameInMap("VirtualPhysicalConnectionAliUids")]
         [Validation(Required=false)]
         public List<string> VirtualPhysicalConnectionAliUids { get; set; }
@@ -89,22 +98,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The business status of the hosted connection. Valid values:
         /// 
-        /// *   **Normal**: normal
-        /// *   **FinancialLocked**: locked due to overdue payments
-        /// *   **SecurityLocked**: locked for security reasons
+        /// *   **Normal**
+        /// *   **FinancialLocked**
+        /// *   **SecurityLocked**
         /// </summary>
         [NameInMap("VirtualPhysicalConnectionBusinessStatus")]
         [Validation(Required=false)]
         public string VirtualPhysicalConnectionBusinessStatus { get; set; }
 
+        /// <summary>
+        /// The information about the hosted connection.
+        /// </summary>
         [NameInMap("VirtualPhysicalConnectionIds")]
         [Validation(Required=false)]
         public List<string> VirtualPhysicalConnectionIds { get; set; }
 
+        /// <summary>
+        /// The business status of the hosted connection.
+        /// </summary>
         [NameInMap("VirtualPhysicalConnectionStatuses")]
         [Validation(Required=false)]
         public List<string> VirtualPhysicalConnectionStatuses { get; set; }
 
+        /// <summary>
+        /// The VLAN ID of the hosted connection.
+        /// </summary>
         [NameInMap("VlanIds")]
         [Validation(Required=false)]
         public List<string> VlanIds { get; set; }

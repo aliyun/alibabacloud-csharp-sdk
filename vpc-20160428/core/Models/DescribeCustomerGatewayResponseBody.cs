@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? Asn { get; set; }
 
         /// <summary>
-        /// The authentication key of the BGP routing protocol for the gateway device in the data center.
+        /// The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.
         /// </summary>
         [NameInMap("AuthKey")]
         [Validation(Required=false)]
@@ -61,12 +61,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the customer gateway belongs.
+        /// 
+        /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

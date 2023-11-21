@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteEntryListRequest : TeaModel {
+        /// <summary>
+        /// The destination CIDR blocks of the routes.
+        /// </summary>
         [NameInMap("DestCidrBlockList")]
         [Validation(Required=false)]
         public List<string> DestCidrBlockList { get; set; }
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.
+        /// The number of entries per page. Valid values: **1** to **100**. Default value: **10**.
         /// </summary>
         [NameInMap("MaxResult")]
         [Validation(Required=false)]
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The type of the next hop. Valid values:
         /// 
         /// *   **Instance** (default): an Elastic Compute Service (ECS) instance
-        /// *   **HaVip**: a high-availability virtual IP address (HAVIP)
+        /// *   **HaVip**: a high-availability virtual IP address (HAVIP).
         /// *   **VpnGateway**: a VPN gateway
         /// *   **NatGateway**: a NAT gateway
         /// *   **NetworkInterface**: a secondary elastic network interface (ENI)
@@ -61,10 +64,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopType { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   You must specify the token that is obtained from the previous query as the value of NextToken.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -103,28 +106,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteEntryId { get; set; }
 
         /// <summary>
-        /// The name of the route.
+        /// The name of the route entry.
         /// 
-        /// The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+        /// The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("RouteEntryName")]
         [Validation(Required=false)]
         public string RouteEntryName { get; set; }
 
         /// <summary>
-        /// The type of the route. Valid values:
+        /// The route type. Valid values:
         /// 
-        /// *   **Custom**: a custom route
-        /// *   **System**: a system route
-        /// *   **BGP**: a BGP route
-        /// *   **CEN**: a Cloud Enterprise Network (CEN) route
+        /// *   **Custom**
+        /// *   **System**
+        /// *   **BGP**
+        /// *   **CEN**
         /// </summary>
         [NameInMap("RouteEntryType")]
         [Validation(Required=false)]
         public string RouteEntryType { get; set; }
 
         /// <summary>
-        /// The ID of the route table.
+        /// The ID of the route table that you want to query.
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to host the route. If the parameter is empty, the route is not hosted.
         /// 
-        /// If you set the value to **TR**, the route is hosted by a transit router.
+        /// Set the value to **TR**, which specifies that the route is hosted by a transit router.
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]

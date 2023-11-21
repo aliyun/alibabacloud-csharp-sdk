@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ConvertBandwidthPackageResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the Internet Shared Bandwidth instance after the conversion.
+        /// The ID of the Internet Shared Bandwidth instance.
         /// </summary>
         [NameInMap("ConvertInstanceId")]
         [Validation(Required=false)]
         public string ConvertInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

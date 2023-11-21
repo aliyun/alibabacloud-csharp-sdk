@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the custom route entry that was successfully added.
+        /// The information about the ID of the custom route entry that was successfully added.
         /// </summary>
         [NameInMap("RouteEntryIds")]
         [Validation(Required=false)]

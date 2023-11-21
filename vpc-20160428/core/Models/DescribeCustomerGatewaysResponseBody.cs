@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeCustomerGatewaysResponseBody : TeaModel {
         /// <summary>
-        /// The tag value.
+        /// The information about customer gateways.
         /// </summary>
         [NameInMap("CustomerGateways")]
         [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? Asn { get; set; }
 
                 /// <summary>
-                /// The authentication key of the BGP routing protocol for the gateway device in the data center.
+                /// The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.
                 /// </summary>
                 [NameInMap("AuthKey")]
                 [Validation(Required=false)]
                 public string AuthKey { get; set; }
 
                 /// <summary>
-                /// The timestamp generated when the customer gateway was created. Unit: milliseconds.
+                /// The timestamp generated when the customer gateway was created. Unit: millisecond.
                 /// 
                 /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
                 /// </summary>
@@ -71,6 +71,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group to which the customer gateway belongs.
+                /// 
+                /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -87,14 +92,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag> Tag { get; set; }
                     public class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The key of tag N.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The value of tag N.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

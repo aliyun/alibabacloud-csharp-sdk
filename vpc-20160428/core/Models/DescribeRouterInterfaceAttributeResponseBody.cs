@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The status of the router interface. Valid values:
         /// 
-        /// *   **Normal**: normal
-        /// *   **FinancialLocked**: locked due to overdue payments
-        /// *   **SecurityLocked**: locked due to security reasons
+        /// *   **Normal**
+        /// *   **FinancialLocked**
+        /// *   **SecurityLocked**
         /// </summary>
         [NameInMap("BusinessStatus")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The time when the connection is established.
+        /// The time when the connection was established.
         /// </summary>
         [NameInMap("ConnectedTime")]
         [Validation(Required=false)]
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether the connection is a cross-border connection. Valid values:
         /// 
-        /// *   **false**: no
-        /// *   **true**: yes
+        /// *   **false**
+        /// *   **true**
         /// </summary>
         [NameInMap("CrossBorder")]
         [Validation(Required=false)]
@@ -83,12 +83,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The end of the time range queried.
+        /// The end of the time range during which data was queried.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false** (default)
+        /// 
+        /// > 
+        /// 
+        /// *   This parameter takes effect only when **RouterType** is set to **VBR** and **OppositeRouterType** is set to **VRouter**.
+        /// 
+        /// *   When **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.
+        /// </summary>
         [NameInMap("FastLinkMode")]
         [Validation(Required=false)]
         public string FastLinkMode { get; set; }
@@ -103,8 +115,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether renewal data is included. Valid values:
         /// 
-        /// *   **false**: no
-        /// *   **true**: yes
+        /// *   **false**
+        /// *   **true**
         /// </summary>
         [NameInMap("HasReservationData")]
         [Validation(Required=false)]
@@ -118,40 +130,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? HcRate { get; set; }
 
         /// <summary>
-        /// The health check threshold, which is the number of probe packets that are sent during a health check. Unit: packets.
+        /// The healthy threshold. This value indicates the number of probe packets that are sent during a health check. Unit: packets.
         /// </summary>
         [NameInMap("HcThreshold")]
         [Validation(Required=false)]
         public int? HcThreshold { get; set; }
 
         /// <summary>
-        /// The source IP address that is used for health checks.
+        /// The source IP address that is used for the health check.
         /// </summary>
         [NameInMap("HealthCheckSourceIp")]
         [Validation(Required=false)]
         public string HealthCheckSourceIp { get; set; }
 
         /// <summary>
-        /// The health check status. Valid values:
+        /// The status of the health check. Valid values:
         /// 
-        /// *   **Abnormal**: abnormal.
-        /// *   **Normal**: normal.
-        /// *   **NoRedundantRoute**: No redundant route is configured.
-        /// *   **NoHealthCheckConfig**: No health check is configured.
+        /// *   **Abnormal**
+        /// *   **Normal**
+        /// *   **NoRedundantRoute**
+        /// *   **NoHealthCheckConfig**
         /// </summary>
         [NameInMap("HealthCheckStatus")]
         [Validation(Required=false)]
         public string HealthCheckStatus { get; set; }
 
         /// <summary>
-        /// The destination IP address that is used for health checks.
+        /// The destination IP address that is used for the health check.
         /// </summary>
         [NameInMap("HealthCheckTargetIp")]
         [Validation(Required=false)]
         public string HealthCheckTargetIp { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// The response parameters.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -172,7 +184,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OppositeAccessPointId { get; set; }
 
         /// <summary>
-        /// The bandwidth of the peer router interface. Unit: Mbit/s.
+        /// The maximum bandwidth of the peer router interface. Unit: Mbit/s.
         /// </summary>
         [NameInMap("OppositeBandwidth")]
         [Validation(Required=false)]
@@ -181,9 +193,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The service status of the peer router interface. Valid values:
         /// 
-        /// *   **Normal**: normal
-        /// *   **FinancialLocked**: locked due to overdue payments
-        /// *   **SecurityLocked**: locked due to security reasons
+        /// *   **Normal**
+        /// *   **FinancialLocked**
+        /// *   **SecurityLocked**
         /// </summary>
         [NameInMap("OppositeInterfaceBusinessStatus")]
         [Validation(Required=false)]
@@ -227,16 +239,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The status of the peer router interface. Valid values:
         /// 
-        /// *   **Idle**: not connected
-        /// *   **AcceptingConnecting**: accepting a connection
-        /// *   **Connecting**: connecting
-        /// *   **Activating**: being activated
-        /// *   **Active**: activated
-        /// *   **Modifying**: being modified
-        /// *   **Deactivating**: being disabled
-        /// *   **Inactive**: disabled
-        /// *   **Deleting**: being deleted
-        /// *   **Deleted**: deleted
+        /// *   **Idle**
+        /// *   **AcceptingConnecting**
+        /// *   **Connecting**
+        /// *   **Activating**
+        /// *   **Active**
+        /// *   **Modifying**
+        /// *   **Deactivating**
+        /// *   **Inactive**
+        /// *   **Deleting**
+        /// *   **Deleted**
         /// </summary>
         [NameInMap("OppositeInterfaceStatus")]
         [Validation(Required=false)]
@@ -259,8 +271,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The type of the router to which the peer router interface belongs. Valid values:
         /// 
-        /// *   **VRouter**: a vRouter
-        /// *   **VBR**: a virtual border router (VBR)
+        /// *   **VRouter**
+        /// *   **VBR**
         /// </summary>
         [NameInMap("OppositeRouterType")]
         [Validation(Required=false)]
@@ -274,7 +286,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OppositeVpcInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -288,32 +300,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ReservationActiveTime { get; set; }
 
         /// <summary>
-        /// The bandwidth after the renewal takes effect. Unit: Mbit/s.
+        /// The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.
         /// </summary>
         [NameInMap("ReservationBandwidth")]
         [Validation(Required=false)]
         public string ReservationBandwidth { get; set; }
 
         /// <summary>
-        /// The metering method that is used after the renewal takes effect. The value is set to **PayByBandwidth**, which indicates the pay-by-bandwidth metering method.
+        /// The metering method that is used after the renewal takes effect. Valid values: If **PayByBandwidth** is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.
         /// </summary>
         [NameInMap("ReservationInternetChargeType")]
         [Validation(Required=false)]
         public string ReservationInternetChargeType { get; set; }
 
         /// <summary>
-        /// The type of the renewal order. The value is set to **RENEW**, which indicates that the order is placed for service renewal.
+        /// The type of the renewal order. Only **RENEW** may be returned, which indicates that the order is placed for service renewal.
         /// </summary>
         [NameInMap("ReservationOrderType")]
         [Validation(Required=false)]
         public string ReservationOrderType { get; set; }
 
+        /// <summary>
+        /// The resource group ID.
+        /// 
+        /// For more information about resource groups, see [What is a resource group?](~~94475~~)
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// Indicates whether the router interface is the requester or the acceptor of the peering connection.
+        /// The role of the router interface in the peering connection.
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
@@ -336,8 +353,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The type of the router to which the route table belongs. Valid values:
         /// 
-        /// *   **VRouter**: a vRouter
-        /// *   **VBR**: a VBR
+        /// *   **VRouter**
+        /// *   **VBR**
         /// </summary>
         [NameInMap("RouterType")]
         [Validation(Required=false)]
@@ -366,27 +383,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The status of the router interface. Valid values:
         /// 
-        /// *   **Idle**: not connected
-        /// *   **AcceptingConnecting**: accepting a connection
-        /// *   **Connecting**: connecting
-        /// *   **Activating**: being activated
-        /// *   **Active**: activated
-        /// *   **Modifying**: being modified
-        /// *   **Deactivating**: being disabled
-        /// *   **Inactive**: disabled
-        /// *   **Deleting**: being deleted
+        /// *   **Idle**
+        /// *   **AcceptingConnecting**
+        /// *   **Connecting**
+        /// *   **Activating**
+        /// *   **Active**
+        /// *   **Modifying**
+        /// *   **Deactivating**
+        /// *   **Inactive**
+        /// *   **Deleting**
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation is successful.
+        /// Indicates whether the request is successful. Valid values: true and false.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// The tag of the resource.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeRouterInterfaceAttributeResponseBodyTags Tags { get; set; }
@@ -395,10 +415,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeRouterInterfaceAttributeResponseBodyTagsTags> Tags { get; set; }
             public class DescribeRouterInterfaceAttributeResponseBodyTagsTags : TeaModel {
+                /// <summary>
+                /// The key of tag N added to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.
+                /// 
+                /// The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+                /// 
+                /// It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

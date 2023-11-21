@@ -58,10 +58,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string LineLabel { get; set; }
 
+            /// <summary>
+            /// The contact information about line O\&M.
+            /// </summary>
             [NameInMap("LineSPContactInfo")]
             [Validation(Required=false)]
             public string LineSPContactInfo { get; set; }
 
+            /// <summary>
+            /// The ISP. Valid values:
+            /// 
+            /// *   **China Telecom**
+            /// *   **China Unicom**
+            /// *   **China Mobile**
+            /// *   **Other ISPs in China**
+            /// </summary>
             [NameInMap("LineServiceProvider")]
             [Validation(Required=false)]
             public string LineServiceProvider { get; set; }
@@ -106,9 +117,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The identity document type of the construction worker. Valid values:
                     /// 
-                    /// *   **IDCard**: identity card
-                    /// *   **Passport**: passport
-                    /// *   **Other**: other identity documents
+                    /// *   **IDCard**
+                    /// *   **Passport**
+                    /// *   **Other**
                     /// </summary>
                     [NameInMap("PMCertificateType")]
                     [Validation(Required=false)]
@@ -124,8 +135,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The gender of the construction worker. Valid values:
                     /// 
-                    /// *   **Male**: male
-                    /// *   **Female**: female
+                    /// *   **Male**
+                    /// *   **Female**
                     /// </summary>
                     [NameInMap("PMGender")]
                     [Validation(Required=false)]

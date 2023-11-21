@@ -20,19 +20,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? AutoConfigRoute { get; set; }
 
         /// <summary>
+        /// This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.
+        /// 
         /// The Border Gateway Protocol (BGP) configurations:
         /// 
         /// *   **BgpConfig.EnableBgp**: specifies whether to enable BGP. Valid values: **true** and **false**. Default value: false.
         /// 
         /// *   **BgpConfig.LocalAsn**: the autonomous system number (ASN) on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.
         /// 
-        /// *   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block must fall within the 169.254.0.0/16 range. The subnet mask of the CIDR block must be 30 bits in length.
+        /// *   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block must belong to 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
         /// 
-        ///     The CIDR block of an IPsec tunnel associated with a VPN gateway must be unique.
+        ///     > The CIDR block of an IPsec tunnel associated with a VPN gateway must be unique.
         /// 
         /// *   **LocalBgpIp**: the BGP address on the Alibaba Cloud side. This IP address must fall within the CIDR block range of the IPsec tunnel.
         /// 
-        /// > *   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
+        /// >*   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
         /// >*   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.
         /// </summary>
         [NameInMap("BgpConfig")]
@@ -51,9 +53,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the customer gateway.
+        /// When you create an IPsec-VPN connection in single-tunnel mode, this parameter is required.
         /// 
-        /// >  If the VPN gateway supports only the single-tunnel mode, this parameter is required.
+        /// The ID of the customer gateway.
         /// </summary>
         [NameInMap("CustomerGatewayId")]
         [Validation(Required=false)]
@@ -70,16 +72,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EffectImmediately { get; set; }
 
         /// <summary>
+        /// This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.
+        /// 
         /// Specifies whether to enable the dead peer detection (DPD) feature. Valid values:
         /// 
-        /// *   **true** (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no response is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.
-        /// *   **false**: disables DPD. The IPsec initiator does not send DPD packets.
+        /// *   **true** (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.
+        /// *   **false**
         /// </summary>
         [NameInMap("EnableDpd")]
         [Validation(Required=false)]
         public bool? EnableDpd { get; set; }
 
         /// <summary>
+        /// This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.
+        /// 
         /// Specifies whether to enable NAT traversal. Valid values:
         /// 
         /// *   **true** (default) After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.
@@ -90,6 +96,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableNatTraversal { get; set; }
 
         /// <summary>
+        /// This parameter is available if you create an IPsec-VPN connection in dual-tunnel mode.
+        /// 
         /// Specifies whether to enable the BGP feature for the tunnel. Valid values: **true** and **false**. Default value: false.
         /// </summary>
         [NameInMap("EnableTunnelsBgp")]
@@ -97,6 +105,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableTunnelsBgp { get; set; }
 
         /// <summary>
+        /// This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.
+        /// 
         /// The health check configuration:
         /// 
         /// *   **HealthCheckConfig.enable**: specifies whether to enable health checks. Valid values: **true** and **false**. Default value: false.
@@ -110,14 +120,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HealthCheckConfig { get; set; }
 
         /// <summary>
+        /// This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.
+        /// 
         /// The configurations of Phase 1 negotiations:
         /// 
         /// *   **IkeConfig.Psk**: The pre-shared key that is used for authentication between the VPN gateway and the on-premises database.
         /// 
         ///     *   The key must be 1 to 100 characters in length and can contain digits, letters, and the following characters: ``~!\`@#$%^&*()_-+={}[]|;:\",.<>/?``
         /// 
-        ///     *   If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the [DescribeVpnConnection](~~120374~~) operation to query the pre-shared key that is generated by the system.
-        ///        >The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the on-premises database. Otherwise, the on-premises database and the VPN gateway cannot establish a connection.
+        ///     *   If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the [DescribeVpnConnection](~~448847~~) operation to query the pre-shared key that is generated by the system.
+        /// 
+        ///          >The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the on-premises database. Otherwise, the on-premises database and the VPN gateway cannot establish a connection.
         /// 
         /// *   **IkeConfig.IkeVersion**: the version of the Internet Key Exchange (IKE) protocol. Valid values: **ikev1** and **ikev2**. Default value: **ikev1**.
         /// 
@@ -149,6 +162,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IkeConfig { get; set; }
 
         /// <summary>
+        /// This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.
+        /// 
         /// The configurations of Phase 2 negotiations:
         /// 
         /// *   **IpsecConfig.IpsecEncAlg**: the encryption algorithm that is used in Phase 2 negotiations.
@@ -206,6 +221,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.
+        /// 
         /// The certificate authority (CA) certificate. If the VPN gateway is of the ShangMi (SM) type, you need to configure a CA certificate for the peer gateway device.
         /// 
         /// *   If an SM VPN gateway is used to create the IPsec-VPN connection, this parameter is required.
@@ -275,7 +292,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The tunnel configurations.
         /// 
-        /// If the VPN gateway supports the dual-tunnel mode, you must configure the active tunnel and standby tunnel by specifying **TunnelOptionsSpecification**. Each IPsec-VPN connection supports only one active tunnel and one standby tunnel.
+        /// *   You can specify the parameters in the **TunnelOptionsSpecification** array if you create an IPsec-VPN connection in dual-tunnel mode.
+        /// *   If you create an IPsec-VPN connection in dual-tunnel mode, you need to configure an active tunnel and a standby tunnel. Each IPsec-VPN connection supports only one active tunnel and one standby tunnel.
         /// </summary>
         [NameInMap("TunnelOptionsSpecification")]
         [Validation(Required=false)]
@@ -284,20 +302,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The ID of the customer gateway associated with the tunnel.
             /// 
-            /// 
-            /// 
             /// > *   This parameter is required if the VPN gateway supports the dual-tunnel mode.
-            /// > *   If the VPN gateway supports the dual-tunnel mode, you must configure the active tunnel and standby tunnel by specifying **TunnelOptionsSpecification**. Each IPsec-VPN connection supports only one active tunnel and one standby tunnel.
+            /// >*   You can specify the parameters in the **TunnelOptionsSpecification** array if you create an IPsec-VPN connection in dual-tunnel mode.
+            /// >*   If you create an IPsec-VPN connection in dual-tunnel mode, you need to configure an active tunnel and a standby tunnel. Each IPsec-VPN connection supports only one active tunnel and one standby tunnel.
             /// </summary>
             [NameInMap("CustomerGatewayId")]
             [Validation(Required=false)]
             public string CustomerGatewayId { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable the Dead Peer Detection (DPD) feature for the tunnel. Valid values:
+            /// Specifies whether to enable DPD for the tunnel. Valid values:
             /// 
-            /// *   **true** (default): The DPD feature is enabled. The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.
-            /// *   **false**: The DPD feature is disabled. The initiator of the IPsec-VPN connection does not send DPD packets.
+            /// *   **true** (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.
+            /// *   **false**
             /// </summary>
             [NameInMap("EnableDpd")]
             [Validation(Required=false)]
@@ -306,8 +323,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// Specifies whether to enable NAT traversal for the tunnel. Valid values:
             /// 
-            /// *   **true** (default): NAT traversal is enabled. After NAT traversal is enabled, the verification process for the peer UDP port is deleted from IKE negotiations. In addition, the NAT gateway in the tunnel can be found.
-            /// *   **false**: NAT traversal is disabled.
+            /// *   **true** (default) After NAT traversal is enabled, the verification process for the peer UDP port is deleted from IKE negotiations. In addition, the NAT gateway in the tunnel can be found.
+            /// *   **false**
             /// </summary>
             [NameInMap("EnableNatTraversal")]
             [Validation(Required=false)]
@@ -344,8 +361,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// The ASN on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.
                 /// 
                 /// > *   If you set **EnableTunnelsBgp** to **true**, this parameter is required.
-                /// > *   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
-                /// > *   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.
+                /// >*   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
+                /// >*   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.
                 /// </summary>
                 [NameInMap("LocalAsn")]
                 [Validation(Required=false)]
@@ -359,7 +376,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string LocalBgpIp { get; set; }
 
                 /// <summary>
-                /// The BGP CIDR block of the tunnel. The CIDR block must fall within the 169.254.0.0/16 range. The subnet mask of the CIDR block must be 30 bits in length.
+                /// The BGP CIDR block of the tunnel. The CIDR block must belong to 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
                 /// 
                 /// >  The BGP CIDR block of a tunnel associated with a VPN gateway must be unique.
                 /// </summary>
@@ -442,10 +459,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The pre-shared key, which is used for identity authentication between the tunnel and the tunnel peer.
                 /// 
-                ///    - The key must be 1 to 100 characters in length and can contain digits, letters, and the following characters: ```~!\`@#$%^&*()_-+={}[]|;:\",.<>/?```
-                ///    - If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the DescribeVpnConnection (~~120374~~) operation to query the pre-shared key that is generated by the system.      
+                /// *   The key must be 1 to 100 characters in length and can contain digits, letters, and the following characters: ``~!\`@#$%^&*()_-+={}[]|;:\",.<>/?``
+                /// *   If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the [DescribeVpnConnection](~~448847~~) operation to query the pre-shared key that is generated by the system.
                 /// 
-                ///    > The pre-shared key of the tunnel and that of the tunnel peer must be the same. Otherwise, the system cannot establish the tunnel.
+                /// >  The tunnel and the tunnel peer must use the same pre-shared key. Otherwise, the tunnel cannot be established.
                 /// </summary>
                 [NameInMap("Psk")]
                 [Validation(Required=false)]

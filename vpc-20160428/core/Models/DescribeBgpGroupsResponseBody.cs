@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether the ASN is fake. Valid values:
                 /// 
-                /// *   **false**: no
-                /// *   **true**: yes
+                /// *   **false**
+                /// *   **true**
                 /// </summary>
                 [NameInMap("IsFake")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Keepalive { get; set; }
 
                 /// <summary>
-                /// The ASN of the VBR.
+                /// The ASN of the device on the Alibaba Cloud side.
                 /// </summary>
                 [NameInMap("LocalAsn")]
                 [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The autonomous system number (ASN) of the gateway device in the data center.
+                /// The autonomous system number (ASN) of the on-premises device in the data center.
                 /// </summary>
                 [NameInMap("PeerAsn")]
                 [Validation(Required=false)]
@@ -131,21 +131,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

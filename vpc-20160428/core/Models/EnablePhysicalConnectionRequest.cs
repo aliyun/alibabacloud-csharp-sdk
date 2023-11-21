@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class EnablePhysicalConnectionRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to skip the order lifecycle. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false** (default)
+        /// 
+        /// >  To use this feature, you must contact your account manager.
+        /// </summary>
         [NameInMap("ByPassSp")]
         [Validation(Required=false)]
         public bool? ByPassSp { get; set; }
@@ -38,9 +46,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// The region ID of the Express Connect circuit.
+        /// The region where the Express Connect circuit is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateHaVipRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:
         /// 
-        /// *   **True**: yes
-        /// *   **False** (default): no
+        /// *   **True**
+        /// *   **False** (default)
         /// 
         /// >  If you set the value to **False**, you cannot disassociate the HAVIP from the primary instance.
         /// </summary>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the HAVIP belongs.
+        /// The region ID of the HAVIP.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The version of the private IP address. Valid values:
         /// 
-        /// *   **ipv4**: IPv4 If you want to query an IPv4 address, this parameter is optional.
-        /// *   **ipv6**: IPv6 If you want to query an IPv6 address, this parameter is required.
+        /// *   **ipv4** If you want to query an IPv4 address, this parameter is optional.
+        /// *   **ipv6** If you want to query an IPv6 address, this parameter is required.
         /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]

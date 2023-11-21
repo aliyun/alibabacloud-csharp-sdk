@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries returned per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -79,21 +79,34 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The type of the router to which the route table belongs. Valid values:
         /// 
-        /// *   **VRouter** (default): a vRouter
-        /// *   **VBR**: a virtual border router (VBR)
+        /// *   **VRouter** (default)
+        /// *   **VBR**
         /// </summary>
         [NameInMap("RouterType")]
         [Validation(Required=false)]
         public string RouterType { get; set; }
 
+        /// <summary>
+        /// The tags of the resource.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeRouteTableListRequestTag> Tag { get; set; }
         public class DescribeRouteTableListRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -103,7 +116,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the virtual private cloud (VPC) to which the route table belongs.
         /// 
-        /// After this parameter is set, the value of the **RouterType** parameter is automatically set to **VRouter**.
+        /// After this parameter is specified, the value of the **RouterType** parameter is automatically set to **VRouter**.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

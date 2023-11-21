@@ -37,6 +37,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// Indicates whether IPv6 is enabled for the vSwitch. If you enable IPv6, you must configure the IPv6 CIDR block of the vSwitch. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// </summary>
         [NameInMap("EnabledIpv6")]
         [Validation(Required=false)]
         public bool? EnabledIpv6 { get; set; }
@@ -51,8 +57,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether the vSwitch is the default vSwitch. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -66,21 +72,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NetworkAclId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the vSwitch belongs.
+        /// The ID of the Alibaba Cloud account to which the resource belongs.
         /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The ID of the resource group to which the ACL belongs.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -103,8 +109,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The type of the route table. Valid values:
             /// 
-            /// *   **System**: system route table
-            /// *   **Custom**: custom route table
+            /// *   **System**
+            /// *   **Custom**
             /// </summary>
             [NameInMap("RouteTableType")]
             [Validation(Required=false)]
@@ -112,6 +118,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// Indicates whether the vSwitch is shared.
+        /// 
+        /// *   If no value is returned, the vSwitch is a regular vSwitch.
+        /// *   If **Shared** is returned, the vSwitch is shared.
+        /// *   If **Sharing** is returned, the vSwitch is being shared.
+        /// </summary>
         [NameInMap("ShareType")]
         [Validation(Required=false)]
         public string ShareType { get; set; }
@@ -127,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The tag list.
+        /// The information about the tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -138,14 +151,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVSwitchAttributesResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVSwitchAttributesResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The key of tag N added to the resource.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The value of tag N added to the resource.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -156,14 +169,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// The vSwitch ID.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The name of the vSwitch.
+        /// The vSwitch name.
         /// </summary>
         [NameInMap("VSwitchName")]
         [Validation(Required=false)]

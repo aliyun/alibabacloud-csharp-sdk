@@ -12,14 +12,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The information about the outbound rules.
+        /// </summary>
         [NameInMap("EgressAclEntries")]
         [Validation(Required=false)]
         public List<UpdateNetworkAclEntriesRequestEgressAclEntries> EgressAclEntries { get; set; }
@@ -50,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The ID of the outbound rule.
             /// 
-            /// Valid values of **N**: **0** to **29**. You can update at most 30 outbound rules.
+            /// Valid values of **N**: **0** to **99**. You can specify at most 100 outbound rules.
             /// </summary>
             [NameInMap("NetworkAclEntryId")]
             [Validation(Required=false)]
@@ -59,27 +62,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The name of the outbound rule.
             /// 
-            /// The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+            /// The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
             /// </summary>
             [NameInMap("NetworkAclEntryName")]
             [Validation(Required=false)]
             public string NetworkAclEntryName { get; set; }
 
             /// <summary>
-            /// The action to be performed on network traffic that matches the rule. Valid values:
+            /// The rule action that determines whether to allow outbound traffic. Valid values:
             /// 
-            /// *   **accept**: allows the network traffic.
-            /// *   **drop**: blocks the network traffic.
+            /// *   **accept**
+            /// *   **drop**
             /// </summary>
             [NameInMap("Policy")]
             [Validation(Required=false)]
             public string Policy { get; set; }
 
             /// <summary>
-            /// The destination port range of the outbound rule.
+            /// The destination port range of the outbound traffic.
             /// 
-            /// *   If **Protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which specifies all ports.
-            /// *   If **Protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
+            /// *   If the **protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specified all ports.
+            /// *   If the **protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -88,11 +91,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The protocol type. Valid values:
             /// 
-            /// *   **icmp**: ICMP
-            /// *   **gre**: GRE
-            /// *   **tcp**: TCP
-            /// *   **udp**: UDP
-            /// *   **all**: all protocols
+            /// *   **icmp**
+            /// *   **gre**
+            /// *   **tcp**
+            /// *   **udp**
+            /// *   **all**
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
@@ -100,6 +103,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// The information about the inbound rule.
+        /// </summary>
         [NameInMap("IngressAclEntries")]
         [Validation(Required=false)]
         public List<UpdateNetworkAclEntriesRequestIngressAclEntries> IngressAclEntries { get; set; }
@@ -123,7 +129,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The ID of the inbound rule.
             /// 
-            /// Valid values of **N**: **0** to **29**. You can update at most 30 inbound rules.
+            /// Valid values of **N**: **0** to **99**. You can specify at most 100 inbound rules.
             /// </summary>
             [NameInMap("NetworkAclEntryId")]
             [Validation(Required=false)]
@@ -132,17 +138,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The name of the inbound rule.
             /// 
-            /// The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+            /// The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
             /// </summary>
             [NameInMap("NetworkAclEntryName")]
             [Validation(Required=false)]
             public string NetworkAclEntryName { get; set; }
 
             /// <summary>
-            /// The action to be performed on network traffic that matches the rule. Valid values:
+            /// The rule action that determines whether to allow inbound requests. Valid values:
             /// 
-            /// *   **accept**: allows the network traffic.
-            /// *   **drop**: blocks the network traffic.
+            /// *   **accept**
+            /// *   **drop**
             /// </summary>
             [NameInMap("Policy")]
             [Validation(Required=false)]
@@ -151,8 +157,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The source port range of the inbound rule.
             /// 
-            /// *   If **Protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which specifies all ports.
-            /// *   If **Protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
+            /// *   If the **protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specifies all ports.
+            /// *   If the **protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid ports: **1** to **65535**.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -161,11 +167,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The protocol type. Valid values:
             /// 
-            /// *   **icmp**: Internet Control Message Protocol (ICMP)
-            /// *   **gre**: Generic Routing Encapsulation (GRE)
-            /// *   **tcp**: TCP
-            /// *   **udp**: UDP
-            /// *   **all**: all protocols
+            /// *   **icmp**
+            /// *   **gre**
+            /// *   **tcp**
+            /// *   **udp**
+            /// *   **all**
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
@@ -211,8 +217,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to update outbound rules. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**
+        /// *   **false** (default)
+        /// 
+        /// >  This parameter cannot be used to add outbound rules to ACLs. If you want to add more outbound rules to ACLs, specify both the existing rule and the rule that you want to add when you call this API operation. If you specify only the rule that you want to add, it overwrites the existing rule.
         /// </summary>
         [NameInMap("UpdateEgressAclEntries")]
         [Validation(Required=false)]
@@ -221,8 +229,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to update inbound rules. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**
+        /// *   **false** (default)
+        /// 
+        /// >  This parameter cannot be used to add inbound rules to ACLs. If you want to add more inbound rules to ACLs, you must specify both the existing rule and the rule that you want to add when you call this API operation. If you specify only the rule that you want to add, it overwrites the existing rule.
         /// </summary>
         [NameInMap("UpdateIngressAclEntries")]
         [Validation(Required=false)]

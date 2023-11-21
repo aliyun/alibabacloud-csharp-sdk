@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeAccessPointsRequest : TeaModel {
+        /// <summary>
+        /// The language of the response. Valid values:
+        /// 
+        /// *   **zh-CN**: Chinese
+        /// *   **en-US** (default): English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }

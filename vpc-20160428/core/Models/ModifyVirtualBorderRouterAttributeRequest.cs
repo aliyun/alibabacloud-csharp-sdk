@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **CircuitCode**: the circuit code provided by the connectivity provider for the Express Connect circuit.
         /// *   **LocalGatewayIp**: the IP address of the gateway device on the Alibaba Cloud side.
-        /// *   **PeerGatewayIp**: the IP address of the gateway device on the user side.
-        /// *   **PeeringSubnetMask**: the subnet mask for the IP addresses of gateway devices on the Alibaba Cloud side and the user side.
+        /// *   **PeerGatewayIp**: the IP address of the gateway device on the customer side.
+        /// *   **PeeringSubnetMask**: the subnet mask for the IP addresses of gateway devices on the Alibaba Cloud side and the customer side.
         /// *   **PhysicalConnectionId**: the ID of the Express Connect circuit.
         /// </summary>
         [NameInMap("AssociatedPhysicalConnections")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
         /// 
-        /// >  Only the owner of the Express Connect circuit can set this parameter.
+        /// >  Only the owner of the Express Connect circuit can set this property.
         /// </summary>
         [NameInMap("CircuitCode")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -70,15 +70,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable IPv6. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("EnableIpv6")]
         [Validation(Required=false)]
         public bool? EnableIpv6 { get; set; }
 
         /// <summary>
-        /// The IP address of the gateway device on the Alibaba Cloud side.
+        /// The IP address of the VBR.
         /// 
         /// Only the owner of the VBR can set or modify this parameter.
         /// </summary>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LocalGatewayIp { get; set; }
 
         /// <summary>
-        /// The IPv6 address of the gateway device on the Alibaba Cloud side.
+        /// The IPv6 address of the VBR.
         /// </summary>
         [NameInMap("LocalIpv6GatewayIp")]
         [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The IP address of the gateway device on the user side.
+        /// The IP address of the gateway device in the data center.
         /// 
         /// Only the owner of the VBR can set or modify this parameter.
         /// </summary>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PeeringIpv6SubnetMask { get; set; }
 
         /// <summary>
-        /// The subnet mask for the IP addresses of the gateway devices on the Alibaba Cloud side and on the user side. Only the owner of the VBR can set or modify this parameter.
+        /// The subnet mask for the IP addresses of the gateway devices on the Alibaba Cloud side and on the customer side. Only the owner of the VBR can set or modify this parameter.
         /// 
         /// The two IP addresses must fall within the same subnet.
         /// </summary>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the VBR.
+        /// The VBR ID.
         /// </summary>
         [NameInMap("VbrId")]
         [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The VLAN ID of the VBR. Valid values: **0 to 2999**.
         /// 
-        /// >  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.
+        /// >  This parameter is available only to Express Connect owners. The VLAN IDs of VBRs on the same Express Connect circuit must be unique.
         /// </summary>
         [NameInMap("VlanId")]
         [Validation(Required=false)]

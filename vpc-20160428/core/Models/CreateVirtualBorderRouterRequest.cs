@@ -147,6 +147,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// 
+        /// For more information about resource group, see [What is Resource Management?](~~94475~~)
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -159,14 +164,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateVirtualBorderRouterRequestTags> Tags { get; set; }
         public class CreateVirtualBorderRouterRequestTags : TeaModel {
+            /// <summary>
+            /// The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// The key cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value. You can specify at most 20 tag values. It can be an empty string.
+            /// 
+            /// The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

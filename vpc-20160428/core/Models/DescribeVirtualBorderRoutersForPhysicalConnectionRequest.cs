@@ -17,20 +17,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> Filter { get; set; }
         public class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter : TeaModel {
             /// <summary>
-            /// The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:
+            /// The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:
             /// 
-            /// *   **PhysicalConnectionId**: Filter by Express Connect circuit ID.
-            /// *   **VbrId**: Filter by VBR ID.
-            /// *   **Status**: Filter by VBR status.
-            /// *   **Name**: Filter by VBR name.
-            /// *   **AccessPointId**: Filter by access point ID.
-            /// *   **eccId**: Filter by Express Cloud Connect (ECC) instance ID.
-            /// *   **type**: Filter by VBR type.
+            /// *   **PhysicalConnectionId**: filter VBRs by the Express Connect circuit ID.
+            /// *   **VbrId**: filter VBRs by ID.
+            /// *   **Status**: filter VBRs by status.
+            /// *   **Name**: filter VBRs by name.
+            /// *   **AccessPointId**: filter VBRs by access point ID.
+            /// *   **eccId**: filter VBRs by ID of Express Cloud Connect (ECC) instance.
+            /// *   **type**: filter VBRs by type.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The filter values for keys. You can specify multiple filter values for a key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }
@@ -42,14 +45,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// The region where the Express Connect circuit is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The region in which the Express Connect circuit is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

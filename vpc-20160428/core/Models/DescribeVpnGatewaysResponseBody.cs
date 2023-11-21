@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// The timestamp when the VPN gateway was created. Unit: milliseconds.
+                /// The timestamp when the VPN gateway was created. Unit: millisecond.
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DisasterRecoveryVSwitchId { get; set; }
 
                 /// <summary>
-                /// Indicates whether BGP is enabled for the VPN gateway.
+                /// The BGP status of the VPN gateway.
                 /// 
                 /// *   **true**
                 /// *   **false**
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public bool? EnableBgp { get; set; }
 
                 /// <summary>
-                /// The timestamp when the VPN gateway expires. Unit: milliseconds.
+                /// The timestamp when the VPN gateway expires. Unit: millisecond.
                 /// 
                 /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The type of the order that has not taken effect. Valid values:
                     /// 
-                    /// *   **RENEWCHANGE**: renewal with a specification change
+                    /// *   **RENEWCHANGE**: renewal with upgrade or downgrade
                     /// *   **TEMP_UPGRADE**: temporary upgrade
                     /// *   **RENEW**: renewal
                     /// </summary>
@@ -243,6 +243,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                /// <summary>
+                /// The ID of the resource group to which the VPN gateway belongs.
+                /// 
+                /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -316,9 +321,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 ///     *   **true**
                 ///     *   **false**
                 /// 
-                /// *   **description**
+                /// *   **description**: the description of the VPN gateway. This parameter is for internal system use only.
                 /// 
-                /// *   **VpnVersion**
+                /// *   **VpnVersion**: the version of the VPN gateway.
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
@@ -336,14 +341,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTagsTag> Tag { get; set; }
                     public class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of tag N added to the resource.
+                        /// The key of tag N.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of tag N added to the resource.
+                        /// The value of tag N.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

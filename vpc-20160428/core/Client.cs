@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+          * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
           * >  You cannot activate a router interface that has overdue payments.
           *
           * @param request ActivateRouterInterfaceRequest
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+          * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
           * >  You cannot activate a router interface that has overdue payments.
           *
           * @param request ActivateRouterInterfaceRequest
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+          * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
           * >  You cannot activate a router interface that has overdue payments.
           *
           * @param request ActivateRouterInterfaceRequest
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+          * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
           * >  You cannot activate a router interface that has overdue payments.
           *
           * @param request ActivateRouterInterfaceRequest
@@ -2323,9 +2323,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)
           * The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):
-          * 1\\. Call the AllocateVpcIpv6Cidr operation to reserve an IPv6 CIDR block.
-          * 2\\. If you want to allocate the reserved IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation, specify the **RegionId** and **VpcId** parameters, and set the **IPv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **IpVersion** parameter to **IPV6**. If you want to allocate the reserved IPv6 CIDR block to a new VPC, call the [CreateVpc](~~35737~~) operation, specify the **RegionId** parameter, and set the **Ipv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **EnableIpv6** parameter to **true**.
+          * 1.  Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.
+          * 2.  To allocate an IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation. Set **RegionId**, **VpcId**, and **IPv6CidrBlock** to the IPv6 CIDR bock, and set **IpVersion** to **ipv6**. To allocate an IPv6 CIDR block when you create a VPC, call the [CreateVpc](~~35737~~) operation. Set **RegionId** and **Ipv6CidrBlock** to the IPv6 CIDR block, and set **EnableIpv6** to **true**.
           *
           * @param request AllocateVpcIpv6CidrRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2395,9 +2396,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)
           * The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):
-          * 1\\. Call the AllocateVpcIpv6Cidr operation to reserve an IPv6 CIDR block.
-          * 2\\. If you want to allocate the reserved IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation, specify the **RegionId** and **VpcId** parameters, and set the **IPv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **IpVersion** parameter to **IPV6**. If you want to allocate the reserved IPv6 CIDR block to a new VPC, call the [CreateVpc](~~35737~~) operation, specify the **RegionId** parameter, and set the **Ipv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **EnableIpv6** parameter to **true**.
+          * 1.  Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.
+          * 2.  To allocate an IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation. Set **RegionId**, **VpcId**, and **IPv6CidrBlock** to the IPv6 CIDR bock, and set **IpVersion** to **ipv6**. To allocate an IPv6 CIDR block when you create a VPC, call the [CreateVpc](~~35737~~) operation. Set **RegionId** and **Ipv6CidrBlock** to the IPv6 CIDR block, and set **EnableIpv6** to **true**.
           *
           * @param request AllocateVpcIpv6CidrRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2467,9 +2469,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)
           * The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):
-          * 1\\. Call the AllocateVpcIpv6Cidr operation to reserve an IPv6 CIDR block.
-          * 2\\. If you want to allocate the reserved IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation, specify the **RegionId** and **VpcId** parameters, and set the **IPv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **IpVersion** parameter to **IPV6**. If you want to allocate the reserved IPv6 CIDR block to a new VPC, call the [CreateVpc](~~35737~~) operation, specify the **RegionId** parameter, and set the **Ipv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **EnableIpv6** parameter to **true**.
+          * 1.  Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.
+          * 2.  To allocate an IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation. Set **RegionId**, **VpcId**, and **IPv6CidrBlock** to the IPv6 CIDR bock, and set **IpVersion** to **ipv6**. To allocate an IPv6 CIDR block when you create a VPC, call the [CreateVpc](~~35737~~) operation. Set **RegionId** and **Ipv6CidrBlock** to the IPv6 CIDR block, and set **EnableIpv6** to **true**.
           *
           * @param request AllocateVpcIpv6CidrRequest
           * @return AllocateVpcIpv6CidrResponse
@@ -2481,9 +2484,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)
           * The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):
-          * 1\\. Call the AllocateVpcIpv6Cidr operation to reserve an IPv6 CIDR block.
-          * 2\\. If you want to allocate the reserved IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation, specify the **RegionId** and **VpcId** parameters, and set the **IPv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **IpVersion** parameter to **IPV6**. If you want to allocate the reserved IPv6 CIDR block to a new VPC, call the [CreateVpc](~~35737~~) operation, specify the **RegionId** parameter, and set the **Ipv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **EnableIpv6** parameter to **true**.
+          * 1.  Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.
+          * 2.  To allocate an IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation. Set **RegionId**, **VpcId**, and **IPv6CidrBlock** to the IPv6 CIDR bock, and set **IpVersion** to **ipv6**. To allocate an IPv6 CIDR block when you create a VPC, call the [CreateVpc](~~35737~~) operation. Set **RegionId** and **Ipv6CidrBlock** to the IPv6 CIDR block, and set **EnableIpv6** to **true**.
           *
           * @param request AllocateVpcIpv6CidrRequest
           * @return AllocateVpcIpv6CidrResponse
@@ -3249,7 +3253,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **AssociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **AssociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **BINDING** state, the network ACL is being associated.
           *     *   If the network ACL is in the **BINDED** state, the network ACL is associated.
           * *   You cannot repeatedly call the **AssociateNetworkAcl** operation to associate a network ACL within the specified period of time.
@@ -3314,7 +3319,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **AssociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **AssociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **BINDING** state, the network ACL is being associated.
           *     *   If the network ACL is in the **BINDED** state, the network ACL is associated.
           * *   You cannot repeatedly call the **AssociateNetworkAcl** operation to associate a network ACL within the specified period of time.
@@ -3379,7 +3385,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **AssociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **AssociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **BINDING** state, the network ACL is being associated.
           *     *   If the network ACL is in the **BINDED** state, the network ACL is associated.
           * *   You cannot repeatedly call the **AssociateNetworkAcl** operation to associate a network ACL within the specified period of time.
@@ -3394,7 +3401,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **AssociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **AssociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **BINDING** state, the network ACL is being associated.
           *     *   If the network ACL is in the **BINDED** state, the network ACL is associated.
           * *   You cannot repeatedly call the **AssociateNetworkAcl** operation to associate a network ACL within the specified period of time.
@@ -4313,7 +4321,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           *     *   If the VPN gateway is in the **updating** state, the SSL certificate is being associated.
           *     *   If the VPN gateway is in the **active** state, the SSL certificate is being associated.
           * *   You cannot call **AssociateVpnGatewayWithCertificate** within a specific period of time.
-          * ## [](#)Prerequisites
+          * ### [](#)Prerequisites
           * Make sure that you have two SSL certificates that use the SM algorithm in the Certificate Management Service console. For more information about SSL certificates, see [What is Certificate Management Service?](~~28535~~).
           *
           * @param request AssociateVpnGatewayWithCertificateRequest
@@ -4376,7 +4384,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           *     *   If the VPN gateway is in the **updating** state, the SSL certificate is being associated.
           *     *   If the VPN gateway is in the **active** state, the SSL certificate is being associated.
           * *   You cannot call **AssociateVpnGatewayWithCertificate** within a specific period of time.
-          * ## [](#)Prerequisites
+          * ### [](#)Prerequisites
           * Make sure that you have two SSL certificates that use the SM algorithm in the Certificate Management Service console. For more information about SSL certificates, see [What is Certificate Management Service?](~~28535~~).
           *
           * @param request AssociateVpnGatewayWithCertificateRequest
@@ -4439,7 +4447,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           *     *   If the VPN gateway is in the **updating** state, the SSL certificate is being associated.
           *     *   If the VPN gateway is in the **active** state, the SSL certificate is being associated.
           * *   You cannot call **AssociateVpnGatewayWithCertificate** within a specific period of time.
-          * ## [](#)Prerequisites
+          * ### [](#)Prerequisites
           * Make sure that you have two SSL certificates that use the SM algorithm in the Certificate Management Service console. For more information about SSL certificates, see [What is Certificate Management Service?](~~28535~~).
           *
           * @param request AssociateVpnGatewayWithCertificateRequest
@@ -4460,7 +4468,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           *     *   If the VPN gateway is in the **updating** state, the SSL certificate is being associated.
           *     *   If the VPN gateway is in the **active** state, the SSL certificate is being associated.
           * *   You cannot call **AssociateVpnGatewayWithCertificate** within a specific period of time.
-          * ## [](#)Prerequisites
+          * ### [](#)Prerequisites
           * Make sure that you have two SSL certificates that use the SM algorithm in the Certificate Management Service console. For more information about SSL certificates, see [What is Certificate Management Service?](~~28535~~).
           *
           * @param request AssociateVpnGatewayWithCertificateRequest
@@ -4887,7 +4895,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * You can cancel only an Express Connect circuit that is in the **Initial**, **Approved**, **Allocated**, or **Confirmed** state.
           *
           * @param request CancelPhysicalConnectionRequest
@@ -4946,7 +4953,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * You can cancel only an Express Connect circuit that is in the **Initial**, **Approved**, **Allocated**, or **Confirmed** state.
           *
           * @param request CancelPhysicalConnectionRequest
@@ -5005,7 +5011,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * You can cancel only an Express Connect circuit that is in the **Initial**, **Approved**, **Allocated**, or **Confirmed** state.
           *
           * @param request CancelPhysicalConnectionRequest
@@ -5018,7 +5023,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * You can cancel only an Express Connect circuit that is in the **Initial**, **Approved**, **Allocated**, or **Confirmed** state.
           *
           * @param request CancelPhysicalConnectionRequest
@@ -5031,7 +5035,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **ChangeResourceGroup** operation within the specified period of time.
+          * ## [](#)
+          * You cannot repeatedly call the **ChangeResourceGroup** operation to modify the resource group of the same Express Connect circuit.
           *
           * @param request ChangeResourceGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5077,7 +5082,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **ChangeResourceGroup** operation within the specified period of time.
+          * ## [](#)
+          * You cannot repeatedly call the **ChangeResourceGroup** operation to modify the resource group of the same Express Connect circuit.
           *
           * @param request ChangeResourceGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5123,7 +5129,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **ChangeResourceGroup** operation within the specified period of time.
+          * ## [](#)
+          * You cannot repeatedly call the **ChangeResourceGroup** operation to modify the resource group of the same Express Connect circuit.
           *
           * @param request ChangeResourceGroupRequest
           * @return ChangeResourceGroupResponse
@@ -5135,7 +5142,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **ChangeResourceGroup** operation within the specified period of time.
+          * ## [](#)
+          * You cannot repeatedly call the **ChangeResourceGroup** operation to modify the resource group of the same Express Connect circuit.
           *
           * @param request ChangeResourceGroupRequest
           * @return ChangeResourceGroupResponse
@@ -5783,10 +5791,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Before you convert a NAT bandwidth package to an Internet Shared Bandwidth instance, make sure you are aware of the following:
-          * *   The conversion does not incur any additional fees.
-          * *   The conversion does not affect the SNAT or DNAT entries of the NAT Gateway, and has no impact on the running services. However, we recommend that you perform the conversion during off-peak hours.
-          * *   After the conversion, the public IP address in the NAT bandwidth package is converted to an EIP. The peak bandwidth and billing method of the Internet Shared Bandwidth instance are consistent with those of the original NAT bandwidth package.
+          * Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:
+          * *   You are not charged for the conversion.
+          * *   When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.
+          * *   After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.
           *
           * @param request ConvertBandwidthPackageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5844,10 +5852,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Before you convert a NAT bandwidth package to an Internet Shared Bandwidth instance, make sure you are aware of the following:
-          * *   The conversion does not incur any additional fees.
-          * *   The conversion does not affect the SNAT or DNAT entries of the NAT Gateway, and has no impact on the running services. However, we recommend that you perform the conversion during off-peak hours.
-          * *   After the conversion, the public IP address in the NAT bandwidth package is converted to an EIP. The peak bandwidth and billing method of the Internet Shared Bandwidth instance are consistent with those of the original NAT bandwidth package.
+          * Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:
+          * *   You are not charged for the conversion.
+          * *   When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.
+          * *   After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.
           *
           * @param request ConvertBandwidthPackageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5905,10 +5913,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Before you convert a NAT bandwidth package to an Internet Shared Bandwidth instance, make sure you are aware of the following:
-          * *   The conversion does not incur any additional fees.
-          * *   The conversion does not affect the SNAT or DNAT entries of the NAT Gateway, and has no impact on the running services. However, we recommend that you perform the conversion during off-peak hours.
-          * *   After the conversion, the public IP address in the NAT bandwidth package is converted to an EIP. The peak bandwidth and billing method of the Internet Shared Bandwidth instance are consistent with those of the original NAT bandwidth package.
+          * Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:
+          * *   You are not charged for the conversion.
+          * *   When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.
+          * *   After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.
           *
           * @param request ConvertBandwidthPackageRequest
           * @return ConvertBandwidthPackageResponse
@@ -5920,10 +5928,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Before you convert a NAT bandwidth package to an Internet Shared Bandwidth instance, make sure you are aware of the following:
-          * *   The conversion does not incur any additional fees.
-          * *   The conversion does not affect the SNAT or DNAT entries of the NAT Gateway, and has no impact on the running services. However, we recommend that you perform the conversion during off-peak hours.
-          * *   After the conversion, the public IP address in the NAT bandwidth package is converted to an EIP. The peak bandwidth and billing method of the Internet Shared Bandwidth instance are consistent with those of the original NAT bandwidth package.
+          * Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:
+          * *   You are not charged for the conversion.
+          * *   When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.
+          * *   After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.
           *
           * @param request ConvertBandwidthPackageRequest
           * @return ConvertBandwidthPackageResponse
@@ -6095,7 +6103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can use BGP to connect a VBR to a data center. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
+          * You can connect a VBR to a data center through BGP. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
           * BGP groups are used to simplify BGP configurations. You can add BGP peers that use the same configurations to one BGP group. Before you start, you must create a BGP group with the requested autonomous system number (ASN).
           * When you call this operation, take note of the following limits:
           * *   You can specify only the data center that is connected to the VBR through an Express Connect circuit as a BGP peer.
@@ -6192,7 +6200,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can use BGP to connect a VBR to a data center. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
+          * You can connect a VBR to a data center through BGP. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
           * BGP groups are used to simplify BGP configurations. You can add BGP peers that use the same configurations to one BGP group. Before you start, you must create a BGP group with the requested autonomous system number (ASN).
           * When you call this operation, take note of the following limits:
           * *   You can specify only the data center that is connected to the VBR through an Express Connect circuit as a BGP peer.
@@ -6289,7 +6297,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can use BGP to connect a VBR to a data center. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
+          * You can connect a VBR to a data center through BGP. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
           * BGP groups are used to simplify BGP configurations. You can add BGP peers that use the same configurations to one BGP group. Before you start, you must create a BGP group with the requested autonomous system number (ASN).
           * When you call this operation, take note of the following limits:
           * *   You can specify only the data center that is connected to the VBR through an Express Connect circuit as a BGP peer.
@@ -6308,7 +6316,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can use BGP to connect a VBR to a data center. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
+          * You can connect a VBR to a data center through BGP. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
           * BGP groups are used to simplify BGP configurations. You can add BGP peers that use the same configurations to one BGP group. Before you start, you must create a BGP group with the requested autonomous system number (ASN).
           * When you call this operation, take note of the following limits:
           * *   You can specify only the data center that is connected to the VBR through an Express Connect circuit as a BGP peer.
@@ -7594,6 +7602,160 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await CreateExpressCloudConnectionWithOptionsAsync(request, runtime);
         }
 
+        public CreateFailoverTestJobResponse CreateFailoverTestJobWithOptions(CreateFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDuration))
+            {
+                query["JobDuration"] = request.JobDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                query["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFailoverTestJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateFailoverTestJobResponse> CreateFailoverTestJobWithOptionsAsync(CreateFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDuration))
+            {
+                query["JobDuration"] = request.JobDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                query["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFailoverTestJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateFailoverTestJobResponse CreateFailoverTestJob(CreateFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateFailoverTestJobWithOptions(request, runtime);
+        }
+
+        public async Task<CreateFailoverTestJobResponse> CreateFailoverTestJobAsync(CreateFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateFailoverTestJobWithOptionsAsync(request, runtime);
+        }
+
         /**
           * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
           * *   If the flow log is in the **Activating** state, the flow log is being created.
@@ -7815,12 +7977,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets of the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
+          * ## [](#)
+          * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets over the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
           * When you call this operation, take note of the following limits:
-          * *   **CreateForwardEntry** is an asynchronous operation. After you make a request, a DNAT entry ID is returned but the specified DNAT entry is not added. The system adds the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
-          *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the status of the DNAT entry, but cannot perform other operations.
+          * *   **CreateForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
+          *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
           *     *   If the DNAT entry is in the **Available** state, the DNAT entry is added.
-          * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within the specified period of time.
+          * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within a specific period of time.
           * *   All combinations of **ExternalIp**, **ExternalPort**, and **IpProtocol** used in DNAT entries must be unique. You cannot distribute requests to more than one Elastic Compute Service (ECS) instance if these requests are initiated from the same source IP address, received on the same port, and use the same protocol.
           * *   The combinations of **IpProtocol**, **InternalIp**, and **InternalPort** must be unique.
           * *   If one or more DNAT entries in the DNAT table are in the **Pending** or **Modifying** state, you cannot add DNAT entries to the DNAT table.
@@ -7911,12 +8074,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets of the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
+          * ## [](#)
+          * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets over the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
           * When you call this operation, take note of the following limits:
-          * *   **CreateForwardEntry** is an asynchronous operation. After you make a request, a DNAT entry ID is returned but the specified DNAT entry is not added. The system adds the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
-          *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the status of the DNAT entry, but cannot perform other operations.
+          * *   **CreateForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
+          *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
           *     *   If the DNAT entry is in the **Available** state, the DNAT entry is added.
-          * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within the specified period of time.
+          * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within a specific period of time.
           * *   All combinations of **ExternalIp**, **ExternalPort**, and **IpProtocol** used in DNAT entries must be unique. You cannot distribute requests to more than one Elastic Compute Service (ECS) instance if these requests are initiated from the same source IP address, received on the same port, and use the same protocol.
           * *   The combinations of **IpProtocol**, **InternalIp**, and **InternalPort** must be unique.
           * *   If one or more DNAT entries in the DNAT table are in the **Pending** or **Modifying** state, you cannot add DNAT entries to the DNAT table.
@@ -8007,12 +8171,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets of the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
+          * ## [](#)
+          * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets over the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
           * When you call this operation, take note of the following limits:
-          * *   **CreateForwardEntry** is an asynchronous operation. After you make a request, a DNAT entry ID is returned but the specified DNAT entry is not added. The system adds the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
-          *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the status of the DNAT entry, but cannot perform other operations.
+          * *   **CreateForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
+          *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
           *     *   If the DNAT entry is in the **Available** state, the DNAT entry is added.
-          * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within the specified period of time.
+          * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within a specific period of time.
           * *   All combinations of **ExternalIp**, **ExternalPort**, and **IpProtocol** used in DNAT entries must be unique. You cannot distribute requests to more than one Elastic Compute Service (ECS) instance if these requests are initiated from the same source IP address, received on the same port, and use the same protocol.
           * *   The combinations of **IpProtocol**, **InternalIp**, and **InternalPort** must be unique.
           * *   If one or more DNAT entries in the DNAT table are in the **Pending** or **Modifying** state, you cannot add DNAT entries to the DNAT table.
@@ -8029,12 +8194,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets of the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
+          * ## [](#)
+          * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets over the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
           * When you call this operation, take note of the following limits:
-          * *   **CreateForwardEntry** is an asynchronous operation. After you make a request, a DNAT entry ID is returned but the specified DNAT entry is not added. The system adds the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
-          *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the status of the DNAT entry, but cannot perform other operations.
+          * *   **CreateForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
+          *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
           *     *   If the DNAT entry is in the **Available** state, the DNAT entry is added.
-          * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within the specified period of time.
+          * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within a specific period of time.
           * *   All combinations of **ExternalIp**, **ExternalPort**, and **IpProtocol** used in DNAT entries must be unique. You cannot distribute requests to more than one Elastic Compute Service (ECS) instance if these requests are initiated from the same source IP address, received on the same port, and use the same protocol.
           * *   The combinations of **IpProtocol**, **InternalIp**, and **InternalPort** must be unique.
           * *   If one or more DNAT entries in the DNAT table are in the **Pending** or **Modifying** state, you cannot add DNAT entries to the DNAT table.
@@ -9370,7 +9536,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-          * *   **CreateIpsecServer** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the IPsec server is being created in the backend. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
           *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
           * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
@@ -9452,7 +9618,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-          * *   **CreateIpsecServer** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the IPsec server is being created in the backend. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
           *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
           * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
@@ -9534,7 +9700,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-          * *   **CreateIpsecServer** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the IPsec server is being created in the backend. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
           *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
           * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
@@ -9550,7 +9716,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-          * *   **CreateIpsecServer** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the IPsec server is being created in the backend. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
           *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
           * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
@@ -9957,10 +10123,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateIpv6Gateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the state of an IPv6 gateway.
+          * *   **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task.
           *     *   If the IPv6 gateway is in the **Creating** state, the IPv6 gateway is being created.
           *     *   If the IPv6 gateway is in the **Created** state, the IPv6 gateway is created.
-          * *   You cannot call the **CreateIpv6Gateway** operation to create multiple IPv6 gateways in a virtual private cloud (VPC) at the same time.
+          * *   You cannot repeatedly call the **CreateIpv6Gateway** operation within a specific time period.
           *
           * @param request CreateIpv6GatewayRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10038,10 +10204,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateIpv6Gateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the state of an IPv6 gateway.
+          * *   **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task.
           *     *   If the IPv6 gateway is in the **Creating** state, the IPv6 gateway is being created.
           *     *   If the IPv6 gateway is in the **Created** state, the IPv6 gateway is created.
-          * *   You cannot call the **CreateIpv6Gateway** operation to create multiple IPv6 gateways in a virtual private cloud (VPC) at the same time.
+          * *   You cannot repeatedly call the **CreateIpv6Gateway** operation within a specific time period.
           *
           * @param request CreateIpv6GatewayRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10119,10 +10285,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateIpv6Gateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the state of an IPv6 gateway.
+          * *   **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task.
           *     *   If the IPv6 gateway is in the **Creating** state, the IPv6 gateway is being created.
           *     *   If the IPv6 gateway is in the **Created** state, the IPv6 gateway is created.
-          * *   You cannot call the **CreateIpv6Gateway** operation to create multiple IPv6 gateways in a virtual private cloud (VPC) at the same time.
+          * *   You cannot repeatedly call the **CreateIpv6Gateway** operation within a specific time period.
           *
           * @param request CreateIpv6GatewayRequest
           * @return CreateIpv6GatewayResponse
@@ -10134,10 +10300,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateIpv6Gateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the state of an IPv6 gateway.
+          * *   **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task.
           *     *   If the IPv6 gateway is in the **Creating** state, the IPv6 gateway is being created.
           *     *   If the IPv6 gateway is in the **Created** state, the IPv6 gateway is created.
-          * *   You cannot call the **CreateIpv6Gateway** operation to create multiple IPv6 gateways in a virtual private cloud (VPC) at the same time.
+          * *   You cannot repeatedly call the **CreateIpv6Gateway** operation within a specific time period.
           *
           * @param request CreateIpv6GatewayRequest
           * @return CreateIpv6GatewayResponse
@@ -10149,14 +10315,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * Before you call this operation, take note of the following items:
-          * *   When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
+          * *   The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
           * *   After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.
-          * *   **CreateNatGateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of a NAT gateway.
+          * *   **CreateNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of the task.
           *     *   If a NAT gateway is in the **Creating** state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.
           *     *   If a NAT gateway is in the **Available** state, the NAT gateway is created.
-          *         It takes 1 to 3 minutes to create a NAT gateway.
-          * *   You cannot repeatedly call the **CreateNatGateway** operation to create a VPC NAT gateway or an Internet NAT gateway within the specified period of time.
+          * It takes 1 to 3 minutes to create a NAT gateway.
+          * *   You cannot repeatedly call the **CreateNatGateway** operation within a specific period of time.
           *
           * @param request CreateNatGatewayRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10274,14 +10441,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * Before you call this operation, take note of the following items:
-          * *   When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
+          * *   The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
           * *   After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.
-          * *   **CreateNatGateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of a NAT gateway.
+          * *   **CreateNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of the task.
           *     *   If a NAT gateway is in the **Creating** state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.
           *     *   If a NAT gateway is in the **Available** state, the NAT gateway is created.
-          *         It takes 1 to 3 minutes to create a NAT gateway.
-          * *   You cannot repeatedly call the **CreateNatGateway** operation to create a VPC NAT gateway or an Internet NAT gateway within the specified period of time.
+          * It takes 1 to 3 minutes to create a NAT gateway.
+          * *   You cannot repeatedly call the **CreateNatGateway** operation within a specific period of time.
           *
           * @param request CreateNatGatewayRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10399,14 +10567,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * Before you call this operation, take note of the following items:
-          * *   When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
+          * *   The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
           * *   After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.
-          * *   **CreateNatGateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of a NAT gateway.
+          * *   **CreateNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of the task.
           *     *   If a NAT gateway is in the **Creating** state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.
           *     *   If a NAT gateway is in the **Available** state, the NAT gateway is created.
-          *         It takes 1 to 3 minutes to create a NAT gateway.
-          * *   You cannot repeatedly call the **CreateNatGateway** operation to create a VPC NAT gateway or an Internet NAT gateway within the specified period of time.
+          * It takes 1 to 3 minutes to create a NAT gateway.
+          * *   You cannot repeatedly call the **CreateNatGateway** operation within a specific period of time.
           *
           * @param request CreateNatGatewayRequest
           * @return CreateNatGatewayResponse
@@ -10418,14 +10587,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * Before you call this operation, take note of the following items:
-          * *   When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
+          * *   The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
           * *   After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.
-          * *   **CreateNatGateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of a NAT gateway.
+          * *   **CreateNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of the task.
           *     *   If a NAT gateway is in the **Creating** state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.
           *     *   If a NAT gateway is in the **Available** state, the NAT gateway is created.
-          *         It takes 1 to 3 minutes to create a NAT gateway.
-          * *   You cannot repeatedly call the **CreateNatGateway** operation to create a VPC NAT gateway or an Internet NAT gateway within the specified period of time.
+          * It takes 1 to 3 minutes to create a NAT gateway.
+          * *   You cannot repeatedly call the **CreateNatGateway** operation within a specific period of time.
           *
           * @param request CreateNatGatewayRequest
           * @return CreateNatGatewayResponse
@@ -10437,10 +10607,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **CreateNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT IP address is not created. The system creates the NAT IP address in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of a NAT IP address.
-          * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address but cannot perform other operations.
+          * ## [](#)
+          * **CreateNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of the task.
+          * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address and cannot perform other operations.
           * *   If a NAT IP address is in the **Available** state, the NAT IP address is created.
-          * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within the specified period of time.
+          * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within a specific period of time.
           *
           * @param request CreateNatIpRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10522,10 +10693,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **CreateNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT IP address is not created. The system creates the NAT IP address in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of a NAT IP address.
-          * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address but cannot perform other operations.
+          * ## [](#)
+          * **CreateNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of the task.
+          * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address and cannot perform other operations.
           * *   If a NAT IP address is in the **Available** state, the NAT IP address is created.
-          * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within the specified period of time.
+          * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within a specific period of time.
           *
           * @param request CreateNatIpRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10607,10 +10779,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **CreateNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT IP address is not created. The system creates the NAT IP address in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of a NAT IP address.
-          * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address but cannot perform other operations.
+          * ## [](#)
+          * **CreateNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of the task.
+          * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address and cannot perform other operations.
           * *   If a NAT IP address is in the **Available** state, the NAT IP address is created.
-          * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within the specified period of time.
+          * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within a specific period of time.
           *
           * @param request CreateNatIpRequest
           * @return CreateNatIpResponse
@@ -10622,10 +10795,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **CreateNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT IP address is not created. The system creates the NAT IP address in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of a NAT IP address.
-          * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address but cannot perform other operations.
+          * ## [](#)
+          * **CreateNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of the task.
+          * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address and cannot perform other operations.
           * *   If a NAT IP address is in the **Available** state, the NAT IP address is created.
-          * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within the specified period of time.
+          * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within a specific period of time.
           *
           * @param request CreateNatIpRequest
           * @return CreateNatIpResponse
@@ -10637,6 +10811,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **CreateNatIpCidr** operation to create a NAT CIDR block within the specified period of time.
           *
           * @param request CreateNatIpCidrRequest
@@ -10715,6 +10890,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **CreateNatIpCidr** operation to create a NAT CIDR block within the specified period of time.
           *
           * @param request CreateNatIpCidrRequest
@@ -10793,6 +10969,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **CreateNatIpCidr** operation to create a NAT CIDR block within the specified period of time.
           *
           * @param request CreateNatIpCidrRequest
@@ -10805,6 +10982,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **CreateNatIpCidr** operation to create a NAT CIDR block within the specified period of time.
           *
           * @param request CreateNatIpCidrRequest
@@ -11733,13 +11911,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateRouteEntries** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry:
+          * ## [](#)References
+          * *   **CreateRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
           *     *   If the route entry is in the **Creating** state, the route entry is being created.
           *     *   If the route entry is in the **Created** state, the route entry is created.
           * *   You cannot repeatedly call the **CreateRouteEntries** operation to create the same route entry within the specified period of time.
           * **When you call this operation to add custom route entries to the route table of a vRouter, take note of the following items:**
           * *   A route table can contain up to 200 custom route entries.
-          * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+          * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the VPC.
           * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or its subnets.
           * *   The destination CIDR blocks (**DstCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DstCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
@@ -11802,13 +11981,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateRouteEntries** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry:
+          * ## [](#)References
+          * *   **CreateRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
           *     *   If the route entry is in the **Creating** state, the route entry is being created.
           *     *   If the route entry is in the **Created** state, the route entry is created.
           * *   You cannot repeatedly call the **CreateRouteEntries** operation to create the same route entry within the specified period of time.
           * **When you call this operation to add custom route entries to the route table of a vRouter, take note of the following items:**
           * *   A route table can contain up to 200 custom route entries.
-          * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+          * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the VPC.
           * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or its subnets.
           * *   The destination CIDR blocks (**DstCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DstCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
@@ -11871,13 +12051,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateRouteEntries** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry:
+          * ## [](#)References
+          * *   **CreateRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
           *     *   If the route entry is in the **Creating** state, the route entry is being created.
           *     *   If the route entry is in the **Created** state, the route entry is created.
           * *   You cannot repeatedly call the **CreateRouteEntries** operation to create the same route entry within the specified period of time.
           * **When you call this operation to add custom route entries to the route table of a vRouter, take note of the following items:**
           * *   A route table can contain up to 200 custom route entries.
-          * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+          * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the VPC.
           * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or its subnets.
           * *   The destination CIDR blocks (**DstCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DstCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
@@ -11894,13 +12075,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateRouteEntries** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry:
+          * ## [](#)References
+          * *   **CreateRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
           *     *   If the route entry is in the **Creating** state, the route entry is being created.
           *     *   If the route entry is in the **Created** state, the route entry is created.
           * *   You cannot repeatedly call the **CreateRouteEntries** operation to create the same route entry within the specified period of time.
           * **When you call this operation to add custom route entries to the route table of a vRouter, take note of the following items:**
           * *   A route table can contain up to 200 custom route entries.
-          * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+          * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the VPC.
           * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or its subnets.
           * *   The destination CIDR blocks (**DstCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DstCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
@@ -11917,24 +12099,25 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-          *     *   If the route entry is in the **Creating** state, the route entry is being created.
-          *     *   If the route entry is in the **Created** state, the route entry is created.
-          * *   You cannot repeatedly call the **CreateRouteEntry** operation to add a custom route entry to the route table of a vRouter or a VBR within the specified period of time.
+          * *   **CreateRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task:
+          *     *   If a route is in the **Creating** state, the route is being added.
+          *     *   If a route is in the **Created** state, the route is added.
+          * *   You cannot repeatedly call **CreateRouteEntry** within a specific period of time.
           * **When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following limits:**
+          * >  When you add a route entry from a prefix list, the quota usage is calculated by adding the number of existing route entries and the maximum number of route entries of the prefix list.
           * *   A route table can contain up to 200 custom route entries.
-          * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+          * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or be a subset of the CIDR block of a vSwitch in the virtual private cloud (VPC). The destination CIDR block can contain the CIDR block of a vSwitch.
           * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
           * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
           * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
-          * *   The next hop (**NextHopId**) of a custom route entry must belong to the same VPC as the route table.
+          * *   The next hop (**NextHopId**) of a custom route entry must in the same VPC as the route table.
           * *   Equal-cost multi-path (ECMP) routing can be configured by specifying the **NextHopList** parameter.
           *     *   When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you must not specify **NextHopList**.
           *     *   When you add route entries for ECMP routing, you must specify **DestinationCidrBlock** and **NextHopList**, and you must not specify **NextHopType** or **NextHopId**.
           * **When you call this operation to add a custom route entry to the route table of a VBR, take note of the following limits:**
           * *   A route table can contain up to 200 custom route entries.
-          * *   The **NextHopList** parameter is not supported.
+          * *   **NextHopList** is not supported.
           * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
           * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
@@ -12023,24 +12206,25 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-          *     *   If the route entry is in the **Creating** state, the route entry is being created.
-          *     *   If the route entry is in the **Created** state, the route entry is created.
-          * *   You cannot repeatedly call the **CreateRouteEntry** operation to add a custom route entry to the route table of a vRouter or a VBR within the specified period of time.
+          * *   **CreateRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task:
+          *     *   If a route is in the **Creating** state, the route is being added.
+          *     *   If a route is in the **Created** state, the route is added.
+          * *   You cannot repeatedly call **CreateRouteEntry** within a specific period of time.
           * **When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following limits:**
+          * >  When you add a route entry from a prefix list, the quota usage is calculated by adding the number of existing route entries and the maximum number of route entries of the prefix list.
           * *   A route table can contain up to 200 custom route entries.
-          * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+          * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or be a subset of the CIDR block of a vSwitch in the virtual private cloud (VPC). The destination CIDR block can contain the CIDR block of a vSwitch.
           * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
           * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
           * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
-          * *   The next hop (**NextHopId**) of a custom route entry must belong to the same VPC as the route table.
+          * *   The next hop (**NextHopId**) of a custom route entry must in the same VPC as the route table.
           * *   Equal-cost multi-path (ECMP) routing can be configured by specifying the **NextHopList** parameter.
           *     *   When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you must not specify **NextHopList**.
           *     *   When you add route entries for ECMP routing, you must specify **DestinationCidrBlock** and **NextHopList**, and you must not specify **NextHopType** or **NextHopId**.
           * **When you call this operation to add a custom route entry to the route table of a VBR, take note of the following limits:**
           * *   A route table can contain up to 200 custom route entries.
-          * *   The **NextHopList** parameter is not supported.
+          * *   **NextHopList** is not supported.
           * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
           * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
@@ -12129,24 +12313,25 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-          *     *   If the route entry is in the **Creating** state, the route entry is being created.
-          *     *   If the route entry is in the **Created** state, the route entry is created.
-          * *   You cannot repeatedly call the **CreateRouteEntry** operation to add a custom route entry to the route table of a vRouter or a VBR within the specified period of time.
+          * *   **CreateRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task:
+          *     *   If a route is in the **Creating** state, the route is being added.
+          *     *   If a route is in the **Created** state, the route is added.
+          * *   You cannot repeatedly call **CreateRouteEntry** within a specific period of time.
           * **When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following limits:**
+          * >  When you add a route entry from a prefix list, the quota usage is calculated by adding the number of existing route entries and the maximum number of route entries of the prefix list.
           * *   A route table can contain up to 200 custom route entries.
-          * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+          * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or be a subset of the CIDR block of a vSwitch in the virtual private cloud (VPC). The destination CIDR block can contain the CIDR block of a vSwitch.
           * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
           * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
           * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
-          * *   The next hop (**NextHopId**) of a custom route entry must belong to the same VPC as the route table.
+          * *   The next hop (**NextHopId**) of a custom route entry must in the same VPC as the route table.
           * *   Equal-cost multi-path (ECMP) routing can be configured by specifying the **NextHopList** parameter.
           *     *   When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you must not specify **NextHopList**.
           *     *   When you add route entries for ECMP routing, you must specify **DestinationCidrBlock** and **NextHopList**, and you must not specify **NextHopType** or **NextHopId**.
           * **When you call this operation to add a custom route entry to the route table of a VBR, take note of the following limits:**
           * *   A route table can contain up to 200 custom route entries.
-          * *   The **NextHopList** parameter is not supported.
+          * *   **NextHopList** is not supported.
           * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
           * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
@@ -12165,24 +12350,25 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-          *     *   If the route entry is in the **Creating** state, the route entry is being created.
-          *     *   If the route entry is in the **Created** state, the route entry is created.
-          * *   You cannot repeatedly call the **CreateRouteEntry** operation to add a custom route entry to the route table of a vRouter or a VBR within the specified period of time.
+          * *   **CreateRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task:
+          *     *   If a route is in the **Creating** state, the route is being added.
+          *     *   If a route is in the **Created** state, the route is added.
+          * *   You cannot repeatedly call **CreateRouteEntry** within a specific period of time.
           * **When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following limits:**
+          * >  When you add a route entry from a prefix list, the quota usage is calculated by adding the number of existing route entries and the maximum number of route entries of the prefix list.
           * *   A route table can contain up to 200 custom route entries.
-          * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+          * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or be a subset of the CIDR block of a vSwitch in the virtual private cloud (VPC). The destination CIDR block can contain the CIDR block of a vSwitch.
           * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
           * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
           * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
-          * *   The next hop (**NextHopId**) of a custom route entry must belong to the same VPC as the route table.
+          * *   The next hop (**NextHopId**) of a custom route entry must in the same VPC as the route table.
           * *   Equal-cost multi-path (ECMP) routing can be configured by specifying the **NextHopList** parameter.
           *     *   When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you must not specify **NextHopList**.
           *     *   When you add route entries for ECMP routing, you must specify **DestinationCidrBlock** and **NextHopList**, and you must not specify **NextHopType** or **NextHopId**.
           * **When you call this operation to add a custom route entry to the route table of a VBR, take note of the following limits:**
           * *   A route table can contain up to 200 custom route entries.
-          * *   The **NextHopList** parameter is not supported.
+          * *   **NextHopList** is not supported.
           * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
           * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
           * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
@@ -12393,6 +12579,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   You can create only one pair of interfaces to be connected between two routers.
           * *   You can create a maximum of five router interfaces for a router.
@@ -12549,6 +12736,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   You can create only one pair of interfaces to be connected between two routers.
           * *   You can create a maximum of five router interfaces for a router.
@@ -12705,6 +12893,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   You can create only one pair of interfaces to be connected between two routers.
           * *   You can create a maximum of five router interfaces for a router.
@@ -12723,6 +12912,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   You can create only one pair of interfaces to be connected between two routers.
           * *   You can create a maximum of five router interfaces for a router.
@@ -13075,7 +13265,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateSslVpnServer** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the SSL server is still being created in the backend. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+          * *   **CreateSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
           *     *   If the VPN gateway is in the **active** state, the SSL server is created.
           * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
@@ -13176,7 +13366,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateSslVpnServer** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the SSL server is still being created in the backend. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+          * *   **CreateSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
           *     *   If the VPN gateway is in the **active** state, the SSL server is created.
           * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
@@ -13277,7 +13467,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateSslVpnServer** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the SSL server is still being created in the backend. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+          * *   **CreateSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
           *     *   If the VPN gateway is in the **active** state, the SSL server is created.
           * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
@@ -13292,7 +13482,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **CreateSslVpnServer** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the SSL server is still being created in the backend. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+          * *   **CreateSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
           *     *   If the VPN gateway is in the **active** state, the SSL server is created.
           * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
@@ -14158,6 +14348,242 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await CreateVSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## [](#)Description
+          * Take note of the following items:
+          * *   You can create at most 10 reserved IPv4 CIDR blocks and 10 reserved IPv6 CIDR blocks for each vSwitch in a virtual private cloud (VPC).
+          * *   After you create a reserved CIDR block for a vSwitch, the CIDR block cannot contain the IP address of the subnet gateway of the VPC to which the vSwitch belongs.
+          * *   **CreateVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
+          *     *   If the vSwitch is in the **Assigning** state, the reserved CIDR block is being created.
+          *     *   If the vSwitch is in the **Assigned** state, the reserved CIDR block is created.
+          * *   When you create a reserved IPv4 CIDR block for a vSwitch, the first IP address and the last three IP addresses of the vSwitch are reserved by the system. The four IP addresses will not be allocated.
+          * *   When you create a reserved IPv6 CIDR block for a vSwitch, the first IP address and the last nine IP addresses of the vSwitch are reserved by the system. The 10 IP addresses will not be allocated. For example, if you create a reserved IPv4 CIDR block for a vSwitch whose CIDR block is 192.168.1.0/24, the reserved CIDR block cannot contain the following IP addresses: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.
+          *
+          * @param request CreateVSwitchCidrReservationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVSwitchCidrReservationResponse
+         */
+        public CreateVSwitchCidrReservationResponse CreateVSwitchCidrReservationWithOptions(CreateVSwitchCidrReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationCidr))
+            {
+                query["VSwitchCidrReservationCidr"] = request.VSwitchCidrReservationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationDescription))
+            {
+                query["VSwitchCidrReservationDescription"] = request.VSwitchCidrReservationDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationMask))
+            {
+                query["VSwitchCidrReservationMask"] = request.VSwitchCidrReservationMask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationName))
+            {
+                query["VSwitchCidrReservationName"] = request.VSwitchCidrReservationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationType))
+            {
+                query["VSwitchCidrReservationType"] = request.VSwitchCidrReservationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVSwitchCidrReservation",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVSwitchCidrReservationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * ## [](#)Description
+          * Take note of the following items:
+          * *   You can create at most 10 reserved IPv4 CIDR blocks and 10 reserved IPv6 CIDR blocks for each vSwitch in a virtual private cloud (VPC).
+          * *   After you create a reserved CIDR block for a vSwitch, the CIDR block cannot contain the IP address of the subnet gateway of the VPC to which the vSwitch belongs.
+          * *   **CreateVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
+          *     *   If the vSwitch is in the **Assigning** state, the reserved CIDR block is being created.
+          *     *   If the vSwitch is in the **Assigned** state, the reserved CIDR block is created.
+          * *   When you create a reserved IPv4 CIDR block for a vSwitch, the first IP address and the last three IP addresses of the vSwitch are reserved by the system. The four IP addresses will not be allocated.
+          * *   When you create a reserved IPv6 CIDR block for a vSwitch, the first IP address and the last nine IP addresses of the vSwitch are reserved by the system. The 10 IP addresses will not be allocated. For example, if you create a reserved IPv4 CIDR block for a vSwitch whose CIDR block is 192.168.1.0/24, the reserved CIDR block cannot contain the following IP addresses: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.
+          *
+          * @param request CreateVSwitchCidrReservationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVSwitchCidrReservationResponse
+         */
+        public async Task<CreateVSwitchCidrReservationResponse> CreateVSwitchCidrReservationWithOptionsAsync(CreateVSwitchCidrReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationCidr))
+            {
+                query["VSwitchCidrReservationCidr"] = request.VSwitchCidrReservationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationDescription))
+            {
+                query["VSwitchCidrReservationDescription"] = request.VSwitchCidrReservationDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationMask))
+            {
+                query["VSwitchCidrReservationMask"] = request.VSwitchCidrReservationMask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationName))
+            {
+                query["VSwitchCidrReservationName"] = request.VSwitchCidrReservationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationType))
+            {
+                query["VSwitchCidrReservationType"] = request.VSwitchCidrReservationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVSwitchCidrReservation",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVSwitchCidrReservationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * ## [](#)Description
+          * Take note of the following items:
+          * *   You can create at most 10 reserved IPv4 CIDR blocks and 10 reserved IPv6 CIDR blocks for each vSwitch in a virtual private cloud (VPC).
+          * *   After you create a reserved CIDR block for a vSwitch, the CIDR block cannot contain the IP address of the subnet gateway of the VPC to which the vSwitch belongs.
+          * *   **CreateVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
+          *     *   If the vSwitch is in the **Assigning** state, the reserved CIDR block is being created.
+          *     *   If the vSwitch is in the **Assigned** state, the reserved CIDR block is created.
+          * *   When you create a reserved IPv4 CIDR block for a vSwitch, the first IP address and the last three IP addresses of the vSwitch are reserved by the system. The four IP addresses will not be allocated.
+          * *   When you create a reserved IPv6 CIDR block for a vSwitch, the first IP address and the last nine IP addresses of the vSwitch are reserved by the system. The 10 IP addresses will not be allocated. For example, if you create a reserved IPv4 CIDR block for a vSwitch whose CIDR block is 192.168.1.0/24, the reserved CIDR block cannot contain the following IP addresses: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.
+          *
+          * @param request CreateVSwitchCidrReservationRequest
+          * @return CreateVSwitchCidrReservationResponse
+         */
+        public CreateVSwitchCidrReservationResponse CreateVSwitchCidrReservation(CreateVSwitchCidrReservationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVSwitchCidrReservationWithOptions(request, runtime);
+        }
+
+        /**
+          * ## [](#)Description
+          * Take note of the following items:
+          * *   You can create at most 10 reserved IPv4 CIDR blocks and 10 reserved IPv6 CIDR blocks for each vSwitch in a virtual private cloud (VPC).
+          * *   After you create a reserved CIDR block for a vSwitch, the CIDR block cannot contain the IP address of the subnet gateway of the VPC to which the vSwitch belongs.
+          * *   **CreateVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
+          *     *   If the vSwitch is in the **Assigning** state, the reserved CIDR block is being created.
+          *     *   If the vSwitch is in the **Assigned** state, the reserved CIDR block is created.
+          * *   When you create a reserved IPv4 CIDR block for a vSwitch, the first IP address and the last three IP addresses of the vSwitch are reserved by the system. The four IP addresses will not be allocated.
+          * *   When you create a reserved IPv6 CIDR block for a vSwitch, the first IP address and the last nine IP addresses of the vSwitch are reserved by the system. The 10 IP addresses will not be allocated. For example, if you create a reserved IPv4 CIDR block for a vSwitch whose CIDR block is 192.168.1.0/24, the reserved CIDR block cannot contain the following IP addresses: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.
+          *
+          * @param request CreateVSwitchCidrReservationRequest
+          * @return CreateVSwitchCidrReservationResponse
+         */
+        public async Task<CreateVSwitchCidrReservationResponse> CreateVSwitchCidrReservationAsync(CreateVSwitchCidrReservationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVSwitchCidrReservationWithOptionsAsync(request, runtime);
+        }
+
         public CreateVbrHaResponse CreateVbrHaWithOptions(CreateVbrHaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14497,7 +14923,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you create a VBR, the VBR is in the **Enabled** state by default.
+          * When you create a VBR, the VBR is in the **active** state by default.
           *
           * @param request CreateVirtualBorderRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14615,7 +15041,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you create a VBR, the VBR is in the **Enabled** state by default.
+          * When you create a VBR, the VBR is in the **active** state by default.
           *
           * @param request CreateVirtualBorderRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14733,7 +15159,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you create a VBR, the VBR is in the **Enabled** state by default.
+          * When you create a VBR, the VBR is in the **active** state by default.
           *
           * @param request CreateVirtualBorderRouterRequest
           * @return CreateVirtualBorderRouterResponse
@@ -14745,7 +15171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you create a VBR, the VBR is in the **Enabled** state by default.
+          * When you create a VBR, the VBR is in the **active** state by default.
           *
           * @param request CreateVirtualBorderRouterRequest
           * @return CreateVirtualBorderRouterResponse
@@ -14757,7 +15183,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Before you call this API operation, familiarize yourself with the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview](~~146571~~) and [Operation guide for Express Connect partners](~~155987~~).
+          * # [](#)Description
+          * Before you call this operation, we recommend that you learn about the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview of hosted connections](~~146571~~) and [Operations performed by Express Connect partners](~~155987~~).
           *
           * @param request CreateVirtualPhysicalConnectionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14835,7 +15262,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Before you call this API operation, familiarize yourself with the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview](~~146571~~) and [Operation guide for Express Connect partners](~~155987~~).
+          * # [](#)Description
+          * Before you call this operation, we recommend that you learn about the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview of hosted connections](~~146571~~) and [Operations performed by Express Connect partners](~~155987~~).
           *
           * @param request CreateVirtualPhysicalConnectionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14913,7 +15341,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Before you call this API operation, familiarize yourself with the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview](~~146571~~) and [Operation guide for Express Connect partners](~~155987~~).
+          * # [](#)Description
+          * Before you call this operation, we recommend that you learn about the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview of hosted connections](~~146571~~) and [Operations performed by Express Connect partners](~~155987~~).
           *
           * @param request CreateVirtualPhysicalConnectionRequest
           * @return CreateVirtualPhysicalConnectionResponse
@@ -14925,7 +15354,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Before you call this API operation, familiarize yourself with the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview](~~146571~~) and [Operation guide for Express Connect partners](~~155987~~).
+          * # [](#)Description
+          * Before you call this operation, we recommend that you learn about the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview of hosted connections](~~146571~~) and [Operations performed by Express Connect partners](~~155987~~).
           *
           * @param request CreateVirtualPhysicalConnectionRequest
           * @return CreateVirtualPhysicalConnectionResponse
@@ -15563,8 +15993,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Preparations:
           * Before the Express Connect partner performs the operation, the Express Connect partner must notify the tenant and request the tenant to enable outbound data transfer billing. For more information, see [Enable outbound data transfer billing](~~274385~~).
           * What to do next:
-          * 1\\. After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
-          * 2\\. Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
+          * 1.  After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
+          * 2.  Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
           *
           * @param request CreateVpconnFromVbrRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15618,8 +16048,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Preparations:
           * Before the Express Connect partner performs the operation, the Express Connect partner must notify the tenant and request the tenant to enable outbound data transfer billing. For more information, see [Enable outbound data transfer billing](~~274385~~).
           * What to do next:
-          * 1\\. After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
-          * 2\\. Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
+          * 1.  After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
+          * 2.  Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
           *
           * @param request CreateVpconnFromVbrRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15673,8 +16103,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Preparations:
           * Before the Express Connect partner performs the operation, the Express Connect partner must notify the tenant and request the tenant to enable outbound data transfer billing. For more information, see [Enable outbound data transfer billing](~~274385~~).
           * What to do next:
-          * 1\\. After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
-          * 2\\. Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
+          * 1.  After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
+          * 2.  Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
           *
           * @param request CreateVpconnFromVbrRequest
           * @return CreateVpconnFromVbrResponse
@@ -15690,8 +16120,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Preparations:
           * Before the Express Connect partner performs the operation, the Express Connect partner must notify the tenant and request the tenant to enable outbound data transfer billing. For more information, see [Enable outbound data transfer billing](~~274385~~).
           * What to do next:
-          * 1\\. After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
-          * 2\\. Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
+          * 1.  After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
+          * 2.  Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
           *
           * @param request CreateVpconnFromVbrRequest
           * @return CreateVpconnFromVbrResponse
@@ -15704,7 +16134,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * By default, an IPsec-VPN connection created by calling the `CreateVpnAttachment` operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the [CreateTransitRouterVpnAttachment](~~443993~~) operation.
-          * ###  Prerequisites
+          * ### [](#)Prerequisites
           * Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see [CreateCustomerGateway](~~120368~~).
           * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.
           *
@@ -15821,7 +16251,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * By default, an IPsec-VPN connection created by calling the `CreateVpnAttachment` operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the [CreateTransitRouterVpnAttachment](~~443993~~) operation.
-          * ###  Prerequisites
+          * ### [](#)Prerequisites
           * Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see [CreateCustomerGateway](~~120368~~).
           * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.
           *
@@ -15938,7 +16368,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * By default, an IPsec-VPN connection created by calling the `CreateVpnAttachment` operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the [CreateTransitRouterVpnAttachment](~~443993~~) operation.
-          * ###  Prerequisites
+          * ### [](#)Prerequisites
           * Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see [CreateCustomerGateway](~~120368~~).
           * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.
           *
@@ -15953,7 +16383,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * By default, an IPsec-VPN connection created by calling the `CreateVpnAttachment` operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the [CreateTransitRouterVpnAttachment](~~443993~~) operation.
-          * ###  Prerequisites
+          * ### [](#)Prerequisites
           * Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see [CreateCustomerGateway](~~120368~~).
           * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.
           *
@@ -15968,9 +16398,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   If the VPN gateway supports the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-          *     **ClientToken**, **Name**, **EffectImmediately**, **AutoConfigRoute**, **Tags**, **TunnelOptionsSpecification**, and **EnableTunnelsBgp**.
-          * *   If the VPN gateway supports only the single-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-          *     **ClientToken**, **CustomerGatewayId**, **Name**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, **RemoteCaCertificate**, and **Tags**.
+          *     **ClientToken**, **Name**, **EffectImmediately**, **AutoConfigRoute**, **Tags** array, **TunnelOptionsSpecification** array, and **EnableTunnelsBgp**.
+          *     For more information about the regions and zones that support the dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](~~2358946~~).
+          * *   If the VPN gateway supports only the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
+          *     **ClientToken**, **CustomerGatewayId**, **Name**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, **RemoteCaCertificate**, and **Tags** array.
           * *   **CreateVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is created.
@@ -16105,9 +16536,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   If the VPN gateway supports the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-          *     **ClientToken**, **Name**, **EffectImmediately**, **AutoConfigRoute**, **Tags**, **TunnelOptionsSpecification**, and **EnableTunnelsBgp**.
-          * *   If the VPN gateway supports only the single-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-          *     **ClientToken**, **CustomerGatewayId**, **Name**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, **RemoteCaCertificate**, and **Tags**.
+          *     **ClientToken**, **Name**, **EffectImmediately**, **AutoConfigRoute**, **Tags** array, **TunnelOptionsSpecification** array, and **EnableTunnelsBgp**.
+          *     For more information about the regions and zones that support the dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](~~2358946~~).
+          * *   If the VPN gateway supports only the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
+          *     **ClientToken**, **CustomerGatewayId**, **Name**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, **RemoteCaCertificate**, and **Tags** array.
           * *   **CreateVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is created.
@@ -16242,9 +16674,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   If the VPN gateway supports the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-          *     **ClientToken**, **Name**, **EffectImmediately**, **AutoConfigRoute**, **Tags**, **TunnelOptionsSpecification**, and **EnableTunnelsBgp**.
-          * *   If the VPN gateway supports only the single-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-          *     **ClientToken**, **CustomerGatewayId**, **Name**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, **RemoteCaCertificate**, and **Tags**.
+          *     **ClientToken**, **Name**, **EffectImmediately**, **AutoConfigRoute**, **Tags** array, **TunnelOptionsSpecification** array, and **EnableTunnelsBgp**.
+          *     For more information about the regions and zones that support the dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](~~2358946~~).
+          * *   If the VPN gateway supports only the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
+          *     **ClientToken**, **CustomerGatewayId**, **Name**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, **RemoteCaCertificate**, and **Tags** array.
           * *   **CreateVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is created.
@@ -16261,9 +16694,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   If the VPN gateway supports the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-          *     **ClientToken**, **Name**, **EffectImmediately**, **AutoConfigRoute**, **Tags**, **TunnelOptionsSpecification**, and **EnableTunnelsBgp**.
-          * *   If the VPN gateway supports only the single-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-          *     **ClientToken**, **CustomerGatewayId**, **Name**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, **RemoteCaCertificate**, and **Tags**.
+          *     **ClientToken**, **Name**, **EffectImmediately**, **AutoConfigRoute**, **Tags** array, **TunnelOptionsSpecification** array, and **EnableTunnelsBgp**.
+          *     For more information about the regions and zones that support the dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](~~2358946~~).
+          * *   If the VPN gateway supports only the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
+          *     **ClientToken**, **CustomerGatewayId**, **Name**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, **RemoteCaCertificate**, and **Tags** array.
           * *   **CreateVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is created.
@@ -17809,7 +18243,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeleteDhcpOptionsSet** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of a DHCP options set:
+          * ## [](#)Description
+          * *   **DeleteDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of the task.
           *     *   If the DHCP options set is in the **Deleting** state, the DHCP options set is being deleted.
           *     *   If you cannot query the DHCP options set, the DHCP options set is deleted.
           * *   You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a DHCP options set within the specified period of time.
@@ -17874,7 +18309,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeleteDhcpOptionsSet** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of a DHCP options set:
+          * ## [](#)Description
+          * *   **DeleteDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of the task.
           *     *   If the DHCP options set is in the **Deleting** state, the DHCP options set is being deleted.
           *     *   If you cannot query the DHCP options set, the DHCP options set is deleted.
           * *   You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a DHCP options set within the specified period of time.
@@ -17939,7 +18375,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeleteDhcpOptionsSet** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of a DHCP options set:
+          * ## [](#)Description
+          * *   **DeleteDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of the task.
           *     *   If the DHCP options set is in the **Deleting** state, the DHCP options set is being deleted.
           *     *   If you cannot query the DHCP options set, the DHCP options set is deleted.
           * *   You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a DHCP options set within the specified period of time.
@@ -17954,7 +18391,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeleteDhcpOptionsSet** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of a DHCP options set:
+          * ## [](#)Description
+          * *   **DeleteDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of the task.
           *     *   If the DHCP options set is in the **Deleting** state, the DHCP options set is being deleted.
           *     *   If you cannot query the DHCP options set, the DHCP options set is deleted.
           * *   You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a DHCP options set within the specified period of time.
@@ -17966,6 +18404,120 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDhcpOptionsSetWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteFailoverTestJobResponse DeleteFailoverTestJobWithOptions(DeleteFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFailoverTestJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteFailoverTestJobResponse> DeleteFailoverTestJobWithOptionsAsync(DeleteFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFailoverTestJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteFailoverTestJobResponse DeleteFailoverTestJob(DeleteFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFailoverTestJobWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteFailoverTestJobResponse> DeleteFailoverTestJobAsync(DeleteFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFailoverTestJobWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -18113,7 +18665,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteForwardEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified DNAT entry is not deleted. The system deletes the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+          * ## [](#)Description
+          * *   **DeleteForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
           *     *   If the DNAT entry is in the **Deleting** state, the system is deleting the DNAT entry. In this case, you can only query the status of the DNAT entry, but cannot perform other operations.
           *     *   If the DNAT entry cannot be found, it is deleted.
           * >  If a DNAT table has DNAT entries in the **Pending** state, you cannot delete the DNAT entries.
@@ -18179,7 +18732,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteForwardEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified DNAT entry is not deleted. The system deletes the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+          * ## [](#)Description
+          * *   **DeleteForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
           *     *   If the DNAT entry is in the **Deleting** state, the system is deleting the DNAT entry. In this case, you can only query the status of the DNAT entry, but cannot perform other operations.
           *     *   If the DNAT entry cannot be found, it is deleted.
           * >  If a DNAT table has DNAT entries in the **Pending** state, you cannot delete the DNAT entries.
@@ -18245,7 +18799,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteForwardEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified DNAT entry is not deleted. The system deletes the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+          * ## [](#)Description
+          * *   **DeleteForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
           *     *   If the DNAT entry is in the **Deleting** state, the system is deleting the DNAT entry. In this case, you can only query the status of the DNAT entry, but cannot perform other operations.
           *     *   If the DNAT entry cannot be found, it is deleted.
           * >  If a DNAT table has DNAT entries in the **Pending** state, you cannot delete the DNAT entries.
@@ -18261,7 +18816,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteForwardEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified DNAT entry is not deleted. The system deletes the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+          * ## [](#)Description
+          * *   **DeleteForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
           *     *   If the DNAT entry is in the **Deleting** state, the system is deleting the DNAT entry. In this case, you can only query the status of the DNAT entry, but cannot perform other operations.
           *     *   If the DNAT entry cannot be found, it is deleted.
           * >  If a DNAT table has DNAT entries in the **Pending** state, you cannot delete the DNAT entries.
@@ -18277,7 +18833,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **DeleteFullNatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the FULLNAT entry is not deleted. The system deletes the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+          * ## [](#)Description
+          * **DeleteFullNatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
           * *   If the FULLNAT entry is in the **Deleting** state, the system is deleting the FULLNAT entry. In this case, you can query the status of the FULLNAT entry, but cannot perform other operations.
           * *   If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.
           * You cannot repeatedly call the **DeleteFullNatEntry** operation to delete a FULLNAT entry within the specified period of time.
@@ -18346,7 +18903,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **DeleteFullNatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the FULLNAT entry is not deleted. The system deletes the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+          * ## [](#)Description
+          * **DeleteFullNatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
           * *   If the FULLNAT entry is in the **Deleting** state, the system is deleting the FULLNAT entry. In this case, you can query the status of the FULLNAT entry, but cannot perform other operations.
           * *   If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.
           * You cannot repeatedly call the **DeleteFullNatEntry** operation to delete a FULLNAT entry within the specified period of time.
@@ -18415,7 +18973,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **DeleteFullNatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the FULLNAT entry is not deleted. The system deletes the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+          * ## [](#)Description
+          * **DeleteFullNatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
           * *   If the FULLNAT entry is in the **Deleting** state, the system is deleting the FULLNAT entry. In this case, you can query the status of the FULLNAT entry, but cannot perform other operations.
           * *   If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.
           * You cannot repeatedly call the **DeleteFullNatEntry** operation to delete a FULLNAT entry within the specified period of time.
@@ -18430,7 +18989,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **DeleteFullNatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the FULLNAT entry is not deleted. The system deletes the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+          * ## [](#)Description
+          * **DeleteFullNatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
           * *   If the FULLNAT entry is in the **Deleting** state, the system is deleting the FULLNAT entry. In this case, you can query the status of the FULLNAT entry, but cannot perform other operations.
           * *   If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.
           * You cannot repeatedly call the **DeleteFullNatEntry** operation to delete a FULLNAT entry within the specified period of time.
@@ -19295,10 +19855,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ### [](#)Description
           * *   Before you delete an IPv4 gateway, make sure that no route tables are associated with the IPv4 gateway.
-          * *   The **DeleteIpv4Gateway** operation is an asynchronous operation. After you call this operation, the system returns a **request ID**. However, the deletion task is still being run in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the IPv4 gateway.
+          * *   **DeleteIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the task.
           *     *   If the IPv4 gateway is in the **Deleting** state, the IPv4 gateway is being deleted.
-          *     *   If the IPv4 gateway cannot be queried, the deletion is complete.
+          *     *   If the IPv4 gateway cannot be queried, the IPv4 gateway is deleted.
           * *   After you call the **DeleteIpv4Gateway** operation to delete an IPv4 gateway, you cannot call the operation again to delete the IPv4 gateway until the deletion task is complete.
           *
           * @param request DeleteIpv4GatewayRequest
@@ -19365,10 +19926,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ### [](#)Description
           * *   Before you delete an IPv4 gateway, make sure that no route tables are associated with the IPv4 gateway.
-          * *   The **DeleteIpv4Gateway** operation is an asynchronous operation. After you call this operation, the system returns a **request ID**. However, the deletion task is still being run in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the IPv4 gateway.
+          * *   **DeleteIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the task.
           *     *   If the IPv4 gateway is in the **Deleting** state, the IPv4 gateway is being deleted.
-          *     *   If the IPv4 gateway cannot be queried, the deletion is complete.
+          *     *   If the IPv4 gateway cannot be queried, the IPv4 gateway is deleted.
           * *   After you call the **DeleteIpv4Gateway** operation to delete an IPv4 gateway, you cannot call the operation again to delete the IPv4 gateway until the deletion task is complete.
           *
           * @param request DeleteIpv4GatewayRequest
@@ -19435,10 +19997,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ### [](#)Description
           * *   Before you delete an IPv4 gateway, make sure that no route tables are associated with the IPv4 gateway.
-          * *   The **DeleteIpv4Gateway** operation is an asynchronous operation. After you call this operation, the system returns a **request ID**. However, the deletion task is still being run in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the IPv4 gateway.
+          * *   **DeleteIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the task.
           *     *   If the IPv4 gateway is in the **Deleting** state, the IPv4 gateway is being deleted.
-          *     *   If the IPv4 gateway cannot be queried, the deletion is complete.
+          *     *   If the IPv4 gateway cannot be queried, the IPv4 gateway is deleted.
           * *   After you call the **DeleteIpv4Gateway** operation to delete an IPv4 gateway, you cannot call the operation again to delete the IPv4 gateway until the deletion task is complete.
           *
           * @param request DeleteIpv4GatewayRequest
@@ -19451,10 +20014,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ### [](#)Description
           * *   Before you delete an IPv4 gateway, make sure that no route tables are associated with the IPv4 gateway.
-          * *   The **DeleteIpv4Gateway** operation is an asynchronous operation. After you call this operation, the system returns a **request ID**. However, the deletion task is still being run in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the IPv4 gateway.
+          * *   **DeleteIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the task.
           *     *   If the IPv4 gateway is in the **Deleting** state, the IPv4 gateway is being deleted.
-          *     *   If the IPv4 gateway cannot be queried, the deletion is complete.
+          *     *   If the IPv4 gateway cannot be queried, the IPv4 gateway is deleted.
           * *   After you call the **DeleteIpv4Gateway** operation to delete an IPv4 gateway, you cannot call the operation again to delete the IPv4 gateway until the deletion task is complete.
           *
           * @param request DeleteIpv4GatewayRequest
@@ -19627,12 +20191,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * - The **DeleteIpv6Gateway** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6GatewayAttribute](/help/en/virtual-private-cloud/latest/describeipv6gatewayattribute) operation to query the status of an IPv6 gateway:   
-          *   - If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
-          *   - If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
-          * - After you call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway, you cannot call the operation again to delete the IPv6 gateway until the deletion task is complete.
-          * ## Prerequisites
           * Before you delete an IPv6 gateway, you must delete the egress-only rules of the IPv6 gateway. For more information, see [DeleteIpv6EgressOnlyRule](~~102201~~).
+          * *   **DeleteIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task:
+          *     *   If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
+          *     *   If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
+          * *   You cannot repeatedly call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway within the specified period of time.
           *
           * @param request DeleteIpv6GatewayRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19690,12 +20253,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * - The **DeleteIpv6Gateway** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6GatewayAttribute](/help/en/virtual-private-cloud/latest/describeipv6gatewayattribute) operation to query the status of an IPv6 gateway:   
-          *   - If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
-          *   - If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
-          * - After you call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway, you cannot call the operation again to delete the IPv6 gateway until the deletion task is complete.
-          * ## Prerequisites
           * Before you delete an IPv6 gateway, you must delete the egress-only rules of the IPv6 gateway. For more information, see [DeleteIpv6EgressOnlyRule](~~102201~~).
+          * *   **DeleteIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task:
+          *     *   If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
+          *     *   If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
+          * *   You cannot repeatedly call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway within the specified period of time.
           *
           * @param request DeleteIpv6GatewayRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19753,12 +20315,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * - The **DeleteIpv6Gateway** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6GatewayAttribute](/help/en/virtual-private-cloud/latest/describeipv6gatewayattribute) operation to query the status of an IPv6 gateway:   
-          *   - If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
-          *   - If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
-          * - After you call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway, you cannot call the operation again to delete the IPv6 gateway until the deletion task is complete.
-          * ## Prerequisites
           * Before you delete an IPv6 gateway, you must delete the egress-only rules of the IPv6 gateway. For more information, see [DeleteIpv6EgressOnlyRule](~~102201~~).
+          * *   **DeleteIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task:
+          *     *   If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
+          *     *   If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
+          * *   You cannot repeatedly call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway within the specified period of time.
           *
           * @param request DeleteIpv6GatewayRequest
           * @return DeleteIpv6GatewayResponse
@@ -19770,12 +20331,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * - The **DeleteIpv6Gateway** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6GatewayAttribute](/help/en/virtual-private-cloud/latest/describeipv6gatewayattribute) operation to query the status of an IPv6 gateway:   
-          *   - If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
-          *   - If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
-          * - After you call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway, you cannot call the operation again to delete the IPv6 gateway until the deletion task is complete.
-          * ## Prerequisites
           * Before you delete an IPv6 gateway, you must delete the egress-only rules of the IPv6 gateway. For more information, see [DeleteIpv6EgressOnlyRule](~~102201~~).
+          * *   **DeleteIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task:
+          *     *   If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
+          *     *   If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
+          * *   You cannot repeatedly call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway within the specified period of time.
           *
           * @param request DeleteIpv6GatewayRequest
           * @return DeleteIpv6GatewayResponse
@@ -19935,9 +20495,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteNatGateway** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT gateway is not deleted. The system deletes the NAT gateway in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of a NAT gateway.
+          * ## [](#)Description
+          * *   **DeleteNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of the task.
           *     *   If a NAT gateway is in the **Deleting** state, the NAT gateway is being deleted. In this case, you can query the NAT gateway but you cannot perform other operations.
-          *     *   If the NAY gateway cannot be found, the NAT gateway is deleted.
+          *     *   If the NAT gateway cannot be found, the NAT gateway is deleted.
           *         After you delete a NAT gateway, you cannot restore the NAT gateway. Proceed with caution.
           * *   You cannot repeatedly call the **DeleteNatGateway** operation to delete a NAT gateway within the specified period of time.
           *
@@ -19997,9 +20558,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteNatGateway** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT gateway is not deleted. The system deletes the NAT gateway in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of a NAT gateway.
+          * ## [](#)Description
+          * *   **DeleteNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of the task.
           *     *   If a NAT gateway is in the **Deleting** state, the NAT gateway is being deleted. In this case, you can query the NAT gateway but you cannot perform other operations.
-          *     *   If the NAY gateway cannot be found, the NAT gateway is deleted.
+          *     *   If the NAT gateway cannot be found, the NAT gateway is deleted.
           *         After you delete a NAT gateway, you cannot restore the NAT gateway. Proceed with caution.
           * *   You cannot repeatedly call the **DeleteNatGateway** operation to delete a NAT gateway within the specified period of time.
           *
@@ -20059,9 +20621,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteNatGateway** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT gateway is not deleted. The system deletes the NAT gateway in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of a NAT gateway.
+          * ## [](#)Description
+          * *   **DeleteNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of the task.
           *     *   If a NAT gateway is in the **Deleting** state, the NAT gateway is being deleted. In this case, you can query the NAT gateway but you cannot perform other operations.
-          *     *   If the NAY gateway cannot be found, the NAT gateway is deleted.
+          *     *   If the NAT gateway cannot be found, the NAT gateway is deleted.
           *         After you delete a NAT gateway, you cannot restore the NAT gateway. Proceed with caution.
           * *   You cannot repeatedly call the **DeleteNatGateway** operation to delete a NAT gateway within the specified period of time.
           *
@@ -20075,9 +20638,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteNatGateway** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT gateway is not deleted. The system deletes the NAT gateway in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of a NAT gateway.
+          * ## [](#)Description
+          * *   **DeleteNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of the task.
           *     *   If a NAT gateway is in the **Deleting** state, the NAT gateway is being deleted. In this case, you can query the NAT gateway but you cannot perform other operations.
-          *     *   If the NAY gateway cannot be found, the NAT gateway is deleted.
+          *     *   If the NAT gateway cannot be found, the NAT gateway is deleted.
           *         After you delete a NAT gateway, you cannot restore the NAT gateway. Proceed with caution.
           * *   You cannot repeatedly call the **DeleteNatGateway** operation to delete a NAT gateway within the specified period of time.
           *
@@ -20091,8 +20655,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified NAT IP address is not deleted. The system deletes the NAT IP address in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of a NAT IP address.
-          *     *   If a NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
+          * ## [](#)Description
+          * *   **DeleteNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of the task.
+          *     *   If the NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
           *     *   If the NAT IP address cannot be found, it is deleted.
           * *   You cannot repeatedly call the **DeleteNatIp** operation to delete a NAT IP address within the specified period of time.
           *
@@ -20160,8 +20725,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified NAT IP address is not deleted. The system deletes the NAT IP address in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of a NAT IP address.
-          *     *   If a NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
+          * ## [](#)Description
+          * *   **DeleteNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of the task.
+          *     *   If the NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
           *     *   If the NAT IP address cannot be found, it is deleted.
           * *   You cannot repeatedly call the **DeleteNatIp** operation to delete a NAT IP address within the specified period of time.
           *
@@ -20229,8 +20795,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified NAT IP address is not deleted. The system deletes the NAT IP address in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of a NAT IP address.
-          *     *   If a NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
+          * ## [](#)Description
+          * *   **DeleteNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of the task.
+          *     *   If the NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
           *     *   If the NAT IP address cannot be found, it is deleted.
           * *   You cannot repeatedly call the **DeleteNatIp** operation to delete a NAT IP address within the specified period of time.
           *
@@ -20244,8 +20811,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **DeleteNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified NAT IP address is not deleted. The system deletes the NAT IP address in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of a NAT IP address.
-          *     *   If a NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
+          * ## [](#)Description
+          * *   **DeleteNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of the task.
+          *     *   If the NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
           *     *   If the NAT IP address cannot be found, it is deleted.
           * *   You cannot repeatedly call the **DeleteNatIp** operation to delete a NAT IP address within the specified period of time.
           *
@@ -20259,6 +20827,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **DeleteNatIpCidr** operation to delete a NAT CIDR block within the specified period of time.
           *
           * @param request DeleteNatIpCidrRequest
@@ -20329,6 +20898,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **DeleteNatIpCidr** operation to delete a NAT CIDR block within the specified period of time.
           *
           * @param request DeleteNatIpCidrRequest
@@ -20399,6 +20969,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **DeleteNatIpCidr** operation to delete a NAT CIDR block within the specified period of time.
           *
           * @param request DeleteNatIpCidrRequest
@@ -20411,6 +20982,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **DeleteNatIpCidr** operation to delete a NAT CIDR block within the specified period of time.
           *
           * @param request DeleteNatIpCidrRequest
@@ -20563,7 +21135,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limit
           * You can only delete a connection over an Express Connect circuit that is in the **Rejected**, **Canceled**, **AllocationFailed**, or **Terminated** state.
           *
           * @param request DeletePhysicalConnectionRequest
@@ -20622,7 +21193,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limit
           * You can only delete a connection over an Express Connect circuit that is in the **Rejected**, **Canceled**, **AllocationFailed**, or **Terminated** state.
           *
           * @param request DeletePhysicalConnectionRequest
@@ -20681,7 +21251,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limit
           * You can only delete a connection over an Express Connect circuit that is in the **Rejected**, **Canceled**, **AllocationFailed**, or **Terminated** state.
           *
           * @param request DeletePhysicalConnectionRequest
@@ -20694,7 +21263,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limit
           * You can only delete a connection over an Express Connect circuit that is in the **Rejected**, **Canceled**, **AllocationFailed**, or **Terminated** state.
           *
           * @param request DeletePhysicalConnectionRequest
@@ -21407,7 +21975,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeleteRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of a custom route table:
+          * ## [](#)Description
+          * *   **DeleteRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of the task.
           *     *   If the custom route table is in the **Deleting** state, the custom route table is being deleted.
           *     *   If you cannot query the custom route table, the custom route table is deleted.
           * *   You cannot repeatedly call the **DeleteRouteTable** operation to delete a custom route table within the specified period of time.
@@ -21468,7 +22037,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeleteRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of a custom route table:
+          * ## [](#)Description
+          * *   **DeleteRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of the task.
           *     *   If the custom route table is in the **Deleting** state, the custom route table is being deleted.
           *     *   If you cannot query the custom route table, the custom route table is deleted.
           * *   You cannot repeatedly call the **DeleteRouteTable** operation to delete a custom route table within the specified period of time.
@@ -21529,7 +22099,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeleteRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of a custom route table:
+          * ## [](#)Description
+          * *   **DeleteRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of the task.
           *     *   If the custom route table is in the **Deleting** state, the custom route table is being deleted.
           *     *   If you cannot query the custom route table, the custom route table is deleted.
           * *   You cannot repeatedly call the **DeleteRouteTable** operation to delete a custom route table within the specified period of time.
@@ -21544,7 +22115,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DeleteRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of a custom route table:
+          * ## [](#)Description
+          * *   **DeleteRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of the task.
           *     *   If the custom route table is in the **Deleting** state, the custom route table is being deleted.
           *     *   If you cannot query the custom route table, the custom route table is deleted.
           * *   You cannot repeatedly call the **DeleteRouteTable** operation to delete a custom route table within the specified period of time.
@@ -22818,6 +23390,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await DeleteVSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## [](#)Description
+          * *   Before you call this operation, make sure that the IP address allocated to an elastic network interface (ENI) from the reserved CIDR block is deleted. If the IP address of the ENI is not deleted, call [UnassignPrivateIpAddresses](~~85919~~) or [UnassignIpv6Addresses](~~98611~~) to delete the IPv4 or IPv6 address.
+          * *   **DeleteVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
+          *     *   If the reserved CIDR block is in the **Releasing** state, it is being released.
+          *     *   If the reserved CIDR block is in the **Released** state, it is released.
+          *
+          * @param request DeleteVSwitchCidrReservationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVSwitchCidrReservationResponse
+         */
         public DeleteVSwitchCidrReservationResponse DeleteVSwitchCidrReservationWithOptions(DeleteVSwitchCidrReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22865,6 +23448,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<DeleteVSwitchCidrReservationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## [](#)Description
+          * *   Before you call this operation, make sure that the IP address allocated to an elastic network interface (ENI) from the reserved CIDR block is deleted. If the IP address of the ENI is not deleted, call [UnassignPrivateIpAddresses](~~85919~~) or [UnassignIpv6Addresses](~~98611~~) to delete the IPv4 or IPv6 address.
+          * *   **DeleteVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
+          *     *   If the reserved CIDR block is in the **Releasing** state, it is being released.
+          *     *   If the reserved CIDR block is in the **Released** state, it is released.
+          *
+          * @param request DeleteVSwitchCidrReservationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVSwitchCidrReservationResponse
+         */
         public async Task<DeleteVSwitchCidrReservationResponse> DeleteVSwitchCidrReservationWithOptionsAsync(DeleteVSwitchCidrReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22912,12 +23506,32 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<DeleteVSwitchCidrReservationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## [](#)Description
+          * *   Before you call this operation, make sure that the IP address allocated to an elastic network interface (ENI) from the reserved CIDR block is deleted. If the IP address of the ENI is not deleted, call [UnassignPrivateIpAddresses](~~85919~~) or [UnassignIpv6Addresses](~~98611~~) to delete the IPv4 or IPv6 address.
+          * *   **DeleteVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
+          *     *   If the reserved CIDR block is in the **Releasing** state, it is being released.
+          *     *   If the reserved CIDR block is in the **Released** state, it is released.
+          *
+          * @param request DeleteVSwitchCidrReservationRequest
+          * @return DeleteVSwitchCidrReservationResponse
+         */
         public DeleteVSwitchCidrReservationResponse DeleteVSwitchCidrReservation(DeleteVSwitchCidrReservationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVSwitchCidrReservationWithOptions(request, runtime);
         }
 
+        /**
+          * ## [](#)Description
+          * *   Before you call this operation, make sure that the IP address allocated to an elastic network interface (ENI) from the reserved CIDR block is deleted. If the IP address of the ENI is not deleted, call [UnassignPrivateIpAddresses](~~85919~~) or [UnassignIpv6Addresses](~~98611~~) to delete the IPv4 or IPv6 address.
+          * *   **DeleteVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
+          *     *   If the reserved CIDR block is in the **Releasing** state, it is being released.
+          *     *   If the reserved CIDR block is in the **Released** state, it is released.
+          *
+          * @param request DeleteVSwitchCidrReservationRequest
+          * @return DeleteVSwitchCidrReservationResponse
+         */
         public async Task<DeleteVSwitchCidrReservationResponse> DeleteVSwitchCidrReservationAsync(DeleteVSwitchCidrReservationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -23215,11 +23829,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * Before you call this operation, take note of the following limits:
           * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
-          * *   You can delete only a VBR that is in the** Unconfirmed**,** Enabled**, or** Terminated** state.
-          * *   If the owner of an Express Connect circuit wants to delete a VBR that belongs to another Alibaba Cloud account, the VBR must be in the **Unconfirmed** state.
+          * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
+          * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
           *
           * @param request DeleteVirtualBorderRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23277,11 +23890,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * Before you call this operation, take note of the following limits:
           * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
-          * *   You can delete only a VBR that is in the** Unconfirmed**,** Enabled**, or** Terminated** state.
-          * *   If the owner of an Express Connect circuit wants to delete a VBR that belongs to another Alibaba Cloud account, the VBR must be in the **Unconfirmed** state.
+          * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
+          * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
           *
           * @param request DeleteVirtualBorderRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23339,11 +23951,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * Before you call this operation, take note of the following limits:
           * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
-          * *   You can delete only a VBR that is in the** Unconfirmed**,** Enabled**, or** Terminated** state.
-          * *   If the owner of an Express Connect circuit wants to delete a VBR that belongs to another Alibaba Cloud account, the VBR must be in the **Unconfirmed** state.
+          * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
+          * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
           *
           * @param request DeleteVirtualBorderRouterRequest
           * @return DeleteVirtualBorderRouterResponse
@@ -23355,11 +23966,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * Before you call this operation, take note of the following limits:
           * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
-          * *   You can delete only a VBR that is in the** Unconfirmed**,** Enabled**, or** Terminated** state.
-          * *   If the owner of an Express Connect circuit wants to delete a VBR that belongs to another Alibaba Cloud account, the VBR must be in the **Unconfirmed** state.
+          * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
+          * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
           *
           * @param request DeleteVirtualBorderRouterRequest
           * @return DeleteVirtualBorderRouterResponse
@@ -24105,7 +24715,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * >  You cannot delete a VPN gateway that is associated with an IPsec-VPN connection.
+          * >  You cannot delete a VPN gateway associated with existing IPsec-VPN connections.
           *
           * @param request DeleteVpnGatewayRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -24163,7 +24773,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * >  You cannot delete a VPN gateway that is associated with an IPsec-VPN connection.
+          * >  You cannot delete a VPN gateway associated with existing IPsec-VPN connections.
           *
           * @param request DeleteVpnGatewayRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -24221,7 +24831,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * >  You cannot delete a VPN gateway that is associated with an IPsec-VPN connection.
+          * >  You cannot delete a VPN gateway associated with existing IPsec-VPN connections.
           *
           * @param request DeleteVpnGatewayRequest
           * @return DeleteVpnGatewayResponse
@@ -24233,7 +24843,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * >  You cannot delete a VPN gateway that is associated with an IPsec-VPN connection.
+          * >  You cannot delete a VPN gateway associated with existing IPsec-VPN connections.
           *
           * @param request DeleteVpnGatewayRequest
           * @return DeleteVpnGatewayResponse
@@ -26516,6 +27126,250 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEipSegmentWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeFailoverTestJobResponse DescribeFailoverTestJobWithOptions(DescribeFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFailoverTestJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeFailoverTestJobResponse> DescribeFailoverTestJobWithOptionsAsync(DescribeFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFailoverTestJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeFailoverTestJobResponse DescribeFailoverTestJob(DescribeFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFailoverTestJobWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeFailoverTestJobResponse> DescribeFailoverTestJobAsync(DescribeFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFailoverTestJobWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeFailoverTestJobsResponse DescribeFailoverTestJobsWithOptions(DescribeFailoverTestJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFailoverTestJobs",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFailoverTestJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeFailoverTestJobsResponse> DescribeFailoverTestJobsWithOptionsAsync(DescribeFailoverTestJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFailoverTestJobs",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFailoverTestJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeFailoverTestJobsResponse DescribeFailoverTestJobs(DescribeFailoverTestJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFailoverTestJobsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeFailoverTestJobsResponse> DescribeFailoverTestJobsAsync(DescribeFailoverTestJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFailoverTestJobsWithOptionsAsync(request, runtime);
         }
 
         public DescribeFlowLogsResponse DescribeFlowLogsWithOptions(DescribeFlowLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -29945,6 +30799,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)References
           * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
           *
           * @param request DescribeRouteEntryListRequest
@@ -30047,6 +30902,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)References
           * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
           *
           * @param request DescribeRouteEntryListRequest
@@ -30149,6 +31005,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)References
           * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
           *
           * @param request DescribeRouteEntryListRequest
@@ -30161,6 +31018,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)References
           * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
           *
           * @param request DescribeRouteEntryListRequest
@@ -34781,7 +35639,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DetachDhcpOptionsSetFromVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+          * ## [](#)Description
+          * *   **DetachDhcpOptionsSetFromVpc** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of the task.
           *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being disassociated.
           *     *   If the DHCP options set is in the **UnUsed** state, the DHCP options set is disassociated.
           * *   You cannot repeatedly call the **DetachDhcpOptionsSetFromVpc** operation to disassociate a DHCP options set from a VPC within the specified period of time.
@@ -34850,7 +35709,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DetachDhcpOptionsSetFromVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+          * ## [](#)Description
+          * *   **DetachDhcpOptionsSetFromVpc** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of the task.
           *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being disassociated.
           *     *   If the DHCP options set is in the **UnUsed** state, the DHCP options set is disassociated.
           * *   You cannot repeatedly call the **DetachDhcpOptionsSetFromVpc** operation to disassociate a DHCP options set from a VPC within the specified period of time.
@@ -34919,7 +35779,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DetachDhcpOptionsSetFromVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+          * ## [](#)Description
+          * *   **DetachDhcpOptionsSetFromVpc** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of the task.
           *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being disassociated.
           *     *   If the DHCP options set is in the **UnUsed** state, the DHCP options set is disassociated.
           * *   You cannot repeatedly call the **DetachDhcpOptionsSetFromVpc** operation to disassociate a DHCP options set from a VPC within the specified period of time.
@@ -34934,7 +35795,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **DetachDhcpOptionsSetFromVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+          * ## [](#)Description
+          * *   **DetachDhcpOptionsSetFromVpc** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of the task.
           *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being disassociated.
           *     *   If the DHCP options set is in the **UnUsed** state, the DHCP options set is disassociated.
           * *   You cannot repeatedly call the **DetachDhcpOptionsSetFromVpc** operation to disassociate a DHCP options set from a VPC within the specified period of time.
@@ -35903,7 +36765,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
           * When you call this operation, take note of the following limits:
           * *   You can enable only an Express Connect circuit that is in the **Confirmed** state.
-          * *   After you enable an Express Connect circuit, it changes to the **Enabled** state.
+          * *   After you enable an Express Connect circuit, it enters the **Enabled** state.
+          * *   **EnablePhysicalConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribePhysicalConnections](~~36042~~) operation to query the status of the task.
+          * *   You cannot repeatedly call **EnablePhysicalConnection** for an Express Connect circuit in the **Confirmed** state within a specific time period.
           *
           * @param request EnablePhysicalConnectionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -35967,7 +36831,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
           * When you call this operation, take note of the following limits:
           * *   You can enable only an Express Connect circuit that is in the **Confirmed** state.
-          * *   After you enable an Express Connect circuit, it changes to the **Enabled** state.
+          * *   After you enable an Express Connect circuit, it enters the **Enabled** state.
+          * *   **EnablePhysicalConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribePhysicalConnections](~~36042~~) operation to query the status of the task.
+          * *   You cannot repeatedly call **EnablePhysicalConnection** for an Express Connect circuit in the **Confirmed** state within a specific time period.
           *
           * @param request EnablePhysicalConnectionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -36031,7 +36897,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
           * When you call this operation, take note of the following limits:
           * *   You can enable only an Express Connect circuit that is in the **Confirmed** state.
-          * *   After you enable an Express Connect circuit, it changes to the **Enabled** state.
+          * *   After you enable an Express Connect circuit, it enters the **Enabled** state.
+          * *   **EnablePhysicalConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribePhysicalConnections](~~36042~~) operation to query the status of the task.
+          * *   You cannot repeatedly call **EnablePhysicalConnection** for an Express Connect circuit in the **Confirmed** state within a specific time period.
           *
           * @param request EnablePhysicalConnectionRequest
           * @return EnablePhysicalConnectionResponse
@@ -36045,7 +36913,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
           * When you call this operation, take note of the following limits:
           * *   You can enable only an Express Connect circuit that is in the **Confirmed** state.
-          * *   After you enable an Express Connect circuit, it changes to the **Enabled** state.
+          * *   After you enable an Express Connect circuit, it enters the **Enabled** state.
+          * *   **EnablePhysicalConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribePhysicalConnections](~~36042~~) operation to query the status of the task.
+          * *   You cannot repeatedly call **EnablePhysicalConnection** for an Express Connect circuit in the **Confirmed** state within a specific time period.
           *
           * @param request EnablePhysicalConnectionRequest
           * @return EnablePhysicalConnectionResponse
@@ -36171,7 +37041,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **EnableVpcIpv4Gateway** operation is asynchronous. After you send the request, the system returns **RequestId**. However, the operation is still being performed in the system background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
+          * ## [](#)Description
+          * *   **EnableVpcIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway.
           *     *   If the IPv4 gateway is in the **Activating** state, the IPv4 gateway is being activated.
           *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is activated.
           * *   You cannot repeatedly call the **EnableVpcIpv4Gateway** operation to activate an IPv4 gateway within the specified period of time.
@@ -36244,7 +37115,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **EnableVpcIpv4Gateway** operation is asynchronous. After you send the request, the system returns **RequestId**. However, the operation is still being performed in the system background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
+          * ## [](#)Description
+          * *   **EnableVpcIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway.
           *     *   If the IPv4 gateway is in the **Activating** state, the IPv4 gateway is being activated.
           *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is activated.
           * *   You cannot repeatedly call the **EnableVpcIpv4Gateway** operation to activate an IPv4 gateway within the specified period of time.
@@ -36317,7 +37189,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **EnableVpcIpv4Gateway** operation is asynchronous. After you send the request, the system returns **RequestId**. However, the operation is still being performed in the system background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
+          * ## [](#)Description
+          * *   **EnableVpcIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway.
           *     *   If the IPv4 gateway is in the **Activating** state, the IPv4 gateway is being activated.
           *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is activated.
           * *   You cannot repeatedly call the **EnableVpcIpv4Gateway** operation to activate an IPv4 gateway within the specified period of time.
@@ -36332,7 +37205,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **EnableVpcIpv4Gateway** operation is asynchronous. After you send the request, the system returns **RequestId**. However, the operation is still being performed in the system background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
+          * ## [](#)Description
+          * *   **EnableVpcIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway.
           *     *   If the IPv4 gateway is in the **Activating** state, the IPv4 gateway is being activated.
           *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is activated.
           * *   You cannot repeatedly call the **EnableVpcIpv4Gateway** operation to activate an IPv4 gateway within the specified period of time.
@@ -37058,6 +37932,128 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await GetTrafficMirrorServiceStatusWithOptionsAsync(request, runtime);
         }
 
+        public GetVSwitchCidrReservationUsageResponse GetVSwitchCidrReservationUsageWithOptions(GetVSwitchCidrReservationUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationId))
+            {
+                query["VSwitchCidrReservationId"] = request.VSwitchCidrReservationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVSwitchCidrReservationUsage",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVSwitchCidrReservationUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetVSwitchCidrReservationUsageResponse> GetVSwitchCidrReservationUsageWithOptionsAsync(GetVSwitchCidrReservationUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationId))
+            {
+                query["VSwitchCidrReservationId"] = request.VSwitchCidrReservationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVSwitchCidrReservationUsage",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVSwitchCidrReservationUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetVSwitchCidrReservationUsageResponse GetVSwitchCidrReservationUsage(GetVSwitchCidrReservationUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVSwitchCidrReservationUsageWithOptions(request, runtime);
+        }
+
+        public async Task<GetVSwitchCidrReservationUsageResponse> GetVSwitchCidrReservationUsageAsync(GetVSwitchCidrReservationUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVSwitchCidrReservationUsageWithOptionsAsync(request, runtime);
+        }
+
         public GetVpcGatewayEndpointAttributeResponse GetVpcGatewayEndpointAttributeWithOptions(GetVpcGatewayEndpointAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -37648,7 +38644,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you can attach a network instance that belongs to another Alibaba Cloud account to your CEN instance, you must grant permissions to your CEN instance.
-          * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
+          * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use the `vpc.aliyuncs.com` domain name to call this operation. The API version is `2016-04-28`.
           * *   You cannot repeatedly call the **GrantInstanceToCen** operation to grant the permissions on a network instance to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
           *
           * @param request GrantInstanceToCenRequest
@@ -37720,7 +38716,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you can attach a network instance that belongs to another Alibaba Cloud account to your CEN instance, you must grant permissions to your CEN instance.
-          * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
+          * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use the `vpc.aliyuncs.com` domain name to call this operation. The API version is `2016-04-28`.
           * *   You cannot repeatedly call the **GrantInstanceToCen** operation to grant the permissions on a network instance to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
           *
           * @param request GrantInstanceToCenRequest
@@ -37792,7 +38788,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you can attach a network instance that belongs to another Alibaba Cloud account to your CEN instance, you must grant permissions to your CEN instance.
-          * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
+          * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use the `vpc.aliyuncs.com` domain name to call this operation. The API version is `2016-04-28`.
           * *   You cannot repeatedly call the **GrantInstanceToCen** operation to grant the permissions on a network instance to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
           *
           * @param request GrantInstanceToCenRequest
@@ -37806,7 +38802,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you can attach a network instance that belongs to another Alibaba Cloud account to your CEN instance, you must grant permissions to your CEN instance.
-          * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
+          * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use the `vpc.aliyuncs.com` domain name to call this operation. The API version is `2016-04-28`.
           * *   You cannot repeatedly call the **GrantInstanceToCen** operation to grant the permissions on a network instance to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
           *
           * @param request GrantInstanceToCenRequest
@@ -40071,8 +41067,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
-          * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Tag.N.Value**, an error message is returned.
+          * ## [](#)
+          * *   If you want to query a specific object, you must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request.
+          * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you specify only **Tag.N.Value**, an error message is returned.
           * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
           * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
           *
@@ -40144,8 +41141,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
-          * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Tag.N.Value**, an error message is returned.
+          * ## [](#)
+          * *   If you want to query a specific object, you must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request.
+          * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you specify only **Tag.N.Value**, an error message is returned.
           * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
           * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
           *
@@ -40217,8 +41215,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
-          * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Tag.N.Value**, an error message is returned.
+          * ## [](#)
+          * *   If you want to query a specific object, you must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request.
+          * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you specify only **Tag.N.Value**, an error message is returned.
           * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
           * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
           *
@@ -40232,8 +41231,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
-          * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Tag.N.Value**, an error message is returned.
+          * ## [](#)
+          * *   If you want to query a specific object, you must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request.
+          * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you specify only **Tag.N.Value**, an error message is returned.
           * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
           * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
           *
@@ -40584,6 +41584,160 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTrafficMirrorSessionsWithOptionsAsync(request, runtime);
+        }
+
+        public ListVSwitchCidrReservationsResponse ListVSwitchCidrReservationsWithOptions(ListVSwitchCidrReservationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationIds))
+            {
+                query["VSwitchCidrReservationIds"] = request.VSwitchCidrReservationIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationType))
+            {
+                query["VSwitchCidrReservationType"] = request.VSwitchCidrReservationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVSwitchCidrReservations",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVSwitchCidrReservationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListVSwitchCidrReservationsResponse> ListVSwitchCidrReservationsWithOptionsAsync(ListVSwitchCidrReservationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationIds))
+            {
+                query["VSwitchCidrReservationIds"] = request.VSwitchCidrReservationIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationType))
+            {
+                query["VSwitchCidrReservationType"] = request.VSwitchCidrReservationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVSwitchCidrReservations",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVSwitchCidrReservationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListVSwitchCidrReservationsResponse ListVSwitchCidrReservations(ListVSwitchCidrReservationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVSwitchCidrReservationsWithOptions(request, runtime);
+        }
+
+        public async Task<ListVSwitchCidrReservationsResponse> ListVSwitchCidrReservationsAsync(ListVSwitchCidrReservationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVSwitchCidrReservationsWithOptionsAsync(request, runtime);
         }
 
         public ListVirtualPhysicalConnectionsResponse ListVirtualPhysicalConnectionsWithOptions(ListVirtualPhysicalConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -42673,7 +43827,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **ModifyForwardEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+          * *   **ModifyForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
           *     *   **Pending**: indicates that the system is modifying the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
           *     *   **Available**: indicates that the DNAT entry is modified.
           * *   You cannot repeatedly call the **ModifyForwardEntry** operation to modify a DNAT entry within the specified period of time.
@@ -42766,7 +43920,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **ModifyForwardEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+          * *   **ModifyForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
           *     *   **Pending**: indicates that the system is modifying the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
           *     *   **Available**: indicates that the DNAT entry is modified.
           * *   You cannot repeatedly call the **ModifyForwardEntry** operation to modify a DNAT entry within the specified period of time.
@@ -42859,7 +44013,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **ModifyForwardEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+          * *   **ModifyForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
           *     *   **Pending**: indicates that the system is modifying the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
           *     *   **Available**: indicates that the DNAT entry is modified.
           * *   You cannot repeatedly call the **ModifyForwardEntry** operation to modify a DNAT entry within the specified period of time.
@@ -42874,7 +44028,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **ModifyForwardEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+          * *   **ModifyForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
           *     *   **Pending**: indicates that the system is modifying the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
           *     *   **Available**: indicates that the DNAT entry is modified.
           * *   You cannot repeatedly call the **ModifyForwardEntry** operation to modify a DNAT entry within the specified period of time.
@@ -42889,7 +44043,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified FULLNAT entry is not modified. The system modifies the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+          * ## [](#)
+          * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
           *     *   **Modifying**: indicates that the system is modifying the FULLNAT entry. You can query the FULLNAT entry, but cannot perform other operations.
           *     *   **Available**: indicates that the FULLNAT entry is modified.
           * *   You cannot repeatedly call the **ModifyFullNatEntryAttribute** operation to modify a FULLNAT entry within the specified period of time.
@@ -42990,7 +44145,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified FULLNAT entry is not modified. The system modifies the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+          * ## [](#)
+          * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
           *     *   **Modifying**: indicates that the system is modifying the FULLNAT entry. You can query the FULLNAT entry, but cannot perform other operations.
           *     *   **Available**: indicates that the FULLNAT entry is modified.
           * *   You cannot repeatedly call the **ModifyFullNatEntryAttribute** operation to modify a FULLNAT entry within the specified period of time.
@@ -43091,7 +44247,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified FULLNAT entry is not modified. The system modifies the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+          * ## [](#)
+          * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
           *     *   **Modifying**: indicates that the system is modifying the FULLNAT entry. You can query the FULLNAT entry, but cannot perform other operations.
           *     *   **Available**: indicates that the FULLNAT entry is modified.
           * *   You cannot repeatedly call the **ModifyFullNatEntryAttribute** operation to modify a FULLNAT entry within the specified period of time.
@@ -43106,7 +44263,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified FULLNAT entry is not modified. The system modifies the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+          * ## [](#)
+          * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
           *     *   **Modifying**: indicates that the system is modifying the FULLNAT entry. You can query the FULLNAT entry, but cannot perform other operations.
           *     *   **Available**: indicates that the FULLNAT entry is modified.
           * *   You cannot repeatedly call the **ModifyFullNatEntryAttribute** operation to modify a FULLNAT entry within the specified period of time.
@@ -44717,7 +45875,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both types of NAT gateway.
+          * ## [](#)Description
+          * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both NAT gateway types.
           *
           * @param request ModifyNatGatewayAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -44787,7 +45946,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both types of NAT gateway.
+          * ## [](#)Description
+          * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both NAT gateway types.
           *
           * @param request ModifyNatGatewayAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -44857,7 +46017,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both types of NAT gateway.
+          * ## [](#)Description
+          * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both NAT gateway types.
           *
           * @param request ModifyNatGatewayAttributeRequest
           * @return ModifyNatGatewayAttributeResponse
@@ -44869,7 +46030,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both types of NAT gateway.
+          * ## [](#)Description
+          * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both NAT gateway types.
           *
           * @param request ModifyNatGatewayAttributeRequest
           * @return ModifyNatGatewayAttributeResponse
@@ -45077,6 +46239,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **ModifyNatIpAttribute** operation to modify the name and description of a NAT IP address within the specified period of time.
           *
           * @param request ModifyNatIpAttributeRequest
@@ -45151,6 +46314,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **ModifyNatIpAttribute** operation to modify the name and description of a NAT IP address within the specified period of time.
           *
           * @param request ModifyNatIpAttributeRequest
@@ -45225,6 +46389,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **ModifyNatIpAttribute** operation to modify the name and description of a NAT IP address within the specified period of time.
           *
           * @param request ModifyNatIpAttributeRequest
@@ -45237,6 +46402,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **ModifyNatIpAttribute** operation to modify the name and description of a NAT IP address within the specified period of time.
           *
           * @param request ModifyNatIpAttributeRequest
@@ -45533,7 +46699,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * When you call this operation, take note of the following limits:
           * *   If an Express Connect circuit is in the **Initial**, **Enabled**, or **Rejected** state, you can modify the specifications of the Express Connect circuit and the ID of the redundant circuit.
           * *   If an Express Connect circuit is in the **Canceled**, **Allocating**, **AllocationFailed**, or **Terminated** state, you cannot modify the specifications of the Express Connect circuit.
@@ -45631,7 +46796,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * When you call this operation, take note of the following limits:
           * *   If an Express Connect circuit is in the **Initial**, **Enabled**, or **Rejected** state, you can modify the specifications of the Express Connect circuit and the ID of the redundant circuit.
           * *   If an Express Connect circuit is in the **Canceled**, **Allocating**, **AllocationFailed**, or **Terminated** state, you cannot modify the specifications of the Express Connect circuit.
@@ -45729,7 +46893,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * When you call this operation, take note of the following limits:
           * *   If an Express Connect circuit is in the **Initial**, **Enabled**, or **Rejected** state, you can modify the specifications of the Express Connect circuit and the ID of the redundant circuit.
           * *   If an Express Connect circuit is in the **Canceled**, **Allocating**, **AllocationFailed**, or **Terminated** state, you cannot modify the specifications of the Express Connect circuit.
@@ -45745,7 +46908,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Limits
           * When you call this operation, take note of the following limits:
           * *   If an Express Connect circuit is in the **Initial**, **Enabled**, or **Rejected** state, you can modify the specifications of the Express Connect circuit and the ID of the redundant circuit.
           * *   If an Express Connect circuit is in the **Canceled**, **Allocating**, **AllocationFailed**, or **Terminated** state, you cannot modify the specifications of the Express Connect circuit.
@@ -45925,6 +47087,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)References
           * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
           *
           * @param request ModifyRouteTableAttributesRequest
@@ -45987,6 +47150,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)References
           * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
           *
           * @param request ModifyRouteTableAttributesRequest
@@ -46049,6 +47213,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)References
           * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
           *
           * @param request ModifyRouteTableAttributesRequest
@@ -46061,6 +47226,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)References
           * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
           *
           * @param request ModifyRouteTableAttributesRequest
@@ -46259,8 +47425,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
-          * >  You cannot modify the specifications of a router interface that has overdue payments.
+          * >  You cannot modify the specification of a router interface that has overdue payments.
           *
           * @param request ModifyRouterInterfaceSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -46322,8 +47489,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
-          * >  You cannot modify the specifications of a router interface that has overdue payments.
+          * >  You cannot modify the specification of a router interface that has overdue payments.
           *
           * @param request ModifyRouterInterfaceSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -46385,8 +47553,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
-          * >  You cannot modify the specifications of a router interface that has overdue payments.
+          * >  You cannot modify the specification of a router interface that has overdue payments.
           *
           * @param request ModifyRouterInterfaceSpecRequest
           * @return ModifyRouterInterfaceSpecResponse
@@ -46398,8 +47567,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
-          * >  You cannot modify the specifications of a router interface that has overdue payments.
+          * >  You cannot modify the specification of a router interface that has overdue payments.
           *
           * @param request ModifyRouterInterfaceSpecRequest
           * @return ModifyRouterInterfaceSpecResponse
@@ -46411,11 +47581,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **ModifySnatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not modified. The system modifies the entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of a SNAT entry.
+          * ## [](#)
+          * **ModifySnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
           * *   **Pending**: indicates that the system is modifying the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
           * *   **Available**: indicates that the SNAT entry is modified.
-          * >  **Pending**: indicates that you cannot modify the SNAT entry in the SNAT table.
-          * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within the specified period of time.
+          * >  If an SNAT entry is in the **Pending** state, it indicates that you cannot modify the SNAT entry.
+          * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within a specific period of time.
           *
           * @param request ModifySnatEntryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -46485,11 +47656,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **ModifySnatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not modified. The system modifies the entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of a SNAT entry.
+          * ## [](#)
+          * **ModifySnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
           * *   **Pending**: indicates that the system is modifying the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
           * *   **Available**: indicates that the SNAT entry is modified.
-          * >  **Pending**: indicates that you cannot modify the SNAT entry in the SNAT table.
-          * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within the specified period of time.
+          * >  If an SNAT entry is in the **Pending** state, it indicates that you cannot modify the SNAT entry.
+          * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within a specific period of time.
           *
           * @param request ModifySnatEntryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -46559,11 +47731,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **ModifySnatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not modified. The system modifies the entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of a SNAT entry.
+          * ## [](#)
+          * **ModifySnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
           * *   **Pending**: indicates that the system is modifying the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
           * *   **Available**: indicates that the SNAT entry is modified.
-          * >  **Pending**: indicates that you cannot modify the SNAT entry in the SNAT table.
-          * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within the specified period of time.
+          * >  If an SNAT entry is in the **Pending** state, it indicates that you cannot modify the SNAT entry.
+          * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within a specific period of time.
           *
           * @param request ModifySnatEntryRequest
           * @return ModifySnatEntryResponse
@@ -46575,11 +47748,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **ModifySnatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not modified. The system modifies the entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of a SNAT entry.
+          * ## [](#)
+          * **ModifySnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
           * *   **Pending**: indicates that the system is modifying the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
           * *   **Available**: indicates that the SNAT entry is modified.
-          * >  **Pending**: indicates that you cannot modify the SNAT entry in the SNAT table.
-          * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within the specified period of time.
+          * >  If an SNAT entry is in the **Pending** state, it indicates that you cannot modify the SNAT entry.
+          * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within a specific period of time.
           *
           * @param request ModifySnatEntryRequest
           * @return ModifySnatEntryResponse
@@ -46713,7 +47887,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   If you only modify the **name** of the SSL server, the operation is synchronous. If you also modify other configurations, the operation is asynchronous.
+          * *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations besides the **name**, the operation is asynchronous.
           * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
           *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server are modified.
@@ -46815,7 +47989,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   If you only modify the **name** of the SSL server, the operation is synchronous. If you also modify other configurations, the operation is asynchronous.
+          * *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations besides the **name**, the operation is asynchronous.
           * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
           *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server are modified.
@@ -46917,7 +48091,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   If you only modify the **name** of the SSL server, the operation is synchronous. If you also modify other configurations, the operation is asynchronous.
+          * *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations besides the **name**, the operation is asynchronous.
           * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
           *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server are modified.
@@ -46933,7 +48107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   If you only modify the **name** of the SSL server, the operation is synchronous. If you also modify other configurations, the operation is asynchronous.
+          * *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations besides the **name**, the operation is asynchronous.
           * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
           *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server are modified.
@@ -47079,7 +48253,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **ModifyVRouterAttribute** operation to modify the name and description of a vRouter within the specified period of time.
+          * You cannot repeatedly call the **ModifyVRouterAttribute** operation within a specific period of time.
           *
           * @param request ModifyVRouterAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -47141,7 +48315,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **ModifyVRouterAttribute** operation to modify the name and description of a vRouter within the specified period of time.
+          * You cannot repeatedly call the **ModifyVRouterAttribute** operation within a specific period of time.
           *
           * @param request ModifyVRouterAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -47203,7 +48377,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **ModifyVRouterAttribute** operation to modify the name and description of a vRouter within the specified period of time.
+          * You cannot repeatedly call the **ModifyVRouterAttribute** operation within a specific period of time.
           *
           * @param request ModifyVRouterAttributeRequest
           * @return ModifyVRouterAttributeResponse
@@ -47215,7 +48389,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **ModifyVRouterAttribute** operation to modify the name and description of a vRouter within the specified period of time.
+          * You cannot repeatedly call the **ModifyVRouterAttribute** operation within a specific period of time.
           *
           * @param request ModifyVRouterAttributeRequest
           * @return ModifyVRouterAttributeResponse
@@ -47411,6 +48585,158 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Usage notes
+          * You cannot repeatedly call **ModifyVSwitchCidrReservationAttribute** within a specific time period.
+          *
+          * @param request ModifyVSwitchCidrReservationAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVSwitchCidrReservationAttributeResponse
+         */
+        public ModifyVSwitchCidrReservationAttributeResponse ModifyVSwitchCidrReservationAttributeWithOptions(ModifyVSwitchCidrReservationAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationDescription))
+            {
+                query["VSwitchCidrReservationDescription"] = request.VSwitchCidrReservationDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationId))
+            {
+                query["VSwitchCidrReservationId"] = request.VSwitchCidrReservationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationName))
+            {
+                query["VSwitchCidrReservationName"] = request.VSwitchCidrReservationName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyVSwitchCidrReservationAttribute",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyVSwitchCidrReservationAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * ## [](#)Usage notes
+          * You cannot repeatedly call **ModifyVSwitchCidrReservationAttribute** within a specific time period.
+          *
+          * @param request ModifyVSwitchCidrReservationAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVSwitchCidrReservationAttributeResponse
+         */
+        public async Task<ModifyVSwitchCidrReservationAttributeResponse> ModifyVSwitchCidrReservationAttributeWithOptionsAsync(ModifyVSwitchCidrReservationAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationDescription))
+            {
+                query["VSwitchCidrReservationDescription"] = request.VSwitchCidrReservationDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationId))
+            {
+                query["VSwitchCidrReservationId"] = request.VSwitchCidrReservationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchCidrReservationName))
+            {
+                query["VSwitchCidrReservationName"] = request.VSwitchCidrReservationName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyVSwitchCidrReservationAttribute",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyVSwitchCidrReservationAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * ## [](#)Usage notes
+          * You cannot repeatedly call **ModifyVSwitchCidrReservationAttribute** within a specific time period.
+          *
+          * @param request ModifyVSwitchCidrReservationAttributeRequest
+          * @return ModifyVSwitchCidrReservationAttributeResponse
+         */
+        public ModifyVSwitchCidrReservationAttributeResponse ModifyVSwitchCidrReservationAttribute(ModifyVSwitchCidrReservationAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyVSwitchCidrReservationAttributeWithOptions(request, runtime);
+        }
+
+        /**
+          * ## [](#)Usage notes
+          * You cannot repeatedly call **ModifyVSwitchCidrReservationAttribute** within a specific time period.
+          *
+          * @param request ModifyVSwitchCidrReservationAttributeRequest
+          * @return ModifyVSwitchCidrReservationAttributeResponse
+         */
+        public async Task<ModifyVSwitchCidrReservationAttributeResponse> ModifyVSwitchCidrReservationAttributeAsync(ModifyVSwitchCidrReservationAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyVSwitchCidrReservationAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /**
           * *   **ModifyVcoRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the associated IPsec-VPN connection and determine whether the weight of the specified destination-based route is modified.
           *     *   If the IPsec-VPN connection is in the **updating** state, the weight of the destination-based route is being modified.
           *     *   If the IPsec-VPN connection is in the **attached** state, the weight of the destination-based route is modified.
@@ -47595,8 +48921,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)
           * *   Only the owner of an Express Connect circuit can modify the **VlanId** parameter.
-          * *   One VLAN ID of an Express Connect circuit cannot be used by two VBRs at the same time.
+          * *   One VLAN ID of an Express Connect circuit cannot be used only by one VBR at the same time.
           * *   The VLAN ID of a VBR in the **Terminated** state is reserved for seven days and cannot be used by other VBRs. The VLAN ID can be used by other VBRs after 7 days.
           * *   You cannot set **LocalGatewayIp**, **PeerGatewayIp**, or **PeeringSubnetMask** for VBRs that do not belong to your Alibaba Cloud account.
           * *   Set **PeeringSubnetMask** to a subnet mask with 24 to 30 bits in length (255.255.255.0～255.255.255.252).
@@ -47722,8 +49049,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)
           * *   Only the owner of an Express Connect circuit can modify the **VlanId** parameter.
-          * *   One VLAN ID of an Express Connect circuit cannot be used by two VBRs at the same time.
+          * *   One VLAN ID of an Express Connect circuit cannot be used only by one VBR at the same time.
           * *   The VLAN ID of a VBR in the **Terminated** state is reserved for seven days and cannot be used by other VBRs. The VLAN ID can be used by other VBRs after 7 days.
           * *   You cannot set **LocalGatewayIp**, **PeerGatewayIp**, or **PeeringSubnetMask** for VBRs that do not belong to your Alibaba Cloud account.
           * *   Set **PeeringSubnetMask** to a subnet mask with 24 to 30 bits in length (255.255.255.0～255.255.255.252).
@@ -47849,8 +49177,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)
           * *   Only the owner of an Express Connect circuit can modify the **VlanId** parameter.
-          * *   One VLAN ID of an Express Connect circuit cannot be used by two VBRs at the same time.
+          * *   One VLAN ID of an Express Connect circuit cannot be used only by one VBR at the same time.
           * *   The VLAN ID of a VBR in the **Terminated** state is reserved for seven days and cannot be used by other VBRs. The VLAN ID can be used by other VBRs after 7 days.
           * *   You cannot set **LocalGatewayIp**, **PeerGatewayIp**, or **PeeringSubnetMask** for VBRs that do not belong to your Alibaba Cloud account.
           * *   Set **PeeringSubnetMask** to a subnet mask with 24 to 30 bits in length (255.255.255.0～255.255.255.252).
@@ -47866,8 +49195,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)
           * *   Only the owner of an Express Connect circuit can modify the **VlanId** parameter.
-          * *   One VLAN ID of an Express Connect circuit cannot be used by two VBRs at the same time.
+          * *   One VLAN ID of an Express Connect circuit cannot be used only by one VBR at the same time.
           * *   The VLAN ID of a VBR in the **Terminated** state is reserved for seven days and cannot be used by other VBRs. The VLAN ID can be used by other VBRs after 7 days.
           * *   You cannot set **LocalGatewayIp**, **PeerGatewayIp**, or **PeeringSubnetMask** for VBRs that do not belong to your Alibaba Cloud account.
           * *   Set **PeeringSubnetMask** to a subnet mask with 24 to 30 bits in length (255.255.255.0～255.255.255.252).
@@ -47883,6 +49213,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **ModifyVpcAttribute** operation to modify the name and description of a VPC within the specified period of time.
           *
           * @param request ModifyVpcAttributeRequest
@@ -47961,6 +49292,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **ModifyVpcAttribute** operation to modify the name and description of a VPC within the specified period of time.
           *
           * @param request ModifyVpcAttributeRequest
@@ -48039,6 +49371,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **ModifyVpcAttribute** operation to modify the name and description of a VPC within the specified period of time.
           *
           * @param request ModifyVpcAttributeRequest
@@ -48051,6 +49384,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Description
           * You cannot repeatedly call the **ModifyVpcAttribute** operation to modify the name and description of a VPC within the specified period of time.
           *
           * @param request ModifyVpcAttributeRequest
@@ -49952,6 +51286,128 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await MoveResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        public MoveVpnResourceGroupResponse MoveVpnResourceGroupWithOptions(MoveVpnResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewResourceGroupId))
+            {
+                query["NewResourceGroupId"] = request.NewResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveVpnResourceGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveVpnResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<MoveVpnResourceGroupResponse> MoveVpnResourceGroupWithOptionsAsync(MoveVpnResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewResourceGroupId))
+            {
+                query["NewResourceGroupId"] = request.NewResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveVpnResourceGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveVpnResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public MoveVpnResourceGroupResponse MoveVpnResourceGroup(MoveVpnResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MoveVpnResourceGroupWithOptions(request, runtime);
+        }
+
+        public async Task<MoveVpnResourceGroupResponse> MoveVpnResourceGroupAsync(MoveVpnResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MoveVpnResourceGroupWithOptionsAsync(request, runtime);
+        }
+
         /**
           * *   You cannot repeatedly call the **OpenFlowLogService** operation within the specified period of time by using an Alibaba Cloud account.
           * *   You can call the [GetFlowLogServiceStatus](~~449624~~) operation to query the status of the flow log feature.
@@ -50195,6 +51651,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Usage notes
           * You can enable traffic mirroring for different regions. You cannot repeatedly call the **OpenTrafficMirrorService** operation to enable traffic mirroring for one region within the specified period of time.
           *
           * @param request OpenTrafficMirrorServiceRequest
@@ -50253,6 +51710,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Usage notes
           * You can enable traffic mirroring for different regions. You cannot repeatedly call the **OpenTrafficMirrorService** operation to enable traffic mirroring for one region within the specified period of time.
           *
           * @param request OpenTrafficMirrorServiceRequest
@@ -50311,6 +51769,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Usage notes
           * You can enable traffic mirroring for different regions. You cannot repeatedly call the **OpenTrafficMirrorService** operation to enable traffic mirroring for one region within the specified period of time.
           *
           * @param request OpenTrafficMirrorServiceRequest
@@ -50323,6 +51782,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Usage notes
           * You can enable traffic mirroring for different regions. You cannot repeatedly call the **OpenTrafficMirrorService** operation to enable traffic mirroring for one region within the specified period of time.
           *
           * @param request OpenTrafficMirrorServiceRequest
@@ -50481,6 +51941,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)Description
           * You can call this API operation to resume a suspended Express Connect circuit. You can resume only shared Express Connect circuits by calling this API operation.
           *
           * @param request RecoverPhysicalConnectionRequest
@@ -50527,6 +51988,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)Description
           * You can call this API operation to resume a suspended Express Connect circuit. You can resume only shared Express Connect circuits by calling this API operation.
           *
           * @param request RecoverPhysicalConnectionRequest
@@ -50573,6 +52035,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)Description
           * You can call this API operation to resume a suspended Express Connect circuit. You can resume only shared Express Connect circuits by calling this API operation.
           *
           * @param request RecoverPhysicalConnectionRequest
@@ -50585,6 +52048,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * # [](#)Description
           * You can call this API operation to resume a suspended Express Connect circuit. You can resume only shared Express Connect circuits by calling this API operation.
           *
           * @param request RecoverPhysicalConnectionRequest
@@ -50597,7 +52061,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the virtual border router (VBR) changes from the **Terminated** state to the **Recovering** state. When the VBR recovers, it enters the **Enabled** state.
+          * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
           * When you call this operation, take note of the following items:
           * *   Only the owner of the Express Connect circuit can call this operation.
           * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -50658,7 +52122,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the virtual border router (VBR) changes from the **Terminated** state to the **Recovering** state. When the VBR recovers, it enters the **Enabled** state.
+          * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
           * When you call this operation, take note of the following items:
           * *   Only the owner of the Express Connect circuit can call this operation.
           * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -50719,7 +52183,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the virtual border router (VBR) changes from the **Terminated** state to the **Recovering** state. When the VBR recovers, it enters the **Enabled** state.
+          * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
           * When you call this operation, take note of the following items:
           * *   Only the owner of the Express Connect circuit can call this operation.
           * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -50734,7 +52198,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the virtual border router (VBR) changes from the **Terminated** state to the **Recovering** state. When the VBR recovers, it enters the **Enabled** state.
+          * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
           * When you call this operation, take note of the following items:
           * *   Only the owner of the Express Connect circuit can call this operation.
           * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -51943,6 +53407,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Usage notes
           * *   **RevokeInstanceFromCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
           * *   You cannot repeatedly call the **RevokeInstanceFromCen** operation to revoke the permissions on a network instance that is attached to a CEN instance within the specified period of time. The network instance can be a VPC, virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
           *
@@ -52014,6 +53479,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Usage notes
           * *   **RevokeInstanceFromCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
           * *   You cannot repeatedly call the **RevokeInstanceFromCen** operation to revoke the permissions on a network instance that is attached to a CEN instance within the specified period of time. The network instance can be a VPC, virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
           *
@@ -52085,6 +53551,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Usage notes
           * *   **RevokeInstanceFromCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
           * *   You cannot repeatedly call the **RevokeInstanceFromCen** operation to revoke the permissions on a network instance that is attached to a CEN instance within the specified period of time. The network instance can be a VPC, virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
           *
@@ -52098,6 +53565,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)Usage notes
           * *   **RevokeInstanceFromCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
           * *   You cannot repeatedly call the **RevokeInstanceFromCen** operation to revoke the permissions on a network instance that is attached to a CEN instance within the specified period of time. The network instance can be a VPC, virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
           *
@@ -52562,8 +54030,235 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await SetHighDefinitionMonitorLogStatusWithOptionsAsync(request, runtime);
         }
 
+        public StartFailoverTestJobResponse StartFailoverTestJobWithOptions(StartFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartFailoverTestJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StartFailoverTestJobResponse> StartFailoverTestJobWithOptionsAsync(StartFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartFailoverTestJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StartFailoverTestJobResponse StartFailoverTestJob(StartFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartFailoverTestJobWithOptions(request, runtime);
+        }
+
+        public async Task<StartFailoverTestJobResponse> StartFailoverTestJobAsync(StartFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartFailoverTestJobWithOptionsAsync(request, runtime);
+        }
+
+        public StopFailoverTestJobResponse StopFailoverTestJobWithOptions(StopFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopFailoverTestJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StopFailoverTestJobResponse> StopFailoverTestJobWithOptionsAsync(StopFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopFailoverTestJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StopFailoverTestJobResponse StopFailoverTestJob(StopFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopFailoverTestJobWithOptions(request, runtime);
+        }
+
+        public async Task<StopFailoverTestJobResponse> StopFailoverTestJobAsync(StopFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopFailoverTestJobWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * ## Usage notes
           * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:
           * *   The keys of tags that are added to the same instance must be unique.
           * *   You cannot create tags without adding them to instances. All tags must be added to instances.
@@ -52633,7 +54328,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Usage notes
           * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:
           * *   The keys of tags that are added to the same instance must be unique.
           * *   You cannot create tags without adding them to instances. All tags must be added to instances.
@@ -52703,7 +54397,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Usage notes
           * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:
           * *   The keys of tags that are added to the same instance must be unique.
           * *   You cannot create tags without adding them to instances. All tags must be added to instances.
@@ -52723,7 +54416,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Usage notes
           * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:
           * *   The keys of tags that are added to the same instance must be unique.
           * *   You cannot create tags without adding them to instances. All tags must be added to instances.
@@ -52743,12 +54435,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Tags are used to classify instances. Each tag consists of a key-value pair. To use tags, make sure that the following requirements are met:
-          * *   The keys of tags that are added to the same instance must be unique.
+          * ## [](#)
+          * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:
+          * *   Each tag key that is added to an instance must be unique.
           * *   You cannot create tags without adding them to instances. All tags must be added to instances.
           * *   Tag information is not shared across regions.
           *     For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.
-          * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. If the maximum number of tags is reached, an error message is returned.
+          * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.
           *
           * @param request TagResourcesForExpressConnectRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -52810,12 +54503,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Tags are used to classify instances. Each tag consists of a key-value pair. To use tags, make sure that the following requirements are met:
-          * *   The keys of tags that are added to the same instance must be unique.
+          * ## [](#)
+          * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:
+          * *   Each tag key that is added to an instance must be unique.
           * *   You cannot create tags without adding them to instances. All tags must be added to instances.
           * *   Tag information is not shared across regions.
           *     For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.
-          * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. If the maximum number of tags is reached, an error message is returned.
+          * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.
           *
           * @param request TagResourcesForExpressConnectRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -52877,12 +54571,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Tags are used to classify instances. Each tag consists of a key-value pair. To use tags, make sure that the following requirements are met:
-          * *   The keys of tags that are added to the same instance must be unique.
+          * ## [](#)
+          * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:
+          * *   Each tag key that is added to an instance must be unique.
           * *   You cannot create tags without adding them to instances. All tags must be added to instances.
           * *   Tag information is not shared across regions.
           *     For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.
-          * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. If the maximum number of tags is reached, an error message is returned.
+          * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.
           *
           * @param request TagResourcesForExpressConnectRequest
           * @return TagResourcesForExpressConnectResponse
@@ -52894,12 +54589,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * Tags are used to classify instances. Each tag consists of a key-value pair. To use tags, make sure that the following requirements are met:
-          * *   The keys of tags that are added to the same instance must be unique.
+          * ## [](#)
+          * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:
+          * *   Each tag key that is added to an instance must be unique.
           * *   You cannot create tags without adding them to instances. All tags must be added to instances.
           * *   Tag information is not shared across regions.
           *     For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.
-          * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. If the maximum number of tags is reached, an error message is returned.
+          * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.
           *
           * @param request TagResourcesForExpressConnectRequest
           * @return TagResourcesForExpressConnectResponse
@@ -52911,9 +54607,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state.
-          * When you call this operation, take note of the following limits:
-          * *   You can only terminate an Express Connect circuit that is in the **Enabled** state.
+          * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state. When you call this operation, take note of the following limits:
+          * *   You can only disable an Express Connect circuit that is in the **Enabled** state.
           * *   Before you disable an Express Connect circuit, you must delete the virtual border routers (VBRs) associated with it.
           *
           * @param request TerminatePhysicalConnectionRequest
@@ -52972,9 +54667,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state.
-          * When you call this operation, take note of the following limits:
-          * *   You can only terminate an Express Connect circuit that is in the **Enabled** state.
+          * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state. When you call this operation, take note of the following limits:
+          * *   You can only disable an Express Connect circuit that is in the **Enabled** state.
           * *   Before you disable an Express Connect circuit, you must delete the virtual border routers (VBRs) associated with it.
           *
           * @param request TerminatePhysicalConnectionRequest
@@ -53033,9 +54727,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state.
-          * When you call this operation, take note of the following limits:
-          * *   You can only terminate an Express Connect circuit that is in the **Enabled** state.
+          * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state. When you call this operation, take note of the following limits:
+          * *   You can only disable an Express Connect circuit that is in the **Enabled** state.
           * *   Before you disable an Express Connect circuit, you must delete the virtual border routers (VBRs) associated with it.
           *
           * @param request TerminatePhysicalConnectionRequest
@@ -53048,9 +54741,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state.
-          * When you call this operation, take note of the following limits:
-          * *   You can only terminate an Express Connect circuit that is in the **Enabled** state.
+          * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state. When you call this operation, take note of the following limits:
+          * *   You can only disable an Express Connect circuit that is in the **Enabled** state.
           * *   Before you disable an Express Connect circuit, you must delete the virtual border routers (VBRs) associated with it.
           *
           * @param request TerminatePhysicalConnectionRequest
@@ -53063,7 +54755,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the VBR changes from the **Enabled** state to the **Terminating** state. After the VBR is terminated, it enters the **Terminated** state.
+          * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
           * >  Only the owner of an Express Connect circuit can call this operation.
           *
           * @param request TerminateVirtualBorderRouterRequest
@@ -53122,7 +54814,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the VBR changes from the **Enabled** state to the **Terminating** state. After the VBR is terminated, it enters the **Terminated** state.
+          * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
           * >  Only the owner of an Express Connect circuit can call this operation.
           *
           * @param request TerminateVirtualBorderRouterRequest
@@ -53181,7 +54873,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the VBR changes from the **Enabled** state to the **Terminating** state. After the VBR is terminated, it enters the **Terminated** state.
+          * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
           * >  Only the owner of an Express Connect circuit can call this operation.
           *
           * @param request TerminateVirtualBorderRouterRequest
@@ -53194,7 +54886,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the VBR changes from the **Enabled** state to the **Terminating** state. After the VBR is terminated, it enters the **Terminated** state.
+          * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
           * >  Only the owner of an Express Connect circuit can call this operation.
           *
           * @param request TerminateVirtualBorderRouterRequest
@@ -53635,10 +55327,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   The ECS instance must be in the **Running** or **Stopped** state.
           * *   The HAVIP must be in the **Available** or **InUse** state.
-          * *   The **UnassociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+          * *   **UnassociateHaVip** is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
           *     *   If the HAVIP is in the **Unassociating** state, the HAVIP is being disassociated.
           *     *   If the HAVIP is in the **Inuse** or **Available** state, the HAVIP is disassociated.
           * *   You cannot repeatedly call the **UnassociateHaVip** operation to disassociate an HAVIP within the specified period of time.
@@ -53711,10 +55404,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   The ECS instance must be in the **Running** or **Stopped** state.
           * *   The HAVIP must be in the **Available** or **InUse** state.
-          * *   The **UnassociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+          * *   **UnassociateHaVip** is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
           *     *   If the HAVIP is in the **Unassociating** state, the HAVIP is being disassociated.
           *     *   If the HAVIP is in the **Inuse** or **Available** state, the HAVIP is disassociated.
           * *   You cannot repeatedly call the **UnassociateHaVip** operation to disassociate an HAVIP within the specified period of time.
@@ -53787,10 +55481,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   The ECS instance must be in the **Running** or **Stopped** state.
           * *   The HAVIP must be in the **Available** or **InUse** state.
-          * *   The **UnassociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+          * *   **UnassociateHaVip** is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
           *     *   If the HAVIP is in the **Unassociating** state, the HAVIP is being disassociated.
           *     *   If the HAVIP is in the **Inuse** or **Available** state, the HAVIP is disassociated.
           * *   You cannot repeatedly call the **UnassociateHaVip** operation to disassociate an HAVIP within the specified period of time.
@@ -53805,10 +55500,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   The ECS instance must be in the **Running** or **Stopped** state.
           * *   The HAVIP must be in the **Available** or **InUse** state.
-          * *   The **UnassociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+          * *   **UnassociateHaVip** is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
           *     *   If the HAVIP is in the **Unassociating** state, the HAVIP is being disassociated.
           *     *   If the HAVIP is in the **Inuse** or **Available** state, the HAVIP is disassociated.
           * *   You cannot repeatedly call the **UnassociateHaVip** operation to disassociate an HAVIP within the specified period of time.
@@ -53823,7 +55519,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UnassociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **UnassociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **UNBINDING** state, the network ACL is being disassociated from the vSwitch.
           *     *   If the network ACL is in the **UNBINDED** state, the network ACL is disassociated from the vSwitch.
           * *   You cannot repeatedly call the **UnassociateNetworkAcl** operation to disassociate a network ACL from a vSwitch within the specified period of time.
@@ -53888,7 +55585,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UnassociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **UnassociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **UNBINDING** state, the network ACL is being disassociated from the vSwitch.
           *     *   If the network ACL is in the **UNBINDED** state, the network ACL is disassociated from the vSwitch.
           * *   You cannot repeatedly call the **UnassociateNetworkAcl** operation to disassociate a network ACL from a vSwitch within the specified period of time.
@@ -53953,7 +55651,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UnassociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **UnassociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **UNBINDING** state, the network ACL is being disassociated from the vSwitch.
           *     *   If the network ACL is in the **UNBINDED** state, the network ACL is disassociated from the vSwitch.
           * *   You cannot repeatedly call the **UnassociateNetworkAcl** operation to disassociate a network ACL from a vSwitch within the specified period of time.
@@ -53968,7 +55667,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UnassociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **UnassociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **UNBINDING** state, the network ACL is being disassociated from the vSwitch.
           *     *   If the network ACL is in the **UNBINDED** state, the network ACL is disassociated from the vSwitch.
           * *   You cannot repeatedly call the **UnassociateNetworkAcl** operation to disassociate a network ACL from a vSwitch within the specified period of time.
@@ -54105,7 +55805,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UnassociateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * ## [](#)References
+          * *   **UnassociateRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task.
           *     *   If the vSwitch is in the **Pending** state, the route table is being disassociated.
           *     *   If the vSwitch is in the **Available** state, the route table is disassociated.
           * *   You cannot repeatedly call the **UnassociateRouteTable** operation to disassociate a route table from a vSwitch within the specified period of time.
@@ -54174,7 +55875,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UnassociateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * ## [](#)References
+          * *   **UnassociateRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task.
           *     *   If the vSwitch is in the **Pending** state, the route table is being disassociated.
           *     *   If the vSwitch is in the **Available** state, the route table is disassociated.
           * *   You cannot repeatedly call the **UnassociateRouteTable** operation to disassociate a route table from a vSwitch within the specified period of time.
@@ -54243,7 +55945,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UnassociateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * ## [](#)References
+          * *   **UnassociateRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task.
           *     *   If the vSwitch is in the **Pending** state, the route table is being disassociated.
           *     *   If the vSwitch is in the **Available** state, the route table is disassociated.
           * *   You cannot repeatedly call the **UnassociateRouteTable** operation to disassociate a route table from a vSwitch within the specified period of time.
@@ -54258,7 +55961,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UnassociateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * ## [](#)References
+          * *   **UnassociateRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task.
           *     *   If the vSwitch is in the **Pending** state, the route table is being disassociated.
           *     *   If the vSwitch is in the **Available** state, the route table is disassociated.
           * *   You cannot repeatedly call the **UnassociateRouteTable** operation to disassociate a route table from a vSwitch within the specified period of time.
@@ -54730,6 +56434,152 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDhcpOptionsSetAttributeWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateFailoverTestJobResponse UpdateFailoverTestJobWithOptions(UpdateFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDuration))
+            {
+                query["JobDuration"] = request.JobDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFailoverTestJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateFailoverTestJobResponse> UpdateFailoverTestJobWithOptionsAsync(UpdateFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDuration))
+            {
+                query["JobDuration"] = request.JobDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFailoverTestJob",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFailoverTestJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateFailoverTestJobResponse UpdateFailoverTestJob(UpdateFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateFailoverTestJobWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateFailoverTestJobResponse> UpdateFailoverTestJobAsync(UpdateFailoverTestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateFailoverTestJobWithOptionsAsync(request, runtime);
         }
 
         public UpdateGatewayRouteTableEntryAttributeResponse UpdateGatewayRouteTableEntryAttributeWithOptions(UpdateGatewayRouteTableEntryAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -55483,7 +57333,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UpdateNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * *   **UpdateNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
           *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being updated.
           *     *   If the network ACL is in the **Available** state, the rules of the network ACL are updated.
           * *   You cannot repeatedly call the **UpdateNetworkAclEntries** operation to update the rules of a network ACL within the specified period of time.
@@ -55560,7 +57410,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UpdateNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * *   **UpdateNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
           *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being updated.
           *     *   If the network ACL is in the **Available** state, the rules of the network ACL are updated.
           * *   You cannot repeatedly call the **UpdateNetworkAclEntries** operation to update the rules of a network ACL within the specified period of time.
@@ -55637,7 +57487,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UpdateNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * *   **UpdateNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
           *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being updated.
           *     *   If the network ACL is in the **Available** state, the rules of the network ACL are updated.
           * *   You cannot repeatedly call the **UpdateNetworkAclEntries** operation to update the rules of a network ACL within the specified period of time.
@@ -55652,7 +57502,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **UpdateNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * *   **UpdateNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
           *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being updated.
           *     *   If the network ACL is in the **Available** state, the rules of the network ACL are updated.
           * *   You cannot repeatedly call the **UpdateNetworkAclEntries** operation to update the rules of a network ACL within the specified period of time.

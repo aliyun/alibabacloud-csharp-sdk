@@ -12,9 +12,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The BFD hop count. Valid values: **1** to **255**.
         /// 
-        /// This parameter is required only if you enable BFD.
-        /// 
-        /// The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. You can set a proper value based on the factors that affect the physical connection.
+        /// This parameter is required only if you enable BFD. The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.
         /// </summary>
         [NameInMap("BfdMultiHop")]
         [Validation(Required=false)]
@@ -37,9 +35,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// 
-        /// >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -48,8 +46,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:
         /// 
-        /// *   **true**: enables BFD.
-        /// *   **false**: disables BFD. This is the default value.
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("EnableBfd")]
         [Validation(Required=false)]

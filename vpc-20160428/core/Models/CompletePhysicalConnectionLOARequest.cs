@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Specifies whether the construction is completed. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// </summary>
         [NameInMap("FinishWork")]
         [Validation(Required=false)]
         public bool? FinishWork { get; set; }
@@ -45,10 +51,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string LineLabel { get; set; }
 
+        /// <summary>
+        /// The contact information about line O\&M.
+        /// </summary>
         [NameInMap("LineSPContactInfo")]
         [Validation(Required=false)]
         public string LineSPContactInfo { get; set; }
 
+        /// <summary>
+        /// The ISP. Valid values:
+        /// 
+        /// *   **China Telecom**
+        /// *   **China Unicom**
+        /// *   **China Mobile**
+        /// *   **Other ISPs in China**
+        /// </summary>
         [NameInMap("LineServiceProvider")]
         [Validation(Required=false)]
         public string LineServiceProvider { get; set; }

@@ -77,8 +77,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The billing method of the VPN gateway. Set the value to **POSTPAY**, which specifies the pay-as-you-go billing method.
-        /// 
-        /// > This parameter is required when you create a VPN gateway.
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -125,6 +123,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the VPN gateway belongs.
+        /// 
+        /// - You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.
+        /// - If you do not specify a resource group, the VPN gateway will belong to the default resource group after being created.
+        /// - After the VPN gateway is created, if you create an SSL server, SSL client certificate, IPsec server, or IPsec-VPN connection under the VPN gateway (when the IPsec-VPN connection is bound to the VPN gateway), these resources directly belong to the resource group to which the VPN gateway belongs and cannot be modified.
+        /// 
+        ///     If you change the resource group to which the VPN gateway belongs, the resource group to which the resource belongs will also be changed.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

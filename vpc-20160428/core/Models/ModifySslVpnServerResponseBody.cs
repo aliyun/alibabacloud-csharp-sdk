@@ -117,6 +117,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the SSL server belongs.
+        /// 
+        /// The SSL server has the same resource group as its associated VPN gateway instance.
+        /// 
+        /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

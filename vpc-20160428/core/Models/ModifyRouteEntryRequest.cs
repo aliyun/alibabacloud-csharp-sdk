@@ -18,10 +18,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The ID of the new next hop instance.
+        /// </summary>
         [NameInMap("NewNextHopId")]
         [Validation(Required=false)]
         public string NewNextHopId { get; set; }
 
+        /// <summary>
+        /// The new next hop type of the route.
+        /// </summary>
         [NameInMap("NewNextHopType")]
         [Validation(Required=false)]
         public string NewNextHopType { get; set; }

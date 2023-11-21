@@ -82,6 +82,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the customer gateway belongs.
+        /// 
+        /// - You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.
+        /// 
+        /// - If you do not specify a resource group, the customer gateway will belong to the default resource group after being created.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
