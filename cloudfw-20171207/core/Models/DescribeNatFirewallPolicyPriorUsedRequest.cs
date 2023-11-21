@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// The language of the content within the request and the response. Valid values:
         /// 
         /// *   **zh**: Chinese (default)
         /// *   **en**: English
