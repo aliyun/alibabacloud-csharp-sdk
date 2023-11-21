@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeHistoryMonitorValuesResponseBody : TeaModel {
         /// <summary>
-        /// The monitoring data returned in the JSON format. For more information, see [Metrics](~~189831~~).
-        /// 
-        /// > 
+        /// The monitoring data returned in the JSON format. For more information, see [Metrics](~~122091~~).
         /// 
         /// *   Only metrics whose values are not 0 are returned. This improves data transmission efficiency. Metrics that are not displayed are represented by the default value of **0**.
         /// 

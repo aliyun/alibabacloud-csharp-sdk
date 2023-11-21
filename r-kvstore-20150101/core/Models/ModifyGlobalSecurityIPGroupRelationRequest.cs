@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class RemoveSubInstanceRequest : TeaModel {
-        /// <summary>
-        /// Instance ID.
-        /// </summary>
-        [NameInMap("InstanceId")]
+    public class ModifyGlobalSecurityIPGroupRelationRequest : TeaModel {
+        [NameInMap("DBClusterId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string DBClusterId { get; set; }
+
+        [NameInMap("GlobalSecurityGroupId")]
+        [Validation(Required=false)]
+        public string GlobalSecurityGroupId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -23,6 +24,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

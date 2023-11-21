@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The storage capacity of the instance. Unit: MB. You must specify one of the **InstanceClass** and **Capacity** parameters to specify the instance type. We recommend that you use **InstanceClass** to specify the instance type.
+        /// The storage capacity of the instance. Unit: MB. This parameter is used only to query ApsaraDB for Redis Community Edition instances that are deployed in classic mode. We recommend that you use the **InstanceClass** parameter to specify an exact instance type.
+        /// 
+        /// >  If you specify the **InstanceClass** parameter, you do not need to specify the Capacity parameter.
         /// </summary>
         [NameInMap("Capacity")]
         [Validation(Required=false)]
@@ -26,10 +28,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The billing method of the instance. Valid values:
         /// 
-        /// *   **PostPaid**: pay-as-you-go
-        /// *   **PrePaid**: subscription.
-        /// 
-        /// > The default value is **PostPaid**.
+        /// *   **PostPaid** (default): pay-as-you-go
+        /// *   **PrePaid**: subscription
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -46,42 +46,51 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// Specifies whether to forcefully change the configurations of the instance. Valid values:
         /// 
         /// *   **false**: forcefully changes the configurations.
-        /// *   **true**: does not forcefully change the configurations.
-        /// 
-        /// > The default value is **true**.
+        /// *   **true** (default): does not forcefully change the configurations.
         /// </summary>
         [NameInMap("ForceUpgrade")]
         [Validation(Required=false)]
         public bool? ForceUpgrade { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. You must specify one of the InstanceClass and Capacity parameters to specify the instance type. We recommend that you use InstanceClass to specify the instance type.
+        /// The instance type.****
         /// 
-        /// To query the instance type, perform the following steps:
+        /// **To view the instance type, perform the following steps:**
         /// 
         /// 1.  In the [Overview](~~26350~~) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.
         /// 2.  In the instance type table of the page that appears, find the instance type in the **InstanceClass** column.
+        /// 
+        /// When you query cloud-native cluster instances, you must set this parameter to one of the following values and use the Instances parameter to specify the instance type that you want to query.
+        /// 
+        /// *   ApsaraDB for Redis cluster instances: redis.cluster.sharding.common.ce
+        /// *   Tair DRAM-based cluster instances: tair.rdb.cluster.sharding.common
+        /// *   Tair persistent memory-based cluster instances: tair.scm.cluster.sharding.common.ce
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
+        /// 
+        /// >  This parameter is required when the **OrderType** parameter is set to **UPGRADE** or **RENEW**.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// A JSON string that contains multiple instances. For more information, see [Description of the Instances parameter in the DescribePrice API operation](~~161811~~).
+        /// A JSON string that contains information about one or more cloud-native cluster instances. For more information, see the "Additional description of the Instances parameter" section of this topic.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public string Instances { get; set; }
 
         /// <summary>
-        /// The node type. Set the value to MASTER_SLAVE. This value indicates that the node type is master-replica.
+        /// The node type. Valid values:
+        /// 
+        /// *   **STAND_ALONE**: standalone
+        /// *   **MASTER_SLAVE** (default): high availability (master-replica)
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
@@ -90,10 +99,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// Specifies whether to return parameters related to the order. Valid values:
         /// 
-        /// *   **false**: does not return parameters related to the order.
-        /// *   **true**: returns parameters related to the order.
-        /// 
-        /// > The default value is **false**.
+        /// *   **false** (default)
+        /// *   **true**
         /// </summary>
         [NameInMap("OrderParamOut")]
         [Validation(Required=false)]
@@ -127,9 +134,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Period { get; set; }
 
         /// <summary>
-        /// The number of instances that you want to purchase. Valid values: **1** to **30**.
-        /// 
-        /// > The default value is **1**.
+        /// The number of instances that you want to purchase. Valid values: **1** to **30**. Default value: **1**.
         /// </summary>
         [NameInMap("Quantity")]
         [Validation(Required=false)]

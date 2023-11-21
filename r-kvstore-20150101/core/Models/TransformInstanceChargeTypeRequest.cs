@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public string AutoRenew { get; set; }
+
+        [NameInMap("AutoRenewPeriod")]
+        [Validation(Required=false)]
+        public long? AutoRenewPeriod { get; set; }
+
         /// <summary>
         /// Specifies whether to enable automatic payment. Default value: true. Valid values:
         /// 
