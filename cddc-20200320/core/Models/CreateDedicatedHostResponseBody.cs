@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
     public class CreateDedicatedHostResponseBody : TeaModel {
+        /// <summary>
+        /// The created hosts.
+        /// </summary>
         [NameInMap("DedicateHostList")]
         [Validation(Required=false)]
         public CreateDedicatedHostResponseBodyDedicateHostList DedicateHostList { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
             [Validation(Required=false)]
             public List<CreateDedicatedHostResponseBodyDedicateHostListDedicateHostList> DedicateHostList { get; set; }
             public class CreateDedicatedHostResponseBodyDedicateHostListDedicateHostList : TeaModel {
+                /// <summary>
+                /// The host ID.
+                /// </summary>
                 [NameInMap("DedicatedHostId")]
                 [Validation(Required=false)]
                 public string DedicatedHostId { get; set; }
@@ -25,10 +31,16 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
 
         }
 
+        /// <summary>
+        /// The order ID.
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -231,6 +231,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return await CreateDedicatedHostWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Each host can have only one account. Before you create an account for a host, make sure that the existing account of the host is deleted. For more information, see [Create an account for a host](~~211413~~).
+          *
+          * @param request CreateDedicatedHostAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDedicatedHostAccountResponse
+         */
         public CreateDedicatedHostAccountResponse CreateDedicatedHostAccountWithOptions(CreateDedicatedHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -294,6 +301,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<CreateDedicatedHostAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Each host can have only one account. Before you create an account for a host, make sure that the existing account of the host is deleted. For more information, see [Create an account for a host](~~211413~~).
+          *
+          * @param request CreateDedicatedHostAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDedicatedHostAccountResponse
+         */
         public async Task<CreateDedicatedHostAccountResponse> CreateDedicatedHostAccountWithOptionsAsync(CreateDedicatedHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -357,12 +371,24 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<CreateDedicatedHostAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Each host can have only one account. Before you create an account for a host, make sure that the existing account of the host is deleted. For more information, see [Create an account for a host](~~211413~~).
+          *
+          * @param request CreateDedicatedHostAccountRequest
+          * @return CreateDedicatedHostAccountResponse
+         */
         public CreateDedicatedHostAccountResponse CreateDedicatedHostAccount(CreateDedicatedHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDedicatedHostAccountWithOptions(request, runtime);
         }
 
+        /**
+          * Each host can have only one account. Before you create an account for a host, make sure that the existing account of the host is deleted. For more information, see [Create an account for a host](~~211413~~).
+          *
+          * @param request CreateDedicatedHostAccountRequest
+          * @return CreateDedicatedHostAccountResponse
+         */
         public async Task<CreateDedicatedHostAccountResponse> CreateDedicatedHostAccountAsync(CreateDedicatedHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -548,7 +574,15 @@ namespace AlibabaCloud.SDK.Cddc20200320
             {
                 request.ECSClassListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ECSClassList, "ECSClassList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
@@ -593,6 +627,14 @@ namespace AlibabaCloud.SDK.Cddc20200320
             {
                 query["ImageId"] = request.ImageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
+            {
+                query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMaxBandwidthOut))
+            {
+                query["InternetMaxBandwidthOut"] = request.InternetMaxBandwidthOut;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
             {
                 query["KeyPairName"] = request.KeyPairName;
@@ -625,6 +667,10 @@ namespace AlibabaCloud.SDK.Cddc20200320
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -636,6 +682,18 @@ namespace AlibabaCloud.SDK.Cddc20200320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDataInBase64))
+            {
+                query["UserDataInBase64"] = request.UserDataInBase64;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -677,7 +735,15 @@ namespace AlibabaCloud.SDK.Cddc20200320
             {
                 request.ECSClassListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ECSClassList, "ECSClassList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
@@ -722,6 +788,14 @@ namespace AlibabaCloud.SDK.Cddc20200320
             {
                 query["ImageId"] = request.ImageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
+            {
+                query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMaxBandwidthOut))
+            {
+                query["InternetMaxBandwidthOut"] = request.InternetMaxBandwidthOut;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
             {
                 query["KeyPairName"] = request.KeyPairName;
@@ -754,6 +828,10 @@ namespace AlibabaCloud.SDK.Cddc20200320
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -765,6 +843,18 @@ namespace AlibabaCloud.SDK.Cddc20200320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDataInBase64))
+            {
+                query["UserDataInBase64"] = request.UserDataInBase64;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -915,6 +1005,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return await DeleteDedicatedHostAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to delete a dedicated cluster only after all the instances and hosts in the dedicated cluster are deleted.
+          *
+          * @param request DeleteDedicatedHostGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDedicatedHostGroupResponse
+         */
         public DeleteDedicatedHostGroupResponse DeleteDedicatedHostGroupWithOptions(DeleteDedicatedHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -958,6 +1055,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DeleteDedicatedHostGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to delete a dedicated cluster only after all the instances and hosts in the dedicated cluster are deleted.
+          *
+          * @param request DeleteDedicatedHostGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDedicatedHostGroupResponse
+         */
         public async Task<DeleteDedicatedHostGroupResponse> DeleteDedicatedHostGroupWithOptionsAsync(DeleteDedicatedHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1001,12 +1105,24 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DeleteDedicatedHostGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to delete a dedicated cluster only after all the instances and hosts in the dedicated cluster are deleted.
+          *
+          * @param request DeleteDedicatedHostGroupRequest
+          * @return DeleteDedicatedHostGroupResponse
+         */
         public DeleteDedicatedHostGroupResponse DeleteDedicatedHostGroup(DeleteDedicatedHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDedicatedHostGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to delete a dedicated cluster only after all the instances and hosts in the dedicated cluster are deleted.
+          *
+          * @param request DeleteDedicatedHostGroupRequest
+          * @return DeleteDedicatedHostGroupResponse
+         */
         public async Task<DeleteDedicatedHostGroupResponse> DeleteDedicatedHostGroupAsync(DeleteDedicatedHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1331,6 +1447,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return await DescribeDedicatedHostGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After hosts are created in a dedicated cluster, you can query the information about the hosts such as performance metrics, total number of CPU cores, total memory size, and total storage.
+          *
+          * @param request DescribeDedicatedHostsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedHostsResponse
+         */
         public DescribeDedicatedHostsResponse DescribeDedicatedHostsWithOptions(DescribeDedicatedHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1410,6 +1533,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DescribeDedicatedHostsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After hosts are created in a dedicated cluster, you can query the information about the hosts such as performance metrics, total number of CPU cores, total memory size, and total storage.
+          *
+          * @param request DescribeDedicatedHostsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedHostsResponse
+         */
         public async Task<DescribeDedicatedHostsResponse> DescribeDedicatedHostsWithOptionsAsync(DescribeDedicatedHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1489,18 +1619,37 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DescribeDedicatedHostsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After hosts are created in a dedicated cluster, you can query the information about the hosts such as performance metrics, total number of CPU cores, total memory size, and total storage.
+          *
+          * @param request DescribeDedicatedHostsRequest
+          * @return DescribeDedicatedHostsResponse
+         */
         public DescribeDedicatedHostsResponse DescribeDedicatedHosts(DescribeDedicatedHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDedicatedHostsWithOptions(request, runtime);
         }
 
+        /**
+          * After hosts are created in a dedicated cluster, you can query the information about the hosts such as performance metrics, total number of CPU cores, total memory size, and total storage.
+          *
+          * @param request DescribeDedicatedHostsRequest
+          * @return DescribeDedicatedHostsResponse
+         */
         public async Task<DescribeDedicatedHostsResponse> DescribeDedicatedHostsAsync(DescribeDedicatedHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDedicatedHostsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After a host is created, you can call this operation to query the information about the host specifications, such as the CPU resources, memory resources, CPU model, host category, and storage type.
+          *
+          * @param request DescribeHostEcsLevelInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHostEcsLevelInfoResponse
+         */
         public DescribeHostEcsLevelInfoResponse DescribeHostEcsLevelInfoWithOptions(DescribeHostEcsLevelInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1556,6 +1705,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DescribeHostEcsLevelInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After a host is created, you can call this operation to query the information about the host specifications, such as the CPU resources, memory resources, CPU model, host category, and storage type.
+          *
+          * @param request DescribeHostEcsLevelInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHostEcsLevelInfoResponse
+         */
         public async Task<DescribeHostEcsLevelInfoResponse> DescribeHostEcsLevelInfoWithOptionsAsync(DescribeHostEcsLevelInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1611,18 +1767,37 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DescribeHostEcsLevelInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After a host is created, you can call this operation to query the information about the host specifications, such as the CPU resources, memory resources, CPU model, host category, and storage type.
+          *
+          * @param request DescribeHostEcsLevelInfoRequest
+          * @return DescribeHostEcsLevelInfoResponse
+         */
         public DescribeHostEcsLevelInfoResponse DescribeHostEcsLevelInfo(DescribeHostEcsLevelInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHostEcsLevelInfoWithOptions(request, runtime);
         }
 
+        /**
+          * After a host is created, you can call this operation to query the information about the host specifications, such as the CPU resources, memory resources, CPU model, host category, and storage type.
+          *
+          * @param request DescribeHostEcsLevelInfoRequest
+          * @return DescribeHostEcsLevelInfoResponse
+         */
         public async Task<DescribeHostEcsLevelInfoResponse> DescribeHostEcsLevelInfoAsync(DescribeHostEcsLevelInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHostEcsLevelInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use a webshell to access a host in an ApsaraDB MyBase for MySQL or ApsaraDB MyBase for PostgreSQL dedicated cluster. For more information, see [Use a webshell to access a host](~~205456~~).
+          *
+          * @param request DescribeHostWebShellRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHostWebShellResponse
+         */
         public DescribeHostWebShellResponse DescribeHostWebShellWithOptions(DescribeHostWebShellRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1670,6 +1845,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DescribeHostWebShellResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use a webshell to access a host in an ApsaraDB MyBase for MySQL or ApsaraDB MyBase for PostgreSQL dedicated cluster. For more information, see [Use a webshell to access a host](~~205456~~).
+          *
+          * @param request DescribeHostWebShellRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHostWebShellResponse
+         */
         public async Task<DescribeHostWebShellResponse> DescribeHostWebShellWithOptionsAsync(DescribeHostWebShellRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1717,18 +1899,37 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DescribeHostWebShellResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use a webshell to access a host in an ApsaraDB MyBase for MySQL or ApsaraDB MyBase for PostgreSQL dedicated cluster. For more information, see [Use a webshell to access a host](~~205456~~).
+          *
+          * @param request DescribeHostWebShellRequest
+          * @return DescribeHostWebShellResponse
+         */
         public DescribeHostWebShellResponse DescribeHostWebShell(DescribeHostWebShellRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHostWebShellWithOptions(request, runtime);
         }
 
+        /**
+          * You can use a webshell to access a host in an ApsaraDB MyBase for MySQL or ApsaraDB MyBase for PostgreSQL dedicated cluster. For more information, see [Use a webshell to access a host](~~205456~~).
+          *
+          * @param request DescribeHostWebShellRequest
+          * @return DescribeHostWebShellResponse
+         */
         public async Task<DescribeHostWebShellResponse> DescribeHostWebShellAsync(DescribeHostWebShellRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHostWebShellWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about region IDs, see [Region IDs](~~198326~~).
+          *
+          * @param request DescribeRegionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1756,6 +1957,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about region IDs, see [Region IDs](~~198326~~).
+          *
+          * @param request DescribeRegionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1783,12 +1991,24 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about region IDs, see [Region IDs](~~198326~~).
+          *
+          * @param request DescribeRegionsRequest
+          * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about region IDs, see [Region IDs](~~198326~~).
+          *
+          * @param request DescribeRegionsRequest
+          * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2137,6 +2357,14 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return await ModifyDedicatedHostAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After a host is created in a dedicated cluster, you can modify the specifications of the host based on your business requirements. The host specifications include the CPU and memory resources. For more information, see [Upgrade host specifications](~~262822~~).
+          * >  When you upgrade the specifications of a host, the host restarts. The database instances that are running on the host also restart. For information about the impacts of a host restart, see [Restart a host](~~141772~~).
+          *
+          * @param request ModifyDedicatedHostClassRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDedicatedHostClassResponse
+         */
         public ModifyDedicatedHostClassResponse ModifyDedicatedHostClassWithOptions(ModifyDedicatedHostClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2192,6 +2420,14 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<ModifyDedicatedHostClassResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After a host is created in a dedicated cluster, you can modify the specifications of the host based on your business requirements. The host specifications include the CPU and memory resources. For more information, see [Upgrade host specifications](~~262822~~).
+          * >  When you upgrade the specifications of a host, the host restarts. The database instances that are running on the host also restart. For information about the impacts of a host restart, see [Restart a host](~~141772~~).
+          *
+          * @param request ModifyDedicatedHostClassRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDedicatedHostClassResponse
+         */
         public async Task<ModifyDedicatedHostClassResponse> ModifyDedicatedHostClassWithOptionsAsync(ModifyDedicatedHostClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2247,18 +2483,39 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<ModifyDedicatedHostClassResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After a host is created in a dedicated cluster, you can modify the specifications of the host based on your business requirements. The host specifications include the CPU and memory resources. For more information, see [Upgrade host specifications](~~262822~~).
+          * >  When you upgrade the specifications of a host, the host restarts. The database instances that are running on the host also restart. For information about the impacts of a host restart, see [Restart a host](~~141772~~).
+          *
+          * @param request ModifyDedicatedHostClassRequest
+          * @return ModifyDedicatedHostClassResponse
+         */
         public ModifyDedicatedHostClassResponse ModifyDedicatedHostClass(ModifyDedicatedHostClassRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDedicatedHostClassWithOptions(request, runtime);
         }
 
+        /**
+          * After a host is created in a dedicated cluster, you can modify the specifications of the host based on your business requirements. The host specifications include the CPU and memory resources. For more information, see [Upgrade host specifications](~~262822~~).
+          * >  When you upgrade the specifications of a host, the host restarts. The database instances that are running on the host also restart. For information about the impacts of a host restart, see [Restart a host](~~141772~~).
+          *
+          * @param request ModifyDedicatedHostClassRequest
+          * @return ModifyDedicatedHostClassResponse
+         */
         public async Task<ModifyDedicatedHostClassResponse> ModifyDedicatedHostClassAsync(ModifyDedicatedHostClassRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDedicatedHostClassWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information, see [Manage dedicated clusters](~~182328~~).
+          *
+          * @param request ModifyDedicatedHostGroupAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDedicatedHostGroupAttributeResponse
+         */
         public ModifyDedicatedHostGroupAttributeResponse ModifyDedicatedHostGroupAttributeWithOptions(ModifyDedicatedHostGroupAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2330,6 +2587,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<ModifyDedicatedHostGroupAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information, see [Manage dedicated clusters](~~182328~~).
+          *
+          * @param request ModifyDedicatedHostGroupAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDedicatedHostGroupAttributeResponse
+         */
         public async Task<ModifyDedicatedHostGroupAttributeResponse> ModifyDedicatedHostGroupAttributeWithOptionsAsync(ModifyDedicatedHostGroupAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2401,18 +2665,37 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<ModifyDedicatedHostGroupAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information, see [Manage dedicated clusters](~~182328~~).
+          *
+          * @param request ModifyDedicatedHostGroupAttributeRequest
+          * @return ModifyDedicatedHostGroupAttributeResponse
+         */
         public ModifyDedicatedHostGroupAttributeResponse ModifyDedicatedHostGroupAttribute(ModifyDedicatedHostGroupAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDedicatedHostGroupAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * For more information, see [Manage dedicated clusters](~~182328~~).
+          *
+          * @param request ModifyDedicatedHostGroupAttributeRequest
+          * @return ModifyDedicatedHostGroupAttributeResponse
+         */
         public async Task<ModifyDedicatedHostGroupAttributeResponse> ModifyDedicatedHostGroupAttributeAsync(ModifyDedicatedHostGroupAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDedicatedHostGroupAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported only for ApsaraDB MyBase for Redis Enhanced Edition (Tair) dedicated clusters.
+          *
+          * @param request ModifyDedicatedHostPasswordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDedicatedHostPasswordResponse
+         */
         public ModifyDedicatedHostPasswordResponse ModifyDedicatedHostPasswordWithOptions(ModifyDedicatedHostPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2460,6 +2743,13 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<ModifyDedicatedHostPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only for ApsaraDB MyBase for Redis Enhanced Edition (Tair) dedicated clusters.
+          *
+          * @param request ModifyDedicatedHostPasswordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDedicatedHostPasswordResponse
+         */
         public async Task<ModifyDedicatedHostPasswordResponse> ModifyDedicatedHostPasswordWithOptionsAsync(ModifyDedicatedHostPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2507,12 +2797,24 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<ModifyDedicatedHostPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only for ApsaraDB MyBase for Redis Enhanced Edition (Tair) dedicated clusters.
+          *
+          * @param request ModifyDedicatedHostPasswordRequest
+          * @return ModifyDedicatedHostPasswordResponse
+         */
         public ModifyDedicatedHostPasswordResponse ModifyDedicatedHostPassword(ModifyDedicatedHostPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDedicatedHostPasswordWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is supported only for ApsaraDB MyBase for Redis Enhanced Edition (Tair) dedicated clusters.
+          *
+          * @param request ModifyDedicatedHostPasswordRequest
+          * @return ModifyDedicatedHostPasswordResponse
+         */
         public async Task<ModifyDedicatedHostPasswordResponse> ModifyDedicatedHostPasswordAsync(ModifyDedicatedHostPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2715,6 +3017,14 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return await QueryHostInstanceConsoleInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you specify the manual host replacement policy when you create an ApsaraDB MyBase for MySQL dedicated cluster, you can call this operation to replace a **faulty** host in the dedicated cluster.
+          * >  You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the value of the **HostStatus** parameter.
+          *
+          * @param request ReplaceDedicatedHostRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReplaceDedicatedHostResponse
+         */
         public ReplaceDedicatedHostResponse ReplaceDedicatedHostWithOptions(ReplaceDedicatedHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2762,6 +3072,14 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<ReplaceDedicatedHostResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you specify the manual host replacement policy when you create an ApsaraDB MyBase for MySQL dedicated cluster, you can call this operation to replace a **faulty** host in the dedicated cluster.
+          * >  You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the value of the **HostStatus** parameter.
+          *
+          * @param request ReplaceDedicatedHostRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReplaceDedicatedHostResponse
+         */
         public async Task<ReplaceDedicatedHostResponse> ReplaceDedicatedHostWithOptionsAsync(ReplaceDedicatedHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2809,12 +3127,26 @@ namespace AlibabaCloud.SDK.Cddc20200320
             return TeaModel.ToObject<ReplaceDedicatedHostResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you specify the manual host replacement policy when you create an ApsaraDB MyBase for MySQL dedicated cluster, you can call this operation to replace a **faulty** host in the dedicated cluster.
+          * >  You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the value of the **HostStatus** parameter.
+          *
+          * @param request ReplaceDedicatedHostRequest
+          * @return ReplaceDedicatedHostResponse
+         */
         public ReplaceDedicatedHostResponse ReplaceDedicatedHost(ReplaceDedicatedHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReplaceDedicatedHostWithOptions(request, runtime);
         }
 
+        /**
+          * If you specify the manual host replacement policy when you create an ApsaraDB MyBase for MySQL dedicated cluster, you can call this operation to replace a **faulty** host in the dedicated cluster.
+          * >  You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the value of the **HostStatus** parameter.
+          *
+          * @param request ReplaceDedicatedHostRequest
+          * @return ReplaceDedicatedHostResponse
+         */
         public async Task<ReplaceDedicatedHostResponse> ReplaceDedicatedHostAsync(ReplaceDedicatedHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

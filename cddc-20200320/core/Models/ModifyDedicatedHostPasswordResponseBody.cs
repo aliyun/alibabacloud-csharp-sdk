@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
     public class ModifyDedicatedHostPasswordResponseBody : TeaModel {
+        /// <summary>
+        /// The name of the host.
+        /// </summary>
         [NameInMap("DedicatedHostName")]
         [Validation(Required=false)]
         public string DedicatedHostName { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

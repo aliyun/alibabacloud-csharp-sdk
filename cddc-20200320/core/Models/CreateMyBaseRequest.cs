@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
     public class CreateMyBaseRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
@@ -29,6 +33,18 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public List<CreateMyBaseRequestECSClassList> ECSClassList { get; set; }
         public class CreateMyBaseRequestECSClassList : TeaModel {
+            [NameInMap("dataDiskAutoSnapshotPolicyId")]
+            [Validation(Required=false)]
+            public string DataDiskAutoSnapshotPolicyId { get; set; }
+
+            [NameInMap("dataDiskEncrypted")]
+            [Validation(Required=false)]
+            public bool? DataDiskEncrypted { get; set; }
+
+            [NameInMap("dataDiskKMSKeyId")]
+            [Validation(Required=false)]
+            public string DataDiskKMSKeyId { get; set; }
+
             [NameInMap("dataDiskPerformanceLevel")]
             [Validation(Required=false)]
             public string DataDiskPerformanceLevel { get; set; }
@@ -53,9 +69,21 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
             [Validation(Required=false)]
             public int? NodeCount { get; set; }
 
+            [NameInMap("sysDiskAutoSnapshotPolicyId")]
+            [Validation(Required=false)]
+            public string SysDiskAutoSnapshotPolicyId { get; set; }
+
             [NameInMap("sysDiskCapacity")]
             [Validation(Required=false)]
             public int? SysDiskCapacity { get; set; }
+
+            [NameInMap("sysDiskEncrypted")]
+            [Validation(Required=false)]
+            public bool? SysDiskEncrypted { get; set; }
+
+            [NameInMap("sysDiskKMSKeyId")]
+            [Validation(Required=false)]
+            public string SysDiskKMSKeyId { get; set; }
 
             [NameInMap("sysDiskType")]
             [Validation(Required=false)]
@@ -91,6 +119,14 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        [NameInMap("InternetChargeType")]
+        [Validation(Required=false)]
+        public string InternetChargeType { get; set; }
+
+        [NameInMap("InternetMaxBandwidthOut")]
+        [Validation(Required=false)]
+        public int? InternetMaxBandwidthOut { get; set; }
+
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
@@ -123,6 +159,10 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -134,6 +174,28 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateMyBaseRequestTags> Tags { get; set; }
+        public class CreateMyBaseRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
+        [NameInMap("UserDataInBase64")]
+        [Validation(Required=false)]
+        public bool? UserDataInBase64 { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

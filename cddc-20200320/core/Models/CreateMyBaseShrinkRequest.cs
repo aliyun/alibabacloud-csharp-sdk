@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
     public class CreateMyBaseShrinkRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
@@ -53,6 +57,14 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        [NameInMap("InternetChargeType")]
+        [Validation(Required=false)]
+        public string InternetChargeType { get; set; }
+
+        [NameInMap("InternetMaxBandwidthOut")]
+        [Validation(Required=false)]
+        public int? InternetMaxBandwidthOut { get; set; }
+
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
@@ -85,6 +97,10 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -96,6 +112,18 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string TagsShrink { get; set; }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
+        [NameInMap("UserDataInBase64")]
+        [Validation(Required=false)]
+        public bool? UserDataInBase64 { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

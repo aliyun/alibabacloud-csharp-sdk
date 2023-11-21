@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
     public class DescribeDedicatedHostDisksRequest : TeaModel {
+        /// <summary>
+        /// The host ID. You can log on to the ApsaraDB for MyBase console and go to the **Hosts** page to view the host ID.
+        /// </summary>
         [NameInMap("DedicatedHostId")]
         [Validation(Required=false)]
         public string DedicatedHostId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the host. You can log on to the ApsaraDB for MyBase console to view the [region ID](~~198326~~).
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
