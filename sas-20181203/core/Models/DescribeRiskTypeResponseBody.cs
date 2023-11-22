@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Alias { get; set; }
 
+            [NameInMap("AuthFlag")]
+            [Validation(Required=false)]
+            public bool? AuthFlag { get; set; }
+
             /// <summary>
             /// An array that consists of the information about baseline subtypes.
             /// </summary>
@@ -43,6 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
+
+                [NameInMap("AuthFlag")]
+                [Validation(Required=false)]
+                public bool? AuthFlag { get; set; }
 
                 /// <summary>
                 /// An array that consists of the check details about the baseline subtype.
@@ -167,6 +175,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                 }
+
+                [NameInMap("SupportedOs")]
+                [Validation(Required=false)]
+                public string SupportedOs { get; set; }
 
                 /// <summary>
                 /// The name of the baseline subtype.

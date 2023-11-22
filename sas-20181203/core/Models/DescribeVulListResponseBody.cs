@@ -386,6 +386,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            [NameInMap("K8sClusterId")]
+            [Validation(Required=false)]
+            public string K8sClusterId { get; set; }
+
+            [NameInMap("K8sNamespace")]
+            [Validation(Required=false)]
+            public string K8sNamespace { get; set; }
+
+            [NameInMap("K8sNodeId")]
+            [Validation(Required=false)]
+            public string K8sNodeId { get; set; }
+
+            [NameInMap("K8sNodeName")]
+            [Validation(Required=false)]
+            public string K8sNodeName { get; set; }
+
+            [NameInMap("K8sPodName")]
+            [Validation(Required=false)]
+            public string K8sPodName { get; set; }
+
             /// <summary>
             /// The timestamp that was generated when the vulnerability was last detected. Unit: milliseconds.
             /// </summary>

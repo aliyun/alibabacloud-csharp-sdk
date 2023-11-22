@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? ResetSecurityScoreRule { get; set; }
 
         /// <summary>
-        /// The list of deducted modules that are supported by the security score feature.
+        /// The list of deduction modules that are supported by the security score feature.
         /// </summary>
         [NameInMap("SecurityScoreRuleList")]
         [Validation(Required=false)]
         public List<ChangeSecurityScoreRuleRequestSecurityScoreRuleList> SecurityScoreRuleList { get; set; }
         public class ChangeSecurityScoreRuleRequestSecurityScoreRuleList : TeaModel {
             /// <summary>
-            /// The deducted module that is supported by the security score feature. Valid values:
+            /// The deduction module that is supported by the security score feature. Valid values:
             /// 
             /// *   SS_REINFORCE: issue in key feature configuration
             /// *   SS_ALARM: unhandled alert
