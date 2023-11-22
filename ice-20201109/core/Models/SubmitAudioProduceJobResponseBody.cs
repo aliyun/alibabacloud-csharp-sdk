@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        [NameInMap("MediaId")]
+        [Validation(Required=false)]
+        public string MediaId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

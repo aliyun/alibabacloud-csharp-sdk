@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string FaceSearchToken { get; set; }
 
+        [NameInMap("MediaType")]
+        [Validation(Required=false)]
+        public string MediaType { get; set; }
+
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("PersonImageUrl")]
         [Validation(Required=false)]
         public string PersonImageUrl { get; set; }
+
+        [NameInMap("SearchLibName")]
+        [Validation(Required=false)]
+        public string SearchLibName { get; set; }
 
     }
 

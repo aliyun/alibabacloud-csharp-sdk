@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitTranscodeJobRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("InputGroup")]
         [Validation(Required=false)]
         public List<SubmitTranscodeJobRequestInputGroup> InputGroup { get; set; }
@@ -164,10 +168,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string TemplateId { get; set; }
 
                 }
-
-                [NameInMap("IsInheritTags")]
-                [Validation(Required=false)]
-                public bool? IsInheritTags { get; set; }
 
                 [NameInMap("Subtitles")]
                 [Validation(Required=false)]
@@ -352,10 +352,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             }
 
                         }
-
-                        [NameInMap("Tags")]
-                        [Validation(Required=false)]
-                        public Dictionary<string, string> Tags { get; set; }
 
                         [NameInMap("TransConfig")]
                         [Validation(Required=false)]

@@ -25,13 +25,29 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string AvatarName { get; set; }
 
+            [NameInMap("Bitrate")]
+            [Validation(Required=false)]
+            public int? Bitrate { get; set; }
+
             [NameInMap("CoverUrl")]
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
 
+            [NameInMap("Height")]
+            [Validation(Required=false)]
+            public int? Height { get; set; }
+
+            [NameInMap("OutputMask")]
+            [Validation(Required=false)]
+            public bool? OutputMask { get; set; }
+
             [NameInMap("VideoUrl")]
             [Validation(Required=false)]
             public string VideoUrl { get; set; }
+
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public int? Width { get; set; }
 
         }
 

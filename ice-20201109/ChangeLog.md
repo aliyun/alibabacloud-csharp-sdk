@@ -1,3 +1,6 @@
+2023-11-22 Version: 2.0.0
+- Generated csharp 2020-11-09 for ICE.
+
 2023-06-06 Version: 1.3.11
 - Add KMS apis and hls encryption transcoding.
 

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("SdkVersion")]
+        [Validation(Required=false)]
+        public string SdkVersion { get; set; }
+
     }
 
 }

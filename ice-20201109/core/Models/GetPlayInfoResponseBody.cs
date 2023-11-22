@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public GetPlayInfoResponseBodyMediaBase MediaBase { get; set; }
         public class GetPlayInfoResponseBodyMediaBase : TeaModel {
+            [NameInMap("CateId")]
+            [Validation(Required=false)]
+            public long? CateId { get; set; }
+
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
@@ -21,9 +25,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
+
+            [NameInMap("MediaTags")]
+            [Validation(Required=false)]
+            public string MediaTags { get; set; }
 
             [NameInMap("MediaType")]
             [Validation(Required=false)]

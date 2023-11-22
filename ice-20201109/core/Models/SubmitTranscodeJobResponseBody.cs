@@ -926,10 +926,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     }
 
-                    [NameInMap("IsInheritTags")]
-                    [Validation(Required=false)]
-                    public string IsInheritTags { get; set; }
-
                     [NameInMap("Subtitles")]
                     [Validation(Required=false)]
                     public List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitles> Subtitles { get; set; }
@@ -1113,10 +1109,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 }
 
                             }
-
-                            [NameInMap("Tags")]
-                            [Validation(Required=false)]
-                            public Dictionary<string, object> Tags { get; set; }
 
                             [NameInMap("TransConfig")]
                             [Validation(Required=false)]

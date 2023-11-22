@@ -1,0 +1,22 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.ICE20201109.Models
+{
+    public class SubmitCustomizedVoiceJobRequest : TeaModel {
+        [NameInMap("DemoAudioMediaURL")]
+        [Validation(Required=false)]
+        public string DemoAudioMediaURL { get; set; }
+
+        [NameInMap("VoiceId")]
+        [Validation(Required=false)]
+        public string VoiceId { get; set; }
+
+    }
+
+}

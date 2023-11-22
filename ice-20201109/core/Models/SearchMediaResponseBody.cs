@@ -369,6 +369,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ScrollToken")]
+        [Validation(Required=false)]
+        public string ScrollToken { get; set; }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }

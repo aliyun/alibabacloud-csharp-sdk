@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("SearchLibName")]
+        [Validation(Required=false)]
+        public string SearchLibName { get; set; }
+
     }
 
 }

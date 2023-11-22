@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ScrollToken")]
+        [Validation(Required=false)]
+        public string ScrollToken { get; set; }
+
+        [NameInMap("SearchLibName")]
+        [Validation(Required=false)]
+        public string SearchLibName { get; set; }
+
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
