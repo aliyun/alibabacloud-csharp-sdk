@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [Validation(Required=false)]
                 public List<DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol> LogicalSymbol { get; set; }
                 public class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol : TeaModel {
+                    [NameInMap("Attributes")]
+                    [Validation(Required=false)]
+                    public int? Attributes { get; set; }
+
                     /// <summary>
                     /// The logical symbol that is displayed in the Dynamic Content Delivery Network (DCDN) console.
                     /// </summary>

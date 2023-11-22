@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchCreateDcdnWafRulesResponseBody : TeaModel {
         /// <summary>
-        /// Creates Web Application Firewall (WAF) protection rules.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The IDs of created rules.
+        /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]
         public BatchCreateDcdnWafRulesResponseBodyRuleIds RuleIds { get; set; }

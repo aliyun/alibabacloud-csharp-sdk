@@ -19,29 +19,26 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// The features that you want to configure. Format:
         /// 
-        /// > 
-        /// 
         /// *   **functionName**: The name of the feature. Separate multiple values with commas (,). For more information, see [A list of features](~~410622~~).
-        /// 
         /// *   **argName**: The feature parameters for **functionName**.
-        /// 
         /// *   **argValue**: The parameter values set for **functionName**.
         /// 
-        ///         [
-        ///          {
-        ///            "functionArgs": [
-        ///             {
-        ///              "argName": "Parameter A", 
-        ///              "argValue": "Parameter value"
-        ///             }, 
-        ///           {
-        ///             "argName": "Parameter B", 
-        ///             "argValue": "Parameter value"
-        ///              }
-        ///          ], 
-        ///          "functionName": "Feature name"
-        ///             }
-        ///         ]
+        /// <!---->
+        /// 
+        ///     [
+        ///      {
+        ///        "functionArgs": [
+        ///         {
+        ///          "argName": "Parameter A", 
+        ///          "argValue": "Value of parameter A"
+        ///         }, 
+        ///       {
+        ///     "argName": "Parameter B", 
+        ///     "argValue": "Value of parameter B"     }
+        ///      ], 
+        ///      "functionName": "Feature name"
+        ///         }
+        ///     ]
         /// </summary>
         [NameInMap("Functions")]
         [Validation(Required=false)]

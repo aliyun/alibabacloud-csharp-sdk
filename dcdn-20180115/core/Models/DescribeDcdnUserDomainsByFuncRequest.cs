@@ -33,6 +33,12 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public int? FuncId { get; set; }
 
+        /// <summary>
+        /// The type of the search. Default value: exact_match. Valid values:
+        /// 
+        /// *   fuzzy_match: fuzzy search.
+        /// *   exact_match: exact search.
+        /// </summary>
         [NameInMap("MatchType")]
         [Validation(Required=false)]
         public string MatchType { get; set; }

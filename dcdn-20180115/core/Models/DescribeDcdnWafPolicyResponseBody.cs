@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// The protection rule configurations that are defined in the protection policy. The configurations only support bot management. For more information, see [Configure protection rules](~~423350~~).
+            /// The protection rule configurations that are defined in the protection policy. The configurations only support bot management. For more information, see [BatchCreateDcdnWafRules](~~BatchCreateDcdnWafRules~~).
             /// </summary>
             [NameInMap("RuleConfigs")]
             [Validation(Required=false)]
