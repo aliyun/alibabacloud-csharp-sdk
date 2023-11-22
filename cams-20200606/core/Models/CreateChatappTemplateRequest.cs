@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [Validation(Required=false)]
                 public bool? IsOptOut { get; set; }
 
+                [NameInMap("NavigateScreen")]
+                [Validation(Required=false)]
+                public string NavigateScreen { get; set; }
+
                 /// <summary>
                 /// The app package name that WhatsApp uses to load your app. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
                 /// </summary>
@@ -155,10 +159,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [NameInMap("UrlType")]
                 [Validation(Required=false)]
                 public string UrlType { get; set; }
-
-                [NameInMap("navigateScreen")]
-                [Validation(Required=false)]
-                public string NavigateScreen { get; set; }
 
             }
 
