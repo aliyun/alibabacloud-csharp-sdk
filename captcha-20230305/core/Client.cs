@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Captcha20230305
             {
                 body["CaptchaVerifyParam"] = request.CaptchaVerifyParam;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -137,6 +141,10 @@ namespace AlibabaCloud.SDK.Captcha20230305
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaptchaVerifyParam))
             {
                 body["CaptchaVerifyParam"] = request.CaptchaVerifyParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Captcha20230305.Models
         [Validation(Required=false)]
         public string CaptchaVerifyParam { get; set; }
 
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
+
     }
 
 }
