@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteImageEventOperationRequest : TeaModel {
+        /// <summary>
+        /// The primary key of the alert handling rule.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }

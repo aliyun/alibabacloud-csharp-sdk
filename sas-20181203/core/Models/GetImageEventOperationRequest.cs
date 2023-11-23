@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetImageEventOperationRequest : TeaModel {
+        /// <summary>
+        /// The primary key of the alert handling rule.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// The language of the content within the request and response. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
