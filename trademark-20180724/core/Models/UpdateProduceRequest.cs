@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Trademark20180724.Models
         [Validation(Required=false)]
         public string ExtMap { get; set; }
 
+        [NameInMap("OperateType")]
+        [Validation(Required=false)]
+        public string OperateType { get; set; }
+
     }
 
 }
