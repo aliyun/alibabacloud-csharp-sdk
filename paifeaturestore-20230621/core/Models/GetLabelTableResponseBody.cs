@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        [NameInMap("RelatedModelFeatures")]
+        [Validation(Required=false)]
+        public List<string> RelatedModelFeatures { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
