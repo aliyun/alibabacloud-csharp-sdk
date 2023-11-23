@@ -41,24 +41,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The queried VPC connections.
+        /// The information about the VPC connection.
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// 企业版转发路由器是否自动发布路由到VPC实例。
+            /// Indicates whether the Enterprise Edition transit router automatically advertises routes to VPCs. Valid values:
             /// 
-            /// - **false**（默认值）：否。
-            /// - **true**：是。
+            /// *   **false:** (default)
+            /// *   **true**
             /// </summary>
             [NameInMap("AutoPublishRouteEnabled")]
             [Validation(Required=false)]
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the CEN instance.
+            /// The CEN instance ID.
             /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The billing method of the VPC connection.
             /// 
-            /// The value is **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.
+            /// Only **POSTPAY** may be returned, which is the default value and specifies the pay-as-you-go billing method.
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The time when the VPC connection is created.
+            /// The time when the VPC connection was created.
             /// 
             /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
             /// </summary>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The type of resource to which the transit router is connected.
             /// 
-            /// The value is set to **VPC**.
+            /// Only **VPC** may be returned, which indicates VPCs.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The status of the VPC connection. Valid values:
             /// 
-            /// *   **Attached**: The VPC connection is created on the transit router.
-            /// *   **Attaching**: The VPC connection is being created on the transit router.
-            /// *   **Detaching**: The VPC connection is being deleted from the transit router.
-            /// *   **Detached**: The VPC connection is deleted from the transit router.
+            /// *   **Attached**
+            /// *   **Attaching**
+            /// *   **Detaching**
+            /// *   **Detached**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterId { get; set; }
 
             /// <summary>
-            /// The ID of the VPC.
+            /// The VPC ID.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? VpcOwnerId { get; set; }
 
             /// <summary>
-            /// The ID of the region where the VPC is deployed.
+            /// The region ID of the VPC.
             /// </summary>
             [NameInMap("VpcRegionId")]
             [Validation(Required=false)]
@@ -200,14 +200,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string NetworkInterfaceId { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID of the node.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The zone ID of the instance.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

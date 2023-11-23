@@ -10,17 +10,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGrantRulesToResourceRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeGrantRulesToResource**.
+        /// *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.
+        /// *   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
-        /// *   If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   You must specify the token that is obtained from the previous query as the value of the **NextToken** parameter.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -35,25 +36,27 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The type of the network instance. Valid values:
+        /// 
+        /// *   **VPC**: virtual private cloud (VPC)
+        /// *   **ExpressConnect**: virtual border router (VBR)
+        /// *   **VPN**: IPsec-VPN connection
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The ID of the network instance.
+        /// The region ID of the network instance.
+        /// 
+        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the network instance. Valid values:
-        /// 
-        /// *   **VPC**: virtual private cloud (VPC)
-        /// *   **ExpressConnect**: virtual border router (VBR)
-        /// *   **VPN**: IPsec-VPN connection
+        /// The network instance ID.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

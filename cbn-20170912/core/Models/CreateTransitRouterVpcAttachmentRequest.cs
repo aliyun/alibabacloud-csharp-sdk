@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// The VPC ID.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

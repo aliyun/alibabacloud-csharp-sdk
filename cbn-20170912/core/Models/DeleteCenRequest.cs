@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The CEN instance ID.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]

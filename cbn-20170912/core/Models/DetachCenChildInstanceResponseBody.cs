@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DetachCenChildInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The AccessKeyId is unauthorized.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

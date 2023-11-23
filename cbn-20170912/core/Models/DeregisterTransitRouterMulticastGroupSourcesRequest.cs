@@ -10,28 +10,33 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeregisterTransitRouterMulticastGroupSourcesRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Specifies whether to perform a dry run. Valid values:
+        /// 
+        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and sends the request.
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Specifies whether only to check the request. Valid values:
-        /// 
-        /// *   **true**: only prechecks the API request. The multicast source is not deleted. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. After the request passes the precheck, the multicast source is deleted.
+        /// The IP address of the multicast group to which the multicast source belongs.
         /// </summary>
         [NameInMap("GroupIpAddress")]
         [Validation(Required=false)]
         public string GroupIpAddress { get; set; }
 
         /// <summary>
-        /// Deletes a multicast source.
+        /// The IDs of the multicast sources that you want to delete.
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
@@ -54,7 +59,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DeregisterTransitRouterMulticastGroupSources**.
+        /// The ID of the multicast domain to which the multicast source belongs.
         /// </summary>
         [NameInMap("TransitRouterMulticastDomainId")]
         [Validation(Required=false)]

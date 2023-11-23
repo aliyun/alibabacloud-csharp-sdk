@@ -9,20 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteFlowlogRequest : TeaModel {
+        /// <summary>
+        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful.
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+        /// 
+        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the flow log.
+        /// </summary>
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
         public string FlowLogId { get; set; }
@@ -36,7 +43,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the region where the flow log is deployed.
+        /// 
+        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

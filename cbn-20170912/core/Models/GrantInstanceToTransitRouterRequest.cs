@@ -10,32 +10,43 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class GrantInstanceToTransitRouterRequest : TeaModel {
         /// <summary>
-        /// The ID of the region where the network instance is deployed.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        /// <summary>
+        /// The ID of the Alibaba Cloud account to which the CEN instance belongs.
+        /// </summary>
         [NameInMap("CenOwnerId")]
         [Validation(Required=false)]
         public long? CenOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the network instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **GrantInstanceToTransitRouter**.
+        /// The type of the network instance. Valid values:
+        /// 
+        /// *   **VPC**: VPC
+        /// *   **ExpressConnect**: VBR
+        /// *   **VPN**: IPsec connection
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        /// <summary>
+        /// The entity that pays the fees of the network instance. Valid values:
+        /// 
+        /// *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
+        /// *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
+        /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
@@ -49,7 +60,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the CEN instance belongs.
+        /// The ID of the region where the network instance is deployed.
+        /// 
+        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

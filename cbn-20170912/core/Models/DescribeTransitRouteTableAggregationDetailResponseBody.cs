@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeTransitRouteTableAggregationDetailResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]

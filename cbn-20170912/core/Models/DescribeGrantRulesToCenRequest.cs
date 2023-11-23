@@ -17,24 +17,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// 要查询的网络实例ID。
+        /// The ID of the network instance that you want to query.
         /// </summary>
         [NameInMap("ChildInstanceId")]
         [Validation(Required=false)]
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// 网络实例所属阿里云账号（主账号）ID。
+        /// The ID of the Alibaba Cloud account to which the network instance belongs.
         /// </summary>
         [NameInMap("ChildInstanceOwnerId")]
         [Validation(Required=false)]
         public long? ChildInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **100**.
-        /// 
-        /// *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries.
-        /// *   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
+        /// *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries returned.
+        /// *   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
