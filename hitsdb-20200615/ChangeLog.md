@@ -1,3 +1,6 @@
+2023-11-23 Version: 3.0.9
+- Generated csharp 2020-06-15 for hitsdb.
+
 2023-11-23 Version: 4.0.0
 - Generated csharp 2020-06-15 for hitsdb.
 

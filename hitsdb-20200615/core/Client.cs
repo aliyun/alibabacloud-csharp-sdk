@@ -2265,6 +2265,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["Delete"] = request.Delete;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -2319,6 +2323,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delete))
             {
                 query["Delete"] = request.Delete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
