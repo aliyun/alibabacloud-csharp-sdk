@@ -22901,8 +22901,8 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * ### [](#)Supported database engines
-          * RDS SQL Server
-          * >  You can call the [DescribeBinlogFiles](~~610550~~) operation to query the log files of other database engines.
+          * SQL Server
+          * >  You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.
           *
           * @param request DescribeLogBackupFilesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -22969,8 +22969,8 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * ### [](#)Supported database engines
-          * RDS SQL Server
-          * >  You can call the [DescribeBinlogFiles](~~610550~~) operation to query the log files of other database engines.
+          * SQL Server
+          * >  You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.
           *
           * @param request DescribeLogBackupFilesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23037,8 +23037,8 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * ### [](#)Supported database engines
-          * RDS SQL Server
-          * >  You can call the [DescribeBinlogFiles](~~610550~~) operation to query the log files of other database engines.
+          * SQL Server
+          * >  You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.
           *
           * @param request DescribeLogBackupFilesRequest
           * @return DescribeLogBackupFilesResponse
@@ -23051,8 +23051,8 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * ### [](#)Supported database engines
-          * RDS SQL Server
-          * >  You can call the [DescribeBinlogFiles](~~610550~~) operation to query the log files of other database engines.
+          * SQL Server
+          * >  You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.
           *
           * @param request DescribeLogBackupFilesRequest
           * @return DescribeLogBackupFilesResponse
@@ -37136,6 +37136,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -37223,6 +37227,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
