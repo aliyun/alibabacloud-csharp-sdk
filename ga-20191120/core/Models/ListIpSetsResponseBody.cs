@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListIpSetsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the acceleration regions.
+        /// The acceleration regions.
         /// </summary>
         [NameInMap("IpSets")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// The list of accelerated IP addresses in the acceleration region.
+            /// The accelerated IP addresses.
             /// </summary>
             [NameInMap("IpAddressList")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string IpSetId { get; set; }
 
             /// <summary>
-            /// The version of the IP protocol. Valid values:
+            /// The IP version. Valid values:
             /// 
             /// *   **IPv4**
             /// *   **IPv6**
@@ -57,86 +57,90 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
             /// 
-            /// *   **BGP**: BGP (Multi-ISP) lines.
-            /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.
+            /// *   **BGP** (default)
+            /// *   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.
             /// 
-            /// If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:
+            /// If you are allowed to use single-ISP bandwidth, one of the following values is supported:
             /// 
-            /// *   **ChinaTelecom**: China Telecom (single ISP)
-            /// *   **ChinaUnicom**: China Unicom (single ISP)
-            /// *   **ChinaMobile**: China Mobile (single ISP)
-            /// *   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)
-            /// *   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)
-            /// *   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)
+            /// *   **ChinaTelecom**
+            /// *   **ChinaUnicom**
+            /// *   **ChinaMobile**
+            /// *   **ChinaTelecom_L2**
+            /// *   **ChinaUnicom_L2**
+            /// *   **ChinaMobile_L2**
             /// 
-            /// > Different acceleration regions support different single-ISP BGP lines.
+            /// >  The supported line types vary based on the acceleration region.
             /// </summary>
             [NameInMap("IspType")]
             [Validation(Required=false)]
             public string IspType { get; set; }
 
             /// <summary>
-            /// 托管实例所属的服务方ID。
+            /// The service that manages the instance.
             /// 
-            /// > 仅在**ServiceManaged**参数为**True**时有效。
+            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
             /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// 是否为托管实例。取值：
+            /// Indicates whether the GA instance is managed. Valid values:
             /// 
-            /// - **true**：是托管资实例。
-            /// 
-            /// - **false**：不是托管实例。
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("ServiceManaged")]
             [Validation(Required=false)]
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// 用户在此托管实例下可执行的动作策略列表。
+            /// The actions that users can perform on the managed instance.
             /// 
-            /// > 仅在**ServiceManaged**参数为**True**时有效。
-            /// > - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。
+            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+            /// 
+            /// *   Users can perform only specific actions on a managed instance.
             /// </summary>
             [NameInMap("ServiceManagedInfos")]
             [Validation(Required=false)]
             public List<ListIpSetsResponseBodyIpSetsServiceManagedInfos> ServiceManagedInfos { get; set; }
             public class ListIpSetsResponseBodyIpSetsServiceManagedInfos : TeaModel {
                 /// <summary>
-                /// 托管策略动作名称，取值：
-                /// - **Create**：创建实例。
-                /// - **Update**：更新当前实例。
-                /// - **Delete**：删除当前实例。
-                /// - **Associate**：引用/被引用当前实例。
-                /// - **UserUnmanaged**：用户解托管实例。
-                /// - **CreateChild**：在当前实例下创建子资源。
+                /// The name of the action on the managed instance. Valid values:
+                /// 
+                /// *   **Create**
+                /// *   **Update**
+                /// *   **Delete**
+                /// *   **Associate**
+                /// *   **UserUnmanaged**
+                /// *   **CreateChild**
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
                 /// <summary>
-                /// 子资源类型，取值：
-                /// - **Listener**：监听资源。
-                /// - **IpSet**：加速地域资源。
-                /// - **EndpointGroup**：终端节点组资源。
-                /// - **ForwardingRule**：转发策略资源。
-                /// - **Endpoint**：终端节点资源。
-                /// - **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。
-                /// - **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。
-                /// > 仅在**Action**参数为**CreateChild**时有效
+                /// The type of the child resource. Valid values:
+                /// 
+                /// *   **Listener**: listener
+                /// *   **IpSet**: acceleration region
+                /// *   **EndpointGroup**: endpoint group
+                /// *   **ForwardingRule**: forwarding rule
+                /// *   **Endpoint**: endpoint
+                /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
+                /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
+                /// 
+                /// >  This parameter takes effect only if **Action** is set to **CreateChild**.
                 /// </summary>
                 [NameInMap("ChildType")]
                 [Validation(Required=false)]
                 public string ChildType { get; set; }
 
                 /// <summary>
-                /// 托管策略动作是否被托管，取值：
-                /// - **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。
-                /// - **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。
+                /// Indicates whether the specified actions are managed. Valid values:
+                /// 
+                /// *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+                /// *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
                 /// </summary>
                 [NameInMap("IsManaged")]
                 [Validation(Required=false)]
@@ -147,10 +151,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The status of the acceleration region. Valid values:
             /// 
-            /// *   **init**: The acceleration region is being initialized.
-            /// *   **active**: The acceleration region is running.
-            /// *   **updating**: The acceleration region is being configured.
-            /// *   **deleting**: The acceleration region is being deleted.
+            /// *   **init**
+            /// *   **active**
+            /// *   **updating**
+            /// *   **deleting**
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]

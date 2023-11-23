@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The configurations of endpoints in the endpoint group.
+        /// The configurations of the endpoints in the endpoint group.
         /// </summary>
         [NameInMap("EndpointConfigurations")]
         [Validation(Required=false)]
         public List<CreateEndpointGroupRequestEndpointConfigurations> EndpointConfigurations { get; set; }
         public class CreateEndpointGroupRequestEndpointConfigurations : TeaModel {
             /// <summary>
-            /// Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:
+            /// Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:
             /// 
             /// *   **true**
             /// *   **false** (default)
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? EnableProxyProtocol { get; set; }
 
             /// <summary>
-            /// Enter the IP address, domain name, or instance ID based on the value of the Type parameter.
+            /// The IP address, domain name, or instance ID based on the value of Type.
             /// </summary>
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
@@ -81,21 +81,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of the endpoint. Valid values:
             /// 
-            /// *   **Domain:** a custom domain name.
-            /// *   **Ip:** a custom IP address.
-            /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-            /// *   **ECS:** Elastic Compute Service (ECS) instance.
-            /// *   **SLB:** Server Load Balancer (SLB) instance.
-            /// *   **ALB:** Application Load Balancer (ALB) instance.
-            /// *   **OSS:** Object Storage Service (OSS) bucket.
-            /// *   **ENI:** Elastic Network interface (ENI).
-            /// *   **NLB:** Network Load Balancer (NLB) instance.
+            /// *   **Domain**: a custom domain name
+            /// *   **Ip**: a custom IP address
+            /// *   **PublicIp**: a public IP address provided by Alibaba Cloud
+            /// *   **ECS**: an Elastic Compute Service (ECS) instance
+            /// *   **SLB**: a Server Load Balancer (SLB) instance
+            /// *   **ALB**: an Application Load Balancer (ALB) instance
+            /// *   **OSS**: an Object Storage Service (OSS) bucket
             /// 
-            /// > *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
-            /// >*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-            /// >*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+            /// > 
             /// 
-            /// For more information, see [Service linked roles](~~178360~~).
+            /// *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+            /// 
+            /// *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+            /// 
+            /// *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+            /// 
+            /// For more information, see [Service-linked roles](~~178360~~).
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
