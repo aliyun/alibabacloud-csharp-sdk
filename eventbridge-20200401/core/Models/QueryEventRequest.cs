@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string EventId { get; set; }
 
+        [NameInMap("EventSource")]
+        [Validation(Required=false)]
+        public string EventSource { get; set; }
+
     }
 
 }

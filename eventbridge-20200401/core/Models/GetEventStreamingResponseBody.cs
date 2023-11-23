@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetEventStreamingResponseBody : TeaModel {
         /// <summary>
-        /// The error code. The value Success indicates that the request is successful.
+        /// The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The response parameters.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -52,21 +52,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public GetEventStreamingResponseBodyDataRunOptions RunOptions { get; set; }
             public class GetEventStreamingResponseBodyDataRunOptions : TeaModel {
                 /// <summary>
-                /// The information about the batch window.
+                /// The batch window.
                 /// </summary>
                 [NameInMap("BatchWindow")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataRunOptionsBatchWindow BatchWindow { get; set; }
                 public class GetEventStreamingResponseBodyDataRunOptionsBatchWindow : TeaModel {
                     /// <summary>
-                    /// The maximum number of events that are allowed in the batch window. If the value specified by this parameter is reached, the data in the batch window is pushed to the downstream application. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
+                    /// The maximum number of events that are allowed in the batch window. If this threshold is reached, data in the window is pushed downstream. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
                     /// </summary>
                     [NameInMap("CountBasedWindow")]
                     [Validation(Required=false)]
                     public int? CountBasedWindow { get; set; }
 
                     /// <summary>
-                    /// The maximum period of time during which events are allowed in the batch window. Unit: seconds. If the value specified by this parameter is reached, the data in the batch window is pushed to the downstream application. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
+                    /// The maximum period of time during which events are allowed in the batch window. Unit: seconds. If this threshold is reached, data in the window is pushed downstream. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
                     /// </summary>
                     [NameInMap("TimeBasedWindow")]
                     [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// Specifies whether to enable dead-letter queues. By default, dead-letter queues are disabled. Messages that fail to be pushed after allowed retries as specified by the retry policy are discarded.
+                /// Indicates whether dead-letter queues are enabled. By default, dead-letter queues are disabled. Messages that fail to be pushed after allowed retries as specified by the retry policy are discarded.
                 /// </summary>
                 [NameInMap("DeadLetterQueue")]
                 [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public GetEventStreamingResponseBodyDataSink Sink { get; set; }
             public class GetEventStreamingResponseBodyDataSink : TeaModel {
                 /// <summary>
-                /// The parameters that are configured if the event target is Function Compute.
+                /// The parameters that are returned if the event target is Function Compute.
                 /// </summary>
                 [NameInMap("SinkFcParameters")]
                 [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The name of the Function Compute function.
+                    /// The function name.
                     /// </summary>
                     [NameInMap("FunctionName")]
                     [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The invocation type. Valid values: Sync Async
+                    /// The invocation type. Valid values: Sync: synchronous Async: asynchronous
                     /// </summary>
                     [NameInMap("InvocationType")]
                     [Validation(Required=false)]
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The name of the service.
+                    /// The service name.
                     /// </summary>
                     [NameInMap("ServiceName")]
                     [Validation(Required=false)]
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -332,76 +332,127 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                /// <summary>
+                /// The Sink Fnf parameters.
+                /// </summary>
                 [NameInMap("SinkFnfParameters")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSinkSinkFnfParameters SinkFnfParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkFnfParameters : TeaModel {
+                    /// <summary>
+                    /// The execution name.
+                    /// </summary>
                     [NameInMap("ExecutionName")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkFnfParametersExecutionName ExecutionName { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkFnfParametersExecutionName : TeaModel {
+                        /// <summary>
+                        /// The method that is used to transform events. Default value: CONSTANT.
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// The template style.
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// The execution name.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The flow name.
+                    /// </summary>
                     [NameInMap("FlowName")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkFnfParametersFlowName FlowName { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkFnfParametersFlowName : TeaModel {
+                        /// <summary>
+                        /// The method that is used to transform events. Default value: CONSTANT.
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// The template style.
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// The flow name.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The execution input information.
+                    /// </summary>
                     [NameInMap("Input")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkFnfParametersInput Input { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkFnfParametersInput : TeaModel {
+                        /// <summary>
+                        /// The method that is used to transform events. Default value: CONSTANT.
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// The template style.
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// The execution input information.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The role name.
+                    /// </summary>
                     [NameInMap("RoleName")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkFnfParametersRoleName RoleName { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkFnfParametersRoleName : TeaModel {
+                        /// <summary>
+                        /// The method that is used to transform events. Default value: CONSTANT.
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// The template style.
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// The role configuration.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -411,7 +462,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// The parameters that are configured if the event target is Message Queue for Apache Kafka.
+                /// The parameters that are returned if the event target is Message Queue for Apache Kafka.
                 /// </summary>
                 [NameInMap("SinkKafkaParameters")]
                 [Validation(Required=false)]
@@ -432,7 +483,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -448,7 +499,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The information about the Message Queue for Apache Kafka instance.
+                    /// The target service type is Message Queue for Apache Kafka.
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -462,7 +513,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -492,7 +543,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -522,7 +573,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -570,7 +621,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// The parameters that are configured if the event target is MNS.
+                /// The parameters that are returned if the event target is Message Service (MNS).
                 /// </summary>
                 [NameInMap("SinkMNSParameters")]
                 [Validation(Required=false)]
@@ -607,7 +658,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// Specifies whether to enable Base64 encoding.
+                    /// Indicates whether Base64 encoding is enabled.
                     /// </summary>
                     [NameInMap("IsBase64Encode")]
                     [Validation(Required=false)]
@@ -621,7 +672,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -637,7 +688,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The information about the MNS queue.
+                    /// The target service type is MNS.
                     /// </summary>
                     [NameInMap("QueueName")]
                     [Validation(Required=false)]
@@ -651,7 +702,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -669,7 +720,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// The parameters that are configured if the event target is Message Queue for RabbitMQ.
+                /// The parameters that are returned if the event target is Message Queue for RabbitMQ.
                 /// </summary>
                 [NameInMap("SinkRabbitMQParameters")]
                 [Validation(Required=false)]
@@ -706,7 +757,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The exchange mode. This parameter is available only if you set TargetType to Exchange.
+                    /// The exchange mode. This parameter is available only if TargetType is set to Exchange.
                     /// </summary>
                     [NameInMap("Exchange")]
                     [Validation(Required=false)]
@@ -720,7 +771,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -736,7 +787,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The information about the Message Queue for RabbitMQ instance.
+                    /// The target service type is Message Queue for RabbitMQ instance.
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -750,7 +801,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -826,7 +877,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The queue mode. This parameter is available only if you set TargetType to Queue.
+                    /// The queue mode. This parameter is available only if TargetType is set to Queue.
                     /// </summary>
                     [NameInMap("QueueName")]
                     [Validation(Required=false)]
@@ -840,7 +891,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -856,7 +907,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The routing rule for the message. This parameter is available only if you set TargetType to Exchange.
+                    /// The routing rule for the message. This parameter is available only if TargetType is set to Exchange.
                     /// </summary>
                     [NameInMap("RoutingKey")]
                     [Validation(Required=false)]
@@ -870,7 +921,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -886,7 +937,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The type of the resource to which the event is delivered.
+                    /// The target type.
                     /// </summary>
                     [NameInMap("TargetType")]
                     [Validation(Required=false)]
@@ -900,7 +951,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -916,7 +967,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The vhost name of the Message Queue for RabbitMQ instance.
+                    /// The name of the vhost of the Message Queue for RabbitMQ instance.
                     /// </summary>
                     [NameInMap("VirtualHostName")]
                     [Validation(Required=false)]
@@ -930,7 +981,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -985,7 +1036,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The parameters that are configured if the event target is Message Queue for Apache RocketMQ.
+                    /// The target service type is Message Queue for Apache RocketMQ.
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -999,7 +1050,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1119,7 +1170,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1174,7 +1225,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The Log Service Logstore.
+                    /// The Simple Log Service Logstore.
                     /// </summary>
                     [NameInMap("LogStore")]
                     [Validation(Required=false)]
@@ -1188,7 +1239,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1204,7 +1255,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The Log Service project.
+                    /// The Simple Log Service project.
                     /// </summary>
                     [NameInMap("Project")]
                     [Validation(Required=false)]
@@ -1218,7 +1269,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1234,7 +1285,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.
+                    /// The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.
                     /// </summary>
                     [NameInMap("RoleName")]
                     [Validation(Required=false)]
@@ -1248,7 +1299,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1264,7 +1315,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Log Service.
+                    /// The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Simple Log Service.
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
@@ -1278,7 +1329,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// None
+                        /// The template style.
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1305,7 +1356,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public GetEventStreamingResponseBodyDataSource Source { get; set; }
             public class GetEventStreamingResponseBodyDataSource : TeaModel {
                 /// <summary>
-                /// The parameters that are configured if the event source is Data Transmission Service (DTS).
+                /// The parameters that are returned if the event source is Data Transmission Service (DTS).
                 /// </summary>
                 [NameInMap("SourceDTSParameters")]
                 [Validation(Required=false)]
@@ -1426,7 +1477,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// The VPC ID.
+                    /// The ID of the virtual private cloud (VPC).
                     /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
@@ -1465,7 +1516,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// The parameters that are configured if the event source is Message Queue for MQTT.
+                /// The parameters that are returned if the event source is Message Queue for MQTT.
                 /// </summary>
                 [NameInMap("SourceMQTTParameters")]
                 [Validation(Required=false)]
@@ -1538,6 +1589,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters SourceRocketMQParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters : TeaModel {
+                    [NameInMap("AuthType")]
+                    [Validation(Required=false)]
+                    public string AuthType { get; set; }
+
                     /// <summary>
                     /// The ID of the consumer group in the Message Queue for Apache RocketMQ instance.
                     /// </summary>
@@ -1545,12 +1600,44 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string GroupID { get; set; }
 
+                    [NameInMap("InstanceEndpoint")]
+                    [Validation(Required=false)]
+                    public string InstanceEndpoint { get; set; }
+
                     /// <summary>
                     /// The ID of the Message Queue for Apache RocketMQ instance.
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
+
+                    [NameInMap("InstanceNetwork")]
+                    [Validation(Required=false)]
+                    public string InstanceNetwork { get; set; }
+
+                    [NameInMap("InstancePassword")]
+                    [Validation(Required=false)]
+                    public string InstancePassword { get; set; }
+
+                    [NameInMap("InstanceSecurityGroupId")]
+                    [Validation(Required=false)]
+                    public string InstanceSecurityGroupId { get; set; }
+
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                    [NameInMap("InstanceUsername")]
+                    [Validation(Required=false)]
+                    public string InstanceUsername { get; set; }
+
+                    [NameInMap("InstanceVSwitchIds")]
+                    [Validation(Required=false)]
+                    public string InstanceVSwitchIds { get; set; }
+
+                    [NameInMap("InstanceVpcId")]
+                    [Validation(Required=false)]
+                    public string InstanceVpcId { get; set; }
 
                     /// <summary>
                     /// The consumer offset of messages. Valid values: CONSUME_FROM_LAST_OFFSET: Start consumption from the latest offset. CONSUME_FROM_FIRST_OFFSET: Start consumption from the earliest offset. CONSUME_FROM_TIMESTAMP: Start consumption from the offset at the specified point in time.
@@ -1590,7 +1677,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// The parameters that are configured if the event source is Log Service.
+                /// The parameters that are returned if the event provider is Simple Log Service.
                 /// </summary>
                 [NameInMap("SourceSLSParameters")]
                 [Validation(Required=false)]
@@ -1604,7 +1691,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string ConsumePosition { get; set; }
 
                     /// <summary>
-                    /// None
+                    /// The consumer group.
                     /// </summary>
                     [NameInMap("ConsumerGroup")]
                     [Validation(Required=false)]
@@ -1642,6 +1729,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Transforms")]
+            [Validation(Required=false)]
+            public List<GetEventStreamingResponseBodyDataTransforms> Transforms { get; set; }
+            public class GetEventStreamingResponseBodyDataTransforms : TeaModel {
+                [NameInMap("Arn")]
+                [Validation(Required=false)]
+                public string Arn { get; set; }
+
+            }
+
         }
 
         /// <summary>
@@ -1659,7 +1756,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values: true and false.
+        /// Indicates whether the operation is successful. The value true indicates that the operation is successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

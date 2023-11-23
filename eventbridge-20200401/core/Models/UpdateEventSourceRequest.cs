@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The associated event bus.
+        /// The event bus with which the event source is associated.
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
@@ -38,35 +38,53 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public UpdateEventSourceRequestSourceHttpEventParameters SourceHttpEventParameters { get; set; }
         public class UpdateEventSourceRequestSourceHttpEventParameters : TeaModel {
             /// <summary>
-            /// The CIDR blocks used for security settings. This parameter is required only if you set SecurityConfig to ip. You can enter CIDR blocks or IP addresses.
+            /// The CIDR block that is used for security settings. This parameter is required only if SecurityConfig is set to ip. You can enter a CIDR block or an IP address.
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public List<string> Ip { get; set; }
 
             /// <summary>
-            /// The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values: GET POST PUT PATCH DELETE HEAD OPTIONS TRACE CONNECT
+            /// The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values:
+            /// 
+            /// *   GET
+            /// *   POST
+            /// *   PUT
+            /// *   PATCH
+            /// *   DELETE
+            /// *   HEAD
+            /// *   OPTIONS
+            /// *   TRACE
+            /// *   CONNECT
             /// </summary>
             [NameInMap("Method")]
             [Validation(Required=false)]
             public List<string> Method { get; set; }
 
             /// <summary>
-            /// The security domain names. This parameter is required only if SecurityConfig is set to referer. You can enter domain names.
+            /// The security domain name. This parameter is required only if SecurityConfig is set to referer. You can enter a domain name.
             /// </summary>
             [NameInMap("Referer")]
             [Validation(Required=false)]
             public List<string> Referer { get; set; }
 
             /// <summary>
-            /// The type of security settings. Valid values: none: No configuration is required. ip: CIDR blocks. referer: security domain names.
+            /// The type of security settings. Valid values:
+            /// 
+            /// *   none: No configuration is required.
+            /// *   ip: CIDR block.
+            /// *   referer: security domain name.
             /// </summary>
             [NameInMap("SecurityConfig")]
             [Validation(Required=false)]
             public string SecurityConfig { get; set; }
 
             /// <summary>
-            /// The protocol type supported by the generated webhook URL. Valid values: HTTP HTTPS HTTP\&HTTPS
+            /// The protocol type that is supported by the generated webhook URL. Valid values:
+            /// 
+            /// *   HTTP
+            /// *   HTTPS
+            /// *   HTTP\&HTTPS
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -89,21 +107,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string ConsumerGroup { get; set; }
 
             /// <summary>
-            /// The instance ID.
+            /// The ID of the Message Queue for Apache Kafka instance.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The concurrency quota, which is the number of consumers.
+            /// The maximum number of consumers.
             /// </summary>
             [NameInMap("MaximumTasks")]
             [Validation(Required=false)]
             public int? MaximumTasks { get; set; }
 
             /// <summary>
-            /// The network. Valid values: Default and PublicNetwork.
+            /// The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
             /// </summary>
             [NameInMap("Network")]
             [Validation(Required=false)]
@@ -117,35 +135,35 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string OffsetReset { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// The ID of the region where the Message Queue for Apache Kafka instance resides.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required if you set Network to PublicNetwork.
+            /// The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required only if you set Network to PublicNetwork.
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// The topic name.
+            /// The name of the topic on the Message Queue for Apache Kafka instance.
             /// </summary>
             [NameInMap("Topic")]
             [Validation(Required=false)]
             public string Topic { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required if you set Network to PublicNetwork.
+            /// The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required only if you set Network to PublicNetwork.
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public string VSwitchIds { get; set; }
 
             /// <summary>
-            /// The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required if you set Network to PublicNetwork.
+            /// The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required only if you set Network to PublicNetwork.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -161,7 +179,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public UpdateEventSourceRequestSourceMNSParameters SourceMNSParameters { get; set; }
         public class UpdateEventSourceRequestSourceMNSParameters : TeaModel {
             /// <summary>
-            /// Specifies whether to enable Base64 decoding. Default value: true.
+            /// Indicates whether Base64 decoding is enabled. By default, Base64 decoding is enabled.
             /// </summary>
             [NameInMap("IsBase64Decode")]
             [Validation(Required=false)]
@@ -191,14 +209,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public UpdateEventSourceRequestSourceRabbitMQParameters SourceRabbitMQParameters { get; set; }
         public class UpdateEventSourceRequestSourceRabbitMQParameters : TeaModel {
             /// <summary>
-            /// The ID of the Message Queue for RabbitMQ instance. For more information, see Limits.
+            /// The ID of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the queue in the Message Queue for RabbitMQ instance. For more information, see Limits.
+            /// The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
             /// </summary>
             [NameInMap("QueueName")]
             [Validation(Required=false)]
@@ -212,7 +230,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The vhost name of the Message Queue for RabbitMQ instance. For more information, see Limits.
+            /// The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
             /// </summary>
             [NameInMap("VirtualHostName")]
             [Validation(Required=false)]
@@ -227,35 +245,44 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public UpdateEventSourceRequestSourceRocketMQParameters SourceRocketMQParameters { get; set; }
         public class UpdateEventSourceRequestSourceRocketMQParameters : TeaModel {
+            /// <summary>
+            /// The authentication type. You can set this parameter to ACL or leave this parameter empty.
+            /// </summary>
             [NameInMap("AuthType")]
             [Validation(Required=false)]
             public string AuthType { get; set; }
 
             /// <summary>
-            /// The ID of the consumer group in the Message Queue for Apache RocketMQ instance.
+            /// The ID of the consumer group on the Message Queue for Apache RocketMQ instance.
             /// </summary>
             [NameInMap("GroupID")]
             [Validation(Required=false)]
             public string GroupID { get; set; }
 
+            /// <summary>
+            /// The endpoint that is used to access the Message Queue for Apache RocketMQ instance.
+            /// </summary>
             [NameInMap("InstanceEndpoint")]
             [Validation(Required=false)]
             public string InstanceEndpoint { get; set; }
 
             /// <summary>
-            /// The ID of the Message Queue for Apache RocketMQ instance. For more information, see Limits.
+            /// The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// None
+            /// None.
             /// </summary>
             [NameInMap("InstanceNetwork")]
             [Validation(Required=false)]
             public string InstanceNetwork { get; set; }
 
+            /// <summary>
+            /// The password that is used to access the Message Queue for Apache RocketMQ instance.
+            /// </summary>
             [NameInMap("InstancePassword")]
             [Validation(Required=false)]
             public string InstancePassword { get; set; }
@@ -270,14 +297,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <summary>
             /// The type of the Message Queue for Apache RocketMQ instance. Valid values:
             /// 
-            /// - Cloud\_4: Message Queue for Apache RocketMQ 4.0 instances.
-            /// 
-            /// - Cloud\_5: Message Queue for Apache RocketMQ 5.0 instances.
+            /// *   Cloud\_4: Message Queue for Apache RocketMQ 4.0 instance.
+            /// *   Cloud\_5: Message Queue for Apache RocketMQ 5.0 instance.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            /// <summary>
+            /// The username that is used to access the Message Queue for Apache RocketMQ instance.
+            /// </summary>
             [NameInMap("InstanceUsername")]
             [Validation(Required=false)]
             public string InstanceUsername { get; set; }
@@ -297,35 +326,41 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceVpcId { get; set; }
 
             /// <summary>
-            /// The consumer offset of the message. Valid values: CONSUME_FROM_LAST_OFFSET: Start consumption from the latest offset. CONSUME_FROM_FIRST_OFFSET: Start consumption from the earliest offset. CONSUME_FROM_TIMESTAMP: Start consumption from the offset at the specified point in time. Default value: CONSUME_FROM_LAST_OFFSET.
+            /// The offset from which message consumption starts. Valid values:
+            /// 
+            /// *   CONSUME_FROM_LAST_OFFSET: Start message consumption from the latest offset.
+            /// *   CONSUME_FROM_FIRST_OFFSET: Start message consumption from the earliest offset.
+            /// *   CONSUME_FROM_TIMESTAMP: Start message consumption from the offset at the specified point in time.
+            /// 
+            /// Default value: CONSUME_FROM_LAST_OFFSET.
             /// </summary>
             [NameInMap("Offset")]
             [Validation(Required=false)]
             public string Offset { get; set; }
 
             /// <summary>
-            /// The region in which the Message Queue for Apache RocketMQ instance resides.
+            /// The region where the Message Queue for Apache RocketMQ instance resides.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The tags that are used to filter messages.
+            /// The tag that is used to filter messages.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
             /// <summary>
-            /// The timestamp of the offset from which consumption starts. This parameter is valid only if you set the Offset parameter to CONSUME_FROM_TIMESTAMP.
+            /// The timestamp that specifies the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUME_FROM_TIMESTAMP.
             /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// The name of the topic in the Message Queue for Apache RocketMQ instance. For more information, see Limits.
+            /// The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
             /// </summary>
             [NameInMap("Topic")]
             [Validation(Required=false)]
@@ -371,25 +406,29 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// The parameters that are configured if the event source is scheduled events.
+        /// The parameters that are configured if you specify scheduled events as the event source.
         /// </summary>
         [NameInMap("SourceScheduledEventParameters")]
         [Validation(Required=false)]
         public UpdateEventSourceRequestSourceScheduledEventParameters SourceScheduledEventParameters { get; set; }
         public class UpdateEventSourceRequestSourceScheduledEventParameters : TeaModel {
             /// <summary>
-            /// The Cron expression.
+            /// The cron expression.
             /// </summary>
             [NameInMap("Schedule")]
             [Validation(Required=false)]
             public string Schedule { get; set; }
 
             /// <summary>
-            /// The time zone in which the Cron expression is executed.
+            /// The time zone in which the cron expression is executed.
             /// </summary>
             [NameInMap("TimeZone")]
             [Validation(Required=false)]
             public string TimeZone { get; set; }
+
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
 
         }
 

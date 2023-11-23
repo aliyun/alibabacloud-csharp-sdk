@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The associated event bus.
+        /// The event bus with which the event source is associated.
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SourceSLSParametersShrink { get; set; }
 
         /// <summary>
-        /// The parameters that are configured if the event source is scheduled events.
+        /// The parameters that are configured if you specify scheduled events as the event source.
         /// </summary>
         [NameInMap("SourceScheduledEventParameters")]
         [Validation(Required=false)]

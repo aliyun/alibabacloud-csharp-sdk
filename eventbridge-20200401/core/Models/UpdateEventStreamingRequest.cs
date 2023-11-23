@@ -1524,6 +1524,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public UpdateEventStreamingRequestSourceSourceRocketMQParameters SourceRocketMQParameters { get; set; }
             public class UpdateEventStreamingRequestSourceSourceRocketMQParameters : TeaModel {
+                [NameInMap("AuthType")]
+                [Validation(Required=false)]
+                public string AuthType { get; set; }
+
                 /// <summary>
                 /// The ID of the consumer group in the Message Queue for Apache RocketMQ instance.
                 /// </summary>
@@ -1531,12 +1535,44 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string GroupID { get; set; }
 
+                [NameInMap("InstanceEndpoint")]
+                [Validation(Required=false)]
+                public string InstanceEndpoint { get; set; }
+
                 /// <summary>
                 /// The ID of the Message Queue for Apache RocketMQ instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceNetwork")]
+                [Validation(Required=false)]
+                public string InstanceNetwork { get; set; }
+
+                [NameInMap("InstancePassword")]
+                [Validation(Required=false)]
+                public string InstancePassword { get; set; }
+
+                [NameInMap("InstanceSecurityGroupId")]
+                [Validation(Required=false)]
+                public string InstanceSecurityGroupId { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                [NameInMap("InstanceUsername")]
+                [Validation(Required=false)]
+                public string InstanceUsername { get; set; }
+
+                [NameInMap("InstanceVSwitchIds")]
+                [Validation(Required=false)]
+                public string InstanceVSwitchIds { get; set; }
+
+                [NameInMap("InstanceVpcId")]
+                [Validation(Required=false)]
+                public string InstanceVpcId { get; set; }
 
                 /// <summary>
                 /// The consumer offset of the message. Valid values: CONSUME_FROM_LAST_OFFSET: consumes messages from the latest offset. CONSUME_FROM_FIRST_OFFSET: consumes messages from the earliest offset. CONSUME_FROM_TIMESTAMP: consumes messages from the offset at the specified point in time. Default value: CONSUME_FROM_LAST_OFFSET.
@@ -1590,6 +1626,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string RoleName { get; set; }
 
             }
+
+        }
+
+        [NameInMap("Transforms")]
+        [Validation(Required=false)]
+        public List<UpdateEventStreamingRequestTransforms> Transforms { get; set; }
+        public class UpdateEventStreamingRequestTransforms : TeaModel {
+            [NameInMap("Arn")]
+            [Validation(Required=false)]
+            public string Arn { get; set; }
 
         }
 

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateEventSourceResponseBody : TeaModel {
         /// <summary>
-        /// The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.
+        /// The returned response code. Valid values:
+        /// 
+        /// *   Success: The request is successful.
+        /// *   Other codes: The request failed. For more information about error codes, see Error codes.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public CreateEventSourceResponseBodyData Data { get; set; }
         public class CreateEventSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// The ARN of the event source.
+            /// The Alibaba Cloud Resource Name (ARN) of the resource.
             /// </summary>
             [NameInMap("EventSourceARN")]
             [Validation(Required=false)]
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values: true and false.
+        /// Indicates whether the operation is successful. The value true indicates that the operation is successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

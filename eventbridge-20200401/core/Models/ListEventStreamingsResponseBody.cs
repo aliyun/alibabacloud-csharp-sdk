@@ -994,13 +994,49 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters SourceRocketMQParameters { get; set; }
                     public class ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters : TeaModel {
+                        [NameInMap("AuthType")]
+                        [Validation(Required=false)]
+                        public string AuthType { get; set; }
+
                         [NameInMap("GroupID")]
                         [Validation(Required=false)]
                         public string GroupID { get; set; }
 
+                        [NameInMap("InstanceEndpoint")]
+                        [Validation(Required=false)]
+                        public string InstanceEndpoint { get; set; }
+
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
                         public string InstanceId { get; set; }
+
+                        [NameInMap("InstanceNetwork")]
+                        [Validation(Required=false)]
+                        public string InstanceNetwork { get; set; }
+
+                        [NameInMap("InstancePassword")]
+                        [Validation(Required=false)]
+                        public string InstancePassword { get; set; }
+
+                        [NameInMap("InstanceSecurityGroupId")]
+                        [Validation(Required=false)]
+                        public string InstanceSecurityGroupId { get; set; }
+
+                        [NameInMap("InstanceType")]
+                        [Validation(Required=false)]
+                        public string InstanceType { get; set; }
+
+                        [NameInMap("InstanceUsername")]
+                        [Validation(Required=false)]
+                        public string InstanceUsername { get; set; }
+
+                        [NameInMap("InstanceVSwitchIds")]
+                        [Validation(Required=false)]
+                        public string InstanceVSwitchIds { get; set; }
+
+                        [NameInMap("InstanceVpcId")]
+                        [Validation(Required=false)]
+                        public string InstanceVpcId { get; set; }
 
                         [NameInMap("Offset")]
                         [Validation(Required=false)]
@@ -1055,6 +1091,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Transforms")]
+                [Validation(Required=false)]
+                public List<ListEventStreamingsResponseBodyDataEventStreamingsTransforms> Transforms { get; set; }
+                public class ListEventStreamingsResponseBodyDataEventStreamingsTransforms : TeaModel {
+                    [NameInMap("Arn")]
+                    [Validation(Required=false)]
+                    public string Arn { get; set; }
+
+                }
 
             }
 

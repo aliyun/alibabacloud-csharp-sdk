@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string SourceShrink { get; set; }
 
+        [NameInMap("Transforms")]
+        [Validation(Required=false)]
+        public string TransformsShrink { get; set; }
+
     }
 
 }

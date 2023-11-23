@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// Then name of the event source.
+        /// The name of the event source.
         /// </summary>
         [NameInMap("EventSourceName")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SourceKafkaParametersShrink { get; set; }
 
         /// <summary>
-        /// The parameters that are configured if the event source is Message Service (MNS).
+        /// The parameters that are configured if the event source is Message Service (MNS). If you specify MNS as the event source, you must configure RegionId, IsBase64Decode, and QueueName.
         /// </summary>
         [NameInMap("SourceMNSParameters")]
         [Validation(Required=false)]

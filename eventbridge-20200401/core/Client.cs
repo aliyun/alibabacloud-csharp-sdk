@@ -649,6 +649,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.SourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Source, "Source", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Transforms))
+            {
+                request.TransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Transforms, "Transforms", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -673,6 +677,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceShrink))
             {
                 body["Source"] = request.SourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformsShrink))
+            {
+                body["Transforms"] = request.TransformsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -717,6 +725,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.SourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Source, "Source", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Transforms))
+            {
+                request.TransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Transforms, "Transforms", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -741,6 +753,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceShrink))
             {
                 body["Source"] = request.SourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformsShrink))
+            {
+                body["Transforms"] = request.TransformsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3458,6 +3474,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 query["EventId"] = request.EventId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSource))
+            {
+                query["EventSource"] = request.EventSource;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3495,6 +3515,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
             {
                 query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSource))
+            {
+                query["EventSource"] = request.EventSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4699,6 +4723,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.SourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Source, "Source", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Transforms))
+            {
+                request.TransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Transforms, "Transforms", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -4723,6 +4751,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceShrink))
             {
                 body["Source"] = request.SourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformsShrink))
+            {
+                body["Transforms"] = request.TransformsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4767,6 +4799,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.SourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Source, "Source", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Transforms))
+            {
+                request.TransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Transforms, "Transforms", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -4791,6 +4827,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceShrink))
             {
                 body["Source"] = request.SourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformsShrink))
+            {
+                body["Transforms"] = request.TransformsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
