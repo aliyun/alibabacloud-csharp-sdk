@@ -37341,6 +37341,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DBProxyInstanceNum"] = request.DBProxyInstanceNum;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBProxyInstanceType))
+            {
+                query["DBProxyInstanceType"] = request.DBProxyInstanceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNetworkType))
             {
                 query["InstanceNetworkType"] = request.InstanceNetworkType;
@@ -37429,6 +37433,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBProxyInstanceNum))
             {
                 query["DBProxyInstanceNum"] = request.DBProxyInstanceNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBProxyInstanceType))
+            {
+                query["DBProxyInstanceType"] = request.DBProxyInstanceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNetworkType))
             {

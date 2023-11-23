@@ -177,6 +177,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        [NameInMap("DBProxyPersistentConnectionSupport")]
+        [Validation(Required=false)]
+        public string DBProxyPersistentConnectionSupport { get; set; }
+
         /// <summary>
         /// The status of the database proxy.
         /// 

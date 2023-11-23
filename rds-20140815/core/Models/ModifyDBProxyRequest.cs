@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceNum { get; set; }
 
+        [NameInMap("DBProxyInstanceType")]
+        [Validation(Required=false)]
+        public string DBProxyInstanceType { get; set; }
+
         /// <summary>
         /// The network type of the instance. Set the value to **VPC**.
         /// 
