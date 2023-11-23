@@ -47,8 +47,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The type of the service resource. Valid values:
         /// 
-        /// *   **slb**: a Classic Load Balancer (CLB) instance that supports PrivateLink. In addition, the CLB instance is deployed in a virtual private cloud (VPC).
-        /// *   **alb**: an Application Load Balancer (ALB) instance that supports PrivateLink. In addition, the ALB instance is deployed in a VPC.
+        /// *   **slb**: a Classic Load Balancer (CLB) instance
+        /// *   **alb**: an Application Load Balancer (ALB) instance
+        /// *   **nlb**: a Network Load Balancer (NLB) instance
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -61,6 +62,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
+        /// <summary>
+        /// The zone ID of the service resource.
+        /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
