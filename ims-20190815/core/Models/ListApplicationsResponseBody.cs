@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                             [Validation(Required=false)]
                             public string Name { get; set; }
 
+                            [NameInMap("Required")]
+                            [Validation(Required=false)]
+                            public bool? Required { get; set; }
+
                         }
 
                     }

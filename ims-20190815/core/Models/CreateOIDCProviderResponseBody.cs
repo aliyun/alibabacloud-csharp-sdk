@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public long? IssuanceLimitTime { get; set; }
 
             /// <summary>
-            /// The URL of the issuer,
+            /// The URL of the issuer.
             /// </summary>
             [NameInMap("IssuerUrl")]
             [Validation(Required=false)]

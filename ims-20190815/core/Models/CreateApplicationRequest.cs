@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public int? RefreshTokenValidity { get; set; }
 
+        [NameInMap("RequiredScopes")]
+        [Validation(Required=false)]
+        public string RequiredScopes { get; set; }
+
         /// <summary>
         /// Indicates whether a secret is required. Valid values:
         /// 

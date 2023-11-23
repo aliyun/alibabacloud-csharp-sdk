@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the information about the RAM user.
+        /// The details of the RAM user.
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public string Comments { get; set; }
 
                 /// <summary>
-                /// The time when the RAM user was created.
+                /// The point in time when the RAM user was created. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 /// <summary>
                 /// The email address of the RAM user.
                 /// 
-                /// >  This parameter is valid only on the China site (aliyun.com).
+                /// >  This parameter applies only to the Alibaba Cloud China site (aliyun.com).
                 /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
                 /// <summary>
-                /// The last time when the RAM user logged on to the Alibaba Cloud Management Console.
+                /// The timestamp when the RAM user last logged on to the console.
                 /// </summary>
                 [NameInMap("LastLoginDate")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 /// <summary>
                 /// The mobile phone number of the RAM user.
                 /// 
-                /// >  This parameter is valid only on the China site (aliyun.com).
+                /// >  This parameter applies only to the Alibaba Cloud China site (aliyun.com).
                 /// </summary>
                 [NameInMap("MobilePhone")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public string ProvisionType { get; set; }
 
                 /// <summary>
-                /// An array that consists of tags.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                     public List<ListUsersResponseBodyUsersUserTagsTag> Tag { get; set; }
                     public class ListUsersResponseBodyUsersUserTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The value of the tag
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 }
 
                 /// <summary>
-                /// The time when the information about the RAM user was updated.
+                /// The point in time when the information about the RAM user was last modified. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]

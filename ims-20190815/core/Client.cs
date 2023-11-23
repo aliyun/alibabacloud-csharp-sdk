@@ -677,6 +677,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["RefreshTokenValidity"] = request.RefreshTokenValidity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequiredScopes))
+            {
+                query["RequiredScopes"] = request.RequiredScopes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretRequired))
             {
                 query["SecretRequired"] = request.SecretRequired;
@@ -735,6 +739,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefreshTokenValidity))
             {
                 query["RefreshTokenValidity"] = request.RefreshTokenValidity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequiredScopes))
+            {
+                query["RequiredScopes"] = request.RequiredScopes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretRequired))
             {
@@ -952,13 +960,13 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ### [](#)Prerequisite
-          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ### [](#)Limits
+          * ### Prerequisites
+          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external (IdP, such as Google G Suite or Okta.
+          * ### Limits
           * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
           * *   You can add a maximum of 20 client IDs to an OIDC IdP.
           * *   You can add a maximum of five fingerprints to an OIDC IdP.
-          * ### [](#)
+          * ###
           * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
           *
           * @param request CreateOIDCProviderRequest
@@ -1013,13 +1021,13 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ### [](#)Prerequisite
-          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ### [](#)Limits
+          * ### Prerequisites
+          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external (IdP, such as Google G Suite or Okta.
+          * ### Limits
           * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
           * *   You can add a maximum of 20 client IDs to an OIDC IdP.
           * *   You can add a maximum of five fingerprints to an OIDC IdP.
-          * ### [](#)
+          * ###
           * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
           *
           * @param request CreateOIDCProviderRequest
@@ -1074,13 +1082,13 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ### [](#)Prerequisite
-          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ### [](#)Limits
+          * ### Prerequisites
+          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external (IdP, such as Google G Suite or Okta.
+          * ### Limits
           * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
           * *   You can add a maximum of 20 client IDs to an OIDC IdP.
           * *   You can add a maximum of five fingerprints to an OIDC IdP.
-          * ### [](#)
+          * ###
           * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
           *
           * @param request CreateOIDCProviderRequest
@@ -1093,13 +1101,13 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ### [](#)Prerequisite
-          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-          * ### [](#)Limits
+          * ### Prerequisites
+          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external (IdP, such as Google G Suite or Okta.
+          * ### Limits
           * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
           * *   You can add a maximum of 20 client IDs to an OIDC IdP.
           * *   You can add a maximum of five fingerprints to an OIDC IdP.
-          * ### [](#)
+          * ###
           * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
           *
           * @param request CreateOIDCProviderRequest
@@ -4150,8 +4158,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ## Description
-          * You can call the following API operations to query the information about all RAM users:
+          * ### [](#)
+          * You can call the following API operations to query the details of all RAM users:
           * *   ListUsers: queries the details of all RAM users.
           * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
           *
@@ -4195,8 +4203,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ## Description
-          * You can call the following API operations to query the information about all RAM users:
+          * ### [](#)
+          * You can call the following API operations to query the details of all RAM users:
           * *   ListUsers: queries the details of all RAM users.
           * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
           *
@@ -4240,8 +4248,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ## Description
-          * You can call the following API operations to query the information about all RAM users:
+          * ### [](#)
+          * You can call the following API operations to query the details of all RAM users:
           * *   ListUsers: queries the details of all RAM users.
           * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
           *
@@ -4255,8 +4263,8 @@ namespace AlibabaCloud.SDK.Ims20190815
         }
 
         /**
-          * ## Description
-          * You can call the following API operations to query the information about all RAM users:
+          * ### [](#)
+          * You can call the following API operations to query the details of all RAM users:
           * *   ListUsers: queries the details of all RAM users.
           * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
           *
@@ -5549,6 +5557,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["NewRefreshTokenValidity"] = request.NewRefreshTokenValidity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewRequiredScopes))
+            {
+                query["NewRequiredScopes"] = request.NewRequiredScopes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewSecretRequired))
             {
                 query["NewSecretRequired"] = request.NewSecretRequired;
@@ -5603,6 +5615,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewRefreshTokenValidity))
             {
                 query["NewRefreshTokenValidity"] = request.NewRefreshTokenValidity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewRequiredScopes))
+            {
+                query["NewRequiredScopes"] = request.NewRequiredScopes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewSecretRequired))
             {
