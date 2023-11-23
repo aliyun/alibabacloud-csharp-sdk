@@ -7660,6 +7660,104 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await DescribeDcdnDomainLogWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDcdnDomainLogExTtlResponse DescribeDcdnDomainLogExTtlWithOptions(DescribeDcdnDomainLogExTtlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnDomainLogExTtl",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnDomainLogExTtlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnDomainLogExTtlResponse> DescribeDcdnDomainLogExTtlWithOptionsAsync(DescribeDcdnDomainLogExTtlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnDomainLogExTtl",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnDomainLogExTtlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnDomainLogExTtlResponse DescribeDcdnDomainLogExTtl(DescribeDcdnDomainLogExTtlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnDomainLogExTtlWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDcdnDomainLogExTtlResponse> DescribeDcdnDomainLogExTtlAsync(DescribeDcdnDomainLogExTtlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnDomainLogExTtlWithOptionsAsync(request, runtime);
+        }
+
         /**
           * *   If you do not set the StartTime or EndTime parameter, data within the last 10 minutes is queried. You can set both the StartTime and EndTime parameters to specify a time range.
           * *   You can specify one or more accelerated domain names. Separate domain names with commas (,).
