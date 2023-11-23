@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
                 }
 
+                [NameInMap("Primary")]
+                [Validation(Required=false)]
+                public bool? Primary { get; set; }
+
                 [NameInMap("PrimaryAccount")]
                 [Validation(Required=false)]
                 public bool? PrimaryAccount { get; set; }
@@ -148,6 +152,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public List<string> Params { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

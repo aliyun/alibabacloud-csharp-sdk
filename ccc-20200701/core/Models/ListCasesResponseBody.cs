@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListCasesResponseBodyDataList> List { get; set; }
             public class ListCasesResponseBodyDataList : TeaModel {
+                [NameInMap("AbandonPhase")]
+                [Validation(Required=false)]
+                public string AbandonPhase { get; set; }
+
                 [NameInMap("AbandonType")]
                 [Validation(Required=false)]
                 public string AbandonType { get; set; }

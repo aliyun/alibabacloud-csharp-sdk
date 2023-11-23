@@ -17,9 +17,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public GetHistoricalCampaignReportResponseBodyData Data { get; set; }
         public class GetHistoricalCampaignReportResponseBodyData : TeaModel {
+            [NameInMap("AbandonRate")]
+            [Validation(Required=false)]
+            public float? AbandonRate { get; set; }
+
             [NameInMap("AbandonedRate")]
             [Validation(Required=false)]
             public float? AbandonedRate { get; set; }
+
+            [NameInMap("AnswerRate")]
+            [Validation(Required=false)]
+            public float? AnswerRate { get; set; }
 
             [NameInMap("CallsAbandoned")]
             [Validation(Required=false)]

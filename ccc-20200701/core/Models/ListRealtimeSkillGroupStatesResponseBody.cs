@@ -21,6 +21,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListRealtimeSkillGroupStatesResponseBodyDataList> List { get; set; }
             public class ListRealtimeSkillGroupStatesResponseBodyDataList : TeaModel {
+                [NameInMap("BreakCodeDetailList")]
+                [Validation(Required=false)]
+                public List<ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList> BreakCodeDetailList { get; set; }
+                public class ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList : TeaModel {
+                    [NameInMap("BreakCode")]
+                    [Validation(Required=false)]
+                    public string BreakCode { get; set; }
+
+                    [NameInMap("Count")]
+                    [Validation(Required=false)]
+                    public long? Count { get; set; }
+
+                }
+
                 [NameInMap("BreakingAgents")]
                 [Validation(Required=false)]
                 public long? BreakingAgents { get; set; }
@@ -56,6 +70,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [NameInMap("TalkingAgents")]
                 [Validation(Required=false)]
                 public long? TalkingAgents { get; set; }
+
+                [NameInMap("TotalAgents")]
+                [Validation(Required=false)]
+                public long? TotalAgents { get; set; }
 
                 [NameInMap("WaitingCalls")]
                 [Validation(Required=false)]

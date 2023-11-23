@@ -29,6 +29,76 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string AgentName { get; set; }
 
+                [NameInMap("Back2Back")]
+                [Validation(Required=false)]
+                public ListHistoricalAgentReportResponseBodyDataListBack2Back Back2Back { get; set; }
+                public class ListHistoricalAgentReportResponseBodyDataListBack2Back : TeaModel {
+                    [NameInMap("AgentHandleRate")]
+                    [Validation(Required=false)]
+                    public string AgentHandleRate { get; set; }
+
+                    [NameInMap("AnswerRate")]
+                    [Validation(Required=false)]
+                    public string AnswerRate { get; set; }
+
+                    [NameInMap("AverageCustomerRingTime")]
+                    [Validation(Required=false)]
+                    public string AverageCustomerRingTime { get; set; }
+
+                    [NameInMap("AverageRingTime")]
+                    [Validation(Required=false)]
+                    public string AverageRingTime { get; set; }
+
+                    [NameInMap("AverageTalkTime")]
+                    [Validation(Required=false)]
+                    public string AverageTalkTime { get; set; }
+
+                    [NameInMap("CallsAgentHandled")]
+                    [Validation(Required=false)]
+                    public string CallsAgentHandled { get; set; }
+
+                    [NameInMap("CallsAnswered")]
+                    [Validation(Required=false)]
+                    public string CallsAnswered { get; set; }
+
+                    [NameInMap("CallsCustomerAnswered")]
+                    [Validation(Required=false)]
+                    public string CallsCustomerAnswered { get; set; }
+
+                    [NameInMap("CallsDialed")]
+                    [Validation(Required=false)]
+                    public string CallsDialed { get; set; }
+
+                    [NameInMap("CustomerAnswerRate")]
+                    [Validation(Required=false)]
+                    public string CustomerAnswerRate { get; set; }
+
+                    [NameInMap("MaxCustomerRingTime")]
+                    [Validation(Required=false)]
+                    public string MaxCustomerRingTime { get; set; }
+
+                    [NameInMap("MaxRingTime")]
+                    [Validation(Required=false)]
+                    public string MaxRingTime { get; set; }
+
+                    [NameInMap("MaxTalkTime")]
+                    [Validation(Required=false)]
+                    public string MaxTalkTime { get; set; }
+
+                    [NameInMap("TotalCustomerRingTime")]
+                    [Validation(Required=false)]
+                    public string TotalCustomerRingTime { get; set; }
+
+                    [NameInMap("TotalRingTime")]
+                    [Validation(Required=false)]
+                    public string TotalRingTime { get; set; }
+
+                    [NameInMap("TotalTalkTime")]
+                    [Validation(Required=false)]
+                    public string TotalTalkTime { get; set; }
+
+                }
+
                 [NameInMap("DisplayId")]
                 [Validation(Required=false)]
                 public string DisplayId { get; set; }
@@ -37,9 +107,31 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public ListHistoricalAgentReportResponseBodyDataListInbound Inbound { get; set; }
                 public class ListHistoricalAgentReportResponseBodyDataListInbound : TeaModel {
+                    [NameInMap("AccessChannelTypeDetails")]
+                    [Validation(Required=false)]
+                    public List<ListHistoricalAgentReportResponseBodyDataListInboundAccessChannelTypeDetails> AccessChannelTypeDetails { get; set; }
+                    public class ListHistoricalAgentReportResponseBodyDataListInboundAccessChannelTypeDetails : TeaModel {
+                        [NameInMap("AccessChannelType")]
+                        [Validation(Required=false)]
+                        public string AccessChannelType { get; set; }
+
+                        [NameInMap("CallsOffered")]
+                        [Validation(Required=false)]
+                        public long? CallsOffered { get; set; }
+
+                    }
+
+                    [NameInMap("AverageFirstResponseTime")]
+                    [Validation(Required=false)]
+                    public float? AverageFirstResponseTime { get; set; }
+
                     [NameInMap("AverageHoldTime")]
                     [Validation(Required=false)]
                     public float? AverageHoldTime { get; set; }
+
+                    [NameInMap("AverageResponseTime")]
+                    [Validation(Required=false)]
+                    public float? AverageResponseTime { get; set; }
 
                     [NameInMap("AverageRingTime")]
                     [Validation(Required=false)]
@@ -121,9 +213,25 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public long? SatisfactionSurveysResponded { get; set; }
 
+                    [NameInMap("ServiceLevel15")]
+                    [Validation(Required=false)]
+                    public float? ServiceLevel15 { get; set; }
+
                     [NameInMap("TotalHoldTime")]
                     [Validation(Required=false)]
                     public long? TotalHoldTime { get; set; }
+
+                    [NameInMap("TotalMessagesSent")]
+                    [Validation(Required=false)]
+                    public long? TotalMessagesSent { get; set; }
+
+                    [NameInMap("TotalMessagesSentByAgent")]
+                    [Validation(Required=false)]
+                    public long? TotalMessagesSentByAgent { get; set; }
+
+                    [NameInMap("TotalMessagesSentByCustomer")]
+                    [Validation(Required=false)]
+                    public string TotalMessagesSentByCustomer { get; set; }
 
                     [NameInMap("TotalRingTime")]
                     [Validation(Required=false)]
@@ -136,6 +244,44 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [NameInMap("TotalWorkTime")]
                     [Validation(Required=false)]
                     public long? TotalWorkTime { get; set; }
+
+                }
+
+                [NameInMap("Internal")]
+                [Validation(Required=false)]
+                public ListHistoricalAgentReportResponseBodyDataListInternal Internal { get; set; }
+                public class ListHistoricalAgentReportResponseBodyDataListInternal : TeaModel {
+                    [NameInMap("AverageTalkTime")]
+                    [Validation(Required=false)]
+                    public float? AverageTalkTime { get; set; }
+
+                    [NameInMap("CallsAnswered")]
+                    [Validation(Required=false)]
+                    public long? CallsAnswered { get; set; }
+
+                    [NameInMap("CallsDialed")]
+                    [Validation(Required=false)]
+                    public long? CallsDialed { get; set; }
+
+                    [NameInMap("CallsHandled")]
+                    [Validation(Required=false)]
+                    public long? CallsHandled { get; set; }
+
+                    [NameInMap("CallsOffered")]
+                    [Validation(Required=false)]
+                    public long? CallsOffered { get; set; }
+
+                    [NameInMap("CallsTalked")]
+                    [Validation(Required=false)]
+                    public long? CallsTalked { get; set; }
+
+                    [NameInMap("MaxTalkTime")]
+                    [Validation(Required=false)]
+                    public long? MaxTalkTime { get; set; }
+
+                    [NameInMap("TotalTalkTime")]
+                    [Validation(Required=false)]
+                    public long? TotalTalkTime { get; set; }
 
                 }
 
@@ -363,17 +509,33 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public long? TotalLoggedInTime { get; set; }
 
+                    [NameInMap("TotalOffSiteLoggedInTime")]
+                    [Validation(Required=false)]
+                    public long? TotalOffSiteLoggedInTime { get; set; }
+
                     [NameInMap("TotalOffSiteOnlineTime")]
                     [Validation(Required=false)]
                     public long? TotalOffSiteOnlineTime { get; set; }
+
+                    [NameInMap("TotalOfficePhoneLoggedInTime")]
+                    [Validation(Required=false)]
+                    public long? TotalOfficePhoneLoggedInTime { get; set; }
 
                     [NameInMap("TotalOfficePhoneOnlineTime")]
                     [Validation(Required=false)]
                     public long? TotalOfficePhoneOnlineTime { get; set; }
 
+                    [NameInMap("TotalOnSiteLoggedInTime")]
+                    [Validation(Required=false)]
+                    public long? TotalOnSiteLoggedInTime { get; set; }
+
                     [NameInMap("TotalOnSiteOnlineTime")]
                     [Validation(Required=false)]
                     public long? TotalOnSiteOnlineTime { get; set; }
+
+                    [NameInMap("TotalOutboundScenarioLoggedInTime")]
+                    [Validation(Required=false)]
+                    public long? TotalOutboundScenarioLoggedInTime { get; set; }
 
                     [NameInMap("TotalOutboundScenarioReadyTime")]
                     [Validation(Required=false)]

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public float? AgentAnswerRate { get; set; }
 
+                [NameInMap("AgentHandleRate")]
+                [Validation(Required=false)]
+                public float? AgentHandleRate { get; set; }
+
                 [NameInMap("AnswerRate")]
                 [Validation(Required=false)]
                 public float? AnswerRate { get; set; }
@@ -41,9 +45,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public long? AverageTalkTime { get; set; }
 
+                [NameInMap("CallsAgentHandled")]
+                [Validation(Required=false)]
+                public long? CallsAgentHandled { get; set; }
+
                 [NameInMap("CallsAnswered")]
                 [Validation(Required=false)]
                 public long? CallsAnswered { get; set; }
+
+                [NameInMap("CallsCustomerAnswered")]
+                [Validation(Required=false)]
+                public long? CallsCustomerAnswered { get; set; }
 
                 [NameInMap("CallsCustomerHandled")]
                 [Validation(Required=false)]
@@ -52,6 +64,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [NameInMap("CallsDialed")]
                 [Validation(Required=false)]
                 public long? CallsDialed { get; set; }
+
+                [NameInMap("CustomerAnswerRate")]
+                [Validation(Required=false)]
+                public float? CustomerAnswerRate { get; set; }
 
                 [NameInMap("CustomerHandleRate")]
                 [Validation(Required=false)]
@@ -87,9 +103,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public ListIntervalAgentSkillGroupReportResponseBodyDataInbound Inbound { get; set; }
             public class ListIntervalAgentSkillGroupReportResponseBodyDataInbound : TeaModel {
+                [NameInMap("AverageFirstResponseTime")]
+                [Validation(Required=false)]
+                public float? AverageFirstResponseTime { get; set; }
+
                 [NameInMap("AverageHoldTime")]
                 [Validation(Required=false)]
                 public float? AverageHoldTime { get; set; }
+
+                [NameInMap("AverageResponseTime")]
+                [Validation(Required=false)]
+                public float? AverageResponseTime { get; set; }
 
                 [NameInMap("AverageRingTime")]
                 [Validation(Required=false)]
@@ -175,6 +199,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public long? TotalHoldTime { get; set; }
 
+                [NameInMap("TotalMessagesSent")]
+                [Validation(Required=false)]
+                public long? TotalMessagesSent { get; set; }
+
+                [NameInMap("TotalMessagesSentByAgent")]
+                [Validation(Required=false)]
+                public long? TotalMessagesSentByAgent { get; set; }
+
+                [NameInMap("TotalMessagesSentByCustomer")]
+                [Validation(Required=false)]
+                public long? TotalMessagesSentByCustomer { get; set; }
+
                 [NameInMap("TotalRingTime")]
                 [Validation(Required=false)]
                 public long? TotalRingTime { get; set; }
@@ -216,6 +252,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [NameInMap("CallsTalk")]
                 [Validation(Required=false)]
                 public long? CallsTalk { get; set; }
+
+                [NameInMap("CallsTalked")]
+                [Validation(Required=false)]
+                public long? CallsTalked { get; set; }
 
                 [NameInMap("MaxTalkTime")]
                 [Validation(Required=false)]
@@ -391,6 +431,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public long? FirstCheckInTime { get; set; }
 
+                [NameInMap("LastCheckOutTime")]
+                [Validation(Required=false)]
+                public long? LastCheckOutTime { get; set; }
+
                 [NameInMap("LastCheckoutTime")]
                 [Validation(Required=false)]
                 public long? LastCheckoutTime { get; set; }
@@ -450,6 +494,22 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [NameInMap("TotalLoggedInTime")]
                 [Validation(Required=false)]
                 public long? TotalLoggedInTime { get; set; }
+
+                [NameInMap("TotalOffSiteLoggedInTime")]
+                [Validation(Required=false)]
+                public string TotalOffSiteLoggedInTime { get; set; }
+
+                [NameInMap("TotalOfficePhoneLoggedInTime")]
+                [Validation(Required=false)]
+                public string TotalOfficePhoneLoggedInTime { get; set; }
+
+                [NameInMap("TotalOnSiteLoggedInTime")]
+                [Validation(Required=false)]
+                public string TotalOnSiteLoggedInTime { get; set; }
+
+                [NameInMap("TotalOutboundScenarioLoggedInTime")]
+                [Validation(Required=false)]
+                public long? TotalOutboundScenarioLoggedInTime { get; set; }
 
                 [NameInMap("TotalOutboundScenarioReadyTime")]
                 [Validation(Required=false)]

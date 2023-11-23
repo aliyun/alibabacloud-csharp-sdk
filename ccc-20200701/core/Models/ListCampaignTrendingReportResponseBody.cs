@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public long? BreakAgents { get; set; }
 
+            [NameInMap("BreakingAgents")]
+            [Validation(Required=false)]
+            public long? BreakingAgents { get; set; }
+
             [NameInMap("Concurrency")]
             [Validation(Required=false)]
             public long? Concurrency { get; set; }
@@ -33,17 +37,45 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public long? LoggedInAgents { get; set; }
 
+            [NameInMap("OutboundScenarioBreakingAgents")]
+            [Validation(Required=false)]
+            public long? OutboundScenarioBreakingAgents { get; set; }
+
+            [NameInMap("OutboundScenarioReadyAgents")]
+            [Validation(Required=false)]
+            public long? OutboundScenarioReadyAgents { get; set; }
+
+            [NameInMap("OutboundScenarioTalkingAgents")]
+            [Validation(Required=false)]
+            public long? OutboundScenarioTalkingAgents { get; set; }
+
+            [NameInMap("OutboundScenarioWorkingAgents")]
+            [Validation(Required=false)]
+            public long? OutboundScenarioWorkingAgents { get; set; }
+
             [NameInMap("ReadyAgents")]
             [Validation(Required=false)]
             public long? ReadyAgents { get; set; }
+
+            [NameInMap("StatsTime")]
+            [Validation(Required=false)]
+            public long? StatsTime { get; set; }
 
             [NameInMap("TalkAgents")]
             [Validation(Required=false)]
             public long? TalkAgents { get; set; }
 
+            [NameInMap("TalkingAgents")]
+            [Validation(Required=false)]
+            public long? TalkingAgents { get; set; }
+
             [NameInMap("WorkAgents")]
             [Validation(Required=false)]
             public long? WorkAgents { get; set; }
+
+            [NameInMap("WorkingAgents")]
+            [Validation(Required=false)]
+            public long? WorkingAgents { get; set; }
 
         }
 

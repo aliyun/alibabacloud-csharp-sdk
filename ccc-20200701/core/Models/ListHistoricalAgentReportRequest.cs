@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MediaType")]
+        [Validation(Required=false)]
+        public string MediaType { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("SkillGroupId")]
+        [Validation(Required=false)]
+        public string SkillGroupId { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
