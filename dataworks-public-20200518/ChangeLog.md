@@ -1,3 +1,6 @@
+2023-11-23 Version: 4.7.4
+- Generated csharp 2020-05-18 for dataworks-public.
+
 2023-11-15 Version: 4.7.3
 - Generated csharp 2020-05-18 for dataworks-public.
 
