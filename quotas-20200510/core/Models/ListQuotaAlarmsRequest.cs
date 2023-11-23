@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string AlarmName { get; set; }
 
         /// <summary>
-        /// The maximum number of records that can be returned for the query.
+        /// The maximum number of records that you want to return for the query.
         /// 
         /// Valid values: 1 to 200. Default value: 30.
         /// </summary>

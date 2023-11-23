@@ -63,6 +63,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public bool? ExceedThreshold { get; set; }
 
+            /// <summary>
+            /// The alert notification methods.
+            /// </summary>
             [NameInMap("NotifyChannels")]
             [Validation(Required=false)]
             public List<string> NotifyChannels { get; set; }

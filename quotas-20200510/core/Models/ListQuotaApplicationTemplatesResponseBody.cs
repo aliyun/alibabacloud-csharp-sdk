@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The returned quota templates.
+        /// The queried quota templates.
         /// </summary>
         [NameInMap("QuotaApplicationTemplates")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates> QuotaApplicationTemplates { get; set; }
         public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates : TeaModel {
             /// <summary>
-            /// N/A
+            /// None
             /// </summary>
             [NameInMap("ApplicableRange")]
             [Validation(Required=false)]
@@ -150,9 +150,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaActionCode { get; set; }
 
             /// <summary>
-            /// The type of the quota.
+            /// The type of the quota. Valid values:
             /// 
             /// *   CommonQuota: general quota
+            /// *   FlowControl: API rate limit
             /// *   WhiteListLabel: privilege
             /// </summary>
             [NameInMap("QuotaCategory")]

@@ -24,12 +24,15 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The information about quota dimensions.
+        /// The quota dimensions.
         /// </summary>
         [NameInMap("QuotaDimensions")]
         [Validation(Required=false)]
         public List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> QuotaDimensions { get; set; }
         public class ListProductQuotaDimensionsResponseBodyQuotaDimensions : TeaModel {
+            /// <summary>
+            /// The quota dimensions on which the quota dimension that you want to query is dependent.
+            /// </summary>
             [NameInMap("DependentDimensions")]
             [Validation(Required=false)]
             public List<string> DependentDimensions { get; set; }
@@ -47,21 +50,21 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string DimensionKey { get; set; }
 
             /// <summary>
-            /// The details of the quota dimension value.
+            /// The details about the dimension value.
             /// </summary>
             [NameInMap("DimensionValueDetail")]
             [Validation(Required=false)]
             public List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> DimensionValueDetail { get; set; }
             public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail : TeaModel {
                 /// <summary>
-                /// The name of the quota dimension value.
+                /// The name of the quota dimension.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The quota dimension value.
+                /// The value of the quota dimension.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -69,6 +72,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
             }
 
+            /// <summary>
+            /// The dimension values.
+            /// </summary>
             [NameInMap("DimensionValues")]
             [Validation(Required=false)]
             public List<string> DimensionValues { get; set; }

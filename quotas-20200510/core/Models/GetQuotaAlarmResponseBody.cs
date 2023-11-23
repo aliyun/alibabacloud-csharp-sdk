@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class GetQuotaAlarmResponseBody : TeaModel {
         /// <summary>
-        /// The percentage of the alert threshold.
+        /// The details of the quota alert rule.
         /// </summary>
         [NameInMap("QuotaAlarm")]
         [Validation(Required=false)]
@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// The alert notification methods.
+            /// </summary>
             [NameInMap("NotifyChannels")]
             [Validation(Required=false)]
             public List<string> NotifyChannels { get; set; }
@@ -48,6 +51,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string NotifyTarget { get; set; }
 
+            /// <summary>
+            /// The abbreviation of the Alibaba Cloud service name.
+            /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }
@@ -104,6 +110,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string ThresholdType { get; set; }
 
+            /// <summary>
+            /// The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.
+            /// </summary>
             [NameInMap("Webhook")]
             [Validation(Required=false)]
             public string Webhook { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class GetProductQuotaResponseBody : TeaModel {
         /// <summary>
-        /// The details of the quotas.
+        /// The details of the quota.
         /// </summary>
         [NameInMap("Quota")]
         [Validation(Required=false)]
@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string ApplicableType { get; set; }
 
+            /// <summary>
+            /// The reason for submitting a quota increase request.
+            /// </summary>
             [NameInMap("ApplyReasonTips")]
             [Validation(Required=false)]
             public string ApplyReasonTips { get; set; }
@@ -77,6 +80,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
+
+            /// <summary>
+            /// Indicates whether the quota is a global quota. Valid values:
+            /// 
+            /// *   true: The quota is shared in all regions.
+            /// *   false: The quota is independently used in a region.
+            /// </summary>
+            [NameInMap("GlobalQuota")]
+            [Validation(Required=false)]
+            public bool? GlobalQuota { get; set; }
 
             /// <summary>
             /// The calculation cycle of the quota.
@@ -161,11 +174,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 public string Quota { get; set; }
 
                 /// <summary>
-                /// The unit of the new quota value.
+                /// The unit of the quota.
                 /// 
-                /// **
-                /// 
-                /// **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+                /// >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
                 /// </summary>
                 [NameInMap("QuotaUnit")]
                 [Validation(Required=false)]
@@ -174,8 +185,8 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 /// <summary>
                 /// The category of the quota. Valid values:
                 /// 
-                /// *   BaseQuota: base quota
-                /// *   ReservedQuota: reserved quota
+                /// *   BaseQuota: base quota.
+                /// *   ReservedQuota: reserved quota.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -210,9 +221,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The unit of the new quota value.
             /// 
-            /// **
-            /// 
-            /// **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+            /// > The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
             /// </summary>
             [NameInMap("QuotaUnit")]
             [Validation(Required=false)]

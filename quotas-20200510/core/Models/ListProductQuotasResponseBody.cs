@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The details of the quotas.
+        /// The queried quotas.
         /// </summary>
         [NameInMap("Quotas")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? Adjustable { get; set; }
 
             /// <summary>
-            /// None
+            /// None.
             /// </summary>
             [NameInMap("ApplicableRange")]
             [Validation(Required=false)]
@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string ApplicableType { get; set; }
 
+            /// <summary>
+            /// The reason for submitting a quota increase request.
+            /// </summary>
             [NameInMap("ApplyReasonTips")]
             [Validation(Required=false)]
             public string ApplyReasonTips { get; set; }
@@ -72,25 +75,29 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? Consumable { get; set; }
 
             /// <summary>
-            /// The quota dimension. Format: `{"regionId":"Region"}`.
+            /// The quota dimensions. Format: `{"regionId":"Region"}`.
             /// </summary>
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
             public Dictionary<string, object> Dimensions { get; set; }
 
             /// <summary>
-            /// The start time of the validity period of the quota. Specify the value in UTC.
+            /// The start time of the validity period of the quota. The value is displayed in UTC.
             /// </summary>
             [NameInMap("EffectiveTime")]
             [Validation(Required=false)]
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// The end time of the validity period of the quota. Specify the value in UTC.
+            /// The end time of the validity period of the quota. The value is displayed in UTC.
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
+
+            [NameInMap("GlobalQuota")]
+            [Validation(Required=false)]
+            public bool? GlobalQuota { get; set; }
 
             /// <summary>
             /// The calculation cycle of the quota.
@@ -129,7 +136,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// The ID of the quota.
+            /// The quota ID.
             /// </summary>
             [NameInMap("QuotaActionCode")]
             [Validation(Required=false)]
@@ -143,11 +150,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaArn { get; set; }
 
             /// <summary>
-            /// The type of the quota.
+            /// The type of the quota. Valid values:
             /// 
             /// *   CommonQuota: general quota
             /// *   FlowControl: API rate limit
-            /// *   WhiteListLabel: whitelist quota
+            /// *   WhiteListLabel: privilege
             /// </summary>
             [NameInMap("QuotaCategory")]
             [Validation(Required=false)]
@@ -161,25 +168,23 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaDescription { get; set; }
 
             /// <summary>
-            /// The details of the quotas.
+            /// The details of the quota.
             /// </summary>
             [NameInMap("QuotaItems")]
             [Validation(Required=false)]
             public List<ListProductQuotasResponseBodyQuotasQuotaItems> QuotaItems { get; set; }
             public class ListProductQuotasResponseBodyQuotasQuotaItems : TeaModel {
                 /// <summary>
-                /// The value of the quota.
+                /// The quota value.
                 /// </summary>
                 [NameInMap("Quota")]
                 [Validation(Required=false)]
                 public string Quota { get; set; }
 
                 /// <summary>
-                /// The unit of the new quota value.
+                /// The unit of the quota.
                 /// 
-                /// **
-                /// 
-                /// **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+                /// >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
                 /// </summary>
                 [NameInMap("QuotaUnit")]
                 [Validation(Required=false)]
@@ -196,7 +201,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The used quota.
+                /// The quota usage.
                 /// </summary>
                 [NameInMap("Usage")]
                 [Validation(Required=false)]
@@ -205,7 +210,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             }
 
             /// <summary>
-            /// The name of the quota.
+            /// The quota name.
             /// </summary>
             [NameInMap("QuotaName")]
             [Validation(Required=false)]
@@ -222,32 +227,30 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaType { get; set; }
 
             /// <summary>
-            /// The unit of the new quota value.
+            /// The unit of the quota.
             /// 
-            /// **
-            /// 
-            /// **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+            /// >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
             /// </summary>
             [NameInMap("QuotaUnit")]
             [Validation(Required=false)]
             public string QuotaUnit { get; set; }
 
             /// <summary>
-            /// None
+            /// None.
             /// </summary>
             [NameInMap("SupportedRange")]
             [Validation(Required=false)]
             public List<float?> SupportedRange { get; set; }
 
             /// <summary>
-            /// The value of the quota.
+            /// The quota value.
             /// </summary>
             [NameInMap("TotalQuota")]
             [Validation(Required=false)]
             public float? TotalQuota { get; set; }
 
             /// <summary>
-            /// The used quota.
+            /// The quota usage.
             /// </summary>
             [NameInMap("TotalUsage")]
             [Validation(Required=false)]

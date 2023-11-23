@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// Indicates whether Quota Center sends a notification about the application result. Valid values:
         /// 
-        /// *   0: Quota Center sends a notification.
-        /// *   3: Quota Center does not send a notification.
+        /// *   0: Quota Center does not send a notification.
+        /// *   3: Quota Center sends a notification.
         /// </summary>
         [NameInMap("NoticeType")]
         [Validation(Required=false)]

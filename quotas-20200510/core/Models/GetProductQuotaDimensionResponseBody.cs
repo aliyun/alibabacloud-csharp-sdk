@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public List<GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail> DimensionValueDetail { get; set; }
             public class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail : TeaModel {
                 /// <summary>
-                /// The name of the quota dimension value.
+                /// The name of the quota dimension.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The quota dimension value.
+                /// The value of the quota dimension.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

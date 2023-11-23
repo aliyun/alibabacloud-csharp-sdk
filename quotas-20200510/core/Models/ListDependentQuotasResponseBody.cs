@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public List<ListDependentQuotasResponseBodyQuotasDimensions> Dimensions { get; set; }
             public class ListDependentQuotasResponseBodyQuotasDimensions : TeaModel {
+                /// <summary>
+                /// The dimensions of the quotas on which the specified quota depends.
+                /// </summary>
                 [NameInMap("DependentDimension")]
                 [Validation(Required=false)]
                 public List<string> DependentDimension { get; set; }
@@ -34,6 +37,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 [Validation(Required=false)]
                 public string DimensionKey { get; set; }
 
+                /// <summary>
+                /// The dimension values.
+                /// </summary>
                 [NameInMap("DimensionValues")]
                 [Validation(Required=false)]
                 public List<string> DimensionValues { get; set; }
