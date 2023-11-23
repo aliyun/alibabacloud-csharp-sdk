@@ -9,12 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpdateInstanceIpWhiteListRequest : TeaModel {
-        /// <summary>
-        /// The name of the group to which the instance belongs. The group name can contain only letters, digits, and underscores (\_).
-        /// </summary>
-        [NameInMap("GroupName")]
+        [NameInMap("Delete")]
         [Validation(Required=false)]
-        public string GroupName { get; set; }
+        public bool? Delete { get; set; }
 
         /// <summary>
         /// The ID of the instance for which you want to configure a whitelist. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the ID.

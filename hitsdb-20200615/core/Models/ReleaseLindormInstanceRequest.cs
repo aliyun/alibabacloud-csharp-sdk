@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class ReleaseLindormInstanceRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to release the instance immediately. If you set this parameter to false, data in the released instance is retained for seven days before it is completely deleted. If you set this parameter to true, data in the released instance is immediately deleted. The default value is false.
+        /// </summary>
         [NameInMap("Immediately")]
         [Validation(Required=false)]
         public bool? Immediately { get; set; }

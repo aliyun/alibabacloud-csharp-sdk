@@ -96,6 +96,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public bool? EnableLTS { get; set; }
 
+        [NameInMap("EnableLsqlVersionV3")]
+        [Validation(Required=false)]
+        public bool? EnableLsqlVersionV3 { get; set; }
+
         [NameInMap("EnableMLCtrl")]
         [Validation(Required=false)]
         public bool? EnableMLCtrl { get; set; }

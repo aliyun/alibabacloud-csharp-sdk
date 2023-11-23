@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetInstanceIpWhiteListResponseBody : TeaModel {
+        [NameInMap("GroupList")]
+        [Validation(Required=false)]
+        public List<GetInstanceIpWhiteListResponseBodyGroupList> GroupList { get; set; }
+        public class GetInstanceIpWhiteListResponseBodyGroupList : TeaModel {
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
+
+            [NameInMap("SecurityIpList")]
+            [Validation(Required=false)]
+            public string SecurityIpList { get; set; }
+
+        }
+
         /// <summary>
         /// The ID of the Lindorm instance.
         /// </summary>

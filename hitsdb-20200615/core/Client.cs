@@ -37,6 +37,135 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CreateLdpsNamespaceResponse CreateLdpsNamespaceWithOptions(CreateLdpsNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLdpsNamespace",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLdpsNamespaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateLdpsNamespaceResponse> CreateLdpsNamespaceWithOptionsAsync(CreateLdpsNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLdpsNamespace",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLdpsNamespaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateLdpsNamespaceResponse CreateLdpsNamespace(CreateLdpsNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLdpsNamespaceWithOptions(request, runtime);
+        }
+
+        public async Task<CreateLdpsNamespaceResponse> CreateLdpsNamespaceAsync(CreateLdpsNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLdpsNamespaceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine types](~~181971~~) and [Select storage types](~~174643~~).
+          *
+          * @param request CreateLindormInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLindormInstanceResponse
+         */
         public CreateLindormInstanceResponse CreateLindormInstanceWithOptions(CreateLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -224,6 +353,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<CreateLindormInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine types](~~181971~~) and [Select storage types](~~174643~~).
+          *
+          * @param request CreateLindormInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLindormInstanceResponse
+         */
         public async Task<CreateLindormInstanceResponse> CreateLindormInstanceWithOptionsAsync(CreateLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -411,12 +547,24 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<CreateLindormInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine types](~~181971~~) and [Select storage types](~~174643~~).
+          *
+          * @param request CreateLindormInstanceRequest
+          * @return CreateLindormInstanceResponse
+         */
         public CreateLindormInstanceResponse CreateLindormInstance(CreateLindormInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateLindormInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine types](~~181971~~) and [Select storage types](~~174643~~).
+          *
+          * @param request CreateLindormInstanceRequest
+          * @return CreateLindormInstanceResponse
+         */
         public async Task<CreateLindormInstanceResponse> CreateLindormInstanceAsync(CreateLindormInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -533,10 +681,6 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
-            {
-                query["GroupName"] = request.GroupName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -584,10 +728,6 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
-            {
-                query["GroupName"] = request.GroupName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -641,6 +781,128 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceIpWhiteListWithOptionsAsync(request, runtime);
+        }
+
+        public GetLdpsNamespacedQuotaResponse GetLdpsNamespacedQuotaWithOptions(GetLdpsNamespacedQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLdpsNamespacedQuota",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLdpsNamespacedQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetLdpsNamespacedQuotaResponse> GetLdpsNamespacedQuotaWithOptionsAsync(GetLdpsNamespacedQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLdpsNamespacedQuota",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLdpsNamespacedQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetLdpsNamespacedQuotaResponse GetLdpsNamespacedQuota(GetLdpsNamespacedQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetLdpsNamespacedQuotaWithOptions(request, runtime);
+        }
+
+        public async Task<GetLdpsNamespacedQuotaResponse> GetLdpsNamespacedQuotaAsync(GetLdpsNamespacedQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetLdpsNamespacedQuotaWithOptionsAsync(request, runtime);
         }
 
         public GetLdpsResourceCostResponse GetLdpsResourceCostWithOptions(GetLdpsResourceCostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1576,7 +1838,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         }
 
         /**
-          * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
+          * You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+          * Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.
           *
           * @param request RenewLindormInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1642,7 +1905,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         }
 
         /**
-          * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
+          * You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+          * Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.
           *
           * @param request RenewLindormInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1708,7 +1972,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         }
 
         /**
-          * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
+          * You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+          * Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.
           *
           * @param request RenewLindormInstanceRequest
           * @return RenewLindormInstanceResponse
@@ -1720,7 +1985,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         }
 
         /**
-          * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
+          * You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+          * Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.
           *
           * @param request RenewLindormInstanceRequest
           * @return RenewLindormInstanceResponse
@@ -1991,20 +2257,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ***
-          *
-          * @param request UpdateInstanceIpWhiteListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateInstanceIpWhiteListResponse
-         */
         public UpdateInstanceIpWhiteListResponse UpdateInstanceIpWhiteListWithOptions(UpdateInstanceIpWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delete))
             {
-                query["GroupName"] = request.GroupName;
+                query["Delete"] = request.Delete;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -2053,20 +2312,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<UpdateInstanceIpWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ***
-          *
-          * @param request UpdateInstanceIpWhiteListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateInstanceIpWhiteListResponse
-         */
         public async Task<UpdateInstanceIpWhiteListResponse> UpdateInstanceIpWhiteListWithOptionsAsync(UpdateInstanceIpWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delete))
             {
-                query["GroupName"] = request.GroupName;
+                query["Delete"] = request.Delete;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -2115,24 +2367,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<UpdateInstanceIpWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ***
-          *
-          * @param request UpdateInstanceIpWhiteListRequest
-          * @return UpdateInstanceIpWhiteListResponse
-         */
         public UpdateInstanceIpWhiteListResponse UpdateInstanceIpWhiteList(UpdateInstanceIpWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateInstanceIpWhiteListWithOptions(request, runtime);
         }
 
-        /**
-          * ***
-          *
-          * @param request UpdateInstanceIpWhiteListRequest
-          * @return UpdateInstanceIpWhiteListResponse
-         */
         public async Task<UpdateInstanceIpWhiteListResponse> UpdateInstanceIpWhiteListAsync(UpdateInstanceIpWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2140,7 +2380,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         }
 
         /**
-          * Upgrades, scales up, or enable cold storage for a Lindorm instance.
+          * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine typpes](~~181971~~) and [Select storage types](~~174643~~).
           *
           * @param request UpgradeLindormInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2210,14 +2450,6 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["OwnerId"] = request.OwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoenixCoreNum))
-            {
-                query["PhoenixCoreNum"] = request.PhoenixCoreNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoenixCoreSpec))
-            {
-                query["PhoenixCoreSpec"] = request.PhoenixCoreSpec;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2286,7 +2518,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         }
 
         /**
-          * Upgrades, scales up, or enable cold storage for a Lindorm instance.
+          * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine typpes](~~181971~~) and [Select storage types](~~174643~~).
           *
           * @param request UpgradeLindormInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2356,14 +2588,6 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["OwnerId"] = request.OwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoenixCoreNum))
-            {
-                query["PhoenixCoreNum"] = request.PhoenixCoreNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoenixCoreSpec))
-            {
-                query["PhoenixCoreSpec"] = request.PhoenixCoreSpec;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2432,7 +2656,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         }
 
         /**
-          * Upgrades, scales up, or enable cold storage for a Lindorm instance.
+          * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine typpes](~~181971~~) and [Select storage types](~~174643~~).
           *
           * @param request UpgradeLindormInstanceRequest
           * @return UpgradeLindormInstanceResponse
@@ -2444,7 +2668,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         }
 
         /**
-          * Upgrades, scales up, or enable cold storage for a Lindorm instance.
+          * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine typpes](~~181971~~) and [Select storage types](~~174643~~).
           *
           * @param request UpgradeLindormInstanceRequest
           * @return UpgradeLindormInstanceResponse
