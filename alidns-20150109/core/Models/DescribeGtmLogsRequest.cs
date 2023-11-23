@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on per page. Maximum value: **100**. Default value: **20**.
+        /// The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

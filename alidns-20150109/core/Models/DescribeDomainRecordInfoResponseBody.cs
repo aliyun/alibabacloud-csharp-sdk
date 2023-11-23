@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RecordId { get; set; }
 
+        /// <summary>
+        /// The remark of the DNS record.
+        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }

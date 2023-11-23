@@ -6203,6 +6203,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDomainNsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Alidns\\&api=DescribeDomainRecordInfo\\&type=RPC\\&version=2015-01-09)
+          *
+          * @param request DescribeDomainRecordInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainRecordInfoResponse
+         */
         public DescribeDomainRecordInfoResponse DescribeDomainRecordInfoWithOptions(DescribeDomainRecordInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6238,6 +6246,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainRecordInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Alidns\\&api=DescribeDomainRecordInfo\\&type=RPC\\&version=2015-01-09)
+          *
+          * @param request DescribeDomainRecordInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainRecordInfoResponse
+         */
         public async Task<DescribeDomainRecordInfoResponse> DescribeDomainRecordInfoWithOptionsAsync(DescribeDomainRecordInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6273,12 +6289,26 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainRecordInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Alidns\\&api=DescribeDomainRecordInfo\\&type=RPC\\&version=2015-01-09)
+          *
+          * @param request DescribeDomainRecordInfoRequest
+          * @return DescribeDomainRecordInfoResponse
+         */
         public DescribeDomainRecordInfoResponse DescribeDomainRecordInfo(DescribeDomainRecordInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainRecordInfoWithOptions(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Alidns\\&api=DescribeDomainRecordInfo\\&type=RPC\\&version=2015-01-09)
+          *
+          * @param request DescribeDomainRecordInfoRequest
+          * @return DescribeDomainRecordInfoResponse
+         */
         public async Task<DescribeDomainRecordInfoResponse> DescribeDomainRecordInfoAsync(DescribeDomainRecordInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
