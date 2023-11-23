@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QuerySearchIndexResponseBody : TeaModel {
-        [NameInMap("IndexConfig")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string IndexConfig { get; set; }
+        public string Code { get; set; }
+
+        [NameInMap("IndexStatus")]
+        [Validation(Required=false)]
+        public string IndexStatus { get; set; }
 
         [NameInMap("IndexType")]
         [Validation(Required=false)]
         public string IndexType { get; set; }
+
+        [NameInMap("MediaTotal")]
+        [Validation(Required=false)]
+        public string MediaTotal { get; set; }
 
         /// <summary>
         /// Id of the request
@@ -27,6 +35,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public string Success { get; set; }
 
     }
 

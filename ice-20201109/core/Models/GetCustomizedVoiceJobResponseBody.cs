@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob CustomizedVoiceJob { get; set; }
             public class GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                [NameInMap("Gender")]
+                [Validation(Required=false)]
+                public string Gender { get; set; }
+
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
@@ -25,13 +33,29 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
+                [NameInMap("Scenario")]
+                [Validation(Required=false)]
+                public string Scenario { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("VoiceDesc")]
+                [Validation(Required=false)]
+                public string VoiceDesc { get; set; }
+
                 [NameInMap("VoiceId")]
                 [Validation(Required=false)]
                 public string VoiceId { get; set; }
+
+                [NameInMap("VoiceName")]
+                [Validation(Required=false)]
+                public string VoiceName { get; set; }
 
             }
 

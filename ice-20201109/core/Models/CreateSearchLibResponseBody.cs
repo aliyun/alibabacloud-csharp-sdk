@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateSearchLibResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -19,6 +23,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public string Success { get; set; }
 
     }
 

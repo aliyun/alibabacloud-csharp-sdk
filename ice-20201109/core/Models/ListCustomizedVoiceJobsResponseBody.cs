@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList> CustomizedVoiceJobList { get; set; }
             public class ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
                 [NameInMap("Gender")]
                 [Validation(Required=false)]
                 public string Gender { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
 
                 [NameInMap("VoiceDesc")]
                 [Validation(Required=false)]

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Scenario { get; set; }
 
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
                 [NameInMap("VoiceDesc")]
                 [Validation(Required=false)]
                 public string VoiceDesc { get; set; }

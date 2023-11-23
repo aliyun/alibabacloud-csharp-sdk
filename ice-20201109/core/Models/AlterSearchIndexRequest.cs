@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string IndexConfig { get; set; }
 
+        [NameInMap("IndexStatus")]
+        [Validation(Required=false)]
+        public string IndexStatus { get; set; }
+
         [NameInMap("IndexType")]
         [Validation(Required=false)]
         public string IndexType { get; set; }
