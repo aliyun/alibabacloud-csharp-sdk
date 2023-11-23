@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string InvoiceThirdPartId { get; set; }
 
+            [NameInMap("invoice_type")]
+            [Validation(Required=false)]
+            public int? InvoiceType { get; set; }
+
             [NameInMap("mail_address")]
             [Validation(Required=false)]
             public string MailAddress { get; set; }
