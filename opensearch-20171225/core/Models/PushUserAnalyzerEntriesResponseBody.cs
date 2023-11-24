@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class PushUserAnalyzerEntriesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// N/A
+        /// The result returned.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

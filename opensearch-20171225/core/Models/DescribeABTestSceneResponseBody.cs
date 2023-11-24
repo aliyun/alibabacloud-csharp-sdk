@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class DescribeABTestSceneResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -47,22 +47,22 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             /// <summary>
             /// The status of the test scenario. Valid values:
             /// 
-            /// *   0: not in effect
-            /// *   1: in effect
+            /// *   0: The test is stopped.
+            /// *   1: The test is started.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The time when the test scenario was last modified.
+            /// The time when the test was last modified.
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]
             public int? Updated { get; set; }
 
             /// <summary>
-            /// The tag of the test scenario.
+            /// The indicators of the test scenarios.
             /// </summary>
             [NameInMap("values")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ModifyAppGroupRequest : TeaModel {
         /// <summary>
-        /// currentVersion
+        /// The online version of the application.
         /// </summary>
         [NameInMap("currentVersion")]
         [Validation(Required=false)]
         public string CurrentVersion { get; set; }
 
         /// <summary>
-        /// The description of the instance.
+        /// The description of the application.
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -26,23 +26,25 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// <summary>
         /// The type of the industry. Valid values:
         /// 
-        /// *   GENERAL
-        /// *   ECOMMERCE
-        /// *   IT_CONTENT
+        /// *   general: general.
+        /// *   ecommerce: e-commerce.
+        /// *   education: education.
+        /// *   esports: electronic sports.
+        /// *   community: content community.
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The ID of the resource group to which the instance belongs.
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// true
+        /// Specifies whether to verify the application before modification. Valid values: true and false.
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

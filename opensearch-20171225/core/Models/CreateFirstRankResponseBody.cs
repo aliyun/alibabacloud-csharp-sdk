@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateFirstRankResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -45,16 +45,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 public string Arg { get; set; }
 
                 /// <summary>
-                /// The attribute, feature function, or field to be searched for.
+                /// The attribute, feature functions, or field to be searched for.
                 /// </summary>
                 [NameInMap("attribute")]
                 [Validation(Required=false)]
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// The weight.
-                /// 
-                /// Valid values: \[-100000,100000] (excluding 0).
+                /// The weight. Valid values: \[-100000,100000]. The value cannot be 0.
                 /// </summary>
                 [NameInMap("weight")]
                 [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateABTestSceneResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the test scenario. For more information, see [ABTestScene](https://www.alibabacloud.com/help/en/opensearch/latest/abtestscene).
+        /// The details of the test scenario. For more information, see [ABTestScene](~~173618~~).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -46,8 +46,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
             /// <summary>
             /// The status of the test. Valid values:
-            /// - true: enabled
-            /// - false: stopped
+            /// 
+            /// *   true: The test is started.
+            /// *   false: The test is stopped.
             /// </summary>
             [NameInMap("online")]
             [Validation(Required=false)]
@@ -61,7 +62,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public Dictionary<string, object> Params { get; set; }
 
             /// <summary>
-            /// The percentage of traffic that is allocated to the A/B test. Valid values: [0,100].
+            /// The percentage of traffic that is allocated to the A/B test. Valid values: 0 to 100.
             /// </summary>
             [NameInMap("traffic")]
             [Validation(Required=false)]

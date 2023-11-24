@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
-    public class ListAppsRequest : TeaModel {
+    public class CreateSortScriptRequest : TeaModel {
         /// <summary>
-        /// true
+        /// 脚本的作用范围
         /// </summary>
-        [NameInMap("group")]
+        [NameInMap("scope")]
         [Validation(Required=false)]
-        public bool? Group { get; set; }
+        public string Scope { get; set; }
 
         /// <summary>
-        /// 0
+        /// 脚本名称
         /// </summary>
-        [NameInMap("page")]
+        [NameInMap("scriptName")]
         [Validation(Required=false)]
-        public int? Page { get; set; }
+        public string ScriptName { get; set; }
 
         /// <summary>
-        /// 0
+        /// 脚本的类型，目前只支持cava_script
         /// </summary>
-        [NameInMap("size")]
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public int? Size { get; set; }
+        public string Type { get; set; }
 
     }
 

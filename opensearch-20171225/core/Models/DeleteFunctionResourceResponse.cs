@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
-    public class ListAppsResponse : TeaModel {
+    public class DeleteFunctionResourceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [NameInMap("statusCode")]
         [Validation(Required=true)]
         public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public DeleteFunctionResourceResponseBody Body { get; set; }
 
     }
 

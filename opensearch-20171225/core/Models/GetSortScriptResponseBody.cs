@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public string Scope { get; set; }
 
+            [NameInMap("scriptName")]
+            [Validation(Required=false)]
+            public string ScriptName { get; set; }
+
             /// <summary>
             /// The status of the script. For more information, see the Script status table.
             /// </summary>

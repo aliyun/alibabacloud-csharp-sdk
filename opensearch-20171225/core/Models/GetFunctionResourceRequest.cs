@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
-    public class PreviewModelRequest : TeaModel {
-        /// <summary>
-        /// query
-        /// </summary>
-        [NameInMap("query")]
+    public class GetFunctionResourceRequest : TeaModel {
+        [NameInMap("output")]
         [Validation(Required=false)]
-        public string Query { get; set; }
+        public string Output { get; set; }
 
     }
 

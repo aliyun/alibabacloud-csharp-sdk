@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListUserAnalyzerEntriesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The entries of the custom analyzer.
-        /// 
-        /// For more information, see [UserAnalyzerEntry](~~178932~~).
+        /// The entries of the custom analyzer. For more information, see UserAnalyzerEntry.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

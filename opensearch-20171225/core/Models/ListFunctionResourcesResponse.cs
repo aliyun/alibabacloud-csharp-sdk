@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
-    public class PreviewModelResponse : TeaModel {
+    public class ListFunctionResourcesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public PreviewModelResponseBody Body { get; set; }
+        public ListFunctionResourcesResponseBody Body { get; set; }
 
     }
 

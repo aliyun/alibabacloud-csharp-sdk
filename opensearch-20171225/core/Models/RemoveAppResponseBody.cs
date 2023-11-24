@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class RemoveAppResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

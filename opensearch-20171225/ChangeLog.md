@@ -1,3 +1,6 @@
+2023-11-24 Version: 2.0.0
+- Generated csharp 2017-12-25 for OpenSearch.
+
 2023-08-10 Version: 1.1.4
 - Generated csharp 2017-12-25 for OpenSearch.
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
-    public class DescribeRegionResponse : TeaModel {
+    public class GetFunctionResourceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeRegionResponseBody Body { get; set; }
+        public GetFunctionResourceResponseBody Body { get; set; }
 
     }
 
