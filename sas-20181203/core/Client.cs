@@ -1727,6 +1727,72 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await AdvanceSecurityEventOperationsWithOptionsAsync(request, runtime);
         }
 
+        public BatchDeleteMaliciousFileWhitelistConfigResponse BatchDeleteMaliciousFileWhitelistConfigWithOptions(BatchDeleteMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigIdList))
+            {
+                query["ConfigIdList"] = request.ConfigIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteMaliciousFileWhitelistConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<BatchDeleteMaliciousFileWhitelistConfigResponse> BatchDeleteMaliciousFileWhitelistConfigWithOptionsAsync(BatchDeleteMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigIdList))
+            {
+                query["ConfigIdList"] = request.ConfigIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteMaliciousFileWhitelistConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public BatchDeleteMaliciousFileWhitelistConfigResponse BatchDeleteMaliciousFileWhitelistConfig(BatchDeleteMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchDeleteMaliciousFileWhitelistConfigWithOptions(request, runtime);
+        }
+
+        public async Task<BatchDeleteMaliciousFileWhitelistConfigResponse> BatchDeleteMaliciousFileWhitelistConfigAsync(BatchDeleteMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchDeleteMaliciousFileWhitelistConfigWithOptionsAsync(request, runtime);
+        }
+
         public BatchOperateCommonOverallConfigResponse BatchOperateCommonOverallConfigWithOptions(BatchOperateCommonOverallConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1799,6 +1865,72 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchOperateCommonOverallConfigWithOptionsAsync(request, runtime);
+        }
+
+        public BatchUpdateMaliciousFileWhitelistConfigResponse BatchUpdateMaliciousFileWhitelistConfigWithOptions(BatchUpdateMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigList))
+            {
+                query["ConfigList"] = request.ConfigList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUpdateMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUpdateMaliciousFileWhitelistConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<BatchUpdateMaliciousFileWhitelistConfigResponse> BatchUpdateMaliciousFileWhitelistConfigWithOptionsAsync(BatchUpdateMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigList))
+            {
+                query["ConfigList"] = request.ConfigList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUpdateMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUpdateMaliciousFileWhitelistConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public BatchUpdateMaliciousFileWhitelistConfigResponse BatchUpdateMaliciousFileWhitelistConfig(BatchUpdateMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchUpdateMaliciousFileWhitelistConfigWithOptions(request, runtime);
+        }
+
+        public async Task<BatchUpdateMaliciousFileWhitelistConfigResponse> BatchUpdateMaliciousFileWhitelistConfigAsync(BatchUpdateMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchUpdateMaliciousFileWhitelistConfigWithOptionsAsync(request, runtime);
         }
 
         public BindAuthToMachineResponse BindAuthToMachineWithOptions(BindAuthToMachineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5067,6 +5199,120 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateJenkinsImageRegistryWithOptionsAsync(request, runtime);
+        }
+
+        public CreateMaliciousFileWhitelistConfigResponse CreateMaliciousFileWhitelistConfigWithOptions(CreateMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            {
+                query["EventName"] = request.EventName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Field))
+            {
+                query["Field"] = request.Field;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldValue))
+            {
+                query["FieldValue"] = request.FieldValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
+            {
+                query["Operator"] = request.Operator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetValue))
+            {
+                query["TargetValue"] = request.TargetValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMaliciousFileWhitelistConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateMaliciousFileWhitelistConfigResponse> CreateMaliciousFileWhitelistConfigWithOptionsAsync(CreateMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            {
+                query["EventName"] = request.EventName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Field))
+            {
+                query["Field"] = request.Field;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldValue))
+            {
+                query["FieldValue"] = request.FieldValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
+            {
+                query["Operator"] = request.Operator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetValue))
+            {
+                query["TargetValue"] = request.TargetValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMaliciousFileWhitelistConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateMaliciousFileWhitelistConfigResponse CreateMaliciousFileWhitelistConfig(CreateMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMaliciousFileWhitelistConfigWithOptions(request, runtime);
+        }
+
+        public async Task<CreateMaliciousFileWhitelistConfigResponse> CreateMaliciousFileWhitelistConfigAsync(CreateMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMaliciousFileWhitelistConfigWithOptionsAsync(request, runtime);
         }
 
         public CreateMaliciousNoteResponse CreateMaliciousNoteWithOptions(CreateMaliciousNoteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8423,6 +8669,72 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteLoginBaseConfigWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteMaliciousFileWhitelistConfigResponse DeleteMaliciousFileWhitelistConfigWithOptions(DeleteMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMaliciousFileWhitelistConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteMaliciousFileWhitelistConfigResponse> DeleteMaliciousFileWhitelistConfigWithOptionsAsync(DeleteMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMaliciousFileWhitelistConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteMaliciousFileWhitelistConfigResponse DeleteMaliciousFileWhitelistConfig(DeleteMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMaliciousFileWhitelistConfigWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteMaliciousFileWhitelistConfigResponse> DeleteMaliciousFileWhitelistConfigAsync(DeleteMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMaliciousFileWhitelistConfigWithOptionsAsync(request, runtime);
         }
 
         public DeleteMaliciousNoteResponse DeleteMaliciousNoteWithOptions(DeleteMaliciousNoteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -36405,6 +36717,72 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await GetLogMetaWithOptionsAsync(request, runtime);
         }
 
+        public GetMaliciousFileWhitelistConfigResponse GetMaliciousFileWhitelistConfigWithOptions(GetMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMaliciousFileWhitelistConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetMaliciousFileWhitelistConfigResponse> GetMaliciousFileWhitelistConfigWithOptionsAsync(GetMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMaliciousFileWhitelistConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetMaliciousFileWhitelistConfigResponse GetMaliciousFileWhitelistConfig(GetMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMaliciousFileWhitelistConfigWithOptions(request, runtime);
+        }
+
+        public async Task<GetMaliciousFileWhitelistConfigResponse> GetMaliciousFileWhitelistConfigAsync(GetMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMaliciousFileWhitelistConfigWithOptionsAsync(request, runtime);
+        }
+
         public GetModuleConfigResponse GetModuleConfigWithOptions(GetModuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44205,6 +44583,104 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListK8sAccessInfoWithOptionsAsync(request, runtime);
+        }
+
+        public ListMaliciousFileWhitelistConfigsResponse ListMaliciousFileWhitelistConfigsWithOptions(ListMaliciousFileWhitelistConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            {
+                query["EventName"] = request.EventName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMaliciousFileWhitelistConfigs",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMaliciousFileWhitelistConfigsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListMaliciousFileWhitelistConfigsResponse> ListMaliciousFileWhitelistConfigsWithOptionsAsync(ListMaliciousFileWhitelistConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            {
+                query["EventName"] = request.EventName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMaliciousFileWhitelistConfigs",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMaliciousFileWhitelistConfigsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListMaliciousFileWhitelistConfigsResponse ListMaliciousFileWhitelistConfigs(ListMaliciousFileWhitelistConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMaliciousFileWhitelistConfigsWithOptions(request, runtime);
+        }
+
+        public async Task<ListMaliciousFileWhitelistConfigsResponse> ListMaliciousFileWhitelistConfigsAsync(ListMaliciousFileWhitelistConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMaliciousFileWhitelistConfigsWithOptionsAsync(request, runtime);
         }
 
         public ListObjectScanEventResponse ListObjectScanEventWithOptions(ListObjectScanEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -59037,6 +59513,128 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateJenkinsImageRegistryPersistenceDayWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateMaliciousFileWhitelistConfigResponse UpdateMaliciousFileWhitelistConfigWithOptions(UpdateMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            {
+                query["EventName"] = request.EventName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Field))
+            {
+                query["Field"] = request.Field;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldValue))
+            {
+                query["FieldValue"] = request.FieldValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
+            {
+                query["Operator"] = request.Operator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetValue))
+            {
+                query["TargetValue"] = request.TargetValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMaliciousFileWhitelistConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateMaliciousFileWhitelistConfigResponse> UpdateMaliciousFileWhitelistConfigWithOptionsAsync(UpdateMaliciousFileWhitelistConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            {
+                query["EventName"] = request.EventName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Field))
+            {
+                query["Field"] = request.Field;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldValue))
+            {
+                query["FieldValue"] = request.FieldValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
+            {
+                query["Operator"] = request.Operator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetValue))
+            {
+                query["TargetValue"] = request.TargetValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMaliciousFileWhitelistConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMaliciousFileWhitelistConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateMaliciousFileWhitelistConfigResponse UpdateMaliciousFileWhitelistConfig(UpdateMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMaliciousFileWhitelistConfigWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateMaliciousFileWhitelistConfigResponse> UpdateMaliciousFileWhitelistConfigAsync(UpdateMaliciousFileWhitelistConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMaliciousFileWhitelistConfigWithOptionsAsync(request, runtime);
         }
 
         public UpdateOpaStrategyNewResponse UpdateOpaStrategyNewWithOptions(UpdateOpaStrategyNewRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The check items that are scanned. Valid values:
         /// 
         /// *   **FULL**: All check items are scanned.
-        /// *   **POLICY**: Only the check items that are configured are scanned.
+        /// *   **FULL**: Only the check items that are configured are scanned.
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]

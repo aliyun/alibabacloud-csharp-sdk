@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// The namespaces.
+                /// An array that consists of queried namespaces.
                 /// </summary>
                 [NameInMap("Namespaces")]
                 [Validation(Required=false)]
@@ -148,6 +148,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public List<string> Hash { get; set; }
 
+                /// <summary>
+                /// An array consisting of images that are added to the whitelist.
+                /// </summary>
                 [NameInMap("Image")]
                 [Validation(Required=false)]
                 public List<string> Image { get; set; }
