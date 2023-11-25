@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersV1Request : TeaModel {
+        [NameInMap("cluster_id")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
         /// <summary>
         /// The cluster type, which is available only when the cluster type is set to `ManagedKubernetes`. Valid values:
         /// 

@@ -3961,11 +3961,22 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterResourcesWithOptionsAsync(ClusterId, headers, runtime);
         }
 
-        public DescribeClusterTasksResponse DescribeClusterTasksWithOptions(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeClusterTasksResponse DescribeClusterTasksWithOptions(string clusterId, DescribeClusterTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["page_number"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3982,11 +3993,22 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeClusterTasksResponse> DescribeClusterTasksWithOptionsAsync(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeClusterTasksResponse> DescribeClusterTasksWithOptionsAsync(string clusterId, DescribeClusterTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["page_number"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4003,18 +4025,18 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeClusterTasksResponse DescribeClusterTasks(string clusterId)
+        public DescribeClusterTasksResponse DescribeClusterTasks(string clusterId, DescribeClusterTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeClusterTasksWithOptions(clusterId, headers, runtime);
+            return DescribeClusterTasksWithOptions(clusterId, request, headers, runtime);
         }
 
-        public async Task<DescribeClusterTasksResponse> DescribeClusterTasksAsync(string clusterId)
+        public async Task<DescribeClusterTasksResponse> DescribeClusterTasksAsync(string clusterId, DescribeClusterTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeClusterTasksWithOptionsAsync(clusterId, headers, runtime);
+            return await DescribeClusterTasksWithOptionsAsync(clusterId, request, headers, runtime);
         }
 
         public DescribeClusterUserKubeconfigResponse DescribeClusterUserKubeconfigWithOptions(string ClusterId, DescribeClusterUserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4367,6 +4389,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["cluster_id"] = request.ClusterId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {
                 query["cluster_spec"] = request.ClusterSpec;
@@ -4419,6 +4445,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["cluster_id"] = request.ClusterId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {
                 query["cluster_spec"] = request.ClusterSpec;
