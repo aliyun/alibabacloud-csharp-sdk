@@ -17,23 +17,23 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ColumnName { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value is an integer that is greater than 0. Default value: **1**.
+        /// The page number. Pages start from page 1. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 30. Valid values:
+        /// The number of entries per page. Valid values:
         /// 
-        /// *   **30**
+        /// *   **30** (default)
         /// *   **50**
         /// *   **100**
         /// </summary>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the cluster resides.
+        /// The region ID of the cluster.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

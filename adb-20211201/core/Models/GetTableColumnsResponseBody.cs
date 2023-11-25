@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetTableColumnsResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// The queried data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetTableColumnsResponseBodyData Data { get; set; }
         public class GetTableColumnsResponseBodyData : TeaModel {
             /// <summary>
-            /// The page number of the returned page. The value is an integer that is greater than 0. Default value: 1.
+            /// The page number. Pages start from page 1. Default value: 1.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 30. Valid values:
+            /// The number of entries per page. Valid values:
             /// 
-            /// *   **30**
+            /// *   **30** (default)
             /// *   **50**
             /// *   **100**
             /// </summary>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// Details of the table.
+            /// The information about the table.
             /// </summary>
             [NameInMap("Table")]
             [Validation(Required=false)]
@@ -51,16 +51,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number of the returned page. The value is an integer that is greater than 0. Default value: 1.
+        /// The page number. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page. Default value: 30. Valid values:
+        /// The number of entries per page. Valid values:
         /// 
-        /// *   **30**
+        /// *   **30** (default)
         /// *   **50**
         /// *   **100**
         /// </summary>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

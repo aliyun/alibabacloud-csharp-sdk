@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
     }
 
 }
