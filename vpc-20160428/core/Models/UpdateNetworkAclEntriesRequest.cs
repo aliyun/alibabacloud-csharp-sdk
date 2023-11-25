@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// The information about the outbound rules.
         /// </summary>
@@ -49,6 +53,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("EntryType")]
             [Validation(Required=false)]
             public string EntryType { get; set; }
+
+            [NameInMap("IpVersion")]
+            [Validation(Required=false)]
+            public string IpVersion { get; set; }
 
             /// <summary>
             /// The ID of the outbound rule.
@@ -126,6 +134,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string EntryType { get; set; }
 
+            [NameInMap("IpVersion")]
+            [Validation(Required=false)]
+            public string IpVersion { get; set; }
+
             /// <summary>
             /// The ID of the inbound rule.
             /// 
@@ -192,6 +204,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
         public string NetworkAclId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

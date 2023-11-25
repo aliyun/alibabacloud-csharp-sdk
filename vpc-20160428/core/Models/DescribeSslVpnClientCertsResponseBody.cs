@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnClientCertsResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey> SslVpnClientCertKey { get; set; }
             public class DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey : TeaModel {
                 /// <summary>
-                /// The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.
+                /// The timestamp that indicates when the SSL client certificate was created. Unit: millisecond.
                 /// 
                 /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
                 /// </summary>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.
+                /// The timestamp that indicates when the SSL client certificate expires. Unit: millisecond.
                 /// 
                 /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
                 /// </summary>
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the SSL client certificate. Valid values:
                 /// 
-                /// *   **expiring-soon**: The certificate expires in one week.
-                /// *   **normal**: The certificate is active.
-                /// *   **expired**: The certificate has expired.
+                /// *   **expiring-soon**
+                /// *   **normal**
+                /// *   **expired**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

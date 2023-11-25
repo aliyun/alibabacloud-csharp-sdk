@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListIpsecServersResponseBody : TeaModel {
         /// <summary>
-        /// The Diffie-Hellman key exchange algorithm.
+        /// The list of IPsec servers.
         /// </summary>
         [NameInMap("IpsecServers")]
         [Validation(Required=false)]
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public bool? EffectImmediately { get; set; }
 
             /// <summary>
-            /// The ID of the Identity as a Service (IDaaS) instance.
+            /// The ID of the IDaaS instance.
             /// </summary>
             [NameInMap("IDaaSInstanceId")]
             [Validation(Required=false)]
             public string IDaaSInstanceId { get; set; }
 
             /// <summary>
-            /// The configurations of phase 1 negotiations.
+            /// The configurations of Phase 1 negotiations.
             /// </summary>
             [NameInMap("IkeConfig")]
             [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// The configuration of phase 2 negotiations.
+            /// The configurations of Phase 2 negotiations.
             /// </summary>
             [NameInMap("IpsecConfig")]
             [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The ID of the IPsec server.
+            /// The IPsec server ID.
             /// </summary>
             [NameInMap("IpsecServerId")]
             [Validation(Required=false)]
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The number of SSL-VPN connections supported by the VPN gateway.
             /// 
-            /// >  The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, if a VPN gateway supports up to five SSL-VPN connections, and three SSL-VPN connections are already established to SSL clients. In this case, you can establish at most two connections to IPsec servers.
+            /// >  The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.
             /// </summary>
             [NameInMap("MaxConnections")]
             [Validation(Required=false)]
@@ -193,8 +193,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// Indicates whether two-factor authentication is enabled. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**: The feature is disabled.
             /// </summary>
             [NameInMap("MultiFactorAuthEnabled")]
             [Validation(Required=false)]
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Psk { get; set; }
 
             /// <summary>
-            /// Indicates whether pre-shared key authentication is enabled. Pre-shared key authentication is enabled only when the value is set to **true**.
+            /// Indicates whether pre-shared key authentication is enabled. Only **true** may be returned, which indicates that pre-shared key authentication is enabled.
             /// </summary>
             [NameInMap("PskEnabled")]
             [Validation(Required=false)]

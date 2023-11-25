@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnPbrRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry> VpnPbrRouteEntry { get; set; }
             public class DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry : TeaModel {
                 /// <summary>
-                /// The timestamp generated when the policy-based route was created. Unit: milliseconds.
+                /// The time when the policy-based route was created. Unit: milliseconds.
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string State { get; set; }
 
                 /// <summary>
-                /// The ID of the VPN gateway.
+                /// The VPN gateway ID.
                 /// </summary>
                 [NameInMap("VpnInstanceId")]
                 [Validation(Required=false)]
@@ -116,10 +116,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The weight of the policy-based route. Valid values:
                 /// 
-                /// - For a VPN gateway that supports the dual-tunnel mode, the default weight is **100**.
-                /// - For a VPN gateway that supports the single-tunnel mode, the weight specifies the priority of the policy-based route.
-                ///    - **100**: a high priority. If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.
-                ///    - **0**: a low priority. If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.
+                /// *   For a VPN gateway that supports the dual-tunnel mode, the default value is **100**.
+                /// 
+                /// *   For a VPN gateway that supports the single-tunnel mode, the weight specifies the priority of the policy-based route.
+                /// 
+                ///     *   **100**: a high priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.
+                ///     *   **0**: a low priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.
                 /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]

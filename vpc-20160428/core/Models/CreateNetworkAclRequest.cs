@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// The name of the network ACL.
         /// 
@@ -37,6 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("NetworkAclName")]
         [Validation(Required=false)]
         public string NetworkAclName { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

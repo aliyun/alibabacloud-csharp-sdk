@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public string DestinationCidrIp { get; set; }
 
+                    [NameInMap("EntryType")]
+                    [Validation(Required=false)]
+                    public string EntryType { get; set; }
+
+                    [NameInMap("IpVersion")]
+                    [Validation(Required=false)]
+                    public string IpVersion { get; set; }
+
                     /// <summary>
                     /// The ID of the outbound rule.
                     /// </summary>
@@ -123,6 +131,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
+
+                    [NameInMap("EntryType")]
+                    [Validation(Required=false)]
+                    public string EntryType { get; set; }
+
+                    [NameInMap("IpVersion")]
+                    [Validation(Required=false)]
+                    public string IpVersion { get; set; }
 
                     /// <summary>
                     /// The ID of the inbound rule.
