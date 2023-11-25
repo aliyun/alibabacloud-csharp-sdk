@@ -1,3 +1,6 @@
+2023-11-25 Version: 1.0.11
+- Generated csharp 2020-02-02 for polardbx.
+
 2023-09-01 Version: 1.0.10
 - Generated csharp 2020-02-02 for polardbx.
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public DescribeDBInstanceAttributeResponseBodyDBInstance DBInstance { get; set; }
         public class DescribeDBInstanceAttributeResponseBodyDBInstance : TeaModel {
+            [NameInMap("CanNotCreateColumnar")]
+            [Validation(Required=false)]
+            public bool? CanNotCreateColumnar { get; set; }
+
             [NameInMap("CnNodeClassCode")]
             [Validation(Required=false)]
             public string CnNodeClassCode { get; set; }
@@ -20,6 +24,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("CnNodeCount")]
             [Validation(Required=false)]
             public int? CnNodeCount { get; set; }
+
+            [NameInMap("ColumnarInstanceName")]
+            [Validation(Required=false)]
+            public string ColumnarInstanceName { get; set; }
+
+            [NameInMap("ColumnarReadDBInstances")]
+            [Validation(Required=false)]
+            public List<string> ColumnarReadDBInstances { get; set; }
 
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
@@ -120,6 +132,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("DifferentDNSpec")]
+            [Validation(Required=false)]
+            public bool? DifferentDNSpec { get; set; }
+
             [NameInMap("DnNodeClassCode")]
             [Validation(Required=false)]
             public string DnNodeClassCode { get; set; }
@@ -184,6 +200,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string Port { get; set; }
 
+            /// <summary>
+            /// 主可用区。
+            /// </summary>
+            [NameInMap("PrimaryZone")]
+            [Validation(Required=false)]
+            public string PrimaryZone { get; set; }
+
             [NameInMap("ReadDBInstances")]
             [Validation(Required=false)]
             public List<string> ReadDBInstances { get; set; }
@@ -203,6 +226,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("RightsSeparationStatus")]
             [Validation(Required=false)]
             public string RightsSeparationStatus { get; set; }
+
+            /// <summary>
+            /// 次可用区。
+            /// </summary>
+            [NameInMap("SecondaryZone")]
+            [Validation(Required=false)]
+            public string SecondaryZone { get; set; }
 
             [NameInMap("Series")]
             [Validation(Required=false)]
@@ -229,6 +259,23 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Value { get; set; }
 
             }
+
+            /// <summary>
+            /// 第三可用区。
+            /// </summary>
+            [NameInMap("TertiaryZone")]
+            [Validation(Required=false)]
+            public string TertiaryZone { get; set; }
+
+            /// <summary>
+            /// 拓扑类型：
+            /// 
+            /// - **3azones**：三可用区；
+            /// - **1azone**：单可用区。
+            /// </summary>
+            [NameInMap("TopologyType")]
+            [Validation(Required=false)]
+            public string TopologyType { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]
