@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
-    public class CreateListenerRequest : TeaModel {
+    public class CreateListenerShrinkRequest : TeaModel {
         /// <summary>
         /// Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:
         /// 
@@ -158,21 +158,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         [NameInMap("ProxyProtocolV2Config")]
         [Validation(Required=false)]
-        public CreateListenerRequestProxyProtocolV2Config ProxyProtocolV2Config { get; set; }
-        public class CreateListenerRequestProxyProtocolV2Config : TeaModel {
-            [NameInMap("Ppv2PrivateLinkEpIdEnabled")]
-            [Validation(Required=false)]
-            public bool? Ppv2PrivateLinkEpIdEnabled { get; set; }
-
-            [NameInMap("Ppv2PrivateLinkEpsIdEnabled")]
-            [Validation(Required=false)]
-            public bool? Ppv2PrivateLinkEpsIdEnabled { get; set; }
-
-            [NameInMap("Ppv2VpcIdEnabled")]
-            [Validation(Required=false)]
-            public bool? Ppv2VpcIdEnabled { get; set; }
-
-        }
+        public string ProxyProtocolV2ConfigShrink { get; set; }
 
         /// <summary>
         /// The region ID of the NLB instance.
@@ -225,8 +211,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateListenerRequestTag> Tag { get; set; }
-        public class CreateListenerRequestTag : TeaModel {
+        public List<CreateListenerShrinkRequestTag> Tag { get; set; }
+        public class CreateListenerShrinkRequestTag : TeaModel {
             /// <summary>
             /// The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
             /// 

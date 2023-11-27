@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
-    public class UpdateListenerAttributeRequest : TeaModel {
+    public class UpdateListenerAttributeShrinkRequest : TeaModel {
         /// <summary>
         /// Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:
         /// 
@@ -129,21 +129,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         [NameInMap("ProxyProtocolV2Config")]
         [Validation(Required=false)]
-        public UpdateListenerAttributeRequestProxyProtocolV2Config ProxyProtocolV2Config { get; set; }
-        public class UpdateListenerAttributeRequestProxyProtocolV2Config : TeaModel {
-            [NameInMap("Ppv2PrivateLinkEpIdEnabled")]
-            [Validation(Required=false)]
-            public bool? Ppv2PrivateLinkEpIdEnabled { get; set; }
-
-            [NameInMap("Ppv2PrivateLinkEpsIdEnabled")]
-            [Validation(Required=false)]
-            public bool? Ppv2PrivateLinkEpsIdEnabled { get; set; }
-
-            [NameInMap("Ppv2VpcIdEnabled")]
-            [Validation(Required=false)]
-            public bool? Ppv2VpcIdEnabled { get; set; }
-
-        }
+        public string ProxyProtocolV2ConfigShrink { get; set; }
 
         /// <summary>
         /// The ID of the region where the NLB instance is deployed.

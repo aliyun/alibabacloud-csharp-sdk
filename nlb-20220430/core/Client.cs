@@ -501,9 +501,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return await CancelShiftLoadBalancerZonesWithOptionsAsync(request, runtime);
         }
 
-        public CreateListenerResponse CreateListenerWithOptions(CreateListenerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateListenerResponse CreateListenerWithOptions(CreateListenerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateListenerShrinkRequest request = new CreateListenerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProxyProtocolV2Config))
+            {
+                request.ProxyProtocolV2ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProxyProtocolV2Config, "ProxyProtocolV2Config", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlpnEnabled))
             {
@@ -568,6 +574,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyProtocolEnabled))
             {
                 body["ProxyProtocolEnabled"] = request.ProxyProtocolEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyProtocolV2ConfigShrink))
+            {
+                body["ProxyProtocolV2Config"] = request.ProxyProtocolV2ConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -612,9 +622,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return TeaModel.ToObject<CreateListenerResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateListenerResponse> CreateListenerWithOptionsAsync(CreateListenerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateListenerResponse> CreateListenerWithOptionsAsync(CreateListenerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateListenerShrinkRequest request = new CreateListenerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProxyProtocolV2Config))
+            {
+                request.ProxyProtocolV2ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProxyProtocolV2Config, "ProxyProtocolV2Config", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlpnEnabled))
             {
@@ -679,6 +695,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyProtocolEnabled))
             {
                 body["ProxyProtocolEnabled"] = request.ProxyProtocolEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyProtocolV2ConfigShrink))
+            {
+                body["ProxyProtocolV2Config"] = request.ProxyProtocolV2ConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4593,9 +4613,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        public UpdateListenerAttributeResponse UpdateListenerAttributeWithOptions(UpdateListenerAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateListenerAttributeResponse UpdateListenerAttributeWithOptions(UpdateListenerAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateListenerAttributeShrinkRequest request = new UpdateListenerAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProxyProtocolV2Config))
+            {
+                request.ProxyProtocolV2ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProxyProtocolV2Config, "ProxyProtocolV2Config", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlpnEnabled))
             {
@@ -4648,6 +4674,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyProtocolEnabled))
             {
                 body["ProxyProtocolEnabled"] = request.ProxyProtocolEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyProtocolV2ConfigShrink))
+            {
+                body["ProxyProtocolV2Config"] = request.ProxyProtocolV2ConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4684,9 +4714,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
             return TeaModel.ToObject<UpdateListenerAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateListenerAttributeResponse> UpdateListenerAttributeWithOptionsAsync(UpdateListenerAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateListenerAttributeResponse> UpdateListenerAttributeWithOptionsAsync(UpdateListenerAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateListenerAttributeShrinkRequest request = new UpdateListenerAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProxyProtocolV2Config))
+            {
+                request.ProxyProtocolV2ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProxyProtocolV2Config, "ProxyProtocolV2Config", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlpnEnabled))
             {
@@ -4739,6 +4775,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyProtocolEnabled))
             {
                 body["ProxyProtocolEnabled"] = request.ProxyProtocolEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyProtocolV2ConfigShrink))
+            {
+                body["ProxyProtocolV2Config"] = request.ProxyProtocolV2ConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

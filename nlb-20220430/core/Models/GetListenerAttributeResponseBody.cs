@@ -152,6 +152,24 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public bool? ProxyProtocolEnabled { get; set; }
 
+        [NameInMap("ProxyProtocolV2Config")]
+        [Validation(Required=false)]
+        public GetListenerAttributeResponseBodyProxyProtocolV2Config ProxyProtocolV2Config { get; set; }
+        public class GetListenerAttributeResponseBodyProxyProtocolV2Config : TeaModel {
+            [NameInMap("Ppv2PrivateLinkEpIdEnabled")]
+            [Validation(Required=false)]
+            public string Ppv2PrivateLinkEpIdEnabled { get; set; }
+
+            [NameInMap("Ppv2PrivateLinkEpsIdEnabled")]
+            [Validation(Required=false)]
+            public string Ppv2PrivateLinkEpsIdEnabled { get; set; }
+
+            [NameInMap("Ppv2VpcIdEnabled")]
+            [Validation(Required=false)]
+            public string Ppv2VpcIdEnabled { get; set; }
+
+        }
+
         /// <summary>
         /// The ID of the region where the NLB instance is deployed.
         /// </summary>
