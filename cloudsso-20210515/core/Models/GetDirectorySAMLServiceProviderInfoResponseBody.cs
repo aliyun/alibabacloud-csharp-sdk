@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string AcsUrl { get; set; }
 
+            [NameInMap("AuthnSignAlgo")]
+            [Validation(Required=false)]
+            public string AuthnSignAlgo { get; set; }
+
+            [NameInMap("CertificateType")]
+            [Validation(Required=false)]
+            public string CertificateType { get; set; }
+
             /// <summary>
             /// The ID of the directory.
             /// </summary>
@@ -50,6 +58,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [NameInMap("EntityId")]
             [Validation(Required=false)]
             public string EntityId { get; set; }
+
+            [NameInMap("SupportEncryptedAssertion")]
+            [Validation(Required=false)]
+            public bool? SupportEncryptedAssertion { get; set; }
 
         }
 
