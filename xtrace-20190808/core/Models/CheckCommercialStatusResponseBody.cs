@@ -8,18 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
-    public class OpenXtraceServiceResponseBody : TeaModel {
-        [NameInMap("OrderId")]
+    public class CheckCommercialStatusResponseBody : TeaModel {
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string Data { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Result")]
-        [Validation(Required=false)]
-        public string Result { get; set; }
 
     }
 
