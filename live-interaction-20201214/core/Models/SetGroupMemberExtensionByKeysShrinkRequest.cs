@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class SetGroupMemberExtensionByKeysShrinkRequest : TeaModel {
-        /// <summary>
-        /// App ID, IMPaaS租户的ID
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// 设置群成员扩展信息的请求体
-        /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
         public string RequestParamsShrink { get; set; }

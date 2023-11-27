@@ -9,56 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class ListRoomUsersResponseBody : TeaModel {
-        /// <summary>
-        /// 请求ID。
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 请求是否成功。
-        /// </summary>
-        [NameInMap("ResponseSuccess")]
-        [Validation(Required=false)]
-        public bool? ResponseSuccess { get; set; }
-
-        /// <summary>
-        /// 错误码，请求异常时返回。
-        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        /// <summary>
-        /// 错误信息，请求异常时返回。
-        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// 请求的返回结果。
-        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResponseSuccess")]
+        [Validation(Required=false)]
+        public bool? ResponseSuccess { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListRoomUsersResponseBodyResult Result { get; set; }
         public class ListRoomUsersResponseBodyResult : TeaModel {
-            [NameInMap("TotalCount")]
+            [NameInMap("HasMore")]
             [Validation(Required=false)]
-            public int? TotalCount { get; set; }
+            public bool? HasMore { get; set; }
+
             [NameInMap("RoomUserVOList")]
             [Validation(Required=false)]
             public List<ListRoomUsersResponseBodyResultRoomUserVOList> RoomUserVOList { get; set; }
             public class ListRoomUsersResponseBodyResultRoomUserVOList : TeaModel {
-                public string RoomId { get; set; }
-                public string UserId { get; set; }
+                [NameInMap("Nick")]
+                [Validation(Required=false)]
                 public string Nick { get; set; }
+
+                [NameInMap("RoomId")]
+                [Validation(Required=false)]
+                public string RoomId { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
+
             }
-            [NameInMap("HasMore")]
+
+            [NameInMap("TotalCount")]
             [Validation(Required=false)]
-            public bool? HasMore { get; set; }
-        };
+            public int? TotalCount { get; set; }
+
+        }
 
     }
 

@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class ListAppInfosResponseBody : TeaModel {
         /// <summary>
+        /// code
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// httpStatusCode
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
         /// desc
         /// </summary>
         [NameInMap("Message")]
@@ -24,18 +38,47 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// httpStatusCode
+        /// result
         /// </summary>
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("Result")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public ListAppInfosResponseBodyResult Result { get; set; }
+        public class ListAppInfosResponseBodyResult : TeaModel {
+            [NameInMap("AppInfos")]
+            [Validation(Required=false)]
+            public List<ListAppInfosResponseBodyResultAppInfos> AppInfos { get; set; }
+            public class ListAppInfosResponseBodyResultAppInfos : TeaModel {
+                [NameInMap("AppId")]
+                [Validation(Required=false)]
+                public string AppId { get; set; }
 
-        /// <summary>
-        /// code
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
+
+                [NameInMap("AppStatus")]
+                [Validation(Required=false)]
+                public int? AppStatus { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("ProdVersion")]
+                [Validation(Required=false)]
+                public string ProdVersion { get; set; }
+
+            }
+
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+
+        }
 
         /// <summary>
         /// success
@@ -43,29 +86,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        /// <summary>
-        /// result
-        /// </summary>
-        [NameInMap("Result")]
-        [Validation(Required=false)]
-        public ListAppInfosResponseBodyResult Result { get; set; }
-        public class ListAppInfosResponseBodyResult : TeaModel {
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("AppInfos")]
-            [Validation(Required=false)]
-            public List<ListAppInfosResponseBodyResultAppInfos> AppInfos { get; set; }
-            public class ListAppInfosResponseBodyResultAppInfos : TeaModel {
-                public string AppId { get; set; }
-                public string AppName { get; set; }
-                public string CreateTime { get; set; }
-                public int? AppStatus { get; set; }
-                public string ProdVersion { get; set; }
-                public string InstanceId { get; set; }
-            }
-        };
 
     }
 

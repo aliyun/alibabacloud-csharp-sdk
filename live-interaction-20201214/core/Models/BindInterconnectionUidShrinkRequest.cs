@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// 绑定用户请求体
-        /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
         public string RequestParamsShrink { get; set; }

@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class UpdateMsgRecallIntervalResponseBody : TeaModel {
         /// <summary>
+        /// code
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// httpStatusCode
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
         /// desc
         /// </summary>
         [NameInMap("Message")]
@@ -24,18 +38,11 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// httpStatusCode
+        /// result
         /// </summary>
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("Result")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        /// <summary>
-        /// code
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Result { get; set; }
 
         /// <summary>
         /// success
@@ -43,13 +50,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        /// <summary>
-        /// result
-        /// </summary>
-        [NameInMap("Result")]
-        [Validation(Required=false)]
-        public string Result { get; set; }
 
     }
 

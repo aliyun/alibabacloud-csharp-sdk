@@ -9,9 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class UpdateMsgRecallIntervalRequest : TeaModel {
-        /// <summary>
-        /// 请求
-        /// </summary>
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
         public UpdateMsgRecallIntervalRequestRequestParams RequestParams { get; set; }
@@ -19,14 +20,8 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("ClientMsgRecallIntervalMinute")]
             [Validation(Required=false)]
             public long? ClientMsgRecallIntervalMinute { get; set; }
-        };
 
-        /// <summary>
-        /// 应用Id
-        /// </summary>
-        [NameInMap("AppId")]
-        [Validation(Required=false)]
-        public string AppId { get; set; }
+        }
 
     }
 

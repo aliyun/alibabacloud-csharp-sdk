@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class UpdateAppNameResponseBody : TeaModel {
         /// <summary>
+        /// code
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// httpStatusCode
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
         /// desc
         /// </summary>
         [NameInMap("Message")]
@@ -22,20 +36,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// httpStatusCode
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        /// <summary>
-        /// code
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
         /// <summary>
         /// success

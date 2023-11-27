@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class GetCommonConfigResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -16,30 +24,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 是否成功
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
-        /// 错误码
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// 错误信息
-        /// </summary>
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// 返回值
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetCommonConfigResponseBodyResult Result { get; set; }
@@ -48,21 +32,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [Validation(Required=false)]
             public GetCommonConfigResponseBodyResultCommonConfig CommonConfig { get; set; }
             public class GetCommonConfigResponseBodyResultCommonConfig : TeaModel {
-                /// <summary>
-                /// 登录配置
-                /// </summary>
-                [NameInMap("LoginConfig")]
-                [Validation(Required=false)]
-                public GetCommonConfigResponseBodyResultCommonConfigLoginConfig LoginConfig { get; set; }
-                public class GetCommonConfigResponseBodyResultCommonConfigLoginConfig : TeaModel {
-                    [NameInMap("LoginType")]
-                    [Validation(Required=false)]
-                    public int? LoginType { get; set; }
-                };
-
-                /// <summary>
-                /// app配置
-                /// </summary>
                 [NameInMap("AppConfigs")]
                 [Validation(Required=false)]
                 public List<GetCommonConfigResponseBodyResultCommonConfigAppConfigs> AppConfigs { get; set; }
@@ -74,17 +43,29 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
                     [Validation(Required=false)]
                     public string AppKey { get; set; }
 
-                    /// <summary>
-                    /// 平台
-                    /// </summary>
                     [NameInMap("Platform")]
                     [Validation(Required=false)]
                     public string Platform { get; set; }
 
                 }
 
+                [NameInMap("LoginConfig")]
+                [Validation(Required=false)]
+                public GetCommonConfigResponseBodyResultCommonConfigLoginConfig LoginConfig { get; set; }
+                public class GetCommonConfigResponseBodyResultCommonConfigLoginConfig : TeaModel {
+                    [NameInMap("LoginType")]
+                    [Validation(Required=false)]
+                    public int? LoginType { get; set; }
+
+                }
+
             }
-        };
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

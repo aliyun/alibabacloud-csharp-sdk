@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// 绑定会话ID请求体
-        /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
         public BindInterconnectionCidRequestRequestParams RequestParams { get; set; }
@@ -26,10 +23,12 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("AimAppCid")]
             [Validation(Required=false)]
             public string AimAppCid { get; set; }
+
             [NameInMap("DingTalkCid")]
             [Validation(Required=false)]
             public string DingTalkCid { get; set; }
-        };
+
+        }
 
     }
 

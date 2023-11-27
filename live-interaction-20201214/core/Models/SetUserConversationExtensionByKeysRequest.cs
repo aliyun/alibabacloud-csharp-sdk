@@ -13,23 +13,23 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// 设置用户拓展字段请求实体
-        /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
         public SetUserConversationExtensionByKeysRequestRequestParams RequestParams { get; set; }
         public class SetUserConversationExtensionByKeysRequestRequestParams : TeaModel {
-            [NameInMap("AppUid")]
-            [Validation(Required=false)]
-            public string AppUid { get; set; }
             [NameInMap("AppCid")]
             [Validation(Required=false)]
             public string AppCid { get; set; }
+
+            [NameInMap("AppUid")]
+            [Validation(Required=false)]
+            public string AppUid { get; set; }
+
             [NameInMap("Extensions")]
             [Validation(Required=false)]
             public Dictionary<string, string> Extensions { get; set; }
-        };
+
+        }
 
     }
 

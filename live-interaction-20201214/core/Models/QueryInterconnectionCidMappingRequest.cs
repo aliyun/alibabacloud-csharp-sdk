@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// 查询请求体
-        /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
         public QueryInterconnectionCidMappingRequestRequestParams RequestParams { get; set; }
@@ -26,10 +23,12 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("SrcCid")]
             [Validation(Required=false)]
             public string SrcCid { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public long? Type { get; set; }
-        };
+
+        }
 
     }
 

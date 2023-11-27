@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class GetUserMuteSettingResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -24,17 +17,19 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// 返回值
-        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetUserMuteSettingResponseBodyResult Result { get; set; }
         public class GetUserMuteSettingResponseBodyResult : TeaModel {
             [NameInMap("UserMuteSettings")]
             [Validation(Required=false)]
-            public Dictionary<string, string> UserMuteSettings { get; set; }
-        };
+            public Dictionary<string, ResultUserMuteSettingsValue> UserMuteSettings { get; set; }
+
+        }
 
     }
 

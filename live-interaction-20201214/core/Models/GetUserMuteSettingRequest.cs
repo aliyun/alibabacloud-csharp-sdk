@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class GetUserMuteSettingRequest : TeaModel {
-        /// <summary>
-        /// AppId
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -23,7 +20,8 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("AppUids")]
             [Validation(Required=false)]
             public List<string> AppUids { get; set; }
-        };
+
+        }
 
     }
 

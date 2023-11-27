@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
-        };
+
+        }
 
     }
 

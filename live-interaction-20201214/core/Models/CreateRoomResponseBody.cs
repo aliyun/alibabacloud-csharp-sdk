@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class CreateRoomResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ResponseSuccess")]
         [Validation(Required=false)]
         public bool? ResponseSuccess { get; set; }
-
-        /// <summary>
-        /// 错误码
-        /// </summary>
-        [NameInMap("errorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        /// <summary>
-        /// 错误信息
-        /// </summary>
-        [NameInMap("errorMsg")]
-        [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -34,11 +24,16 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("roomId")]
             [Validation(Required=false)]
             public string RoomId { get; set; }
-        };
 
-        [NameInMap("RequestId")]
+        }
+
+        [NameInMap("errorCode")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ErrorCode { get; set; }
+
+        [NameInMap("errorMsg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
 
     }
 

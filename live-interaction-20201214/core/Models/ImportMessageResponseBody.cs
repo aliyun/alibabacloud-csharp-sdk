@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class ImportMessageResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -21,14 +17,19 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ImportMessageResponseBodyResult Result { get; set; }
         public class ImportMessageResponseBodyResult : TeaModel {
             [NameInMap("ImportMessageResult")]
             [Validation(Required=false)]
-            public Dictionary<string, string> ImportMessageResult { get; set; }
-        };
+            public Dictionary<string, ResultImportMessageResultValue> ImportMessageResult { get; set; }
+
+        }
 
     }
 

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class GetMediaUploadUrlRequest : TeaModel {
-        /// <summary>
-        /// AppId
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -23,7 +20,8 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("MimeType")]
             [Validation(Required=false)]
             public string MimeType { get; set; }
-        };
+
+        }
 
     }
 

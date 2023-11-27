@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class GetMediaUrlRequest : TeaModel {
-        /// <summary>
-        /// AppId
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -23,10 +20,12 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
+
             [NameInMap("UrlExpireTime")]
             [Validation(Required=false)]
             public long? UrlExpireTime { get; set; }
-        };
+
+        }
 
     }
 

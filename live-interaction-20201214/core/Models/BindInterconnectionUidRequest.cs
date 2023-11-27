@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// 绑定用户请求体
-        /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
         public BindInterconnectionUidRequestRequestParams RequestParams { get; set; }
@@ -26,10 +23,12 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("AppUid")]
             [Validation(Required=false)]
             public string AppUid { get; set; }
+
             [NameInMap("DingTalkUid")]
             [Validation(Required=false)]
             public string DingTalkUid { get; set; }
-        };
+
+        }
 
     }
 

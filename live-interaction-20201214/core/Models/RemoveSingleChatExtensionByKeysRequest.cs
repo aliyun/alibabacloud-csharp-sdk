@@ -13,23 +13,23 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// 单聊移除拓展字段请求实体
-        /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
         public RemoveSingleChatExtensionByKeysRequestRequestParams RequestParams { get; set; }
         public class RemoveSingleChatExtensionByKeysRequestRequestParams : TeaModel {
-            [NameInMap("AppUid")]
-            [Validation(Required=false)]
-            public string AppUid { get; set; }
             [NameInMap("AppCid")]
             [Validation(Required=false)]
             public string AppCid { get; set; }
+
+            [NameInMap("AppUid")]
+            [Validation(Required=false)]
+            public string AppUid { get; set; }
+
             [NameInMap("Keys")]
             [Validation(Required=false)]
             public List<string> Keys { get; set; }
-        };
+
+        }
 
     }
 

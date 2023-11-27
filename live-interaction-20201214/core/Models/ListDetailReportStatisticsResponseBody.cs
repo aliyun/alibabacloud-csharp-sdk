@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class ListDetailReportStatisticsResponseBody : TeaModel {
         /// <summary>
+        /// code
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// httpStatusCode
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
         /// desc
         /// </summary>
         [NameInMap("Message")]
@@ -24,27 +38,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// httpStatusCode
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        /// <summary>
-        /// code
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// success
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
         /// result
         /// </summary>
         [NameInMap("Result")]
@@ -53,8 +46,16 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         public class ListDetailReportStatisticsResponseBodyResult : TeaModel {
             [NameInMap("Data")]
             [Validation(Required=false)]
-            public List<string> Data { get; set; }
-        };
+            public List<Dictionary<string, object>> Data { get; set; }
+
+        }
+
+        /// <summary>
+        /// success
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

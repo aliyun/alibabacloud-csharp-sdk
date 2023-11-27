@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class RemoveMessageExtensionByKeysRequest : TeaModel {
-        /// <summary>
-        /// AppId
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -23,13 +20,16 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("AppCid")]
             [Validation(Required=false)]
             public string AppCid { get; set; }
-            [NameInMap("MsgId")]
-            [Validation(Required=false)]
-            public string MsgId { get; set; }
+
             [NameInMap("Keys")]
             [Validation(Required=false)]
             public List<string> Keys { get; set; }
-        };
+
+            [NameInMap("MsgId")]
+            [Validation(Required=false)]
+            public string MsgId { get; set; }
+
+        }
 
     }
 

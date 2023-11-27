@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class CancelSilenceAllGroupMembersRequest : TeaModel {
-        /// <summary>
-        /// AppId
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -23,10 +20,12 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [NameInMap("AppCid")]
             [Validation(Required=false)]
             public string AppCid { get; set; }
+
             [NameInMap("OperatorAppUid")]
             [Validation(Required=false)]
             public string OperatorAppUid { get; set; }
-        };
+
+        }
 
     }
 

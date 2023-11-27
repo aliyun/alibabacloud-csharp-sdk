@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class UpdateCallbackConfigRequest : TeaModel {
-        /// <summary>
-        /// 应用Id
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -20,25 +17,31 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public UpdateCallbackConfigRequestRequestParams RequestParams { get; set; }
         public class UpdateCallbackConfigRequestRequestParams : TeaModel {
+            [NameInMap("Apis")]
+            [Validation(Required=false)]
+            public Dictionary<string, bool?> Apis { get; set; }
+
             [NameInMap("CallbackUrl")]
             [Validation(Required=false)]
             public string CallbackUrl { get; set; }
+
+            [NameInMap("Events")]
+            [Validation(Required=false)]
+            public Dictionary<string, bool?> Events { get; set; }
+
             [NameInMap("SignatureKey")]
             [Validation(Required=false)]
             public string SignatureKey { get; set; }
+
             [NameInMap("SignatureValue")]
             [Validation(Required=false)]
             public string SignatureValue { get; set; }
-            [NameInMap("Apis")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> Apis { get; set; }
+
             [NameInMap("Spis")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Spis { get; set; }
-            [NameInMap("Events")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> Events { get; set; }
-        };
+            public Dictionary<string, bool?> Spis { get; set; }
+
+        }
 
     }
 

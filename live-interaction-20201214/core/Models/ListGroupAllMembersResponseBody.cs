@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class ListGroupAllMembersResponseBody : TeaModel {
-        /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 错误码
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// 错误信息
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// 拉取群成员列表的结果
-        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListGroupAllMembersResponseBodyResult Result { get; set; }
@@ -41,13 +29,29 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [Validation(Required=false)]
             public List<ListGroupAllMembersResponseBodyResultMembers> Members { get; set; }
             public class ListGroupAllMembersResponseBodyResultMembers : TeaModel {
+                [NameInMap("AppUid")]
+                [Validation(Required=false)]
                 public string AppUid { get; set; }
-                public int? Role { get; set; }
-                public string Nick { get; set; }
-                public long? JoinTime { get; set; }
+
+                [NameInMap("Extensions")]
+                [Validation(Required=false)]
                 public Dictionary<string, string> Extensions { get; set; }
+
+                [NameInMap("JoinTime")]
+                [Validation(Required=false)]
+                public long? JoinTime { get; set; }
+
+                [NameInMap("Nick")]
+                [Validation(Required=false)]
+                public string Nick { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
+                public int? Role { get; set; }
+
             }
-        };
+
+        }
 
     }
 

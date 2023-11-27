@@ -9,41 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
     public class GetIMConfigResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
-        /// 错误码
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// 网络错误码
-        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        /// <summary>
-        /// 错误信息
-        /// </summary>
         [NameInMap("Messaage")]
         [Validation(Required=false)]
         public string Messaage { get; set; }
 
-        /// <summary>
-        /// 返回结果
-        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetIMConfigResponseBodyResult Result { get; set; }
@@ -52,9 +33,36 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
             [Validation(Required=false)]
             public GetIMConfigResponseBodyResultImConfig ImConfig { get; set; }
             public class GetIMConfigResponseBodyResultImConfig : TeaModel {
-                /// <summary>
-                /// 消息配置
-                /// </summary>
+                [NameInMap("CallbackConfig")]
+                [Validation(Required=false)]
+                public GetIMConfigResponseBodyResultImConfigCallbackConfig CallbackConfig { get; set; }
+                public class GetIMConfigResponseBodyResultImConfigCallbackConfig : TeaModel {
+                    [NameInMap("Apis")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, bool?> Apis { get; set; }
+
+                    [NameInMap("CallbackUrl")]
+                    [Validation(Required=false)]
+                    public string CallbackUrl { get; set; }
+
+                    [NameInMap("Events")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, bool?> Events { get; set; }
+
+                    [NameInMap("SignatureKey")]
+                    [Validation(Required=false)]
+                    public string SignatureKey { get; set; }
+
+                    [NameInMap("SignatureValue")]
+                    [Validation(Required=false)]
+                    public string SignatureValue { get; set; }
+
+                    [NameInMap("Spis")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, bool?> Spis { get; set; }
+
+                }
+
                 [NameInMap("MsgConfig")]
                 [Validation(Required=false)]
                 public GetIMConfigResponseBodyResultImConfigMsgConfig MsgConfig { get; set; }
@@ -62,37 +70,16 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
                     [NameInMap("ClientMsgRecallTimeIntervalMinute")]
                     [Validation(Required=false)]
                     public long? ClientMsgRecallTimeIntervalMinute { get; set; }
-                };
 
-                /// <summary>
-                /// 回调配置
-                /// </summary>
-                [NameInMap("CallbackConfig")]
-                [Validation(Required=false)]
-                public GetIMConfigResponseBodyResultImConfigCallbackConfig CallbackConfig { get; set; }
-                public class GetIMConfigResponseBodyResultImConfigCallbackConfig : TeaModel {
-                    [NameInMap("CallbackUrl")]
-                    [Validation(Required=false)]
-                    public string CallbackUrl { get; set; }
-                    [NameInMap("SignatureKey")]
-                    [Validation(Required=false)]
-                    public string SignatureKey { get; set; }
-                    [NameInMap("SignatureValue")]
-                    [Validation(Required=false)]
-                    public string SignatureValue { get; set; }
-                    [NameInMap("Apis")]
-                    [Validation(Required=false)]
-                    public Dictionary<string, string> Apis { get; set; }
-                    [NameInMap("Spis")]
-                    [Validation(Required=false)]
-                    public Dictionary<string, string> Spis { get; set; }
-                    [NameInMap("Events")]
-                    [Validation(Required=false)]
-                    public Dictionary<string, string> Events { get; set; }
-                };
+                }
 
             }
-        };
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 
