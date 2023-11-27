@@ -3053,6 +3053,54 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await DetachPolicyWithOptionsAsync(request, runtime);
         }
 
+        public DisableAssociatedTransferResponse DisableAssociatedTransferWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableAssociatedTransfer",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableAssociatedTransferResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DisableAssociatedTransferResponse> DisableAssociatedTransferWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableAssociatedTransfer",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableAssociatedTransferResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DisableAssociatedTransferResponse DisableAssociatedTransfer()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableAssociatedTransferWithOptions(runtime);
+        }
+
+        public async Task<DisableAssociatedTransferResponse> DisableAssociatedTransferAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableAssociatedTransferWithOptionsAsync(runtime);
+        }
+
         /**
           * After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.
           * >  If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.
@@ -3127,6 +3175,54 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableControlPolicyWithOptionsAsync(runtime);
+        }
+
+        public EnableAssociatedTransferResponse EnableAssociatedTransferWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableAssociatedTransfer",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableAssociatedTransferResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<EnableAssociatedTransferResponse> EnableAssociatedTransferWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableAssociatedTransfer",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableAssociatedTransferResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public EnableAssociatedTransferResponse EnableAssociatedTransfer()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableAssociatedTransferWithOptions(runtime);
+        }
+
+        public async Task<EnableAssociatedTransferResponse> EnableAssociatedTransferAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableAssociatedTransferWithOptionsAsync(runtime);
         }
 
         /**
@@ -3517,6 +3613,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await GetAccountDeletionCheckResultWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is `169946124551****`. The response shows that the member is deleted.
+          *
+          * @param request GetAccountDeletionStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAccountDeletionStatusResponse
+         */
         public GetAccountDeletionStatusResponse GetAccountDeletionStatusWithOptions(GetAccountDeletionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3544,6 +3647,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetAccountDeletionStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is `169946124551****`. The response shows that the member is deleted.
+          *
+          * @param request GetAccountDeletionStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAccountDeletionStatusResponse
+         */
         public async Task<GetAccountDeletionStatusResponse> GetAccountDeletionStatusWithOptionsAsync(GetAccountDeletionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3571,12 +3681,24 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetAccountDeletionStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is `169946124551****`. The response shows that the member is deleted.
+          *
+          * @param request GetAccountDeletionStatusRequest
+          * @return GetAccountDeletionStatusResponse
+         */
         public GetAccountDeletionStatusResponse GetAccountDeletionStatus(GetAccountDeletionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAccountDeletionStatusWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is `169946124551****`. The response shows that the member is deleted.
+          *
+          * @param request GetAccountDeletionStatusRequest
+          * @return GetAccountDeletionStatusResponse
+         */
         public async Task<GetAccountDeletionStatusResponse> GetAccountDeletionStatusAsync(GetAccountDeletionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6133,7 +6255,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /**
           * >  You can use a RAM role that is not associated with a session policy to call this API operation.
-          * This topic provides an example on how to call the API operation to query the resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
+          * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
           *
           * @param request ListResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6196,7 +6318,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /**
           * >  You can use a RAM role that is not associated with a session policy to call this API operation.
-          * This topic provides an example on how to call the API operation to query the resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
+          * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
           *
           * @param request ListResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6259,7 +6381,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /**
           * >  You can use a RAM role that is not associated with a session policy to call this API operation.
-          * This topic provides an example on how to call the API operation to query the resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
+          * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
           *
           * @param request ListResourcesRequest
           * @return ListResourcesResponse
@@ -6272,7 +6394,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /**
           * >  You can use a RAM role that is not associated with a session policy to call this API operation.
-          * This topic provides an example on how to call the API operation to query the resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
+          * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
           *
           * @param request ListResourcesRequest
           * @return ListResourcesResponse

@@ -1,3 +1,6 @@
+2023-11-27 Version: 2.2.0
+- Generated csharp 2020-03-31 for ResourceManager.
+
 2023-07-27 Version: 2.1.6
 - Generated csharp 2020-03-31 for ResourceManager.
 

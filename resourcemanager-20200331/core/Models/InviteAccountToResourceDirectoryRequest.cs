@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string Note { get; set; }
 
+        /// <summary>
+        /// The tag key and value.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<InviteAccountToResourceDirectoryRequestTag> Tag { get; set; }

@@ -63,6 +63,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string ResellAccountType { get; set; }
 
+        /// <summary>
+        /// The tag key and value.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateResourceAccountRequestTag> Tag { get; set; }

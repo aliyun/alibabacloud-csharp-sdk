@@ -54,6 +54,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string QueryKeyword { get; set; }
 
+        /// <summary>
+        /// The tag key and value.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListAccountsForParentRequestTag> Tag { get; set; }

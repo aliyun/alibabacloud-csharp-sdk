@@ -19,6 +19,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public bool? All { get; set; }
 
+        /// <summary>
+        /// The ID of a resource group or member.
+        /// 
+        /// You can specify a maximum of 50 IDs.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -35,6 +40,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// A tag key.
+        /// 
+        /// You can specify a maximum of 20 tag keys.
+        /// 
+        /// >  If you set the `All` parameter to `true`, you do not need to configure this parameter.
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

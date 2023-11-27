@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourcesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Pages start from page 1. Default value: 1.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
         /// Valid values: 1 to 100. Default value: 10.
         /// </summary>
@@ -51,20 +51,43 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// The resource type.
         /// 
-        /// For more information about the supported resource types, see the **Resource type** column in [Alibaba Cloud services that support resource groups](~~94479~~).
+        /// For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The resource types. A maximum of 50 resource types are supported.
+        /// 
+        /// >  If you configure `ResourceTypes`, you must configure both `Service` and `ResourceType`. Otherwise, the configured Service or ResourceType does not take effect.
+        /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public List<ListResourcesRequestResourceTypes> ResourceTypes { get; set; }
         public class ListResourcesRequestResourceTypes : TeaModel {
+            /// <summary>
+            /// The resource type.
+            /// 
+            /// Valid values of N: 1 to 50.
+            /// 
+            /// For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).
+            /// 
+            /// >  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.
+            /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            /// <summary>
+            /// The ID of the Alibaba Cloud service.
+            /// 
+            /// Valid values of N: 1 to 50.
+            /// 
+            /// You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).
+            /// 
+            /// >  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.
+            /// </summary>
             [NameInMap("Service")]
             [Validation(Required=false)]
             public string Service { get; set; }
@@ -74,7 +97,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// The ID of the Alibaba Cloud service.
         /// 
-        /// You can obtain the ID from the **Service code** column in [Alibaba Cloud services that support resource groups](~~94479~~).
+        /// You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).
         /// </summary>
         [NameInMap("Service")]
         [Validation(Required=false)]
