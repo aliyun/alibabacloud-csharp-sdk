@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RouteTableName { get; set; }
 
+        [NameInMap("RouteTableType")]
+        [Validation(Required=false)]
+        public string RouteTableType { get; set; }
+
         /// <summary>
         /// The ID of the router to which the route table belongs.
         /// </summary>

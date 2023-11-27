@@ -31146,6 +31146,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["RouteTableName"] = request.RouteTableName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableType))
+            {
+                query["RouteTableType"] = request.RouteTableType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouterId))
             {
                 query["RouterId"] = request.RouterId;
@@ -31224,6 +31228,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableName))
             {
                 query["RouteTableName"] = request.RouteTableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableType))
+            {
+                query["RouteTableType"] = request.RouteTableType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouterId))
             {
