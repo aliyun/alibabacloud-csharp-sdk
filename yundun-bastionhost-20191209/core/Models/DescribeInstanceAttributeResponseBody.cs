@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeInstanceAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// The attribute information about the bastion host.
+        /// </summary>
         [NameInMap("InstanceAttribute")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyInstanceAttribute InstanceAttribute { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public List<string> AuthorizedSecurityGroups { get; set; }
 
+            /// <summary>
+            /// The total bandwidth of the bastion host.
+            /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public string Bandwidth { get; set; }
 
+            /// <summary>
+            /// The extra bandwidth plan of the bastion host.
+            /// </summary>
             [NameInMap("BandwidthPackage")]
             [Validation(Required=false)]
             public string BandwidthPackage { get; set; }
@@ -73,10 +82,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> Ports { get; set; }
             public class DescribeInstanceAttributeResponseBodyInstanceAttributePorts : TeaModel {
+                /// <summary>
+                /// The custom port.
+                /// 
+                /// >  You can change only the SSH and RDP ports. If O\&M ports are not specified, the value of the StandardPort parameter is returned.
+                /// </summary>
                 [NameInMap("CustomPort")]
                 [Validation(Required=false)]
                 public int? CustomPort { get; set; }
 
+                /// <summary>
+                /// The standard port of the bastion host. Valid values:
+                /// 
+                /// *   **SSH**: 60022
+                /// *   **RDP**: 63389
+                /// *   **HTTPS**: 443
+                /// </summary>
                 [NameInMap("StandardPort")]
                 [Validation(Required=false)]
                 public int? StandardPort { get; set; }

@@ -1201,6 +1201,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceRegionId"] = request.InstanceRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainId))
+            {
+                query["NetworkDomainId"] = request.NetworkDomainId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSType))
             {
                 query["OSType"] = request.OSType;
@@ -1267,6 +1271,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceRegionId))
             {
                 query["InstanceRegionId"] = request.InstanceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainId))
+            {
+                query["NetworkDomainId"] = request.NetworkDomainId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSType))
             {
@@ -6756,6 +6764,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainId))
+            {
+                query["NetworkDomainId"] = request.NetworkDomainId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSType))
             {
                 query["OSType"] = request.OSType;
@@ -6817,6 +6829,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainId))
+            {
+                query["NetworkDomainId"] = request.NetworkDomainId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSType))
             {

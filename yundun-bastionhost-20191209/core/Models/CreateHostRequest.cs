@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceRegionId { get; set; }
 
+        [NameInMap("NetworkDomainId")]
+        [Validation(Required=false)]
+        public string NetworkDomainId { get; set; }
+
         /// <summary>
         /// The operating system of the host that you want to create. Valid values:
         /// 

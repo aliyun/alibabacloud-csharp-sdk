@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("NetworkDomainId")]
+        [Validation(Required=false)]
+        public string NetworkDomainId { get; set; }
+
         /// <summary>
         /// The ID of the host.
         /// 

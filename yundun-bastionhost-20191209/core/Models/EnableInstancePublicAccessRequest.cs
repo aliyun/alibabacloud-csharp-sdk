@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class EnableInstancePublicAccessRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **EnableInstancePublicAccess**.
+        /// The ID of the bastion host.
+        /// 
+        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host whose Internet access is enabled.
+        /// The region ID of the bastion host.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
