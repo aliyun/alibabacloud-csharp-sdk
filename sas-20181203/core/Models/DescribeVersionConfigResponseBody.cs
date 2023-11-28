@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AssetLevel { get; set; }
 
         /// <summary>
-        /// The quota for configuration assessment. Unit: times/month.
+        /// The purchased quota for configuration assessment. Unit: times/month.
         /// </summary>
         [NameInMap("CspmCapacity")]
         [Validation(Required=false)]
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HighestVersion { get; set; }
 
         /// <summary>
-        /// The number of honeypots.
+        /// The purchased quota for the cloud honeypot feature.
         /// </summary>
         [NameInMap("HoneypotCapacity")]
         [Validation(Required=false)]
         public long? HoneypotCapacity { get; set; }
 
         /// <summary>
-        /// The quota for the container image scan feature.
+        /// The purchased quota for the container image scan feature.
         /// </summary>
         [NameInMap("ImageScanCapacity")]
         [Validation(Required=false)]
@@ -128,6 +128,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public bool? IsOverBalance { get; set; }
 
+        /// <summary>
+        /// Indicates whether the pay-as-you-go billing method is used. Valid values:
+        /// 
+        /// *   **false**
+        /// *   **true**
+        /// </summary>
         [NameInMap("IsPostpay")]
         [Validation(Required=false)]
         public bool? IsPostpay { get; set; }
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsTrialVersion { get; set; }
 
         /// <summary>
-        /// The timestamp when the last trial ends. Unit: milliseconds.
+        /// The timestamp when the last trial of Security Center ends. Unit: milliseconds.
         /// </summary>
         [NameInMap("LastTrailEndTime")]
         [Validation(Required=false)]
@@ -170,33 +176,50 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? OpenTime { get; set; }
 
+        /// <summary>
+        /// The instance ID of Security Center that uses the pay-as-you-go billing method.
+        /// </summary>
         [NameInMap("PostPayInstanceId")]
         [Validation(Required=false)]
         public string PostPayInstanceId { get; set; }
 
+        /// <summary>
+        /// The configuration of the pay-as-you-go module. Valid values:
+        /// 
+        /// *   **VUL**: vulnerability fixing module
+        /// </summary>
         [NameInMap("PostPayModuleSwitch")]
         [Validation(Required=false)]
         public string PostPayModuleSwitch { get; set; }
 
+        /// <summary>
+        /// The creation time of Security Center that uses the pay-as-you-go billing method.
+        /// </summary>
         [NameInMap("PostPayOpenTime")]
         [Validation(Required=false)]
         public long? PostPayOpenTime { get; set; }
 
+        /// <summary>
+        /// The status of Security Center that uses the pay-as-you-go billing method. Valid values:
+        /// 
+        /// *   **1**: The instance runs as expected.
+        /// *   **2**: The instance is stopped due to overdue payments.
+        /// </summary>
         [NameInMap("PostPayStatus")]
         [Validation(Required=false)]
         public int? PostPayStatus { get; set; }
 
         /// <summary>
-        /// The quota for application protection. Unit: process/month.
+        /// The purchased quota for application protection. Unit: process/month.
         /// </summary>
         [NameInMap("RaspCapacity")]
         [Validation(Required=false)]
         public long? RaspCapacity { get; set; }
 
         /// <summary>
-        /// The timestamp when Security Center is released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.
+        /// The timestamp when Security Center was released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.
         /// 
-        /// > If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Basic Anti-Virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).
+        /// >  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](~~42308~~).
         /// </summary>
         [NameInMap("ReleaseTime")]
         [Validation(Required=false)]
@@ -228,6 +251,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("SasScreen")]
         [Validation(Required=false)]
         public int? SasScreen { get; set; }
+
+        /// <summary>
+        /// The purchased quota for malicious file detection SDK. Unit: process/month.
+        /// </summary>
+        [NameInMap("SdkCapacity")]
+        [Validation(Required=false)]
+        public long? SdkCapacity { get; set; }
 
         /// <summary>
         /// The log storage capacity that you purchase. Unit: GB. Valid values: 0 to 200000.
@@ -276,7 +306,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? VmCores { get; set; }
 
         /// <summary>
-        /// The quota for vulnerability fixing. Unit: times/month.
+        /// The purchased quota for vulnerability fixing. Unit: times/month.
         /// </summary>
         [NameInMap("VulFixCapacity")]
         [Validation(Required=false)]

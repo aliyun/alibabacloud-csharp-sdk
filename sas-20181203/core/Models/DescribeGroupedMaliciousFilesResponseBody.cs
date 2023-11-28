@@ -10,18 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedMaliciousFilesResponseBody : TeaModel {
         /// <summary>
-        /// The severity of the malicious image sample. Valid values:
-        /// 
-        /// *   **serious**
-        /// *   **suspicious**
-        /// *   **remind**
+        /// The details of the malicious image sample.
         /// </summary>
         [NameInMap("GroupedMaliciousFileResponse")]
         [Validation(Required=false)]
         public List<DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse> GroupedMaliciousFileResponse { get; set; }
         public class DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse : TeaModel {
             /// <summary>
-            /// The timestamp when the first scan was performed. Unit: milliseconds.
+            /// The timestamp generated when the first scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("FirstScanTimestamp")]
             [Validation(Required=false)]
@@ -35,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ImageCount { get; set; }
 
             /// <summary>
-            /// The timestamp when the last scan was performed. Unit: milliseconds.
+            /// The timestamp generated when the last scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("LatestScanTimestamp")]
             [Validation(Required=false)]
@@ -52,6 +48,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Level { get; set; }
 
+            /// <summary>
+            /// The keyword of the malicious image sample.
+            /// </summary>
             [NameInMap("MaliciousKey")]
             [Validation(Required=false)]
             public string MaliciousKey { get; set; }
@@ -76,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **0**: unhandled
             /// *   **1**: handled
             /// *   **2**: verifying
-            /// *   **3**: added to the whitelist
+            /// *   **3**: whitelisted
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
