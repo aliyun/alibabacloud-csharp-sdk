@@ -206,6 +206,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
             {
                 body["AcceptingVpcId"] = request.AcceptingVpcId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
+            {
+                body["Bandwidth"] = request.Bandwidth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 body["ClientToken"] = request.ClientToken;
@@ -281,6 +285,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptingVpcId))
             {
                 body["AcceptingVpcId"] = request.AcceptingVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
+            {
+                body["Bandwidth"] = request.Bandwidth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {

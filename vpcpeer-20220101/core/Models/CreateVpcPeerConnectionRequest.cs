@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         [Validation(Required=false)]
         public string AcceptingVpcId { get; set; }
 
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public int? Bandwidth { get; set; }
+
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 

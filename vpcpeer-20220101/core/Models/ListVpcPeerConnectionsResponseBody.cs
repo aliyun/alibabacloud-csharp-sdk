@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             /// </summary>
             [NameInMap("AcceptingOwnerUid")]
             [Validation(Required=false)]
-            public int? AcceptingOwnerUid { get; set; }
+            public long? AcceptingOwnerUid { get; set; }
 
             /// <summary>
             /// The region ID of the accepter VPC.
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
-            public int? OwnerId { get; set; }
+            public long? OwnerId { get; set; }
 
             /// <summary>
             /// The region ID of the requester VPC.
