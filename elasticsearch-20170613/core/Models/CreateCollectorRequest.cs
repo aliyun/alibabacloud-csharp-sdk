@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// The ID of the created crawer.
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]

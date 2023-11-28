@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateDataTasksRequest : TeaModel {
         /// <summary>
-        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// es-cn-n6w1o1x0w001c\*\*\*\*
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

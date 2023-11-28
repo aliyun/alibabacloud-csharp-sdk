@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListPipelineRequest : TeaModel {
         /// <summary>
-        /// 1
+        /// The header of the response.
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// pipeline_test
+        /// The ID of the request.
         /// </summary>
         [NameInMap("pipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }
 
         /// <summary>
-        /// 15
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]

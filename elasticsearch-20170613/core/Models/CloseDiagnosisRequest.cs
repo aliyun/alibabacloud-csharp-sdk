@@ -10,15 +10,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CloseDiagnosisRequest : TeaModel {
         /// <summary>
-        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// spanish
-        /// </summary>
         [NameInMap("lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

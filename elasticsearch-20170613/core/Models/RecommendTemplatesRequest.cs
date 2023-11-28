@@ -9,6 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RecommendTemplatesRequest : TeaModel {
+        /// <summary>
+        /// *
+        /// *
+        /// *
+        /// *
+        /// *
+        /// 
+        /// **
+        /// 
+        /// ****
+        /// </summary>
         [NameInMap("usageScenario")]
         [Validation(Required=false)]
         public string UsageScenario { get; set; }

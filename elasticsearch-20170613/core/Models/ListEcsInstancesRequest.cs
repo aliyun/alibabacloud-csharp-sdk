@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListEcsInstancesRequest : TeaModel {
         /// <summary>
-        /// \["i-bp13y63575oypr9d\*\*\*\*","i-bp1gyhphjaj73jsr\*\*\*\*"]
+        /// test
         /// </summary>
         [NameInMap("ecsInstanceIds")]
         [Validation(Required=false)]
         public string EcsInstanceIds { get; set; }
 
         /// <summary>
-        /// test
+        /// \[{ "tagKey":"a","tagValue":"b"}]
         /// </summary>
         [NameInMap("ecsInstanceName")]
         [Validation(Required=false)]
         public string EcsInstanceName { get; set; }
 
         /// <summary>
-        /// 1
+        /// 10
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// 10
+        /// \["i-bp13y63575oypr9d\*\*\*\*","i-bp1gyhphjaj73jsr\*\*\*\*"]
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// \[{ "tagKey":"a","tagValue":"b"}]
+        /// vpc-bp16k1dvzxtmagcva\*\*\*\*
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
         /// <summary>
-        /// vpc-bp16k1dvzxtmagcva\*\*\*\*
+        /// The ID of the request.
         /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]

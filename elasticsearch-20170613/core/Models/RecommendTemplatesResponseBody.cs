@@ -21,6 +21,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            /// <summary>
+            /// *
+            /// *
+            /// *
+            /// *
+            /// 
+            /// **
+            /// 
+            /// ****
+            /// </summary>
             [NameInMap("templateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }

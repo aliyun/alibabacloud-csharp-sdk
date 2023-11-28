@@ -29,16 +29,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string RestartType { get; set; }
 
-        /// <summary>
-        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
-        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// true
-        /// </summary>
         [NameInMap("force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }

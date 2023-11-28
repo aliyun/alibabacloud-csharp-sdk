@@ -9,26 +9,47 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateSynonymsDictsResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The returned result.
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<UpdateSynonymsDictsResponseBodyResult> Result { get; set; }
         public class UpdateSynonymsDictsResponseBodyResult : TeaModel {
+            /// <summary>
+            /// The size of the dictionary file. Unit: bytes.
+            /// </summary>
             [NameInMap("fileSize")]
             [Validation(Required=false)]
             public long? FileSize { get; set; }
 
+            /// <summary>
+            /// The name of the dictionary file.
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The source type of the dictionary file. Valid values:
+            /// 
+            /// *   OSS
+            /// *   ORIGIN
+            /// </summary>
             [NameInMap("sourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
 
+            /// <summary>
+            /// The dictionary type. The value is fixed as SYNONYMS.
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }

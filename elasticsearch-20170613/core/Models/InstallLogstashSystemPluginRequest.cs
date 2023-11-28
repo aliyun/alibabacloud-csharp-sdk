@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string Body { get; set; }
 
-        /// <summary>
-        /// ls-cn-oew1qbgl\*\*\*\*
-        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

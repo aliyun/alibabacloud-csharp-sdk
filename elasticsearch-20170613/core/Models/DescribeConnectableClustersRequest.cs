@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeConnectableClustersRequest : TeaModel {
         /// <summary>
-        /// true
+        /// The ID of the instance that can communicate with each other.
         /// </summary>
         [NameInMap("alreadySetItems")]
         [Validation(Required=false)]

@@ -35,22 +35,22 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         }
 
-        /// <summary>
-        /// 2
-        /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// false
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ignoreStatus")]
         [Validation(Required=false)]
         public bool? IgnoreStatus { get; set; }
 
         /// <summary>
-        /// WORKER
+        /// Returned results:
+        /// 
+        /// *   true: can be scaled in
+        /// *   false: cannot be scaled in.
         /// </summary>
         [NameInMap("nodeType")]
         [Validation(Required=false)]

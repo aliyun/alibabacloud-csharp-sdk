@@ -65,6 +65,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<CreateInstanceRequestTags> Tags { get; set; }
+        public class CreateInstanceRequestTags : TeaModel {
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
         [NameInMap("warmNodeConfiguration")]
         [Validation(Required=false)]
         public WarmNodeConfiguration WarmNodeConfiguration { get; set; }

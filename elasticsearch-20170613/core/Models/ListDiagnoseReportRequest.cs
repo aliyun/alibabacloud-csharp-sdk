@@ -10,49 +10,49 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDiagnoseReportRequest : TeaModel {
         /// <summary>
-        /// true
+        /// SYSTEM
         /// </summary>
         [NameInMap("detail")]
         [Validation(Required=false)]
         public bool? Detail { get; set; }
 
         /// <summary>
-        /// 1595174399999
+        /// 1
         /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// spanish
+        /// 1594569600000
         /// </summary>
         [NameInMap("lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// 1
+        /// 20
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// 20
+        /// true
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// 1594569600000
+        /// 1595174399999
         /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// SYSTEM
+        /// The ID of the request.
         /// </summary>
         [NameInMap("trigger")]
         [Validation(Required=false)]

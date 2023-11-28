@@ -18,14 +18,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// The moderation results.
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// false
+        /// The monitoring type. Valid values:
+        /// 
+        /// *   checkClusterHealth: Cluster Health Status
+        /// *   checkConfigCompatible: Configuration Compatibility Status
+        /// *   checkClusterResource: resource space status
+        /// *   checkClusterSnapshot: Whether a snapshot exists
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

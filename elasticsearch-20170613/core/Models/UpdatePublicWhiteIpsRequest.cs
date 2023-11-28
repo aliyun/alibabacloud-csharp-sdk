@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string Body { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The results that are returned.
+        /// </summary>
         [NameInMap("modifyMode")]
         [Validation(Required=false)]
         public string ModifyMode { get; set; }

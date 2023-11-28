@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashPluginsRequest : TeaModel {
         /// <summary>
-        /// logstash-filter-clone
+        /// USER
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// 10
+        /// The ID of the request.
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// 3
+        /// The returned results.
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// USER
+        /// The description of the plug-in.
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]

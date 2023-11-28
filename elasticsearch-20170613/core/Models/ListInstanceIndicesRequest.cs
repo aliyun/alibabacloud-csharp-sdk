@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// false
+        /// 15
         /// </summary>
         [NameInMap("isManaged")]
         [Validation(Required=false)]
         public bool? IsManaged { get; set; }
 
         /// <summary>
-        /// false
+        /// The ID of the request.
         /// </summary>
         [NameInMap("isOpenstore")]
         [Validation(Required=false)]
         public bool? IsOpenstore { get; set; }
 
         /// <summary>
-        /// log-0001
+        /// 1
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// 1
+        /// The header of the response.
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// 15
+        /// The total size of the index in Cloud Hosting. Unit: bytes.
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]

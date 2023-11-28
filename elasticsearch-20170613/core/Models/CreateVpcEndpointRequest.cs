@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateVpcEndpointRequest : TeaModel {
         /// <summary>
-        /// 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\*\*\*
+        /// The returned result details.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// false
+        /// The ID of the user endpoint service associated with the endpoint.
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

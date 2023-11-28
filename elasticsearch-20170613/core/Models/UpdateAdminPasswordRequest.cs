@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EsAdminPassword { get; set; }
 
         /// <summary>
-        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// Indicates whether the password was updated. Valid values:
+        /// 
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]

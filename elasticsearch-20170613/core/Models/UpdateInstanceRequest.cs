@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public WarmNodeConfiguration WarmNodeConfiguration { get; set; }
 
         /// <summary>
-        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// The result of the request.
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// upgrade
+        /// The number of data nodes.
         /// </summary>
         [NameInMap("orderActionType")]
         [Validation(Required=false)]

@@ -10,49 +10,49 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashRequest : TeaModel {
         /// <summary>
-        /// ls-cn-abc
+        /// rg-acfm2h5vbzd\*\*\*\*
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// ls-cn-n6w1o5jq\*\*\*\*
+        /// \[{"tagKey":"key1","tagValue":"value1"}]
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// 1
+        /// ls-cn-n6w1o5jq\*\*\*\*
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// rg-acfm2h5vbzd\*\*\*\*
+        /// Details of the request header.
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// 10
+        /// 5.5.3\_with_X-Pack
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// \[{"tagKey":"key1","tagValue":"value1"}]
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
         /// <summary>
-        /// 5.5.3\_with_X-Pack
+        /// The ID of the request.
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]

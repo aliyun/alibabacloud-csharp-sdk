@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashLogRequest : TeaModel {
         /// <summary>
-        /// 1531910852074
+        /// 20
         /// </summary>
         [NameInMap("beginTime")]
         [Validation(Required=false)]
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// 1531910852074
+        /// The ID of the request.
         /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// 1
+        /// The returned data.
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// host:10.7.xx.xx AND level:info AND content:opening
+        /// 1
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
-        /// 20
+        /// The severity level of the log entry. Including trace, debug, info, warn, error, etc. (GC logs have no level).
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// LOGSTASH_INSTANCE_LOG
+        /// 1531910852074
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

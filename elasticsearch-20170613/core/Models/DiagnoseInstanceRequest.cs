@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DiagnoseInstanceRequest : TeaModel {
         /// <summary>
-        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// The timestamp when the diagnostic report was generated.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// en
+        /// The returned data.
         /// </summary>
         [NameInMap("lang")]
         [Validation(Required=false)]
