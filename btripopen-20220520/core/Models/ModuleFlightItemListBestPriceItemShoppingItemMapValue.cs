@@ -9,16 +9,47 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleFlightItemListBestPriceItemShoppingItemMapValue : TeaModel {
-        /// <summary>
-        /// id
-        /// </summary>
-        [NameInMap("id")]
+        [NameInMap("cabin_quantity_list")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public List<ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityList> CabinQuantityList { get; set; }
+        public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityList : TeaModel {
+            [NameInMap("segment_position")]
+            [Validation(Required=false)]
+            public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition SegmentPosition { get; set; }
+            public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition : TeaModel {
+                [NameInMap("segment_index")]
+                [Validation(Required=false)]
+                public int? SegmentIndex { get; set; }
 
-        [NameInMap("cabin_quantity")]
-        [Validation(Required=false)]
-        public Dictionary<string, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue> CabinQuantity { get; set; }
+                [NameInMap("journey_index")]
+                [Validation(Required=false)]
+                public int? JourneyIndex { get; set; }
+
+            }
+
+            [NameInMap("cabin")]
+            [Validation(Required=false)]
+            public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin Cabin { get; set; }
+            public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin : TeaModel {
+                [NameInMap("cabin")]
+                [Validation(Required=false)]
+                public string Cabin { get; set; }
+
+                [NameInMap("cabin_class")]
+                [Validation(Required=false)]
+                public string CabinClass { get; set; }
+
+                [NameInMap("cabin_class_name")]
+                [Validation(Required=false)]
+                public string CabinClassName { get; set; }
+
+                [NameInMap("quantity")]
+                [Validation(Required=false)]
+                public string Quantity { get; set; }
+
+            }
+
+        }
 
         [NameInMap("search_price")]
         [Validation(Required=false)]
@@ -138,6 +169,55 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
         }
+
+        [NameInMap("segment_price_list")]
+        [Validation(Required=false)]
+        public List<ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceList> SegmentPriceList { get; set; }
+        public class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceList : TeaModel {
+            [NameInMap("segment_position")]
+            [Validation(Required=false)]
+            public ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSegmentPosition SegmentPosition { get; set; }
+            public class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSegmentPosition : TeaModel {
+                [NameInMap("journey_index")]
+                [Validation(Required=false)]
+                public int? JourneyIndex { get; set; }
+
+                [NameInMap("segment_index")]
+                [Validation(Required=false)]
+                public int? SegmentIndex { get; set; }
+
+            }
+
+            [NameInMap("search_price")]
+            [Validation(Required=false)]
+            public ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSearchPrice SearchPrice { get; set; }
+            public class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSearchPrice : TeaModel {
+                [NameInMap("ticket_price")]
+                [Validation(Required=false)]
+                public int? TicketPrice { get; set; }
+
+                [NameInMap("sell_price")]
+                [Validation(Required=false)]
+                public int? SellPrice { get; set; }
+
+                [NameInMap("tax")]
+                [Validation(Required=false)]
+                public int? Tax { get; set; }
+
+            }
+
+        }
+
+        /// <summary>
+        /// id
+        /// </summary>
+        [NameInMap("id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        [NameInMap("cabin_quantity")]
+        [Validation(Required=false)]
+        public Dictionary<string, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue> CabinQuantity { get; set; }
 
         [NameInMap("segment_price")]
         [Validation(Required=false)]

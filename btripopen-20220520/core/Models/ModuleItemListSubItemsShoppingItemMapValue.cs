@@ -9,17 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleItemListSubItemsShoppingItemMapValue : TeaModel {
-        /// <summary>
-        /// id
-        /// </summary>
-        [NameInMap("id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        [NameInMap("cabin_quantity")]
-        [Validation(Required=false)]
-        public Dictionary<string, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue> CabinQuantity { get; set; }
-
         [NameInMap("search_price")]
         [Validation(Required=false)]
         public ModuleItemListSubItemsShoppingItemMapValueSearchPrice SearchPrice { get; set; }
@@ -138,6 +127,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
         }
+
+        /// <summary>
+        /// id
+        /// </summary>
+        [NameInMap("id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        [NameInMap("cabin_quantity")]
+        [Validation(Required=false)]
+        public Dictionary<string, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue> CabinQuantity { get; set; }
 
         [NameInMap("segment_price")]
         [Validation(Required=false)]
