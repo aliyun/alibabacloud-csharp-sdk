@@ -25,6 +25,13 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ApplyConfigToMachineGroupResponse
+         */
         public ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroupWithOptions(string project, string machineGroup, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -49,6 +56,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ApplyConfigToMachineGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ApplyConfigToMachineGroupResponse
+         */
         public async Task<ApplyConfigToMachineGroupResponse> ApplyConfigToMachineGroupWithOptionsAsync(string project, string machineGroup, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -73,6 +87,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ApplyConfigToMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return ApplyConfigToMachineGroupResponse
+         */
         public ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroup(string project, string machineGroup, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -80,6 +99,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ApplyConfigToMachineGroupWithOptions(project, machineGroup, configName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return ApplyConfigToMachineGroupResponse
+         */
         public async Task<ApplyConfigToMachineGroupResponse> ApplyConfigToMachineGroupAsync(string project, string machineGroup, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -455,6 +479,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateConfigWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   You can create up to 30 consumer groups for a Logstore.
+          * *   Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see [Consume log data](~~120035~~) and [Use consumer groups to consume data](~~28998~~).
+          *
+          * @param request CreateConsumerGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateConsumerGroupResponse
+         */
         public CreateConsumerGroupResponse CreateConsumerGroupWithOptions(string project, string logstore, CreateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -494,6 +529,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateConsumerGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   You can create up to 30 consumer groups for a Logstore.
+          * *   Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see [Consume log data](~~120035~~) and [Use consumer groups to consume data](~~28998~~).
+          *
+          * @param request CreateConsumerGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateConsumerGroupResponse
+         */
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroupWithOptionsAsync(string project, string logstore, CreateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -533,6 +579,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   You can create up to 30 consumer groups for a Logstore.
+          * *   Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see [Consume log data](~~120035~~) and [Use consumer groups to consume data](~~28998~~).
+          *
+          * @param request CreateConsumerGroupRequest
+          * @return CreateConsumerGroupResponse
+         */
         public CreateConsumerGroupResponse CreateConsumerGroup(string project, string logstore, CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -540,6 +595,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateConsumerGroupWithOptions(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   You can create up to 30 consumer groups for a Logstore.
+          * *   Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see [Consume log data](~~120035~~) and [Use consumer groups to consume data](~~28998~~).
+          *
+          * @param request CreateConsumerGroupRequest
+          * @return CreateConsumerGroupResponse
+         */
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroupAsync(string project, string logstore, CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -613,6 +677,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateDashboardWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateDomainRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDomainResponse
+         */
         public CreateDomainResponse CreateDomainWithOptions(string project, CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -644,6 +716,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateDomainResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateDomainRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDomainResponse
+         */
         public async Task<CreateDomainResponse> CreateDomainWithOptionsAsync(string project, CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -675,6 +755,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateDomainResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateDomainRequest
+          * @return CreateDomainResponse
+         */
         public CreateDomainResponse CreateDomain(string project, CreateDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -682,6 +768,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateDomainWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateDomainRequest
+          * @return CreateDomainResponse
+         */
         public async Task<CreateDomainResponse> CreateDomainAsync(string project, CreateDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -689,6 +781,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateDomainWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateIndexRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateIndexResponse
+         */
         public CreateIndexResponse CreateIndexWithOptions(string project, string logstore, CreateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -744,6 +844,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateIndexResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateIndexRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateIndexResponse
+         */
         public async Task<CreateIndexResponse> CreateIndexWithOptionsAsync(string project, string logstore, CreateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -799,6 +907,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateIndexResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateIndexRequest
+          * @return CreateIndexResponse
+         */
         public CreateIndexResponse CreateIndex(string project, string logstore, CreateIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -806,6 +920,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateIndexWithOptions(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateIndexRequest
+          * @return CreateIndexResponse
+         */
         public async Task<CreateIndexResponse> CreateIndexAsync(string project, string logstore, CreateIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -813,6 +933,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateIndexWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateLogStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLogStoreResponse
+         */
         public CreateLogStoreResponse CreateLogStoreWithOptions(string project, CreateLogStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -884,6 +1013,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateLogStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateLogStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLogStoreResponse
+         */
         public async Task<CreateLogStoreResponse> CreateLogStoreWithOptionsAsync(string project, CreateLogStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -955,6 +1093,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateLogStoreRequest
+          * @return CreateLogStoreResponse
+         */
         public CreateLogStoreResponse CreateLogStore(string project, CreateLogStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -962,6 +1107,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateLogStoreWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateLogStoreRequest
+          * @return CreateLogStoreResponse
+         */
         public async Task<CreateLogStoreResponse> CreateLogStoreAsync(string project, CreateLogStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -969,6 +1121,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateLogStoreWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateLoggingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLoggingResponse
+         */
         public CreateLoggingResponse CreateLoggingWithOptions(string project, CreateLoggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1004,6 +1164,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateLoggingResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateLoggingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLoggingResponse
+         */
         public async Task<CreateLoggingResponse> CreateLoggingWithOptionsAsync(string project, CreateLoggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1039,6 +1207,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateLoggingRequest
+          * @return CreateLoggingResponse
+         */
         public CreateLoggingResponse CreateLogging(string project, CreateLoggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1046,6 +1220,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateLoggingWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateLoggingRequest
+          * @return CreateLoggingResponse
+         */
         public async Task<CreateLoggingResponse> CreateLoggingAsync(string project, CreateLoggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1177,6 +1357,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateLogtailPipelineConfigWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateMachineGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateMachineGroupResponse
+         */
         public CreateMachineGroupResponse CreateMachineGroupWithOptions(string project, CreateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1224,6 +1413,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateMachineGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateMachineGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateMachineGroupResponse
+         */
         public async Task<CreateMachineGroupResponse> CreateMachineGroupWithOptionsAsync(string project, CreateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1271,6 +1469,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateMachineGroupRequest
+          * @return CreateMachineGroupResponse
+         */
         public CreateMachineGroupResponse CreateMachineGroup(string project, CreateMachineGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1278,6 +1483,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateMachineGroupWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateMachineGroupRequest
+          * @return CreateMachineGroupResponse
+         */
         public async Task<CreateMachineGroupResponse> CreateMachineGroupAsync(string project, CreateMachineGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1285,6 +1497,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateMachineGroupWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateOssExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOssExternalStoreResponse
+         */
         public CreateOssExternalStoreResponse CreateOssExternalStoreWithOptions(string project, CreateOssExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1324,6 +1544,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateOssExternalStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateOssExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOssExternalStoreResponse
+         */
         public async Task<CreateOssExternalStoreResponse> CreateOssExternalStoreWithOptionsAsync(string project, CreateOssExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1363,6 +1591,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateOssExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateOssExternalStoreRequest
+          * @return CreateOssExternalStoreResponse
+         */
         public CreateOssExternalStoreResponse CreateOssExternalStore(string project, CreateOssExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1370,6 +1604,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateOssExternalStoreWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateOssExternalStoreRequest
+          * @return CreateOssExternalStoreResponse
+         */
         public async Task<CreateOssExternalStoreResponse> CreateOssExternalStoreAsync(string project, CreateOssExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1471,6 +1711,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateProjectWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateRdsExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateRdsExternalStoreResponse
+         */
         public CreateRdsExternalStoreResponse CreateRdsExternalStoreWithOptions(string project, CreateRdsExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1510,6 +1758,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateRdsExternalStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateRdsExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateRdsExternalStoreResponse
+         */
         public async Task<CreateRdsExternalStoreResponse> CreateRdsExternalStoreWithOptionsAsync(string project, CreateRdsExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1549,6 +1805,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateRdsExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateRdsExternalStoreRequest
+          * @return CreateRdsExternalStoreResponse
+         */
         public CreateRdsExternalStoreResponse CreateRdsExternalStore(string project, CreateRdsExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1556,6 +1818,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateRdsExternalStoreWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateRdsExternalStoreRequest
+          * @return CreateRdsExternalStoreResponse
+         */
         public async Task<CreateRdsExternalStoreResponse> CreateRdsExternalStoreAsync(string project, CreateRdsExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1563,6 +1831,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateRdsExternalStoreWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateSavedSearchRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateSavedSearchResponse
+         */
         public CreateSavedSearchResponse CreateSavedSearchWithOptions(string project, CreateSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1610,6 +1887,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateSavedSearchResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateSavedSearchRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateSavedSearchResponse
+         */
         public async Task<CreateSavedSearchResponse> CreateSavedSearchWithOptionsAsync(string project, CreateSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1657,6 +1943,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateSavedSearchRequest
+          * @return CreateSavedSearchResponse
+         */
         public CreateSavedSearchResponse CreateSavedSearch(string project, CreateSavedSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1664,89 +1957,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateSavedSearchWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request CreateSavedSearchRequest
+          * @return CreateSavedSearchResponse
+         */
         public async Task<CreateSavedSearchResponse> CreateSavedSearchAsync(string project, CreateSavedSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateSavedSearchWithOptionsAsync(project, request, headers, runtime);
-        }
-
-        public CreateTicketResponse CreateTicketWithOptions(CreateTicketRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlayAccessKeyId))
-            {
-                body["playAccessKeyId"] = request.PlayAccessKeyId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlayAccessKeySecret))
-            {
-                body["playAccessKeySecret"] = request.PlayAccessKeySecret;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateTicket",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/tickets",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateTicketResponse>(Execute(params_, req, runtime));
-        }
-
-        public async Task<CreateTicketResponse> CreateTicketWithOptionsAsync(CreateTicketRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlayAccessKeyId))
-            {
-                body["playAccessKeyId"] = request.PlayAccessKeyId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlayAccessKeySecret))
-            {
-                body["playAccessKeySecret"] = request.PlayAccessKeySecret;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateTicket",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/tickets",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateTicketResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        public CreateTicketResponse CreateTicket(CreateTicketRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateTicketWithOptions(request, headers, runtime);
-        }
-
-        public async Task<CreateTicketResponse> CreateTicketAsync(CreateTicketRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateTicketWithOptionsAsync(request, headers, runtime);
         }
 
         public DeleteAnnotationDataResponse DeleteAnnotationDataWithOptions(string datasetId, string annotationdataId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2057,6 +2279,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteConfigWithOptionsAsync(project, configName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteConsumerGroupResponse
+         */
         public DeleteConsumerGroupResponse DeleteConsumerGroupWithOptions(string project, string logstore, string consumerGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2081,6 +2310,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteConsumerGroupResponse
+         */
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupWithOptionsAsync(string project, string logstore, string consumerGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2105,6 +2341,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteConsumerGroupResponse
+         */
         public DeleteConsumerGroupResponse DeleteConsumerGroup(string project, string logstore, string consumerGroup)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2112,6 +2353,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteConsumerGroupWithOptions(project, logstore, consumerGroup, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteConsumerGroupResponse
+         */
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupAsync(string project, string logstore, string consumerGroup)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2181,6 +2427,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteDashboardWithOptionsAsync(project, dashboardName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDomainResponse
+         */
         public DeleteDomainResponse DeleteDomainWithOptions(string project, string domainName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2205,6 +2458,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteDomainResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDomainResponse
+         */
         public async Task<DeleteDomainResponse> DeleteDomainWithOptionsAsync(string project, string domainName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2229,6 +2489,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteDomainResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteDomainResponse
+         */
         public DeleteDomainResponse DeleteDomain(string project, string domainName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2236,6 +2501,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteDomainWithOptions(project, domainName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteDomainResponse
+         */
         public async Task<DeleteDomainResponse> DeleteDomainAsync(string project, string domainName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2243,6 +2513,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteDomainWithOptionsAsync(project, domainName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteExternalStoreResponse
+         */
         public DeleteExternalStoreResponse DeleteExternalStoreWithOptions(string project, string externalStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2267,6 +2544,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteExternalStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteExternalStoreResponse
+         */
         public async Task<DeleteExternalStoreResponse> DeleteExternalStoreWithOptionsAsync(string project, string externalStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2291,6 +2575,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteExternalStoreResponse
+         */
         public DeleteExternalStoreResponse DeleteExternalStore(string project, string externalStoreName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2298,6 +2587,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteExternalStoreWithOptions(project, externalStoreName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteExternalStoreResponse
+         */
         public async Task<DeleteExternalStoreResponse> DeleteExternalStoreAsync(string project, string externalStoreName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2305,6 +2599,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteExternalStoreWithOptionsAsync(project, externalStoreName, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteIndexResponse
+         */
         public DeleteIndexResponse DeleteIndexWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2329,6 +2631,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteIndexResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteIndexResponse
+         */
         public async Task<DeleteIndexResponse> DeleteIndexWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2353,6 +2663,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteIndexResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteIndexResponse
+         */
         public DeleteIndexResponse DeleteIndex(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2360,6 +2676,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteIndexWithOptions(project, logstore, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteIndexResponse
+         */
         public async Task<DeleteIndexResponse> DeleteIndexAsync(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2367,6 +2689,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteIndexWithOptionsAsync(project, logstore, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteLogStoreResponse
+         */
         public DeleteLogStoreResponse DeleteLogStoreWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2391,6 +2721,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteLogStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteLogStoreResponse
+         */
         public async Task<DeleteLogStoreResponse> DeleteLogStoreWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2415,6 +2753,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteLogStoreResponse
+         */
         public DeleteLogStoreResponse DeleteLogStore(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2422,6 +2766,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteLogStoreWithOptions(project, logstore, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteLogStoreResponse
+         */
         public async Task<DeleteLogStoreResponse> DeleteLogStoreAsync(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2553,6 +2903,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteLogtailPipelineConfigWithOptionsAsync(project, configName, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteMachineGroupResponse
+         */
         public DeleteMachineGroupResponse DeleteMachineGroupWithOptions(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2577,6 +2935,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteMachineGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteMachineGroupResponse
+         */
         public async Task<DeleteMachineGroupResponse> DeleteMachineGroupWithOptionsAsync(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2601,6 +2967,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteMachineGroupResponse
+         */
         public DeleteMachineGroupResponse DeleteMachineGroup(string project, string machineGroup)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2608,6 +2980,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteMachineGroupWithOptions(project, machineGroup, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteMachineGroupResponse
+         */
         public async Task<DeleteMachineGroupResponse> DeleteMachineGroupAsync(string project, string machineGroup)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2677,6 +3055,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteProjectWithOptionsAsync(project, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteProjectPolicyResponse
+         */
         public DeleteProjectPolicyResponse DeleteProjectPolicyWithOptions(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2701,6 +3087,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteProjectPolicyResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteProjectPolicyResponse
+         */
         public async Task<DeleteProjectPolicyResponse> DeleteProjectPolicyWithOptionsAsync(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2725,6 +3119,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteProjectPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteProjectPolicyResponse
+         */
         public DeleteProjectPolicyResponse DeleteProjectPolicy(string project)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2732,6 +3132,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteProjectPolicyWithOptions(project, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteProjectPolicyResponse
+         */
         public async Task<DeleteProjectPolicyResponse> DeleteProjectPolicyAsync(string project)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2739,6 +3145,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteProjectPolicyWithOptionsAsync(project, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteSavedSearchResponse
+         */
         public DeleteSavedSearchResponse DeleteSavedSearchWithOptions(string project, string savedsearchName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2763,6 +3177,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteSavedSearchResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteSavedSearchResponse
+         */
         public async Task<DeleteSavedSearchResponse> DeleteSavedSearchWithOptionsAsync(string project, string savedsearchName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2787,6 +3209,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteSavedSearchResponse
+         */
         public DeleteSavedSearchResponse DeleteSavedSearch(string project, string savedsearchName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2794,6 +3222,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteSavedSearchWithOptions(project, savedsearchName, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteSavedSearchResponse
+         */
         public async Task<DeleteSavedSearchResponse> DeleteSavedSearchAsync(string project, string savedsearchName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2801,6 +3235,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteSavedSearchWithOptionsAsync(project, savedsearchName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteShipperResponse
+         */
         public DeleteShipperResponse DeleteShipperWithOptions(string project, string logstore, string shipperName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2825,6 +3266,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteShipperResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteShipperResponse
+         */
         public async Task<DeleteShipperResponse> DeleteShipperWithOptionsAsync(string project, string logstore, string shipperName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2849,6 +3297,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteShipperResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteShipperResponse
+         */
         public DeleteShipperResponse DeleteShipper(string project, string logstore, string shipperName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2856,6 +3309,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteShipperWithOptions(project, logstore, shipperName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return DeleteShipperResponse
+         */
         public async Task<DeleteShipperResponse> DeleteShipperAsync(string project, string logstore, string shipperName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3031,6 +3489,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetAnnotationLabelWithOptionsAsync(labelId, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAppliedConfigsResponse
+         */
         public GetAppliedConfigsResponse GetAppliedConfigsWithOptions(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3055,6 +3520,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetAppliedConfigsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAppliedConfigsResponse
+         */
         public async Task<GetAppliedConfigsResponse> GetAppliedConfigsWithOptionsAsync(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3079,6 +3551,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetAppliedConfigsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetAppliedConfigsResponse
+         */
         public GetAppliedConfigsResponse GetAppliedConfigs(string project, string machineGroup)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3086,6 +3563,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetAppliedConfigsWithOptions(project, machineGroup, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetAppliedConfigsResponse
+         */
         public async Task<GetAppliedConfigsResponse> GetAppliedConfigsAsync(string project, string machineGroup)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3093,6 +3575,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetAppliedConfigsWithOptionsAsync(project, machineGroup, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAppliedMachineGroupsResponse
+         */
         public GetAppliedMachineGroupsResponse GetAppliedMachineGroupsWithOptions(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3117,6 +3606,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetAppliedMachineGroupsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAppliedMachineGroupsResponse
+         */
         public async Task<GetAppliedMachineGroupsResponse> GetAppliedMachineGroupsWithOptionsAsync(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3141,6 +3637,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetAppliedMachineGroupsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetAppliedMachineGroupsResponse
+         */
         public GetAppliedMachineGroupsResponse GetAppliedMachineGroups(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3148,6 +3649,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetAppliedMachineGroupsWithOptions(project, configName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetAppliedMachineGroupsResponse
+         */
         public async Task<GetAppliedMachineGroupsResponse> GetAppliedMachineGroupsAsync(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3155,6 +3661,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetAppliedMachineGroupsWithOptionsAsync(project, configName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetCheckPointRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetCheckPointResponse
+         */
         public GetCheckPointResponse GetCheckPointWithOptions(string project, string logstore, string consumerGroup, GetCheckPointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3186,6 +3700,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetCheckPointResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetCheckPointRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetCheckPointResponse
+         */
         public async Task<GetCheckPointResponse> GetCheckPointWithOptionsAsync(string project, string logstore, string consumerGroup, GetCheckPointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3217,6 +3739,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetCheckPointResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetCheckPointRequest
+          * @return GetCheckPointResponse
+         */
         public GetCheckPointResponse GetCheckPoint(string project, string logstore, string consumerGroup, GetCheckPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3224,6 +3752,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetCheckPointWithOptions(project, logstore, consumerGroup, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetCheckPointRequest
+          * @return GetCheckPointResponse
+         */
         public async Task<GetCheckPointResponse> GetCheckPointAsync(string project, string logstore, string consumerGroup, GetCheckPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3371,6 +3905,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetConfigWithOptionsAsync(project, configName, headers, runtime);
         }
 
+        /**
+          * *   You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetContextLogsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetContextLogsResponse
+         */
         public GetContextLogsResponse GetContextLogsWithOptions(string project, string logstore, GetContextLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3418,6 +3961,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetContextLogsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * *   You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetContextLogsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetContextLogsResponse
+         */
         public async Task<GetContextLogsResponse> GetContextLogsWithOptionsAsync(string project, string logstore, GetContextLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3465,6 +4017,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetContextLogsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetContextLogsRequest
+          * @return GetContextLogsResponse
+         */
         public GetContextLogsResponse GetContextLogs(string project, string logstore, GetContextLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3472,6 +4031,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetContextLogsWithOptions(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * *   You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetContextLogsRequest
+          * @return GetContextLogsResponse
+         */
         public async Task<GetContextLogsResponse> GetContextLogsAsync(string project, string logstore, GetContextLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3479,6 +4045,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetContextLogsWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   The following content describes the relationships among a cursor, project, Logstore, and shard:
+          *     *   A project can have multiple Logstores.
+          *     *   A Logstore can have multiple shards.
+          *     *   You can use a cursor to obtain a log in a shard.
+          *
+          * @param request GetCursorRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetCursorResponse
+         */
         public GetCursorResponse GetCursorWithOptions(string project, string logstore, string shardId, GetCursorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3510,6 +4089,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetCursorResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   The following content describes the relationships among a cursor, project, Logstore, and shard:
+          *     *   A project can have multiple Logstores.
+          *     *   A Logstore can have multiple shards.
+          *     *   You can use a cursor to obtain a log in a shard.
+          *
+          * @param request GetCursorRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetCursorResponse
+         */
         public async Task<GetCursorResponse> GetCursorWithOptionsAsync(string project, string logstore, string shardId, GetCursorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3541,6 +4133,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetCursorResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   The following content describes the relationships among a cursor, project, Logstore, and shard:
+          *     *   A project can have multiple Logstores.
+          *     *   A Logstore can have multiple shards.
+          *     *   You can use a cursor to obtain a log in a shard.
+          *
+          * @param request GetCursorRequest
+          * @return GetCursorResponse
+         */
         public GetCursorResponse GetCursor(string project, string logstore, string shardId, GetCursorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3548,6 +4151,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetCursorWithOptions(project, logstore, shardId, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   The following content describes the relationships among a cursor, project, Logstore, and shard:
+          *     *   A project can have multiple Logstores.
+          *     *   A Logstore can have multiple shards.
+          *     *   You can use a cursor to obtain a log in a shard.
+          *
+          * @param request GetCursorRequest
+          * @return GetCursorResponse
+         */
         public async Task<GetCursorResponse> GetCursorAsync(string project, string logstore, string shardId, GetCursorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3693,6 +4307,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetDashboardWithOptionsAsync(project, dashboardName, headers, runtime);
         }
 
+        /**
+          * *   The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetExternalStoreResponse
+         */
         public GetExternalStoreResponse GetExternalStoreWithOptions(string project, string externalStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3717,6 +4339,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetExternalStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * *   The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetExternalStoreResponse
+         */
         public async Task<GetExternalStoreResponse> GetExternalStoreWithOptionsAsync(string project, string externalStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3741,6 +4371,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetExternalStoreResponse
+         */
         public GetExternalStoreResponse GetExternalStore(string project, string externalStoreName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3748,6 +4384,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetExternalStoreWithOptions(project, externalStoreName, headers, runtime);
         }
 
+        /**
+          * *   The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetExternalStoreResponse
+         */
         public async Task<GetExternalStoreResponse> GetExternalStoreAsync(string project, string externalStoreName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3755,6 +4397,23 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetExternalStoreWithOptionsAsync(project, externalStoreName, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+          *     *   Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.
+          *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+          *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:\\__receive_time\\_\\_ field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+          * *   Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see [Use GetHistograms to query the distribution of logs](~~462234~~).
+          *
+          * @param request GetHistogramsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetHistogramsResponse
+         */
         public GetHistogramsResponse GetHistogramsWithOptions(string project, string logstore, GetHistogramsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3798,6 +4457,23 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetHistogramsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+          *     *   Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.
+          *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+          *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:\\__receive_time\\_\\_ field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+          * *   Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see [Use GetHistograms to query the distribution of logs](~~462234~~).
+          *
+          * @param request GetHistogramsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetHistogramsResponse
+         */
         public async Task<GetHistogramsResponse> GetHistogramsWithOptionsAsync(string project, string logstore, GetHistogramsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3841,6 +4517,21 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetHistogramsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+          *     *   Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.
+          *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+          *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:\\__receive_time\\_\\_ field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+          * *   Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see [Use GetHistograms to query the distribution of logs](~~462234~~).
+          *
+          * @param request GetHistogramsRequest
+          * @return GetHistogramsResponse
+         */
         public GetHistogramsResponse GetHistograms(string project, string logstore, GetHistogramsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3848,6 +4539,21 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetHistogramsWithOptions(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+          *     *   Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.
+          *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+          *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:\\__receive_time\\_\\_ field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+          * *   Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see [Use GetHistograms to query the distribution of logs](~~462234~~).
+          *
+          * @param request GetHistogramsRequest
+          * @return GetHistogramsResponse
+         */
         public async Task<GetHistogramsResponse> GetHistogramsAsync(string project, string logstore, GetHistogramsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3855,6 +4561,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetHistogramsWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetIndexResponse
+         */
         public GetIndexResponse GetIndexWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3879,6 +4593,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetIndexResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetIndexResponse
+         */
         public async Task<GetIndexResponse> GetIndexWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3903,6 +4625,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetIndexResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetIndexResponse
+         */
         public GetIndexResponse GetIndex(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3910,6 +4638,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetIndexWithOptions(project, logstore, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetIndexResponse
+         */
         public async Task<GetIndexResponse> GetIndexAsync(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3917,6 +4651,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetIndexWithOptionsAsync(project, logstore, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLogStoreResponse
+         */
         public GetLogStoreResponse GetLogStoreWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3941,6 +4683,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLogStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLogStoreResponse
+         */
         public async Task<GetLogStoreResponse> GetLogStoreWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3965,6 +4715,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetLogStoreResponse
+         */
         public GetLogStoreResponse GetLogStore(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3972,6 +4728,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetLogStoreWithOptions(project, logstore, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetLogStoreResponse
+         */
         public async Task<GetLogStoreResponse> GetLogStoreAsync(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4041,6 +4803,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetLogStoreMeteringModeWithOptionsAsync(project, logstore, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLoggingResponse
+         */
         public GetLoggingResponse GetLoggingWithOptions(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4065,6 +4834,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLoggingResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLoggingResponse
+         */
         public async Task<GetLoggingResponse> GetLoggingWithOptionsAsync(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4089,6 +4865,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetLoggingResponse
+         */
         public GetLoggingResponse GetLogging(string project)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4096,6 +4877,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetLoggingWithOptions(project, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetLoggingResponse
+         */
         public async Task<GetLoggingResponse> GetLoggingAsync(string project)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4103,6 +4889,23 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetLoggingWithOptionsAsync(project, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * > Simple Log Service allows you to create a Scheduled SQL job. For more information, see [Create a Scheduled SQL job](~~286457~~).
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+          *         Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. 
+          *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+          *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:**receive_time** field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+          * *   Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see [Examples of calling the GetLogs operation by using Simple Log Service SDK for Java](~~407683~~) and [Examples of calling the GetLogs operation by using Simple Log Service SDK for Python](~~407684~~).
+          *
+          * @param request GetLogsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLogsResponse
+         */
         public GetLogsResponse GetLogsWithOptions(string project, string logstore, GetLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4162,6 +4965,23 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLogsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * > Simple Log Service allows you to create a Scheduled SQL job. For more information, see [Create a Scheduled SQL job](~~286457~~).
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+          *         Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. 
+          *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+          *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:**receive_time** field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+          * *   Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see [Examples of calling the GetLogs operation by using Simple Log Service SDK for Java](~~407683~~) and [Examples of calling the GetLogs operation by using Simple Log Service SDK for Python](~~407684~~).
+          *
+          * @param request GetLogsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLogsResponse
+         */
         public async Task<GetLogsResponse> GetLogsWithOptionsAsync(string project, string logstore, GetLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4221,6 +5041,21 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLogsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * > Simple Log Service allows you to create a Scheduled SQL job. For more information, see [Create a Scheduled SQL job](~~286457~~).
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+          *         Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. 
+          *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+          *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:**receive_time** field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+          * *   Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see [Examples of calling the GetLogs operation by using Simple Log Service SDK for Java](~~407683~~) and [Examples of calling the GetLogs operation by using Simple Log Service SDK for Python](~~407684~~).
+          *
+          * @param request GetLogsRequest
+          * @return GetLogsResponse
+         */
         public GetLogsResponse GetLogs(string project, string logstore, GetLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4228,6 +5063,21 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetLogsWithOptions(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * > Simple Log Service allows you to create a Scheduled SQL job. For more information, see [Create a Scheduled SQL job](~~286457~~).
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+          *         Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. 
+          *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+          *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:**receive_time** field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+          * *   Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see [Examples of calling the GetLogs operation by using Simple Log Service SDK for Java](~~407683~~) and [Examples of calling the GetLogs operation by using Simple Log Service SDK for Python](~~407684~~).
+          *
+          * @param request GetLogsRequest
+          * @return GetLogsResponse
+         */
         public async Task<GetLogsResponse> GetLogsAsync(string project, string logstore, GetLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4235,6 +5085,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetLogsWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:
+          * 1.  1.  Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.
+          * 2.  2.  Historical data: The difference between the time record in the log and the current server time is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          *
+          * @param request GetLogsV2Request
+          * @param headers GetLogsV2Headers
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLogsV2Response
+         */
         public GetLogsV2Response GetLogsV2WithOptions(string project, string logstore, GetLogsV2Request request, GetLogsV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4315,6 +5177,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLogsV2Response>(Execute(params_, req, runtime));
         }
 
+        /**
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:
+          * 1.  1.  Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.
+          * 2.  2.  Historical data: The difference between the time record in the log and the current server time is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          *
+          * @param request GetLogsV2Request
+          * @param headers GetLogsV2Headers
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLogsV2Response
+         */
         public async Task<GetLogsV2Response> GetLogsV2WithOptionsAsync(string project, string logstore, GetLogsV2Request request, GetLogsV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4395,6 +5269,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLogsV2Response>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:
+          * 1.  1.  Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.
+          * 2.  2.  Historical data: The difference between the time record in the log and the current server time is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          *
+          * @param request GetLogsV2Request
+          * @return GetLogsV2Response
+         */
         public GetLogsV2Response GetLogsV2(string project, string logstore, GetLogsV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4402,6 +5286,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetLogsV2WithOptions(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+          * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:
+          * 1.  1.  Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.
+          * 2.  2.  Historical data: The difference between the time record in the log and the current server time is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+          *
+          * @param request GetLogsV2Request
+          * @return GetLogsV2Response
+         */
         public async Task<GetLogsV2Response> GetLogsV2Async(string project, string logstore, GetLogsV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4471,6 +5365,85 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetLogtailPipelineConfigWithOptionsAsync(project, configName, headers, runtime);
         }
 
+        public GetMLServiceResultsResponse GetMLServiceResultsWithOptions(string serviceName, GetMLServiceResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowBuiltin))
+            {
+                query["allowBuiltin"] = request.AllowBuiltin;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMLServiceResults",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/service/" + serviceName + "/analysis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMLServiceResultsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetMLServiceResultsResponse> GetMLServiceResultsWithOptionsAsync(string serviceName, GetMLServiceResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowBuiltin))
+            {
+                query["allowBuiltin"] = request.AllowBuiltin;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMLServiceResults",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/ml/service/" + serviceName + "/analysis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMLServiceResultsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetMLServiceResultsResponse GetMLServiceResults(string serviceName, GetMLServiceResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMLServiceResultsWithOptions(serviceName, request, headers, runtime);
+        }
+
+        public async Task<GetMLServiceResultsResponse> GetMLServiceResultsAsync(string serviceName, GetMLServiceResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMLServiceResultsWithOptionsAsync(serviceName, request, headers, runtime);
+        }
+
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMachineGroupResponse
+         */
         public GetMachineGroupResponse GetMachineGroupWithOptions(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4495,6 +5468,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetMachineGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMachineGroupResponse
+         */
         public async Task<GetMachineGroupResponse> GetMachineGroupWithOptionsAsync(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4519,6 +5499,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetMachineGroupResponse
+         */
         public GetMachineGroupResponse GetMachineGroup(string project, string machineGroup)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4526,6 +5511,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetMachineGroupWithOptions(project, machineGroup, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetMachineGroupResponse
+         */
         public async Task<GetMachineGroupResponse> GetMachineGroupAsync(string project, string machineGroup)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4533,6 +5523,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetMachineGroupWithOptionsAsync(project, machineGroup, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetProjectResponse
+         */
         public GetProjectResponse GetProjectWithOptions(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4557,6 +5555,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetProjectResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetProjectResponse
+         */
         public async Task<GetProjectResponse> GetProjectWithOptionsAsync(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4581,6 +5587,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetProjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetProjectResponse
+         */
         public GetProjectResponse GetProject(string project)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4588,6 +5600,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetProjectWithOptions(project, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetProjectResponse
+         */
         public async Task<GetProjectResponse> GetProjectAsync(string project)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4595,6 +5613,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetProjectWithOptionsAsync(project, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   You can use the query parameter to specify a standard SQL statement.
+          * *   You must specify a project in the domain name of the request.
+          * *   You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.
+          * *   You must specify a time range in the SQL statement by using the \\__date\\_\\_ parameter or \\__time\\_\\_ parameter. The value of the \\__date\\_\\_ parameter is a timestamp, and the value of the \\__time\\_\\_ parameter is an integer. The unit of the \\__time\\_\\_ parameter is seconds.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetProjectLogsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetProjectLogsResponse
+         */
         public GetProjectLogsResponse GetProjectLogsWithOptions(string project, GetProjectLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4630,6 +5661,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetProjectLogsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   You can use the query parameter to specify a standard SQL statement.
+          * *   You must specify a project in the domain name of the request.
+          * *   You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.
+          * *   You must specify a time range in the SQL statement by using the \\__date\\_\\_ parameter or \\__time\\_\\_ parameter. The value of the \\__date\\_\\_ parameter is a timestamp, and the value of the \\__time\\_\\_ parameter is an integer. The unit of the \\__time\\_\\_ parameter is seconds.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetProjectLogsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetProjectLogsResponse
+         */
         public async Task<GetProjectLogsResponse> GetProjectLogsWithOptionsAsync(string project, GetProjectLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4665,6 +5709,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetProjectLogsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   You can use the query parameter to specify a standard SQL statement.
+          * *   You must specify a project in the domain name of the request.
+          * *   You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.
+          * *   You must specify a time range in the SQL statement by using the \\__date\\_\\_ parameter or \\__time\\_\\_ parameter. The value of the \\__date\\_\\_ parameter is a timestamp, and the value of the \\__time\\_\\_ parameter is an integer. The unit of the \\__time\\_\\_ parameter is seconds.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetProjectLogsRequest
+          * @return GetProjectLogsResponse
+         */
         public GetProjectLogsResponse GetProjectLogs(string project, GetProjectLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4672,6 +5727,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetProjectLogsWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   You can use the query parameter to specify a standard SQL statement.
+          * *   You must specify a project in the domain name of the request.
+          * *   You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.
+          * *   You must specify a time range in the SQL statement by using the \\__date\\_\\_ parameter or \\__time\\_\\_ parameter. The value of the \\__date\\_\\_ parameter is a timestamp, and the value of the \\__time\\_\\_ parameter is an integer. The unit of the \\__time\\_\\_ parameter is seconds.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetProjectLogsRequest
+          * @return GetProjectLogsResponse
+         */
         public async Task<GetProjectLogsResponse> GetProjectLogsAsync(string project, GetProjectLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4679,6 +5745,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetProjectLogsWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetProjectPolicyResponse
+         */
         public GetProjectPolicyResponse GetProjectPolicyWithOptions(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4703,6 +5777,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetProjectPolicyResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetProjectPolicyResponse
+         */
         public async Task<GetProjectPolicyResponse> GetProjectPolicyWithOptionsAsync(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4727,6 +5809,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetProjectPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetProjectPolicyResponse
+         */
         public GetProjectPolicyResponse GetProjectPolicy(string project)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4734,6 +5822,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetProjectPolicyWithOptions(project, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetProjectPolicyResponse
+         */
         public async Task<GetProjectPolicyResponse> GetProjectPolicyAsync(string project)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4741,6 +5835,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetProjectPolicyWithOptionsAsync(project, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSavedSearchResponse
+         */
         public GetSavedSearchResponse GetSavedSearchWithOptions(string project, string savedsearchName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4765,6 +5867,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetSavedSearchResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSavedSearchResponse
+         */
         public async Task<GetSavedSearchResponse> GetSavedSearchWithOptionsAsync(string project, string savedsearchName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4789,6 +5899,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetSavedSearchResponse
+         */
         public GetSavedSearchResponse GetSavedSearch(string project, string savedsearchName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4796,6 +5912,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetSavedSearchWithOptions(project, savedsearchName, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return GetSavedSearchResponse
+         */
         public async Task<GetSavedSearchResponse> GetSavedSearchAsync(string project, string savedsearchName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4803,6 +5925,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetSavedSearchWithOptionsAsync(project, savedsearchName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetShipperStatusRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetShipperStatusResponse
+         */
         public GetShipperStatusResponse GetShipperStatusWithOptions(string project, string logstore, string shipperName, GetShipperStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4850,6 +5980,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetShipperStatusResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetShipperStatusRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetShipperStatusResponse
+         */
         public async Task<GetShipperStatusResponse> GetShipperStatusWithOptionsAsync(string project, string logstore, string shipperName, GetShipperStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4897,6 +6035,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetShipperStatusResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetShipperStatusRequest
+          * @return GetShipperStatusResponse
+         */
         public GetShipperStatusResponse GetShipperStatus(string project, string logstore, string shipperName, GetShipperStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4904,6 +6048,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetShipperStatusWithOptions(project, logstore, shipperName, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request GetShipperStatusRequest
+          * @return GetShipperStatusResponse
+         */
         public async Task<GetShipperStatusResponse> GetShipperStatusAsync(string project, string logstore, string shipperName, GetShipperStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5375,6 +6525,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListConfigWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListConsumerGroupResponse
+         */
         public ListConsumerGroupResponse ListConsumerGroupWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -5399,6 +6557,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListConsumerGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListConsumerGroupResponse
+         */
         public async Task<ListConsumerGroupResponse> ListConsumerGroupWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -5423,6 +6589,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return ListConsumerGroupResponse
+         */
         public ListConsumerGroupResponse ListConsumerGroup(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5430,6 +6602,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListConsumerGroupWithOptions(project, logstore, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return ListConsumerGroupResponse
+         */
         public async Task<ListConsumerGroupResponse> ListConsumerGroupAsync(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5521,6 +6699,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListDashboardWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Only one custom domain name can be bound to each project.
+          *
+          * @param request ListDomainsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDomainsResponse
+         */
         public ListDomainsResponse ListDomainsWithOptions(string project, ListDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5560,6 +6747,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListDomainsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Only one custom domain name can be bound to each project.
+          *
+          * @param request ListDomainsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDomainsResponse
+         */
         public async Task<ListDomainsResponse> ListDomainsWithOptionsAsync(string project, ListDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5599,6 +6795,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListDomainsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Only one custom domain name can be bound to each project.
+          *
+          * @param request ListDomainsRequest
+          * @return ListDomainsResponse
+         */
         public ListDomainsResponse ListDomains(string project, ListDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5606,6 +6809,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListDomainsWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Only one custom domain name can be bound to each project.
+          *
+          * @param request ListDomainsRequest
+          * @return ListDomainsResponse
+         */
         public async Task<ListDomainsResponse> ListDomainsAsync(string project, ListDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5613,6 +6823,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListDomainsWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListExternalStoreResponse
+         */
         public ListExternalStoreResponse ListExternalStoreWithOptions(string project, ListExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5652,6 +6870,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListExternalStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListExternalStoreResponse
+         */
         public async Task<ListExternalStoreResponse> ListExternalStoreWithOptionsAsync(string project, ListExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5691,6 +6917,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListExternalStoreRequest
+          * @return ListExternalStoreResponse
+         */
         public ListExternalStoreResponse ListExternalStore(string project, ListExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5698,6 +6930,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListExternalStoreWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListExternalStoreRequest
+          * @return ListExternalStoreResponse
+         */
         public async Task<ListExternalStoreResponse> ListExternalStoreAsync(string project, ListExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5705,6 +6943,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListExternalStoreWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListLogStoresRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListLogStoresResponse
+         */
         public ListLogStoresResponse ListLogStoresWithOptions(string project, ListLogStoresRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5752,6 +6999,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListLogStoresResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListLogStoresRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListLogStoresResponse
+         */
         public async Task<ListLogStoresResponse> ListLogStoresWithOptionsAsync(string project, ListLogStoresRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5799,6 +7055,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListLogStoresResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListLogStoresRequest
+          * @return ListLogStoresResponse
+         */
         public ListLogStoresResponse ListLogStores(string project, ListLogStoresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5806,6 +7069,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListLogStoresWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListLogStoresRequest
+          * @return ListLogStoresResponse
+         */
         public async Task<ListLogStoresResponse> ListLogStoresAsync(string project, ListLogStoresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5913,6 +7183,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListLogtailPipelineConfigWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListMachineGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListMachineGroupResponse
+         */
         public ListMachineGroupResponse ListMachineGroupWithOptions(string project, ListMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5952,6 +7230,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListMachineGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListMachineGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListMachineGroupResponse
+         */
         public async Task<ListMachineGroupResponse> ListMachineGroupWithOptionsAsync(string project, ListMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5991,6 +7277,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListMachineGroupRequest
+          * @return ListMachineGroupResponse
+         */
         public ListMachineGroupResponse ListMachineGroup(string project, ListMachineGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5998,6 +7290,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListMachineGroupWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListMachineGroupRequest
+          * @return ListMachineGroupResponse
+         */
         public async Task<ListMachineGroupResponse> ListMachineGroupAsync(string project, ListMachineGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6005,6 +7303,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListMachineGroupWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListMachinesRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListMachinesResponse
+         */
         public ListMachinesResponse ListMachinesWithOptions(string project, string machineGroup, ListMachinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6040,6 +7346,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListMachinesResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListMachinesRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListMachinesResponse
+         */
         public async Task<ListMachinesResponse> ListMachinesWithOptionsAsync(string project, string machineGroup, ListMachinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6075,6 +7389,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListMachinesResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListMachinesRequest
+          * @return ListMachinesResponse
+         */
         public ListMachinesResponse ListMachines(string project, string machineGroup, ListMachinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6082,6 +7402,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListMachinesWithOptions(project, machineGroup, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListMachinesRequest
+          * @return ListMachinesResponse
+         */
         public async Task<ListMachinesResponse> ListMachinesAsync(string project, string machineGroup, ListMachinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6089,7 +7415,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListMachinesWithOptionsAsync(project, machineGroup, request, headers, runtime);
         }
 
-        public ListProjectResponse ListProjectWithOptions(string resourceGroupId, ListProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListProjectRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListProjectResponse
+         */
+        public ListProjectResponse ListProjectWithOptions(ListProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -6100,6 +7435,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["projectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
             {
@@ -6125,7 +7464,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListProjectResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<ListProjectResponse> ListProjectWithOptionsAsync(string resourceGroupId, ListProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListProjectRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListProjectResponse
+         */
+        public async Task<ListProjectResponse> ListProjectWithOptionsAsync(ListProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -6136,6 +7484,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["projectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
             {
@@ -6161,20 +7513,43 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListProjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListProjectResponse ListProject(string resourceGroupId, ListProjectRequest request)
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListProjectRequest
+          * @return ListProjectResponse
+         */
+        public ListProjectResponse ListProject(ListProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListProjectWithOptions(resourceGroupId, request, headers, runtime);
+            return ListProjectWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListProjectResponse> ListProjectAsync(string resourceGroupId, ListProjectRequest request)
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListProjectRequest
+          * @return ListProjectResponse
+         */
+        public async Task<ListProjectResponse> ListProjectAsync(ListProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListProjectWithOptionsAsync(resourceGroupId, request, headers, runtime);
+            return await ListProjectWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListSavedSearchRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSavedSearchResponse
+         */
         public ListSavedSearchResponse ListSavedSearchWithOptions(string project, ListSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6210,6 +7585,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListSavedSearchResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListSavedSearchRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSavedSearchResponse
+         */
         public async Task<ListSavedSearchResponse> ListSavedSearchWithOptionsAsync(string project, ListSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6245,6 +7629,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListSavedSearchRequest
+          * @return ListSavedSearchResponse
+         */
         public ListSavedSearchResponse ListSavedSearch(string project, ListSavedSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6252,6 +7643,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListSavedSearchWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListSavedSearchRequest
+          * @return ListSavedSearchResponse
+         */
         public async Task<ListSavedSearchResponse> ListSavedSearchAsync(string project, ListSavedSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6321,6 +7719,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListShardsWithOptionsAsync(project, logstore, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListShipperResponse
+         */
         public ListShipperResponse ListShipperWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -6345,6 +7750,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListShipperResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListShipperResponse
+         */
         public async Task<ListShipperResponse> ListShipperWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -6369,6 +7781,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListShipperResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return ListShipperResponse
+         */
         public ListShipperResponse ListShipper(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6376,6 +7793,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListShipperWithOptions(project, logstore, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return ListShipperResponse
+         */
         public async Task<ListShipperResponse> ListShipperAsync(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6383,6 +7805,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListShipperWithOptionsAsync(project, logstore, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param tmpReq ListTagResourcesRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6429,6 +7860,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListTagResourcesResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param tmpReq ListTagResourcesRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6475,6 +7915,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListTagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6482,6 +7929,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListTagResourcesWithOptions(request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6579,6 +8033,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await PutAnnotationDataWithOptionsAsync(datasetId, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.
+          *     *   You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see [RAM](~~128139~~).
+          *     *   If you set the Principal element to an asterisk (\\*) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\\*) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.
+          *     *   You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.
+          *
+          * @param request PutProjectPolicyRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutProjectPolicyResponse
+         */
         public PutProjectPolicyResponse PutProjectPolicyWithOptions(string project, PutProjectPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6605,6 +8072,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<PutProjectPolicyResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.
+          *     *   You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see [RAM](~~128139~~).
+          *     *   If you set the Principal element to an asterisk (\\*) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\\*) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.
+          *     *   You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.
+          *
+          * @param request PutProjectPolicyRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutProjectPolicyResponse
+         */
         public async Task<PutProjectPolicyResponse> PutProjectPolicyWithOptionsAsync(string project, PutProjectPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6631,6 +8111,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<PutProjectPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.
+          *     *   You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see [RAM](~~128139~~).
+          *     *   If you set the Principal element to an asterisk (\\*) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\\*) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.
+          *     *   You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.
+          *
+          * @param request PutProjectPolicyRequest
+          * @return PutProjectPolicyResponse
+         */
         public PutProjectPolicyResponse PutProjectPolicy(string project, PutProjectPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6638,6 +8129,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return PutProjectPolicyWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.
+          *     *   You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see [RAM](~~128139~~).
+          *     *   If you set the Principal element to an asterisk (\\*) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\\*) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.
+          *     *   You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.
+          *
+          * @param request PutProjectPolicyRequest
+          * @return PutProjectPolicyResponse
+         */
         public async Task<PutProjectPolicyResponse> PutProjectPolicyAsync(string project, PutProjectPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6745,6 +8247,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await PutWebtrackingWithOptionsAsync(project, logstoreName, request, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request QueryMLServiceResultsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryMLServiceResultsResponse
+         */
+        // Deprecated
         public QueryMLServiceResultsResponse QueryMLServiceResultsWithOptions(string serviceName, QueryMLServiceResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6774,6 +8285,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<QueryMLServiceResultsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request QueryMLServiceResultsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryMLServiceResultsResponse
+         */
+        // Deprecated
         public async Task<QueryMLServiceResultsResponse> QueryMLServiceResultsWithOptionsAsync(string serviceName, QueryMLServiceResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6803,6 +8323,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<QueryMLServiceResultsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request QueryMLServiceResultsRequest
+          * @return QueryMLServiceResultsResponse
+         */
+        // Deprecated
         public QueryMLServiceResultsResponse QueryMLServiceResults(string serviceName, QueryMLServiceResultsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6810,6 +8337,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return QueryMLServiceResultsWithOptions(serviceName, request, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request QueryMLServiceResultsRequest
+          * @return QueryMLServiceResultsResponse
+         */
+        // Deprecated
         public async Task<QueryMLServiceResultsResponse> QueryMLServiceResultsAsync(string serviceName, QueryMLServiceResultsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6817,6 +8351,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await QueryMLServiceResultsWithOptionsAsync(serviceName, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveConfigFromMachineGroupResponse
+         */
         public RemoveConfigFromMachineGroupResponse RemoveConfigFromMachineGroupWithOptions(string project, string machineGroup, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -6841,6 +8382,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<RemoveConfigFromMachineGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveConfigFromMachineGroupResponse
+         */
         public async Task<RemoveConfigFromMachineGroupResponse> RemoveConfigFromMachineGroupWithOptionsAsync(string project, string machineGroup, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -6865,6 +8413,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<RemoveConfigFromMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return RemoveConfigFromMachineGroupResponse
+         */
         public RemoveConfigFromMachineGroupResponse RemoveConfigFromMachineGroup(string project, string machineGroup, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6872,6 +8425,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return RemoveConfigFromMachineGroupWithOptions(project, machineGroup, configName, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @return RemoveConfigFromMachineGroupResponse
+         */
         public async Task<RemoveConfigFromMachineGroupResponse> RemoveConfigFromMachineGroupAsync(string project, string machineGroup, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6879,6 +8437,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await RemoveConfigFromMachineGroupWithOptionsAsync(project, machineGroup, configName, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the `[BeginKey,EndKey)` format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see [Shard](~~28976~~).
+          *
+          * @param request SplitShardRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SplitShardResponse
+         */
         public SplitShardResponse SplitShardWithOptions(string project, string logstore, string shard, SplitShardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6914,6 +8482,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<SplitShardResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the `[BeginKey,EndKey)` format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see [Shard](~~28976~~).
+          *
+          * @param request SplitShardRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SplitShardResponse
+         */
         public async Task<SplitShardResponse> SplitShardWithOptionsAsync(string project, string logstore, string shard, SplitShardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6949,6 +8527,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<SplitShardResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the `[BeginKey,EndKey)` format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see [Shard](~~28976~~).
+          *
+          * @param request SplitShardRequest
+          * @return SplitShardResponse
+         */
         public SplitShardResponse SplitShard(string project, string logstore, string shard, SplitShardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6956,6 +8542,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return SplitShardWithOptions(project, logstore, shard, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the `[BeginKey,EndKey)` format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see [Shard](~~28976~~).
+          *
+          * @param request SplitShardRequest
+          * @return SplitShardResponse
+         */
         public async Task<SplitShardResponse> SplitShardAsync(string project, string logstore, string shard, SplitShardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6963,6 +8557,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await SplitShardWithOptionsAsync(project, logstore, shard, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request TagResourcesRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6999,6 +8602,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<TagResourcesResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request TagResourcesRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7035,6 +8647,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<TagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7042,6 +8661,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TagResourcesWithOptions(request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7049,6 +8675,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await TagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UntagResourcesRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7089,6 +8724,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UntagResourcesResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UntagResourcesRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7129,6 +8773,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UntagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7136,6 +8787,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UntagResourcesWithOptions(request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7329,6 +8987,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateConfigWithOptionsAsync(project, configName, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateConsumerGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateConsumerGroupResponse
+         */
         public UpdateConsumerGroupResponse UpdateConsumerGroupWithOptions(string project, string logstore, string consumerGroup, UpdateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7364,6 +9031,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateConsumerGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateConsumerGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateConsumerGroupResponse
+         */
         public async Task<UpdateConsumerGroupResponse> UpdateConsumerGroupWithOptionsAsync(string project, string logstore, string consumerGroup, UpdateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7399,6 +9075,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateConsumerGroupRequest
+          * @return UpdateConsumerGroupResponse
+         */
         public UpdateConsumerGroupResponse UpdateConsumerGroup(string project, string logstore, string consumerGroup, UpdateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7406,6 +9089,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateConsumerGroupWithOptions(project, logstore, consumerGroup, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateConsumerGroupRequest
+          * @return UpdateConsumerGroupResponse
+         */
         public async Task<UpdateConsumerGroupResponse> UpdateConsumerGroupAsync(string project, string logstore, string consumerGroup, UpdateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7521,6 +9211,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateDashboardWithOptionsAsync(project, dashboardName, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateIndexRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateIndexResponse
+         */
         public UpdateIndexResponse UpdateIndexWithOptions(string project, string logstore, UpdateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7576,6 +9275,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateIndexResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateIndexRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateIndexResponse
+         */
         public async Task<UpdateIndexResponse> UpdateIndexWithOptionsAsync(string project, string logstore, UpdateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7631,6 +9339,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateIndexResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateIndexRequest
+          * @return UpdateIndexResponse
+         */
         public UpdateIndexResponse UpdateIndex(string project, string logstore, UpdateIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7638,6 +9353,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateIndexWithOptions(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateIndexRequest
+          * @return UpdateIndexResponse
+         */
         public async Task<UpdateIndexResponse> UpdateIndexAsync(string project, string logstore, UpdateIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7645,6 +9367,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateIndexWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          * *   You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.
+          *
+          * @param request UpdateLogStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateLogStoreResponse
+         */
         public UpdateLogStoreResponse UpdateLogStoreWithOptions(string project, string logstore, UpdateLogStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7716,6 +9448,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateLogStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          * *   You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.
+          *
+          * @param request UpdateLogStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateLogStoreResponse
+         */
         public async Task<UpdateLogStoreResponse> UpdateLogStoreWithOptionsAsync(string project, string logstore, UpdateLogStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7787,6 +9529,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          * *   You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.
+          *
+          * @param request UpdateLogStoreRequest
+          * @return UpdateLogStoreResponse
+         */
         public UpdateLogStoreResponse UpdateLogStore(string project, string logstore, UpdateLogStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7794,6 +9544,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateLogStoreWithOptions(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          * *   You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.
+          *
+          * @param request UpdateLogStoreRequest
+          * @return UpdateLogStoreResponse
+         */
         public async Task<UpdateLogStoreResponse> UpdateLogStoreAsync(string project, string logstore, UpdateLogStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7877,6 +9635,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateLogStoreMeteringModeWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateLoggingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateLoggingResponse
+         */
         public UpdateLoggingResponse UpdateLoggingWithOptions(string project, UpdateLoggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7912,6 +9678,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateLoggingResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateLoggingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateLoggingResponse
+         */
         public async Task<UpdateLoggingResponse> UpdateLoggingWithOptionsAsync(string project, UpdateLoggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7947,6 +9721,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateLoggingRequest
+          * @return UpdateLoggingResponse
+         */
         public UpdateLoggingResponse UpdateLogging(string project, UpdateLoggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7954,6 +9734,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateLoggingWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateLoggingRequest
+          * @return UpdateLoggingResponse
+         */
         public async Task<UpdateLoggingResponse> UpdateLoggingAsync(string project, UpdateLoggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8085,6 +9871,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateLogtailPipelineConfigWithOptionsAsync(project, configName, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateMachineGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateMachineGroupResponse
+         */
         public UpdateMachineGroupResponse UpdateMachineGroupWithOptions(string project, string groupName, UpdateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8132,6 +9926,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateMachineGroupResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateMachineGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateMachineGroupResponse
+         */
         public async Task<UpdateMachineGroupResponse> UpdateMachineGroupWithOptionsAsync(string project, string groupName, UpdateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8179,6 +9981,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateMachineGroupRequest
+          * @return UpdateMachineGroupResponse
+         */
         public UpdateMachineGroupResponse UpdateMachineGroup(string project, string groupName, UpdateMachineGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8186,6 +9994,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateMachineGroupWithOptions(project, groupName, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateMachineGroupRequest
+          * @return UpdateMachineGroupResponse
+         */
         public async Task<UpdateMachineGroupResponse> UpdateMachineGroupAsync(string project, string groupName, UpdateMachineGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8193,6 +10007,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateMachineGroupWithOptionsAsync(project, groupName, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateMachineGroupMachineRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateMachineGroupMachineResponse
+         */
         public UpdateMachineGroupMachineResponse UpdateMachineGroupMachineWithOptions(string project, string machineGroup, UpdateMachineGroupMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8225,6 +10047,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateMachineGroupMachineResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateMachineGroupMachineRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateMachineGroupMachineResponse
+         */
         public async Task<UpdateMachineGroupMachineResponse> UpdateMachineGroupMachineWithOptionsAsync(string project, string machineGroup, UpdateMachineGroupMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8257,6 +10087,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateMachineGroupMachineResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateMachineGroupMachineRequest
+          * @return UpdateMachineGroupMachineResponse
+         */
         public UpdateMachineGroupMachineResponse UpdateMachineGroupMachine(string project, string machineGroup, UpdateMachineGroupMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8264,6 +10100,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateMachineGroupMachineWithOptions(project, machineGroup, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateMachineGroupMachineRequest
+          * @return UpdateMachineGroupMachineResponse
+         */
         public async Task<UpdateMachineGroupMachineResponse> UpdateMachineGroupMachineAsync(string project, string machineGroup, UpdateMachineGroupMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8271,6 +10113,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateMachineGroupMachineWithOptionsAsync(project, machineGroup, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateOssExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateOssExternalStoreResponse
+         */
         public UpdateOssExternalStoreResponse UpdateOssExternalStoreWithOptions(string project, string externalStoreName, UpdateOssExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8310,6 +10160,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateOssExternalStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateOssExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateOssExternalStoreResponse
+         */
         public async Task<UpdateOssExternalStoreResponse> UpdateOssExternalStoreWithOptionsAsync(string project, string externalStoreName, UpdateOssExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8349,6 +10207,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateOssExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateOssExternalStoreRequest
+          * @return UpdateOssExternalStoreResponse
+         */
         public UpdateOssExternalStoreResponse UpdateOssExternalStore(string project, string externalStoreName, UpdateOssExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8356,6 +10220,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateOssExternalStoreWithOptions(project, externalStoreName, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateOssExternalStoreRequest
+          * @return UpdateOssExternalStoreResponse
+         */
         public async Task<UpdateOssExternalStoreResponse> UpdateOssExternalStoreAsync(string project, string externalStoreName, UpdateOssExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8363,6 +10233,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateOssExternalStoreWithOptionsAsync(project, externalStoreName, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateProjectRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateProjectResponse
+         */
         public UpdateProjectResponse UpdateProjectWithOptions(string project, UpdateProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8394,6 +10273,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateProjectResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateProjectRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateProjectResponse
+         */
         public async Task<UpdateProjectResponse> UpdateProjectWithOptionsAsync(string project, UpdateProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8425,6 +10313,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateProjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateProjectRequest
+          * @return UpdateProjectResponse
+         */
         public UpdateProjectResponse UpdateProject(string project, UpdateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8432,6 +10327,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateProjectWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateProjectRequest
+          * @return UpdateProjectResponse
+         */
         public async Task<UpdateProjectResponse> UpdateProjectAsync(string project, UpdateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8439,6 +10341,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateProjectWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateRdsExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateRdsExternalStoreResponse
+         */
         public UpdateRdsExternalStoreResponse UpdateRdsExternalStoreWithOptions(string project, string externalStoreName, UpdateRdsExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8478,6 +10388,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateRdsExternalStoreResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateRdsExternalStoreRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateRdsExternalStoreResponse
+         */
         public async Task<UpdateRdsExternalStoreResponse> UpdateRdsExternalStoreWithOptionsAsync(string project, string externalStoreName, UpdateRdsExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8517,6 +10435,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateRdsExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateRdsExternalStoreRequest
+          * @return UpdateRdsExternalStoreResponse
+         */
         public UpdateRdsExternalStoreResponse UpdateRdsExternalStore(string project, string externalStoreName, UpdateRdsExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8524,6 +10448,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateRdsExternalStoreWithOptions(project, externalStoreName, request, headers, runtime);
         }
 
+        /**
+          * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateRdsExternalStoreRequest
+          * @return UpdateRdsExternalStoreResponse
+         */
         public async Task<UpdateRdsExternalStoreResponse> UpdateRdsExternalStoreAsync(string project, string externalStoreName, UpdateRdsExternalStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

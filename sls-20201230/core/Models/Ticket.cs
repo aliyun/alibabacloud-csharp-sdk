@@ -45,18 +45,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string TicketId { get; set; }
 
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("unlimitedExpiration")]
-        [Validation(Required=false)]
-        public bool? UnlimitedExpiration { get; set; }
-
-        [NameInMap("unlimitedNumber")]
-        [Validation(Required=false)]
-        public bool? UnlimitedNumber { get; set; }
-
         [NameInMap("usedNumber")]
         [Validation(Required=false)]
         public int? UsedNumber { get; set; }

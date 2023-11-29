@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListDomainsRequest : TeaModel {
+        /// <summary>
+        /// The domain name that is used to match custom domain names. For example, if you set domainName to `example.com`, the matched domain names are `a.example.com` and `b.example.com`.
+        /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// The line from which the query starts. Default value: 0.
+        /// </summary>
         [NameInMap("offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }
 
+        /// <summary>
+        /// The number of entries per page. Default value: 500. Maximum value: 500.
+        /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }

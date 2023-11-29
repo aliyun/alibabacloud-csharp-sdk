@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateDomainRequest : TeaModel {
+        /// <summary>
+        /// The domain name.
+        /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

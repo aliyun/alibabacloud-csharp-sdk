@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class CreateTicketRequest : TeaModel {
-        [NameInMap("playAccessKeyId")]
+    public class GetMLServiceResultsResponseBody : TeaModel {
+        [NameInMap("data")]
         [Validation(Required=false)]
-        public string PlayAccessKeyId { get; set; }
+        public List<Dictionary<string, string>> Data { get; set; }
 
-        [NameInMap("playAccessKeySecret")]
+        [NameInMap("status")]
         [Validation(Required=false)]
-        public string PlayAccessKeySecret { get; set; }
+        public Dictionary<string, string> Status { get; set; }
 
     }
 

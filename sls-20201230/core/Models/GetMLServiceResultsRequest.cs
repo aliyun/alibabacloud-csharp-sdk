@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class PutProjectPolicyRequest : TeaModel {
-        /// <summary>
-        /// The project policy.
-        /// </summary>
+    public class GetMLServiceResultsRequest : TeaModel {
+        [NameInMap("allowBuiltin")]
+        [Validation(Required=false)]
+        public bool? AllowBuiltin { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public MLServiceAnalysisParam Body { get; set; }
 
     }
 

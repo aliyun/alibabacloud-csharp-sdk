@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
+        /// <summary>
+        /// The compression method.
+        /// </summary>
         [NameInMap("Accept-Encoding")]
         [Validation(Required=false)]
         public string AcceptEncoding { get; set; }
