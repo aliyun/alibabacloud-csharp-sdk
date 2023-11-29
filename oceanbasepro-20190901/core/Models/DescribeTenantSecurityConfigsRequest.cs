@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeTenantSecurityConfigsRequest : TeaModel {
+        [NameInMap("CheckId")]
+        [Validation(Required=false)]
+        public string CheckId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

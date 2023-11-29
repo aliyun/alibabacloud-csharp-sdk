@@ -40,12 +40,50 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
+            [NameInMap("CpuArchitecture")]
+            [Validation(Required=false)]
+            public string CpuArchitecture { get; set; }
+
             /// <summary>
             /// The number of OceanBase clusters queried.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
+            [NameInMap("DataDiskAutoScaleConfig")]
+            [Validation(Required=false)]
+            public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig DataDiskAutoScaleConfig { get; set; }
+            public class DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig : TeaModel {
+                [NameInMap("AutoScale")]
+                [Validation(Required=false)]
+                public bool? AutoScale { get; set; }
+
+                [NameInMap("MaxDiskSize")]
+                [Validation(Required=false)]
+                public long? MaxDiskSize { get; set; }
+
+                [NameInMap("ScaleStepInMerge")]
+                [Validation(Required=false)]
+                public long? ScaleStepInMerge { get; set; }
+
+                [NameInMap("ScaleStepInNormal")]
+                [Validation(Required=false)]
+                public long? ScaleStepInNormal { get; set; }
+
+                [NameInMap("UpperMergeThreshold")]
+                [Validation(Required=false)]
+                public long? UpperMergeThreshold { get; set; }
+
+                [NameInMap("UpperThreshold")]
+                [Validation(Required=false)]
+                public long? UpperThreshold { get; set; }
+
+                [NameInMap("Upperbound")]
+                [Validation(Required=false)]
+                public long? Upperbound { get; set; }
+
+            }
 
             /// <summary>
             /// The request ID.
@@ -95,6 +133,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
+
+            [NameInMap("InTempCapacityStatus")]
+            [Validation(Required=false)]
+            public bool? InTempCapacityStatus { get; set; }
 
             /// <summary>
             /// The instance type.
@@ -157,6 +199,24 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesResource Resource { get; set; }
             public class DescribeInstancesResponseBodyInstancesResource : TeaModel {
+                [NameInMap("CapacityUnit")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesResourceCapacityUnit CapacityUnit { get; set; }
+                public class DescribeInstancesResponseBodyInstancesResourceCapacityUnit : TeaModel {
+                    [NameInMap("MaxCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MaxCapacityUnit { get; set; }
+
+                    [NameInMap("MinCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MinCapacityUnit { get; set; }
+
+                    [NameInMap("UsedCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? UsedCapacityUnit { get; set; }
+
+                }
+
                 /// <summary>
                 /// Indicates whether new nodes can be added.
                 /// </summary>
@@ -164,6 +224,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesResourceCpu Cpu { get; set; }
                 public class DescribeInstancesResponseBodyInstancesResourceCpu : TeaModel {
+                    [NameInMap("OriginalTotalCpu")]
+                    [Validation(Required=false)]
+                    public long? OriginalTotalCpu { get; set; }
+
                     /// <summary>
                     /// The name of the OceanBase cluster.    
                     /// It must be 1 to 20 characters in length.   
@@ -200,6 +264,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesResourceDiskSize DiskSize { get; set; }
                 public class DescribeInstancesResponseBodyInstancesResourceDiskSize : TeaModel {
+                    [NameInMap("OriginalTotalDiskSize")]
+                    [Validation(Required=false)]
+                    public long? OriginalTotalDiskSize { get; set; }
+
                     /// <summary>
                     /// The request ID.
                     /// </summary>
@@ -245,6 +313,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesResourceMemory Memory { get; set; }
                 public class DescribeInstancesResponseBodyInstancesResourceMemory : TeaModel {
+                    [NameInMap("OriginalTotalMemory")]
+                    [Validation(Required=false)]
+                    public long? OriginalTotalMemory { get; set; }
+
                     /// <summary>
                     /// The number of CPU cores of the cluster.
                     /// </summary>
@@ -280,16 +352,6 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
-
-            /// <summary>
-            /// The number of the page to return.    
-            /// 
-            /// - Start value: 1 
-            /// - Default value: 1
-            /// </summary>
-            [NameInMap("SecurityIps")]
-            [Validation(Required=false)]
-            public List<string> SecurityIps { get; set; }
 
             /// <summary>
             /// The billing method for the OceanBase cluster. Valid values:  

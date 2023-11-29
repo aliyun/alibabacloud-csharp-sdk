@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs InstanceSecurityConfigs { get; set; }
         public class DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs : TeaModel {
+            [NameInMap("CheckId")]
+            [Validation(Required=false)]
+            public string CheckId { get; set; }
+
+            [NameInMap("CheckTime")]
+            [Validation(Required=false)]
+            public string CheckTime { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
             [NameInMap("SecurityConfigs")]
             [Validation(Required=false)]
             public List<DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigsSecurityConfigs> SecurityConfigs { get; set; }

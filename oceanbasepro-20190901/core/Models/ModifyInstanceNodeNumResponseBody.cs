@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public ModifyInstanceNodeNumResponseBodyData Data { get; set; }
         public class ModifyInstanceNodeNumResponseBodyData : TeaModel {
+            [NameInMap("DryRunResult")]
+            [Validation(Required=false)]
+            public bool? DryRunResult { get; set; }
+
             [NameInMap("OrderId")]
             [Validation(Required=false)]
             public string OrderId { get; set; }

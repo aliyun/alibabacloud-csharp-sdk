@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DeleteTenantUsersResponseBody : TeaModel {
         /// <summary>
-        /// DeleteTenantUsers
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

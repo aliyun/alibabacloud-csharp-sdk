@@ -24,12 +24,20 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("LogDisk")]
+        [Validation(Required=false)]
+        public long? LogDisk { get; set; }
+
         /// <summary>
         /// The ID of the tenant.
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
+
+        [NameInMap("ReadOnlyZoneList")]
+        [Validation(Required=false)]
+        public string ReadOnlyZoneList { get; set; }
 
         /// <summary>
         /// The information about the CPU resources of the tenant.

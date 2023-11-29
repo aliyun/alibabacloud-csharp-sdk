@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public long? MinMem { get; set; }
 
+            [NameInMap("SafeMem")]
+            [Validation(Required=false)]
+            public string SafeMem { get; set; }
+
             [NameInMap("UsedMem")]
             [Validation(Required=false)]
             public long? UsedMem { get; set; }

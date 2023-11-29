@@ -34,12 +34,54 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public List<string> AvailableZones { get; set; }
 
+            [NameInMap("CpuArchitecture")]
+            [Validation(Required=false)]
+            public string CpuArchitecture { get; set; }
+
             /// <summary>
             /// Indicates whether the log disk specifications can be upgraded.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
+            [NameInMap("DataDiskAutoScale")]
+            [Validation(Required=false)]
+            public bool? DataDiskAutoScale { get; set; }
+
+            [NameInMap("DataDiskAutoScaleConfig")]
+            [Validation(Required=false)]
+            public DescribeInstanceResponseBodyInstanceDataDiskAutoScaleConfig DataDiskAutoScaleConfig { get; set; }
+            public class DescribeInstanceResponseBodyInstanceDataDiskAutoScaleConfig : TeaModel {
+                [NameInMap("AutoScale")]
+                [Validation(Required=false)]
+                public bool? AutoScale { get; set; }
+
+                [NameInMap("MaxDiskSize")]
+                [Validation(Required=false)]
+                public long? MaxDiskSize { get; set; }
+
+                [NameInMap("ScaleStepInMerge")]
+                [Validation(Required=false)]
+                public long? ScaleStepInMerge { get; set; }
+
+                [NameInMap("ScaleStepInNormal")]
+                [Validation(Required=false)]
+                public long? ScaleStepInNormal { get; set; }
+
+                [NameInMap("UpperMergeThreshold")]
+                [Validation(Required=false)]
+                public long? UpperMergeThreshold { get; set; }
+
+                [NameInMap("UpperThreshold")]
+                [Validation(Required=false)]
+                public long? UpperThreshold { get; set; }
+
+                [NameInMap("Upperbound")]
+                [Validation(Required=false)]
+                public long? Upperbound { get; set; }
+
+            }
 
             /// <summary>
             /// The total number of CPU cores of the cluster.
@@ -73,6 +115,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public bool? EnableIsolationOptimization { get; set; }
 
+            [NameInMap("EnableProxyService")]
+            [Validation(Required=false)]
+            public bool? EnableProxyService { get; set; }
+
             [NameInMap("EnableUpgradeLogDisk")]
             [Validation(Required=false)]
             public bool? EnableUpgradeLogDisk { get; set; }
@@ -83,6 +129,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
+
+            [NameInMap("InTempCapacityStatus")]
+            [Validation(Required=false)]
+            public bool? InTempCapacityStatus { get; set; }
 
             /// <summary>
             /// The detailed information of the OBServer version.
@@ -146,6 +196,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string PayType { get; set; }
 
+            [NameInMap("ProxyClusterId")]
+            [Validation(Required=false)]
+            public string ProxyClusterId { get; set; }
+
+            [NameInMap("ProxyServiceStatus")]
+            [Validation(Required=false)]
+            public string ProxyServiceStatus { get; set; }
+
+            [NameInMap("ReplicaMode")]
+            [Validation(Required=false)]
+            public string ReplicaMode { get; set; }
+
             /// <summary>
             /// The size of used memory in the cluster, in GB.
             /// </summary>
@@ -153,6 +215,24 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public DescribeInstanceResponseBodyInstanceResource Resource { get; set; }
             public class DescribeInstanceResponseBodyInstanceResource : TeaModel {
+                [NameInMap("CapacityUnit")]
+                [Validation(Required=false)]
+                public DescribeInstanceResponseBodyInstanceResourceCapacityUnit CapacityUnit { get; set; }
+                public class DescribeInstanceResponseBodyInstanceResourceCapacityUnit : TeaModel {
+                    [NameInMap("MaxCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MaxCapacityUnit { get; set; }
+
+                    [NameInMap("MinCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MinCapacityUnit { get; set; }
+
+                    [NameInMap("UsedCapacityUnit")]
+                    [Validation(Required=false)]
+                    public string UsedCapacityUnit { get; set; }
+
+                }
+
                 /// <summary>
                 /// The information of the OceanBase cluster.
                 /// </summary>
@@ -160,6 +240,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public DescribeInstanceResponseBodyInstanceResourceCpu Cpu { get; set; }
                 public class DescribeInstanceResponseBodyInstanceResourceCpu : TeaModel {
+                    [NameInMap("OriginalTotalCpu")]
+                    [Validation(Required=false)]
+                    public long? OriginalTotalCpu { get; set; }
+
                     /// <summary>
                     /// The series of the OceanBase cluster. Valid values:   
                     /// - NORMAL: the high availability edition.   
@@ -203,6 +287,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [Validation(Required=false)]
                     public double? DataUsedSize { get; set; }
 
+                    [NameInMap("MaxDiskSize")]
+                    [Validation(Required=false)]
+                    public double? MaxDiskSize { get; set; }
+
                     /// <summary>
                     /// The time in UTC when the cluster expires.
                     /// </summary>
@@ -216,6 +304,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [NameInMap("MaxDiskUsedPercent")]
                     [Validation(Required=false)]
                     public double? MaxDiskUsedPercent { get; set; }
+
+                    [NameInMap("OriginalTotalDiskSize")]
+                    [Validation(Required=false)]
+                    public long? OriginalTotalDiskSize { get; set; }
 
                     /// <summary>
                     /// The data replica distribution mode of the cluster. Valid values: 
@@ -256,6 +348,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public DescribeInstanceResponseBodyInstanceResourceLogDiskSize LogDiskSize { get; set; }
                 public class DescribeInstanceResponseBodyInstanceResourceLogDiskSize : TeaModel {
+                    [NameInMap("LogAssignedSize")]
+                    [Validation(Required=false)]
+                    public string LogAssignedSize { get; set; }
+
+                    [NameInMap("MaxLogAssignedObServer")]
+                    [Validation(Required=false)]
+                    public List<string> MaxLogAssignedObServer { get; set; }
+
+                    [NameInMap("MaxLogAssignedPercent")]
+                    [Validation(Required=false)]
+                    public string MaxLogAssignedPercent { get; set; }
+
                     /// <summary>
                     /// The ID of the region.
                     /// </summary>
@@ -279,6 +383,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public DescribeInstanceResponseBodyInstanceResourceMemory Memory { get; set; }
                 public class DescribeInstanceResponseBodyInstanceResourceMemory : TeaModel {
+                    [NameInMap("OriginalTotalMemory")]
+                    [Validation(Required=false)]
+                    public long? OriginalTotalMemory { get; set; }
+
                     /// <summary>
                     /// Indicates whether trusted ECS instances are used.
                     /// </summary>
@@ -324,6 +432,20 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("TenantCreatable")]
+            [Validation(Required=false)]
+            public DescribeInstanceResponseBodyInstanceTenantCreatable TenantCreatable { get; set; }
+            public class DescribeInstanceResponseBodyInstanceTenantCreatable : TeaModel {
+                [NameInMap("DisableCreateTenantReason")]
+                [Validation(Required=false)]
+                public string DisableCreateTenantReason { get; set; }
+
+                [NameInMap("EnableCreateTenant")]
+                [Validation(Required=false)]
+                public bool? EnableCreateTenant { get; set; }
+
+            }
 
             /// <summary>
             /// You can call this operation to query the detailed information of an OceanBase cluster.

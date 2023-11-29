@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DeleteTenantUsersRequest : TeaModel {
         /// <summary>
-        /// Example 1
+        /// The ID of the OceanBase cluster.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// $.parameters[4].schema.enumValueTitles
+        /// The ID of the tenant.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
         /// <summary>
-        /// $.parameters[2].schema.example
+        /// A list of usernames.
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
+                [NameInMap("Privileges")]
+                [Validation(Required=false)]
+                public string Privileges { get; set; }
+
                 [NameInMap("Role")]
                 [Validation(Required=false)]
                 public string Role { get; set; }

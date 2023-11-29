@@ -10,49 +10,55 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeParametersHistoryRequest : TeaModel {
         /// <summary>
-        /// The value of the parameter after the modification.
+        /// The type of the parameter.   
+        /// Valid values: CLUSTER and TENANT.
         /// </summary>
         [NameInMap("Dimension")]
         [Validation(Required=false)]
         public string Dimension { get; set; }
 
         /// <summary>
-        /// The list of parameter modification records.
+        /// The resource ID of the parameter type.   
+        /// You can leave this parameter unspecified when you call this operation to query the modification history of cluster parameters. In the case of tenant parameters, pass the tenant ID.
         /// </summary>
         [NameInMap("DimensionValue")]
         [Validation(Required=false)]
         public string DimensionValue { get; set; }
 
         /// <summary>
-        /// Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
+        /// The end time for the query of parameter modification history.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The name of the parameter.
+        /// The ID of the OceanBase cluster.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Default value: 10.
+        /// The number of the page to return.    
+        /// - Start value: 1   
+        /// - Default value: 1
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.
+        /// The number of rows to return on each page.   
+        /// - Maximum value: 100   
+        /// - Default value: 10
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// You can call this operation to query the modification history of cluster or tenant parameters.
+        /// The start time of the time range for querying the parameter modification history.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

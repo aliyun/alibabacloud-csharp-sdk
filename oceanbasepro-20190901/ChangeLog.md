@@ -1,3 +1,6 @@
+2023-11-29 Version: 1.1.0
+- Generated csharp 2019-09-01 for OceanBasePro.
+
 2023-06-08 Version: 1.0.9
 - Update SDK.
 

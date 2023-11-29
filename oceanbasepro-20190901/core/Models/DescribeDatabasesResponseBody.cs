@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string TenantId { get; set; }
 
+            [NameInMap("TenantName")]
+            [Validation(Required=false)]
+            public string TenantName { get; set; }
+
             /// <summary>
             /// The name of the database table.
             /// </summary>
@@ -100,6 +104,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public List<DescribeDatabasesResponseBodyDatabasesUsers> Users { get; set; }
             public class DescribeDatabasesResponseBodyDatabasesUsers : TeaModel {
+                [NameInMap("Privileges")]
+                [Validation(Required=false)]
+                public string Privileges { get; set; }
+
                 /// <summary>
                 /// The request ID.
                 /// </summary>

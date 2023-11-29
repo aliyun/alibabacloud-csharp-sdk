@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public List<string> RejectedValue { get; set; }
 
+            [NameInMap("Unit")]
+            [Validation(Required=false)]
+            public string Unit { get; set; }
+
             /// <summary>
             /// The invalid value range of the parameter.    
             /// It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.

@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyInstanceNameResponseBody : TeaModel {
         /// <summary>
-        /// The name of the OceanBase cluster.
-        /// </summary>
-        [NameInMap("InstanceName")]
-        [Validation(Required=false)]
-        public string InstanceName { get; set; }
-
-        /// <summary>
         /// The operation that you want to perform.   
         /// Set the value to **ModifyInstanceName**.
         /// </summary>

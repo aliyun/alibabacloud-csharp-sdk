@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public bool? EnableInternetAddressService { get; set; }
 
+            [NameInMap("EnableParallelQuery")]
+            [Validation(Required=false)]
+            public bool? EnableParallelQuery { get; set; }
+
             [NameInMap("EnableReadWriteSplit")]
             [Validation(Required=false)]
             public bool? EnableReadWriteSplit { get; set; }
@@ -185,6 +189,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("MasterIntranetAddressZone")]
             [Validation(Required=false)]
             public string MasterIntranetAddressZone { get; set; }
+
+            [NameInMap("MaxParallelQueryDegree")]
+            [Validation(Required=false)]
+            public long? MaxParallelQueryDegree { get; set; }
 
             [NameInMap("PayType")]
             [Validation(Required=false)]
@@ -292,18 +300,15 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 public string AddressType { get; set; }
 
                 /// <summary>
-                /// 是否开启事务拆分
-                /// </summary>
-                [NameInMap("ConnectionRole")]
-                [Validation(Required=false)]
-                public string ConnectionRole { get; set; }
-
-                /// <summary>
                 /// The Internet address for accessing the tenant.
                 /// </summary>
                 [NameInMap("ConnectionZones")]
                 [Validation(Required=false)]
                 public List<string> ConnectionZones { get; set; }
+
+                [NameInMap("EnableTransactionSplit")]
+                [Validation(Required=false)]
+                public bool? EnableTransactionSplit { get; set; }
 
                 /// <summary>
                 /// The ID of the VPC.
@@ -364,6 +369,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public int? IntranetPort { get; set; }
 
+                [NameInMap("MaxConnectionNum")]
+                [Validation(Required=false)]
+                public long? MaxConnectionNum { get; set; }
+
+                [NameInMap("ParallelQueryDegree")]
+                [Validation(Required=false)]
+                public long? ParallelQueryDegree { get; set; }
+
+                [NameInMap("TenantEndpointId")]
+                [Validation(Required=false)]
+                public string TenantEndpointId { get; set; }
+
                 /// <summary>
                 /// The primary zone corresponding to the address for accessing the tenant.
                 /// </summary>
@@ -420,6 +437,24 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public DescribeTenantResponseBodyTenantTenantResource TenantResource { get; set; }
             public class DescribeTenantResponseBodyTenantTenantResource : TeaModel {
+                [NameInMap("CapacityUnit")]
+                [Validation(Required=false)]
+                public DescribeTenantResponseBodyTenantTenantResourceCapacityUnit CapacityUnit { get; set; }
+                public class DescribeTenantResponseBodyTenantTenantResourceCapacityUnit : TeaModel {
+                    [NameInMap("MaxCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MaxCapacityUnit { get; set; }
+
+                    [NameInMap("MinCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MinCapacityUnit { get; set; }
+
+                    [NameInMap("UsedCapacit")]
+                    [Validation(Required=false)]
+                    public int? UsedCapacit { get; set; }
+
+                }
+
                 /// <summary>
                 /// The enabling status of the Clog service.  
                 /// CLOSED: The Clog service is disabled.  
@@ -474,6 +509,20 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [NameInMap("UsedDiskSize")]
                     [Validation(Required=false)]
                     public float? UsedDiskSize { get; set; }
+
+                }
+
+                [NameInMap("LogDiskSize")]
+                [Validation(Required=false)]
+                public DescribeTenantResponseBodyTenantTenantResourceLogDiskSize LogDiskSize { get; set; }
+                public class DescribeTenantResponseBodyTenantTenantResourceLogDiskSize : TeaModel {
+                    [NameInMap("TotalLogDisk")]
+                    [Validation(Required=false)]
+                    public int? TotalLogDisk { get; set; }
+
+                    [NameInMap("UnitLogDisk")]
+                    [Validation(Required=false)]
+                    public int? UnitLogDisk { get; set; }
 
                 }
 
@@ -549,6 +598,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 public string TenantZoneRole { get; set; }
 
             }
+
+            [NameInMap("TimeZone")]
+            [Validation(Required=false)]
+            public string TimeZone { get; set; }
 
             /// <summary>
             /// Indicates whether the clog service is available. To enable the clog service, submit a ticket.

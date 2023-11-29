@@ -34,10 +34,6 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public bool? IsPrimary { get; set; }
 
-            [NameInMap("IsReadOnlyAddressMaster")]
-            [Validation(Required=false)]
-            public bool? IsReadOnlyAddressMaster { get; set; }
-
             [NameInMap("IsReadable")]
             [Validation(Required=false)]
             public string IsReadable { get; set; }

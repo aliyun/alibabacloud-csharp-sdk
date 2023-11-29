@@ -31,25 +31,15 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string MasterIntranetAddressZone { get; set; }
 
         /// <summary>
-        /// The switching mode.
-        /// </summary>
-        [NameInMap("ModifyType")]
-        [Validation(Required=false)]
-        public string ModifyType { get; set; }
-
-        /// <summary>
         /// The ID of the vSwitch.
         /// </summary>
         [NameInMap("PrimaryZone")]
         [Validation(Required=false)]
         public string PrimaryZone { get; set; }
 
-        /// <summary>
-        /// Example 1
-        /// </summary>
-        [NameInMap("PrimaryZoneDeployType")]
+        [NameInMap("TenantEndpointId")]
         [Validation(Required=false)]
-        public string PrimaryZoneDeployType { get; set; }
+        public string TenantEndpointId { get; set; }
 
         /// <summary>
         /// The return result of the request.

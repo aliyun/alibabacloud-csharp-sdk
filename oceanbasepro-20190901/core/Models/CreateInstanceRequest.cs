@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string DiskType { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// The specifications of the cluster.     
         /// You can specify one of the following four plans:   
@@ -77,6 +81,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
+
+        [NameInMap("IsolationOptimization")]
+        [Validation(Required=false)]
+        public string IsolationOptimization { get; set; }
 
         /// <summary>
         /// OceanBase Server version number.
@@ -104,6 +112,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
+
+        [NameInMap("ReplicaMode")]
+        [Validation(Required=false)]
+        public string ReplicaMode { get; set; }
 
         /// <summary>
         /// The ID of the resource group to which the instance belongs.

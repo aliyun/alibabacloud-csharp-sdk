@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public CreateInstanceResponseBodyData Data { get; set; }
         public class CreateInstanceResponseBodyData : TeaModel {
+            [NameInMap("DryRunResult")]
+            [Validation(Required=false)]
+            public bool? DryRunResult { get; set; }
+
             /// <summary>
             /// 订单ID。该参数只有创建包年包月ECS实例（请求参数InstanceChargeType=PrePaid）时有返回值。
             /// </summary>
