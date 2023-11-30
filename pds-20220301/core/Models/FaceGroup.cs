@@ -17,19 +17,19 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public FaceGroupGroupCoverFaceBoundary GroupCoverFaceBoundary { get; set; }
         public class FaceGroupGroupCoverFaceBoundary : TeaModel {
-            [NameInMap("height")]
+            [NameInMap("Height")]
             [Validation(Required=false)]
             public int? Height { get; set; }
 
-            [NameInMap("left")]
+            [NameInMap("Left")]
             [Validation(Required=false)]
             public int? Left { get; set; }
 
-            [NameInMap("top")]
+            [NameInMap("Top")]
             [Validation(Required=false)]
             public int? Top { get; set; }
 
-            [NameInMap("width")]
+            [NameInMap("Width")]
             [Validation(Required=false)]
             public int? Width { get; set; }
 

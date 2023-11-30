@@ -198,6 +198,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await AddStoryFilesWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * You can call this operation to assign a group administrator role to a user.
+          *
+          * @param request AssignRoleRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssignRoleResponse
+         */
         public AssignRoleResponse AssignRoleWithOptions(AssignRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -238,6 +246,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<AssignRoleResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to assign a group administrator role to a user.
+          *
+          * @param request AssignRoleRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssignRoleResponse
+         */
         public async Task<AssignRoleResponse> AssignRoleWithOptionsAsync(AssignRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -278,6 +294,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<AssignRoleResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to assign a group administrator role to a user.
+          *
+          * @param request AssignRoleRequest
+          * @return AssignRoleResponse
+         */
         public AssignRoleResponse AssignRole(AssignRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -285,6 +307,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return AssignRoleWithOptions(request, headers, runtime);
         }
 
+        /**
+          * You can call this operation to assign a group administrator role to a user.
+          *
+          * @param request AssignRoleRequest
+          * @return AssignRoleResponse
+         */
         public async Task<AssignRoleResponse> AssignRoleAsync(AssignRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -292,6 +320,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await AssignRoleWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * For more information, see "OAuth 2.0 For Web Server Applications" at [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications) in User Guide.
+          *
+          * @param tmpReq AuthorizeRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AuthorizeResponse
+         */
         public AuthorizeResponse AuthorizeWithOptions(AuthorizeRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -345,11 +381,19 @@ namespace AlibabaCloud.SDK.Pds20220301
                 AuthType = "Anonymous",
                 Style = "ROA",
                 ReqBodyType = "formData",
-                BodyType = "json",
+                BodyType = "binary",
             };
             return TeaModel.ToObject<AuthorizeResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * For more information, see "OAuth 2.0 For Web Server Applications" at [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications) in User Guide.
+          *
+          * @param tmpReq AuthorizeRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AuthorizeResponse
+         */
         public async Task<AuthorizeResponse> AuthorizeWithOptionsAsync(AuthorizeRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -403,11 +447,17 @@ namespace AlibabaCloud.SDK.Pds20220301
                 AuthType = "Anonymous",
                 Style = "ROA",
                 ReqBodyType = "formData",
-                BodyType = "json",
+                BodyType = "binary",
             };
             return TeaModel.ToObject<AuthorizeResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information, see "OAuth 2.0 For Web Server Applications" at [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications) in User Guide.
+          *
+          * @param request AuthorizeRequest
+          * @return AuthorizeResponse
+         */
         public AuthorizeResponse Authorize(AuthorizeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -415,6 +465,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return AuthorizeWithOptions(request, headers, runtime);
         }
 
+        /**
+          * For more information, see "OAuth 2.0 For Web Server Applications" at [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications) in User Guide.
+          *
+          * @param request AuthorizeRequest
+          * @return AuthorizeResponse
+         */
         public async Task<AuthorizeResponse> AuthorizeAsync(AuthorizeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -500,6 +556,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await BatchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * You can cancel only the group administrator role.
+          *
+          * @param request CancelAssignRoleRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelAssignRoleResponse
+         */
         public CancelAssignRoleResponse CancelAssignRoleWithOptions(CancelAssignRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -540,6 +604,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CancelAssignRoleResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * You can cancel only the group administrator role.
+          *
+          * @param request CancelAssignRoleRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelAssignRoleResponse
+         */
         public async Task<CancelAssignRoleResponse> CancelAssignRoleWithOptionsAsync(CancelAssignRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -580,6 +652,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CancelAssignRoleResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * You can cancel only the group administrator role.
+          *
+          * @param request CancelAssignRoleRequest
+          * @return CancelAssignRoleResponse
+         */
         public CancelAssignRoleResponse CancelAssignRole(CancelAssignRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -587,6 +665,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return CancelAssignRoleWithOptions(request, headers, runtime);
         }
 
+        /**
+          * You can cancel only the group administrator role.
+          *
+          * @param request CancelAssignRoleRequest
+          * @return CancelAssignRoleResponse
+         */
         public async Task<CancelAssignRoleResponse> CancelAssignRoleAsync(CancelAssignRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1048,6 +1132,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await CreateCustomizedStoryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.
+          *
+          * @param request CreateDomainRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDomainResponse
+         */
         public CreateDomainResponse CreateDomainWithOptions(CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1100,6 +1192,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateDomainResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.
+          *
+          * @param request CreateDomainRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDomainResponse
+         */
         public async Task<CreateDomainResponse> CreateDomainWithOptionsAsync(CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1152,6 +1252,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateDomainResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.
+          *
+          * @param request CreateDomainRequest
+          * @return CreateDomainResponse
+         */
         public CreateDomainResponse CreateDomain(CreateDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1159,6 +1265,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return CreateDomainWithOptions(request, headers, runtime);
         }
 
+        /**
+          * If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.
+          *
+          * @param request CreateDomainRequest
+          * @return CreateDomainResponse
+         */
         public async Task<CreateDomainResponse> CreateDomainAsync(CreateDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1616,6 +1728,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await CreateGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).
+          *
+          * @param request CreateIdentityToBenefitPkgMappingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateIdentityToBenefitPkgMappingResponse
+         */
         public CreateIdentityToBenefitPkgMappingResponse CreateIdentityToBenefitPkgMappingWithOptions(CreateIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1660,6 +1780,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateIdentityToBenefitPkgMappingResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).
+          *
+          * @param request CreateIdentityToBenefitPkgMappingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateIdentityToBenefitPkgMappingResponse
+         */
         public async Task<CreateIdentityToBenefitPkgMappingResponse> CreateIdentityToBenefitPkgMappingWithOptionsAsync(CreateIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1704,6 +1832,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateIdentityToBenefitPkgMappingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).
+          *
+          * @param request CreateIdentityToBenefitPkgMappingRequest
+          * @return CreateIdentityToBenefitPkgMappingResponse
+         */
         public CreateIdentityToBenefitPkgMappingResponse CreateIdentityToBenefitPkgMapping(CreateIdentityToBenefitPkgMappingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1711,6 +1845,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return CreateIdentityToBenefitPkgMappingWithOptions(request, headers, runtime);
         }
 
+        /**
+          * If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).
+          *
+          * @param request CreateIdentityToBenefitPkgMappingRequest
+          * @return CreateIdentityToBenefitPkgMappingResponse
+         */
         public async Task<CreateIdentityToBenefitPkgMappingResponse> CreateIdentityToBenefitPkgMappingAsync(CreateIdentityToBenefitPkgMappingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1860,6 +2000,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await CreateOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.
+          *
+          * @param request CreateShareLinkRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateShareLinkResponse
+         */
         public CreateShareLinkResponse CreateShareLinkWithOptions(CreateShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1944,6 +2092,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateShareLinkResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.
+          *
+          * @param request CreateShareLinkRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateShareLinkResponse
+         */
         public async Task<CreateShareLinkResponse> CreateShareLinkWithOptionsAsync(CreateShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2028,6 +2184,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateShareLinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.
+          *
+          * @param request CreateShareLinkRequest
+          * @return CreateShareLinkResponse
+         */
         public CreateShareLinkResponse CreateShareLink(CreateShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2035,6 +2197,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return CreateShareLinkWithOptions(request, headers, runtime);
         }
 
+        /**
+          * A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.
+          *
+          * @param request CreateShareLinkRequest
+          * @return CreateShareLinkResponse
+         */
         public async Task<CreateShareLinkResponse> CreateShareLinkAsync(CreateShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3098,6 +3266,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await DeltaGetLastCursorWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * For information about best practices for downloading a file.
+          *
+          * @param request DownloadFileRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DownloadFileResponse
+         */
         public DownloadFileResponse DownloadFileWithOptions(DownloadFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3146,6 +3322,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<DownloadFileResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * For information about best practices for downloading a file.
+          *
+          * @param request DownloadFileRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DownloadFileResponse
+         */
         public async Task<DownloadFileResponse> DownloadFileWithOptionsAsync(DownloadFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3194,6 +3378,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<DownloadFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * For information about best practices for downloading a file.
+          *
+          * @param request DownloadFileRequest
+          * @return DownloadFileResponse
+         */
         public DownloadFileResponse DownloadFile(DownloadFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3201,6 +3391,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return DownloadFileWithOptions(request, headers, runtime);
         }
 
+        /**
+          * For information about best practices for downloading a file.
+          *
+          * @param request DownloadFileRequest
+          * @return DownloadFileResponse
+         */
         public async Task<DownloadFileResponse> DownloadFileAsync(DownloadFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3458,6 +3654,17 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await FileListPermissionWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * This operation is an incremental update operation. Take note of the following items:
+          * *   If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.
+          * *   If a tag name specified in the request is different from the existing tag names, the specified tag is added.
+          * *   The existing tags with unique names are not affected.
+          *
+          * @param request FilePutUserTagsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FilePutUserTagsResponse
+         */
         public FilePutUserTagsResponse FilePutUserTagsWithOptions(FilePutUserTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3494,6 +3701,17 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<FilePutUserTagsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * This operation is an incremental update operation. Take note of the following items:
+          * *   If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.
+          * *   If a tag name specified in the request is different from the existing tag names, the specified tag is added.
+          * *   The existing tags with unique names are not affected.
+          *
+          * @param request FilePutUserTagsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FilePutUserTagsResponse
+         */
         public async Task<FilePutUserTagsResponse> FilePutUserTagsWithOptionsAsync(FilePutUserTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3530,6 +3748,15 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<FilePutUserTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is an incremental update operation. Take note of the following items:
+          * *   If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.
+          * *   If a tag name specified in the request is different from the existing tag names, the specified tag is added.
+          * *   The existing tags with unique names are not affected.
+          *
+          * @param request FilePutUserTagsRequest
+          * @return FilePutUserTagsResponse
+         */
         public FilePutUserTagsResponse FilePutUserTags(FilePutUserTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3537,6 +3764,15 @@ namespace AlibabaCloud.SDK.Pds20220301
             return FilePutUserTagsWithOptions(request, headers, runtime);
         }
 
+        /**
+          * This operation is an incremental update operation. Take note of the following items:
+          * *   If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.
+          * *   If a tag name specified in the request is different from the existing tag names, the specified tag is added.
+          * *   The existing tags with unique names are not affected.
+          *
+          * @param request FilePutUserTagsRequest
+          * @return FilePutUserTagsResponse
+         */
         public async Task<FilePutUserTagsResponse> FilePutUserTagsAsync(FilePutUserTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3846,6 +4082,62 @@ namespace AlibabaCloud.SDK.Pds20220301
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetDomainWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GetDomainQuotaResponse GetDomainQuotaWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDomainQuota",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/get_quota",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDomainQuotaResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetDomainQuotaResponse> GetDomainQuotaWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDomainQuota",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/get_quota",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDomainQuotaResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetDomainQuotaResponse GetDomainQuota()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDomainQuotaWithOptions(headers, runtime);
+        }
+
+        public async Task<GetDomainQuotaResponse> GetDomainQuotaAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDomainQuotaWithOptionsAsync(headers, runtime);
         }
 
         public GetDownloadUrlResponse GetDownloadUrlWithOptions(GetDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4684,6 +4976,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await GetShareLinkByAnonymousWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.
+          *
+          * @param request GetShareLinkTokenRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetShareLinkTokenResponse
+         */
         public GetShareLinkTokenResponse GetShareLinkTokenWithOptions(GetShareLinkTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4720,6 +5020,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetShareLinkTokenResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.
+          *
+          * @param request GetShareLinkTokenRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetShareLinkTokenResponse
+         */
         public async Task<GetShareLinkTokenResponse> GetShareLinkTokenWithOptionsAsync(GetShareLinkTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4756,6 +5064,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetShareLinkTokenResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.
+          *
+          * @param request GetShareLinkTokenRequest
+          * @return GetShareLinkTokenResponse
+         */
         public GetShareLinkTokenResponse GetShareLinkToken(GetShareLinkTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4763,6 +5077,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return GetShareLinkTokenWithOptions(request, headers, runtime);
         }
 
+        /**
+          * To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.
+          *
+          * @param request GetShareLinkTokenRequest
+          * @return GetShareLinkTokenResponse
+         */
         public async Task<GetShareLinkTokenResponse> GetShareLinkTokenAsync(GetShareLinkTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4896,6 +5216,16 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await GetStoryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * **Before you call this operation, make sure that you are familiar with the [billing](~~425220~~) of Drive and Photo Service**.
+          * To call this operation, make sure that the value-added image processing feature is enabled.
+          * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.
+          *
+          * @param request GetTaskStatusRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetTaskStatusResponse
+         */
         public GetTaskStatusResponse GetTaskStatusWithOptions(GetTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4928,6 +5258,16 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetTaskStatusResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * **Before you call this operation, make sure that you are familiar with the [billing](~~425220~~) of Drive and Photo Service**.
+          * To call this operation, make sure that the value-added image processing feature is enabled.
+          * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.
+          *
+          * @param request GetTaskStatusRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetTaskStatusResponse
+         */
         public async Task<GetTaskStatusResponse> GetTaskStatusWithOptionsAsync(GetTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4960,6 +5300,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetTaskStatusResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * **Before you call this operation, make sure that you are familiar with the [billing](~~425220~~) of Drive and Photo Service**.
+          * To call this operation, make sure that the value-added image processing feature is enabled.
+          * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.
+          *
+          * @param request GetTaskStatusRequest
+          * @return GetTaskStatusResponse
+         */
         public GetTaskStatusResponse GetTaskStatus(GetTaskStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4967,6 +5315,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return GetTaskStatusWithOptions(request, headers, runtime);
         }
 
+        /**
+          * **Before you call this operation, make sure that you are familiar with the [billing](~~425220~~) of Drive and Photo Service**.
+          * To call this operation, make sure that the value-added image processing feature is enabled.
+          * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.
+          *
+          * @param request GetTaskStatusRequest
+          * @return GetTaskStatusResponse
+         */
         public async Task<GetTaskStatusResponse> GetTaskStatusAsync(GetTaskStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5146,6 +5502,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await GetUserWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * For more information about best practices, see [Preview videos online](~~427477~~).
+          *
+          * @param request GetVideoPreviewPlayInfoRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetVideoPreviewPlayInfoResponse
+         */
         public GetVideoPreviewPlayInfoResponse GetVideoPreviewPlayInfoWithOptions(GetVideoPreviewPlayInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5161,6 +5525,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 body["file_id"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetMasterUrl))
+            {
+                body["get_master_url"] = request.GetMasterUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetWithoutUrl))
             {
@@ -5198,6 +5566,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetVideoPreviewPlayInfoResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * For more information about best practices, see [Preview videos online](~~427477~~).
+          *
+          * @param request GetVideoPreviewPlayInfoRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetVideoPreviewPlayInfoResponse
+         */
         public async Task<GetVideoPreviewPlayInfoResponse> GetVideoPreviewPlayInfoWithOptionsAsync(GetVideoPreviewPlayInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5213,6 +5589,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 body["file_id"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetMasterUrl))
+            {
+                body["get_master_url"] = request.GetMasterUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetWithoutUrl))
             {
@@ -5250,6 +5630,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetVideoPreviewPlayInfoResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about best practices, see [Preview videos online](~~427477~~).
+          *
+          * @param request GetVideoPreviewPlayInfoRequest
+          * @return GetVideoPreviewPlayInfoResponse
+         */
         public GetVideoPreviewPlayInfoResponse GetVideoPreviewPlayInfo(GetVideoPreviewPlayInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5257,6 +5643,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return GetVideoPreviewPlayInfoWithOptions(request, headers, runtime);
         }
 
+        /**
+          * For more information about best practices, see [Preview videos online](~~427477~~).
+          *
+          * @param request GetVideoPreviewPlayInfoRequest
+          * @return GetVideoPreviewPlayInfoResponse
+         */
         public async Task<GetVideoPreviewPlayInfoResponse> GetVideoPreviewPlayInfoAsync(GetVideoPreviewPlayInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5264,6 +5656,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await GetVideoPreviewPlayInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * For more information about best practices, see [Preview videos online](~~427477~~).
+          *
+          * @param request GetVideoPreviewPlayMetaRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetVideoPreviewPlayMetaResponse
+         */
         public GetVideoPreviewPlayMetaResponse GetVideoPreviewPlayMetaWithOptions(GetVideoPreviewPlayMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5304,6 +5704,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetVideoPreviewPlayMetaResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * For more information about best practices, see [Preview videos online](~~427477~~).
+          *
+          * @param request GetVideoPreviewPlayMetaRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetVideoPreviewPlayMetaResponse
+         */
         public async Task<GetVideoPreviewPlayMetaResponse> GetVideoPreviewPlayMetaWithOptionsAsync(GetVideoPreviewPlayMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5344,6 +5752,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetVideoPreviewPlayMetaResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about best practices, see [Preview videos online](~~427477~~).
+          *
+          * @param request GetVideoPreviewPlayMetaRequest
+          * @return GetVideoPreviewPlayMetaResponse
+         */
         public GetVideoPreviewPlayMetaResponse GetVideoPreviewPlayMeta(GetVideoPreviewPlayMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5351,11 +5765,95 @@ namespace AlibabaCloud.SDK.Pds20220301
             return GetVideoPreviewPlayMetaWithOptions(request, headers, runtime);
         }
 
+        /**
+          * For more information about best practices, see [Preview videos online](~~427477~~).
+          *
+          * @param request GetVideoPreviewPlayMetaRequest
+          * @return GetVideoPreviewPlayMetaResponse
+         */
         public async Task<GetVideoPreviewPlayMetaResponse> GetVideoPreviewPlayMetaAsync(GetVideoPreviewPlayMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetVideoPreviewPlayMetaWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GroupUpdateNameResponse GroupUpdateNameWithOptions(GroupUpdateNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["group_id"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GroupUpdateName",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/group/update_name",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GroupUpdateNameResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GroupUpdateNameResponse> GroupUpdateNameWithOptionsAsync(GroupUpdateNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["group_id"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GroupUpdateName",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/group/update_name",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GroupUpdateNameResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GroupUpdateNameResponse GroupUpdateName(GroupUpdateNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GroupUpdateNameWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GroupUpdateNameResponse> GroupUpdateNameAsync(GroupUpdateNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GroupUpdateNameWithOptionsAsync(request, headers, runtime);
         }
 
         public ImportUserResponse ImportUserWithOptions(ImportUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6550,6 +7048,76 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await ListGroupMemberWithOptionsAsync(request, headers, runtime);
         }
 
+        public ListIdentityRoleResponse ListIdentityRoleWithOptions(ListIdentityRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identity))
+            {
+                body["identity"] = request.Identity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIdentityRole",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/role/list_identity_role",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIdentityRoleResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListIdentityRoleResponse> ListIdentityRoleWithOptionsAsync(ListIdentityRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identity))
+            {
+                body["identity"] = request.Identity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIdentityRole",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/role/list_identity_role",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIdentityRoleResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListIdentityRoleResponse ListIdentityRole(ListIdentityRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListIdentityRoleWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListIdentityRoleResponse> ListIdentityRoleAsync(ListIdentityRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListIdentityRoleWithOptionsAsync(request, headers, runtime);
+        }
+
         public ListIdentityToBenefitPkgMappingResponse ListIdentityToBenefitPkgMappingWithOptions(ListIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7066,6 +7634,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await ListRevisionWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * This operation is discontinued. To query shares, you can call the SearchShareLink operation.
+          *
+          * @param request ListShareLinkRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListShareLinkResponse
+         */
         public ListShareLinkResponse ListShareLinkWithOptions(ListShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7114,6 +7690,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListShareLinkResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * This operation is discontinued. To query shares, you can call the SearchShareLink operation.
+          *
+          * @param request ListShareLinkRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListShareLinkResponse
+         */
         public async Task<ListShareLinkResponse> ListShareLinkWithOptionsAsync(ListShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7162,6 +7746,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListShareLinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is discontinued. To query shares, you can call the SearchShareLink operation.
+          *
+          * @param request ListShareLinkRequest
+          * @return ListShareLinkResponse
+         */
         public ListShareLinkResponse ListShareLink(ListShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7169,6 +7759,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return ListShareLinkWithOptions(request, headers, runtime);
         }
 
+        /**
+          * This operation is discontinued. To query shares, you can call the SearchShareLink operation.
+          *
+          * @param request ListShareLinkRequest
+          * @return ListShareLinkResponse
+         */
         public async Task<ListShareLinkResponse> ListShareLinkAsync(ListShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7176,6 +7772,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await ListShareLinkWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.
+          *
+          * @param request ListTagsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagsResponse
+         */
         public ListTagsResponse ListTagsWithOptions(ListTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7212,6 +7816,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListTagsResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.
+          *
+          * @param request ListTagsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagsResponse
+         */
         public async Task<ListTagsResponse> ListTagsWithOptionsAsync(ListTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7248,6 +7860,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.
+          *
+          * @param request ListTagsRequest
+          * @return ListTagsResponse
+         */
         public ListTagsResponse ListTags(ListTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7255,6 +7873,12 @@ namespace AlibabaCloud.SDK.Pds20220301
             return ListTagsWithOptions(request, headers, runtime);
         }
 
+        /**
+          * You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.
+          *
+          * @param request ListTagsRequest
+          * @return ListTagsResponse
+         */
         public async Task<ListTagsResponse> ListTagsAsync(ListTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9178,6 +9802,15 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await SearchUserWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications).<props="intl">只发布国际站</props>
+          * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit [Access process for JWT applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications).<props="intl">只发布国际站</props>
+          *
+          * @param request TokenRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TokenResponse
+         */
         public TokenResponse TokenWithOptions(TokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9230,6 +9863,15 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<TokenResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications).<props="intl">只发布国际站</props>
+          * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit [Access process for JWT applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications).<props="intl">只发布国际站</props>
+          *
+          * @param request TokenRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TokenResponse
+         */
         public async Task<TokenResponse> TokenWithOptionsAsync(TokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9282,6 +9924,13 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<TokenResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications).<props="intl">只发布国际站</props>
+          * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit [Access process for JWT applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications).<props="intl">只发布国际站</props>
+          *
+          * @param request TokenRequest
+          * @return TokenResponse
+         */
         public TokenResponse Token(TokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9289,6 +9938,13 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TokenWithOptions(request, headers, runtime);
         }
 
+        /**
+          * For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications).<props="intl">只发布国际站</props>
+          * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit [Access process for JWT applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications).<props="intl">只发布国际站</props>
+          *
+          * @param request TokenRequest
+          * @return TokenResponse
+         */
         public async Task<TokenResponse> TokenAsync(TokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9374,7 +10030,7 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await TrashFileWithOptionsAsync(request, headers, runtime);
         }
 
-        public UnLinkAcountResponse UnLinkAcountWithOptions(UnLinkAcountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UnLinkAccountResponse UnLinkAccountWithOptions(UnLinkAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -9401,7 +10057,7 @@ namespace AlibabaCloud.SDK.Pds20220301
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "UnLinkAcount",
+                Action = "UnLinkAccount",
                 Version = "2022-03-01",
                 Protocol = "HTTPS",
                 Pathname = "/v2/account/unlink",
@@ -9411,10 +10067,10 @@ namespace AlibabaCloud.SDK.Pds20220301
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UnLinkAcountResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<UnLinkAccountResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<UnLinkAcountResponse> UnLinkAcountWithOptionsAsync(UnLinkAcountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UnLinkAccountResponse> UnLinkAccountWithOptionsAsync(UnLinkAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -9441,7 +10097,7 @@ namespace AlibabaCloud.SDK.Pds20220301
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "UnLinkAcount",
+                Action = "UnLinkAccount",
                 Version = "2022-03-01",
                 Protocol = "HTTPS",
                 Pathname = "/v2/account/unlink",
@@ -9451,21 +10107,21 @@ namespace AlibabaCloud.SDK.Pds20220301
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UnLinkAcountResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<UnLinkAccountResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UnLinkAcountResponse UnLinkAcount(UnLinkAcountRequest request)
+        public UnLinkAccountResponse UnLinkAccount(UnLinkAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UnLinkAcountWithOptions(request, headers, runtime);
+            return UnLinkAccountWithOptions(request, headers, runtime);
         }
 
-        public async Task<UnLinkAcountResponse> UnLinkAcountAsync(UnLinkAcountRequest request)
+        public async Task<UnLinkAccountResponse> UnLinkAccountAsync(UnLinkAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UnLinkAcountWithOptionsAsync(request, headers, runtime);
+            return await UnLinkAccountWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateDomainResponse UpdateDomainWithOptions(UpdateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

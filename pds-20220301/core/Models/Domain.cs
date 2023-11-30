@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public AppAccessStrategy PublishedAppAccessStrategy { get; set; }
 
+        [NameInMap("sharable")]
+        [Validation(Required=false)]
+        public bool? Sharable { get; set; }
+
         [NameInMap("size_quota")]
         [Validation(Required=false)]
         public long? SizeQuota { get; set; }

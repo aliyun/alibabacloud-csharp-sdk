@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class DeleteDomainRequest : TeaModel {
         /// <summary>
-        /// domain id
+        /// The domain ID.
         /// </summary>
         [NameInMap("domain_id")]
         [Validation(Required=false)]

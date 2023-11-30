@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListShareLinkResponseBody : TeaModel {
+        /// <summary>
+        /// The information about the shares.
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ShareLink> Items { get; set; }
 
+        /// <summary>
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.
+        /// </summary>
         [NameInMap("next_marker")]
         [Validation(Required=false)]
         public string NextMarker { get; set; }

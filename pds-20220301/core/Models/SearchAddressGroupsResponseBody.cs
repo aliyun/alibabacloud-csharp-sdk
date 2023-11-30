@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class SearchAddressGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// The location-based groups.
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<AddressGroup> Items { get; set; }

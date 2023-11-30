@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetLinkInfoByUserIdResponseBody : TeaModel {
+        /// <summary>
+        /// The information about the users.
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<AccountLinkInfo> Items { get; set; }

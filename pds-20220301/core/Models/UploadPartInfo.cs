@@ -31,6 +31,20 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         }
 
+        [NameInMap("parallel_sha256_ctx")]
+        [Validation(Required=false)]
+        public UploadPartInfoParallelSha256Ctx ParallelSha256Ctx { get; set; }
+        public class UploadPartInfoParallelSha256Ctx : TeaModel {
+            [NameInMap("h")]
+            [Validation(Required=false)]
+            public List<long?> H { get; set; }
+
+            [NameInMap("part_offset")]
+            [Validation(Required=false)]
+            public long? PartOffset { get; set; }
+
+        }
+
         [NameInMap("part_number")]
         [Validation(Required=false)]
         public int? PartNumber { get; set; }

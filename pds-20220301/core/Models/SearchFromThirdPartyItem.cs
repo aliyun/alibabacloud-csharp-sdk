@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class UnLinkAcountRequest : TeaModel {
+    public class SearchFromThirdPartyItem : TeaModel {
+        [NameInMap("authentication_type")]
+        [Validation(Required=false)]
+        public string AuthenticationType { get; set; }
+
         [NameInMap("extra")]
         [Validation(Required=false)]
         public string Extra { get; set; }
@@ -17,13 +21,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Identity { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("others")]
         [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("user_id")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
+        public Dictionary<string, object> Others { get; set; }
 
     }
 

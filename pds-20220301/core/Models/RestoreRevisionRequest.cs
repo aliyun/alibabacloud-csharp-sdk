@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class RestoreRevisionRequest : TeaModel {
+        /// <summary>
+        /// The drive ID.
+        /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
+        /// <summary>
+        /// The file ID.
+        /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
+        /// <summary>
+        /// The version ID.
+        /// </summary>
         [NameInMap("revision_id")]
         [Validation(Required=false)]
         public string RevisionId { get; set; }

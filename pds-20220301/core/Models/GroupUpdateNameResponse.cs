@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class UnLinkAcountResponse : TeaModel {
+    public class GroupUpdateNameResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }

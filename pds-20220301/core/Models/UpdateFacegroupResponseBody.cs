@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class UpdateFacegroupResponseBody : TeaModel {
+        /// <summary>
+        /// The drive ID.
+        /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
+        /// <summary>
+        /// The group ID.
+        /// </summary>
         [NameInMap("group_id")]
         [Validation(Required=false)]
         public string GroupId { get; set; }

@@ -29,11 +29,6 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Exif { get; set; }
 
-        [NameInMap("faces")]
-        [Validation(Required=false)]
-        [Obsolete]
-        public string Faces { get; set; }
-
         [NameInMap("faces_thumbnail")]
         [Validation(Required=false)]
         public List<FaceThumbnail> FacesThumbnail { get; set; }
