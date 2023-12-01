@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<string> WithFields { get; set; }
 
+        [NameInMap("WithoutTotalHits")]
+        [Validation(Required=false)]
+        public bool? WithoutTotalHits { get; set; }
+
     }
 
 }

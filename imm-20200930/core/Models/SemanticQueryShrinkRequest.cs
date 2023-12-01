@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class SemanticQueryRequest : TeaModel {
+    public class SemanticQueryShrinkRequest : TeaModel {
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("MediaTypes")]
         [Validation(Required=false)]
-        public List<string> MediaTypes { get; set; }
+        public string MediaTypesShrink { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("WithFields")]
         [Validation(Required=false)]
-        public List<string> WithFields { get; set; }
+        public string WithFieldsShrink { get; set; }
 
     }
 

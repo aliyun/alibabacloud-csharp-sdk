@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public string Alias { get; set; }
 
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+
             [NameInMap("URI")]
             [Validation(Required=false)]
             public string URI { get; set; }

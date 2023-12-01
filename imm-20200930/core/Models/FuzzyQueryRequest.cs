@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Sort { get; set; }
 
+        [NameInMap("WithFields")]
+        [Validation(Required=false)]
+        public List<string> WithFields { get; set; }
+
     }
 
 }

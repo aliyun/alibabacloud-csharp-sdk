@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<CreateTriggerRequestActions> Actions { get; set; }
         public class CreateTriggerRequestActions : TeaModel {
+            [NameInMap("FastFailPolicy")]
+            [Validation(Required=false)]
+            public FastFailPolicy FastFailPolicy { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

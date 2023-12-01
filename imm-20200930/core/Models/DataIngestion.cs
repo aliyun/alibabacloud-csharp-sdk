@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<DataIngestionActions> Actions { get; set; }
         public class DataIngestionActions : TeaModel {
+            [NameInMap("FastFailPolicy")]
+            [Validation(Required=false)]
+            public FastFailPolicy FastFailPolicy { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Topic { get; set; }
 
         }
+
+        [NameInMap("Phase")]
+        [Validation(Required=false)]
+        public string Phase { get; set; }
 
         [NameInMap("State")]
         [Validation(Required=false)]

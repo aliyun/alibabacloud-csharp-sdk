@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string FileHash { get; set; }
 
+        [NameInMap("LatLong")]
+        [Validation(Required=false)]
+        public string LatLong { get; set; }
+
         [NameInMap("MediaType")]
         [Validation(Required=false)]
         public string MediaType { get; set; }
@@ -50,6 +54,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("OSSURI")]
         [Validation(Required=false)]
         public string OSSURI { get; set; }
+
+        [NameInMap("ProduceTime")]
+        [Validation(Required=false)]
+        public string ProduceTime { get; set; }
 
         [NameInMap("URI")]
         [Validation(Required=false)]

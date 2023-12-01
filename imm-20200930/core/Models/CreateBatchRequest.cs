@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<CreateBatchRequestActions> Actions { get; set; }
         public class CreateBatchRequestActions : TeaModel {
+            [NameInMap("FastFailPolicy")]
+            [Validation(Required=false)]
+            public FastFailPolicy FastFailPolicy { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
