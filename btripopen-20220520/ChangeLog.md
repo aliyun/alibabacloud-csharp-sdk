@@ -1,3 +1,6 @@
+2023-12-04 Version: 1.9.1
+- Generated csharp 2022-05-20 for btripOpen.
+
 2023-11-29 Version: 1.9.0
 - Generated csharp 2022-05-20 for btripOpen.
 

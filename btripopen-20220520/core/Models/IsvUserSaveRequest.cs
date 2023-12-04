@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string UserName { get; set; }
 
+            [NameInMap("user_nick")]
+            [Validation(Required=false)]
+            public string UserNick { get; set; }
+
         }
 
     }
