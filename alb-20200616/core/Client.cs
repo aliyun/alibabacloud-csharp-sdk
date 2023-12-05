@@ -791,6 +791,13 @@ namespace AlibabaCloud.SDK.Alb20200616
             return await AttachCommonBandwidthPackageToLoadBalancerWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported only by Application Load Balancer (ALB) instances that use static IP addresses. Before you call this operation, you must call the StartShiftLoadBalancerZones operation to remove the zone from the ALB instance.
+          *
+          * @param request CancelShiftLoadBalancerZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelShiftLoadBalancerZonesResponse
+         */
         public CancelShiftLoadBalancerZonesResponse CancelShiftLoadBalancerZonesWithOptions(CancelShiftLoadBalancerZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -830,6 +837,13 @@ namespace AlibabaCloud.SDK.Alb20200616
             return TeaModel.ToObject<CancelShiftLoadBalancerZonesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only by Application Load Balancer (ALB) instances that use static IP addresses. Before you call this operation, you must call the StartShiftLoadBalancerZones operation to remove the zone from the ALB instance.
+          *
+          * @param request CancelShiftLoadBalancerZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelShiftLoadBalancerZonesResponse
+         */
         public async Task<CancelShiftLoadBalancerZonesResponse> CancelShiftLoadBalancerZonesWithOptionsAsync(CancelShiftLoadBalancerZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -869,12 +883,24 @@ namespace AlibabaCloud.SDK.Alb20200616
             return TeaModel.ToObject<CancelShiftLoadBalancerZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only by Application Load Balancer (ALB) instances that use static IP addresses. Before you call this operation, you must call the StartShiftLoadBalancerZones operation to remove the zone from the ALB instance.
+          *
+          * @param request CancelShiftLoadBalancerZonesRequest
+          * @return CancelShiftLoadBalancerZonesResponse
+         */
         public CancelShiftLoadBalancerZonesResponse CancelShiftLoadBalancerZones(CancelShiftLoadBalancerZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelShiftLoadBalancerZonesWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is supported only by Application Load Balancer (ALB) instances that use static IP addresses. Before you call this operation, you must call the StartShiftLoadBalancerZones operation to remove the zone from the ALB instance.
+          *
+          * @param request CancelShiftLoadBalancerZonesRequest
+          * @return CancelShiftLoadBalancerZonesResponse
+         */
         public async Task<CancelShiftLoadBalancerZonesResponse> CancelShiftLoadBalancerZonesAsync(CancelShiftLoadBalancerZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7225,6 +7251,13 @@ namespace AlibabaCloud.SDK.Alb20200616
             return await StartListenerWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported by Application Load Balancer (ALB) instances that use static IP addresses. The zone cannot be removed if the ALB instance has only one available zone.
+          *
+          * @param request StartShiftLoadBalancerZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartShiftLoadBalancerZonesResponse
+         */
         public StartShiftLoadBalancerZonesResponse StartShiftLoadBalancerZonesWithOptions(StartShiftLoadBalancerZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7264,6 +7297,13 @@ namespace AlibabaCloud.SDK.Alb20200616
             return TeaModel.ToObject<StartShiftLoadBalancerZonesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported by Application Load Balancer (ALB) instances that use static IP addresses. The zone cannot be removed if the ALB instance has only one available zone.
+          *
+          * @param request StartShiftLoadBalancerZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartShiftLoadBalancerZonesResponse
+         */
         public async Task<StartShiftLoadBalancerZonesResponse> StartShiftLoadBalancerZonesWithOptionsAsync(StartShiftLoadBalancerZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7303,12 +7343,24 @@ namespace AlibabaCloud.SDK.Alb20200616
             return TeaModel.ToObject<StartShiftLoadBalancerZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported by Application Load Balancer (ALB) instances that use static IP addresses. The zone cannot be removed if the ALB instance has only one available zone.
+          *
+          * @param request StartShiftLoadBalancerZonesRequest
+          * @return StartShiftLoadBalancerZonesResponse
+         */
         public StartShiftLoadBalancerZonesResponse StartShiftLoadBalancerZones(StartShiftLoadBalancerZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartShiftLoadBalancerZonesWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is supported by Application Load Balancer (ALB) instances that use static IP addresses. The zone cannot be removed if the ALB instance has only one available zone.
+          *
+          * @param request StartShiftLoadBalancerZonesRequest
+          * @return StartShiftLoadBalancerZonesResponse
+         */
         public async Task<StartShiftLoadBalancerZonesResponse> StartShiftLoadBalancerZonesAsync(StartShiftLoadBalancerZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

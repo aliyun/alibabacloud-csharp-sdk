@@ -177,6 +177,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public ListRulesResponseBodyRulesRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
                 public class ListRulesResponseBodyRulesRuleActionsForwardGroupConfig : TeaModel {
+                    [NameInMap("ServerGroupStickySession")]
+                    [Validation(Required=false)]
+                    public ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession ServerGroupStickySession { get; set; }
+                    public class ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession : TeaModel {
+                        [NameInMap("Enabled")]
+                        [Validation(Required=false)]
+                        public bool? Enabled { get; set; }
+
+                        [NameInMap("Timeout")]
+                        [Validation(Required=false)]
+                        public int? Timeout { get; set; }
+
+                    }
+
                     /// <summary>
                     /// The server groups to which requests are forwarded.
                     /// </summary>
@@ -455,6 +469,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         }
 
                     }
+
+                    [NameInMap("TargetType")]
+                    [Validation(Required=false)]
+                    public string TargetType { get; set; }
 
                 }
 
