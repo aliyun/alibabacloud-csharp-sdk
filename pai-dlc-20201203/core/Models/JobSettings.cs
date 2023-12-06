@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string ErrorMonitoringArgs { get; set; }
 
+        [NameInMap("JobReservedMinutes")]
+        [Validation(Required=false)]
+        public int? JobReservedMinutes { get; set; }
+
+        [NameInMap("JobReservedPolicy")]
+        [Validation(Required=false)]
+        public string JobReservedPolicy { get; set; }
+
         [NameInMap("OversoldType")]
         [Validation(Required=false)]
         public string OversoldType { get; set; }
