@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("DefaultLinkType")]
+            [Validation(Required=false)]
+            public string DefaultLinkType { get; set; }
+
             /// <summary>
             /// The areas that are connected by the bandwidth plan.
             /// </summary>

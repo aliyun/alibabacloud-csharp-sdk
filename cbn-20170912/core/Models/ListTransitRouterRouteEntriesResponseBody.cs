@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If the **NextToken** parameter is empty, no next page exists.
-        /// *   If a value of **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The queried routes.
+        /// A list of route entries.
         /// </summary>
         [NameInMap("TransitRouterRouteEntries")]
         [Validation(Required=false)]
         public List<ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries> TransitRouterRouteEntries { get; set; }
         public class ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries : TeaModel {
             /// <summary>
-            /// The time when the route was created.
+            /// The time when the route entry was created.
             /// 
             /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
             /// 
@@ -68,53 +68,91 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? OperationalMode { get; set; }
 
+            /// <summary>
+            /// The route attributes.
+            /// </summary>
             [NameInMap("PathAttributes")]
             [Validation(Required=false)]
             public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes PathAttributes { get; set; }
             public class ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes : TeaModel {
+                /// <summary>
+                /// The route AS path.
+                /// </summary>
                 [NameInMap("AsPaths")]
                 [Validation(Required=false)]
                 public List<string> AsPaths { get; set; }
 
+                /// <summary>
+                /// The route community.
+                /// </summary>
                 [NameInMap("Communities")]
                 [Validation(Required=false)]
                 public List<string> Communities { get; set; }
 
+                /// <summary>
+                /// The source instance ID.
+                /// </summary>
                 [NameInMap("OriginInstanceId")]
                 [Validation(Required=false)]
                 public string OriginInstanceId { get; set; }
 
+                /// <summary>
+                /// The source instance type. Valid values:
+                /// 
+                /// *   **VPC**
+                /// *   **VBR**
+                /// *   **TR**
+                /// *   **VPN**
+                /// *   **CCN**
+                /// </summary>
                 [NameInMap("OriginInstanceType")]
                 [Validation(Required=false)]
                 public string OriginInstanceType { get; set; }
 
+                /// <summary>
+                /// The route type. Valid values:
+                /// 
+                /// *   **System**
+                /// *   **Custom**
+                /// *   **static**
+                /// *   **BGP**
+                /// *   **BlackHole**
+                /// </summary>
                 [NameInMap("OriginRouteType")]
                 [Validation(Required=false)]
                 public string OriginRouteType { get; set; }
 
+                /// <summary>
+                /// The route priority.
+                /// 
+                /// A smaller value indicates a higher priority.
+                /// </summary>
                 [NameInMap("Preference")]
                 [Validation(Required=false)]
                 public int? Preference { get; set; }
 
             }
 
+            /// <summary>
+            /// The prefix list ID.
+            /// </summary>
             [NameInMap("PrefixListId")]
             [Validation(Required=false)]
             public string PrefixListId { get; set; }
 
             /// <summary>
-            /// The tag of the route.
+            /// The route tag.
             /// 
-            /// Only **PermitVbr** may be returned, which indicates that the route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
+            /// Only **PermitVbr** may be returned, which indicates that the route is advertised only to the route tables of the virtual border routers (VBRs) that are connected to the transit router.
             /// 
-            /// >  This parameter is returned only for automatically learned routes.
+            /// >  This parameter is returned only for routes whose CIDR blocks are automatically generated by the system.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
             /// <summary>
-            /// The description of the route.
+            /// The route description.
             /// 
             /// >  This parameter is returned only for static routes.
             /// </summary>
@@ -148,22 +186,33 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterRouteEntryName { get; set; }
 
             /// <summary>
-            /// The ID of the next hop.
+            /// The next hop ID. This parameter is not returned if the route is a blackhole route.
             /// </summary>
             [NameInMap("TransitRouterRouteEntryNextHopId")]
             [Validation(Required=false)]
             public string TransitRouterRouteEntryNextHopId { get; set; }
 
+            /// <summary>
+            /// The next hop ID.
+            /// </summary>
             [NameInMap("TransitRouterRouteEntryNextHopResourceId")]
             [Validation(Required=false)]
             public string TransitRouterRouteEntryNextHopResourceId { get; set; }
 
+            /// <summary>
+            /// The next hop type. Valid values:
+            /// 
+            /// *   **VPC**
+            /// *   **VBR**
+            /// *   **TR**
+            /// *   **VPN**
+            /// </summary>
             [NameInMap("TransitRouterRouteEntryNextHopResourceType")]
             [Validation(Required=false)]
             public string TransitRouterRouteEntryNextHopResourceType { get; set; }
 
             /// <summary>
-            /// The type of next hop. Valid values:
+            /// The next hop type. Valid values:
             /// 
             /// *   **BlackHole**: a blackhole route. Packets destined for the destination CIDR block of the route are dropped.
             /// *   **Attachment**: a network instance connection. Packets destined for the destination CIDR block of the route are forwarded to the specified network instance connection.
@@ -172,20 +221,35 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string TransitRouterRouteEntryNextHopType { get; set; }
 
+            /// <summary>
+            /// The source instance ID.
+            /// </summary>
             [NameInMap("TransitRouterRouteEntryOriginResourceId")]
             [Validation(Required=false)]
             public string TransitRouterRouteEntryOriginResourceId { get; set; }
 
+            /// <summary>
+            /// The source instance type. Valid values:
+            /// 
+            /// *   **VPC**
+            /// *   **VBR**
+            /// *   **TR**
+            /// *   **VPN**
+            /// </summary>
             [NameInMap("TransitRouterRouteEntryOriginResourceType")]
             [Validation(Required=false)]
             public string TransitRouterRouteEntryOriginResourceType { get; set; }
 
             /// <summary>
-            /// The status of the route. Valid values:
+            /// The route status. Valid values:
             /// 
-            /// *   **Creating**: The route is being created.
-            /// *   **Active**: The route is available.
-            /// *   **Deleting**: The route is being deleted.
+            /// *   **Active**
+            /// *   **Rejected**
+            /// *   **Prohibited**
+            /// *   **Standby**
+            /// *   **Candidate**
+            /// *   **Creating**
+            /// *   **Deleting**
             /// </summary>
             [NameInMap("TransitRouterRouteEntryStatus")]
             [Validation(Required=false)]
@@ -194,8 +258,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The type of the route. Valid values:
             /// 
-            /// *   **Static**: a static route
-            /// *   **Propagated**: an automatically learned route
+            /// *   **Static**: static routes.
+            /// *   **Propagated**: automatically learned by the route table.
             /// </summary>
             [NameInMap("TransitRouterRouteEntryType")]
             [Validation(Required=false)]

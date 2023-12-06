@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DefaultLinkType")]
+        [Validation(Required=false)]
+        public string DefaultLinkType { get; set; }
+
         /// <summary>
         /// Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:
         /// 

@@ -1206,8 +1206,9 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * The description of the CEN instance.
-          * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+          * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+          * * If a CEN instance is in the **Active** state, the CEN instance is created.
           *
           * @param request CreateCenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1273,8 +1274,9 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * The description of the CEN instance.
-          * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+          * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+          * * If a CEN instance is in the **Active** state, the CEN instance is created.
           *
           * @param request CreateCenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1340,8 +1342,9 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * The description of the CEN instance.
-          * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+          * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+          * * If a CEN instance is in the **Active** state, the CEN instance is created.
           *
           * @param request CreateCenRequest
           * @return CreateCenResponse
@@ -1353,8 +1356,9 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * The description of the CEN instance.
-          * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+          * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+          * * If a CEN instance is in the **Active** state, the CEN instance is created.
           *
           * @param request CreateCenRequest
           * @return CreateCenResponse
@@ -3923,6 +3927,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLinkType))
+            {
+                query["DefaultLinkType"] = request.DefaultLinkType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -4027,6 +4035,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLinkType))
+            {
+                query["DefaultLinkType"] = request.DefaultLinkType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -22338,6 +22350,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLinkType))
+            {
+                query["DefaultLinkType"] = request.DefaultLinkType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -22421,6 +22437,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLinkType))
+            {
+                query["DefaultLinkType"] = request.DefaultLinkType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
