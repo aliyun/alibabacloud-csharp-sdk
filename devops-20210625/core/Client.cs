@@ -633,6 +633,136 @@ namespace AlibabaCloud.SDK.Devops20210625
             return await CreateBranchWithOptionsAsync(repositoryId, request, headers, runtime);
         }
 
+        public CreateCommitStatusResponse CreateCommitStatusWithOptions(CreateCommitStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sha))
+            {
+                query["sha"] = request.Sha;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
+            {
+                body["context"] = request.Context;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                body["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetUrl))
+            {
+                body["targetUrl"] = request.TargetUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCommitStatus",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/repository/commit_statuses/create_commit_status",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCommitStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateCommitStatusResponse> CreateCommitStatusWithOptionsAsync(CreateCommitStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sha))
+            {
+                query["sha"] = request.Sha;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
+            {
+                body["context"] = request.Context;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                body["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetUrl))
+            {
+                body["targetUrl"] = request.TargetUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCommitStatus",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/repository/commit_statuses/create_commit_status",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCommitStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateCommitStatusResponse CreateCommitStatus(CreateCommitStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateCommitStatusWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateCommitStatusResponse> CreateCommitStatusAsync(CreateCommitStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateCommitStatusWithOptionsAsync(request, headers, runtime);
+        }
+
         public CreateDeployKeyResponse CreateDeployKeyWithOptions(string repositoryId, CreateDeployKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6759,6 +6889,116 @@ namespace AlibabaCloud.SDK.Devops20210625
             return await GetMergeRequestWithOptionsAsync(repositoryId, localId, request, headers, runtime);
         }
 
+        public GetMergeRequestChangeTreeResponse GetMergeRequestChangeTreeWithOptions(GetMergeRequestChangeTreeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromPatchSetBizId))
+            {
+                query["fromPatchSetBizId"] = request.FromPatchSetBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalId))
+            {
+                query["localId"] = request.LocalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToPatchSetBizId))
+            {
+                query["toPatchSetBizId"] = request.ToPatchSetBizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMergeRequestChangeTree",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/merge_requests/diffs/change_tree",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMergeRequestChangeTreeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetMergeRequestChangeTreeResponse> GetMergeRequestChangeTreeWithOptionsAsync(GetMergeRequestChangeTreeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromPatchSetBizId))
+            {
+                query["fromPatchSetBizId"] = request.FromPatchSetBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalId))
+            {
+                query["localId"] = request.LocalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToPatchSetBizId))
+            {
+                query["toPatchSetBizId"] = request.ToPatchSetBizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMergeRequestChangeTree",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/merge_requests/diffs/change_tree",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMergeRequestChangeTreeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetMergeRequestChangeTreeResponse GetMergeRequestChangeTree(GetMergeRequestChangeTreeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMergeRequestChangeTreeWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GetMergeRequestChangeTreeResponse> GetMergeRequestChangeTreeAsync(GetMergeRequestChangeTreeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMergeRequestChangeTreeWithOptionsAsync(request, headers, runtime);
+        }
+
         public GetOrganizationMemberResponse GetOrganizationMemberWithOptions(string organizationId, string accountId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8751,6 +8991,116 @@ namespace AlibabaCloud.SDK.Devops20210625
             return await JoinPipelineGroupWithOptionsAsync(organizationId, request, headers, runtime);
         }
 
+        public ListCommitStatusesResponse ListCommitStatusesWithOptions(ListCommitStatusesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sha))
+            {
+                query["sha"] = request.Sha;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCommitStatuses",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/repository/commit_statuses/list_commit_statuses",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCommitStatusesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListCommitStatusesResponse> ListCommitStatusesWithOptionsAsync(ListCommitStatusesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sha))
+            {
+                query["sha"] = request.Sha;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCommitStatuses",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/repository/commit_statuses/list_commit_statuses",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCommitStatusesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListCommitStatusesResponse ListCommitStatuses(ListCommitStatusesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListCommitStatusesWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListCommitStatusesResponse> ListCommitStatusesAsync(ListCommitStatusesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListCommitStatusesWithOptionsAsync(request, headers, runtime);
+        }
+
         public ListFlowTagGroupsResponse ListFlowTagGroupsWithOptions(string organizationId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9119,6 +9469,348 @@ namespace AlibabaCloud.SDK.Devops20210625
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListHostGroupsWithOptionsAsync(organizationId, request, headers, runtime);
+        }
+
+        public ListMergeRequestCommentsResponse ListMergeRequestCommentsWithOptions(ListMergeRequestCommentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalId))
+            {
+                query["localId"] = request.LocalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommentType))
+            {
+                body["commentType"] = request.CommentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["filePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchSetBizIds))
+            {
+                body["patchSetBizIds"] = request.PatchSetBizIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolved))
+            {
+                body["resolved"] = request.Resolved;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                body["state"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMergeRequestComments",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/merge_requests/comments/list_comments",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMergeRequestCommentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListMergeRequestCommentsResponse> ListMergeRequestCommentsWithOptionsAsync(ListMergeRequestCommentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalId))
+            {
+                query["localId"] = request.LocalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommentType))
+            {
+                body["commentType"] = request.CommentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["filePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchSetBizIds))
+            {
+                body["patchSetBizIds"] = request.PatchSetBizIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolved))
+            {
+                body["resolved"] = request.Resolved;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                body["state"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMergeRequestComments",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/merge_requests/comments/list_comments",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMergeRequestCommentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListMergeRequestCommentsResponse ListMergeRequestComments(ListMergeRequestCommentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMergeRequestCommentsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListMergeRequestCommentsResponse> ListMergeRequestCommentsAsync(ListMergeRequestCommentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMergeRequestCommentsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListMergeRequestFilesReadsResponse ListMergeRequestFilesReadsWithOptions(ListMergeRequestFilesReadsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromPatchSetBizId))
+            {
+                query["fromPatchSetBizId"] = request.FromPatchSetBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalId))
+            {
+                query["localId"] = request.LocalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToPatchSetBizId))
+            {
+                query["toPatchSetBizId"] = request.ToPatchSetBizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMergeRequestFilesReads",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/merge_requests/diffs/files_read_infos",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMergeRequestFilesReadsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListMergeRequestFilesReadsResponse> ListMergeRequestFilesReadsWithOptionsAsync(ListMergeRequestFilesReadsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromPatchSetBizId))
+            {
+                query["fromPatchSetBizId"] = request.FromPatchSetBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalId))
+            {
+                query["localId"] = request.LocalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToPatchSetBizId))
+            {
+                query["toPatchSetBizId"] = request.ToPatchSetBizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMergeRequestFilesReads",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/merge_requests/diffs/files_read_infos",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMergeRequestFilesReadsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListMergeRequestFilesReadsResponse ListMergeRequestFilesReads(ListMergeRequestFilesReadsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMergeRequestFilesReadsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListMergeRequestFilesReadsResponse> ListMergeRequestFilesReadsAsync(ListMergeRequestFilesReadsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMergeRequestFilesReadsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListMergeRequestPatchSetsResponse ListMergeRequestPatchSetsWithOptions(ListMergeRequestPatchSetsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalId))
+            {
+                query["localId"] = request.LocalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMergeRequestPatchSets",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/merge_requests/diffs/list_patchsets",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMergeRequestPatchSetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListMergeRequestPatchSetsResponse> ListMergeRequestPatchSetsWithOptionsAsync(ListMergeRequestPatchSetsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalId))
+            {
+                query["localId"] = request.LocalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepositoryIdentity))
+            {
+                query["repositoryIdentity"] = request.RepositoryIdentity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMergeRequestPatchSets",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/api/v4/projects/merge_requests/diffs/list_patchsets",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMergeRequestPatchSetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListMergeRequestPatchSetsResponse ListMergeRequestPatchSets(ListMergeRequestPatchSetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMergeRequestPatchSetsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListMergeRequestPatchSetsResponse> ListMergeRequestPatchSetsAsync(ListMergeRequestPatchSetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMergeRequestPatchSetsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListMergeRequestsResponse ListMergeRequestsWithOptions(ListMergeRequestsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
