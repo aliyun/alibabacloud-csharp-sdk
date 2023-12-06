@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string OperationParams { get; set; }
 
+        /// <summary>
+        /// The remark of the operation.
+        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }

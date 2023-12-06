@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// The ID of the export record.
+        /// The ID of the export record of the anomalous event.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

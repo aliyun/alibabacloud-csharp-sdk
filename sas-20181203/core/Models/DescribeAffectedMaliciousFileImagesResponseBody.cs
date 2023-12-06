@@ -86,14 +86,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ImageUuid { get; set; }
 
+            /// <summary>
+            /// The name of the ECS instance.
+            /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            /// <summary>
+            /// The public IP address of the server.
+            /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            /// <summary>
+            /// The private IP address of the server.
+            /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
@@ -198,18 +207,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Tag { get; set; }
 
+            /// <summary>
+            /// The ID of the task object.
+            /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
+            /// <summary>
+            /// The name of the task object.
+            /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
             public string TargetName { get; set; }
 
+            /// <summary>
+            /// The object type. Valid value:
+            /// 
+            /// *   **ECS_IMAGE**
+            /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
             public string TargetType { get; set; }
 
+            /// <summary>
+            /// The UUID of the server.
+            /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }

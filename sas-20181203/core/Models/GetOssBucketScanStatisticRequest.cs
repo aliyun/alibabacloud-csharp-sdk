@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOssBucketScanStatisticRequest : TeaModel {
+        /// <summary>
+        /// The names of the buckets.
+        /// </summary>
         [NameInMap("BucketNameList")]
         [Validation(Required=false)]
         public List<string> BucketNameList { get; set; }

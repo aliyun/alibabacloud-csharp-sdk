@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details about the restoration task.
+        /// An array that consists of the restoration tasks.
         /// </summary>
         [NameInMap("RestoreJobs")]
         [Validation(Required=false)]
         public List<DescribeRestoreJobsResponseBodyRestoreJobs> RestoreJobs { get; set; }
         public class DescribeRestoreJobsResponseBodyRestoreJobs : TeaModel {
             /// <summary>
-            /// The size of the backup file. Unit: bytes.
+            /// The size of backup data. Unit: bytes.
             /// </summary>
             [NameInMap("ActualBytes")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? BytesTotal { get; set; }
 
             /// <summary>
-            /// The ID of the anti-ransomware agent that is used to perform the restoration task.
+            /// The ID of the anti-ransomware agent that is used to restore data.
             /// </summary>
             [NameInMap("ClientId")]
             [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The directory in which the restored file is stored. The value is the directory that you specify for protection when you create the anti-ransomware policy
+            /// The included directory based on which the files to restore are located. The value is the directory that you specify for protection when you create the anti-ransomware policy
             /// </summary>
             [NameInMap("Includes")]
             [Validation(Required=false)]
@@ -208,21 +208,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The number of files that are restored.
+            /// The number of files that are backed up.
             /// </summary>
             [NameInMap("ItemsDone")]
             [Validation(Required=false)]
             public long? ItemsDone { get; set; }
 
             /// <summary>
-            /// The total number of files that need to be restored.
+            /// The total number of files that you want to restore.
             /// </summary>
             [NameInMap("ItemsTotal")]
             [Validation(Required=false)]
             public long? ItemsTotal { get; set; }
 
             /// <summary>
-            /// The error message.
+            /// The error message returned.
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Percentage { get; set; }
 
             /// <summary>
-            /// The request ID.
+            /// The ID of the request, which is used to locate and troubleshoot issues.
             /// </summary>
             [NameInMap("RequestId")]
             [Validation(Required=false)]
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SnapshotVersion { get; set; }
 
             /// <summary>
-            /// The restored content.
+            /// The path to the source file that you want to restore.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SourceClientId { get; set; }
 
             /// <summary>
-            /// The speed at which data is restored. Unit: byte/s.
+            /// The speed of data restoration. Unit: byte/s.
             /// </summary>
             [NameInMap("Speed")]
             [Validation(Required=false)]
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **CANCELING**: The task is being canceled.
             /// *   **CANCELED**: The task is canceled.
             /// *   **PARTIAL_COMPLETE**: The task is partially successful.
-            /// *   **CREATED**: The task was created but is not run.
+            /// *   **CREATED**: The task is created but is not run.
             /// *   **EXPIRED**: The task is not updated.
             /// *   **QUEUED**: The task is waiting to be run.
             /// *   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.
@@ -353,6 +353,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("VaultId")]
             [Validation(Required=false)]
             public string VaultId { get; set; }
+
+            /// <summary>
+            /// The ID of the region where the backup vault resides.
+            /// </summary>
+            [NameInMap("VaultRegionId")]
+            [Validation(Required=false)]
+            public string VaultRegionId { get; set; }
 
         }
 

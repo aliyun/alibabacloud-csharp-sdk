@@ -26,28 +26,33 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AttachTypes { get; set; }
 
         /// <summary>
-        /// 要查询漏洞影响的容器名称。
+        /// The name of the container that is affected by the vulnerability.
         /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
         public string ContainerName { get; set; }
 
         /// <summary>
-        /// 首次扫描时间结束时间。
-        /// > 时间戳，单位为毫秒。
+        /// The end time of the first scan.
+        /// 
+        /// >  This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("CreateTsEnd")]
         [Validation(Required=false)]
         public long? CreateTsEnd { get; set; }
 
         /// <summary>
-        /// 首次扫描时间起始时间。
-        /// > 时间戳，单位为毫秒。
+        /// The start time of the first scan.
+        /// 
+        /// >  This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("CreateTsStart")]
         [Validation(Required=false)]
         public long? CreateTsStart { get; set; }
 
+        /// <summary>
+        /// The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.
+        /// </summary>
         [NameInMap("CveId")]
         [Validation(Required=false)]
         public string CveId { get; set; }
@@ -72,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// 要查询漏洞影响的镜像名称。
+        /// The name of the image that is affected by the vulnerability.
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
@@ -100,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// 要查询漏洞影响的进程路径。
+        /// The path of the process that is affected by the vulnerability.
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]

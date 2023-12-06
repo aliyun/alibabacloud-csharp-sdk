@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// *   **23**: Data Security Center (DSC)
                 /// *   **24**: Elastic IP Address (EIP)
                 /// *   **25**: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)
-                /// *   **26**: PolarDB for Xscale (PolarDB-X)
+                /// *   **26**: PolarDB-X
                 /// *   **27**: Elasticsearch
                 /// </summary>
                 [NameInMap("AssetType")]
@@ -77,22 +77,40 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public int? InstanceRiskCount { get; set; }
 
+                /// <summary>
+                /// The type of the server. Valid values:
+                /// 
+                /// *   **0**: an asset provided by Alibaba Cloud
+                /// *   **1**: a third-party cloud asset
+                /// *   **2**: an asset in a data center
+                /// *   **3**, **4**, **5**, and **7**: an asset provided by another cloud
+                /// *   **8**: a lightweight cloud asset
+                /// </summary>
                 [NameInMap("Vendor")]
                 [Validation(Required=false)]
                 public int? Vendor { get; set; }
 
             }
 
+            /// <summary>
+            /// The total number of cloud service instances.
+            /// </summary>
             [NameInMap("InstanceCountTotal")]
             [Validation(Required=false)]
             public int? InstanceCountTotal { get; set; }
 
+            /// <summary>
+            /// The total number of cloud service instances that are at risk.
+            /// </summary>
             [NameInMap("InstanceRiskCountTotal")]
             [Validation(Required=false)]
             public int? InstanceRiskCountTotal { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

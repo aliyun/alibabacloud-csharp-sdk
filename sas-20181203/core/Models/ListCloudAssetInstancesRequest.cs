@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudAssetInstancesRequest : TeaModel {
         /// <summary>
-        /// The cloud assets.
+        /// The details of the cloud asset.
         /// </summary>
         [NameInMap("CloudAssetTypes")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The subtype of the cloud asset.
             /// 
-            /// You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtypes of cloud assets from the AssetSubType response parameter.
+            /// You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtype of the cloud asset.
             /// </summary>
             [NameInMap("AssetSubType")]
             [Validation(Required=false)]
@@ -28,12 +28,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the cloud asset.
             /// 
-            /// You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the types of cloud assets from the AssetType response parameter.
+            /// You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the cloud asset type.
             /// </summary>
             [NameInMap("AssetType")]
             [Validation(Required=false)]
             public int? AssetType { get; set; }
 
+            /// <summary>
+            /// The server type. Valid values:
+            /// 
+            /// *   **0**: a cloud asset provided by Alibaba Cloud
+            /// *   **1**: a cloud asset outside Alibaba Cloud
+            /// *   **2**: a cloud asset in a data center
+            /// *   **3**, **4**, **5**, and **7**: a cloud asset provided by a third-party service provider
+            /// *   **8**: a lightweight cloud asset
+            /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
             public int? Vendor { get; set; }

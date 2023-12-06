@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Alias { get; set; }
 
+            /// <summary>
+            /// The baseline type flag of the current user version. Valid values:
+            /// 
+            /// - **true**: Have access
+            /// - **false**: No permissions
+            /// </summary>
             [NameInMap("AuthFlag")]
             [Validation(Required=false)]
             public bool? AuthFlag { get; set; }
@@ -48,6 +54,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
+                /// <summary>
+                /// The baseline subtype permission flag of the current user version. Valid values:
+                /// 
+                /// - **true**: Have access
+                /// - **false**: No permissions
+                /// </summary>
                 [NameInMap("AuthFlag")]
                 [Validation(Required=false)]
                 public bool? AuthFlag { get; set; }
@@ -176,6 +188,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
                 }
 
+                /// <summary>
+                /// The operating system type of the server. Valid values:
+                /// 
+                /// - **windows**
+                /// - **linux**
+                /// </summary>
                 [NameInMap("SupportedOs")]
                 [Validation(Required=false)]
                 public string SupportedOs { get; set; }

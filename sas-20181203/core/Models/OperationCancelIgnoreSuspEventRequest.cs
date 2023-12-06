@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperationCancelIgnoreSuspEventRequest : TeaModel {
         /// <summary>
-        /// The information about the remarks.
+        /// The remarks.
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

@@ -76,6 +76,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string From { get; set; }
 
+        /// <summary>
+        /// The ID of the new server group to which the servers belong.
+        /// 
+        /// > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+        /// </summary>
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public long? GroupId { get; set; }
+
+        /// <summary>
+        /// The unique ID of the alert event.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
@@ -108,6 +120,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The status codes of alert events.
+        /// </summary>
         [NameInMap("OperateErrorCodeList")]
         [Validation(Required=false)]
         public List<string> OperateErrorCodeList { get; set; }
@@ -206,10 +221,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string TimeStart { get; set; }
 
+        /// <summary>
+        /// The unique key of the alert event.
+        /// </summary>
         [NameInMap("UniqueInfo")]
         [Validation(Required=false)]
         public string UniqueInfo { get; set; }
 
+        /// <summary>
+        /// The unique ID of the associated instance.
+        /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }

@@ -19,7 +19,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The UUID of the server.
+        /// The server UUID.
+        /// 
+        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

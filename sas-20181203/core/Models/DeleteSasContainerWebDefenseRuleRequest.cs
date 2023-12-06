@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteSasContainerWebDefenseRuleRequest : TeaModel {
+        /// <summary>
+        /// The rule ID.
+        /// 
+        /// >  You can call the ListContainerWebDefenseRule operation to query the rule ID.
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }

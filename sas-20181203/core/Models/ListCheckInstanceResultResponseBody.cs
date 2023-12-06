@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the instance.
+            /// The instance name.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The information about the exceptions of check items.
+            /// The exception message of the check item.
             /// </summary>
             [NameInMap("StatusMessage")]
             [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// The format of the check results for the instance. Valid values:
+                /// The format of the check result for the instance. Valid values:
                 /// 
                 /// *   **text**
                 /// *   **link**
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// Indicates whether the search condition is supported. Valid values:
+            /// Indicates whether the search condition is used. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Search { get; set; }
 
             /// <summary>
-            /// The value of the search condition.
+            /// The search key.
             /// </summary>
             [NameInMap("SearchKey")]
             [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ShowName { get; set; }
 
             /// <summary>
-            /// The format of the check result for the instance. Valid values:
+            /// The type of the check result for the instance. Valid values:
             /// 
             /// *   **text**
             /// *   **link**

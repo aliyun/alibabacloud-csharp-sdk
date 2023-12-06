@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// The port number.
+        /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }

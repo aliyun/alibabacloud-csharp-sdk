@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeImageListBySensitiveFileResponseBodyImageInfos> ImageInfos { get; set; }
         public class DescribeImageListBySensitiveFileResponseBodyImageInfos : TeaModel {
             /// <summary>
-            /// The digest of the image.
+            /// The image digest.
             /// </summary>
             [NameInMap("Digest")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// The ID of the image instance.
+            /// The image instance ID.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The name of the image repository.
+            /// The image repository name.
             /// </summary>
             [NameInMap("RepoName")]
             [Validation(Required=false)]
@@ -90,19 +90,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
+            /// <summary>
+            /// The sensitive file status. Valid values:
+            /// 
+            /// *   **0**: unhandled
+            /// *   **1**: ignored
+            /// *   **2**: false positive
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tag of the image.
+            /// The tag that is added to the image.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
             /// <summary>
-            /// The UUID of the image.
+            /// The image UUID.
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

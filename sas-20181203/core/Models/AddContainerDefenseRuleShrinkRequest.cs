@@ -50,6 +50,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? RuleSwitch { get; set; }
 
+        /// <summary>
+        /// The rule type. Valid values:
+        /// 
+        /// *   2: user-defined rules
+        /// 
+        /// > Only the value 2 is supported.
+        /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }

@@ -96,6 +96,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SavedBackupCount { get; set; }
 
             /// <summary>
+            /// The status of the anti-ransomware service. Valid values:
+            /// *   **SERVICE_EXCEPTION**: Service exception
+            /// *   **RESTORING**: Restoring
+            /// *   **BACKING_UP**: Backup in process
+            /// </summary>
+            [NameInMap("ServiceStatus")]
+            [Validation(Required=false)]
+            public string ServiceStatus { get; set; }
+
+            /// <summary>
             /// The status of the anti-ransomware agent. Valid values:
             /// 
             /// *   **NOT_INSTALLED**: not installed

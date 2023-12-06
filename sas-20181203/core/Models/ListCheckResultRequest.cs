@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// Specifies whether the check item supports custom parameters. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// </summary>
         [NameInMap("CustomParam")]
         [Validation(Required=false)]
         public bool? CustomParam { get; set; }

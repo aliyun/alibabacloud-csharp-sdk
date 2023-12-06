@@ -31905,6 +31905,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["From"] = request.From;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
@@ -32015,6 +32019,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
@@ -40723,6 +40731,112 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAvailableHoneypotWithOptionsAsync(request, runtime);
+        }
+
+        public ListBackupRecordResponse ListBackupRecordWithOptions(ListBackupRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupEndTime))
+            {
+                query["BackupEndTime"] = request.BackupEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStartTime))
+            {
+                query["BackupStartTime"] = request.BackupStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineRemark))
+            {
+                query["MachineRemark"] = request.MachineRemark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBackupRecord",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBackupRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListBackupRecordResponse> ListBackupRecordWithOptionsAsync(ListBackupRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupEndTime))
+            {
+                query["BackupEndTime"] = request.BackupEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStartTime))
+            {
+                query["BackupStartTime"] = request.BackupStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineRemark))
+            {
+                query["MachineRemark"] = request.MachineRemark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBackupRecord",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBackupRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListBackupRecordResponse ListBackupRecord(ListBackupRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListBackupRecordWithOptions(request, runtime);
+        }
+
+        public async Task<ListBackupRecordResponse> ListBackupRecordAsync(ListBackupRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListBackupRecordWithOptionsAsync(request, runtime);
         }
 
         public ListCheckInstanceResultResponse ListCheckInstanceResultWithOptions(ListCheckInstanceResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

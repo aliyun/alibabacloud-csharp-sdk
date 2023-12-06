@@ -50,6 +50,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? RuleSwitch { get; set; }
 
+        /// <summary>
+        /// The rule type. Valid values:
+        /// 
+        /// *   2: user-defined rules
+        /// 
+        /// > Only the value 2 is supported.
+        /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }
@@ -99,12 +106,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The hash values of the files that need to be added to the whitelist.
             /// 
-            /// >  This parameter is not supported.
+            /// > This parameter is not supported.
             /// </summary>
             [NameInMap("Hash")]
             [Validation(Required=false)]
             public List<string> Hash { get; set; }
 
+            /// <summary>
+            /// The images that need to be added to the whitelist.
+            /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public List<string> Image { get; set; }

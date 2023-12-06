@@ -10,46 +10,53 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetRefreshTaskConfigResponseBody : TeaModel {
         /// <summary>
-        /// An array that consist of the configurations.
+        /// The asset synchronization configuration.
         /// </summary>
         [NameInMap("AssetRefreshConfig")]
         [Validation(Required=false)]
         public List<ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig> AssetRefreshConfig { get; set; }
         public class ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig : TeaModel {
+            /// <summary>
+            /// The configuration type. Valid values:
+            /// 
+            /// *   **0**: host refresh task
+            /// *   **1**: cloud service refresh task
+            /// *   **2**: scheduled AccessKey pair verification task
+            /// </summary>
             [NameInMap("RefreshConfigType")]
             [Validation(Required=false)]
             public int? RefreshConfigType { get; set; }
 
             /// <summary>
-            /// The synchronization cycle. Valid values:
+            /// The interval at which assets are synchronized. Unit: minutes. Valid values:
             /// 
-            /// *   **60**: 60 minutes
-            /// *   **180**: 3 hours
-            /// *   **360**: 6 hours
-            /// *   **720**: 12 hours
-            /// *   **1440**: 1 day
-            /// *   **10080**: 7 days
+            /// *   **60**
+            /// *   **180**
+            /// *   **360**
+            /// *   **720**
+            /// *   **1440**
+            /// *   **10080**
             /// </summary>
             [NameInMap("SchedulePeriod")]
             [Validation(Required=false)]
             public int? SchedulePeriod { get; set; }
 
             /// <summary>
-            /// The status of asset synchonization. Valid values:
+            /// Indicates whether the feature is enabled. Valid values:
             /// 
-            /// *   **1**: enabled
-            /// *   **0**: disabled
+            /// *   **1**: The feature is enabled.
+            /// *   **0**: The feature is disabled.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The service provider of the cloud asset. Valid values:
+            /// The cloud asset type. Valid values:
             /// 
             /// *   **3**: Tencent Cloud
-            /// *   **4**: HUAWEI CLOUD
-            /// *   **7**: Amazon Web Services (AWS) Cloud
+            /// *   **4**: Huawei Cloud
+            /// *   **7**: Amazon Web Services (AWS)
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
