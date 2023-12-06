@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class Sku : TeaModel {
+        [NameInMap("barcode")]
+        [Validation(Required=false)]
+        public string Barcode { get; set; }
+
         [NameInMap("canSell")]
         [Validation(Required=false)]
         public bool? CanSell { get; set; }
