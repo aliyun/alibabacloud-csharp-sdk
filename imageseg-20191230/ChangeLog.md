@@ -1,3 +1,6 @@
+2023-12-06 Version: 3.0.0
+- Generated csharp 2019-12-30 for imageseg.
+
 2022-11-18 Version: 2.0.4
 - Update RefineMask.
 

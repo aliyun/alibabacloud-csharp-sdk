@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
             [Validation(Required=false)]
             public List<SegmentClothResponseBodyDataElements> Elements { get; set; }
             public class SegmentClothResponseBodyDataElements : TeaModel {
+                [NameInMap("ClassUrl")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> ClassUrl { get; set; }
+
                 [NameInMap("ImageURL")]
                 [Validation(Required=false)]
                 public string ImageURL { get; set; }
