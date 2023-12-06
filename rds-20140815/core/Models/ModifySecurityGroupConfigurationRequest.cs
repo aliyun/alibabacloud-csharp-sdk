@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySecurityGroupConfigurationRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the ECS security group. Each RDS instance can be added to up to three security groups. Separate the security group IDs with commas (,). To delete an ECS security group for the RDS instance, leave this parameter empty. You can call the [DescribeSecurityGroups](~~25556~~) operation to query the ECS security group list.
+        /// The ID of the ECS security group. Each instance can be added to up to three security groups. Separate the security group IDs with commas (,). To delete an ECS security group for the instance, leave this parameter empty. You can call the DescribeSecurityGroups operation to query the ID of the ECS security group.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

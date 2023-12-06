@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RestoreTableRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.
+        /// The backup set ID. You can call the DescribeBackups operation to obtain the backup set ID.
         /// 
-        /// > You must specify at least one of BackupId or **RestoreTime** parameters.
+        /// >  You must specify at least one of **BackupId** or **RestoreTime** parameters.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

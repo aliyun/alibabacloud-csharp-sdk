@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.
+        /// The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

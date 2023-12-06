@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteBackupFileRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).
+        /// The backup set ID. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).
         /// 
         /// > 
         /// 
-        /// *   Only the IDs of the backup sets for the database is supported.
+        /// *   If the instance runs SQL Server, only the ID of the backup set for an individual database is supported.
         /// 
-        /// *   You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup sets.
+        /// *   You can call the DescribeBackups operation to query the backup set ID.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupTime { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateYouhuiForOrderRequest : TeaModel {
         /// <summary>
-        /// The ticket ID.
+        /// The activity ID.
         /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]

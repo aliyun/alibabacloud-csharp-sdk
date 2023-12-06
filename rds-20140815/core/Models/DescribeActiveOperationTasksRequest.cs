@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the pending task belongs. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// > The value **all** indicates all regions.
+        /// >  The value **all** indicates all regions.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]

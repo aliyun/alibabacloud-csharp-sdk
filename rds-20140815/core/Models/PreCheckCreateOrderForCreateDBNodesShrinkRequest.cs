@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class PreCheckCreateOrderForCreateDBNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically complete the payment. Valid value:
+        /// Specifies whether to automatically complete the payment. Valid values:
         /// 
         /// 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
         /// 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
         /// 
-        /// >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+        /// >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The commodity code of the instance. Valid values:
+        /// The commodity code. Valid values:
         /// 
         /// *   **bards**: The instance is a pay-as-you-go primary instance.
         /// *   **rds**: The instance is a subscription primary instance.
@@ -52,25 +52,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The details about the node.
+        /// The information about the node.
+        /// 
+        /// >  This parameter is used for ApsaraDB RDS for MySQL instances on RDS Cluster Edition.
         /// </summary>
         [NameInMap("DBNode")]
         [Validation(Required=false)]
         public string DBNodeShrink { get; set; }
 
         /// <summary>
-        /// The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.
+        /// The database engine version of the instance. Valid values:
         /// 
-        /// *   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**
-        /// *   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
-        /// *   Valid values when Engine is set to PostgreSQL: **9.4, 10.0, 11.0, 12.0, and 13.0**
+        /// *   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**
+        /// *   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
+        /// *   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, and 14.0**
+        /// *   Valid value if you set Engine to MariaDB: **10.3**
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -98,14 +101,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource of the instance.
+        /// The resource.
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -120,7 +123,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The zone ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
+        /// The zone ID. You can call the [DescribeRegions](~~26243~~) operation to query the zone ID.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

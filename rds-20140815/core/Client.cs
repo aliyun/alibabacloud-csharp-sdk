@@ -1130,8 +1130,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
-          * >  This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Usage notes
+          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~610592~~).
+          * ### [](#)Precautions
+          * This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           *
           * @param request CancelImportRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1189,8 +1193,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
-          * >  This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Usage notes
+          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~610592~~).
+          * ### [](#)Precautions
+          * This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           *
           * @param request CancelImportRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1248,8 +1256,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
-          * >  This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Usage notes
+          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~610592~~).
+          * ### [](#)Precautions
+          * This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           *
           * @param request CancelImportRequest
           * @return CancelImportResponse
@@ -1261,8 +1273,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
-          * >  This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Usage notes
+          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~610592~~).
+          * ### [](#)Precautions
+          * This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           *
           * @param request CancelImportRequest
           * @return CancelImportResponse
@@ -1273,6 +1289,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await CancelImportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request CheckAccountNameAvailableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckAccountNameAvailableResponse
+         */
         public CheckAccountNameAvailableResponse CheckAccountNameAvailableWithOptions(CheckAccountNameAvailableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1320,6 +1347,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CheckAccountNameAvailableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request CheckAccountNameAvailableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckAccountNameAvailableResponse
+         */
         public async Task<CheckAccountNameAvailableResponse> CheckAccountNameAvailableWithOptionsAsync(CheckAccountNameAvailableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1367,12 +1405,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CheckAccountNameAvailableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request CheckAccountNameAvailableRequest
+          * @return CheckAccountNameAvailableResponse
+         */
         public CheckAccountNameAvailableResponse CheckAccountNameAvailable(CheckAccountNameAvailableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckAccountNameAvailableWithOptions(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request CheckAccountNameAvailableRequest
+          * @return CheckAccountNameAvailableResponse
+         */
         public async Task<CheckAccountNameAvailableResponse> CheckAccountNameAvailableAsync(CheckAccountNameAvailableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3482,7 +3540,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * ### [](#)References
           * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-          * *   [Use the cloud migration feature](~~365562~~)
+          * [Use the cloud migration feature](~~365562~~)
           *
           * @param request CreateCloudMigrationPrecheckTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3548,7 +3606,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * ### [](#)References
           * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-          * *   [Use the cloud migration feature](~~365562~~)
+          * [Use the cloud migration feature](~~365562~~)
           *
           * @param request CreateCloudMigrationPrecheckTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3614,7 +3672,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * ### [](#)References
           * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-          * *   [Use the cloud migration feature](~~365562~~)
+          * [Use the cloud migration feature](~~365562~~)
           *
           * @param request CreateCloudMigrationPrecheckTaskRequest
           * @return CreateCloudMigrationPrecheckTaskResponse
@@ -3630,7 +3688,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * ### [](#)References
           * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-          * *   [Use the cloud migration feature](~~365562~~)
+          * [Use the cloud migration feature](~~365562~~)
           *
           * @param request CreateCloudMigrationPrecheckTaskRequest
           * @return CreateCloudMigrationPrecheckTaskResponse
@@ -5974,7 +6032,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * > This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+          * >  This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
           * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
           *
           * @param request CreateDiagnosticReportRequest
@@ -6017,7 +6075,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * > This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+          * >  This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
           * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
           *
           * @param request CreateDiagnosticReportRequest
@@ -6060,7 +6118,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * > This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+          * >  This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
           * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
           *
           * @param request CreateDiagnosticReportRequest
@@ -6073,7 +6131,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * > This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+          * >  This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
           * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
           *
           * @param request CreateDiagnosticReportRequest
@@ -8372,13 +8430,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /**
           * ### [](#)Supported database engines
           * Your RDS instance runs SQL Server 2008 R2 with local disks.
-          * ### [](#)Description
-          * You can create a temporary instance based on a backup set or a point in time within the past seven days. Before you call this operation, make sure that the following requirements are met:
-          * *   Your instance runs SQL Server 2008 R2 with local disks.
-          * *   Your instance is in the Running state.
-          * *   Your instance does not have ongoing migration tasks.
-          * *   The last creation of a backup file is complete.
-          * >  After a temporary instance is created, the temporary instance inherits the accounts and databases in the backup set.
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Restore the data of an ApsaraDB RDS for SQL Server instance by using a temporary RDS instance](~~95724~~)
           *
           * @param request CreateTempDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8442,13 +8496,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /**
           * ### [](#)Supported database engines
           * Your RDS instance runs SQL Server 2008 R2 with local disks.
-          * ### [](#)Description
-          * You can create a temporary instance based on a backup set or a point in time within the past seven days. Before you call this operation, make sure that the following requirements are met:
-          * *   Your instance runs SQL Server 2008 R2 with local disks.
-          * *   Your instance is in the Running state.
-          * *   Your instance does not have ongoing migration tasks.
-          * *   The last creation of a backup file is complete.
-          * >  After a temporary instance is created, the temporary instance inherits the accounts and databases in the backup set.
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Restore the data of an ApsaraDB RDS for SQL Server instance by using a temporary RDS instance](~~95724~~)
           *
           * @param request CreateTempDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8512,13 +8562,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /**
           * ### [](#)Supported database engines
           * Your RDS instance runs SQL Server 2008 R2 with local disks.
-          * ### [](#)Description
-          * You can create a temporary instance based on a backup set or a point in time within the past seven days. Before you call this operation, make sure that the following requirements are met:
-          * *   Your instance runs SQL Server 2008 R2 with local disks.
-          * *   Your instance is in the Running state.
-          * *   Your instance does not have ongoing migration tasks.
-          * *   The last creation of a backup file is complete.
-          * >  After a temporary instance is created, the temporary instance inherits the accounts and databases in the backup set.
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Restore the data of an ApsaraDB RDS for SQL Server instance by using a temporary RDS instance](~~95724~~)
           *
           * @param request CreateTempDBInstanceRequest
           * @return CreateTempDBInstanceResponse
@@ -8532,13 +8578,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /**
           * ### [](#)Supported database engines
           * Your RDS instance runs SQL Server 2008 R2 with local disks.
-          * ### [](#)Description
-          * You can create a temporary instance based on a backup set or a point in time within the past seven days. Before you call this operation, make sure that the following requirements are met:
-          * *   Your instance runs SQL Server 2008 R2 with local disks.
-          * *   Your instance is in the Running state.
-          * *   Your instance does not have ongoing migration tasks.
-          * *   The last creation of a backup file is complete.
-          * >  After a temporary instance is created, the temporary instance inherits the accounts and databases in the backup set.
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Restore the data of an ApsaraDB RDS for SQL Server instance by using a temporary RDS instance](~~95724~~)
           *
           * @param request CreateTempDBInstanceRequest
           * @return CreateTempDBInstanceResponse
@@ -14057,6 +14099,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeCharacterSetNameWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeClassDetailsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClassDetailsResponse
+         */
         public DescribeClassDetailsResponse DescribeClassDetailsWithOptions(DescribeClassDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14120,6 +14173,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeClassDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeClassDetailsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClassDetailsResponse
+         */
         public async Task<DescribeClassDetailsResponse> DescribeClassDetailsWithOptionsAsync(DescribeClassDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14183,12 +14247,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeClassDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeClassDetailsRequest
+          * @return DescribeClassDetailsResponse
+         */
         public DescribeClassDetailsResponse DescribeClassDetails(DescribeClassDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClassDetailsWithOptions(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          *
+          * @param request DescribeClassDetailsRequest
+          * @return DescribeClassDetailsResponse
+         */
         public async Task<DescribeClassDetailsResponse> DescribeClassDetailsAsync(DescribeClassDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15169,7 +15253,8 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * *   SQL Server
           * ### [](#)References
-          * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
           * >  For more information about how to query cross-region data backup files, see [DescribeCrossRegionBackups](~~121733~~).
@@ -15247,7 +15332,8 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * *   SQL Server
           * ### [](#)References
-          * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
           * >  For more information about how to query cross-region data backup files, see [DescribeCrossRegionBackups](~~121733~~).
@@ -15325,7 +15411,8 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * *   SQL Server
           * ### [](#)References
-          * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
           * >  For more information about how to query cross-region data backup files, see [DescribeCrossRegionBackups](~~121733~~).
@@ -15345,7 +15432,8 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * *   SQL Server
           * ### [](#)References
-          * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
           * >  For more information about how to query cross-region data backup files, see [DescribeCrossRegionBackups](~~121733~~).
@@ -21671,6 +21759,290 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeHASwitchConfigWithOptionsAsync(request, runtime);
         }
 
+        public DescribeHistoryEventsResponse DescribeHistoryEventsWithOptions(DescribeHistoryEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveStatus))
+            {
+                query["ArchiveStatus"] = request.ArchiveStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCategory))
+            {
+                query["EventCategory"] = request.EventCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
+            {
+                query["EventLevel"] = request.EventLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStatus))
+            {
+                query["EventStatus"] = request.EventStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryEvents",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeHistoryEventsResponse> DescribeHistoryEventsWithOptionsAsync(DescribeHistoryEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveStatus))
+            {
+                query["ArchiveStatus"] = request.ArchiveStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCategory))
+            {
+                query["EventCategory"] = request.EventCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
+            {
+                query["EventLevel"] = request.EventLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStatus))
+            {
+                query["EventStatus"] = request.EventStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryEvents",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeHistoryEventsResponse DescribeHistoryEvents(DescribeHistoryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHistoryEventsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeHistoryEventsResponse> DescribeHistoryEventsAsync(DescribeHistoryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHistoryEventsWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeHistoryEventsStatResponse DescribeHistoryEventsStatWithOptions(DescribeHistoryEventsStatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveStatus))
+            {
+                query["ArchiveStatus"] = request.ArchiveStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryEventsStat",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryEventsStatResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeHistoryEventsStatResponse> DescribeHistoryEventsStatWithOptionsAsync(DescribeHistoryEventsStatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveStatus))
+            {
+                query["ArchiveStatus"] = request.ArchiveStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryEventsStat",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryEventsStatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeHistoryEventsStatResponse DescribeHistoryEventsStat(DescribeHistoryEventsStatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHistoryEventsStatWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeHistoryEventsStatResponse> DescribeHistoryEventsStatAsync(DescribeHistoryEventsStatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHistoryEventsStatWithOptionsAsync(request, runtime);
+        }
+
         /**
           * ### [](#)Supported database engines
           * *   MySQL
@@ -21921,6 +22293,176 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHistoryTasksWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeHistoryTasksStatResponse DescribeHistoryTasksStatWithOptions(DescribeHistoryTasksStatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromExecTime))
+            {
+                query["FromExecTime"] = request.FromExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToExecTime))
+            {
+                query["ToExecTime"] = request.ToExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryTasksStat",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryTasksStatResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeHistoryTasksStatResponse> DescribeHistoryTasksStatWithOptionsAsync(DescribeHistoryTasksStatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromExecTime))
+            {
+                query["FromExecTime"] = request.FromExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToExecTime))
+            {
+                query["ToExecTime"] = request.ToExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryTasksStat",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryTasksStatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeHistoryTasksStatResponse DescribeHistoryTasksStat(DescribeHistoryTasksStatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHistoryTasksStatWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeHistoryTasksStatResponse> DescribeHistoryTasksStatAsync(DescribeHistoryTasksStatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHistoryTasksStatWithOptionsAsync(request, runtime);
         }
 
         public DescribeHostGroupElasticStrategyParametersResponse DescribeHostGroupElasticStrategyParametersWithOptions(DescribeHostGroupElasticStrategyParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -23534,8 +24076,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Usage notes
           * This operation allows you to query the migration tasks that are created for the instance over the last week.
-          * > 
+          * ### [](#)Precautions
           * *   This operation is supported only for migration tasks that are created to migrate full backup files.
           * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           *
@@ -23603,8 +24148,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Usage notes
           * This operation allows you to query the migration tasks that are created for the instance over the last week.
-          * > 
+          * ### [](#)Precautions
           * *   This operation is supported only for migration tasks that are created to migrate full backup files.
           * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           *
@@ -23672,8 +24220,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Usage notes
           * This operation allows you to query the migration tasks that are created for the instance over the last week.
-          * > 
+          * ### [](#)Precautions
           * *   This operation is supported only for migration tasks that are created to migrate full backup files.
           * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           *
@@ -23687,8 +24238,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * ### [](#)Supported database engine
+          * *   SQL Server
+          * ### [](#)Usage notes
           * This operation allows you to query the migration tasks that are created for the instance over the last week.
-          * > 
+          * ### [](#)Precautions
           * *   This operation is supported only for migration tasks that are created to migrate full backup files.
           * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
           *
@@ -24473,8 +25027,6 @@ namespace AlibabaCloud.SDK.Rds20140815
           * ### [](#)Supported database engines
           * *   MySQL
           * *   PostgreSQL
-          * *   SQL Server
-          * *   MariaDB
           * ### [](#)References
           * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
           * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~)
@@ -24531,8 +25083,6 @@ namespace AlibabaCloud.SDK.Rds20140815
           * ### [](#)Supported database engines
           * *   MySQL
           * *   PostgreSQL
-          * *   SQL Server
-          * *   MariaDB
           * ### [](#)References
           * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
           * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~)
@@ -24589,8 +25139,6 @@ namespace AlibabaCloud.SDK.Rds20140815
           * ### [](#)Supported database engines
           * *   MySQL
           * *   PostgreSQL
-          * *   SQL Server
-          * *   MariaDB
           * ### [](#)References
           * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
           * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~)
@@ -24609,8 +25157,6 @@ namespace AlibabaCloud.SDK.Rds20140815
           * ### [](#)Supported database engines
           * *   MySQL
           * *   PostgreSQL
-          * *   SQL Server
-          * *   MariaDB
           * ### [](#)References
           * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
           * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~)
@@ -26650,8 +27196,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * The SQL explorer feature must be enabled for the instance.
-          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
           *
           * @param request DescribeSQLCollectorRetentionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -26709,8 +27257,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * The SQL explorer feature must be enabled for the instance.
-          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
           *
           * @param request DescribeSQLCollectorRetentionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -26768,8 +27318,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * The SQL explorer feature must be enabled for the instance.
-          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
           *
           * @param request DescribeSQLCollectorRetentionRequest
           * @return DescribeSQLCollectorRetentionResponse
@@ -26781,8 +27333,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * The SQL explorer feature must be enabled for the instance.
-          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
           *
           * @param request DescribeSQLCollectorRetentionRequest
           * @return DescribeSQLCollectorRetentionResponse
@@ -26966,11 +27520,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * ### [](#)Supported database engines
           * *   MySQL
-          * *   SQL Server
           * *   PostgreSQL
-          * > 
+          * *   SQL Server
+          * ### [Usage notes](#)
           * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
           * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
           * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
@@ -27063,11 +27617,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * ### [](#)Supported database engines
           * *   MySQL
-          * *   SQL Server
           * *   PostgreSQL
-          * > 
+          * *   SQL Server
+          * ### [Usage notes](#)
           * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
           * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
           * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
@@ -27160,11 +27714,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * ### [](#)Supported database engines
           * *   MySQL
-          * *   SQL Server
           * *   PostgreSQL
-          * > 
+          * *   SQL Server
+          * ### [Usage notes](#)
           * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
           * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
           * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
@@ -27179,11 +27733,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * ### [](#)Supported database engines
           * *   MySQL
-          * *   SQL Server
           * *   PostgreSQL
-          * > 
+          * *   SQL Server
+          * ### [Usage notes](#)
           * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
           * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
           * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
@@ -27504,7 +28058,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](~~201042~~)
+          * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](~~206310~~)
+          * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
           *
           * @param request DescribeSecurityGroupConfigurationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -27550,7 +28112,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](~~201042~~)
+          * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](~~206310~~)
+          * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
           *
           * @param request DescribeSecurityGroupConfigurationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -27596,7 +28166,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](~~201042~~)
+          * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](~~206310~~)
+          * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
           *
           * @param request DescribeSecurityGroupConfigurationRequest
           * @return DescribeSecurityGroupConfigurationResponse
@@ -27608,7 +28186,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](~~201042~~)
+          * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](~~206310~~)
+          * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
           *
           * @param request DescribeSecurityGroupConfigurationRequest
           * @return DescribeSecurityGroupConfigurationResponse
@@ -31386,7 +31972,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Lock and delete an account](~~147649~~).
+          * ### [](#)Supported database engines
+          * PostgreSQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Lock an account of an ApsaraDB RDS for PostgreSQL instance](~~147649~~)
           *
           * @param request LockAccountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -31436,7 +32026,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Lock and delete an account](~~147649~~).
+          * ### [](#)Supported database engines
+          * PostgreSQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Lock an account of an ApsaraDB RDS for PostgreSQL instance](~~147649~~)
           *
           * @param request LockAccountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -31486,7 +32080,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Lock and delete an account](~~147649~~).
+          * ### [](#)Supported database engines
+          * PostgreSQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Lock an account of an ApsaraDB RDS for PostgreSQL instance](~~147649~~)
           *
           * @param request LockAccountRequest
           * @return LockAccountResponse
@@ -31498,7 +32096,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Lock and delete an account](~~147649~~).
+          * ### [](#)Supported database engines
+          * PostgreSQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Lock an account of an ApsaraDB RDS for PostgreSQL instance](~~147649~~)
           *
           * @param request LockAccountRequest
           * @return LockAccountResponse
@@ -31846,11 +32448,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * *   In standard whitelist mode, IP addresses in the whitelist apply to both the classic network and VPCs. To minimize security risks, we recommend that you use the enhanced whitelist mode.
-          * *   In enhanced whitelist mode, IP addresses in the whitelist are divided into VPC IP addresses and IP addresses of the classic network and Internet.
-          * > 
-          * *   You cannot change the whitelist mode from the enhanced whitelist mode to the standard whitelist mode.
-          * *   This operation is not supported for instances that run SQL Server and MariaDB.
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Change the whitelist mode of an ApsaraDB RDS for MySQL instance to the enhanced whitelist mode](~~96117~~)
+          * *   [Change the whitelist mode of an ApsaraDB RDS for PostgreSQL instance to the enhanced whitelist mode](~~96767~~)
           *
           * @param request MigrateSecurityIPModeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -31896,11 +32500,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * *   In standard whitelist mode, IP addresses in the whitelist apply to both the classic network and VPCs. To minimize security risks, we recommend that you use the enhanced whitelist mode.
-          * *   In enhanced whitelist mode, IP addresses in the whitelist are divided into VPC IP addresses and IP addresses of the classic network and Internet.
-          * > 
-          * *   You cannot change the whitelist mode from the enhanced whitelist mode to the standard whitelist mode.
-          * *   This operation is not supported for instances that run SQL Server and MariaDB.
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Change the whitelist mode of an ApsaraDB RDS for MySQL instance to the enhanced whitelist mode](~~96117~~)
+          * *   [Change the whitelist mode of an ApsaraDB RDS for PostgreSQL instance to the enhanced whitelist mode](~~96767~~)
           *
           * @param request MigrateSecurityIPModeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -31946,11 +32552,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * *   In standard whitelist mode, IP addresses in the whitelist apply to both the classic network and VPCs. To minimize security risks, we recommend that you use the enhanced whitelist mode.
-          * *   In enhanced whitelist mode, IP addresses in the whitelist are divided into VPC IP addresses and IP addresses of the classic network and Internet.
-          * > 
-          * *   You cannot change the whitelist mode from the enhanced whitelist mode to the standard whitelist mode.
-          * *   This operation is not supported for instances that run SQL Server and MariaDB.
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Change the whitelist mode of an ApsaraDB RDS for MySQL instance to the enhanced whitelist mode](~~96117~~)
+          * *   [Change the whitelist mode of an ApsaraDB RDS for PostgreSQL instance to the enhanced whitelist mode](~~96767~~)
           *
           * @param request MigrateSecurityIPModeRequest
           * @return MigrateSecurityIPModeResponse
@@ -31962,11 +32570,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * *   In standard whitelist mode, IP addresses in the whitelist apply to both the classic network and VPCs. To minimize security risks, we recommend that you use the enhanced whitelist mode.
-          * *   In enhanced whitelist mode, IP addresses in the whitelist are divided into VPC IP addresses and IP addresses of the classic network and Internet.
-          * > 
-          * *   You cannot change the whitelist mode from the enhanced whitelist mode to the standard whitelist mode.
-          * *   This operation is not supported for instances that run SQL Server and MariaDB.
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Change the whitelist mode of an ApsaraDB RDS for MySQL instance to the enhanced whitelist mode](~~96117~~)
+          * *   [Change the whitelist mode of an ApsaraDB RDS for PostgreSQL instance to the enhanced whitelist mode](~~96767~~)
           *
           * @param request MigrateSecurityIPModeRequest
           * @return MigrateSecurityIPModeResponse
@@ -38771,6 +39381,104 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await ModifyDbProxyInstanceSslWithOptionsAsync(request, runtime);
         }
 
+        public ModifyEventInfoResponse ModifyEventInfoWithOptions(ModifyEventInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionParams))
+            {
+                query["ActionParams"] = request.ActionParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventAction))
+            {
+                query["EventAction"] = request.EventAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyEventInfo",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyEventInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyEventInfoResponse> ModifyEventInfoWithOptionsAsync(ModifyEventInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionParams))
+            {
+                query["ActionParams"] = request.ActionParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventAction))
+            {
+                query["EventAction"] = request.EventAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyEventInfo",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyEventInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyEventInfoResponse ModifyEventInfo(ModifyEventInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyEventInfoWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyEventInfoResponse> ModifyEventInfoAsync(ModifyEventInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyEventInfoWithOptionsAsync(request, runtime);
+        }
+
         /**
           * ### [](#)Supported database engines
           * *   MySQL
@@ -39640,8 +40348,17 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * You can modify the parameters directly or by using a parameter template. After you submit the parameter modification request, ApsaraDB RDS starts a task to apply the new parameter values to the instance. If a new parameter value takes effect only after the instance restarts, ApsaraDB RDS restarts the instance. For information about configurable parameters, see [Configure the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~).
-          * > Before the system runs a parameter modification task, the system checks whether the parameters exist, whether they are configurable, and whether the new parameter values are valid.
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for SQL Server instance](~~95667~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for MariaDB instance](~~97130~~)
           *
           * @param request ModifyParameterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -39715,8 +40432,17 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * You can modify the parameters directly or by using a parameter template. After you submit the parameter modification request, ApsaraDB RDS starts a task to apply the new parameter values to the instance. If a new parameter value takes effect only after the instance restarts, ApsaraDB RDS restarts the instance. For information about configurable parameters, see [Configure the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~).
-          * > Before the system runs a parameter modification task, the system checks whether the parameters exist, whether they are configurable, and whether the new parameter values are valid.
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for SQL Server instance](~~95667~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for MariaDB instance](~~97130~~)
           *
           * @param request ModifyParameterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -39790,8 +40516,17 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * You can modify the parameters directly or by using a parameter template. After you submit the parameter modification request, ApsaraDB RDS starts a task to apply the new parameter values to the instance. If a new parameter value takes effect only after the instance restarts, ApsaraDB RDS restarts the instance. For information about configurable parameters, see [Configure the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~).
-          * > Before the system runs a parameter modification task, the system checks whether the parameters exist, whether they are configurable, and whether the new parameter values are valid.
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for SQL Server instance](~~95667~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for MariaDB instance](~~97130~~)
           *
           * @param request ModifyParameterRequest
           * @return ModifyParameterResponse
@@ -39803,8 +40538,17 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * You can modify the parameters directly or by using a parameter template. After you submit the parameter modification request, ApsaraDB RDS starts a task to apply the new parameter values to the instance. If a new parameter value takes effect only after the instance restarts, ApsaraDB RDS restarts the instance. For information about configurable parameters, see [Configure the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~).
-          * > Before the system runs a parameter modification task, the system checks whether the parameters exist, whether they are configurable, and whether the new parameter values are valid.
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for SQL Server instance](~~95667~~)
+          * *   [Modify the parameters of an ApsaraDB RDS for MariaDB instance](~~97130~~)
           *
           * @param request ModifyParameterRequest
           * @return ModifyParameterResponse
@@ -40868,7 +41612,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](~~201042~~)
+          * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](~~206310~~)
+          * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
           *
           * @param request ModifySecurityGroupConfigurationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -40918,7 +41670,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](~~201042~~)
+          * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](~~206310~~)
+          * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
           *
           * @param request ModifySecurityGroupConfigurationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -40968,7 +41728,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](~~201042~~)
+          * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](~~206310~~)
+          * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
           *
           * @param request ModifySecurityGroupConfigurationRequest
           * @return ModifySecurityGroupConfigurationResponse
@@ -40980,7 +41748,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](~~201042~~)
+          * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](~~206310~~)
+          * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
           *
           * @param request ModifySecurityGroupConfigurationRequest
           * @return ModifySecurityGroupConfigurationResponse
@@ -41185,6 +41961,128 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityIpsWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyTaskInfoResponse ModifyTaskInfoWithOptions(ModifyTaskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionParams))
+            {
+                query["ActionParams"] = request.ActionParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StepName))
+            {
+                query["StepName"] = request.StepName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskAction))
+            {
+                query["TaskAction"] = request.TaskAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTaskInfo",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTaskInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyTaskInfoResponse> ModifyTaskInfoWithOptionsAsync(ModifyTaskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionParams))
+            {
+                query["ActionParams"] = request.ActionParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StepName))
+            {
+                query["StepName"] = request.StepName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskAction))
+            {
+                query["TaskAction"] = request.TaskAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTaskInfo",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTaskInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyTaskInfoResponse ModifyTaskInfo(ModifyTaskInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyTaskInfoWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyTaskInfoResponse> ModifyTaskInfoAsync(ModifyTaskInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyTaskInfoWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -44025,6 +44923,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await RestartDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  Before restoration, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether a cross-region backup set can be used for cross-region restoration.
+          * ### [](#)Supported database engine
+          * MySQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~)
+          * *   [Restore the data of an ApsaraDB RDS for MySQL instance across regions](~~120875~~)
+          *
+          * @param request RestoreDdrTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RestoreDdrTableResponse
+         */
         public RestoreDdrTableResponse RestoreDdrTableWithOptions(RestoreDdrTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44100,6 +45011,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RestoreDdrTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  Before restoration, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether a cross-region backup set can be used for cross-region restoration.
+          * ### [](#)Supported database engine
+          * MySQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~)
+          * *   [Restore the data of an ApsaraDB RDS for MySQL instance across regions](~~120875~~)
+          *
+          * @param request RestoreDdrTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RestoreDdrTableResponse
+         */
         public async Task<RestoreDdrTableResponse> RestoreDdrTableWithOptionsAsync(RestoreDdrTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44175,12 +45099,36 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RestoreDdrTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  Before restoration, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether a cross-region backup set can be used for cross-region restoration.
+          * ### [](#)Supported database engine
+          * MySQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~)
+          * *   [Restore the data of an ApsaraDB RDS for MySQL instance across regions](~~120875~~)
+          *
+          * @param request RestoreDdrTableRequest
+          * @return RestoreDdrTableResponse
+         */
         public RestoreDdrTableResponse RestoreDdrTable(RestoreDdrTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RestoreDdrTableWithOptions(request, runtime);
         }
 
+        /**
+          * >  Before restoration, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether a cross-region backup set can be used for cross-region restoration.
+          * ### [](#)Supported database engine
+          * MySQL
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~)
+          * *   [Restore the data of an ApsaraDB RDS for MySQL instance across regions](~~120875~~)
+          *
+          * @param request RestoreDdrTableRequest
+          * @return RestoreDdrTableResponse
+         */
         public async Task<RestoreDdrTableResponse> RestoreDdrTableAsync(RestoreDdrTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -44190,13 +45138,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /**
           * ### [](#)Supported database engines
           * MySQL
-          * ### [](#)Description
-          * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~). Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the Running state.
-          * *   The instance does not have ongoing migration tasks.
-          * *   If you want to restore data to a specific point in time, make sure that the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
-          * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
-          * *   The names that you want to use for the restored tables do not exist in the instance.
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Restore individual databases and tables](~~103175~~)
           *
           * @param request RestoreTableRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -44268,13 +45212,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /**
           * ### [](#)Supported database engines
           * MySQL
-          * ### [](#)Description
-          * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~). Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the Running state.
-          * *   The instance does not have ongoing migration tasks.
-          * *   If you want to restore data to a specific point in time, make sure that the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
-          * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
-          * *   The names that you want to use for the restored tables do not exist in the instance.
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Restore individual databases and tables](~~103175~~)
           *
           * @param request RestoreTableRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -44346,13 +45286,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /**
           * ### [](#)Supported database engines
           * MySQL
-          * ### [](#)Description
-          * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~). Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the Running state.
-          * *   The instance does not have ongoing migration tasks.
-          * *   If you want to restore data to a specific point in time, make sure that the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
-          * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
-          * *   The names that you want to use for the restored tables do not exist in the instance.
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Restore individual databases and tables](~~103175~~)
           *
           * @param request RestoreTableRequest
           * @return RestoreTableResponse
@@ -44366,13 +45302,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /**
           * ### [](#)Supported database engines
           * MySQL
-          * ### [](#)Description
-          * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~). Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the Running state.
-          * *   The instance does not have ongoing migration tasks.
-          * *   If you want to restore data to a specific point in time, make sure that the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
-          * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
-          * *   The names that you want to use for the restored tables do not exist in the instance.
+          * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * [Restore individual databases and tables](~~103175~~)
           *
           * @param request RestoreTableRequest
           * @return RestoreTableResponse

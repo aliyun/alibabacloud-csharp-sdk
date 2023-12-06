@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the **DescribeDBInstances** operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// > If you specify this parameter, you must also specify **SecretName**.
+        /// >  If you specify this parameter, you must also specify the **SecretName** parameter. parameter.
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the **DescribeRegions** operation to query the most recent region list.
+        /// The region ID. You can call the DescribeSecrets operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. You can call the **DescribeDBInstanceAttribute** operation to obtain the ID of the resource group.
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the **CreateSecret** operation to obtain the value of this parameter.
+        /// The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the CreateSecret operation to obtain the value of this parameter.
         /// 
-        /// > You must specify one of **SecretName** and SecretArn.
+        /// >  You must specify one of the SecretArn and **SecretName** parameters.
         /// </summary>
         [NameInMap("SecretArn")]
         [Validation(Required=false)]

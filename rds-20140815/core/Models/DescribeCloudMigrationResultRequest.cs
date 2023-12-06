@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCloudMigrationResultRequest : TeaModel {
         /// <summary>
-        /// The ID of the destination instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// The ID of the task. You can obtain the ID of a task from the response that is returned when you call the [CreateCloudMigrationTask](~~411690~~) operation to create the task.
+        /// The task ID. You can obtain the task ID from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// The name of the task. You can obtain the ID of a task from the response that is returned when you call the [CreateCloudMigrationTask](~~411690~~) operation to create the task.
+        /// The task name. You can obtain the task name from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

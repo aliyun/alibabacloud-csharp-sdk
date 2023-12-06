@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RestoreDdrTableResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

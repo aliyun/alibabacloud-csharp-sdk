@@ -17,49 +17,49 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupDataSize { get; set; }
 
         /// <summary>
-        /// The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.
+        /// The size of the backup log. Unit: bytes.
         /// </summary>
         [NameInMap("BackupLogSize")]
         [Validation(Required=false)]
         public long? BackupLogSize { get; set; }
 
         /// <summary>
-        /// The storage that is used to store backup files. Unit: bytes. The value -1 indicates that no backup files are stored.
+        /// The size of the backup data. Unit: MB.
         /// </summary>
         [NameInMap("BackupSize")]
         [Validation(Required=false)]
         public long? BackupSize { get; set; }
 
         /// <summary>
-        /// Database Storage.
+        /// The disk capacity of the instance.
         /// </summary>
         [NameInMap("DbInstanceStorage")]
         [Validation(Required=false)]
         public long? DbInstanceStorage { get; set; }
 
         /// <summary>
-        /// ProxyInstance name.
+        /// The name of the proxy instance.
         /// </summary>
         [NameInMap("DbProxyInstanceName")]
         [Validation(Required=false)]
         public string DbProxyInstanceName { get; set; }
 
         /// <summary>
-        /// The total storage that is occupied by data files and log files on the instance. Unit: bytes. The value -1 indicates that no data files or log files are stored on the instance.
+        /// The total storage used. The value is the sum of the DataSize and LogSize values. Unit: bytes. The value -1 indicates that no data files or log files are stored.
         /// </summary>
         [NameInMap("DiskUsed")]
         [Validation(Required=false)]
         public long? DiskUsed { get; set; }
 
         /// <summary>
-        /// Instance StorageType
+        /// The storage type of the instance.
         /// </summary>
         [NameInMap("InstanceStorageType")]
         [Validation(Required=false)]
         public string InstanceStorageType { get; set; }
 
         /// <summary>
-        /// Whitelist Rules.
+        /// The rule for the IP address whitelist of the instance.
         /// </summary>
         [NameInMap("RdsEcsSecurityGroupRel")]
         [Validation(Required=false)]
@@ -75,28 +75,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// The region ID.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The IP address whitelist of the serverless instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for PostgreSQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. You can specify up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
+        /// The IP address whitelist of the instance. For more information, see [Configure IP address whitelists](~~43185~~). If the returned IP address whitelist contains more than one entry, these entries are separated with commas (,). Each entry is unique and up to 1,000 entries are returned. The entries in the IP address whitelist must be in one of the following formats:
         /// 
         /// *   IP addresses, such as 10.10.XX.XX.
         /// *   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
@@ -109,13 +109,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The vSwitch ID.
+        /// 
+        /// >  The vSwitch must belong to the same zone as the instance.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// VPC ID.
+        /// The ID of the virtual private cloud (VPC).
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

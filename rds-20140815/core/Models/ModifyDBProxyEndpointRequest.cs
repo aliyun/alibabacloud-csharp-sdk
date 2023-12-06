@@ -30,17 +30,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConfigDBProxyFeatures { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.
+        /// The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
         /// 
-        /// > *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.
-        /// > *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.
+        /// > 
+        /// 
+        /// *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.
+        /// 
+        /// *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
@@ -136,7 +139,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReadOnlyInstanceWeight { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMetaListResponseBody : TeaModel {
         /// <summary>
-        /// The name of the instance.
+        /// The instance name.
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// An array consisting of the information about the databases and tables whose data is included in the backup set.
+        /// The information about the databases and tables whose data is included in the backup set.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -28,21 +28,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeMetaListResponseBodyItemsMeta> Meta { get; set; }
             public class DescribeMetaListResponseBodyItemsMeta : TeaModel {
                 /// <summary>
-                /// The name of the database.
+                /// The database name.
                 /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
                 /// <summary>
-                /// The size of the table. Unit: KB.
+                /// The table size. Unit: KB.
                 /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public string Size { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// The table name.
                 /// </summary>
                 [NameInMap("Tables")]
                 [Validation(Required=false)]

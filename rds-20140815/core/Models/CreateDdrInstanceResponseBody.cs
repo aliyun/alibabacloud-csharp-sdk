@@ -12,21 +12,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The endpoint that is used to connect to the destination instance.
         /// 
-        /// > **DBInstanceNetType** indicates whether the endpoint is internal or public.
+        /// >  The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// The ID of the destination instance.
+        /// The destination instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the order.
+        /// The order ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

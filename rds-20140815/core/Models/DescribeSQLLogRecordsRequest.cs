@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogRecordsRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time must be less than 30 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time must be less than 15 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, you cannot filter log entries by keyword.
         /// *   You can specify up to 10 keywords. The keywords are evaluated by using the **AND** operator. Separate multiple keywords with spaces.
-        /// *   If a field name in the specified SQL statement is enclosed in backquotes (\`) and you want to use the field name as a keyword, you must enter the backquotes (\`) as part of the field name. For example, if the field name is \*\*\`id\`**, enter **\`id\`** rather than **id\*\*.
+        /// *   If a field name in the specified SQL statement is enclosed in backquotes (\`) and you want to use the field name as a keyword, you must enter the backquotes (\`) as part of the field name. For example, if the field name is \`id\`, enter \`id\` instead of id.
         /// 
-        /// > After you enter a keyword, the system matches the keyword based on the **Database**, **User**, and **QueryKeywords** parameters. The parameters are evaluated by using the **OR** operator.
+        /// >  After you enter a keyword, the system matches the keyword based on the **Database**, **User**, and **QueryKeywords** parameters. The parameters are evaluated by using the **OR** operator.
         /// </summary>
         [NameInMap("QueryKeywords")]
         [Validation(Required=false)]

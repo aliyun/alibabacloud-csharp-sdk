@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCustinsResourceInfoRequest : TeaModel {
         /// <summary>
-        /// The instance ID. Separate multiple values with commas (,).
+        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceIds")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

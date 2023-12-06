@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceIpHostnameRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
+        /// You can call the DescribeDBInstanceAttribute operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

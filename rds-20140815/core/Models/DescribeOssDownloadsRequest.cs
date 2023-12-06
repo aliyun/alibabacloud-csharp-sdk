@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeOssDownloadsRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the migration task. You can call the [DescribeMigrateTasks](~~64563~~) operation to query the ID of the migration task.
+        /// The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.
         /// </summary>
         [NameInMap("MigrateTaskId")]
         [Validation(Required=false)]

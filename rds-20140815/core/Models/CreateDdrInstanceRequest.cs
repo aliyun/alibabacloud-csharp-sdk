@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDdrInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set that is used for the restoration. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the backup set.
+        /// The backup set ID that you want to use for the restoration. You can call the DescribeCrossRegionBackups operation to query backup set ID.
         /// 
-        /// > If you set **RestoreType** to **BackupSet**, you must specify this parameter.
+        /// >  This parameter is required when you set the **RestoreType** parameter to **BackupSet**.
         /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The instance name. The name must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
         /// 
-        /// > The name cannot start with http:// or https://.
+        /// >  The value cannot start with http:// or https://.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -144,21 +144,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.
+        /// The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The region ID of the destination instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -182,9 +182,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// The method that is used to restore data. Valid values:
+        /// The restoration method that you want to use. Valid values:
         /// 
-        /// *   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetID**.
+        /// *   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetId**.
         /// *   **BackupTime**: restores data to a point in time. If you use this value, you must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.
         /// </summary>
         [NameInMap("RestoreType")]
@@ -202,9 +202,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// The ID of the source instance if you want to restore data to a point in time.
+        /// The source instance ID, which is used if you want to restore data to a point in time.
         /// 
-        /// > If you set **RestoreType** to **BackupTime**, you must specify this parameter.
+        /// >  This parameter is required when you set the **RestoreType** parameter to **BackupTime**.
         /// </summary>
         [NameInMap("SourceDBInstanceName")]
         [Validation(Required=false)]
@@ -244,18 +244,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// The VPC ID of the instance. This parameter is available only when you set **InstanceNetworkType** to **VPC**.
+        /// The VPC ID of the destination instance. This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.
         /// 
-        /// > If you specify this parameter, you must also specify **ZoneId**.
+        /// >  If you specify this parameter, you must also specify the **ZoneId** parameter.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set **InstanceNetworkType** to **VPC**.
+        /// The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.
         /// 
-        /// > If you specify this parameter, you must also specify **ZoneId**.
+        /// >  If you specify this parameter, you must also specify the **ZoneId** parameter.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

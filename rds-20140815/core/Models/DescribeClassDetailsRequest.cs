@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClassCode { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the resource group ID.
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

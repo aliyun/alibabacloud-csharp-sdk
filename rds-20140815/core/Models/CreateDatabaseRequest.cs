@@ -45,14 +45,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The name of the database.
         /// 
-        /// > 
-        /// 
-        /// *   The name must be 2 to 64 characters in length.
-        /// 
-        /// *   The name must start with a lowercase letter and end with a lowercase letter or digit.
-        /// *   The name can contain lowercase letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must be unique within the instance.
-        /// *   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).
+        /// > *   The name must be 2 to 64 characters in length.
+        /// > *   The name must start with a lowercase letter and end with a lowercase letter or digit.
+        /// > *   The name can contain lowercase letters, digits, underscores (\_), and hyphens (-).
+        /// > *   The name must be unique within the instance.
+        /// > *   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

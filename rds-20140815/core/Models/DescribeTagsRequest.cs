@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// > If you specify this parameter, all tags that are added to the instance are queried. Other filter conditions are invalid.
+        /// >  If you specify this parameter, all tags that are added to this instance are queried, and other filter conditions becomes invalid.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

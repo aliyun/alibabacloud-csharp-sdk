@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConfigDBProxyService { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceNum { get; set; }
 
+        /// <summary>
+        /// A reserved parameter. You do not need to specify this parameter.
+        /// </summary>
         [NameInMap("DBProxyInstanceType")]
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the instance.
+        /// The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.
         /// 
         /// >  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.
         /// </summary>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// The vSwitch ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the vSwitch ID of the instance.
+        /// The vSwitch ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.
         /// 
         /// >  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.
         /// </summary>

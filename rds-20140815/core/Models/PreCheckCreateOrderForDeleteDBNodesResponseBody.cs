@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class PreCheckCreateOrderForDeleteDBNodesResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// The information about the failed order.
         /// </summary>
         [NameInMap("Failures")]
         [Validation(Required=false)]
@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<PreCheckCreateOrderForDeleteDBNodesResponseBodyFailuresFailures> Failures { get; set; }
             public class PreCheckCreateOrderForDeleteDBNodesResponseBodyFailuresFailures : TeaModel {
                 /// <summary>
-                /// The response code returned. Valid values:
+                /// The response code. Valid values:
                 /// 
                 /// *   **200**: success
                 /// *   **400**: client error
                 /// *   **401**: identity authentication failed
-                /// *   **404**: request page not found
+                /// *   **404**: requested page not found
                 /// *   **500**: server error
                 /// </summary>
                 [NameInMap("Code")]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// Indicates the result of the precheck task.
+        /// The precheck result.
         /// </summary>
         [NameInMap("PreCheckResult")]
         [Validation(Required=false)]
         public bool? PreCheckResult { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

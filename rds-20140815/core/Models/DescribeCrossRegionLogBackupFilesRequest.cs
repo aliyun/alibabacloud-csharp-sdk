@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionLogBackupFilesRequest : TeaModel {
         /// <summary>
-        /// The ID of the region in which the cross-region data backup file is stored. You can call the [DescribeCrossRegionBackupDBInstance](~~121737~~) operation to query the most recent region list.
+        /// The ID of the destination region within which the cross-region backup file is stored. You can call the DescribeCrossRegionBackupDBInstance operation to query the region ID.
         /// </summary>
         [NameInMap("CrossBackupRegion")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

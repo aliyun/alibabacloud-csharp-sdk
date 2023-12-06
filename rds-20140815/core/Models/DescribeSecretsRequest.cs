@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.
+        /// The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

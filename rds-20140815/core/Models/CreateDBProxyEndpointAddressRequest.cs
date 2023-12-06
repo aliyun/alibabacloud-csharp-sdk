@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.
+        /// The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyNewConnectStringPort { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -75,18 +75,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC to which the proxy endpoint belongs. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the instance.
+        /// The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.
         /// 
-        /// >  This parameter must be specified when DBProxyConnectStringNetType is set to **VPC**.
+        /// >  This parameter must be specified when **DBProxyConnectStringNetType** is set to **VPC**.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch that is associated with the specified VPC. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the vSwitch ID of the instance.
+        /// The ID of the vSwitch that is associated with the specified VPC. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.
         /// 
-        /// >  This parameter must be specified when DBProxyConnectStringNetType is set to **VPC**.
+        /// >  This parameter must be specified when **DBProxyConnectStringNetType** is set to **VPC**.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.
+        /// The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SpecifiedTime { get; set; }
 
         /// <summary>
-        /// The ID of the host to which you want to migrate the primary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to obtain the ID of the host.
+        /// The ID of the host to which you want to migrate the primary instance. You can call the DescribeDedicatedHosts operation to query the host ID.
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForMaster")]
         [Validation(Required=false)]
         public string TargetDedicatedHostIdForMaster { get; set; }
 
         /// <summary>
-        /// The ID of the host to which you want to migrate the secondary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to obtain the ID of the host.
+        /// The ID of the host to which you want to migrate the secondary instance. You can call the DescribeDedicatedHosts operation to query the host ID.
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForSlave")]
         [Validation(Required=false)]

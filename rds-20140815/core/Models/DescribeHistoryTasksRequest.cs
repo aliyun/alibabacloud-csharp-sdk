@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the pending event. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

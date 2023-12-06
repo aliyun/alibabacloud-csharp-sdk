@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupFile { get; set; }
 
         /// <summary>
-        /// The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("BucketRegion")]
         [Validation(Required=false)]
@@ -48,20 +48,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// > 
-        /// 
-        /// *   The value of this parameter is the ID of the region in which you want to create the instance.
-        /// 
-        /// *   The value of this parameter must be consistent with the value of **BucketRegion**.
+        /// > *   The value of this parameter is the ID of the region in which you want to create the instance.
+        /// > *   The value of this parameter must be consistent with the value of **BucketRegion**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -78,11 +75,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The amount of storage that is required to restore the data of the full backup file. Unit: GB.
         /// 
-        /// > 
-        /// 
-        /// *   The default value of this parameter is 5 times the size of the full backup file.
-        /// 
-        /// *   The minimum value of this parameter is 20.
+        /// > *   The default value of this parameter is 5 times the size of the full backup file.
+        /// > *   The minimum value of this parameter is 20.
         /// </summary>
         [NameInMap("RestoreSize")]
         [Validation(Required=false)]
@@ -96,13 +90,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Retention { get; set; }
 
         /// <summary>
-        /// The ID of the zone. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.
+        /// The zone ID. You can call the DescribeRegions operation to query the zone ID.
         /// 
-        /// > 
-        /// 
-        /// *   If you specify this parameter, the system creates a snapshot in single-digit seconds, which greatly reduces the time that is required to import the full backup file.
-        /// 
-        /// *   When you call the [CreateDBInstance](~~26228~~) operation to create an instance by using the full backup file, the instance is created in the zone that you specify for this parameter.
+        /// > *   If you specify this parameter, the system creates a snapshot in single-digit seconds, which greatly reduces the time that is required to import the full backup file.
+        /// > *   When you call the CreateDBInstance operation to create an instance by using the full backup file, the instance is created in the zone that you specify for this parameter.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

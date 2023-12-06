@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details about each SQL audit log entry.
+        /// The details about each SQL audit log entry.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// The database name.
                 /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// The time at which the SQL statement was executed. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? ReturnRowCounts { get; set; }
 
                 /// <summary>
-                /// The SQL statement that is executed in the query.
+                /// The SQL statement.
                 /// </summary>
                 [NameInMap("SQLText")]
                 [Validation(Required=false)]
                 public string SQLText { get; set; }
 
                 /// <summary>
-                /// The ID of the thread.
+                /// The thread ID.
                 /// </summary>
                 [NameInMap("ThreadID")]
                 [Validation(Required=false)]

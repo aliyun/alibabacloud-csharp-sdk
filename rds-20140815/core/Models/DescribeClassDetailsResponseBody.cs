@@ -95,11 +95,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// Unit: cents (US dollars).
         /// 
-        /// > 
-        /// 
-        /// *   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.
-        /// 
-        /// *   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.
+        /// > *   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.
+        /// > *   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.
         /// </summary>
         [NameInMap("ReferencePrice")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySecurityGroupConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// An array that consists of ECS security groups.
+        /// An array that consists of information about the ECS security group.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation> EcsSecurityGroupRelation { get; set; }
             public class ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation : TeaModel {
                 /// <summary>
-                /// The network type of an ECS security group. Valid values:
+                /// The network type of the ECS security group. Valid values:
                 /// 
                 /// *   **Classic**
                 /// *   **VPC**
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

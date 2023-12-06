@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMarketingActivityRequest : TeaModel {
         /// <summary>
-        /// The unique ID (UID) of the Alibaba Cloud account.
+        /// The ID of the Alibaba Cloud account.
         /// </summary>
         [NameInMap("AliUid")]
         [Validation(Required=false)]
         public long? AliUid { get; set; }
 
         /// <summary>
-        /// The BID of the account to which the Anycast EIP belongs.
+        /// *   China site: 26842
+        /// *   International site: 26888
         /// </summary>
         [NameInMap("Bid")]
         [Validation(Required=false)]
@@ -35,14 +36,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.
+        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Upgrade Code
+        /// The service name.
         /// </summary>
         [NameInMap("UpgradeCode")]
         [Validation(Required=false)]

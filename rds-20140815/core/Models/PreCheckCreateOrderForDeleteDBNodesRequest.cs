@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class PreCheckCreateOrderForDeleteDBNodesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically complete the payment. Valid value:
+        /// Specifies whether to automatically complete the payment. Valid values:
         /// 
         /// 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
         /// 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
         /// 
-        /// >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+        /// >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The commodity code of the instance. Valid values:
+        /// The commodity code. Valid value:
         /// 
         /// *   **bards**: The instance is a pay-as-you-go primary instance.
         /// *   **rds**: The instance is a subscription primary instance.
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -66,22 +66,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<string> DBNodeId { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance. Valid values:
+        /// The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.
         /// 
-        /// *   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**
-        /// *   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
-        /// *   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, and 14.0**
-        /// *   Valid value if you set Engine to MariaDB: **10.3**
+        /// *   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**
+        /// *   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
+        /// *   Valid values when Engine is set to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The type of the database node. Valid values:
+        /// The type of the database node. Valid value:
         /// 
-        /// *   **Master**: the primary instance role
-        /// *   **Slave**: the secondary instance role
+        /// *   **Master**: the primary node
+        /// *   **Slave**: the secondary node
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
@@ -99,7 +98,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -121,7 +120,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance.
+        /// The zone ID.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

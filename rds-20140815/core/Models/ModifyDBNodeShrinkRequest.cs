@@ -72,6 +72,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// Effective time, value:
+        /// - Immediate (default value): takes effect immediately.
+        /// - MaintainTime: Effective within the operational time period, please refer to ModifyDBInstanceMaintainTime.
+        /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }

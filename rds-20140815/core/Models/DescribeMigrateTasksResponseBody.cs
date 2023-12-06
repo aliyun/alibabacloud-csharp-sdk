@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMigrateTasksResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeMigrateTasksResponseBodyItemsMigrateTask> MigrateTask { get; set; }
             public class DescribeMigrateTasksResponseBodyItemsMigrateTask : TeaModel {
                 /// <summary>
-                /// The type of the migration task. Valid values:
+                /// The migration task type. Valid values:
                 /// 
                 /// *   **FULL**: The migration task migrates full backup files that can be used to restore the full data of the instance.
                 /// *   **UPDF**: The migration task migrates incremental or log backup files that can be used to restore the incremental data of the instance.
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// The database name.
                 /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string IsDBReplaced { get; set; }
 
                 /// <summary>
-                /// The ID of the migration task.
+                /// The migration task ID.
                 /// </summary>
                 [NameInMap("MigrateTaskId")]
                 [Validation(Required=false)]

@@ -10,21 +10,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RestoreDdrTableRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set.
+        /// The cross-region backup set ID. You can call the DescribeCrossRegionBackups operation to query the IDs of the backup sets that are available to an instance.
+        /// 
+        /// >  If you set the **RestoreType** parameter to **0**, you must also specify the BackupId parameter.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The source instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -35,14 +37,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -78,9 +80,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreType { get; set; }
 
         /// <summary>
-        /// The ID of the source instance if you want to restore data to a point in time.
+        /// The ID of the source instance whose data you want to restore to a point in time.
         /// 
-        /// > : If you set **RestoreType** to **1**, you must also specify this parameter.
+        /// >  If you set the **RestoreType** parameter to **1**, you must also specify the SourceDBInstanceName parameter.
         /// </summary>
         [NameInMap("SourceDBInstanceName")]
         [Validation(Required=false)]

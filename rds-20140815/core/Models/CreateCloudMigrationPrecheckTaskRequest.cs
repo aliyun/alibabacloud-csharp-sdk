@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateCloudMigrationPrecheckTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
