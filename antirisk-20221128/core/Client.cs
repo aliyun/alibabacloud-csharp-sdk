@@ -381,5 +381,91 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return await ListChannelRiskDetailsWithOptionsAsync(request, headers, runtime);
         }
 
+        public ListUninstallDetailResponse ListUninstallDetailWithOptions(ListUninstallDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDs))
+            {
+                query["endDs"] = request.EndDs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDs))
+            {
+                query["startDs"] = request.StartDs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUninstallDetail",
+                Version = "2022-11-28",
+                Protocol = "HTTPS",
+                Pathname = "/uninstall/listUninstallDetail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUninstallDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListUninstallDetailResponse> ListUninstallDetailWithOptionsAsync(ListUninstallDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDs))
+            {
+                query["endDs"] = request.EndDs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDs))
+            {
+                query["startDs"] = request.StartDs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUninstallDetail",
+                Version = "2022-11-28",
+                Protocol = "HTTPS",
+                Pathname = "/uninstall/listUninstallDetail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUninstallDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListUninstallDetailResponse ListUninstallDetail(ListUninstallDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListUninstallDetailWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListUninstallDetailResponse> ListUninstallDetailAsync(ListUninstallDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListUninstallDetailWithOptionsAsync(request, headers, runtime);
+        }
+
     }
 }

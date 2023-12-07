@@ -1,3 +1,6 @@
+2023-12-07 Version: 1.1.0
+- Generated csharp 2022-11-28 for antirisk.
+
 2023-06-26 Version: 1.0.4
 - Add other languages.
 
