@@ -126,13 +126,6 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public ClusterStateChangeReason StateChangeReason { get; set; }
 
         /// <summary>
-        /// 集群状态，值同clusterState
-        /// </summary>
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        /// <summary>
         /// 预付费配置。
         /// </summary>
         [NameInMap("SubscriptionConfig")]

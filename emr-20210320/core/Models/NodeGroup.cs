@@ -143,6 +143,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public NodeGroupStateChangeReason StateChangeReason { get; set; }
 
         /// <summary>
+        /// 节点组状态，NodeGroupState别名。
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        /// <summary>
         /// 系统盘信息。
         /// </summary>
         [NameInMap("SystemDisk")]

@@ -9,228 +9,384 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorHBaseRegionServersResponseBody : TeaModel {
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDoctorHBaseRegionServersResponseBodyData> Data { get; set; }
         public class ListDoctorHBaseRegionServersResponseBodyData : TeaModel {
+            /// <summary>
+            /// The metric information.
+            /// </summary>
             [NameInMap("Metrics")]
             [Validation(Required=false)]
             public ListDoctorHBaseRegionServersResponseBodyDataMetrics Metrics { get; set; }
             public class ListDoctorHBaseRegionServersResponseBodyDataMetrics : TeaModel {
+                /// <summary>
+                /// The average garbage collection (GC) duration.
+                /// </summary>
                 [NameInMap("AvgGc")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsAvgGc AvgGc { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsAvgGc : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public float? Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The cache hit ratio.
+                /// </summary>
                 [NameInMap("CacheRatio")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsCacheRatio CacheRatio { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsCacheRatio : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public float? Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The number of daily read requests.
+                /// </summary>
                 [NameInMap("DailyReadRequest")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsDailyReadRequest DailyReadRequest { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsDailyReadRequest : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The growth rate of the number of daily read requests.
+                /// </summary>
                 [NameInMap("DailyReadRequestDayGrowthRatio")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsDailyReadRequestDayGrowthRatio DailyReadRequestDayGrowthRatio { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsDailyReadRequestDayGrowthRatio : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public float? Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The number of daily write requests.
+                /// </summary>
                 [NameInMap("DailyWriteRequest")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsDailyWriteRequest DailyWriteRequest { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsDailyWriteRequest : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The growth rate of the number of daily write requests.
+                /// </summary>
                 [NameInMap("DailyWriteRequestDayGrowthRatio")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsDailyWriteRequestDayGrowthRatio DailyWriteRequestDayGrowthRatio { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsDailyWriteRequestDayGrowthRatio : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public float? Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The number of regions.
+                /// </summary>
                 [NameInMap("RegionCount")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsRegionCount RegionCount { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsRegionCount : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The cumulative number of read requests.
+                /// </summary>
                 [NameInMap("TotalReadRequest")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsTotalReadRequest TotalReadRequest { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsTotalReadRequest : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The cumulative number of all requests.
+                /// </summary>
                 [NameInMap("TotalRequest")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsTotalRequest TotalRequest { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsTotalRequest : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The cumulative number of write requests.
+                /// </summary>
                 [NameInMap("TotalWriteRequest")]
                 [Validation(Required=false)]
                 public ListDoctorHBaseRegionServersResponseBodyDataMetricsTotalWriteRequest TotalWriteRequest { get; set; }
                 public class ListDoctorHBaseRegionServersResponseBodyDataMetricsTotalWriteRequest : TeaModel {
+                    /// <summary>
+                    /// The description of the metric.
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The unit of the metric.
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
@@ -239,6 +395,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
             }
 
+            /// <summary>
+            /// The RegionServer host.
+            /// </summary>
             [NameInMap("RegionServerHost")]
             [Validation(Required=false)]
             public string RegionServerHost { get; set; }
@@ -246,28 +405,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// 本次请求所返回的最大记录条数。
+        /// The maximum number of entries that are returned.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 返回读取到的数据位置，空代表数据已经读取完毕。
+        /// A pagination token.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 本次请求条件下的数据总量。
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

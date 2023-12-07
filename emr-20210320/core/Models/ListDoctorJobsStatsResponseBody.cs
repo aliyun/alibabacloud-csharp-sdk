@@ -9,82 +9,139 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorJobsStatsResponseBody : TeaModel {
+        /// <summary>
+        /// The summary of job information.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDoctorJobsStatsResponseBodyData> Data { get; set; }
         public class ListDoctorJobsStatsResponseBodyData : TeaModel {
+            /// <summary>
+            /// The total number of jobs.
+            /// </summary>
             [NameInMap("AppsCount")]
             [Validation(Required=false)]
             public ListDoctorJobsStatsResponseBodyDataAppsCount AppsCount { get; set; }
             public class ListDoctorJobsStatsResponseBodyDataAppsCount : TeaModel {
+                /// <summary>
+                /// The description of the metric.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// The name of the metric.
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The unit of the metric.
+                /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
+                /// <summary>
+                /// The value of the metric.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public long? Value { get; set; }
 
             }
 
+            /// <summary>
+            /// The aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running.
+            /// </summary>
             [NameInMap("MemSeconds")]
             [Validation(Required=false)]
             public ListDoctorJobsStatsResponseBodyDataMemSeconds MemSeconds { get; set; }
             public class ListDoctorJobsStatsResponseBodyDataMemSeconds : TeaModel {
+                /// <summary>
+                /// The description of the metric.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// The name of the metric.
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The unit of the metric.
+                /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
+                /// <summary>
+                /// The value of the metric.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public long? Value { get; set; }
 
             }
 
+            /// <summary>
+            /// The YARN queue to which the job was submitted.
+            /// </summary>
             [NameInMap("Queue")]
             [Validation(Required=false)]
             public string Queue { get; set; }
 
+            /// <summary>
+            /// The type of the compute engine.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// The username that is used to submit the job.
+            /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]
             public string User { get; set; }
 
+            /// <summary>
+            /// The aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running.
+            /// </summary>
             [NameInMap("VcoreSeconds")]
             [Validation(Required=false)]
             public ListDoctorJobsStatsResponseBodyDataVcoreSeconds VcoreSeconds { get; set; }
             public class ListDoctorJobsStatsResponseBodyDataVcoreSeconds : TeaModel {
+                /// <summary>
+                /// The description of the metric.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// The name of the metric.
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The unit of the metric.
+                /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
+                /// <summary>
+                /// The value of the metric.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public long? Value { get; set; }
@@ -94,28 +151,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// 本次请求所返回的最大记录条数。
+        /// The maximum number of entries returned.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 返回读取到的数据位置，空代表数据已经读取完毕。
+        /// A pagination token.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 本次请求条件下的数据总量。
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

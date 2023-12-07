@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateApplicationConfigsRequest : TeaModel {
         /// <summary>
-        /// The list of application configurations.
+        /// The application configurations.
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the node group.
+        /// The node group ID.
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorHBaseRegionResponseBody : TeaModel {
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDoctorHBaseRegionResponseBodyData Data { get; set; }
         public class GetDoctorHBaseRegionResponseBodyData : TeaModel {
+            /// <summary>
+            /// The metric information.
+            /// </summary>
             [NameInMap("Metrics")]
             [Validation(Required=false)]
             public GetDoctorHBaseRegionResponseBodyDataMetrics Metrics { get; set; }
@@ -61,6 +67,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
                 }
 
+                /// <summary>
+                /// The number of StoreFiles.
+                /// </summary>
                 [NameInMap("StoreFileCount")]
                 [Validation(Required=false)]
                 public GetDoctorHBaseRegionResponseBodyDataMetricsStoreFileCount StoreFileCount { get; set; }
@@ -69,6 +78,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The name of the metric.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -77,6 +89,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// The value of the metric.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }

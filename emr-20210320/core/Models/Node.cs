@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string AutoRenewDurationUnit { get; set; }
 
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public long? CreateTime { get; set; }
+
         /// <summary>
         /// 节点过期时间。
         /// </summary>

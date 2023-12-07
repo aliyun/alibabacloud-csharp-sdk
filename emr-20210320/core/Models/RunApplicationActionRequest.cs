@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the operation.
+        /// The operation object.
         /// </summary>
         [NameInMap("ComponentInstanceSelector")]
         [Validation(Required=false)]

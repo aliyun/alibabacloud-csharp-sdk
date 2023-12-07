@@ -9,30 +9,101 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorReportsResponseBody : TeaModel {
+        /// <summary>
+        /// The reports.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDoctorReportsResponseBodyData> Data { get; set; }
         public class ListDoctorReportsResponseBodyData : TeaModel {
+            /// <summary>
+            /// The service types.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   compute
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   hive
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   hdfs
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   yarn
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   oss
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   hbase
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// </summary>
             [NameInMap("ComponentTypes")]
             [Validation(Required=false)]
             public List<string> ComponentTypes { get; set; }
 
+            /// <summary>
+            /// The date on which the report was generated.
+            /// </summary>
             [NameInMap("DateTime")]
             [Validation(Required=false)]
             public string DateTime { get; set; }
 
+            /// <summary>
+            /// The summary of the report.
+            /// </summary>
             [NameInMap("SummaryReport")]
             [Validation(Required=false)]
             public ListDoctorReportsResponseBodyDataSummaryReport SummaryReport { get; set; }
             public class ListDoctorReportsResponseBodyDataSummaryReport : TeaModel {
+                /// <summary>
+                /// The score.
+                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public int? Score { get; set; }
 
+                /// <summary>
+                /// The optimization suggestion.
+                /// </summary>
                 [NameInMap("Suggestion")]
                 [Validation(Required=false)]
                 public string Suggestion { get; set; }
 
+                /// <summary>
+                /// The summary of the report.
+                /// </summary>
                 [NameInMap("Summary")]
                 [Validation(Required=false)]
                 public string Summary { get; set; }

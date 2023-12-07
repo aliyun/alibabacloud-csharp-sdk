@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ComponentInstanceSelector : TeaModel {
+        [NameInMap("ActionScope")]
+        [Validation(Required=false)]
+        [Obsolete]
+        public string ActionScope { get; set; }
+
         /// <summary>
         /// 应用名称。
         /// </summary>
@@ -71,7 +76,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// 执行范围。
+        /// 动作执行范围。取值范围：
+        /// - APPLICATION：应用级别。
+        /// - COMPONENT：组件级别。
+        /// - COMPONENT_INSTANCE：组件实例级别。
         /// </summary>
         [NameInMap("RunActionScope")]
         [Validation(Required=false)]

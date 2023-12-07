@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorReportComponentSummaryResponseBody : TeaModel {
+        /// <summary>
+        /// The content of the report.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDoctorReportComponentSummaryResponseBodyData Data { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public string Suggestion { get; set; }
 
+            /// <summary>
+            /// The summary of the report.
+            /// </summary>
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }

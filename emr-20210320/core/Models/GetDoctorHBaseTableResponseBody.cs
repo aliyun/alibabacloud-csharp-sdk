@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorHBaseTableResponseBody : TeaModel {
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDoctorHBaseTableResponseBodyData Data { get; set; }
         public class GetDoctorHBaseTableResponseBodyData : TeaModel {
+            /// <summary>
+            /// The diagnosis result.
+            /// </summary>
             [NameInMap("Analysis")]
             [Validation(Required=false)]
             public GetDoctorHBaseTableResponseBodyDataAnalysis Analysis { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [Validation(Required=false)]
                 public List<string> ReadRequestHotspotRegionList { get; set; }
 
+                /// <summary>
+                /// The description of read imbalance.
+                /// </summary>
                 [NameInMap("ReadRequestUnbalanceSuggestion")]
                 [Validation(Required=false)]
                 public string ReadRequestUnbalanceSuggestion { get; set; }
@@ -29,6 +38,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [Validation(Required=false)]
                 public List<string> RequestHotspotRegionList { get; set; }
 
+                /// <summary>
+                /// The description of read/write imbalance.
+                /// </summary>
                 [NameInMap("RequestUnbalanceSuggestion")]
                 [Validation(Required=false)]
                 public string RequestUnbalanceSuggestion { get; set; }
@@ -41,6 +53,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [Validation(Required=false)]
                 public List<string> WriteRequestHotspotRegionList { get; set; }
 
+                /// <summary>
+                /// The description of write imbalance.
+                /// </summary>
                 [NameInMap("WriteRequestUnbalanceSuggestion")]
                 [Validation(Required=false)]
                 public string WriteRequestUnbalanceSuggestion { get; set; }

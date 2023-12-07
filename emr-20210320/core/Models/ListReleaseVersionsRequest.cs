@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string IaasType { get; set; }
 
         /// <summary>
-        /// The ID of the region in which you want to create the instance.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

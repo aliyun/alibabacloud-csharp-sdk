@@ -8,34 +8,31 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class GetDoctorHBaseRegionServerRequest : TeaModel {
+    public class QueryApmComponentsRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// 集群ID。
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        /// <summary>
-        /// The date.
-        /// </summary>
-        [NameInMap("DateTime")]
+        [NameInMap("Provider")]
         [Validation(Required=false)]
-        public string DateTime { get; set; }
+        public string Provider { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// 地域ID。
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The host of the region server.
+        /// 如果存在clusterId，从Cluster中获取该值，如果clusterId为空，用户显式指定
         /// </summary>
-        [NameInMap("RegionServerHost")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string RegionServerHost { get; set; }
+        public string ResourceGroupId { get; set; }
 
     }
 

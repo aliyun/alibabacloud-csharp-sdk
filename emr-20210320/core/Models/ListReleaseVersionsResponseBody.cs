@@ -23,28 +23,29 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The major EMR versions.
+        /// </summary>
         [NameInMap("ReleaseVersions")]
         [Validation(Required=false)]
         public List<ListReleaseVersionsResponseBodyReleaseVersions> ReleaseVersions { get; set; }
         public class ListReleaseVersionsResponseBodyReleaseVersions : TeaModel {
             /// <summary>
-            /// IaaS类型。取值范围：
-            /// - ECS：基于ECS构建。
-            /// - K8S：基于K8S构建。
+            /// The IaaS type.
             /// </summary>
             [NameInMap("IaasType")]
             [Validation(Required=false)]
             public string IaasType { get; set; }
 
             /// <summary>
-            /// EMR发行版。
+            /// The EMR version.
             /// </summary>
             [NameInMap("ReleaseVersion")]
             [Validation(Required=false)]
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// 版本序列。
+            /// The version series.
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]

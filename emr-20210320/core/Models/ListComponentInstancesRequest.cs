@@ -8,67 +8,66 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class ListDoctorHBaseRegionServersRequest : TeaModel {
+    public class ListComponentInstancesRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// 应用名称列表。
+        /// </summary>
+        [NameInMap("ApplicationNames")]
+        [Validation(Required=false)]
+        public List<string> ApplicationNames { get; set; }
+
+        /// <summary>
+        /// 集群ID。
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The query date.
+        /// 组件名称列表。
         /// </summary>
-        [NameInMap("DateTime")]
+        [NameInMap("ComponentNames")]
         [Validation(Required=false)]
-        public string DateTime { get; set; }
+        public List<string> ComponentNames { get; set; }
+
+        [NameInMap("ComponentStates")]
+        [Validation(Required=false)]
+        public List<string> ComponentStates { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// 一次获取的最大记录数。取值范围：1~100。
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the request to retrieve a new page of results.
+        /// 标记当前开始读取的位置，置空表示从头开始。
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The field that you use to sort the query results. Valid value:
-        /// 
-        /// *   regionCount: the number of regions.
+        /// 节点ID列表。
         /// </summary>
-        [NameInMap("OrderBy")]
+        [NameInMap("NodeIds")]
         [Validation(Required=false)]
-        public string OrderBy { get; set; }
+        public List<string> NodeIds { get; set; }
 
         /// <summary>
-        /// The order in which you want to sort the query results. Valid value:
-        /// 
-        /// *   ASC: in ascending order
-        /// *   DESC: in descending order
+        /// 节点名称列表。
         /// </summary>
-        [NameInMap("OrderType")]
+        [NameInMap("NodeNames")]
         [Validation(Required=false)]
-        public string OrderType { get; set; }
+        public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// 地域ID。
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// The RegionServer hosts.
-        /// </summary>
-        [NameInMap("RegionServerHosts")]
-        [Validation(Required=false)]
-        public List<string> RegionServerHosts { get; set; }
 
     }
 
