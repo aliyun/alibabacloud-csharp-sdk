@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<ApplyConfigToMachineGroupResponse>(Execute(params_, req, runtime));
         }
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<ApplyConfigToMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
