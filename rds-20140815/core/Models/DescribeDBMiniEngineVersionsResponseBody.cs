@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string EngineVersion { get; set; }
 
+            [NameInMap("ExpireDate")]
+            [Validation(Required=false)]
+            public string ExpireDate { get; set; }
+
             /// <summary>
             /// The expiration status of the minor engine version. Valid values:
             /// 

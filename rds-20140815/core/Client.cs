@@ -7562,6 +7562,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskConfirmed))
+            {
+                query["RiskConfirmed"] = request.RiskConfirmed;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDatabase))
             {
                 query["SourceDatabase"] = request.SourceDatabase;
@@ -7643,6 +7647,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskConfirmed))
+            {
+                query["RiskConfirmed"] = request.RiskConfirmed;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDatabase))
             {

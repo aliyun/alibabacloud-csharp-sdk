@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RiskConfirmed")]
+        [Validation(Required=false)]
+        public bool? RiskConfirmed { get; set; }
+
         /// <summary>
         /// The source database from which you want to synchronize the extension to the destination database. If you do not specify the **Extensions** parameter, you must specify this parameter.
         /// </summary>
