@@ -1,3 +1,6 @@
+2023-12-07 Version: 4.1.2
+- Generated csharp 2020-12-30 for Sls.
+
 2023-12-07 Version: 4.1.1
 - Generated csharp 2020-12-30 for Sls.
 
