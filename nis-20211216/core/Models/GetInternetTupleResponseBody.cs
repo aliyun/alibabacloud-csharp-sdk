@@ -231,12 +231,9 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
-            /// <summary>
-            /// The number of repeated packets.
-            /// </summary>
-            [NameInMap("RetranCount")]
+            [NameInMap("RetransmitRate")]
             [Validation(Required=false)]
-            public double? RetranCount { get; set; }
+            public double? RetransmitRate { get; set; }
 
             /// <summary>
             /// The round-trip time (RTT). Unit: milliseconds.

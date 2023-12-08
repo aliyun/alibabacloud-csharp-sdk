@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// </summary>
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
-        public List<string> AccountIds { get; set; }
+        public List<long?> AccountIds { get; set; }
 
         /// <summary>
         /// The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// The local port.
         /// 
-        /// > This parameter is required only when you set **TupleType** to **5**.
+        /// >  This parameter is required only if you set the **TupleType** parameter to **5**.
         /// </summary>
         [NameInMap("CloudPort")]
         [Validation(Required=false)]
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// The direction of the Internet traffic that you want to query. Valid values:
         /// 
-        /// - **in**: inbound
-        /// - **out**: outbound
+        /// *   **in**: inbound
+        /// *   **out**: outbound
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string InstanceListShrink { get; set; }
 
         /// <summary>
-        /// The metric for instance ranking. Default value: **ByteCount**. This value specifies that instances are ranked by traffic volume.
+        /// The metric for data ranking. Default value: **ByteCount**. This value specifies that data is ranked by traffic volume.
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
@@ -150,35 +150,35 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// The order in which instances are ranked by Internet traffic. Valid values:
         /// 
-        /// - **desc**: the descending order
-        /// - **asc**: the ascending order
+        /// *   **desc**: the descending order
+        /// *   **asc**: the ascending order
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }
 
         /// <summary>
-        /// Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.
+        /// Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.
         /// </summary>
         [NameInMap("TopN")]
         [Validation(Required=false)]
         public int? TopN { get; set; }
 
         /// <summary>
-        /// The type of the tuple. Valid values:
+        /// The type of the tuple. Valid values:
         /// 
-        /// - **1**: 1-tuple
-        /// - **2**: 2-tuples
-        /// - **5**: 5-tuples
+        /// *   **1**: 1-tuple
+        /// *   **2**: 2-tuple
+        /// *   **5**: 5-tuple
         /// </summary>
         [NameInMap("TupleType")]
         [Validation(Required=false)]
         public int? TupleType { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
+        /// Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
         /// 
-        /// > By default, the multi-account management feature is disabled. If you want to enable this feature, contact your customer business manager.
+        /// >  By default, the multi-account management feature is not available. If you want to use this feature, contact your customer business manager to apply for permissions.
         /// </summary>
         [NameInMap("UseMultiAccount")]
         [Validation(Required=false)]

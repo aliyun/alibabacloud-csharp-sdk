@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.Nis20211216
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
                 query["SourceId"] = request.SourceId;
@@ -231,6 +235,10 @@ namespace AlibabaCloud.SDK.Nis20211216
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
@@ -326,10 +334,6 @@ namespace AlibabaCloud.SDK.Nis20211216
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditParam))
-            {
-                query["AuditParam"] = request.AuditParam;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathId))
             {
                 query["NetworkPathId"] = request.NetworkPathId;
@@ -374,10 +378,6 @@ namespace AlibabaCloud.SDK.Nis20211216
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditParam))
-            {
-                query["AuditParam"] = request.AuditParam;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathId))
             {
                 query["NetworkPathId"] = request.NetworkPathId;

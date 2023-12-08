@@ -12,10 +12,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class CreateAndAnalyzeNetworkPathRequest : TeaModel {
-        [NameInMap("AuditParam")]
-        [Validation(Required=false)]
-        public string AuditParam { get; set; }
-
         /// <summary>
         /// The protocol type. Valid values:
         /// 

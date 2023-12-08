@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// The ID of the source resource.
         /// </summary>
@@ -75,14 +79,27 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
+        /// <summary>
+        /// The tags to add to the resource.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateNetworkPathRequestTag> Tag { get; set; }
         public class CreateNetworkPathRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+            /// 
+            /// You can add up to 20 tags in each call.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
