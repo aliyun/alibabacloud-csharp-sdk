@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkAppInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. 
+        /// The application ID.
         /// 
-        /// >  You can call the [ListSparkApps](~~612475~~) operation to query the Spark application ID.
+        /// >  You can call the [ListSparkApps](~~455888~~) operation to query the Spark application IDs.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

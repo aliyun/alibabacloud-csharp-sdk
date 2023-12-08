@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// A reserved parameter.
+        /// </summary>
         [NameInMap("ClusterMode")]
         [Validation(Required=false)]
         public string ClusterMode { get; set; }
 
+        /// <summary>
+        /// A reserved parameter.
+        /// </summary>
         [NameInMap("ClusterSizeResource")]
         [Validation(Required=false)]
         public string ClusterSizeResource { get; set; }
@@ -47,6 +53,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
+        /// <summary>
+        /// A reserved parameter.
+        /// </summary>
         [NameInMap("MaxClusterCount")]
         [Validation(Required=false)]
         public int? MaxClusterCount { get; set; }
@@ -61,15 +70,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string MaxComputeResource { get; set; }
 
+        /// <summary>
+        /// A reserved parameter.
+        /// </summary>
         [NameInMap("MinClusterCount")]
         [Validation(Required=false)]
         public int? MinClusterCount { get; set; }
 
         /// <summary>
-        /// The minimum reserved computing resources. Unit: AnalyticDB Compute Unit (ACU).
+        /// The minimum reserved computing resources. Unit: AnalyticDB Compute Units (ACUs).
         /// 
-        /// *   If GroupType is set to Interactive, set the value to 16ACU.
-        /// *   If GroupType is set to Job, set the value to 0ACU.
+        /// *   When GroupType is set to Interactive, set this parameter to 16 ACUs.
+        /// *   When GroupType is set to Job, set this parameter to 0 ACUs.
         /// </summary>
         [NameInMap("MinComputeResource")]
         [Validation(Required=false)]
