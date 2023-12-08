@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string RdsId { get; set; }
 
-            [NameInMap("RdsPassword")]
-            [Validation(Required=false)]
-            public string RdsPassword { get; set; }
-
             [NameInMap("RdsUserName")]
             [Validation(Required=false)]
             public string RdsUserName { get; set; }

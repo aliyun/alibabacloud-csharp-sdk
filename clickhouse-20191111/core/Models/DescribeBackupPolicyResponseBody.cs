@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public int? BackupRetentionPeriod { get; set; }
 
+        [NameInMap("BackupSize")]
+        [Validation(Required=false)]
+        public string BackupSize { get; set; }
+
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
         public string PreferredBackupPeriod { get; set; }

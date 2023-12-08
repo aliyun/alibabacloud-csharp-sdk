@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [NameInMap("dbClusterId")]
             [Validation(Required=false)]
             public string DbClusterId { get; set; }
+
             [NameInMap("orderId")]
             [Validation(Required=false)]
             public string OrderId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

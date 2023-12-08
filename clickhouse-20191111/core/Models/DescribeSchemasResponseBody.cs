@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public List<DescribeSchemasResponseBodyItemsSchema> Schema { get; set; }
             public class DescribeSchemasResponseBodyItemsSchema : TeaModel {
+                [NameInMap("DBClusterId")]
+                [Validation(Required=false)]
                 public string DBClusterId { get; set; }
+
+                [NameInMap("SchemaName")]
+                [Validation(Required=false)]
                 public string SchemaName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

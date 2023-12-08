@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClustersRequest : TeaModel {
-        [NameInMap("ControlVersion")]
-        [Validation(Required=false)]
-        public string ControlVersion { get; set; }
-
         [NameInMap("DBClusterDescription")]
         [Validation(Required=false)]
         public string DBClusterDescription { get; set; }
@@ -44,6 +40,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

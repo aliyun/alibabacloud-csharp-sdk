@@ -33,12 +33,25 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public List<CheckScaleOutBalancedResponseBodyTableDetailsTableDetail> TableDetail { get; set; }
             public class CheckScaleOutBalancedResponseBodyTableDetailsTableDetail : TeaModel {
+                [NameInMap("Cluster")]
+                [Validation(Required=false)]
                 public string Cluster { get; set; }
+
+                [NameInMap("Database")]
+                [Validation(Required=false)]
                 public string Database { get; set; }
+
+                [NameInMap("Detail")]
+                [Validation(Required=false)]
                 public int? Detail { get; set; }
+
+                [NameInMap("TableName")]
+                [Validation(Required=false)]
                 public string TableName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TimeDuration")]
         [Validation(Required=false)]

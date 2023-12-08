@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RestartTime")]
+        [Validation(Required=false)]
+        public string RestartTime { get; set; }
+
     }
 
 }

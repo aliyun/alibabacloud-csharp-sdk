@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
             [NameInMap("BackupSize")]
             [Validation(Required=false)]
-            public int? BackupSize { get; set; }
+            public long? BackupSize { get; set; }
 
             [NameInMap("BackupStartTime")]
             [Validation(Required=false)]
@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]
             public string DBClusterId { get; set; }
+
+            [NameInMap("ExpireDate")]
+            [Validation(Required=false)]
+            public string ExpireDate { get; set; }
 
         }
 

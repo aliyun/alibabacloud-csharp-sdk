@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string SchemaName { get; set; }
 
-        [NameInMap("TableName")]
-        [Validation(Required=false)]
-        public string TableName { get; set; }
-
     }
 
 }

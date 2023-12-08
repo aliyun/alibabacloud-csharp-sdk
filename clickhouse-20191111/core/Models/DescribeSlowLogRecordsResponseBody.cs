@@ -72,12 +72,15 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 }
 
             }
+
             [NameInMap("Rows")]
             [Validation(Required=false)]
             public string Rows { get; set; }
+
             [NameInMap("RowsBeforeLimitAtLeast")]
             [Validation(Required=false)]
             public string RowsBeforeLimitAtLeast { get; set; }
+
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics Statistics { get; set; }
@@ -95,6 +98,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public int? RowsRead { get; set; }
 
             }
+
             [NameInMap("TableSchema")]
             [Validation(Required=false)]
             public DescribeSlowLogRecordsResponseBodySlowLogRecordsTableSchema TableSchema { get; set; }
@@ -114,7 +118,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 }
 
             }
-        };
+
+        }
 
     }
 

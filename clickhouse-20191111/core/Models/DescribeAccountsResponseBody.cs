@@ -17,12 +17,29 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public List<DescribeAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
+                [NameInMap("AccountDescription")]
+                [Validation(Required=false)]
                 public string AccountDescription { get; set; }
+
+                [NameInMap("AccountName")]
+                [Validation(Required=false)]
                 public string AccountName { get; set; }
+
+                [NameInMap("AccountStatus")]
+                [Validation(Required=false)]
                 public string AccountStatus { get; set; }
+
+                [NameInMap("AccountType")]
+                [Validation(Required=false)]
                 public string AccountType { get; set; }
+
+                [NameInMap("ConfigType")]
+                [Validation(Required=false)]
+                public string ConfigType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
