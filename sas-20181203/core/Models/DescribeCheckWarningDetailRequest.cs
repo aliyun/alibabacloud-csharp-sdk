@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningDetailRequest : TeaModel {
+        [NameInMap("CheckId")]
+        [Validation(Required=false)]
+        public string CheckId { get; set; }
+
         /// <summary>
         /// The ID of the alert that is triggered by the check item.
         /// 
@@ -43,6 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

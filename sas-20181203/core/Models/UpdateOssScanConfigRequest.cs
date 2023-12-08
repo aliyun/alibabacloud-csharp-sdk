@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateOssScanConfigRequest : TeaModel {
+        [NameInMap("AllKeyPrefix")]
+        [Validation(Required=false)]
+        public bool? AllKeyPrefix { get; set; }
+
         /// <summary>
         /// The names of the buckets.
         /// </summary>
@@ -33,12 +37,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        [NameInMap("KeyPrefixList")]
+        [Validation(Required=false)]
+        public List<string> KeyPrefixList { get; set; }
+
         /// <summary>
         /// The suffixes of the objects that you want to check.
         /// </summary>
         [NameInMap("KeySuffixList")]
         [Validation(Required=false)]
         public List<string> KeySuffixList { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         /// <summary>
         /// The time when the check is performed. The value specifies the days of the week.

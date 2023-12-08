@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        [NameInMap("CheckIds")]
+        [Validation(Required=false)]
+        public List<long?> CheckIds { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Default value: **zh**. Valid values:
         /// 

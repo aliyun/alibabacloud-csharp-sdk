@@ -82,16 +82,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the sensitive files.
+        /// The information about the sensitive file.
         /// </summary>
         [NameInMap("SensitiveFileList")]
         [Validation(Required=false)]
         public List<DescribeImageSensitiveFileListResponseBodySensitiveFileList> SensitiveFileList { get; set; }
         public class DescribeImageSensitiveFileListResponseBodySensitiveFileList : TeaModel {
+            /// <summary>
+            /// The key of the sensitive file type.
+            /// </summary>
             [NameInMap("ClassKey")]
             [Validation(Required=false)]
             public string ClassKey { get; set; }
 
+            /// <summary>
+            /// The name of the sensitive file type.
+            /// </summary>
             [NameInMap("ClassName")]
             [Validation(Required=false)]
             public string ClassName { get; set; }
@@ -111,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// The timestamp generated when the last baseline check was performed. Unit: milliseconds.
+            /// The timestamp generated when the last scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]
@@ -129,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// The type of alerts for the sensitive file. Valid value:
+            /// The type of the alert for the sensitive file. Valid values:
             /// 
             /// *   **npm_token**: NPM access token
             /// *   **ftp_cfg**: FTP configuration
@@ -196,7 +202,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **rdp**: RDP
             /// *   **mailgun_key**: Mailgun webhook signing key
             /// *   **mailchimp_api_key**: API key for Mailchimp
-            /// *   **netrc_cfg**: .netrc configuration file
+            /// *   **netrc_cfg**: netrc configuration file
             /// *   **openvpn_cfg**: OpenVPN configuration
             /// *   **github_refresh_token**: GitHub refresh token
             /// *   **salesforce**: Salesforce credentials

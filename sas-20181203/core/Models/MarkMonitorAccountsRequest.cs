@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class MarkMonitorAccountsRequest : TeaModel {
+        /// <summary>
+        /// The IDs of the members.
+        /// </summary>
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
         public string AccountIds { get; set; }

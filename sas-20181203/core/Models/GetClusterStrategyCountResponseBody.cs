@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The number of rules.
+            /// The number of policies.
             /// </summary>
             [NameInMap("StrategyCount")]
             [Validation(Required=false)]

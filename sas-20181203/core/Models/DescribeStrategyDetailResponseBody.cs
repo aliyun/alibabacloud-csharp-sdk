@@ -266,6 +266,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     [Validation(Required=false)]
                     public bool? On { get; set; }
 
+                    [NameInMap("SupportedOs")]
+                    [Validation(Required=false)]
+                    public string SupportedOs { get; set; }
+
                     /// <summary>
                     /// The type of the sub-check item.
                     /// </summary>

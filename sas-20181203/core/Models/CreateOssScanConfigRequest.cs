@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateOssScanConfigRequest : TeaModel {
+        [NameInMap("AllKeyPrefix")]
+        [Validation(Required=false)]
+        public bool? AllKeyPrefix { get; set; }
+
         /// <summary>
         /// The names of buckets.
         /// </summary>
@@ -33,12 +37,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("KeyPrefixList")]
+        [Validation(Required=false)]
+        public List<string> KeyPrefixList { get; set; }
+
         /// <summary>
         /// The suffixes of the files to scan.
         /// </summary>
         [NameInMap("KeySuffixList")]
         [Validation(Required=false)]
         public List<string> KeySuffixList { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         /// <summary>
         /// The days on which the scan is executed in a week.

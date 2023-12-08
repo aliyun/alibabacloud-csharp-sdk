@@ -21,6 +21,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListCheckTypesResponseBodyData> Data { get; set; }
         public class ListCheckTypesResponseBodyData : TeaModel {
+            [NameInMap("CheckDetails")]
+            [Validation(Required=false)]
+            public List<ListCheckTypesResponseBodyDataCheckDetails> CheckDetails { get; set; }
+            public class ListCheckTypesResponseBodyDataCheckDetails : TeaModel {
+                [NameInMap("AffiliatedRiskTypes")]
+                [Validation(Required=false)]
+                public List<string> AffiliatedRiskTypes { get; set; }
+
+                [NameInMap("AffiliatedRisks")]
+                [Validation(Required=false)]
+                public List<string> AffiliatedRisks { get; set; }
+
+                [NameInMap("CheckId")]
+                [Validation(Required=false)]
+                public long? CheckId { get; set; }
+
+                [NameInMap("CheckItem")]
+                [Validation(Required=false)]
+                public string CheckItem { get; set; }
+
+            }
+
             [NameInMap("CheckType")]
             [Validation(Required=false)]
             public string CheckType { get; set; }

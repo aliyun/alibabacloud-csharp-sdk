@@ -73,12 +73,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NntfCount { get; set; }
 
             /// <summary>
-            /// Indicates whether the application protection feature is supported.
+            /// Indicates whether the application protection feature is supported. Valid values:
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// *   **0**: not supported
+            /// *   **1**: supported
             /// 
-            /// > If this parameter is not returned, the application protection feature is not supported.
+            /// >  If this parameter is not returned, the application protection feature is not supported.
             /// </summary>
             [NameInMap("RaspDefend")]
             [Validation(Required=false)]
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Related { get; set; }
 
             /// <summary>
-            /// The tag that is added to the vulnerability. Valid values:
+            /// The tag of the vulnerability. Valid values:
             /// 
-            /// *   Restart required
-            /// *   Remote utilization
-            /// *   EXP exists
-            /// *   Available
-            /// *   Elevation of Privilege
-            /// *   Code Execution
+            /// *   **Restart required**
+            /// *   **Remote utilization**
+            /// *   **EXP exists**
+            /// *   **Available**
+            /// *   **Elevation of Privilege**
+            /// *   **Code Execution**
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **cms**: Web-CMS vulnerability
             /// *   **app**: application vulnerability
             /// *   **emg**: urgent vulnerability
-            /// *   **sca**: vulnerability that is detected based on software component analysis
+            /// *   **sca**: vulnerability that is detected by software component analysis
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

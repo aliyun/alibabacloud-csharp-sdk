@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("FixStatus")]
+            [Validation(Required=false)]
+            public int? FixStatus { get; set; }
+
             /// <summary>
             /// The instance ID of the server.
             /// </summary>
@@ -104,6 +108,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
+
+            [NameInMap("LastHandleTime")]
+            [Validation(Required=false)]
+            public long? LastHandleTime { get; set; }
 
             /// <summary>
             /// The timestamp generated when the last scan was performed. Unit: milliseconds.

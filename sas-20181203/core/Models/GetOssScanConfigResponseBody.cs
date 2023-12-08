@@ -16,6 +16,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public GetOssScanConfigResponseBodyData Data { get; set; }
         public class GetOssScanConfigResponseBodyData : TeaModel {
+            [NameInMap("AllKeyPrefix")]
+            [Validation(Required=false)]
+            public bool? AllKeyPrefix { get; set; }
+
+            [NameInMap("BucketCount")]
+            [Validation(Required=false)]
+            public int? BucketCount { get; set; }
+
+            [NameInMap("BucketName")]
+            [Validation(Required=false)]
+            public string BucketName { get; set; }
+
             /// <summary>
             /// The names of the buckets.
             /// </summary>
@@ -40,12 +52,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("KeyPrefixList")]
+            [Validation(Required=false)]
+            public List<string> KeyPrefixList { get; set; }
+
             /// <summary>
             /// The suffixes of the objects that are checked.
             /// </summary>
             [NameInMap("KeySuffixList")]
             [Validation(Required=false)]
             public List<string> KeySuffixList { get; set; }
+
+            [NameInMap("LastUpdateTime")]
+            [Validation(Required=false)]
+            public long? LastUpdateTime { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
             /// <summary>
             /// The days when the check is performed. The value indicates the days of the week.

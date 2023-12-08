@@ -66,7 +66,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// Specifies whether the vulnerability is handled. Valid values:
         /// 
-        /// **y**: yes **n**: no
+        /// *   **y**: handled
+        /// *   **n**: not handled
         /// </summary>
         [NameInMap("Dealed")]
         [Validation(Required=false)]
@@ -110,21 +111,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The Alibaba Cloud account ID of the member in the resource directory.
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// The tag that is used to filter vulnerabilities. Valid values:
+        /// The tag that is used to search for the vulnerability. Valid values:
         /// 
-        /// *   Restart required
-        /// *   Remote utilization
-        /// *   EXP exists
-        /// *   Available
-        /// *   Elevation of Privilege
-        /// *   Code Execution
+        /// *   **Restart required**
+        /// *   **Remote utilization**
+        /// *   **EXP exists**
+        /// *   **Available**
+        /// *   **Elevation of Privilege**
+        /// *   **Code Execution**
         /// </summary>
         [NameInMap("SearchTags")]
         [Validation(Required=false)]
@@ -146,8 +147,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **cve**: Linux software vulnerability
         /// *   **sys**: Windows system vulnerability
         /// *   **cms**: Web-CMS vulnerability
-        /// *   **app**: application vulnerability
-        /// *   **emg**: urgent vulnerability
+        /// *   **app**: application vulnerability that is detected by network scanning
+        /// *   **sca**: application vulnerability that is detected by software component analysis
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

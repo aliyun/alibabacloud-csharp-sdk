@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? RiskId { get; set; }
 
+        [NameInMap("ShowChecks")]
+        [Validation(Required=false)]
+        public bool? ShowChecks { get; set; }
+
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeOnceTaskLeafRecordPageResponseBody : TeaModel {
         /// <summary>
-        /// The details of the sub-tasks.
+        /// The details of the sub-task.
         /// </summary>
         [NameInMap("OnceTasks")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RealRunTime { get; set; }
 
             /// <summary>
-            /// The execution result of the sub-task.
+            /// The execution result.
             /// </summary>
             [NameInMap("ResultInfo")]
             [Validation(Required=false)]
@@ -76,12 +76,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The status of the sub-task. Valid values:
+            /// The sub-task status. Valid values:
             /// 
             /// *   **INIT**: The sub-task is not started.
             /// *   **START**: The sub-task is started.
             /// *   **SUCCESS**: The sub-task is complete.
-            /// *   **TIMEOUT**: The task timed out.
+            /// *   **TIMEOUT**: The sub-task timed out.
             /// </summary>
             [NameInMap("StatusText")]
             [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// The type of the assets that are scanned.
+            /// The type of the assets that are scanned. Valid values:
             /// 
             /// *   **IMAGE_REPO**: image repository
             /// *   **IMAGE**: image
@@ -133,12 +133,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// The name of the cluster.
+                /// The cluster name.
                 /// </summary>
                 [NameInMap("ClusterName")]
                 [Validation(Required=false)]
                 public string ClusterName { get; set; }
 
+                /// <summary>
+                /// The time consumed. The value is in the JSON format. The end time of each item is displayed.
+                /// 
+                /// *   **vul**: system vulnerabilities
+                /// *   **scaVul**: application vulnerabilities
+                /// *   **scaVul**: baseline
+                /// *   **binary**: binary
+                /// *   **forbiddenPackageInfo**: information about the prohibited package
+                /// *   **identificationInfo**: identity authentication
+                /// *   **script**: malicious scripts
+                /// *   **sensitiveFile**: sensitive files
+                /// *   **sensitiveInfo**: AccessKey pair leaks
+                /// *   **webshell**: website scripts
+                /// </summary>
                 [NameInMap("CostTimeInfo")]
                 [Validation(Required=false)]
                 public string CostTimeInfo { get; set; }

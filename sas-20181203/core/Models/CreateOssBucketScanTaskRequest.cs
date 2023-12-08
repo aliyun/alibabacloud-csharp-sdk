@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateOssBucketScanTaskRequest : TeaModel {
+        [NameInMap("AllKeyPrefix")]
+        [Validation(Required=false)]
+        public bool? AllKeyPrefix { get; set; }
+
         /// <summary>
         /// The names of the buckets.
         /// </summary>
@@ -22,6 +26,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("ExcludeKeySuffixList")]
         [Validation(Required=false)]
         public List<string> ExcludeKeySuffixList { get; set; }
+
+        [NameInMap("KeyPrefixList")]
+        [Validation(Required=false)]
+        public List<string> KeyPrefixList { get; set; }
 
         /// <summary>
         /// The suffixes of the objects that you want to check.
