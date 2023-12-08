@@ -1,3 +1,6 @@
+2023-12-08 Version: 1.0.4
+- Generated csharp 2018-08-28 for Tag.
+
 2022-06-30 Version: 1.0.3
 - Add Policy APIs.
 

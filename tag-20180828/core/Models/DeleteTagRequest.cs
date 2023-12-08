@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class DeleteTagRequest : TeaModel {
+        /// <summary>
+        /// The tag key.
+        /// 
+        /// If no tag value is associated with a tag key, you can specify the `Key` parameter without specifying the Value parameter to delete the tag key. Otherwise, you must specify both the `Key` and `Value` parameters to delete a preset tag.
+        /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
@@ -21,6 +26,11 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// 
+        /// >  Only `cn-hangzhou` is supported.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,6 +39,9 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// The tag value.
+        /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
         public string Value { get; set; }

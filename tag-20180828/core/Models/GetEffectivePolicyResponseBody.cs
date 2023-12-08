@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class GetEffectivePolicyResponseBody : TeaModel {
+        /// <summary>
+        /// The effective tag policy.
+        /// </summary>
         [NameInMap("EffectivePolicy")]
         [Validation(Required=false)]
         public string EffectivePolicy { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

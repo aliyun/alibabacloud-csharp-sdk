@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
-    public class DeleteTagResponseBody : TeaModel {
+    public class OpenCreatedByResponseBody : TeaModel {
         /// <summary>
         /// The ID of the request.
         /// </summary>

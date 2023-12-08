@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListTagResourcesRequest : TeaModel {
+        /// <summary>
+        /// The type of the tag. Valid values:
+        /// 
+        /// *   Custom
+        /// *   System
+        /// *   All
+        /// 
+        /// Default value: All.
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        /// <summary>
+        /// The token that is used to start the next query.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -25,14 +37,25 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page.
+        /// 
+        /// Maximum value: 1000. Default value: 50.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The region ID of the resources.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud Resource Name (ARN) of a resource.
+        /// </summary>
         [NameInMap("ResourceARN")]
         [Validation(Required=false)]
         public List<string> ResourceARN { get; set; }
@@ -41,6 +64,18 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// The key-value pairs of tags. You can specify 1 to 10 key-value pairs.
+        /// 
+        /// If you specify multiple tags, the system queries the resources to which all these tags are added.
+        /// 
+        /// Limits:
+        /// 
+        /// *   A tag key must be 1 to 128 characters in length.
+        /// *   A tag value must be 1 to 128 characters in length.
+        /// *   Tag keys and tag values are case-sensitive.
+        /// *   Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }

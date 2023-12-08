@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
-    public class DeletePolicyRequest : TeaModel {
+    public class CloseCreatedByRequest : TeaModel {
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -17,16 +17,6 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// The ID of the tag policy.
-        /// </summary>
-        [NameInMap("PolicyId")]
-        [Validation(Required=false)]
-        public string PolicyId { get; set; }
-
-        /// <summary>
-        /// The region ID. Set the value to cn-shanghai.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -34,6 +24,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public string ResourceOwnerId { get; set; }
 
     }
 

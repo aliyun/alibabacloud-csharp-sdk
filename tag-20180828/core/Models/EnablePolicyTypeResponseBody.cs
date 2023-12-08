@@ -8,10 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
-    public class DeleteTagResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
+    public class EnablePolicyTypeResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

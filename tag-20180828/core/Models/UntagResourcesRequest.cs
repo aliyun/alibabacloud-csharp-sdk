@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the resources.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud Resource Name (ARN) of a resource.
+        /// </summary>
         [NameInMap("ResourceARN")]
         [Validation(Required=false)]
         public List<string> ResourceARN { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// A tag key.
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

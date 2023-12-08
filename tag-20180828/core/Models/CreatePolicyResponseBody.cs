@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class CreatePolicyResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the tag policy.
+        /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        [NameInMap("PolicyName")]
+        [Validation(Required=false)]
+        public string PolicyName { get; set; }
+
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
