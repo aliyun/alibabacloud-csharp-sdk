@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string DestinationType { get; set; }
 
+        [NameInMap("Direction")]
+        [Validation(Required=false)]
+        public string Direction { get; set; }
+
         /// <summary>
         /// The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
         /// 

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string AclUuid { get; set; }
 
+        [NameInMap("Direction")]
+        [Validation(Required=false)]
+        public string Direction { get; set; }
+
         /// <summary>
         /// The language of the content within the response. Valid values:
         /// 
