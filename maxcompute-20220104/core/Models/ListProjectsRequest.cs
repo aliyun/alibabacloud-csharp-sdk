@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListProjectsRequest : TeaModel {
+        /// <summary>
+        /// The flag to choose whether list the specific catalog - system_catalog.
+        /// </summary>
         [NameInMap("listSystemCatalog")]
         [Validation(Required=false)]
         public bool? ListSystemCatalog { get; set; }

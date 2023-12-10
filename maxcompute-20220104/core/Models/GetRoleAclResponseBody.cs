@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("schemaName")]
+                [Validation(Required=false)]
+                public string SchemaName { get; set; }
+
             }
 
             /// <summary>
@@ -59,6 +63,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("schemaName")]
+                [Validation(Required=false)]
+                public string SchemaName { get; set; }
 
             }
 
@@ -83,6 +91,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("schemaName")]
+                [Validation(Required=false)]
+                public string SchemaName { get; set; }
+
             }
 
             /// <summary>
@@ -105,6 +117,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("schemaName")]
+                [Validation(Required=false)]
+                public string SchemaName { get; set; }
 
             }
 
@@ -129,6 +145,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("schemaName")]
+                [Validation(Required=false)]
+                public string SchemaName { get; set; }
+
             }
 
             /// <summary>
@@ -152,9 +172,25 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("schemaName")]
+                [Validation(Required=false)]
+                public string SchemaName { get; set; }
+
             }
 
         }
+
+        [NameInMap("errorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("errorMsg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
+
+        [NameInMap("httpCode")]
+        [Validation(Required=false)]
+        public int? HttpCode { get; set; }
 
         /// <summary>
         /// The ID of the request.

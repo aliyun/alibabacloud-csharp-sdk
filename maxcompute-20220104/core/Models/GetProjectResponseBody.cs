@@ -349,6 +349,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("superAdmins")]
+            [Validation(Required=false)]
+            public List<string> SuperAdmins { get; set; }
+
             /// <summary>
             /// The type of the project. Valid values: -**managed**: The project is an internal project. -**external**: The project is an external project.
             /// </summary>

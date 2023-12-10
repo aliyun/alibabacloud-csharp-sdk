@@ -347,6 +347,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// Indicates whether the current project support the three-tier model
+                /// </summary>
                 [NameInMap("threeTierModel")]
                 [Validation(Required=false)]
                 public bool? ThreeTierModel { get; set; }
