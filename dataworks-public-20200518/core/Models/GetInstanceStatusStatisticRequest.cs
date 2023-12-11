@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        [NameInMap("SchedulerPeriod")]
+        [Validation(Required=false)]
+        public string SchedulerPeriod { get; set; }
+
         /// <summary>
         /// The scheduling type of the node. Valid values:
         /// 

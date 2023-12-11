@@ -11058,6 +11058,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["ProjectId"] = request.ProjectId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulerPeriod))
+            {
+                body["SchedulerPeriod"] = request.SchedulerPeriod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulerType))
             {
                 body["SchedulerType"] = request.SchedulerType;
@@ -11100,6 +11104,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulerPeriod))
+            {
+                body["SchedulerPeriod"] = request.SchedulerPeriod;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulerType))
             {
@@ -17806,6 +17814,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["NodeName"] = request.NodeName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["OrderBy"] = request.OrderBy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
             {
                 body["Owner"] = request.Owner;
@@ -17884,6 +17896,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
             {
                 body["NodeName"] = request.NodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["OrderBy"] = request.OrderBy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
             {

@@ -45,17 +45,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ExtensionName { get; set; }
 
             /// <summary>
-            /// The timestamp when extension was modified.
-            /// </summary>
-            [NameInMap("GmtCreate")]
-            [Validation(Required=false)]
-            public long? GmtCreate { get; set; }
-
-            [NameInMap("GmtModified")]
-            [Validation(Required=false)]
-            public long? GmtModified { get; set; }
-
-            /// <summary>
             /// The description of the extension.
             /// </summary>
             [NameInMap("ModifyUser")]
