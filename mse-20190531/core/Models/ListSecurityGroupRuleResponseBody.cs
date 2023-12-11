@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public List<ListSecurityGroupRuleResponseBodyData> Data { get; set; }
         public class ListSecurityGroupRuleResponseBodyData : TeaModel {
+            [NameInMap("AuthCidrs")]
+            [Validation(Required=false)]
+            public List<string> AuthCidrs { get; set; }
+
             /// <summary>
             /// The rule description.
             /// </summary>

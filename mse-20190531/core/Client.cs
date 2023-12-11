@@ -1969,6 +1969,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 request.PathListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PathList, "PathList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ToAuthorizeSecurityGroups))
+            {
+                request.ToAuthorizeSecurityGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ToAuthorizeSecurityGroups, "ToAuthorizeSecurityGroups", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -2001,6 +2005,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToAuthorizeSecurityGroupsShrink))
+            {
+                query["ToAuthorizeSecurityGroups"] = request.ToAuthorizeSecurityGroupsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -2042,6 +2050,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 request.PathListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PathList, "PathList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ToAuthorizeSecurityGroups))
+            {
+                request.ToAuthorizeSecurityGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ToAuthorizeSecurityGroups, "ToAuthorizeSecurityGroups", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -2074,6 +2086,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToAuthorizeSecurityGroupsShrink))
+            {
+                query["ToAuthorizeSecurityGroups"] = request.ToAuthorizeSecurityGroupsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -6168,6 +6184,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CascadingDelete))
+            {
+                query["CascadingDelete"] = request.CascadingDelete;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
             {
                 query["GatewayUniqueId"] = request.GatewayUniqueId;
@@ -6202,6 +6222,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CascadingDelete))
+            {
+                query["CascadingDelete"] = request.CascadingDelete;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
             {

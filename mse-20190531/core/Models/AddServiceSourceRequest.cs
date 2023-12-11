@@ -106,6 +106,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        [NameInMap("ToAuthorizeSecurityGroups")]
+        [Validation(Required=false)]
+        public List<AddServiceSourceRequestToAuthorizeSecurityGroups> ToAuthorizeSecurityGroups { get; set; }
+        public class AddServiceSourceRequestToAuthorizeSecurityGroups : TeaModel {
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("PortRange")]
+            [Validation(Required=false)]
+            public string PortRange { get; set; }
+
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+        }
+
         /// <summary>
         /// The type of the service source.
         /// 

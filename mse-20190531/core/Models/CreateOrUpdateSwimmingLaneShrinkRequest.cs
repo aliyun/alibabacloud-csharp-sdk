@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the primary key. The value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
+        /// The tag.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

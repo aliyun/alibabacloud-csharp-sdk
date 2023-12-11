@@ -33,10 +33,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The end time of the O\&M window.
+        /// </summary>
         [NameInMap("MaintenanceEndTime")]
         [Validation(Required=false)]
         public string MaintenanceEndTime { get; set; }
 
+        /// <summary>
+        /// The start time of the O\&M window.
+        /// </summary>
         [NameInMap("MaintenanceStartTime")]
         [Validation(Required=false)]
         public string MaintenanceStartTime { get; set; }

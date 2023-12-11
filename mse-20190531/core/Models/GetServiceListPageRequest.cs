@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 应用名字。
+        /// The application name.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]

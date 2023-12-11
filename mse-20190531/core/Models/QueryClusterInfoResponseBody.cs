@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryClusterInfoResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// The details of the data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DiskType { get; set; }
 
             /// <summary>
-            /// 弹性公网IP（EIP）的实例ID
+            /// The ID of the instance that is associated with the Elastic IP Address (EIP).
             /// </summary>
             [NameInMap("EipInstanceId")]
             [Validation(Required=false)]
             public string EipInstanceId { get; set; }
 
             /// <summary>
-            /// 到期时间（包年包月）
+            /// The time when the subscription instance expires.
             /// </summary>
             [NameInMap("EndDate")]
             [Validation(Required=false)]
@@ -277,14 +277,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string IntranetPort { get; set; }
 
+            /// <summary>
+            /// The O\&M time window.
+            /// </summary>
             [NameInMap("MaintenancePeriod")]
             [Validation(Required=false)]
             public QueryClusterInfoResponseBodyDataMaintenancePeriod MaintenancePeriod { get; set; }
             public class QueryClusterInfoResponseBodyDataMaintenancePeriod : TeaModel {
+                /// <summary>
+                /// The start time of the O\&M time window.
+                /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
+                /// <summary>
+                /// The end time of the O\&M time window.
+                /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
@@ -335,14 +344,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// ENI网络接入的安全组ID
+            /// The ID of the security group to which the elastic network interface (ENI) is connected.
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// ENI网络接入的安全组类型
+            /// The type of the security group to which the ENI is connected.
             /// </summary>
             [NameInMap("SecurityGroupType")]
             [Validation(Required=false)]

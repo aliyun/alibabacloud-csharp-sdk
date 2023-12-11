@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateOrUpdateSwimmingLaneGroupResponseBody : TeaModel {
         /// <summary>
-        /// The details of the data.
+        /// The response parameters.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

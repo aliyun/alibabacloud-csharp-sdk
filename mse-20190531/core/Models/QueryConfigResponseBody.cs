@@ -91,6 +91,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? ConfigSecretSupported { get; set; }
 
+            /// <summary>
+            /// Indicates whether the Nacos open source console is enabled.
+            /// </summary>
             [NameInMap("ConsoleUIEnabled")]
             [Validation(Required=false)]
             public bool? ConsoleUIEnabled { get; set; }

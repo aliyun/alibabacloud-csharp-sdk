@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        [NameInMap("ToAuthorizeSecurityGroups")]
+        [Validation(Required=false)]
+        public string ToAuthorizeSecurityGroupsShrink { get; set; }
+
         /// <summary>
         /// The type of the service source.
         /// 

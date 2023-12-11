@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The information about the header configuration policy.
+        /// The description of user header settings.
         /// </summary>
         [NameInMap("HeaderOpJSON")]
         [Validation(Required=false)]
