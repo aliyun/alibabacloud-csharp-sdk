@@ -168,11 +168,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string DBInstanceMode { get; set; }
 
                 /// <summary>
-                /// The type of the network interface card (NIC) that is used by the instance. Valid values:
-                /// 
-                /// *   **0**: Internet.
-                /// *   **1**: internal network.
-                /// *   **2**: VPC.
+                /// An invalid parameter. It is no longer returned when you call this operation.
                 /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
@@ -403,7 +399,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string RunningTime { get; set; }
 
                 /// <summary>
-                /// The IP address whitelist of the instance.
+                /// An invalid parameter. It is no longer returned when you call this operation.
                 /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
@@ -497,14 +493,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// *   **TB SSD**
                 /// *   **GB HDD**
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode or Serverless mode.
+                /// >  This parameter is returned only for instances in reserved storage mode.
                 /// </summary>
                 [NameInMap("StorageUnit")]
                 [Validation(Required=false)]
                 public string StorageUnit { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instance supports backup and restoration.
+                /// Indicates whether the instance supports backup and restoration. Valid values:
                 /// 
                 /// *   **true**
                 /// *   **false**

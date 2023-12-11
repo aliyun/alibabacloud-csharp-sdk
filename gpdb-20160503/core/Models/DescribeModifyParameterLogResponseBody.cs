@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModifyParameterLogResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the modification takes effect.
+        /// The queried parameter modification logs.
         /// </summary>
         [NameInMap("Changelogs")]
         [Validation(Required=false)]
         public List<DescribeModifyParameterLogResponseBodyChangelogs> Changelogs { get; set; }
         public class DescribeModifyParameterLogResponseBodyChangelogs : TeaModel {
             /// <summary>
-            /// The time when the configuration change takes effect.
+            /// The effective time.
             /// </summary>
             [NameInMap("EffectTime")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParameterName { get; set; }
 
             /// <summary>
-            /// Indicates whether the configuration change takes effect.
+            /// Indicates whether the modification takes effect.
             /// </summary>
             [NameInMap("ParameterValid")]
             [Validation(Required=false)]

@@ -42,9 +42,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// The number of coordinator nodes. Valid values: 1 and 2.
-        /// 
-        /// > This parameter is available only for China site (aliyun.com).
+        /// This parameter is no longer used.
         /// </summary>
         [NameInMap("MasterNodeNum")]
         [Validation(Required=false)]

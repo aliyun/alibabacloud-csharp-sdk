@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceIPArrayListResponseBody : TeaModel {
         /// <summary>
-        /// The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.
+        /// The queried IP address whitelists.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray> DBInstanceIPArray { get; set; }
             public class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray : TeaModel {
                 /// <summary>
-                /// The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.
+                /// The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute is not displayed in the console.
                 /// </summary>
                 [NameInMap("DBInstanceIPArrayAttribute")]
                 [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string DBInstanceIPArrayName { get; set; }
 
                 /// <summary>
-                /// The IP addresses listed in the whitelist. You can add up to 1,000 IP addresses to the whitelist. Separate multiple IP addresses with commas (,). The IP addresses must use one of the following formats:
+                /// The IP addresses listed in the whitelist. Up to 1,000 IP addresses are contained in a whitelist and separated by commas (,). The IP addresses must use one of the following formats:
                 /// 
                 /// *   0.0.0.0/0
                 /// *   10.23.12.24. This is a standard IP address.

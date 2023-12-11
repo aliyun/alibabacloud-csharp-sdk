@@ -190,9 +190,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MasterCU { get; set; }
 
         /// <summary>
-        /// The number of coordinator nodes. Valid values: 1 and 2.
-        /// 
-        /// > If you do not specify this parameter, 1 is used.
+        /// This parameter is no longer used.
         /// </summary>
         [NameInMap("MasterNodeNum")]
         [Validation(Required=false)]

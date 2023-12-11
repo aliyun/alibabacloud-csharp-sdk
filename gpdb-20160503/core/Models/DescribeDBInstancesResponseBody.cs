@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The type of the Serverless mode. Valid values:
-        /// 
-        /// *   **Manual**: manual scheduling.
-        /// *   **Auto**: automatic scheduling.
-        /// 
-        /// > This parameter is returned only for instances in Serverless mode.
+        /// The queried instances.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -44,9 +39,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The edition of the instance. Valid values:
                 /// 
-                /// *   **Basic**: Basic Edition
-                /// *   **HighAvailability**: High-availability Edition
-                /// *   **Finance**: Enterprise Edition
+                /// *   **Basic**: Basic Edition.
+                /// *   **HighAvailability**: High-availability Edition.
+                /// *   **Finance**: Enterprise Edition.
                 /// </summary>
                 [NameInMap("DBInstanceCategory")]
                 [Validation(Required=false)]
@@ -60,7 +55,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
@@ -69,9 +64,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The resource type of the instance. Valid values:
                 /// 
-                /// *   **Serverless**: Serverless mode
-                /// *   **StorageElastic**: elastic storage mode
-                /// *   **Classic**: reserved storage mode
+                /// *   **Serverless**: Serverless mode.
+                /// *   **StorageElastic**: elastic storage mode.
+                /// *   **Classic**: reserved storage mode.
                 /// </summary>
                 [NameInMap("DBInstanceMode")]
                 [Validation(Required=false)]
@@ -80,9 +75,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The type of the network interface card (NIC) that is used by the instance. Valid values:
                 /// 
-                /// *   **0**: Internet
-                /// *   **1**: internal network
-                /// *   **2**: VPC
+                /// *   **0**: Internet.
+                /// *   **1**: internal network.
+                /// *   **2**: VPC.
                 /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
@@ -96,7 +91,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string DBInstanceStatus { get; set; }
 
                 /// <summary>
-                /// The database engine that the instance runs.
+                /// The database engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
@@ -112,7 +107,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The expiration time of the instance. The time is displayed in UTC.
                 /// 
-                /// >  For pay-as-you-go instances, `2999-09-08T16:00:00Z` is returned.
+                /// > The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -121,8 +116,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The resource type of the instance. Valid values:
                 /// 
-                /// *   **cluster**: elastic storage mode or Serverless mode
-                /// *   **replicaSet**: reserved storage mode
+                /// *   **cluster**: Serverless mode or elastic storage mode.
+                /// *   **replicaSet**: reserved storage mode.
                 /// </summary>
                 [NameInMap("InstanceDeployType")]
                 [Validation(Required=false)]
@@ -131,8 +126,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **Classic**
-                /// *   **VPC**
+                /// *   **Classic**: classic network.
+                /// *   **VPC**: VPC.
                 /// </summary>
                 [NameInMap("InstanceNetworkType")]
                 [Validation(Required=false)]
@@ -153,9 +148,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string LockMode { get; set; }
 
                 /// <summary>
-                /// The reason why the cluster is locked.
+                /// The reason why the instance is locked. Valid values:
                 /// 
-                /// >  This parameter is returned only when the cluster is locked. The value is **instance_expire**.
+                /// *   **0**: The instance is not locked.
+                /// *   **1**: The instance is manually locked.
+                /// *   **2**: The instance is automatically locked due to instance expiration.
+                /// *   **3**: The instance is automatically locked due to instance restoration.
+                /// *   **4**: The instance is automatically locked due to exhausted storage.
+                /// 
+                /// > If the instance is in reserved storage mode and unlocked, null is returned.
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
@@ -171,15 +172,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The billing method of the instance. Valid values:
                 /// 
-                /// *   **Postpaid**: pay-as-you-go
-                /// *   **Prepaid**: subscription
+                /// *   **Postpaid**: pay-as-you-go.
+                /// *   **Prepaid**: subscription.
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -202,17 +203,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The type of the Serverless mode. Valid values:
                 /// 
-                /// *   **Manual**: manual scheduling
-                /// *   **Auto**: automatic scheduling
+                /// *   **Manual**: manual scheduling.
+                /// *   **Auto**: automatic scheduling.
                 /// 
-                /// >  This parameter is returned only for instances in Serverless mode.
+                /// > This parameter is returned only for instances in Serverless mode.
                 /// </summary>
                 [NameInMap("ServerlessMode")]
                 [Validation(Required=false)]
                 public string ServerlessMode { get; set; }
 
                 /// <summary>
-                /// The storage capacity. Unit: GB.
+                /// The storage capacity of the instance. Unit: GB.
                 /// </summary>
                 [NameInMap("StorageSize")]
                 [Validation(Required=false)]
@@ -221,15 +222,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The storage type of the instance. Valid values:
                 /// 
-                /// *   **cloud_essd**: enhanced SSD (ESSD)
-                /// *   **cloud_efficiency**: ultra disk
+                /// *   **cloud_essd**: enhanced SSD (ESSD).
+                /// *   **cloud_efficiency**: ultra disk.
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// The tags of the instance. Each tag is a key-value pair.
+                /// The tags that are added to the instance.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -240,14 +241,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public List<DescribeDBInstancesResponseBodyItemsDBInstanceTagsTag> Tag { get; set; }
                     public class DescribeDBInstancesResponseBodyItemsDBInstanceTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The key of tag N.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The value of tag N.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -258,21 +259,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of virtual private cloud (VPC).
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The zone ID of the instance.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

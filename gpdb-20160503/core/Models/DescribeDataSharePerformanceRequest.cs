@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID of the instance.
         /// 
         /// >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
         /// </summary>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+        /// This parameter is no longer used.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

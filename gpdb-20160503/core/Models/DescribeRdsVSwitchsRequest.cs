@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs.
+        /// This parameter is no longer used.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -46,10 +46,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of virtual private cloud (VPC).
+        /// The virtual private cloud (VPC) ID of the instance.
         /// 
-        /// > *   You can call the [DescribeRdsVpcs](~~208327~~) operation to query the available VPCs.
-        /// > *   This parameter is required.
+        /// > 
+        /// 
+        /// *   You can call the [DescribeRdsVpcs](~~208327~~) operation to query the available VPC IDs.
+        /// 
+        /// *   This parameter must be specified.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceIPArrayListRequest : TeaModel {
+        /// <summary>
+        /// The name of the IP address whitelist. If you do not specify this parameter, the default whitelist is queried.
+        /// 
+        /// >  Each instance supports up to 50 IP address whitelists.
+        /// </summary>
         [NameInMap("DBInstanceIPArrayName")]
         [Validation(Required=false)]
         public string DBInstanceIPArrayName { get; set; }

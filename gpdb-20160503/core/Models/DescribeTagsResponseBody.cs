@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the tags.
+        /// The queried tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeTagsResponseBodyTags> Tags { get; set; }
         public class DescribeTagsResponseBodyTags : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// The tag key.
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The tag value.
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

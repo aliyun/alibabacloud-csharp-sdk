@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Nodes { get; set; }
 
+        [NameInMap("ResourceGroupName")]
+        [Validation(Required=false)]
+        public string ResourceGroupName { get; set; }
+
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format.
         /// 

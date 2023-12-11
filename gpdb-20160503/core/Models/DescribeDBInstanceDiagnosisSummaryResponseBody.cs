@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string NodeAddress { get; set; }
 
             /// <summary>
-            /// The ID of the node group.
+            /// The node group ID.
             /// </summary>
             [NameInMap("NodeCID")]
             [Validation(Required=false)]
             public string NodeCID { get; set; }
 
             /// <summary>
-            /// The ID of the node.
+            /// The node ID.
             /// </summary>
             [NameInMap("NodeID")]
             [Validation(Required=false)]
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// The initial role of the node. Valid values:
             /// 
-            /// *   **primary**: primary node
-            /// *   **mirror**: secondary node
+            /// *   **primary**: primary node.
+            /// *   **mirror**: secondary node.
             /// 
-            /// If the value of this parameter is the same as that of **NodeRole**, no primary/secondary switchover occurs. If the value of this parameter is not the same as that of **NodeRole**, a primary/secondary switchover occurs.
+            /// If the value of this parameter is the same as that of **NodeRole**, no primary/secondary switchover occurs. If the value of this parameter is different from that of **NodeRole**, a primary/secondary switchover occurs.
             /// </summary>
             [NameInMap("NodePreferredRole")]
             [Validation(Required=false)]
@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// The current role of the node. Valid values:
             /// 
-            /// *   **primary**: primary node
-            /// *   **mirror**: secondary node
+            /// *   **primary**: primary node.
+            /// *   **mirror**: secondary node.
             /// </summary>
             [NameInMap("NodeRole")]
             [Validation(Required=false)]
@@ -104,9 +104,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// The type of the node. Valid values:
             /// 
-            /// *   **master**: primary coordinator node
-            /// *   **slave**: standby coordinator node
-            /// *   **segment**: compute node
+            /// *   **master**: primary coordinator node.
+            /// *   **slave**: standby coordinator node.
+            /// *   **segment**: compute node.
             /// </summary>
             [NameInMap("NodeType")]
             [Validation(Required=false)]

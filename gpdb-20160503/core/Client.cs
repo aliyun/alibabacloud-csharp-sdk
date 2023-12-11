@@ -3262,6 +3262,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Nodes"] = request.Nodes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -3315,6 +3319,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodes))
             {
                 query["Nodes"] = request.Nodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -4791,6 +4799,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Tag"] = request.Tag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4893,6 +4905,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
