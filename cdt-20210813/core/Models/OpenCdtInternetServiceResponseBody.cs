@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CDT20210813.Models
 {
-    public class OpenCdtServiceResponseBody : TeaModel {
+    public class OpenCdtInternetServiceResponseBody : TeaModel {
         [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public long? OrderId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

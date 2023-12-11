@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CDT20210813.Models
 {
-    public class OpenCdtServiceResponseBody : TeaModel {
-        [NameInMap("OrderId")]
+    public class SwitchToCdtResponseBody : TeaModel {
+        [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public long? EffectiveTime { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

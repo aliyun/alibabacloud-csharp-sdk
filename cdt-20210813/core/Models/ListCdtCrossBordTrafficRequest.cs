@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CDT20210813.Models
 {
-    public class GetCdtCbServiceStatusRequest : TeaModel {
-        [NameInMap("OwnerId")]
+    public class ListCdtCrossBordTrafficRequest : TeaModel {
+        [NameInMap("BusinessRegionId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string BusinessRegionId { get; set; }
 
     }
 

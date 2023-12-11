@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CDT20210813.Models
 {
-    public class OpenCdtServiceResponseBody : TeaModel {
-        [NameInMap("OrderId")]
+    public class ListCdtProductsRequest : TeaModel {
+        [NameInMap("BusinessRegionId")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string BusinessRegionId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Product")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Product { get; set; }
 
     }
 

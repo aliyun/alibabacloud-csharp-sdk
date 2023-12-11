@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CDT20210813.Models
 {
-    public class OpenCdtServiceResponse : TeaModel {
+    public class DescribeRegionsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CDT20210813.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public OpenCdtServiceResponseBody Body { get; set; }
+        public DescribeRegionsResponseBody Body { get; set; }
 
     }
 

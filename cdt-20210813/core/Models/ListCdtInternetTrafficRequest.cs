@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CDT20210813.Models
 {
-    public class GetCdtServiceStatusRequest : TeaModel {
-        [NameInMap("OwnerId")]
+    public class ListCdtInternetTrafficRequest : TeaModel {
+        [NameInMap("BusinessRegionId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string BusinessRegionId { get; set; }
 
     }
 

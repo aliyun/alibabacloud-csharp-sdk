@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,10 +11,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CDT20210813.Models
 {
-    public class OpenCdtServiceRequest : TeaModel {
-        [NameInMap("OwnerId")]
+    public class DescribeRegionsRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AcceptLanguage { get; set; }
 
     }
 
