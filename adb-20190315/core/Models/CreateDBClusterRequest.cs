@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBNodeStorage { get; set; }
 
+        [NameInMap("DiskEncryption")]
+        [Validation(Required=false)]
+        public string DiskEncryption { get; set; }
+
         /// <summary>
         /// The number of elastic I/O units (EIUs). For more information, see [Use EIUs to scale up storage resources](~~189505~~).
         /// </summary>
@@ -118,6 +122,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("ExecutorCount")]
         [Validation(Required=false)]
         public string ExecutorCount { get; set; }
+
+        [NameInMap("KmsId")]
+        [Validation(Required=false)]
+        public string KmsId { get; set; }
 
         /// <summary>
         /// The mode of the cluster. Valid values:

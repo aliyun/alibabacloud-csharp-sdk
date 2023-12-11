@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// The region ID.
         /// 
-        /// > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

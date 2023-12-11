@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClusterPerformanceRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// The ID of the AnalyticDB for MySQL cluster.
         /// 
-        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region, including cluster IDs.
+        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -38,37 +38,37 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// 
         ///     *   **AnalyticDB_Connections**: the number of database connections.
         /// 
-        /// *   Write
+        /// *   Writes
         /// 
         ///     *   **AnalyticDB_TPS**: the write transactions per second (TPS).
         ///     *   **AnalyticDB_InsertRT**: the write response time.
-        ///     *   **AnalyticDB_InsertBytes**: the write throughout.
+        ///     *   **AnalyticDB_InsertBytes**: the write throughput.
         /// 
-        /// *   Update
+        /// *   Updates
         /// 
         ///     *   **AnalyticDB_UpdateRT**: the update response time.
         /// 
-        /// *   Delete
+        /// *   Deletion
         /// 
         ///     *   **AnalyticDB_DeleteRT**: the delete response time.
         /// 
-        /// *   Query
+        /// *   Queries
         /// 
         ///     *   **AnalyticDB_QPS**: the queries per second (QPS).
         ///     *   **AnalyticDB_QueryRT**: the query response time.
         ///     *   **AnalyticDB_QueryWaitTime**: the query wait time.
         /// 
-        /// *   Disk
+        /// *   Disks
         /// 
         ///     *   **AnalyticDB_IO**: the disk I/O throughput.
         ///     *   **AnalyticDB_IO_UTIL**: the I/O utilization.
         ///     *   **AnalyticDB_IO_WAIT**: the I/O wait time.
         ///     *   **AnalyticDB_IOPS**: the disk input/output operations per second (IOPS).
-        ///     *   **AnalyticDB_DiskUsage**: the disk usage.
-        ///     *   **AnalyticDB_HotDataDiskUsage**: the disk usage of hot data.
-        ///     *   **AnalyticDB_ColdDataDiskUsage**: the disk usage of cold data.
+        ///     *   **AnalyticDB_DiskUsage**: the disk space that is used.
+        ///     *   **AnalyticDB_HotDataDiskUsage**: the disk space that is used by hot data.
+        ///     *   **AnalyticDB_ColdDataDiskUsage**: the disk space that is used by cold data.
         /// 
-        /// > If you leave this parameter empty, the values of all the preceding performance metrics are returned.
+        /// >  If you leave this parameter empty, the values of all the preceding performance metrics are returned.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
@@ -82,6 +82,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the cluster.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -94,6 +97,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The name of the resource group.
+        /// </summary>
         [NameInMap("ResourcePools")]
         [Validation(Required=false)]
         public string ResourcePools { get; set; }

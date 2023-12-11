@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAccountsRequest : TeaModel {
         /// <summary>
-        /// The account of the database.
+        /// The name of the database account.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// *   Normal: standard account
-        /// *   Super: privileged account
+        /// *   Normal: standard account.
+        /// *   Super: privileged account.
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

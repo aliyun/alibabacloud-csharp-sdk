@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTablesRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -24,6 +24,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the cluster.
+        /// 
+        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

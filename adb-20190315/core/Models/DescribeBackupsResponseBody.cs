@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// </summary>
                 [NameInMap("BackupSize")]
                 [Validation(Required=false)]
-                public int? BackupSize { get; set; }
+                public long? BackupSize { get; set; }
 
                 /// <summary>
                 /// The start time of the backup.

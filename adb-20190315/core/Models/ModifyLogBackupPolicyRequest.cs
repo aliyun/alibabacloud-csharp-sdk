@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyLogBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The resource group ID.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

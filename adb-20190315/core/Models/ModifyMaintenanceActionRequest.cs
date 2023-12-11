@@ -11,12 +11,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
     public class ModifyMaintenanceActionRequest : TeaModel {
         /// <summary>
         /// The ID of the pending O\&M event. You can specify multiple IDs to batch change the switchover time. Separate multiple IDs with commas (,).
-        /// 
-        /// > 
-        /// 
-        /// *   You can call the [DescribeMaintenanceAction](~~271738~~) operation to query the information about pending O\&M events, including the event ID.
-        /// 
-        /// *   You can change the switchover time only for pending O\&M events. The switchover time of historical O\&M events cannot be changed. For more information about the status of pending and historical O\&M events, see [DescribeMaintenanceAction](~~271738~~).
+        /// > - You can call the [DescribeMaintenanceAction](~~271738~~) operation to query the information about pending O\&M events, including the event ID.
+        /// > - You can change the switchover time only for pending O\&M events. The switchover time of historical O\&M events cannot be changed. For more information about the status of pending and historical O\&M events, see [DescribeMaintenanceAction](~~271738~~).
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -33,14 +29,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// The ID of the region where the pending O\&M event occurs.
         /// 
-        /// > 
-        /// 
-        /// *   You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// > - You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The resource group ID.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

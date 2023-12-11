@@ -45,12 +45,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> Series { get; set; }
             public class DescribeDBClusterPerformanceResponseBodyPerformancesSeries : TeaModel {
                 /// <summary>
-                /// The name of the performance metric.
+                /// The name of the performance metric value.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The tags that are added to the cluster.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             }
 
             /// <summary>
-            /// The unit of the performance metric.
+            /// The unit of the performance metrics.
             /// </summary>
             [NameInMap("Unit")]
             [Validation(Required=false)]

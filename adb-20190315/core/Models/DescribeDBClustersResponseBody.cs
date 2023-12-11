@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// *   **CLUSTER**: reserved mode for Cluster Edition.
                 /// *   **MIXED_STORAGE**: elastic mode for Cluster Edition.
                 /// 
-                /// > For more information about cluster editions, see [Editions](~~205001~~).
+                /// >  For more information about cluster editions, see [Editions](~~205001~~).
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
@@ -134,11 +134,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// *   **cloud**: basic disk.
                 /// *   **cloud_ssd**: standard SSD.
                 /// *   **cloud_efficiency**: ultra disk.
-                /// *   **cloud_essd**: PL1 enhanced SSD (ESSD).
+                /// *   **cloud_essd**: PL0 enhanced SSD (ESSD).
+                /// *   **cloud_essd**: PL1 ESSD.
                 /// *   **cloud_essd2**: PL2 ESSD.
                 /// *   **cloud_essd3**: PL3 ESSD.
                 /// 
-                /// > For more information, see [ESSDs](~~122389~~).
+                /// >  For more information, see [ESSDs](~~122389~~).
                 /// </summary>
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
@@ -154,7 +155,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <summary>
                 /// The number of elastic I/O units (EIUs). For more information, see [Use EIUs to scale up storage resources](~~189505~~).
                 /// 
-                /// > This parameter is returned only for clusters in elastic mode.
+                /// >  This parameter is returned only for clusters in elastic mode.
                 /// </summary>
                 [NameInMap("ElasticIOResource")]
                 [Validation(Required=false)]
@@ -227,7 +228,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <summary>
                 /// The reason why the cluster is locked.
                 /// 
-                /// > This parameter is returned only when the cluster was locked. **instance_expire** is returned.
+                /// >  This parameter is returned only when the cluster was locked. **instance_expire** is returned.
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
@@ -279,7 +280,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -306,7 +307,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                         /// <summary>
                         /// The tag key.
                         /// 
-                        /// > You can call the [TagResources](~~179253~~) operation to add tags to a cluster.
+                        /// >  You can call the [TagResources](~~179253~~) operation to add tags to a cluster.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTablesResponseBody : TeaModel {
         /// <summary>
-        /// The list of tables.
+        /// The queried tables.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeTablesResponseBodyItemsTable> Table { get; set; }
             public class DescribeTablesResponseBodyItemsTable : TeaModel {
                 /// <summary>
-                /// The ID of the cluster.
+                /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
                 /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

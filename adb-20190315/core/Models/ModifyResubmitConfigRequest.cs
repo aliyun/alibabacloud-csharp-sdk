@@ -8,22 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
-    public class DescribeEIURangeRequest : TeaModel {
-        [NameInMap("ComputeResource")]
-        [Validation(Required=false)]
-        public string ComputeResource { get; set; }
-
+    public class ModifyResubmitConfigRequest : TeaModel {
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
-
-        [NameInMap("DBClusterVersion")]
-        [Validation(Required=false)]
-        public string DBClusterVersion { get; set; }
-
-        [NameInMap("Operation")]
-        [Validation(Required=false)]
-        public string Operation { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -33,13 +21,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        /// <summary>
-        /// The resource group ID.
-        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -52,9 +33,31 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("ZoneId")]
+        [NameInMap("Rules")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public List<ModifyResubmitConfigRequestRules> Rules { get; set; }
+        public class ModifyResubmitConfigRequestRules : TeaModel {
+            [NameInMap("ExceedMemoryException")]
+            [Validation(Required=false)]
+            public bool? ExceedMemoryException { get; set; }
+
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
+
+            [NameInMap("PeakMemory")]
+            [Validation(Required=false)]
+            public string PeakMemory { get; set; }
+
+            [NameInMap("QueryTime")]
+            [Validation(Required=false)]
+            public string QueryTime { get; set; }
+
+            [NameInMap("TargetGroupName")]
+            [Validation(Required=false)]
+            public string TargetGroupName { get; set; }
+
+        }
 
     }
 

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeComputeResourceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
@@ -20,6 +23,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBClusterVersion { get; set; }
 
+        /// <summary>
+        /// The available computing resources for migrating AnalyticDB MySQL Data Warehouse Edition to AnalyticDB MySQL Lakehouse Edition. Possible values are:
+        /// - **true**
+        /// - **false**(default value)
+        /// </summary>
         [NameInMap("Migrate")]
         [Validation(Required=false)]
         public bool? Migrate { get; set; }

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// *   **CLUSTER**: reserved mode for Cluster Edition.
                 /// *   **MIXED_STORAGE**: elastic mode for Cluster Edition.
                 /// 
-                /// > For more information about cluster editions, see [Editions](~~205001~~).
+                /// >  For more information about cluster editions, see [Editions](~~205001~~).
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The specifications of computing resources that are used by the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.
+                /// The specifications of computing resources that are used in the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.
                 /// </summary>
                 [NameInMap("ComputeResource")]
                 [Validation(Required=false)]
@@ -130,6 +130,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public string DBVersion { get; set; }
 
+                [NameInMap("DiskEncryption")]
+                [Validation(Required=false)]
+                public string DiskEncryption { get; set; }
+
                 /// <summary>
                 /// The ESSD performance level.
                 /// </summary>
@@ -144,11 +148,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// *   **cloud**: basic disk.
                 /// *   **cloud_ssd**: standard SSD.
                 /// *   **cloud_efficiency**: ultra disk.
-                /// *   **cloud_essd**: PL1 enhanced SSD (ESSD).
+                /// *   **cloud_essd0**: PL0 enhanced SSD (ESSD).
+                /// *   **cloud_essd**: PL1 ESSD.
                 /// *   **cloud_essd2**: PL2 ESSD.
                 /// *   **cloud_essd3**: PL3 ESSD.
                 /// 
-                /// > For more information about ESSDs, see [ESSD specifications](~~122389~~).
+                /// >  For more information about ESSDs, see [ESSDs](~~122389~~).
                 /// </summary>
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
@@ -259,7 +264,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <summary>
                 /// The ID of the key that is used to encrypt disk data.
                 /// 
-                /// > This parameter is returned only when disk encryption is enabled.
+                /// >  This parameter is returned only when disk encryption is enabled.
                 /// </summary>
                 [NameInMap("KmsId")]
                 [Validation(Required=false)]
@@ -281,16 +286,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <summary>
                 /// The reason why the cluster is locked.
                 /// 
-                /// > This parameter is returned only when the cluster was locked. The value is **instance_expire**.
+                /// >  This parameter is returned only when the cluster was locked. **instance_expire** is returned.
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// The maintenance window of the cluster. The window is in the *HH:mmZ-HH:mmZ* format. The time is displayed in UTC. Example: *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.
+                /// The maintenance window of the cluster. The window follows the ISO 8601 standard in the *HH:mmZ- HH:mmZ* format. The time is displayed in UTC. An example is *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.
                 /// 
-                /// > For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).
+                /// >  For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).
                 /// </summary>
                 [NameInMap("MaintainTime")]
                 [Validation(Required=false)]
@@ -302,7 +307,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// *   **flexible**: elastic mode.
                 /// *   **reserver**: reserved mode.
                 /// 
-                /// > For more information about cluster modes, see [Editions](~~205001~~).
+                /// >  For more information about cluster modes, see [Editions](~~205001~~).
                 /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
@@ -340,14 +345,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The specifications of storage resources that are used by the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.
+                /// The specifications of storage resources that are used in the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.
                 /// </summary>
                 [NameInMap("StorageResource")]
                 [Validation(Required=false)]
@@ -365,16 +370,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                     public List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag> Tag { get; set; }
                     public class DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag key.
                         /// 
-                        /// > You can call the [TagResources](~~179253~~) operation to add a tag to the cluster.
+                        /// >  You can call the [TagResources](~~179253~~) operation to add a tag to the cluster.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
