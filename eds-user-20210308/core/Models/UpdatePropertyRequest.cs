@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UpdatePropertyRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **UpdateProperty**.
+        /// The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.
         /// </summary>
         [NameInMap("PropertyId")]
         [Validation(Required=false)]
         public long? PropertyId { get; set; }
 
         /// <summary>
-        /// The property values that failed to be modified.
+        /// The new property name.
         /// </summary>
         [NameInMap("PropertyKey")]
         [Validation(Required=false)]
         public string PropertyKey { get; set; }
 
         /// <summary>
-        /// The new property value N.
+        /// The values of property.
         /// </summary>
         [NameInMap("PropertyValues")]
         [Validation(Required=false)]
         public List<UpdatePropertyRequestPropertyValues> PropertyValues { get; set; }
         public class UpdatePropertyRequestPropertyValues : TeaModel {
             /// <summary>
-            /// The error code.
+            /// The new property value.
             /// </summary>
             [NameInMap("PropertyValue")]
             [Validation(Required=false)]
             public string PropertyValue { get; set; }
 
             /// <summary>
-            /// The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.
+            /// The ID of property value that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property value ID.
             /// </summary>
             [NameInMap("PropertyValueId")]
             [Validation(Required=false)]

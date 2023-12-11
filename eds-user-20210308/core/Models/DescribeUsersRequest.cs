@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeUsersRequest : TeaModel {
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public string BizType { get; set; }
+
         /// <summary>
         /// The list of usernames that must be exactly matched.
         /// </summary>
@@ -58,6 +62,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [NameInMap("OrgId")]
         [Validation(Required=false)]
         public string OrgId { get; set; }
+
+        [NameInMap("SolutionId")]
+        [Validation(Required=false)]
+        public string SolutionId { get; set; }
 
     }
 
