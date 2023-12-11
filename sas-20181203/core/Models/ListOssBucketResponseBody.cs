@@ -59,6 +59,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public bool? Support { get; set; }
 
+            /// <summary>
+            /// Whether to support config. Valid values:
+            /// 
+            /// * true
+            /// * false
+            /// </summary>
             [NameInMap("SupportConfig")]
             [Validation(Required=false)]
             public string SupportConfig { get; set; }

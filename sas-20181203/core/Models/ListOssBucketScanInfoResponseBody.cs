@@ -23,6 +23,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string BucketName { get; set; }
 
+            /// <summary>
+            /// Configuration status, valid values:
+            /// 
+            /// - **0**: No Configuration.
+            /// - **1**: Not Open.
+            /// - **2**: Open.
+            /// </summary>
             [NameInMap("ConfigStatus")]
             [Validation(Required=false)]
             public int? ConfigStatus { get; set; }

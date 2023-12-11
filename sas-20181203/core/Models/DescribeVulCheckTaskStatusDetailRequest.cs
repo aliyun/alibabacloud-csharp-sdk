@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulCheckTaskStatusDetailRequest : TeaModel {
         /// <summary>
-        /// The IDs of tasks.
+        /// The task IDs.
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

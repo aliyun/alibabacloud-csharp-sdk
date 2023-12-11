@@ -16,14 +16,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public GetOssScanConfigResponseBodyData Data { get; set; }
         public class GetOssScanConfigResponseBodyData : TeaModel {
+            /// <summary>
+            /// Whether to match all file prefixes.
+            /// </summary>
             [NameInMap("AllKeyPrefix")]
             [Validation(Required=false)]
             public bool? AllKeyPrefix { get; set; }
 
+            /// <summary>
+            /// The number of the buckets.
+            /// </summary>
             [NameInMap("BucketCount")]
             [Validation(Required=false)]
             public int? BucketCount { get; set; }
 
+            /// <summary>
+            /// The name of the bucket.
+            /// </summary>
             [NameInMap("BucketName")]
             [Validation(Required=false)]
             public string BucketName { get; set; }
@@ -52,10 +61,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            /// <summary>
+            /// The ID of the policy.
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// The prefixes of the object that you want to check.
+            /// </summary>
             [NameInMap("KeyPrefixList")]
             [Validation(Required=false)]
             public List<string> KeyPrefixList { get; set; }
@@ -67,10 +82,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<string> KeySuffixList { get; set; }
 
+            /// <summary>
+            /// The time when the policy last update.
+            /// </summary>
             [NameInMap("LastUpdateTime")]
             [Validation(Required=false)]
             public long? LastUpdateTime { get; set; }
 
+            /// <summary>
+            /// The name of the policy.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

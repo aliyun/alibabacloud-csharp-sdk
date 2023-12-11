@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateOssBucketScanTaskRequest : TeaModel {
+        /// <summary>
+        /// Whether to match all prefixes.
+        /// </summary>
         [NameInMap("AllKeyPrefix")]
         [Validation(Required=false)]
         public bool? AllKeyPrefix { get; set; }
@@ -27,6 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> ExcludeKeySuffixList { get; set; }
 
+        /// <summary>
+        /// The prefixes of the objects that you want to check.
+        /// </summary>
         [NameInMap("KeyPrefixList")]
         [Validation(Required=false)]
         public List<string> KeyPrefixList { get; set; }

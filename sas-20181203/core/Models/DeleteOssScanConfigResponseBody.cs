@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class CheckSecurityEventIdResponseBody : TeaModel {
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public bool? Data { get; set; }
-
+    public class DeleteOssScanConfigResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

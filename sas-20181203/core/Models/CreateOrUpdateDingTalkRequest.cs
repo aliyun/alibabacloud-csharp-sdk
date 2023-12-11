@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the chatbot.
         /// 
-        /// > You can call the [DescribeDingTalk](~~DescribeDingTalk~~) operation to query the IDs of chatbots.
+        /// > You can call the [DescribeDingTalk](https://www.alibabacloud.com/help/en/security-center/developer-reference/api-sas-2018-12-03-describedingtalk/?spm=a2c63.p38356.0.0.681e4360Qd1eb1) operation to query the IDs of chatbots.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
