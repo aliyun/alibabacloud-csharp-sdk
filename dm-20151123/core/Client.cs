@@ -877,6 +877,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagDescription))
+            {
+                query["TagDescription"] = request.TagDescription;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagName))
             {
                 query["TagName"] = request.TagName;
@@ -915,6 +919,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagDescription))
+            {
+                query["TagDescription"] = request.TagDescription;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagName))
             {
@@ -2461,6 +2469,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagDescription))
+            {
+                query["TagDescription"] = request.TagDescription;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagId))
             {
                 query["TagId"] = request.TagId;
@@ -2503,6 +2515,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagDescription))
+            {
+                query["TagDescription"] = request.TagDescription;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagId))
             {
