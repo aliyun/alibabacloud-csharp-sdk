@@ -143,6 +143,148 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return await CreateTaskWithOptionsAsync(request, headers, runtime);
         }
 
+        public CreateTranscriptionPhrasesResponse CreateTranscriptionPhrasesWithOptions(CreateTranscriptionPhrasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordWeights))
+            {
+                body["WordWeights"] = request.WordWeights;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateTranscriptionPhrasesResponse> CreateTranscriptionPhrasesWithOptionsAsync(CreateTranscriptionPhrasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordWeights))
+            {
+                body["WordWeights"] = request.WordWeights;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateTranscriptionPhrasesResponse CreateTranscriptionPhrases(CreateTranscriptionPhrasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTranscriptionPhrasesWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateTranscriptionPhrasesResponse> CreateTranscriptionPhrasesAsync(CreateTranscriptionPhrasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTranscriptionPhrasesWithOptionsAsync(request, headers, runtime);
+        }
+
+        public DeleteTranscriptionPhrasesResponse DeleteTranscriptionPhrasesWithOptions(string PhraseId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PhraseId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteTranscriptionPhrasesResponse> DeleteTranscriptionPhrasesWithOptionsAsync(string PhraseId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PhraseId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteTranscriptionPhrasesResponse DeleteTranscriptionPhrases(string PhraseId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteTranscriptionPhrasesWithOptions(PhraseId, headers, runtime);
+        }
+
+        public async Task<DeleteTranscriptionPhrasesResponse> DeleteTranscriptionPhrasesAsync(string PhraseId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteTranscriptionPhrasesWithOptionsAsync(PhraseId, headers, runtime);
+        }
+
         public GetTaskInfoResponse GetTaskInfoWithOptions(string TaskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -197,6 +339,204 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetTaskInfoWithOptionsAsync(TaskId, headers, runtime);
+        }
+
+        public GetTranscriptionPhrasesResponse GetTranscriptionPhrasesWithOptions(string PhraseId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PhraseId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetTranscriptionPhrasesResponse> GetTranscriptionPhrasesWithOptionsAsync(string PhraseId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PhraseId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetTranscriptionPhrasesResponse GetTranscriptionPhrases(string PhraseId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetTranscriptionPhrasesWithOptions(PhraseId, headers, runtime);
+        }
+
+        public async Task<GetTranscriptionPhrasesResponse> GetTranscriptionPhrasesAsync(string PhraseId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetTranscriptionPhrasesWithOptionsAsync(PhraseId, headers, runtime);
+        }
+
+        public ListTranscriptionPhrasesResponse ListTranscriptionPhrasesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListTranscriptionPhrasesResponse> ListTranscriptionPhrasesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListTranscriptionPhrasesResponse ListTranscriptionPhrases()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListTranscriptionPhrasesWithOptions(headers, runtime);
+        }
+
+        public async Task<ListTranscriptionPhrasesResponse> ListTranscriptionPhrasesAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListTranscriptionPhrasesWithOptionsAsync(headers, runtime);
+        }
+
+        public UpdateTranscriptionPhrasesResponse UpdateTranscriptionPhrasesWithOptions(string PhraseId, UpdateTranscriptionPhrasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordWeights))
+            {
+                body["WordWeights"] = request.WordWeights;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PhraseId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateTranscriptionPhrasesResponse> UpdateTranscriptionPhrasesWithOptionsAsync(string PhraseId, UpdateTranscriptionPhrasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordWeights))
+            {
+                body["WordWeights"] = request.WordWeights;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTranscriptionPhrases",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/tingwu/v2/resources/phrases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PhraseId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateTranscriptionPhrasesResponse UpdateTranscriptionPhrases(string PhraseId, UpdateTranscriptionPhrasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateTranscriptionPhrasesWithOptions(PhraseId, request, headers, runtime);
+        }
+
+        public async Task<UpdateTranscriptionPhrasesResponse> UpdateTranscriptionPhrasesAsync(string PhraseId, UpdateTranscriptionPhrasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateTranscriptionPhrasesWithOptionsAsync(PhraseId, request, headers, runtime);
         }
 
     }

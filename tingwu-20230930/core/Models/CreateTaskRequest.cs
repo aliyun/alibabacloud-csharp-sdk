@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public int? OutputLevel { get; set; }
 
+                [NameInMap("PhraseId")]
+                [Validation(Required=false)]
+                public string PhraseId { get; set; }
+
             }
 
             [NameInMap("Translation")]
