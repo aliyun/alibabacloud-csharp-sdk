@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("TagDescription")]
+        [Validation(Required=false)]
+        public string TagDescription { get; set; }
+
         [NameInMap("TagId")]
         [Validation(Required=false)]
         public int? TagId { get; set; }
