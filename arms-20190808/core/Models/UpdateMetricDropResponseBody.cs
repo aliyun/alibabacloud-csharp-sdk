@@ -8,34 +8,29 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class ListPrometheusInstancesResponseBody : TeaModel {
-        /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful.
-        /// </summary>
+    public class UpdateMetricDropResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public long? Code { get; set; }
 
-        /// <summary>
-        /// The Prometheus instances in the region in the JSON format.
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
-        /// <summary>
-        /// The returned message.
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the ID to query logs and troubleshoot issues.
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

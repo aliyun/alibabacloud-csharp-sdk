@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UninstallPromClusterRequest : TeaModel {
         /// <summary>
-        /// 语言环境, 默认为中文 zh | en
+        /// Language environment(If left blank, defaults to zh):
+        /// - zh
+        /// - en
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]

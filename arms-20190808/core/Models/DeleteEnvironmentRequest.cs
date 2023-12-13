@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteEnvironmentRequest : TeaModel {
+        /// <summary>
+        /// cascade delete Prometheus instance.
+        /// </summary>
         [NameInMap("DeletePromInstance")]
         [Validation(Required=false)]
         public bool? DeletePromInstance { get; set; }
 
         /// <summary>
-        /// Environment instance ID.
+        /// The ID of the environment instance.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

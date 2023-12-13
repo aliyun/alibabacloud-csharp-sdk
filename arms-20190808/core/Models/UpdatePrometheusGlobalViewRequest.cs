@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdatePrometheusGlobalViewRequest : TeaModel {
         /// <summary>
-        /// 创建GlobalView时，是否要求所有子实例都校验成功时，才创建GlobalView实例。默认是false，即可以部分成功。
+        /// To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):
+        /// - true
+        /// - false
         /// </summary>
         [NameInMap("AllSubClustersSuccess")]
         [Validation(Required=false)]
@@ -23,10 +25,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The name of the global aggregation instance.
+        /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// The region ID of the global aggregation instance.
+        /// </summary>
         [NameInMap("MostRegionId")]
         [Validation(Required=false)]
         public string MostRegionId { get; set; }

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class OpenXtraceDefaultSLRResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`
+        /// *   `false`
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// Activates the service-linked role AliyunServiceRoleForXtrace for Tracing Analysis.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

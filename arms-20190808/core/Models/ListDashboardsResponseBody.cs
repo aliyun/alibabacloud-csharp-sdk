@@ -311,6 +311,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// The indicators of whether the Prometheus service has been activated.
+        /// </summary>
         [NameInMap("PrometheusServiceOpened")]
         [Validation(Required=false)]
         public string PrometheusServiceOpened { get; set; }

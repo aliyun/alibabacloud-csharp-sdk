@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<ListAlertsResponseBodyPageBeanListAlerts> ListAlerts { get; set; }
             public class ListAlertsResponseBodyPageBeanListAlerts : TeaModel {
+                [NameInMap("AcknowledgeTime")]
+                [Validation(Required=false)]
+                public long? AcknowledgeTime { get; set; }
+
                 /// <summary>
                 /// The list of activities.
                 /// </summary>
@@ -216,6 +220,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                [NameInMap("Describe")]
+                [Validation(Required=false)]
+                public string Describe { get; set; }
+
                 /// <summary>
                 /// The ID of the notification policy.
                 /// </summary>
@@ -229,6 +237,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [NameInMap("DispatchRuleName")]
                 [Validation(Required=false)]
                 public string DispatchRuleName { get; set; }
+
+                [NameInMap("Handler")]
+                [Validation(Required=false)]
+                public string Handler { get; set; }
+
+                [NameInMap("NotifyRobots")]
+                [Validation(Required=false)]
+                public string NotifyRobots { get; set; }
+
+                [NameInMap("Owner")]
+                [Validation(Required=false)]
+                public string Owner { get; set; }
+
+                [NameInMap("RecoverTime")]
+                [Validation(Required=false)]
+                public long? RecoverTime { get; set; }
 
                 /// <summary>
                 /// The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.

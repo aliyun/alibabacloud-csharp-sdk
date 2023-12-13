@@ -10,41 +10,43 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateEnvironmentRequest : TeaModel {
         /// <summary>
-        /// Locale, the default is Chinese zh | en.
+        /// The language. Valid values: zh and en. Default value: zh.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// Resource instance ID bound to the environment, including container instance ID or VpcId.
+        /// The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
         /// </summary>
         [NameInMap("BindResourceId")]
         [Validation(Required=false)]
         public string BindResourceId { get; set; }
 
         /// <summary>
-        /// Environment name.
+        /// The name of the environment.
         /// </summary>
         [NameInMap("EnvironmentName")]
         [Validation(Required=false)]
         public string EnvironmentName { get; set; }
 
         /// <summary>
-        /// Environment subtypes:
-        /// - CS: Currently supports ACK.
-        /// - ECS: ECS is currently supported.
-        /// - Cloud: Currently supports Cloud.
+        /// The subtype of the environment. Valid values:
+        /// 
+        /// *   CS: Container Service for Kubernetes (ACK)
+        /// *   ECS: ECS
+        /// *   Cloud: cloud service
         /// </summary>
         [NameInMap("EnvironmentSubType")]
         [Validation(Required=false)]
         public string EnvironmentSubType { get; set; }
 
         /// <summary>
-        /// Environment type:
-        /// - CS: Container Service.
-        /// - ECS.
-        /// - Cloud: cloud service.
+        /// The type of the environment. Valid values:
+        /// 
+        /// *   CS: Container Service
+        /// *   ECS: Elastic Compute Service
+        /// *   Cloud: cloud service
         /// </summary>
         [NameInMap("EnvironmentType")]
         [Validation(Required=false)]
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// The tags to add to the instance.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

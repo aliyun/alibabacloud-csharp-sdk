@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public GetPrometheusInstanceResponseBodyData Data { get; set; }
         public class GetPrometheusInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// auth token string.
+            /// </summary>
+            [NameInMap("AuthToken")]
+            [Validation(Required=false)]
+            public string AuthToken { get; set; }
+
+            /// <summary>
             /// The ID of the Prometheus instance.
             /// </summary>
             [NameInMap("ClusterId")]
@@ -57,6 +64,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string GrafanaInstanceId { get; set; }
 
             /// <summary>
+            /// http api internet url.
+            /// </summary>
+            [NameInMap("HttpApiInterUrl")]
+            [Validation(Required=false)]
+            public string HttpApiInterUrl { get; set; }
+
+            /// <summary>
+            /// http api intranet url.
+            /// </summary>
+            [NameInMap("HttpApiIntraUrl")]
+            [Validation(Required=false)]
+            public string HttpApiIntraUrl { get; set; }
+
+            /// <summary>
             /// The billing method. Valid values:
             /// 
             /// *   PREPAY: subscription
@@ -67,11 +88,53 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string PaymentType { get; set; }
 
             /// <summary>
+            /// push gateway internet url.
+            /// </summary>
+            [NameInMap("PushGatewayInterUrl")]
+            [Validation(Required=false)]
+            public string PushGatewayInterUrl { get; set; }
+
+            /// <summary>
+            /// push gateway intranet url.
+            /// </summary>
+            [NameInMap("PushGatewayIntraUrl")]
+            [Validation(Required=false)]
+            public string PushGatewayIntraUrl { get; set; }
+
+            /// <summary>
             /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            /// <summary>
+            /// remote read internet url.
+            /// </summary>
+            [NameInMap("RemoteReadInterUrl")]
+            [Validation(Required=false)]
+            public string RemoteReadInterUrl { get; set; }
+
+            /// <summary>
+            /// remote read intranet url.
+            /// </summary>
+            [NameInMap("RemoteReadIntraUrl")]
+            [Validation(Required=false)]
+            public string RemoteReadIntraUrl { get; set; }
+
+            /// <summary>
+            /// remote write internet url.
+            /// </summary>
+            [NameInMap("RemoteWriteInterUrl")]
+            [Validation(Required=false)]
+            public string RemoteWriteInterUrl { get; set; }
+
+            /// <summary>
+            /// remote write intranet url.
+            /// </summary>
+            [NameInMap("RemoteWriteIntraUrl")]
+            [Validation(Required=false)]
+            public string RemoteWriteIntraUrl { get; set; }
 
             /// <summary>
             /// The ID of the resource group to which the instance belongs.

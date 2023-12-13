@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// 创建GlobalView时，是否要求所有子实例都校验成功时，才创建GlobalView实例。默认是false，即可以部分成功。
+        /// To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):
+        /// - true
+        /// - false
         /// </summary>
         [NameInMap("AllSubClustersSuccess")]
         [Validation(Required=false)]
         public bool? AllSubClustersSuccess { get; set; }
 
         /// <summary>
-        /// The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs��.
+        /// The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -31,7 +33,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The type of the Prometheus instance. Valid values: remote-write: Prometheus instance for remote write. ecs: Prometheus instance for ECS. cloud-monitor�: Prometheus instance for cloud services in China. cloud-product: Prometheus instance for Alibaba Cloud services outside China. global-view: Prometheus instance for GlobalView. aliyun-cs��: Prometheus instance for Container Service.
+        /// Types include:
+        /// - remote-write: General-purpose Instance
+        /// - ecs: Prometheus for ECS
+        /// - global-view: Global Aggregation Instance
+        /// - aliyun-cs: Prometheus Instance for Container Service
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]

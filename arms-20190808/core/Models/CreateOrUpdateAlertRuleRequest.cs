@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AlertName { get; set; }
 
+        /// <summary>
+        /// Alarm Notification Channel Configuration. Used for compatibility with legacy rules.
+        /// </summary>
         [NameInMap("AlertPiplines")]
         [Validation(Required=false)]
         public string AlertPiplines { get; set; }
@@ -128,6 +131,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// Data Configuration. The dataRevision field specifies the data repair method when there is no data for the metric.
+        /// 
+        /// - Fill with zero: 0
+        /// - Fill with one: 1
+        /// - Fill with null: 2 (default, does not trigger an alarm)
+        /// </summary>
         [NameInMap("DataConfig")]
         [Validation(Required=false)]
         public string DataConfig { get; set; }
@@ -180,14 +190,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Level { get; set; }
 
+        /// <summary>
+        /// Application Tags. Used for application monitoring alert rules, to filter applications associated with alert rules.
+        /// </summary>
         [NameInMap("MarkTags")]
         [Validation(Required=false)]
         public List<CreateOrUpdateAlertRuleRequestMarkTags> MarkTags { get; set; }
         public class CreateOrUpdateAlertRuleRequestMarkTags : TeaModel {
+            /// <summary>
+            /// The Tag Key.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The Tag Value.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -217,10 +236,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string MetricsType { get; set; }
 
+        /// <summary>
+        /// Effective Time and Notification Time. Used for compatibility with legacy rules.
+        /// </summary>
         [NameInMap("Notice")]
         [Validation(Required=false)]
         public string Notice { get; set; }
 
+        /// <summary>
+        /// Notification Mode. Normal mode or Simplified mode.
+        /// </summary>
         [NameInMap("NotifyMode")]
         [Validation(Required=false)]
         public string NotifyMode { get; set; }
@@ -256,14 +281,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The list of tags.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateOrUpdateAlertRuleRequestTags> Tags { get; set; }
         public class CreateOrUpdateAlertRuleRequestTags : TeaModel {
+            /// <summary>
+            /// The tag key.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

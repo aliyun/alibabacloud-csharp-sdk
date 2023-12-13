@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances> PrometheusInstances { get; set; }
             public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances : TeaModel {
+                [NameInMap("AuthToken")]
+                [Validation(Required=false)]
+                public string AuthToken { get; set; }
+
                 /// <summary>
                 /// The ID of the Prometheus instance.
                 /// </summary>
@@ -64,6 +68,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string GrafanaInstanceId { get; set; }
 
+                [NameInMap("HttpApiInterUrl")]
+                [Validation(Required=false)]
+                public string HttpApiInterUrl { get; set; }
+
+                [NameInMap("HttpApiIntraUrl")]
+                [Validation(Required=false)]
+                public string HttpApiIntraUrl { get; set; }
+
                 /// <summary>
                 /// The billing method. Valid values:
                 /// 
@@ -74,12 +86,36 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string PaymentType { get; set; }
 
+                [NameInMap("PushGatewayInterUrl")]
+                [Validation(Required=false)]
+                public string PushGatewayInterUrl { get; set; }
+
+                [NameInMap("PushGatewayIntraUrl")]
+                [Validation(Required=false)]
+                public string PushGatewayIntraUrl { get; set; }
+
                 /// <summary>
                 /// The region ID of the Prometheus instance.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("RemoteReadInterUrl")]
+                [Validation(Required=false)]
+                public string RemoteReadInterUrl { get; set; }
+
+                [NameInMap("RemoteReadIntraUrl")]
+                [Validation(Required=false)]
+                public string RemoteReadIntraUrl { get; set; }
+
+                [NameInMap("RemoteWriteInterUrl")]
+                [Validation(Required=false)]
+                public string RemoteWriteInterUrl { get; set; }
+
+                [NameInMap("RemoteWriteIntraUrl")]
+                [Validation(Required=false)]
+                public string RemoteWriteIntraUrl { get; set; }
 
                 /// <summary>
                 /// The ID of the resource group to which the Prometheus instance belongs.

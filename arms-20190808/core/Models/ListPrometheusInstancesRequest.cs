@@ -10,14 +10,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListPrometheusInstancesRequest : TeaModel {
         /// <summary>
-        /// 实例类型
+        /// Optional instance types (if left blank, all types of instances will be queried):
+        /// - cloud-product-prometheus 
+        /// - ManagedKubernetes
+        /// - satellite
+        /// - Ask
+        /// - remote-write-prometheus
+        /// - cloud-monitor-cmee
+        /// - ExternalKubernetes
+        /// - vpc-prometheus
+        /// - cloud-monitor-direct
+        /// - Edge Kubernetes
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

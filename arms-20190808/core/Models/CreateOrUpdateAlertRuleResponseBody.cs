@@ -363,6 +363,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string MetricsType { get; set; }
 
+            /// <summary>
+            /// Notification Mode.
+            /// </summary>
             [NameInMap("NotifyMode")]
             [Validation(Required=false)]
             public string NotifyMode { get; set; }
@@ -395,14 +398,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The list of tags.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<CreateOrUpdateAlertRuleResponseBodyAlertRuleTags> Tags { get; set; }
             public class CreateOrUpdateAlertRuleResponseBodyAlertRuleTags : TeaModel {
+                /// <summary>
+                /// The tag key.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

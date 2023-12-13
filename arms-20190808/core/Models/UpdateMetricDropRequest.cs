@@ -8,10 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class OpenArmsDefaultSLRRequest : TeaModel {
-        /// <summary>
-        /// The ID of the region.
-        /// </summary>
+    public class UpdateMetricDropRequest : TeaModel {
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        [NameInMap("MetricDrop")]
+        [Validation(Required=false)]
+        public string MetricDrop { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
