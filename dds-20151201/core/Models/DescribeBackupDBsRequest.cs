@@ -66,10 +66,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
 
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         /// <summary>
         /// The ID of the source instance.
         /// </summary>

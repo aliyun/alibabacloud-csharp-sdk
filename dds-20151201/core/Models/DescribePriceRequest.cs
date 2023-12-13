@@ -24,7 +24,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **dds_sharding**: a sharded cluster instance that uses the pay-as-you-go billing method
         /// *   **badds_sharding**: a sharded cluster instance that uses the subscription billing method
         /// *   **badds_sharding_intl**: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)
+        /// *   **dds_sharding_intl**: a sharded cluster instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)
         /// *   **badds_sharding_jp**: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)
+        /// *   **badds_intl**: a replica set instance that uses the subscription billing method and is available on the International site (alibabacloud.com)
+        /// *   **dds_intl**: a replica set instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
@@ -101,10 +104,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the regions.
+        /// The regions.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -20,12 +20,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsDdsRegion> DdsRegion { get; set; }
             public class DescribeRegionsResponseBodyRegionsDdsRegion : TeaModel {
+                /// <summary>
+                /// The public endpoint of the region.
+                /// 
+                /// For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following value is returned for the EndPoint parameter:
+                /// 
+                /// *   mongodb.aliyuncs.com
+                /// </summary>
                 [NameInMap("EndPoint")]
                 [Validation(Required=false)]
                 public string EndPoint { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -34,14 +41,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The name of the region.
                 /// 
-                /// The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.
+                /// The value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is **cn-hangzhou**, the following values are returned for the LocalName parameter:
+                /// 
+                /// *   If the value of the **AcceptLanguage** parameter is **zh**, the value **1** is returned for the LocalName parameter.
+                /// *   If the value of the **AcceptLanguage** parameter is **en**, the value **China (Hangzhou)** is returned for the LocalName parameter.
                 /// </summary>
                 [NameInMap("RegionName")]
                 [Validation(Required=false)]
                 public string RegionName { get; set; }
 
                 /// <summary>
-                /// Details about the zones.
+                /// The zones.
                 /// </summary>
                 [NameInMap("Zones")]
                 [Validation(Required=false)]
@@ -62,7 +72,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public bool? VpcEnabled { get; set; }
 
                         /// <summary>
-                        /// The ID of the zone.
+                        /// The zone ID.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -71,7 +81,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         /// <summary>
                         /// The name of the zone.
                         /// 
-                        /// The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.
+                        /// The value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the ZoneId parameter in the response is **cn-hangzhou-h**, the following values are returned for the ZoneName parameter:
+                        /// 
+                        /// *   If the value of the **AcceptLanguage** parameter is **zh**, the value ** H** is returned for the ZoneName parameter.
+                        /// *   If the value of the **AcceptLanguage** parameter is **en**, the value **Hangzhou Zone H** is returned for the ZoneName parameter.
                         /// </summary>
                         [NameInMap("ZoneName")]
                         [Validation(Required=false)]
@@ -86,7 +99,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

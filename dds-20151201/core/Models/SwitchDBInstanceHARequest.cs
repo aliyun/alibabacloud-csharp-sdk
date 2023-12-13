@@ -54,10 +54,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string RoleIds { get; set; }
 
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         /// <summary>
         /// The time when the primary and secondary nodes are switched. Valid values:
         /// 

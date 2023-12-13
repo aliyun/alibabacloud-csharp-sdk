@@ -12,24 +12,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The retention period of the original classic network address when you change the network type to VPC. Valid values: **14**, **30**, **60**, and **120**. Unit: days.
         /// 
-        /// >  This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.
+        /// > This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.
         /// </summary>
         [NameInMap("ClassicExpiredDays")]
         [Validation(Required=false)]
         public int? ClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The network type to switch to. Valid values:
+        /// The network type to switch to. Valid value:
         /// 
         /// *   **VPC**
-        /// *   **Classic**
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -54,40 +53,39 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:
         /// 
-        /// - **True**: retains the original classic network address.
-        /// - **False**: does not retain the original classic network address.
+        /// *   **True**: retains the original classic network address.
+        /// *   **False**: does not retain the original classic network address.
         /// 
-        /// > * This parameter is required when the **NetworkType** parameter is set to **VPC**.
-        /// > * If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.
+        /// > 
+        /// 
+        /// *   This parameter is required when the **NetworkType** parameter is set to **VPC**.
+        /// 
+        /// *   If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.
         /// </summary>
         [NameInMap("RetainClassic")]
         [Validation(Required=false)]
         public string RetainClassic { get; set; }
 
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         /// <summary>
-        /// The ID of the vSwitch.
+        /// The ID of the vSwitch in the VPC.
         /// 
-        /// >  This parameter is required when the **NetworkType** parameter is set to **VPC**.
+        /// > This parameter is required when the **NetworkType** parameter is set to **VPC**.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC).
+        /// The ID of the VPC.
         /// 
-        /// >  This parameter is required when the **NetworkType** parameter is set to **VPC**.
+        /// > This parameter is required when the **NetworkType** parameter is set to **VPC**.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeRegions](~~468365~~) operation to query the most recent zone list.
+        /// 可用区ID，您可以通过调用[DescribeRegions](~~61933~~)接口查询可用区ID。
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

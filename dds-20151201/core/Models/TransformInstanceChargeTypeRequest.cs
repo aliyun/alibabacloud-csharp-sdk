@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **true**
         /// *   **false**
         /// 
-        /// > Default value: **true**.
+        /// >  Default value: **true**.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -73,12 +73,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.
+        /// The subscription duration. Valid values:
+        /// 
+        /// *   If the PricingCycle parameter is set to Month, the valid values of this parameter range from **1** to **9**.
+        /// *   If the PricingCycle parameter is set to Year, the valid values of this parameter are **1**, **2**, **3**, and **5**.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public long? Period { get; set; }
 
+        /// <summary>
+        /// The unit of the subscription duration. Valid values:
+        /// 
+        /// *   **Month**
+        /// *   **Year**
+        /// 
+        /// Default value: Month.
+        /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
@@ -90,10 +101,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
     }
 

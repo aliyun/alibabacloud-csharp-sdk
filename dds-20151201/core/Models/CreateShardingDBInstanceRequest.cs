@@ -368,10 +368,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string SecurityIPList { get; set; }
 
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         /// <summary>
         /// The source instance ID.
         /// 

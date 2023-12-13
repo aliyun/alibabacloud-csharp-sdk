@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAvailableResourceRequest : TeaModel {
+        /// <summary>
+        /// The instance type of the instance.
+        /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
@@ -23,14 +26,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DbType { get; set; }
 
+        /// <summary>
+        /// The database engine version of the instance.
+        /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Default value: PrePaid. Valid values:
+        /// The billing method of the instance. Valid values:
         /// 
-        /// *   **PrePaid**: subscription
+        /// *   **PrePaid** (default): subscription
         /// *   **PostPaid**: pay-as-you-go
         /// </summary>
         [NameInMap("InstanceChargeType")]
@@ -67,10 +73,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
+        /// <summary>
+        /// The storage type of the instance. Valid values:
+        /// 
+        /// - **local_ssd**: local SSD 
+        /// - **cloud_essd1**: PL1 enhanced SSD (ESSD) 
+        /// - **cloud_essd2**: PL2 ESSD 
+        /// - **cloud_essd3**: PL3 ESSD 
+        /// - **cloud_auto**: ESSD AutoPL 
+        /// 
+        /// By default, this parameter is empty, which indicates that all types of storage resources are queried.
+        /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeReplicaSetRoleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// Details about the replica set roles.
+        /// The details of the roles of the replica set instance.
         /// </summary>
         [NameInMap("ReplicaSets")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string ConnectionDomain { get; set; }
 
                 /// <summary>
-                /// The port of the node.
+                /// The port number that is used to connect to the node.
                 /// </summary>
                 [NameInMap("ConnectionPort")]
                 [Validation(Required=false)]
@@ -49,18 +49,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The network type. Valid values:
+                /// The network type of the instance. Valid values:
                 /// 
-                /// *   **VPC**
-                /// *   **Classic**
-                /// *   **Public**
+                /// *   **VPC**: the virtual private cloud (VPC)
+                /// *   **Classic**: the classic network
+                /// *   **Public**: the Internet
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The role of the node in the replica set.
+                /// The role of the node in the replica set instance. Valid values:
                 /// 
                 /// *   **Primary**
                 /// *   **Secondary**
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

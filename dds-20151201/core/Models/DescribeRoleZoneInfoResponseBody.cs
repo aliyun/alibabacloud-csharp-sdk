@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRoleZoneInfoResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of information of nodes in the zone.
+        /// The information of nodes in the zone.
         /// </summary>
         [NameInMap("ZoneInfos")]
         [Validation(Required=false)]
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// *   **shard**
                 /// *   **mongos**
                 /// 
-                /// >  Valid value for replica set instances: **normal**. Valid values for replica set instances: **configServer**, **shard**, and **mongos**.
+                /// > Valid value for replica set instances: **normal**. Valid values for sharded cluster instances: **configServer**, **shard**, and **mongos**.
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// The ID of the role.
+                /// The role ID.
                 /// </summary>
                 [NameInMap("RoleId")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string RoleType { get; set; }
 
                 /// <summary>
-                /// The zone ID.
+                /// The zone ID of the node.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

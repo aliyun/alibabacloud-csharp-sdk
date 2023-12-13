@@ -61,10 +61,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string RoleARN { get; set; }
 
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         /// <summary>
         /// The TDE status. When the value of this parameter is set to **Enabled**, TDE is enabled.
         /// 

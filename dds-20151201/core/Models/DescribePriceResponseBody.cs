@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public DescribePriceResponseBodyOrder Order { get; set; }
         public class DescribePriceResponseBodyOrder : TeaModel {
             /// <summary>
-            /// The coupons.
+            /// The information of coupons.
             /// </summary>
             [NameInMap("Coupons")]
             [Validation(Required=false)]
@@ -28,7 +28,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public List<DescribePriceResponseBodyOrderCouponsCoupon> Coupon { get; set; }
                 public class DescribePriceResponseBodyOrderCouponsCoupon : TeaModel {
                     /// <summary>
-                    /// The billing method to which the coupon was applied. Valid values: **payondemand**: subscription. **payasyougo**: pay-as-you-go.
+                    /// The activity type of the coupon. Valid values:
+                    /// 
+                    /// *   **payondemand**: subscription
+                    /// *   **payasyougo**: pay-as-you-go
                     /// </summary>
                     [NameInMap("ActivityCategory")]
                     [Validation(Required=false)]
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public string PromotionOptionCode { get; set; }
 
                     /// <summary>
-                    /// The rules that match the coupon.
+                    /// Details about the rules that match the coupon.
                     /// </summary>
                     [NameInMap("PromotionRuleIdList")]
                     [Validation(Required=false)]
@@ -130,6 +133,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
             }
 
+            /// <summary>
+            /// Indicates whether the information of the discount is displayed.
+            /// </summary>
             [NameInMap("ShowDiscountInfo")]
             [Validation(Required=false)]
             public bool? ShowDiscountInfo { get; set; }
@@ -171,21 +177,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
                 /// <summary>
-                /// The name of the rule.
+                /// The rule name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the policy.
+                /// The rule ID.
                 /// </summary>
                 [NameInMap("RuleDescId")]
                 [Validation(Required=false)]
                 public long? RuleDescId { get; set; }
 
                 /// <summary>
-                /// The title of the rule.
+                /// The rule title.
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -214,14 +220,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string DiscountAmount { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The original price of the order.
+                /// The list price of the order.
                 /// </summary>
                 [NameInMap("OriginalAmount")]
                 [Validation(Required=false)]
