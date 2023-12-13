@@ -9,18 +9,48 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class TwoElementsVerificationRequest : TeaModel {
+        /// <summary>
+        /// The authorization code.
+        /// 
+        /// >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).
+        /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        /// <summary>
+        /// The phone number to be verified.
+        /// 
+        /// *   If the value of Mask is NORMAL, specify a value in plaintext for this field.
+        /// *   If the value of Mask is MD5, specify a MD5-encrypted value for this field.
+        /// *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
+        /// 
+        /// >  Letters in the encrypted strings are not case-sensitive.
+        /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
+        /// <summary>
+        /// The encryption method. Valid values:
+        /// 
+        /// *   **NORMAL**: plaintext
+        /// *   **MD5**
+        /// *   **SHA256**
+        /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
         public string Mask { get; set; }
 
+        /// <summary>
+        /// The name to be verified.
+        /// 
+        /// *   If the value of Mask is NORMAL, specify a value in plaintext for this field.
+        /// *   If the value of Mask is MD5, specify a MD5-encrypted value for this field.
+        /// *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
+        /// 
+        /// >  Letters in the encrypted strings are not case-sensitive.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

@@ -9,14 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class PhoneNumberStatusForAccountRequest : TeaModel {
+        /// <summary>
+        /// The authorization code.
+        /// 
+        /// >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).
+        /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        /// <summary>
+        /// The phone number to be queried.
+        /// 
+        /// *   If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.
+        /// *   If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.
+        /// *   If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.
+        /// 
+        /// >  Letters in the encrypted strings are not case-sensitive.
+        /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
+        /// <summary>
+        /// The encryption method of the phone number. Valid values:
+        /// 
+        /// *   **NORMAL**: The phone number is not encrypted.
+        /// *   **MD5**
+        /// *   **SHA256**
+        /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
         public string Mask { get; set; }

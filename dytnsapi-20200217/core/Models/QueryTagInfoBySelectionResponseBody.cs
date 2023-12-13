@@ -9,121 +9,131 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryTagInfoBySelectionResponseBody : TeaModel {
+        /// <summary>
+        /// The response code. **OK** indicates that the request is successful.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryTagInfoBySelectionResponseBodyData> Data { get; set; }
         public class QueryTagInfoBySelectionResponseBodyData : TeaModel {
             /// <summary>
-            /// 可用的授权码列表
+            /// The list of available authorization codes.
             /// </summary>
             [NameInMap("AuthCodeList")]
             [Validation(Required=false)]
             public List<string> AuthCodeList { get; set; }
 
+            [NameInMap("ComplexityType")]
+            [Validation(Required=false)]
+            public string ComplexityType { get; set; }
+
             /// <summary>
-            /// API demo链接
+            /// The URL for the API demo.
             /// </summary>
             [NameInMap("DemoAddress")]
             [Validation(Required=false)]
             public string DemoAddress { get; set; }
 
             /// <summary>
-            /// API文档链接
+            /// The URL for the API documentation.
             /// </summary>
             [NameInMap("DocAddress")]
             [Validation(Required=false)]
             public string DocAddress { get; set; }
 
             /// <summary>
-            /// 枚举值定义链接
+            /// The URL for the definitions of the enumerated values.
             /// </summary>
             [NameInMap("EnumDefinitionAddress")]
             [Validation(Required=false)]
             public string EnumDefinitionAddress { get; set; }
 
             /// <summary>
-            /// 流程名称
+            /// The flow name.
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]
             public string FlowName { get; set; }
 
             /// <summary>
-            /// 行业id
+            /// The industry ID.
             /// </summary>
             [NameInMap("IndustryId")]
             [Validation(Required=false)]
             public long? IndustryId { get; set; }
 
             /// <summary>
-            /// 行业名称
+            /// The industry name.
             /// </summary>
             [NameInMap("IndustryName")]
             [Validation(Required=false)]
             public string IndustryName { get; set; }
 
             /// <summary>
-            /// 标签参数列表
+            /// The list of tag parameters.
             /// </summary>
             [NameInMap("ParamList")]
             [Validation(Required=false)]
             public List<QueryTagInfoBySelectionResponseBodyDataParamList> ParamList { get; set; }
             public class QueryTagInfoBySelectionResponseBodyDataParamList : TeaModel {
                 /// <summary>
-                /// 参数英文名
+                /// The English name of the parameter.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// 输入提示
+                /// The input hint.
                 /// </summary>
                 [NameInMap("Hint")]
                 [Validation(Required=false)]
                 public string Hint { get; set; }
 
                 /// <summary>
-                /// 是否必填
+                /// Indicates whether the parameter is required.
                 /// </summary>
                 [NameInMap("Must")]
                 [Validation(Required=false)]
                 public bool? Must { get; set; }
 
                 /// <summary>
-                /// 参数中文名
+                /// The Chinese name of the parameter.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// 类型EnumUIWidgetTypes对应的code
+                /// The type. The code that corresponds to EnumUIWidgetTypes.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// 枚举值定义，code:desc
+                /// The definitions of the enumerated values such as Code or Desc.
                 /// </summary>
                 [NameInMap("ValueDict")]
                 [Validation(Required=false)]
                 public List<QueryTagInfoBySelectionResponseBodyDataParamListValueDict> ValueDict { get; set; }
                 public class QueryTagInfoBySelectionResponseBodyDataParamListValueDict : TeaModel {
                     /// <summary>
-                    /// 英文名
+                    /// The English name.
                     /// </summary>
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// 中文名
+                    /// The Chinese name.
                     /// </summary>
                     [NameInMap("Desc")]
                     [Validation(Required=false)]
@@ -133,29 +143,33 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
             }
 
+            [NameInMap("RichTextDescription")]
+            [Validation(Required=false)]
+            public string RichTextDescription { get; set; }
+
             /// <summary>
-            /// 场景id
+            /// The scene ID.
             /// </summary>
             [NameInMap("SceneId")]
             [Validation(Required=false)]
             public long? SceneId { get; set; }
 
             /// <summary>
-            /// 场景名称
+            /// The scene name.
             /// </summary>
             [NameInMap("SceneName")]
             [Validation(Required=false)]
             public string SceneName { get; set; }
 
             /// <summary>
-            /// 标签id
+            /// The tag ID.
             /// </summary>
             [NameInMap("TagId")]
             [Validation(Required=false)]
             public long? TagId { get; set; }
 
             /// <summary>
-            /// 标签名称
+            /// The tag name.
             /// </summary>
             [NameInMap("TagName")]
             [Validation(Required=false)]
@@ -163,14 +177,26 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         }
 
+        /// <summary>
+        /// The returned message.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request is successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

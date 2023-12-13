@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 标签id
+        /// The tag ID.
         /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]

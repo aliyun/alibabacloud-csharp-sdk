@@ -8,13 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class QueryTagInfoBySelectionRequest : TeaModel {
-        /// <summary>
-        /// The industry ID.
-        /// </summary>
-        [NameInMap("IndustryId")]
+    public class UAIDVerificationRequest : TeaModel {
+        [NameInMap("AuthCode")]
         [Validation(Required=false)]
-        public long? IndustryId { get; set; }
+        public string AuthCode { get; set; }
+
+        [NameInMap("Carrier")]
+        [Validation(Required=false)]
+        public string Carrier { get; set; }
+
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
+
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -28,19 +37,13 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// The scene ID.
-        /// </summary>
-        [NameInMap("SceneId")]
+        [NameInMap("Token")]
         [Validation(Required=false)]
-        public long? SceneId { get; set; }
+        public string Token { get; set; }
 
-        /// <summary>
-        /// The tag ID.
-        /// </summary>
-        [NameInMap("TagId")]
+        [NameInMap("UserGrantId")]
         [Validation(Required=false)]
-        public long? TagId { get; set; }
+        public string UserGrantId { get; set; }
 
     }
 

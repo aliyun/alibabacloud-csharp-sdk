@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryUsageStatisticsByTagIdRequest : TeaModel {
         /// <summary>
-        /// 开始时间
+        /// The beginning of the time range to query.
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
         public string BeginTime { get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// The end of the time range to query.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -27,10 +27,16 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The page number. Default value: 1.
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public long? PageNo { get; set; }
 
+        /// <summary>
+        /// The number of entries per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// The tag ID.
         /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]
