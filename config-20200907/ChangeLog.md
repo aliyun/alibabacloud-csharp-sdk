@@ -1,3 +1,6 @@
+2023-12-13 Version: 2.4.1
+- Generated csharp 2020-09-07 for Config.
+
 2023-11-06 Version: 2.4.0
 - Generated csharp 2020-09-07 for Config.
 

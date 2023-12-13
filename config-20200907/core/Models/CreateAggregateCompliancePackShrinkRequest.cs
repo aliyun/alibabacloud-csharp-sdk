@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
 
+        [NameInMap("TemplateContent")]
+        [Validation(Required=false)]
+        public string TemplateContent { get; set; }
+
     }
 
 }
