@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
                 /// <summary>
                 /// The name of the instance.
                 /// </summary>

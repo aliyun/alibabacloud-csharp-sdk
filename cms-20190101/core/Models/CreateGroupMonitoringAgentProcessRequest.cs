@@ -62,9 +62,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string EscalationsLevel { get; set; }
 
             /// <summary>
-            /// The time period during which the alert rule is ineffective.
-            /// 
-            /// Valid values of N: 1 to 3.
+            /// This parameter is deprecated.
             /// </summary>
             [NameInMap("NoEffectiveInterval")]
             [Validation(Required=false)]
@@ -159,6 +157,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The alert threshold.
             /// 
             /// Valid values of N: 1 to 3.
+            /// 
+            /// Unit: cores.
             /// </summary>
             [NameInMap("Threshold")]
             [Validation(Required=false)]

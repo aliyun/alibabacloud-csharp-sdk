@@ -10,37 +10,37 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeGroupMonitoringAgentProcessResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status codes.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The number of the returned page. Default value: 1.
+        /// The page number. Default value: 1
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page. Default value: 10.
+        /// The number of entries per page. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The process monitoring tasks created for the application group.
+        /// The process monitoring tasks.
         /// </summary>
         [NameInMap("Processes")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess> Process { get; set; }
             public class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess : TeaModel {
                 /// <summary>
-                /// The configurations of the alert rule.
+                /// The alert rule configurations.
                 /// </summary>
                 [NameInMap("AlertConfig")]
                 [Validation(Required=false)]
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig> AlertConfig { get; set; }
                     public class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig : TeaModel {
                         /// <summary>
-                        /// The comparison operator of the threshold for critical-level alerts. Valid values:
+                        /// The comparison operator that is used to compare the metric value with the threshold. Valid values:
                         /// 
                         /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
                         /// *   GreaterThanThreshold: greater than the threshold
                         /// *   LessThanOrEqualToThreshold: less than or equal to the threshold
                         /// *   LessThanThreshold: less than the threshold
                         /// *   NotEqualToThreshold: not equal to the threshold
-                        /// *   GreaterThanYesterday: greater than the metric value at the same time yesterday
+                        /// *   GreaterThanYesterday: greater than the metric value at the same time yesterday.
                         /// *   LessThanYesterday: less than the metric value at the same time yesterday
                         /// *   GreaterThanLastWeek: greater than the metric value at the same time last week
                         /// *   LessThanLastWeek: less than the metric value at the same time last week
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         /// 
                         /// *   critical
                         /// *   warn
-                        /// *   info
+                        /// *   Info
                         /// </summary>
                         [NameInMap("EscalationsLevel")]
                         [Validation(Required=false)]
@@ -106,9 +106,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string NoEffectiveInterval { get; set; }
 
                         /// <summary>
-                        /// The duration of the mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
+                        /// The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
                         /// 
-                        /// >  Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.
+                        /// >  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
                         /// </summary>
                         [NameInMap("SilenceTime")]
                         [Validation(Required=false)]
@@ -121,6 +121,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         [Validation(Required=false)]
                         public string Statistics { get; set; }
 
+                        /// <summary>
+                        /// The resource for which alerts are triggered.
+                        /// </summary>
                         [NameInMap("TargetList")]
                         [Validation(Required=false)]
                         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList TargetList { get; set; }
@@ -129,18 +132,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                             [Validation(Required=false)]
                             public List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget> Target { get; set; }
                             public class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget : TeaModel {
+                                /// <summary>
+                                /// The Alibaba Cloud Resource Name (ARN) of the resource. Format: acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message. Example: acs:mns:cn-hangzhou:120886317861\*\*\*\*:/queues/test123/message. Fields:
+                                /// 
+                                /// {Service name abbreviation}: the abbreviation of the service name. Valid value: mns. {userId}: the ID of the Alibaba Cloud account. {regionId}: the region ID of the message queue or topic. {Resource type}: the type of the resource that triggers the alert. Valid values: - **queues** - **topics** - {Resource name}: the resource name. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.
+                                /// </summary>
                                 [NameInMap("Arn")]
                                 [Validation(Required=false)]
                                 public string Arn { get; set; }
 
+                                /// <summary>
+                                /// The ID of the resource for which alerts are triggered.
+                                /// </summary>
                                 [NameInMap("Id")]
                                 [Validation(Required=false)]
                                 public string Id { get; set; }
 
+                                /// <summary>
+                                /// The parameters of the alert callback. The parameters are in the JSON format.
+                                /// </summary>
                                 [NameInMap("JsonParmas")]
                                 [Validation(Required=false)]
                                 public string JsonParmas { get; set; }
 
+                                /// <summary>
+                                /// The level of the alert. Valid values:
+                                /// 
+                                /// INFO WARN CRITICAL
+                                /// </summary>
                                 [NameInMap("Level")]
                                 [Validation(Required=false)]
                                 public string Level { get; set; }
@@ -150,7 +169,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         }
 
                         /// <summary>
-                        /// The threshold for triggering alerts.
+                        /// The alert threshold.
                         /// </summary>
                         [NameInMap("Threshold")]
                         [Validation(Required=false)]
@@ -176,6 +195,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// The ID of the application group.
+                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
@@ -188,7 +210,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The conditional expressions used to match the instances.
+                /// The matching conditions.
                 /// 
                 /// >  Only the instances that meet the conditional expressions are monitored by the process monitoring task.
                 /// </summary>
@@ -201,14 +223,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress> MatchExpress { get; set; }
                     public class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress : TeaModel {
                         /// <summary>
-                        /// The method used to match the instances. Default value: all. Valid values:
+                        /// The matching condition. Valid values:
                         /// 
-                        /// *   all
-                        /// *   startWith
-                        /// *   endWith
-                        /// *   contains
-                        /// *   notContains
-                        /// *   equals
+                        /// *   all (default): matches all
+                        /// *   startWith: starts with a prefix
+                        /// *   endWith: ends with a suffix
+                        /// *   contains: contains
+                        /// *   notContains: excludes
+                        /// *   equals: equals
                         /// 
                         /// >  The matched instances are monitored by the process monitoring task.
                         /// </summary>
@@ -219,7 +241,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         /// <summary>
                         /// The criteria based on which the instances are matched.
                         /// 
-                        /// >  Set the value to `name`, indicating that the instances are matched based on instance name.
+                        /// >  Set the value to `name`. The value name indicates that the instances are matched based on the instance name.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -236,12 +258,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// The logical operator used between conditional expressions that are used to match instances. Valid values:
+                /// 
+                /// *   all
+                /// *   and
+                /// *   or
+                /// </summary>
                 [NameInMap("MatchExpressFilterRelation")]
                 [Validation(Required=false)]
                 public string MatchExpressFilterRelation { get; set; }
 
                 /// <summary>
-                /// The name of the process monitoring task.
+                /// The process name.
                 /// </summary>
                 [NameInMap("ProcessName")]
                 [Validation(Required=false)]
@@ -252,21 +281,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+        /// Indicates whether the request was successful. Valid values: Valid values: true and false.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

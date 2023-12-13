@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus> NodeStatus { get; set; }
             public class DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus : TeaModel {
+                [NameInMap("AgentInstallErrorCode")]
+                [Validation(Required=false)]
+                public string AgentInstallErrorCode { get; set; }
+
                 /// <summary>
                 /// Indicates whether the CloudMonitor agent is automatically installed. Valid values:
                 /// 

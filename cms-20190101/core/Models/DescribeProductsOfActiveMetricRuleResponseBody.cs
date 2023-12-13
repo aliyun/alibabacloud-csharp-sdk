@@ -31,23 +31,79 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig> AlertInitConfig { get; set; }
                     public class DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig : TeaModel {
+                        /// <summary>
+                        /// The operator that is used to compare the metric value with the threshold for Warn-level alerts.
+                        /// 
+                        /// Valid values:
+                        /// 
+                        /// *   LessThanThreshold: less than the threshold
+                        /// 
+                        /// *   GreaterThanLastWeek: greater than the metric value at the same time last week
+                        /// 
+                        /// *   LessThanOrEqualToThreshold: less than or equal to the threshold
+                        /// 
+                        /// *   NotEqualToThreshold: does not equal to the threshold
+                        /// 
+                        /// *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
+                        /// 
+                        /// *   GreaterThanYesterday: greater than the metric value at the same time yesterday
+                        /// 
+                        /// *   LessThanYesterday: less than the metric value at the same time yesterday
+                        /// 
+                        /// *   LessThanLastWeek: less than the metric value at the same time last week
+                        /// 
+                        /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
+                        /// 
+                        /// *   GreaterThanThreshold: greater than the threshold
+                        /// 
+                        /// *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+                        /// </summary>
                         [NameInMap("ComparisonOperator")]
                         [Validation(Required=false)]
                         public string ComparisonOperator { get; set; }
 
                         /// <summary>
-                        /// The consecutive number of times for which the metric value is measured before an alert is triggered.
+                        /// The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.
                         /// </summary>
                         [NameInMap("EvaluationCount")]
                         [Validation(Required=false)]
                         public string EvaluationCount { get; set; }
 
+                        /// <summary>
+                        /// The alert level.
+                        /// 
+                        /// Valid values:
+                        /// 
+                        /// *   INFO
+                        /// 
+                        ///     <!-- -->
+                        /// 
+                        ///     <!-- -->
+                        /// 
+                        ///     <!-- -->
+                        /// 
+                        /// *   WARN
+                        /// 
+                        ///     <!-- -->
+                        /// 
+                        ///     <!-- -->
+                        /// 
+                        ///     <!-- -->
+                        /// 
+                        /// *   CRITICAL
+                        /// 
+                        ///     <!-- -->
+                        /// 
+                        ///     <!-- -->
+                        /// 
+                        ///     <!-- -->
+                        /// </summary>
                         [NameInMap("Level")]
                         [Validation(Required=false)]
                         public string Level { get; set; }
 
                         /// <summary>
-                        /// The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+                        /// The metric name. For more information, see [Appendix 1: Metrics](~~163515~~).
                         /// </summary>
                         [NameInMap("MetricName")]
                         [Validation(Required=false)]
@@ -61,21 +117,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string Namespace { get; set; }
 
                         /// <summary>
-                        /// The aggregation period of the monitoring data. Unit: minutes. For more information, see [Appendix 1: Metrics](~~163515~~).
+                        /// The aggregation period of monitoring data. Unit: minutes. For more information, see [Appendix 1: Metrics](~~163515~~).
                         /// </summary>
                         [NameInMap("Period")]
                         [Validation(Required=false)]
                         public string Period { get; set; }
 
                         /// <summary>
-                        /// The statistical aggregation method that is used to calculate metric values that trigger alerts. For more information, see [Appendix 1: Metrics](~~163515~~).
+                        /// The method used to calculate metric values that trigger alerts. For more information, see [Appendix 1: Metrics](~~163515~~).
                         /// </summary>
                         [NameInMap("Statistics")]
                         [Validation(Required=false)]
                         public string Statistics { get; set; }
 
                         /// <summary>
-                        /// The threshold of the metric value.
+                        /// The alert threshold.
                         /// </summary>
                         [NameInMap("Threshold")]
                         [Validation(Required=false)]
@@ -85,6 +141,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// The abbreviation of the service name.
+                /// </summary>
                 [NameInMap("Product")]
                 [Validation(Required=false)]
                 public string Product { get; set; }
@@ -93,33 +152,53 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the request was successful.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// The information about the services for which one-click alert is enabled. Services are separated with commas (,). Valid values:
+        /// 
+        /// *   ecs: Elastic Compute Service (ECS)
+        /// *   rds: ApsaraDB RDS
+        /// *   slb: Server Load Balancer (SLB)
+        /// *   redis_standard: ApsaraDB for Redis of the standard architecture
+        /// *   redis_sharding: ApsaraDB for Redis of the cluster architecture
+        /// *   redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture
+        /// *   mongodb: ApsaraDB for MongoDB of the replica set architecture
+        /// *   mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture
+        /// *   hbase: ApsaraDB for HBase
+        /// *   elasticsearch: Elasticsearch
+        /// *   opensearch: OpenSearch
+        /// </summary>
         [NameInMap("Datapoints")]
         [Validation(Required=false)]
         public string Datapoints { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// *   true: The request was successful.
+        /// *   false: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

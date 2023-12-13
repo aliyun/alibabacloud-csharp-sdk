@@ -288,6 +288,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string NoEffectiveInterval { get; set; }
 
+        [NameInMap("Options")]
+        [Validation(Required=false)]
+        public string Options { get; set; }
+
         /// <summary>
         /// The aggregation period of the metric data.
         /// 

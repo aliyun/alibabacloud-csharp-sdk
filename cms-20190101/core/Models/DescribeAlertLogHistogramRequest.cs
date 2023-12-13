@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        [NameInMap("EventType")]
+        [Validation(Required=false)]
+        public string EventType { get; set; }
+
         /// <summary>
         /// The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
         /// 
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RuleId")]
+        [Validation(Required=false)]
+        public string RuleId { get; set; }
 
         /// <summary>
         /// The name of the alert rule.

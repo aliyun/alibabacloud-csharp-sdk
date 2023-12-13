@@ -5506,6 +5506,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
             {
                 query["GroupBy"] = request.GroupBy;
@@ -5541,6 +5545,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
                 query["Product"] = request.Product;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
@@ -5600,6 +5608,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
             {
                 query["GroupBy"] = request.GroupBy;
@@ -5635,6 +5647,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
                 query["Product"] = request.Product;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
@@ -5718,6 +5734,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
             {
                 query["GroupBy"] = request.GroupBy;
@@ -5753,6 +5773,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
                 query["Product"] = request.Product;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
@@ -5812,6 +5836,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
             {
                 query["GroupBy"] = request.GroupBy;
@@ -5847,6 +5875,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
                 query["Product"] = request.Product;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
@@ -5929,6 +5961,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
             {
@@ -6027,6 +6063,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
             {
@@ -7498,7 +7538,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.
+          * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and configure alert rules for the process monitoring task.
           *
           * @param request DescribeGroupMonitoringAgentProcessRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7544,7 +7584,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.
+          * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and configure alert rules for the process monitoring task.
           *
           * @param request DescribeGroupMonitoringAgentProcessRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7590,7 +7630,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.
+          * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and configure alert rules for the process monitoring task.
           *
           * @param request DescribeGroupMonitoringAgentProcessRequest
           * @return DescribeGroupMonitoringAgentProcessResponse
@@ -7602,7 +7642,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         }
 
         /**
-          * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.
+          * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and configure alert rules for the process monitoring task.
           *
           * @param request DescribeGroupMonitoringAgentProcessRequest
           * @return DescribeGroupMonitoringAgentProcessResponse
@@ -16438,6 +16478,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["NoEffectiveInterval"] = request.NoEffectiveInterval;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
@@ -16543,6 +16587,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoEffectiveInterval))
             {
                 query["NoEffectiveInterval"] = request.NoEffectiveInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
