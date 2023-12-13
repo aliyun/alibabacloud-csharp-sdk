@@ -9,17 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class CreateImageCacheResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        /// <summary>
+        /// The ID of the intermediate elastic container instance that is used to create the image cache.
+        /// </summary>
+        [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ContainerGroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the image cache.
+        /// </summary>
         [NameInMap("ImageCacheId")]
         [Validation(Required=false)]
         public string ImageCacheId { get; set; }
 
-        [NameInMap("ContainerGroupId")]
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ContainerGroupId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

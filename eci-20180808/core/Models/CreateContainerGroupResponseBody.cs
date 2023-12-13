@@ -9,13 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class CreateContainerGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// The ID of the elastic container instance.
+        /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
         public string ContainerGroupId { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

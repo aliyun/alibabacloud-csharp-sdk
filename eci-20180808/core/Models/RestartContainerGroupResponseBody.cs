@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class RestartContainerGroupResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

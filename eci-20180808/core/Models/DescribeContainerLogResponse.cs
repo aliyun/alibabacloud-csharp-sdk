@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public DescribeContainerLogResponseBody Body { get; set; }
