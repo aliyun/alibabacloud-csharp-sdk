@@ -133,12 +133,55 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public bool? AutoRepair { get; set; }
 
+            [NameInMap("auto_repair_policy")]
+            [Validation(Required=false)]
+            public NodepoolManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
+            public class NodepoolManagementAutoRepairPolicy : TeaModel {
+                [NameInMap("restart_node")]
+                [Validation(Required=false)]
+                public bool? RestartNode { get; set; }
+
+            }
+
+            [NameInMap("auto_upgrade")]
+            [Validation(Required=false)]
+            public bool? AutoUpgrade { get; set; }
+
+            [NameInMap("auto_upgrade_policy")]
+            [Validation(Required=false)]
+            public NodepoolManagementAutoUpgradePolicy AutoUpgradePolicy { get; set; }
+            public class NodepoolManagementAutoUpgradePolicy : TeaModel {
+                [NameInMap("auto_upgrade_kubelet")]
+                [Validation(Required=false)]
+                public bool? AutoUpgradeKubelet { get; set; }
+
+            }
+
+            [NameInMap("auto_vul_fix")]
+            [Validation(Required=false)]
+            public bool? AutoVulFix { get; set; }
+
+            [NameInMap("auto_vul_fix_policy")]
+            [Validation(Required=false)]
+            public NodepoolManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
+            public class NodepoolManagementAutoVulFixPolicy : TeaModel {
+                [NameInMap("restart_node")]
+                [Validation(Required=false)]
+                public bool? RestartNode { get; set; }
+
+                [NameInMap("vul_level")]
+                [Validation(Required=false)]
+                public string VulLevel { get; set; }
+
+            }
+
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
             [NameInMap("upgrade_config")]
             [Validation(Required=false)]
+            [Obsolete]
             public NodepoolManagementUpgradeConfig UpgradeConfig { get; set; }
             public class NodepoolManagementUpgradeConfig : TeaModel {
                 [NameInMap("auto_upgrade")]
@@ -164,6 +207,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("max_nodes")]
         [Validation(Required=false)]
         public long? MaxNodes { get; set; }
+
+        [NameInMap("node_config")]
+        [Validation(Required=false)]
+        public NodepoolNodeConfig NodeConfig { get; set; }
+        public class NodepoolNodeConfig : TeaModel {
+            [NameInMap("kubelet_configuration")]
+            [Validation(Required=false)]
+            public KubeletConfig KubeletConfiguration { get; set; }
+
+        }
 
         [NameInMap("nodepool_info")]
         [Validation(Required=false)]
@@ -239,6 +292,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string KeyPair { get; set; }
 
+            [NameInMap("login_as_non_root")]
+            [Validation(Required=false)]
+            public bool? LoginAsNonRoot { get; set; }
+
             [NameInMap("login_password")]
             [Validation(Required=false)]
             public string LoginPassword { get; set; }
@@ -265,6 +322,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             [NameInMap("platform")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Platform { get; set; }
 
             [NameInMap("private_pool_options")]
@@ -327,9 +385,25 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public bool? SystemDiskBurstingEnabled { get; set; }
 
+            [NameInMap("system_disk_categories")]
+            [Validation(Required=false)]
+            public List<string> SystemDiskCategories { get; set; }
+
             [NameInMap("system_disk_category")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
+
+            [NameInMap("system_disk_encrypt_algorithm")]
+            [Validation(Required=false)]
+            public string SystemDiskEncryptAlgorithm { get; set; }
+
+            [NameInMap("system_disk_encrypted")]
+            [Validation(Required=false)]
+            public bool? SystemDiskEncrypted { get; set; }
+
+            [NameInMap("system_disk_kms_key_id")]
+            [Validation(Required=false)]
+            public string SystemDiskKmsKeyId { get; set; }
 
             [NameInMap("system_disk_performance_level")]
             [Validation(Required=false)]

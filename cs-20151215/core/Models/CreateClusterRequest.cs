@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// 注册集群 API Server SLB 访问控制列表。
+        /// The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.
         /// </summary>
         [NameInMap("access_control_list")]
         [Validation(Required=false)]
@@ -24,24 +24,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// *   Specify the Flannel plug-in in the following format: \[{"name":"flannel","config":""}].
         /// *   Specify the Terway plug-in in the following format: \[{"name": "terway-eniip","config": ""}].
         /// 
-        /// **Volume plug-in**: required. The `csi` and `flexvolume` volume plug-ins are supported.
+        /// **Volume plug-in**: required. The `CSI` and `FlexVolume` volume plug-ins are supported.
         /// 
         /// *   Specify the `CSI` plug-in in the following format: \[{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].
-        /// *   Specify the `FlexVolume plug-in` in the following format: \[{"name": "flexvolume","config": ""}].
+        /// *   Specify the `FlexVolume` plug-in in the following format: \[{"name": "flexvolume","config": ""}].
         /// 
-        /// **Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Log Service is disabled, you cannot use the cluster auditing feature.
+        /// **Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.
         /// 
         /// *   Use an existing `Simple Log Service project`: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].
         /// *   To create a `Simple Log Service project`, specify the component in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].
         /// 
-        /// **Ingress controller**`: optional. By default, the nginx-ingress-controller component is installed in ACK dedicated clusters.`
+        /// **Ingress controller**: optional. By default, the `nginx-ingress-controller` component is installed in ACK dedicated clusters.
         /// 
         /// *   To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: \[{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].
         /// *   If you do not want to install nginx-ingress-controller, specify the component in the following format: \[{"name": "nginx-ingress-controller","config": "","disabled": true}].
         /// 
-        /// **Event center**: Optional. By default, the event center feature is enabled.
+        /// **Event center**: optional. By default, the event center feature is enabled.
         /// 
-        /// You can use Kubernetes event centers to store and query events, and configure alert rules. You can use the Logstores that are associated with Kubernetes event centers for free within 90 days. For more information, see [Create and use a Kubernetes event center](https://help.aliyun.com/document_detail/150476.html#task-2389213).
+        /// You can use Kubernetes event centers to store and query events, and configure alert rules. You can use the Logstores that are associated with Kubernetes event centers for free within 90 days. For more information, see [Create and use an event center](https://help.aliyun.com/document_detail/150476.html#task-2389213).
         /// 
         /// Enable the ack-node-problem-detector component in the following format: \[{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].
         /// </summary>
@@ -103,24 +103,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The type of ACK managed cluster. Valid values:
         /// 
-        /// *   `ack.pro.small`: ACK Pro clusters
-        /// *   `ack.standard`: ACK Basic clusters
+        /// *   `ack.pro.small`: ACK Pro cluster.
+        /// *   `ack.standard`: ACK Basic cluster.
         /// 
-        /// Default value: `ack.standard`. If you leave this property empty, an ACK Basic cluster is created.
+        /// Default value: `ack.standard`. If you leave this property empty, an ACK Basic cluster.is created.
         /// 
-        /// For more information, see [Introduction to ACK managed clusters](https://help.aliyun.com/document_detail/173290.html).
+        /// For more information, see [Overview of ACK Pro clusters](https://help.aliyun.com/document_detail/173290.html).
         /// </summary>
         [NameInMap("cluster_spec")]
         [Validation(Required=false)]
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// The type of the cluster. Valid values:
+        /// The cluster type. Valid values:
         /// 
-        /// *   `Kubernetes`: ACK dedicated clusters
-        /// *   `ManagedKubernetes`: ACK managed clusters or ACK Edge clusters
-        /// *   `Ask`: ACK Serverless Basic clusters
-        /// *   `ExternalKubernetes`: external clusters that are registered to ACK
+        /// *   `Kubernetes`: ACK dedicated cluster.
+        /// *   `ManagedKubernetes`: ACK Basic cluster or ACK Edge cluster.
+        /// *   `Ask`: ACK Serverless Basic cluster.
+        /// *   `ExternalKubernetes`: external cluster that is registered to ACK.
         /// </summary>
         [NameInMap("cluster_type")]
         [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// 
         /// For more information about subnetting for ACK clusters, see [Plan CIDR blocks for an ACK cluster that is deployed in a VPC](~~86500~~).
         /// 
-        /// > If the cluster uses Flannel, this parameter is required.
+        /// >  This parameter is required if the cluster uses the Flannel plug-in.
         /// </summary>
         [NameInMap("container_cidr")]
         [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> ControlplaneLogComponents { get; set; }
 
         /// <summary>
-        /// The Simple Log Service project that is used to store the log of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the `k8s-log-{ClusterID}` format.
+        /// The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the `k8s-log-{ClusterID}` format.
         /// </summary>
         [NameInMap("controlplane_log_project")]
         [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ControlplaneLogTtl { get; set; }
 
         /// <summary>
-        /// The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
+        /// The CPU management policy of the nodes in a node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
         /// 
         /// *   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.
         /// *   `none`: specifies that the default CPU affinity is used.
@@ -194,8 +194,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// Specifies whether to perform a rollback if the cluster fails to be created. Valid values:
         /// 
-        /// *   `true`: performs a rollback if the system fails to create the cluster
-        /// *   `false`: does not perform a rollback if the system fails to create the cluster
+        /// *   `true`: performs a rollback if the system fails to create the cluster.
+        /// *   `false`: does not perform a rollback if the system fails to create the cluster.
         /// 
         /// Default value: `true`.
         /// </summary>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The ID of a key that is managed by Key Management Service (KMS). The key is used to encrypt data disks. For more information, see [KMS](~~28935~~).
         /// 
-        /// > This feature supports only ACK Pro clusters.
+        /// >  This feature supports only ACK Pro clusters.
         /// </summary>
         [NameInMap("encryption_provider_key")]
         [Validation(Required=false)]
@@ -275,9 +275,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ImageType { get; set; }
 
         /// <summary>
-        /// The list of existing Elastic Compute Service (ECS) instances that are specified as worker nodes for the cluster.
+        /// The list of existing ECS instances that are specified as worker nodes for the cluster.
         /// 
-        /// > This parameter is required when you create worker nodes on existing ECS instances.
+        /// >  This parameter is required when you create worker nodes on existing ECS instances.
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// Specifies whether to create an advanced security group. This parameter takes effect only if `security_group_id` is left empty.
         /// 
-        /// > To use a basic security group, make sure that the sum of the number of cluster nodes and the number of pods that use Terway does not exceed 2,000. Therefore, if the cluster uses Terway, we recommend that you use an advanced security group.
+        /// >  To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, if the cluster uses Terway, we recommend that you use an advanced security group.
         /// 
         /// *   `true`: creates an advanced security group.
         /// *   `false`: does not create an advanced security group.
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string LoginPassword { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for master nodes. This parameter takes effect and is required only if `master_instance_charge_type` is set to `PrePaid`.
+        /// Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only if `master_instance_charge_type` is set to `PrePaid`. Valid values:
         /// 
         /// *   `true`: enables auto-renewal.
         /// *   `false`: disables auto-renewal.
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The billing cycle of master nodes. This parameter is required if master_instance_charge_type is set to `PrePaid`.
         /// 
-        /// Set the value to `Month`. Resources are billed only on a monthly basis.
+        /// Set the value to `Month`. Master nodes are billed only on a monthly basis.
         /// </summary>
         [NameInMap("master_period_unit")]
         [Validation(Required=false)]
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// 
         /// *   `cloud_efficiency`: ultra disk.
         /// *   `cloud_ssd`: standard SSD.
-        /// *   `cloud_essd`: enhanced SSD (ESSD).
+        /// *   `cloud_essd`: ESSD.
         /// 
         /// Default value: `cloud_ssd`. The default value may vary in different zones.
         /// </summary>
@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string MasterSystemDiskCategory { get; set; }
 
         /// <summary>
-        /// The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see [ESSDs](~~122389~~).
+        /// The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for enhanced SSDs. For more information about the relationship between disk PLs and disk sizes, see [ESSDs](~~122389~~).
         /// </summary>
         [NameInMap("master_system_disk_performance_level")]
         [Validation(Required=false)]
@@ -479,9 +479,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> MasterVswitchIds { get; set; }
 
         /// <summary>
-        /// The name of the cluster.
+        /// The cluster name.
         /// 
-        /// The name must be 1 to 63 characters in length and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+        /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -500,7 +500,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? NatGateway { get; set; }
 
         /// <summary>
-        /// The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel.
+        /// The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel as the network plug-in.
         /// 
         /// Default value: `26`.
         /// </summary>
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodePortRange { get; set; }
 
         /// <summary>
-        /// 节点池列表。
+        /// The list of node pools.
         /// </summary>
         [NameInMap("nodepools")]
         [Validation(Required=false)]
@@ -589,9 +589,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// The list of pod vSwiches. You need to specify at least one pod vSwitch for each node vSwitch and the pod vSwitches must not be the same as the node vSwitches (`vswitch`). We recommend that you specify pod vSwitches whose mask lengths are no greater than 19.
+        /// The list of pod vSwitches. You need to specify at least one pod vSwitch for each node vSwitch and the pod vSwitches must not be the same as the node vSwitches (`vswitch`). We recommend that you specify pod vSwitches whose mask lengths are no greater than 19.
         /// 
-        /// > When the cluster uses Terway, the `pod_vswitch_ids` parameter is required.
+        /// >  The `pod_vswitch_ids` parameter is required if the cluster uses Terway as the network plug-in.
         /// </summary>
         [NameInMap("pod_vswitch_ids")]
         [Validation(Required=false)]
@@ -610,8 +610,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The kube-proxy mode. Valid values:
         /// 
-        /// *   `iptables`: iptables is a kube-proxy mode. It uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.
-        /// *   `ipvs`: a high-performance kube-proxy mode. It uses Linux IP Virtual Server (IPVS) to conduct Service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios where high-performance load balancing is required.
+        /// *   `iptables`: iptables is a mature and stable kube-proxy mode. It uses iptables rules to conduct service discovery and load balancing. The performance of this mode is restricted by the size of the Kubernetes cluster. This mode is suitable for Kubernetes clusters that manage a small number of Services.
+        /// *   `ipvs`: IPVS is a high-performance kube-proxy mode. It uses Linux Virtual Server (LVS) to conduct service discovery and load balancing. This mode is suitable for clusters that manage a large number of Services. We recommend that you use this mode in scenarios where high-performance load balancing is required.
         /// 
         /// Default value: `ipvs`.
         /// </summary>
@@ -627,14 +627,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> RdsInstances { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// The ID of the region in which you want to deploy the cluster.
         /// </summary>
         [NameInMap("region_id")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the cluster belongs. You can use this parameter to isolate different clusters.
+        /// The ID of the resource group to which the cluster belongs. You can use resource groups to isolate clusters.
         /// </summary>
         [NameInMap("resource_group_id")]
         [Validation(Required=false)]
@@ -643,7 +643,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.
         /// 
-        /// For more information about how to select a proper container runtime, see [How to select between Docker and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).
+        /// For more information about how to select a proper container runtime, see [Comparison of Docker, containerd, and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).
         /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]
@@ -677,7 +677,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The type of service discovery that is implemented in the `ACK Serverless` cluster.
         /// 
-        /// *   `CoreDNS`:a standard service discovery plug-in provided by open source Kubernetes. To use the Domain Name System (DNS) resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 CPU cores and 512 MiB of memory.
+        /// *   `CoreDNS`: a standard service discovery plug-in provided by open source Kubernetes. To use the Domain Name System (DNS) resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 CPU cores and 512 MiB of memory.
         /// *   `PrivateZone`: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.
         /// 
         /// By default, this parameter is not specified.
@@ -692,7 +692,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// *   `true`: automatically creates a NAT gateway and configures SNAT rules. Set this parameter to `true` if nodes and applications in the cluster need to access the Internet.
         /// *   `false`: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.
         /// 
-        /// > If this feature is disabled when you create the cluster, you can manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](~~178480~~).
+        /// >  If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](~~178480~~).
         /// 
         /// Default value: `true`.
         /// </summary>
@@ -701,12 +701,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SnatEntry { get; set; }
 
         /// <summary>
-        /// Reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see [ACK reinforcement based on MLPS](~~196148~~).
+        /// Reinforcement based on classified protection. For more information, see [ACK reinforcement based on classified protection](~~196148~~).
         /// 
         /// Valid values:
         /// 
-        /// *   `true`: enables reinforcement based on MLPS.
-        /// *   `false`: disables reinforcement based on MLPS.
+        /// *   `true`: enables reinforcement based on classified protection.
+        /// *   `false`: disables reinforcement based on classified protection.
         /// 
         /// Default value: `false`.
         /// </summary>
@@ -727,7 +727,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SshFlags { get; set; }
 
         /// <summary>
-        /// The labels that you want to add to nodes. You must add labels based on the following rules:
+        /// The labels that you want to add to nodes. You must add tags based on the following rules:
         /// 
         /// *   Each label is a case-sensitive key-value pair. You can add up to 20 labels.
         /// *   A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
@@ -737,7 +737,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<Tag> Tags { get; set; }
 
         /// <summary>
-        /// The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
+        /// The taints of the nodes in the node pool. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [Taints and Tolerations](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
         /// </summary>
         [NameInMap("taints")]
         [Validation(Required=false)]
@@ -774,7 +774,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// The virtual private cloud (VPC) in which you want to deploy the cluster. You must specify a VPC when you create the cluster.
+        /// The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.
         /// </summary>
         [NameInMap("vpcid")]
         [Validation(Required=false)]
@@ -826,7 +826,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// Specifies whether to encrypt the data disks. Valid values:
+            /// Specifies whether to encrypt a data disk. Valid values:
             /// 
             /// *   `true`: encrypts a data disk.
             /// *   `false`: does not encrypt a data disk.
@@ -838,7 +838,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Encrypted { get; set; }
 
             /// <summary>
-            /// The PL of a data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](~~122389~~).
+            /// The performance level (PL) of a data disk. This parameter takes effect only on ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](~~122389~~).
             /// </summary>
             [NameInMap("performance_level")]
             [Validation(Required=false)]
@@ -897,7 +897,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string WorkerPeriodUnit { get; set; }
 
         /// <summary>
-        /// The category of the system disk that you attach to the worker node. For more information, see [Elastic Block Storage overview](~~63136~~).
+        /// The category of the system disk that you attach to the worker node. For more information, see [Elastic Block Storage devices](~~63136~~).
         /// 
         /// Valid values:
         /// 
@@ -929,7 +929,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The size of the system disk that you want to use for worker nodes. Unit: GiB.
         /// 
-        /// Valid values: 40 to 500
+        /// Valid values: 40 to 500.
         /// 
         /// The value of this parameter must be at least 40 and no less than the image size.
         /// 
@@ -951,7 +951,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The list of vSwitches that are specified for nodes. Each node is allocated a vSwitch.
         /// 
-        /// The ` worker_vswitch_ids  `parameter is optional but the `vswitch_ids` parameter is required when you create an ACK managed cluster that does not contain nodes.
+        /// The `worker_vswitch_ids` parameter is optional but the `vswitch_ids` parameter is required when you create an ACK managed cluster that does not contain nodes.
         /// </summary>
         [NameInMap("worker_vswitch_ids")]
         [Validation(Required=false)]

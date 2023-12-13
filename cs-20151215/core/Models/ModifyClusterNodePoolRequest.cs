@@ -238,6 +238,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("upgrade_config")]
             [Validation(Required=false)]
+            [Obsolete]
             public ModifyClusterNodePoolRequestManagementUpgradeConfig UpgradeConfig { get; set; }
             public class ModifyClusterNodePoolRequestManagementUpgradeConfig : TeaModel {
                 /// <summary>
@@ -367,6 +368,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            [NameInMap("image_type")]
+            [Validation(Required=false)]
+            public string ImageType { get; set; }
+
             /// <summary>
             /// The billing method of the nodes in the node pool. Valid values:
             /// 
@@ -480,6 +485,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("platform")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Platform { get; set; }
 
             /// <summary>
@@ -581,6 +587,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
 
+            [NameInMap("system_disk_bursting_enabled")]
+            [Validation(Required=false)]
+            public bool? SystemDiskBurstingEnabled { get; set; }
+
+            [NameInMap("system_disk_categories")]
+            [Validation(Required=false)]
+            public List<string> SystemDiskCategories { get; set; }
+
             /// <summary>
             /// The type of system disk. Valid values:
             /// 
@@ -593,12 +607,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            [NameInMap("system_disk_encrypt_algorithm")]
+            [Validation(Required=false)]
+            public string SystemDiskEncryptAlgorithm { get; set; }
+
+            [NameInMap("system_disk_encrypted")]
+            [Validation(Required=false)]
+            public bool? SystemDiskEncrypted { get; set; }
+
+            [NameInMap("system_disk_kms_key_id")]
+            [Validation(Required=false)]
+            public string SystemDiskKmsKeyId { get; set; }
+
             /// <summary>
             /// The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs. You can specify a higher PL if you increase the size of the system disk. For more information, see [ESSDs](~~122389~~).
             /// </summary>
             [NameInMap("system_disk_performance_level")]
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
+
+            [NameInMap("system_disk_provisioned_iops")]
+            [Validation(Required=false)]
+            public long? SystemDiskProvisionedIops { get; set; }
 
             /// <summary>
             /// The system disk size of a node. Unit: GiB.

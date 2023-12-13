@@ -202,6 +202,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<Taint> Taints { get; set; }
 
+            [NameInMap("unschedulable")]
+            [Validation(Required=false)]
+            public bool? Unschedulable { get; set; }
+
             /// <summary>
             /// The user data of the node pool. For more information, see [Generate user data](~~49121~~).
             /// </summary>
@@ -467,6 +471,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public long? AutoRenewPeriod { get; set; }
 
+            [NameInMap("cis_enabled")]
+            [Validation(Required=false)]
+            public bool? CisEnabled { get; set; }
+
             /// <summary>
             /// Indicates whether pay-as-you-go instances are automatically created to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as cost or insufficient inventory. This parameter takes effect when `multi_az_policy` is set to `COST_OPTIMIZED`. Valid values:
             /// 
@@ -505,6 +513,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            [NameInMap("image_type")]
+            [Validation(Required=false)]
+            public string ImageType { get; set; }
+
             /// <summary>
             /// The billing method of the nodes in the node pool. Valid values:
             /// 
@@ -542,6 +554,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("key_pair")]
             [Validation(Required=false)]
             public string KeyPair { get; set; }
+
+            [NameInMap("login_as_non_root")]
+            [Validation(Required=false)]
+            public bool? LoginAsNonRoot { get; set; }
 
             /// <summary>
             /// The password for SSH logon. You must set this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
@@ -687,6 +703,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
+            [NameInMap("soc_enabled")]
+            [Validation(Required=false)]
+            public bool? SocEnabled { get; set; }
+
             /// <summary>
             /// The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.
             /// </summary>
@@ -742,6 +762,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
 
+            [NameInMap("system_disk_bursting_enabled")]
+            [Validation(Required=false)]
+            public bool? SystemDiskBurstingEnabled { get; set; }
+
+            [NameInMap("system_disk_categories")]
+            [Validation(Required=false)]
+            public List<string> SystemDiskCategories { get; set; }
+
             /// <summary>
             /// The type of system disk. Valid values:
             /// 
@@ -752,12 +780,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            [NameInMap("system_disk_encrypt_algorithm")]
+            [Validation(Required=false)]
+            public string SystemDiskEncryptAlgorithm { get; set; }
+
+            [NameInMap("system_disk_encrypted")]
+            [Validation(Required=false)]
+            public bool? SystemDiskEncrypted { get; set; }
+
+            [NameInMap("system_disk_kms_key_id")]
+            [Validation(Required=false)]
+            public string SystemDiskKmsKeyId { get; set; }
+
             /// <summary>
             /// The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs (ESSDs).
             /// </summary>
             [NameInMap("system_disk_performance_level")]
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
+
+            [NameInMap("system_disk_provisioned_iops")]
+            [Validation(Required=false)]
+            public long? SystemDiskProvisionedIops { get; set; }
 
             /// <summary>
             /// The system disk size of a node. Unit: GiB.

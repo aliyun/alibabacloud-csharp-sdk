@@ -242,6 +242,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<Taint> Taints { get; set; }
 
+            [NameInMap("unschedulable")]
+            [Validation(Required=false)]
+            public bool? Unschedulable { get; set; }
+
             /// <summary>
             /// The user data on the node.
             /// </summary>
@@ -325,6 +329,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("upgrade_config")]
             [Validation(Required=false)]
+            [Obsolete]
             public CreateClusterNodePoolRequestManagementUpgradeConfig UpgradeConfig { get; set; }
             public class CreateClusterNodePoolRequestManagementUpgradeConfig : TeaModel {
                 /// <summary>
@@ -370,6 +375,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("max_nodes")]
         [Validation(Required=false)]
         public long? MaxNodes { get; set; }
+
+        [NameInMap("node_config")]
+        [Validation(Required=false)]
+        public CreateClusterNodePoolRequestNodeConfig NodeConfig { get; set; }
+        public class CreateClusterNodePoolRequestNodeConfig : TeaModel {
+            [NameInMap("kubelet_configuration")]
+            [Validation(Required=false)]
+            public KubeletConfig KubeletConfiguration { get; set; }
+
+        }
 
         /// <summary>
         /// The configurations of the node pool.
@@ -431,6 +446,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("auto_renew_period")]
             [Validation(Required=false)]
             public long? AutoRenewPeriod { get; set; }
+
+            [NameInMap("cis_enabled")]
+            [Validation(Required=false)]
+            public bool? CisEnabled { get; set; }
 
             /// <summary>
             /// Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect when you set `multi_az_policy` to `COST_OPTIMIZED`. Valid values:
@@ -531,6 +550,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string KeyPair { get; set; }
 
+            [NameInMap("login_as_non_root")]
+            [Validation(Required=false)]
+            public bool? LoginAsNonRoot { get; set; }
+
             /// <summary>
             /// The password for SSH logon. You must set this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
             /// </summary>
@@ -599,6 +622,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("platform")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Platform { get; set; }
 
             /// <summary>
@@ -660,6 +684,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("security_group_ids")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
+
+            [NameInMap("soc_enabled")]
+            [Validation(Required=false)]
+            public bool? SocEnabled { get; set; }
 
             /// <summary>
             /// The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.
@@ -727,6 +755,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public bool? SystemDiskBurstingEnabled { get; set; }
 
+            [NameInMap("system_disk_categories")]
+            [Validation(Required=false)]
+            public List<string> SystemDiskCategories { get; set; }
+
             /// <summary>
             /// The type of system disk. Valid values:
             /// 
@@ -739,6 +771,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("system_disk_category")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
+
+            [NameInMap("system_disk_encrypt_algorithm")]
+            [Validation(Required=false)]
+            public string SystemDiskEncryptAlgorithm { get; set; }
+
+            [NameInMap("system_disk_encrypted")]
+            [Validation(Required=false)]
+            public bool? SystemDiskEncrypted { get; set; }
+
+            [NameInMap("system_disk_kms_key_id")]
+            [Validation(Required=false)]
+            public string SystemDiskKmsKeyId { get; set; }
 
             /// <summary>
             /// The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.
