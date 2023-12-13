@@ -285,6 +285,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("StorageClass")]
+            [Validation(Required=false)]
+            public string StorageClass { get; set; }
+
             /// <summary>
             /// The title of the audio or video file.
             /// </summary>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateMediaStorageClassRequest : TeaModel {
+        [NameInMap("AllowUpdateWithoutTimeLimit")]
+        [Validation(Required=false)]
+        public bool? AllowUpdateWithoutTimeLimit { get; set; }
+
         /// <summary>
         /// The media asset ID. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:
         /// 

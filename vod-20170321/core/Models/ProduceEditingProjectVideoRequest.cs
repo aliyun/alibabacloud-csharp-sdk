@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ProduceEditingProjectVideoRequest : TeaModel {
+        /// <summary>
+        /// The ID of the application. Default value: **app-1000000**. For more information, see [Multi-application service](~~113600~~).
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
