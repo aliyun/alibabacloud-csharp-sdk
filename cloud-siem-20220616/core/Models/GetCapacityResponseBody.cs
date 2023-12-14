@@ -9,51 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class GetCapacityResponseBody : TeaModel {
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
+        /// <summary>
+        /// The information about the storage capacity.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCapacityResponseBodyData Data { get; set; }
         public class GetCapacityResponseBodyData : TeaModel {
+            /// <summary>
+            /// Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:
+            /// 
+            /// *   true: The logs are in the normal state. The log analysis feature is available.
+            /// *   false: The logs are being cleared. The log analysis feature is unavailable.
+            /// </summary>
             [NameInMap("ExistLogStore")]
             [Validation(Required=false)]
             public bool? ExistLogStore { get; set; }
 
+            /// <summary>
+            /// The purchased storage capacity of the threat analysis feature. Unit: GB.
+            /// </summary>
             [NameInMap("PreservedCapacity")]
             [Validation(Required=false)]
             public long? PreservedCapacity { get; set; }
 
+            /// <summary>
+            /// The billable storage capacity of the threat analysis feature. Unit: GB.
+            /// </summary>
             [NameInMap("UsedCapacity")]
             [Validation(Required=false)]
             public double? UsedCapacity { get; set; }
 
         }
 
-        [NameInMap("DyCode")]
-        [Validation(Required=false)]
-        public string DyCode { get; set; }
-
-        [NameInMap("DyMessage")]
-        [Validation(Required=false)]
-        public string DyMessage { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

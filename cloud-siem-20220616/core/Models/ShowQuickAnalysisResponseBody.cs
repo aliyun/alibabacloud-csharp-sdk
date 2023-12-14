@@ -9,43 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ShowQuickAnalysisResponseBody : TeaModel {
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
+        /// <summary>
+        /// The index fields.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ShowQuickAnalysisResponseBodyData Data { get; set; }
         public class ShowQuickAnalysisResponseBodyData : TeaModel {
+            /// <summary>
+            /// The index fields of the logs.
+            /// </summary>
             [NameInMap("IndexList")]
             [Validation(Required=false)]
             public List<string> IndexList { get; set; }
 
         }
 
-        [NameInMap("DyCode")]
-        [Validation(Required=false)]
-        public string DyCode { get; set; }
-
-        [NameInMap("DyMessage")]
-        [Validation(Required=false)]
-        public string DyMessage { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 
