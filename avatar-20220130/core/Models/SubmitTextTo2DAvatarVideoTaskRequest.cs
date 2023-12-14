@@ -49,6 +49,22 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
+            [NameInMap("Height")]
+            [Validation(Required=false)]
+            public int? Height { get; set; }
+
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public int? Width { get; set; }
+
+            [NameInMap("X")]
+            [Validation(Required=false)]
+            public int? X { get; set; }
+
+            [NameInMap("Y")]
+            [Validation(Required=false)]
+            public int? Y { get; set; }
+
         }
 
         [NameInMap("Callback")]
