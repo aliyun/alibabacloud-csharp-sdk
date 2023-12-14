@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Aliding20230426.Models
+{
+    public class CreateDeliveryPlanShrinkRequest : TeaModel {
+        [NameInMap("Content")]
+        [Validation(Required=false)]
+        public string ContentShrink { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        [NameInMap("ResId")]
+        [Validation(Required=false)]
+        public string ResId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("UserIdList")]
+        [Validation(Required=false)]
+        public string UserIdListShrink { get; set; }
+
+    }
+
+}
