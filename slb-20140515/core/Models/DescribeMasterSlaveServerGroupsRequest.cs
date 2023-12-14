@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeMasterSlaveServerGroupsRequest : TeaModel {
+        /// <summary>
+        /// The description of the primary/secondary server group.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -16,15 +19,15 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// Specifies whether to return information about the associated listeners. Valid values:
         /// 
-        /// *   **true**: returns information about the associated listeners.
-        /// *   **false**: does not return information about the associated listeners.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("IncludeListener")]
         [Validation(Required=false)]
         public bool? IncludeListener { get; set; }
 
         /// <summary>
-        /// The ID of the CLB instance.
+        /// The CLB instance ID.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the Classic Load Balancer (CLB) instance.
+        /// The region ID of the CLB instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -61,18 +64,16 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public List<DescribeMasterSlaveServerGroupsRequestTag> Tag { get; set; }
         public class DescribeMasterSlaveServerGroupsRequestTag : TeaModel {
             /// <summary>
-            /// The tag key. You can specify at most 20 tag keys.
+            /// The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.
             /// 
-            /// The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.
-            /// 
-            /// The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` and `acs:`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

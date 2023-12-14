@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateMasterSlaveServerGroupResponseBody : TeaModel {
         /// <summary>
-        /// The list of backend servers in the primary/secondary server group.
+        /// The backend servers in the primary/secondary server group.
         /// </summary>
         [NameInMap("MasterSlaveBackendServers")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The port number used by the backend server.
+                /// The port that is used by the backend server.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string ServerType { get; set; }
 
                 /// <summary>
-                /// The type of the backend server. Valid values:
+                /// The service type of the backend server. Valid values:
                 /// 
-                /// *   **ecs**: an ECS instance
-                /// *   **eni**: an ENI
+                /// *   **ecs**
+                /// *   **eni**
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -72,14 +72,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The ID of the primary/secondary server group.
+        /// The primary/secondary server group ID.
         /// </summary>
         [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
         public string MasterSlaveServerGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

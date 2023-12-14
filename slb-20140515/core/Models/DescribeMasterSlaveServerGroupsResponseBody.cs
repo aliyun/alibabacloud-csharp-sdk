@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeMasterSlaveServerGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The list of backend servers in the primary/secondary server group.
+        /// The primary/secondary server groups.
         /// </summary>
         [NameInMap("MasterSlaveServerGroups")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects AssociatedObjects { get; set; }
                 public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects : TeaModel {
                     /// <summary>
-                    /// The list of listeners.
+                    /// The listeners.
                     /// </summary>
                     [NameInMap("Listeners")]
                     [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                         public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener> Listener { get; set; }
                         public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener : TeaModel {
                             /// <summary>
-                            /// The listening port.
+                            /// The listener port.
                             /// </summary>
                             [NameInMap("Port")]
                             [Validation(Required=false)]
                             public int? Port { get; set; }
 
                             /// <summary>
-                            /// The listening protocol.
+                            /// The listener protocol.
                             /// </summary>
                             [NameInMap("Protocol")]
                             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 }
 
                 /// <summary>
-                /// The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+                /// The time when the CLB instance was created. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string MasterSlaveServerGroupName { get; set; }
 
                 /// <summary>
-                /// The tag key.
+                /// The tags to add to the resource.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                     public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag> Tag { get; set; }
                     public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag keys.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag values.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

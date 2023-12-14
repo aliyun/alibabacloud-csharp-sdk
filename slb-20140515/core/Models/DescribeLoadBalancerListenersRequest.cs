@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeLoadBalancerListenersRequest : TeaModel {
+        /// <summary>
+        /// The description of the listener.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The frontend port that is used by the CLB instance.
+        /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
@@ -37,9 +43,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public List<string> LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// Valid values: **1** to **100**. If you do not specify a value, the default value **20** is used.
+        /// Valid values: **1** to **100**. If you do not specify this parameter, the default value **20** is used.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -83,24 +89,25 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 标签列表。
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeLoadBalancerListenersRequestTag> Tag { get; set; }
         public class DescribeLoadBalancerListenersRequestTag : TeaModel {
             /// <summary>
-            /// 资源的标签键。N的取值范围：**1~20**。一旦输入该值，则不允许为空字符串。
+            /// The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// 最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+            /// The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// 资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。
-            /// 最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+            /// The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

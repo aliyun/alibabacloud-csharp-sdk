@@ -1538,6 +1538,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["XForwardedFor"] = request.XForwardedFor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_ClientSrcPort))
+            {
+                query["XForwardedFor_ClientSrcPort"] = request.XForwardedFor_ClientSrcPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBID))
             {
                 query["XForwardedFor_SLBID"] = request.XForwardedFor_SLBID;
@@ -1545,6 +1549,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBIP))
             {
                 query["XForwardedFor_SLBIP"] = request.XForwardedFor_SLBIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBPORT))
+            {
+                query["XForwardedFor_SLBPORT"] = request.XForwardedFor_SLBPORT;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_proto))
             {
@@ -1726,6 +1734,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["XForwardedFor"] = request.XForwardedFor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_ClientSrcPort))
+            {
+                query["XForwardedFor_ClientSrcPort"] = request.XForwardedFor_ClientSrcPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBID))
             {
                 query["XForwardedFor_SLBID"] = request.XForwardedFor_SLBID;
@@ -1733,6 +1745,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBIP))
             {
                 query["XForwardedFor_SLBIP"] = request.XForwardedFor_SLBIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBPORT))
+            {
+                query["XForwardedFor_SLBPORT"] = request.XForwardedFor_SLBPORT;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_proto))
             {
@@ -1950,6 +1966,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["XForwardedFor"] = request.XForwardedFor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_ClientSrcPort))
+            {
+                query["XForwardedFor_ClientSrcPort"] = request.XForwardedFor_ClientSrcPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBID))
             {
                 query["XForwardedFor_SLBID"] = request.XForwardedFor_SLBID;
@@ -1957,6 +1977,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBIP))
             {
                 query["XForwardedFor_SLBIP"] = request.XForwardedFor_SLBIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBPORT))
+            {
+                query["XForwardedFor_SLBPORT"] = request.XForwardedFor_SLBPORT;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_proto))
             {
@@ -2146,6 +2170,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["XForwardedFor"] = request.XForwardedFor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_ClientSrcPort))
+            {
+                query["XForwardedFor_ClientSrcPort"] = request.XForwardedFor_ClientSrcPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBID))
             {
                 query["XForwardedFor_SLBID"] = request.XForwardedFor_SLBID;
@@ -2153,6 +2181,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBIP))
             {
                 query["XForwardedFor_SLBIP"] = request.XForwardedFor_SLBIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBPORT))
+            {
+                query["XForwardedFor_SLBPORT"] = request.XForwardedFor_SLBPORT;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_proto))
             {
@@ -4499,6 +4531,14 @@ namespace AlibabaCloud.SDK.Slb20140515
             return await DeleteServerCertificateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Slb\\&api=DeleteTLSCipherPolicy\\&type=RPC\\&version=2014-05-15)
+          *
+          * @param request DeleteTLSCipherPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTLSCipherPolicyResponse
+         */
         public DeleteTLSCipherPolicyResponse DeleteTLSCipherPolicyWithOptions(DeleteTLSCipherPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4546,6 +4586,14 @@ namespace AlibabaCloud.SDK.Slb20140515
             return TeaModel.ToObject<DeleteTLSCipherPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Slb\\&api=DeleteTLSCipherPolicy\\&type=RPC\\&version=2014-05-15)
+          *
+          * @param request DeleteTLSCipherPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTLSCipherPolicyResponse
+         */
         public async Task<DeleteTLSCipherPolicyResponse> DeleteTLSCipherPolicyWithOptionsAsync(DeleteTLSCipherPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4593,12 +4641,26 @@ namespace AlibabaCloud.SDK.Slb20140515
             return TeaModel.ToObject<DeleteTLSCipherPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Slb\\&api=DeleteTLSCipherPolicy\\&type=RPC\\&version=2014-05-15)
+          *
+          * @param request DeleteTLSCipherPolicyRequest
+          * @return DeleteTLSCipherPolicyResponse
+         */
         public DeleteTLSCipherPolicyResponse DeleteTLSCipherPolicy(DeleteTLSCipherPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTLSCipherPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Slb\\&api=DeleteTLSCipherPolicy\\&type=RPC\\&version=2014-05-15)
+          *
+          * @param request DeleteTLSCipherPolicyRequest
+          * @return DeleteTLSCipherPolicyResponse
+         */
         public async Task<DeleteTLSCipherPolicyResponse> DeleteTLSCipherPolicyAsync(DeleteTLSCipherPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11392,6 +11454,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["XForwardedFor"] = request.XForwardedFor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_ClientSrcPort))
+            {
+                query["XForwardedFor_ClientSrcPort"] = request.XForwardedFor_ClientSrcPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBID))
             {
                 query["XForwardedFor_SLBID"] = request.XForwardedFor_SLBID;
@@ -11399,6 +11465,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBIP))
             {
                 query["XForwardedFor_SLBIP"] = request.XForwardedFor_SLBIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBPORT))
+            {
+                query["XForwardedFor_SLBPORT"] = request.XForwardedFor_SLBPORT;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_proto))
             {
@@ -11568,6 +11638,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["XForwardedFor"] = request.XForwardedFor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_ClientSrcPort))
+            {
+                query["XForwardedFor_ClientSrcPort"] = request.XForwardedFor_ClientSrcPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBID))
             {
                 query["XForwardedFor_SLBID"] = request.XForwardedFor_SLBID;
@@ -11575,6 +11649,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBIP))
             {
                 query["XForwardedFor_SLBIP"] = request.XForwardedFor_SLBIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBPORT))
+            {
+                query["XForwardedFor_SLBPORT"] = request.XForwardedFor_SLBPORT;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_proto))
             {
@@ -11787,6 +11865,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["XForwardedFor"] = request.XForwardedFor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_ClientSrcPort))
+            {
+                query["XForwardedFor_ClientSrcPort"] = request.XForwardedFor_ClientSrcPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBID))
             {
                 query["XForwardedFor_SLBID"] = request.XForwardedFor_SLBID;
@@ -11794,6 +11876,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBIP))
             {
                 query["XForwardedFor_SLBIP"] = request.XForwardedFor_SLBIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBPORT))
+            {
+                query["XForwardedFor_SLBPORT"] = request.XForwardedFor_SLBPORT;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_proto))
             {
@@ -11978,6 +12064,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["XForwardedFor"] = request.XForwardedFor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_ClientSrcPort))
+            {
+                query["XForwardedFor_ClientSrcPort"] = request.XForwardedFor_ClientSrcPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBID))
             {
                 query["XForwardedFor_SLBID"] = request.XForwardedFor_SLBID;
@@ -11985,6 +12075,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBIP))
             {
                 query["XForwardedFor_SLBIP"] = request.XForwardedFor_SLBIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_SLBPORT))
+            {
+                query["XForwardedFor_SLBPORT"] = request.XForwardedFor_SLBPORT;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XForwardedFor_proto))
             {

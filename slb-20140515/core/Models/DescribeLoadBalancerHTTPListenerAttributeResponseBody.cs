@@ -389,6 +389,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string XForwardedFor { get; set; }
 
+        [NameInMap("XForwardedFor_ClientSrcPort")]
+        [Validation(Required=false)]
+        public string XForwardedFor_ClientSrcPort { get; set; }
+
         /// <summary>
         /// Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:
         /// 
@@ -408,6 +412,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("XForwardedFor_SLBIP")]
         [Validation(Required=false)]
         public string XForwardedFor_SLBIP { get; set; }
+
+        [NameInMap("XForwardedFor_SLBPORT")]
+        [Validation(Required=false)]
+        public string XForwardedFor_SLBPORT { get; set; }
 
         /// <summary>
         /// Indicates whether the `X-Forwarded-Proto` header is used to retrieve the listener protocol. Valid values:

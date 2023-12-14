@@ -837,21 +837,23 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             }
 
             /// <summary>
-            /// 标签列表。
+            /// The tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeLoadBalancerListenersResponseBodyListenersTags> Tags { get; set; }
             public class DescribeLoadBalancerListenersResponseBodyListenersTags : TeaModel {
                 /// <summary>
-                /// 资源的标签键。
+                /// The tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// 资源的标签值。
+                /// The tag value.
+                /// 
+                /// For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
