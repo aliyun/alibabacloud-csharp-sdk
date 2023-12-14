@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Bailian20230601.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        [NameInMap("DataType")]
+        [Validation(Required=false)]
+        public int? DataType { get; set; }
+
         [NameInMap("DocumentList")]
         [Validation(Required=false)]
         public List<ImportEnterpriseDocumentRequestDocumentList> DocumentList { get; set; }

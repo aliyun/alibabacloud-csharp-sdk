@@ -8,10 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20230601.Models
 {
-    public class DeleteEnterpriseDataResponseBody : TeaModel {
+    public class QueryEnterpriseDataTagResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public List<QueryEnterpriseDataTagResponseBodyData> Data { get; set; }
+        public class QueryEnterpriseDataTagResponseBodyData : TeaModel {
+            [NameInMap("DataId")]
+            [Validation(Required=false)]
+            public string DataId { get; set; }
+
+            [NameInMap("TagId")]
+            [Validation(Required=false)]
+            public long? TagId { get; set; }
+
+            [NameInMap("TagName")]
+            [Validation(Required=false)]
+            public string TagName { get; set; }
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -21,9 +35,6 @@ namespace AlibabaCloud.SDK.Bailian20230601.Models
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

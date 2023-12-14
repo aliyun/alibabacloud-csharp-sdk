@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20230601.Models
 {
-    public class CancelFineTuneJobRequest : TeaModel {
+    public class QueryEnterpriseTagListRequest : TeaModel {
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("PageNo")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public int? PageNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

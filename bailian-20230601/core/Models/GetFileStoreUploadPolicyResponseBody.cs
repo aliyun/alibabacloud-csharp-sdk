@@ -8,38 +8,42 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20230601.Models
 {
-    public class SearchEnterpriseDataResponseBody : TeaModel {
+    public class GetFileStoreUploadPolicyResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<SearchEnterpriseDataResponseBodyData> Data { get; set; }
-        public class SearchEnterpriseDataResponseBodyData : TeaModel {
-            [NameInMap("DataId")]
+        public GetFileStoreUploadPolicyResponseBodyData Data { get; set; }
+        public class GetFileStoreUploadPolicyResponseBodyData : TeaModel {
+            [NameInMap("AccessId")]
             [Validation(Required=false)]
-            public string DataId { get; set; }
+            public string AccessId { get; set; }
 
-            [NameInMap("DataName")]
+            [NameInMap("Dir")]
             [Validation(Required=false)]
-            public string DataName { get; set; }
+            public string Dir { get; set; }
 
-            [NameInMap("Score")]
+            [NameInMap("Expire")]
             [Validation(Required=false)]
-            public string Score { get; set; }
+            public string Expire { get; set; }
 
-            [NameInMap("Source")]
+            [NameInMap("Host")]
             [Validation(Required=false)]
-            public string Source { get; set; }
+            public string Host { get; set; }
 
-            [NameInMap("Text")]
+            [NameInMap("Key")]
             [Validation(Required=false)]
-            public string Text { get; set; }
+            public string Key { get; set; }
 
-            [NameInMap("Title")]
+            [NameInMap("Policy")]
             [Validation(Required=false)]
-            public string Title { get; set; }
+            public string Policy { get; set; }
 
-            [NameInMap("TitlePath")]
+            [NameInMap("SecurityToken")]
             [Validation(Required=false)]
-            public string TitlePath { get; set; }
+            public string SecurityToken { get; set; }
+
+            [NameInMap("Signature")]
+            [Validation(Required=false)]
+            public string Signature { get; set; }
 
         }
 
@@ -51,9 +55,6 @@ namespace AlibabaCloud.SDK.Bailian20230601.Models
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

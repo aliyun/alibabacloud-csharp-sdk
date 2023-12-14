@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Bailian20230601.Models
             [Validation(Required=false)]
             public int? DataTypeCode { get; set; }
 
-            [NameInMap("DownloadUrl")]
-            [Validation(Required=false)]
-            public string DownloadUrl { get; set; }
-
             [NameInMap("StatusDetail")]
             [Validation(Required=false)]
             public string StatusDetail { get; set; }

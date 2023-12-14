@@ -8,32 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20230601.Models
 {
-    public class GetEnterpriseDataChunkResponseBody : TeaModel {
+    public class GetPromptResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<GetEnterpriseDataChunkResponseBodyData> Data { get; set; }
-        public class GetEnterpriseDataChunkResponseBodyData : TeaModel {
-            [NameInMap("Text")]
+        public GetPromptResponseBodyData Data { get; set; }
+        public class GetPromptResponseBodyData : TeaModel {
+            [NameInMap("PromptContent")]
             [Validation(Required=false)]
-            public string Text { get; set; }
+            public string PromptContent { get; set; }
 
-            [NameInMap("Title")]
+            [NameInMap("PromptId")]
             [Validation(Required=false)]
-            public string Title { get; set; }
-
-            [NameInMap("TitlePath")]
-            [Validation(Required=false)]
-            public string TitlePath { get; set; }
+            public string PromptId { get; set; }
 
         }
 
-        [NameInMap("ErrorCode")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
+        public string HttpStatusCode { get; set; }
 
-        [NameInMap("ErrorMsg")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
+        public string Message { get; set; }
 
         /// <summary>
         /// Id of the request

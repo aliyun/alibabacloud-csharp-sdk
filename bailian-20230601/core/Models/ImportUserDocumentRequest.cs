@@ -8,30 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20230601.Models
 {
-    public class ImportEnterpriseDocumentShrinkRequest : TeaModel {
+    public class ImportUserDocumentRequest : TeaModel {
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
-        [NameInMap("DataType")]
+        [NameInMap("FileName")]
         [Validation(Required=false)]
-        public int? DataType { get; set; }
+        public string FileName { get; set; }
 
-        [NameInMap("DocumentList")]
+        [NameInMap("FileStoreId")]
         [Validation(Required=false)]
-        public string DocumentListShrink { get; set; }
+        public long? FileStoreId { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("OssPath")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string OssPath { get; set; }
 
         [NameInMap("StoreId")]
         [Validation(Required=false)]
         public long? StoreId { get; set; }
 
-        [NameInMap("Tags")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string TagsShrink { get; set; }
+        public string UserId { get; set; }
 
     }
 
