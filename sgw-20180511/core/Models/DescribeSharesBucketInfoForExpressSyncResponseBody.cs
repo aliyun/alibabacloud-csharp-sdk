@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeSharesBucketInfoForExpressSyncResponseBodyBucketInfosBucketInfo> BucketInfo { get; set; }
             public class DescribeSharesBucketInfoForExpressSyncResponseBodyBucketInfosBucketInfo : TeaModel {
+                [NameInMap("BucketName")]
+                [Validation(Required=false)]
                 public string BucketName { get; set; }
+
+                [NameInMap("BucketPrefix")]
+                [Validation(Required=false)]
                 public string BucketPrefix { get; set; }
+
+                [NameInMap("BucketRegion")]
+                [Validation(Required=false)]
                 public string BucketRegion { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Code")]
         [Validation(Required=false)]

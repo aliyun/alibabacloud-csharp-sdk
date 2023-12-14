@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeGatewaysTagsResponseBodyGatewayTagsGatewayTag> GatewayTag { get; set; }
             public class DescribeGatewaysTagsResponseBodyGatewayTagsGatewayTag : TeaModel {
+                [NameInMap("GatewayId")]
+                [Validation(Required=false)]
                 public string GatewayId { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeGatewaysTagsResponseBodyGatewayTagsGatewayTagTags Tags { get; set; }
                 public class DescribeGatewaysTagsResponseBodyGatewayTagsGatewayTagTags : TeaModel {
                     [NameInMap("Tag")]
@@ -39,8 +44,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

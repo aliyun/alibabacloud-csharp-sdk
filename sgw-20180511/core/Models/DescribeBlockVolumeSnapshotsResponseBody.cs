@@ -37,11 +37,21 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeBlockVolumeSnapshotsResponseBodySnapshotsSnapshot> Snapshot { get; set; }
             public class DescribeBlockVolumeSnapshotsResponseBodySnapshotsSnapshot : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
                 public long? Size { get; set; }
+
+                [NameInMap("SnapshotName")]
+                [Validation(Required=false)]
                 public string SnapshotName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

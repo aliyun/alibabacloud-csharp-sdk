@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeGatewaysForCmsResponseBodyGatewaysGateway> Gateway { get; set; }
             public class DescribeGatewaysForCmsResponseBodyGatewaysGateway : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("GatewayId")]
+                [Validation(Required=false)]
                 public string GatewayId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

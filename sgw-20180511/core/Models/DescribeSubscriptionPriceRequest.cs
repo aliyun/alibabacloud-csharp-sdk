@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [Validation(Required=false)]
         public long? CacheCloudEfficiencySize { get; set; }
 
+        [NameInMap("CacheESSDPl1Size")]
+        [Validation(Required=false)]
+        public long? CacheESSDPl1Size { get; set; }
+
         [NameInMap("CacheSSDSize")]
         [Validation(Required=false)]
         public long? CacheSSDSize { get; set; }

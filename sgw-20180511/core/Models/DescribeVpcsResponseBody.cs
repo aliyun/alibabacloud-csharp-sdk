@@ -45,12 +45,25 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeVpcsResponseBodyVpcsVpc> Vpc { get; set; }
             public class DescribeVpcsResponseBodyVpcsVpc : TeaModel {
+                [NameInMap("CidrBlock")]
+                [Validation(Required=false)]
                 public string CidrBlock { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("IsDefault")]
+                [Validation(Required=false)]
                 public bool? IsDefault { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
     }
 

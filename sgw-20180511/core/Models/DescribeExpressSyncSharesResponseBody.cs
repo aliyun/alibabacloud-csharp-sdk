@@ -29,17 +29,45 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeExpressSyncSharesResponseBodySharesShare> Share { get; set; }
             public class DescribeExpressSyncSharesResponseBodySharesShare : TeaModel {
+                [NameInMap("ExpressSyncId")]
+                [Validation(Required=false)]
                 public string ExpressSyncId { get; set; }
+
+                [NameInMap("ExpressSyncState")]
+                [Validation(Required=false)]
                 public string ExpressSyncState { get; set; }
+
+                [NameInMap("GatewayId")]
+                [Validation(Required=false)]
                 public string GatewayId { get; set; }
+
+                [NameInMap("GatewayName")]
+                [Validation(Required=false)]
                 public string GatewayName { get; set; }
+
+                [NameInMap("GatewayRegion")]
+                [Validation(Required=false)]
                 public string GatewayRegion { get; set; }
+
+                [NameInMap("MnsQueue")]
+                [Validation(Required=false)]
                 public string MnsQueue { get; set; }
+
+                [NameInMap("ShareName")]
+                [Validation(Required=false)]
                 public string ShareName { get; set; }
+
+                [NameInMap("StorageBundleId")]
+                [Validation(Required=false)]
                 public string StorageBundleId { get; set; }
+
+                [NameInMap("SyncProgress")]
+                [Validation(Required=false)]
                 public int? SyncProgress { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

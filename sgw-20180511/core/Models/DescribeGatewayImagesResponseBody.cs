@@ -21,17 +21,45 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeGatewayImagesResponseBodyImagesImage> Image { get; set; }
             public class DescribeGatewayImagesResponseBodyImagesImage : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("MD5")]
+                [Validation(Required=false)]
                 public string MD5 { get; set; }
+
+                [NameInMap("ModifiedDate")]
+                [Validation(Required=false)]
                 public string ModifiedDate { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
                 public long? Size { get; set; }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
                 public string Title { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
                 public string Url { get; set; }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
                 public string Version { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

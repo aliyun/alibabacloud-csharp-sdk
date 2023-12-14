@@ -41,16 +41,41 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeTasksResponseBodyTasksSimpleTask> SimpleTask { get; set; }
             public class DescribeTasksResponseBodyTasksSimpleTask : TeaModel {
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
                 public long? CreatedTime { get; set; }
+
+                [NameInMap("MessageKey")]
+                [Validation(Required=false)]
                 public string MessageKey { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
                 public int? Progress { get; set; }
+
+                [NameInMap("RelatedResourceId")]
+                [Validation(Required=false)]
                 public string RelatedResourceId { get; set; }
+
+                [NameInMap("StateCode")]
+                [Validation(Required=false)]
                 public string StateCode { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
                 public string TaskId { get; set; }
+
+                [NameInMap("UpdatedTime")]
+                [Validation(Required=false)]
                 public long? UpdatedTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

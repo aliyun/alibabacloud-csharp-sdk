@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sgw20180511.Models
 {
     public class DescribeVpcsRequest : TeaModel {
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ResourceRegionId")]
+        [Validation(Required=false)]
+        public string ResourceRegionId { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]

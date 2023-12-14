@@ -33,12 +33,25 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<CheckUpgradeVersionResponseBodyPatchesPatch> Patch { get; set; }
             public class CheckUpgradeVersionResponseBodyPatchesPatch : TeaModel {
+                [NameInMap("InternalUrl")]
+                [Validation(Required=false)]
                 public string InternalUrl { get; set; }
+
+                [NameInMap("MD5")]
+                [Validation(Required=false)]
                 public string MD5 { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
                 public string Url { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

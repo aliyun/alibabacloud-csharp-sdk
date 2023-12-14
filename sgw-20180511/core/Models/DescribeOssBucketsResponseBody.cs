@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeOssBucketsResponseBodyBucketsBucket> Bucket { get; set; }
             public class DescribeOssBucketsResponseBodyBucketsBucket : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Code")]
         [Validation(Required=false)]

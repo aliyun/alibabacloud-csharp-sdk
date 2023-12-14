@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("IsAlreadyExist")]
+        [Validation(Required=false)]
+        public bool? IsAlreadyExist { get; set; }
+
         [NameInMap("IsRequireRecovery")]
         [Validation(Required=false)]
         public string IsRequireRecovery { get; set; }

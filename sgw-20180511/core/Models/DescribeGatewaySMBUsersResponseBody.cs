@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sgw20180511.Models
 {
     public class DescribeGatewaySMBUsersResponseBody : TeaModel {
+        [NameInMap("ActiveDirectory")]
+        [Validation(Required=false)]
+        public bool? ActiveDirectory { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -45,9 +49,13 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeGatewaySMBUsersResponseBodyUsersUser> User { get; set; }
             public class DescribeGatewaySMBUsersResponseBodyUsersUser : TeaModel {
+                [NameInMap("Username")]
+                [Validation(Required=false)]
                 public string Username { get; set; }
+
             }
-        };
+
+        }
 
     }
 

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [Validation(Required=false)]
         public float? CacheCloudSSDSizePrice { get; set; }
 
+        [NameInMap("CacheESSDPl1SizePrice")]
+        [Validation(Required=false)]
+        public float? CacheESSDPl1SizePrice { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }

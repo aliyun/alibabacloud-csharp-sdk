@@ -21,15 +21,37 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeExpressSyncsResponseBodyExpressSyncsExpressSync> ExpressSync { get; set; }
             public class DescribeExpressSyncsResponseBodyExpressSyncsExpressSync : TeaModel {
+                [NameInMap("BucketName")]
+                [Validation(Required=false)]
                 public string BucketName { get; set; }
+
+                [NameInMap("BucketPrefix")]
+                [Validation(Required=false)]
                 public string BucketPrefix { get; set; }
+
+                [NameInMap("BucketRegion")]
+                [Validation(Required=false)]
                 public string BucketRegion { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("ExpressSyncId")]
+                [Validation(Required=false)]
                 public string ExpressSyncId { get; set; }
+
+                [NameInMap("MnsTopic")]
+                [Validation(Required=false)]
                 public string MnsTopic { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public string EcsInstanceId { get; set; }
 
+            [NameInMap("HostInstanceId")]
+            [Validation(Required=false)]
+            public string HostInstanceId { get; set; }
+
             [NameInMap("LastHeartbeatTime")]
             [Validation(Required=false)]
             public long? LastHeartbeatTime { get; set; }

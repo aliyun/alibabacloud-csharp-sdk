@@ -33,10 +33,17 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeGatewayModificationClassesResponseBodyTargetGatewayClassesTargetGatewayClass> TargetGatewayClass { get; set; }
             public class DescribeGatewayModificationClassesResponseBodyTargetGatewayClassesTargetGatewayClass : TeaModel {
+                [NameInMap("GatewayClass")]
+                [Validation(Required=false)]
                 public string GatewayClass { get; set; }
+
+                [NameInMap("IsAvailable")]
+                [Validation(Required=false)]
                 public bool? IsAvailable { get; set; }
+
             }
-        };
+
+        }
 
     }
 

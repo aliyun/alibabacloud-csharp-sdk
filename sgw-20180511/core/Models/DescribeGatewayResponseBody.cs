@@ -64,7 +64,8 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [NameInMap("ElasticNode")]
             [Validation(Required=false)]
             public List<string> ElasticNode { get; set; }
-        };
+
+        }
 
         [NameInMap("ExpireStatus")]
         [Validation(Required=false)]
@@ -81,6 +82,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [NameInMap("GatewayId")]
         [Validation(Required=false)]
         public string GatewayId { get; set; }
+
+        [NameInMap("GatewayRegionId")]
+        [Validation(Required=false)]
+        public string GatewayRegionId { get; set; }
 
         [NameInMap("GatewayType")]
         [Validation(Required=false)]

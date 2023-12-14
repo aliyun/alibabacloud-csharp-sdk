@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeGatewayNFSClientsResponseBodyClientInfoListClientInfo> ClientInfo { get; set; }
             public class DescribeGatewayNFSClientsResponseBodyClientInfoListClientInfo : TeaModel {
+                [NameInMap("ClientIpAddr")]
+                [Validation(Required=false)]
                 public string ClientIpAddr { get; set; }
+
+                [NameInMap("HasNFSv3")]
+                [Validation(Required=false)]
                 public bool? HasNFSv3 { get; set; }
+
+                [NameInMap("HasNFSv40")]
+                [Validation(Required=false)]
                 public bool? HasNFSv40 { get; set; }
+
+                [NameInMap("HasNFSv41")]
+                [Validation(Required=false)]
                 public bool? HasNFSv41 { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Code")]
         [Validation(Required=false)]

@@ -37,13 +37,29 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeStorageBundlesResponseBodyStorageBundlesStorageBundle> StorageBundle { get; set; }
             public class DescribeStorageBundlesResponseBodyStorageBundlesStorageBundle : TeaModel {
+                [NameInMap("BackendBucketRegionId")]
+                [Validation(Required=false)]
                 public string BackendBucketRegionId { get; set; }
+
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
                 public long? CreatedTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("StorageBundleId")]
+                [Validation(Required=false)]
                 public string StorageBundleId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

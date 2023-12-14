@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [Validation(Required=false)]
         public bool? ReleaseAfterExpiration { get; set; }
 
+        [NameInMap("ResourceRegionId")]
+        [Validation(Required=false)]
+        public string ResourceRegionId { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }

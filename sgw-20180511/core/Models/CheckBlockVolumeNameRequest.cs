@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sgw20180511.Models
 {
     public class CheckBlockVolumeNameRequest : TeaModel {
+        /// <summary>
+        /// Bucket Endpoint。
+        /// </summary>
         [NameInMap("BucketEndpoint")]
         [Validation(Required=false)]
         public string BucketEndpoint { get; set; }

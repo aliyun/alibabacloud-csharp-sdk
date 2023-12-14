@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeGatewayInfoResponseBodyGatewayInfosGatewayInfo> GatewayInfo { get; set; }
             public class DescribeGatewayInfoResponseBodyGatewayInfosGatewayInfo : TeaModel {
+                [NameInMap("Info")]
+                [Validation(Required=false)]
                 public string Info { get; set; }
+
+                [NameInMap("Time")]
+                [Validation(Required=false)]
                 public long? Time { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

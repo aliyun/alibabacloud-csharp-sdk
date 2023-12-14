@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [Validation(Required=false)]
         public bool? IsBackToResource { get; set; }
 
+        [NameInMap("IsColdArchive")]
+        [Validation(Required=false)]
+        public bool? IsColdArchive { get; set; }
+
         [NameInMap("IsFresh")]
         [Validation(Required=false)]
         public bool? IsFresh { get; set; }

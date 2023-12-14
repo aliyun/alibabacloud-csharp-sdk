@@ -29,10 +29,17 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
             [Validation(Required=false)]
             public List<DescribeGatewayStockResponseBodyStocksStock> Stock { get; set; }
             public class DescribeGatewayStockResponseBodyStocksStock : TeaModel {
+                [NameInMap("StockInfo")]
+                [Validation(Required=false)]
                 public string StockInfo { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
