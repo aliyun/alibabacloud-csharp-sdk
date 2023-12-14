@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
 
+        [NameInMap("UserIdForFilter")]
+        [Validation(Required=false)]
+        public string UserIdForFilter { get; set; }
+
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

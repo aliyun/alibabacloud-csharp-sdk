@@ -1566,6 +1566,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["Tags"] = request.TagsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdForFilter))
+            {
+                query["UserIdForFilter"] = request.UserIdForFilter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -1667,6 +1671,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 query["Tags"] = request.TagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdForFilter))
+            {
+                query["UserIdForFilter"] = request.UserIdForFilter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
