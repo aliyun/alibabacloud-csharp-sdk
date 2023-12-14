@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Viapi20210930.Models
 {
-    public class QueryAiStoreRegionsResponseBody : TeaModel {
-        [NameInMap("Data")]
+    public class AiStoreTemplate : TeaModel {
+        [NameInMap("TemplateContext")]
         [Validation(Required=false)]
-        public List<AiStoreUserTask> Data { get; set; }
+        public string TemplateContext { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("TemplateVariable")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string TemplateVariable { get; set; }
 
     }
 

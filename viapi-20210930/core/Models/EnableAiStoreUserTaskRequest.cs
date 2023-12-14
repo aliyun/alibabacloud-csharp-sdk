@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Viapi20210930.Models
 {
     public class EnableAiStoreUserTaskRequest : TeaModel {
+        [NameInMap("AistoreVersion")]
+        [Validation(Required=false)]
+        public string AistoreVersion { get; set; }
+
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Viapi20210930.Models
 {
     public class QueryAiStoreUserTaskPageRequest : TeaModel {
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
-
         [NameInMap("ApiName")]
         [Validation(Required=false)]
         public string ApiName { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("BucketName")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string BucketName { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Viapi20210930.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("Product")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Product { get; set; }
 
-        [NameInMap("BucketName")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string BucketName { get; set; }
+        public string Status { get; set; }
 
     }
 

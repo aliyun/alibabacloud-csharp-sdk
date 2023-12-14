@@ -9,16 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Viapi20210930.Models
 {
     public class CheckServiceLinkedRoleForDeletingResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Deletable")]
         [Validation(Required=false)]
         public bool? Deletable { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("RoleUsages")]
         [Validation(Required=false)]

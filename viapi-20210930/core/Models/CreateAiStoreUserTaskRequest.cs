@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Viapi20210930.Models
 {
     public class CreateAiStoreUserTaskRequest : TeaModel {
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
-
         [NameInMap("ApiName")]
         [Validation(Required=false)]
         public string ApiName { get; set; }
+
+        [NameInMap("BucketKeyPrefix")]
+        [Validation(Required=false)]
+        public string BucketKeyPrefix { get; set; }
 
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
-        [NameInMap("BucketKeyPrefix")]
+        [NameInMap("CreateConfig")]
         [Validation(Required=false)]
-        public string BucketKeyPrefix { get; set; }
+        public string CreateConfig { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -33,13 +33,17 @@ namespace AlibabaCloud.SDK.Viapi20210930.Models
         [Validation(Required=false)]
         public string ParamInfo { get; set; }
 
-        [NameInMap("Remark")]
+        [NameInMap("Product")]
         [Validation(Required=false)]
-        public string Remark { get; set; }
+        public string Product { get; set; }
 
         [NameInMap("ReceiveConfig")]
         [Validation(Required=false)]
         public string ReceiveConfig { get; set; }
+
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

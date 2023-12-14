@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,138 +9,85 @@ using Tea;
 namespace AlibabaCloud.SDK.Viapi20210930.Models
 {
     public class AiStoreUserTask : TeaModel {
-        /// <summary>
-        /// ID
-        /// </summary>
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public long? Id { get; set; }
-
-        /// <summary>
-        /// 创建时间
-        /// </summary>
-        [NameInMap("GmtCreate")]
-        [Validation(Required=false)]
-        public string GmtCreate { get; set; }
-
-        /// <summary>
-        /// 修改时间
-        /// </summary>
-        [NameInMap("GmtModified")]
-        [Validation(Required=false)]
-        public string GmtModified { get; set; }
-
-        /// <summary>
-        /// 地域
-        /// </summary>
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
-
-        /// <summary>
-        /// 地域描述
-        /// </summary>
-        [NameInMap("RegionDesc")]
-        [Validation(Required=false)]
-        public string RegionDesc { get; set; }
-
-        /// <summary>
-        /// 任务名称
-        /// </summary>
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// 产品名称
-        /// </summary>
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
-
-        /// <summary>
-        /// 产品描述
-        /// </summary>
-        [NameInMap("ProductDesc")]
-        [Validation(Required=false)]
-        public string ProductDesc { get; set; }
-
-        /// <summary>
-        /// API名称
-        /// </summary>
-        [NameInMap("ApiName")]
-        [Validation(Required=false)]
-        public string ApiName { get; set; }
-
-        /// <summary>
-        /// API描述
-        /// </summary>
         [NameInMap("ApiDesc")]
         [Validation(Required=false)]
         public string ApiDesc { get; set; }
 
-        /// <summary>
-        /// API版本
-        /// </summary>
-        [NameInMap("Version")]
+        [NameInMap("ApiName")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string ApiName { get; set; }
 
-        /// <summary>
-        /// 参数信息
-        /// </summary>
-        [NameInMap("ParamInfo")]
-        [Validation(Required=false)]
-        public string ParamInfo { get; set; }
-
-        /// <summary>
-        /// bucket名称
-        /// </summary>
-        [NameInMap("BucketName")]
-        [Validation(Required=false)]
-        public string BucketName { get; set; }
-
-        /// <summary>
-        /// bucketKey前缀
-        /// </summary>
         [NameInMap("BucketKeyPrefix")]
         [Validation(Required=false)]
         public string BucketKeyPrefix { get; set; }
 
-        /// <summary>
-        /// 备注
-        /// </summary>
-        [NameInMap("Remark")]
+        [NameInMap("BucketName")]
         [Validation(Required=false)]
-        public string Remark { get; set; }
+        public string BucketName { get; set; }
 
-        /// <summary>
-        /// 接收消息配置
-        /// </summary>
-        [NameInMap("ReceiveConfig")]
+        [NameInMap("DisableTime")]
         [Validation(Required=false)]
-        public string ReceiveConfig { get; set; }
+        public string DisableTime { get; set; }
 
-        /// <summary>
-        /// 状态
-        /// </summary>
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        /// <summary>
-        /// 启用时间
-        /// </summary>
         [NameInMap("EnableTime")]
         [Validation(Required=false)]
         public string EnableTime { get; set; }
 
-        /// <summary>
-        /// 停用时间
-        /// </summary>
-        [NameInMap("DisableTime")]
+        [NameInMap("GmtCreate")]
         [Validation(Required=false)]
-        public string DisableTime { get; set; }
+        public string GmtCreate { get; set; }
+
+        [NameInMap("GmtModified")]
+        [Validation(Required=false)]
+        public string GmtModified { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("ParamInfo")]
+        [Validation(Required=false)]
+        public string ParamInfo { get; set; }
+
+        [NameInMap("Product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
+
+        [NameInMap("ProductDesc")]
+        [Validation(Required=false)]
+        public string ProductDesc { get; set; }
+
+        [NameInMap("ReceiveConfig")]
+        [Validation(Required=false)]
+        public string ReceiveConfig { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
+        [NameInMap("RegionDesc")]
+        [Validation(Required=false)]
+        public string RegionDesc { get; set; }
+
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("TaskVersion")]
+        [Validation(Required=false)]
+        public string TaskVersion { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 
