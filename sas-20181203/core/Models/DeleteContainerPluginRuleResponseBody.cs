@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteContainerPluginRuleResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the container plug-in is manually deleted. Valid values: **true** and **false**.
+        /// Indicates whether the container plug-in is manually deleted. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

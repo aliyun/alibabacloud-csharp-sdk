@@ -44789,6 +44789,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await ListInterceptionTargetPageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use this operation to query the access information about Kubernetes clusters.
+          *
+          * @param request ListK8sAccessInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListK8sAccessInfoResponse
+         */
         public ListK8sAccessInfoResponse ListK8sAccessInfoWithOptions(ListK8sAccessInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44828,6 +44835,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ListK8sAccessInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to query the access information about Kubernetes clusters.
+          *
+          * @param request ListK8sAccessInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListK8sAccessInfoResponse
+         */
         public async Task<ListK8sAccessInfoResponse> ListK8sAccessInfoWithOptionsAsync(ListK8sAccessInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44867,12 +44881,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ListK8sAccessInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use this operation to query the access information about Kubernetes clusters.
+          *
+          * @param request ListK8sAccessInfoRequest
+          * @return ListK8sAccessInfoResponse
+         */
         public ListK8sAccessInfoResponse ListK8sAccessInfo(ListK8sAccessInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListK8sAccessInfoWithOptions(request, runtime);
         }
 
+        /**
+          * You can use this operation to query the access information about Kubernetes clusters.
+          *
+          * @param request ListK8sAccessInfoRequest
+          * @return ListK8sAccessInfoResponse
+         */
         public async Task<ListK8sAccessInfoResponse> ListK8sAccessInfoAsync(ListK8sAccessInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -56811,6 +56837,80 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await RemoveCheckResultWhiteListWithOptionsAsync(request, runtime);
         }
 
+        public ResetHoneypotResponse ResetHoneypotWithOptions(ResetHoneypotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoneypotId))
+            {
+                query["HoneypotId"] = request.HoneypotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetHoneypot",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetHoneypotResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ResetHoneypotResponse> ResetHoneypotWithOptionsAsync(ResetHoneypotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoneypotId))
+            {
+                query["HoneypotId"] = request.HoneypotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetHoneypot",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetHoneypotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ResetHoneypotResponse ResetHoneypot(ResetHoneypotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResetHoneypotWithOptions(request, runtime);
+        }
+
+        public async Task<ResetHoneypotResponse> ResetHoneypotAsync(ResetHoneypotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResetHoneypotWithOptionsAsync(request, runtime);
+        }
+
         public RetryAgentlessTaskResponse RetryAgentlessTaskWithOptions(RetryAgentlessTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -57733,6 +57833,80 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartDiscoverDatabaseTaskWithOptionsAsync(runtime);
+        }
+
+        public StartHoneypotResponse StartHoneypotWithOptions(StartHoneypotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoneypotId))
+            {
+                query["HoneypotId"] = request.HoneypotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartHoneypot",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartHoneypotResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StartHoneypotResponse> StartHoneypotWithOptionsAsync(StartHoneypotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoneypotId))
+            {
+                query["HoneypotId"] = request.HoneypotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartHoneypot",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartHoneypotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StartHoneypotResponse StartHoneypot(StartHoneypotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartHoneypotWithOptions(request, runtime);
+        }
+
+        public async Task<StartHoneypotResponse> StartHoneypotAsync(StartHoneypotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartHoneypotWithOptionsAsync(request, runtime);
         }
 
         public StartPreCheckDatabaseResponse StartPreCheckDatabaseWithOptions(StartPreCheckDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

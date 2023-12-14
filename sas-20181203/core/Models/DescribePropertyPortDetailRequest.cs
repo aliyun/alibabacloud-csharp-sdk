@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyPortDetailRequest : TeaModel {
         /// <summary>
-        /// The IP address that is bound to the listening port.
+        /// The IP address bound to the port.
         /// </summary>
         [NameInMap("BindIp")]
         [Validation(Required=false)]

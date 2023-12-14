@@ -47,9 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RiskId { get; set; }
 
         /// <summary>
-        /// Specifies whether the check item passed the baseline check. Valid values:
-        /// *   **1**: no
-        /// *   **3**: yes
+        /// The risk status of the check item. Valid values:
+        /// 
+        /// *   **1**: failed
+        /// *   **3**: passed
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

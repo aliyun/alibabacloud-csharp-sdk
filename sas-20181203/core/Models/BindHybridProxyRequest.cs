@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class BindHybridProxyRequest : TeaModel {
+        /// <summary>
+        /// The name of the proxy cluster.
+        /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
+        /// <summary>
+        /// The UUIDs of servers that you want to add to Security Center over the proxy server.
+        /// </summary>
         [NameInMap("YundunUuids")]
         [Validation(Required=false)]
         public List<string> YundunUuids { get; set; }

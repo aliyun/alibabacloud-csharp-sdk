@@ -40,6 +40,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<string> Namespaces { get; set; }
 
+            /// <summary>
+            /// The ID of the rule.
+            /// 
+            /// >  You can call the [ListInterceptionRulePage](~~2590599~~) operation to query the IDs of rules.
+            /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public long? RuleId { get; set; }

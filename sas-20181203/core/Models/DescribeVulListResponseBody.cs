@@ -59,21 +59,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// The edition of Security Center that is authorized to protect the asset. Valid values:
+            /// The edition of Security Center that is authorized to scan the asset. Valid values:
             /// 
-            /// *   **1**: Basic edition
-            /// *   **6**: Anti-virus edition
-            /// *   **5**: Advanced edition
-            /// *   **3**: Enterprise edition
-            /// *   **7**: Ultimate edition
-            /// *   **10**: Value-added Plan edition
+            /// *   **1**: Basic
+            /// *   **6**: Anti-virus
+            /// *   **5**: Advanced
+            /// *   **3**: Enterprise
+            /// *   **7**: Ultimate
+            /// *   **10**: Value-added Plan
             /// </summary>
             [NameInMap("AuthVersion")]
             [Validation(Required=false)]
             public string AuthVersion { get; set; }
 
             /// <summary>
-            /// Indicates whether Security Center is authorized to protect the asset. Valid values:
+            /// Indicates whether Security Center is authorized to scan the asset. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public DescribeVulListResponseBodyVulRecordsExtendContentJson ExtendContentJson { get; set; }
             public class DescribeVulListResponseBodyVulRecordsExtendContentJson : TeaModel {
                 /// <summary>
-                /// The package path of the software that has the vulnerability.
+                /// The path to the package of the software that has the vulnerability.
                 /// </summary>
                 [NameInMap("AbsolutePath")]
                 [Validation(Required=false)]
@@ -110,6 +110,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// The returned message that indicates the urgent vulnerability.
+                /// </summary>
                 [NameInMap("EmgProof")]
                 [Validation(Required=false)]
                 public string EmgProof { get; set; }
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// The timestamp that was generated when the vulnerability was last detected. Unit: milliseconds.
+                /// The timestamp when the vulnerability was last detected. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("LastTs")]
                 [Validation(Required=false)]
@@ -161,20 +164,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string EnviromentFactor { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the score of urgency to fix a vulnerability is calculated. Valid values:
+                    /// Indicates whether the vulnerability priority score is calculated. Valid values:
                     /// 
-                    /// *   **0**: The score is not calculated.
-                    /// *   **1**: The score is calculated.
+                    /// *   **0**: no
+                    /// *   **1**: yes
                     /// </summary>
                     [NameInMap("Is_calc")]
                     [Validation(Required=false)]
                     public string IsCalc { get; set; }
 
                     /// <summary>
-                    /// The status of the score of urgency to fix a vulnerability. Valid values:
+                    /// The status of the vulnerability priority score. Valid values:
                     /// 
                     /// *   **none**: No score is generated.
-                    /// *   **pending**: The score is to be calculated.
+                    /// *   **pending**: The score is pending calculation.
                     /// *   **normal**: The calculation is normal.
                     /// </summary>
                     [NameInMap("Status")]
@@ -189,13 +192,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string TimeFactor { get; set; }
 
                     /// <summary>
-                    /// The score of urgency to fix a vulnerability.
+                    /// The vulnerability priority score.
                     /// 
-                    /// The fixing suggestions vary based on the score of urgency of a vulnerability.
+                    /// The following list describes scores and related fixing suggestions:
                     /// 
-                    /// *   **\[13.5,15]**: The vulnerability is a high-risk vulnerability. You must fix the vulnerability at the earliest opportunity.
-                    /// *   **\[7,13.5)**: The vulnerability is a medium-risk vulnerability. You can fix the vulnerability at your convenience.
-                    /// *   **\[0,7)**: The vulnerability is a low-risk vulnerability. You can ignore the vulnerability.
+                    /// *   If the score is from **13.5 to 15**, the vulnerability is a high-risk vulnerability. You must fix the vulnerability at the earliest opportunity.
+                    /// *   If the score is **greater than or equal to 7 but less than 13.5**, the vulnerability is a medium-risk vulnerability. You can fix the vulnerability at your convenience.
+                    /// *   If the score is **less than 7**, the vulnerability is a low-risk vulnerability. You can ignore the vulnerability.
                     /// </summary>
                     [NameInMap("Total_score")]
                     [Validation(Required=false)]
@@ -218,7 +221,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string OsRelease { get; set; }
 
                 /// <summary>
-                /// The vulnerability ID.
+                /// The ID of the vulnerability.
                 /// </summary>
                 [NameInMap("PrimaryId")]
                 [Validation(Required=false)]
@@ -239,7 +242,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string ContainerName { get; set; }
 
                     /// <summary>
-                    /// The full version number.
+                    /// The complete version number.
                     /// </summary>
                     [NameInMap("FullVersion")]
                     [Validation(Required=false)]
@@ -260,7 +263,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string MatchDetail { get; set; }
 
                     /// <summary>
-                    /// The rule that is used to detect the vulnerability.
+                    /// The rules that are used to detect the vulnerability.
                     /// </summary>
                     [NameInMap("MatchList")]
                     [Validation(Required=false)]
@@ -274,7 +277,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The path of the software that has the vulnerability.
+                    /// The path to the software that has the vulnerability.
                     /// </summary>
                     [NameInMap("Path")]
                     [Validation(Required=false)]
@@ -295,7 +298,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string UpdateCmd { get; set; }
 
                     /// <summary>
-                    /// The package version number of the software that has the vulnerability.
+                    /// The version number of the package of the software that has the vulnerability.
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -306,37 +309,40 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The status of the vulnerability. Valid values:
                 /// 
-                /// *   **1**: The vulnerability is unfixed.
-                /// *   **2**: The vulnerability failed to be fixed.
-                /// *   3: The system failed to be rolled back.
-                /// *   **4**: The vulnerability is being fixed.
-                /// *   **5**: The system is being rolled back.
-                /// *   **6**: The vulnerability is being verified.
-                /// *   **7**: The vulnerability is fixed.
-                /// *   **8**: The vulnerability is fixed and the system is to be restarted.
-                /// *   **9**: The system is rolled back.
-                /// *   **10**: The vulnerability is ignored.
-                /// *   **11**: The system is rolled back and is to be restarted.
-                /// *   **12**: The vulnerability is not found.
-                /// *   **20**: The vulnerability expires.
+                /// *   **1**: unfixed
+                /// *   **2**: fix failed
+                /// *   3: rollback failed
+                /// *   **4**: being fixed
+                /// *   **5**: being rolled back
+                /// *   **6**: being verified
+                /// *   **7**: fixed
+                /// *   **8**: fixed and to be restarted
+                /// *   **9**: rolled back
+                /// *   **10**: ignored
+                /// *   **11**: rolled back and to be restarted
+                /// *   **12**: not found
+                /// *   **20**: expired
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tag of the vulnerability.
+                /// The tag that is added to the vulnerability.
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
+                /// <summary>
+                /// The URL of the vulnerability.
+                /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
                 public string Target { get; set; }
 
                 /// <summary>
-                /// The CVE.
+                /// The CVE list.
                 /// </summary>
                 [NameInMap("cveList")]
                 [Validation(Required=false)]
@@ -345,7 +351,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The timestamp that was generated when the vulnerability was first detected. Unit: milliseconds.
+            /// The timestamp when the vulnerability was first detected. Unit: milliseconds.
             /// </summary>
             [NameInMap("FirstTs")]
             [Validation(Required=false)]
@@ -359,7 +365,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? GroupId { get; set; }
 
             /// <summary>
-            /// The instance ID of the asset.
+            /// The ID of the asset.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -386,35 +392,50 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            /// <summary>
+            /// The ID of the cluster.
+            /// </summary>
             [NameInMap("K8sClusterId")]
             [Validation(Required=false)]
             public string K8sClusterId { get; set; }
 
+            /// <summary>
+            /// The namespace.
+            /// </summary>
             [NameInMap("K8sNamespace")]
             [Validation(Required=false)]
             public string K8sNamespace { get; set; }
 
+            /// <summary>
+            /// The ID of the node.
+            /// </summary>
             [NameInMap("K8sNodeId")]
             [Validation(Required=false)]
             public string K8sNodeId { get; set; }
 
+            /// <summary>
+            /// The name of the node.
+            /// </summary>
             [NameInMap("K8sNodeName")]
             [Validation(Required=false)]
             public string K8sNodeName { get; set; }
 
+            /// <summary>
+            /// The name of the pod.
+            /// </summary>
             [NameInMap("K8sPodName")]
             [Validation(Required=false)]
             public string K8sPodName { get; set; }
 
             /// <summary>
-            /// The timestamp that was generated when the vulnerability was last detected. Unit: milliseconds.
+            /// The timestamp when the vulnerability was last detected. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastTs")]
             [Validation(Required=false)]
             public long? LastTs { get; set; }
 
             /// <summary>
-            /// The timestamp that was generated when the vulnerability status was modified. Unit: milliseconds.
+            /// The timestamp when the vulnerability status was modified. Unit: milliseconds.
             /// </summary>
             [NameInMap("ModifyTs")]
             [Validation(Required=false)]
@@ -434,14 +455,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **later**: medium
             /// *   **nntf**: low
             /// 
-            /// >  We recommend that you fix **high-level** vulnerabilities as soon as possible.
+            /// >  We recommend that you fix **high-risk** vulnerabilities at the earliest opportunity.
             /// </summary>
             [NameInMap("Necessity")]
             [Validation(Required=false)]
             public string Necessity { get; set; }
 
             /// <summary>
-            /// Indicates whether the Security Center agent of the asset is online. Valid values:
+            /// Indicates whether the Security Center agent on the asset is online. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -451,52 +472,52 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Online { get; set; }
 
             /// <summary>
-            /// The name of the operating system of your asset.
+            /// The name of the operating system for your asset.
             /// </summary>
             [NameInMap("OsName")]
             [Validation(Required=false)]
             public string OsName { get; set; }
 
             /// <summary>
-            /// The name of the operating system of your asset.
+            /// The name of the operating system for your asset.
             /// </summary>
             [NameInMap("OsVersion")]
             [Validation(Required=false)]
             public string OsVersion { get; set; }
 
             /// <summary>
-            /// The vulnerability ID.
+            /// The ID of the vulnerability.
             /// </summary>
             [NameInMap("PrimaryId")]
             [Validation(Required=false)]
             public long? PrimaryId { get; set; }
 
             /// <summary>
-            /// Indicates whether the runtime application self-protection (RASP) feature is supported. Valid values:
+            /// Indicates whether the application protection feature is supported. Valid values:
             /// 
-            /// *   **0**: TheRASP feature is not supported.
-            /// *   **1**: The RASP feature is supported
+            /// *   **0**: no
+            /// *   **1**: yes
             /// 
-            /// >  If this parameter is not returned, the RASP is not supported.
+            /// >  If this parameter is not returned, the application protection is not supported.
             /// </summary>
             [NameInMap("RaspDefend")]
             [Validation(Required=false)]
             public int? RaspDefend { get; set; }
 
             /// <summary>
-            /// The protection mode of the RASP feature. Valid values:
+            /// The protection mode of the application protection feature. Valid values:
             /// 
-            /// *   **0**: The RASP feature is not supported.
-            /// *   **1**: The RASP feature is in Monitor mode.
-            /// *   **2**: The RASP feature is in Block mode.
-            /// *   **3**: The RASP feature is disabled.
+            /// *   **0**: unprotected
+            /// *   **1**: the Monitor mode
+            /// *   **2**: the Block mode
+            /// *   **3**: disabled
             /// </summary>
             [NameInMap("RaspStatus")]
             [Validation(Required=false)]
             public int? RaspStatus { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the instance resides.
+            /// The region ID of the asset.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -510,21 +531,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Related { get; set; }
 
             /// <summary>
-            /// The timestamp that was generated when the vulnerability was fixed. Unit: milliseconds.
+            /// The timestamp when the vulnerability was fixed. Unit: milliseconds.
             /// </summary>
             [NameInMap("RepairTs")]
             [Validation(Required=false)]
             public long? RepairTs { get; set; }
 
             /// <summary>
-            /// The code that indicates the fixing result of the vulnerability.
+            /// The code that indicates the vulnerability fixing result.
             /// </summary>
             [NameInMap("ResultCode")]
             [Validation(Required=false)]
             public string ResultCode { get; set; }
 
             /// <summary>
-            /// The message that indicates the fixing result of the vulnerability.
+            /// The message that indicates the vulnerability fixing result.
             /// </summary>
             [NameInMap("ResultMessage")]
             [Validation(Required=false)]
@@ -533,26 +554,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the vulnerability. Valid values:
             /// 
-            /// *   **1**: The vulnerability is unfixed.
-            /// *   **2**: The vulnerability failed to be fixed.
-            /// *   **3**: The system failed to be rolled back.
-            /// *   **4**: The vulnerability is being fixed.
-            /// *   **5**: The system is being rolled back.
-            /// *   **6**: The vulnerability is being verified.
-            /// *   **7**: The vulnerability is fixed.
-            /// *   **8**: The vulnerability is fixed and the system is to be restarted.
-            /// *   **9**: The system is rolled back.
-            /// *   **10**: The vulnerability is ignored.
-            /// *   **11**: The system is rolled back and is to be restarted.
-            /// *   **12**: The vulnerability is not found.
-            /// *   **20**: The vulnerability expires.
+            /// *   **1**: unfixed
+            /// *   **2**: fix failed
+            /// *   **3**: rollback failed
+            /// *   **4**: being fixed
+            /// *   **5**: being rolled back
+            /// *   **6**: being verified
+            /// *   **7**: fixed
+            /// *   **8**: fixed and to be restarted
+            /// *   **9**: rolled back
+            /// *   **10**: ignored
+            /// *   **11**: rolled back and to be restarted
+            /// *   **12**: not found
+            /// *   **20**: expired
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The tag of the vulnerability.
+            /// The tag that is added to the vulnerability.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
@@ -566,14 +587,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **cms**: Web-CMS vulnerability
             /// *   **emg**: urgent vulnerability
             /// *   **app**: application vulnerability
-            /// *   **sca**: application vulnerability that is detected by using Software Component Analysis (SCA).
+            /// *   **sca**: application vulnerability that is detected by using software component analysis
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The instance UUID of the asset.
+            /// The UUID of the asset.
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

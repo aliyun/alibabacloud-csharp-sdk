@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAegisContainerPluginRuleCriteriaRequest : TeaModel {
+        /// <summary>
+        /// The language of the content within the request and response. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The value of the search condition.
+        /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
         public string Value { get; set; }

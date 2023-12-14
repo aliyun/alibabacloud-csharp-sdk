@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// The ID of the rule. You can call the addContainerWebDefenseRule operation to query the ID.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

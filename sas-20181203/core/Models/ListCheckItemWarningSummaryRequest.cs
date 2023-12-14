@@ -108,6 +108,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        /// <summary>
+        /// The UUID array of the servers.
+        /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]
         public List<string> UuidList { get; set; }

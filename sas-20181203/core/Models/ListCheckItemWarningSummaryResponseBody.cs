@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckItemWarningSummaryResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the risk statistics of check items.
+        /// The risk statistics of check items.
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
@@ -23,10 +23,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Advice { get; set; }
 
+            /// <summary>
+            /// The list of the baseline categories of attribution.
+            /// </summary>
             [NameInMap("AffiliatedRiskTypes")]
             [Validation(Required=false)]
             public List<string> AffiliatedRiskTypes { get; set; }
 
+            /// <summary>
+            /// The list of baselines attribution.
+            /// </summary>
             [NameInMap("AffiliatedRisks")]
             [Validation(Required=false)]
             public List<string> AffiliatedRisks { get; set; }
@@ -53,9 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckItem { get; set; }
 
             /// <summary>
-            /// The risk level of the check item.Valid values:
+            /// The risk level of the check item. Valid values:
+            /// 
             /// *   **high**
-            /// *  **medium**
+            /// *   **medium**
             /// *   **low**
             /// </summary>
             [NameInMap("CheckLevel")]
@@ -70,9 +77,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckType { get; set; }
 
             /// <summary>
-            /// Checks if the item belongs to the container runtime category.Valid values:
+            /// Indicates whether the check item belongs to the container runtime type. Valid values:
+            /// 
             /// *   **true**
-            /// *  **false**
+            /// *   **false**
             /// </summary>
             [NameInMap("ContainerCheckItem")]
             [Validation(Required=false)]
@@ -93,10 +101,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskType { get; set; }
 
             /// <summary>
-            /// The risk status of the check item.Valid values:
-            /// *  **1**: failed
+            /// The risk status of the check item. Valid values:
             /// 
-            /// *  **3**: passed
+            /// *   **1**: failed
+            /// *   **3**: passed
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

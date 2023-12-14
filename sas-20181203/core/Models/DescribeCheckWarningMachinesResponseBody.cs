@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// An array consisting of the servers on which the same risk item is detected.
+        /// The servers on which the same risk item is detected.
         /// </summary>
         [NameInMap("Machines")]
         [Validation(Required=false)]
@@ -26,22 +26,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether Security Center is authorized to protect the asset. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("Bind")]
             [Validation(Required=false)]
             public bool? Bind { get; set; }
 
             /// <summary>
-            /// The ID of the server.
+            /// The instance ID of the server.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// The instance name of the server.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]

@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// An array that consists of the fingerprints of the ports.
+        /// The fingerprints of the ports.
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyPortDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertyPortDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// The IP address that is bound to the listening port.
+            /// The IP address bound to the port.
             /// </summary>
             [NameInMap("BindIp")]
             [Validation(Required=false)]
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// The ID of the server.
+            /// The instance ID of the server.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// The instance name of the server.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// The listening port.
+            /// The listener port.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]

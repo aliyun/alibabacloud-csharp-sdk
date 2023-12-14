@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The public IP address of the associated instance.
+            /// The public IP address that is associated with instance.
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -358,6 +358,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string K8sPodName { get; set; }
 
+            /// <summary>
+            /// Indicates whether the large model analysis tag is supported. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
+            /// </summary>
             [NameInMap("LargeModel")]
             [Validation(Required=false)]
             public bool? LargeModel { get; set; }
@@ -390,8 +396,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the malicious behavior defense rule. Valid values:
             /// 
-            /// *   **open**: enabled.
-            /// *   **close**: disabled.
+            /// *   **open**
+            /// *   **close**
             /// </summary>
             [NameInMap("MaliciousRuleStatus")]
             [Validation(Required=false)]
@@ -457,7 +463,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SaleVersion { get; set; }
 
             /// <summary>
-            /// The IDs of the associated alert events.
+            /// The ID of the associated alert event.
             /// </summary>
             [NameInMap("SecurityEventIds")]
             [Validation(Required=false)]

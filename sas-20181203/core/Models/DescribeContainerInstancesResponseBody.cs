@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerInstancesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about containers.
+        /// The details of the container asset.
         /// </summary>
         [NameInMap("ContainerInstanceList")]
         [Validation(Required=false)]
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// The ID of cluster.
+            /// The ID of the cluster.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// The cluster name.
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
@@ -69,14 +69,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// The container is exposed.
+            /// Indicates whether the asset is exposed to the Internet.
+            /// 
+            /// *   **1**: exposed
+            /// *   **0**: not exposed
             /// </summary>
             [NameInMap("Exposed")]
             [Validation(Required=false)]
             public int? Exposed { get; set; }
 
             /// <summary>
-            /// The container exposed details .
+            /// The exposure details. The value is a JSON string.
             /// </summary>
             [NameInMap("ExposedDetail")]
             [Validation(Required=false)]
@@ -100,7 +103,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HcStatus { get; set; }
 
             /// <summary>
-            /// The IP address of the server.
+            /// The IP address of the host.
             /// </summary>
             [NameInMap("HostIp")]
             [Validation(Required=false)]
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageDigest { get; set; }
 
             /// <summary>
-            /// The ID of the image.
+            /// The image ID.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
@@ -135,7 +138,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageRepoName { get; set; }
 
             /// <summary>
-            /// The namespace to which the image repository belongs.
+            /// The namespace of the image repository.
             /// </summary>
             [NameInMap("ImageRepoNamespace")]
             [Validation(Required=false)]
