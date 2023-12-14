@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("ExecutorRpc")]
             [Validation(Required=false)]
-            public double? ExecutorRpc { get; set; }
+            public bool? ExecutorRpc { get; set; }
 
             /// <summary>
             /// Degree of parallelism.
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("HitPlan")]
             [Validation(Required=false)]
-            public double? HitPlan { get; set; }
+            public bool? HitPlan { get; set; }
 
             /// <summary>
             /// Whether an internal SQL.
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("TableScan")]
             [Validation(Required=false)]
-            public double? TableScan { get; set; }
+            public bool? TableScan { get; set; }
 
             /// <summary>
             /// Trace ID.
