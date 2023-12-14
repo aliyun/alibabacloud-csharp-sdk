@@ -1,3 +1,6 @@
+2023-12-14 Version: 1.3.4
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2023-12-06 Version: 1.3.3
 - Generated csharp 2020-12-03 for pai-dlc.
 
