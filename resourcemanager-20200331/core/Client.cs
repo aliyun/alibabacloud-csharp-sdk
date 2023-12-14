@@ -1616,6 +1616,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1653,6 +1657,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5063,6 +5071,54 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await ListAncestorsWithOptionsAsync(request, runtime);
         }
 
+        public ListAssociatedTransferSettingResponse ListAssociatedTransferSettingWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssociatedTransferSetting",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssociatedTransferSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListAssociatedTransferSettingResponse> ListAssociatedTransferSettingWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssociatedTransferSetting",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssociatedTransferSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListAssociatedTransferSettingResponse ListAssociatedTransferSetting()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAssociatedTransferSettingWithOptions(runtime);
+        }
+
+        public async Task<ListAssociatedTransferSettingResponse> ListAssociatedTransferSettingAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAssociatedTransferSettingWithOptionsAsync(runtime);
+        }
+
         /**
           * This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named `FullAliyunAccess`.
           *
@@ -8437,6 +8493,72 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAccountWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateAssociatedTransferSettingResponse UpdateAssociatedTransferSettingWithOptions(UpdateAssociatedTransferSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleSettings))
+            {
+                query["RuleSettings"] = request.RuleSettings;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAssociatedTransferSetting",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAssociatedTransferSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateAssociatedTransferSettingResponse> UpdateAssociatedTransferSettingWithOptionsAsync(UpdateAssociatedTransferSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleSettings))
+            {
+                query["RuleSettings"] = request.RuleSettings;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAssociatedTransferSetting",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAssociatedTransferSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateAssociatedTransferSettingResponse UpdateAssociatedTransferSetting(UpdateAssociatedTransferSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAssociatedTransferSettingWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateAssociatedTransferSettingResponse> UpdateAssociatedTransferSettingAsync(UpdateAssociatedTransferSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAssociatedTransferSettingWithOptionsAsync(request, runtime);
         }
 
         /**
