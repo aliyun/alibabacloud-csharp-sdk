@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
             [Validation(Required=false)]
             public string CommonName { get; set; }
 
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
             [NameInMap("IsUsing")]
             [Validation(Required=false)]
             public bool? IsUsing { get; set; }

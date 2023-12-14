@@ -69,6 +69,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public int? IsAccessProduct { get; set; }
 
+        [NameInMap("Keepalive")]
+        [Validation(Required=false)]
+        public bool? Keepalive { get; set; }
+
+        [NameInMap("KeepaliveRequests")]
+        [Validation(Required=false)]
+        public int? KeepaliveRequests { get; set; }
+
+        [NameInMap("KeepaliveTimeout")]
+        [Validation(Required=false)]
+        public int? KeepaliveTimeout { get; set; }
+
         [NameInMap("LoadBalancing")]
         [Validation(Required=false)]
         public int? LoadBalancing { get; set; }
@@ -81,9 +93,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public int? ReadTime { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("Retry")]
+        [Validation(Required=false)]
+        public bool? Retry { get; set; }
 
         [NameInMap("SniHost")]
         [Validation(Required=false)]

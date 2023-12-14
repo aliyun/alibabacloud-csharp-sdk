@@ -1,3 +1,6 @@
+2023-12-14 Version: 1.1.9
+- Generated csharp 2019-09-10 for waf-openapi.
+
 2022-01-18 Version: 1.1.8
 - Upgrade SDK.
 
