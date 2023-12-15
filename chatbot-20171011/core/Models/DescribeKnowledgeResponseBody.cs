@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public List<string> KeyWords { get; set; }
 
+        /// <summary>
+        /// FAQ ID
+        /// </summary>
         [NameInMap("KnowledgeId")]
         [Validation(Required=false)]
         public long? KnowledgeId { get; set; }
@@ -61,6 +64,9 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public List<DescribeKnowledgeResponseBodyOutlines> Outlines { get; set; }
         public class DescribeKnowledgeResponseBodyOutlines : TeaModel {
+            /// <summary>
+            /// FAQ ID
+            /// </summary>
             [NameInMap("KnowledgeId")]
             [Validation(Required=false)]
             public long? KnowledgeId { get; set; }

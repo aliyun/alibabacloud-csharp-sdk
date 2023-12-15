@@ -69,10 +69,16 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 0 for deleted, 1 for inSandbox, 2 for draft，3 for online
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        /// <summary>
+        /// null
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }

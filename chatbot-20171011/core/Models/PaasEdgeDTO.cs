@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class PaasEdgeDTO : TeaModel {
-        /// <summary>
-        /// Id
-        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
-        /// <summary>
-        /// Label
-        /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
 
-        /// <summary>
-        /// Source
-        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
-        /// <summary>
-        /// Target
-        /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }

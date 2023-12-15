@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class AppendEntityMemberRequest : TeaModel {
-        /// <summary>
-        /// 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
-        /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
@@ -31,10 +28,12 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             [NameInMap("MemberName")]
             [Validation(Required=false)]
             public string MemberName { get; set; }
+
             [NameInMap("Synonyms")]
             [Validation(Required=false)]
             public List<string> Synonyms { get; set; }
-        };
+
+        }
 
     }
 

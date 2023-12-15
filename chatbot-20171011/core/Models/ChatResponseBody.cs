@@ -32,38 +32,54 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
                 [NameInMap("AnswerSource")]
                 [Validation(Required=false)]
                 public string AnswerSource { get; set; }
+
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
+
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
+
                 [NameInMap("ContentType")]
                 [Validation(Required=false)]
                 public string ContentType { get; set; }
+
                 [NameInMap("HitStatement")]
                 [Validation(Required=false)]
                 public string HitStatement { get; set; }
+
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
+
                 [NameInMap("RelatedKnowledges")]
                 [Validation(Required=false)]
                 public List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> RelatedKnowledges { get; set; }
                 public class ChatResponseBodyMessagesKnowledgeRelatedKnowledges : TeaModel {
+                    [NameInMap("KnowledgeId")]
+                    [Validation(Required=false)]
                     public string KnowledgeId { get; set; }
+
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
                     public string Title { get; set; }
+
                 }
+
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public double? Score { get; set; }
+
                 [NameInMap("Summary")]
                 [Validation(Required=false)]
                 public string Summary { get; set; }
+
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
-            };
+
+            }
 
             [NameInMap("Recommends")]
             [Validation(Required=false)]
@@ -94,62 +110,87 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
                 [NameInMap("AnswerSource")]
                 [Validation(Required=false)]
                 public string AnswerSource { get; set; }
+
                 [NameInMap("ArticleTitle")]
                 [Validation(Required=false)]
                 public string ArticleTitle { get; set; }
+
                 [NameInMap("Commands")]
                 [Validation(Required=false)]
-                public Dictionary<string, string> Commands { get; set; }
+                public Dictionary<string, object> Commands { get; set; }
+
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
+
                 [NameInMap("ContentType")]
                 [Validation(Required=false)]
                 public string ContentType { get; set; }
+
                 [NameInMap("DialogName")]
                 [Validation(Required=false)]
                 public string DialogName { get; set; }
+
                 [NameInMap("Ext")]
                 [Validation(Required=false)]
-                public Dictionary<string, string> Ext { get; set; }
+                public Dictionary<string, object> Ext { get; set; }
+
                 [NameInMap("ExternalFlags")]
                 [Validation(Required=false)]
-                public Dictionary<string, string> ExternalFlags { get; set; }
+                public Dictionary<string, object> ExternalFlags { get; set; }
+
                 [NameInMap("HitStatement")]
                 [Validation(Required=false)]
                 public string HitStatement { get; set; }
+
                 [NameInMap("IntentName")]
                 [Validation(Required=false)]
                 public string IntentName { get; set; }
+
                 [NameInMap("MetaData")]
                 [Validation(Required=false)]
                 public string MetaData { get; set; }
+
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
+
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
                 public string NodeName { get; set; }
+
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public double? Score { get; set; }
+
                 [NameInMap("Slots")]
                 [Validation(Required=false)]
                 public List<ChatResponseBodyMessagesTextSlots> Slots { get; set; }
                 public class ChatResponseBodyMessagesTextSlots : TeaModel {
+                    [NameInMap("IsHit")]
+                    [Validation(Required=false)]
                     public bool? IsHit { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
                     public string Name { get; set; }
+
+                    [NameInMap("Origin")]
+                    [Validation(Required=false)]
                     public string Origin { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
                     public string Value { get; set; }
+
                 }
+
                 [NameInMap("UserDefinedChatTitle")]
                 [Validation(Required=false)]
                 public string UserDefinedChatTitle { get; set; }
-            };
 
-            /// <summary>
-            /// 在线场景，反问标题
-            /// </summary>
+            }
+
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
@@ -158,9 +199,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
-            /// <summary>
-            /// 语音场景，澄清内容
-            /// </summary>
             [NameInMap("VoiceTitle")]
             [Validation(Required=false)]
             public string VoiceTitle { get; set; }

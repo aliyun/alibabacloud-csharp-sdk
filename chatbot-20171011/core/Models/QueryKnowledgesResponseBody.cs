@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             [Validation(Required=false)]
             public string EndDate { get; set; }
 
+            /// <summary>
+            /// FAQ ID
+            /// </summary>
             [NameInMap("KnowledgeId")]
             [Validation(Required=false)]
             public long? KnowledgeId { get; set; }

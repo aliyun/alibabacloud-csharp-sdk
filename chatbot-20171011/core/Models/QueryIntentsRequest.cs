@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class QueryIntentsRequest : TeaModel {
-        /// <summary>
-        /// 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
-        /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
@@ -20,9 +17,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public long? DialogId { get; set; }
 
-        /// <summary>
-        /// 机器人实例 ID
-        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

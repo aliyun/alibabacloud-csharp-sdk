@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
     public class GetConversationListResponseBody : TeaModel {
         [NameInMap("Messages")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Messages { get; set; }
+        public List<Dictionary<string, string>> Messages { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
