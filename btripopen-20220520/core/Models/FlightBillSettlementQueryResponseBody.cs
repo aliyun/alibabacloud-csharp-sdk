@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string AirlineCorpName { get; set; }
 
+                [NameInMap("alipay_id")]
+                [Validation(Required=false)]
+                public string AlipayId { get; set; }
+
                 [NameInMap("alipay_trade_no")]
                 [Validation(Required=false)]
                 public string AlipayTradeNo { get; set; }

@@ -1941,6 +1941,102 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        public BaseCityInfoSearchResponse BaseCityInfoSearchWithOptions(BaseCityInfoSearchRequest request, BaseCityInfoSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["region"] = request.Region;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripAccessToken))
+            {
+                realHeaders["x-acs-btrip-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripAccessToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BaseCityInfoSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/cities/action/search",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BaseCityInfoSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<BaseCityInfoSearchResponse> BaseCityInfoSearchWithOptionsAsync(BaseCityInfoSearchRequest request, BaseCityInfoSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["region"] = request.Region;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripAccessToken))
+            {
+                realHeaders["x-acs-btrip-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripAccessToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BaseCityInfoSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/cities/action/search",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BaseCityInfoSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public BaseCityInfoSearchResponse BaseCityInfoSearch(BaseCityInfoSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            BaseCityInfoSearchHeaders headers = new BaseCityInfoSearchHeaders();
+            return BaseCityInfoSearchWithOptions(request, headers, runtime);
+        }
+
+        public async Task<BaseCityInfoSearchResponse> BaseCityInfoSearchAsync(BaseCityInfoSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            BaseCityInfoSearchHeaders headers = new BaseCityInfoSearchHeaders();
+            return await BaseCityInfoSearchWithOptionsAsync(request, headers, runtime);
+        }
+
         public BtripBillInfoAdjustResponse BtripBillInfoAdjustWithOptions(BtripBillInfoAdjustRequest request, BtripBillInfoAdjustHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TicketNo { get; set; }
 
+                [NameInMap("ticket_status")]
+                [Validation(Required=false)]
+                public int? TicketStatus { get; set; }
+
                 [NameInMap("to_city_name")]
                 [Validation(Required=false)]
                 public string ToCityName { get; set; }
