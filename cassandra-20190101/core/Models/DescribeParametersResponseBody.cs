@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -21,26 +25,41 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyParametersParameter> Parameter { get; set; }
             public class DescribeParametersResponseBodyParametersParameter : TeaModel {
-                public string Value { get; set; }
-                public string DataType { get; set; }
-                public string Description { get; set; }
-                public string Name { get; set; }
-                public string DefaultValue { get; set; }
+                [NameInMap("AllowedValues")]
+                [Validation(Required=false)]
                 public string AllowedValues { get; set; }
+
+                [NameInMap("DataType")]
+                [Validation(Required=false)]
+                public string DataType { get; set; }
+
+                [NameInMap("DefaultValue")]
+                [Validation(Required=false)]
+                public string DefaultValue { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

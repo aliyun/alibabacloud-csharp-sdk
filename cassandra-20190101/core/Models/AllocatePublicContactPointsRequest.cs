@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class AllocatePublicContactPointsRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -19,10 +23,6 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [NameInMap("DataCenterId")]
         [Validation(Required=false)]
         public string DataCenterId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public List<string> SecurityGroupId { get; set; }
-        };
+
+        }
 
     }
 

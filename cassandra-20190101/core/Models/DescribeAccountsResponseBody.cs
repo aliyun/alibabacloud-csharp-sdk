@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public DescribeAccountsResponseBodyAccounts Accounts { get; set; }
@@ -21,9 +17,17 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
             [Validation(Required=false)]
             public List<DescribeAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

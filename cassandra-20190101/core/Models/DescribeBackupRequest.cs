@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class DescribeBackupRequest : TeaModel {
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        [NameInMap("DataCenterId")]
-        [Validation(Required=false)]
-        public string DataCenterId { get; set; }
-
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [NameInMap("BackupType")]
         [Validation(Required=false)]
         public string BackupType { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        [NameInMap("DataCenterId")]
+        [Validation(Required=false)]
+        public string DataCenterId { get; set; }
 
     }
 

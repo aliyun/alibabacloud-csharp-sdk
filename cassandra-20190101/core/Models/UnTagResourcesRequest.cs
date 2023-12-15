@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class UnTagResourcesRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class DescribeClustersRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClusterName")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClusterName { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ClusterName")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ClusterName { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

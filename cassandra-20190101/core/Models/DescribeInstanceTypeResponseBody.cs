@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class DescribeInstanceTypeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("InstanceTypeSpecList")]
         [Validation(Required=false)]
         public DescribeInstanceTypeResponseBodyInstanceTypeSpecList InstanceTypeSpecList { get; set; }
@@ -21,11 +17,25 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec> InstanceTypeSpec { get; set; }
             public class DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec : TeaModel {
+                [NameInMap("CpuSize")]
+                [Validation(Required=false)]
                 public long? CpuSize { get; set; }
-                public long? MemSize { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("MemSize")]
+                [Validation(Required=false)]
+                public long? MemSize { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

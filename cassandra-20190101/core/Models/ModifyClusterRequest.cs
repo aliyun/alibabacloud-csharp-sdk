@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
+        [NameInMap("ConfirmProductOffline")]
+        [Validation(Required=false)]
+        public string ConfirmProductOffline { get; set; }
+
     }
 
 }

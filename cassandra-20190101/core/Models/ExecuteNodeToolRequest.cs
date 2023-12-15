@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class ExecuteNodeToolRequest : TeaModel {
+        [NameInMap("Arguments")]
+        [Validation(Required=false)]
+        public string Arguments { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [NameInMap("Command")]
         [Validation(Required=false)]
         public string Command { get; set; }
-
-        [NameInMap("Arguments")]
-        [Validation(Required=false)]
-        public string Arguments { get; set; }
 
         [NameInMap("DataCenterId")]
         [Validation(Required=false)]

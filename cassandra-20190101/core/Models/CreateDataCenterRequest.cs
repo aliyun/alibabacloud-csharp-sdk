@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class CreateDataCenterRequest : TeaModel {
-        [NameInMap("PayType")]
-        [Validation(Required=false)]
-        public string PayType { get; set; }
-
-        [NameInMap("PeriodUnit")]
-        [Validation(Required=false)]
-        public string PeriodUnit { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public int? Period { get; set; }
-
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
@@ -33,14 +21,6 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -48,6 +28,14 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [NameInMap("DataCenterName")]
         [Validation(Required=false)]
         public string DataCenterName { get; set; }
+
+        [NameInMap("DiskSize")]
+        [Validation(Required=false)]
+        public int? DiskSize { get; set; }
+
+        [NameInMap("DiskType")]
+        [Validation(Required=false)]
+        public string DiskType { get; set; }
 
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -57,13 +45,21 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [Validation(Required=false)]
         public int? NodeCount { get; set; }
 
-        [NameInMap("DiskType")]
+        [NameInMap("PayType")]
         [Validation(Required=false)]
-        public string DiskType { get; set; }
+        public string PayType { get; set; }
 
-        [NameInMap("DiskSize")]
+        [NameInMap("Period")]
         [Validation(Required=false)]
-        public int? DiskSize { get; set; }
+        public int? Period { get; set; }
+
+        [NameInMap("PeriodUnit")]
+        [Validation(Required=false)]
+        public string PeriodUnit { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]
@@ -72,6 +68,10 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [NameInMap("VswitchId")]
         [Validation(Required=false)]
         public string VswitchId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-cassandra")]
 [assembly: AssemblyDescription("Alibaba Cloud Cassandra (20190101) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("04cc8210-4a51-11eb-9e10-4d6802b6352b")]
+[assembly: Guid("ad303850-9b0e-11ee-b404-8d114b1eda19")]
 
 // Version information for an assembly consists of the following four values:
 //

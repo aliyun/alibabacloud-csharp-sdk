@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class DescribeIpWhitelistResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("IpList")]
         [Validation(Required=false)]
         public DescribeIpWhitelistResponseBodyIpList IpList { get; set; }
@@ -20,7 +16,12 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
             [NameInMap("IP")]
             [Validation(Required=false)]
             public List<string> IP { get; set; }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

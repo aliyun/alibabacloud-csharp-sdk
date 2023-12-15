@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
-
         [NameInMap("DataCenterId")]
         [Validation(Required=false)]
         public string DataCenterId { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
     }
 

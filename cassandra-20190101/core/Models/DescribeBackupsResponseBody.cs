@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cassandra20190101.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Backups")]
         [Validation(Required=false)]
         public DescribeBackupsResponseBodyBackups Backups { get; set; }
@@ -21,16 +17,45 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
             [Validation(Required=false)]
             public List<DescribeBackupsResponseBodyBackupsBackup> Backup { get; set; }
             public class DescribeBackupsResponseBodyBackupsBackup : TeaModel {
-                public string EndTime { get; set; }
-                public string Status { get; set; }
-                public string StartTime { get; set; }
-                public long? Size { get; set; }
-                public string BackupType { get; set; }
+                [NameInMap("BackupId")]
+                [Validation(Required=false)]
                 public string BackupId { get; set; }
+
+                [NameInMap("BackupType")]
+                [Validation(Required=false)]
+                public string BackupType { get; set; }
+
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
                 public string ClusterId { get; set; }
+
+                [NameInMap("DataCenterId")]
+                [Validation(Required=false)]
                 public string DataCenterId { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public string EndTime { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public long? Size { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
+                public string StartTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

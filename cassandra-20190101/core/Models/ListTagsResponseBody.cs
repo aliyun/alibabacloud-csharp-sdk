@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Cassandra20190101.Models
             [Validation(Required=false)]
             public List<ListTagsResponseBodyTagsTag> Tag { get; set; }
             public class ListTagsResponseBodyTagsTag : TeaModel {
-                public string TagValue { get; set; }
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
                 public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
             }
-        };
+
+        }
 
     }
 
