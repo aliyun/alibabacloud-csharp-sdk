@@ -33,11 +33,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   **false**: no
         /// *   **true**: yes
         /// 
-        /// > This parameter can be set together with the IsGroupMember parameter.
-        /// 
-        /// *   If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.
-        /// 
-        /// *   If you set only one of them or both of them, the specified values prevail.
+        /// >- This parameter can be set together with the IsGroupMember parameter.
+        /// >- If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.
+        /// >- If you set only one of them or both of them, the specified values prevail.
         /// </summary>
         [NameInMap("IsGroupMember")]
         [Validation(Required=false)]
@@ -49,11 +47,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   **false**: no
         /// *   **true**: yes
         /// 
-        /// > This parameter can be set together with the IsGroupMember parameter.
-        /// 
-        /// *   If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.
-        /// 
-        /// *   If you set only one of them or both of them, the specified values prevail.
+        /// >- This parameter can be set together with the IsGroupMember parameter.
+        /// >- If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.
+        /// >- If you set only one of them or both of them, the specified values prevail.
         /// </summary>
         [NameInMap("IsGroupSource")]
         [Validation(Required=false)]

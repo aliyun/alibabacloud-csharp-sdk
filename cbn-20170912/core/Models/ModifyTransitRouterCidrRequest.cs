@@ -10,49 +10,46 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyTransitRouterCidrRequest : TeaModel {
         /// <summary>
-        /// The ID of the region where the transit router is deployed.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// The new CIDR block of the transit router.
         /// </summary>
         [NameInMap("Cidr")]
         [Validation(Required=false)]
         public string Cidr { get; set; }
 
         /// <summary>
-        /// Specifies whether to allow the system to automatically add routes that point to the CIDR block to the route table of the transit router.
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// *   **true**: yes
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        ///     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit route to which the VPN connection is attached.
-        /// 
-        ///     The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.
-        /// 
-        ///     The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
-        /// 
-        /// *   **false**: no
+        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The new CIDR block of the transit router.
+        /// The new description of the transit router CIDR block.
+        /// 
+        /// The description must be 1 to 256 characters in length.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Specifies whether to perform a dry run. Valid values:
+        /// 
+        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false**: performs a dry run and sends the request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the transit router CIDR block.
+        /// The new name of the transit router CIDR block.
         /// 
-        /// You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a transit route CIDR block.
+        /// The name must be 1 to 128 characters in length.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -67,14 +64,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ModifyTransitRouterCidr**.
+        /// Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
+        /// - **true**: yes
+        ///   
+        ///   A value of **true** specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds the following blackhole route to the route table of the transit router to which the VPN connection is attached:
+        /// 
+        ///    The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. 
+        /// 
+        ///     The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. 
+        /// -  **false**: no
         /// </summary>
         [NameInMap("PublishCidrRoute")]
         [Validation(Required=false)]
         public bool? PublishCidrRoute { get; set; }
 
         /// <summary>
-        /// The ID of the transit router.
+        /// The ID of the region where the transit router is deployed.
+        /// 
+        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -89,21 +96,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the request. Valid values:
+        /// The ID of the CIDR block.
         /// 
-        /// *   **true**: checks the request but does not modify the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false**: sends the request. If the request passes the precheck, the CIDR block of the transit router is modified.
+        /// You can call the [ListTransitRouterCidr](~~462772~~) operation to query the ID of a CIDR block.
         /// </summary>
         [NameInMap("TransitRouterCidrId")]
         [Validation(Required=false)]
         public string TransitRouterCidrId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
-        /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        /// The ID of the transit router.
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]

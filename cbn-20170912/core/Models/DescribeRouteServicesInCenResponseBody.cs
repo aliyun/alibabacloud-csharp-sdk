@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeRouteServicesInCenResponseBody : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the region where the cloud service is deployed.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the cloud service is accessed.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the cloud service is accessed.
+        /// The information about the cloud services.
         /// </summary>
         [NameInMap("RouteServiceEntries")]
         [Validation(Required=false)]
@@ -42,19 +42,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry> RouteServiceEntry { get; set; }
             public class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry : TeaModel {
                 /// <summary>
-                /// Queries the cloud services that are configured on a Cloud Enterprise Network (CEN) instance.
+                /// The ID of the region where the cloud service is accessed.
                 /// </summary>
                 [NameInMap("AccessRegionId")]
                 [Validation(Required=false)]
                 public string AccessRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The ID of the CEN instance.
                 /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
+                /// <summary>
+                /// The service addresses of the cloud service.
+                /// </summary>
                 [NameInMap("Cidrs")]
                 [Validation(Required=false)]
                 public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs Cidrs { get; set; }
@@ -66,34 +69,39 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The service address of the cloud service.
+                /// The description of the cloud service.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The number of the returned page.
+                /// The service address of the cloud service.
                 /// </summary>
                 [NameInMap("Host")]
                 [Validation(Required=false)]
                 public string Host { get; set; }
 
+                /// <summary>
+                /// The ID of the region where the cloud service is deployed.
+                /// </summary>
                 [NameInMap("HostRegionId")]
                 [Validation(Required=false)]
                 public string HostRegionId { get; set; }
 
                 /// <summary>
-                /// The number of entries returned per page.
+                /// The ID of the VPC that is associated with the cloud service.
                 /// </summary>
                 [NameInMap("HostVpcId")]
                 [Validation(Required=false)]
                 public string HostVpcId { get; set; }
 
                 /// <summary>
-                /// The service address of the cloud service.
+                /// The status of the cloud service. Valid values:
                 /// 
-                /// You can enter a domain name, an IP address, or a CIDR block.
+                /// *   **Creating**: The cloud service is being created.
+                /// *   **Active**: The cloud service is available.
+                /// *   **Deleting**: The cloud service is being deleted.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -104,7 +112,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The ID of the VPC that is associated with the cloud service.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

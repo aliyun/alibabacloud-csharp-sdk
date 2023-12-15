@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// *   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. Valid values: **1** to **100**. We recommend that you set **MaxResults** to **20**.
         /// 
-        ///         The value of **MaxResults** in the response indicates the number of entries in the current batch.
+        ///     The value of **MaxResults** in the response indicates the number of entries in the current batch.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
