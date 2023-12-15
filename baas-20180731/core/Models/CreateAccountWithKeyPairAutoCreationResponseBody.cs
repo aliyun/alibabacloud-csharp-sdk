@@ -1,0 +1,40 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Baas20180731.Models
+{
+    public class CreateAccountWithKeyPairAutoCreationResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public CreateAccountWithKeyPairAutoCreationResponseBodyResult Result { get; set; }
+        public class CreateAccountWithKeyPairAutoCreationResponseBodyResult : TeaModel {
+            [NameInMap("AccountPrivateKey")]
+            [Validation(Required=false)]
+            public string AccountPrivateKey { get; set; }
+
+            [NameInMap("AccountPublicKey")]
+            [Validation(Required=false)]
+            public string AccountPublicKey { get; set; }
+
+            [NameInMap("AccountRecoverPrivateKey")]
+            [Validation(Required=false)]
+            public string AccountRecoverPrivateKey { get; set; }
+
+            [NameInMap("AccountRecoverPublicKey")]
+            [Validation(Required=false)]
+            public string AccountRecoverPublicKey { get; set; }
+
+        }
+
+    }
+
+}
