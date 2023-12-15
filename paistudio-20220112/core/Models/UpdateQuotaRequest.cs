@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
+        [NameInMap("QueueStrategy")]
+        [Validation(Required=false)]
+        public string QueueStrategy { get; set; }
+
     }
 
 }

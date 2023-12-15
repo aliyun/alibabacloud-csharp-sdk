@@ -41,6 +41,40 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public string EcsSpec { get; set; }
 
+            [NameInMap("InstanceCount")]
+            [Validation(Required=false)]
+            public long? InstanceCount { get; set; }
+
+            [NameInMap("InstanceSpec")]
+            [Validation(Required=false)]
+            public GetTrainingJobResponseBodyComputeResourceInstanceSpec InstanceSpec { get; set; }
+            public class GetTrainingJobResponseBodyComputeResourceInstanceSpec : TeaModel {
+                [NameInMap("CPU")]
+                [Validation(Required=false)]
+                public string CPU { get; set; }
+
+                [NameInMap("GPU")]
+                [Validation(Required=false)]
+                public string GPU { get; set; }
+
+                [NameInMap("GPUType")]
+                [Validation(Required=false)]
+                public string GPUType { get; set; }
+
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
+                public string Memory { get; set; }
+
+                [NameInMap("SharedMemory")]
+                [Validation(Required=false)]
+                public string SharedMemory { get; set; }
+
+            }
+
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public string ResourceId { get; set; }
+
         }
 
         [NameInMap("GmtCreateTime")]
@@ -186,6 +220,20 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [NameInMap("OutputUri")]
             [Validation(Required=false)]
             public string OutputUri { get; set; }
+
+        }
+
+        [NameInMap("OutputModel")]
+        [Validation(Required=false)]
+        public GetTrainingJobResponseBodyOutputModel OutputModel { get; set; }
+        public class GetTrainingJobResponseBodyOutputModel : TeaModel {
+            [NameInMap("OutputChannelName")]
+            [Validation(Required=false)]
+            public string OutputChannelName { get; set; }
+
+            [NameInMap("Uri")]
+            [Validation(Required=false)]
+            public string Uri { get; set; }
 
         }
 

@@ -229,6 +229,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public ListTrainingJobsResponseBodyTrainingJobsUserVpc UserVpc { get; set; }
             public class ListTrainingJobsResponseBodyTrainingJobsUserVpc : TeaModel {
+                [NameInMap("DefaultRoute")]
+                [Validation(Required=false)]
+                public string DefaultRoute { get; set; }
+
                 [NameInMap("ExtendedCIDRs")]
                 [Validation(Required=false)]
                 public List<string> ExtendedCIDRs { get; set; }

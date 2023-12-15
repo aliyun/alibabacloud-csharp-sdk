@@ -2998,6 +2998,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 body["Labels"] = request.Labels;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueStrategy))
+            {
+                body["QueueStrategy"] = request.QueueStrategy;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3029,6 +3033,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
             {
                 body["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueStrategy))
+            {
+                body["QueueStrategy"] = request.QueueStrategy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
