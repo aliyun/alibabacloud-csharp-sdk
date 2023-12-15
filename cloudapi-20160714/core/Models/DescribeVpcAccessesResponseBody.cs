@@ -57,6 +57,26 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags Tags { get; set; }
+                public class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags : TeaModel {
+                    [NameInMap("TagInfo")]
+                    [Validation(Required=false)]
+                    public List<DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo> TagInfo { get; set; }
+                    public class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("VpcAccessId")]
                 [Validation(Required=false)]
                 public string VpcAccessId { get; set; }

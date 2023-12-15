@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveApiProductsAuthoritiesRequest : TeaModel {
+        /// <summary>
+        /// The API products.
+        /// </summary>
         [NameInMap("ApiProductIds")]
         [Validation(Required=false)]
         public List<string> ApiProductIds { get; set; }
 
+        /// <summary>
+        /// The application ID.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public long? AppId { get; set; }

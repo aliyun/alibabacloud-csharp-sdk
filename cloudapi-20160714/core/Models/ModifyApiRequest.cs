@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
+        /// <summary>
+        /// Configuration Mode
+        /// </summary>
         [NameInMap("BackendEnable")]
         [Validation(Required=false)]
         public bool? BackendEnable { get; set; }

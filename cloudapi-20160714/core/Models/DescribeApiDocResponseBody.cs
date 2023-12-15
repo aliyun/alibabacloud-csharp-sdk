@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiDocResponseBodyErrorCodeSamplesErrorCodeSample> ErrorCodeSample { get; set; }
             public class DescribeApiDocResponseBodyErrorCodeSamplesErrorCodeSample : TeaModel {
                 /// <summary>
-                /// The error code.
+                /// The returned error code.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The error message.
+                /// The returned error message.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiDocResponseBodyRequestParametersRequestParameter> RequestParameter { get; set; }
             public class DescribeApiDocResponseBodyRequestParametersRequestParameter : TeaModel {
                 /// <summary>
-                /// The name of the API parameter.
+                /// The name of the parameter in the API request.
                 /// </summary>
                 [NameInMap("ApiParameterName")]
                 [Validation(Required=false)]
@@ -214,42 +214,42 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ArrayItemsType { get; set; }
 
                 /// <summary>
-                /// Default value
+                /// The default value.
                 /// </summary>
                 [NameInMap("DefaultValue")]
                 [Validation(Required=false)]
                 public string DefaultValue { get; set; }
 
                 /// <summary>
-                /// Example
+                /// The example value.
                 /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
                 /// <summary>
-                /// Description
+                /// The description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The order in the document.
+                /// The order in which the parameter is sorted in the document.
                 /// </summary>
                 [NameInMap("DocOrder")]
                 [Validation(Required=false)]
                 public int? DocOrder { get; set; }
 
                 /// <summary>
-                /// Specifies whether the document is public. Valid values: PUBLIC and PRIVATE.
+                /// Indicates whether the document is public. Valid values: **PUBLIC** and **PRIVATE**.
                 /// </summary>
                 [NameInMap("DocShow")]
                 [Validation(Required=false)]
                 public string DocShow { get; set; }
 
                 /// <summary>
-                /// The hash values that can be entered when ParameterType is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.
+                /// The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
                 /// </summary>
                 [NameInMap("EnumValue")]
                 [Validation(Required=false)]
@@ -298,21 +298,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public long? MinValue { get; set; }
 
                 /// <summary>
-                /// The type of the parameter.
+                /// The data type of the parameter.
                 /// </summary>
                 [NameInMap("ParameterType")]
                 [Validation(Required=false)]
                 public string ParameterType { get; set; }
 
                 /// <summary>
-                /// The regular expression used for parameter validation when ParameterType is set to String.
+                /// The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.
                 /// </summary>
                 [NameInMap("RegularExpression")]
                 [Validation(Required=false)]
                 public string RegularExpression { get; set; }
 
                 /// <summary>
-                /// Required
+                /// Indicates whether the parameter is required.
                 /// </summary>
                 [NameInMap("Required")]
                 [Validation(Required=false)]

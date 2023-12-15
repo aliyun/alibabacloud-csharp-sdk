@@ -21,42 +21,42 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeAppAttributesResponseBodyAppsAppAttribute> AppAttribute { get; set; }
             public class DescribeAppAttributesResponseBodyAppsAppAttribute : TeaModel {
                 /// <summary>
-                /// The ID of the app.
+                /// The application ID.
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public long? AppId { get; set; }
 
                 /// <summary>
-                /// The name of the app.
+                /// The application name.
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The creation time (UTC) of the app.
+                /// The creation time (UTC) of the application.
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The description of the app.
+                /// The application description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Extended Fields.
+                /// The extended information.
                 /// </summary>
                 [NameInMap("Extend")]
                 [Validation(Required=false)]
                 public string Extend { get; set; }
 
                 /// <summary>
-                /// The modification time (UTC) of the app.
+                /// The modification time (UTC) of the application.
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     public List<DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo> TagInfo { get; set; }
                     public class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

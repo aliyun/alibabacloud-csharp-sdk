@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of request logs.
+        /// The request logs.
         /// </summary>
         [NameInMap("RequestLogs")]
         [Validation(Required=false)]
@@ -28,35 +28,50 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<QueryRequestLogsResponseBodyRequestLogsRequestLog> RequestLog { get; set; }
             public class QueryRequestLogsResponseBodyRequestLogsRequestLog : TeaModel {
                 /// <summary>
-                /// The ID of the API.
+                /// The API ID.
                 /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// The name of the API
+                /// The API name.
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
+                /// <summary>
+                /// The application name.
+                /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                /// <summary>
+                /// The time when API Gateway finished forwarding the request to the backend service.
+                /// </summary>
                 [NameInMap("BackendRequestEnd")]
                 [Validation(Required=false)]
                 public long? BackendRequestEnd { get; set; }
 
+                /// <summary>
+                /// The time when API Gateway started to forward the request to the backend service.
+                /// </summary>
                 [NameInMap("BackendRequestStart")]
                 [Validation(Required=false)]
                 public long? BackendRequestStart { get; set; }
 
+                /// <summary>
+                /// The time when API Gateway finished receiving the response from the backend service.
+                /// </summary>
                 [NameInMap("BackendResponseEnd")]
                 [Validation(Required=false)]
                 public long? BackendResponseEnd { get; set; }
 
+                /// <summary>
+                /// The time when API Gateway started to receive the response from the backend service.
+                /// </summary>
                 [NameInMap("BackendResponseStart")]
                 [Validation(Required=false)]
                 public long? BackendResponseStart { get; set; }
@@ -76,42 +91,42 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ClientNonce { get; set; }
 
                 /// <summary>
-                /// The ID of the application from which an API request is sent.
+                /// The application ID that is used by the caller.
                 /// </summary>
                 [NameInMap("ConsumerAppId")]
                 [Validation(Required=false)]
                 public string ConsumerAppId { get; set; }
 
                 /// <summary>
-                /// The application key used by the caller.
+                /// The App Key that is used by the caller.
                 /// </summary>
                 [NameInMap("ConsumerAppKey")]
                 [Validation(Required=false)]
                 public string ConsumerAppKey { get; set; }
 
                 /// <summary>
-                /// The ID of the custom trace.
+                /// The custom trace ID.
                 /// </summary>
                 [NameInMap("CustomTraceId")]
                 [Validation(Required=false)]
                 public string CustomTraceId { get; set; }
 
                 /// <summary>
-                /// The domain name of the request.
+                /// The requested domain name in the request.
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// The error code returned if the request failed.
+                /// The error code that is returned.
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// The error message returned if the request fails.
+                /// The error message returned if the call fails.
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
@@ -124,18 +139,30 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string Exception { get; set; }
 
+                /// <summary>
+                /// The time when API Gateway finished receiving the request.
+                /// </summary>
                 [NameInMap("FrontRequestEnd")]
                 [Validation(Required=false)]
                 public long? FrontRequestEnd { get; set; }
 
+                /// <summary>
+                /// The time when API Gateway started to receive the request.
+                /// </summary>
                 [NameInMap("FrontRequestStart")]
                 [Validation(Required=false)]
                 public long? FrontRequestStart { get; set; }
 
+                /// <summary>
+                /// The time when API Gateway finished forwarding the response to the client.
+                /// </summary>
                 [NameInMap("FrontResponseEnd")]
                 [Validation(Required=false)]
                 public long? FrontResponseEnd { get; set; }
 
+                /// <summary>
+                /// The time when API Gateway started to forward the response to the client.
+                /// </summary>
                 [NameInMap("FrontResponseStart")]
                 [Validation(Required=false)]
                 public long? FrontResponseStart { get; set; }
@@ -155,7 +182,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The HTTP method used to send the request.
+                /// The HTTP method that is used to send the request.
                 /// </summary>
                 [NameInMap("HttpMethod")]
                 [Validation(Required=false)]
@@ -190,7 +217,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string JwtClaims { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region in which the instance resides.
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
@@ -211,7 +238,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string RequestHeaders { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The request ID.
                 /// </summary>
                 [NameInMap("RequestId")]
                 [Validation(Required=false)]
@@ -267,7 +294,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ResponseSize { get; set; }
 
                 /// <summary>
-                /// The total time consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
+                /// The total time consumed to access the backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("ServiceLatency")]
                 [Validation(Required=false)]
@@ -288,7 +315,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string StageName { get; set; }
 
                 /// <summary>
-                /// The HTTP status code.
+                /// The status code returned.
                 /// </summary>
                 [NameInMap("StatusCode")]
                 [Validation(Required=false)]
@@ -302,7 +329,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string TotalLatency { get; set; }
 
                 /// <summary>
-                /// The list of plug-ins hit by the request and the relevant context.
+                /// The plug-in hit by the request and the relevant context.
                 /// </summary>
                 [NameInMap("plugin")]
                 [Validation(Required=false)]

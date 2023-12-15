@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeImportOASTaskRequest : TeaModel {
+        /// <summary>
+        /// The ID of the asynchronous API import task that was generated during the import operation. This ID is used to query the execution status of the API import task.
+        /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]
         public string OperationId { get; set; }

@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiGroupResponseBodyCustomDomainsDomainItem> DomainItem { get; set; }
             public class DescribeApiGroupResponseBodyCustomDomainsDomainItem : TeaModel {
                 /// <summary>
-                /// The name of the bound runtime environment.
+                /// The environment in which the associated API group runs.
                 /// </summary>
                 [NameInMap("BindStageName")]
                 [Validation(Required=false)]
@@ -80,16 +80,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string CertificateId { get; set; }
 
                 /// <summary>
-                /// The name of the SSL certificate.
+                /// The SSL certificate name.
                 /// </summary>
                 [NameInMap("CertificateName")]
                 [Validation(Required=false)]
                 public string CertificateName { get; set; }
 
+                /// <summary>
+                /// The time when the certificate expires.
+                /// </summary>
                 [NameInMap("CertificateValidEnd")]
                 [Validation(Required=false)]
                 public long? CertificateValidEnd { get; set; }
 
+                /// <summary>
+                /// The time when the certificate takes effect.
+                /// </summary>
                 [NameInMap("CertificateValidStart")]
                 [Validation(Required=false)]
                 public long? CertificateValidStart { get; set; }
@@ -114,8 +120,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 /// <summary>
                 /// The domain name resolution status. Valid values:
                 /// 
-                /// *   **RESOLVED**: The domain name has been resolved.
-                /// *   **UNRESOLVED**: The domain name has not been resolved.
+                /// *   **RESOLVED**
+                /// *   **UNRESOLVED**
                 /// </summary>
                 [NameInMap("DomainCNAMEStatus")]
                 [Validation(Required=false)]
@@ -139,7 +145,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The domain name-related remarks, such as the cause for a domain name exception.
+                /// Remarks about the domain name, such as the cause of an exception.
                 /// </summary>
                 [NameInMap("DomainRemark")]
                 [Validation(Required=false)]
@@ -153,7 +159,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DomainWebSocketStatus { get; set; }
 
                 /// <summary>
-                /// Indicates whether to redirect HTTP requests to HTTPS.
+                /// Indicates whether to redirect HTTP requests as HTTPS requests.
                 /// </summary>
                 [NameInMap("IsHttpRedirectToHttps")]
                 [Validation(Required=false)]
@@ -202,6 +208,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// Indicates whether access over the public second-level domain name is enabled. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("DisableInnerDomain")]
         [Validation(Required=false)]
         public bool? DisableInnerDomain { get; set; }
@@ -310,21 +322,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiGroupResponseBodyStageItemsStageInfo> StageInfo { get; set; }
             public class DescribeApiGroupResponseBodyStageItemsStageInfo : TeaModel {
                 /// <summary>
-                /// The description of the runtime environment.
+                /// The environment description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the runtime environment.
+                /// The environment ID.
                 /// </summary>
                 [NameInMap("StageId")]
                 [Validation(Required=false)]
                 public string StageId { get; set; }
 
                 /// <summary>
-                /// The name of the runtime environment.
+                /// The environment name.
                 /// </summary>
                 [NameInMap("StageName")]
                 [Validation(Required=false)]

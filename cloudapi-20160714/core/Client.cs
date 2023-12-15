@@ -1042,8 +1042,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
           * *   This operation is intended for API providers.
-          * *   The name of each API within the same group must be unique.
-          * *   Each request path within the same group must be unique.
+          * *   The name of an API must be unique within an API group.
+          * *   A request path must be unique within an API group.
           * *   The QPS limit on this operation is 50 per user.
           *
           * @param request CreateApiRequest
@@ -1118,6 +1118,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["ServiceConfig"] = request.ServiceConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
             {
                 query["Visibility"] = request.Visibility;
@@ -1185,8 +1189,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
           * *   This operation is intended for API providers.
-          * *   The name of each API within the same group must be unique.
-          * *   Each request path within the same group must be unique.
+          * *   The name of an API must be unique within an API group.
+          * *   A request path must be unique within an API group.
           * *   The QPS limit on this operation is 50 per user.
           *
           * @param request CreateApiRequest
@@ -1261,6 +1265,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["ServiceConfig"] = request.ServiceConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
             {
                 query["Visibility"] = request.Visibility;
@@ -1328,8 +1336,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
           * *   This operation is intended for API providers.
-          * *   The name of each API within the same group must be unique.
-          * *   Each request path within the same group must be unique.
+          * *   The name of an API must be unique within an API group.
+          * *   A request path must be unique within an API group.
           * *   The QPS limit on this operation is 50 per user.
           *
           * @param request CreateApiRequest
@@ -1343,8 +1351,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
           * *   This operation is intended for API providers.
-          * *   The name of each API within the same group must be unique.
-          * *   Each request path within the same group must be unique.
+          * *   The name of an API must be unique within an API group.
+          * *   A request path must be unique within an API group.
           * *   The QPS limit on this operation is 50 per user.
           *
           * @param request CreateApiRequest
@@ -1786,6 +1794,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["CreateEventBridgeServiceLinkedRole"] = request.CreateEventBridgeServiceLinkedRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSlr))
+            {
+                query["CreateSlr"] = request.CreateSlr;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -1793,6 +1805,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1829,6 +1845,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["CreateEventBridgeServiceLinkedRole"] = request.CreateEventBridgeServiceLinkedRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSlr))
+            {
+                query["CreateSlr"] = request.CreateSlr;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -1836,6 +1856,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1990,6 +2014,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2024,6 +2052,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2652,6 +2684,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["Schema"] = request.Schema;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2698,6 +2734,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
             {
                 query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9540,6 +9580,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9582,6 +9626,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9896,6 +9944,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9934,6 +9986,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10131,7 +10187,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * *   This API is intended for API providers.
+          * *   This operation is intended for API callers.
           *
           * @param request DescribeDeployedApisRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10205,7 +10261,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * *   This API is intended for API providers.
+          * *   This operation is intended for API callers.
           *
           * @param request DescribeDeployedApisRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10279,7 +10335,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * *   This API is intended for API providers.
+          * *   This operation is intended for API callers.
           *
           * @param request DescribeDeployedApisRequest
           * @return DescribeDeployedApisResponse
@@ -10291,7 +10347,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * *   This API is intended for API providers.
+          * *   This operation is intended for API callers.
           *
           * @param request DescribeDeployedApisRequest
           * @return DescribeDeployedApisResponse
@@ -12297,6 +12353,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -12346,6 +12406,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14208,6 +14272,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcAccessId))
             {
                 query["VpcAccessId"] = request.VpcAccessId;
@@ -14262,6 +14330,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcAccessId))
             {
@@ -16184,6 +16256,104 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyApiGroupWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyApiGroupInstanceResponse ModifyApiGroupInstanceWithOptions(ModifyApiGroupInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                query["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiGroupInstance",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiGroupInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyApiGroupInstanceResponse> ModifyApiGroupInstanceWithOptionsAsync(ModifyApiGroupInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                query["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiGroupInstance",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiGroupInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyApiGroupInstanceResponse ModifyApiGroupInstance(ModifyApiGroupInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApiGroupInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyApiGroupInstanceResponse> ModifyApiGroupInstanceAsync(ModifyApiGroupInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApiGroupInstanceWithOptionsAsync(request, runtime);
         }
 
         public ModifyApiGroupNetworkPolicyResponse ModifyApiGroupNetworkPolicyWithOptions(ModifyApiGroupNetworkPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -21400,6 +21570,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
@@ -21450,6 +21624,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {

@@ -28,10 +28,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The name of the runtime environment. Valid values:
+        /// The environment to which the API is published. Valid values:
         /// 
         /// *   **RELEASE**
-        /// *   **TEST.**
+        /// *   **TEST**
         /// 
         /// If this parameter is not specified, the default value is used, which is RELEASE.
         /// </summary>

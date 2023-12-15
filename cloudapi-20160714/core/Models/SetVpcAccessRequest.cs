@@ -29,6 +29,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<SetVpcAccessRequestTag> Tag { get; set; }
+        public class SetVpcAccessRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

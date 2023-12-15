@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("VpcAccessId")]
+        [Validation(Required=false)]
+        public string VpcAccessId { get; set; }
+
     }
 
 }

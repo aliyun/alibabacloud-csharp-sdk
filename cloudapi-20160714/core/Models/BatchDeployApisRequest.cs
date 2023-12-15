@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class BatchDeployApisRequest : TeaModel {
         /// <summary>
-        /// The APIs that you want to operate.
+        /// The APIs that you want to publish.
         /// </summary>
         [NameInMap("Api")]
         [Validation(Required=false)]
         public List<BatchDeployApisRequestApi> Api { get; set; }
         public class BatchDeployApisRequestApi : TeaModel {
             /// <summary>
-            /// The ID of the API.
+            /// The API ID.
             /// </summary>
             [NameInMap("ApiUid")]
             [Validation(Required=false)]
             public string ApiUid { get; set; }
 
             /// <summary>
-            /// The ID of the API group.
+            /// The API group ID.
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]

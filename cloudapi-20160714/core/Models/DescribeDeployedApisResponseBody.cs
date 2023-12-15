@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem> DeployedApiItem { get; set; }
             public class DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem : TeaModel {
                 /// <summary>
-                /// The ID of the API.
+                /// The API ID.
                 /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ApiMethod { get; set; }
 
                 /// <summary>
-                /// The name of the API.
+                /// The API name.
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
@@ -49,42 +49,42 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ApiPath { get; set; }
 
                 /// <summary>
-                /// The publishing time (UTC) of the API.
+                /// The time when the API was published. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("DeployedTime")]
                 [Validation(Required=false)]
                 public string DeployedTime { get; set; }
 
                 /// <summary>
-                /// The description of the API.
+                /// The API description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the API group.
+                /// The API group ID.
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The name of the API group.
+                /// The name of the API group to which the API belongs.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The region in which the API is located.
+                /// The region ID of the API.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The name of the runtime environment. Valid values:
+                /// The environment name. Valid values:
                 /// 
                 /// *   **RELEASE**
                 /// *   **TEST**

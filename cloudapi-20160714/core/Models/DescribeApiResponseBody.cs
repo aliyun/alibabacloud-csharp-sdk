@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiResponseBodyConstantParametersConstantParameter> ConstantParameter { get; set; }
             public class DescribeApiResponseBodyConstantParametersConstantParameter : TeaModel {
                 /// <summary>
-                /// The value of the parameter.
+                /// The constant parameter value.
                 /// </summary>
                 [NameInMap("ConstantValue")]
                 [Validation(Required=false)]
                 public string ConstantValue { get; set; }
 
                 /// <summary>
-                /// Description
+                /// The parameter description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The name of the backend service parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
@@ -160,14 +160,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiResponseBodyCustomSystemParametersCustomSystemParameter> CustomSystemParameter { get; set; }
             public class DescribeApiResponseBodyCustomSystemParametersCustomSystemParameter : TeaModel {
                 /// <summary>
-                /// Examples
+                /// The example value.
                 /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
                 /// <summary>
-                /// Description
+                /// The parameter description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// The name of the corresponding backend parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string EffectiveVersion { get; set; }
 
                 /// <summary>
-                /// The name of the runtime environment. Valid values: RELEASE and TEST.
+                /// The environment to which the API is published. Valid values: RELEASE and TEST.
                 /// </summary>
                 [NameInMap("StageName")]
                 [Validation(Required=false)]
@@ -263,28 +263,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiResponseBodyErrorCodeSamplesErrorCodeSample> ErrorCodeSample { get; set; }
             public class DescribeApiResponseBodyErrorCodeSamplesErrorCodeSample : TeaModel {
                 /// <summary>
-                /// Error codes
+                /// The returned error code.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// Description
+                /// The error description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Error message
+                /// The returned error message.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// Model
+                /// The model.
                 /// </summary>
                 [NameInMap("Model")]
                 [Validation(Required=false)]
@@ -475,7 +475,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiResponseBodyRequestParametersRequestParameter> RequestParameter { get; set; }
             public class DescribeApiResponseBodyRequestParametersRequestParameter : TeaModel {
                 /// <summary>
-                /// The name of the parameter.
+                /// The parameter name.
                 /// </summary>
                 [NameInMap("ApiParameterName")]
                 [Validation(Required=false)]
@@ -496,21 +496,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DefaultValue { get; set; }
 
                 /// <summary>
-                /// Examples
+                /// The example value.
                 /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
                 /// <summary>
-                /// Description
+                /// The parameter description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The order in the document.
+                /// The order in which the parameter is sorted in the document.
                 /// </summary>
                 [NameInMap("DocOrder")]
                 [Validation(Required=false)]
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DocShow { get; set; }
 
                 /// <summary>
-                /// The hash values that can be entered when **ParameterType** is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.
+                /// The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
                 /// </summary>
                 [NameInMap("EnumValue")]
                 [Validation(Required=false)]
@@ -545,42 +545,42 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The maximum parameter length when **ParameterType** is set to String.
+                /// The maximum length of the parameter value if the **ParameterType** parameter is set to String.
                 /// </summary>
                 [NameInMap("MaxLength")]
                 [Validation(Required=false)]
                 public long? MaxLength { get; set; }
 
                 /// <summary>
-                /// The maximum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
+                /// The maximum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.
                 /// </summary>
                 [NameInMap("MaxValue")]
                 [Validation(Required=false)]
                 public long? MaxValue { get; set; }
 
                 /// <summary>
-                /// The minimum parameter length when **ParameterType** is set to String.
+                /// The minimum length of the parameter value if the **ParameterType** parameter is set to String.
                 /// </summary>
                 [NameInMap("MinLength")]
                 [Validation(Required=false)]
                 public long? MinLength { get; set; }
 
                 /// <summary>
-                /// The minimum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
+                /// The minimum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.
                 /// </summary>
                 [NameInMap("MinValue")]
                 [Validation(Required=false)]
                 public long? MinValue { get; set; }
 
                 /// <summary>
-                /// The type of a request parameter. Valid values: String, Int, Long, Float, Double, and Boolean.
+                /// The data type of the parameter. Valid values: String, Int, Long, Float, Double, and Boolean.
                 /// </summary>
                 [NameInMap("ParameterType")]
                 [Validation(Required=false)]
                 public string ParameterType { get; set; }
 
                 /// <summary>
-                /// The regular expression used for parameter validation when **ParameterType** is set to String.
+                /// The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.
                 /// </summary>
                 [NameInMap("RegularExpression")]
                 [Validation(Required=false)]
@@ -619,7 +619,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ResultType { get; set; }
 
         /// <summary>
-        /// The configuration items of API requests sent by API Gateway to the backend service.
+        /// The configuration items of API requests that API Gateway sends to the backend service.
         /// </summary>
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
@@ -838,12 +838,23 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public int? MockStatusCode { get; set; }
 
             /// <summary>
-            /// Information when the backend service is OSS
+            /// The information returned when the backend service is Object Storage Service (OSS).
             /// </summary>
             [NameInMap("OssConfig")]
             [Validation(Required=false)]
             public DescribeApiResponseBodyServiceConfigOssConfig OssConfig { get; set; }
             public class DescribeApiResponseBodyServiceConfigOssConfig : TeaModel {
+                /// <summary>
+                /// The operation options on OSS. Valid values:
+                /// 
+                /// *   GetObject
+                /// *   PostObject
+                /// *   DeleteObject
+                /// *   PutObject
+                /// *   HeadObject
+                /// *   GetObjectMeta
+                /// *   AppendObject
+                /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
@@ -855,6 +866,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string BucketName { get; set; }
 
+                /// <summary>
+                /// The stored object or folder path.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
@@ -975,14 +989,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The data type of the back-end service parameter.
+                /// The data type of the parameter. Valid values: STRING, NUMBER, and BOOLEAN.
                 /// </summary>
                 [NameInMap("ParameterType")]
                 [Validation(Required=false)]
                 public string ParameterType { get; set; }
 
                 /// <summary>
-                /// The name of the backend service parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
@@ -1004,14 +1018,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiResponseBodyServiceParametersMapServiceParameterMap> ServiceParameterMap { get; set; }
             public class DescribeApiResponseBodyServiceParametersMapServiceParameterMap : TeaModel {
                 /// <summary>
-                /// The corresponding frontend parameter name. It must be included in RequestParametersObject and matches ApiParameterName in RequestParameter data.
+                /// The name of the frontend parameter. The name must be included in RequestParametersObject and match ApiParameterName in RequestParameters.
                 /// </summary>
                 [NameInMap("RequestParameterName")]
                 [Validation(Required=false)]
                 public string RequestParameterName { get; set; }
 
                 /// <summary>
-                /// The name of the backend service parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
@@ -1033,14 +1047,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiResponseBodySystemParametersSystemParameter> SystemParameter { get; set; }
             public class DescribeApiResponseBodySystemParametersSystemParameter : TeaModel {
                 /// <summary>
-                /// Examples
+                /// The example value.
                 /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
                 /// <summary>
-                /// Description
+                /// The parameter description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -1061,7 +1075,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// The name of the corresponding backend parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
@@ -1082,12 +1096,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// The type of the two-way communication API. Valid values:
+        /// The type of the two-way communication API.
         /// 
-        /// *   **COMMON**: general APIs
-        /// *   **REGISTER**: registered APIs
-        /// *   **UNREGISTER**: unregistered APIs
-        /// *   **NOTIFY**: downstream notification
+        /// *   **COMMON**: common API
+        /// *   **REGISTER**: registered API
+        /// *   **UNREGISTER**: unregistered API
+        /// *   **NOTIFY**: downstream notification API
         /// </summary>
         [NameInMap("WebSocketApiType")]
         [Validation(Required=false)]

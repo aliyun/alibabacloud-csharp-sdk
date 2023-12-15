@@ -1,3 +1,6 @@
+2023-12-15 Version: 3.5.0
+- Generated csharp 2016-07-14 for CloudAPI.
+
 2023-11-07 Version: 3.4.0
 - Generated csharp 2016-07-14 for CloudAPI.
 

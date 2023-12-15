@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeImportOASTaskResponseBody : TeaModel {
+        /// <summary>
+        /// The execution status of the subtask. Valid values:
+        /// 
+        /// *   RUNNING
+        /// *   WAIT
+        /// *   OVER
+        /// *   FAIL
+        /// *   CANCEL
+        /// </summary>
         [NameInMap("ApiResults")]
         [Validation(Required=false)]
         public DescribeImportOASTaskResponseBodyApiResults ApiResults { get; set; }
@@ -53,6 +62,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
+        /// <summary>
+        /// The execution status of the subtask. Valid values:
+        /// 
+        /// *   RUNNING
+        /// *   WAIT
+        /// *   OVER
+        /// *   FAIL
+        /// *   CANCEL
+        /// </summary>
         [NameInMap("ModelResults")]
         [Validation(Required=false)]
         public DescribeImportOASTaskResponseBodyModelResults ModelResults { get; set; }
@@ -85,10 +103,19 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The status of the import task. Valid values:
+        /// 
+        /// *   Running
+        /// *   Finished
+        /// </summary>
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]
         public string TaskStatus { get; set; }

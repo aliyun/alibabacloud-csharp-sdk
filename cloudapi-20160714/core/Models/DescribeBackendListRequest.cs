@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeBackendListRequest : TeaModel {
+        /// <summary>
+        /// The name of the backend service. You can use \* to perform fuzzy queries.
+        /// </summary>
         [NameInMap("BackendName")]
         [Validation(Required=false)]
         public string BackendName { get; set; }
 
+        /// <summary>
+        /// The type of the backend service.
+        /// </summary>
         [NameInMap("BackendType")]
         [Validation(Required=false)]
         public string BackendType { get; set; }
 
+        /// <summary>
+        /// The number of the current page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -28,6 +40,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeBackendListRequestTag> Tag { get; set; }
+        public class DescribeBackendListRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

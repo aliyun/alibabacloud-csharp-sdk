@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The environment in which the API is requested. Valid values:
+        /// The environment in which you want to perform this operation. Valid values:
         /// 
         /// *   **RELEASE**: the production environment
-        /// *   **PRE**: the pre-release environment
+        /// *   **PRE**: the staging environment
         /// *   **TEST**: the test environment
         /// </summary>
         [NameInMap("StageName")]

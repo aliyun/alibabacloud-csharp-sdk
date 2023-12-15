@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeGroupQpsResponseBodyGroupQpsMonitorItem> MonitorItem { get; set; }
             public class DescribeGroupQpsResponseBodyGroupQpsMonitorItem : TeaModel {
                 /// <summary>
-                /// The time.
+                /// The point in time.
                 /// </summary>
                 [NameInMap("ItemTime")]
                 [Validation(Required=false)]
                 public string ItemTime { get; set; }
 
                 /// <summary>
-                /// The number of requests that fall into the time range.
+                /// The number of requests at the specified point in time.
                 /// </summary>
                 [NameInMap("ItemValue")]
                 [Validation(Required=false)]

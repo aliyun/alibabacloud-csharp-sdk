@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstanceHttpCodeResponseBody : TeaModel {
         /// <summary>
-        /// The list of HTTP status codes returned.
+        /// The HTTP status codes.
         /// </summary>
         [NameInMap("InstanceHttpCode")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeInstanceHttpCodeResponseBodyInstanceHttpCodeMonitorItem> MonitorItem { get; set; }
             public class DescribeInstanceHttpCodeResponseBodyInstanceHttpCodeMonitorItem : TeaModel {
                 /// <summary>
-                /// The HTTP status code.
+                /// The HTTP status code returned.
                 /// </summary>
                 [NameInMap("ItemTime")]
                 [Validation(Required=false)]
                 public string ItemTime { get; set; }
 
                 /// <summary>
-                /// The number of HTTP status codes returned.
+                /// The corresponding value.
                 /// </summary>
                 [NameInMap("ItemValue")]
                 [Validation(Required=false)]

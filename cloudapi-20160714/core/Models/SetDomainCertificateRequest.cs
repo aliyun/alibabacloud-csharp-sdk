@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string CaCertificateBody { get; set; }
 
         /// <summary>
-        /// The content of the certificate.
+        /// The certificate content.
         /// </summary>
         [NameInMap("CertificateBody")]
         [Validation(Required=false)]

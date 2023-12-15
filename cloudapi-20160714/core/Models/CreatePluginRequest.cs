@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The plug-in definition statement, which can be in JSON or YAML format.
+        /// The plug-in definition. Supported formats: JSON and YAML.
         /// </summary>
         [NameInMap("PluginData")]
         [Validation(Required=false)]

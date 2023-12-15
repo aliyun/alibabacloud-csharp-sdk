@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
-    public class DescribeDatasetListRequest : TeaModel {
-        [NameInMap("DatasetIds")]
+    public class ModifyApiGroupInstanceRequest : TeaModel {
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string DatasetIds { get; set; }
+        public string GroupId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("Remark")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string Remark { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
@@ -27,8 +23,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<DescribeDatasetListRequestTag> Tag { get; set; }
-        public class DescribeDatasetListRequestTag : TeaModel {
+        public List<ModifyApiGroupInstanceRequestTag> Tag { get; set; }
+        public class ModifyApiGroupInstanceRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
@@ -38,6 +34,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("TargetInstanceId")]
+        [Validation(Required=false)]
+        public string TargetInstanceId { get; set; }
 
     }
 

@@ -76,6 +76,26 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string Schema { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeModelsResponseBodyModelDetailsModelDetailTags Tags { get; set; }
+                public class DescribeModelsResponseBodyModelDetailsModelDetailTags : TeaModel {
+                    [NameInMap("TagInfo")]
+                    [Validation(Required=false)]
+                    public List<DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo> TagInfo { get; set; }
+                    public class DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
             }
 
         }

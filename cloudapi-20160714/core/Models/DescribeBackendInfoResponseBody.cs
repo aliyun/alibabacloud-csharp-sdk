@@ -24,77 +24,150 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string BackendId { get; set; }
 
             /// <summary>
-            /// The time when the backend service was created.
+            /// The configurations of the backend service in the environment.
             /// </summary>
             [NameInMap("BackendModels")]
             [Validation(Required=false)]
             public List<DescribeBackendInfoResponseBodyBackendInfoBackendModels> BackendModels { get; set; }
             public class DescribeBackendInfoResponseBodyBackendInfoBackendModels : TeaModel {
                 /// <summary>
-                /// The backend configurations.
+                /// The backend service configurations.
                 /// </summary>
                 [NameInMap("BackendConfig")]
                 [Validation(Required=false)]
                 public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig BackendConfig { get; set; }
                 public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig : TeaModel {
+                    /// <summary>
+                    /// The information about the backend service whose type is Service Discovery.
+                    /// </summary>
                     [NameInMap("DiscoveryConfig")]
                     [Validation(Required=false)]
                     public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig DiscoveryConfig { get; set; }
                     public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig : TeaModel {
+                        /// <summary>
+                        /// The Nacos configurations.
+                        /// </summary>
                         [NameInMap("NacosConfig")]
                         [Validation(Required=false)]
                         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig NacosConfig { get; set; }
                         public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig : TeaModel {
+                            /// <summary>
+                            /// The AccessKey of the RAM user that has the resource management permissions on Microservices Engine (MSE).
+                            /// </summary>
                             [NameInMap("AccessKey")]
                             [Validation(Required=false)]
                             public string AccessKey { get; set; }
 
+                            /// <summary>
+                            /// The authentication method.
+                            /// </summary>
                             [NameInMap("AuthType")]
                             [Validation(Required=false)]
                             public string AuthType { get; set; }
 
+                            /// <summary>
+                            /// The name of the cluster to which the microservice belongs.
+                            /// </summary>
                             [NameInMap("Clusters")]
                             [Validation(Required=false)]
                             public string Clusters { get; set; }
 
+                            /// <summary>
+                            /// The name of the group to which the microservice that is registered with Nacos belongs.
+                            /// </summary>
                             [NameInMap("GroupName")]
                             [Validation(Required=false)]
                             public string GroupName { get; set; }
 
+                            /// <summary>
+                            /// The ID of the namespace where the microservice that is registered with Nacos resides.
+                            /// </summary>
                             [NameInMap("Namespace")]
                             [Validation(Required=false)]
                             public string Namespace { get; set; }
 
+                            /// <summary>
+                            /// The password.
+                            /// </summary>
                             [NameInMap("Password")]
                             [Validation(Required=false)]
                             public string Password { get; set; }
 
+                            /// <summary>
+                            /// The SecretKey of the RAM user that has the resource management permissions on MSE.
+                            /// </summary>
                             [NameInMap("SecretKey")]
                             [Validation(Required=false)]
                             public string SecretKey { get; set; }
 
+                            /// <summary>
+                            /// The Nacos service address.
+                            /// </summary>
                             [NameInMap("ServerAddress")]
                             [Validation(Required=false)]
                             public string ServerAddress { get; set; }
 
+                            /// <summary>
+                            /// The microservice name.
+                            /// </summary>
                             [NameInMap("ServiceName")]
                             [Validation(Required=false)]
                             public string ServiceName { get; set; }
 
+                            /// <summary>
+                            /// The username.
+                            /// </summary>
                             [NameInMap("UserName")]
                             [Validation(Required=false)]
                             public string UserName { get; set; }
 
                         }
 
+                        /// <summary>
+                        /// The registry type.
+                        /// </summary>
                         [NameInMap("RcType")]
                         [Validation(Required=false)]
                         public string RcType { get; set; }
 
                     }
 
+                    [NameInMap("EdasConfig")]
+                    [Validation(Required=false)]
+                    public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig EdasConfig { get; set; }
+                    public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig : TeaModel {
+                        [NameInMap("EdasAppId")]
+                        [Validation(Required=false)]
+                        public string EdasAppId { get; set; }
+
+                        [NameInMap("MicroserviceNamespace")]
+                        [Validation(Required=false)]
+                        public string MicroserviceNamespace { get; set; }
+
+                        [NameInMap("MicroserviceNamespaceId")]
+                        [Validation(Required=false)]
+                        public string MicroserviceNamespaceId { get; set; }
+
+                        [NameInMap("MicroserviceNamespaceName")]
+                        [Validation(Required=false)]
+                        public string MicroserviceNamespaceName { get; set; }
+
+                        [NameInMap("MseInstanceId")]
+                        [Validation(Required=false)]
+                        public string MseInstanceId { get; set; }
+
+                        [NameInMap("RegistryType")]
+                        [Validation(Required=false)]
+                        public string RegistryType { get; set; }
+
+                        [NameInMap("ServiceName")]
+                        [Validation(Required=false)]
+                        public string ServiceName { get; set; }
+
+                    }
+
                     /// <summary>
-                    /// The information about the backend service that is EventBridge.
+                    /// The information about the backend service whose type is EventBridge.
                     /// </summary>
                     [NameInMap("EventBridgeConfig")]
                     [Validation(Required=false)]
@@ -108,7 +181,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string EventBridgeRegionId { get; set; }
 
                         /// <summary>
-                        /// The name of the event bus.
+                        /// The event bus.
                         /// </summary>
                         [NameInMap("EventBus")]
                         [Validation(Required=false)]
@@ -131,7 +204,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     }
 
                     /// <summary>
-                    /// The information about the backend service whose type is FC_EVENT or FC_HTTP.
+                    /// The information about the backend service whose type is Function Compute.
                     /// </summary>
                     [NameInMap("FunctionComputeConfig")]
                     [Validation(Required=false)]
@@ -152,21 +225,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string FcRegionId { get; set; }
 
                         /// <summary>
-                        /// The type of the Function Compute service.
+                        /// The type of the service in Function Compute.
                         /// </summary>
                         [NameInMap("FcType")]
                         [Validation(Required=false)]
                         public string FcType { get; set; }
 
                         /// <summary>
-                        /// The function name defined in Function Compute.
+                        /// The function name that is defined in Function Compute.
                         /// </summary>
                         [NameInMap("FunctionName")]
                         [Validation(Required=false)]
                         public string FunctionName { get; set; }
 
                         /// <summary>
-                        /// The backend service path.
+                        /// Indicates whether the backend service receives only the service path.
                         /// </summary>
                         [NameInMap("OnlyBusinessPath")]
                         [Validation(Required=false)]
@@ -180,14 +253,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string Qualifier { get; set; }
 
                         /// <summary>
-                        /// The Alibaba Cloud Resource Name (ARN) of the RAM role to be assumed by API Gateway to access Function Compute.
+                        /// The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by API Gateway to access Function Compute.
                         /// </summary>
                         [NameInMap("RoleArn")]
                         [Validation(Required=false)]
                         public string RoleArn { get; set; }
 
                         /// <summary>
-                        /// The service name defined in Function Compute.
+                        /// The service name that is defined in Function Compute.
                         /// </summary>
                         [NameInMap("ServiceName")]
                         [Validation(Required=false)]
@@ -202,28 +275,46 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     [Validation(Required=false)]
                     public string HttpTargetHostName { get; set; }
 
+                    /// <summary>
+                    /// The information about the backend service whose type is Mock.
+                    /// </summary>
                     [NameInMap("MockConfig")]
                     [Validation(Required=false)]
                     public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig MockConfig { get; set; }
                     public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig : TeaModel {
+                        /// <summary>
+                        /// The header returned for service mocking.
+                        /// </summary>
                         [NameInMap("MockHeaders")]
                         [Validation(Required=false)]
                         public List<DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders> MockHeaders { get; set; }
                         public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders : TeaModel {
+                            /// <summary>
+                            /// The name of the header parameter.
+                            /// </summary>
                             [NameInMap("HeaderName")]
                             [Validation(Required=false)]
                             public string HeaderName { get; set; }
 
+                            /// <summary>
+                            /// The value of the header parameter.
+                            /// </summary>
                             [NameInMap("HeaderValue")]
                             [Validation(Required=false)]
                             public string HeaderValue { get; set; }
 
                         }
 
+                        /// <summary>
+                        /// The result returned for service mocking.
+                        /// </summary>
                         [NameInMap("MockResult")]
                         [Validation(Required=false)]
                         public string MockResult { get; set; }
 
+                        /// <summary>
+                        /// The status code that is returned for service mocking.
+                        /// </summary>
                         [NameInMap("MockStatusCode")]
                         [Validation(Required=false)]
                         public string MockStatusCode { get; set; }
@@ -231,7 +322,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     }
 
                     /// <summary>
-                    /// The information about the backend service whose type is OSS.
+                    /// The information about the backend service whose type is Object Storage Service (OSS).
                     /// </summary>
                     [NameInMap("OssConfig")]
                     [Validation(Required=false)]
@@ -245,7 +336,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string BucketName { get; set; }
 
                         /// <summary>
-                        /// The region ID of the Object Storage Service (OSS) bucket.
+                        /// The region ID of the OSS bucket.
                         /// </summary>
                         [NameInMap("OssRegionId")]
                         [Validation(Required=false)]
@@ -286,7 +377,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string InstanceId { get; set; }
 
                         /// <summary>
-                        /// The name of the VPC Configuration.
+                        /// The name of the VPC configuration.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -314,7 +405,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string VpcId { get; set; }
 
                         /// <summary>
-                        /// http/https
+                        /// Indicates whether HTTP or HTTPS is used.
                         /// </summary>
                         [NameInMap("VpcScheme")]
                         [Validation(Required=false)]
@@ -367,7 +458,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string StageModeId { get; set; }
 
                 /// <summary>
-                /// The name of the environment.
+                /// The environment name.
                 /// </summary>
                 [NameInMap("StageName")]
                 [Validation(Required=false)]
