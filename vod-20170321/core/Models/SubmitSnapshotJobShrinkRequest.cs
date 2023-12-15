@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
-    public class SubmitSnapshotJobRequest : TeaModel {
+    public class SubmitSnapshotJobShrinkRequest : TeaModel {
         /// <summary>
         /// The maximum number of snapshots. Default value: **1**.
         /// </summary>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         [NameInMap("SpecifiedOffsetTimes")]
         [Validation(Required=false)]
-        public List<long?> SpecifiedOffsetTimes { get; set; }
+        public string SpecifiedOffsetTimesShrink { get; set; }
 
         /// <summary>
         /// The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](~~86952~~).

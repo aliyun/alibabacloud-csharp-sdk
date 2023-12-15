@@ -15663,13 +15663,19 @@ namespace AlibabaCloud.SDK.Vod20170321
           * > *   Only snapshots in the JPG format are generated.
           * > *   After a snapshot job is complete, ApsaraVideo VOD sends a [SnapshotComplete](~~57337~~) event notification that contains EventType=SnapshotComplete and SubType=SpecifiedTime.
           *
-          * @param request SubmitSnapshotJobRequest
+          * @param tmpReq SubmitSnapshotJobRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return SubmitSnapshotJobResponse
          */
-        public SubmitSnapshotJobResponse SubmitSnapshotJobWithOptions(SubmitSnapshotJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SubmitSnapshotJobResponse SubmitSnapshotJobWithOptions(SubmitSnapshotJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSnapshotJobShrinkRequest request = new SubmitSnapshotJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SpecifiedOffsetTimes))
+            {
+                request.SpecifiedOffsetTimesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SpecifiedOffsetTimes, "SpecifiedOffsetTimes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -15690,6 +15696,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedOffsetTime))
             {
                 query["SpecifiedOffsetTime"] = request.SpecifiedOffsetTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedOffsetTimesShrink))
+            {
+                query["SpecifiedOffsetTimes"] = request.SpecifiedOffsetTimesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpriteSnapshotConfig))
             {
@@ -15730,13 +15740,19 @@ namespace AlibabaCloud.SDK.Vod20170321
           * > *   Only snapshots in the JPG format are generated.
           * > *   After a snapshot job is complete, ApsaraVideo VOD sends a [SnapshotComplete](~~57337~~) event notification that contains EventType=SnapshotComplete and SubType=SpecifiedTime.
           *
-          * @param request SubmitSnapshotJobRequest
+          * @param tmpReq SubmitSnapshotJobRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return SubmitSnapshotJobResponse
          */
-        public async Task<SubmitSnapshotJobResponse> SubmitSnapshotJobWithOptionsAsync(SubmitSnapshotJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<SubmitSnapshotJobResponse> SubmitSnapshotJobWithOptionsAsync(SubmitSnapshotJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSnapshotJobShrinkRequest request = new SubmitSnapshotJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SpecifiedOffsetTimes))
+            {
+                request.SpecifiedOffsetTimesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SpecifiedOffsetTimes, "SpecifiedOffsetTimes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -15757,6 +15773,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedOffsetTime))
             {
                 query["SpecifiedOffsetTime"] = request.SpecifiedOffsetTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedOffsetTimesShrink))
+            {
+                query["SpecifiedOffsetTimes"] = request.SpecifiedOffsetTimesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpriteSnapshotConfig))
             {
