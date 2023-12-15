@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListDevicePersonStatisticsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -39,9 +31,17 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
 
         }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

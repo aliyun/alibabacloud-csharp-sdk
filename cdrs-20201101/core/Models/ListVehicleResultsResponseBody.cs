@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListVehicleResultsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListVehicleResultsResponseBodyData> Data { get; set; }
         public class ListVehicleResultsResponseBodyData : TeaModel {
-            [NameInMap("VehicleApplication")]
+            [NameInMap("Gender")]
             [Validation(Required=false)]
-            public string VehicleApplication { get; set; }
+            public string Gender { get; set; }
+
+            [NameInMap("LiveAddress")]
+            [Validation(Required=false)]
+            public string LiveAddress { get; set; }
+
+            [NameInMap("PersonId")]
+            [Validation(Required=false)]
+            public string PersonId { get; set; }
+
+            [NameInMap("PlateId")]
+            [Validation(Required=false)]
+            public string PlateId { get; set; }
 
             [NameInMap("Profession")]
             [Validation(Required=false)]
@@ -45,35 +41,39 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
-            [NameInMap("Gender")]
+            [NameInMap("VehicleApplication")]
             [Validation(Required=false)]
-            public string Gender { get; set; }
-
-            [NameInMap("PlateId")]
-            [Validation(Required=false)]
-            public string PlateId { get; set; }
+            public string VehicleApplication { get; set; }
 
             [NameInMap("VehicleClass")]
             [Validation(Required=false)]
             public string VehicleClass { get; set; }
 
-            [NameInMap("LiveAddress")]
-            [Validation(Required=false)]
-            public string LiveAddress { get; set; }
-
             [NameInMap("VehicleId")]
             [Validation(Required=false)]
             public string VehicleId { get; set; }
 
-            [NameInMap("PersonId")]
-            [Validation(Required=false)]
-            public string PersonId { get; set; }
-
         }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

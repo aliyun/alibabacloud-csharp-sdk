@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListCityMapPersonFlowResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListCityMapPersonFlowResponseBodyData> Data { get; set; }
         public class ListCityMapPersonFlowResponseBodyData : TeaModel {
+            [NameInMap("FlowDirection")]
+            [Validation(Required=false)]
+            public string FlowDirection { get; set; }
+
             [NameInMap("FlowNumber")]
             [Validation(Required=false)]
             public string FlowNumber { get; set; }
@@ -45,15 +33,27 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
             [Validation(Required=false)]
             public string TargetDataSourceId { get; set; }
 
-            [NameInMap("FlowDirection")]
-            [Validation(Required=false)]
-            public string FlowDirection { get; set; }
-
         }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

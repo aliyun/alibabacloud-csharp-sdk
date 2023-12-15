@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListCorpMetricsStatisticResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListCorpMetricsStatisticResponseBodyData> Data { get; set; }
         public class ListCorpMetricsStatisticResponseBodyData : TeaModel {
+            [NameInMap("CorpId")]
+            [Validation(Required=false)]
+            public string CorpId { get; set; }
+
             [NameInMap("DateId")]
             [Validation(Required=false)]
             public string DateId { get; set; }
@@ -45,17 +33,13 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
             [Validation(Required=false)]
             public string DeviceId { get; set; }
 
+            [NameInMap("PersonId")]
+            [Validation(Required=false)]
+            public string PersonId { get; set; }
+
             [NameInMap("TagCode")]
             [Validation(Required=false)]
             public string TagCode { get; set; }
-
-            [NameInMap("UserGroupId")]
-            [Validation(Required=false)]
-            public string UserGroupId { get; set; }
-
-            [NameInMap("CorpId")]
-            [Validation(Required=false)]
-            public string CorpId { get; set; }
 
             [NameInMap("TagMetrics")]
             [Validation(Required=false)]
@@ -65,19 +49,35 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
             [Validation(Required=false)]
             public string TagValue { get; set; }
 
-            [NameInMap("PersonId")]
+            [NameInMap("UserGroupId")]
             [Validation(Required=false)]
-            public string PersonId { get; set; }
+            public string UserGroupId { get; set; }
 
         }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

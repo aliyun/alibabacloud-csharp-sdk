@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListRangeDeviceRequest : TeaModel {
-        [NameInMap("Radius")]
+        [NameInMap("CorpId")]
         [Validation(Required=false)]
-        public int? Radius { get; set; }
+        public string CorpId { get; set; }
 
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("CorpId")]
+        [NameInMap("Radius")]
         [Validation(Required=false)]
-        public string CorpId { get; set; }
+        public int? Radius { get; set; }
 
     }
 

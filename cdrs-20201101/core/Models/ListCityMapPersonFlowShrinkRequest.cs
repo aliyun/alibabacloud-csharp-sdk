@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListCityMapPersonFlowShrinkRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         [NameInMap("OriginDataSourceIdList")]
         [Validation(Required=false)]
         public string OriginDataSourceIdListShrink { get; set; }
@@ -21,21 +25,17 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("TargetDataSourceIdList")]
+        [NameInMap("Range")]
         [Validation(Required=false)]
-        public string TargetDataSourceIdListShrink { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string Range { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("Range")]
+        [NameInMap("TargetDataSourceIdList")]
         [Validation(Required=false)]
-        public string Range { get; set; }
+        public string TargetDataSourceIdListShrink { get; set; }
 
     }
 

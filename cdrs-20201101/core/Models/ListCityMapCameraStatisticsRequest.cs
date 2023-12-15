@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListCityMapCameraStatisticsRequest : TeaModel {
+        [NameInMap("DataSourceIdList")]
+        [Validation(Required=false)]
+        public string DataSourceIdList { get; set; }
+
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("DataSourceIdList")]
-        [Validation(Required=false)]
-        public string DataSourceIdList { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public string StartTime { get; set; }
 
     }
 

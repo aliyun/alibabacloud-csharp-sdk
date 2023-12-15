@@ -9,25 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListCityMapRangeStatisticResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -41,37 +25,37 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
             [Validation(Required=false)]
             public string ChildValue { get; set; }
 
-            [NameInMap("OldValue")]
+            [NameInMap("CorpId")]
             [Validation(Required=false)]
-            public string OldValue { get; set; }
-
-            [NameInMap("ManValue")]
-            [Validation(Required=false)]
-            public string ManValue { get; set; }
-
-            [NameInMap("DataSourceName")]
-            [Validation(Required=false)]
-            public string DataSourceName { get; set; }
+            public string CorpId { get; set; }
 
             [NameInMap("DataSourceId")]
             [Validation(Required=false)]
             public string DataSourceId { get; set; }
 
-            [NameInMap("CorpId")]
+            [NameInMap("DataSourceName")]
             [Validation(Required=false)]
-            public string CorpId { get; set; }
+            public string DataSourceName { get; set; }
 
-            [NameInMap("MotorValue")]
+            [NameInMap("Latitude")]
             [Validation(Required=false)]
-            public string MotorValue { get; set; }
+            public string Latitude { get; set; }
 
             [NameInMap("Longitude")]
             [Validation(Required=false)]
             public string Longitude { get; set; }
 
-            [NameInMap("Latitude")]
+            [NameInMap("ManValue")]
             [Validation(Required=false)]
-            public string Latitude { get; set; }
+            public string ManValue { get; set; }
+
+            [NameInMap("MotorValue")]
+            [Validation(Required=false)]
+            public string MotorValue { get; set; }
+
+            [NameInMap("OldValue")]
+            [Validation(Required=false)]
+            public string OldValue { get; set; }
 
             [NameInMap("WomanValue")]
             [Validation(Required=false)]
@@ -79,9 +63,25 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
 
         }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

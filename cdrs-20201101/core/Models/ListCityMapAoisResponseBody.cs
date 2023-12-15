@@ -9,9 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListCityMapAoisResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<ListCityMapAoisResponseBodyData> Data { get; set; }
+        public class ListCityMapAoisResponseBodyData : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -21,23 +35,9 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public List<ListCityMapAoisResponseBodyData> Data { get; set; }
-        public class ListCityMapAoisResponseBodyData : TeaModel {
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
-        }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

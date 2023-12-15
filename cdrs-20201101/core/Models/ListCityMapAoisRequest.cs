@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListCityMapAoisRequest : TeaModel {
-        [NameInMap("Radius")]
-        [Validation(Required=false)]
-        public int? Radius { get; set; }
-
         [NameInMap("Latitude")]
         [Validation(Required=false)]
         public string Latitude { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [NameInMap("Longitude")]
         [Validation(Required=false)]
         public string Longitude { get; set; }
+
+        [NameInMap("Radius")]
+        [Validation(Required=false)]
+        public int? Radius { get; set; }
 
     }
 

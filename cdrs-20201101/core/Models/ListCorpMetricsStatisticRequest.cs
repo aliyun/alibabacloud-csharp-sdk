@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public string CorpId { get; set; }
 
-        [NameInMap("TagCode")]
+        [NameInMap("DeviceGroupList")]
         [Validation(Required=false)]
-        public string TagCode { get; set; }
+        public Dictionary<string, object> DeviceGroupList { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("DeviceIdList")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public Dictionary<string, object> DeviceIdList { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -33,21 +33,21 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("UserGroupList")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> UserGroupList { get; set; }
-
-        [NameInMap("DeviceGroupList")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> DeviceGroupList { get; set; }
-
-        [NameInMap("DeviceIdList")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> DeviceIdList { get; set; }
-
         [NameInMap("QualitScore")]
         [Validation(Required=false)]
         public string QualitScore { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("TagCode")]
+        [Validation(Required=false)]
+        public string TagCode { get; set; }
+
+        [NameInMap("UserGroupList")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> UserGroupList { get; set; }
 
     }
 

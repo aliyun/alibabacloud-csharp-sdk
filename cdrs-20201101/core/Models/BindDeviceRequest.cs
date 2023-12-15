@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public List<BindDeviceRequestDevices> Devices { get; set; }
         public class BindDeviceRequestDevices : TeaModel {
-            [NameInMap("DeviceId")]
-            [Validation(Required=false)]
-            public string DeviceId { get; set; }
-
             [NameInMap("CorpId")]
             [Validation(Required=false)]
             public string CorpId { get; set; }
+
+            [NameInMap("DeviceId")]
+            [Validation(Required=false)]
+            public string DeviceId { get; set; }
 
         }
 

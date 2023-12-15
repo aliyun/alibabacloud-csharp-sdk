@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListCityMapRangeStatisticRequest : TeaModel {
-        [NameInMap("Radius")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public int? Radius { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("Latitude")]
         [Validation(Required=false)]
@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public string Longitude { get; set; }
 
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("Radius")]
+        [Validation(Required=false)]
+        public int? Radius { get; set; }
 
     }
 

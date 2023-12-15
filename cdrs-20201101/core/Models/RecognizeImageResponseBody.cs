@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class RecognizeImageResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -25,33 +21,87 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
             [Validation(Required=false)]
             public List<RecognizeImageResponseBodyDataBodyList> BodyList { get; set; }
             public class RecognizeImageResponseBodyDataBodyList : TeaModel {
+                [NameInMap("CropAlgorithmCode")]
+                [Validation(Required=false)]
                 public string CropAlgorithmCode { get; set; }
-                public int? RightBottomY { get; set; }
+
+                [NameInMap("Feature")]
+                [Validation(Required=false)]
                 public string Feature { get; set; }
-                public int? LeftTopY { get; set; }
-                public string TargetImageContent { get; set; }
+
+                [NameInMap("LeftTopX")]
+                [Validation(Required=false)]
                 public int? LeftTopX { get; set; }
+
+                [NameInMap("LeftTopY")]
+                [Validation(Required=false)]
+                public int? LeftTopY { get; set; }
+
+                [NameInMap("RightBottomX")]
+                [Validation(Required=false)]
                 public int? RightBottomX { get; set; }
+
+                [NameInMap("RightBottomY")]
+                [Validation(Required=false)]
+                public int? RightBottomY { get; set; }
+
+                [NameInMap("TargetImageContent")]
+                [Validation(Required=false)]
+                public string TargetImageContent { get; set; }
+
             }
+
             [NameInMap("FaceList")]
             [Validation(Required=false)]
             public List<RecognizeImageResponseBodyDataFaceList> FaceList { get; set; }
             public class RecognizeImageResponseBodyDataFaceList : TeaModel {
+                [NameInMap("CropAlgorithmCode")]
+                [Validation(Required=false)]
                 public string CropAlgorithmCode { get; set; }
-                public string Feature { get; set; }
-                public int? RightBottomY { get; set; }
-                public int? LeftTopY { get; set; }
-                public string TargetImageContent { get; set; }
-                public float? FaceQuality { get; set; }
-                public int? RightBottomX { get; set; }
-                public int? LeftTopX { get; set; }
-                public float? FaceKeyPointQuality { get; set; }
-            }
-        };
 
-        [NameInMap("Code")]
+                [NameInMap("FaceKeyPointQuality")]
+                [Validation(Required=false)]
+                public float? FaceKeyPointQuality { get; set; }
+
+                [NameInMap("FaceQuality")]
+                [Validation(Required=false)]
+                public float? FaceQuality { get; set; }
+
+                [NameInMap("Feature")]
+                [Validation(Required=false)]
+                public string Feature { get; set; }
+
+                [NameInMap("LeftTopX")]
+                [Validation(Required=false)]
+                public int? LeftTopX { get; set; }
+
+                [NameInMap("LeftTopY")]
+                [Validation(Required=false)]
+                public int? LeftTopY { get; set; }
+
+                [NameInMap("RightBottomX")]
+                [Validation(Required=false)]
+                public int? RightBottomX { get; set; }
+
+                [NameInMap("RightBottomY")]
+                [Validation(Required=false)]
+                public int? RightBottomY { get; set; }
+
+                [NameInMap("TargetImageContent")]
+                [Validation(Required=false)]
+                public string TargetImageContent { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

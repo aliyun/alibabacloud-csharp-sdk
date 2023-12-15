@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public string CorpId { get; set; }
 
-        [NameInMap("TagCode")]
-        [Validation(Required=false)]
-        public string TagCode { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("TagCode")]
+        [Validation(Required=false)]
+        public string TagCode { get; set; }
 
     }
 

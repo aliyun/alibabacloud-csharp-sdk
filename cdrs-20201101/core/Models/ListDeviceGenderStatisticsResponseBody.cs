@@ -9,9 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListDeviceGenderStatisticsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<ListDeviceGenderStatisticsResponseBodyData> Data { get; set; }
+        public class ListDeviceGenderStatisticsResponseBodyData : TeaModel {
+            [NameInMap("DataSourceId")]
+            [Validation(Required=false)]
+            public string DataSourceId { get; set; }
+
+            [NameInMap("Gender")]
+            [Validation(Required=false)]
+            public string Gender { get; set; }
+
+            [NameInMap("Number")]
+            [Validation(Required=false)]
+            public string Number { get; set; }
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -21,27 +39,9 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public List<ListDeviceGenderStatisticsResponseBodyData> Data { get; set; }
-        public class ListDeviceGenderStatisticsResponseBodyData : TeaModel {
-            [NameInMap("Gender")]
-            [Validation(Required=false)]
-            public string Gender { get; set; }
-
-            [NameInMap("DataSourceId")]
-            [Validation(Required=false)]
-            public string DataSourceId { get; set; }
-
-            [NameInMap("Number")]
-            [Validation(Required=false)]
-            public string Number { get; set; }
-
-        }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

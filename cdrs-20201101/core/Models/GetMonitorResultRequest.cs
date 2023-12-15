@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class GetMonitorResultRequest : TeaModel {
+        [NameInMap("AlgorithmVendor")]
+        [Validation(Required=false)]
+        public string AlgorithmVendor { get; set; }
+
         [NameInMap("CorpId")]
         [Validation(Required=false)]
         public string CorpId { get; set; }
 
-        [NameInMap("TaskId")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public long? EndTime { get; set; }
 
         [NameInMap("MinRecordId")]
         [Validation(Required=false)]
@@ -25,13 +29,9 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
-        [NameInMap("AlgorithmVendor")]
-        [Validation(Required=false)]
-        public string AlgorithmVendor { get; set; }
+        public string TaskId { get; set; }
 
     }
 

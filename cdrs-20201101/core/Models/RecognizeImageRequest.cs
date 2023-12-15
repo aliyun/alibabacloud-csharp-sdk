@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [Validation(Required=false)]
         public string CorpId { get; set; }
 
-        [NameInMap("Vendor")]
-        [Validation(Required=false)]
-        public string Vendor { get; set; }
-
         [NameInMap("ImageContent")]
         [Validation(Required=false)]
         public string ImageContent { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [NameInMap("RequireCropImage")]
         [Validation(Required=false)]
         public bool? RequireCropImage { get; set; }
+
+        [NameInMap("Vendor")]
+        [Validation(Required=false)]
+        public string Vendor { get; set; }
 
     }
 

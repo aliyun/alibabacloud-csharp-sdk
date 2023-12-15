@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class CreateProjectResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("CorpId")]
         [Validation(Required=false)]
         public string CorpId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

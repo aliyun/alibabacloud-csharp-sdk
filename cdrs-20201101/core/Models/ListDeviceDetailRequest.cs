@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListDeviceDetailRequest : TeaModel {
+        [NameInMap("CorpId")]
+        [Validation(Required=false)]
+        public string CorpId { get; set; }
+
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
-
-        [NameInMap("CorpId")]
-        [Validation(Required=false)]
-        public string CorpId { get; set; }
 
     }
 

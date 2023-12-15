@@ -9,41 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CDRS20201101.Models
 {
     public class ListDataStatisticsByDayResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDataStatisticsByDayResponseBodyData> Data { get; set; }
         public class ListDataStatisticsByDayResponseBodyData : TeaModel {
-            [NameInMap("NonMotorNumber")]
+            [NameInMap("BodyNumber")]
             [Validation(Required=false)]
-            public int? NonMotorNumber { get; set; }
-
-            [NameInMap("FaceNumber")]
-            [Validation(Required=false)]
-            public int? FaceNumber { get; set; }
-
-            [NameInMap("MotorNumber")]
-            [Validation(Required=false)]
-            public int? MotorNumber { get; set; }
+            public int? BodyNumber { get; set; }
 
             [NameInMap("CorpId")]
             [Validation(Required=false)]
@@ -53,9 +29,17 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
             [Validation(Required=false)]
             public string Date { get; set; }
 
-            [NameInMap("BodyNumber")]
+            [NameInMap("FaceNumber")]
             [Validation(Required=false)]
-            public int? BodyNumber { get; set; }
+            public int? FaceNumber { get; set; }
+
+            [NameInMap("MotorNumber")]
+            [Validation(Required=false)]
+            public int? MotorNumber { get; set; }
+
+            [NameInMap("NonMotorNumber")]
+            [Validation(Required=false)]
+            public int? NonMotorNumber { get; set; }
 
             [NameInMap("TotalNumber")]
             [Validation(Required=false)]
@@ -63,9 +47,25 @@ namespace AlibabaCloud.SDK.CDRS20201101.Models
 
         }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 
