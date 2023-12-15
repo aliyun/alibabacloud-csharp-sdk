@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? Confirmor { get; set; }
 
         /// <summary>
-        /// The IDs of the notifications that needs to be confirmed. You can call the [QueryNotify](~~427959~~) operation to query notifications for an instance.
+        /// The notification IDs.
         /// </summary>
         [NameInMap("NotifyIdList")]
         [Validation(Required=false)]

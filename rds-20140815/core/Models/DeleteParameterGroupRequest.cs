@@ -14,21 +14,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the ID of the parameter template.
+        /// The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute to obtain the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

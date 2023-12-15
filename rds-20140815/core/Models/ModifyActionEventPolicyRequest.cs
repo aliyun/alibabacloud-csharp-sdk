@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyActionEventPolicyRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the event history feature. Valid values: **True | False**.
+        /// Specifies whether to enable the event history feature. Valid values:
+        /// 
+        /// *   **True**
+        /// *   **False**
         /// </summary>
         [NameInMap("EnableEventLog")]
         [Validation(Required=false)]
@@ -21,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region for which you want to enable the event history feature. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

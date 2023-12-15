@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDedicatedHostsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the dedicated cluster.
+        /// The host group ID.
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// An array that consists of hosts returned.
+        /// The host information.
         /// </summary>
         [NameInMap("DedicatedHosts")]
         [Validation(Required=false)]
@@ -28,38 +28,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts> DedicatedHosts { get; set; }
             public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts : TeaModel {
                 /// <summary>
-                /// The account of the host. You can call the [CreateDedicatedHostAccount](~~196877~~) operation to create a host account.
+                /// The host account. You can call the [CreateDedicatedHostAccount](~~196877~~) operation to create a host account.
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the system allows you to create instances on the host. Valid values:
+                /// Specifies whether instances can be deployed on the host. Valid values:
                 /// 
-                /// *   **0**: The system does not allow you to create instances on the host.
-                /// *   **1**: The system allows you to create instances on the host.
+                /// *   **0**: Instances cannot be deployed on the host.
+                /// *   **1**: Instances can be deployed on the host.
                 /// </summary>
                 [NameInMap("AllocationStatus")]
                 [Validation(Required=false)]
                 public string AllocationStatus { get; set; }
 
                 /// <summary>
-                /// The ID of the bastion host.
+                /// The bastion host ID.
                 /// </summary>
                 [NameInMap("BastionInstanceId")]
                 [Validation(Required=false)]
                 public string BastionInstanceId { get; set; }
 
                 /// <summary>
-                /// The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+                /// The core overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
                 /// </summary>
                 [NameInMap("CPUAllocationRatio")]
                 [Validation(Required=false)]
                 public string CPUAllocationRatio { get; set; }
 
                 /// <summary>
-                /// The number of used cores on the host.
+                /// The number of used CPU cores on the host. Unit: cores.
                 /// </summary>
                 [NameInMap("CpuUsed")]
                 [Validation(Required=false)]
@@ -73,21 +73,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated cluster.
+                /// The dedicated cluster ID.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
                 public string DedicatedHostGroupId { get; set; }
 
                 /// <summary>
-                /// The ID of the host.
+                /// The host ID.
                 /// </summary>
                 [NameInMap("DedicatedHostId")]
                 [Validation(Required=false)]
                 public string DedicatedHostId { get; set; }
 
                 /// <summary>
-                /// The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the disk overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+                /// The disk overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
                 /// </summary>
                 [NameInMap("DiskAllocationRatio")]
                 [Validation(Required=false)]
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The total number of cores that are configured for the host.
+                /// The total number of CPU cores that are configured for the host. Unit: cores.
                 /// </summary>
                 [NameInMap("HostCPU")]
                 [Validation(Required=false)]
                 public string HostCPU { get; set; }
 
                 /// <summary>
-                /// The specifications of the host.
+                /// The instance type of the host.
                 /// </summary>
                 [NameInMap("HostClass")]
                 [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string HostMem { get; set; }
 
                 /// <summary>
-                /// The name of the host.
+                /// The host name.
                 /// </summary>
                 [NameInMap("HostName")]
                 [Validation(Required=false)]
@@ -138,13 +138,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The status of the host. Valid values:
                 /// 
-                /// *   **0**: The host is being created.
-                /// *   **1**: The host is running.
-                /// *   **2**: The host is faulty.
-                /// *   **3**: The host is being replaced.
-                /// *   **4**: The host is deprecated.
-                /// *   **5**: The host is being deleted.
-                /// *   **6**: The host is restarting.
+                /// *   **0**: creating
+                /// *   **1**: running
+                /// *   **2**: faulty
+                /// *   **3**: being replaced
+                /// *   **4**: deprecated
+                /// *   **5**: deleting
+                /// *   **6**: restarting
                 /// </summary>
                 [NameInMap("HostStatus")]
                 [Validation(Required=false)]
@@ -158,9 +158,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string HostStorage { get; set; }
 
                 /// <summary>
-                /// The type of storage media that is used for the host. Valid values:
+                /// The storage type of the host. Valid values:
                 /// 
-                /// *   **dhg_cloud_ssd**: enhanced SSD
+                /// *   **dhg_cloud_ssd**: ESSD
                 /// *   **dhg_local_ssd**: local SSD
                 /// </summary>
                 [NameInMap("HostType")]
@@ -175,11 +175,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string IPAddress { get; set; }
 
                 /// <summary>
-                /// The image of the host. This parameter is returned only when the **Engine** parameter is set to **mssql**. Valid values:
+                /// The host image. This parameter is returned only when the **Engine** parameter is set to **mssql**. Valid values:
                 /// 
-                /// *   **WindowsWithMssqlStdLicense**: a Windows image, which contains the licenses of the SQL Server Standard Edition
-                /// *   **WindowsWithMssqlEntLisence**: a Windows image, which contains the licenses of the SQL Server Enterprise Edition
-                /// *   **WindowsWithMssqlWebLisence**: a Windows image, which contains the licenses of the SQL Server Web Edition
+                /// *   **WindowsWithMssqlStdLicense**: a Windows image that contains the licenses of SQL Server Standard Edition
+                /// *   **WindowsWithMssqlEntLisence**: a Windows image that contains the licenses of SQL Server Enterprise Edition
+                /// *   **WindowsWithMssqlWebLisence**: a Windows image that contains the licenses of SQL Server Web Edition
                 /// </summary>
                 [NameInMap("ImageCategory")]
                 [Validation(Required=false)]
@@ -200,14 +200,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string MemAllocationRatio { get; set; }
 
                 /// <summary>
-                /// The amount of used memory space on the host. Unit: MB.
+                /// The size of the used memory. Unit: MB.
                 /// </summary>
                 [NameInMap("MemoryUsed")]
                 [Validation(Required=false)]
                 public string MemoryUsed { get; set; }
 
                 /// <summary>
-                /// Indicates whether the operating system permissions of the host can be granted. Valid values:
+                /// Indicates whether the feature that allows you to have the OS permissions on the host is enabled. Valid values:
                 /// 
                 /// *   **0** or **null**: The permissions cannot be granted.
                 /// *   **1**: The permissions can be granted.
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

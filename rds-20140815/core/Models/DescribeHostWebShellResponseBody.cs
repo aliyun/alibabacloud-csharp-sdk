@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHostWebShellResponseBody : TeaModel {
         /// <summary>
-        /// The URL of the webshell.
+        /// The webshell URL.
         /// </summary>
         [NameInMap("LoginUrl")]
         [Validation(Required=false)]

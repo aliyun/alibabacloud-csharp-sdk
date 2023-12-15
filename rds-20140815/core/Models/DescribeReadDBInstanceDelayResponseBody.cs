@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeReadDBInstanceDelayResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the primary instance.
+        /// The primary instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The latency of data replication between the primary instance and the read-only instance.
+        /// The latency of data replication. Unit: seconds.
         /// </summary>
         [NameInMap("DelayTime")]
         [Validation(Required=false)]
         public int? DelayTime { get; set; }
 
         /// <summary>
-        /// An array that consists of latency information.
+        /// The latency information.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeReadDBInstanceDelayResponseBodyItemsItems> Items { get; set; }
             public class DescribeReadDBInstanceDelayResponseBodyItemsItems : TeaModel {
                 /// <summary>
-                /// The ID of the primary instance.
+                /// The primary instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
@@ -43,8 +43,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 /// <summary>
                 /// An array that consists of information about the read-only instance.
-                /// 
-                /// >  This parameter is returned only when the primary instance runs the MySQL database engine.
                 /// </summary>
                 [NameInMap("ReadDBInstanceNames")]
                 [Validation(Required=false)]
@@ -57,9 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// An array that consists of latencies.
-                /// 
-                /// >  This parameter is returned only when the primary instance runs the MySQL database engine.
+                /// The latency of data replication.
                 /// </summary>
                 [NameInMap("ReadDelayTimes")]
                 [Validation(Required=false)]
@@ -72,9 +68,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// An array that consists of information about the write-ahead log (WAL) latency.
+                /// The information about the write-ahead log (WAL) latency.
                 /// 
-                /// >  This parameter is returned only when the primary instance runs the PostgreSQL database engine.
+                /// >  This parameter is returned only when the primary instance runs PostgreSQL.
                 /// </summary>
                 [NameInMap("ReadonlyInstanceDelay")]
                 [Validation(Required=false)]
@@ -99,7 +95,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string FlushLatency { get; set; }
 
                         /// <summary>
-                        /// The ID of the read-only instance.
+                        /// The read-only instance ID.
                         /// </summary>
                         [NameInMap("ReadDBInstanceName")]
                         [Validation(Required=false)]
@@ -149,14 +145,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the read-only instance.
+        /// The read-only instance ID.
         /// </summary>
         [NameInMap("ReadDBInstanceId")]
         [Validation(Required=false)]
         public string ReadDBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

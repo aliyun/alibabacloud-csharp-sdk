@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PersistentConnectionStatus")]
+        [Validation(Required=false)]
+        public string PersistentConnectionStatus { get; set; }
+
         /// <summary>
         /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>

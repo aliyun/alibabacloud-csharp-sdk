@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeUpgradeMajorVersionPrecheckTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,20 +25,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return in the upgrade check report.
+        /// The page number.
         /// 
-        /// Valid values: any non-zero positive integer. Default value: 1.
+        /// Valid values: any non-zero positive integer. Default value: 1
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page of the upgrade check report.
+        /// The number of entries per page.
         /// 
         /// Valid values:
         /// 
-        /// *   30 (This is the default value.)
+        /// *   30 (default)
         /// *   50
         /// *   100
         /// </summary>
@@ -56,15 +56,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The new major engine version of the instance. The new major engine version must be later than the original major engine version.
-        /// 
-        /// For example, if the original major engine version is PostgreSQL 9.4, the new major engine version can be PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, or PostgreSQL 13.
         /// </summary>
         [NameInMap("TargetMajorVersion")]
         [Validation(Required=false)]
         public string TargetMajorVersion { get; set; }
 
         /// <summary>
-        /// The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the **TaskId** parameter that is returned from the call of the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation.
+        /// The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the **TaskId** parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

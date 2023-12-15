@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeSQLLogFilesResponseBodyItemsLogFile> LogFile { get; set; }
             public class DescribeSQLLogFilesResponseBodyItemsLogFile : TeaModel {
                 /// <summary>
-                /// The name of the file.
+                /// The file name.
                 /// </summary>
                 [NameInMap("FileID")]
                 [Validation(Required=false)]

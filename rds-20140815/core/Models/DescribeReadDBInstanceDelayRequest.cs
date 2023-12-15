@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeReadDBInstanceDelayRequest : TeaModel {
         /// <summary>
-        /// The ID of the primary instance.
+        /// The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the read-only instance.
+        /// The read-only instance ID. You can call the DescribeDBInstances operation to query the read-only instance ID.
         /// </summary>
         [NameInMap("ReadInstanceId")]
         [Validation(Required=false)]
         public string ReadInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the global active database clusters that you want to query reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

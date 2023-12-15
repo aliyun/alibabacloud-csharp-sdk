@@ -15,11 +15,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Enable**
         /// *   **Disable**
         /// 
-        /// The return value is a JSON string. Examples:
+        /// The return value is a JSON string. Example:
         /// 
-        /// {"status":"Disable", "check_interval_seconds": 60,
-        /// 
-        /// "max_failed_login_attempts": 60, "blocking_seconds": 600}
+        ///     {"status":"Disable", "check_interval_seconds": 60,
+        ///               "max_failed_login_attempts": 60, "blocking_seconds": 600}
         /// 
         /// Description:
         /// 
@@ -41,16 +40,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Enable**
         /// *   **Disable**
         /// 
-        /// The return value is a JSON string. Example:
+        /// In this case, the return value is a JSON string. Examples:
         /// 
-        /// {"status":"Disable"}.
+        ///     {"status":"Disable"}.
         /// </summary>
         [NameInMap("PersistentConnectionsConfiguration")]
         [Validation(Required=false)]
         public string PersistentConnectionsConfiguration { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -64,7 +63,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// The return value is a JSON string. Example:
         /// 
-        /// {"status":"Enable"}.
+        ///     {"status":"Enable"}
         /// </summary>
         [NameInMap("TransparentSwitchConfiguration")]
         [Validation(Required=false)]

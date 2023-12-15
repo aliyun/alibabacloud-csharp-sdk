@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The password of the account.
+        /// The password of the host account.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The hostname of the instance. You can call the [DescribeDBInstanceIpHostname](~~610525~~) operation to query the hostname.
+        /// The instance hostname. You can call the DescribeDBInstanceIpHostname operation to query the hostname.
         /// </summary>
         [NameInMap("HostName")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID.
         /// </summary>
         [NameInMap("RegionID")]
         [Validation(Required=false)]

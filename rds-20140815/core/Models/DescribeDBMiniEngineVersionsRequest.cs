@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBMiniEngineVersionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The dedicated cluster ID. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.
+        /// The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MinorVersionTag { get; set; }
 
         /// <summary>
-        /// The RDS edition of the instance. Valid values:
+        /// The instance edition. Valid values:
         /// 
         /// *   **Basic**: RDS Basic Edition
         /// *   **HighAvailability**: RDS High-availability Edition
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
