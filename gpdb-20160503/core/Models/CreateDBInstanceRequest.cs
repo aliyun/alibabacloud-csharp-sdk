@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceMode { get; set; }
 
+        [NameInMap("EnableSSL")]
+        [Validation(Required=false)]
+        public bool? EnableSSL { get; set; }
+
         /// <summary>
         /// The ID of the encryption key.
         /// 

@@ -635,6 +635,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["DBInstanceMode"] = request.DBInstanceMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSL))
+            {
+                query["EnableSSL"] = request.EnableSSL;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
             {
                 query["EncryptionKey"] = request.EncryptionKey;
@@ -819,6 +823,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceMode))
             {
                 query["DBInstanceMode"] = request.DBInstanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSL))
+            {
+                query["EnableSSL"] = request.EnableSSL;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
             {
