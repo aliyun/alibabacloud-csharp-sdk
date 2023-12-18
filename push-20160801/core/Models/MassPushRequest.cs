@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public int? AndroidVivoPushMode { get; set; }
 
+            [NameInMap("AndroidVivoReceiptId")]
+            [Validation(Required=false)]
+            public string AndroidVivoReceiptId { get; set; }
+
             [NameInMap("AndroidXiaoMiActivity")]
             [Validation(Required=false)]
             [Obsolete]

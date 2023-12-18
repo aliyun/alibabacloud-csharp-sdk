@@ -1186,6 +1186,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidVivoPushMode"] = request.AndroidVivoPushMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoReceiptId))
+            {
+                query["AndroidVivoReceiptId"] = request.AndroidVivoReceiptId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaoMiActivity))
             {
                 query["AndroidXiaoMiActivity"] = request.AndroidXiaoMiActivity;
@@ -1496,6 +1500,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoPushMode))
             {
                 query["AndroidVivoPushMode"] = request.AndroidVivoPushMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoReceiptId))
+            {
+                query["AndroidVivoReceiptId"] = request.AndroidVivoReceiptId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaoMiActivity))
             {
