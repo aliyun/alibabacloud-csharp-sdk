@@ -158,15 +158,15 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public class GetListenerAttributeResponseBodyProxyProtocolV2Config : TeaModel {
             [NameInMap("Ppv2PrivateLinkEpIdEnabled")]
             [Validation(Required=false)]
-            public string Ppv2PrivateLinkEpIdEnabled { get; set; }
+            public bool? Ppv2PrivateLinkEpIdEnabled { get; set; }
 
             [NameInMap("Ppv2PrivateLinkEpsIdEnabled")]
             [Validation(Required=false)]
-            public string Ppv2PrivateLinkEpsIdEnabled { get; set; }
+            public bool? Ppv2PrivateLinkEpsIdEnabled { get; set; }
 
             [NameInMap("Ppv2VpcIdEnabled")]
             [Validation(Required=false)]
-            public string Ppv2VpcIdEnabled { get; set; }
+            public bool? Ppv2VpcIdEnabled { get; set; }
 
         }
 
