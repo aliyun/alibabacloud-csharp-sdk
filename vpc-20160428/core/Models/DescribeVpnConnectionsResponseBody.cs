@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string AttachInstanceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource that is associated with the IPsec-VPN connection. Valid values:
+                /// The type of resource that is associated with the IPsec-VPN connection. Valid values:
                 /// 
                 /// *   **CEN**: indicates that the IPsec-VPN connection is associated with a transit router of a Cloud Enterprise Network (CEN) instance.
                 /// *   **NO_ASSOCIATED**: indicates that the IPsec-VPN connection is not associated with any resource.
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string CustomerGatewayId { get; set; }
 
                 /// <summary>
-                /// Indicates whether IPsec negotiations immediately start after the configuration takes effect. Valid values:
+                /// Indicates whether IPsec negotiations immediately start.
                 /// 
                 /// *   **true**: Negotiations are reinitiated after the configuration is changed.
                 /// *   **false**: Negotiations are reinitiated after traffic is detected.
@@ -103,20 +103,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public bool? EffectImmediately { get; set; }
 
                 /// <summary>
-                /// Indicates whether the dead peer detection (DPD) feature is enabled for the IPsec-VPN connection. Valid values:
+                /// Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:
                 /// 
-                /// *   **true**: The DPD feature is enabled.
+                /// *   **true**
                 /// 
                 ///     The initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no feedback is received from the peer within a specific period of time, the connection fails. Then, the ISAKMP security association (SA), IPsec SA, and IPsec tunnel are deleted.
                 /// 
-                /// *   **false**: The DPD feature is disabled. The initiator of the IPsec-VPN connection does not send DPD packets.
+                /// *   **false**
                 /// </summary>
                 [NameInMap("EnableDpd")]
                 [Validation(Required=false)]
                 public bool? EnableDpd { get; set; }
 
                 /// <summary>
-                /// Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values:
+                /// Indicates whether NAT traversal is enabled for the IPsec-VPN connection.
                 /// 
                 /// *   **true**
                 /// 
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public bool? EnableTunnelsBgp { get; set; }
 
                 /// <summary>
-                /// The configuration of Phase 1 negotiations.
+                /// The configurations of Phase 1 negotiations.
                 /// </summary>
                 [NameInMap("IkeConfig")]
                 [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string IkeMode { get; set; }
 
                     /// <summary>
-                    /// The Diffie-Hellman (DH) group in the IKE phase.
+                    /// The DH group in the IKE phase.
                     /// </summary>
                     [NameInMap("IkePfs")]
                     [Validation(Required=false)]
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string InternetIp { get; set; }
 
                 /// <summary>
-                /// The configuration of Phase 2 negotiations.
+                /// The configurations of Phase 2 negotiations.
                 /// </summary>
                 [NameInMap("IpsecConfig")]
                 [Validation(Required=false)]
@@ -283,8 +283,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The network type of the IPsec-VPN connection. Valid values:
                 /// 
-                /// *   **public**: an encrypted connection over the Internet
-                /// *   **private**: an encrypted connection over private networks
+                /// *   **public**
+                /// *   **private**
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RemoteCaCertificate { get; set; }
 
                 /// <summary>
-                /// The CIDR block on the data center side.
+                /// The CIDR block of the data center.
                 /// 
                 /// Multiple CIDR blocks are separated by commas (,).
                 /// </summary>
@@ -306,6 +306,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string RemoteSubnet { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group to which the IPsec-VPN connection belongs.
+                /// 
+                /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -336,7 +341,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string State { get; set; }
 
                 /// <summary>
-                /// The state of the IPsec-VPN connection. Valid values:
+                /// The status of the IPsec-VPN connection. Valid values:
                 /// 
                 /// *   **ike_sa_not_established**: Phase 1 negotiations failed.
                 /// *   **ike_sa_established**: Phase 1 negotiations succeeded.
@@ -348,7 +353,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The list of tags added to the IPsec-VPN connection.
+                /// The list of tags to be added to the IPsec-VPN connection.
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
@@ -440,7 +445,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// <summary>
                         /// The CA certificate of the tunnel peer.
                         /// 
-                        /// This parameter is returned only if the VPN gateway is of the ShangMi (SM) type.
+                        /// This parameter is returned only if the VPN gateway is of the SM type.
                         /// </summary>
                         [NameInMap("RemoteCaCertificate")]
                         [Validation(Required=false)]
@@ -461,7 +466,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// 
                         /// *   **active**
                         /// *   **updating**
-                        /// *   **deleted**
+                        /// *   **deleting**
                         /// </summary>
                         [NameInMap("State")]
                         [Validation(Required=false)]
@@ -480,7 +485,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string Status { get; set; }
 
                         /// <summary>
-                        /// The BGP configuration.
+                        /// The BGP configurations.
                         /// </summary>
                         [NameInMap("TunnelBgpConfig")]
                         [Validation(Required=false)]
@@ -489,22 +494,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                             /// <summary>
                             /// The negotiation state of BGP. Valid values:
                             /// 
-                            /// *   **success**: normal
-                            /// *   **false**: abnormal
+                            /// *   **success**
+                            /// *   **false**
                             /// </summary>
                             [NameInMap("BgpStatus")]
                             [Validation(Required=false)]
                             public string BgpStatus { get; set; }
 
                             /// <summary>
-                            /// The ASN of the tunnel on the Alibaba Cloud side.
+                            /// The ASN on the Alibaba Cloud side.
                             /// </summary>
                             [NameInMap("LocalAsn")]
                             [Validation(Required=false)]
                             public string LocalAsn { get; set; }
 
                             /// <summary>
-                            /// The BGP IP address of the tunnel on the Alibaba Cloud side.
+                            /// The BGP address on the Alibaba Cloud side.
                             /// </summary>
                             [NameInMap("LocalBgpIp")]
                             [Validation(Required=false)]
@@ -616,7 +621,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         }
 
                         /// <summary>
-                        /// The configuration of Phase 2 negotiations.
+                        /// The configurations of Phase 2 negotiations.
                         /// </summary>
                         [NameInMap("TunnelIpsecConfig")]
                         [Validation(Required=false)]
@@ -695,7 +700,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public int? Interval { get; set; }
 
                     /// <summary>
-                    /// Indicates whether advertised routes are withdrawn when the health check fails. Valid values:
+                    /// Indicates whether advertised routes are withdrawn when the health check fails.
                     /// 
                     /// *   **revoke_route**: Advertised routes are withdrawn.
                     /// *   **reserve_route**: Advertised routes are not withdrawn.
@@ -721,8 +726,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The state of the health check. Valid values:
                     /// 
-                    /// *   **success**: normal
-                    /// *   **failed**: abnormal
+                    /// *   **success**
+                    /// *   **failed**
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -759,7 +764,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string LocalBgpIp { get; set; }
 
                     /// <summary>
-                    /// The autonomous system number (ASN) of the peer.
+                    /// The ASN of the peer.
                     /// </summary>
                     [NameInMap("PeerAsn")]
                     [Validation(Required=false)]
@@ -775,8 +780,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The negotiation state of the BGP routing protocol. Valid values:
                     /// 
-                    /// *   **success**: normal
-                    /// *   **false**: abnormal
+                    /// *   **success**
+                    /// *   **false**
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]

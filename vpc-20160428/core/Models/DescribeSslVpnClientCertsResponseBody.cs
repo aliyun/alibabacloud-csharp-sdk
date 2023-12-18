@@ -73,6 +73,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group to which the SSL client certificate belongs.
+                /// 
+                /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }

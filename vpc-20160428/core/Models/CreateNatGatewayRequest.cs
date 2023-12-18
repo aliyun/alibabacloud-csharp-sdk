@@ -154,6 +154,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </summary>
         [NameInMap("SecurityProtectionEnabled")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? SecurityProtectionEnabled { get; set; }
 
         /// <summary>

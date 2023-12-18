@@ -47,6 +47,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// IPsec连接所属的资源组ID。
+        /// 
+        /// 您可以调用[ListResourceGroups](~~158855~~)接口查询资源组ID。
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

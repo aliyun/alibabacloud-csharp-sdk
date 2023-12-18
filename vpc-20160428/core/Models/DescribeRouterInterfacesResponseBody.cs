@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouterInterfacesResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -58,16 +58,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The service status of the router interface. Valid values:
                 /// 
-                /// *   **Normal**: normal
-                /// *   **FinancialLocked**: locked due to overdue payments
-                /// *   **SecurityLocked**: locked due to security reasons
+                /// *   **Normal**
+                /// *   **FinancialLocked**
+                /// *   **SecurityLocked**
                 /// </summary>
                 [NameInMap("BusinessStatus")]
                 [Validation(Required=false)]
                 public string BusinessStatus { get; set; }
 
                 /// <summary>
-                /// The metering method.
+                /// The billing method.
                 /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The end of the time range queried.
+                /// The end of the time range during which data was queried.
                 /// 
                 /// The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
                 /// </summary>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Default value: false. Valid values:
+                /// Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:
                 /// 
                 /// *   **true**
-                /// *   **false**
+                /// *   **false** (default)
                 /// </summary>
                 [NameInMap("FastLinkMode")]
                 [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string HasReservationData { get; set; }
 
                 /// <summary>
-                /// The rate of the heath check.
+                /// The rate of heath checks.
                 /// </summary>
                 [NameInMap("HcRate")]
                 [Validation(Required=false)]
@@ -264,26 +264,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ReservationActiveTime { get; set; }
 
                 /// <summary>
-                /// The bandwidth after the renewal takes effect. Unit: Mbit/s.
+                /// The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.
                 /// </summary>
                 [NameInMap("ReservationBandwidth")]
                 [Validation(Required=false)]
                 public string ReservationBandwidth { get; set; }
 
                 /// <summary>
-                /// The metering method that is used after the renewal takes effect.
+                /// The metering method that is used after the renewal takes effect. Valid values:
                 /// </summary>
                 [NameInMap("ReservationInternetChargeType")]
                 [Validation(Required=false)]
                 public string ReservationInternetChargeType { get; set; }
 
                 /// <summary>
-                /// The type of the renewal order.
+                /// The type of the renewal order. Valid values:
                 /// </summary>
                 [NameInMap("ReservationOrderType")]
                 [Validation(Required=false)]
                 public string ReservationOrderType { get; set; }
 
+                /// <summary>
+                /// Resource Group ID.
+                /// 
+                /// For more information about resource groups, please refer to [What is a Resource Group?](~~94475~~)
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -333,6 +338,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The tags of the resource.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags Tags { get; set; }
@@ -341,10 +349,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags> Tags { get; set; }
                     public class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags : TeaModel {
+                        /// <summary>
+                        /// The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.
+                        /// 
+                        /// A tag key can support up to 128 characters, cannot start with \"aliyun\" or \"acs:\", and cannot contain \"http://\" or \"https://\".
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.
+                        /// 
+                        /// A maximum of 128 characters are supported, it cannot start with \"aliyun\" or \"acs:\", and it cannot contain \"http://\" or \"https://\".
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -365,7 +383,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

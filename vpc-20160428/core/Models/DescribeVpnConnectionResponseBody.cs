@@ -270,6 +270,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the IPsec-VPN connection belongs.
+        /// 
+        /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -323,14 +328,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVpnConnectionResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVpnConnectionResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The tag key of the IPsec-VPN connection.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value of the IPsec-VPN connection.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -421,11 +426,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Role { get; set; }
 
                 /// <summary>
-                /// The tunnel status. Valid values: 
+                /// The tunnel status. Valid values:
                 /// 
                 /// *   **active**
                 /// *   **updating**
-                /// *   **deleted**
+                /// *   **deleting**
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
@@ -444,7 +449,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The BGP configuration.
+                /// The BGP configurations.
                 /// </summary>
                 [NameInMap("TunnelBgpConfig")]
                 [Validation(Required=false)]
@@ -453,22 +458,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The negotiation state of BGP. Valid values:
                     /// 
-                    /// *   **success**: normal
-                    /// *   **false**: abnormal
+                    /// *   **success**
+                    /// *   **false**
                     /// </summary>
                     [NameInMap("BgpStatus")]
                     [Validation(Required=false)]
                     public string BgpStatus { get; set; }
 
                     /// <summary>
-                    /// The ASN of the tunnel on the Alibaba Cloud side.
+                    /// The ASN on the Alibaba Cloud side.
                     /// </summary>
                     [NameInMap("LocalAsn")]
                     [Validation(Required=false)]
                     public string LocalAsn { get; set; }
 
                     /// <summary>
-                    /// The BGP IP address of the tunnel on the Alibaba Cloud side.
+                    /// The BGP address on the Alibaba Cloud side.
                     /// </summary>
                     [NameInMap("LocalBgpIp")]
                     [Validation(Required=false)]
@@ -543,7 +548,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string IkeMode { get; set; }
 
                     /// <summary>
-                    /// The DH group in the IKE phase.
+                    /// The Diffie-Hellman (DH) group in the IKE phase.
                     /// </summary>
                     [NameInMap("IkePfs")]
                     [Validation(Required=false)]
@@ -580,7 +585,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The configuration of Phase 2 negotiations.
+                /// The configurations of Phase 2 negotiations.
                 /// </summary>
                 [NameInMap("TunnelIpsecConfig")]
                 [Validation(Required=false)]
@@ -617,9 +622,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The zone of the tunnel.
+                /// The zone where the tunnel is deployed.
                 /// 
-                /// You can call [DescribeZones](~~36064~~) to query zone IDs and mapping between zone IDs and zone names.
+                /// You can call [DescribeZones](~~36064~~) to query zone IDs.
                 /// </summary>
                 [NameInMap("ZoneNo")]
                 [Validation(Required=false)]

@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters> TrafficMirrorFilters { get; set; }
         public class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters : TeaModel {
+            [NameInMap("CreationTime")]
+            [Validation(Required=false)]
+            public string CreationTime { get; set; }
+
             /// <summary>
             /// The details about the outbound rules.
             /// </summary>

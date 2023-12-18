@@ -211,6 +211,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string IpAddress { get; set; }
 
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
                 /// <summary>
                 /// The name of the EIP.
                 /// </summary>
@@ -249,6 +253,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("PrivateIpAddress")]
+                [Validation(Required=false)]
+                public string PrivateIpAddress { get; set; }
 
                 /// <summary>
                 /// The ID of the IP address pool to which the EIP belongs.

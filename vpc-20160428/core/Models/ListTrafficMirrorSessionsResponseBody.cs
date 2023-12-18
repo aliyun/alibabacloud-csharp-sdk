@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions> TrafficMirrorSessions { get; set; }
         public class ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions : TeaModel {
+            [NameInMap("CreationTime")]
+            [Validation(Required=false)]
+            public string CreationTime { get; set; }
+
             /// <summary>
             /// Indicates whether the traffic mirror session was enabled.
             /// 
