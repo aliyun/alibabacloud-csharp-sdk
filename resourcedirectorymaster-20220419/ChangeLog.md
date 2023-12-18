@@ -1,3 +1,6 @@
+2023-12-18 Version: 2.0.1
+- Generated csharp 2022-04-19 for ResourceDirectoryMaster.
+
 2023-08-23 Version: 2.0.0
 - Generated csharp 2022-04-19 for ResourceDirectoryMaster.
 
