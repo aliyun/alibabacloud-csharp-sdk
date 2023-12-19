@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DetachUserENIResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

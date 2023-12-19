@@ -205,6 +205,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string StorageResource { get; set; }
 
+                /// <summary>
+                /// 标签列表。
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeDBClustersResponseBodyItemsDBClusterTags Tags { get; set; }
@@ -213,10 +216,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     [Validation(Required=false)]
                     public List<DescribeDBClustersResponseBodyItemsDBClusterTagsTag> Tag { get; set; }
                     public class DescribeDBClustersResponseBodyItemsDBClusterTagsTag : TeaModel {
+                        /// <summary>
+                        /// 标签键。
+                        /// > 您可以调用[TagResources](~~179253~~)接口为目标集群创建标签。
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// 标签值。
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

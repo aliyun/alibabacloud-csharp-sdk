@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DetachUserENIRequest : TeaModel {
+        /// <summary>
+        /// The instance ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
