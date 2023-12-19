@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public string CardNumber { get; set; }
 
+            [NameInMap("CardType")]
+            [Validation(Required=false)]
+            public string CardType { get; set; }
+
             [NameInMap("ValidDate")]
             [Validation(Required=false)]
             public string ValidDate { get; set; }

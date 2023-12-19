@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string Address { get; set; }
 
+                [NameInMap("BirthDate")]
+                [Validation(Required=false)]
+                public string BirthDate { get; set; }
+
                 [NameInMap("EndDate")]
                 [Validation(Required=false)]
                 public string EndDate { get; set; }
@@ -66,6 +70,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Nationality")]
+                [Validation(Required=false)]
+                public string Nationality { get; set; }
 
                 [NameInMap("StartDate")]
                 [Validation(Required=false)]
