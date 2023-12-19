@@ -54,6 +54,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters> TrafficMirrorFilters { get; set; }
         public class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters : TeaModel {
+            /// <summary>
+            /// The time when the filter is created.
+            /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }

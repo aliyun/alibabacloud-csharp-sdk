@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tag information.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag that is added to the resource. You can specify at most 20 tag keys. 
+            /// The key of the tag that is added to the resource. You can specify at most 20 tag keys.
             /// 
             /// The key cannot exceed 128 characters in length. The key cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
             /// 
@@ -75,9 +75,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag that is added to the resource. You can specify at most 20 tag values. 
+            /// The value of the tag that is added to the resource. You can specify at most 20 tag values.
             /// 
-            /// The tag value cannot exceed 128 characters in length. The key cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// The tag value cannot exceed 128 characters in length. The value cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// 
             /// > When you call this operation, the **Tag.N.Value** parameter is required and can be an empty string.
             /// </summary>

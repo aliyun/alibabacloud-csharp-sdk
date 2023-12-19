@@ -149,8 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable the firewall feature. Valid values:
         /// 
-        /// *   **false** (default)
-        /// *   **true**
+        /// *   **false** (default)><notice>This parameter is deprecated.></notice>
         /// </summary>
         [NameInMap("SecurityProtectionEnabled")]
         [Validation(Required=false)]

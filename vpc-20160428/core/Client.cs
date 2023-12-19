@@ -12971,10 +12971,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT gateway** refers to both gateway types.
+          * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT** gateway refers to both gateway types.
           * Before you call this operation, take note of the following limits:
           * *   **CreateSnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
-          *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+          *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, and cannot perform other operations.
           *     *   If the SNAT entry is in the **Available** state, the SNAT entry is added.
           * *   You cannot repeatedly call the **CreateSnatEntry** operation to add an SNAT entry to an SNAT table within the specified period of time.
           * *   The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the VPC where the NAT gateway is deployed.
@@ -13057,10 +13057,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT gateway** refers to both gateway types.
+          * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT** gateway refers to both gateway types.
           * Before you call this operation, take note of the following limits:
           * *   **CreateSnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
-          *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+          *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, and cannot perform other operations.
           *     *   If the SNAT entry is in the **Available** state, the SNAT entry is added.
           * *   You cannot repeatedly call the **CreateSnatEntry** operation to add an SNAT entry to an SNAT table within the specified period of time.
           * *   The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the VPC where the NAT gateway is deployed.
@@ -13143,10 +13143,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT gateway** refers to both gateway types.
+          * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT** gateway refers to both gateway types.
           * Before you call this operation, take note of the following limits:
           * *   **CreateSnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
-          *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+          *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, and cannot perform other operations.
           *     *   If the SNAT entry is in the **Available** state, the SNAT entry is added.
           * *   You cannot repeatedly call the **CreateSnatEntry** operation to add an SNAT entry to an SNAT table within the specified period of time.
           * *   The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the VPC where the NAT gateway is deployed.
@@ -13163,10 +13163,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT gateway** refers to both gateway types.
+          * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT** gateway refers to both gateway types.
           * Before you call this operation, take note of the following limits:
           * *   **CreateSnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
-          *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+          *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, and cannot perform other operations.
           *     *   If the SNAT entry is in the **Available** state, the SNAT entry is added.
           * *   You cannot repeatedly call the **CreateSnatEntry** operation to add an SNAT entry to an SNAT table within the specified period of time.
           * *   The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the VPC where the NAT gateway is deployed.
@@ -35028,6 +35028,64 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await DescribeVpnGatewayWithOptionsAsync(request, runtime);
         }
 
+        public DescribeVpnGatewayAvailableZonesResponse DescribeVpnGatewayAvailableZonesWithOptions(DescribeVpnGatewayAvailableZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpnGatewayAvailableZones",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpnGatewayAvailableZonesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVpnGatewayAvailableZonesResponse> DescribeVpnGatewayAvailableZonesWithOptionsAsync(DescribeVpnGatewayAvailableZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpnGatewayAvailableZones",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpnGatewayAvailableZonesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVpnGatewayAvailableZonesResponse DescribeVpnGatewayAvailableZones(DescribeVpnGatewayAvailableZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVpnGatewayAvailableZonesWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVpnGatewayAvailableZonesResponse> DescribeVpnGatewayAvailableZonesAsync(DescribeVpnGatewayAvailableZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVpnGatewayAvailableZonesWithOptionsAsync(request, runtime);
+        }
+
         public DescribeVpnGatewaysResponse DescribeVpnGatewaysWithOptions(DescribeVpnGatewaysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -35888,6 +35946,120 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachDhcpOptionsSetFromVpcWithOptionsAsync(request, runtime);
+        }
+
+        public DiagnoseVpnConnectionsResponse DiagnoseVpnConnectionsWithOptions(DiagnoseVpnConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelIds))
+            {
+                query["TunnelIds"] = request.TunnelIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnConnectionIds))
+            {
+                query["VpnConnectionIds"] = request.VpnConnectionIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnGatewayId))
+            {
+                query["VpnGatewayId"] = request.VpnGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DiagnoseVpnConnections",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DiagnoseVpnConnectionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DiagnoseVpnConnectionsResponse> DiagnoseVpnConnectionsWithOptionsAsync(DiagnoseVpnConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelIds))
+            {
+                query["TunnelIds"] = request.TunnelIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnConnectionIds))
+            {
+                query["VpnConnectionIds"] = request.VpnConnectionIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnGatewayId))
+            {
+                query["VpnGatewayId"] = request.VpnGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DiagnoseVpnConnections",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DiagnoseVpnConnectionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DiagnoseVpnConnectionsResponse DiagnoseVpnConnections(DiagnoseVpnConnectionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DiagnoseVpnConnectionsWithOptions(request, runtime);
+        }
+
+        public async Task<DiagnoseVpnConnectionsResponse> DiagnoseVpnConnectionsAsync(DiagnoseVpnConnectionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DiagnoseVpnConnectionsWithOptionsAsync(request, runtime);
         }
 
         /**
