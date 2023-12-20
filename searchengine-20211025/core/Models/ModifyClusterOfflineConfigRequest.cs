@@ -23,12 +23,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public Dictionary<string, int?> Config { get; set; }
 
-        /// <summary>
-        /// The name of the data source.
-        /// </summary>
-        [NameInMap("dataSource")]
+        [NameInMap("dataSourceName")]
         [Validation(Required=false)]
-        public string DataSource { get; set; }
+        public string DataSourceName { get; set; }
 
         /// <summary>
         /// The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.
@@ -65,15 +62,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string Partition { get; set; }
 
-        /// <summary>
-        /// Specifies whether to trigger reindexing.
-        /// 
-        /// *   true: synchronizes the configuration and triggers reindexing.
-        /// *   false: waits for the configuration to take effect next time when reindexing is triggered.
-        /// </summary>
-        [NameInMap("triggerBuild")]
+        [NameInMap("pushMode")]
         [Validation(Required=false)]
-        public bool? TriggerBuild { get; set; }
+        public string PushMode { get; set; }
 
     }
 

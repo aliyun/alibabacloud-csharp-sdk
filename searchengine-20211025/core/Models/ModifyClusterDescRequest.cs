@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyClusterDescRequest : TeaModel {
+        /// <summary>
+        /// The parameters in the request body
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public Dictionary<string, object> Body { get; set; }

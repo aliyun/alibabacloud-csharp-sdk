@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListDateSourceGenerationsRequest : TeaModel {
+        /// <summary>
+        /// The data center where the data source is deployed.
+        /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// Obtains the data restoration version of a data source.
+        /// The valid state of the data source. Valid values: true and false. The default value of this parameter is true.
+        /// 
+        /// 1.  true indicates that the generations that have not expired and of which the tasks have been executed are returned.
+        /// 2.  false indicates that all generations are returned.
         /// </summary>
         [NameInMap("validStatus")]
         [Validation(Required=false)]

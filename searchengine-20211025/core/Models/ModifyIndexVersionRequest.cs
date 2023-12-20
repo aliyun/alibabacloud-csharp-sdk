@@ -10,53 +10,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyIndexVersionRequest : TeaModel {
         /// <summary>
-        /// ## Sample requests
-        /// 
-        /// ﻿
-        /// 
-        ///     PUT /openapi/ha3/instances/ha3_instance_nameclusters/test_cluster/index-version
-        /// 
-        /// ﻿
-        /// 
-        ///     [
-        ///     ﻿
-        ///       {
-        ///     ﻿
-        ///         "indexName": "index1",
-        ///     ﻿
-        ///         "version": "123456",
-        ///     ﻿
-        ///         "buildDeployId": "20201010"
-        ///     ﻿
-        ///       },
-        ///     ﻿
-        ///       {
-        ///     ﻿
-        ///         "indexName": "index1",
-        ///     ﻿
-        ///         "version": "123456",
-        ///     ﻿
-        ///         "buildDeployId": "20201010"
-        ///     ﻿
-        ///       }
-        ///     ﻿
-        ///     ]
+        /// The keyword used to search for a version. Fuzzy match is supported.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<ModifyIndexVersionRequestBody> Body { get; set; }
         public class ModifyIndexVersionRequestBody : TeaModel {
+            /// <summary>
+            /// The ID of the index deployed in offline mode.
+            /// </summary>
             [NameInMap("buildDeployId")]
             [Validation(Required=false)]
             public string BuildDeployId { get; set; }
 
             /// <summary>
-            /// WB01240825
+            /// The name of the index.
             /// </summary>
             [NameInMap("indexName")]
             [Validation(Required=false)]
             public string IndexName { get; set; }
 
+            /// <summary>
+            /// The version of the index.
+            /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }

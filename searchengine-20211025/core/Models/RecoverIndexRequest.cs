@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public int? BuildDeployId { get; set; }
 
+        /// <summary>
+        /// The name of the data source
+        /// </summary>
         [NameInMap("dataSourceName")]
         [Validation(Required=false)]
         public string DataSourceName { get; set; }
@@ -27,6 +30,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string Generation { get; set; }
 
+        /// <summary>
+        /// The name of the index
+        /// </summary>
         [NameInMap("indexName")]
         [Validation(Required=false)]
         public string IndexName { get; set; }

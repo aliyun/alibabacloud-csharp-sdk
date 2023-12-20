@@ -892,7 +892,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The result returned
+          * ## Method
+          * `DELETE`
+          * ## URI
+          * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -920,7 +923,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The result returned
+          * ## Method
+          * `DELETE`
+          * ## URI
+          * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
           *
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
@@ -948,7 +954,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The result returned
+          * ## Method
+          * `DELETE`
+          * ## URI
+          * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
           *
           * @return DeleteDataSourceResponse
          */
@@ -960,7 +969,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The result returned
+          * ## Method
+          * `DELETE`
+          * ## URI
+          * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
           *
           * @return DeleteDataSourceResponse
          */
@@ -2483,7 +2495,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
           * @param runtime runtime options for this request RuntimeOptions
           * @return ListClusterNamesResponse
          */
-        public ListClusterNamesResponse ListClusterNamesWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListClusterNamesResponse ListClusterNamesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2494,7 +2506,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
                 Action = "ListClusterNames",
                 Version = "2021-10-25",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/cluster-names",
+                Pathname = "/openapi/ha3/cluster-names",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2514,7 +2526,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
           * @param runtime runtime options for this request RuntimeOptions
           * @return ListClusterNamesResponse
          */
-        public async Task<ListClusterNamesResponse> ListClusterNamesWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListClusterNamesResponse> ListClusterNamesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2525,7 +2537,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
                 Action = "ListClusterNames",
                 Version = "2021-10-25",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/cluster-names",
+                Pathname = "/openapi/ha3/cluster-names",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2543,11 +2555,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
           *
           * @return ListClusterNamesResponse
          */
-        public ListClusterNamesResponse ListClusterNames(string instanceId)
+        public ListClusterNamesResponse ListClusterNames()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListClusterNamesWithOptions(instanceId, headers, runtime);
+            return ListClusterNamesWithOptions(headers, runtime);
         }
 
         /**
@@ -2558,11 +2570,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
           *
           * @return ListClusterNamesResponse
          */
-        public async Task<ListClusterNamesResponse> ListClusterNamesAsync(string instanceId)
+        public async Task<ListClusterNamesResponse> ListClusterNamesAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListClusterNamesWithOptionsAsync(instanceId, headers, runtime);
+            return await ListClusterNamesWithOptionsAsync(headers, runtime);
         }
 
         public ListClusterTasksResponse ListClusterTasksWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2893,6 +2905,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListDataSourcesWithOptionsAsync(instanceId, headers, runtime);
         }
 
+        /**
+          * ### Method
+          * `GET`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
+          *
+          * @param request ListDateSourceGenerationsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDateSourceGenerationsResponse
+         */
         public ListDateSourceGenerationsResponse ListDateSourceGenerationsWithOptions(string instanceId, string dataSourceName, ListDateSourceGenerationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2925,6 +2948,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDateSourceGenerationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### Method
+          * `GET`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
+          *
+          * @param request ListDateSourceGenerationsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDateSourceGenerationsResponse
+         */
         public async Task<ListDateSourceGenerationsResponse> ListDateSourceGenerationsWithOptionsAsync(string instanceId, string dataSourceName, ListDateSourceGenerationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2957,6 +2991,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDateSourceGenerationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Method
+          * `GET`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
+          *
+          * @param request ListDateSourceGenerationsRequest
+          * @return ListDateSourceGenerationsResponse
+         */
         public ListDateSourceGenerationsResponse ListDateSourceGenerations(string instanceId, string dataSourceName, ListDateSourceGenerationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2964,6 +3007,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListDateSourceGenerationsWithOptions(instanceId, dataSourceName, request, headers, runtime);
         }
 
+        /**
+          * ### Method
+          * `GET`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
+          *
+          * @param request ListDateSourceGenerationsRequest
+          * @return ListDateSourceGenerationsResponse
+         */
         public async Task<ListDateSourceGenerationsResponse> ListDateSourceGenerationsAsync(string instanceId, string dataSourceName, ListDateSourceGenerationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3656,7 +3708,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The name of the cluster
+          * ### Method
+          * `PUT`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
           *
           * @param request ModifyClusterDescRequest
           * @param headers map
@@ -3692,7 +3747,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The name of the cluster
+          * ### Method
+          * `PUT`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
           *
           * @param request ModifyClusterDescRequest
           * @param headers map
@@ -3728,7 +3786,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The name of the cluster
+          * ### Method
+          * `PUT`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
           *
           * @param request ModifyClusterDescRequest
           * @return ModifyClusterDescResponse
@@ -3741,7 +3802,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The name of the cluster
+          * ### Method
+          * `PUT`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
           *
           * @param request ModifyClusterDescRequest
           * @return ModifyClusterDescResponse
@@ -3775,9 +3839,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             {
                 body["config"] = request.Config;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSource))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceName))
             {
-                body["dataSource"] = request.DataSource;
+                body["dataSourceName"] = request.DataSourceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
             {
@@ -3799,9 +3863,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             {
                 body["partition"] = request.Partition;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerBuild))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushMode))
             {
-                body["triggerBuild"] = request.TriggerBuild;
+                body["pushMode"] = request.PushMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3845,9 +3909,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             {
                 body["config"] = request.Config;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSource))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceName))
             {
-                body["dataSource"] = request.DataSource;
+                body["dataSourceName"] = request.DataSourceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
             {
@@ -3869,9 +3933,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             {
                 body["partition"] = request.Partition;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerBuild))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushMode))
             {
-                body["triggerBuild"] = request.TriggerBuild;
+                body["pushMode"] = request.PushMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5182,7 +5246,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The name of the index
+          * ### Method
+          * `POST`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/recover-index`
           *
           * @param request RecoverIndexRequest
           * @param headers map
@@ -5230,7 +5297,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The name of the index
+          * ### Method
+          * `POST`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/recover-index`
           *
           * @param request RecoverIndexRequest
           * @param headers map
@@ -5278,7 +5348,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The name of the index
+          * ### Method
+          * `POST`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/recover-index`
           *
           * @param request RecoverIndexRequest
           * @return RecoverIndexResponse
@@ -5291,7 +5364,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-          * The name of the index
+          * ### Method
+          * `POST`
+          * ### URI
+          * `/openapi/ha3/instances/{instanceId}/recover-index`
           *
           * @param request RecoverIndexRequest
           * @return RecoverIndexResponse
