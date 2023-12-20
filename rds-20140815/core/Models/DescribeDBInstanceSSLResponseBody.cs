@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
+        [NameInMap("ForceEncryption")]
+        [Validation(Required=false)]
+        public string ForceEncryption { get; set; }
+
         /// <summary>
         /// The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
         /// 
@@ -178,6 +182,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ServerKey")]
         [Validation(Required=false)]
         public string ServerKey { get; set; }
+
+        [NameInMap("TlsVersion")]
+        [Validation(Required=false)]
+        public string TlsVersion { get; set; }
 
     }
 

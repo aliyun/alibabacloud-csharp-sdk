@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("ForceEncryption")]
+        [Validation(Required=false)]
+        public string ForceEncryption { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -130,6 +134,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ServerKey")]
         [Validation(Required=false)]
         public string ServerKey { get; set; }
+
+        [NameInMap("TlsVersion")]
+        [Validation(Required=false)]
+        public string TlsVersion { get; set; }
 
     }
 

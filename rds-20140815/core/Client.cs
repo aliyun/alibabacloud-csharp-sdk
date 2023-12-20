@@ -37190,6 +37190,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceEncryption))
+            {
+                query["ForceEncryption"] = request.ForceEncryption;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -37221,6 +37225,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerKey))
             {
                 query["ServerKey"] = request.ServerKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsVersion))
+            {
+                query["TlsVersion"] = request.TlsVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -37292,6 +37300,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceEncryption))
+            {
+                query["ForceEncryption"] = request.ForceEncryption;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -37323,6 +37335,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerKey))
             {
                 query["ServerKey"] = request.ServerKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsVersion))
+            {
+                query["TlsVersion"] = request.TlsVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
