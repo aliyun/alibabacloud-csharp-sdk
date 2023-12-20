@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
+        /// <summary>
+        /// The type of a gateway to be disassociated from a route table.
+        /// </summary>
         [NameInMap("GatewayType")]
         [Validation(Required=false)]
         public string GatewayType { get; set; }

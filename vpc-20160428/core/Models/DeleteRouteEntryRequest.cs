@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string NextHopId { get; set; }
 
+        /// <summary>
+        /// The list of the next hop of the ECMP route.
+        /// </summary>
         [NameInMap("NextHopList")]
         [Validation(Required=false)]
         public List<DeleteRouteEntryRequestNextHopList> NextHopList { get; set; }

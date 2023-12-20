@@ -21839,13 +21839,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you call this operation, take note of the following rules:
+          * When you call this operation, take note of the following items:
           * *   You can delete only routes that are in the **Available** state.
-          * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or a route is being created.
+          * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
           * *   Before you call this operation to delete a route of a VBR route table, call the [DescribeRouteEntryList](~~138148~~) operation to query the **NextHopId** of the route first.
-          * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route:
+          * *   **DeleteRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
           *     *   If the route is in the **Deleting** state, the route is being deleted.
-          *     *   If you cannot query the route, the route is deleted.
+          *     *   If you cannot query the route entry, the route entry is deleted.
           * *   You cannot repeatedly call the **DeleteRouteEntry** operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.
           *
           * @param request DeleteRouteEntryRequest
@@ -21916,13 +21916,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you call this operation, take note of the following rules:
+          * When you call this operation, take note of the following items:
           * *   You can delete only routes that are in the **Available** state.
-          * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or a route is being created.
+          * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
           * *   Before you call this operation to delete a route of a VBR route table, call the [DescribeRouteEntryList](~~138148~~) operation to query the **NextHopId** of the route first.
-          * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route:
+          * *   **DeleteRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
           *     *   If the route is in the **Deleting** state, the route is being deleted.
-          *     *   If you cannot query the route, the route is deleted.
+          *     *   If you cannot query the route entry, the route entry is deleted.
           * *   You cannot repeatedly call the **DeleteRouteEntry** operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.
           *
           * @param request DeleteRouteEntryRequest
@@ -21993,13 +21993,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you call this operation, take note of the following rules:
+          * When you call this operation, take note of the following items:
           * *   You can delete only routes that are in the **Available** state.
-          * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or a route is being created.
+          * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
           * *   Before you call this operation to delete a route of a VBR route table, call the [DescribeRouteEntryList](~~138148~~) operation to query the **NextHopId** of the route first.
-          * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route:
+          * *   **DeleteRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
           *     *   If the route is in the **Deleting** state, the route is being deleted.
-          *     *   If you cannot query the route, the route is deleted.
+          *     *   If you cannot query the route entry, the route entry is deleted.
           * *   You cannot repeatedly call the **DeleteRouteEntry** operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.
           *
           * @param request DeleteRouteEntryRequest
@@ -22012,13 +22012,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you call this operation, take note of the following rules:
+          * When you call this operation, take note of the following items:
           * *   You can delete only routes that are in the **Available** state.
-          * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or a route is being created.
+          * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
           * *   Before you call this operation to delete a route of a VBR route table, call the [DescribeRouteEntryList](~~138148~~) operation to query the **NextHopId** of the route first.
-          * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route:
+          * *   **DeleteRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
           *     *   If the route is in the **Deleting** state, the route is being deleted.
-          *     *   If you cannot query the route, the route is deleted.
+          *     *   If you cannot query the route entry, the route entry is deleted.
           * *   You cannot repeatedly call the **DeleteRouteEntry** operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.
           *
           * @param request DeleteRouteEntryRequest
@@ -39614,6 +39614,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["NatGatewayId"] = request.NatGatewayId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatIp))
+            {
+                query["NatIp"] = request.NatIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatIpPort))
+            {
+                query["NatIpPort"] = request.NatIpPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIds))
             {
                 query["NetworkInterfaceIds"] = request.NetworkInterfaceIds;
@@ -39692,6 +39700,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
             {
                 query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatIp))
+            {
+                query["NatIp"] = request.NatIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatIpPort))
+            {
+                query["NatIpPort"] = request.NatIpPort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIds))
             {

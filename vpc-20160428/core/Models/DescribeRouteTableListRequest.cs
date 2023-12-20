@@ -69,6 +69,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RouteTableName { get; set; }
 
+        /// <summary>
+        /// The type of the route table. Valid values:
+        /// - **System**
+        /// - **Custom**
+        /// </summary>
         [NameInMap("RouteTableType")]
         [Validation(Required=false)]
         public string RouteTableType { get; set; }

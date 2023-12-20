@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string NextHopId { get; set; }
 
+        /// <summary>
+        /// The next hop list.
+        /// </summary>
         [NameInMap("NextHopList")]
         [Validation(Required=false)]
         public List<CreateRouteEntryRequestNextHopList> NextHopList { get; set; }

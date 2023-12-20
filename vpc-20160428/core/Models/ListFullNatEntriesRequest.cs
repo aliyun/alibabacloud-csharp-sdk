@@ -71,6 +71,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
+        [NameInMap("NatIp")]
+        [Validation(Required=false)]
+        public string NatIp { get; set; }
+
+        [NameInMap("NatIpPort")]
+        [Validation(Required=false)]
+        public string NatIpPort { get; set; }
+
         /// <summary>
         /// The ID of the elastic network interface (ENI) that you want to query.
         /// </summary>
