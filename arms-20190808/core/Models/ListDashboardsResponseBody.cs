@@ -311,6 +311,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        [NameInMap("EnvironmentId")]
+        [Validation(Required=false)]
+        public string EnvironmentId { get; set; }
+
         /// <summary>
         /// The indicators of whether the Prometheus service has been activated.
         /// </summary>

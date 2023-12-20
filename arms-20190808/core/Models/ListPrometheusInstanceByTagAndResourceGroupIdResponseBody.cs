@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances> PrometheusInstances { get; set; }
             public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances : TeaModel {
+                /// <summary>
+                /// Auth Token string.
+                /// </summary>
                 [NameInMap("AuthToken")]
                 [Validation(Required=false)]
                 public string AuthToken { get; set; }
@@ -68,10 +71,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string GrafanaInstanceId { get; set; }
 
+                /// <summary>
+                /// HTTP Api internet url.
+                /// </summary>
                 [NameInMap("HttpApiInterUrl")]
                 [Validation(Required=false)]
                 public string HttpApiInterUrl { get; set; }
 
+                /// <summary>
+                /// HTTP Api intranet url.
+                /// </summary>
                 [NameInMap("HttpApiIntraUrl")]
                 [Validation(Required=false)]
                 public string HttpApiIntraUrl { get; set; }
@@ -86,10 +95,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string PaymentType { get; set; }
 
+                /// <summary>
+                /// Push Gateway internet url.
+                /// </summary>
                 [NameInMap("PushGatewayInterUrl")]
                 [Validation(Required=false)]
                 public string PushGatewayInterUrl { get; set; }
 
+                /// <summary>
+                /// Push Gateway intranet url.
+                /// </summary>
                 [NameInMap("PushGatewayIntraUrl")]
                 [Validation(Required=false)]
                 public string PushGatewayIntraUrl { get; set; }
@@ -101,18 +116,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// Remote Read internet url.
+                /// </summary>
                 [NameInMap("RemoteReadInterUrl")]
                 [Validation(Required=false)]
                 public string RemoteReadInterUrl { get; set; }
 
+                /// <summary>
+                /// Remote Read intranet url.
+                /// </summary>
                 [NameInMap("RemoteReadIntraUrl")]
                 [Validation(Required=false)]
                 public string RemoteReadIntraUrl { get; set; }
 
+                /// <summary>
+                /// Remote Write internet url.
+                /// </summary>
                 [NameInMap("RemoteWriteInterUrl")]
                 [Validation(Required=false)]
                 public string RemoteWriteInterUrl { get; set; }
 
+                /// <summary>
+                /// Remote Write intranet url.
+                /// </summary>
                 [NameInMap("RemoteWriteIntraUrl")]
                 [Validation(Required=false)]
                 public string RemoteWriteIntraUrl { get; set; }
@@ -125,7 +152,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// 资源类型
+                /// Resource type.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]

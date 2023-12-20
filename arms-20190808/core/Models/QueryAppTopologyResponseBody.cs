@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class InstallEnvironmentFeatureResponseBody : TeaModel {
+    public class QueryAppTopologyResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the request was successful.
+        /// The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public long? Code { get; set; }
 
         /// <summary>
-        /// The release ID.
+        /// The returned struct.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public object Data { get; set; }
 
         /// <summary>
         /// The returned message.
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// Indicates whether the call was successful. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   true: The call was successful.
+        /// *   false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

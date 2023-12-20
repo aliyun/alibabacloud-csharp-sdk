@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class InstallEnvironmentFeatureRequest : TeaModel {
         /// <summary>
-        /// Language,the default language is Chinese.
+        /// The language. Valid values: zh and en. Default value: zh.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// Config information of Feature.
+        /// The metadata of the feature.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// Environment ID.
+        /// The environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// Name of Feature.
+        /// The name of the feature.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   app-agent-pilot
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   metric-agent
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("FeatureName")]
         [Validation(Required=false)]
         public string FeatureName { get; set; }
 
         /// <summary>
-        /// Version of Feature.
+        /// The version of the feature.
         /// </summary>
         [NameInMap("FeatureVersion")]
         [Validation(Required=false)]
         public string FeatureVersion { get; set; }
 
         /// <summary>
-        /// Region of Feature.
+        /// The region ID of the feature.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
