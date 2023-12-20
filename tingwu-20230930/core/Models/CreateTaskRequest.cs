@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public class CreateTaskRequestParametersSummarization : TeaModel {
                 [NameInMap("Types")]
                 [Validation(Required=false)]
-                public Dictionary<string, object> Types { get; set; }
+                public List<string> Types { get; set; }
 
             }
 
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
 
                 [NameInMap("TargetLanguages")]
                 [Validation(Required=false)]
-                public Dictionary<string, object> TargetLanguages { get; set; }
+                public List<string> TargetLanguages { get; set; }
 
             }
 
