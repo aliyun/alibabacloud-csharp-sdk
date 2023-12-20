@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public bool? EnableRDMA { get; set; }
 
+        [NameInMap("EnableSanityCheck")]
+        [Validation(Required=false)]
+        public bool? EnableSanityCheck { get; set; }
+
         [NameInMap("EnableTideResource")]
         [Validation(Required=false)]
         public bool? EnableTideResource { get; set; }
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }
+
+        [NameInMap("SanityCheckArgs")]
+        [Validation(Required=false)]
+        public string SanityCheckArgs { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
