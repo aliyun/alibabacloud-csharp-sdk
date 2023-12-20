@@ -276,6 +276,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string OverApplyId { get; set; }
 
+                [NameInMap("payment_department_id")]
+                [Validation(Required=false)]
+                public string PaymentDepartmentId { get; set; }
+
+                [NameInMap("payment_department_name")]
+                [Validation(Required=false)]
+                public string PaymentDepartmentName { get; set; }
+
                 [NameInMap("primary_id")]
                 [Validation(Required=false)]
                 public long? PrimaryId { get; set; }
