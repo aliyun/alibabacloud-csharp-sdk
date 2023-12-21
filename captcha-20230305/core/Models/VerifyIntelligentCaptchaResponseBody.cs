@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Captcha20230305.Models
         [Validation(Required=false)]
         public VerifyIntelligentCaptchaResponseBodyResult Result { get; set; }
         public class VerifyIntelligentCaptchaResponseBodyResult : TeaModel {
+            [NameInMap("VerifyCode")]
+            [Validation(Required=false)]
+            public string VerifyCode { get; set; }
+
             [NameInMap("VerifyResult")]
             [Validation(Required=false)]
             public bool? VerifyResult { get; set; }
