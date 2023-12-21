@@ -25,6 +25,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        [NameInMap("TenantContext")]
+        [Validation(Required=false)]
+        public CreateDeliveryPlanRequestTenantContext TenantContext { get; set; }
+        public class CreateDeliveryPlanRequestTenantContext : TeaModel {
+            [NameInMap("tenantId")]
+            [Validation(Required=false)]
+            public string TenantId { get; set; }
+
+        }
+
         [NameInMap("UserIdList")]
         [Validation(Required=false)]
         public List<string> UserIdList { get; set; }

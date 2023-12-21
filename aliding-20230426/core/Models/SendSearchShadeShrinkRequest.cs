@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        [NameInMap("TenantContext")]
+        [Validation(Required=false)]
+        public string TenantContextShrink { get; set; }
+
     }
 
 }

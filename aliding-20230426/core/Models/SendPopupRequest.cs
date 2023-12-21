@@ -21,6 +21,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        [NameInMap("TenantContext")]
+        [Validation(Required=false)]
+        public SendPopupRequestTenantContext TenantContext { get; set; }
+        public class SendPopupRequestTenantContext : TeaModel {
+            [NameInMap("tenantId")]
+            [Validation(Required=false)]
+            public string TenantId { get; set; }
+
+        }
+
     }
 
 }
