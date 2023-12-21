@@ -2184,6 +2184,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMode))
             {
                 query["EnableMode"] = request.EnableMode;
@@ -2230,6 +2234,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMode))
             {
                 query["EnableMode"] = request.EnableMode;

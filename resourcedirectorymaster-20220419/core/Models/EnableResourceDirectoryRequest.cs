@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class EnableResourceDirectoryRequest : TeaModel {
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// The mode in which you enable a resource directory. Valid values:
         /// 
