@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClustersResponseBody : TeaModel {
         /// <summary>
-        /// Details of the clusters.
+        /// The queried cluster.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -23,22 +23,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The billing method of the cluster. Valid values:
                 /// 
-                /// *   **ads**: pay-as-you-go
-                /// *   **ads_pre**: subscription
+                /// *   **ads**: pay-as-you-go.
+                /// *   **ads_pre**: subscription.
                 /// </summary>
                 [NameInMap("CommodityCode")]
                 [Validation(Required=false)]
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The specifications of the reserved computing resources. Each ACU is equivalent to 1 core and 4 GB memory. Computing resources serve compute operations. The amount of computing resources is proportional to the query speed of the cluster. You can scale computing resources based on your needs.
+                /// The specifications of reserved computing resources. Each ACU is equivalent to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
                 /// </summary>
                 [NameInMap("ComputeResource")]
                 [Validation(Required=false)]
                 public string ComputeResource { get; set; }
 
                 /// <summary>
-                /// The public endpoint of the cluster.
+                /// The public endpoint that is used to connect to the cluster.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
@@ -75,15 +75,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The state of the cluster. Valid values:
                 /// 
-                /// *   **Preparing**: The cluster is being prepared.
-                /// *   **Creating**: The cluster is being created.
-                /// *   **Running**: The cluster is running.
-                /// *   **Deleting**: The cluster is being deleted.
-                /// *   **Restoring**: The cluster is being restored from a backup.
-                /// *   **ClassChanging**: The cluster specifications are being changed.
-                /// *   **NetAddressCreating**: A network connection is being created.
-                /// *   **NetAddressDeleting**: A network connection is being deleted.
-                /// *   **NetAddressModifying**: A network connection is being modified.
+                /// *   **Preparing**
+                /// 
+                /// <!---->
+                /// 
+                /// *   **Creating**
+                /// *   **Running**
+                /// *   **Deleting**
+                /// 
+                /// <!---->
+                /// 
+                /// *   **Restoring**
+                /// 
+                /// <!---->
+                /// 
+                /// *   **ClassChanging**
+                /// *   **NetAddressCreating**
+                /// *   **NetAddressDeleting**
+                /// *   **NetAddressModifying**
                 /// </summary>
                 [NameInMap("DBClusterStatus")]
                 [Validation(Required=false)]
@@ -97,14 +106,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string DBClusterType { get; set; }
 
                 /// <summary>
-                /// The version of the AnalyticDB for MySQL Data Lakehouse Edition cluster. Only the version **5.0** is supported.
+                /// The version of AnalyticDB for MySQL Data Lakehouse Edition. **5.0** is returned.
                 /// </summary>
                 [NameInMap("DBVersion")]
                 [Validation(Required=false)]
                 public string DBVersion { get; set; }
 
                 /// <summary>
-                /// The engine of the cluster. **AnalyticDB** is returned.
+                /// The database engine of the cluster. **AnalyticDB** is returned.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
@@ -113,8 +122,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The time when the cluster expired. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
                 /// 
-                /// > *   The expiration time is returned for a subscription cluster.
-                /// > *   An empty string is returned for a pay-as-you-go cluster.
+                /// > 
+                /// 
+                /// *   The expiration time is returned for a subscription cluster.
+                /// 
+                /// *   An empty string is returned for a pay-as-you-go cluster.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -123,18 +135,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// Indicates whether the subscription cluster has expired. Valid values:
                 /// 
-                /// *   **true**: The cluster has expired.
-                /// *   **false**: The cluster has not expired.
+                /// *   **true**
+                /// *   **false**
                 /// 
-                /// > *   If the cluster has expired, the system locks or releases the cluster within a specific time period. We recommend that you renew expired clusters. For more information, see [Renewal policy](~~135246~~).
-                /// > *  This parameter is not returned for pay-as-you-go clusters.
+                /// > 
+                /// 
+                /// *   If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew expired clusters. For more information, see [Renewal policy](~~135246~~).
+                /// 
+                /// *   This parameter is not returned for pay-as-you-go clusters.
                 /// </summary>
                 [NameInMap("Expired")]
                 [Validation(Required=false)]
                 public string Expired { get; set; }
 
                 /// <summary>
-                /// The lock state of the instance. Valid values:
+                /// The lock state of the cluster. Valid values:
                 /// 
                 /// *   **Unlock**: The cluster is not locked.
                 /// *   **ManualLock**: The cluster is manually locked.
@@ -147,7 +162,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The reason why the cluster is locked.
                 /// 
-                /// >  This parameter is returned only when the cluster is locked. The value is **instance_expire**.
+                /// >  This parameter is returned only when the cluster was locked. **instance_expire** is returned.
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
@@ -163,8 +178,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The billing method of the cluster. Valid values:
                 /// 
-                /// *   **Postpaid**: pay-as-you-go
-                /// *   **Prepaid**: subscription
+                /// *   **Postpaid**: pay-as-you-go.
+                /// *   **Prepaid**: subscription.
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
@@ -185,28 +200,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The remaining reserved computing resources that are available in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+                /// The amount of remaining reserved computing resources that are available in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
                 /// </summary>
                 [NameInMap("ReservedACU")]
                 [Validation(Required=false)]
                 public string ReservedACU { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The specifications of the reserved storage resources. Each AnalyticDB compute unit (ACU) is equivalent to 1 core and 4 GB memory. Storage resources serve read and write requests. The amount of storage resources is proportional to the read and write performance of the cluster.
+                /// The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is equivalent to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
                 /// </summary>
                 [NameInMap("StorageResource")]
                 [Validation(Required=false)]
                 public string StorageResource { get; set; }
 
                 /// <summary>
-                /// 标签列表。
+                /// The tags that are added to the cluster.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -217,15 +232,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public List<DescribeDBClustersResponseBodyItemsDBClusterTagsTag> Tag { get; set; }
                     public class DescribeDBClustersResponseBodyItemsDBClusterTagsTag : TeaModel {
                         /// <summary>
-                        /// 标签键。
-                        /// > 您可以调用[TagResources](~~179253~~)接口为目标集群创建标签。
+                        /// The tag key.
+                        /// 
+                        /// >  You can call the [TagResources](~~179253~~) operation to add tags to a cluster.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// 标签值。
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -236,7 +252,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// The ID of the virtual private cloud (VPC).
+                /// The virtual private cloud (VPC) ID of the cluster.
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
@@ -261,28 +277,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

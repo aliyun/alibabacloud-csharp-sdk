@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeEnabledPrivilegesRequest : TeaModel {
+        /// <summary>
+        /// 数据库账号名称。
+        /// > 您可以调用[DescribeAccounts](~~612430~~)接口查看指定集群的数据库账号信息，包括账号名称。
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }

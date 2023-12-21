@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeEnabledPrivilegesResponseBody : TeaModel {
         /// <summary>
-        /// The permission levels and specific permissions.
+        /// The queried permission level and permissions.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// Details of the permissions.
+            /// The queried permissions.
             /// </summary>
             [NameInMap("Privileges")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyDBClusterRequest : TeaModel {
         /// <summary>
-        /// The amount of reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+        /// The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
         /// 
         /// >  This parameter must be specified with a unit.
         /// </summary>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The amount of reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+        /// The reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
         /// 
         /// >  This parameter must be specified with a unit.
         /// </summary>
