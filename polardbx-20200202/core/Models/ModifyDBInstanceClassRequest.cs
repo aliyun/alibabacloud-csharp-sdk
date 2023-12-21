@@ -29,6 +29,22 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SpecifiedDNScale")]
+        [Validation(Required=false)]
+        public bool? SpecifiedDNScale { get; set; }
+
+        [NameInMap("SpecifiedDNSpecMapJson")]
+        [Validation(Required=false)]
+        public string SpecifiedDNSpecMapJson { get; set; }
+
+        [NameInMap("SwitchTime")]
+        [Validation(Required=false)]
+        public string SwitchTime { get; set; }
+
+        [NameInMap("SwitchTimeMode")]
+        [Validation(Required=false)]
+        public string SwitchTimeMode { get; set; }
+
         [NameInMap("TargetDBInstanceClass")]
         [Validation(Required=false)]
         public string TargetDBInstanceClass { get; set; }

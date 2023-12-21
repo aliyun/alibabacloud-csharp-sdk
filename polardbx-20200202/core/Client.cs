@@ -865,6 +865,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["SecurityAccountPassword"] = request.SecurityAccountPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePoolName))
+            {
+                query["StoragePoolName"] = request.StoragePoolName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -927,6 +931,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityAccountPassword))
             {
                 query["SecurityAccountPassword"] = request.SecurityAccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePoolName))
+            {
+                query["StoragePoolName"] = request.StoragePoolName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -998,6 +1006,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsColumnarReadDBInstance))
+            {
+                query["IsColumnarReadDBInstance"] = request.IsColumnarReadDBInstance;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsReadDBInstance))
             {
@@ -1117,6 +1129,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsColumnarReadDBInstance))
+            {
+                query["IsColumnarReadDBInstance"] = request.IsColumnarReadDBInstance;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsReadDBInstance))
             {
@@ -4795,6 +4811,22 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedDNScale))
+            {
+                query["SpecifiedDNScale"] = request.SpecifiedDNScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedDNSpecMapJson))
+            {
+                query["SpecifiedDNSpecMapJson"] = request.SpecifiedDNSpecMapJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
+            {
+                query["SwitchTime"] = request.SwitchTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTimeMode))
+            {
+                query["SwitchTimeMode"] = request.SwitchTimeMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBInstanceClass))
             {
                 query["TargetDBInstanceClass"] = request.TargetDBInstanceClass;
@@ -4841,6 +4873,22 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedDNScale))
+            {
+                query["SpecifiedDNScale"] = request.SpecifiedDNScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedDNSpecMapJson))
+            {
+                query["SpecifiedDNSpecMapJson"] = request.SpecifiedDNSpecMapJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
+            {
+                query["SwitchTime"] = request.SwitchTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTimeMode))
+            {
+                query["SwitchTimeMode"] = request.SwitchTimeMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBInstanceClass))
             {
@@ -6505,6 +6553,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDNSpec))
+            {
+                query["AddDNSpec"] = request.AddDNSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CNNodeCount))
             {
                 query["CNNodeCount"] = request.CNNodeCount;
@@ -6525,9 +6577,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DbInstanceNodeCount"] = request.DbInstanceNodeCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteDNIds))
+            {
+                query["DeleteDNIds"] = request.DeleteDNIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePoolName))
+            {
+                query["StoragePoolName"] = request.StoragePoolName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6552,6 +6612,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDNSpec))
+            {
+                query["AddDNSpec"] = request.AddDNSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CNNodeCount))
             {
                 query["CNNodeCount"] = request.CNNodeCount;
@@ -6572,9 +6636,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DbInstanceNodeCount"] = request.DbInstanceNodeCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteDNIds))
+            {
+                query["DeleteDNIds"] = request.DeleteDNIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePoolName))
+            {
+                query["StoragePoolName"] = request.StoragePoolName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

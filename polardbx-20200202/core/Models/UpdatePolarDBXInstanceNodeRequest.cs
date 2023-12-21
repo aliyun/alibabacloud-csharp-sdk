@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpdatePolarDBXInstanceNodeRequest : TeaModel {
+        [NameInMap("AddDNSpec")]
+        [Validation(Required=false)]
+        public string AddDNSpec { get; set; }
+
         [NameInMap("CNNodeCount")]
         [Validation(Required=false)]
         public string CNNodeCount { get; set; }
@@ -29,9 +33,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DbInstanceNodeCount { get; set; }
 
+        [NameInMap("DeleteDNIds")]
+        [Validation(Required=false)]
+        public string DeleteDNIds { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("StoragePoolName")]
+        [Validation(Required=false)]
+        public string StoragePoolName { get; set; }
 
     }
 

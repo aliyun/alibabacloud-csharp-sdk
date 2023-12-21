@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        [NameInMap("IsColumnarReadDBInstance")]
+        [Validation(Required=false)]
+        public bool? IsColumnarReadDBInstance { get; set; }
+
         [NameInMap("IsReadDBInstance")]
         [Validation(Required=false)]
         public bool? IsReadDBInstance { get; set; }

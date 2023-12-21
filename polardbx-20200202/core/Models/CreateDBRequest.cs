@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string SecurityAccountPassword { get; set; }
 
+        [NameInMap("StoragePoolName")]
+        [Validation(Required=false)]
+        public string StoragePoolName { get; set; }
+
     }
 
 }
