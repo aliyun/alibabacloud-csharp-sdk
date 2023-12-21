@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// The IDs of check items.
+        /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }

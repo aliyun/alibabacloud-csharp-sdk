@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// The ID of the risk item.
+        /// The ID of the risk item. This parameter is required.
         /// 
-        /// >  To query the information about the risk items and check items of a server, you must provide the IDs of risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.
+        /// >  To query the information about the risk items and check items of a server, you must specify the IDs of the risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
         /// </summary>
         [NameInMap("RiskId")]
         [Validation(Required=false)]

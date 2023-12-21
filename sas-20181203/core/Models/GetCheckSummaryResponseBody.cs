@@ -9,6 +9,60 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryResponseBody : TeaModel {
+        [NameInMap("OverallStatistic")]
+        [Validation(Required=false)]
+        public GetCheckSummaryResponseBodyOverallStatistic OverallStatistic { get; set; }
+        public class GetCheckSummaryResponseBodyOverallStatistic : TeaModel {
+            [NameInMap("NotCheckCount")]
+            [Validation(Required=false)]
+            public int? NotCheckCount { get; set; }
+
+            [NameInMap("NotCheckHighCount")]
+            [Validation(Required=false)]
+            public int? NotCheckHighCount { get; set; }
+
+            [NameInMap("NotCheckLowCount")]
+            [Validation(Required=false)]
+            public int? NotCheckLowCount { get; set; }
+
+            [NameInMap("NotCheckMediumCount")]
+            [Validation(Required=false)]
+            public int? NotCheckMediumCount { get; set; }
+
+            [NameInMap("NotPassCount")]
+            [Validation(Required=false)]
+            public int? NotPassCount { get; set; }
+
+            [NameInMap("NotPassHighCount")]
+            [Validation(Required=false)]
+            public int? NotPassHighCount { get; set; }
+
+            [NameInMap("NotPassLowCount")]
+            [Validation(Required=false)]
+            public int? NotPassLowCount { get; set; }
+
+            [NameInMap("NotPassMediumCount")]
+            [Validation(Required=false)]
+            public int? NotPassMediumCount { get; set; }
+
+            [NameInMap("PassCount")]
+            [Validation(Required=false)]
+            public int? PassCount { get; set; }
+
+            [NameInMap("PassHighCount")]
+            [Validation(Required=false)]
+            public int? PassHighCount { get; set; }
+
+            [NameInMap("PassLowCount")]
+            [Validation(Required=false)]
+            public int? PassLowCount { get; set; }
+
+            [NameInMap("PassMediumCount")]
+            [Validation(Required=false)]
+            public int? PassMediumCount { get; set; }
+
+        }
+
         /// <summary>
         /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
@@ -93,6 +147,60 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string ShowName { get; set; }
 
+                [NameInMap("StandardStatistic")]
+                [Validation(Required=false)]
+                public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic StandardStatistic { get; set; }
+                public class GetCheckSummaryResponseBodySummarysStandardsStandardStatistic : TeaModel {
+                    [NameInMap("NotCheckCount")]
+                    [Validation(Required=false)]
+                    public int? NotCheckCount { get; set; }
+
+                    [NameInMap("NotCheckHighCount")]
+                    [Validation(Required=false)]
+                    public int? NotCheckHighCount { get; set; }
+
+                    [NameInMap("NotCheckLowCount")]
+                    [Validation(Required=false)]
+                    public int? NotCheckLowCount { get; set; }
+
+                    [NameInMap("NotCheckMediumCount")]
+                    [Validation(Required=false)]
+                    public int? NotCheckMediumCount { get; set; }
+
+                    [NameInMap("NotPassCount")]
+                    [Validation(Required=false)]
+                    public int? NotPassCount { get; set; }
+
+                    [NameInMap("NotPassHighCount")]
+                    [Validation(Required=false)]
+                    public int? NotPassHighCount { get; set; }
+
+                    [NameInMap("NotPassLowCount")]
+                    [Validation(Required=false)]
+                    public int? NotPassLowCount { get; set; }
+
+                    [NameInMap("NotPassMediumCount")]
+                    [Validation(Required=false)]
+                    public int? NotPassMediumCount { get; set; }
+
+                    [NameInMap("PassCount")]
+                    [Validation(Required=false)]
+                    public int? PassCount { get; set; }
+
+                    [NameInMap("PassHighCount")]
+                    [Validation(Required=false)]
+                    public int? PassHighCount { get; set; }
+
+                    [NameInMap("PassLowCount")]
+                    [Validation(Required=false)]
+                    public int? PassLowCount { get; set; }
+
+                    [NameInMap("PassMediumCount")]
+                    [Validation(Required=false)]
+                    public int? PassMediumCount { get; set; }
+
+                }
+
             }
 
             /// <summary>
@@ -105,6 +213,60 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
+            [NameInMap("TypeStatistic")]
+            [Validation(Required=false)]
+            public GetCheckSummaryResponseBodySummarysTypeStatistic TypeStatistic { get; set; }
+            public class GetCheckSummaryResponseBodySummarysTypeStatistic : TeaModel {
+                [NameInMap("NotCheckCount")]
+                [Validation(Required=false)]
+                public int? NotCheckCount { get; set; }
+
+                [NameInMap("NotCheckHighCount")]
+                [Validation(Required=false)]
+                public int? NotCheckHighCount { get; set; }
+
+                [NameInMap("NotCheckLowCount")]
+                [Validation(Required=false)]
+                public int? NotCheckLowCount { get; set; }
+
+                [NameInMap("NotCheckMediumCount")]
+                [Validation(Required=false)]
+                public int? NotCheckMediumCount { get; set; }
+
+                [NameInMap("NotPassCount")]
+                [Validation(Required=false)]
+                public int? NotPassCount { get; set; }
+
+                [NameInMap("NotPassHighCount")]
+                [Validation(Required=false)]
+                public int? NotPassHighCount { get; set; }
+
+                [NameInMap("NotPassLowCount")]
+                [Validation(Required=false)]
+                public int? NotPassLowCount { get; set; }
+
+                [NameInMap("NotPassMediumCount")]
+                [Validation(Required=false)]
+                public int? NotPassMediumCount { get; set; }
+
+                [NameInMap("PassCount")]
+                [Validation(Required=false)]
+                public int? PassCount { get; set; }
+
+                [NameInMap("PassHighCount")]
+                [Validation(Required=false)]
+                public int? PassHighCount { get; set; }
+
+                [NameInMap("PassLowCount")]
+                [Validation(Required=false)]
+                public int? PassLowCount { get; set; }
+
+                [NameInMap("PassMediumCount")]
+                [Validation(Required=false)]
+                public int? PassMediumCount { get; set; }
+
+            }
 
         }
 

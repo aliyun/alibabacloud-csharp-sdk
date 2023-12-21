@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryIncidentTracingDetailRequest : TeaModel {
+        /// <summary>
+        /// The ID of the event.
+        /// 
+        /// >  You can call the [DescribeCloudSiemEvents](~~DescribeCloudSiemEvents~~) operation to query the IDs of events.
+        /// </summary>
         [NameInMap("IncidentId")]
         [Validation(Required=false)]
         public string IncidentId { get; set; }

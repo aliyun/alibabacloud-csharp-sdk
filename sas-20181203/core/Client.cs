@@ -34181,6 +34181,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendors))
+            {
+                query["Vendors"] = request.Vendors;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -34211,6 +34215,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
             {
                 query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendors))
+            {
+                query["Vendors"] = request.Vendors;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -34667,9 +34675,18 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await GetCloudAssetDetailWithOptionsAsync(request, runtime);
         }
 
-        public GetCloudAssetSummaryResponse GetCloudAssetSummaryWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetCloudAssetSummaryResponse GetCloudAssetSummaryWithOptions(GetCloudAssetSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendors))
+            {
+                query["Vendors"] = request.Vendors;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetCloudAssetSummary",
@@ -34685,9 +34702,18 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<GetCloudAssetSummaryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetCloudAssetSummaryResponse> GetCloudAssetSummaryWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetCloudAssetSummaryResponse> GetCloudAssetSummaryWithOptionsAsync(GetCloudAssetSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendors))
+            {
+                query["Vendors"] = request.Vendors;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetCloudAssetSummary",
@@ -34703,16 +34729,16 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<GetCloudAssetSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetCloudAssetSummaryResponse GetCloudAssetSummary()
+        public GetCloudAssetSummaryResponse GetCloudAssetSummary(GetCloudAssetSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetCloudAssetSummaryWithOptions(runtime);
+            return GetCloudAssetSummaryWithOptions(request, runtime);
         }
 
-        public async Task<GetCloudAssetSummaryResponse> GetCloudAssetSummaryAsync()
+        public async Task<GetCloudAssetSummaryResponse> GetCloudAssetSummaryAsync(GetCloudAssetSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetCloudAssetSummaryWithOptionsAsync(runtime);
+            return await GetCloudAssetSummaryWithOptionsAsync(request, runtime);
         }
 
         public GetClusterCheckItemWarningStatisticsResponse GetClusterCheckItemWarningStatisticsWithOptions(GetClusterCheckItemWarningStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -53733,6 +53759,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Config"] = request.Config;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoTargetAsOn))
+            {
+                query["NoTargetAsOn"] = request.NoTargetAsOn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -53767,6 +53797,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
                 query["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoTargetAsOn))
+            {
+                query["NoTargetAsOn"] = request.NoTargetAsOn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {

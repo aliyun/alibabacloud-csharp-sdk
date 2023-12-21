@@ -20,6 +20,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// Specifies whether to configure assets for the feature. Default value: **false**. Valid values:
+        /// 
+        /// *   **true**: yes
+        /// *   **false**: no
+        /// 
+        /// >  This parameter takes effect only when you set **Config** to **on**.
+        /// </summary>
+        [NameInMap("NoTargetAsOn")]
+        [Validation(Required=false)]
+        public bool? NoTargetAsOn { get; set; }
+
+        /// <summary>
         /// The source IP address of the request.
         /// </summary>
         [NameInMap("SourceIp")]

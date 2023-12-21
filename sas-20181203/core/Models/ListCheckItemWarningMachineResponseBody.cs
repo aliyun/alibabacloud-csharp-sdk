@@ -77,6 +77,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// Whether the repair is supported. Valid values:
+            /// *   **0**: Supported
+            /// *   **1**: Not Supported
+            /// </summary>
             [NameInMap("FixStatus")]
             [Validation(Required=false)]
             public int? FixStatus { get; set; }
@@ -109,6 +114,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            /// <summary>
+            /// The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.
+            /// </summary>
             [NameInMap("LastHandleTime")]
             [Validation(Required=false)]
             public long? LastHandleTime { get; set; }

@@ -30,10 +30,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CheckWarningId { get; set; }
 
+            /// <summary>
+            /// The ID of the container.
+            /// </summary>
             [NameInMap("ContainerId")]
             [Validation(Required=false)]
             public string ContainerId { get; set; }
 
+            /// <summary>
+            /// The name of the container.
+            /// </summary>
             [NameInMap("ContainerName")]
             [Validation(Required=false)]
             public string ContainerName { get; set; }

@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteOssScanConfigRequest : TeaModel {
+        /// <summary>
+        /// The ID of the policy.
+        /// 
+        /// >  You can call the [ListOssScanConfig](~~ListOssScanConfig~~) operation to query the IDs of rules.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }

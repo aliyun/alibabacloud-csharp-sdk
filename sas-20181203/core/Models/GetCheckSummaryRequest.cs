@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ResourceDirectoryAccountId { get; set; }
 
+        [NameInMap("Vendors")]
+        [Validation(Required=false)]
+        public List<string> Vendors { get; set; }
+
     }
 
 }

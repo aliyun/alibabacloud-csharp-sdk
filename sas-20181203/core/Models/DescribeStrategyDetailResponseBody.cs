@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeStrategyDetailResponseBodyStrategy Strategy { get; set; }
         public class DescribeStrategyDetailResponseBodyStrategy : TeaModel {
             /// <summary>
-            /// The type of the baseline check policy. Valid values:
+            /// The type of the baseline check policy that you want to query. Valid values:
             /// 
             /// *   **common**: standard baseline check policy
             /// *   **custom**: custom baseline check policy
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CycleStartTime { get; set; }
 
             /// <summary>
-            /// The time when the baseline check based on the baseline check policy ends.
+            /// The end time of the check. Specify the time in the HH:mm:ss format.
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -74,14 +74,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The subtype of the baseline check item.
+            /// The subtype of the baselines. 
+            /// 
+            /// > You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the subtypes of baselines.
             /// </summary>
             [NameInMap("RiskSubTypeName")]
             [Validation(Required=false)]
             public string RiskSubTypeName { get; set; }
 
             /// <summary>
-            /// An array that consists of the whitelist of risk items.
+            /// The whitelist of risk items.
             /// </summary>
             [NameInMap("RiskTypeWhiteListQueryResultList")]
             [Validation(Required=false)]
@@ -95,17 +97,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// Indicates whether the check item is selected. Valid values:
+                /// Indicates whether the risk item is selected. Valid values:
                 /// 
-                /// *   **true**: The check item is selected.
-                /// *   **false**: The check item is not selected.
+                /// *   **true**: yes
+                /// *   **false**: no
                 /// </summary>
                 [NameInMap("On")]
                 [Validation(Required=false)]
                 public bool? On { get; set; }
 
                 /// <summary>
-                /// The sub-check items.
+                /// An array that consists of sub-risk items.
                 /// </summary>
                 [NameInMap("SubTypes")]
                 [Validation(Required=false)]
@@ -119,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Alias { get; set; }
 
                     /// <summary>
-                    /// The details of custom check items.
+                    /// The details about the custom check item.
                     /// </summary>
                     [NameInMap("CheckDetails")]
                     [Validation(Required=false)]
@@ -147,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public string CheckItem { get; set; }
 
                         /// <summary>
-                        /// The details of rules.
+                        /// An array that consists of rules.
                         /// </summary>
                         [NameInMap("Rules")]
                         [Validation(Required=false)]
@@ -161,24 +163,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                             public int? DefaultValue { get; set; }
 
                             /// <summary>
-                            /// Indicates whether the rule can be selected. Valid values:
+                            /// Indicates whether the rule is included in the policy. Valid values:
                             /// 
-                            /// *   **1**: The rule can be selected.
-                            /// *   **0**: The rule cannot be selected.
+                            /// *   **1**: yes
+                            /// *   **0**: no
                             /// </summary>
                             [NameInMap("Optional")]
                             [Validation(Required=false)]
                             public int? Optional { get; set; }
 
                             /// <summary>
-                            /// The rule parameters.
+                            /// An array that consists of the parameters of the rule.
                             /// </summary>
                             [NameInMap("ParamList")]
                             [Validation(Required=false)]
                             public List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList> ParamList { get; set; }
                             public class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList : TeaModel {
                                 /// <summary>
-                                /// The options that can be selected for the rule parameter if the value of ParamType is set to 2.
+                                /// If the value of paramType is 2, this parameter provides the options that can be selected for paramType.
                                 /// </summary>
                                 [NameInMap("EnumValue")]
                                 [Validation(Required=false)]
@@ -223,7 +225,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                                 /// The type of the rule parameter. Valid values:
                                 /// 
                                 /// *   **1**: input
-                                /// *   **2**: selection
+                                /// *   **2**: select
                                 /// </summary>
                                 [NameInMap("ParamType")]
                                 [Validation(Required=false)]
@@ -246,7 +248,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                             public string RuleDesc { get; set; }
 
                             /// <summary>
-                            /// The rule ID.
+                            /// The ID of the rule.
                             /// </summary>
                             [NameInMap("RuleId")]
                             [Validation(Required=false)]
@@ -257,15 +259,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// Indicates whether the sub-check item is selected. Valid values:
+                    /// Indicates whether the sub-risk item is selected. Valid values:
                     /// 
-                    /// *   **true**: The sub-check item is selected.
-                    /// *   **false**: The sub-check item is not selected.
+                    /// *   **true**: yes
+                    /// *   **false**: no
                     /// </summary>
                     [NameInMap("On")]
                     [Validation(Required=false)]
                     public bool? On { get; set; }
 
+                    /// <summary>
+                    /// The operating system type of the server. Valid values:
+                    /// *   **windows**
+                    /// *   **linux**
+                    /// </summary>
                     [NameInMap("SupportedOs")]
                     [Validation(Required=false)]
                     public string SupportedOs { get; set; }
@@ -280,7 +287,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The check item.
+                /// The name of the check item.
                 /// </summary>
                 [NameInMap("TypeName")]
                 [Validation(Required=false)]
@@ -289,17 +296,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The time when the baseline check based on the baseline check policy starts.
+            /// The start time of the check. Specify the time in the HH:mm:ss format.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The condition by which the baseline check policy is applied to the asset. Valid values:
+            /// The method that is used to apply the baseline check policy. Valid values:
             /// 
-            /// *   **groupId**: the ID of the asset group
-            /// *   **uuid**: the UUID of the asset
+            /// *   **groupId**: asset groups
+            /// *   **uuid**: assets
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
@@ -308,8 +315,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the baseline check policy. Valid values:
             /// 
-            /// *   **1**: standard baseline check policy
-            /// *   **2**: custom baseline check policy
+            /// *   **1**: standard policies
+            /// *   **2**: custom policies
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
