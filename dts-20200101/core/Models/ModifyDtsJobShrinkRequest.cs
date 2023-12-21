@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
+        [NameInMap("DtsJobId")]
+        [Validation(Required=false)]
+        public string DtsJobId { get; set; }
+
         /// <summary>
         /// The operator that is related to the extract, transform, and load (ETL) feature and dedicated to T+1 business.
         /// </summary>

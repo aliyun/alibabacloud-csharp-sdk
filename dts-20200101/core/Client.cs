@@ -3213,6 +3213,72 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await CreateMigrationJobWithOptionsAsync(request, runtime);
         }
 
+        public CreateReverseDtsJobResponse CreateReverseDtsJobWithOptions(CreateReverseDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReverseDtsJob",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReverseDtsJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateReverseDtsJobResponse> CreateReverseDtsJobWithOptionsAsync(CreateReverseDtsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReverseDtsJob",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReverseDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateReverseDtsJobResponse CreateReverseDtsJob(CreateReverseDtsJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateReverseDtsJobWithOptions(request, runtime);
+        }
+
+        public async Task<CreateReverseDtsJobResponse> CreateReverseDtsJobAsync(CreateReverseDtsJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateReverseDtsJobWithOptionsAsync(request, runtime);
+        }
+
         /**
           * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
           *
@@ -9769,6 +9835,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DtsInstanceId"] = request.DtsInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileOssUrl))
             {
                 query["FileOssUrl"] = request.FileOssUrl;
@@ -9851,6 +9921,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsInstanceId))
             {
                 query["DtsInstanceId"] = request.DtsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileOssUrl))
             {
@@ -10381,6 +10455,200 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDtsJobDuLimitWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyDtsJobEndpointResponse ModifyDtsJobEndpointWithOptions(ModifyDtsJobEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUid))
+            {
+                query["AliyunUid"] = request.AliyunUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["Database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsInstanceId))
+            {
+                query["DtsInstanceId"] = request.DtsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoint))
+            {
+                query["Endpoint"] = request.Endpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointInstanceId))
+            {
+                query["EndpointInstanceId"] = request.EndpointInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointInstanceType))
+            {
+                query["EndpointInstanceType"] = request.EndpointInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointIp))
+            {
+                query["EndpointIp"] = request.EndpointIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointPort))
+            {
+                query["EndpointPort"] = request.EndpointPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                query["RoleName"] = request.RoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardPassword))
+            {
+                query["ShardPassword"] = request.ShardPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardUsername))
+            {
+                query["ShardUsername"] = request.ShardUsername;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizationDirection))
+            {
+                query["SynchronizationDirection"] = request.SynchronizationDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDtsJobEndpoint",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDtsJobEndpointResponse> ModifyDtsJobEndpointWithOptionsAsync(ModifyDtsJobEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUid))
+            {
+                query["AliyunUid"] = request.AliyunUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["Database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsInstanceId))
+            {
+                query["DtsInstanceId"] = request.DtsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoint))
+            {
+                query["Endpoint"] = request.Endpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointInstanceId))
+            {
+                query["EndpointInstanceId"] = request.EndpointInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointInstanceType))
+            {
+                query["EndpointInstanceType"] = request.EndpointInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointIp))
+            {
+                query["EndpointIp"] = request.EndpointIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointPort))
+            {
+                query["EndpointPort"] = request.EndpointPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                query["RoleName"] = request.RoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardPassword))
+            {
+                query["ShardPassword"] = request.ShardPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardUsername))
+            {
+                query["ShardUsername"] = request.ShardUsername;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizationDirection))
+            {
+                query["SynchronizationDirection"] = request.SynchronizationDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDtsJobEndpoint",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDtsJobEndpointResponse ModifyDtsJobEndpoint(ModifyDtsJobEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDtsJobEndpointWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDtsJobEndpointResponse> ModifyDtsJobEndpointAsync(ModifyDtsJobEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDtsJobEndpointWithOptionsAsync(request, runtime);
         }
 
         public ModifyDtsJobNameResponse ModifyDtsJobNameWithOptions(ModifyDtsJobNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -11951,6 +12219,80 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartMigrationJobWithOptionsAsync(request, runtime);
+        }
+
+        public StartReverseWriterResponse StartReverseWriterWithOptions(StartReverseWriterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckPoint))
+            {
+                query["CheckPoint"] = request.CheckPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartReverseWriter",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartReverseWriterResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StartReverseWriterResponse> StartReverseWriterWithOptionsAsync(StartReverseWriterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckPoint))
+            {
+                query["CheckPoint"] = request.CheckPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartReverseWriter",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartReverseWriterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StartReverseWriterResponse StartReverseWriter(StartReverseWriterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartReverseWriterWithOptions(request, runtime);
+        }
+
+        public async Task<StartReverseWriterResponse> StartReverseWriterAsync(StartReverseWriterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartReverseWriterWithOptionsAsync(request, runtime);
         }
 
         /**

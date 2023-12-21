@@ -1249,6 +1249,50 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
+                [NameInMap("FullDataCheckStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus FullDataCheckStatus { get; set; }
+                public class DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("IncDataCheckStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus IncDataCheckStatus { get; set; }
+                public class DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
                 /// <summary>
                 /// The memory that has been used. Unit: MB.
                 /// </summary>
@@ -1281,6 +1325,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                     [NameInMap("DataSynchronization")]
                     [Validation(Required=false)]
                     public bool? DataSynchronization { get; set; }
+
+                    [NameInMap("FullDataCheck")]
+                    [Validation(Required=false)]
+                    public bool? FullDataCheck { get; set; }
+
+                    [NameInMap("IncDataCheck")]
+                    [Validation(Required=false)]
+                    public bool? IncDataCheck { get; set; }
 
                     /// <summary>
                     /// Indicates whether initial schema synchronization is performed. Valid values:
