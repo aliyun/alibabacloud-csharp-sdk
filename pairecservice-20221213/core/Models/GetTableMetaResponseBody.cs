@@ -1,0 +1,80 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.PaiRecService20221213.Models
+{
+    public class GetTableMetaResponseBody : TeaModel {
+        [NameInMap("CanDelete")]
+        [Validation(Required=false)]
+        public bool? CanDelete { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("Fields")]
+        [Validation(Required=false)]
+        public List<GetTableMetaResponseBodyFields> Fields { get; set; }
+        public class GetTableMetaResponseBodyFields : TeaModel {
+            [NameInMap("IsDimensionField")]
+            [Validation(Required=false)]
+            public bool? IsDimensionField { get; set; }
+
+            [NameInMap("Meaning")]
+            [Validation(Required=false)]
+            public string Meaning { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
+        [NameInMap("GmtCreateTime")]
+        [Validation(Required=false)]
+        public string GmtCreateTime { get; set; }
+
+        [NameInMap("GmtModifiedTime")]
+        [Validation(Required=false)]
+        public string GmtModifiedTime { get; set; }
+
+        [NameInMap("Module")]
+        [Validation(Required=false)]
+        public string Module { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
+
+        [NameInMap("TableName")]
+        [Validation(Required=false)]
+        public string TableName { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
+
+    }
+
+}
