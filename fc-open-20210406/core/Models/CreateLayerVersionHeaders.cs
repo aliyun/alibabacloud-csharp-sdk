@@ -14,21 +14,21 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// The description of the layer.
+        /// The ID of your Alibaba Cloud account.
         /// </summary>
         [NameInMap("X-Fc-Account-Id")]
         [Validation(Required=false)]
         public string XFcAccountId { get; set; }
 
         /// <summary>
-        /// The checksum of the layer code package.
+        /// The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
         /// </summary>
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]
         public string XFcDate { get; set; }
 
         /// <summary>
-        /// The information about the layer code package.
+        /// The trace ID of the invocation request of Function Compute.
         /// </summary>
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]

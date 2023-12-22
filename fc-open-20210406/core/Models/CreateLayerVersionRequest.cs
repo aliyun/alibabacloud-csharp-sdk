@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class CreateLayerVersionRequest : TeaModel {
         /// <summary>
-        /// The name of the layer.
+        /// The layer code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public Code Code { get; set; }
 
         /// <summary>
-        /// The name of the runtime. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **php7.2**, **go1**, **dotnetcore2.1** and **custom**.
+        /// The runtime environments that are supported by the layer.
         /// </summary>
         [NameInMap("compatibleRuntime")]
         [Validation(Required=false)]
         public List<string> CompatibleRuntime { get; set; }
 
         /// <summary>
-        /// The name of the layer.
+        /// The layer description. The description can be up to 256 characters in length.
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

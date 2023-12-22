@@ -2827,6 +2827,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             return await GetFunctionWithOptionsAsync(serviceName, functionName, request, headers, runtime);
         }
 
+        /**
+          * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+          *
+          * @param request GetFunctionAsyncInvokeConfigRequest
+          * @param headers GetFunctionAsyncInvokeConfigHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetFunctionAsyncInvokeConfigResponse
+         */
         public GetFunctionAsyncInvokeConfigResponse GetFunctionAsyncInvokeConfigWithOptions(string serviceName, string functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2872,6 +2880,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             return TeaModel.ToObject<GetFunctionAsyncInvokeConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+          *
+          * @param request GetFunctionAsyncInvokeConfigRequest
+          * @param headers GetFunctionAsyncInvokeConfigHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetFunctionAsyncInvokeConfigResponse
+         */
         public async Task<GetFunctionAsyncInvokeConfigResponse> GetFunctionAsyncInvokeConfigWithOptionsAsync(string serviceName, string functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2917,6 +2933,12 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             return TeaModel.ToObject<GetFunctionAsyncInvokeConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+          *
+          * @param request GetFunctionAsyncInvokeConfigRequest
+          * @return GetFunctionAsyncInvokeConfigResponse
+         */
         public GetFunctionAsyncInvokeConfigResponse GetFunctionAsyncInvokeConfig(string serviceName, string functionName, GetFunctionAsyncInvokeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2924,6 +2946,12 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             return GetFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
         }
 
+        /**
+          * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+          *
+          * @param request GetFunctionAsyncInvokeConfigRequest
+          * @return GetFunctionAsyncInvokeConfigResponse
+         */
         public async Task<GetFunctionAsyncInvokeConfigResponse> GetFunctionAsyncInvokeConfigAsync(string serviceName, string functionName, GetFunctionAsyncInvokeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3795,10 +3823,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 query["qualifier"] = request.Qualifier;
             }
-            string body = "";
+            byte[] body = null;
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
             {
-                body = AlibabaCloud.TeaUtil.Common.ToString(request.Body);
+                body = request.Body;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -3848,7 +3876,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "json",
+                ReqBodyType = "byte",
                 BodyType = "byte",
             };
             return TeaModel.ToObject<InvokeFunctionResponse>(CallApi(params_, req, runtime));
@@ -3862,10 +3890,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 query["qualifier"] = request.Qualifier;
             }
-            string body = "";
+            byte[] body = null;
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
             {
-                body = AlibabaCloud.TeaUtil.Common.ToString(request.Body);
+                body = request.Body;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -3915,7 +3943,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "json",
+                ReqBodyType = "byte",
                 BodyType = "byte",
             };
             return TeaModel.ToObject<InvokeFunctionResponse>(await CallApiAsync(params_, req, runtime));
@@ -4295,6 +4323,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             return await ListEventSourcesWithOptionsAsync(serviceName, functionName, request, headers, runtime);
         }
 
+        /**
+          * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+          *
+          * @param request ListFunctionAsyncInvokeConfigsRequest
+          * @param headers ListFunctionAsyncInvokeConfigsHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListFunctionAsyncInvokeConfigsResponse
+         */
         public ListFunctionAsyncInvokeConfigsResponse ListFunctionAsyncInvokeConfigsWithOptions(string serviceName, string functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4356,6 +4392,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             return TeaModel.ToObject<ListFunctionAsyncInvokeConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+          *
+          * @param request ListFunctionAsyncInvokeConfigsRequest
+          * @param headers ListFunctionAsyncInvokeConfigsHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListFunctionAsyncInvokeConfigsResponse
+         */
         public async Task<ListFunctionAsyncInvokeConfigsResponse> ListFunctionAsyncInvokeConfigsWithOptionsAsync(string serviceName, string functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4417,6 +4461,12 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             return TeaModel.ToObject<ListFunctionAsyncInvokeConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+          *
+          * @param request ListFunctionAsyncInvokeConfigsRequest
+          * @return ListFunctionAsyncInvokeConfigsResponse
+         */
         public ListFunctionAsyncInvokeConfigsResponse ListFunctionAsyncInvokeConfigs(string serviceName, string functionName, ListFunctionAsyncInvokeConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4424,6 +4474,12 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             return ListFunctionAsyncInvokeConfigsWithOptions(serviceName, functionName, request, headers, runtime);
         }
 
+        /**
+          * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+          *
+          * @param request ListFunctionAsyncInvokeConfigsRequest
+          * @return ListFunctionAsyncInvokeConfigsResponse
+         */
         public async Task<ListFunctionAsyncInvokeConfigsResponse> ListFunctionAsyncInvokeConfigsAsync(string serviceName, string functionName, ListFunctionAsyncInvokeConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4568,8 +4624,8 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         }
 
         /**
-          * The maximum number of resources to return. Valid values: \\[0,1000].
-          * The number of returned resources is less than or equal to the specified number.
+          * The ListInstances operation allows you to query the available instances of a function.
+          * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
           *
           * @param request ListInstancesRequest
           * @param headers ListInstancesHeaders
@@ -4622,8 +4678,8 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         }
 
         /**
-          * The maximum number of resources to return. Valid values: \\[0,1000].
-          * The number of returned resources is less than or equal to the specified number.
+          * The ListInstances operation allows you to query the available instances of a function.
+          * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
           *
           * @param request ListInstancesRequest
           * @param headers ListInstancesHeaders
@@ -4676,8 +4732,8 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         }
 
         /**
-          * The maximum number of resources to return. Valid values: \\[0,1000].
-          * The number of returned resources is less than or equal to the specified number.
+          * The ListInstances operation allows you to query the available instances of a function.
+          * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
           *
           * @param request ListInstancesRequest
           * @return ListInstancesResponse
@@ -4690,8 +4746,8 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         }
 
         /**
-          * The maximum number of resources to return. Valid values: \\[0,1000].
-          * The number of returned resources is less than or equal to the specified number.
+          * The ListInstances operation allows you to query the available instances of a function.
+          * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
           *
           * @param request ListInstancesRequest
           * @return ListInstancesResponse

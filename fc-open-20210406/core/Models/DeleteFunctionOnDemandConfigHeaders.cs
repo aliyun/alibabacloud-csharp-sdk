@@ -14,23 +14,29 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// Xiaoqi
+        /// If the ETag specified in the request matches the ETag value of the OndemandConfig, FC returns 200 OK. If the ETag specified in the request does not match the ETag value of the object, FC returns 412 Precondition Failed.
         /// </summary>
         [NameInMap("If-Match")]
         [Validation(Required=false)]
         public string IfMatch { get; set; }
 
         /// <summary>
-        /// 65332
+        /// The ID of your Alibaba Cloud account.
         /// </summary>
         [NameInMap("X-Fc-Account-Id")]
         [Validation(Required=false)]
         public string XFcAccountId { get; set; }
 
+        /// <summary>
+        /// The start time when the function is invoked. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+        /// </summary>
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]
         public string XFcDate { get; set; }
 
+        /// <summary>
+        /// The trace ID of the request for Function Compute API, which is also the unique ID of the request.
+        /// </summary>
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]
         public string XFcTraceId { get; set; }

@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class DeleteFunctionAsyncInvokeConfigRequest : TeaModel {
-        /// <summary>
-        /// The qualifier.
-        /// </summary>
-        [NameInMap("qualifier")]
+    public class EventSinkConfig : TeaModel {
+        [NameInMap("deliveryOption")]
         [Validation(Required=false)]
-        public string Qualifier { get; set; }
+        public DeliveryOption DeliveryOption { get; set; }
 
     }
 

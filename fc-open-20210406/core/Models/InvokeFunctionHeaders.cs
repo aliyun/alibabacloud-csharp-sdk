@@ -47,6 +47,16 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string XFcLogType { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the asynchronous task mode for requests. Default value: false. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// 
+        /// > 
+        /// 
+        /// *   This parameter takes effect only for asynchronous invocations. It does not take effect for synchronous invocations.
+        /// </summary>
         [NameInMap("X-Fc-Stateful-Async-Invocation-Enable")]
         [Validation(Required=false)]
         public string XFcStatefulAsyncInvocationEnable { get; set; }

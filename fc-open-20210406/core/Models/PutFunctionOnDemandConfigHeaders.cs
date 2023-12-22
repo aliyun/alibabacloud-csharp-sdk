@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// The name of the service.
+        /// If the ETag specified in the request matches the ETag value of the object, the object and 200 OK are returned. Otherwise, 412 Precondition Failed is returned.
         /// </summary>
         [NameInMap("If-Match")]
         [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string XFcAccountId { get; set; }
 
         /// <summary>
-        /// Example 1
+        /// The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
         /// </summary>
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]
         public string XFcDate { get; set; }
 
         /// <summary>
-        /// Creates function rules.
+        /// The unique ID of the trace.
         /// </summary>
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]

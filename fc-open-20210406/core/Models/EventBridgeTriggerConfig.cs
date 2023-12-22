@@ -17,9 +17,17 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string EventRuleFilterPattern { get; set; }
 
+        [NameInMap("eventSinkConfig")]
+        [Validation(Required=false)]
+        public EventSinkConfig EventSinkConfig { get; set; }
+
         [NameInMap("eventSourceConfig")]
         [Validation(Required=false)]
         public EventSourceConfig EventSourceConfig { get; set; }
+
+        [NameInMap("runOptions")]
+        [Validation(Required=false)]
+        public RunOptions RunOptions { get; set; }
 
         [NameInMap("triggerEnable")]
         [Validation(Required=false)]

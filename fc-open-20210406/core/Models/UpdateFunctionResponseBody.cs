@@ -101,14 +101,29 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string LastModifiedTime { get; set; }
 
+        /// <summary>
+        /// An array that consists of the information of layers.
+        /// 
+        /// > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
+        /// </summary>
         [NameInMap("layers")]
         [Validation(Required=false)]
         public List<string> Layers { get; set; }
+
+        /// <summary>
+        /// ARN list of layers
+        /// </summary>
+        [NameInMap("layersArnV2")]
+        [Validation(Required=false)]
+        public List<string> LayersArnV2 { get; set; }
 
         [NameInMap("memorySize")]
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
+        /// <summary>
+        /// The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).
+        /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]
         public string Runtime { get; set; }

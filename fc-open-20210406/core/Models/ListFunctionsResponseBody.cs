@@ -58,12 +58,20 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             [Validation(Required=false)]
             public CustomContainerConfig CustomContainerConfig { get; set; }
 
+            [NameInMap("customDNS")]
+            [Validation(Required=false)]
+            public CustomDNS CustomDNS { get; set; }
+
             /// <summary>
             /// The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
             /// </summary>
             [NameInMap("customHealthCheckConfig")]
             [Validation(Required=false)]
             public CustomHealthCheckConfig CustomHealthCheckConfig { get; set; }
+
+            [NameInMap("customRuntimeConfig")]
+            [Validation(Required=false)]
+            public CustomRuntimeConfig CustomRuntimeConfig { get; set; }
 
             /// <summary>
             /// The description of the function.
@@ -179,6 +187,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             [NameInMap("layers")]
             [Validation(Required=false)]
             public List<string> Layers { get; set; }
+
+            [NameInMap("layersArnV2")]
+            [Validation(Required=false)]
+            public List<string> LayersArnV2 { get; set; }
 
             /// <summary>
             /// The memory size that is configured for the function. Unit: MB.
