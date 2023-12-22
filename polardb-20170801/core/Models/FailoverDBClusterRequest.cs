@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RollBackForDisaster")]
+        [Validation(Required=false)]
+        public bool? RollBackForDisaster { get; set; }
+
         /// <summary>
         /// The ID of the read-only node that you want to promote to the primary node. You can call the [DescribeDBClusters](~~98094~~) operation to query node information, such as node IDs.
         /// 

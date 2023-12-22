@@ -58,7 +58,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The type of operation performed on the cluster. Valid values:
         /// 
-        /// *   **Add**: add one or more nodes to the cluster.
         /// *   **Modify**: temporarily upgrade the configuration of the cluster.
         /// </summary>
         [NameInMap("OperationType")]

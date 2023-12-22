@@ -241,6 +241,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string ServerlessType { get; set; }
 
+            [NameInMap("SubCluster")]
+            [Validation(Required=false)]
+            public string SubCluster { get; set; }
+
             /// <summary>
             /// The ID of the zone.
             /// </summary>

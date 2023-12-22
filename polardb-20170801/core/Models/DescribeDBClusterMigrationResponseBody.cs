@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string EndpointType { get; set; }
 
+            [NameInMap("ReadWriteMode")]
+            [Validation(Required=false)]
+            public string ReadWriteMode { get; set; }
+
         }
 
         /// <summary>
@@ -232,6 +236,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string VSwitchId { get; set; }
 
             }
+
+            [NameInMap("CustinsType")]
+            [Validation(Required=false)]
+            public string CustinsType { get; set; }
 
             /// <summary>
             /// The ID of the endpoint.
