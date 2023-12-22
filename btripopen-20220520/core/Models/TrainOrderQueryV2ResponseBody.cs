@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
+                [NameInMap("ticket_entrance")]
+                [Validation(Required=false)]
+                public string TicketEntrance { get; set; }
+
                 [NameInMap("ticket_no")]
                 [Validation(Required=false)]
                 public string TicketNo { get; set; }
@@ -459,6 +463,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [NameInMap("start_time")]
                         [Validation(Required=false)]
                         public string StartTime { get; set; }
+
+                        [NameInMap("ticket_entrance")]
+                        [Validation(Required=false)]
+                        public string TicketEntrance { get; set; }
 
                         [NameInMap("ticket_no")]
                         [Validation(Required=false)]
