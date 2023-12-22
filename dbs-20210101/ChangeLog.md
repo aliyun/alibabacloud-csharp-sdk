@@ -1,3 +1,6 @@
+2023-12-22 Version: 1.0.5
+- Generated csharp 2021-01-01 for Dbs.
+
 2023-08-21 Version: 1.0.4
 - Generated csharp 2021-01-01 for Dbs.
 

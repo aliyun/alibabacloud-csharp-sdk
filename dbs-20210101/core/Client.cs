@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Dbs20210101
             {
                 query["NewResourceGroupId"] = request.NewResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
@@ -113,6 +117,10 @@ namespace AlibabaCloud.SDK.Dbs20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewResourceGroupId))
             {
                 query["NewResourceGroupId"] = request.NewResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
