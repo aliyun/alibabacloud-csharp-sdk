@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             [Validation(Required=false)]
             public string AvailableCredit { get; set; }
 
+            [NameInMap("ConsumedUndeductedValue")]
+            [Validation(Required=false)]
+            public string ConsumedUndeductedValue { get; set; }
+
             [NameInMap("CreditLine")]
             [Validation(Required=false)]
             public string CreditLine { get; set; }
