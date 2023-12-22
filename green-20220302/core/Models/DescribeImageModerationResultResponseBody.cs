@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public int? FrameNum { get; set; }
 
+            [NameInMap("ReqId")]
+            [Validation(Required=false)]
+            public string ReqId { get; set; }
+
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<DescribeImageModerationResultResponseBodyDataResult> Result { get; set; }

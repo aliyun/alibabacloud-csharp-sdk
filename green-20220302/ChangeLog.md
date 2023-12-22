@@ -1,3 +1,6 @@
+2023-12-22 Version: 1.2.0
+- Generated csharp 2022-03-02 for Green.
+
 2023-11-02 Version: 1.1.0
 - Generated csharp 2022-03-02 for Green.
 
