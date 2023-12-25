@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -35,18 +35,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource whose control mode you want to change.
+        /// The type of the resource whose control mode you want to change. Valid values:
         /// 
-        /// *   Set the value to **Accelerator**, which specifies a standard GA instance.
+        /// **Accelerator**: standard GA instance.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The control mode of the resource.
+        /// The control mode of the resource. Valid values:
         /// 
-        /// *   Set the value to false, which changes the control mode of the resource from managed mode to unmanaged mode.
+        /// **false**: changes the control mode of the resource from managed mode to unmanaged mode.
         /// 
         /// >  You can change the control mode only from managed mode to unmanaged mode.
         /// </summary>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListIspTypesRequest : TeaModel {
+        /// <summary>
+        /// The ID of the GA instance that you want to query.
+        /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }

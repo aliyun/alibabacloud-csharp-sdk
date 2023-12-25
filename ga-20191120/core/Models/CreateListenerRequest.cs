@@ -282,11 +282,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The endpoint group that is associated with the intelligent routing listener.
+        /// The endpoint groups that are associated with the intelligent routing listener.
         /// 
-        /// You can configure at most 10 endpoint groups for an intelligent routing listener.
+        /// You can configure up to 10 endpoint groups for an intelligent routing listener.
         /// 
-        /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+        /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
         /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
@@ -295,26 +295,26 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:
             /// 
-            /// *   **true**: uses the proxy protocol to preserve client IP addresses.
-            /// *   **false** (default): does not use the proxy protocol to preserve client IP addresses.
+            /// *   **true**
+            /// *   **false** (default)
             /// 
-            /// You can set this parameter for up to 10 endpoint groups.
+            /// You can specify this parameter for up to 10 endpoint groups.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("EnableClientIPPreservationProxyProtocol")]
             [Validation(Required=false)]
             public bool? EnableClientIPPreservationProxyProtocol { get; set; }
 
             /// <summary>
-            /// Specifies whether to obtain and preserve the IP addresses of clients that access the endpoint by using the TCP Option Address (TOA) module. Valid values:
+            /// Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:
             /// 
-            /// *   **true**: preserves client IP addresses by using the TOA module.
-            /// *   **false** (default): does not preserve client IP addresses by using the TOA module.
+            /// *   **true**
+            /// *   **false** (default)
             /// 
-            /// You can set this parameter for up to 10 endpoint groups.
+            /// You can specify this parameter for up to 10 endpoint groups.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("EnableClientIPPreservationToa")]
             [Validation(Required=false)]
@@ -332,18 +332,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// 
                 /// You can specify up to 100 endpoint IP addresses or domain names for an endpoint group of an intelligent routing listener.
                 /// 
-                /// > If the **Type** parameter is set to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
+                /// >  If you set **Type** to **Standard**, you can configure endpoint groups and endpoints, and this parameter is required.
                 /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// The private IP address of the elastic network interface (ENI).
+                /// 
+                /// >  If the endpoint type is **ENI**, you can specify this parameter. If you do not specify this parameter, the primary private IP address of the ENI is used.
+                /// </summary>
                 [NameInMap("SubAddress")]
                 [Validation(Required=false)]
                 public string SubAddress { get; set; }
 
                 /// <summary>
-                /// The endpoint type of the intelligent routing listener. Valid values:
+                /// The type of the endpoint that is associated with the intelligent routing listener. Valid values:
                 /// 
                 /// *   **Domain**: a custom domain name
                 /// *   **Ip**: a custom IP address
@@ -355,15 +360,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// 
                 /// You can specify up to 100 endpoint types for an endpoint group of an intelligent routing listener.
                 /// 
-                /// > 
-                /// 
-                /// *   If the **Type** parameter is set to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
-                /// 
-                /// *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system creates the service-linked role.
-                /// *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-                /// *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
-                /// 
-                /// For more information, see [Service-linked roles](~~178360~~).
+                /// > *   If you set **Type** to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
+                /// >*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+                /// >*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+                /// >*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.  
+                /// > For more information, see [Service linked roles](~~178360~~).
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -374,13 +375,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// 
                 /// Valid values: **0** to **255**.
                 /// 
-                /// You can set the weights of up to 100 endpoints for an endpoint group of an intelligent routing listener.
+                /// You can specify the weights of up to 100 endpoints for an endpoint group of an intelligent routing listener.
                 /// 
-                /// > 
-                /// 
-                /// *   If the **Type** parameter is set to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
-                /// 
-                /// *   If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
+                /// > *   If you set **Type** to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
+                /// >*   If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.
                 /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
@@ -391,11 +389,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The description of the endpoint group that is associated with the intelligent routing listener.
             /// 
-            /// The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
+            /// The description can be up to 256 characters in length and cannot contain `http://` or `https://`.
             /// 
             /// You can enter the descriptions of up to 10 endpoint groups.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("EndpointGroupDescription")]
             [Validation(Required=false)]
@@ -408,7 +406,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// You can enter the names of up to 10 endpoint groups.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("EndpointGroupName")]
             [Validation(Required=false)]
@@ -419,69 +417,63 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// You can enter the region IDs of up to 10 endpoint groups.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
             public string EndpointGroupRegion { get; set; }
 
             /// <summary>
-            /// The endpoint group type of the intelligent routing listener. Valid values:
+            /// The type of the endpoint group associated with the intelligent routing listener. Valid values:
             /// 
-            /// *   **default** (default): a default endpoint group.
-            /// *   **virtual**: a virtual endpoint group.
+            /// *   **default** (default)
+            /// *   **virtual**
             /// 
-            /// You can specify the types of up to 10 endpoint groups.
+            /// You can specify up to 10 endpoint group types.
             /// 
-            /// > 
-            /// 
-            /// *   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
-            /// 
-            /// *   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support virtual endpoint groups.
+            /// > *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.
+            /// >*   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support virtual endpoint groups.
             /// </summary>
             [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
 
             /// <summary>
-            /// The protocol used by the endpoint that is associated with the intelligent routing listener. Valid values:
+            /// The backend service protocol of the endpoint that is associated with the intelligent routing listener. Valid values:
             /// 
-            /// *   **HTTP** (default): HTTP
-            /// *   **HTTPS**: HTTPS
+            /// *   **HTTP** (default)
+            /// *   **HTTPS**
             /// 
-            /// You can specify at most 10 protocols.
+            /// You can specify up to 10 backend service protocols.
             /// 
-            /// > 
-            /// 
-            /// *   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
-            /// 
-            /// *   You can set this parameter only for HTTP intelligent routing listeners and HTTPS intelligent routing listeners.
-            /// *   For an HTTP listener, the protocol must be **HTTP**.
+            /// > *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.
+            /// >*   You can specify this parameter only for HTTP and HTTPS intelligent routing listeners.
+            /// >*   For an HTTP listener, the protocol must be **HTTP**.
             /// </summary>
             [NameInMap("EndpointRequestProtocol")]
             [Validation(Required=false)]
             public string EndpointRequestProtocol { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable health checks for the endpoint group that is associated with the intelligent routing listener. Valid values:
+            /// Specifies whether to enable health checks for the endpoint group. Valid values:
             /// 
-            /// *   **true**: enables the health check feature.
-            /// *   **false** (default): disables the health check feature.
+            /// *   **true**
+            /// *   **false** (default)
             /// 
             /// You can enable the health check feature for up to 10 endpoint groups.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
 
             /// <summary>
-            /// The interval at which you want to perform health checks. Unit: seconds.
+            /// The interval at which health checks are performed. Unit: seconds.
             /// 
             /// You can specify up to 10 health check intervals.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("HealthCheckIntervalSeconds")]
             [Validation(Required=false)]
@@ -492,7 +484,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// You can specify up to 10 health check paths.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("HealthCheckPath")]
             [Validation(Required=false)]
@@ -501,9 +493,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The port that is used for health checks. Valid values: **1** to **65535**.
             /// 
-            /// You can specify up to 10 ports for health checks.
+            /// You can specify up to 10 health check ports.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("HealthCheckPort")]
             [Validation(Required=false)]
@@ -512,20 +504,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The protocol over which health check requests are sent. Valid values:
             /// 
-            /// *   **tcp**: TCP
-            /// *   **http**: HTTP
-            /// *   **https**: HTTPS
+            /// *   **tcp**
+            /// *   **http**
+            /// *   **https**
             /// 
             /// You can specify up to 10 health check protocols.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// The mappings between ports.
+            /// The port mapping.
             /// </summary>
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
@@ -536,11 +528,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// 
                 /// You can specify up to five endpoint ports.
                 /// 
-                /// > 
-                /// 
-                /// *   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
-                /// 
-                /// *   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support port mappings.
+                /// >*   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.
+                /// >*   Only HTTP and HTTPS intelligent routing listeners support port mappings.
                 /// </summary>
                 [NameInMap("EndpointPort")]
                 [Validation(Required=false)]
@@ -551,12 +540,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// 
                 /// You can specify up to five listener ports.
                 /// 
-                /// > 
-                /// 
-                /// *   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
-                /// 
-                /// *   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support port mappings.
-                /// *   The listener port in a port mapping must be the port that is used by the current listener.
+                /// > *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.
+                /// >*   Only HTTP and HTTPS intelligent routing listeners support port mappings.
+                /// >*   The listener port in a port mapping must be the port that is used by the current listener.
                 /// </summary>
                 [NameInMap("ListenerPort")]
                 [Validation(Required=false)]
@@ -567,22 +553,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy. Valid values: **2** to **10**. Default value: **3**.
             /// 
-            /// You can specify the number of consecutive health check successes or failures for at most 10 endpoint groups.
+            /// You can specify the number of successful consecutive health checks or failed consecutive health checks for up to 10 endpoint groups.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("ThresholdCount")]
             [Validation(Required=false)]
             public long? ThresholdCount { get; set; }
 
             /// <summary>
-            /// The traffic distribution ratio. If an intelligent routing listener is associated with multiple endpoint groups, you can use this parameter to specify the ratio of traffic that you want to distribute to each endpoint group.
+            /// The traffic distribution ratio. If an intelligent routing listener is associated with multiple endpoint groups, you can configure this parameter to specify the ratio of traffic distributed to each endpoint group.
             /// 
             /// Valid values: **1** to **100**. Default value: **100**.
             /// 
-            /// You can specify the traffic distribution ratios for up to 10 endpoint groups.
+            /// You can specify traffic distribution ratios for up to 10 endpoint groups.
             /// 
-            /// > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+            /// >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
             /// </summary>
             [NameInMap("TrafficPercentage")]
             [Validation(Required=false)]
@@ -590,6 +576,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
+        /// <summary>
+        /// The timeout period of idle connections. Unit: seconds.
+        /// 
+        /// *   TCP: 10-900. Default value: 900. Unit: seconds.
+        /// *   UDP: 10-20. Default value: 20. Unit: seconds.
+        /// *   HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.
+        /// </summary>
         [NameInMap("IdleTimeout")]
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }
@@ -669,6 +662,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The timeout period for HTTP or HTTPS requests. Unit: seconds.
+        /// 
+        /// Valid values: 1 to 180. Default value: 60. Unit: seconds.
+        /// 
+        /// >  This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.
+        /// </summary>
         [NameInMap("RequestTimeout")]
         [Validation(Required=false)]
         public int? RequestTimeout { get; set; }
@@ -713,11 +713,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **Standard** (default): intelligent routing
         /// *   **CustomRouting**: custom routing
         /// 
-        /// > 
-        /// 
-        /// *   Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.
-        /// 
-        /// *   You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see [Listener overview](~~153216~~).
+        /// > *   Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.
+        /// > *   You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see [Listener overview](~~153216~~).
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
+        [NameInMap("AccessLogSwitch")]
+        [Validation(Required=false)]
+        public string AccessLogSwitch { get; set; }
+
         /// <summary>
         /// The ID of the endpoint group.
         /// </summary>

@@ -77,8 +77,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The metering method that is used when you use the pay-as-you-go billing method. Valid values:
         /// 
-        /// *   **PayByTraffic** (default): pay-by-data-transfer
-        /// *   **PayBY95**: pay-by-95th-percentile By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.
+        /// *   **PayByTraffic** (default)
+        /// *   **PayBY95** By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.
+        /// 
+        /// >  This parameter takes effect only if you set **ChargeType** to **POSTPAY**.
         /// </summary>
         [NameInMap("BillingType")]
         [Validation(Required=false)]

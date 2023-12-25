@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array of information about the resources to which tags are added.
+        /// The information about the resources to which tags are added.
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -47,25 +47,25 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The type of the resource.
                 /// 
-                /// *   **accelerator:** a standard GA instance.
-                /// *   **basicaccelerator:** a basic GA instance.
-                /// *   **bandwidthpackage:** a bandwidth plan.
-                /// *   **acl:** an ACL.
-                /// *   **endpointgroup:** an EndpointGroup.
+                /// *   **accelerator**: a standard GA instance
+                /// *   **basicaccelerator**: a basic GA instance
+                /// *   **bandwidthpackage**: a bandwidth plan
+                /// *   **acl**: an ACL
+                /// *   **endpointgroup**: an endpoint group
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

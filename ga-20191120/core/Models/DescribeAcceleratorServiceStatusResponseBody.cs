@@ -24,72 +24,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the GA instance.
+        /// The status of the GA instance. Valid values:
         /// 
-        /// Valid values:
-        /// 
-        /// *   Released
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     The instance was released due to overdue payments
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
-        /// 
-        /// *   Expired
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     The instance expired due to overdue payments
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
-        /// 
-        /// *   NotOpened
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     The instance is not activated
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
-        /// 
-        /// *   Normal
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     The instance is activated
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
+        /// *   Released: The instance was released due to overdue payments.
+        /// *   Expired: The instance expired due to overdue payments.
+        /// *   NotOpened: The instance is not activated.
+        /// *   Normal: The instance is activated.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

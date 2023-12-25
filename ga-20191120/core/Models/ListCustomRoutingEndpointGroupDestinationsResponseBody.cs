@@ -10,80 +10,83 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListCustomRoutingEndpointGroupDestinationsResponseBody : TeaModel {
         /// <summary>
-        /// The details about the endpoint group mapping configurations.
+        /// The details about the endpoint group mappings.
         /// </summary>
         [NameInMap("Destinations")]
         [Validation(Required=false)]
         public List<ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinations> Destinations { get; set; }
         public class ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinations : TeaModel {
             /// <summary>
-            /// The ID of the GA instance.
+            /// The GA instance ID.
             /// </summary>
             [NameInMap("AcceleratorId")]
             [Validation(Required=false)]
             public string AcceleratorId { get; set; }
 
             /// <summary>
-            /// The ID of the endpoint group mapping configuration.
+            /// The ID of the endpoint group mapping.
             /// </summary>
             [NameInMap("DestinationId")]
             [Validation(Required=false)]
             public string DestinationId { get; set; }
 
             /// <summary>
-            /// The ID of the endpoint group.
+            /// The endpoint group ID.
             /// </summary>
             [NameInMap("EndpointGroupId")]
             [Validation(Required=false)]
             public string EndpointGroupId { get; set; }
 
             /// <summary>
-            /// The start port of the backend service port range of the endpoint group.
+            /// The first port of the backend service port range.
             /// </summary>
             [NameInMap("FromPort")]
             [Validation(Required=false)]
             public int? FromPort { get; set; }
 
             /// <summary>
-            /// The ID of the listener.
+            /// The listener ID.
             /// </summary>
             [NameInMap("ListenerId")]
             [Validation(Required=false)]
             public string ListenerId { get; set; }
 
             /// <summary>
-            /// The backend service protocol of the endpoint group.
+            /// The backend service protocols of the endpoint group. Valid values:
             /// 
-            /// *   **TCP**: TCP
-            /// *   **UDP**: UDP
-            /// *   **TCP,UDP**: TCP and UDP
+            /// *   **TCP**
+            /// *   **UDP**
+            /// *   **TCP,UDP**
             /// </summary>
             [NameInMap("Protocols")]
             [Validation(Required=false)]
             public List<string> Protocols { get; set; }
 
             /// <summary>
-            /// The service ID to which the managed instance belongs.
+            /// The ID of the service that manages the GA instance.
             /// 
-            /// >  Valid only when the ServiceManaged parameter is True.
+            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
             /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// Is it a managed instance. Valid values:
+            /// Indicates whether the GA instance is managed. Valid values:
             /// 
-            /// - **true**
-            /// 
-            /// - **false**
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("ServiceManaged")]
             [Validation(Required=false)]
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// A list of action policies that users can execute on this managed instance.
+            /// The actions that you can perform on the managed instance.
+            /// 
+            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+            /// 
+            /// *   You can perform only specific actions on a managed instance.
             /// </summary>
             [NameInMap("ServiceManagedInfos")]
             [Validation(Required=false)]
@@ -104,28 +107,27 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// Sub resource type, Valid values:
+                /// The type of the child resource. Valid values:
                 /// 
-                /// Listener
-                /// IpSet
-                /// EndpointGroup
-                /// ForwardingRule
-                /// Endpoint
-                /// EndpointGroupDestination
-                /// EndpointPolicy
+                /// *   **Listener**: listener.
+                /// *   **IpSet**: acceleration region.
+                /// *   **EndpointGroup**: endpoint group.
+                /// *   **ForwardingRule**: forwarding rule.
+                /// *   **Endpoint**: endpoint.
+                /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
+                /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
                 /// 
-                /// > Only valid when the Action parameter is CreateChild.
+                /// >  This parameter takes effect only if **Action** is set to **CreateChild**.
                 /// </summary>
                 [NameInMap("ChildType")]
                 [Validation(Required=false)]
                 public string ChildType { get; set; }
 
                 /// <summary>
-                /// Is the managed policy action managed, Valid values:
+                /// Indicates whether the specified actions are managed. Valid values:
                 /// 
-                /// - **true**: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-                /// 
-                /// - **false**: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+                /// *   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.
+                /// *   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.
                 /// </summary>
                 [NameInMap("IsManaged")]
                 [Validation(Required=false)]
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The end port of the backend service port range of the endpoint group.
+            /// The last port of the backend service port range.
             /// </summary>
             [NameInMap("ToPort")]
             [Validation(Required=false)]

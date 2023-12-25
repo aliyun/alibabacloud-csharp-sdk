@@ -45,21 +45,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string SlsLogStoreName { get; set; }
 
         /// <summary>
-        /// The name of the Log Service project.
+        /// The name of the Simple Log Service project.
         /// </summary>
         [NameInMap("SlsProjectName")]
         [Validation(Required=false)]
         public string SlsProjectName { get; set; }
 
         /// <summary>
-        /// The region ID of the Log Service project.
+        /// The ID of the region to which the Simple Log Service project belongs.
         /// </summary>
         [NameInMap("SlsRegionId")]
         [Validation(Required=false)]
         public string SlsRegionId { get; set; }
 
         /// <summary>
-        /// The status of the log.
+        /// Indicates whether the GA instance is associated with the project.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

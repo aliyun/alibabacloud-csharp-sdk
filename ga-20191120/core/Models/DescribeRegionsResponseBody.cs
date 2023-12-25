@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// The region ID. Only **cn-hangzhou** is returned.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
