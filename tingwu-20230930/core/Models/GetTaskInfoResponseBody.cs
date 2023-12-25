@@ -17,6 +17,36 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public GetTaskInfoResponseBodyData Data { get; set; }
         public class GetTaskInfoResponseBodyData : TeaModel {
+            [NameInMap("Result")]
+            [Validation(Required=false)]
+            public GetTaskInfoResponseBodyDataResult Result { get; set; }
+            public class GetTaskInfoResponseBodyDataResult : TeaModel {
+                [NameInMap("AutoChapters")]
+                [Validation(Required=false)]
+                public string AutoChapters { get; set; }
+
+                [NameInMap("MeetingAssistance")]
+                [Validation(Required=false)]
+                public string MeetingAssistance { get; set; }
+
+                [NameInMap("PptExtraction")]
+                [Validation(Required=false)]
+                public string PptExtraction { get; set; }
+
+                [NameInMap("Summarization")]
+                [Validation(Required=false)]
+                public string Summarization { get; set; }
+
+                [NameInMap("Transcription")]
+                [Validation(Required=false)]
+                public string Transcription { get; set; }
+
+                [NameInMap("Translation")]
+                [Validation(Required=false)]
+                public string Translation { get; set; }
+
+            }
+
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
