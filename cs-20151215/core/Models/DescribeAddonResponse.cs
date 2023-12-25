@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateControlPlaneLogResponse : TeaModel {
+    public class DescribeAddonResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public UpdateControlPlaneLogResponseBody Body { get; set; }
+        public DescribeAddonResponseBody Body { get; set; }
 
     }
 

@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("concurrency")]
+        [Validation(Required=false)]
+        public bool? Concurrency { get; set; }
+
         /// <summary>
         /// The configurations about the cluster.
         /// </summary>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteClusterResponseBody : TeaModel {
+    public class UpdateControlPlaneLogResponseBody : TeaModel {
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// The task ID.
-        /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

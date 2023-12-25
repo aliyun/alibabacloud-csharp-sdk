@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RemoveNodePoolNodesShrinkRequest : TeaModel {
+        [NameInMap("concurrency")]
+        [Validation(Required=false)]
+        public bool? Concurrency { get; set; }
+
         /// <summary>
         /// Specifies whether to drain the nodes that you want to remove. Valid values:
         /// 
