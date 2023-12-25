@@ -1,3 +1,6 @@
+2023-12-25 Version: 1.0.4
+- Generated csharp 2018-08-08 for Eci.
+
 2023-12-13 Version: 1.0.3
 - Generated csharp 2018-08-08 for Eci.
 

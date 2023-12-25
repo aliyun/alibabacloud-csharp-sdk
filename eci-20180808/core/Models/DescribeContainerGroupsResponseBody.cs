@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public List<DescribeContainerGroupsResponseBodyContainerGroups> ContainerGroups { get; set; }
         public class DescribeContainerGroupsResponseBodyContainerGroups : TeaModel {
+            [NameInMap("ComputeCategory")]
+            [Validation(Required=false)]
+            public string ComputeCategory { get; set; }
+
             /// <summary>
             /// The instance ID.
             /// </summary>

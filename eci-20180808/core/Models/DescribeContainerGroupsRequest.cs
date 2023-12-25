@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
+
         /// <summary>
         /// The status of the elastic container instance. Valid values:
         /// 
