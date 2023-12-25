@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("vendorRequestId")]
+        [Validation(Required=false)]
+        public string VendorRequestId { get; set; }
+
+        [NameInMap("vendorType")]
+        [Validation(Required=false)]
+        public string VendorType { get; set; }
+
     }
 
 }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateMeetingRoomRequest : TeaModel {
+        [NameInMap("EnableCycleReservation")]
+        [Validation(Required=false)]
+        public bool? EnableCycleReservation { get; set; }
+
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
@@ -16,6 +20,30 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [NameInMap("IsvRoomId")]
         [Validation(Required=false)]
         public string IsvRoomId { get; set; }
+
+        [NameInMap("ReservationAuthority")]
+        [Validation(Required=false)]
+        public CreateMeetingRoomRequestReservationAuthority ReservationAuthority { get; set; }
+        public class CreateMeetingRoomRequestReservationAuthority : TeaModel {
+            [NameInMap("AuthorizedMembers")]
+            [Validation(Required=false)]
+            public List<CreateMeetingRoomRequestReservationAuthorityAuthorizedMembers> AuthorizedMembers { get; set; }
+            public class CreateMeetingRoomRequestReservationAuthorityAuthorizedMembers : TeaModel {
+                [NameInMap("MemberId")]
+                [Validation(Required=false)]
+                public string MemberId { get; set; }
+
+                [NameInMap("MemberName")]
+                [Validation(Required=false)]
+                public string MemberName { get; set; }
+
+                [NameInMap("MemberType")]
+                [Validation(Required=false)]
+                public string MemberType { get; set; }
+
+            }
+
+        }
 
         [NameInMap("RoomCapacity")]
         [Validation(Required=false)]

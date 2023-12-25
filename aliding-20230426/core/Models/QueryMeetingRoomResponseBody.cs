@@ -24,9 +24,41 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string CorpId { get; set; }
 
+            [NameInMap("DeviceUnionIds")]
+            [Validation(Required=false)]
+            public List<string> DeviceUnionIds { get; set; }
+
+            [NameInMap("EnableCycleReservation")]
+            [Validation(Required=false)]
+            public bool? EnableCycleReservation { get; set; }
+
             [NameInMap("IsvRoomId")]
             [Validation(Required=false)]
             public string IsvRoomId { get; set; }
+
+            [NameInMap("ReservationAuthority")]
+            [Validation(Required=false)]
+            public QueryMeetingRoomResponseBodyResultReservationAuthority ReservationAuthority { get; set; }
+            public class QueryMeetingRoomResponseBodyResultReservationAuthority : TeaModel {
+                [NameInMap("AuthorizedMembers")]
+                [Validation(Required=false)]
+                public List<QueryMeetingRoomResponseBodyResultReservationAuthorityAuthorizedMembers> AuthorizedMembers { get; set; }
+                public class QueryMeetingRoomResponseBodyResultReservationAuthorityAuthorizedMembers : TeaModel {
+                    [NameInMap("MemberId")]
+                    [Validation(Required=false)]
+                    public string MemberId { get; set; }
+
+                    [NameInMap("MemberName")]
+                    [Validation(Required=false)]
+                    public string MemberName { get; set; }
+
+                    [NameInMap("MemberType")]
+                    [Validation(Required=false)]
+                    public string MemberType { get; set; }
+
+                }
+
+            }
 
             [NameInMap("RoomCapacity")]
             [Validation(Required=false)]
@@ -99,6 +131,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             public int? RoomStatus { get; set; }
 
         }
+
+        [NameInMap("vendorRequestId")]
+        [Validation(Required=false)]
+        public string VendorRequestId { get; set; }
+
+        [NameInMap("vendorType")]
+        [Validation(Required=false)]
+        public string VendorType { get; set; }
 
     }
 

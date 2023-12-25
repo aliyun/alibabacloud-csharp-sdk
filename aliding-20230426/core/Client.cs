@@ -2772,6 +2772,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReservationAuthority))
+            {
+                request.ReservationAuthorityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReservationAuthority, "ReservationAuthority", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoomLabelIds))
             {
                 request.RoomLabelIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoomLabelIds, "RoomLabelIds", "json");
@@ -2785,6 +2789,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
                 request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCycleReservation))
+            {
+                body["EnableCycleReservation"] = request.EnableCycleReservation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 body["GroupId"] = request.GroupId;
@@ -2792,6 +2800,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvRoomId))
             {
                 body["IsvRoomId"] = request.IsvRoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservationAuthorityShrink))
+            {
+                body["ReservationAuthority"] = request.ReservationAuthorityShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomCapacity))
             {
@@ -2861,6 +2873,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReservationAuthority))
+            {
+                request.ReservationAuthorityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReservationAuthority, "ReservationAuthority", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoomLabelIds))
             {
                 request.RoomLabelIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoomLabelIds, "RoomLabelIds", "json");
@@ -2874,6 +2890,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
                 request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCycleReservation))
+            {
+                body["EnableCycleReservation"] = request.EnableCycleReservation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 body["GroupId"] = request.GroupId;
@@ -2881,6 +2901,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvRoomId))
             {
                 body["IsvRoomId"] = request.IsvRoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservationAuthorityShrink))
+            {
+                body["ReservationAuthority"] = request.ReservationAuthorityShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomCapacity))
             {
@@ -19504,6 +19528,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReservationAuthority))
+            {
+                request.ReservationAuthorityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReservationAuthority, "ReservationAuthority", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoomLabelIds))
             {
                 request.RoomLabelIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoomLabelIds, "RoomLabelIds", "json");
@@ -19517,6 +19545,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
                 request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCycleReservation))
+            {
+                body["EnableCycleReservation"] = request.EnableCycleReservation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 body["GroupId"] = request.GroupId;
@@ -19524,6 +19556,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvRoomId))
             {
                 body["IsvRoomId"] = request.IsvRoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservationAuthorityShrink))
+            {
+                body["ReservationAuthority"] = request.ReservationAuthorityShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomCapacity))
             {
@@ -19597,6 +19633,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReservationAuthority))
+            {
+                request.ReservationAuthorityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReservationAuthority, "ReservationAuthority", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoomLabelIds))
             {
                 request.RoomLabelIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoomLabelIds, "RoomLabelIds", "json");
@@ -19610,6 +19650,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
                 request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCycleReservation))
+            {
+                body["EnableCycleReservation"] = request.EnableCycleReservation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 body["GroupId"] = request.GroupId;
@@ -19617,6 +19661,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvRoomId))
             {
                 body["IsvRoomId"] = request.IsvRoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservationAuthorityShrink))
+            {
+                body["ReservationAuthority"] = request.ReservationAuthorityShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomCapacity))
             {

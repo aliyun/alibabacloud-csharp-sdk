@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateMeetingRoomShrinkRequest : TeaModel {
+        [NameInMap("EnableCycleReservation")]
+        [Validation(Required=false)]
+        public bool? EnableCycleReservation { get; set; }
+
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [NameInMap("IsvRoomId")]
         [Validation(Required=false)]
         public string IsvRoomId { get; set; }
+
+        [NameInMap("ReservationAuthority")]
+        [Validation(Required=false)]
+        public string ReservationAuthorityShrink { get; set; }
 
         [NameInMap("RoomCapacity")]
         [Validation(Required=false)]
