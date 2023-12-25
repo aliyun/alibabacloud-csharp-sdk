@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class CreateResourceShareResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the resource share.
+        /// The information about the resource share.
         /// </summary>
         [NameInMap("ResourceShare")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             /// *   Deleting: The resource share is being deleted.
             /// *   Deleted: The resource share is deleted.
             /// 
-            /// >  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.
+            /// >  The system automatically deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.
             /// </summary>
             [NameInMap("ResourceShareStatus")]
             [Validation(Required=false)]

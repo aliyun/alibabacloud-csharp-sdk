@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string ResourceOwner { get; set; }
 
+        /// <summary>
+        /// The ID of a resource share.
+        /// </summary>
         [NameInMap("ResourceShareIds")]
         [Validation(Required=false)]
         public List<string> ResourceShareIds { get; set; }
@@ -55,6 +58,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The ID of a principal.
+        /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<string> Targets { get; set; }

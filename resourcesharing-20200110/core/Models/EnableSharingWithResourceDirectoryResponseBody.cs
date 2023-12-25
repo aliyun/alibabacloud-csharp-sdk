@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class EnableSharingWithResourceDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

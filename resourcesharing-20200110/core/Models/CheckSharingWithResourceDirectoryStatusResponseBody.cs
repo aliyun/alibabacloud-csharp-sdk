@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class CheckSharingWithResourceDirectoryStatusResponseBody : TeaModel {
+        /// <summary>
+        /// Indicates whether resource sharing within a resource directory is enabled. Valid values:
+        /// 
+        /// *   false
+        /// *   true
+        /// </summary>
         [NameInMap("EnableSharingWithRd")]
         [Validation(Required=false)]
         public bool? EnableSharingWithRd { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

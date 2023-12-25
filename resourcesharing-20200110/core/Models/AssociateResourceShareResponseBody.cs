@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class AssociateResourceShareResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the entities that are associated with the resource share.
+        /// The information about the entities that are associated with the resource share.
         /// </summary>
         [NameInMap("ResourceShareAssociations")]
         [Validation(Required=false)]

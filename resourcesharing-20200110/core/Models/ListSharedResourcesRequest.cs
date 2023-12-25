@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The ID of a shared resource.
+        /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
@@ -39,6 +42,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string ResourceOwner { get; set; }
 
+        /// <summary>
+        /// The ID of a resource share.
+        /// </summary>
         [NameInMap("ResourceShareIds")]
         [Validation(Required=false)]
         public List<string> ResourceShareIds { get; set; }

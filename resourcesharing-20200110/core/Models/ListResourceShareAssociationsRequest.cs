@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        /// <summary>
+        /// The IDs of the resource shares.
+        /// </summary>
         [NameInMap("ResourceShareIds")]
         [Validation(Required=false)]
         public List<string> ResourceShareIds { get; set; }

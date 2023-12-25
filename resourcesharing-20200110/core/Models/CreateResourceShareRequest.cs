@@ -12,13 +12,16 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         /// <summary>
         /// Specifies whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:
         /// 
-        /// *   false: Resources in the resource share can be shared only with accounts in the resource directory. This is the default value.
+        /// *   false (default): Resources in the resource share can be shared only with accounts in the resource directory.
         /// *   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.
         /// </summary>
         [NameInMap("AllowExternalTargets")]
         [Validation(Required=false)]
         public bool? AllowExternalTargets { get; set; }
 
+        /// <summary>
+        /// The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see [Permission library](~~465474~~).
+        /// </summary>
         [NameInMap("PermissionNames")]
         [Validation(Required=false)]
         public List<string> PermissionNames { get; set; }
@@ -34,6 +37,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string ResourceShareName { get; set; }
 
+        /// <summary>
+        /// The information about the shared resources.
+        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<CreateResourceShareRequestResources> Resources { get; set; }
@@ -64,6 +70,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 
         }
 
+        /// <summary>
+        /// The information about the principals.
+        /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<string> Targets { get; set; }

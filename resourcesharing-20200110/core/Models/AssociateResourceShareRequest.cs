@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class AssociateResourceShareRequest : TeaModel {
+        /// <summary>
+        /// The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see [Permission library](~~465474~~).
+        /// </summary>
         [NameInMap("PermissionNames")]
         [Validation(Required=false)]
         public List<string> PermissionNames { get; set; }
@@ -20,6 +23,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string ResourceShareId { get; set; }
 
+        /// <summary>
+        /// The information about the resources.
+        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<AssociateResourceShareRequestResources> Resources { get; set; }
@@ -50,6 +56,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 
         }
 
+        /// <summary>
+        /// The information about the principals.
+        /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<string> Targets { get; set; }

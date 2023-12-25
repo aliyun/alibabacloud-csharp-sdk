@@ -23,6 +23,32 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public AcceptResourceShareInvitationResponseBodyResourceShareInvitation ResourceShareInvitation { get; set; }
         public class AcceptResourceShareInvitationResponseBodyResourceShareInvitation : TeaModel {
+            [NameInMap("AcceptInvitationFailedDetails")]
+            [Validation(Required=false)]
+            public List<AcceptResourceShareInvitationResponseBodyResourceShareInvitationAcceptInvitationFailedDetails> AcceptInvitationFailedDetails { get; set; }
+            public class AcceptResourceShareInvitationResponseBodyResourceShareInvitationAcceptInvitationFailedDetails : TeaModel {
+                [NameInMap("AssociateType")]
+                [Validation(Required=false)]
+                public string AssociateType { get; set; }
+
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("StatusMessage")]
+                [Validation(Required=false)]
+                public string StatusMessage { get; set; }
+
+            }
+
             /// <summary>
             /// The time when the invitation was created. The time is displayed in UTC.
             /// </summary>
