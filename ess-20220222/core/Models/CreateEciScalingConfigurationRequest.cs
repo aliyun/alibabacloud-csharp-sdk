@@ -483,6 +483,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? CpuOptionsThreadsPerCore { get; set; }
 
+        [NameInMap("DataCacheBucket")]
+        [Validation(Required=false)]
+        public string DataCacheBucket { get; set; }
+
+        [NameInMap("DataCacheBurstingEnabled")]
+        [Validation(Required=false)]
+        public bool? DataCacheBurstingEnabled { get; set; }
+
+        [NameInMap("DataCachePL")]
+        [Validation(Required=false)]
+        public string DataCachePL { get; set; }
+
+        [NameInMap("DataCacheProvisionedIops")]
+        [Validation(Required=false)]
+        public int? DataCacheProvisionedIops { get; set; }
+
         /// <summary>
         /// > This parameter is unavailable.
         /// </summary>
@@ -851,6 +867,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [NameInMap("InstanceFamilyLevel")]
         [Validation(Required=false)]
         public string InstanceFamilyLevel { get; set; }
+
+        [NameInMap("InstanceTypes")]
+        [Validation(Required=false)]
+        public List<string> InstanceTypes { get; set; }
 
         /// <summary>
         /// The number of IPv6 addresses.

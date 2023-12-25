@@ -285,6 +285,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public bool? SystemSuspended { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeScalingGroupsResponseBodyScalingGroupsTags> Tags { get; set; }
+            public class DescribeScalingGroupsResponseBodyScalingGroupsTags : TeaModel {
+                [NameInMap("Propagate")]
+                [Validation(Required=false)]
+                public bool? Propagate { get; set; }
+
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
             [NameInMap("TotalCapacity")]
             [Validation(Required=false)]
             public int? TotalCapacity { get; set; }

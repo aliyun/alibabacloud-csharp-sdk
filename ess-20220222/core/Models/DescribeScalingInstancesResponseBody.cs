@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? LoadBalancerWeight { get; set; }
 
+            [NameInMap("PrivateIpAddress")]
+            [Validation(Required=false)]
+            public string PrivateIpAddress { get; set; }
+
             [NameInMap("ScalingActivityId")]
             [Validation(Required=false)]
             public string ScalingActivityId { get; set; }
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("ScalingGroupId")]
             [Validation(Required=false)]
             public string ScalingGroupId { get; set; }
+
+            [NameInMap("ScalingInstanceId")]
+            [Validation(Required=false)]
+            public string ScalingInstanceId { get; set; }
 
             [NameInMap("SpotStrategy")]
             [Validation(Required=false)]

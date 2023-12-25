@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the scaling group.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// The ID of the scaling configuration that you want to delete.
+        /// </summary>
         [NameInMap("ScalingConfigurationId")]
         [Validation(Required=false)]
         public string ScalingConfigurationId { get; set; }

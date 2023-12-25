@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string LifecycleState { get; set; }
 
+        [NameInMap("LifecycleStates")]
+        [Validation(Required=false)]
+        public List<string> LifecycleStates { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

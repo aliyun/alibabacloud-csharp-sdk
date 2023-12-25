@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivityDetailResponseBody : TeaModel {
+        /// <summary>
+        /// The details about the event.
+        /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]
         public string Detail { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the scaling activity.
+        /// </summary>
         [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]
         public string ScalingActivityId { get; set; }

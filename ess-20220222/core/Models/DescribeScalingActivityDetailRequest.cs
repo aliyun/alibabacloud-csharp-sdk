@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the scaling activity.
+        /// </summary>
         [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]
         public string ScalingActivityId { get; set; }

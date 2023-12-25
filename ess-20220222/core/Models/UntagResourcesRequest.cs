@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class UntagResourcesRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to remove all tags from the Auto Scaling resource. This parameter takes effect only if you do not specify the `TagKeys` parameter. Valid values:
+        /// 
+        /// *   true: removes all tags from the Auto Scaling resource.
+        /// *   false: does not remove tags from the Auto Scaling resource.
+        /// 
+        /// Default value: false.
+        /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
@@ -17,10 +25,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the Auto Scaling resource. You can call the DescribeRegions operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.
+        /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
@@ -29,10 +43,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The keys of the tags that you want to remove from the Auto Scaling resource. You can specify 1 to 20 tag keys.
+        /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public List<string> TagKeys { get; set; }

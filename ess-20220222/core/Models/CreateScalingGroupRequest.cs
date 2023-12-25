@@ -560,6 +560,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            [NameInMap("Propagate")]
+            [Validation(Required=false)]
+            public bool? Propagate { get; set; }
+
             /// <summary>
             /// The tag value that you want to add to the scaling group.
             /// </summary>

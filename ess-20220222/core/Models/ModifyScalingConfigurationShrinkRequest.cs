@@ -767,6 +767,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
 
+        [NameInMap("StorageSetId")]
+        [Validation(Required=false)]
+        public string StorageSetId { get; set; }
+
+        [NameInMap("StorageSetPartitionNumber")]
+        [Validation(Required=false)]
+        public int? StorageSetPartitionNumber { get; set; }
+
         /// <summary>
         /// The categories of the system disks. If Auto Scaling cannot create instances by using the disk category that has the highest priority, Auto Scaling creates instances by using the disk category that has the next highest priority. Valid values:
         /// 

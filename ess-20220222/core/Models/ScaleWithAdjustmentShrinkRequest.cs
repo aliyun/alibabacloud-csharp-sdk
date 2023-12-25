@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
-    public class ScaleWithAdjustmentRequest : TeaModel {
+    public class ScaleWithAdjustmentShrinkRequest : TeaModel {
         /// <summary>
         /// The type of the scaling policy. Valid values:
         /// 
@@ -47,57 +47,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         [NameInMap("Overrides")]
         [Validation(Required=false)]
-        public ScaleWithAdjustmentRequestOverrides Overrides { get; set; }
-        public class ScaleWithAdjustmentRequestOverrides : TeaModel {
-            [NameInMap("ContainerOverrides")]
-            [Validation(Required=false)]
-            public List<ScaleWithAdjustmentRequestOverridesContainerOverrides> ContainerOverrides { get; set; }
-            public class ScaleWithAdjustmentRequestOverridesContainerOverrides : TeaModel {
-                [NameInMap("Args")]
-                [Validation(Required=false)]
-                public List<string> Args { get; set; }
-
-                [NameInMap("Commands")]
-                [Validation(Required=false)]
-                public List<string> Commands { get; set; }
-
-                [NameInMap("Cpu")]
-                [Validation(Required=false)]
-                public float? Cpu { get; set; }
-
-                [NameInMap("EnvironmentVars")]
-                [Validation(Required=false)]
-                public List<ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars> EnvironmentVars { get; set; }
-                public class ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars : TeaModel {
-                    [NameInMap("Key")]
-                    [Validation(Required=false)]
-                    public string Key { get; set; }
-
-                    [NameInMap("Value")]
-                    [Validation(Required=false)]
-                    public string Value { get; set; }
-
-                }
-
-                [NameInMap("Memory")]
-                [Validation(Required=false)]
-                public float? Memory { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-            }
-
-            [NameInMap("Cpu")]
-            [Validation(Required=false)]
-            public float? Cpu { get; set; }
-
-            [NameInMap("Memory")]
-            [Validation(Required=false)]
-            public float? Memory { get; set; }
-
-        }
+        public string OverridesShrink { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

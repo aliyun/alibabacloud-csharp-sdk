@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class RemoveInstancesRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("DecreaseDesiredCapacity")]
         [Validation(Required=false)]
         public bool? DecreaseDesiredCapacity { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DeleteEciScalingConfigurationResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request. This request ID is returned regardless of whether the request is successful.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

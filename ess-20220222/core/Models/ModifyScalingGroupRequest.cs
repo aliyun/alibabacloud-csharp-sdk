@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? DesiredCapacity { get; set; }
 
+        [NameInMap("DisableDesiredCapacity")]
+        [Validation(Required=false)]
+        public bool? DisableDesiredCapacity { get; set; }
+
         /// <summary>
         /// The scaling policy for the multi-zone scaling group that contains ECS instances. Valid values:
         /// 

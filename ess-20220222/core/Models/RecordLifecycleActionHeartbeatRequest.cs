@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the scaling group.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -25,14 +28,27 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends. Valid values: 30 to 21600. Unit: seconds.
+        /// 
+        /// You can call this operation to prolong the length of a lifecycle hook. You can also call the CompleteLifecycleAction operation to end a lifecycle hook ahead of schedule.
+        /// 
+        /// Default value: 600.
+        /// </summary>
         [NameInMap("heartbeatTimeout")]
         [Validation(Required=false)]
         public int? HeartbeatTimeout { get; set; }
 
+        /// <summary>
+        /// The token of the lifecycle hook. You can obtain this token by using a Message Service (MNS) queue or an MNS topic that is specified for the lifecycle hook.
+        /// </summary>
         [NameInMap("lifecycleActionToken")]
         [Validation(Required=false)]
         public string LifecycleActionToken { get; set; }
 
+        /// <summary>
+        /// The ID of the lifecycle hook.
+        /// </summary>
         [NameInMap("lifecycleHookId")]
         [Validation(Required=false)]
         public string LifecycleHookId { get; set; }
