@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClusterConfigResponseBody : TeaModel {
+        /// <summary>
+        /// The information about the parameter settings of the cluster.
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

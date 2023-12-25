@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeTransferHistoryRequest : TeaModel {
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

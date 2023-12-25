@@ -360,6 +360,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await CheckClickhouseToRDSWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request CheckModifyConfigNeedRestartRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckModifyConfigNeedRestartResponse
+         */
         public CheckModifyConfigNeedRestartResponse CheckModifyConfigNeedRestartWithOptions(CheckModifyConfigNeedRestartRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -391,6 +398,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CheckModifyConfigNeedRestartResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request CheckModifyConfigNeedRestartRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckModifyConfigNeedRestartResponse
+         */
         public async Task<CheckModifyConfigNeedRestartResponse> CheckModifyConfigNeedRestartWithOptionsAsync(CheckModifyConfigNeedRestartRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -422,12 +436,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CheckModifyConfigNeedRestartResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request CheckModifyConfigNeedRestartRequest
+          * @return CheckModifyConfigNeedRestartResponse
+         */
         public CheckModifyConfigNeedRestartResponse CheckModifyConfigNeedRestart(CheckModifyConfigNeedRestartRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckModifyConfigNeedRestartWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request CheckModifyConfigNeedRestartRequest
+          * @return CheckModifyConfigNeedRestartResponse
+         */
         public async Task<CheckModifyConfigNeedRestartResponse> CheckModifyConfigNeedRestartAsync(CheckModifyConfigNeedRestartRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1604,6 +1630,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await CreateMonitorDataReportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see [Migrate data between ApsaraDB for ClickHouse clusters](~~276926~~).
+          *
+          * @param request CreateOSSStorageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOSSStorageResponse
+         */
         public CreateOSSStorageResponse CreateOSSStorageWithOptions(CreateOSSStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1651,6 +1684,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CreateOSSStorageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see [Migrate data between ApsaraDB for ClickHouse clusters](~~276926~~).
+          *
+          * @param request CreateOSSStorageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOSSStorageResponse
+         */
         public async Task<CreateOSSStorageResponse> CreateOSSStorageWithOptionsAsync(CreateOSSStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1698,18 +1738,37 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CreateOSSStorageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see [Migrate data between ApsaraDB for ClickHouse clusters](~~276926~~).
+          *
+          * @param request CreateOSSStorageRequest
+          * @return CreateOSSStorageResponse
+         */
         public CreateOSSStorageResponse CreateOSSStorage(CreateOSSStorageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateOSSStorageWithOptions(request, runtime);
         }
 
+        /**
+          * Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see [Migrate data between ApsaraDB for ClickHouse clusters](~~276926~~).
+          *
+          * @param request CreateOSSStorageRequest
+          * @return CreateOSSStorageResponse
+         */
         public async Task<CreateOSSStorageResponse> CreateOSSStorageAsync(CreateOSSStorageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateOSSStorageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.
+          *
+          * @param request CreatePortsForClickHouseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePortsForClickHouseResponse
+         */
         public CreatePortsForClickHouseResponse CreatePortsForClickHouseWithOptions(CreatePortsForClickHouseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1761,6 +1820,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CreatePortsForClickHouseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.
+          *
+          * @param request CreatePortsForClickHouseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePortsForClickHouseResponse
+         */
         public async Task<CreatePortsForClickHouseResponse> CreatePortsForClickHouseWithOptionsAsync(CreatePortsForClickHouseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1812,18 +1878,37 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CreatePortsForClickHouseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.
+          *
+          * @param request CreatePortsForClickHouseRequest
+          * @return CreatePortsForClickHouseResponse
+         */
         public CreatePortsForClickHouseResponse CreatePortsForClickHouse(CreatePortsForClickHouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePortsForClickHouseWithOptions(request, runtime);
         }
 
+        /**
+          * >  For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.
+          *
+          * @param request CreatePortsForClickHouseRequest
+          * @return CreatePortsForClickHouseResponse
+         */
         public async Task<CreatePortsForClickHouseResponse> CreatePortsForClickHouseAsync(CreatePortsForClickHouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePortsForClickHouseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation is only applicable to ApsaraDB for ClickHouse clusters.
+          *
+          * @param request CreateRDSToClickhouseDbRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateRDSToClickhouseDbResponse
+         */
         public CreateRDSToClickhouseDbResponse CreateRDSToClickhouseDbWithOptions(CreateRDSToClickhouseDbRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1915,6 +2000,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CreateRDSToClickhouseDbResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is only applicable to ApsaraDB for ClickHouse clusters.
+          *
+          * @param request CreateRDSToClickhouseDbRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateRDSToClickhouseDbResponse
+         */
         public async Task<CreateRDSToClickhouseDbResponse> CreateRDSToClickhouseDbWithOptionsAsync(CreateRDSToClickhouseDbRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2006,18 +2098,37 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CreateRDSToClickhouseDbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is only applicable to ApsaraDB for ClickHouse clusters.
+          *
+          * @param request CreateRDSToClickhouseDbRequest
+          * @return CreateRDSToClickhouseDbResponse
+         */
         public CreateRDSToClickhouseDbResponse CreateRDSToClickhouseDb(CreateRDSToClickhouseDbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateRDSToClickhouseDbWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation is only applicable to ApsaraDB for ClickHouse clusters.
+          *
+          * @param request CreateRDSToClickhouseDbRequest
+          * @return CreateRDSToClickhouseDbResponse
+         */
         public async Task<CreateRDSToClickhouseDbResponse> CreateRDSToClickhouseDbAsync(CreateRDSToClickhouseDbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRDSToClickhouseDbWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,
+          *
+          * @param request CreateSQLAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateSQLAccountResponse
+         */
         public CreateSQLAccountResponse CreateSQLAccountWithOptions(CreateSQLAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2077,6 +2188,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CreateSQLAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,
+          *
+          * @param request CreateSQLAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateSQLAccountResponse
+         */
         public async Task<CreateSQLAccountResponse> CreateSQLAccountWithOptionsAsync(CreateSQLAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2136,12 +2254,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<CreateSQLAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,
+          *
+          * @param request CreateSQLAccountRequest
+          * @return CreateSQLAccountResponse
+         */
         public CreateSQLAccountResponse CreateSQLAccount(CreateSQLAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSQLAccountWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,
+          *
+          * @param request CreateSQLAccountRequest
+          * @return CreateSQLAccountResponse
+         */
         public async Task<CreateSQLAccountResponse> CreateSQLAccountAsync(CreateSQLAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2238,6 +2368,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await CreateServiceLinkedRoleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.
+          *
+          * @param request DeleteAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2285,6 +2422,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.
+          *
+          * @param request DeleteAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2332,18 +2476,38 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.
+          *
+          * @param request DeleteAccountRequest
+          * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccountWithOptions(request, runtime);
         }
 
+        /**
+          * >  After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.
+          *
+          * @param request DeleteAccountRequest
+          * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **
+          * **Warning** After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.
+          *
+          * @param request DeleteDBClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBClusterResponse
+         */
         public DeleteDBClusterResponse DeleteDBClusterWithOptions(DeleteDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2387,6 +2551,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DeleteDBClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **
+          * **Warning** After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.
+          *
+          * @param request DeleteDBClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBClusterResponse
+         */
         public async Task<DeleteDBClusterResponse> DeleteDBClusterWithOptionsAsync(DeleteDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2430,12 +2602,26 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DeleteDBClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **
+          * **Warning** After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.
+          *
+          * @param request DeleteDBClusterRequest
+          * @return DeleteDBClusterResponse
+         */
         public DeleteDBClusterResponse DeleteDBCluster(DeleteDBClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDBClusterWithOptions(request, runtime);
         }
 
+        /**
+          * **
+          * **Warning** After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.
+          *
+          * @param request DeleteDBClusterRequest
+          * @return DeleteDBClusterResponse
+         */
         public async Task<DeleteDBClusterResponse> DeleteDBClusterAsync(DeleteDBClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3012,6 +3198,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await DescribeAllDataSourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+          *
+          * @param request DescribeBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBackupPolicyResponse
+         */
         public DescribeBackupPolicyResponse DescribeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3055,6 +3248,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+          *
+          * @param request DescribeBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBackupPolicyResponse
+         */
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyWithOptionsAsync(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3098,12 +3298,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+          *
+          * @param request DescribeBackupPolicyRequest
+          * @return DescribeBackupPolicyResponse
+         */
         public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+          *
+          * @param request DescribeBackupPolicyRequest
+          * @return DescribeBackupPolicyResponse
+         */
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyAsync(DescribeBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3362,6 +3574,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await DescribeColumnsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeConfigHistoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeConfigHistoryResponse
+         */
         public DescribeConfigHistoryResponse DescribeConfigHistoryWithOptions(DescribeConfigHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3385,6 +3604,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeConfigHistoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeConfigHistoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeConfigHistoryResponse
+         */
         public async Task<DescribeConfigHistoryResponse> DescribeConfigHistoryWithOptionsAsync(DescribeConfigHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3408,18 +3634,37 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeConfigHistoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeConfigHistoryRequest
+          * @return DescribeConfigHistoryResponse
+         */
         public DescribeConfigHistoryResponse DescribeConfigHistory(DescribeConfigHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeConfigHistoryWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeConfigHistoryRequest
+          * @return DescribeConfigHistoryResponse
+         */
         public async Task<DescribeConfigHistoryResponse> DescribeConfigHistoryAsync(DescribeConfigHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeConfigHistoryWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeConfigVersionDifferenceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeConfigVersionDifferenceResponse
+         */
         public DescribeConfigVersionDifferenceResponse DescribeConfigVersionDifferenceWithOptions(DescribeConfigVersionDifferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3443,6 +3688,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeConfigVersionDifferenceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeConfigVersionDifferenceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeConfigVersionDifferenceResponse
+         */
         public async Task<DescribeConfigVersionDifferenceResponse> DescribeConfigVersionDifferenceWithOptionsAsync(DescribeConfigVersionDifferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3466,12 +3718,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeConfigVersionDifferenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeConfigVersionDifferenceRequest
+          * @return DescribeConfigVersionDifferenceResponse
+         */
         public DescribeConfigVersionDifferenceResponse DescribeConfigVersionDifference(DescribeConfigVersionDifferenceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeConfigVersionDifferenceWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeConfigVersionDifferenceRequest
+          * @return DescribeConfigVersionDifferenceResponse
+         */
         public async Task<DescribeConfigVersionDifferenceResponse> DescribeConfigVersionDifferenceAsync(DescribeConfigVersionDifferenceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3780,6 +4044,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await DescribeDBClusterConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeDBClusterConfigInXMLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterConfigInXMLResponse
+         */
         public DescribeDBClusterConfigInXMLResponse DescribeDBClusterConfigInXMLWithOptions(DescribeDBClusterConfigInXMLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3811,6 +4082,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeDBClusterConfigInXMLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeDBClusterConfigInXMLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterConfigInXMLResponse
+         */
         public async Task<DescribeDBClusterConfigInXMLResponse> DescribeDBClusterConfigInXMLWithOptionsAsync(DescribeDBClusterConfigInXMLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3842,12 +4120,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeDBClusterConfigInXMLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeDBClusterConfigInXMLRequest
+          * @return DescribeDBClusterConfigInXMLResponse
+         */
         public DescribeDBClusterConfigInXMLResponse DescribeDBClusterConfigInXML(DescribeDBClusterConfigInXMLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBClusterConfigInXMLWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request DescribeDBClusterConfigInXMLRequest
+          * @return DescribeDBClusterConfigInXMLResponse
+         */
         public async Task<DescribeDBClusterConfigInXMLResponse> DescribeDBClusterConfigInXMLAsync(DescribeDBClusterConfigInXMLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3952,6 +4242,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await DescribeDBClusterNetInfoItemsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.
+          *
+          * @param request DescribeDBClusterPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterPerformanceResponse
+         */
         public DescribeDBClusterPerformanceResponse DescribeDBClusterPerformanceWithOptions(DescribeDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4007,6 +4305,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeDBClusterPerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.
+          *
+          * @param request DescribeDBClusterPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBClusterPerformanceResponse
+         */
         public async Task<DescribeDBClusterPerformanceResponse> DescribeDBClusterPerformanceWithOptionsAsync(DescribeDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4062,12 +4368,26 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeDBClusterPerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.
+          *
+          * @param request DescribeDBClusterPerformanceRequest
+          * @return DescribeDBClusterPerformanceResponse
+         */
         public DescribeDBClusterPerformanceResponse DescribeDBClusterPerformance(DescribeDBClusterPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBClusterPerformanceWithOptions(request, runtime);
         }
 
+        /**
+          * You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.
+          *
+          * @param request DescribeDBClusterPerformanceRequest
+          * @return DescribeDBClusterPerformanceResponse
+         */
         public async Task<DescribeDBClusterPerformanceResponse> DescribeDBClusterPerformanceAsync(DescribeDBClusterPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5058,6 +5378,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -5100,6 +5428,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -5246,6 +5582,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await DescribeTablesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.
+          *
+          * @param request DescribeTransferHistoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTransferHistoryResponse
+         */
         public DescribeTransferHistoryResponse DescribeTransferHistoryWithOptions(DescribeTransferHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5289,6 +5632,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeTransferHistoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.
+          *
+          * @param request DescribeTransferHistoryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTransferHistoryResponse
+         */
         public async Task<DescribeTransferHistoryResponse> DescribeTransferHistoryWithOptionsAsync(DescribeTransferHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5332,12 +5682,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeTransferHistoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.
+          *
+          * @param request DescribeTransferHistoryRequest
+          * @return DescribeTransferHistoryResponse
+         */
         public DescribeTransferHistoryResponse DescribeTransferHistory(DescribeTransferHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTransferHistoryWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.
+          *
+          * @param request DescribeTransferHistoryRequest
+          * @return DescribeTransferHistoryResponse
+         */
         public async Task<DescribeTransferHistoryResponse> DescribeTransferHistoryAsync(DescribeTransferHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5734,6 +6096,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await ModifyAccountDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5789,6 +6158,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5844,12 +6220,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyBackupPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyAsync(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6238,6 +6626,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await ModifyDBClusterConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request ModifyDBClusterConfigInXMLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterConfigInXMLResponse
+         */
         public ModifyDBClusterConfigInXMLResponse ModifyDBClusterConfigInXMLWithOptions(ModifyDBClusterConfigInXMLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6277,6 +6672,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<ModifyDBClusterConfigInXMLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request ModifyDBClusterConfigInXMLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBClusterConfigInXMLResponse
+         */
         public async Task<ModifyDBClusterConfigInXMLResponse> ModifyDBClusterConfigInXMLWithOptionsAsync(ModifyDBClusterConfigInXMLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6316,12 +6718,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<ModifyDBClusterConfigInXMLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request ModifyDBClusterConfigInXMLRequest
+          * @return ModifyDBClusterConfigInXMLResponse
+         */
         public ModifyDBClusterConfigInXMLResponse ModifyDBClusterConfigInXML(ModifyDBClusterConfigInXMLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBClusterConfigInXMLWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+          *
+          * @param request ModifyDBClusterConfigInXMLRequest
+          * @return ModifyDBClusterConfigInXMLResponse
+         */
         public async Task<ModifyDBClusterConfigInXMLResponse> ModifyDBClusterConfigInXMLAsync(ModifyDBClusterConfigInXMLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6760,6 +7174,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await ModifyMinorVersionGreadeTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation is applicable only to ApsaraDB for ClickHouse clusters.
+          *
+          * @param request ModifyRDSToClickhouseDbRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyRDSToClickhouseDbResponse
+         */
         public ModifyRDSToClickhouseDbResponse ModifyRDSToClickhouseDbWithOptions(ModifyRDSToClickhouseDbRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6851,6 +7272,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<ModifyRDSToClickhouseDbResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is applicable only to ApsaraDB for ClickHouse clusters.
+          *
+          * @param request ModifyRDSToClickhouseDbRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyRDSToClickhouseDbResponse
+         */
         public async Task<ModifyRDSToClickhouseDbResponse> ModifyRDSToClickhouseDbWithOptionsAsync(ModifyRDSToClickhouseDbRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6942,12 +7370,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<ModifyRDSToClickhouseDbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is applicable only to ApsaraDB for ClickHouse clusters.
+          *
+          * @param request ModifyRDSToClickhouseDbRequest
+          * @return ModifyRDSToClickhouseDbResponse
+         */
         public ModifyRDSToClickhouseDbResponse ModifyRDSToClickhouseDb(ModifyRDSToClickhouseDbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyRDSToClickhouseDbWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation is applicable only to ApsaraDB for ClickHouse clusters.
+          *
+          * @param request ModifyRDSToClickhouseDbRequest
+          * @return ModifyRDSToClickhouseDbResponse
+         */
         public async Task<ModifyRDSToClickhouseDbResponse> ModifyRDSToClickhouseDbAsync(ModifyRDSToClickhouseDbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7296,6 +7736,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await RestartInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## [](#)Prerequisites
+          * *   The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.
+          * *   The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.
+          * >  You can execute the `select * from system.clusters;` statement to query the IP address of an ApsaraDB for ClickHouse cluster.
+          *
+          * @param request TransferVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransferVersionResponse
+         */
         public TransferVersionResponse TransferVersionWithOptions(TransferVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7371,6 +7821,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<TransferVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## [](#)Prerequisites
+          * *   The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.
+          * *   The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.
+          * >  You can execute the `select * from system.clusters;` statement to query the IP address of an ApsaraDB for ClickHouse cluster.
+          *
+          * @param request TransferVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransferVersionResponse
+         */
         public async Task<TransferVersionResponse> TransferVersionWithOptionsAsync(TransferVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7446,18 +7906,43 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<TransferVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## [](#)Prerequisites
+          * *   The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.
+          * *   The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.
+          * >  You can execute the `select * from system.clusters;` statement to query the IP address of an ApsaraDB for ClickHouse cluster.
+          *
+          * @param request TransferVersionRequest
+          * @return TransferVersionResponse
+         */
         public TransferVersionResponse TransferVersion(TransferVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransferVersionWithOptions(request, runtime);
         }
 
+        /**
+          * ## [](#)Prerequisites
+          * *   The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.
+          * *   The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.
+          * >  You can execute the `select * from system.clusters;` statement to query the IP address of an ApsaraDB for ClickHouse cluster.
+          *
+          * @param request TransferVersionRequest
+          * @return TransferVersionResponse
+         */
         public async Task<TransferVersionResponse> TransferVersionAsync(TransferVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransferVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.
+          *
+          * @param request UpgradeMinorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeMinorVersionResponse
+         */
         public UpgradeMinorVersionResponse UpgradeMinorVersionWithOptions(UpgradeMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7513,6 +7998,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<UpgradeMinorVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.
+          *
+          * @param request UpgradeMinorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeMinorVersionResponse
+         */
         public async Task<UpgradeMinorVersionResponse> UpgradeMinorVersionWithOptionsAsync(UpgradeMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7568,12 +8060,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<UpgradeMinorVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.
+          *
+          * @param request UpgradeMinorVersionRequest
+          * @return UpgradeMinorVersionResponse
+         */
         public UpgradeMinorVersionResponse UpgradeMinorVersion(UpgradeMinorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeMinorVersionWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.
+          *
+          * @param request UpgradeMinorVersionRequest
+          * @return UpgradeMinorVersionResponse
+         */
         public async Task<UpgradeMinorVersionResponse> UpgradeMinorVersionAsync(UpgradeMinorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

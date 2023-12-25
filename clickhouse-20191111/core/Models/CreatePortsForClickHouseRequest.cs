@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreatePortsForClickHouseRequest : TeaModel {
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The port type. Set the value to mysql_port.
+        /// </summary>
         [NameInMap("PortType")]
         [Validation(Required=false)]
         public string PortType { get; set; }
 
+        /// <summary>
+        /// The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

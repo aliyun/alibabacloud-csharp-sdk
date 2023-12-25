@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeTablesRequest : TeaModel {
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The database name.
+        /// </summary>
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
         public string SchemaName { get; set; }

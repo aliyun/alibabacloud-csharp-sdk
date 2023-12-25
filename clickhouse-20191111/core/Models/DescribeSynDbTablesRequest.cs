@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeSynDbTablesRequest : TeaModel {
+        /// <summary>
+        /// The ID of the ApsaraDB for ClickHouse cluster.
+        /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
         public string DbClusterId { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The name of the ApsaraDB RDS for MySQL instance.
+        /// </summary>
         [NameInMap("SynDb")]
         [Validation(Required=false)]
         public string SynDb { get; set; }

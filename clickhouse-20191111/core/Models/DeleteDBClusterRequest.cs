@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DeleteDBClusterRequest : TeaModel {
+        /// <summary>
+        /// The ID of the pay-as-you-go ApsaraDB for ClickHouse cluster.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DeleteSyndbRequest : TeaModel {
+        /// <summary>
+        /// The cluster ID.
+        /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
         public string DbClusterId { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The name of the database in the ApsaraDB RDS for MySQL instance. The database is used for data synchronization.
+        /// </summary>
         [NameInMap("SynDb")]
         [Validation(Required=false)]
         public string SynDb { get; set; }
