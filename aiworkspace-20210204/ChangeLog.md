@@ -1,3 +1,6 @@
+2023-12-26 Version: 1.0.4
+- Generated csharp 2021-02-04 for AIWorkSpace.
+
 2023-10-21 Version: 1.0.3
 - Generated csharp 2021-02-04 for AIWorkSpace.
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListModelsRequest : TeaModel {
+        [NameInMap("Collections")]
+        [Validation(Required=false)]
+        public string Collections { get; set; }
+
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
+
+        [NameInMap("ModelType")]
+        [Validation(Required=false)]
+        public string ModelType { get; set; }
 
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -48,14 +56,6 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
-
-        [NameInMap("SouceType")]
-        [Validation(Required=false)]
-        public string SouceType { get; set; }
-
-        [NameInMap("SourceId")]
-        [Validation(Required=false)]
-        public string SourceId { get; set; }
 
         [NameInMap("Task")]
         [Validation(Required=false)]

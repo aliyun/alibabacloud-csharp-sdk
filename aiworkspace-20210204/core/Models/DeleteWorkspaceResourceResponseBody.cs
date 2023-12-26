@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ResourceIds")]
+        [Validation(Required=false)]
+        public List<string> ResourceIds { get; set; }
+
     }
 
 }

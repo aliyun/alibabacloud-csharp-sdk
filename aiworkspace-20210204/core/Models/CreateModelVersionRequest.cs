@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ApprovalStatus { get; set; }
 
+        [NameInMap("EvaluationSpec")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> EvaluationSpec { get; set; }
+
+        [NameInMap("ExtraInfo")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> ExtraInfo { get; set; }
+
         [NameInMap("FormatType")]
         [Validation(Required=false)]
         public string FormatType { get; set; }

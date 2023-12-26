@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        [NameInMap("ExtraInfo")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> ExtraInfo { get; set; }
+
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
@@ -48,6 +52,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
+
+        [NameInMap("ModelType")]
+        [Validation(Required=false)]
+        public string ModelType { get; set; }
+
+        [NameInMap("OrderNumber")]
+        [Validation(Required=false)]
+        public long? OrderNumber { get; set; }
 
         [NameInMap("Origin")]
         [Validation(Required=false)]

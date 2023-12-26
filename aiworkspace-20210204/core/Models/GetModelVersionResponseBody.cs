@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ApprovalStatus { get; set; }
 
+        [NameInMap("EvaluationSpec")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> EvaluationSpec { get; set; }
+
+        [NameInMap("ExtraInfo")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> ExtraInfo { get; set; }
+
         [NameInMap("FormatType")]
         [Validation(Required=false)]
         public string FormatType { get; set; }
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
+
+        [NameInMap("Metrics")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Metrics { get; set; }
 
         [NameInMap("Options")]
         [Validation(Required=false)]
