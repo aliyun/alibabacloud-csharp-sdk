@@ -528,6 +528,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 body["Scheduler"] = request.Scheduler;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings))
+            {
+                body["Settings"] = request.Settings;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingJobDescription))
             {
                 body["TrainingJobDescription"] = request.TrainingJobDescription;
@@ -615,6 +619,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scheduler))
             {
                 body["Scheduler"] = request.Scheduler;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings))
+            {
+                body["Settings"] = request.Settings;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingJobDescription))
             {

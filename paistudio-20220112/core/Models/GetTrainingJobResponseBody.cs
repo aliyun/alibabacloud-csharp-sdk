@@ -263,6 +263,28 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         }
 
+        [NameInMap("Settings")]
+        [Validation(Required=false)]
+        public GetTrainingJobResponseBodySettings Settings { get; set; }
+        public class GetTrainingJobResponseBodySettings : TeaModel {
+            [NameInMap("AIMasterType")]
+            [Validation(Required=false)]
+            public string AIMasterType { get; set; }
+
+            [NameInMap("EnableErrorMonitoringInAIMaster")]
+            [Validation(Required=false)]
+            public bool? EnableErrorMonitoringInAIMaster { get; set; }
+
+            [NameInMap("ErrorMonitoringArgs")]
+            [Validation(Required=false)]
+            public string ErrorMonitoringArgs { get; set; }
+
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
+        }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
