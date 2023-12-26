@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public string ChildInstanceType { get; set; }
 
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
                 /// <summary>
                 /// The entity that pays the fees of the network instance. Valid values:
                 /// 

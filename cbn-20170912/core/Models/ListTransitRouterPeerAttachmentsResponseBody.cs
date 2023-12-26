@@ -101,6 +101,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// The default link type. Valid values:
+            /// - **Gold**
+            /// - **Platinum**
+            /// </summary>
             [NameInMap("DefaultLinkType")]
             [Validation(Required=false)]
             public string DefaultLinkType { get; set; }

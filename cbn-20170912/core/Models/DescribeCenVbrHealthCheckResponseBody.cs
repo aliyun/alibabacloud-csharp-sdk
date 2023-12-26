@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
+                /// <summary>
+                /// The description of the health check.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }

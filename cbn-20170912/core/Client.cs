@@ -646,9 +646,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you take note of the following rules:
-          * *   Only Enterprise Edition transit routers support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [Transit routers](~~181681~~).
-          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterRouteTableAssociations** operation to query the status of an associated forwarding correlation.
+          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with the route table of an Enterprise Edition transit router. The Enterprise Edition transit router forwards traffic for the network instance based on the routes in the route table. Before you begin, we recommend that you take note of the following rules:
+          * *   Only route tables of an Enterprise Edition transit router support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   Each network instance connection can have an associated forwarding correlation with one route tables of Enterprise Edition transit router.
+          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterRouteTableAssociations** operation to query the status of an associated forwarding correlation.
           *     *   If an associated forwarding correlation is in the **Associating** state, the associated forwarding correlation is being created. You can query the associated forwarding correlation but cannot perform other operations.
           *     *   If an associated forwarding correlation is in the **Active** state, the associated forwarding correlation is created.
           *
@@ -712,9 +713,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you take note of the following rules:
-          * *   Only Enterprise Edition transit routers support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [Transit routers](~~181681~~).
-          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterRouteTableAssociations** operation to query the status of an associated forwarding correlation.
+          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with the route table of an Enterprise Edition transit router. The Enterprise Edition transit router forwards traffic for the network instance based on the routes in the route table. Before you begin, we recommend that you take note of the following rules:
+          * *   Only route tables of an Enterprise Edition transit router support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   Each network instance connection can have an associated forwarding correlation with one route tables of Enterprise Edition transit router.
+          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterRouteTableAssociations** operation to query the status of an associated forwarding correlation.
           *     *   If an associated forwarding correlation is in the **Associating** state, the associated forwarding correlation is being created. You can query the associated forwarding correlation but cannot perform other operations.
           *     *   If an associated forwarding correlation is in the **Active** state, the associated forwarding correlation is created.
           *
@@ -778,9 +780,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you take note of the following rules:
-          * *   Only Enterprise Edition transit routers support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [Transit routers](~~181681~~).
-          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterRouteTableAssociations** operation to query the status of an associated forwarding correlation.
+          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with the route table of an Enterprise Edition transit router. The Enterprise Edition transit router forwards traffic for the network instance based on the routes in the route table. Before you begin, we recommend that you take note of the following rules:
+          * *   Only route tables of an Enterprise Edition transit router support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   Each network instance connection can have an associated forwarding correlation with one route tables of Enterprise Edition transit router.
+          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterRouteTableAssociations** operation to query the status of an associated forwarding correlation.
           *     *   If an associated forwarding correlation is in the **Associating** state, the associated forwarding correlation is being created. You can query the associated forwarding correlation but cannot perform other operations.
           *     *   If an associated forwarding correlation is in the **Active** state, the associated forwarding correlation is created.
           *
@@ -794,9 +797,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you take note of the following rules:
-          * *   Only Enterprise Edition transit routers support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [Transit routers](~~181681~~).
-          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterRouteTableAssociations** operation to query the status of an associated forwarding correlation.
+          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with the route table of an Enterprise Edition transit router. The Enterprise Edition transit router forwards traffic for the network instance based on the routes in the route table. Before you begin, we recommend that you take note of the following rules:
+          * *   Only route tables of an Enterprise Edition transit router support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   Each network instance connection can have an associated forwarding correlation with one route tables of Enterprise Edition transit router.
+          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterRouteTableAssociations** operation to query the status of an associated forwarding correlation.
           *     *   If an associated forwarding correlation is in the **Associating** state, the associated forwarding correlation is being created. You can query the associated forwarding correlation but cannot perform other operations.
           *     *   If an associated forwarding correlation is in the **Active** state, the associated forwarding correlation is created.
           *
@@ -3314,7 +3318,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * The ID of the request.
+          * *   You can call **CreateTransitRouter** to create an Enterprise Edition transit router. For more information about the regions that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouter** is an asynchronous operation. After you send a request, the transit router ID is returned but the operation is still being performed in the system background. You can call [ListTransitRouters](~~261219~~) to query the status of an Enterprise Edition transit router.
+          *     *   If an Enterprise Edition transit router is in the **Creating** state, the Enterprise Edition transit router is being created. In this case, you can query the Enterprise Edition transit router but cannot perform other operations.
+          *     *   If an Enterprise Edition transit router is in the **Active** state, the Enterprise Edition transit router is created.
           *
           * @param tmpReq CreateTransitRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3402,7 +3409,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * The ID of the request.
+          * *   You can call **CreateTransitRouter** to create an Enterprise Edition transit router. For more information about the regions that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouter** is an asynchronous operation. After you send a request, the transit router ID is returned but the operation is still being performed in the system background. You can call [ListTransitRouters](~~261219~~) to query the status of an Enterprise Edition transit router.
+          *     *   If an Enterprise Edition transit router is in the **Creating** state, the Enterprise Edition transit router is being created. In this case, you can query the Enterprise Edition transit router but cannot perform other operations.
+          *     *   If an Enterprise Edition transit router is in the **Active** state, the Enterprise Edition transit router is created.
           *
           * @param tmpReq CreateTransitRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3490,7 +3500,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * The ID of the request.
+          * *   You can call **CreateTransitRouter** to create an Enterprise Edition transit router. For more information about the regions that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouter** is an asynchronous operation. After you send a request, the transit router ID is returned but the operation is still being performed in the system background. You can call [ListTransitRouters](~~261219~~) to query the status of an Enterprise Edition transit router.
+          *     *   If an Enterprise Edition transit router is in the **Creating** state, the Enterprise Edition transit router is being created. In this case, you can query the Enterprise Edition transit router but cannot perform other operations.
+          *     *   If an Enterprise Edition transit router is in the **Active** state, the Enterprise Edition transit router is created.
           *
           * @param request CreateTransitRouterRequest
           * @return CreateTransitRouterResponse
@@ -3502,7 +3515,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * The ID of the request.
+          * *   You can call **CreateTransitRouter** to create an Enterprise Edition transit router. For more information about the regions that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouter** is an asynchronous operation. After you send a request, the transit router ID is returned but the operation is still being performed in the system background. You can call [ListTransitRouters](~~261219~~) to query the status of an Enterprise Edition transit router.
+          *     *   If an Enterprise Edition transit router is in the **Creating** state, the Enterprise Edition transit router is being created. In this case, you can query the Enterprise Edition transit router but cannot perform other operations.
+          *     *   If an Enterprise Edition transit router is in the **Active** state, the Enterprise Edition transit router is created.
           *
           * @param request CreateTransitRouterRequest
           * @return CreateTransitRouterResponse
@@ -19852,12 +19868,12 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * - You can specify only elastic network interfaces (ENIs) as multicast sources.
-          * - `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.     
-          *   - If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
-          *   - If a multicast source is in the **Registered** state, the multicast source is created.
-          * #### Prerequisites
-          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatetransitroutermulticastdomain).
+          * *   You can specify only elastic network interfaces (ENIs) as multicast sources.
+          * *   `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.
+          *     *   If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
+          *     *   If a multicast source is in the **Registered** state, the multicast source is created.
+          * ### Prerequisites
+          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
           *
           * @param request RegisterTransitRouterMulticastGroupSourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19927,12 +19943,12 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * - You can specify only elastic network interfaces (ENIs) as multicast sources.
-          * - `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.     
-          *   - If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
-          *   - If a multicast source is in the **Registered** state, the multicast source is created.
-          * #### Prerequisites
-          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatetransitroutermulticastdomain).
+          * *   You can specify only elastic network interfaces (ENIs) as multicast sources.
+          * *   `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.
+          *     *   If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
+          *     *   If a multicast source is in the **Registered** state, the multicast source is created.
+          * ### Prerequisites
+          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
           *
           * @param request RegisterTransitRouterMulticastGroupSourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20002,12 +20018,12 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * - You can specify only elastic network interfaces (ENIs) as multicast sources.
-          * - `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.     
-          *   - If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
-          *   - If a multicast source is in the **Registered** state, the multicast source is created.
-          * #### Prerequisites
-          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatetransitroutermulticastdomain).
+          * *   You can specify only elastic network interfaces (ENIs) as multicast sources.
+          * *   `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.
+          *     *   If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
+          *     *   If a multicast source is in the **Registered** state, the multicast source is created.
+          * ### Prerequisites
+          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
           *
           * @param request RegisterTransitRouterMulticastGroupSourcesRequest
           * @return RegisterTransitRouterMulticastGroupSourcesResponse
@@ -20019,12 +20035,12 @@ namespace AlibabaCloud.SDK.Cbn20170912
         }
 
         /**
-          * - You can specify only elastic network interfaces (ENIs) as multicast sources.
-          * - `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.     
-          *   - If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
-          *   - If a multicast source is in the **Registered** state, the multicast source is created.
-          * #### Prerequisites
-          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatetransitroutermulticastdomain).
+          * *   You can specify only elastic network interfaces (ENIs) as multicast sources.
+          * *   `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.
+          *     *   If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
+          *     *   If a multicast source is in the **Registered** state, the multicast source is created.
+          * ### Prerequisites
+          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
           *
           * @param request RegisterTransitRouterMulticastGroupSourcesRequest
           * @return RegisterTransitRouterMulticastGroupSourcesResponse

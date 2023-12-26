@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public long? CenOwnerId { get; set; }
 
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
             /// <summary>
             /// The entity that pays the fees of the network instance. Valid values: Valid values:
             /// 

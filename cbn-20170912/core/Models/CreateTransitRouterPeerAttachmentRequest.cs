@@ -62,6 +62,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The default link type. Valid values:
+        /// - **Platinum**: only available for the **Pay-By-Data-Transfer** bandwidth.
+        /// - **Gold** (default)
+        /// </summary>
         [NameInMap("DefaultLinkType")]
         [Validation(Required=false)]
         public string DefaultLinkType { get; set; }
