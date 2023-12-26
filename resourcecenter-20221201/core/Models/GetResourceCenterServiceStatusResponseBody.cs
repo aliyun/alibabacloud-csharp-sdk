@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         /// <summary>
         /// The initialization status of the service. Valid values:
         /// 
-        /// *   Pending: The service being initialized.
+        /// *   Pending: The service is being initialized.
         /// *   Finished: The service is initialized.
         /// </summary>
         [NameInMap("InitialStatus")]

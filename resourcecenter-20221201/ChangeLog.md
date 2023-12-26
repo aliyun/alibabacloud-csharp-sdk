@@ -1,3 +1,6 @@
+2023-12-26 Version: 1.2.0
+- Generated csharp 2022-12-01 for ResourceCenter.
+
 2023-11-21 Version: 1.1.1
 - Generated csharp 2022-12-01 for ResourceCenter.
 

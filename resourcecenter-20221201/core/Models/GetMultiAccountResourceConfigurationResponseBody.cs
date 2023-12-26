@@ -30,22 +30,40 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// The time when the resource expires.
+        /// </summary>
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
+        /// <summary>
+        /// The attributes of the IP address.
+        /// </summary>
         [NameInMap("IpAddressAttributes")]
         [Validation(Required=false)]
         public List<GetMultiAccountResourceConfigurationResponseBodyIpAddressAttributes> IpAddressAttributes { get; set; }
         public class GetMultiAccountResourceConfigurationResponseBodyIpAddressAttributes : TeaModel {
+            /// <summary>
+            /// The IP address.
+            /// </summary>
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
             public string IpAddress { get; set; }
 
+            /// <summary>
+            /// The network type. Valid values:
+            /// 
+            /// *   **Public**: the Internet
+            /// *   **Private**: internal network
+            /// </summary>
             [NameInMap("NetworkType")]
             [Validation(Required=false)]
             public string NetworkType { get; set; }
 
+            /// <summary>
+            /// The version.
+            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
@@ -111,14 +129,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public List<GetMultiAccountResourceConfigurationResponseBodyTags> Tags { get; set; }
         public class GetMultiAccountResourceConfigurationResponseBodyTags : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// The key of tag N.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The value of tag N.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
