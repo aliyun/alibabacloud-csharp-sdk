@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
-    public class ADClockRequest : TeaModel {
-        [NameInMap("Params")]
+    public class InsertCustomResponseBody : TeaModel {
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Params { get; set; }
+        public string Data { get; set; }
 
-        [NameInMap("ServiceCode")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ServiceCode { get; set; }
+        public string RequestId { get; set; }
 
     }
 

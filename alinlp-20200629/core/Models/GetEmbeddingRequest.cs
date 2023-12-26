@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
-    public class ADClockRequest : TeaModel {
-        [NameInMap("Params")]
-        [Validation(Required=false)]
-        public string Params { get; set; }
-
+    public class GetEmbeddingRequest : TeaModel {
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
+
+        [NameInMap("Text")]
+        [Validation(Required=false)]
+        public string Text { get; set; }
+
+        [NameInMap("TextType")]
+        [Validation(Required=false)]
+        public string TextType { get; set; }
 
     }
 

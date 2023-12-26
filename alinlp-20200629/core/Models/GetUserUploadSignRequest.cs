@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
-    public class ADClockRequest : TeaModel {
-        [NameInMap("Params")]
-        [Validation(Required=false)]
-        public string Params { get; set; }
-
+    public class GetUserUploadSignRequest : TeaModel {
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }

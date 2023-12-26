@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
-    public class ADClockRequest : TeaModel {
-        [NameInMap("Params")]
+    public class DeleteServiceDataByIdsRequest : TeaModel {
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string Params { get; set; }
+        public List<string> Ids { get; set; }
 
-        [NameInMap("ServiceCode")]
+        [NameInMap("ServiceId")]
         [Validation(Required=false)]
-        public string ServiceCode { get; set; }
+        public long? ServiceId { get; set; }
 
     }
 

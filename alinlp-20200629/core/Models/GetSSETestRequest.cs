@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
-    public class ADClockRequest : TeaModel {
+    public class GetSSETestRequest : TeaModel {
         [NameInMap("Params")]
         [Validation(Required=false)]
         public string Params { get; set; }
