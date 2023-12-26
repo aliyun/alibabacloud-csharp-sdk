@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        [NameInMap("device")]
+        [Validation(Required=false)]
+        public string Device { get; set; }
+
         [NameInMap("encrypted")]
         [Validation(Required=false)]
         public string Encrypted { get; set; }
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string MountTarget { get; set; }
 
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("performance_level")]
         [Validation(Required=false)]
         public string PerformanceLevel { get; set; }
@@ -52,6 +60,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("size")]
         [Validation(Required=false)]
         public long? Size { get; set; }
+
+        [NameInMap("snapshot_id")]
+        [Validation(Required=false)]
+        public string SnapshotId { get; set; }
 
     }
 
