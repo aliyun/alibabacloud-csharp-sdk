@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteLifecyclePolicyRequest : TeaModel {
+        /// <summary>
+        /// The ID of the file system.
+        /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        /// <summary>
+        /// The name of the lifecycle policy.
+        /// </summary>
         [NameInMap("LifecyclePolicyName")]
         [Validation(Required=false)]
         public string LifecyclePolicyName { get; set; }

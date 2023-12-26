@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class RemoveClientFromBlackListRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("FileSystemId")]
-        [Validation(Required=false)]
-        public string FileSystemId { get; set; }
-
         [NameInMap("ClientIP")]
         [Validation(Required=false)]
         public string ClientIP { get; set; }
@@ -24,6 +16,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("FileSystemId")]
+        [Validation(Required=false)]
+        public string FileSystemId { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

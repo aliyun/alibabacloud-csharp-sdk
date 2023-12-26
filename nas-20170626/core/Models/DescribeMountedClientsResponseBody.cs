@@ -9,22 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeMountedClientsResponseBody : TeaModel {
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
+        /// <summary>
+        /// The queried clients.
+        /// </summary>
         [NameInMap("Clients")]
         [Validation(Required=false)]
         public DescribeMountedClientsResponseBodyClients Clients { get; set; }
@@ -33,9 +20,44 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeMountedClientsResponseBodyClientsClient> Client { get; set; }
             public class DescribeMountedClientsResponseBodyClientsClient : TeaModel {
+                /// <summary>
+                /// The IP address of the client.
+                /// </summary>
+                [NameInMap("ClientIP")]
+                [Validation(Required=false)]
                 public string ClientIP { get; set; }
+
             }
-        };
+
+        }
+
+        /// <summary>
+        /// The page number.
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// The number of IP addresses returned per page.
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// The request ID.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// The total number of IP addresses.
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

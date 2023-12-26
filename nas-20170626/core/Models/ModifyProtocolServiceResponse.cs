@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
-    public class DescribeTagsResponse : TeaModel {
+    public class ModifyProtocolServiceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeTagsResponseBody Body { get; set; }
+        public ModifyProtocolServiceResponseBody Body { get; set; }
 
     }
 

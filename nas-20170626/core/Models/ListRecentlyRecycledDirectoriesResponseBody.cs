@@ -10,40 +10,57 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListRecentlyRecycledDirectoriesResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// The information about the directories that are recently deleted.
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Entries")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<ListRecentlyRecycledDirectoriesResponseBodyEntries> Entries { get; set; }
+        public class ListRecentlyRecycledDirectoriesResponseBodyEntries : TeaModel {
+            /// <summary>
+            /// The ID of the directory.
+            /// </summary>
+            [NameInMap("FileId")]
+            [Validation(Required=false)]
+            public string FileId { get; set; }
+
+            /// <summary>
+            /// The time when the directory was last deleted.
+            /// </summary>
+            [NameInMap("LastDeleteTime")]
+            [Validation(Required=false)]
+            public string LastDeleteTime { get; set; }
+
+            /// <summary>
+            /// The name of the directory.
+            /// </summary>
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            /// <summary>
+            /// The absolute path to the directory.
+            /// </summary>
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+        }
 
         /// <summary>
-        /// Id of the request
+        /// A pagination token.
+        /// 
+        /// If not all directories are returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("Entries")]
+        /// <summary>
+        /// The request ID.
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<ListRecentlyRecycledDirectoriesResponseBodyEntries> Entries { get; set; }
-        public class ListRecentlyRecycledDirectoriesResponseBodyEntries : TeaModel {
-            [NameInMap("FileId")]
-            [Validation(Required=false)]
-            public string FileId { get; set; }
-
-            [NameInMap("Path")]
-            [Validation(Required=false)]
-            public string Path { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("LastDeleteTime")]
-            [Validation(Required=false)]
-            public string LastDeleteTime { get; set; }
-
-        }
+        public string RequestId { get; set; }
 
     }
 

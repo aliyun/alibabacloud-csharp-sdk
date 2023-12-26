@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteSnapshotRequest : TeaModel {
+        /// <summary>
+        /// The snapshot ID.
+        /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }

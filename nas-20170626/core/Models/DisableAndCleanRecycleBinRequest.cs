@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DisableAndCleanRecycleBinRequest : TeaModel {
+        /// <summary>
+        /// The ID of the file system.
+        /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }

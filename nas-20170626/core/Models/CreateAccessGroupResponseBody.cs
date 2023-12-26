@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateAccessGroupResponseBody : TeaModel {
+        /// <summary>
+        /// The name of the permission group.
+        /// </summary>
         [NameInMap("AccessGroupName")]
         [Validation(Required=false)]
         public string AccessGroupName { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

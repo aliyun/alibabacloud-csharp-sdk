@@ -10,15 +10,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateRecycleBinDeleteJobResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// The job ID.
+        /// </summary>
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
+        /// <summary>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
 
     }
 

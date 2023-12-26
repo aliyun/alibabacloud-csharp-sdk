@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteSnapshotResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// 
+        /// Every response returns a unique request ID regardless of whether the request is successful.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

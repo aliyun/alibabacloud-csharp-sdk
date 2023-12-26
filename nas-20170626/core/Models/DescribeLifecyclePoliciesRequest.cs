@@ -9,17 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLifecyclePoliciesRequest : TeaModel {
+        /// <summary>
+        /// The ID of the file system.
+        /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
-        [NameInMap("PageSize")]
+        /// <summary>
+        /// The name of the lifecycle policy. The name must meet the following conventions:
+        /// 
+        /// The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (\_), and hyphens (-).
+        /// </summary>
+        [NameInMap("LifecyclePolicyName")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string LifecyclePolicyName { get; set; }
 
+        /// <summary>
+        /// The page number.
+        /// 
+        /// Pages start from page 1. Default value: 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// The number of entries per page.
+        /// 
+        /// Valid values: 1 to 100.
+        /// 
+        /// Default value: 10.
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

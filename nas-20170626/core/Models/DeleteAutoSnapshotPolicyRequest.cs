@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteAutoSnapshotPolicyRequest : TeaModel {
+        /// <summary>
+        /// The ID of the automatic snapshot policy.
+        /// 
+        /// You can call the [DescribeAutoSnapshotPolicies](~~126583~~) operation to view available automatic snapshot policies.
+        /// </summary>
         [NameInMap("AutoSnapshotPolicyId")]
         [Validation(Required=false)]
         public string AutoSnapshotPolicyId { get; set; }

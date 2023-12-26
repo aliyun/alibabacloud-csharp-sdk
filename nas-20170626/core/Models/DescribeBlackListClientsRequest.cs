@@ -9,17 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeBlackListClientsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        /// <summary>
+        /// The IP address of the client.
+        /// </summary>
+        [NameInMap("ClientIP")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClientIP { get; set; }
 
+        /// <summary>
+        /// The ID of the file system.
+        /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
-        [NameInMap("ClientIP")]
+        /// <summary>
+        /// The ID of the region where the file system resides.
+        /// </summary>
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ClientIP { get; set; }
+        public string RegionId { get; set; }
 
     }
 
