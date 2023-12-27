@@ -8147,6 +8147,82 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await PutProjectPolicyWithOptionsAsync(project, request, headers, runtime);
         }
 
+        public PutProjectTransferAccelerationResponse PutProjectTransferAccelerationWithOptions(string project, PutProjectTransferAccelerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutProjectTransferAcceleration",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/transferacceleration",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PutProjectTransferAccelerationResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<PutProjectTransferAccelerationResponse> PutProjectTransferAccelerationWithOptionsAsync(string project, PutProjectTransferAccelerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutProjectTransferAcceleration",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/transferacceleration",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PutProjectTransferAccelerationResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public PutProjectTransferAccelerationResponse PutProjectTransferAcceleration(string project, PutProjectTransferAccelerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PutProjectTransferAccelerationWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<PutProjectTransferAccelerationResponse> PutProjectTransferAccelerationAsync(string project, PutProjectTransferAccelerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PutProjectTransferAccelerationWithOptionsAsync(project, request, headers, runtime);
+        }
+
         public PutWebtrackingResponse PutWebtrackingWithOptions(string project, string logstoreName, PutWebtrackingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
