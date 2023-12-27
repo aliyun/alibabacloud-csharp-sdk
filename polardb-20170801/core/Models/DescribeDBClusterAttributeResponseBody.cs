@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string CompressStorageMode { get; set; }
 
+        [NameInMap("CompressStorageUsed")]
+        [Validation(Required=false)]
+        public long? CompressStorageUsed { get; set; }
+
         /// <summary>
         /// The time when the cluster was created.
         /// </summary>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterRequest : TeaModel {
+        [NameInMap("CompressStorage")]
+        [Validation(Required=false)]
+        public string CompressStorage { get; set; }
+
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

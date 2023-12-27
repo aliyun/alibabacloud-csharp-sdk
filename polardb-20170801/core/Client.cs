@@ -7534,6 +7534,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBVersion"] = request.DBVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
             {
                 query["Expired"] = request.Expired;
@@ -7636,6 +7640,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBVersion))
             {
                 query["DBVersion"] = request.DBVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescribeType))
+            {
+                query["DescribeType"] = request.DescribeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
             {
@@ -13200,6 +13208,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressStorage))
+            {
+                query["CompressStorage"] = request.CompressStorage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -13263,6 +13275,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressStorage))
+            {
+                query["CompressStorage"] = request.CompressStorage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;

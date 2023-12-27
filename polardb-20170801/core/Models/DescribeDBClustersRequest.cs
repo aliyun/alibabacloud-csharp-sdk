@@ -63,6 +63,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
+        /// 查询方式，当取值为Simple时，将返回简略版参数
+        /// </summary>
+        [NameInMap("DescribeType")]
+        [Validation(Required=false)]
+        public string DescribeType { get; set; }
+
+        /// <summary>
         /// Specifies whether the cluster has expired. Valid values:
         /// 
         /// *   **true**
