@@ -1313,8 +1313,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > *   You can specify up to 50 domain names in each request.
-          * >*   You can call this operation up to 30 times per second per account.
+          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+          * *   You can call this operation up to 30 times per second per account.
           *
           * @param request BatchSetDcdnDomainConfigsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1364,8 +1364,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > *   You can specify up to 50 domain names in each request.
-          * >*   You can call this operation up to 30 times per second per account.
+          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+          * *   You can call this operation up to 30 times per second per account.
           *
           * @param request BatchSetDcdnDomainConfigsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1415,8 +1415,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > *   You can specify up to 50 domain names in each request.
-          * >*   You can call this operation up to 30 times per second per account.
+          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+          * *   You can call this operation up to 30 times per second per account.
           *
           * @param request BatchSetDcdnDomainConfigsRequest
           * @return BatchSetDcdnDomainConfigsResponse
@@ -1428,8 +1428,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > *   You can specify up to 50 domain names in each request.
-          * >*   You can call this operation up to 30 times per second per account.
+          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+          * *   You can call this operation up to 30 times per second per account.
           *
           * @param request BatchSetDcdnDomainConfigsRequest
           * @return BatchSetDcdnDomainConfigsResponse
@@ -2373,9 +2373,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
-          * *   You can call this operation up to three times per second per account.
+          * **
+          * ****
+          * *
+          * *
           *
           * @param request CreateDcdnSubTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2413,9 +2414,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
-          * *   You can call this operation up to three times per second per account.
+          * **
+          * ****
+          * *
+          * *
           *
           * @param request CreateDcdnSubTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2453,9 +2455,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
-          * *   You can call this operation up to three times per second per account.
+          * **
+          * ****
+          * *
+          * *
           *
           * @param request CreateDcdnSubTaskRequest
           * @return CreateDcdnSubTaskResponse
@@ -2467,9 +2470,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
-          * *   You can call this operation up to three times per second per account.
+          * **
+          * ****
+          * *
+          * *
           *
           * @param request CreateDcdnSubTaskRequest
           * @return CreateDcdnSubTaskResponse
@@ -2683,10 +2687,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
-          * *   You can only specify the production and staging environments when you call this operation.
-          * *   You can call this operation up to 100 times per second.
+          * > *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+          * >*   You can only specify the production and staging environments when you call this operation.
+          * >*   You can call this operation up to 100 times per second per account.
           *
           * @param tmpReq CreateRoutineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2734,10 +2737,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
-          * *   You can only specify the production and staging environments when you call this operation.
-          * *   You can call this operation up to 100 times per second.
+          * > *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+          * >*   You can only specify the production and staging environments when you call this operation.
+          * >*   You can call this operation up to 100 times per second per account.
           *
           * @param tmpReq CreateRoutineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2785,10 +2787,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
-          * *   You can only specify the production and staging environments when you call this operation.
-          * *   You can call this operation up to 100 times per second.
+          * > *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+          * >*   You can only specify the production and staging environments when you call this operation.
+          * >*   You can call this operation up to 100 times per second per account.
           *
           * @param request CreateRoutineRequest
           * @return CreateRoutineResponse
@@ -2800,10 +2801,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
-          * *   You can only specify the production and staging environments when you call this operation.
-          * *   You can call this operation up to 100 times per second.
+          * > *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+          * >*   You can only specify the production and staging environments when you call this operation.
+          * >*   You can call this operation up to 100 times per second per account.
           *
           * @param request CreateRoutineRequest
           * @return CreateRoutineResponse
@@ -5361,8 +5361,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * **
-          * **You can call this operation up to three times per second.
+          * >You can call this operation up to three times per second.
           *
           * @param request DescribeDcdnDeliverListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5396,8 +5395,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * **
-          * **You can call this operation up to three times per second.
+          * >You can call this operation up to three times per second.
           *
           * @param request DescribeDcdnDeliverListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5431,8 +5429,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * **
-          * **You can call this operation up to three times per second.
+          * >You can call this operation up to three times per second.
           *
           * @param request DescribeDcdnDeliverListRequest
           * @return DescribeDcdnDeliverListResponse
@@ -5444,8 +5441,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * **
-          * **You can call this operation up to three times per second.
+          * >You can call this operation up to three times per second.
           *
           * @param request DescribeDcdnDeliverListRequest
           * @return DescribeDcdnDeliverListResponse
@@ -13085,7 +13081,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
           * *   You can query the refresh or prefetch tasks by ID or URL.
           * *   You can set both **TaskId** and **ObjectPath** in a request. If you do not set **TaskId** or **ObjectPath**, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
           * *   If you specify **DomainName** or **Status**, you must also specify **ObjectType**.
@@ -13163,7 +13158,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
           * *   You can query the refresh or prefetch tasks by ID or URL.
           * *   You can set both **TaskId** and **ObjectPath** in a request. If you do not set **TaskId** or **ObjectPath**, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
           * *   If you specify **DomainName** or **Status**, you must also specify **ObjectType**.
@@ -13241,7 +13235,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
           * *   You can query the refresh or prefetch tasks by ID or URL.
           * *   You can set both **TaskId** and **ObjectPath** in a request. If you do not set **TaskId** or **ObjectPath**, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
           * *   If you specify **DomainName** or **Status**, you must also specify **ObjectType**.
@@ -13257,7 +13250,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
           * *   You can query the refresh or prefetch tasks by ID or URL.
           * *   You can set both **TaskId** and **ObjectPath** in a request. If you do not set **TaskId** or **ObjectPath**, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
           * *   If you specify **DomainName** or **Status**, you must also specify **ObjectType**.
@@ -13962,6 +13954,112 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDcdnSMCertificateListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeDcdnSSLCertificateListResponse DescribeDcdnSSLCertificateListWithOptions(DescribeDcdnSSLCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyword))
+            {
+                query["SearchKeyword"] = request.SearchKeyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnSSLCertificateList",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnSSLCertificateListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnSSLCertificateListResponse> DescribeDcdnSSLCertificateListWithOptionsAsync(DescribeDcdnSSLCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyword))
+            {
+                query["SearchKeyword"] = request.SearchKeyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnSSLCertificateList",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnSSLCertificateListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnSSLCertificateListResponse DescribeDcdnSSLCertificateList(DescribeDcdnSSLCertificateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnSSLCertificateListWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDcdnSSLCertificateListResponse> DescribeDcdnSSLCertificateListAsync(DescribeDcdnSSLCertificateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnSSLCertificateListWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -21400,6 +21498,104 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await RefreshDcdnObjectCachesWithOptionsAsync(request, runtime);
         }
 
+        public RefreshErObjectCachesResponse RefreshErObjectCachesWithOptions(RefreshErObjectCachesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeDomainName))
+            {
+                query["MergeDomainName"] = request.MergeDomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
+            {
+                query["ObjectPath"] = request.ObjectPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                query["ObjectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutineId))
+            {
+                query["RoutineId"] = request.RoutineId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshErObjectCaches",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshErObjectCachesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RefreshErObjectCachesResponse> RefreshErObjectCachesWithOptionsAsync(RefreshErObjectCachesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeDomainName))
+            {
+                query["MergeDomainName"] = request.MergeDomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
+            {
+                query["ObjectPath"] = request.ObjectPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                query["ObjectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutineId))
+            {
+                query["RoutineId"] = request.RoutineId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshErObjectCaches",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshErObjectCachesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RefreshErObjectCachesResponse RefreshErObjectCaches(RefreshErObjectCachesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RefreshErObjectCachesWithOptions(request, runtime);
+        }
+
+        public async Task<RefreshErObjectCachesResponse> RefreshErObjectCachesAsync(RefreshErObjectCachesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RefreshErObjectCachesWithOptionsAsync(request, runtime);
+        }
+
         /**
           * > You can call this operation up to 30 times per second per account.
           *
@@ -23071,7 +23267,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+          * > You can call this operation up to three times per second per account.
           *
           * @param request UpdateDcdnDeliverTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23125,7 +23321,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+          * > You can call this operation up to three times per second per account.
           *
           * @param request UpdateDcdnDeliverTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23179,7 +23375,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+          * > You can call this operation up to three times per second per account.
           *
           * @param request UpdateDcdnDeliverTaskRequest
           * @return UpdateDcdnDeliverTaskResponse
@@ -23191,7 +23387,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+          * > You can call this operation up to three times per second per account.
           *
           * @param request UpdateDcdnDeliverTaskRequest
           * @return UpdateDcdnDeliverTaskResponse

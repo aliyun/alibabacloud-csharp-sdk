@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRefreshTasksResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tasks.
+        /// Details about tasks.
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -67,11 +67,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string ObjectPath { get; set; }
 
                 /// <summary>
-                /// The type of the task. Valid values:
+                /// The type of the task.
                 /// 
                 /// *   **file**: URL-based refresh
                 /// *   **path**: directory-based refresh
-                /// *   **regex**: regular expression-based refresh
                 /// *   **preload**: URL-based prefetch
                 /// </summary>
                 [NameInMap("ObjectType")]
@@ -86,7 +85,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Process { get; set; }
 
                 /// <summary>
-                /// The status of the auxiliary media asset.
+                /// The status of the task.
                 /// 
                 /// *   **Complete**: The task is complete.
                 /// *   **Refreshing**: The task is in progress.
@@ -97,7 +96,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The task ID.
+                /// The ID of the task.
                 /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]

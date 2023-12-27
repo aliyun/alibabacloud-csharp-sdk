@@ -8,10 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class UpdateDcdnDeliverTaskResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
+    public class RefreshErObjectCachesResponseBody : TeaModel {
+        [NameInMap("RefreshTaskId")]
+        [Validation(Required=false)]
+        public string RefreshTaskId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// Specifies whether to enable the HTTPS certificate. Valid values:
         /// 
-        /// *   \*\*on\*\*: enables the HTTPS certificate.
+        /// *   **on**: enables the HTTPS certificate.
         /// *   **off**: does not enable the HTTPS certificate.
         /// 
         /// This is the default value.

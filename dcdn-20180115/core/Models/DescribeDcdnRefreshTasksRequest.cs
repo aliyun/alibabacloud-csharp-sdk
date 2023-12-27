@@ -33,11 +33,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string ObjectPath { get; set; }
 
         /// <summary>
-        /// The type of the task. Valid values:
+        /// The type of the task.
         /// 
         /// *   **file**: URL-based refresh
         /// *   **directory**: directory-based refresh
-        /// *   **regex**: regular expression-based refresh
         /// *   **preload**: URL-based prefetch
         /// 
         /// If you set **DomainName** or **Status**, you must also set this parameter.
@@ -76,7 +75,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The status of the task. Valid values:
+        /// The status of the task.
         /// 
         /// *   **Complete**: The task is complete.
         /// *   **Refreshing**: The task is in progress.

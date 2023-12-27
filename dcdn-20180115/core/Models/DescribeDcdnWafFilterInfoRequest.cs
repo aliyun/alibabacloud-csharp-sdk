@@ -16,9 +16,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// *   custom_acl: custom protection
         /// *   whitelist: IP address whitelist
         /// 
-        /// **
-        /// 
-        /// **If you do not specify this parameter, all types are returned.
+        /// >If you do not specify this parameter, all types are returned.
         /// </summary>
         [NameInMap("DefenseScenes")]
         [Validation(Required=false)]
