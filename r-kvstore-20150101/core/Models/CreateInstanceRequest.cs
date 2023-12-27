@@ -209,6 +209,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// Parameter template ID.
+        /// </summary>
         [NameInMap("ParamGroupId")]
         [Validation(Required=false)]
         public string ParamGroupId { get; set; }

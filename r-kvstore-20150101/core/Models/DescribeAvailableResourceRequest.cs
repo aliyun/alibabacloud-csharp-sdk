@@ -51,11 +51,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Redis产品系列，取值如下：
+        /// The edition of the instance. Valid values:
         /// 
-        /// - **professional**：标准版，支持单副本、主备、读写分离、集群四种架构，扩展性强。
-        ///  <props="china">
-        /// -  **economical**：仅支持主备架构，具有价格优势，更多信息请参见[经济版实例](~~2489678~~)。</props>
+        /// *   **professional**: Standard Edition. This edition supports the standalone, master-replica, read /write splitting, and cluster architectures and provides high scalability.
         /// </summary>
         [NameInMap("InstanceScene")]
         [Validation(Required=false)]
@@ -90,13 +88,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The instance series. Valid values:
+        /// The series of the instance. Valid values:
         /// 
-        /// *   **Local**: ApsaraDB for Redis Community Edition instance that uses local disks or ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks
-        /// *   **Tair_rdb**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses cloud disks
+        /// *   **Local**: classic ApsaraDB for Redis Community Edition instance or classic ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance
+        /// *   **Tair_rdb**: cloud-native ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance
         /// *   **Tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance
         /// *   **Tair_essd**: ApsaraDB for Redis Enhanced Edition (Tair) ESSD-based instance
-        /// *   **OnECS**: ApsaraDB for Redis Community Edition instance that uses cloud disks
+        /// *   **OnECS**: cloud-native ApsaraDB for Redis Community Edition instance
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]

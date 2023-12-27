@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAccountsRequest : TeaModel {
         /// <summary>
-        /// r-bp1zxszhcgatnx****
+        /// The name of the account that you want to query.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The name of the account.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

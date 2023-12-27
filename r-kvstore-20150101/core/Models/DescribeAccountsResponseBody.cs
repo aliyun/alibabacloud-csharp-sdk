@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
         /// <summary>
-        /// Details about account permissions.
+        /// Details about returned accounts of the instance.
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -21,38 +21,41 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
                 /// <summary>
-                /// The name of the account that you want to query.
+                /// The description of the account.
                 /// </summary>
                 [NameInMap("AccountDescription")]
                 [Validation(Required=false)]
                 public string AccountDescription { get; set; }
 
                 /// <summary>
-                /// The operation that you want to perform. Set the value to **DescribeAccounts**.
+                /// The name of the account.
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The state of the account. Valid values:
+                /// 
+                /// *   **Unavailable**: The account is unavailable.
+                /// *   **Available**: The account is available.
                 /// </summary>
                 [NameInMap("AccountStatus")]
                 [Validation(Required=false)]
                 public string AccountStatus { get; set; }
 
                 /// <summary>
-                /// The description of the account.
+                /// The type of the account. Valid values:
+                /// 
+                /// *   **Normal**: standard account
+                /// *   **Super**: super account
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// The permission of the account. Default value: RoleReadWrite. Valid values:
-                /// 
-                /// *   **RoleReadOnly**: The account has the read-only permissions.
-                /// *   **RoleReadWrite**: The account has the read and write permissions.
+                /// Details about account permissions.
                 /// </summary>
                 [NameInMap("DatabasePrivileges")]
                 [Validation(Required=false)]
@@ -63,10 +66,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     public List<DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege> DatabasePrivilege { get; set; }
                     public class DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege : TeaModel {
                         /// <summary>
-                        /// The permissions of the account. Valid values:
+                        /// The permission of the account. Default value: RoleReadWrite. Valid values:
                         /// 
-                        /// *   **RoleReadOnly**: The account has read-only permissions.
-                        /// *   **RoleReadWrite**: The account has read and write permissions.
+                        /// *   **RoleReadOnly**: The account has the read-only permissions.
+                        /// *   **RoleReadWrite**: The account has the read and write permissions.
                         /// </summary>
                         [NameInMap("AccountPrivilege")]
                         [Validation(Required=false)]
@@ -77,10 +80,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The type of the account. Valid values:
-                /// 
-                /// *   **Normal**: standard account
-                /// *   **Super**: super account
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

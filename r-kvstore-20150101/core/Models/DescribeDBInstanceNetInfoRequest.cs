@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeDBInstanceNetInfoRequest : TeaModel {
         /// <summary>
-        /// r-bp1zxszhcgatnx****
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

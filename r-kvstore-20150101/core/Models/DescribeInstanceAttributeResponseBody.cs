@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// Details of the instances.
+        /// Details of the instance.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string ArchitectureType { get; set; }
 
                 /// <summary>
-                /// The retention period of audit logs. Unit: days. A value of 0 indicates that the audit log feature is disabled. For more information about how to enable the audit log feature, see [Enable the new audit log feature](~~102015~~).
+                /// The retention period of audit logs. Unit: day. A value of 0 indicates that the audit log feature is disabled. For more information, see [Enable the audit log feature](~~102015~~).
                 /// </summary>
                 [NameInMap("AuditLogRetention")]
                 [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// 
                 /// > 
                 /// 
-                /// *   This parameter is returned only when the data flashback feature is enabled for the instance. For more information, see [Use data flashback to restore data by point in time](~~148479~~).
+                /// *   This parameter is returned only if the [data flashback](~~148479~~) feature is enabled for the instance.
                 /// 
                 /// *   When you call the [RestoreInstance](~~61083~~) operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the **RestoreTime** parameter to this point in time.
                 /// </summary>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string CloudType { get; set; }
 
                 /// <summary>
-                /// The parameter settings of the instance in the JSON format. For more information, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).
+                /// The parameter configurations of the instance in the JSON format. For more information, see [Parameter descriptions](~~43885~~). You can use the [DescribeAuditLogConfig](~~473830~~) operation to query audit log configurations.
                 /// </summary>
                 [NameInMap("Config")]
                 [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.
+                /// The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The ID of the distributed instance to which the instance belongs.
                 /// 
-                /// > This parameter is returned only when the instance is a child instance of a distributed instance.
+                /// >  This parameter is returned only if the ApsaraDB for Redis instance is a child instance of a distributed instance.
                 /// </summary>
                 [NameInMap("GlobalInstanceId")]
                 [Validation(Required=false)]
@@ -150,8 +150,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// Indicates whether your Alibaba Cloud account has pending orders for renewal and configuration change. Valid values:
                 /// 
-                /// *   **true**: Your Alibaba Cloud account has pending orders.
-                /// *   **false**: Your Alibaba Cloud account does not have pending orders.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("HasRenewChangeOrder")]
                 [Validation(Required=false)]
@@ -165,14 +165,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string InstanceClass { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// The instance name.
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
@@ -181,8 +181,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// Indicates whether the release protection feature is enabled for the instance. Valid values:
                 /// 
-                /// *   **true**: Release protection is enabled.
-                /// *   **false**: Release protection is disabled.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("InstanceReleaseProtection")]
                 [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// *   **Flushing**: The instance is being released.
                 /// *   **Released**: The instance is released.
                 /// *   **Transforming**: The billing method of the instance is being changed.
-                /// *   **Unavailable**: The instance is suspended.
+                /// *   **Unavailable**: The instance is unavailable.
                 /// *   **Error**: The instance failed to be created.
                 /// *   **Migrating**: The instance is being migrated.
                 /// *   **BackupRecovering**: The instance is being restored from a backup.
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// *   **SSLModifying**: The SSL certificate of the instance is being changed.
                 /// *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
                 /// 
-                /// > For more information about instance states, see [Instance states and impacts](~~200740~~).
+                /// >  For more information about instance states, see [Instance states and impacts](~~200740~~).
                 /// </summary>
                 [NameInMap("InstanceStatus")]
                 [Validation(Required=false)]
@@ -225,11 +225,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// Whether the instance order has been completed is used to determine whether the modify instance specifications order has reached its final state. The return value is:
+                /// Indicates whether the order for instance configuration change has reached the final state. Valid values:
                 /// 
-                /// * **true**: The modify instance specifications operation has been completed or has not been made.
-                /// 
-                /// * **false**: Changing specifications, the order is not yet completed.
+                /// *   **true**: The configuration change has been completed or has not been performed.
+                /// *   **false**: The configurations of the instance are being changed.
                 /// </summary>
                 [NameInMap("IsOrderCompleted")]
                 [Validation(Required=false)]
@@ -238,18 +237,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// Indicates whether the instance is managed by ApsaraDB RDS. Valid values:
                 /// 
-                /// *   **true**: The instance is managed by ApsaraDB RDS.
-                /// *   **false**: The instance is not managed by ApsaraDB RDS.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("IsRds")]
                 [Validation(Required=false)]
                 public bool? IsRds { get; set; }
 
                 /// <summary>
-                /// Does the instance support enabling transparent data encryption (TDE) function? Return value:
+                /// Indicates whether the transparent data encryption (TDE) feature is supported for the instance. Valid values:
                 /// 
-                /// * **true**: Supported, only supported for local disk, memory type Tair instance version. 
-                /// * **false**: Not Supported.
+                /// *   **true**: This feature is supported. This feature is available only for [DRAM-based](~~443827~~) instances that use local disks.
+                /// *   **false**: This feature is not supported.
                 /// </summary>
                 [NameInMap("IsSupportTDE")]
                 [Validation(Required=false)]
@@ -272,8 +271,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **CLASSIC**: classic network
-                /// *   **VPC**: VPC
+                /// *   **CLASSIC**
+                /// *   **VPC**
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -290,7 +289,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// The plan type of the instance. Valid values:
+                /// The plan type. Valid values:
                 /// 
                 /// *   **standard**: standard plan.
                 /// *   **customized**: custom plan. This plan type is phased out.
@@ -300,7 +299,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string PackageType { get; set; }
 
                 /// <summary>
-                /// The port number of the instance.
+                /// The port number that is used to connect to the instance.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -309,7 +308,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The private IP address of the instance.
                 /// 
-                /// > This parameter is not returned when the instance is deployed in the classic network.
+                /// >  This parameter is not returned when the instance is deployed in the classic network.
                 /// </summary>
                 [NameInMap("PrivateIp")]
                 [Validation(Required=false)]
@@ -332,14 +331,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// If the instance is a cluster instance that uses cloud disks, this parameter indicates the instance type of each shard. In this case, the InstanceClass parameter indicates a virtual instance type.
                 /// 
-                /// > To query the costs of this instance type, specify the returned instance type for this parameter for the [DescribePrice](~~95612~~) operation and call the operation.
+                /// >  You can call the [DescribePrice](~~95612~~) operation to query the price of the instance type that is returned by this parameter.
                 /// </summary>
                 [NameInMap("RealInstanceClass")]
                 [Validation(Required=false)]
                 public string RealInstanceClass { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -355,8 +354,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The architecture of the instance. Valid values:
                 /// 
-                /// *   **master-slave**: standard master-replica architecture.
-                /// *   **cluster**: cluster architecture, which includes read/write splitting instances and cluster instances.
+                /// *   **master-slave**: the standard mater-replica architecture.
+                /// *   **cluster**: the cluster architecture, which includes the read/write splitting instances and cluster instances.
                 /// </summary>
                 [NameInMap("ReplicationMode")]
                 [Validation(Required=false)]
@@ -370,40 +369,50 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The ID of the secondary zone.
+                /// The secondary zone ID of the instance.
                 /// 
-                /// > This parameter is returned only when the instance has a secondary zone ID.
+                /// >  This parameter is returned only if the instance has a secondary zone ID.
                 /// </summary>
                 [NameInMap("SecondaryZoneId")]
                 [Validation(Required=false)]
                 public string SecondaryZoneId { get; set; }
 
                 /// <summary>
-                /// The IP addresses contained in a whitelist of the instance.
+                /// The IP address whitelist.
                 /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
 
                 /// <summary>
-                /// The number of shards. This parameter is available only for instances that are purchased on the China site (aliyun.com).
-                /// 
-                /// This parameter is returned only when the instance is a [cluster instance](~~52228~~) that uses cloud disks.
+                /// The number of shards. This parameter is available only for ApsaraDB for Redis instances that are purchased on the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("ShardCount")]
                 [Validation(Required=false)]
                 public int? ShardCount { get; set; }
 
+                [NameInMap("SlaveReadOnlyCount")]
+                [Validation(Required=false)]
+                public long? SlaveReadOnlyCount { get; set; }
+
+                /// <summary>
+                /// The storage space of cloud disks. Valid values vary based on the instance specifications. For more information, see [ESSD-based instances](~~443846~~).
+                /// 
+                /// > This parameter is available and required only if the **InstanceType** parameter is set to **tair_essd**.
+                /// </summary>
                 [NameInMap("Storage")]
                 [Validation(Required=false)]
                 public string Storage { get; set; }
 
+                /// <summary>
+                /// The type of the storage.
+                /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// Details of the tags.
+                /// The details of the tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -414,14 +423,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     public List<DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttributeTagsTag> Tag { get; set; }
                     public class DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttributeTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -432,7 +441,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
@@ -449,7 +458,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string VpcAuthMode { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The ID of the instance that is deployed in the VPC.
                 /// </summary>
                 [NameInMap("VpcCloudInstanceId")]
                 [Validation(Required=false)]
@@ -463,7 +472,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The zone ID of the instance.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

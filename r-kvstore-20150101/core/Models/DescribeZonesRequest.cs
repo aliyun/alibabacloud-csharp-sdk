@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeZonesRequest : TeaModel {
+        /// <summary>
+        /// The display language of the response. Default value: zh-CN. Valid values:
+        /// * **zh-C**N: Chinese
+        /// * **en-US**: English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }

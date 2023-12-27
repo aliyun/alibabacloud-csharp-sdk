@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceConfigRequest : TeaModel {
         /// <summary>
-        /// The configuration parameters of the instance in the JSON format.
+        /// The instance parameter settings that you want to modify. Specify this parameter in the JSON format. The new value of a parameter overwrites the original value.
         /// 
-        /// > For more information, see [Supported parameters](~~259681~~).
+        /// **
+        /// 
+        /// **Description** For more information, see [Supported parameters](~~259681~~).
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]

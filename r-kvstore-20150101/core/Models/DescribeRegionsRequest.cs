@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The diaplay language of the **LocalName** parameter value. Valid values:
+        /// The display language of the **LocalName** parameter value. Valid values:
         /// 
         /// *   **zh-CN**: Chinese
         /// *   **en-US**: English

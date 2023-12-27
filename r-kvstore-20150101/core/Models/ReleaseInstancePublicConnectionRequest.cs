@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ReleaseInstancePublicConnection**.
+        /// The ID of the instance for which you want to release a public endpoint.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class LockDBInstanceWriteRequest : TeaModel {
+        /// <summary>
+        /// The instance ID.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The reason why write operations on the instance are locked.
+        /// </summary>
         [NameInMap("LockReason")]
         [Validation(Required=false)]
         public string LockReason { get; set; }

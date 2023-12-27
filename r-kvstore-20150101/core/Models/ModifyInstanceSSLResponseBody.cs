@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ModifyInstanceSSL**.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

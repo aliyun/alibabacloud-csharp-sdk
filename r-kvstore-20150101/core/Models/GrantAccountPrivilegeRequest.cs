@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class GrantAccountPrivilegeRequest : TeaModel {
         /// <summary>
-        /// GrantAccountPrivilege
+        /// The name of the account. You can call the [DescribeAccounts](~~DescribeAccounts~~) operation to obtain the name of the account.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The permissions of the account. Valid values:
+        /// The permissions of the account. Default value: RoleReadWrite. Valid values:
         /// 
-        /// *   **RoleReadOnly**: The account has read-only permissions.
-        /// *   **RoleReadWrite**: The account has read and write permissions.
+        /// *   RoleReadOnly: The account has the read-only permissions.
+        /// *   RoleReadWrite: The account has the read and write permissions.
         /// </summary>
         [NameInMap("AccountPrivilege")]
         [Validation(Required=false)]
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// Modifies the permissions of an account for an ApsaraDB for Redis instance.
+        /// The ID of the instance to which the account belongs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

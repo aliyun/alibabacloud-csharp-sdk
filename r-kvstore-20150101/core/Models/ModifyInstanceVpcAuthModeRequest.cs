@@ -42,7 +42,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// *   **Open**: disables password-free access.
         /// *   **Close**: enables password-free access.
         /// 
-        /// > The default value is **Open**.
+        /// **
+        /// 
+        /// **Description** Default value: **Open**.
         /// </summary>
         [NameInMap("VpcAuthMode")]
         [Validation(Required=false)]

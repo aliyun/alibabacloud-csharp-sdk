@@ -10,17 +10,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class TransformInstanceChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// The new billing method. Valid values:
+        /// The time when the instance expires.
         /// 
-        /// *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.
-        /// *   **PostPaid**: pay-as-you-go.
+        /// >  A value is returned for this parameter only if the instance was changed from pay-as-you-go to subscription.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **TransformInstanceChargeType**.
+        /// The ID of the order.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

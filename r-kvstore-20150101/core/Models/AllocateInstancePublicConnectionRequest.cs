@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AllocateInstancePublicConnectionRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **AllocateInstancePublicConnection**.
+        /// The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
+        /// 
+        /// >  The endpoint is in the `<prefix>.redis.rds.aliyuncs.com` format.
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -32,9 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
-        /// 
-        /// >  The endpoint is in the `<prefix>.redis.rds.aliyuncs.com` format.
+        /// The service port number of the instance. Valid values: **1024** to **65535**.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The detailed proxy information, including information about proxy nodes.
+        /// The information about proxy nodes.
         /// </summary>
         [NameInMap("RedisProxyList")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Connection { get; set; }
 
                 /// <summary>
-                /// The node ID.
+                /// The ID of the node.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The node type. Valid values:
                 /// 
-                /// *   **proxy**: proxy node
-                /// *   **db**: data node
+                /// *   **db**: a data node.
+                /// *   **normal**: a management node, which can be a proxy node or a Configserver node. For specific instances, the return value of this parameter is proxy or cs, instead of normal.
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Connection { get; set; }
 
                 /// <summary>
-                /// The node ID.
+                /// The ID of the node.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]

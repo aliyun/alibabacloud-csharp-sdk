@@ -8,10 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeEngineVersionRequest : TeaModel {
-        /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
-        /// </summary>
+    public class DescribeDBNodeDirectVipInfoRequest : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -31,10 +28,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeGlobalDistributeCacheRequest : TeaModel {
         /// <summary>
-        /// Details of the child instances.
+        /// The ID of the distributed instance.
         /// </summary>
         [NameInMap("GlobalInstanceId")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries to return each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the distributed instance.
+        /// The ID of the child instance that is attached to the distributed instance.
         /// </summary>
         [NameInMap("SubInstanceId")]
         [Validation(Required=false)]

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **InitializeKvstorePermission**.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

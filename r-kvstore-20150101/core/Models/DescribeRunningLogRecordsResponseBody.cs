@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRunningLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the node.
-        /// 
-        /// >  If a standard instance is queried, `(null)` is returned.
+        /// The type of the database engine.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// Details about the log entries.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -37,28 +35,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeRunningLogRecordsResponseBodyItemsLogRecords> LogRecords { get; set; }
             public class DescribeRunningLogRecordsResponseBodyItemsLogRecords : TeaModel {
                 /// <summary>
-                /// The maximum number of entries returned on each page.
+                /// The content of the log.
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
-                /// The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+                /// The time when the log was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The page number of the returned page.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The ID of the node.
+                /// 
+                /// >  If a standard instance is queried, `(null)` is returned.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
@@ -69,42 +69,42 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The number of log entries returned on the current page.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The number of log entries returned on the current page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The keyword that is used to query operational logs.
+        /// The maximum number of entries returned on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+        /// The beginning of the time range to query.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The type of the database engine.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

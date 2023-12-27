@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeTasksRequest : TeaModel {
         /// <summary>
-        /// 2020-11-26T01:00Z
+        /// The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The identifier of the task.
+        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+        /// The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -58,14 +58,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+        /// The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The status of the task. Separate multiple values with commas (,). Valid values:
+        /// 
+        /// *   **0**: The task is pending.
+        /// *   **1**: The task is running.
+        /// *   **2**: The task is complete.
+        /// *   **4**: The task is closed.
+        /// *   **7**: The task is paused.
+        /// *   **8**: The task is interrupted.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

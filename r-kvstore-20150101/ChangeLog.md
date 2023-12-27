@@ -1,3 +1,6 @@
+2023-12-27 Version: 2.24.0
+- Generated csharp 2015-01-01 for R-kvstore.
+
 2023-11-21 Version: 2.23.0
 - Generated csharp 2015-01-01 for R-kvstore.
 

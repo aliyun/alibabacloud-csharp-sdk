@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class TransformToPrePaidResponseBody : TeaModel {
         /// <summary>
-        /// Specifies whether to enable auto-renewal. Default value: false. Valid values:
-        /// 
-        /// *   **true**: yes
-        /// *   **false**: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see [Manually renew an instance](~~26352~~).
+        /// The time when the instance expires after the billing method of the instance is changed from pay-as-you-go to subscription.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **TransformToPrePaid**.
+        /// The ID of the order.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

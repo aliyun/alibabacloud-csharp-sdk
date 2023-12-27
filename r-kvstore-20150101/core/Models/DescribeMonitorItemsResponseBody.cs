@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeMonitorItemsResponseBody : TeaModel {
         /// <summary>
-        /// The unit of the metric.
+        /// The returned metrics.
+        /// 
+        /// > *   **memoryUsage**, **GetQps**, and **PutQps** are supported only by ApsaraDB for Redis instances that use Redis 4.0 or later. **GetQps** and **PutQps** require the latest minor version. You can upgrade the major version or minor version of the instance as needed. For more information, see [Upgrade the major version](~~101764~~) and [Upgrade the minor version](~~56450~~).
+        /// > *   When you use instances of Redis 2.8, if the **hit_rate** metric is not displayed, you must upgrade the minor version of the instance. For more information, see [Upgrade the minor version](~~56450~~).
         /// </summary>
         [NameInMap("MonitorItems")]
         [Validation(Required=false)]
@@ -21,14 +24,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeMonitorItemsResponseBodyMonitorItemsKVStoreMonitorItem> KVStoreMonitorItem { get; set; }
             public class DescribeMonitorItemsResponseBodyMonitorItemsKVStoreMonitorItem : TeaModel {
                 /// <summary>
-                /// DescribeMonitorItems
+                /// The metric.
                 /// </summary>
                 [NameInMap("MonitorKey")]
                 [Validation(Required=false)]
                 public string MonitorKey { get; set; }
 
                 /// <summary>
-                /// Queries the metrics of an ApsaraDB for Redis instance.
+                /// The unit of the metric.
                 /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeMonitorItems**.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
