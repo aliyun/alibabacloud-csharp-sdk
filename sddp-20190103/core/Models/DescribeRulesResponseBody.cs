@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
             /// <summary>
             /// The content in the sensitive data detection rule.
+            /// 
+            /// >  A built-in detection rule whose CustomType is 0 does not return the content of the rule.
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -174,7 +176,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// The sensitivity level of data that hits the sensitive data detection rule. Valid values:
             /// 
-            /// *   **N/A**: No sensitive data is detected.
+            /// *   **N/A**: indicates that no sensitive data is detected.
             /// *   **S1**: indicates the low sensitivity level.
             /// *   **S2**: indicates the medium sensitivity level.
             /// *   **S3**: indicates the high sensitivity level.
@@ -201,6 +203,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            /// <summary>
+            /// The data asset type that is supported by the sensitive data detection rule. Valid values:
+            /// 
+            /// *   **0**: all data assets
+            /// *   **1**: structured data assets
+            /// *   **2**: unstructured data assets
+            /// </summary>
             [NameInMap("SupportForm")]
             [Validation(Required=false)]
             public int? SupportForm { get; set; }
@@ -220,7 +229,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? UserId { get; set; }
 
             /// <summary>
-            /// The severity level of the alert. Valid values:
+            /// The severity level. Valid values:
             /// 
             /// *   **1**: low
             /// *   **2**: medium

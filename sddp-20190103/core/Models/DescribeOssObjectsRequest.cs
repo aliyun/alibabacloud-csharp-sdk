@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("FileCategoryCode")]
+        [Validation(Required=false)]
+        public long? FileCategoryCode { get; set; }
+
         /// <summary>
         /// The ID of the instance to which the OSS object belongs.
         /// 

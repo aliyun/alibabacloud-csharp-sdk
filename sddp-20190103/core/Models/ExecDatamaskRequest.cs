@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        [NameInMap("FeatureType")]
+        [Validation(Required=false)]
+        public int? FeatureType { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Default value: **zh_cn**. Valid values:
         /// 

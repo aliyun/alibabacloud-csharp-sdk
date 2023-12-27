@@ -44,6 +44,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string CategoryName { get; set; }
 
+            [NameInMap("FileCategoryCode")]
+            [Validation(Required=false)]
+            public long? FileCategoryCode { get; set; }
+
+            [NameInMap("FileCategoryName")]
+            [Validation(Required=false)]
+            public string FileCategoryName { get; set; }
+
             /// <summary>
             /// The file ID of the OSS object.
             /// </summary>

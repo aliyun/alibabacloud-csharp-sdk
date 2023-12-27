@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public List<DescribeInstancesResponseBodyItems> Items { get; set; }
         public class DescribeInstancesResponseBodyItems : TeaModel {
             /// <summary>
-            /// The point in time when the data asset was created. This value is a UNIX timestamp. Unit: milliseconds.
+            /// The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DepartName { get; set; }
 
             /// <summary>
-            /// The unique ID of the data asset.
+            /// The unique ID of the data asset in DSC.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -62,20 +62,37 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Labelsec { get; set; }
 
             /// <summary>
-            /// The point in time when the data asset was last scanned. This value is a UNIX timestamp. Unit: milliseconds.
+            /// The time when the data asset was last scanned. The value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastFinishTime")]
             [Validation(Required=false)]
             public long? LastFinishTime { get; set; }
 
+            /// <summary>
+            /// A list of tags.
+            /// </summary>
             [NameInMap("ModelTags")]
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyItemsModelTags> ModelTags { get; set; }
             public class DescribeInstancesResponseBodyItemsModelTags : TeaModel {
+                /// <summary>
+                /// The ID of the tag. Valid values:
+                /// 
+                /// *   **101**: personal sensitive information
+                /// *   **102**: personal information
+                /// *   **107**: general information
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// The name of the tag. Valid values:
+                /// 
+                /// *   Personal sensitive information
+                /// *   Personal information
+                /// *   General information
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -104,7 +121,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which DSC can scan for sensitive data, see [Supported data assets](~~212906~~).
+            /// The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets that DSC can scan to detect sensitive data, see [Supported data assets](~~212906~~).
             /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
@@ -128,12 +145,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Protection { get; set; }
 
             /// <summary>
-            /// The sensitivity level of the data asset. A higher sensitivity level indicates that the identified data is more sensitive.
+            /// The ID of the sensitivity level for the data asset. A higher sensitivity level ID indicates that the identified data is more sensitive.
             /// 
-            /// *   **1**: No sensitive data is identified.
+            /// *   **1**: No sensitive data is detected.
             /// *   **2**: sensitive data at level 1.
             /// *   **3**: sensitive data at level 2.
-            /// *   **4**: sensitive data at level 3
+            /// *   **4**: sensitive data at level 3.
             /// *   **5**: sensitive data at level 4.
             /// *   **6**: sensitive data at level 5.
             /// *   **7**: sensitive data at level 6.
@@ -163,15 +180,15 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// Indicates whether the data asset contains sensitive data. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("Sensitive")]
             [Validation(Required=false)]
             public bool? Sensitive { get; set; }
 
             /// <summary>
-            /// The total number of sensitive data objects in the data asset. For example, if the data asset is an ApsaraDB RDS instance, the value indicates the total number of sensitive tables in all databases of the instance.
+            /// The number of sensitive data objects in the data asset. For example, if the data asset is an ApsaraDB RDS instance, the value indicates the number of sensitive tables in all databases of the instance.
             /// </summary>
             [NameInMap("SensitiveCount")]
             [Validation(Required=false)]

@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? EventStatus { get; set; }
 
+        [NameInMap("FeatureType")]
+        [Validation(Required=false)]
+        public int? FeatureType { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Default value: **zh_cn**. Valid values:
         /// 
@@ -164,6 +168,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("ServiceRegionId")]
         [Validation(Required=false)]
         public string ServiceRegionId { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
         /// <summary>
         /// The username that is used to access the database.

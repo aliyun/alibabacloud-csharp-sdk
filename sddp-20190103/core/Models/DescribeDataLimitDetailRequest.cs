@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataLimitDetailRequest : TeaModel {
+        [NameInMap("FeatureType")]
+        [Validation(Required=false)]
+        public int? FeatureType { get; set; }
+
         /// <summary>
         /// The unique ID of the data asset that you want to query.
         /// 

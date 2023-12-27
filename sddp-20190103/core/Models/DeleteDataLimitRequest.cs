@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DeleteDataLimitRequest : TeaModel {
+        [NameInMap("FeatureType")]
+        [Validation(Required=false)]
+        public int? FeatureType { get; set; }
+
         /// <summary>
         /// The ID of the data asset.
         /// 
@@ -27,6 +31,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

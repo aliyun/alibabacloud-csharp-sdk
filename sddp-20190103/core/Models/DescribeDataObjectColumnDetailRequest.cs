@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("FeatureType")]
+        [Validation(Required=false)]
+        public int? FeatureType { get; set; }
+
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }

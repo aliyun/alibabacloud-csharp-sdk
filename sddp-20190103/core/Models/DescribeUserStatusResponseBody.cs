@@ -112,6 +112,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? OssTotalSize { get; set; }
 
+            [NameInMap("ProtectionDays")]
+            [Validation(Required=false)]
+            public int? ProtectionDays { get; set; }
+
             /// <summary>
             /// Indicates whether DSC is purchased. Valid values:
             /// 
@@ -152,6 +156,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("Trail")]
             [Validation(Required=false)]
             public bool? Trail { get; set; }
+
+            [NameInMap("UseAgentAudit")]
+            [Validation(Required=false)]
+            public bool? UseAgentAudit { get; set; }
 
             /// <summary>
             /// The number of instances that are used.

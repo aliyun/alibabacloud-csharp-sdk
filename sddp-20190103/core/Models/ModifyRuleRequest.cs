@@ -103,6 +103,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
+        /// <summary>
+        /// The data assets supported by the sensitive data detection rule. Valid values:
+        /// 
+        /// *   **0**: all data assets
+        /// *   **1**: structured data assets
+        /// *   **2**: unstructured data assets
+        /// </summary>
         [NameInMap("SupportForm")]
         [Validation(Required=false)]
         public int? SupportForm { get; set; }

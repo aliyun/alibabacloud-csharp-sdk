@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("ObjectFileCategory")]
+            [Validation(Required=false)]
+            public string ObjectFileCategory { get; set; }
+
             [NameInMap("ObjectType")]
             [Validation(Required=false)]
             public string ObjectType { get; set; }

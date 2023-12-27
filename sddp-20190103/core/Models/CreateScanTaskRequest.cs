@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public long? DataLimitId { get; set; }
 
+        [NameInMap("FeatureType")]
+        [Validation(Required=false)]
+        public int? FeatureType { get; set; }
+
         /// <summary>
         /// The interval between two consecutive custom scan tasks. Unit: days. Valid values: 1 to 2147483648.
         /// </summary>
@@ -79,6 +83,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("ScanRangeContent")]
         [Validation(Required=false)]
         public string ScanRangeContent { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
         /// <summary>
         /// The name of the scan task.

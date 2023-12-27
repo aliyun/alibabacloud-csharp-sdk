@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeTemplateAllRulesRequest : TeaModel {
+        [NameInMap("FeatureType")]
+        [Validation(Required=false)]
+        public int? FeatureType { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

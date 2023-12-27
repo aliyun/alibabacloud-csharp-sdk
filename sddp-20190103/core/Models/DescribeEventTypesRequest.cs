@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeEventTypesRequest : TeaModel {
+        [NameInMap("FeatureType")]
+        [Validation(Required=false)]
+        public int? FeatureType { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Valid values:
         /// 
