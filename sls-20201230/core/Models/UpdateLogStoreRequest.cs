@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? HotTtl { get; set; }
 
+        [NameInMap("infrequentAccessTTL")]
+        [Validation(Required=false)]
+        public int? InfrequentAccessTTL { get; set; }
+
         /// <summary>
         /// The name of the Logstore.
         /// </summary>
@@ -86,6 +90,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// </summary>
         [NameInMap("shardCount")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? ShardCount { get; set; }
 
         /// <summary>
@@ -96,6 +101,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// </summary>
         [NameInMap("telemetryType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TelemetryType { get; set; }
 
         /// <summary>

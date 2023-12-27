@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? HotTtl { get; set; }
 
+        [NameInMap("infrequentAccessTTL")]
+        [Validation(Required=false)]
+        public int? InfrequentAccessTTL { get; set; }
+
         [NameInMap("lastModifyTime")]
         [Validation(Required=false)]
         public int? LastModifyTime { get; set; }

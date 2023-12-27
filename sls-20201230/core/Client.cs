@@ -968,6 +968,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["hot_ttl"] = request.HotTtl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfrequentAccessTTL))
+            {
+                body["infrequentAccessTTL"] = request.InfrequentAccessTTL;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
                 body["logstoreName"] = request.LogstoreName;
@@ -1047,6 +1051,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTtl))
             {
                 body["hot_ttl"] = request.HotTtl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfrequentAccessTTL))
+            {
+                body["infrequentAccessTTL"] = request.InfrequentAccessTTL;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
@@ -9479,6 +9487,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["hot_ttl"] = request.HotTtl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfrequentAccessTTL))
+            {
+                body["infrequentAccessTTL"] = request.InfrequentAccessTTL;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
                 body["logstoreName"] = request.LogstoreName;
@@ -9559,6 +9571,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTtl))
             {
                 body["hot_ttl"] = request.HotTtl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfrequentAccessTTL))
+            {
+                body["infrequentAccessTTL"] = request.InfrequentAccessTTL;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
