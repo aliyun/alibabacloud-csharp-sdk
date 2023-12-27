@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        /// <summary>
+        /// The vSwitch ID.
+        /// </summary>
         [NameInMap("VswId")]
         [Validation(Required=false)]
         public string VswId { get; set; }

@@ -105,6 +105,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBNodeStorage { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable disk encryption.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("DiskEncryption")]
         [Validation(Required=false)]
         public string DiskEncryption { get; set; }
@@ -123,6 +131,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string ExecutorCount { get; set; }
 
+        /// <summary>
+        /// The Key Management Service (KMS) ID that is used for disk encryption. This parameter is valid only when DiskEncryption is set to true.
+        /// </summary>
         [NameInMap("KmsId")]
         [Validation(Required=false)]
         public string KmsId { get; set; }
@@ -130,10 +141,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// The mode of the cluster. Valid values:
         /// 
-        /// *   **Reserver**: the reserved mode
-        /// *   **Flexible**: the elastic mode
-        /// 
-        /// >  If you do not specify this parameter, the cluster is in reserved mode.
+        /// *   **Reserver**: the reserved mode.
+        /// *   **Flexible**: the elastic mode.
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]

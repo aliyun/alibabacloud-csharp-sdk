@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to detach all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:
+        /// Specifies whether to remove all tags from clusters. Default value: false. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   **true**
+        /// *   **false**
         /// 
-        /// Default value: false.
+        /// >  If you specify TagKey and this parameter, this parameter does not take effect.
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -30,12 +30,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// The region ID.
+        /// 
+        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of cluster N. Valid values of N: 1 to 50.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -49,12 +54,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the cluster. Set the value to `ALIYUN::ADB::CLUSTER`.
+        /// The resource type. Set the value to **ALIYUN::ADB::CLUSTER**.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The key of tag N. Valid values of N: 1 to 20.
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

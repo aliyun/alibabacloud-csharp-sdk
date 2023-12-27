@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The description of the task.
+        /// The queried task.
         /// </summary>
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
         public DescribeTaskInfoResponseBodyTaskInfo TaskInfo { get; set; }
         public class DescribeTaskInfoResponseBodyTaskInfo : TeaModel {
             /// <summary>
-            /// The start time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.
+            /// The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
             /// </summary>
             [NameInMap("BeginTime")]
             [Validation(Required=false)]
             public string BeginTime { get; set; }
 
             /// <summary>
-            /// The end time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.
+            /// The end time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
             /// </summary>
             [NameInMap("FinishTime")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// The status of the task.
+            /// The status. Valid values:
             /// 
             /// *   Waiting
             /// *   Running
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]

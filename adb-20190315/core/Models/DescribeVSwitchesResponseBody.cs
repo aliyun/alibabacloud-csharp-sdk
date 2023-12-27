@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public DescribeVSwitchesResponseBodyVSwitches VSwitches { get; set; }
         public class DescribeVSwitchesResponseBodyVSwitches : TeaModel {
+            /// <summary>
+            /// The queried vSwitch.
+            /// </summary>
             [NameInMap("VSwitch")]
             [Validation(Required=false)]
             public List<DescribeVSwitchesResponseBodyVSwitchesVSwitch> VSwitch { get; set; }
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// Indicates whether the vSwitch is the default vSwitch. Valid values: **true** **false**
+                /// Indicates whether the vSwitch is the default vSwitch. Valid values: **true**: The vSwitch is the default vSwitch. **false**: The vSwitch is not the default vSwitch.
                 /// </summary>
                 [NameInMap("IsDefault")]
                 [Validation(Required=false)]

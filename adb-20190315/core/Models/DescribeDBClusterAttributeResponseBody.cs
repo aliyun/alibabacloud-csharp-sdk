@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClusterAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The information about the cluster.
+        /// The queried cluster information.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The specifications of computing resources that are used in the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.
+                /// The specifications of computing resources that are used in the cluster in elastic mode. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
                 /// </summary>
                 [NameInMap("ComputeResource")]
                 [Validation(Required=false)]
                 public string ComputeResource { get; set; }
 
                 /// <summary>
-                /// The Virtual Private Cloud (VPC) endpoint of the cluster.
+                /// The Virtual Private Cloud (VPC) endpoint that is used to connect to the cluster.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string DBClusterStatus { get; set; }
 
                 /// <summary>
-                /// The type of the cluster. Valid values:
+                /// The cluster type. Valid values:
                 /// 
                 /// *   **Common**: common cluster.
                 /// *   **RDS_ANALYSIS**: MySQL analytic instance.
@@ -124,12 +124,18 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public long? DBNodeStorage { get; set; }
 
                 /// <summary>
-                /// The version of the database engine. **3.0** is returned.
+                /// The engine version of the cluster. **3.0** is returned.
                 /// </summary>
                 [NameInMap("DBVersion")]
                 [Validation(Required=false)]
                 public string DBVersion { get; set; }
 
+                /// <summary>
+                /// Indicates whether disk encryption is enabled. Valid values:
+                /// 
+                /// *   true
+                /// *   false
+                /// </summary>
                 [NameInMap("DiskEncryption")]
                 [Validation(Required=false)]
                 public string DiskEncryption { get; set; }
@@ -160,7 +166,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// The ID of the Data Transmission Service (DTS) synchronization task. This parameter is returned only for MySQL analytic instances.
+                /// The ID of the Data Transmission Service (DTS) synchronization job. This parameter is returned only for MySQL analytic instances.
                 /// </summary>
                 [NameInMap("DtsJobId")]
                 [Validation(Required=false)]
@@ -176,8 +182,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <summary>
                 /// The single-node specifications of an EIU. Valid values:
                 /// 
-                /// *   8Core64GB: If this value is returned, an EIU of the cluster has 24 cores and 192 GB memory.
-                /// *   12Core96GB: If this value is returned, an EIU of the cluster has 36 cores and 288 GB memory.
+                /// *   8Core64GB: If this value is returned, the specifications of an EIU are 24 cores and 192 GB memory.
+                /// *   12Core96GB: If this value is returned, the specifications of an EIU are 36 cores and 288 GB memory.
                 /// </summary>
                 [NameInMap("ElasticIOResourceSize")]
                 [Validation(Required=false)]
@@ -225,7 +231,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string ExecutorCount { get; set; }
 
                 /// <summary>
-                /// The time when the cluster expires. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC. Example: *2999-09-08T16:00:00Z*.
+                /// The expiration time of the cluster. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC. Example: *2999-09-08T16:00:00Z*.
                 /// 
                 /// > 
                 /// 
@@ -248,7 +254,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Expired { get; set; }
 
                 /// <summary>
-                /// The public IP address.
+                /// The public IP address of the cluster.
                 /// </summary>
                 [NameInMap("InnerIp")]
                 [Validation(Required=false)]
@@ -277,7 +283,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// *   **ManualLock**: The cluster is manually locked.
                 /// *   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.
                 /// *   **LockByRestoration**: The cluster is automatically locked due to cluster restoration.
-                /// *   **LockByDiskQuota**: The cluster is automatically locked when it has used 90% of its storage.
+                /// *   **LockByDiskQuota**: The cluster is automatically locked when 90% of the cluster storage is used.
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
@@ -293,7 +299,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// The maintenance window of the cluster. The window follows the ISO 8601 standard in the *HH:mmZ- HH:mmZ* format. The time is displayed in UTC. An example is *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.
+                /// The maintenance window of the cluster. The time is displayed in the *HH:mmZ-HH:mmZ* format in UTC. An example is *04:00Z-05:00Z*, which indicates that routine maintenance is performed from 04:00 to 05:00.
                 /// 
                 /// >  For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).
                 /// </summary>
@@ -352,7 +358,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The specifications of storage resources that are used in the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.
+                /// The specifications of storage resources that are used in the cluster in elastic mode. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
                 /// </summary>
                 [NameInMap("StorageResource")]
                 [Validation(Required=false)]

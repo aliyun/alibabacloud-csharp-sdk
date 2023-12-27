@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("MonthlyRepeat")]
+            [Validation(Required=false)]
+            public string MonthlyRepeat { get; set; }
+
             /// <summary>
             /// The name of the scaling plan.
             /// </summary>

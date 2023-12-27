@@ -1588,6 +1588,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["ElasticPlanEndDay"] = request.ElasticPlanEndDay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanMonthlyRepeat))
+            {
+                query["ElasticPlanMonthlyRepeat"] = request.ElasticPlanMonthlyRepeat;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanName))
             {
                 query["ElasticPlanName"] = request.ElasticPlanName;
@@ -1682,6 +1686,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanEndDay))
             {
                 query["ElasticPlanEndDay"] = request.ElasticPlanEndDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanMonthlyRepeat))
+            {
+                query["ElasticPlanMonthlyRepeat"] = request.ElasticPlanMonthlyRepeat;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanName))
             {
@@ -12007,6 +12015,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["ElasticPlanEndDay"] = request.ElasticPlanEndDay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanMonthlyRepeat))
+            {
+                query["ElasticPlanMonthlyRepeat"] = request.ElasticPlanMonthlyRepeat;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanName))
             {
                 query["ElasticPlanName"] = request.ElasticPlanName;
@@ -12100,6 +12112,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanEndDay))
             {
                 query["ElasticPlanEndDay"] = request.ElasticPlanEndDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanMonthlyRepeat))
+            {
+                query["ElasticPlanMonthlyRepeat"] = request.ElasticPlanMonthlyRepeat;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPlanName))
             {

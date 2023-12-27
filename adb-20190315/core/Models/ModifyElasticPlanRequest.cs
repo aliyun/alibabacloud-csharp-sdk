@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string ElasticPlanEndDay { get; set; }
 
+        [NameInMap("ElasticPlanMonthlyRepeat")]
+        [Validation(Required=false)]
+        public string ElasticPlanMonthlyRepeat { get; set; }
+
         /// <summary>
         /// The name of the scaling plan.
         /// 

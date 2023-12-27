@@ -11,21 +11,27 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
     public class DescribeAccountsRequest : TeaModel {
         /// <summary>
         /// The name of the database account.
+        /// 
+        /// >  If you do not specify this parameter, the information about all database accounts is returned.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// *   Normal: standard account.
-        /// *   Super: privileged account.
+        /// The type of the database account. If you do not specify this parameter, the information about all account types is returned. Valid values:
+        /// 
+        /// *   **Normal**: standard account.
+        /// *   **Super**: privileged account.
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// 
+        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

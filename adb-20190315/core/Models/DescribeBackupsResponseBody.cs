@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string BackupEndTime { get; set; }
 
                 /// <summary>
-                /// The ID of the backup set.
+                /// The backup set ID.
                 /// </summary>
                 [NameInMap("BackupId")]
                 [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string BackupMethod { get; set; }
 
                 /// <summary>
-                /// The backup size. Unit: bytes.
+                /// The size of the backup set. Unit: bytes.
                 /// </summary>
                 [NameInMap("BackupSize")]
                 [Validation(Required=false)]

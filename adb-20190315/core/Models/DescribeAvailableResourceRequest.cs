@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAvailableResourceRequest : TeaModel {
         /// <summary>
-        /// The supported mode. Valid values:
+        /// The language of query results. Valid values:
         /// 
-        /// *   **flexible**: elastic mode
-        /// *   **reserver**: reserved mode
+        /// *   **zh-CN** (default): Chinese.
+        /// *   **en-US**: English.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// The version of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// </summary>
         [NameInMap("DBClusterVersion")]
         [Validation(Required=false)]
         public string DBClusterVersion { get; set; }
@@ -39,7 +42,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The resources available in the zones.
+        /// The region ID.
+        /// 
+        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -54,7 +59,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the zone.
+        /// The zone ID.
+        /// 
+        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

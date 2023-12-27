@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Benefit { get; set; }
 
             /// <summary>
-            /// The SQL statement used to execute the BUILD task.
+            /// The SQL statement that is used to execute the BUILD job.
             /// </summary>
             [NameInMap("BuildSQL")]
             [Validation(Required=false)]
             public string BuildSQL { get; set; }
 
             /// <summary>
-            /// The state of the suggestion execution task. Valid values:
+            /// The state of the suggestion execution job. Valid values:
             /// 
             /// *   **SUCCEED**
             /// *   **FAILED**
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string JobStatus { get; set; }
 
             /// <summary>
-            /// The page number. Pages start from page 1. Default value: 1.
+            /// The page number. Pages start from 1. Default value: 1.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The SQL statement used to roll back the suggestion.
+            /// The SQL statement that is used to roll back the suggestion.
             /// </summary>
             [NameInMap("RollbackSQL")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string SubmitTime { get; set; }
 
             /// <summary>
-            /// The total number of entries returned. The value is an integer that is greater than or equal to 0. Default value: 0.
+            /// The total number of entries returned. Minimum value: 0. Default value: 0.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]

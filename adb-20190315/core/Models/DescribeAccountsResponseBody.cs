@@ -37,17 +37,19 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <summary>
                 /// The state of the database account. Valid values:
                 /// 
-                /// *   Creating
-                /// *   Available
-                /// *   Deleting
+                /// *   **Creating**
+                /// *   **Available**
+                /// *   **Deleting**
                 /// </summary>
                 [NameInMap("AccountStatus")]
                 [Validation(Required=false)]
                 public string AccountStatus { get; set; }
 
                 /// <summary>
-                /// *   Normal: standard account.
-                /// *   Super: privileged account.
+                /// The type of the database account. Valid values:
+                /// 
+                /// *   **Normal**: standard account.
+                /// *   **Super**: privileged account.
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
