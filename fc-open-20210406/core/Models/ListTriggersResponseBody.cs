@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The ARN of the RAM role that is used by the event source to invoke the function.
+            /// The Alibaba Cloud Resource Name (ARN) of the RAM role that is used by the event source to invoke the function.
             /// </summary>
             [NameInMap("invocationRole")]
             [Validation(Required=false)]
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             /// <summary>
             /// The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
             /// 
-            /// *   Object Storage Service (OSS) trigger: [OSSTriggerConfig](~~415697~~)).
+            /// *   Object Storage Service (OSS) trigger: [OSSTriggerConfig](~~415697~~).
             /// *   Simple Log Service trigger: [LogTriggerConfig](~~415694~~).
             /// *   Time trigger: [TimeTriggerConfig](~~415712~~).
             /// *   HTTP trigger: [HTTPTriggerConfig](~~415685~~).
             /// *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
-            /// *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~415674~~).
+            /// *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).
             /// *   MNS topic trigger: [MnsTopicTriggerConfig](~~415695~~).
-            /// *   EventBridge triggers: [EventBridgeTriggerConfig](~~2508622~~).
+            /// *   EventBridge triggers: [EventBridgeTriggerConfig](javascript:void\(0\)).
             /// </summary>
             [NameInMap("triggerConfig")]
             [Validation(Required=false)]

@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public List<ListFunctionAsyncInvokeConfigsResponseBodyConfigs> Configs { get; set; }
         public class ListFunctionAsyncInvokeConfigsResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// The time when the desktop group was created.
+            /// The time when the application was created.
             /// </summary>
             [NameInMap("createdTime")]
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// The configuration structure of the destination for asynchronous invocations. If you have not configured this parameter, this parameter is null.
+            /// The configuration structure of the destination for the asynchronous invocation. If you have not configured this parameter, this parameter is null.
             /// </summary>
             [NameInMap("destinationConfig")]
             [Validation(Required=false)]
             public DestinationConfig DestinationConfig { get; set; }
 
             /// <summary>
-            /// The name of the function.
+            /// The function name.
             /// </summary>
             [NameInMap("function")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public string LastModifiedTime { get; set; }
 
             /// <summary>
-            /// The maximum validity period of a message. If you have not configured this parameter, this parameter is null.
+            /// The maximum validity period of messages. If you have not configured this parameter, this parameter is null.
             /// </summary>
             [NameInMap("maxAsyncEventAgeInSeconds")]
             [Validation(Required=false)]
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public string Service { get; set; }
 
             /// <summary>
-            /// Indicates whether the asynchronous task feature is enabled.
+            /// Specifies whether to enable the asynchronous task feature.
             /// 
-            /// *   **true**: The asynchronous task feature is enabled.
-            /// *   **false**: The asynchronous task feature is disabled.
+            /// *   **true**
+            /// *   **false**
             /// 
             /// If you have not configured this parameter, this parameter is null.
             /// </summary>

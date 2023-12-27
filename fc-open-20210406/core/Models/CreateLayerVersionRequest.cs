@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Code Code { get; set; }
 
         /// <summary>
-        /// The runtime environments that are supported by the layer.
+        /// The runtimes that are supported by the layer.
         /// </summary>
         [NameInMap("compatibleRuntime")]
         [Validation(Required=false)]

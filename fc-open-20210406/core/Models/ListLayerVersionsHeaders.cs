@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string XFcAccountId { get; set; }
 
         /// <summary>
-        /// The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+        /// The time when the operation is called. The format is: **EEE,d MMM yyyy HH:mm:ss GMT**.
         /// </summary>
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]

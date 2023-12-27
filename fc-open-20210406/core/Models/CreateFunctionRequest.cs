@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public int? CaPort { get; set; }
 
         /// <summary>
-        /// The code of the function. The code must be packaged into a ZIP file. Choose **code** or **customContainerConfig** for the function.
+        /// The code of the function. The code must be packaged into a ZIP file. Configure **code** or **customContainerConfig**.
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// The configurations of the custom container runtime. After you configure the custom container runtime, Function Compute can execute the function in a container created from a custom image. Choose **code** or **customContainerConfig** for the function.
+        /// The configurations of the Custom Container runtime. After you configure the Custom Container runtime, Function Compute can execute the function in a container created from a custom image. Configure **code** or **customContainerConfig**.
         /// </summary>
         [NameInMap("customContainerConfig")]
         [Validation(Required=false)]
         public CustomContainerConfig CustomContainerConfig { get; set; }
 
         /// <summary>
-        /// The custom Domain Name System (DNS) configurations of the function.
+        /// The custom DNS configurations of the function.
         /// </summary>
         [NameInMap("customDNS")]
         [Validation(Required=false)]
@@ -145,6 +145,8 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// *   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)
         /// *   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)
         /// *   **g1**: same as **fc.gpu.tesla.1**
+        /// 
+        /// Default value: e1
         /// </summary>
         [NameInMap("instanceType")]
         [Validation(Required=false)]
@@ -153,28 +155,28 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// <summary>
         /// An array that consists of the information of layers.
         /// 
-        /// > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
+        /// >  If multiple layers exist, the layers are merged based on the array subscripts in descending order. The content of a layer with a smaller subscript overwrites that of a larger subscript.
         /// </summary>
         [NameInMap("layers")]
         [Validation(Required=false)]
         public List<string> Layers { get; set; }
 
         /// <summary>
-        /// The memory size for the function. Unit: MB. The value must be a multiple of 64. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
+        /// The memory size of the function. Unit: MB. The value must be a multiple of 64. The memory size varies based on the function instance type. For more information, see the "Instance types" section of the [Instance types and usage modes](~~179379~~) topic.
         /// </summary>
         [NameInMap("memorySize")]
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
         /// <summary>
-        /// The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).
+        /// The runtime of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).
         /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]
         public string Runtime { get; set; }
 
         /// <summary>
-        /// The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the function is terminated.
+        /// The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When this period is elapsed, the function execution is terminated.
         /// </summary>
         [NameInMap("timeout")]
         [Validation(Required=false)]

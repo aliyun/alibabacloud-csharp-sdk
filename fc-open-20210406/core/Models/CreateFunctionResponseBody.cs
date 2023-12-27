@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// <summary>
         /// An array that consists of the information of layers.
         /// 
-        /// > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
+        /// >  If multiple layers exist, the layers are merged based on the array subscripts in descending order. The content of a layer with a smaller subscript overwrites that of a larger subscript.
         /// </summary>
         [NameInMap("layers")]
         [Validation(Required=false)]

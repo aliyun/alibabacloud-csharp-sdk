@@ -92,6 +92,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public TracingConfig TracingConfig { get; set; }
 
+        [NameInMap("useSLRAuthentication")]
+        [Validation(Required=false)]
+        public bool? UseSLRAuthentication { get; set; }
+
         /// <summary>
         /// The VPC configuration. The configuration allows a function to access the specified VPC.
         /// </summary>

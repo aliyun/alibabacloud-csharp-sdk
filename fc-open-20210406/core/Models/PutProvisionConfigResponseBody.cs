@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public List<ScheduledActions> ScheduledActions { get; set; }
 
         /// <summary>
-        /// The expected number of provisioned instances.
+        /// The number of target provisioned instances.
         /// </summary>
         [NameInMap("target")]
         [Validation(Required=false)]

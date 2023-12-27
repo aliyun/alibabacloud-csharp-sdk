@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string TriggerName { get; set; }
 
         /// <summary>
-        /// The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.
+        /// The trigger type. Valid values: **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, **mns_topic**, and **eventbridge**.
         /// </summary>
         [NameInMap("triggerType")]
         [Validation(Required=false)]

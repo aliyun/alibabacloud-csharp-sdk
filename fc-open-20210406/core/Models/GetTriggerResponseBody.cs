@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// *   HTTP trigger: [HTTPTriggerConfig](~~415685~~).
         /// *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
         /// *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~415674~~).
-        /// *   MNS topic trigger: [MnsTopicTriggerConfig](~~415695~~).
+        /// *   Message Service (MNS) topic trigger: [MnsTopicTriggerConfig](~~415695~~).
         /// *   EventBridge triggers: [EventBridgeTriggerConfig](~~2508622~~).
         /// </summary>
         [NameInMap("triggerConfig")]

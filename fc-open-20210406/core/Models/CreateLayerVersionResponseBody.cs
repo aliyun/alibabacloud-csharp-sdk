@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class CreateLayerVersionResponseBody : TeaModel {
         /// <summary>
-        /// The access mode of the layer.
+        /// The access mode of the layer. Digit 0 specifies that the layer is private and digit 1 specifies that the layer is public. By default, public layers are public. Custom layers can be set to private or public.
         /// </summary>
         [NameInMap("acl")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public long? Codesize { get; set; }
 
         /// <summary>
-        /// The runtime environments that are supported by the layer.
+        /// The runtimes that are supported by the layer.
         /// </summary>
         [NameInMap("compatibleRuntime")]
         [Validation(Required=false)]

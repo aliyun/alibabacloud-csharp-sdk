@@ -28,10 +28,12 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string XFcDate { get; set; }
 
         /// <summary>
-        /// The method used to invoke the function. Valid values:
+        /// The invocation method. Valid values:
         /// 
-        /// *   **Sync**: synchronous
-        /// *   **Async**: asynchronous
+        /// *   **Sync**: synchronous invocations
+        /// *   **Async**: asynchronous invocations
+        /// 
+        /// Default value: Sync
         /// </summary>
         [NameInMap("X-Fc-Invocation-Type")]
         [Validation(Required=false)]

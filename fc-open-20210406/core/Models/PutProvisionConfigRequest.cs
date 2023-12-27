@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public List<ScheduledActions> ScheduledActions { get; set; }
 
         /// <summary>
-        /// The number of provisioned instances. Value range: [1,100000].
+        /// The number of target provisioned instances. Valid values: \[0,10000].
         /// </summary>
         [NameInMap("target")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public List<TargetTrackingPolicies> TargetTrackingPolicies { get; set; }
 
         /// <summary>
-        /// The name of the alias.
+        /// The service alias or latest version. Other versions are not supported.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

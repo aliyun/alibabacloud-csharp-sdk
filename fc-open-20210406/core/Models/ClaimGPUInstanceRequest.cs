@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string DiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// The system disk space of the GPU rendering instance.
+        /// The system disk space of the GPU rendering instance. Unit: GB.
         /// </summary>
         [NameInMap("diskSizeGigabytes")]
         [Validation(Required=false)]
         public string DiskSizeGigabytes { get; set; }
 
         /// <summary>
-        /// The image ID of the GPU-rendered instance.
+        /// The image ID of the GPU rendering instance.
         /// </summary>
         [NameInMap("imageId")]
         [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// The role of the user.
+        /// The user role.
         /// </summary>
         [NameInMap("role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
         /// <summary>
-        /// The ID of the security group.
+        /// The security group ID.
         /// </summary>
         [NameInMap("sgId")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// The vSwitch ID of the instance.
         /// </summary>
         [NameInMap("vswId")]
         [Validation(Required=false)]
