@@ -1,3 +1,6 @@
+2023-12-27 Version: 1.1.23
+- Generated csharp 2022-01-01 for pai-dsw.
+
 2023-08-14 Version: 1.1.22
 - Generated csharp 2022-01-01 for pai-dsw.
 

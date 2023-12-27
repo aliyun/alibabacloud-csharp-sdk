@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("ExcludePaths")]
+        [Validation(Required=false)]
+        public List<string> ExcludePaths { get; set; }
+
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
@@ -36,6 +40,20 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public List<GetInstanceSnapshotResponseBodyLabels> Labels { get; set; }
+        public class GetInstanceSnapshotResponseBodyLabels : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

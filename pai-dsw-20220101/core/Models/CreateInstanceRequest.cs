@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         }
 
+        [NameInMap("Driver")]
+        [Validation(Required=false)]
+        public string Driver { get; set; }
+
         [NameInMap("EcsSpec")]
         [Validation(Required=false)]
         public string EcsSpec { get; set; }
@@ -132,6 +136,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [NameInMap("ExtendedCIDRs")]
             [Validation(Required=false)]
             public List<string> ExtendedCIDRs { get; set; }
+
+            [NameInMap("ForwardInfos")]
+            [Validation(Required=false)]
+            public List<ForwardInfo> ForwardInfos { get; set; }
 
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]

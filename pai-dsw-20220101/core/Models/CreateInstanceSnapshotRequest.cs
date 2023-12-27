@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class CreateInstanceSnapshotRequest : TeaModel {
+        [NameInMap("ExcludePaths")]
+        [Validation(Required=false)]
+        public List<string> ExcludePaths { get; set; }
+
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
@@ -26,6 +30,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("Overwrite")]
+        [Validation(Required=false)]
+        public bool? Overwrite { get; set; }
 
         [NameInMap("SnapshotDescription")]
         [Validation(Required=false)]

@@ -31,9 +31,17 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public bool? DisassociateDatasets { get; set; }
 
+        [NameInMap("DisassociateDriver")]
+        [Validation(Required=false)]
+        public bool? DisassociateDriver { get; set; }
+
         [NameInMap("DisassociateVpc")]
         [Validation(Required=false)]
         public bool? DisassociateVpc { get; set; }
+
+        [NameInMap("Driver")]
+        [Validation(Required=false)]
+        public string Driver { get; set; }
 
         [NameInMap("EcsSpec")]
         [Validation(Required=false)]
@@ -50,6 +58,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
+
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public long? Priority { get; set; }
 
         [NameInMap("RequestedResource")]
         [Validation(Required=false)]
@@ -92,6 +104,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [NameInMap("ExtendedCIDRs")]
             [Validation(Required=false)]
             public List<string> ExtendedCIDRs { get; set; }
+
+            [NameInMap("ForwardInfos")]
+            [Validation(Required=false)]
+            public List<ForwardInfo> ForwardInfos { get; set; }
 
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]

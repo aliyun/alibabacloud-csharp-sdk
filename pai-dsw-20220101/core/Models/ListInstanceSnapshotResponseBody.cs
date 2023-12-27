@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public List<ListInstanceSnapshotResponseBodySnapshots> Snapshots { get; set; }
         public class ListInstanceSnapshotResponseBodySnapshots : TeaModel {
+            [NameInMap("ExcludePaths")]
+            [Validation(Required=false)]
+            public List<string> ExcludePaths { get; set; }
+
             [NameInMap("GmtCreateTime")]
             [Validation(Required=false)]
             public string GmtCreateTime { get; set; }
