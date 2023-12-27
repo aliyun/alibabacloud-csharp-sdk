@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAvailabilityZonesRequest : TeaModel {
         /// <summary>
-        /// Specifies the language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:
+        /// The language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:
         /// 
         /// *   **zh**: Chinese.
         /// *   **en**: English
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// The instance type of the instance.
+        /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
@@ -33,14 +36,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DbType { get; set; }
 
+        /// <summary>
+        /// The database engine version of the instance.
+        /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// The ID of the secondary zone that you want to exclude from the query results. You can configure both the ExcludeSecondaryZoneId and ExcludeZoneId parameters to filter multiple zones that you want to exclude from the query results.
+        /// </summary>
         [NameInMap("ExcludeSecondaryZoneId")]
         [Validation(Required=false)]
         public string ExcludeSecondaryZoneId { get; set; }
 
+        /// <summary>
+        /// The ID of the zone that you want to exclude from the query results.
+        /// </summary>
         [NameInMap("ExcludeZoneId")]
         [Validation(Required=false)]
         public string ExcludeZoneId { get; set; }
@@ -107,11 +119,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **cloud_essd3**: PL3 ESSD.
         /// *   **local_ssd**: local SSD.
         /// 
-        /// > 
-        /// 
-        /// *   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
-        /// 
-        /// *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+        /// > *   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
+        /// > *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

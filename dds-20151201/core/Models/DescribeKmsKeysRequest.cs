@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
+        /// <summary>
+        /// The region ID. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

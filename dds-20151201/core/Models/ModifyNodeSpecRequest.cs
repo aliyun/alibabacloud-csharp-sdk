@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyNodeSpecRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Default value: true. Valid values:
+        /// Specifies whether to enable automatic payment. Valid values:
         /// 
-        /// *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-        /// *   **false**: disables automatic payment.
+        /// *   **true** (default): enables automatic payment. Make sure that you have sufficient balance within your account.
+        /// *   **false**: disables automatic payment. In this case, you must manually pay for the instance.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The time when the changed configurations take effect. Default value: Immediately. Valid values:
+        /// The time when the changed configurations take effect. Valid values:
         /// 
-        /// *   **Immediately**: The new configurations immediately take effect.
+        /// *   **Immediately** (default): The new configurations immediately take effect
         /// *   **MaintainTime**: The new configurations take effect during the maintenance window of the instance.
         /// </summary>
         [NameInMap("EffectiveTime")]

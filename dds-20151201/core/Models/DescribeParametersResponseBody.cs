@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
         /// <summary>
-        /// The settings of parameters that are being configured.
+        /// The parameter settings in the configuration template.
         /// </summary>
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
@@ -105,11 +105,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
             public class DescribeParametersResponseBodyRunningParametersParameter : TeaModel {
                 /// <summary>
-                /// The role of the instance. Valid values:
+                /// 实例的角色类型，取值说明：
                 /// 
-                /// *   **db**: a shard node.
-                /// *   **cs**: a Configserver node.
-                /// *   **mongos**: a mongos node.
+                /// - **db**：shard角色。
+                /// - **cs**：config server角色。
+                /// - **mongos**：mongos角色。
                 /// </summary>
                 [NameInMap("CharacterType")]
                 [Validation(Required=false)]

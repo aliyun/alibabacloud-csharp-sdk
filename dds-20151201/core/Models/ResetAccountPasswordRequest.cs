@@ -10,31 +10,35 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ResetAccountPassword**.
+        /// The account for which you want to reset the password. Set the value to **root**.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The new password.
+        /// 
+        /// *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`
+        /// *   The password must be 8 to 32 characters in length.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// The type of the database account. Valid values:
+        /// The role of the instance. Valid values:
         /// 
-        /// *   mongos: an account that can be used to log on to mongos
-        /// *   shard: an account that can be used to log on to shards
+        /// *   db: a shard node.
+        /// *   cs: a Configserver node.
+        /// *   mongos: a mongos node.
         /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// com.aliyun.abs.dds.service.v20151201.domain.ResetDdsAccountPasswordRequest
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

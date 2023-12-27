@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **PostPaid** (default): pay-as-you-go
         /// *   **PrePaid**: subscription
         /// 
-        /// > **Period** is required if you set the value of this parameter to **PrePaid**.
+        /// >  If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -91,12 +91,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// Specifies whether to encrypt the disk. Valid values:
-        /// 
-        /// *   true
-        /// *   false
-        /// 
-        /// Default value: false.
+        /// Specifies whether to enable disk encryption.
         /// </summary>
         [NameInMap("Encrypted")]
         [Validation(Required=false)]
@@ -126,18 +121,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **4.0**
         /// *   **3.4**
         /// 
-        /// > 
-        /// 
-        /// *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
-        /// 
-        /// *   If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.
+        /// > *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+        /// > *   If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// 实例的全局IP白名单模板，多个IP白名单模板请用英文逗号（,）分隔，不可重复。
+        /// The global IP address whitelist template of the instance. Separate multiple templates with commas (,). The template name must be globally unique.
         /// </summary>
         [NameInMap("GlobalSecurityGroupIds")]
         [Validation(Required=false)]
@@ -165,13 +157,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **eu-central-1b**: Frankfurt Zone B
         /// *   **eu-central-1c**: Frankfurt Zone C
         /// 
-        /// > 
-        /// 
-        /// *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
-        /// 
-        /// *   The value of this parameter cannot be the same as the value of **ZoneId** or **SecondaryZoneId**.
-        /// 
-        /// *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
+        /// > *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
+        /// > *   The value of this parameter cannot be the same as the value of **ZoneId** or **SecondaryZoneId**.
+        /// > *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
         /// </summary>
         [NameInMap("HiddenZoneId")]
         [Validation(Required=false)]
@@ -187,11 +175,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The instance type of the mongos node. For more information, see [Sharded cluster instance types](~~311414~~).
             /// 
-            /// > 
-            /// 
-            /// *   **N** specifies the serial number of the mongos node for which the instance type is specified. For example, **Mongos.2.Class** specifies the instance type of the second mongos node.
-            /// 
-            /// *   Valid values for **N**: **2** to **32**.
+            /// > *   **N** specifies the serial number of the mongos node for which the instance type is specified. For example, **Mongos.2.Class** specifies the instance type of the second mongos node.
+            /// > *   Valid values for **N**: **2** to **32**.
             /// </summary>
             [NameInMap("Class")]
             [Validation(Required=false)]
@@ -201,8 +186,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The network type of the instance. Set the value to VPC.
-        /// 
-        /// ****
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -217,11 +200,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The subscription period of the instance. Unit: month.
+        /// The subscription period of the instance. Unit: months.
         /// 
-        /// Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, and 60************************
+        /// Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
         /// 
-        /// > This parameter is available and required if you set the value of **ChargeType** to **PrePaid**.
+        /// > When you set the **ChargeType** parameter to **PrePaid**, this parameter is valid and required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -237,6 +220,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
+        /// <summary>
+        /// The provisioned IOPS. Valid values: 0 to 50000.
+        /// </summary>
         [NameInMap("ProvisionedIops")]
         [Validation(Required=false)]
         public long? ProvisionedIops { get; set; }
@@ -249,7 +235,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The shard nodes of the instance.
+        /// The information of the shard node.
         /// </summary>
         [NameInMap("ReplicaSet")]
         [Validation(Required=false)]
@@ -258,11 +244,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The instance type of the shard node. For more information, see [Sharded cluster instance types](~~311414~~).
             /// 
-            /// > 
-            /// 
-            /// *   **N** specifies the serial number of the shard node for which the instance type is specified. For example, **ReplicaSet.2.Class** specifies the instance type of the second shard node.
-            /// 
-            /// *   Valid values for **N**: **2** to **32**.
+            /// > *   **N** specifies the serial number of the shard node for which the instance type is specified. For example, **ReplicaSet.2.Class** specifies the instance type of the second shard node.
+            /// > *   Valid values for **N**: **2** to **32**.
             /// </summary>
             [NameInMap("Class")]
             [Validation(Required=false)]
@@ -271,9 +254,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The number of read-only nodes in shard node N.
             /// 
-            /// Valid values: **0** to **5**. Default value: **0**.
+            /// Valid values: **0**, 1, 2, 3, 4, and **5**. Default value: **0**.
             /// 
-            /// > **N** specifies the serial number of the shard node for which you want to set the number of read-only nodes. For example, **ReplicaSet.2.ReadonlyReplicas** specifies the number of read-only nodes in the second shard node.
+            /// >  **N** specifies the serial number of the shard node for which you want to set the number of read-only nodes. For example, **ReplicaSet.2.ReadonlyReplicas** specifies the number of read-only nodes in the second shard node.
             /// </summary>
             [NameInMap("ReadonlyReplicas")]
             [Validation(Required=false)]
@@ -282,11 +265,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The storage space of the shard node. Unit: GB.
             /// 
-            /// > 
-            /// 
-            /// *   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).
-            /// 
-            /// *   **N** specifies the serial number of the shard node for which the storage space is specified. For example, **ReplicaSet.2.Storage** specifies the storage space of the second shard node.
+            /// > *   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).
+            /// > *   **N** specifies the serial number of the shard node for which the storage space is specified. For example, **ReplicaSet.2.Storage** specifies the storage space of the second shard node.
             /// </summary>
             [NameInMap("Storage")]
             [Validation(Required=false)]
@@ -340,12 +320,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **eu-central-1b**: Frankfurt Zone B
         /// *   **eu-central-1c**: Frankfurt Zone C
         /// 
-        /// > 
-        /// 
-        /// *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
-        /// 
-        /// *   The value of this parameter cannot be the same as the value of **ZoneId** or **HiddenZoneId**.
-        /// *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
+        /// > *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
+        /// > *   The value of this parameter cannot be the same as the value of **ZoneId** or **HiddenZoneId**.
+        /// > *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
         /// </summary>
         [NameInMap("SecondaryZoneId")]
         [Validation(Required=false)]
@@ -358,11 +335,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   IP addresses, such as 10.23.12.24.
         /// *   CIDR blocks, such as 10.23.12.0/24. In this case, 24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
         /// 
-        /// > 
-        /// 
-        /// *   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.
-        /// 
-        /// *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.
+        /// > *   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.
+        /// > *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.
         /// </summary>
         [NameInMap("SecurityIPList")]
         [Validation(Required=false)]
@@ -380,11 +354,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The storage engine of the instance. Set the value to **WiredTiger**.
         /// 
-        /// > 
-        /// 
-        /// *   If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.
-        /// 
-        /// *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+        /// > *   If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.
+        /// > *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
         /// </summary>
         [NameInMap("StorageEngine")]
         [Validation(Required=false)]
@@ -398,24 +369,34 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **cloud_essd3**: ESSD PL3
         /// *   **local_ssd**: local SSD
         /// 
-        /// > 
-        /// 
-        /// *   Instances of MongoDB 4.4 and later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
-        /// 
-        /// *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+        /// > *   Instances of MongoDB 4.4 and later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
+        /// > *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }
 
+        /// <summary>
+        /// The custom tags added to the instance.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateShardingDBInstanceRequestTag> Tag { get; set; }
         public class CreateShardingDBInstanceRequestTag : TeaModel {
+            /// <summary>
+            /// The key of the tag.
+            /// 
+            /// > **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag.
+            /// 
+            /// > **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -423,14 +404,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The vSwitch ID.
+        /// The vSwitch ID of the instance.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC).
+        /// The ID of the VPC.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

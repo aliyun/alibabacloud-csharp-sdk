@@ -1,3 +1,6 @@
+2023-12-27 Version: 5.0.1
+- Generated csharp 2015-12-01 for Dds.
+
 2023-12-13 Version: 5.0.0
 - Generated csharp 2015-12-01 for Dds.
 

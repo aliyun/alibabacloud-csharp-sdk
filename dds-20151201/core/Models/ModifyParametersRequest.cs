@@ -12,17 +12,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The role of the instance. Valid values:
         /// 
-        /// *   **db**: a shard node
-        /// *   **cs**: a Configserver node
-        /// *   **mongos**: a mongos node
-        /// *   **logic**: a sharded cluster instance
+        /// *   **db**: a shard node.
+        /// *   **cs**: a Configserver node.
+        /// *   **mongos**: a mongos node.
         /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
         /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.
         /// </summary>

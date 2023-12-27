@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyAuditLogFilterRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The type of the audit log entries to be collected. Valid values:
+        /// The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:
         /// 
         /// *   **admin**: O\&M and management operations
         /// *   **slow**: slow query logs

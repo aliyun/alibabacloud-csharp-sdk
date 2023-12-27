@@ -498,7 +498,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
+          * This operation is applicable to replica set instances or sharded cluster instances.
+          * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
           *
           * @param request CheckRecoveryConditionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -568,7 +569,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
+          * This operation is applicable to replica set instances or sharded cluster instances.
+          * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
           *
           * @param request CheckRecoveryConditionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -638,7 +640,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
+          * This operation is applicable to replica set instances or sharded cluster instances.
+          * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
           *
           * @param request CheckRecoveryConditionRequest
           * @return CheckRecoveryConditionResponse
@@ -650,7 +653,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
+          * This operation is applicable to replica set instances or sharded cluster instances.
+          * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
           *
           * @param request CheckRecoveryConditionRequest
           * @return CheckRecoveryConditionResponse
@@ -661,6 +665,13 @@ namespace AlibabaCloud.SDK.Dds20151201
             return await CheckRecoveryConditionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Database accounts can be created only for shards in sharded cluster instances that use cloud disks.
+          *
+          * @param request CreateAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAccountResponse
+         */
         public CreateAccountResponse CreateAccountWithOptions(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -712,6 +723,13 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Database accounts can be created only for shards in sharded cluster instances that use cloud disks.
+          *
+          * @param request CreateAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAccountResponse
+         */
         public async Task<CreateAccountResponse> CreateAccountWithOptionsAsync(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -763,12 +781,24 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Database accounts can be created only for shards in sharded cluster instances that use cloud disks.
+          *
+          * @param request CreateAccountRequest
+          * @return CreateAccountResponse
+         */
         public CreateAccountResponse CreateAccount(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAccountWithOptions(request, runtime);
         }
 
+        /**
+          * Database accounts can be created only for shards in sharded cluster instances that use cloud disks.
+          *
+          * @param request CreateAccountRequest
+          * @return CreateAccountResponse
+         */
         public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5459,6 +5489,15 @@ namespace AlibabaCloud.SDK.Dds20151201
             return await DescribeDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is a replica set or sharded cluster instance.
+          * *   The instance uses local physical disks to store data.
+          *
+          * @param request DescribeDBInstanceSwitchLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceSwitchLogResponse
+         */
         public DescribeDBInstanceSwitchLogResponse DescribeDBInstanceSwitchLogWithOptions(DescribeDBInstanceSwitchLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5506,6 +5545,15 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceSwitchLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is a replica set or sharded cluster instance.
+          * *   The instance uses local physical disks to store data.
+          *
+          * @param request DescribeDBInstanceSwitchLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceSwitchLogResponse
+         */
         public async Task<DescribeDBInstanceSwitchLogResponse> DescribeDBInstanceSwitchLogWithOptionsAsync(DescribeDBInstanceSwitchLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5553,12 +5601,28 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceSwitchLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is a replica set or sharded cluster instance.
+          * *   The instance uses local physical disks to store data.
+          *
+          * @param request DescribeDBInstanceSwitchLogRequest
+          * @return DescribeDBInstanceSwitchLogResponse
+         */
         public DescribeDBInstanceSwitchLogResponse DescribeDBInstanceSwitchLog(DescribeDBInstanceSwitchLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceSwitchLogWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is a replica set or sharded cluster instance.
+          * *   The instance uses local physical disks to store data.
+          *
+          * @param request DescribeDBInstanceSwitchLogRequest
+          * @return DescribeDBInstanceSwitchLogResponse
+         */
         public async Task<DescribeDBInstanceSwitchLogResponse> DescribeDBInstanceSwitchLogAsync(DescribeDBInstanceSwitchLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7091,6 +7155,13 @@ namespace AlibabaCloud.SDK.Dds20151201
             return await DescribeKernelReleaseNotesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Queried keys are available only for disk encryption.
+          *
+          * @param request DescribeKmsKeysRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeKmsKeysResponse
+         */
         public DescribeKmsKeysResponse DescribeKmsKeysWithOptions(DescribeKmsKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7130,6 +7201,13 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeKmsKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Queried keys are available only for disk encryption.
+          *
+          * @param request DescribeKmsKeysRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeKmsKeysResponse
+         */
         public async Task<DescribeKmsKeysResponse> DescribeKmsKeysWithOptionsAsync(DescribeKmsKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7169,12 +7247,24 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeKmsKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Queried keys are available only for disk encryption.
+          *
+          * @param request DescribeKmsKeysRequest
+          * @return DescribeKmsKeysResponse
+         */
         public DescribeKmsKeysResponse DescribeKmsKeys(DescribeKmsKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeKmsKeysWithOptions(request, runtime);
         }
 
+        /**
+          * Queried keys are available only for disk encryption.
+          *
+          * @param request DescribeKmsKeysRequest
+          * @return DescribeKmsKeysResponse
+         */
         public async Task<DescribeKmsKeysResponse> DescribeKmsKeysAsync(DescribeKmsKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8699,6 +8789,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowHDMIps))
+            {
+                query["ShowHDMIps"] = request.ShowHDMIps;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8741,6 +8835,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowHDMIps))
+            {
+                query["ShowHDMIps"] = request.ShowHDMIps;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10269,7 +10367,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * *   The instance must be in the running state when you call this operation.
-          * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+          * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
           * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
           *
           * @param request ModifyAuditLogFilterRequest
@@ -10329,7 +10427,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * *   The instance must be in the running state when you call this operation.
-          * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+          * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
           * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
           *
           * @param request ModifyAuditLogFilterRequest
@@ -10389,7 +10487,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * *   The instance must be in the running state when you call this operation.
-          * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+          * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
           * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
           *
           * @param request ModifyAuditLogFilterRequest
@@ -10403,7 +10501,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * *   The instance must be in the running state when you call this operation.
-          * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+          * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
           * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
           *
           * @param request ModifyAuditLogFilterRequest
@@ -12606,7 +12704,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   A replica set or sharded cluster instance is used.
+          * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
+          * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
           *
           * @param request ModifyInstanceVpcAuthModeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12664,7 +12765,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   A replica set or sharded cluster instance is used.
+          * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
+          * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
           *
           * @param request ModifyInstanceVpcAuthModeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12722,7 +12826,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   A replica set or sharded cluster instance is used.
+          * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
+          * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
           *
           * @param request ModifyInstanceVpcAuthModeRequest
           * @return ModifyInstanceVpcAuthModeResponse
@@ -12734,7 +12841,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   A replica set or sharded cluster instance is used.
+          * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
+          * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
           *
           * @param request ModifyInstanceVpcAuthModeRequest
           * @return ModifyInstanceVpcAuthModeResponse
@@ -13162,7 +13272,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * ## Precautions
+          * ### Precautions
           * *   The instance must be in the Running state when you call this operation.
           * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
           *
@@ -13230,7 +13340,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * ## Precautions
+          * ### Precautions
           * *   The instance must be in the Running state when you call this operation.
           * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
           *
@@ -13298,7 +13408,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * ## Precautions
+          * ### Precautions
           * *   The instance must be in the Running state when you call this operation.
           * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
           *
@@ -13312,7 +13422,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * ## Precautions
+          * ### Precautions
           * *   The instance must be in the Running state when you call this operation.
           * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
           *
@@ -13727,6 +13837,13 @@ namespace AlibabaCloud.SDK.Dds20151201
             return await ModifySecurityIpsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
+          *
+          * @param request ModifyTaskInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyTaskInfoResponse
+         */
         public ModifyTaskInfoResponse ModifyTaskInfoWithOptions(ModifyTaskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13778,6 +13895,13 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyTaskInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
+          *
+          * @param request ModifyTaskInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyTaskInfoResponse
+         */
         public async Task<ModifyTaskInfoResponse> ModifyTaskInfoWithOptionsAsync(ModifyTaskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13829,12 +13953,24 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyTaskInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
+          *
+          * @param request ModifyTaskInfoRequest
+          * @return ModifyTaskInfoResponse
+         */
         public ModifyTaskInfoResponse ModifyTaskInfo(ModifyTaskInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTaskInfoWithOptions(request, runtime);
         }
 
+        /**
+          * The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
+          *
+          * @param request ModifyTaskInfoRequest
+          * @return ModifyTaskInfoResponse
+         */
         public async Task<ModifyTaskInfoResponse> ModifyTaskInfoAsync(ModifyTaskInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

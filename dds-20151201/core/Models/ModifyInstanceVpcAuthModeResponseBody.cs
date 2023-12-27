@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyInstanceVpcAuthModeResponseBody : TeaModel {
         /// <summary>
-        /// Specifies whether to enable authentication to allow access within a VPC. Valid values:
-        /// 
-        /// *   **Open**: enables password-free access.
-        /// *   **Close**: disables password-free access.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
