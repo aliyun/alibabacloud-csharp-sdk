@@ -41,10 +41,16 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The page number.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page. Valid values: 1 to 100.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -56,22 +62,44 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the dedicated block storage cluster belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The states of dedicated block storage clusters. Valid values:
+        /// 
+        /// *   Preparing
+        /// *   Running
+        /// *   Expired
+        /// *   Offline
+        /// 
+        /// Multiple states can be specified. Valid values of N: 1, 2, 3, and 4.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
+        /// <summary>
+        /// The tags. Up to 20 tags are supported.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDedicatedBlockStorageClustersRequestTag> Tag { get; set; }
         public class DescribeDedicatedBlockStorageClustersRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the dedicated block storage cluster.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the dedicated block storage cluster.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
