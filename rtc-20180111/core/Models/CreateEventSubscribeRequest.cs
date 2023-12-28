@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("Role")]
+        [Validation(Required=false)]
+        public long? Role { get; set; }
+
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<string> Users { get; set; }

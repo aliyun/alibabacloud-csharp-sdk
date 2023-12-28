@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public List<RemoveTerminalsResponseBodyTerminalsTerminal> Terminal { get; set; }
             public class RemoveTerminalsResponseBodyTerminalsTerminal : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
                 public int? Code { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
             }
-        };
+
+        }
 
     }
 

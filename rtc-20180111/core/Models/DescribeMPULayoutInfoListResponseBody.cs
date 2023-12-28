@@ -17,9 +17,20 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public List<DescribeMPULayoutInfoListResponseBodyLayoutsLayout> Layout { get; set; }
             public class DescribeMPULayoutInfoListResponseBodyLayoutsLayout : TeaModel {
+                [NameInMap("AudioMixCount")]
+                [Validation(Required=false)]
                 public int? AudioMixCount { get; set; }
+
+                [NameInMap("LayoutId")]
+                [Validation(Required=false)]
                 public long? LayoutId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Panes")]
+                [Validation(Required=false)]
                 public DescribeMPULayoutInfoListResponseBodyLayoutsLayoutPanes Panes { get; set; }
                 public class DescribeMPULayoutInfoListResponseBodyLayoutsLayoutPanes : TeaModel {
                     [NameInMap("Panes")]
@@ -57,8 +68,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

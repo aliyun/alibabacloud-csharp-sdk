@@ -1,3 +1,6 @@
+2023-12-28 Version: 1.4.0
+- Generated csharp 2018-01-11 for rtc.
+
 2022-05-06 Version: 1.3.5
 - Add DescribeAppKey interface.
 

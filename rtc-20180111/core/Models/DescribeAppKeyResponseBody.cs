@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppKeyResponseBody : TeaModel {
+        /// <summary>
+        /// AppKey。
+        /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }

@@ -17,9 +17,17 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
+        [NameInMap("CropMode")]
+        [Validation(Required=false)]
+        public long? CropMode { get; set; }
+
         [NameInMap("LayoutIds")]
         [Validation(Required=false)]
         public List<long?> LayoutIds { get; set; }
+
+        [NameInMap("MediaEncode")]
+        [Validation(Required=false)]
+        public long? MediaEncode { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -44,6 +52,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("TaskProfile")]
+        [Validation(Required=false)]
+        public string TaskProfile { get; set; }
 
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

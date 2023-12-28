@@ -120,7 +120,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [NameInMap("EnablePortraitSegmentation")]
             [Validation(Required=false)]
             public bool? EnablePortraitSegmentation { get; set; }
-        };
+
+        }
 
         [NameInMap("LayoutIds")]
         [Validation(Required=false)]

@@ -124,6 +124,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string OssBucket { get; set; }
 
+        [NameInMap("OssEndpoint")]
+        [Validation(Required=false)]
+        public string OssEndpoint { get; set; }
+
         [NameInMap("OssFilePrefix")]
         [Validation(Required=false)]
         public string OssFilePrefix { get; set; }

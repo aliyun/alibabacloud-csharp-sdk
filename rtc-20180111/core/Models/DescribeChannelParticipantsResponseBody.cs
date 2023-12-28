@@ -32,7 +32,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [NameInMap("User")]
             [Validation(Required=false)]
             public List<string> User { get; set; }
-        };
+
+        }
 
     }
 
