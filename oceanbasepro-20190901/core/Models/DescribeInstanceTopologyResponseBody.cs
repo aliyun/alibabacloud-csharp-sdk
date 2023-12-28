@@ -150,6 +150,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                         [Validation(Required=false)]
                         public string NodeId { get; set; }
 
+                        [NameInMap("ReplicaType")]
+                        [Validation(Required=false)]
+                        public string ReplicaType { get; set; }
+
                         /// <summary>
                         /// Alibaba Cloud CLI
                         /// </summary>
@@ -206,6 +210,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public List<DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes> Nodes { get; set; }
                 public class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes : TeaModel {
+                    [NameInMap("FullCopyId")]
+                    [Validation(Required=false)]
+                    public long? FullCopyId { get; set; }
+
                     /// <summary>
                     /// The information of zones.
                     /// </summary>
@@ -315,6 +323,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [NameInMap("NodeStatus")]
                     [Validation(Required=false)]
                     public string NodeStatus { get; set; }
+
+                    [NameInMap("ReadOnlyCopyId")]
+                    [Validation(Required=false)]
+                    public long? ReadOnlyCopyId { get; set; }
+
+                    [NameInMap("ReplicaType")]
+                    [Validation(Required=false)]
+                    public string ReplicaType { get; set; }
 
                 }
 

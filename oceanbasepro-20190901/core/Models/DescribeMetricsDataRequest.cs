@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string Metrics { get; set; }
 
+        [NameInMap("ReplicaType")]
+        [Validation(Required=false)]
+        public string ReplicaType { get; set; }
+
         [NameInMap("SortMetricKey")]
         [Validation(Required=false)]
         public string SortMetricKey { get; set; }

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string PrimaryZone { get; set; }
 
+        [NameInMap("TenantEndpointDirectId")]
+        [Validation(Required=false)]
+        public string TenantEndpointDirectId { get; set; }
+
         [NameInMap("TenantEndpointId")]
         [Validation(Required=false)]
         public string TenantEndpointId { get; set; }
@@ -47,6 +51,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
+
+        [NameInMap("UserDirectVSwitchId")]
+        [Validation(Required=false)]
+        public string UserDirectVSwitchId { get; set; }
 
         /// <summary>
         /// The request ID.

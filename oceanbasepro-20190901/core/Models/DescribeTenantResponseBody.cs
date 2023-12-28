@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("DataMergeTime")]
+            [Validation(Required=false)]
+            public string DataMergeTime { get; set; }
+
             /// <summary>
             /// The list of zones.
             /// </summary>
@@ -212,6 +216,94 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string PrimaryZoneDeployType { get; set; }
 
+            [NameInMap("ReadOnlyResource")]
+            [Validation(Required=false)]
+            public DescribeTenantResponseBodyTenantReadOnlyResource ReadOnlyResource { get; set; }
+            public class DescribeTenantResponseBodyTenantReadOnlyResource : TeaModel {
+                [NameInMap("CapacityUnit")]
+                [Validation(Required=false)]
+                public DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit CapacityUnit { get; set; }
+                public class DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit : TeaModel {
+                    [NameInMap("MaxCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MaxCapacityUnit { get; set; }
+
+                    [NameInMap("MinCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MinCapacityUnit { get; set; }
+
+                    [NameInMap("UsedCapacit")]
+                    [Validation(Required=false)]
+                    public int? UsedCapacit { get; set; }
+
+                }
+
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
+                public DescribeTenantResponseBodyTenantReadOnlyResourceCpu Cpu { get; set; }
+                public class DescribeTenantResponseBodyTenantReadOnlyResourceCpu : TeaModel {
+                    [NameInMap("TotalCpu")]
+                    [Validation(Required=false)]
+                    public float? TotalCpu { get; set; }
+
+                    [NameInMap("UnitCpu")]
+                    [Validation(Required=false)]
+                    public float? UnitCpu { get; set; }
+
+                    [NameInMap("UsedCpu")]
+                    [Validation(Required=false)]
+                    public float? UsedCpu { get; set; }
+
+                }
+
+                [NameInMap("DiskSize")]
+                [Validation(Required=false)]
+                public DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize DiskSize { get; set; }
+                public class DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize : TeaModel {
+                    [NameInMap("UsedDiskSize")]
+                    [Validation(Required=false)]
+                    public float? UsedDiskSize { get; set; }
+
+                }
+
+                [NameInMap("LogDiskSize")]
+                [Validation(Required=false)]
+                public DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize LogDiskSize { get; set; }
+                public class DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize : TeaModel {
+                    [NameInMap("TotalLogDisk")]
+                    [Validation(Required=false)]
+                    public int? TotalLogDisk { get; set; }
+
+                    [NameInMap("UnitLogDisk")]
+                    [Validation(Required=false)]
+                    public int? UnitLogDisk { get; set; }
+
+                }
+
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
+                public DescribeTenantResponseBodyTenantReadOnlyResourceMemory Memory { get; set; }
+                public class DescribeTenantResponseBodyTenantReadOnlyResourceMemory : TeaModel {
+                    [NameInMap("TotalMemory")]
+                    [Validation(Required=false)]
+                    public float? TotalMemory { get; set; }
+
+                    [NameInMap("UnitMemory")]
+                    [Validation(Required=false)]
+                    public float? UnitMemory { get; set; }
+
+                    [NameInMap("UsedMemory")]
+                    [Validation(Required=false)]
+                    public float? UsedMemory { get; set; }
+
+                }
+
+                [NameInMap("UnitNum")]
+                [Validation(Required=false)]
+                public int? UnitNum { get; set; }
+
+            }
+
             /// <summary>
             /// <DescribeTenantResponse>
             ///     <RequestId>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</RequestId>
@@ -298,6 +390,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [NameInMap("AddressType")]
                 [Validation(Required=false)]
                 public string AddressType { get; set; }
+
+                [NameInMap("ConnectionReplicaType")]
+                [Validation(Required=false)]
+                public string ConnectionReplicaType { get; set; }
 
                 /// <summary>
                 /// The Internet address for accessing the tenant.
@@ -589,6 +685,36 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [NameInMap("TenantZoneId")]
                 [Validation(Required=false)]
                 public string TenantZoneId { get; set; }
+
+                [NameInMap("TenantZoneReplicas")]
+                [Validation(Required=false)]
+                public List<DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas> TenantZoneReplicas { get; set; }
+                public class DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas : TeaModel {
+                    [NameInMap("FullCopyId")]
+                    [Validation(Required=false)]
+                    public int? FullCopyId { get; set; }
+
+                    [NameInMap("LogicZoneName")]
+                    [Validation(Required=false)]
+                    public string LogicZoneName { get; set; }
+
+                    [NameInMap("ReadOnlyCopyId")]
+                    [Validation(Required=false)]
+                    public string ReadOnlyCopyId { get; set; }
+
+                    [NameInMap("ZoneCopyId")]
+                    [Validation(Required=false)]
+                    public int? ZoneCopyId { get; set; }
+
+                    [NameInMap("ZoneNodes")]
+                    [Validation(Required=false)]
+                    public string ZoneNodes { get; set; }
+
+                    [NameInMap("ZoneReplicaType")]
+                    [Validation(Required=false)]
+                    public string ZoneReplicaType { get; set; }
+
+                }
 
                 /// <summary>
                 /// The character set.

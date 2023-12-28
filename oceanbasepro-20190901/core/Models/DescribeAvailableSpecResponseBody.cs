@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                 }
 
+                [NameInMap("DiskTypes")]
+                [Validation(Required=false)]
+                public List<string> DiskTypes { get; set; }
+
                 [NameInMap("InstanceClass")]
                 [Validation(Required=false)]
                 public string InstanceClass { get; set; }

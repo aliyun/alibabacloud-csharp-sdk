@@ -204,6 +204,142 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string ProxyServiceStatus { get; set; }
 
+            [NameInMap("ReadOnlyResource")]
+            [Validation(Required=false)]
+            public DescribeInstanceResponseBodyInstanceReadOnlyResource ReadOnlyResource { get; set; }
+            public class DescribeInstanceResponseBodyInstanceReadOnlyResource : TeaModel {
+                [NameInMap("CapacityUnit")]
+                [Validation(Required=false)]
+                public DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit CapacityUnit { get; set; }
+                public class DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit : TeaModel {
+                    [NameInMap("MaxCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MaxCapacityUnit { get; set; }
+
+                    [NameInMap("MinCapacityUnit")]
+                    [Validation(Required=false)]
+                    public int? MinCapacityUnit { get; set; }
+
+                    [NameInMap("UsedCapacityUnit")]
+                    [Validation(Required=false)]
+                    public string UsedCapacityUnit { get; set; }
+
+                }
+
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
+                public DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu Cpu { get; set; }
+                public class DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu : TeaModel {
+                    [NameInMap("OriginalTotalCpu")]
+                    [Validation(Required=false)]
+                    public long? OriginalTotalCpu { get; set; }
+
+                    [NameInMap("TotalCpu")]
+                    [Validation(Required=false)]
+                    public long? TotalCpu { get; set; }
+
+                    [NameInMap("UnitCpu")]
+                    [Validation(Required=false)]
+                    public long? UnitCpu { get; set; }
+
+                    [NameInMap("UsedCpu")]
+                    [Validation(Required=false)]
+                    public long? UsedCpu { get; set; }
+
+                }
+
+                [NameInMap("DiskSize")]
+                [Validation(Required=false)]
+                public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize DiskSize { get; set; }
+                public class DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize : TeaModel {
+                    [NameInMap("DataUsedSize")]
+                    [Validation(Required=false)]
+                    public double? DataUsedSize { get; set; }
+
+                    [NameInMap("MaxDiskSize")]
+                    [Validation(Required=false)]
+                    public double? MaxDiskSize { get; set; }
+
+                    [NameInMap("MaxDiskUsedObServer")]
+                    [Validation(Required=false)]
+                    public List<string> MaxDiskUsedObServer { get; set; }
+
+                    [NameInMap("MaxDiskUsedPercent")]
+                    [Validation(Required=false)]
+                    public double? MaxDiskUsedPercent { get; set; }
+
+                    [NameInMap("OriginalTotalDiskSize")]
+                    [Validation(Required=false)]
+                    public long? OriginalTotalDiskSize { get; set; }
+
+                    [NameInMap("TotalDiskSize")]
+                    [Validation(Required=false)]
+                    public long? TotalDiskSize { get; set; }
+
+                    [NameInMap("UnitDiskSize")]
+                    [Validation(Required=false)]
+                    public long? UnitDiskSize { get; set; }
+
+                    [NameInMap("UsedDiskSize")]
+                    [Validation(Required=false)]
+                    public long? UsedDiskSize { get; set; }
+
+                }
+
+                [NameInMap("LogDiskSize")]
+                [Validation(Required=false)]
+                public DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize LogDiskSize { get; set; }
+                public class DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize : TeaModel {
+                    [NameInMap("LogAssignedSize")]
+                    [Validation(Required=false)]
+                    public string LogAssignedSize { get; set; }
+
+                    [NameInMap("MaxLogAssignedObServer")]
+                    [Validation(Required=false)]
+                    public List<string> MaxLogAssignedObServer { get; set; }
+
+                    [NameInMap("MaxLogAssignedPercent")]
+                    [Validation(Required=false)]
+                    public string MaxLogAssignedPercent { get; set; }
+
+                    [NameInMap("TotalDiskSize")]
+                    [Validation(Required=false)]
+                    public long? TotalDiskSize { get; set; }
+
+                    [NameInMap("UnitDiskSize")]
+                    [Validation(Required=false)]
+                    public long? UnitDiskSize { get; set; }
+
+                }
+
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
+                public DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory Memory { get; set; }
+                public class DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory : TeaModel {
+                    [NameInMap("OriginalTotalMemory")]
+                    [Validation(Required=false)]
+                    public long? OriginalTotalMemory { get; set; }
+
+                    [NameInMap("TotalMemory")]
+                    [Validation(Required=false)]
+                    public long? TotalMemory { get; set; }
+
+                    [NameInMap("UnitMemory")]
+                    [Validation(Required=false)]
+                    public long? UnitMemory { get; set; }
+
+                    [NameInMap("UsedMemory")]
+                    [Validation(Required=false)]
+                    public long? UsedMemory { get; set; }
+
+                }
+
+                [NameInMap("UnitCount")]
+                [Validation(Required=false)]
+                public long? UnitCount { get; set; }
+
+            }
+
             [NameInMap("ReplicaMode")]
             [Validation(Required=false)]
             public string ReplicaMode { get; set; }
@@ -359,6 +495,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [NameInMap("MaxLogAssignedPercent")]
                     [Validation(Required=false)]
                     public string MaxLogAssignedPercent { get; set; }
+
+                    [NameInMap("OriginalTotalDiskSize")]
+                    [Validation(Required=false)]
+                    public int? OriginalTotalDiskSize { get; set; }
 
                     /// <summary>
                     /// The ID of the region.
