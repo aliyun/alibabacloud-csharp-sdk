@@ -1545,6 +1545,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                [NameInMap("SourcePrometheusParameters")]
+                [Validation(Required=false)]
+                public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters SourcePrometheusParameters { get; set; }
+                public class GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters : TeaModel {
+                    [NameInMap("ClusterId")]
+                    [Validation(Required=false)]
+                    public string ClusterId { get; set; }
+
+                    [NameInMap("DataType")]
+                    [Validation(Required=false)]
+                    public string DataType { get; set; }
+
+                    [NameInMap("Labels")]
+                    [Validation(Required=false)]
+                    public string Labels { get; set; }
+
+                }
+
                 /// <summary>
                 /// Source RabbitMQ Parameters
                 /// </summary>

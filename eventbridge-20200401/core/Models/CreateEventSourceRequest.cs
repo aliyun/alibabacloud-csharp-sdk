@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// The parameters that are configured if the event source is scheduled events.
+        /// The parameters that are configured if you specify scheduled events as the event source.
         /// </summary>
         [NameInMap("SourceScheduledEventParameters")]
         [Validation(Required=false)]
