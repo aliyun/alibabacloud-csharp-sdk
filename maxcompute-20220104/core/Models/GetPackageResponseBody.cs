@@ -67,6 +67,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The name of schema.
+                    /// </summary>
                     [NameInMap("schemaName")]
                     [Validation(Required=false)]
                     public string SchemaName { get; set; }
@@ -94,6 +97,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The name of schema.
+                    /// </summary>
                     [NameInMap("schemaName")]
                     [Validation(Required=false)]
                     public string SchemaName { get; set; }
@@ -121,6 +127,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The name of schema.
+                    /// </summary>
                     [NameInMap("schemaName")]
                     [Validation(Required=false)]
                     public string SchemaName { get; set; }
@@ -131,14 +140,23 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         }
 
+        /// <summary>
+        /// The error code returned if the request failed.
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
+        /// </summary>
         [NameInMap("httpCode")]
         [Validation(Required=false)]
         public int? HttpCode { get; set; }

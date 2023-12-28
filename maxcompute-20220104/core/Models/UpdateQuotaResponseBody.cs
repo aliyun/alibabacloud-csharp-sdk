@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class UpdateQuotaResponseBody : TeaModel {
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

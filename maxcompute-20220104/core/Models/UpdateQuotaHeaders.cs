@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
+        /// <summary>
+        /// The trusted AccessKey pairs.
+        /// </summary>
         [NameInMap("AkProven")]
         [Validation(Required=false)]
         public string AkProven { get; set; }

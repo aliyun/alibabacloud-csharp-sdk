@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public bool? AllowFullScan { get; set; }
 
+                [NameInMap("elderTunnelQuota")]
+                [Validation(Required=false)]
+                public string ElderTunnelQuota { get; set; }
+
                 /// <summary>
                 /// Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.
                 /// </summary>
@@ -166,6 +170,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [NameInMap("projectBackupSize")]
                     [Validation(Required=false)]
                     public long? ProjectBackupSize { get; set; }
+
+                    [NameInMap("projectTotalSize")]
+                    [Validation(Required=false)]
+                    public long? ProjectTotalSize { get; set; }
 
                     /// <summary>
                     /// The tiered storage.
@@ -353,6 +361,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             [Validation(Required=false)]
             public List<string> SuperAdmins { get; set; }
 
+            [NameInMap("threeTierModel")]
+            [Validation(Required=false)]
+            public bool? ThreeTierModel { get; set; }
+
             /// <summary>
             /// The type of the project. Valid values: -**managed**: The project is an internal project. -**external**: The project is an external project.
             /// </summary>
@@ -361,6 +373,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Type { get; set; }
 
         }
+
+        [NameInMap("errorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("errorMsg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
 
         /// <summary>
         /// Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.

@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The Schema name.
+                /// </summary>
                 [NameInMap("schemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
@@ -64,6 +67,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The Schema name.
+                /// </summary>
                 [NameInMap("schemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
@@ -91,6 +97,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The Schema name.
+                /// </summary>
                 [NameInMap("schemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
@@ -118,6 +127,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The Schema name.
+                /// </summary>
                 [NameInMap("schemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
@@ -145,6 +157,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The Schema name.
+                /// </summary>
                 [NameInMap("schemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
@@ -172,6 +187,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The Schema name.
+                /// </summary>
                 [NameInMap("schemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
@@ -180,14 +198,23 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         }
 
+        /// <summary>
+        /// The error code returned if the request failed.
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
+        /// <summary>
+        /// The HTTP status code.
+        /// </summary>
         [NameInMap("httpCode")]
         [Validation(Required=false)]
         public int? HttpCode { get; set; }
