@@ -71,10 +71,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
+        /// <summary>
+        /// The NAT IP address that provides address translation in FULLNAT entries.
+        /// </summary>
         [NameInMap("NatIp")]
         [Validation(Required=false)]
         public string NatIp { get; set; }
 
+        /// <summary>
+        /// The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.
+        /// </summary>
         [NameInMap("NatIpPort")]
         [Validation(Required=false)]
         public string NatIpPort { get; set; }

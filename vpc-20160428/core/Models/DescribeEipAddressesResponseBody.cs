@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BandwidthPackageId { get; set; }
 
                 /// <summary>
-                /// The type of the bandwidth. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.
+                /// The bandwidth type. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.
                 /// </summary>
                 [NameInMap("BandwidthPackageType")]
                 [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BizType { get; set; }
 
                 /// <summary>
-                /// The service state of the EIP. Valid values:
+                /// The service status of the EIP. Valid values:
                 /// 
                 /// *   **Normal**
                 /// *   **FinancialLocked**
@@ -146,8 +146,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The line type. Valid values:
                 /// 
-                /// *   **BGP**: BGP (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.
-                /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
+                /// *   **BGP**: BGP (Multi-ISP). All regions support BGP (Multi-ISP) EIPs.
+                /// *   **BGP_PRO**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.
                 /// 
                 /// For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.
                 /// 
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// The type of the associated instance. Valid values:
                 /// 
                 /// *   **EcsInstance**: an ECS instance in a VPC.
-                /// *   **SlbInstance**: an SLB instance in a VPC.
+                /// *   **SlbInstance**: a CLB instance in a VPC.
                 /// *   **Nat**: a NAT gateway.
                 /// *   **HaVip**: an HAVIP.
                 /// *   **NetworkInterface**: a secondary ENI.
@@ -197,20 +197,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The metering method of the EIP. Valid values:
                 /// 
-                /// *   **PayByBandwidth**: pay-by-bandwidth.
-                /// *   **PayByTraffic**: pay-by-traffic.
+                /// *   **PayByBandwidth**
+                /// *   **PayByTraffic**
                 /// </summary>
                 [NameInMap("InternetChargeType")]
                 [Validation(Required=false)]
                 public string InternetChargeType { get; set; }
 
                 /// <summary>
-                /// The EIP.
+                /// The IP address of the EIP.
                 /// </summary>
                 [NameInMap("IpAddress")]
                 [Validation(Required=false)]
                 public string IpAddress { get; set; }
 
+                /// <summary>
+                /// The association mode. Valid values:
+                /// 
+                /// *   **NAT**: NAT mode
+                /// *   **MULTI_BINDED**: multi-EIP-to-ENI mode
+                /// *   **BINDED**: cut-through mode
+                /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
                 public string Mode { get; set; }
@@ -254,6 +261,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                /// <summary>
+                /// The private IP address of the secondary ENI with which the EIP is associated.
+                /// </summary>
                 [NameInMap("PrivateIpAddress")]
                 [Validation(Required=false)]
                 public string PrivateIpAddress { get; set; }
@@ -289,8 +299,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The metering method that is used after the renewal takes effect. Valid values:
                 /// 
-                /// *   **PayByBandwidth**: pay-by-bandwidth.
-                /// *   **PayByTraffic**: pay-by-traffic.
+                /// *   **PayByBandwidth**
+                /// *   **PayByTraffic**
                 /// </summary>
                 [NameInMap("ReservationInternetChargeType")]
                 [Validation(Required=false)]
@@ -308,7 +318,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ReservationOrderType { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -341,7 +351,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the contiguous EIP group.
+                /// The IDs of contiguous EIPs.
                 /// 
                 /// This value is returned only when you query contiguous EIPs.
                 /// </summary>
@@ -352,15 +362,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether the resource is created by the service account. Valid values:
                 /// 
-                /// *   **0**: The resource is not created by the service account.
-                /// *   **1**: The resource is created by the service account.
+                /// *   **0**: no
+                /// *   **1**: yes
                 /// </summary>
                 [NameInMap("ServiceManaged")]
                 [Validation(Required=false)]
                 public int? ServiceManaged { get; set; }
 
                 /// <summary>
-                /// The state of the EIP. Valid values:
+                /// The status of the EIP. Valid values:
                 /// 
                 /// *   **Associating**
                 /// *   **Unassociating**

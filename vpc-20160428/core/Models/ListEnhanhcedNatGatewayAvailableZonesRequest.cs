@@ -19,6 +19,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public List<ListEnhanhcedNatGatewayAvailableZonesRequestFilter> Filter { get; set; }
+        public class ListEnhanhcedNatGatewayAvailableZonesRequestFilter : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

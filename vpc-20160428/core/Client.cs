@@ -5959,10 +5959,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **CopyNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **CopyNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being copied.
           *     *   If the network ACL is in the **Available** state, the rules of the network ACL are copied.
-          * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation to copy the rules of a network ACL within the specified period of time.
+          * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation within the specified period of time.
           *
           * @param request CopyNetworkAclEntriesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6032,10 +6033,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **CopyNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **CopyNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being copied.
           *     *   If the network ACL is in the **Available** state, the rules of the network ACL are copied.
-          * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation to copy the rules of a network ACL within the specified period of time.
+          * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation within the specified period of time.
           *
           * @param request CopyNetworkAclEntriesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6105,10 +6107,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **CopyNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **CopyNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being copied.
           *     *   If the network ACL is in the **Available** state, the rules of the network ACL are copied.
-          * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation to copy the rules of a network ACL within the specified period of time.
+          * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation within the specified period of time.
           *
           * @param request CopyNetworkAclEntriesRequest
           * @return CopyNetworkAclEntriesResponse
@@ -6120,10 +6123,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **CopyNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+          * ## [](#)Description
+          * *   **CopyNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
           *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being copied.
           *     *   If the network ACL is in the **Available** state, the rules of the network ACL are copied.
-          * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation to copy the rules of a network ACL within the specified period of time.
+          * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation within the specified period of time.
           *
           * @param request CopyNetworkAclEntriesRequest
           * @return CopyNetworkAclEntriesResponse
@@ -6853,13 +6857,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Usage notes
-          * When you call this operation, take note of the following items:
-          * *   The first IP address and last three IP addresses of a default vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+          * When you call this operation, take note of the following limits:
+          * *   The first IP address and last three IP addresses of a vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
           * *   The number of instances in the default vSwitch cannot exceed the remaining number of instances supported by the VPC (15,000 minus the number of existing instances).
           * *   Default vSwitches do not support multicasting or broadcasting.
           * *   After you create a default vSwitch, you cannot modify its CIDR block.
-          * *   **CreateDefaultVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
+          * *   **CreateDefaultVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
           *     *   If a default vSwitch is in the **Pending** state, it is being configured.
           *     *   If a default vSwitch is in the **Available** state, it is available.
           * *   If a default vSwitch already exists in a region, you cannot call this operation to create a default vSwitch in this region.
@@ -6925,13 +6928,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Usage notes
-          * When you call this operation, take note of the following items:
-          * *   The first IP address and last three IP addresses of a default vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+          * When you call this operation, take note of the following limits:
+          * *   The first IP address and last three IP addresses of a vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
           * *   The number of instances in the default vSwitch cannot exceed the remaining number of instances supported by the VPC (15,000 minus the number of existing instances).
           * *   Default vSwitches do not support multicasting or broadcasting.
           * *   After you create a default vSwitch, you cannot modify its CIDR block.
-          * *   **CreateDefaultVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
+          * *   **CreateDefaultVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
           *     *   If a default vSwitch is in the **Pending** state, it is being configured.
           *     *   If a default vSwitch is in the **Available** state, it is available.
           * *   If a default vSwitch already exists in a region, you cannot call this operation to create a default vSwitch in this region.
@@ -6997,13 +6999,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Usage notes
-          * When you call this operation, take note of the following items:
-          * *   The first IP address and last three IP addresses of a default vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+          * When you call this operation, take note of the following limits:
+          * *   The first IP address and last three IP addresses of a vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
           * *   The number of instances in the default vSwitch cannot exceed the remaining number of instances supported by the VPC (15,000 minus the number of existing instances).
           * *   Default vSwitches do not support multicasting or broadcasting.
           * *   After you create a default vSwitch, you cannot modify its CIDR block.
-          * *   **CreateDefaultVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
+          * *   **CreateDefaultVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
           *     *   If a default vSwitch is in the **Pending** state, it is being configured.
           *     *   If a default vSwitch is in the **Available** state, it is available.
           * *   If a default vSwitch already exists in a region, you cannot call this operation to create a default vSwitch in this region.
@@ -7019,13 +7020,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## Usage notes
-          * When you call this operation, take note of the following items:
-          * *   The first IP address and last three IP addresses of a default vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+          * When you call this operation, take note of the following limits:
+          * *   The first IP address and last three IP addresses of a vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
           * *   The number of instances in the default vSwitch cannot exceed the remaining number of instances supported by the VPC (15,000 minus the number of existing instances).
           * *   Default vSwitches do not support multicasting or broadcasting.
           * *   After you create a default vSwitch, you cannot modify its CIDR block.
-          * *   **CreateDefaultVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
+          * *   **CreateDefaultVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
           *     *   If a default vSwitch is in the **Pending** state, it is being configured.
           *     *   If a default vSwitch is in the **Available** state, it is available.
           * *   If a default vSwitch already exists in a region, you cannot call this operation to create a default vSwitch in this region.
@@ -8473,6 +8473,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * @deprecated
           * ## Usage notes
           * You can call this operation to create only pay-as-you-go GA instances.
           *
@@ -8480,6 +8481,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * @param runtime runtime options for this request RuntimeOptions
           * @return CreateGlobalAccelerationInstanceResponse
          */
+        // Deprecated
         public CreateGlobalAccelerationInstanceResponse CreateGlobalAccelerationInstanceWithOptions(CreateGlobalAccelerationInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8548,6 +8550,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * @deprecated
           * ## Usage notes
           * You can call this operation to create only pay-as-you-go GA instances.
           *
@@ -8555,6 +8558,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * @param runtime runtime options for this request RuntimeOptions
           * @return CreateGlobalAccelerationInstanceResponse
          */
+        // Deprecated
         public async Task<CreateGlobalAccelerationInstanceResponse> CreateGlobalAccelerationInstanceWithOptionsAsync(CreateGlobalAccelerationInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8623,12 +8627,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * @deprecated
           * ## Usage notes
           * You can call this operation to create only pay-as-you-go GA instances.
           *
           * @param request CreateGlobalAccelerationInstanceRequest
           * @return CreateGlobalAccelerationInstanceResponse
          */
+        // Deprecated
         public CreateGlobalAccelerationInstanceResponse CreateGlobalAccelerationInstance(CreateGlobalAccelerationInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8636,12 +8642,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * @deprecated
           * ## Usage notes
           * You can call this operation to create only pay-as-you-go GA instances.
           *
           * @param request CreateGlobalAccelerationInstanceRequest
           * @return CreateGlobalAccelerationInstanceResponse
          */
+        // Deprecated
         public async Task<CreateGlobalAccelerationInstanceResponse> CreateGlobalAccelerationInstanceAsync(CreateGlobalAccelerationInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14160,7 +14168,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   Each instance can belong to only one vSwitch.
           * *   vSwitches do not support multicast or broadcast.
           * *   After you create a vSwitch, you cannot modify its CIDR block.
-          * *   The **CreateVSwitch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * *   **CreateVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVSwitchAttributes](~~94567~~) to query the status of the task.
           *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
           *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
           * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
@@ -14256,7 +14264,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   Each instance can belong to only one vSwitch.
           * *   vSwitches do not support multicast or broadcast.
           * *   After you create a vSwitch, you cannot modify its CIDR block.
-          * *   The **CreateVSwitch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * *   **CreateVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVSwitchAttributes](~~94567~~) to query the status of the task.
           *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
           *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
           * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
@@ -14352,7 +14360,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   Each instance can belong to only one vSwitch.
           * *   vSwitches do not support multicast or broadcast.
           * *   After you create a vSwitch, you cannot modify its CIDR block.
-          * *   The **CreateVSwitch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * *   **CreateVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVSwitchAttributes](~~94567~~) to query the status of the task.
           *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
           *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
           * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
@@ -14374,7 +14382,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   Each instance can belong to only one vSwitch.
           * *   vSwitches do not support multicast or broadcast.
           * *   After you create a vSwitch, you cannot modify its CIDR block.
-          * *   The **CreateVSwitch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+          * *   **CreateVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVSwitchAttributes](~~94567~~) to query the status of the task.
           *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
           *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
           * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
@@ -21035,7 +21043,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **DeleteNetworkAcl** operation to delete a network ACL within the specified period of time.
+          * ## [](#)Description
+          * You cannot repeatedly call the **DeleteNetworkAcl** operation within the specified period of time.
           *
           * @param request DeleteNetworkAclRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21101,7 +21110,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **DeleteNetworkAcl** operation to delete a network ACL within the specified period of time.
+          * ## [](#)Description
+          * You cannot repeatedly call the **DeleteNetworkAcl** operation within the specified period of time.
           *
           * @param request DeleteNetworkAclRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21167,7 +21177,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **DeleteNetworkAcl** operation to delete a network ACL within the specified period of time.
+          * ## [](#)Description
+          * You cannot repeatedly call the **DeleteNetworkAcl** operation within the specified period of time.
           *
           * @param request DeleteNetworkAclRequest
           * @return DeleteNetworkAclResponse
@@ -21179,7 +21190,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **DeleteNetworkAcl** operation to delete a network ACL within the specified period of time.
+          * ## [](#)Description
+          * You cannot repeatedly call the **DeleteNetworkAcl** operation within the specified period of time.
           *
           * @param request DeleteNetworkAclRequest
           * @return DeleteNetworkAclResponse
@@ -39457,6 +39469,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -39514,6 +39530,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -47371,7 +47391,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)References
           * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
           *
           * @param request ModifyRouteTableAttributesRequest
@@ -47434,7 +47453,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)References
           * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
           *
           * @param request ModifyRouteTableAttributesRequest
@@ -47497,7 +47515,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)References
           * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
           *
           * @param request ModifyRouteTableAttributesRequest
@@ -47510,7 +47527,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)References
           * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
           *
           * @param request ModifyRouteTableAttributesRequest
@@ -48685,9 +48701,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **ModifyVSwitchAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
-          *     *   If the vSwitch is in the **Pending** state, the vSwitch is being modified.
-          *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+          * *   **ModifyVSwitchAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
+          *     *   If the vSwitch is in the **Pending** state, the name and description of the vSwitch are being modified.
+          *     *   If the vSwitch is in the **Available** state, the name and description of the vSwitch are modified.
           * *   You cannot repeatedly call the **ModifyVSwitchAttribute** operation to modify the name and description of a vSwitch within the specified period of time.
           *
           * @param request ModifyVSwitchAttributeRequest
@@ -48762,9 +48778,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **ModifyVSwitchAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
-          *     *   If the vSwitch is in the **Pending** state, the vSwitch is being modified.
-          *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+          * *   **ModifyVSwitchAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
+          *     *   If the vSwitch is in the **Pending** state, the name and description of the vSwitch are being modified.
+          *     *   If the vSwitch is in the **Available** state, the name and description of the vSwitch are modified.
           * *   You cannot repeatedly call the **ModifyVSwitchAttribute** operation to modify the name and description of a vSwitch within the specified period of time.
           *
           * @param request ModifyVSwitchAttributeRequest
@@ -48839,9 +48855,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **ModifyVSwitchAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
-          *     *   If the vSwitch is in the **Pending** state, the vSwitch is being modified.
-          *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+          * *   **ModifyVSwitchAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
+          *     *   If the vSwitch is in the **Pending** state, the name and description of the vSwitch are being modified.
+          *     *   If the vSwitch is in the **Available** state, the name and description of the vSwitch are modified.
           * *   You cannot repeatedly call the **ModifyVSwitchAttribute** operation to modify the name and description of a vSwitch within the specified period of time.
           *
           * @param request ModifyVSwitchAttributeRequest
@@ -48854,9 +48870,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **ModifyVSwitchAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
-          *     *   If the vSwitch is in the **Pending** state, the vSwitch is being modified.
-          *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+          * *   **ModifyVSwitchAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
+          *     *   If the vSwitch is in the **Pending** state, the name and description of the vSwitch are being modified.
+          *     *   If the vSwitch is in the **Available** state, the name and description of the vSwitch are modified.
           * *   You cannot repeatedly call the **ModifyVSwitchAttribute** operation to modify the name and description of a vSwitch within the specified period of time.
           *
           * @param request ModifyVSwitchAttributeRequest
@@ -49305,6 +49321,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SitelinkEnable))
+            {
+                query["SitelinkEnable"] = request.SitelinkEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VbrId))
             {
                 query["VbrId"] = request.VbrId;
@@ -49432,6 +49452,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SitelinkEnable))
+            {
+                query["SitelinkEnable"] = request.SitelinkEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VbrId))
             {

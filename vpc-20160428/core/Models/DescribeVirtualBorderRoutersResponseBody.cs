@@ -305,6 +305,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string EccId { get; set; }
 
+                [NameInMap("EcrAttatchStatus")]
+                [Validation(Required=false)]
+                public string EcrAttatchStatus { get; set; }
+
+                [NameInMap("EcrId")]
+                [Validation(Required=false)]
+                public string EcrId { get; set; }
+
                 /// <summary>
                 /// Indicates whether IPv6 is enabled. Valid values:
                 /// 
@@ -457,6 +465,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("RouteTableId")]
                 [Validation(Required=false)]
                 public string RouteTableId { get; set; }
+
+                [NameInMap("SitelinkEnable")]
+                [Validation(Required=false)]
+                public bool? SitelinkEnable { get; set; }
 
                 /// <summary>
                 /// The status of the VBR. Valid values:

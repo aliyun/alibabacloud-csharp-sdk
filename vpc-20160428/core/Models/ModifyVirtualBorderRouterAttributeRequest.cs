@@ -178,6 +178,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SitelinkEnable")]
+        [Validation(Required=false)]
+        public bool? SitelinkEnable { get; set; }
+
         /// <summary>
         /// The VBR ID.
         /// </summary>
